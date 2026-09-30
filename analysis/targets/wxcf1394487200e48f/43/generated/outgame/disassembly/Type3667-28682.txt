@@ -1,0 +1,104 @@
+; Original class: NormalPool
+; Type3667.CreateObjectPool; wasmcode function 5863; offset=2068877 size=304
+; signature={'args': [127, 127, 127, 125, 127, 127, 127], 'returns': []}; localGroups=[]
+001f918e  i32.const [4987658]
+001f9193  i32.load8_u [0, 0]
+001f9196  i32.eqz []
+001f9197  if [-64]
+001f9199    i32.const [3960072]
+001f919e    call [900] ; 
+001f91a1    i32.const [3958636]
+001f91a6    call [900] ; 
+001f91a9    i32.const [3918832]
+001f91ae    call [900] ; 
+001f91b1    i32.const [3918212]
+001f91b6    call [900] ; 
+001f91b9    i32.const [4000612]
+001f91be    call [900] ; 
+001f91c1    i32.const [3932308]
+001f91c6    call [900] ; 
+001f91c9    i32.const [4002680]
+001f91ce    call [900] ; 
+001f91d1    i32.const [3922532]
+001f91d6    call [900] ; 
+001f91d9    i32.const [4987658]
+001f91de    i32.const [1]
+001f91e0    i32.store8 [0, 0]
+001f91e3  end []
+001f91e4  i32.const [3932308]
+001f91e9  i32.load [2, 0]
+001f91ec  call [901] ; 
+001f91ef  i32.const [4000612]
+001f91f4  i32.load [2, 0]
+001f91f7  call [1051] ; 
+001f91fa  local.set [6]
+001f91fc  local.get [6]
+001f91fe  if [-64]
+001f9200    local.get [0]
+001f9202    local.get [1]
+001f9204    i32.store [2, 24]
+001f9207    local.get [0]
+001f9209    local.get [5]
+001f920b    i32.store8 [0, 28]
+001f920e    local.get [0]
+001f9210    local.get [4]
+001f9212    i32.store [2, 12]
+001f9215    local.get [0]
+001f9217    i32.const [4002680]
+001f921c    i32.load [2, 0]
+001f921f    local.get [6]
+001f9221    local.get [1]
+001f9223    call [2134] ; 
+001f9226    i32.store [2, 8]
+001f9229    i32.const [0]
+001f922b    i32.const [3922532]
+001f9230    i32.load [2, 0]
+001f9233    local.get [0]
+001f9235    i32.load [2, 8]
+001f9238    local.get [3]
+001f923a    call [11765] ; 
+001f923d    i32.const [1]
+001f923f    i32.const [3922532]
+001f9244    i32.load [2, 0]
+001f9247    local.get [0]
+001f9249    i32.load [2, 8]
+001f924c    local.get [2]
+001f924e    call [1027] ; 
+001f9251    i32.const [2]
+001f9253    i32.const [3922532]
+001f9258    i32.load [2, 0]
+001f925b    local.get [0]
+001f925d    i32.load [2, 8]
+001f9260    local.get [3]
+001f9262    call [11765] ; 
+001f9265    i32.const [3]
+001f9267    i32.const [3922532]
+001f926c    i32.load [2, 0]
+001f926f    local.get [0]
+001f9271    i32.load [2, 8]
+001f9274    i32.const [0]
+001f9276    call [1027] ; 
+001f9279    i32.const [3918832]
+001f927e    i32.load [2, 0]
+001f9281    call [903] ; 
+001f9284    local.set [1]
+001f9286    local.get [1]
+001f9288    i32.const [3960072]
+001f928d    i32.load [2, 0]
+001f9290    call [951] ; 
+001f9293    local.get [0]
+001f9295    local.get [1]
+001f9297    i32.store [2, 20]
+001f929a    i32.const [3918212]
+001f929f    i32.load [2, 0]
+001f92a2    call [903] ; 
+001f92a5    local.set [1]
+001f92a7    local.get [1]
+001f92a9    i32.const [3958636]
+001f92ae    i32.load [2, 0]
+001f92b1    call [951] ; 
+001f92b4    local.get [0]
+001f92b6    local.get [1]
+001f92b8    i32.store [2, 16]
+001f92bb  end []
+001f92bc  end []

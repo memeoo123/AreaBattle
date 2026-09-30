@@ -1,0 +1,46 @@
+; Original shared generic: Fsm`1.FireEvent
+; ProcedureFsmGeneric.FireEvent; wasmcode function 19669; offset=8819077 size=115
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00869188  local.get [0]
+0086918a  i32.load [2, 28]
+0086918d  local.set [4]
+0086918f  local.get [4]
+00869191  i32.eqz []
+00869192  if [-64]
+00869194    i32.const [3932324]
+00869199    call [902] ; 
+0086919c    call [903] ; 
+0086919f    local.set [0]
+008691a1    local.get [0]
+008691a3    i32.const [4050092] ; STRING "Current state is invalid."
+008691a8    call [902] ; 
+008691ab    i32.const [0]
+008691ad    i32.const [10659] ; TABLE GameFrameworkException..ctor
+008691b1    global.set [3]
+008691b3    i32.const [10659] ; TABLE GameFrameworkException..ctor
+008691b7    call_indirect [2, 0]
+008691ba    local.get [0]
+008691bc    i32.const [3968620]
+008691c1    call [902] ; 
+008691c4    i32.const [1106]
+008691c7    global.set [3]
+008691c9    i32.const [1106]
+008691cc    call_indirect [0, 0]
+008691cf    unreachable []
+008691d0  end []
+008691d1  local.get [3]
+008691d3  i32.load [2, 16]
+008691d6  i32.load [2, 96]
+008691d9  i32.load [2, 120]
+008691dc  i32.load [2, 0]
+008691df  local.get [3]
+008691e1  i32.load [2, 16]
+008691e4  i32.load [2, 96]
+008691e7  i32.load [2, 120]
+008691ea  local.get [4]
+008691ec  local.get [0]
+008691ee  local.get [1]
+008691f0  local.get [2]
+008691f2  i32.const [0]
+008691f4  call [3914] ; 
+008691f7  end []

@@ -1,0 +1,24 @@
+{
+  "status": "provider_bundle_release_verified_acquisition_pending",
+  "source": [
+    "disassembly/Type2954-23028.txt",
+    "disassembly/Type2939-22969.txt",
+    "disassembly/Type2939-22973.txt",
+    "bundle-dependency-generics.json"
+  ],
+  "verified": [
+    "Destroy sets IsDestroyed before owner/dependency processing and does not enforce CanDestroy",
+    "Owner count decremented then owner cleared",
+    "Dependency group traverses original list, including duplicate entries, and adjusts Int32 count unchecked",
+    "Dependency group cleared only after successful Release; failures retain earlier effects",
+    "Destroy does not clear handle list/reference count"
+  ],
+  "remaining": [
+    "Bundle acquisition and lifetime manager",
+    "Original startup flags and platform loader",
+    "Production page/account integration and full build/E2E"
+  ],
+  "checks": 533,
+  "priorPlaymodeChecks": 8,
+  "dynamicScope": "No new Play Mode run required for isolated bundle bookkeeping; prior8-check report does not cover bundle destruction"
+}

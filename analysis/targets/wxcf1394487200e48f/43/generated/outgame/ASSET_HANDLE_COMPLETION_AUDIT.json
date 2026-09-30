@@ -1,0 +1,25 @@
+{
+  "status": "completion_contract_verified_provider_dispatch_pending",
+  "source": [
+    "disassembly/Type2929-22899.txt",
+    "disassembly/Type2929-22900.txt",
+    "disassembly/Type2929-22907.txt",
+    "disassembly/Type2930-22916.txt"
+  ],
+  "verified": [
+    "Add checks validity; already-done provider invokes new delegate synchronously without storing it",
+    "Pending subscription uses multicast combine; removal uses delegate remove",
+    "Dispatch invokes current multicast snapshot, retains subscriptions and does not catch exceptions",
+    "Callback removal does not change in-flight snapshot; following invocation sees removal",
+    "Released handle removal warns and throws Exception with original message"
+  ],
+  "remaining": [
+    "Provider done transition and trigger ordering",
+    "Original loader mode initialization",
+    "Native provider references and pool lifecycle composition",
+    "Production pages/account and full build/E2E"
+  ],
+  "checks": 531,
+  "playmodeChecks": 8,
+  "dynamicScope": "8 Play Mode checks cover existing fly flow; completion edge cases are integrated callback tests"
+}

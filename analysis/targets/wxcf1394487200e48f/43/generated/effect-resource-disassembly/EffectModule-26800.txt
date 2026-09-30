@@ -1,0 +1,235 @@
+; EffectModule.ReadEffectData; wasmcode function 12436; offset=6023553 size=679
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(4, 127)]
+005be984  global.get [0]
+005be986  i32.const [16]
+005be988  i32.sub []
+005be989  local.set [3]
+005be98b  local.get [3]
+005be98d  global.set [0]
+005be98f  i32.const [4989030]
+005be994  i32.load8_u [0, 0]
+005be997  i32.eqz []
+005be998  if [-64]
+005be99a    i32.const [3928176]
+005be99f    call [900] ; 
+005be9a2    i32.const [3929208]
+005be9a7    call [900] ; 
+005be9aa    i32.const [3993492]
+005be9af    call [900] ; 
+005be9b2    i32.const [3929800]
+005be9b7    call [900] ; 
+005be9ba    i32.const [3955564]
+005be9bf    call [900] ; 
+005be9c2    i32.const [3955572]
+005be9c7    call [900] ; 
+005be9ca    i32.const [3934404]
+005be9cf    call [900] ; 
+005be9d2    i32.const [3973440]
+005be9d7    call [900] ; 
+005be9da    i32.const [3973444]
+005be9df    call [900] ; 
+005be9e2    i32.const [3926996]
+005be9e7    call [900] ; 
+005be9ea    i32.const [4105784] ; STRING "表[EffectConfig]中有相同键({0})"
+005be9ef    call [900] ; 
+005be9f2    i32.const [4052160] ; STRING "EffectConfig"
+005be9f7    call [900] ; 
+005be9fa    i32.const [4052148] ; STRING "Effect:设置特效数据"
+005be9ff    call [900] ; 
+005bea02    i32.const [4052152] ; STRING "Effect:配置文件AB资源为null"
+005bea07    call [900] ; 
+005bea0a    i32.const [4989030]
+005bea0f    i32.const [1]
+005bea11    i32.store8 [0, 0]
+005bea14  end []
+005bea15  block [-64]
+005bea17    local.get [0]
+005bea19    i32.load8_u [0, 24]
+005bea1c    br_if [0]
+005bea1e    i32.const [3929800]
+005bea23    i32.load [2, 0]
+005bea26    call [901] ; 
+005bea29    block [-64]
+005bea2b      i32.const [3929800]
+005bea30      i32.load [2, 0]
+005bea33      i32.load [2, 92]
+005bea36      i32.load [2, 4]
+005bea39      br_if [0]
+005bea3b      i32.const [3928176]
+005bea40      i32.load [2, 0]
+005bea43      call [901] ; 
+005bea46      i32.const [5011829]
+005bea4b      i32.load8_u [0, 0]
+005bea4e      i32.eqz []
+005bea4f      if [-64]
+005bea51        i32.const [3928176]
+005bea56        call [900] ; 
+005bea59        i32.const [5011829]
+005bea5e        i32.const [1]
+005bea60        i32.store8 [0, 0]
+005bea63      end []
+005bea64      i32.const [3928176]
+005bea69      i32.load [2, 0]
+005bea6c      call [901] ; 
+005bea6f      i32.const [3928176]
+005bea74      i32.load [2, 0]
+005bea77      i32.load [2, 92]
+005bea7a      i32.load8_u [0, 36]
+005bea7d      br_if [0]
+005bea7f      i32.const [3926996]
+005bea84      i32.load [2, 0]
+005bea87      i32.const [1]
+005bea89      call [909] ; 
+005bea8c      local.set [0]
+005bea8e      local.get [0]
+005bea90      i32.const [4052152] ; STRING "Effect:配置文件AB资源为null"
+005bea95      i32.load [2, 0]
+005bea98      call [905] ; 
+005bea9b      local.get [0]
+005bea9d      i32.const [4052152] ; STRING "Effect:配置文件AB资源为null"
+005beaa2      i32.load [2, 0]
+005beaa5      i32.store [2, 16]
+005beaa8      i32.const [3929208]
+005beaad      i32.load [2, 0]
+005beab0      call [901] ; 
+005beab3      local.get [0]
+005beab5      i32.const [0]
+005beab7      i32.const [2087] ; TABLE CLog.Error
+005beaba      global.set [3]
+005beabc      i32.const [2087] ; TABLE CLog.Error
+005beabf      call_indirect [0, 0]
+005beac2      br [1]
+005beac4    end []
+005beac5    i32.const [3926996]
+005beaca    i32.load [2, 0]
+005beacd    i32.const [1]
+005beacf    call [909] ; 
+005bead2    local.set [1]
+005bead4    local.get [1]
+005bead6    i32.const [4052148] ; STRING "Effect:设置特效数据"
+005beadb    i32.load [2, 0]
+005beade    call [905] ; 
+005beae1    local.get [1]
+005beae3    i32.const [4052148] ; STRING "Effect:设置特效数据"
+005beae8    i32.load [2, 0]
+005beaeb    i32.store [2, 16]
+005beaee    i32.const [3929208]
+005beaf3    i32.load [2, 0]
+005beaf6    call [901] ; 
+005beaf9    local.get [1]
+005beafb    i32.const [0]
+005beafd    call [13024] ; CLog.zW¡Gf
+005beb00    i32.const [3929800]
+005beb05    i32.load [2, 0]
+005beb08    call [901] ; 
+005beb0b    block [-64]
+005beb0d      i32.const [4052160] ; STRING "EffectConfig"
+005beb12      i32.load [2, 0]
+005beb15      i32.const [3993492]
+005beb1a      i32.load [2, 0]
+005beb1d      call [4480] ; 
+005beb20      local.set [2]
+005beb22      local.get [2]
+005beb24      i32.eqz []
+005beb25      br_if [0]
+005beb27      i32.const [0]
+005beb29      local.set [1]
+005beb2b      loop [-64]
+005beb2d        i32.const [3973440]
+005beb32        i32.load [2, 0]
+005beb35        drop []
+005beb36        local.get [1]
+005beb38        local.get [2]
+005beb3a        i32.load [2, 12]
+005beb3d        i32.ge_s []
+005beb3e        br_if [1]
+005beb40        block [-64]
+005beb42          local.get [0]
+005beb44          i32.load [2, 20]
+005beb47          local.get [2]
+005beb49          local.get [1]
+005beb4b          i32.const [3973444]
+005beb50          i32.load [2, 0]
+005beb53          call [930] ; 
+005beb56          i32.load [2, 8]
+005beb59          i32.const [3955572]
+005beb5e          i32.load [2, 0]
+005beb61          call [1129] ; 
+005beb64          if [-64]
+005beb66            i32.const [3926996]
+005beb6b            i32.load [2, 0]
+005beb6e            i32.const [1]
+005beb70            call [909] ; 
+005beb73            local.set [5]
+005beb75            local.get [3]
+005beb77            local.get [2]
+005beb79            local.get [1]
+005beb7b            i32.const [3973444]
+005beb80            i32.load [2, 0]
+005beb83            call [930] ; 
+005beb86            i32.load [2, 8]
+005beb89            i32.store [2, 12]
+005beb8c            i32.const [3934404]
+005beb91            i32.load [2, 0]
+005beb94            local.get [3]
+005beb96            i32.const [12]
+005beb98            i32.add []
+005beb99            call [910] ; 
+005beb9c            local.set [4]
+005beb9e            i32.const [4105784] ; STRING "表[EffectConfig]中有相同键({0})"
+005beba3            i32.load [2, 0]
+005beba6            local.get [4]
+005beba8            i32.const [0]
+005bebaa            call [1015] ; String.Format
+005bebad            local.set [4]
+005bebaf            local.get [5]
+005bebb1            local.get [4]
+005bebb3            call [905] ; 
+005bebb6            local.get [5]
+005bebb8            local.get [4]
+005bebba            i32.store [2, 16]
+005bebbd            i32.const [3929208]
+005bebc2            i32.load [2, 0]
+005bebc5            call [901] ; 
+005bebc8            local.get [5]
+005bebca            i32.const [0]
+005bebcc            i32.const [2087] ; TABLE CLog.Error
+005bebcf            global.set [3]
+005bebd1            i32.const [2087] ; TABLE CLog.Error
+005bebd4            call_indirect [0, 0]
+005bebd7            br [1]
+005bebd9          end []
+005bebda          local.get [0]
+005bebdc          i32.load [2, 20]
+005bebdf          local.get [2]
+005bebe1          local.get [1]
+005bebe3          i32.const [3973444]
+005bebe8          i32.load [2, 0]
+005bebeb          call [930] ; 
+005bebee          i32.load [2, 8]
+005bebf1          local.get [2]
+005bebf3          local.get [1]
+005bebf5          i32.const [3973444]
+005bebfa          i32.load [2, 0]
+005bebfd          call [930] ; 
+005bec00          i32.const [3955564]
+005bec05          i32.load [2, 0]
+005bec08          call [1049] ; 
+005bec0b        end []
+005bec0c        local.get [1]
+005bec0e        i32.const [1]
+005bec10        i32.add []
+005bec11        local.set [1]
+005bec13        br [0]
+005bec15      end []
+005bec16      unreachable []
+005bec17    end []
+005bec18    local.get [0]
+005bec1a    i32.const [1]
+005bec1c    i32.store8 [0, 24]
+005bec1f  end []
+005bec20  local.get [3]
+005bec22  i32.const [16]
+005bec24  i32.add []
+005bec25  global.set [0]
+005bec27  end []

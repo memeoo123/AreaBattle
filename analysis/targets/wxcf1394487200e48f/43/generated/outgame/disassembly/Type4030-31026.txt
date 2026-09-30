@@ -1,0 +1,25 @@
+; Original class: CommanderData
+; Type4030.get_Unlockable; wasmcode function 6201; offset=2217077 size=60
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0021d476  i32.const [5008691]
+0021d47b  i32.load8_u [0, 0]
+0021d47e  i32.eqz []
+0021d47f  if [-64]
+0021d481    i32.const [3953440]
+0021d486    call [900] ; 
+0021d489    i32.const [5008691]
+0021d48e    i32.const [1]
+0021d490    i32.store8 [0, 0]
+0021d493  end []
+0021d494  i32.const [3953440]
+0021d499  i32.load [2, 0]
+0021d49c  call [935] ; 
+0021d49f  i32.const [0]
+0021d4a1  call [1254] ; LevelControl.get_CurLevel
+0021d4a4  local.get [0]
+0021d4a6  local.get [0]
+0021d4a8  call [1711] ; CommanderData.get_config
+0021d4ab  i32.load [2, 28]
+0021d4ae  i32.ge_s []
+0021d4af  return []
+0021d4b0  end []

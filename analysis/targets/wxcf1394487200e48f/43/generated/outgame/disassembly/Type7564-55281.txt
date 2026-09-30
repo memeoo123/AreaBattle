@@ -1,0 +1,26 @@
+; Original class: <>c__DisplayClass15_0
+; Type7564.<ShowInterstitialStatic>b__2; wasmcode function 15304; offset=7396404 size=63
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0070dc35  i32.const [5005740]
+0070dc3a  i32.load8_u [0, 0]
+0070dc3d  i32.eqz []
+0070dc3e  if [-64]
+0070dc40    i32.const [3984752]
+0070dc45    call [900] ; 
+0070dc48    i32.const [5005740]
+0070dc4d    i32.const [1]
+0070dc4f    i32.store8 [0, 0]
+0070dc52  end []
+0070dc53  local.get [1]
+0070dc55  if [-64]
+0070dc57    i32.const [3984752]
+0070dc5c    i32.load [2, 0]
+0070dc5f    call [1203] ; 
+0070dc62    local.get [1]
+0070dc64    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+0070dc67    local.get [0]
+0070dc69    i32.load [2, 8]
+0070dc6c    i32.const [0]
+0070dc6e    call [2923] ; ReporterSDK.NewReportInsertShow
+0070dc71  end []
+0070dc72  end []

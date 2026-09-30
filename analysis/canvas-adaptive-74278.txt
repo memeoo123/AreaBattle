@@ -1,0 +1,134 @@
+; Original class: CanvasAdaptive
+; Type10722.Awake; wasmcode function 20342; offset=9121310 size=359
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127), (2, 125)]
+008b2e23 global.get [0]
+008b2e25 i32.const [16]
+008b2e27 i32.sub []
+008b2e28 local.set [1]
+008b2e2a local.get [1]
+008b2e2c global.set [0]
+008b2e2e i32.const [5001863]
+008b2e33 i32.load8_u [0, 0]
+008b2e36 i32.eqz []
+008b2e37 if [-64]
+008b2e39 i32.const [3928176]
+008b2e3e call [900] ; 
+008b2e41 i32.const [3930676]
+008b2e46 call [900] ; 
+008b2e49 i32.const [4000680]
+008b2e4e call [900] ; 
+008b2e51 i32.const [4000948]
+008b2e56 call [900] ; 
+008b2e59 i32.const [4000980]
+008b2e5e call [900] ; 
+008b2e61 i32.const [3936516]
+008b2e66 call [900] ; 
+008b2e69 i32.const [4103964] ; STRING "当前分辨率比值："
+008b2e6e call [900] ; 
+008b2e71 i32.const [5001863]
+008b2e76 i32.const [1]
+008b2e78 i32.store8 [0, 0]
+008b2e7b end []
+008b2e7c local.get [0]
+008b2e7e local.get [0]
+008b2e80 i32.const [0]
+008b2e82 call [943] ; Component.get_gameObject
+008b2e85 i32.const [4000980]
+008b2e8a i32.load [2, 0]
+008b2e8d call [1091] ; 
+008b2e90 i32.store [2, 16]
+008b2e93 local.get [0]
+008b2e95 local.get [0]
+008b2e97 i32.const [0]
+008b2e99 call [943] ; Component.get_gameObject
+008b2e9c i32.const [4000948]
+008b2ea1 i32.load [2, 0]
+008b2ea4 call [1091] ; 
+008b2ea7 i32.store [2, 12]
+008b2eaa local.get [0]
+008b2eac i32.load [2, 12]
+008b2eaf local.set [2]
+008b2eb1 i32.const [3936516]
+008b2eb6 i32.load [2, 0]
+008b2eb9 call [901] ; 
+008b2ebc local.get [2]
+008b2ebe i32.const [0]
+008b2ec0 i32.const [0]
+008b2ec2 call [940] ; Object.op_Equality
+008b2ec5 if [-64]
+008b2ec7 local.get [0]
+008b2ec9 local.get [0]
+008b2ecb i32.const [0]
+008b2ecd call [943] ; Component.get_gameObject
+008b2ed0 i32.const [4000680]
+008b2ed5 i32.load [2, 0]
+008b2ed8 call [1094] ; 
+008b2edb i32.store [2, 12]
+008b2ede end []
+008b2edf local.get [0]
+008b2ee1 i32.load [2, 16]
+008b2ee4 local.set [2]
+008b2ee6 local.get [0]
+008b2ee8 local.get [2]
+008b2eea f32.load [2, 24]
+008b2eed local.get [2]
+008b2eef f32.load [2, 28]
+008b2ef2 f32.div []
+008b2ef3 f32.store [2, 24]
+008b2ef6 local.get [2]
+008b2ef8 f32.load [2, 28]
+008b2efb local.set [3]
+008b2efd local.get [2]
+008b2eff f32.load [2, 24]
+008b2f02 local.set [4]
+008b2f04 i32.const [3928176]
+008b2f09 i32.load [2, 0]
+008b2f0c call [901] ; 
+008b2f0f i32.const [3928176]
+008b2f14 i32.load [2, 0]
+008b2f17 i32.load [2, 92]
+008b2f1a local.get [3]
+008b2f1c local.get [4]
+008b2f1e f32.gt []
+008b2f1f i32.store8 [0, 0]
+008b2f22 i32.const [3928176]
+008b2f27 i32.load [2, 0]
+008b2f2a i32.load [2, 92]
+008b2f2d local.get [0]
+008b2f2f i32.load8_u [0, 36]
+008b2f32 i32.store8 [0, 8]
+008b2f35 local.get [1]
+008b2f37 i32.const [0]
+008b2f39 call [1213] ; Screen.get_width
+008b2f3c f32.convert_i32_s []
+008b2f3d i32.const [0]
+008b2f3f call [1173] ; Screen.get_height
+008b2f42 f32.convert_i32_s []
+008b2f43 f32.div []
+008b2f44 f32.store [2, 12]
+008b2f47 local.get [1]
+008b2f49 i32.const [12]
+008b2f4b i32.add []
+008b2f4c i32.const [0]
+008b2f4e call [1247] ; Single.ToString
+008b2f51 local.set [2]
+008b2f53 i32.const [4103964] ; STRING "当前分辨率比值："
+008b2f58 i32.load [2, 0]
+008b2f5b local.get [2]
+008b2f5d i32.const [0]
+008b2f5f call [921] ; String.Concat
+008b2f62 local.set [2]
+008b2f64 i32.const [3930676]
+008b2f69 i32.load [2, 0]
+008b2f6c call [901] ; 
+008b2f6f local.get [2]
+008b2f71 i32.const [0]
+008b2f73 call [1062] ; Debug.Log
+008b2f76 local.get [0]
+008b2f78 local.get [0]
+008b2f7a call [8153] ; CanvasAdaptive.adaptive
+008b2f7d local.get [1]
+008b2f7f i32.const [16]
+008b2f81 i32.add []
+008b2f82 global.set [0]
+008b2f84 end []

@@ -1,0 +1,24 @@
+; Original class: ItemBase
+; Type4541.AddItem; wasmcode function 11726; offset=5739991 size=51
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(1, 127)]
+005795da  local.get [0]
+005795dc  call [2040] ; GlobalItemManager.get_Instance
+005795df  local.set [3]
+005795e1  local.get [0]
+005795e3  i32.load [2, 0]
+005795e6  local.set [2]
+005795e8  local.get [3]
+005795ea  local.get [0]
+005795ec  local.get [1]
+005795ee  local.get [2]
+005795f0  i32.const [48]
+005795f2  i32.add []
+005795f3  i32.load [2, 192]
+005795f7  local.get [2]
+005795f9  i32.load [2, 236]
+005795fd  global.set [3]
+005795ff  global.get [3]
+00579601  call_indirect [31, 0]
+00579604  local.get [0]
+00579606  call [12045] ; GlobalItemManager.AddRewards
+00579609  end []

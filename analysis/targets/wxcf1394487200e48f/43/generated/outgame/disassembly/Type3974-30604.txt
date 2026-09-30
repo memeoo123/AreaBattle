@@ -1,0 +1,218 @@
+; Original class: MineGameMain
+; Type3974.OnApplicationFocus; wasmcode function 18540; offset=8352481 size=649
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f72e4  global.get [0]
+007f72e6  i32.const [48]
+007f72e8  i32.sub []
+007f72e9  local.set [2]
+007f72eb  local.get [2]
+007f72ed  global.set [0]
+007f72ef  local.get [2]
+007f72f1  local.get [1]
+007f72f3  i32.store8 [0, 47]
+007f72f6  i32.const [5010122]
+007f72fb  i32.load8_u [0, 0]
+007f72fe  i32.eqz []
+007f72ff  if [-64]
+007f7301    i32.const [3989352]
+007f7306    call [900] ; 
+007f7309    i32.const [3928952]
+007f730e    call [900] ; 
+007f7311    i32.const [3929208]
+007f7316    call [900] ; 
+007f7319    i32.const [3953440]
+007f731e    call [900] ; 
+007f7321    i32.const [3953480]
+007f7326    call [900] ; 
+007f7329    i32.const [3930256]
+007f732e    call [900] ; 
+007f7331    i32.const [3932476]
+007f7336    call [900] ; 
+007f7339    i32.const [3935996]
+007f733e    call [900] ; 
+007f7341    i32.const [3926996]
+007f7346    call [900] ; 
+007f7349    i32.const [4018328]
+007f734e    call [900] ; 
+007f7351    i32.const [4018480]
+007f7356    call [900] ; 
+007f7359    i32.const [3941104]
+007f735e    call [900] ; 
+007f7361    i32.const [4105300] ; STRING "游戏失去焦点，开始上传数据"
+007f7366    call [900] ; 
+007f7369    i32.const [4064432] ; STRING "OnApplicationFocus："
+007f736e    call [900] ; 
+007f7371    i32.const [4104316] ; STRING "数据存储完成"
+007f7376    call [900] ; 
+007f7379    i32.const [4055232] ; STRING "GamePause"
+007f737e    call [900] ; 
+007f7381    i32.const [5010122]
+007f7386    i32.const [1]
+007f7388    i32.store8 [0, 0]
+007f738b  end []
+007f738c  i32.const [3928952]
+007f7391  i32.load [2, 0]
+007f7394  call [901] ; 
+007f7397  local.get [2]
+007f7399  i32.const [47]
+007f739b  i32.add []
+007f739c  i32.const [0]
+007f739e  call [1148] ; Boolean.ToString
+007f73a1  local.set [1]
+007f73a3  local.get [0]
+007f73a5  i32.const [4064432] ; STRING "OnApplicationFocus："
+007f73aa  i32.load [2, 0]
+007f73ad  local.get [1]
+007f73af  i32.const [0]
+007f73b1  call [921] ; String.Concat
+007f73b4  local.get [2]
+007f73b6  call [2125] ; MineGameMain.O{P^xr
+007f73b9  block [-64]
+007f73bb    i32.const [3935996]
+007f73c0    i32.load [2, 0]
+007f73c3    i32.load [2, 92]
+007f73c6    i32.load8_u [0, 0]
+007f73c9    i32.eqz []
+007f73ca    br_if [0]
+007f73cc    i32.const [3932476]
+007f73d1    i32.load [2, 0]
+007f73d4    call [901] ; 
+007f73d7    i32.const [4988221]
+007f73dc    i32.load8_u [0, 0]
+007f73df    i32.eqz []
+007f73e0    if [-64]
+007f73e2      i32.const [3932476]
+007f73e7      call [900] ; 
+007f73ea      i32.const [4988221]
+007f73ef      i32.const [1]
+007f73f1      i32.store8 [0, 0]
+007f73f4    end []
+007f73f5    i32.const [3932476]
+007f73fa    i32.load [2, 0]
+007f73fd    call [901] ; 
+007f7400    i32.const [3932476]
+007f7405    i32.load [2, 0]
+007f7408    i32.load [2, 92]
+007f740b    i32.load8_u [0, 28]
+007f740e    i32.eqz []
+007f740f    if [-64]
+007f7411      i32.const [3926996]
+007f7416      i32.load [2, 0]
+007f7419      i32.const [1]
+007f741b      call [909] ; 
+007f741e      local.set [1]
+007f7420      local.get [2]
+007f7422      local.get [2]
+007f7424      i32.load8_u [0, 47]
+007f7427      i32.const [1]
+007f7429      i32.xor []
+007f742a      i32.store8 [0, 46]
+007f742d      i32.const [3928952]
+007f7432      i32.load [2, 0]
+007f7435      local.get [2]
+007f7437      i32.const [46]
+007f7439      i32.add []
+007f743a      call [910] ; 
+007f743d      local.set [3]
+007f743f      local.get [1]
+007f7441      local.get [3]
+007f7443      call [905] ; 
+007f7446      local.get [1]
+007f7448      local.get [3]
+007f744a      i32.store [2, 16]
+007f744d      i32.const [4055232] ; STRING "GamePause"
+007f7452      i32.load [2, 0]
+007f7455      local.get [1]
+007f7457      i32.const [0]
+007f7459      call [1230] ; MsgDispatcher.SendMessage
+007f745c    end []
+007f745d    local.get [2]
+007f745f    i32.load8_u [0, 47]
+007f7462    br_if [0]
+007f7464    block [-64]
+007f7466      i32.const [0]
+007f7468      call [1143] ; GameModule.get_UI
+007f746b      i32.const [4018328]
+007f7470      i32.load [2, 0]
+007f7473      call [1503] ; 
+007f7476      i32.eqz []
+007f7477      br_if [0]
+007f7479      i32.const [3953440]
+007f747e      i32.load [2, 0]
+007f7481      call [935] ; 
+007f7484      i32.load [2, 8]
+007f7487      i32.const [6]
+007f7489      i32.ne []
+007f748a      br_if [0]
+007f748c      i32.const [3953480]
+007f7491      i32.load [2, 0]
+007f7494      call [935] ; 
+007f7497      i32.load8_u [0, 8]
+007f749a      br_if [0]
+007f749c      i32.const [0]
+007f749e      call [1143] ; GameModule.get_UI
+007f74a1      i32.const [3989352]
+007f74a6      i32.load [2, 0]
+007f74a9      call [1032] ; 
+007f74ac      i32.const [4018480]
+007f74b1      i32.load [2, 0]
+007f74b4      call [1367] ; 
+007f74b7      drop []
+007f74b8    end []
+007f74b9    i32.const [3926996]
+007f74be    i32.load [2, 0]
+007f74c1    i32.const [1]
+007f74c3    call [909] ; 
+007f74c6    local.set [1]
+007f74c8    local.get [1]
+007f74ca    i32.const [4105300] ; STRING "游戏失去焦点，开始上传数据"
+007f74cf    i32.load [2, 0]
+007f74d2    call [905] ; 
+007f74d5    local.get [1]
+007f74d7    i32.const [4105300] ; STRING "游戏失去焦点，开始上传数据"
+007f74dc    i32.load [2, 0]
+007f74df    i32.store [2, 16]
+007f74e2    i32.const [3929208]
+007f74e7    i32.load [2, 0]
+007f74ea    call [901] ; 
+007f74ed    local.get [2]
+007f74ef    i64.const [4575657221408423936]
+007f74f9    i64.store [3, 32]
+007f74fc    local.get [2]
+007f74fe    i64.const [4575657221408423936]
+007f7508    i64.store [3, 16]
+007f750b    local.get [2]
+007f750d    i64.const [1065353216]
+007f7513    i64.store [3, 24]
+007f7516    local.get [2]
+007f7518    i64.const [1065353216]
+007f751e    i64.store [3, 8]
+007f7521    local.get [2]
+007f7523    i32.const [8]
+007f7525    i32.add []
+007f7526    local.get [1]
+007f7528    i32.const [0]
+007f752a    call [1867] ; CLog.LogByColor
+007f752d    i32.const [3941104]
+007f7532    i32.load [2, 0]
+007f7535    call [901] ; 
+007f7538    i32.const [0]
+007f753a    call [1820] ; UserDataPrefs.OnSave
+007f753d    i32.const [3930256]
+007f7542    i32.load [2, 0]
+007f7545    call [901] ; 
+007f7548    i32.const [0]
+007f754a    call [1309] ; DataManagerPool.get_Instance
+007f754d    i32.const [0]
+007f754f    call [2323] ; DataManagerPool.SaveData
+007f7552    local.get [0]
+007f7554    i32.const [4104316] ; STRING "数据存储完成"
+007f7559    i32.load [2, 0]
+007f755c    local.get [2]
+007f755e    call [2125] ; MineGameMain.O{P^xr
+007f7561  end []
+007f7562  local.get [2]
+007f7564  i32.const [48]
+007f7566  i32.add []
+007f7567  global.set [0]
+007f7569  end []

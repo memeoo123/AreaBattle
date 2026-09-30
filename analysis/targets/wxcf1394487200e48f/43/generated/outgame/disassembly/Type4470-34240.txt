@@ -1,0 +1,16 @@
+; Original class: LevelRankControl
+; Type4470.GetPlayerScore; wasmcode1 function 58382; offset=19092774 size=25
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+01235527  local.get [0]
+01235529  i32.load [2, 16]
+0123552c  i32.load [2, 20]
+0123552f  i32.const [16]
+01235531  i32.const [20]
+01235533  local.get [1]
+01235535  i32.const [2]
+01235537  i32.eq []
+01235538  select []
+01235539  i32.add []
+0123553a  i32.load [2, 0]
+0123553d  return []
+0123553e  end []

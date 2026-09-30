@@ -1,0 +1,58 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "ordinaryMarkers": {
+    "blue": "CAB-68a3634b9a99c5a2a10a36b772e4e945:6112431770738899461",
+    "red": "CAB-68a3634b9a99c5a2a10a36b772e4e945:7197884350226120440",
+    "parent": "Bastion/objEffectRoot, parent local TRS identity",
+    "modeConsumer": "Tower.Update f6993@0x289f16..0x289fb1 reads SkillControl.field100. mode0 hides both; mode1 enables blue for player camp; mode2 enables red for nonplayer camp; other branches do not actively hide. SkillControl down f15938 targetType0→1,2→2,8→3; up f15937 clears0.",
+    "sourceAnimation": "Original Animation default/autoplay and hdzd_saojian_ani preserved; no inferred tween replacement."
+  },
+  "showMyCampEffect": {
+    "function": "LevelControl.ShowMyCampEffect f4973, generated/guide-presentation-tween-helpers.json",
+    "filter": "Enumerates LevelControl+56 dictionary; value.Camp(+20)==PlayerCampID and value.Transform(+16) is a nonnull Unity Object. No additional tower.Active filter appears in this caller.",
+    "position": "Transform.position",
+    "effect": 107,
+    "config": {
+      "res": "hdzd_effect_yindao_03",
+      "duration": 3,
+      "type": 3
+    },
+    "parent": null,
+    "sortingLayer": "LayerMask.NameToLayer(\"Default\") f7116",
+    "effectOrder": -20,
+    "showSignature": {
+      "class": "GFRunning.EffectModule",
+      "method": "Show",
+      "token": "0x06001166",
+      "function": 2596,
+      "parameterNames": [
+        "templId",
+        "pos",
+        "parent",
+        "effectSortingLayer",
+        "effectOrder"
+      ]
+    },
+    "sourceRoot": "CAB-cfe20b2df2a68585abca3f6dfada43e5:404227533793537550",
+    "sourceRootTRS": "position(0,0,-1.5), identity rotation, scale1; passed world position overrides prefab position; caller does not override rotation/scale.",
+    "guideTriggers": [
+      1,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "guideCaller": "GuideUI.OnOK f11888@0x58bc61..0x58bd0b"
+  },
+  "manifest": "generated/resource-snapshots/skill-effects-20260928/prepared-markers/native-import.json",
+  "runtimeKeys": [
+    "Recovered/SkillEffects/hero_sanjiao_blue",
+    "Recovered/SkillEffects/hero_sanjiao_red",
+    "Recovered/SkillEffects/hdzd_effect_yindao_03"
+  ],
+  "importer": "RecoveredSkillEffectImporter.Import third prepared-markers manifest",
+  "status": "prepared; Unity import and consumer runtime validation pending root unified build"
+}

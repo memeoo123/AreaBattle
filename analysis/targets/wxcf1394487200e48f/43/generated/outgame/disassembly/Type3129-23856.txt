@@ -1,0 +1,80 @@
+; Original class: AssetBundleManager
+; Type3129.sbee; wasmcode function 13172; offset=6305577 size=244
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 127)]
+0060372c  i32.const [4988570]
+00603731  i32.load8_u [0, 0]
+00603734  i32.eqz []
+00603735  if [-64]
+00603737    i32.const [3911576]
+0060373c    call [900] ; 
+0060373f    i32.const [3928344]
+00603744    call [900] ; 
+00603747    i32.const [3932344]
+0060374c    call [900] ; 
+0060374f    i32.const [3936516]
+00603754    call [900] ; 
+00603757    i32.const [3927284]
+0060375c    call [900] ; 
+0060375f    i32.const [3940520]
+00603764    call [900] ; 
+00603767    i32.const [4044964] ; STRING "AssetBundleManager"
+0060376c    call [900] ; 
+0060376f    i32.const [4988570]
+00603774    i32.const [1]
+00603776    i32.store8 [0, 0]
+00603779  end []
+0060377a  i32.const [3927284]
+0060377f  i32.load [2, 0]
+00603782  i32.const [1]
+00603784  call [909] ; 
+00603787  local.set [0]
+00603789  i32.const [3911576]
+0060378e  i32.load [2, 0]
+00603791  local.set [1]
+00603793  i32.const [3940520]
+00603798  i32.load [2, 0]
+0060379b  call [901] ; 
+0060379e  local.get [1]
+006037a0  i32.const [0]
+006037a2  call [912] ; Type.GetTypeFromHandle
+006037a5  local.set [1]
+006037a7  local.get [0]
+006037a9  local.get [1]
+006037ab  call [905] ; 
+006037ae  local.get [0]
+006037b0  local.get [1]
+006037b2  i32.store [2, 16]
+006037b5  i32.const [3932344]
+006037ba  i32.load [2, 0]
+006037bd  call [903] ; 
+006037c0  local.set [1]
+006037c2  local.get [1]
+006037c4  i32.const [4044964] ; STRING "AssetBundleManager"
+006037c9  i32.load [2, 0]
+006037cc  local.get [0]
+006037ce  i32.const [0]
+006037d0  call [2696] ; GameObject..ctor
+006037d3  i32.const [3928344]
+006037d8  i32.load [2, 0]
+006037db  call [901] ; 
+006037de  i32.const [3928344]
+006037e3  i32.load [2, 0]
+006037e6  i32.load [2, 92]
+006037e9  local.get [1]
+006037eb  i32.store [2, 36]
+006037ee  i32.const [3928344]
+006037f3  i32.load [2, 0]
+006037f6  i32.load [2, 92]
+006037f9  drop []
+006037fa  i32.const [3928344]
+006037ff  i32.load [2, 0]
+00603802  i32.load [2, 92]
+00603805  i32.load [2, 36]
+00603808  local.set [0]
+0060380a  i32.const [3936516]
+0060380f  i32.load [2, 0]
+00603812  call [901] ; 
+00603815  local.get [0]
+00603817  i32.const [0]
+00603819  call [1111] ; Object.DontDestroyOnLoad
+0060381c  end []

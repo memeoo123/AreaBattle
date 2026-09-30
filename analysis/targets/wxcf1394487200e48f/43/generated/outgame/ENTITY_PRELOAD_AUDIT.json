@@ -1,0 +1,43 @@
+{
+  "atUtc": "2026-09-30T07:21:11.890389+00:00",
+  "status": "source-branches-implemented-host-composition-pending",
+  "sourceEvidence": "PREFAB_LOADER_SOURCE_EVIDENCE.json",
+  "productionFiles": [
+    "OutgameLoadPrefabControl.cs",
+    "OutgameCoreControllerBindings.cs",
+    "OutgamePrefabCache.cs"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T07:21:11.890389+00:00",
+    "scope": "LoadPrefabControl entity acquisition/template preparation/shared preload queues, native bundle pool reuse/deferred destruction",
+    "checksPassed": 729,
+    "nativePlayModeChecks": 13,
+    "nativeRequests": 5,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Concrete LevelControl/PlayerControl/loading-page preload host, remaining30 controller lifecycles, Main/account/full outgame Player or original remote services",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameEntityPoolPlayModeValidation.Run"
+    ]
+  },
+  "findings": [
+    "EntityRoot corrected from Transform to original GameObject field type16505 -> Type6826. Per-id roots are parented with worldPositionStays=true and then positioned at world zero; existing null roots are not replaced.",
+    "GetEntity/GetEntityNow reuse by activeSelf; newly instantiated entities enter cache before root lookup/parent/name and activation. Name is config AssetName + underscore + child count, verified by ExtesionMethod cctor/signEnumToStr/IntToString.",
+    "Destroyed-entry removal still increments index, so shifted idle object is skipped for that request. GetEntityNow misses return null after scheduling only template loading.",
+    "PrepareEntity warms native templates without creating instances. Entity template loader Adds only absent keys, unlike LoadAsset replacement; successful reload of present null cache calls back but leaves cache null.",
+    "Source31577 success resets only a local variable. Failure writes the unchanged count then requeues when count<=3; default count0 can retry indefinitely. No invented retry cap/increment added. Bounded test verifies repeated pending work then seeds count4 to exercise terminal log/no callback.",
+    "PrepareStart cancels next background preload, resets shared cursor, rebuilds shared list and prepares serially. Each success increments cursor, resets loading UI float44 and continues; UI failure preserves advanced cursor. PreLoad sets gate true, leaves cursor unchanged, advances callback-local index, and checks gate before next item.",
+    "Preload list is fixed1,10,11,12,13,14,15,101,9033,9034 then positive unique player skin/random skin per star, boss821, obstacle EnityID. Repeated source LevelControl getter reads retained. Generic instantiation table72592 independently verified against Level/Player/UI parent contexts.",
+    "Native PlayMode proves cold template preparation, native pool naming/parent/activeSelf reuse and deferred9033 root/child destruction; original entity11001 and main EntityRoot survive selective clear. Uses rebuilt original native assets with local file patch URLs.",
+    "New native harness initial launch occurred before its file was saved due generator assertion; preserved entity-pool-native-missing-harness.log. Fixed harness generator and ran successfully; no production change required."
+  ],
+  "remaining": [
+    "Supply IOutgamePrefabPreloadHost from actual LevelControl4107, PlayerControl4462 and loading page in production composition. Current optional dependency is not a noop fallback; calling preload without it fails.",
+    "Finish remaining30 controller lifecycles and all pending Main/account/UI/service graph; complete full outgame persistence/restart/failure/Player acceptance."
+  ],
+  "sourceMethods": 52,
+  "resolvedGenericUsages": 19,
+  "disassembledMethodMapCount": 4565
+}

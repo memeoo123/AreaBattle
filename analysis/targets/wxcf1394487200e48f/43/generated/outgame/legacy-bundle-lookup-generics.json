@@ -1,0 +1,119 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3959612,
+      "encodedUsage": "0xc0008329",
+      "methodSpecIndex": 16788,
+      "methodSpecAddress": 684464,
+      "methodSpec": [
+        10530,
+        1039,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "TryGetValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3127,
+            "name": "LoadedAssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958528,
+      "encodedUsage": "0xc0008113",
+      "methodSpecIndex": 16521,
+      "methodSpecAddress": 681260,
+      "methodSpec": [
+        10530,
+        934,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "TryGetValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x1d0000",
+            "data": 3556452,
+            "name": null
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3960452,
+      "encodedUsage": "0xc0001a43",
+      "methodSpecIndex": 3361,
+      "methodSpecAddress": 523340,
+      "methodSpec": [
+        10530,
+        333,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "TryGetValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

@@ -1,0 +1,58 @@
+; Original class: Util
+; Type3196.DataParse; wasmcode function 1682; offset=547086 size=171
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+00085911  i32.const [5011021]
+00085916  i32.load8_u [0, 0]
+00085919  i32.eqz []
+0008591a  if [-64]
+0008591c    i32.const [3929208]
+00085921    call [900] ; 
+00085924    i32.const [3959700]
+00085929    call [900] ; 
+0008592c    i32.const [3918660]
+00085931    call [900] ; 
+00085934    i32.const [3926996]
+00085939    call [900] ; 
+0008593c    i32.const [4088532] ; STRING "get callback data: "
+00085941    call [900] ; 
+00085944    i32.const [5011021]
+00085949    i32.const [1]
+0008594b    i32.store8 [0, 0]
+0008594e  end []
+0008594f  i32.const [3926996]
+00085954  i32.load [2, 0]
+00085957  i32.const [1]
+00085959  call [909] ; 
+0008595c  local.set [1]
+0008595e  i32.const [4088532] ; STRING "get callback data: "
+00085963  i32.load [2, 0]
+00085966  local.get [0]
+00085968  i32.const [0]
+0008596a  call [921] ; String.Concat
+0008596d  local.set [2]
+0008596f  local.get [1]
+00085971  local.get [2]
+00085973  call [905] ; 
+00085976  local.get [1]
+00085978  local.get [2]
+0008597a  i32.store [2, 16]
+0008597d  i32.const [3929208]
+00085982  i32.load [2, 0]
+00085985  call [901] ; 
+00085988  local.get [1]
+0008598a  i32.const [0]
+0008598c  call [1069] ; CLog.Log
+0008598f  i32.const [3918660]
+00085994  i32.load [2, 0]
+00085997  call [903] ; 
+0008599a  i32.const [3959700]
+0008599f  i32.load [2, 0]
+000859a2  call [951] ; 
+000859a5  local.get [0]
+000859a7  i32.const [0]
+000859a9  call [7656] ; Json.Deserialize
+000859ac  i32.const [3918660]
+000859b1  i32.load [2, 0]
+000859b4  call [924] ; 
+000859b7  return []
+000859b8  end []

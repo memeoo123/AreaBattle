@@ -1,0 +1,619 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.0/staging' branch; Version is '6000.0.68f1 (e1e9baaf294b) revision 14805434'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 65325 MB
+[Licensing::IpcConnector] Channel LicenseClient-jiachengwei doesn't exist
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T06:28:42Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 55180)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Unity.exe
+-batchmode
+-accept-apiupdate
+-projectPath
+E:/Projects/AreaBattle/UnityProject
+-executeMethod
+AreaBattle.EditorTools.RecoveredHudImporter.ImportTopInfoBatch
+-logFile
+E:/Projects/AreaBattle/analysis/top-info-import.log
+Successfully changed project path to: E:/Projects/AreaBattle/UnityProject
+E:/Projects/AreaBattle/UnityProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [64880]  Target information:
+
+Player connection [64880]  * "[IP] 192.168.12.13 [Port] 55506 [Flags] 2 [Guid] 2599752644 [EditorId] 2599752644 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H2NB5JD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [64880] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [64880] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jiachengwei" at "2026-09-30T06:28:42.7843272Z"
+[Package Manager] Connected to IPC stream "Upm-53620" after 0.2 seconds.
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.68f1 (e1e9baaf294b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Projects/AreaBattle/UnityProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.15.8180
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Code 3 while verifying Licensing Client signature (process Id: 55180, path: "C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              f0b13e414430447ea4e8a5baf1cac84d
+  Correlation Id:          ef8f088fa73f3556e8e6a9f77be6267f
+  External correlation Id: 9184248818703821941
+  Machine Id:              9cQkwGhPtCyHx8hTJUSXA0S3txg=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jiachengwei" (connect: 0.25s, validation: 0.05s, handshake: 2.95s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jiachengwei-notifications" at "2026-09-30T06:28:45.7846653Z"
+[Licensing::Module] Connected to LicensingClient (PId: 55180, launch time: 0.00, total connection time: 3.25s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 00-0000-0000-0000-0000-XXXX
+  Product: Unity Pro
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 3.26s
+[Licensing::Module] Licensing is initialized (took 2.63s).
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 2.629974 seconds.
+- Loaded All Assemblies, in  2.868 seconds
+Native extension for Android target not found
+Unauthorized device detected, Id: 7afd45a, please add debug authorization and reconnect.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,string,object[])
+UnityEngine.Debug:LogFormat (string,object[])
+UnityEditor.Android.AndroidDeploymentTargetsExtension:GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext,UnityEditor.ProgressHandler) (at /home/bokken/build/output/unity/unity/PlatformDependent/AndroidPlayer/Editor/Managed/DeploymentTargets/AndroidDeploymentTargetsExtension.cs:397)
+UnityEditor.Android.TargetScanWorker:ScanSync () (at /home/bokken/build/output/unity/unity/PlatformDependent/AndroidPlayer/Editor/Managed/TargetScanWorker.cs:164)
+UnityEditor.Android.TargetExtension:OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[]) (at /home/bokken/build/output/unity/unity/PlatformDependent/AndroidPlayer/Editor/Managed/ExtensionModule.cs:106)
+UnityEditor.Android.TargetExtension:OnLoad () (at /home/bokken/build/output/unity/unity/PlatformDependent/AndroidPlayer/Editor/Managed/ExtensionModule.cs:67)
+UnityEditor.Modules.ModuleManager:InitializePlatformSupportModules ()
+
+(Filename: /home/bokken/build/output/unity/unity/PlatformDependent/AndroidPlayer/Editor/Managed/DeploymentTargets/AndroidDeploymentTargetsExtension.cs Line: 397)
+
+Android Extension - Scanning For ADB Devices 79 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.293 seconds
+Domain Reload Profiling: 3159ms
+	BeginReloadAssembly (81ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (2658ms)
+	LoadAllAssembliesAndSetupDomain (97ms)
+		LoadAssemblies (80ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (95ms)
+			TypeCache.Refresh (94ms)
+				TypeCache.ScanAssembly (86ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (293ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (272ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (131ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (69ms)
+			ProcessInitializeOnLoadMethodAttributes (36ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+Package Manager log level set to [2]
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 36 packages:
+  Built-in packages:
+    com.unity.ugui@2.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.ugui@cec3688a7c38)
+    com.unity.multiplayer.center@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546)
+    com.unity.modules.accessibility@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.ai@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.hierarchycore)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/Projects/AreaBattle/UnityProject
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 1s342ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[210/213    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+*** Tundra requires additional run (1.32 seconds), 1 items updated, 209 evaluated
+Starting: C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\Tools\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: E:/Projects/AreaBattle/UnityProject
+ExitCode: 0 Duration: 0s160ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: E:/Projects/AreaBattle/UnityProject
+ExitCode: 0 Duration: 1s249ms
+Finished compiling graph: 216 nodes, 1871 flattened edges (1751 ToBuild, 20 ToUse), maximum node priority 104
+[166/213    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[207/213    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\AreaBattle\Scripts\OutgameFlyRuntime.cs(10,59): warning CS0108: 'OutgameFlyRuntime.animation' hides inherited member 'Component.animation'. Use the new keyword if hiding was intended.
+
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\EditorSkeletonPlayer.cs(57,51): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\Following\BoundingBoxFollower.cs(167,7): warning CS0618: 'Collider2D.usedByComposite' is obsolete: 'usedByComposite has been deprecated. Use Collider2D.compositeOperation instead'
+
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\Following\BoundingBoxFollowerGraphic.cs(168,7): warning CS0618: 'Collider2D.usedByComposite' is obsolete: 'usedByComposite has been deprecated. Use Collider2D.compositeOperation instead'
+
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\SkeletonUtility\SkeletonUtility.cs(126,5): warning CS0618: 'Rigidbody2D.isKinematic' is obsolete: 'Please use Rigidbody2D.bodyType instead.'
+
+Assets\AreaBattle\Scripts\OutgameLegacyPrefabResource.cs(9,46): warning CS0414: The field 'OutgameLegacyPrefabResource.sprite' is assigned but its value is never used
+
+Assets\AreaBattle\Scripts\OutgameLegacyPrefabResource.cs(9,28): warning CS0414: The field 'OutgameLegacyPrefabResource.mainObject' is assigned but its value is never used
+[208/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[209/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[210/213    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[211/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[212/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.24 seconds), 7 items updated, 213 evaluated
+Assets\AreaBattle\Scripts\OutgameFlyRuntime.cs(10,59): warning CS0108: 'OutgameFlyRuntime.animation' hides inherited member 'Component.animation'. Use the new keyword if hiding was intended.
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\EditorSkeletonPlayer.cs(57,51): warning CS0618: 'Object.FindObjectsOfType<T>()' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\Following\BoundingBoxFollower.cs(167,7): warning CS0618: 'Collider2D.usedByComposite' is obsolete: 'usedByComposite has been deprecated. Use Collider2D.compositeOperation instead'
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\Following\BoundingBoxFollowerGraphic.cs(168,7): warning CS0618: 'Collider2D.usedByComposite' is obsolete: 'usedByComposite has been deprecated. Use Collider2D.compositeOperation instead'
+Assets\AreaBattle\ThirdParty\Spine41\spine-unity\Components\SkeletonUtility\SkeletonUtility.cs(126,5): warning CS0618: 'Rigidbody2D.isKinematic' is obsolete: 'Please use Rigidbody2D.bodyType instead.'
+Assets\AreaBattle\Scripts\OutgameLegacyPrefabResource.cs(9,46): warning CS0414: The field 'OutgameLegacyPrefabResource.sprite' is assigned but its value is never used
+Assets\AreaBattle\Scripts\OutgameLegacyPrefabResource.cs(9,28): warning CS0414: The field 'OutgameLegacyPrefabResource.mainObject' is assigned but its value is never used
+AssetDatabase: script compilation time: 3.055928s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.326 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.253 seconds
+Domain Reload Profiling: 578ms
+	BeginReloadAssembly (245ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (33ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (124ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (33ms)
+		LoadAssemblies (67ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (16ms)
+			BuildScriptInfoCaches (4ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (253ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (168ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (69ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=52917a750e6696f45a26a1178eb66a28): Total: 3.825 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=373 ms
+		Asset DB Callback time: managed=53 ms, native=7 ms
+		Scripting: domain reloads=1, domain reload time=326 ms, compile time=3057 ms, other=6 ms
+		Project Asset Count: scripts=347, non-scripts=2125
+		Asset File Changes: new=2, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 6.821ms
+	ApplyChangesToAssetFolders: 0.348ms
+	Scan: 55.050ms
+	OnSourceAssetsModified: 0.512ms
+	CategorizeAssetsWithTransientArtifact: 1.973ms
+	ProcessAssetsWithTransientArtifactChanges: 7.417ms
+	CategorizeAssets: 9.806ms
+	ImportOutOfDateAssets: 254.485ms (-2803.018ms without children)
+		CompileScripts: 3057.080ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.067ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.170ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.185ms
+	PostProcessAllAssets: 53.506ms
+	Hotreload: 0.873ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.002ms
+	UnloadStreamsBegin: 0.242ms
+	PersistCurrentRevisions: 0.058ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 0.783ms
+	Untracked: 3433.829ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 5.576ms
+Initializing Unity extensions:
+Assertion failed on expression: 'SUCCEEDED(hr)'
+Assertion failed on expression: 'SUCCEEDED(hr)'
+Assertion failed on expression: 'ERROR_SUCCESS == status'
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-AreaBattle
+Curl error 7: Failed to connect to config.uca.cloud.unity3d.com port 443 after 2 ms: Could not connect to server
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 895 unused Assets / (2.5 MB). Loaded Objects now: 1430.
+Memory consumption went from 106.1 MB to 103.6 MB.
+Total: 3.739700 ms (FindLiveObjects: 0.060500 ms CreateObjectMapping: 0.019100 ms MarkObjects: 2.806600 ms  DeleteObjects: 0.853000 ms)
+
+Asset Pipeline Refresh (id=4b720ac5c91563343a8419606b7a096a): Total: 0.010 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Textures/CAB-71a96badbcffab7b7451a783f271bc4b_2026805924299331817/YD.png using Guid(04c8c611faa238c4daf9028c4f06ec0a) (TextureImporter) -> (artifact id: '7144806e1d470b86d59763a9afce1998') in 0.0523964 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=7e7f71b381398bc468cfc3d1ae8c251f): Total: 0.067 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Textures/CAB-71a96badbcffab7b7451a783f271bc4b_2026805924299331817/YD.png using Guid(04c8c611faa238c4daf9028c4f06ec0a) (TextureImporter) -> (artifact id: '7144806e1d470b86d59763a9afce1998') in 0.0461135 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2a1be93e5e48c514cb9cb79cedb45709): Total: 0.051 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Spine/CAB-71a96badbcffab7b7451a783f271bc4b_435856469966727484.txt using Guid(416b31bbe4f2653409abae32f1f49b09) (TextScriptImporter) -> (artifact id: '7ae6c84b3c7b665ea6338bb711bc4f75') in 0.0011299 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=955caa397a122ce4a8d116e4325e48f4): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Textures/CAB-71a96badbcffab7b7451a783f271bc4b_-7791903411662756124/YD_2.png using Guid(3479ad8d8553dbf4a9eaabee610f7fc5) (TextureImporter) -> (artifact id: '9d780a7f3b91ea85c38808d68d885949') in 0.0124446 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=59d125c784eb1e74a9c2ac1ab3ed3e24): Total: 0.017 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Textures/CAB-71a96badbcffab7b7451a783f271bc4b_-7791903411662756124/YD_2.png using Guid(3479ad8d8553dbf4a9eaabee610f7fc5) (TextureImporter) -> (artifact id: '9d780a7f3b91ea85c38808d68d885949') in 0.0114646 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=dd81bd7f33f2b47429081e8e80b4f870): Total: 0.016 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Spine/CAB-71a96badbcffab7b7451a783f271bc4b_5200670246001647623.txt using Guid(fc943b415feb09c43866392db5d9568e) (TextScriptImporter) -> (artifact id: 'a5035b6a37cd47acd2ffa664f485e20a') in 0.001048 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bfe6da4963081fb408ca2cc272b71731): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Meshes/CAB-71a96badbcffab7b7451a783f271bc4b_-2780960743001050164.asset using Guid(7414d633902f4754aa651723b4868d95) (NativeFormatImporter) -> (artifact id: 'ac530c10a0b7277f043abd3ac8dacf60') in 0.0010842 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1851c95be6a14e2418e60c571ea43aed): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Materials/CAB-71a96badbcffab7b7451a783f271bc4b_-7672899569522605211.mat using Guid(fc641687867d0e545a80a6a58102e6cf) (NativeFormatImporter)Main Object Name 'YD_YD' does not match filename 'CAB-71a96badbcffab7b7451a783f271bc4b_-7672899569522605211'
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:ImportNativeResource (AreaBattle.EditorTools.RecoveredGuideSpineImporter/Resource,string,System.Type) (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:128)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:65)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 128]
+
+ -> (artifact id: 'ddd6bafd0f776b6ccfe5a060788f9ae9') in 0.0017643 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=57b7e7b1952b1ca46a5552e9cf9a7536): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Materials/CAB-71a96badbcffab7b7451a783f271bc4b_-7572599234430709561.mat using Guid(fed2e73817d751a47a923e0a757d2d05) (NativeFormatImporter)Main Object Name 'YD_YD_2' does not match filename 'CAB-71a96badbcffab7b7451a783f271bc4b_-7572599234430709561'
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:ImportNativeResource (AreaBattle.EditorTools.RecoveredGuideSpineImporter/Resource,string,System.Type) (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:128)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:65)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 128]
+
+ -> (artifact id: '39adc3b7e0fc6ff9640ed38cc0df2929') in 0.0011339 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=cfc38a58b2a454e41be3f7bd682ddaf9): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Spine/CAB-71a96badbcffab7b7451a783f271bc4b_-1778157884270872766.asset using Guid(e5d72c94728ecf94b8781b24c65bead5) (NativeFormatImporter)Main Object Name 'YD_Atlas' does not match filename 'CAB-71a96badbcffab7b7451a783f271bc4b_-1778157884270872766'
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:ImportNativeResource (AreaBattle.EditorTools.RecoveredGuideSpineImporter/Resource,string,System.Type) (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:128)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:77)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 128]
+
+ -> (artifact id: '1c848d1e2bd5d1a9ce3b25dcd41adfa0') in 0.0015187 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=3f950acb7d4de0443adc8ec60f422141): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=429ade5c340b367468b234f8d5fd893c): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/Spine/CAB-71a96badbcffab7b7451a783f271bc4b_5262709187943515980.asset using Guid(e7401860532b0eb4d935e048f849e34f) (NativeFormatImporter)Main Object Name 'YD_SkeletonData' does not match filename 'CAB-71a96badbcffab7b7451a783f271bc4b_5262709187943515980'
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:ImportNativeResource (AreaBattle.EditorTools.RecoveredGuideSpineImporter/Resource,string,System.Type) (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:128)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:77)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 128]
+
+ -> (artifact id: '84e82761e1a71c03efc5053900db5e8d') in 0.0017385 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=33a2fa9392c14af44a830b52295650ec): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=051e1c078b77aaf45aec93cfa271764c): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/YD_0.prefab using Guid(aaea5a43043e33644ad6a203858e23f4) (PrefabImporter) -> (artifact id: '04bbb4b9b6e4cefbc63ae43c9ba56858') in 0.0037858 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=36860a7bfe3d3174e9cef020aa59eb67): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+ConsistencyChecker - guid: aaea5a43043e33644ad6a203858e23f4, dependenciesHash.value: 4959ef41442e846ab5bb32d971216e6d, artifactid: 04bbb4b9b6e4cefbc63ae43c9ba56858, producedFiles[0].extension: , producedFiles[0].contentHash: 0ab9e8c5e5390f76c183630612bbc88a
+ConsistencyChecker - guid: aaea5a43043e33644ad6a203858e23f4, dependenciesHash.value: 4959ef41442e846ab5bb32d971216e6d, artifactid: 86f2c2be509966b8ecebcfe0f49d9241, producedFiles[0].extension: , producedFiles[0].contentHash: 37690ccc415a682ebecc9bc4be7d97aa
+Importer(PrefabImporter) generated inconsistent result for asset(guid:aaea5a43043e33644ad6a203858e23f4) "Assets/AreaBattle/Resources/Recovered/GuideSpine/YD_0.prefab"
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:83)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 83]
+
+Start importing Assets/AreaBattle/Resources/Recovered/GuideSpine/YD_0.prefab using Guid(aaea5a43043e33644ad6a203858e23f4) (PrefabImporter) -> (artifact id: '04bbb4b9b6e4cefbc63ae43c9ba56858') in 0.0013704 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f8f62264dd135eb4494b06294346d157): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+ConsistencyChecker - guid: aaea5a43043e33644ad6a203858e23f4, dependenciesHash.value: 4959ef41442e846ab5bb32d971216e6d, artifactid: 04bbb4b9b6e4cefbc63ae43c9ba56858, producedFiles[0].extension: , producedFiles[0].contentHash: 0ab9e8c5e5390f76c183630612bbc88a
+ConsistencyChecker - guid: aaea5a43043e33644ad6a203858e23f4, dependenciesHash.value: 4959ef41442e846ab5bb32d971216e6d, artifactid: 86f2c2be509966b8ecebcfe0f49d9241, producedFiles[0].extension: , producedFiles[0].contentHash: 37690ccc415a682ebecc9bc4be7d97aa
+Importer(PrefabImporter) generated inconsistent result for asset(guid:aaea5a43043e33644ad6a203858e23f4) "Assets/AreaBattle/Resources/Recovered/GuideSpine/YD_0.prefab"
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+AreaBattle.EditorTools.RecoveredGuideSpineImporter:Import () (at Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs:102)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportManifest (string,string,int,string) (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:143)
+AreaBattle.EditorTools.RecoveredHudImporter:ImportTopInfoBatch () (at Assets/AreaBattle/Editor/RecoveredHudImporter.cs:71)
+
+[Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs line 102]
+
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo using Guid(1ad1bd53ac33c8343a28e682af44a086) (DefaultImporter) -> (artifact id: '1dde2c45f4333f0be0f5151aed1d7108') in 0.0012634 seconds
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites using Guid(f5dedfa70fa4de745adf3f938eaa93fd) (DefaultImporter) -> (artifact id: '6dd7e27b063e8bf046bb68897818fc6c') in 0.0009476 seconds
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Fonts using Guid(7f470ee34df87c14eae7a8f9f0626223) (DefaultImporter) -> (artifact id: 'cb1775fd460d010525fb905f0e4038be') in 0.0007064 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=68b8669042c57d6438bb6302cd95cd3c): Total: 0.034 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5853751139883327423.png using Guid(88da92fd310ee734f8fd18839a1e609c) (TextureImporter) -> (artifact id: '59bac917770b3d233ac54cb9bd13222d') in 0.0019054 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1983ff2c317fcb74ca56f04a21301ef7): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5853751139883327423.png using Guid(88da92fd310ee734f8fd18839a1e609c) (TextureImporter) -> (artifact id: '89426faac1e67203f2a149c271b4991c') in 0.0020941 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=dd8745286b821734881db5f77416d8bc): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_3372530375804971773.png using Guid(ec0bd374b2d05a64f8217555d718e2fa) (TextureImporter) -> (artifact id: 'e40a19058e78e60161ab6e3df51d330c') in 0.002039 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=842fbf3a415a68e4fb04478c8a50ed7a): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_3372530375804971773.png using Guid(ec0bd374b2d05a64f8217555d718e2fa) (TextureImporter) -> (artifact id: '523ddd7b177502ddb36c8a21ddbfa76e') in 0.0021601 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=356b292c57c1ad6419b7dfbd6c88aff5): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_6229623910888829140.png using Guid(3f43006f4ff1011458a2e7e8c4c5fd9e) (TextureImporter) -> (artifact id: 'dc9eb5262c5d1429c4fad1a9eff97607') in 0.0020465 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=73e2721508836f548b8b7ec76cf4e8be): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_6229623910888829140.png using Guid(3f43006f4ff1011458a2e7e8c4c5fd9e) (TextureImporter) -> (artifact id: '097affd5920b60c18d926d93898cd628') in 0.0021221 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=edbc0c199e7e62149ab4e84abc926694): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_5852780606741034777.png using Guid(09d1dff944ffd844882b80c43e446958) (TextureImporter) -> (artifact id: 'ffb6c0998ea7d42314b4d377fde7e7fd') in 0.0024161 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=c79eff340f14b914588b8a0dbb5823f5): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_5852780606741034777.png using Guid(09d1dff944ffd844882b80c43e446958) (TextureImporter) -> (artifact id: '147e1584be76973a33d3b4d6820eee9f') in 0.0026937 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1020f647317489a4d946525bc0397667): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_2720706472938528916.png using Guid(25b0f8890d9fd764fb5ef5d7af8f6c02) (TextureImporter) -> (artifact id: '1b4f693847a33263fc83dcd231c0446b') in 0.0021538 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1052d101bfbc98d4ba8c885c99777369): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_2720706472938528916.png using Guid(25b0f8890d9fd764fb5ef5d7af8f6c02) (TextureImporter) -> (artifact id: '854da96c360d88618e8f70becb0e905b') in 0.0031792 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b554f94aabdaa634496f72d3bc7ef562): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-3310161222436784470.png using Guid(d8eca2f38c4ff7848b65407a6810b38d) (TextureImporter) -> (artifact id: '54ec6c235609be3bb08166035cc17848') in 0.0025281 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9ae1f0d1cf588a04b889d51f74ec1e9e): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-3310161222436784470.png using Guid(d8eca2f38c4ff7848b65407a6810b38d) (TextureImporter) -> (artifact id: '5550f820dbbc84be677183b703f818bc') in 0.0033765 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d2692cabe2c61e64c9dcc88f5053b394): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-4239473088066994772.png using Guid(d8c805d49afd8d64a9701d527eab48bd) (TextureImporter) -> (artifact id: '3d0dd979c858a0522b8ed0417d1a0006') in 0.0019366 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8a90a8447cdbb174895617b7135fd1ff): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-4239473088066994772.png using Guid(d8c805d49afd8d64a9701d527eab48bd) (TextureImporter) -> (artifact id: '18dd346978f8d2c0b7fd1aca1a9a678c') in 0.0022089 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=97d439460ef3596439afb386835ac7cb): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-2067149362258942805.png using Guid(3be087c22d0d196489cd3f03b09020f5) (TextureImporter) -> (artifact id: 'b6c9cb47fa583570b19b89e08f9c939f') in 0.0018593 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=eadbf3c395e21854c869fa43a8d0022e): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-2067149362258942805.png using Guid(3be087c22d0d196489cd3f03b09020f5) (TextureImporter) -> (artifact id: '2f3214472a7e645ee403aac08512c6c9') in 0.0019295 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=704ddc6c1dc73f54bafc65d01b936214): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5557301240740203688.png using Guid(f950b39fdd126e84a8d89b92cf2b92b0) (TextureImporter) -> (artifact id: 'aeff8b8dd1333cb3e80b80709ccbd513') in 0.0023623 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2d001315a3dc01f44bbb8277ceaf2c9f): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5557301240740203688.png using Guid(f950b39fdd126e84a8d89b92cf2b92b0) (TextureImporter) -> (artifact id: 'c72c92e4dd74ec05777e5b38a99ca685') in 0.0023919 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=57865c692106d4444bb19b7891e5fc5d): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5159291304696048613.png using Guid(b40524a31da1fd146a9512163be0e462) (TextureImporter) -> (artifact id: '4792022ad4513f8abbc8d58571663d2a') in 0.0020309 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=22200112198fc4d4ab34c7b03d011b9b): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5159291304696048613.png using Guid(b40524a31da1fd146a9512163be0e462) (TextureImporter) -> (artifact id: '01d7fb2c8e57b384c242a630b1003a4b') in 0.0021513 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=222f0648c07c6784997ee5b6b9c2ade6): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5034225749149788827.png using Guid(4355c04277fcb3a4f93de413100355db) (TextureImporter) -> (artifact id: '8942c5eba6053aecce93bcd7401114b8') in 0.0017804 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=765c3bf4727d6b1408fbaa451c0ba691): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Sprites/CAB-a79877fee73a97ed0be4eacb186a645b_-5034225749149788827.png using Guid(4355c04277fcb3a4f93de413100355db) (TextureImporter) -> (artifact id: '60554f8e203c803ff0f36388197b4da6') in 0.0019548 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=31e8d13e935442c42ab3eb06162acda7): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Fonts/CAB-a14f3eb3adf948afc8e578331928efaf_6544835752251692798.ttf using Guid(2ac5e9d2b0696bb42a603c30ed0fbb34) (TrueTypeFontImporter) -> (artifact id: 'd092e05a63cdf8169bedfd1b8520ce95') in 0.0032725 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=34e600ba733966d4caf76ca61a9afc9a): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Fonts/CAB-a14f3eb3adf948afc8e578331928efaf_-8154394059653640722.ttf using Guid(6201883ef87b4e9478808f4646a594eb) (TrueTypeFontImporter) -> (artifact id: '2d86b68f456d46aaeea8ef449ba37d4d') in 0.0052867 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b56a1d3e359f7dc4590032f549456d46): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/Fonts/CAB-a14f3eb3adf948afc8e578331928efaf_6544835752251692798.ttf using Guid(2ac5e9d2b0696bb42a603c30ed0fbb34) (TrueTypeFontImporter) -> (artifact id: 'd3b4760607d140dbf5737c8b229ffe38') in 0.0015929 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=55a8131b5b0203049bb504c92af7be92): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=7e5069e652630504b8b851c8a6d59833): Total: 0.016 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/TopInfoUI.prefab using Guid(04c7a86e5dcdded4eac790f720e17d18) (PrefabImporter) -> (artifact id: 'ddd596661570957d79196d6904a5b2ad') in 0.0052564 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9b9e882fb1f7e2a42af5199453288106): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/TopInfoUI.prefab using Guid(04c7a86e5dcdded4eac790f720e17d18) (PrefabImporter) -> (artifact id: 'd9a2eac8c5d17ff765d716a75aef70d6') in 0.0035662 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d5001ff71bad96d4ba94c1aa111af4af): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/TopInfo/hud-import.json using Guid(c500f0317f60f3e4094d6309e92f36db) (TextScriptImporter) -> (artifact id: '25cb98e3ed2e003395696ddfcfc687f2') in 0.0015816 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e6efd5b7e09a7684e95b2fec5a03365d): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backned.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-jiachengwei-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-jiachengwei channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790749731594,"processId":53620,"allocatedMemory":15073160,"memoryLabels":[{"Default":28597},{"Permanent":15356},{"NewDelete":70705},{"Thread":4230344},{"Manager":37786},{"VertexData":8},{"Geometry":816},{"VFX":-104},{"Texture":160},{"Shader":78795},{"Material":24},{"GfxDevice":55176},{"Animation":392},{"Audio":4040},{"Font":2882904},{"FreeType":11486},{"FontEngine":256},{"Physics":2081},{"Serialization":816},{"Input":14824},{"JobScheduler":33024},{"TextLib":160},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1624752},{"Resource":1304},{"Renderer":2928},{"Transform":4646},{"File":1016},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":43505},{"DynamicArray":89972},{"HashMap":62276},{"Utility":2662798},{"Curl":48},{"PoolAlloc":1768},{"AI":104},{"TypeTree":5005},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7888},{"Director":8240},{"CloudService":16272},{"WebRequest":808},{"VR":45969},{"SceneManager":496},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":1},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":384},{"Hierarchy":272},{"Gui":80},{"EditorUtility":26460},{"VersionControl":4},{"Undo":947},{"AssetDatabase":2440166},{"EditorGi":328},{"UnityConnect":24184},{"Upm":2036},{"DrivenProperties":72},{"LocalIPC":217},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2879},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

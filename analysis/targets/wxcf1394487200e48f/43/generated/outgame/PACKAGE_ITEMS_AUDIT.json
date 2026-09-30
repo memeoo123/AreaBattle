@@ -1,0 +1,40 @@
+{
+  "atUtc": "2026-09-30T11:24:27.663128+00:00",
+  "status": "all-nine-item-entities-package-random-and-real-chain-owner-composition-pending",
+  "sourceEvidence": "PACKAGE_ITEMS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T11:24:27.663128+00:00",
+    "scope": "Both package entities, weighted selection/nested effects, all nine factory constructors and real package->module/tool/storage flow",
+    "checksPassed": 1077,
+    "newIntegratedChecks": 14,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full owner/Main composition, original time-seeded RNG replay, SDK delivery or full outgame Player"
+  },
+  "implementedLifecycleControllers": 14,
+  "remainingLifecycleControllers": 24,
+  "findings": [
+    "PackageItemBase34300 and Auto34305 outer counter is unchecked Int32 compared after sign extension to Int64 requested count. Nonpositive count returns empty; no clamp or long counter substituted. Per iteration reads current config.GetPackageRewards(ItemConfig.paramInt), enumerates dictionary pairs.",
+    "Every package group creates fresh System.Random and calls virtual Next(0,10000), accepts roll<rewardRandom. Then gets current reward range list, skips if initially empty. For j<live rewardItemCount: GetRandomWeight, List.Remove(selected), generate quantity using shared RandomHelper.Random(min,max)=Next(min,unchecked(max+1)), set original rewardOrder. Removal affects returned list only, cached elements/config remain. No check for exhaustion inside pick loop; excess requested picks fail on empty selector.",
+    "Generic GetRandomWeight26203 body f10956 and lambda26209 f15316 resolved via original registration. Null list logs source text and returns null. Aggregate unchecked sum of weights; shared Random.Next(0,total); live indexed cumulative unchecked sum with strict roll<cumulative; fallback first row. Empty list reaches index0, zero weight sum falls back first, negative/overflow total passed to Random unchanged. No normalization or weight repair.",
+    "Base conversion creates reward rows without item-config lookup or nested expansion. Auto conversion looks up current Items[selected.Config.itemId], if type1==9 obtains current global.GetItem before quantity RNG, then calls nonnull entity virtual AddItem(count) immediately; no row appended for that nested item. Null nested entity still consumes quantity RNG. This is effectful conversion and nested effects can survive later failures. Virtual slot4 verified table2088->wasm14832 invoked by helper2866.",
+    "Package.Use34302 calls base ItemBase.Use first (message/report), then virtual ItemToReward, appends each returned row reference to current ItemManager.PackageOpenRewardsTemp via LinkedList.AddLast per iteration, then current global.AddRewardsByItemSelf(list). No implicit debit/save beyond downstream methods. Base Add/OnlyModel delegate base ItemBase and thus virtual reward conversion; Manual only inherits. Auto Add/OnlyModel use virtual Use(count), including model path host callbacks.",
+    "All nine original factory entity types now have concrete constructors. Removed AdditionalConstructors placeholder; unsupported source type2 values still return null in original factory selection. Default chance RNG creates System.Random per group; shared GameRandomSource remains one shared generator for weight and inclusive quantity. Golden tests inject deterministic RNG, not original time-seed reconstruction.",
+    "Next ownership evidence: GlobalItemManager.get_Instance34590 constructs and publishes singleton before invoking current ItemConfigMgr.InitMgr. This missing production ownership path is the next task; class constructor and failure/reentrancy semantics need source-backed composition. ItemConfigMgr.get_Instance alone does not initialize tables."
+  ],
+  "remaining": [
+    "Restore GlobalItemManager.get_Instance34590 owner: construct/publish global before current ItemConfigMgr.InitMgr, preserving failure/reentrancy and release/reset; compose config/record/rewards/factory/entity services into source-default legacy data manager startup. Then full UserInfo/CommanderUI/Dice/report owners and24 remaining controller lifecycles, full Main/account/menu/business flows and runnable outgame Player.",
+    "Full source GlobalItemManager singleton/owner composition not yet integrated into Main; standalone service tests explicitly initialize config/record.",
+    "Reporting/platform, full UserInfo/Dice/CommanderUI owners and24 controller lifecycles still incomplete.",
+    "No fresh native PlayMode or full outgame Player build. RNG default time seeding/platform sequence not claimed bit-identical; original source call structure and deterministic boundary cases validated."
+  ],
+  "disassembledMethodMapCount": 5170,
+  "artifacts": {
+    "integratedLog": "analysis/package-items-integrated-final.log"
+  }
+}

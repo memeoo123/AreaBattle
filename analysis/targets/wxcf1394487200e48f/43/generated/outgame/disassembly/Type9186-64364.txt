@@ -1,0 +1,45 @@
+; Original class: WxVideoAdapter
+; Type9186.<startRequestAd>b__5_0; wasmcode function 14692; offset=7203070 size=112
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006de8ff  i32.const [5006868]
+006de904  i32.load8_u [0, 0]
+006de907  i32.eqz []
+006de908  if [-64]
+006de90a    i32.const [4035336] ; STRING " OnLoad"
+006de90f    call [900] ; 
+006de912    i32.const [4035496] ; STRING " autoloadSuccess"
+006de917    call [900] ; 
+006de91a    i32.const [5006868]
+006de91f    i32.const [1]
+006de921    i32.store8 [0, 0]
+006de924  end []
+006de925  local.get [0]
+006de927  i32.load [2, 8]
+006de92a  i32.const [4035336] ; STRING " OnLoad"
+006de92f  i32.load [2, 0]
+006de932  i32.const [0]
+006de934  call [921] ; String.Concat
+006de937  i32.const [0]
+006de939  call [999] ; XYXLOG.Log
+006de93c  local.get [0]
+006de93e  i32.load [2, 12]
+006de941  i32.const [5]
+006de943  i32.eq []
+006de944  if [-64]
+006de946    local.get [0]
+006de948    i32.load [2, 8]
+006de94b    i32.const [4035496] ; STRING " autoloadSuccess"
+006de950    i32.load [2, 0]
+006de953    i32.const [0]
+006de955    call [921] ; String.Concat
+006de958    i32.const [0]
+006de95a    call [999] ; XYXLOG.Log
+006de95d    local.get [0]
+006de95f    i32.const [1]
+006de961    i32.store8 [0, 68]
+006de964    return []
+006de965  end []
+006de966  local.get [0]
+006de968  i32.const [0]
+006de96a  call [2324] ; DAUAdsAdapter.notifyRequestAdSuccess
+006de96d  end []

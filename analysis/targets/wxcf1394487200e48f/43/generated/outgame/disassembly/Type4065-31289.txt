@@ -1,0 +1,35 @@
+; Original class: GuideControl
+; Type4065.GuideCanDrawLine; wasmcode function 6007; offset=2114418 size=101
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00204373  i32.const [5008384]
+00204378  i32.load8_u [0, 0]
+0020437b  i32.eqz []
+0020437c  if [-64]
+0020437e    i32.const [3927888]
+00204383    call [900] ; 
+00204386    i32.const [4001900] ; METHOD GuideControl.ny]vld
+0020438b    call [900] ; 
+0020438e    i32.const [3940172]
+00204393    call [900] ; 
+00204396    i32.const [5008384]
+0020439b    i32.const [1]
+0020439d    i32.store8 [0, 0]
+002043a0  end []
+002043a1  i32.const [3927888]
+002043a6  i32.load [2, 0]
+002043a9  call [903] ; 
+002043ac  local.set [1]
+002043ae  local.get [1]
+002043b0  local.get [0]
+002043b2  i32.const [4001900] ; METHOD GuideControl.ny]vld
+002043b7  i32.load [2, 0]
+002043ba  i32.const [0]
+002043bc  call [1002] ; Action..ctor
+002043bf  i32.const [3940172]
+002043c4  i32.load [2, 0]
+002043c7  call [901] ; 
+002043ca  f32.const [0.699999988079071]
+002043cf  local.get [1]
+002043d1  i32.const [0]
+002043d3  call [7029] ; TimeHelper.Delay
+002043d6  end []

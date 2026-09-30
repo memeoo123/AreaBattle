@@ -1,0 +1,90 @@
+{
+  "status": "source-asset-confirmed-video-match-inferred",
+  "skin": {
+    "id": 102,
+    "skinType": 1,
+    "iconName": "bubing02",
+    "prefabId": 1002,
+    "castType": 1002,
+    "price": 0,
+    "DiamondPrice": 140,
+    "lockState": 1,
+    "sortNo": 3,
+    "actNo": 0,
+    "special": 0,
+    "tag": "",
+    "describe": "typename_02"
+  },
+  "prefab": "assets/gameres/bundleres/model/soldiercommon/soldier_102.prefab",
+  "runtime": {
+    "name": "soldier_102",
+    "prefabId": 1002,
+    "soldierType": 1,
+    "meshSourceId": "CAB-4b8f30068b53dbfd7809d94bff945fdd:7294511497472044634",
+    "animTexturePath": "generated/presentation-prepared/soldier_102.anim.rgba32",
+    "animTextureSha256": "d94a70e34c0de470a19174c361b1a0ee20f797fd2f7ec9136ab2f0fadba33f42",
+    "animWidth": 94,
+    "animHeight": 301,
+    "animLinear": true,
+    "animFilter": 1,
+    "animWrap": 1,
+    "mainTexturePath": "generated/unity-assets/Texture2D/skin04__CAB-291f98b37f0ac53c59522212fde27811__-2867337717525323612.png",
+    "mainSRGB": true,
+    "mainFilter": 1,
+    "mainWrap": 0,
+    "animAdd": [
+      -2.3104281425476074,
+      -0.6281309127807617,
+      0.0,
+      0.0
+    ],
+    "animMul": [
+      6.921867847442627,
+      4.752204418182373,
+      0.0,
+      0.0
+    ],
+    "runStart": 266.0,
+    "runFrames": 37.0,
+    "runSeconds": 0.6000000238418579,
+    "deadStart": 0.0,
+    "deadFrames": 42.0,
+    "deadSeconds": 0.699999988079071,
+    "scale": 0.052000001072883606,
+    "sortingOrder": -5,
+    "renderQueue": 3000
+  },
+  "sourceBinding": "generated/model-binding-evidence.json: dynamic-soldier-model/player-selected-skin/enemy-skin",
+  "inference": "Pointed asymmetric hat and star staff in cached skin04 atlas match the recorded ordinary soldiers. Visual identification, not original account read; camp-specific original skin selection remains inferred.",
+  "sources": [
+    {
+      "path": "generated/unity-assets/prefabs/soldier_102.hierarchy.json",
+      "sha256": "a02041e4f059435b65d272b915659c16c7cf3e46f7f28542e82117aa22785a55"
+    },
+    {
+      "path": "generated/unity-assets/Material/soldier_102Material__CAB-291f98b37f0ac53c59522212fde27811__-1952733032704900329.json",
+      "sha256": "f60604b21d43c2ccaa1c4ee8adc0fe314282f19b0b17b64331216db93ebb2032"
+    },
+    {
+      "path": "generated/unity-assets/Mesh/soldier_102Mesh__CAB-4b8f30068b53dbfd7809d94bff945fdd__7294511497472044634.mesh.json",
+      "sha256": "6025d0eb5d0993b02db4e27278566342e0123a9474ae85921bd7558eb78853c6"
+    },
+    {
+      "path": "generated/unity-assets/Texture2D/soldier_102Texture__CAB-aeba85d26f18b91c0e22d5ba7f9eb60d__5185415925605478935.texture.json",
+      "sha256": "aba4b92e175540c3022f3cc53b1916e2dc05a69998c7057b06691e8a5b7da64c"
+    },
+    {
+      "path": "generated/unity-assets/Texture2D/skin04__CAB-291f98b37f0ac53c59522212fde27811__-2867337717525323612.png",
+      "sha256": "234524d557102bb4aa29f66c0f9f68ba46e8790281f5c99b15b2a84cf4013a9e"
+    }
+  ],
+  "atUtc": "2026-09-28T10:36:21.968399+00:00",
+  "implementation": "BattleView.OrdinarySoldierSkinId=102 or -battle-skin102 (separate CLI arguments); only ordinary type1 visuals change for blue/red camp mask6; green retains default100.",
+  "validation": {
+    "integratedCases": 259,
+    "mechanicsTraceIdentical": true,
+    "replayVictoryPts": 86.74529266357422,
+    "render": "generated/video-20260928/full-replay-first-checkpoint.png",
+    "visualReview": "Original pointed asymmetric hat and star staff appear in the reconstructed shot. No claim of whole-frame or pose equivalence."
+  }
+}

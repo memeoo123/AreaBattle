@@ -1,0 +1,23 @@
+{
+  "status": "actual_message_bus_subscription_verified_production_owner_pending",
+  "source": [
+    "disassembly/Type3874-30170.txt",
+    "disassembly/Type3874-30173.txt",
+    "disassembly/Type3874-30175.txt",
+    "disassembly/Type3485-26822.txt",
+    "disassembly/Type3485-26830.txt"
+  ],
+  "verified": [
+    "OnInit sets ActiveUpdate true and adds GamePlayState listener",
+    "Message checks current level before reading first boxed state value",
+    "OnDispose removes one source delegate; repeated init retains duplicates",
+    "Actual OutgameMessageDispatcher victory events change held inventory; ordinary dispose/reinit grants once"
+  ],
+  "remaining": [
+    "Production owner must instantiate/init bank and publish gameplay states through source host",
+    "Source reporting provider and full gameplay/return-home persistence E2E",
+    "Easter/time and account bootstrap"
+  ],
+  "checks": 576,
+  "freshPlayMode": false
+}

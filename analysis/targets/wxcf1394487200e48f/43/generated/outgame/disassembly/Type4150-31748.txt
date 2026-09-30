@@ -1,0 +1,21 @@
+; Original class: SkinManager
+; Type4150.SetUserSkinId; wasmcode function 5668; offset=1991860 size=52
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+001e64b5  i32.const [5010258]
+001e64ba  i32.load8_u [0, 0]
+001e64bd  i32.eqz []
+001e64be  if [-64]
+001e64c0    i32.const [3962492]
+001e64c5    call [900] ; 
+001e64c8    i32.const [5010258]
+001e64cd    i32.const [1]
+001e64cf    i32.store8 [0, 0]
+001e64d2  end []
+001e64d3  local.get [0]
+001e64d5  i32.load [2, 32]
+001e64d8  local.get [1]
+001e64da  local.get [2]
+001e64dc  i32.const [3962492]
+001e64e1  i32.load [2, 0]
+001e64e4  call [2602] ; 
+001e64e7  end []

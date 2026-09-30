@@ -1,0 +1,30 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native recovered1001/2001 AudioControl/UI/Parallel/Fade actions driven by source TimeModule countdown implementation and actual local DateTime. Full TimeModule lifecycle/loop/Unity timer ownership is included; actual MonoBehaviour UpdateManager drives audio actions; resource/AudioManager and complete app composition still fixture/pending; no recording or Player claim.",
+    "checks": [
+        "Native lazy singleton reuses named object and existing component",
+        "Native audio services bind actual source countdown registration/removal methods",
+        "Audio constructor registers actual shared native update owner",
+        "State2 -> UI parallel -> source Ptype4 factory -> real original1001 loop-fade source and global start",
+        "Native cursor advances while production countdown callback raises volume from zero",
+        "State7 pauses native playback but source empty pause hook leaves fade callbacks active",
+        "Source DateTime countdown advances with focus flag false; no synthetic pause gate",
+        "Native GF_GameFocus event freezes both delta timer families while DateTime fade continues",
+        "Fade-in completion reaches configured volume and retains timer id after removal",
+        "State6 resumes original native music after fade-in completed while paused",
+        "Controller music toggle reaches settings, global message and live fade target",
+        "Fractional setting refresh uses original .4 configured volume",
+        "State8 music stop starts fade-out with source-volume times setting; node remains until completion",
+        "Native loop keeps playing while fade-out lowers volume before end event",
+        "Fade completion sends end, removes GUID, releases handle/update and destroys native child",
+        "Same UI node resolves Ptype3 into native original2001 one-shot fade action",
+        "Short original clip enters source length-minus-one-second automatic fade-out",
+        "One-shot fade ends through countdown completion and same node removes final action",
+        "Native resumed loop and Unity-second timers both use actual unscaled frame delta",
+        "Full source shutdown clears active timers and initialized flag",
+        "Shutdown removed source focus listener",
+        "Native FixedUpdate ran; both disposed audio actions removed by real Update with only fixed handle retained",
+        "Destroyed native singleton recreated on next access with fresh callback ownership"
+    ]
+}

@@ -1,0 +1,36 @@
+; Original class: SkinManager
+; Type4150.CreatorSkinData; wasmcode function 15907; offset=7650633 size=93
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0074bd4a  i32.const [5010251]
+0074bd4f  i32.load8_u [0, 0]
+0074bd52  i32.eqz []
+0074bd53  if [-64]
+0074bd55    i32.const [3933916]
+0074bd5a    call [900] ; 
+0074bd5d    i32.const [3948488]
+0074bd62    call [900] ; 
+0074bd65    i32.const [5010251]
+0074bd6a    i32.const [1]
+0074bd6c    i32.store8 [0, 0]
+0074bd6f  end []
+0074bd70  local.get [2]
+0074bd72  i32.const [3948488]
+0074bd77  i32.load [2, 0]
+0074bd7a  call [903] ; 
+0074bd7d  i32.store [2, 0]
+0074bd80  local.get [2]
+0074bd82  i32.load [2, 0]
+0074bd85  i32.const [5]
+0074bd87  i32.const [3933916]
+0074bd8c  i32.load [2, 0]
+0074bd8f  local.get [1]
+0074bd91  call [918] ; 
+0074bd94  i32.const [2]
+0074bd96  i32.eq []
+0074bd97  i32.store8 [0, 12]
+0074bd9a  local.get [2]
+0074bd9c  local.get [1]
+0074bd9e  local.get [2]
+0074bda0  local.get [2]
+0074bda2  call [10334] ; SkinManager.SetSkinData
+0074bda5  end []

@@ -1,0 +1,33 @@
+; Original class: U¥V¥
+; Type3535..ctor; wasmcode function 9757; offset=4671484 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004747fd  i32.const [4989636]
+00474802  i32.load8_u [0, 0]
+00474805  i32.eqz []
+00474806  if [-64]
+00474808    i32.const [3915596]
+0047480d    call [900] ; 
+00474810    i32.const [4989636]
+00474815    i32.const [1]
+00474817    i32.store8 [0, 0]
+0047481a  end []
+0047481b  local.get [0]
+0047481d  local.set [2]
+0047481f  local.get [0]
+00474821  i32.load [2, 24]
+00474824  local.get [1]
+00474826  i32.const [0]
+00474828  call [1031] ; Delegate.Combine
+0047482b  local.set [0]
+0047482d  local.get [2]
+0047482f  local.get [0]
+00474831  i32.const [3915596]
+00474836  i32.load [2, 0]
+00474839  call [938] ; 
+0047483c  i32.store [2, 24]
+0047483f  local.get [0]
+00474841  i32.const [3915596]
+00474846  i32.load [2, 0]
+00474849  call [938] ; 
+0047484c  drop []
+0047484d  end []

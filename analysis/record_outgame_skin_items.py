@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-item-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==337
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='skin-item-purchase-and-video-callbacks';s['validation'].update(integratedChecksPassed=337,skinItemActionChecksPassed=4)
+s['nextActions']=['Bind original SkinItem visuals/buttons and ShopUI listeners, recover source ordering and visibility gates.','Resolve original video reward reason and real provider lifecycle; finish account startup/concrete effects.','Complete remaining outgame systems and fresh playable build/end-to-end validation.']
+for sub in s['subsystems']:
+ if sub['id']=='skins-cosmetics':sub.update(implementation='Skin manager core and SkinItem buy/select/video callbacks implemented with tool dispatcher; UI/listeners/providers pending',validation='7 manager and4 item callback checks pass; subsystem incomplete')
+write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['skin-item-callbacks']={'implementationReady':True,'scope':'Source SkinItem callback actions; UI gates, live provider and ChooseSkin listener visuals excluded','rules':['InitData uses castType1001 price, castType1002 DiamondPrice; other fresh item prices remain0. ISkin slots3/4/10 match these fields.','Buy calls ToolChange currency negative price; failure shows missing-currency toast after dispatcher effects/save. Success voice2017, BuySkin statistic+1, ReportToolUse(id,3), ToolChange skin+1, ChooseSkin event, clear-new/red-dot. No extra final save.','Select only when curItemState==0: voice2001, ChooseSkin, ReportToolUse(id,3), optional onClick, clear-new/red-dot.','Video failure callback is inert; success reports use, grants skin through ToolChange with original reward reason, ChooseSkin, clear-new/red-dot. Reward reason supplied explicitly; original static reason resolution pending.'],'source':['disassembly/Type4364-33356.txt','disassembly/Type4364-33357.txt','disassembly/Type4364-33366.txt','disassembly/Type4364-33367.txt'],'implementation':['OutgameSkinItemActions.cs','OutgameToolDispatcher.cs'],'validation':'Real inventory, manager and isolated disk integration validates save-before-equip/new-clear boundary; UI/provider effects observed by explicit sink.'};write(p,s)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['sourceMethodsIndexed']=750;write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='SkinItem purchase/select/video callbacks') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Skin purchase/select/video callbacks with real dispatch and isolated restart','checksPassed':337,'outgameChecksPassed':70,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 皮肤购买与广告回调（337项）\n新增 OutgameSkinItemActions，按原 SkinItem 保留金币/钻石价格、扣款失败提示、成功统计/发放/装备事件/清新标记顺序，以及广告失败无动作、成功发奖。选择仅 curItemState==0 执行，保留可选 onClick 顺序。原存档在 ToolChange 内发生，早于装备与清新标记；隔离重启验证该边界及后续保存。4新检查通过，Unity退出0，337集成检查（原267+关外70）。源方法索引750。真实UI绑定、ChooseSkin视觉监听、广告原reason静态值和平台提供者、启动与完整构建仍待完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','337 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 337 checks; full goal remains incomplete.')

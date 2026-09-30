@@ -1,0 +1,55 @@
+; Original class: G~
+; Type3424.UnLoadAudioClip; wasmcode function 9865; offset=4733772 size=158
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00483b4d  i32.const [5011695]
+00483b52  i32.load8_u [0, 0]
+00483b55  i32.eqz []
+00483b56  if [-64]
+00483b58    i32.const [3928176]
+00483b5d    call [900] ; 
+00483b60    i32.const [3928344]
+00483b65    call [900] ; 
+00483b68    i32.const [4040164] ; STRING ".unity3d"
+00483b6d    call [900] ; 
+00483b70    i32.const [5011695]
+00483b75    i32.const [1]
+00483b77    i32.store8 [0, 0]
+00483b7a  end []
+00483b7b  local.get [0]
+00483b7d  i32.const [0]
+00483b7f  call [1374] ; String.ToLower
+00483b82  i32.const [4040164] ; STRING ".unity3d"
+00483b87  i32.load [2, 0]
+00483b8a  i32.const [0]
+00483b8c  call [921] ; String.Concat
+00483b8f  local.set [0]
+00483b91  i32.const [3928176]
+00483b96  i32.load [2, 0]
+00483b99  call [901] ; 
+00483b9c  i32.const [5011829]
+00483ba1  i32.load8_u [0, 0]
+00483ba4  i32.eqz []
+00483ba5  if [-64]
+00483ba7    i32.const [3928176]
+00483bac    call [900] ; 
+00483baf    i32.const [5011829]
+00483bb4    i32.const [1]
+00483bb6    i32.store8 [0, 0]
+00483bb9  end []
+00483bba  i32.const [3928176]
+00483bbf  i32.load [2, 0]
+00483bc2  call [901] ; 
+00483bc5  i32.const [3928176]
+00483bca  i32.load [2, 0]
+00483bcd  i32.load [2, 92]
+00483bd0  i32.load8_u [0, 36]
+00483bd3  i32.eqz []
+00483bd4  if [-64]
+00483bd6    i32.const [3928344]
+00483bdb    i32.load [2, 0]
+00483bde    call [901] ; 
+00483be1    local.get [0]
+00483be3    i32.const [0]
+00483be5    call [8247] ; AssetBundleManager.UnloadAssetBundle
+00483be8  end []
+00483be9  end []

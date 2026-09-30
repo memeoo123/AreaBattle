@@ -1,0 +1,33 @@
+; Original class: InputManager
+; Type3603.twUP; wasmcode function 5983; offset=2107558 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+002028a7  i32.const [4989982]
+002028ac  i32.load8_u [0, 0]
+002028af  i32.eqz []
+002028b0  if [-64]
+002028b2    i32.const [3946476]
+002028b7    call [900] ; 
+002028ba    i32.const [4989982]
+002028bf    i32.const [1]
+002028c1    i32.store8 [0, 0]
+002028c4  end []
+002028c5  local.get [0]
+002028c7  local.set [2]
+002028c9  local.get [0]
+002028cb  i32.load [2, 52]
+002028ce  local.get [1]
+002028d0  i32.const [0]
+002028d2  call [1056] ; Delegate.Remove
+002028d5  local.set [0]
+002028d7  local.get [2]
+002028d9  local.get [0]
+002028db  i32.const [3946476]
+002028e0  i32.load [2, 0]
+002028e3  call [937] ; 
+002028e6  i32.store [2, 52]
+002028e9  local.get [0]
+002028eb  i32.const [3946476]
+002028f0  i32.load [2, 0]
+002028f3  call [937] ; 
+002028f6  drop []
+002028f7  end []

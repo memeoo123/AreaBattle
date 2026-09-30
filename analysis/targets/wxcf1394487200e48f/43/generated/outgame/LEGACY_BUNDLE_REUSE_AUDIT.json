@@ -1,0 +1,19 @@
+{
+  "atUtc": "2026-09-30T03:29:50.216943+00:00",
+  "status": "partial-subsystem-verified",
+  "method": 23863,
+  "function": 13170,
+  "caller": 23836,
+  "behavior": [
+    "Root reference increments; countdown set to f32 bits1325400064 =2147483648; remove one matching pending item if present",
+    "Look up direct dependencies by root.BundleName; only dependencies returned by source GetLoadedAssetBundle are retained",
+    "No fallback for not-ready dependency, recursion, or duplicate dependency filtering",
+    "Each retained dependency increments and removes pending entry identically"
+  ],
+  "validation": {
+    "integratedChecks": 627,
+    "covered": "Unload root/child then retain before cleanup, ensure nothing destroyed; blocked dependency skipped and duplicate dependency increments retained",
+    "freshNativePlayMode": false
+  },
+  "pending": "Wire reuse into full native LoadAssetBundleInternal23836; request resolution/dependency/variant acquisition and original startup still incomplete."
+}

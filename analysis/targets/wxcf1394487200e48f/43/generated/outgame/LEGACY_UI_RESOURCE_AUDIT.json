@@ -1,0 +1,52 @@
+{
+  "atUtc": "2026-09-30T03:03:12.035070+00:00",
+  "status": "partial-subsystem-verified",
+  "methods": [
+    29863,
+    29871,
+    27392,
+    27413,
+    27415,
+    27418,
+    27385
+  ],
+  "resourceInstantiation": [
+    "AssetBundle.LoadAsset(requestedName), reject Unity-null and non-GameObject",
+    "Instantiate fresh object, SetActive(argument), retain original asset name",
+    "Source helper29871 only checks instance Unity-null; no inferred ownership registration"
+  ],
+  "legacyPage": [
+    "LoadPrefab UI/ + original path",
+    "Log source path and resource AssetBundle object",
+    "LastIndexOf string slash basename; Instantiate(basename,false)",
+    "SetParent(layer) default worldPositionStays; stretch anchors and zero offsets",
+    "Yield null twice then optional callback with original resource identity"
+  ],
+  "rootComposition": "OutgameUiLegacyRootResources shares concrete resource factory; UIRoot active true; existing zero-delta resource pump retained",
+  "validation": {
+    "integratedChecks": 612,
+    "nativePlayMode": {
+      "passed": true,
+      "batchMode": false,
+      "loadFrame": 1,
+      "completeFrame": 3,
+      "error": "",
+      "scope": "Native legacy root/page instantiation and two-frame completion through cached page initialization; imported local asset adapter, no original bundle transport/account/business composition",
+      "checks": [
+        "Resource acquisition receives original UI path: UI/UIRoot",
+        "Legacy resource pump receives zero deltas during UI initialization",
+        "Legacy root is active under persistent native canvas",
+        "Resource acquisition receives original UI path: UI/FestActUI/ValentineUI",
+        "Native scheduler leaves page hidden before two-frame completion",
+        "Two native frame yields complete while game time is paused",
+        "Hidden page callback preserves resource identity and original layer",
+        "Concrete legacy open binds thirteen original outlets, activates and sorts the page"
+      ]
+    }
+  },
+  "limitations": [
+    "Actual AssetBundle constructor path compiled but native bundle acquisition not exercised; tests use explicitly injected imported asset lookup.",
+    "Legacy resources/provider ownership, atlas owner and original full startup/account/menu composition remain incomplete.",
+    "Cached page business hooks isolated. No new Player build."
+  ]
+}

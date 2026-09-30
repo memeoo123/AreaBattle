@@ -1,0 +1,28 @@
+; Original class: DOTween
+; Type9871.set_logBehaviour; wasmcode function 6168; offset=2206038 size=78
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0021a957  i32.const [4985520]
+0021a95c  i32.load8_u [0, 0]
+0021a95f  i32.eqz []
+0021a960  if [-64]
+0021a962    i32.const [3930144]
+0021a967    call [900] ; 
+0021a96a    i32.const [4985520]
+0021a96f    i32.const [1]
+0021a971    i32.store8 [0, 0]
+0021a974  end []
+0021a975  i32.const [3930144]
+0021a97a  i32.load [2, 0]
+0021a97d  call [901] ; 
+0021a980  i32.const [3930144]
+0021a985  i32.load [2, 0]
+0021a988  i32.load [2, 92]
+0021a98b  local.get [0]
+0021a98d  i32.store [2, 40]
+0021a990  i32.const [3930144]
+0021a995  i32.load [2, 0]
+0021a998  i32.load [2, 92]
+0021a99b  i32.load [2, 40]
+0021a99e  i32.const [0]
+0021a9a0  call [12583] ; Debugger.SetLogPriority
+0021a9a3  end []

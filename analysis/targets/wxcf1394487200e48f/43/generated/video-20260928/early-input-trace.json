@@ -1,0 +1,61 @@
+{
+  "scope": "Observed committed input order and native-frame visible-state times; pointer sampling and presentation latency not separated.",
+  "events": [
+    {
+      "pts": 4.10254,
+      "previousPts": 4.08523,
+      "kind": "connect",
+      "source": 2,
+      "target": 5,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 5.81944,
+      "previousPts": 5.80334,
+      "kind": "connect",
+      "source": 1,
+      "target": 5,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 7.73713,
+      "previousPts": 7.72049,
+      "kind": "connect",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 2
+    },
+    {
+      "pts": 13.00674,
+      "previousPts": 12.98981,
+      "kind": "cut",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 15.19104,
+      "previousPts": 15.17443,
+      "kind": "connect",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 2
+    },
+    {
+      "pts": 23.39533,
+      "previousPts": 23.3786,
+      "kind": "cut",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 24.89574,
+      "previousPts": 24.87938,
+      "kind": "connect",
+      "source": 2,
+      "target": 1,
+      "expectedOutgoing": 2
+    }
+  ]
+}

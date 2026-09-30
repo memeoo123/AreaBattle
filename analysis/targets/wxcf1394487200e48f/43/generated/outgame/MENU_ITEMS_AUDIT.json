@@ -1,0 +1,20 @@
+{
+  "status": "source_sequence_verified_production_host_pending",
+  "source": [
+    "disassembly/Type4294-32741.txt",
+    "disassembly/Type4296-32716.txt"
+  ],
+  "verified": [
+    "New Main, Shop and Commander created in source order, each followed by shared WaitForEndOfFrame",
+    "Existing pages are made visible without frame waits",
+    "ItemInfo created only if absent after the three pages",
+    "Close visits source fields32,24,28,36,40 and excludes ItemInfo"
+  ],
+  "remaining": [
+    "Concrete production page factory and UI lifecycle",
+    "Actual frame scheduler PlayMode verification",
+    "Account/data and production entry with full Player E2E"
+  ],
+  "checks": 570,
+  "freshPlayMode": false
+}

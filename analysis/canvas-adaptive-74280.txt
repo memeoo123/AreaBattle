@@ -1,0 +1,26 @@
+; Original class: CanvasAdaptive
+; Type10722.PrintDesignResolutionInfo; wasmcode function 12967; offset=6222816 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005ef3e1 i32.const [5001865]
+005ef3e6 i32.load8_u [0, 0]
+005ef3e9 i32.eqz []
+005ef3ea if [-64]
+005ef3ec i32.const [3944524]
+005ef3f1 call [900] ; 
+005ef3f4 i32.const [5001865]
+005ef3f9 i32.const [1]
+005ef3fb i32.store8 [0, 0]
+005ef3fe end []
+005ef3ff i32.const [3944524]
+005ef404 i32.load [2, 0]
+005ef407 call [903] ; 
+005ef40a local.set [1]
+005ef40c local.get [1]
+005ef40e i32.const [0]
+005ef410 i32.store [2, 8]
+005ef413 local.get [1]
+005ef415 local.get [0]
+005ef417 i32.store [2, 16]
+005ef41a local.get [1]
+005ef41c return []
+005ef41d end []

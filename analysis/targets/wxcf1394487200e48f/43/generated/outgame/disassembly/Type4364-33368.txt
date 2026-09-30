@@ -1,0 +1,101 @@
+; Original class: SkinItem
+; Type4364.Awake; wasmcode function 10343; offset=4962644 size=278
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+004bb957  i32.const [5008968]
+004bb95c  i32.load8_u [0, 0]
+004bb95f  i32.eqz []
+004bb960  if [-64]
+004bb962    i32.const [3927888]
+004bb967    call [900] ; 
+004bb96a    i32.const [3993256]
+004bb96f    call [900] ; 
+004bb972    i32.const [4014408] ; METHOD SkinItem.lokqz
+004bb977    call [900] ; 
+004bb97a    i32.const [4014412] ; METHOD SkinItem.otQuVXu
+004bb97f    call [900] ; 
+004bb982    i32.const [3925968]
+004bb987    call [900] ; 
+004bb98a    i32.const [5008968]
+004bb98f    i32.const [1]
+004bb991    i32.store8 [0, 0]
+004bb994  end []
+004bb995  local.get [0]
+004bb997  i32.load [2, 76]
+004bb99a  local.set [1]
+004bb99c  i32.const [3927888]
+004bb9a1  i32.load [2, 0]
+004bb9a4  call [903] ; 
+004bb9a7  local.set [2]
+004bb9a9  local.get [2]
+004bb9ab  local.get [0]
+004bb9ad  local.get [0]
+004bb9af  i32.const [15]
+004bb9b1  call [1170] ; 
+004bb9b4  i32.const [0]
+004bb9b6  call [1002] ; Action..ctor
+004bb9b9  local.get [1]
+004bb9bb  local.get [2]
+004bb9bd  i32.const [0]
+004bb9bf  call [1121] ; UIExtension.AddClick
+004bb9c2  local.get [0]
+004bb9c4  i32.load [2, 84]
+004bb9c7  i32.const [3993256]
+004bb9cc  i32.load [2, 0]
+004bb9cf  call [1010] ; 
+004bb9d2  i32.const [0]
+004bb9d4  call [3247] ; UIVideoBtn.RemoveVideoBtnListeners
+004bb9d7  local.get [0]
+004bb9d9  i32.load [2, 84]
+004bb9dc  i32.const [3993256]
+004bb9e1  i32.load [2, 0]
+004bb9e4  call [1010] ; 
+004bb9e7  local.set [1]
+004bb9e9  i32.const [3925968]
+004bb9ee  i32.load [2, 0]
+004bb9f1  call [903] ; 
+004bb9f4  local.set [2]
+004bb9f6  local.get [2]
+004bb9f8  local.get [0]
+004bb9fa  i32.const [4014408] ; METHOD SkinItem.lokqz
+004bb9ff  i32.load [2, 0]
+004bba02  call [1224] ; 
+004bba05  local.get [1]
+004bba07  local.get [2]
+004bba09  i32.const [0]
+004bba0b  call [1961] ; UIVideoBtn.AddVideoPlayCallBack
+004bba0e  local.get [0]
+004bba10  i32.load [2, 88]
+004bba13  local.set [1]
+004bba15  i32.const [3927888]
+004bba1a  i32.load [2, 0]
+004bba1d  call [903] ; 
+004bba20  local.set [2]
+004bba22  local.get [2]
+004bba24  local.get [0]
+004bba26  local.get [0]
+004bba28  i32.const [14]
+004bba2a  call [1170] ; 
+004bba2d  i32.const [0]
+004bba2f  call [1002] ; Action..ctor
+004bba32  local.get [1]
+004bba34  local.get [2]
+004bba36  i32.const [0]
+004bba38  call [1121] ; UIExtension.AddClick
+004bba3b  local.get [0]
+004bba3d  i32.load [2, 124]
+004bba40  local.set [1]
+004bba42  i32.const [3927888]
+004bba47  i32.load [2, 0]
+004bba4a  call [903] ; 
+004bba4d  local.set [2]
+004bba4f  local.get [2]
+004bba51  local.get [0]
+004bba53  i32.const [4014412] ; METHOD SkinItem.otQuVXu
+004bba58  i32.load [2, 0]
+004bba5b  i32.const [0]
+004bba5d  call [1002] ; Action..ctor
+004bba60  local.get [1]
+004bba62  local.get [2]
+004bba64  i32.const [0]
+004bba66  call [1121] ; UIExtension.AddClick
+004bba69  end []

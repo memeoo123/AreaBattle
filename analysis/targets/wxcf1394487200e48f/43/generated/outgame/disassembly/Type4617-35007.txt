@@ -1,0 +1,59 @@
+; Original class: GameStatisticsManager
+; Type4617.OnInit; wasmcode function 19544; offset=8784806 size=178
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00860ba7  i32.const [5001605]
+00860bac  i32.load8_u [0, 0]
+00860baf  i32.eqz []
+00860bb0  if [-64]
+00860bb2    i32.const [3947148]
+00860bb7    call [900] ; 
+00860bba    i32.const [4001380] ; METHOD GameStatisticsManager.CommonGameModule_StatisticsEventResiger
+00860bbf    call [900] ; 
+00860bc2    i32.const [4001384] ; METHOD GameStatisticsManager.CommonGameModule_StatisticsEventSet
+00860bc7    call [900] ; 
+00860bca    i32.const [3932400]
+00860bcf    call [900] ; 
+00860bd2    i32.const [4048988] ; STRING "CommonGameModule_StatisticsEventSet"
+00860bd7    call [900] ; 
+00860bda    i32.const [4048984] ; STRING "CommonGameModule_StatisticsEventResiger"
+00860bdf    call [900] ; 
+00860be2    i32.const [5001605]
+00860be7    i32.const [1]
+00860be9    i32.store8 [0, 0]
+00860bec  end []
+00860bed  local.get [0]
+00860bef  i32.const [3932400]
+00860bf4  i32.load [2, 0]
+00860bf7  call [903] ; 
+00860bfa  i32.store [2, 28]
+00860bfd  i32.const [3947148]
+00860c02  i32.load [2, 0]
+00860c05  call [903] ; 
+00860c08  local.set [1]
+00860c0a  local.get [1]
+00860c0c  local.get [0]
+00860c0e  i32.const [4001380] ; METHOD GameStatisticsManager.CommonGameModule_StatisticsEventResiger
+00860c13  i32.load [2, 0]
+00860c16  i32.const [0]
+00860c18  call [1067] ; EventHandler..ctor
+00860c1b  i32.const [4048984] ; STRING "CommonGameModule_StatisticsEventResiger"
+00860c20  i32.load [2, 0]
+00860c23  local.get [1]
+00860c25  i32.const [0]
+00860c27  call [1146] ; MsgDispatcher.AddEventListener
+00860c2a  i32.const [3947148]
+00860c2f  i32.load [2, 0]
+00860c32  call [903] ; 
+00860c35  local.set [1]
+00860c37  local.get [1]
+00860c39  local.get [0]
+00860c3b  i32.const [4001384] ; METHOD GameStatisticsManager.CommonGameModule_StatisticsEventSet
+00860c40  i32.load [2, 0]
+00860c43  i32.const [0]
+00860c45  call [1067] ; EventHandler..ctor
+00860c48  i32.const [4048988] ; STRING "CommonGameModule_StatisticsEventSet"
+00860c4d  i32.load [2, 0]
+00860c50  local.get [1]
+00860c52  i32.const [0]
+00860c54  call [1146] ; MsgDispatcher.AddEventListener
+00860c57  end []

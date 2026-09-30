@@ -1,0 +1,52 @@
+; Original class: DAUAdsAdapter
+; Type7488.reportRequestAd; wasmcode function 12696; offset=6113005 size=148
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d46ee  i32.const [5004959]
+005d46f3  i32.load8_u [0, 0]
+005d46f6  i32.eqz []
+005d46f7  if [-64]
+005d46f9    i32.const [3930112]
+005d46fe    call [900] ; 
+005d4701    i32.const [4036692] ; STRING " 广告请求 uptype=1 "
+005d4706    call [900] ; 
+005d4709    i32.const [3943536]
+005d470e    call [900] ; 
+005d4711    i32.const [5004959]
+005d4716    i32.const [1]
+005d4718    i32.store8 [0, 0]
+005d471b  end []
+005d471c  local.get [0]
+005d471e  i32.load [2, 8]
+005d4721  i32.const [4036692] ; STRING " 广告请求 uptype=1 "
+005d4726  i32.load [2, 0]
+005d4729  i32.const [0]
+005d472b  call [921] ; String.Concat
+005d472e  i32.const [0]
+005d4730  call [999] ; XYXLOG.Log
+005d4733  local.get [0]
+005d4735  i32.const [0]
+005d4737  call [1342] ; Time.get_realtimeSinceStartup
+005d473a  f32.store [2, 48]
+005d473d  i32.const [3943536]
+005d4742  i32.load [2, 0]
+005d4745  call [903] ; 
+005d4748  local.set [1]
+005d474a  local.get [1]
+005d474c  i32.const [0]
+005d474e  call [2456] ; ads_up_event..ctor
+005d4751  local.get [0]
+005d4753  local.get [1]
+005d4755  local.get [0]
+005d4757  call [3642] ; DAUAdsAdapter.setInfo
+005d475a  local.get [1]
+005d475c  i64.const [4607182418800017408]
+005d4766  i64.store [3, 80]
+005d4769  i32.const [3930112]
+005d476e  i32.load [2, 0]
+005d4771  call [901] ; 
+005d4774  local.get [0]
+005d4776  call [2513] ; DAUEventConstant.get_Instance
+005d4779  local.get [1]
+005d477b  local.get [0]
+005d477d  call [2512] ; DAUEventConstant.reportSever
+005d4780  end []

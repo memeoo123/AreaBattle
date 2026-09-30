@@ -1,0 +1,26 @@
+; Original class: MenuTabUI
+; Type4379.mplyla; wasmcode function 7562; offset=3627879 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00375b68  local.get [0]
+00375b6a  i32.load [2, 208]
+00375b6e  local.set [0]
+00375b70  i32.const [5009954]
+00375b75  i32.load8_u [0, 0]
+00375b78  i32.eqz []
+00375b79  if [-64]
+00375b7b    i32.const [3939048]
+00375b80    call [900] ; 
+00375b83    i32.const [5009954]
+00375b88    i32.const [1]
+00375b8a    i32.store8 [0, 0]
+00375b8d  end []
+00375b8e  local.get [0]
+00375b90  i32.const [3939048]
+00375b95  i32.load [2, 0]
+00375b98  i32.load [2, 92]
+00375b9b  i32.load [2, 0]
+00375b9e  i32.const [0]
+00375ba0  call [10338] ; SkinManager.HaveAnyNew
+00375ba3  i32.const [0]
+00375ba5  call [949] ; GameObject.SetActive
+00375ba8  end []

@@ -1,0 +1,136 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetProductInfoStatic; wasmcode1 function 38445; offset=14430898 size=390
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00dc32b3  i32.const [5005413]
+00dc32b8  i32.load8_u [0, 0]
+00dc32bb  i32.eqz []
+00dc32bc  if [-64]
+00dc32be    i32.const [3934720]
+00dc32c3    i32.const [1605]
+00dc32c6    call_indirect [0, 0]
+00dc32c9    i32.const [3941216]
+00dc32ce    i32.const [1605]
+00dc32d1    call_indirect [0, 0]
+00dc32d4    i32.const [4094900] ; STRING "price"
+00dc32d9    i32.const [1605]
+00dc32dc    call_indirect [0, 0]
+00dc32df    i32.const [4057280] ; STRING "ISDK GetProductInfoStatic skus: "
+00dc32e4    i32.const [1605]
+00dc32e7    call_indirect [0, 0]
+00dc32ea    i32.const [4094908] ; STRING "priceCountryApiType"
+00dc32ef    i32.const [1605]
+00dc32f2    call_indirect [0, 0]
+00dc32f5    i32.const [4096772] ; STRING "sku"
+00dc32fa    i32.const [1605]
+00dc32fd    call_indirect [0, 0]
+00dc3300    i32.const [4098416] ; STRING "title"
+00dc3305    i32.const [1605]
+00dc3308    call_indirect [0, 0]
+00dc330b    i32.const [4086556] ; STRING "description"
+00dc3310    i32.const [1605]
+00dc3313    call_indirect [0, 0]
+00dc3316    i32.const [5005413]
+00dc331b    i32.const [1]
+00dc331d    i32.store8 [0, 0]
+00dc3320  end []
+00dc3321  i32.const [4057280] ; STRING "ISDK GetProductInfoStatic skus: "
+00dc3326  i32.load [2, 0]
+00dc3329  local.get [1]
+00dc332b  i32.const [0]
+00dc332d  i32.const [1476] ; TABLE String.Concat
+00dc3330  call_indirect [3, 0]
+00dc3333  local.get [1]
+00dc3335  i32.const [9037] ; TABLE XYXLOG.IAPLog
+00dc3339  call_indirect [4, 0]
+00dc333c  i32.const [3941216]
+00dc3341  i32.load [2, 0]
+00dc3344  i32.const [1149]
+00dc3347  call_indirect [0, 0]
+00dc334a  local.get [1]
+00dc334c  i32.const [0]
+00dc334e  call [7313] ; V3_IAPGlobalData.GetProductionInfo
+00dc3351  local.set [1]
+00dc3353  local.get [1]
+00dc3355  if [-64]
+00dc3357    i32.const [3934720]
+00dc335c    i32.load [2, 0]
+00dc335f    i32.const [109007]
+00dc3363    call_indirect [2, 0]
+00dc3366    local.set [0]
+00dc3368    local.get [1]
+00dc336a    i32.load [2, 12]
+00dc336d    i32.const [0]
+00dc336f    i32.const [8863] ; TABLE JsonData.op_Implicit
+00dc3373    call_indirect [1, 0]
+00dc3376    local.set [2]
+00dc3378    local.get [0]
+00dc337a    i32.const [4086556] ; STRING "description"
+00dc337f    i32.load [2, 0]
+00dc3382    local.get [2]
+00dc3384    i32.const [0]
+00dc3386    i32.const [8864] ; TABLE JsonData.set_Item
+00dc338a    call_indirect [6, 0]
+00dc338d    local.get [1]
+00dc338f    i32.load [2, 20]
+00dc3392    i32.const [0]
+00dc3394    i32.const [8863] ; TABLE JsonData.op_Implicit
+00dc3398    call_indirect [1, 0]
+00dc339b    local.set [2]
+00dc339d    local.get [0]
+00dc339f    i32.const [4094900] ; STRING "price"
+00dc33a4    i32.load [2, 0]
+00dc33a7    local.get [2]
+00dc33a9    i32.const [0]
+00dc33ab    i32.const [8864] ; TABLE JsonData.set_Item
+00dc33af    call_indirect [6, 0]
+00dc33b2    local.get [1]
+00dc33b4    i32.load [2, 8]
+00dc33b7    i32.const [0]
+00dc33b9    i32.const [8863] ; TABLE JsonData.op_Implicit
+00dc33bd    call_indirect [1, 0]
+00dc33c0    local.set [2]
+00dc33c2    local.get [0]
+00dc33c4    i32.const [4096772] ; STRING "sku"
+00dc33c9    i32.load [2, 0]
+00dc33cc    local.get [2]
+00dc33ce    i32.const [0]
+00dc33d0    i32.const [8864] ; TABLE JsonData.set_Item
+00dc33d4    call_indirect [6, 0]
+00dc33d7    local.get [1]
+00dc33d9    i32.load [2, 12]
+00dc33dc    i32.const [0]
+00dc33de    i32.const [8863] ; TABLE JsonData.op_Implicit
+00dc33e2    call_indirect [1, 0]
+00dc33e5    local.set [2]
+00dc33e7    local.get [0]
+00dc33e9    i32.const [4098416] ; STRING "title"
+00dc33ee    i32.load [2, 0]
+00dc33f1    local.get [2]
+00dc33f3    i32.const [0]
+00dc33f5    i32.const [8864] ; TABLE JsonData.set_Item
+00dc33f9    call_indirect [6, 0]
+00dc33fc    local.get [1]
+00dc33fe    i32.load [2, 36]
+00dc3401    i32.const [0]
+00dc3403    i32.const [8863] ; TABLE JsonData.op_Implicit
+00dc3407    call_indirect [1, 0]
+00dc340a    local.set [1]
+00dc340c    local.get [0]
+00dc340e    i32.const [4094908] ; STRING "priceCountryApiType"
+00dc3413    i32.load [2, 0]
+00dc3416    local.get [1]
+00dc3418    i32.const [0]
+00dc341a    i32.const [8864] ; TABLE JsonData.set_Item
+00dc341e    call_indirect [6, 0]
+00dc3421    local.get [0]
+00dc3423    i32.const [0]
+00dc3425    i32.const [31247] ; TABLE JsonData.ToJson
+00dc3429    call_indirect [1, 0]
+00dc342c    local.set [0]
+00dc342e  else []
+00dc342f    i32.const [0]
+00dc3431    local.set [0]
+00dc3433  end []
+00dc3434  local.get [0]
+00dc3436  return []
+00dc3437  end []

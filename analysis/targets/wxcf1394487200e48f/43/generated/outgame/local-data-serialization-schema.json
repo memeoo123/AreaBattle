@@ -1,0 +1,357 @@
+[
+  {
+    "name": "LocalData",
+    "typeIndex": 4120,
+    "fields": [
+      {
+        "name": "buyRemoveAd",
+        "offset": 8,
+        "flags": "0x6",
+        "type": {
+          "name": "Boolean",
+          "typeIndex": 154,
+          "kind": 2
+        }
+      },
+      {
+        "name": "dealOldComm",
+        "offset": 9,
+        "flags": "0x6",
+        "type": {
+          "name": "Byte",
+          "typeIndex": 155,
+          "kind": 5
+        }
+      },
+      {
+        "name": "LevelID",
+        "offset": 12,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "defeatState",
+        "offset": 16,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "goldNum",
+        "offset": 20,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "diamondsNum",
+        "offset": 24,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "strengthsNum",
+        "offset": 28,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "ToolValue",
+        "offset": 32,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "collectNum",
+        "offset": 36,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "collectAdNum",
+        "offset": 40,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "firstChargeData",
+        "offset": 44,
+        "flags": "0x6",
+        "type": {
+          "name": "FirstChargeData",
+          "typeIndex": 4122,
+          "kind": 18
+        }
+      },
+      {
+        "name": "jumpData",
+        "offset": 48,
+        "flags": "0x6",
+        "type": {
+          "name": "JumpData",
+          "typeIndex": 4121,
+          "kind": 18
+        }
+      },
+      {
+        "name": "toolCounts",
+        "offset": 52,
+        "flags": "0x6",
+        "type": {
+          "name": "List`1",
+          "args": [
+            {
+              "name": "ToolCount",
+              "typeIndex": 4124,
+              "kind": 18
+            }
+          ]
+        }
+      },
+      {
+        "name": "limitedBagInfos",
+        "offset": 56,
+        "flags": "0x6",
+        "type": {
+          "name": "List`1",
+          "args": [
+            {
+              "name": "LimitedItemBagInfo",
+              "typeIndex": 4098,
+              "kind": 18
+            }
+          ]
+        }
+      },
+      {
+        "name": "PurchasedJewelKey",
+        "offset": 60,
+        "flags": "0x6",
+        "type": {
+          "name": "List`1",
+          "args": [
+            {
+              "name": "String",
+              "typeIndex": 102,
+              "kind": 14
+            }
+          ]
+        }
+      },
+      {
+        "name": "dailyChallengeData",
+        "offset": 64,
+        "flags": "0x86",
+        "type": {
+          "name": "DailyChallengeData",
+          "typeIndex": 3977,
+          "kind": 18
+        }
+      },
+      {
+        "name": "season_pass",
+        "offset": 68,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "groupLevelIndex",
+        "offset": 72,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "SpeedUpPerDay",
+        "offset": 76,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      }
+    ]
+  },
+  {
+    "name": "FirstChargeData",
+    "typeIndex": 4122,
+    "fields": [
+      {
+        "name": "hasCharge",
+        "offset": 8,
+        "flags": "0x6",
+        "type": {
+          "name": "Boolean",
+          "typeIndex": 154,
+          "kind": 2
+        }
+      },
+      {
+        "name": "rewardState",
+        "offset": 9,
+        "flags": "0x6",
+        "type": {
+          "name": "Byte",
+          "typeIndex": 155,
+          "kind": 5
+        }
+      },
+      {
+        "name": "firstChargeTime",
+        "offset": 16,
+        "flags": "0x6",
+        "type": {
+          "name": "Int64",
+          "typeIndex": 216,
+          "kind": 10
+        }
+      }
+    ]
+  },
+  {
+    "name": "JumpData",
+    "typeIndex": 4121,
+    "fields": [
+      {
+        "name": "defeatNum",
+        "offset": 8,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "jumpNum",
+        "offset": 12,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "jumpDayOfYear",
+        "offset": 16,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      }
+    ]
+  },
+  {
+    "name": "ToolCount",
+    "typeIndex": 4124,
+    "fields": [
+      {
+        "name": "id",
+        "offset": 8,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "count",
+        "offset": 12,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      }
+    ]
+  },
+  {
+    "name": "LimitedItemBagInfo",
+    "typeIndex": 4098,
+    "fields": [
+      {
+        "name": "isActive",
+        "offset": 8,
+        "flags": "0x6",
+        "type": {
+          "name": "Boolean",
+          "typeIndex": 154,
+          "kind": 2
+        }
+      },
+      {
+        "name": "id",
+        "offset": 12,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "ItemBagId",
+        "offset": 16,
+        "flags": "0x6",
+        "type": {
+          "name": "Int32",
+          "typeIndex": 215,
+          "kind": 8
+        }
+      },
+      {
+        "name": "LimitedTime",
+        "offset": 24,
+        "flags": "0x6",
+        "type": {
+          "name": "Int64",
+          "typeIndex": 216,
+          "kind": 10
+        }
+      }
+    ]
+  }
+]

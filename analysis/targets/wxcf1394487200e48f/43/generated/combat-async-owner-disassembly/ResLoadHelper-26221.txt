@@ -1,0 +1,37 @@
+; ResLoadHelper.LoadScene; wasmcode function 10687; offset=5190505 size=103
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+004f336a  i32.const [5011606]
+004f336f  i32.load8_u [0, 0]
+004f3372  i32.eqz []
+004f3373  if [-64]
+004f3375    i32.const [4000624]
+004f337a    call [900] ; 
+004f337d    i32.const [3932308]
+004f3382    call [900] ; 
+004f3385    i32.const [3938016]
+004f338a    call [900] ; 
+004f338d    i32.const [5011606]
+004f3392    i32.const [1]
+004f3394    i32.store8 [0, 0]
+004f3397  end []
+004f3398  i32.const [3938016]
+004f339d  i32.load [2, 0]
+004f33a0  call [901] ; 
+004f33a3  local.get [0]
+004f33a5  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f33a8  if [-64]
+004f33aa    i32.const [3932308]
+004f33af    i32.load [2, 0]
+004f33b2    call [901] ; 
+004f33b5    i32.const [4000624]
+004f33ba    i32.load [2, 0]
+004f33bd    call [1051] ; 
+004f33c0    local.get [0]
+004f33c2    local.get [1]
+004f33c4    local.get [2]
+004f33c6    local.get [3]
+004f33c8    i32.const [0]
+004f33ca    call [7266] ; ResourcesModule.LoadScene
+004f33cd    drop []
+004f33ce  end []
+004f33cf  end []

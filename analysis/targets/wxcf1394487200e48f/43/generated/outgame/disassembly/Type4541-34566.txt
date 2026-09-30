@@ -1,0 +1,24 @@
+; Original class: ItemBase
+; Type4541.AddItemOnlyModel; wasmcode function 4987; offset=1721274 size=51
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(1, 127)]
+001a43bd  local.get [0]
+001a43bf  call [2040] ; GlobalItemManager.get_Instance
+001a43c2  local.set [3]
+001a43c4  local.get [0]
+001a43c6  i32.load [2, 0]
+001a43c9  local.set [2]
+001a43cb  local.get [3]
+001a43cd  local.get [0]
+001a43cf  local.get [1]
+001a43d1  local.get [2]
+001a43d3  i32.const [48]
+001a43d5  i32.add []
+001a43d6  i32.load [2, 192]
+001a43da  local.get [2]
+001a43dc  i32.load [2, 236]
+001a43e0  global.set [3]
+001a43e2  global.get [3]
+001a43e4  call_indirect [31, 0]
+001a43e7  local.get [0]
+001a43e9  call [12046] ; GlobalItemManager.AddRewardsModel
+001a43ec  end []

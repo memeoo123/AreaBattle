@@ -1,0 +1,88 @@
+; Original class: CanvasAdaptive
+; Type10722.Update; wasmcode function 20341; offset=9121093 size=215
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008b2d48  global.get [0]
+008b2d4a  i32.const [16]
+008b2d4c  i32.sub []
+008b2d4d  local.set [1]
+008b2d4f  local.get [1]
+008b2d51  global.set [0]
+008b2d53  i32.const [5001866]
+008b2d58  i32.load8_u [0, 0]
+008b2d5b  i32.eqz []
+008b2d5c  if [-64]
+008b2d5e    i32.const [3930676]
+008b2d63    call [900] ; 
+008b2d66    i32.const [4081308] ; STRING "_"
+008b2d6b    call [900] ; 
+008b2d6e    i32.const [4055084] ; STRING "GameAspectChange"
+008b2d73    call [900] ; 
+008b2d76    i32.const [4103760] ; STRING "屏幕分辨率变动，触发适配"
+008b2d7b    call [900] ; 
+008b2d7e    i32.const [5001866]
+008b2d83    i32.const [1]
+008b2d85    i32.store8 [0, 0]
+008b2d88  end []
+008b2d89  i32.const [0]
+008b2d8b  call [1213] ; Screen.get_width
+008b2d8e  local.set [2]
+008b2d90  i32.const [0]
+008b2d92  call [1173] ; Screen.get_height
+008b2d95  local.set [3]
+008b2d97  local.get [0]
+008b2d99  f32.load [2, 20]
+008b2d9c  local.get [2]
+008b2d9e  f32.convert_i32_s []
+008b2d9f  local.get [3]
+008b2da1  f32.convert_i32_s []
+008b2da2  f32.div []
+008b2da3  f32.ne []
+008b2da4  if [-64]
+008b2da6    local.get [0]
+008b2da8    local.get [1]
+008b2daa    call [8153] ; CanvasAdaptive.adaptive
+008b2dad    local.get [1]
+008b2daf    i32.const [0]
+008b2db1    call [1213] ; Screen.get_width
+008b2db4    i32.store [2, 12]
+008b2db7    local.get [1]
+008b2db9    i32.const [12]
+008b2dbb    i32.add []
+008b2dbc    i32.const [0]
+008b2dbe    call [966] ; Int32.ToString
+008b2dc1    local.set [0]
+008b2dc3    local.get [1]
+008b2dc5    i32.const [0]
+008b2dc7    call [1173] ; Screen.get_height
+008b2dca    i32.store [2, 12]
+008b2dcd    local.get [1]
+008b2dcf    i32.const [12]
+008b2dd1    i32.add []
+008b2dd2    i32.const [0]
+008b2dd4    call [966] ; Int32.ToString
+008b2dd7    local.set [2]
+008b2dd9    i32.const [4103760] ; STRING "屏幕分辨率变动，触发适配"
+008b2dde    i32.load [2, 0]
+008b2de1    local.get [0]
+008b2de3    i32.const [4081308] ; STRING "_"
+008b2de8    i32.load [2, 0]
+008b2deb    local.get [2]
+008b2ded    i32.const [0]
+008b2def    call [1098] ; String.Concat
+008b2df2    local.set [0]
+008b2df4    i32.const [3930676]
+008b2df9    i32.load [2, 0]
+008b2dfc    call [901] ; 
+008b2dff    local.get [0]
+008b2e01    i32.const [0]
+008b2e03    call [1062] ; Debug.Log
+008b2e06    i32.const [4055084] ; STRING "GameAspectChange"
+008b2e0b    i32.load [2, 0]
+008b2e0e    i32.const [0]
+008b2e10    call [1317] ; MsgDispatcher.SendMessage
+008b2e13  end []
+008b2e14  local.get [1]
+008b2e16  i32.const [16]
+008b2e18  i32.add []
+008b2e19  global.set [0]
+008b2e1b  end []

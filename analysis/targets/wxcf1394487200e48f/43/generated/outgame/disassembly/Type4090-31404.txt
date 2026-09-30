@@ -1,0 +1,11 @@
+; Original class: CoinData
+; Type4090.Reset; wasmcode1 function 30882; offset=11853799 size=23
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00b4dfe8  local.get [0]
+00b4dfea  i32.const [0]
+00b4dfec  i32.const [9375] ; TABLE GameModule.get_Config
+00b4dff0  call_indirect [2, 0]
+00b4dff3  i32.load [2, 256]
+00b4dff7  i32.load [2, 48]
+00b4dffa  i32.store [2, 8]
+00b4dffd  end []

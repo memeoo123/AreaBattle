@@ -1,0 +1,37 @@
+; Original shared generic: Fsm`1.ChangeState
+; ProcedureFsmGeneric.ChangeState; wasmcode function 19671; offset=8819535 size=90
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00869352  local.get [2]
+00869354  i32.load [2, 28]
+00869357  i32.eqz []
+00869358  if [-64]
+0086935a    i32.const [3940520]
+0086935f    call [900] ; 
+00869362    local.get [2]
+00869364    call [954] ; 
+00869367  end []
+00869368  local.get [2]
+0086936a  i32.load [2, 28]
+0086936d  i32.load [2, 0]
+00869370  local.set [3]
+00869372  i32.const [3940520]
+00869377  i32.load [2, 0]
+0086937a  call [901] ; 
+0086937d  local.get [3]
+0086937f  i32.const [0]
+00869381  call [912] ; Type.GetTypeFromHandle
+00869384  local.set [3]
+00869386  local.get [2]
+00869388  i32.load [2, 16]
+0086938b  i32.load [2, 96]
+0086938e  i32.load [2, 124]
+00869391  i32.load [2, 0]
+00869394  local.get [2]
+00869396  i32.load [2, 16]
+00869399  i32.load [2, 96]
+0086939c  i32.load [2, 124]
+0086939f  local.get [0]
+008693a1  local.get [3]
+008693a3  local.get [1]
+008693a5  call [1035] ; 
+008693a8  end []

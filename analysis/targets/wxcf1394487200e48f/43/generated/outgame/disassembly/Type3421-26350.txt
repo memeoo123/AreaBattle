@@ -1,0 +1,48 @@
+; Original class: AudioManager
+; Type3421..ctor; wasmcode function 8219; offset=3897133 size=143
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003b772e  i32.const [5011676]
+003b7733  i32.load8_u [0, 0]
+003b7736  i32.eqz []
+003b7737  if [-64]
+003b7739    i32.const [3955228]
+003b773e    call [900] ; 
+003b7741    i32.const [3956232]
+003b7746    call [900] ; 
+003b7749    i32.const [3917400]
+003b774e    call [900] ; 
+003b7751    i32.const [3917604]
+003b7756    call [900] ; 
+003b7759    i32.const [4034536] ; STRING ""
+003b775e    call [900] ; 
+003b7761    i32.const [5011676]
+003b7766    i32.const [1]
+003b7768    i32.store8 [0, 0]
+003b776b  end []
+003b776c  i32.const [3917400]
+003b7771  i32.load [2, 0]
+003b7774  call [903] ; 
+003b7777  local.set [1]
+003b7779  local.get [1]
+003b777b  i32.const [3955228]
+003b7780  i32.load [2, 0]
+003b7783  call [951] ; 
+003b7786  local.get [0]
+003b7788  local.get [1]
+003b778a  i32.store [2, 16]
+003b778d  i32.const [3917604]
+003b7792  i32.load [2, 0]
+003b7795  call [903] ; 
+003b7798  local.set [1]
+003b779a  local.get [1]
+003b779c  i32.const [3956232]
+003b77a1  i32.load [2, 0]
+003b77a4  call [951] ; 
+003b77a7  local.get [0]
+003b77a9  local.get [1]
+003b77ab  i32.store [2, 28]
+003b77ae  local.get [0]
+003b77b0  i32.const [4034536] ; STRING ""
+003b77b5  i32.load [2, 0]
+003b77b8  i32.store [2, 36]
+003b77bb  end []

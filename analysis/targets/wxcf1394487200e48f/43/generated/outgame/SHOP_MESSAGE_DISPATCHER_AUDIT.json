@@ -1,0 +1,33 @@
+{
+  "status": "string_dispatch_and_shop_host_verified_video_pending",
+  "source": [
+    "disassembly/Type3485-26817.txt",
+    "disassembly/Type3485-26820.txt",
+    "disassembly/Type3485-26822.txt",
+    "disassembly/Type3485-26824.txt",
+    "disassembly/Type3485-26825.txt",
+    "disassembly/Type3485-26828.txt",
+    "disassembly/Type3485-26830.txt",
+    "disassembly/Type3485-26831.txt",
+    "disassembly/Type3485-26835.txt",
+    "disassembly/Type3485-26836.txt",
+    "message-dispatcher-generics.json"
+  ],
+  "verified": [
+    "Dictionary<string,EventHandler> add/combine, remove-last delegate and remove empty key",
+    "Null delegate can be stored and throws on send; missing key does nothing",
+    "Multicast in-flight snapshot and exception interruption",
+    "Shared dispatcher lazily created; ClearEvent replaces singleton",
+    "Concrete shop host routes lifecycle registrations to recovered dispatcher",
+    "Original ShopUI receives ToolChange through actual dispatcher and stops receiving after Dispose"
+  ],
+  "remaining": [
+    "Indexed event API family in MsgDispatcher",
+    "UIVideoBtn native callback host and source button lifecycle",
+    "Production account/menu owner and page initialization",
+    "Full persistence/build/E2E"
+  ],
+  "checks": 536,
+  "priorPlaymodeChecks": 8,
+  "dynamicScope": "Native ShopUI exercised in integrated editor tests; prior fly Play Mode report not rerun"
+}

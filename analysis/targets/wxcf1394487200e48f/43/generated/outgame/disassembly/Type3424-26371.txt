@@ -1,0 +1,43 @@
+; Original class: G~
+; Type3424.CreateAudioSource; wasmcode function 15143; offset=7360239 size=112
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00704ef0  i32.const [5011691]
+00704ef5  i32.load8_u [0, 0]
+00704ef8  i32.eqz []
+00704ef9  if [-64]
+00704efb    i32.const [4000692]
+00704f00    call [900] ; 
+00704f03    i32.const [3936516]
+00704f08    call [900] ; 
+00704f0b    i32.const [3941136]
+00704f10    call [900] ; 
+00704f13    i32.const [5011691]
+00704f18    i32.const [1]
+00704f1a    i32.store8 [0, 0]
+00704f1d  end []
+00704f1e  i32.const [3936516]
+00704f23  i32.load [2, 0]
+00704f26  call [901] ; 
+00704f29  local.get [0]
+00704f2b  i32.const [0]
+00704f2d  i32.const [0]
+00704f2f  call [946] ; Object.op_Inequality
+00704f32  if [-64]
+00704f34    i32.const [3941136]
+00704f39    i32.load [2, 0]
+00704f3c    call [901] ; 
+00704f3f    local.get [0]
+00704f41    local.get [1]
+00704f43    i32.const [0]
+00704f45    call [4685] ; Utils.NewGameObject
+00704f48    i32.const [4000692]
+00704f4d    i32.load [2, 0]
+00704f50    call [1094] ; 
+00704f53    local.set [0]
+00704f55  else []
+00704f56    i32.const [0]
+00704f58    local.set [0]
+00704f5a  end []
+00704f5b  local.get [0]
+00704f5d  return []
+00704f5e  end []

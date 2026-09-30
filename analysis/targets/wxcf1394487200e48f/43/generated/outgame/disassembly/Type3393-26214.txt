@@ -1,0 +1,37 @@
+; Original class: ResLoadHelper
+; Type3393.LoadPrefab; wasmcode function 10688; offset=5190609 size=98
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+004f33d2  i32.const [5011599]
+004f33d7  i32.load8_u [0, 0]
+004f33da  i32.eqz []
+004f33db  if [-64]
+004f33dd    i32.const [3938016]
+004f33e2    call [900] ; 
+004f33e5    i32.const [4066252] ; STRING "Prefabs/"
+004f33ea    call [900] ; 
+004f33ed    i32.const [5011599]
+004f33f2    i32.const [1]
+004f33f4    i32.store8 [0, 0]
+004f33f7  end []
+004f33f8  i32.const [3938016]
+004f33fd  i32.load [2, 0]
+004f3400  call [901] ; 
+004f3403  local.get [0]
+004f3405  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f3408  if [-64]
+004f340a    i32.const [4066252] ; STRING "Prefabs/"
+004f340f    i32.load [2, 0]
+004f3412    local.get [0]
+004f3414    i32.const [0]
+004f3416    call [921] ; String.Concat
+004f3419    local.set [0]
+004f341b    i32.const [3938016]
+004f3420    i32.load [2, 0]
+004f3423    call [901] ; 
+004f3426    local.get [0]
+004f3428    local.get [1]
+004f342a    local.get [2]
+004f342c    local.get [0]
+004f342e    call [10689] ; ResLoadHelper.LoadPrefabOri
+004f3431  end []
+004f3432  end []

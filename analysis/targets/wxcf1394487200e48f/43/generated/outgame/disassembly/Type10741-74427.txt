@@ -1,0 +1,41 @@
+; Original class: UIVideoBtn
+; Type10741.AddVideoBtnEvent; wasmcode function 9776; offset=4677483 size=105
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00475f6c  i32.const [5001946]
+00475f71  i32.load8_u [0, 0]
+00475f74  i32.eqz []
+00475f75  if [-64]
+00475f77    i32.const [3986880]
+00475f7c    call [900] ; 
+00475f7f    i32.const [3941508]
+00475f84    call [900] ; 
+00475f87    i32.const [5001946]
+00475f8c    i32.const [1]
+00475f8e    i32.store8 [0, 0]
+00475f91  end []
+00475f92  local.get [0]
+00475f94  i32.load [2, 180]
+00475f98  local.set [2]
+00475f9a  local.get [2]
+00475f9c  i32.eqz []
+00475f9d  if [-64]
+00475f9f    i32.const [3941508]
+00475fa4    i32.load [2, 0]
+00475fa7    call [903] ; 
+00475faa    local.set [2]
+00475fac    local.get [2]
+00475fae    i32.const [0]
+00475fb0    call [4192] ; VideoBtnEvent..ctor
+00475fb3    local.get [0]
+00475fb5    local.get [2]
+00475fb7    i32.store [2, 180]
+00475fbb    local.get [0]
+00475fbd    i32.load [2, 180]
+00475fc1    local.set [2]
+00475fc3  end []
+00475fc4  local.get [2]
+00475fc6  local.get [1]
+00475fc8  i32.const [3986880]
+00475fcd  i32.load [2, 0]
+00475fd0  call [1546] ; 
+00475fd3  end []

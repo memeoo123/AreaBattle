@@ -1,0 +1,23 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.get_CanReadLocalData; wasmcode function 14662; offset=7200108 size=46
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+006ddd6d  i32.const [0]
+006ddd6f  call [1083] ; BridgeManager.get_xyxFunc
+006ddd72  local.set [0]
+006ddd74  local.get [0]
+006ddd76  local.set [1]
+006ddd78  local.get [0]
+006ddd7a  i32.load [2, 0]
+006ddd7d  local.set [0]
+006ddd7f  local.get [1]
+006ddd81  local.get [0]
+006ddd83  i32.const [432]
+006ddd86  i32.add []
+006ddd87  i32.load [2, 192]
+006ddd8b  local.get [0]
+006ddd8d  i32.load [2, 620]
+006ddd91  global.set [3]
+006ddd93  global.get [3]
+006ddd95  call_indirect [1, 0]
+006ddd98  return []
+006ddd99  end []

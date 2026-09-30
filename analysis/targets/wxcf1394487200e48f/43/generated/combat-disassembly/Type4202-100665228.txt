@@ -1,0 +1,29 @@
+; Type4202.Execute; wasmcode function 13877; offset=6936498 size=62
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0069d7b3  local.get [0]
+0069d7b5  i32.load8_u [0, 16]
+0069d7b8  i32.eqz []
+0069d7b9  if [-64]
+0069d7bb    local.get [0]
+0069d7bd    i32.const [0]
+0069d7bf    i32.store [2, 28]
+0069d7c2    local.get [0]
+0069d7c4    i32.const [1]
+0069d7c6    i32.store8 [0, 16]
+0069d7c9  end []
+0069d7ca  local.get [0]
+0069d7cc  i32.const [0]
+0069d7ce  call [1388] ; 
+0069d7d1  local.get [0]
+0069d7d3  local.get [0]
+0069d7d5  call [8805] ; Type4202.Tool1Skill
+0069d7d8  i32.const [0]
+0069d7da  call [1227] ; 
+0069d7dd  i32.store [2, 44]
+0069d7e0  i32.const [0]
+0069d7e2  call [1193] ; GameModule.get_Audio
+0069d7e5  i32.const [1]
+0069d7e7  i32.const [2039]
+0069d7ea  i32.const [0]
+0069d7ec  call [1201] ; Extension.PlayerVoice, Raw.1201
+0069d7ef  end []

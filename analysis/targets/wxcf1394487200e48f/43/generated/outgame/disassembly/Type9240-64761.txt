@@ -1,0 +1,32 @@
+; Original class: WXFunctionManger
+; Type9240.SetPreloadList; wasmcode1 function 39995; offset=14744495 size=89
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00e0fbb0  i32.const [5006581]
+00e0fbb5  i32.load8_u [0, 0]
+00e0fbb8  i32.eqz []
+00e0fbb9  if [-64]
+00e0fbbb    i32.const [3930676]
+00e0fbc0    i32.const [1605]
+00e0fbc3    call_indirect [0, 0]
+00e0fbc6    i32.const [4050324] ; STRING "DBTWXFuntionsManger SetPreloadList"
+00e0fbcb    i32.const [1605]
+00e0fbce    call_indirect [0, 0]
+00e0fbd1    i32.const [5006581]
+00e0fbd6    i32.const [1]
+00e0fbd8    i32.store8 [0, 0]
+00e0fbdb  end []
+00e0fbdc  i32.const [3930676]
+00e0fbe1  i32.load [2, 0]
+00e0fbe4  i32.const [1149]
+00e0fbe7  call_indirect [0, 0]
+00e0fbea  i32.const [4050324] ; STRING "DBTWXFuntionsManger SetPreloadList"
+00e0fbef  i32.load [2, 0]
+00e0fbf2  i32.const [0]
+00e0fbf4  i32.const [2311] ; TABLE Debug.Log
+00e0fbf7  call_indirect [4, 0]
+00e0fbfa  local.get [0]
+00e0fbfc  i32.load [2, 16]
+00e0fbff  local.get [1]
+00e0fc01  i32.const [0]
+00e0fc03  call [31744] ; AudioModule.downloadAudio
+00e0fc07  end []

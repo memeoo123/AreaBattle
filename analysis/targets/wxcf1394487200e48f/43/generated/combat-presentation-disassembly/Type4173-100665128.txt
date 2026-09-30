@@ -1,0 +1,60 @@
+; Type4173.Execute; wasmcode function 15168; offset=7368850 size=160
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00707093  i32.const [5010324]
+00707098  i32.load8_u [0, 0]
+0070709b  i32.eqz []
+0070709c  if [-64]
+0070709e    i32.const [3953440]
+007070a3    call [900] ; 
+007070a6    i32.const [3944712]
+007070ab    call [900] ; 
+007070ae    i32.const [3926888]
+007070b3    call [900] ; 
+007070b6    i32.const [5010324]
+007070bb    i32.const [1]
+007070bd    i32.store8 [0, 0]
+007070c0  end []
+007070c1  local.get [0]
+007070c3  i32.load8_u [0, 16]
+007070c6  i32.eqz []
+007070c7  if [-64]
+007070c9    local.get [0]
+007070cb    i32.const [0]
+007070cd    i32.store [2, 28]
+007070d0    local.get [0]
+007070d2    i32.const [1]
+007070d4    i32.store8 [0, 16]
+007070d7  end []
+007070d8  i32.const [3953440]
+007070dd  i32.load [2, 0]
+007070e0  call [935] ; 
+007070e3  i32.load8_u [0, 52]
+007070e6  if [-64]
+007070e8    i32.const [3944712]
+007070ed    i32.load [2, 0]
+007070f0    call [901] ; 
+007070f3    i32.const [3944712]
+007070f8    i32.load [2, 0]
+007070fb    i32.load [2, 92]
+007070fe    i32.load [2, 36]
+00707101    i32.const [0]
+00707103    call [1317] ; MsgDispatcher.SendMessage
+00707106  end []
+00707107  i32.const [0]
+00707109  call [1821] ; UIAudioManager.get_Instance
+0070710c  local.set [0]
+0070710e  i32.const [3926888]
+00707113  i32.load [2, 0]
+00707116  i32.const [1]
+00707118  call [909] ; 
+0070711b  local.set [1]
+0070711d  local.get [1]
+0070711f  i32.const [2042] ; TABLE UnityWebRequest.get_responseCode
+00707122  i32.store [2, 16]
+00707125  local.get [0]
+00707127  i32.const [1]
+00707129  local.get [1]
+0070712b  i32.const [0]
+0070712d  call [2462] ; UIAudioManager.Play
+00707130  drop []
+00707131  end []

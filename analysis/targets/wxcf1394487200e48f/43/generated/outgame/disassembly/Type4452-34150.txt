@@ -1,0 +1,27 @@
+; Original class: ProcedureStarGame
+; Type4452.|N]vf; wasmcode1 function 54295; offset=17958468 size=70
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+01120645  i32.const [5009785]
+0112064a  i32.load8_u [0, 0]
+0112064d  i32.eqz []
+0112064e  if [-64]
+01120650    i32.const [3953448]
+01120655    i32.const [1605]
+01120658    call_indirect [0, 0]
+0112065b    i32.const [5009785]
+01120660    i32.const [1]
+01120662    i32.store8 [0, 0]
+01120665  end []
+01120666  local.get [1]
+01120668  i32.const [0]
+0112066a  i32.const [2502] ; TABLE Int32.Parse
+0112066d  call_indirect [1, 0]
+01120670  local.set [0]
+01120672  i32.const [3953448]
+01120677  i32.load [2, 0]
+0112067a  i32.const [10272]
+0112067e  call_indirect [2, 0]
+01120681  local.get [0]
+01120683  local.get [0]
+01120685  call [26092] ; LevelRankControl.GM_SendRank
+01120689  end []

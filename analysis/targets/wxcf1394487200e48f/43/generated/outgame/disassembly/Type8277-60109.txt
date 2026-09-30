@@ -1,0 +1,38 @@
+; Original class: Text
+; Type8277..ctor; wasmcode function 10124; offset=4853315 size=103
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004a0e44  i32.const [4985210]
+004a0e49  i32.load8_u [0, 0]
+004a0e4c  i32.eqz []
+004a0e4d  if [-64]
+004a0e4f    i32.const [3939452]
+004a0e54    call [900] ; 
+004a0e57    i32.const [3927300]
+004a0e5c    call [900] ; 
+004a0e5f    i32.const [4985210]
+004a0e64    i32.const [1]
+004a0e66    i32.store8 [0, 0]
+004a0e69  end []
+004a0e6a  local.get [0]
+004a0e6c  i32.const [0]
+004a0e6e  call [12277] ; FontData.get_defaultFontData
+004a0e71  i32.store [2, 124]
+004a0e74  local.get [0]
+004a0e76  i32.const [3939452]
+004a0e7b  i32.load [2, 0]
+004a0e7e  i32.load [2, 92]
+004a0e81  i32.load [2, 0]
+004a0e84  i32.store [2, 128]
+004a0e88  local.get [0]
+004a0e8a  i32.const [3927300]
+004a0e8f  i32.load [2, 0]
+004a0e92  i32.const [4]
+004a0e94  call [909] ; 
+004a0e97  i32.store [2, 144]
+004a0e9b  local.get [0]
+004a0e9d  i32.const [0]
+004a0e9f  call [4375] ; MaskableGraphic..ctor
+004a0ea2  local.get [0]
+004a0ea4  i32.const [0]
+004a0ea6  i32.store8 [0, 92]
+004a0ea9  end []

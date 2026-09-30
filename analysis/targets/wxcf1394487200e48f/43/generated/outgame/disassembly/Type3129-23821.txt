@@ -1,0 +1,23 @@
+; Original class: AssetBundleManager
+; Type3129.UnloadAssetBundle; wasmcode function 8247; offset=3916712 size=57
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003bc3a9  i32.const [4988535]
+003bc3ae  i32.load8_u [0, 0]
+003bc3b1  i32.eqz []
+003bc3b2  if [-64]
+003bc3b4    i32.const [3928344]
+003bc3b9    call [900] ; 
+003bc3bc    i32.const [4988535]
+003bc3c1    i32.const [1]
+003bc3c3    i32.store8 [0, 0]
+003bc3c6  end []
+003bc3c7  i32.const [3928344]
+003bc3cc  i32.load [2, 0]
+003bc3cf  call [901] ; 
+003bc3d2  local.get [0]
+003bc3d4  local.get [0]
+003bc3d6  call [8248] ; AssetBundleManager.UnloadAssetBundleInternal
+003bc3d9  local.get [0]
+003bc3db  local.get [0]
+003bc3dd  call [13169] ; AssetBundleManager.UnloadDependencies
+003bc3e0  end []

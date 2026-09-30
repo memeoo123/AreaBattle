@@ -1,0 +1,27 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.BuySuccessCallBackFormUserStatic; wasmcode1 function 38460; offset=14432963 size=70
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00dc3ac4  i32.const [5005416]
+00dc3ac9  i32.load8_u [0, 0]
+00dc3acc  i32.eqz []
+00dc3acd  if [-64]
+00dc3acf    i32.const [4057272] ; STRING "ISDK BuySuccessCallBackFormUserStatic orderId: "
+00dc3ad4    i32.const [1605]
+00dc3ad7    call_indirect [0, 0]
+00dc3ada    i32.const [5005416]
+00dc3adf    i32.const [1]
+00dc3ae1    i32.store8 [0, 0]
+00dc3ae4  end []
+00dc3ae5  i32.const [4057272] ; STRING "ISDK BuySuccessCallBackFormUserStatic orderId: "
+00dc3aea  i32.load [2, 0]
+00dc3aed  local.get [1]
+00dc3aef  i32.const [0]
+00dc3af1  i32.const [1476] ; TABLE String.Concat
+00dc3af4  call_indirect [3, 0]
+00dc3af7  local.get [1]
+00dc3af9  i32.const [9037] ; TABLE XYXLOG.IAPLog
+00dc3afd  call_indirect [4, 0]
+00dc3b00  local.get [1]
+00dc3b02  i32.const [0]
+00dc3b04  call [27257] ; IAPMgr.BuySuccessCallBackFormUserStatic
+00dc3b08  end []

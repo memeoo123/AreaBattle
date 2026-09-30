@@ -1,0 +1,83 @@
+; Original class: WXFunctionManger
+; Type9240.AdsIsReady; wasmcode function 9550; offset=4588413 size=218
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+00460380  i32.const [5006589]
+00460385  i32.load8_u [0, 0]
+00460388  i32.eqz []
+00460389  if [-64]
+0046038b    i32.const [3911392]
+00460390    call [900] ; 
+00460393    i32.const [3927760]
+00460398    call [900] ; 
+0046039b    i32.const [3940520]
+004603a0    call [900] ; 
+004603a3    i32.const [3941756]
+004603a8    call [900] ; 
+004603ab    i32.const [4078432] ; STRING "WXFunctionManger AdsIsReady false"
+004603b0    call [900] ; 
+004603b3    i32.const [5006589]
+004603b8    i32.const [1]
+004603ba    i32.store8 [0, 0]
+004603bd  end []
+004603be  local.get [0]
+004603c0  i32.const [20]
+004603c2  i32.add []
+004603c3  local.set [1]
+004603c5  local.get [0]
+004603c7  i32.load [2, 20]
+004603ca  local.set [0]
+004603cc  local.get [0]
+004603ce  i32.eqz []
+004603cf  if [-64]
+004603d1    i32.const [3941756]
+004603d6    i32.load [2, 0]
+004603d9    i32.load [2, 92]
+004603dc    i32.load [2, 4]
+004603df    local.set [0]
+004603e1    i32.const [3911392]
+004603e6    i32.load [2, 0]
+004603e9    local.set [2]
+004603eb    i32.const [3940520]
+004603f0    i32.load [2, 0]
+004603f3    call [901] ; 
+004603f6    local.get [0]
+004603f8    local.get [2]
+004603fa    i32.const [0]
+004603fc    call [912] ; Type.GetTypeFromHandle
+004603ff    local.get [0]
+00460401    call [2540] ; WXModuleManager.GetModuleBase
+00460404    local.set [0]
+00460406    local.get [1]
+00460408    local.get [0]
+0046040a    i32.const [3927760]
+0046040f    i32.load [2, 0]
+00460412    call [924] ; 
+00460415    i32.store [2, 0]
+00460418    local.get [0]
+0046041a    i32.const [3927760]
+0046041f    i32.load [2, 0]
+00460422    call [924] ; 
+00460425    drop []
+00460426    local.get [1]
+00460428    i32.load [2, 0]
+0046042b    local.set [0]
+0046042d  end []
+0046042e  local.get [0]
+00460430  local.get [0]
+00460432  local.get [0]
+00460434  call [3485] ; WXFunctionManger.CheckFunctionActive
+00460437  if [-64]
+00460439    local.get [1]
+0046043b    i32.load [2, 0]
+0046043e    i32.load8_u [0, 10]
+00460441    i32.const [0]
+00460443    i32.ne []
+00460444    return []
+00460445  end []
+00460446  i32.const [4078432] ; STRING "WXFunctionManger AdsIsReady false"
+0046044b  i32.load [2, 0]
+0046044e  i32.const [0]
+00460450  call [2349] ; XYXLOG.Warning
+00460453  i32.const [0]
+00460455  return []
+00460456  end []

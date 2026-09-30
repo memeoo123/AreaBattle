@@ -1,0 +1,129 @@
+; Original class: InputManager
+; Type3603.get_Instance; wasmcode function 1623; offset=535421 size=388
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+00082b80  i32.const [4989951]
+00082b85  i32.load8_u [0, 0]
+00082b88  i32.eqz []
+00082b89  if [-64]
+00082b8b    i32.const [4000776]
+00082b90    call [900] ; 
+00082b93    i32.const [4001060]
+00082b98    call [900] ; 
+00082b9b    i32.const [3932344]
+00082ba0    call [900] ; 
+00082ba3    i32.const [3934348]
+00082ba8    call [900] ; 
+00082bab    i32.const [3936516]
+00082bb0    call [900] ; 
+00082bb3    i32.const [4058020] ; STRING "InputManager"
+00082bb8    call [900] ; 
+00082bbb    i32.const [4989951]
+00082bc0    i32.const [1]
+00082bc2    i32.store8 [0, 0]
+00082bc5  end []
+00082bc6  i32.const [3934348]
+00082bcb  i32.load [2, 0]
+00082bce  call [901] ; 
+00082bd1  i32.const [3934348]
+00082bd6  i32.load [2, 0]
+00082bd9  i32.load [2, 92]
+00082bdc  i32.load [2, 4]
+00082bdf  local.set [0]
+00082be1  i32.const [3936516]
+00082be6  i32.load [2, 0]
+00082be9  call [901] ; 
+00082bec  local.get [0]
+00082bee  i32.const [0]
+00082bf0  i32.const [0]
+00082bf2  call [940] ; Object.op_Equality
+00082bf5  if [-64]
+00082bf7    i32.const [4058020] ; STRING "InputManager"
+00082bfc    i32.load [2, 0]
+00082bff    i32.const [0]
+00082c01    call [1757] ; GameObject.Find
+00082c04    local.set [0]
+00082c06    i32.const [3936516]
+00082c0b    i32.load [2, 0]
+00082c0e    call [901] ; 
+00082c11    local.get [0]
+00082c13    i32.const [0]
+00082c15    i32.const [0]
+00082c17    call [940] ; Object.op_Equality
+00082c1a    if [-64]
+00082c1c      i32.const [3932344]
+00082c21      i32.load [2, 0]
+00082c24      call [903] ; 
+00082c27      local.set [0]
+00082c29      local.get [0]
+00082c2b      i32.const [0]
+00082c2d      call [1781] ; GameObject..ctor
+00082c30      local.get [0]
+00082c32      i32.const [4058020] ; STRING "InputManager"
+00082c37      i32.load [2, 0]
+00082c3a      i32.const [0]
+00082c3c      call [1375] ; Object.set_name
+00082c3f    end []
+00082c40    local.get [0]
+00082c42    i32.const [4001060]
+00082c47    i32.load [2, 0]
+00082c4a    call [1091] ; 
+00082c4d    local.set [1]
+00082c4f    i32.const [3934348]
+00082c54    i32.load [2, 0]
+00082c57    call [901] ; 
+00082c5a    i32.const [3934348]
+00082c5f    i32.load [2, 0]
+00082c62    i32.load [2, 92]
+00082c65    local.get [1]
+00082c67    i32.store [2, 4]
+00082c6a    i32.const [3934348]
+00082c6f    i32.load [2, 0]
+00082c72    i32.load [2, 92]
+00082c75    drop []
+00082c76    i32.const [3934348]
+00082c7b    i32.load [2, 0]
+00082c7e    i32.load [2, 92]
+00082c81    i32.load [2, 4]
+00082c84    local.set [1]
+00082c86    i32.const [3936516]
+00082c8b    i32.load [2, 0]
+00082c8e    call [901] ; 
+00082c91    local.get [1]
+00082c93    i32.const [0]
+00082c95    i32.const [0]
+00082c97    call [940] ; Object.op_Equality
+00082c9a    if [-64]
+00082c9c      local.get [0]
+00082c9e      i32.const [4000776]
+00082ca3      i32.load [2, 0]
+00082ca6      call [1094] ; 
+00082ca9      local.set [1]
+00082cab      i32.const [3934348]
+00082cb0      i32.load [2, 0]
+00082cb3      call [901] ; 
+00082cb6      i32.const [3934348]
+00082cbb      i32.load [2, 0]
+00082cbe      i32.load [2, 92]
+00082cc1      local.get [1]
+00082cc3      i32.store [2, 4]
+00082cc6      i32.const [3934348]
+00082ccb      i32.load [2, 0]
+00082cce      i32.load [2, 92]
+00082cd1      drop []
+00082cd2    end []
+00082cd3    i32.const [3936516]
+00082cd8    i32.load [2, 0]
+00082cdb    call [901] ; 
+00082cde    local.get [0]
+00082ce0    i32.const [0]
+00082ce2    call [1111] ; Object.DontDestroyOnLoad
+00082ce5  end []
+00082ce6  i32.const [3934348]
+00082ceb  i32.load [2, 0]
+00082cee  call [901] ; 
+00082cf1  i32.const [3934348]
+00082cf6  i32.load [2, 0]
+00082cf9  i32.load [2, 92]
+00082cfc  i32.load [2, 4]
+00082cff  return []
+00082d00  end []

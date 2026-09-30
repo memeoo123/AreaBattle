@@ -1,0 +1,124 @@
+; Original class: BaseUI
+; Type3544.LoadGameObject; wasmcode function 20480; offset=9206045 size=324
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+008c791e  i32.const [4989645]
+008c7923  i32.load8_u [0, 0]
+008c7926  i32.eqz []
+008c7927  if [-64]
+008c7929    i32.const [3929208]
+008c792e    call [900] ; 
+008c7931    i32.const [3926996]
+008c7936    call [900] ; 
+008c7939    i32.const [3936516]
+008c793e    call [900] ; 
+008c7941    i32.const [4105600] ; STRING "缓存模式，不播放动画 不抛事件"
+008c7946    call [900] ; 
+008c7949    i32.const [4106536] ; STRING "非缓存模式，播放动画 抛事件"
+008c794e    call [900] ; 
+008c7951    i32.const [4989645]
+008c7956    i32.const [1]
+008c7958    i32.store8 [0, 0]
+008c795b  end []
+008c795c  local.get [0]
+008c795e  i32.load8_u [0, 26]
+008c7961  local.set [3]
+008c7963  i32.const [3936516]
+008c7968  i32.load [2, 0]
+008c796b  call [901] ; 
+008c796e  local.get [3]
+008c7970  if [-64]
+008c7972    local.get [1]
+008c7974    i32.const [0]
+008c7976    call [2792] ; Object.DestroyImmediate
+008c7979    return []
+008c797a  end []
+008c797b  local.get [1]
+008c797d  i32.const [0]
+008c797f  i32.const [0]
+008c7981  call [940] ; Object.op_Equality
+008c7984  i32.eqz []
+008c7985  if [-64]
+008c7987    local.get [0]
+008c7989    local.get [2]
+008c798b    i32.store [2, 84]
+008c798e    local.get [0]
+008c7990    local.get [1]
+008c7992    local.get [0]
+008c7994    call [4713] ; UIObject.initGameObject
+008c7997    local.get [0]
+008c7999    local.get [0]
+008c799b    call [8201] ; BaseUI.addCanvas
+008c799e    local.get [0]
+008c79a0    i32.load [2, 0]
+008c79a3    local.set [2]
+008c79a5    local.get [0]
+008c79a7    local.get [2]
+008c79a9    i32.load [2, 352]
+008c79ad    local.get [2]
+008c79af    i32.load [2, 348]
+008c79b3    global.set [3]
+008c79b5    global.get [3]
+008c79b7    call_indirect [0, 0]
+008c79ba    local.get [0]
+008c79bc    i32.load [2, 0]
+008c79bf    local.set [2]
+008c79c1    local.get [0]
+008c79c3    local.get [2]
+008c79c5    i32.load [2, 304]
+008c79c9    local.get [2]
+008c79cb    i32.load [2, 300]
+008c79cf    global.set [3]
+008c79d1    global.get [3]
+008c79d3    call_indirect [0, 0]
+008c79d6    local.get [0]
+008c79d8    i32.load8_u [0, 88]
+008c79db    local.set [3]
+008c79dd    i32.const [3926996]
+008c79e2    i32.load [2, 0]
+008c79e5    i32.const [1]
+008c79e7    call [909] ; 
+008c79ea    local.set [2]
+008c79ec    local.get [3]
+008c79ee    i32.eqz []
+008c79ef    if [-64]
+008c79f1      local.get [2]
+008c79f3      i32.const [4106536] ; STRING "非缓存模式，播放动画 抛事件"
+008c79f8      i32.load [2, 0]
+008c79fb      call [905] ; 
+008c79fe      local.get [2]
+008c7a00      i32.const [4106536] ; STRING "非缓存模式，播放动画 抛事件"
+008c7a05      i32.load [2, 0]
+008c7a08      i32.store [2, 16]
+008c7a0b      i32.const [3929208]
+008c7a10      i32.load [2, 0]
+008c7a13      call [901] ; 
+008c7a16      local.get [2]
+008c7a18      i32.const [0]
+008c7a1a      call [1069] ; CLog.Log
+008c7a1d      i32.const [0]
+008c7a1f      call [1388] ; UpdateManager.get_Instance
+008c7a22      local.get [0]
+008c7a24      local.get [1]
+008c7a26      local.get [0]
+008c7a28      call [8200] ; BaseUI.waitOpenAnim
+008c7a2b      i32.const [0]
+008c7a2d      call [1227] ; MonoBehaviour.StartCoroutine
+008c7a30      drop []
+008c7a31      return []
+008c7a32    end []
+008c7a33    local.get [2]
+008c7a35    i32.const [4105600] ; STRING "缓存模式，不播放动画 不抛事件"
+008c7a3a    i32.load [2, 0]
+008c7a3d    call [905] ; 
+008c7a40    local.get [2]
+008c7a42    i32.const [4105600] ; STRING "缓存模式，不播放动画 不抛事件"
+008c7a47    i32.load [2, 0]
+008c7a4a    i32.store [2, 16]
+008c7a4d    i32.const [3929208]
+008c7a52    i32.load [2, 0]
+008c7a55    call [901] ; 
+008c7a58    local.get [2]
+008c7a5a    i32.const [0]
+008c7a5c    call [1069] ; CLog.Log
+008c7a5f  end []
+008c7a60  end []

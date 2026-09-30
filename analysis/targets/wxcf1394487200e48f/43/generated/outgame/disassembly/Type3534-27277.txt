@@ -1,0 +1,25 @@
+; Original class: TimeModule
+; Type3534.Check; wasmcode function 10094; offset=4834221 size=51
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(1, 124)]
+0049c3b0  local.get [0]
+0049c3b2  local.get [1]
+0049c3b4  local.get [0]
+0049c3b6  call [10092] ; TimeModule.GetTime
+0049c3b9  local.set [3]
+0049c3bb  local.get [0]
+0049c3bd  local.get [3]
+0049c3bf  local.get [0]
+0049c3c1  call [10101] ; TimeModule.CheckComplete
+0049c3c4  local.get [0]
+0049c3c6  local.get [3]
+0049c3c8  local.get [0]
+0049c3ca  call [10097] ; TimeModule.CheckSecond
+0049c3cd  local.get [0]
+0049c3cf  local.get [3]
+0049c3d1  local.get [0]
+0049c3d3  call [10099] ; TimeModule.CheckMillisecond
+0049c3d6  local.get [0]
+0049c3d8  local.get [3]
+0049c3da  local.get [0]
+0049c3dc  call [10098] ; TimeModule.CheckMinute
+0049c3df  end []

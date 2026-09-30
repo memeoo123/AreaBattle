@@ -1,0 +1,63 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "scope": "Static PVP level-loader identity; no matchmaking or remote profile behavior synthesized.",
+  "rules": [
+    {
+      "id": "pvp-special-table",
+      "status": "confirmed",
+      "fact": "PVPController loader f18345 first uses ConfigMgr.dicSpecialLevel[1].SceneId as fallback. Lookup key is controller.field52 if nonzero, else ArenaControl.GetCombatMap(1). On successful dictionary lookup use that SpecialLevelConfig.SceneId. This is NOT MatchLevelConfig, whose recovered typed class contains only id; raw MatchLevelConfig is rank title/MaxScore.",
+      "evidence": [
+        "analysis/special_pvp_load.txt:0x7e0df1..0x7e0e88",
+        "generated/gameplay-symbols.json:ConfigMgr field30=dicSpecialLevel (instance offset128)",
+        "generated/gameplay-symbols.json:SpecialLevelConfig(id,SceneId)",
+        "generated/tables/SpecialLevelConfig.json"
+      ]
+    },
+    {
+      "id": "pvp-direct-layout-load",
+      "status": "confirmed",
+      "fact": "Selected SceneId is appended to level resource path, passed with load args to LevelControl.OnLevelCfgLoad. PVP skips normal LevelConfig.SceneId mapper. PVP map ID and selected layout ID are distinct identities.",
+      "evidence": [
+        "analysis/special_pvp_load.txt:0x7e0e8c..0x7e1014"
+      ]
+    },
+    {
+      "id": "current-level-branch-terminology",
+      "status": "confirmed",
+      "fact": "LevelControl.eSpecialState is field24; get_CurLevel reads saved GamePlay currentLevel if eSpecialState==0, else direct layout field16. The property NAMED SpecialLevel is the field16 layout ID, not the field24 mode. Prior report prose SpecialLevel!=0 meant the nonzero special MODE; exact offsets govern the implementation.",
+      "evidence": [
+        "analysis/special_levelcontrol.txt:0x67c06..0x67c21",
+        "analysis/special_levelcontrol.txt:0x63ad3..0x63ada",
+        "generated/gameplay-symbols.json:LevelControl fields"
+      ]
+    },
+    {
+      "id": "pvp-current-level-identity",
+      "status": "bounded-confirmed",
+      "fact": "PVP.Init, OnInit, OnGamePlayState and loader use PVP.active8. The traced bodies do not set LevelControl.eSpecialState24 or direct layout16. Consequently an entry whose eSpecialState is0 retains saved normal progress as CurLevel and player SkillItem unlock identity, regardless of map SceneId. A controlled reconstruction entry should explicitly accept that normal-progress identity instead of using its PVP map/layout.",
+      "evidence": [
+        "analysis/special_pvp_all.txt",
+        "analysis/special_pvp_load.txt",
+        "analysis/special_levelcontrol.txt:0x67c06..0x67c21",
+        "generated/special-entry-identity.json:SkillItem.Init @0x4bc0c5..0x4bc0dd"
+      ]
+    }
+  ],
+  "mappingExamples": [
+    {
+      "mapId": 1,
+      "layoutId": 2001
+    },
+    {
+      "mapId": 2,
+      "layoutId": 2002
+    },
+    {
+      "mapId": 3,
+      "layoutId": 2003
+    }
+  ],
+  "unknowns": [
+    "Arena matching/rank persistence and all lobby entry callback permutations are not implemented by this report. The normal-progress conclusion is conditional on normal lobby eSpecialState0; PVP itself does not overwrite a pre-existing special mode."
+  ]
+}

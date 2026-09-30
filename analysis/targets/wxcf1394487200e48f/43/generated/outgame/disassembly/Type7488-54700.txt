@@ -1,0 +1,54 @@
+; Original class: DAUAdsAdapter
+; Type7488.reportShowFail; wasmcode function 6175; offset=2213188 size=154
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0021c545  i32.const [5004964]
+0021c54a  i32.load8_u [0, 0]
+0021c54d  i32.eqz []
+0021c54e  if [-64]
+0021c550    i32.const [3930112]
+0021c555    call [900] ; 
+0021c558    i32.const [4036680] ; STRING " 广告播放失败 uptype=26 "
+0021c55d    call [900] ; 
+0021c560    i32.const [3943536]
+0021c565    call [900] ; 
+0021c568    i32.const [5004964]
+0021c56d    i32.const [1]
+0021c56f    i32.store8 [0, 0]
+0021c572  end []
+0021c573  local.get [0]
+0021c575  i32.load [2, 8]
+0021c578  i32.const [4036680] ; STRING " 广告播放失败 uptype=26 "
+0021c57d  i32.load [2, 0]
+0021c580  i32.const [0]
+0021c582  call [921] ; String.Concat
+0021c585  i32.const [0]
+0021c587  call [999] ; XYXLOG.Log
+0021c58a  i32.const [3943536]
+0021c58f  i32.load [2, 0]
+0021c592  call [903] ; 
+0021c595  local.set [3]
+0021c597  local.get [3]
+0021c599  i32.const [0]
+0021c59b  call [2456] ; ads_up_event..ctor
+0021c59e  local.get [0]
+0021c5a0  local.get [3]
+0021c5a2  local.get [3]
+0021c5a4  call [3642] ; DAUAdsAdapter.setInfo
+0021c5a7  local.get [3]
+0021c5a9  local.get [2]
+0021c5ab  i32.store [2, 128]
+0021c5af  local.get [3]
+0021c5b1  local.get [1]
+0021c5b3  i32.store [2, 124]
+0021c5b6  local.get [3]
+0021c5b8  i64.const [4628011567076605952]
+0021c5c3  i64.store [3, 80]
+0021c5c6  i32.const [3930112]
+0021c5cb  i32.load [2, 0]
+0021c5ce  call [901] ; 
+0021c5d1  local.get [3]
+0021c5d3  call [2513] ; DAUEventConstant.get_Instance
+0021c5d6  local.get [3]
+0021c5d8  local.get [3]
+0021c5da  call [2512] ; DAUEventConstant.reportSever
+0021c5dd  end []

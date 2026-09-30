@@ -1,0 +1,54 @@
+; Original class: ADModule
+; Type9202.getFilterType; wasmcode function 5240; offset=1815223 size=130
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001bb2b8  i32.const [5006933]
+001bb2bd  i32.load8_u [0, 0]
+001bb2c0  i32.eqz []
+001bb2c1  if [-64]
+001bb2c3    i32.const [3984752]
+001bb2c8    call [900] ; 
+001bb2cb    i32.const [4082428] ; STRING "ad_click_lock_enable"
+001bb2d0    call [900] ; 
+001bb2d3    i32.const [4040676] ; STRING "1"
+001bb2d8    call [900] ; 
+001bb2db    i32.const [5006933]
+001bb2e0    i32.const [1]
+001bb2e2    i32.store8 [0, 0]
+001bb2e5  end []
+001bb2e6  block [-64]
+001bb2e8    block [-64]
+001bb2ea      i32.const [3984752]
+001bb2ef      i32.load [2, 0]
+001bb2f2      call [1203] ; 
+001bb2f5      i32.const [0]
+001bb2f7      call [2457] ; XYXSDKModuleMgr.get_onlineParamManager
+001bb2fa      i32.const [4082428] ; STRING "ad_click_lock_enable"
+001bb2ff      i32.load [2, 0]
+001bb302      i32.const [0]
+001bb304      call [5855] ; OnlineParamManager.GetParam
+001bb307      local.set [0]
+001bb309      local.get [0]
+001bb30b      if [-64]
+001bb30d        i32.const [0]
+001bb30f        local.set [1]
+001bb311        local.get [0]
+001bb313        i32.load [2, 8]
+001bb316        br_if [2]
+001bb318      end []
+001bb319    end []
+001bb31a    i32.const [1]
+001bb31c    local.set [1]
+001bb31e  end []
+001bb31f  local.get [1]
+001bb321  i32.eqz []
+001bb322  if [-64]
+001bb324    i32.const [4040676] ; STRING "1"
+001bb329    i32.load [2, 0]
+001bb32c    local.get [0]
+001bb32e    i32.const [0]
+001bb330    call [1019] ; String.Equals
+001bb333    return []
+001bb334  end []
+001bb335  i32.const [1]
+001bb337  return []
+001bb338  end []

@@ -1,0 +1,32 @@
+; Type4202..ctor; wasmcode function 8804; offset=4391825 size=87
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00430392  i32.const [5010376]
+00430397  i32.load8_u [0, 0]
+0043039a  i32.eqz []
+0043039b  if [-64]
+0043039d    i32.const [3974432]
+004303a2    call [900] ; 
+004303a5    i32.const [3923380]
+004303aa    call [900] ; 
+004303ad    i32.const [5010376]
+004303b2    i32.const [1]
+004303b4    i32.store8 [0, 0]
+004303b7  end []
+004303b8  i32.const [3923380]
+004303bd  i32.load [2, 0]
+004303c0  call [903] ; 
+004303c3  local.set [2]
+004303c5  local.get [2]
+004303c7  i32.const [3974432]
+004303cc  i32.load [2, 0]
+004303cf  call [944] ; 
+004303d2  local.get [0]
+004303d4  local.get [2]
+004303d6  i32.store [2, 48]
+004303d9  local.get [0]
+004303db  i32.const [1]
+004303dd  i32.store [2, 12]
+004303e0  local.get [0]
+004303e2  local.get [1]
+004303e4  i32.store [2, 20]
+004303e7  end []

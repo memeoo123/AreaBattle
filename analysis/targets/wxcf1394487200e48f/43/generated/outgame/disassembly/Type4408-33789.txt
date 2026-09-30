@@ -1,0 +1,80 @@
+; Original class: ShopUI
+; Type4408.ShowUI; wasmcode function 16000; offset=7719271 size=222
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0075c96a  global.get [0]
+0075c96c  i32.const [16]
+0075c96e  i32.sub []
+0075c96f  local.set [1]
+0075c971  local.get [1]
+0075c973  global.set [0]
+0075c975  i32.const [5007564]
+0075c97a  i32.load8_u [0, 0]
+0075c97d  i32.eqz []
+0075c97e  if [-64]
+0075c980    i32.const [3953536]
+0075c985    call [900] ; 
+0075c988    i32.const [3953576]
+0075c98d    call [900] ; 
+0075c990    i32.const [3926996]
+0075c995    call [900] ; 
+0075c998    i32.const [3936516]
+0075c99d    call [900] ; 
+0075c9a0    i32.const [3939116]
+0075c9a5    call [900] ; 
+0075c9a8    i32.const [4034536] ; STRING ""
+0075c9ad    call [900] ; 
+0075c9b0    i32.const [4068120] ; STRING "RotateSoldier"
+0075c9b5    call [900] ; 
+0075c9b8    i32.const [5007564]
+0075c9bd    i32.const [1]
+0075c9bf    i32.store8 [0, 0]
+0075c9c2  end []
+0075c9c3  i32.const [3953576]
+0075c9c8  i32.load [2, 0]
+0075c9cb  call [935] ; 
+0075c9ce  i32.load [2, 16]
+0075c9d1  i32.const [6]
+0075c9d3  i32.const [4034536] ; STRING ""
+0075c9d8  i32.load [2, 0]
+0075c9db  i32.const [0]
+0075c9dd  call [2549] ; TopInfoUI.RendererPart
+0075c9e0  i32.const [3926996]
+0075c9e5  i32.load [2, 0]
+0075c9e8  i32.const [1]
+0075c9ea  call [909] ; 
+0075c9ed  local.set [2]
+0075c9ef  local.get [1]
+0075c9f1  local.get [0]
+0075c9f3  i32.load [2, 120]
+0075c9f6  i32.store [2, 12]
+0075c9f9  i32.const [3939116]
+0075c9fe  i32.load [2, 0]
+0075ca01  local.get [1]
+0075ca03  i32.const [12]
+0075ca05  i32.add []
+0075ca06  call [910] ; 
+0075ca09  local.set [3]
+0075ca0b  local.get [2]
+0075ca0d  local.get [3]
+0075ca0f  call [905] ; 
+0075ca12  local.get [2]
+0075ca14  local.get [3]
+0075ca16  i32.store [2, 16]
+0075ca19  i32.const [4068120] ; STRING "RotateSoldier"
+0075ca1e  i32.load [2, 0]
+0075ca21  local.get [2]
+0075ca23  i32.const [0]
+0075ca25  call [1230] ; MsgDispatcher.SendMessage
+0075ca28  local.get [0]
+0075ca2a  local.get [1]
+0075ca2c  local.get [1]
+0075ca2e  call [7171] ; ShopUI.RefreshSkinState
+0075ca31  i32.const [3953536]
+0075ca36  i32.load [2, 0]
+0075ca39  call [935] ; 
+0075ca3c  drop []
+0075ca3d  local.get [1]
+0075ca3f  i32.const [16]
+0075ca41  i32.add []
+0075ca42  global.set [0]
+0075ca44  end []

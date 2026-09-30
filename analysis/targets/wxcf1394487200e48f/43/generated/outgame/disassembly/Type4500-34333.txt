@@ -1,0 +1,48 @@
+; Original class: ItemManager
+; Type4500.get_Instance; wasmcode function 7674; offset=3657242 size=138
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0037ce1b  i32.const [5009879]
+0037ce20  i32.load8_u [0, 0]
+0037ce23  i32.eqz []
+0037ce24  if [-64]
+0037ce26    i32.const [3995108]
+0037ce2b    call [900] ; 
+0037ce2e    i32.const [3930256]
+0037ce33    call [900] ; 
+0037ce36    i32.const [3934604]
+0037ce3b    call [900] ; 
+0037ce3e    i32.const [5009879]
+0037ce43    i32.const [1]
+0037ce45    i32.store8 [0, 0]
+0037ce48  end []
+0037ce49  i32.const [3934604]
+0037ce4e  i32.load [2, 0]
+0037ce51  i32.load [2, 92]
+0037ce54  i32.load [2, 0]
+0037ce57  i32.eqz []
+0037ce58  if [-64]
+0037ce5a    i32.const [3930256]
+0037ce5f    i32.load [2, 0]
+0037ce62    call [901] ; 
+0037ce65    i32.const [0]
+0037ce67    call [1309] ; DataManagerPool.get_Instance
+0037ce6a    i32.const [3995108]
+0037ce6f    i32.load [2, 0]
+0037ce72    call [1609] ; 
+0037ce75    local.set [0]
+0037ce77    i32.const [3934604]
+0037ce7c    i32.load [2, 0]
+0037ce7f    i32.load [2, 92]
+0037ce82    local.get [0]
+0037ce84    i32.store [2, 0]
+0037ce87    i32.const [3934604]
+0037ce8c    i32.load [2, 0]
+0037ce8f    i32.load [2, 92]
+0037ce92    drop []
+0037ce93  end []
+0037ce94  i32.const [3934604]
+0037ce99  i32.load [2, 0]
+0037ce9c  i32.load [2, 92]
+0037ce9f  i32.load [2, 0]
+0037cea2  return []
+0037cea3  end []

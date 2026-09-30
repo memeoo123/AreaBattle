@@ -1,0 +1,23 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-player-models-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==354
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='player-model-animation-dispatch';s['validation'].update(integratedChecksPassed=354,playerModelChecksPassed=5);s['nextActions']=['Restore baked mesh animator and actual model clip/resource import plus source display roots.','Wire PlayerModels/PlayerAnimation/ShopEquipment with concrete shop/account lifecycle.','Complete remaining outgame systems and full playable build/end-to-end validation.'];write(p,s)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['sourceMethodsIndexed']=822;write(p,s)
+sources=['disassembly/Type4462-34211.txt','disassembly/Type4461-34219.txt','disassembly/Type4523-34506.txt','disassembly/Type4523-34490.txt','player-animation-virtual-resolution.json']
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['player-model-animation-dispatch']={'implementationReady':True,'productionConnected':False,'source':sources,'implementation':['OutgamePlayerAnimation.cs'],'rules':['Current equipped ID lookup; color before activeSelf gate. Animator dictionary caches missing values too.','Reset then relax(false), then assign completion callback. Completion rereads equip and uses its cached animator or captured fallback, plays idle(true).','Source is baked mesh animation. A standard Spine SkeletonAnimation substitution is not equivalent.'],'pending':'Concrete animator, color, model resources and original roots.'};write(p,s)
+p=o/'PLAYER_DISPLAY_AUDIT.json';s=read(p);s['confirmed'].append({'fact':'Virtual slot11 offset280 resolves Reset, slot5 offset232 resolves Play. SpineAnimator operates MeshFilter, clip meshes and MaterialPropertyBlock _AnimTime/_AnimLoop. Source Reset zeros offsets32/36/40/44 and paused/loop flags but does not clear offset48 completion callback. Completion Update resets before invoking callback, clears it after invocation.','source':sources+['disassembly/Type4523-34502.txt','disassembly/Type4523-34509.txt']});s['pending']=['Concrete baked animation renderer, clip data and Soldier.SetSoldierColor adapter','Original display roots/camera and model asset coverage','Swipe/rotation and lifecycle'];write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='PlayerControl animation helper and completion') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'PlayerControl animation dispatch and virtual resolution','checksPassed':354,'outgameChecksPassed':87,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Concrete baked animator/model roots or playable lobby'};write(p,s)
+note='\n\n## 商店模型动画调度（354项）\n元数据虚槽确认 Reset/Play，原播放器使用烘焙网格而非 SkeletonAnimation。新增 OutgamePlayerAnimation：按当前装备取模型，先着色再检查 activeSelf，缓存动画组件，Reset→relax(false)→完成时重新读装备并idle(true)，保留无动画组件缓存和原错误。新增2项检查，集成354项通过（原267+关外87），Unity退出0。源方法索引822。实际烘焙动画播放器、模型资源/展示根节点、生产生命周期待完成；完整目标保持未完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+subprocess.run(b+['set-check']+a+['--name','outgamePlayerAnimationDispatch','--result','pass','--evidence','354 integrated checks; animation dispatch verified; concrete renderer and full goal incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded354; full goal remains active.')

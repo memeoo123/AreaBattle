@@ -1,0 +1,164 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "scope": [
+    "ArrowTower projectile",
+    "WayLineCircle drag preview",
+    "WayLineControl cut gesture"
+  ],
+  "sourceAcquisition": "generated/resource-snapshots/arrow-projectile-20260928/acquisition-manifest.json",
+  "acquisitionScope": "One previously missing catalog root effect/scene/hdzd_eff_spheretrails.prefab.unity3d, 28700 bytes; two dependencies reused local verified bundles. No baseline evidence overwritten.",
+  "coverage": {
+    "prefabs": 3,
+    "particleSystems": 6,
+    "particleSystemRenderers": 6,
+    "trailRenderers": 1,
+    "meshes": 1,
+    "materials": 3,
+    "textures": 3,
+    "unresolvedNativePointers": 0,
+    "originalScriptsExecuted": false
+  },
+  "rules": [
+    {
+      "id": "arrow-native-effect",
+      "status": "confirmed",
+      "source": [
+        "generated/arrow-evidence.json:projectile-path",
+        "WASM 0x60a3a0..0x60a3ae,0x3bd84b..0x3bd9c6,0x69fbae..0x69fc51,0x72af4b..0x72aff5,0x8dab58..0x8dabfd"
+      ],
+      "fact": "ArrowTower uses hdzd_eff_SphereTrails, localScale .5, Euler(0,90,0), duration .2 and captured endpoint. Existing ArrowState owns source movement, callback and hit rules; visual reads that state, never creates new damage."
+    },
+    {
+      "id": "arrow-prefab-components",
+      "status": "confirmed",
+      "source": [
+        "generated/resource-snapshots/arrow-projectile-20260928/prefabs/hdzd_eff_spheretrails.flat.json"
+      ],
+      "fact": "Six original transforms, five ParticleSystems/renderers; native enabled modules Initial, Emission, Color, Trail preserved including every disabled module, curve, gradient and seed setting. All five children are inactive in the source prefab. ArrowTower f8258 @0x3bd9cd..0x3bd9fd activates exactly child[i] where i==source.CampID; no clamp/fallback for camps outside0..4. Renderer mode Mesh, original unity_default_resources:10207 Sphere (515 vertices). Original hdzd_effect_13 Material and texture, builtin shader203 Legacy Shaders/Particles/Alpha Blended."
+    },
+    {
+      "id": "preview-source-entities",
+      "status": "confirmed",
+      "source": [
+        "analysis/flow_gesture_preload.txt:f9382 @0x458ac5..0x458aff",
+        "analysis/flow_gesture_circle.txt:f2745 @0xd1540..0xd156e"
+      ],
+      "fact": "Entity13 LineArrow is the endpoint ring. DrawParaLine lazily obtains single LineRendererEntity; it is not an arrow projectile. Entity12 LineRanderCut is initially inactive."
+    },
+    {
+      "id": "preview-color-and-transform",
+      "status": "confirmed",
+      "source": [
+        "analysis/flow_gesture_circle.txt:f9388 @0x459483..0x4594ee",
+        "f2745 @0xd15cc..0xd1710,0xd17dd..0xd19a4,0xd19d7..0xd1a1e"
+      ],
+      "fact": "Valid preview line receives supplied player LineColor; invalid line and ring are red. Valid ring _TintColor=(0,.2745098174,.631372571,1). Ring position=end+up*.02. Valid target replaces end with target.position and ring renderer scale=1.25*target.localScale.x; otherwise scale=1.25. Single line SetLine passes allowCut=false and showArrow=false (background only)."
+    },
+    {
+      "id": "preview-tag2-expansion",
+      "status": "confirmed",
+      "source": [
+        "analysis/flow_gesture_circle.txt:f2745 @0xd171a..0xd17c7",
+        "analysis/flow_gesture_tags.txt:f15702 @0x7368a9..0x7368b1",
+        "analysis/special_levelcontrol.txt:get_IsBossLv f26097 wasmcode1 @0x982ff4..0x982ffa; InitTower f11599 @0x56ac48,0x56acd9"
+      ],
+      "fact": "For a valid target, LevelControl.IsBossLv (byte+53 getter verified) true AND target.CompareTag(Tag2) multiplies the ring scale by another1.3. Loader sets IsBossLv when a StarInfo.isBoss is present, clears at Enter. Helper exposes expandTaggedTarget as this exact predicate; Boss.Init token100665274 f68533 wasmcode1 @0x14ad873..0x14ad89e explicitly assigns Tags.static20/Tag2 to the Boss model via GameObject.set_tag table53636 (Unity API mapped). Therefore actual initialized Boss target corresponds to Tag2, confirmed by the consumer, not the type name alone."
+    },
+    {
+      "id": "preview-hide",
+      "status": "confirmed",
+      "source": [
+        "analysis/flow_gesture_circle.txt:f9389",
+        "analysis/flow_gesture_cutend.txt:f4669 @0x18a1f7..0x18a24a"
+      ],
+      "fact": "Clear hides existing line and LineArrow; EndInput also hides cut root. No extra lingering effect or post-release trail is introduced."
+    },
+    {
+      "id": "cut-native-trail",
+      "status": "confirmed",
+      "source": [
+        "generated/gesture-visuals/LineRanderCut.hierarchy.json",
+        "analysis/flow_gesture_cutmove.txt:f6778 @0x2708b9..0x270983"
+      ],
+      "fact": "MoveCut sets root localPosition=pointer+up*.02 then SetActive(show). Source TrailRenderer time .4, minVertexDistance .002, width curve first value .1755829751,last .0307303816. Entire curve tangents/gradient retained by native serialization. Material xqzd_effect_tuowei02 uses original texture and builtin200 Legacy Shaders/Particles/Additive."
+    },
+    {
+      "id": "native-import-adapter",
+      "status": "implementation-adapter",
+      "source": [
+        "analysis/native_unity_serialization.py",
+        "analysis/flow_gesture_prepare.py"
+      ],
+      "fact": "Original type-tree serializedVersion retained at all nested nodes. Every local PPtr remapped to a stable large fileID. Material/mesh placeholders resolved to imported asset GUIDs; source material properties/native mesh coordinates/native bounds retained. Runtime manually pauses and Simulates ParticleSystems once per supplied scaledDelta for engine-independent production adapter replay. TrailRenderer remains the native original renderer."
+    },
+    {
+      "id": "preview-physics-not-connect-eligibility",
+      "status": "confirmed",
+      "source": [
+        "analysis/flow_gesture_drag.txt:f9378 @0x457b1b..0x458417",
+        "analysis/flow_gesture_check_source.txt:f9377 @0x457830..0x457989",
+        "analysis/flow_gesture_check_pair.txt:f5490 @0x1d697c..0x1d6a17",
+        "analysis/flow_gesture_overlap.txt:f4671 @0x18a3fe",
+        "analysis/flow_gesture_layers.txt:Layers.cctor @0x821183..0x82118b",
+        "generated/gesture-visuals/original-TagManager.json"
+      ],
+      "fact": "Capsule radius.03 mask1<<8 (GamePlayer1). Segment endpoint is direct ray-hit tower position if a tower, otherwise ground pointer. Select non-source collider with nearest transform center to source; threshold1000 and <= makes ties choose the last hit. No other collider means valid free ring; nearest non-tower means invalid. Candidate tower snaps endpoint. If candidate differs from direct ray-hit tower (or none), requery source to candidate and reject any collider GameObject other than the two endpoints. No line Direction/IsFrom/active state, grade/capacity, or CheckNewLine enters preview validity. Source selection and final submission remain separate original logic."
+    },
+    {
+      "id": "release-submits-cached-target",
+      "status": "confirmed",
+      "source": [
+        "generated/controls-disassembly/WayLineControl-M____rR-100665576.txt:f14747 @0x6e29a7",
+        "generated/controls-disassembly/WayLineControl-O_PYk_S-100665554.txt:f14746 @0x6e28d4..0x6e2928",
+        "analysis/flow_gesture_submit.txt:f9379",
+        "analysis/flow_gesture_cutend.txt:f4669"
+      ],
+      "fact": "Pointer down clears target120. Pointer move computes and caches target120 from the physics/snap result. Pointer up checks stored source116 and target120 nonnull and passes both to f9379 without resampling coordinates, then f4669 clears source116,draw64,sourceTower124 and hides visuals. The implementation clears its no-longer-observable target on end too; next down also clears. BattleView Begin/Move/EndTowerDrag are the exact shared production and editor-replay adapter; final eligibility remains Guide.TryConnect/Simulation.Connect, not preview validity."
+    }
+  ],
+  "goldens": {
+    "arrowParticleSystems": 5,
+    "ringParticleSystems": 1,
+    "sphereVertices": 515,
+    "activeProjectileChildIndexForCamp1": 1,
+    "firstArrowStartSize": 0.08,
+    "firstArrowMaxParticles": 2,
+    "firstArrowTrailLifetime": 0.15,
+    "firstArrowMinVertexDistance": 0.01,
+    "ringSimulationSpeed": 0.2,
+    "validTargetScaleForTargetScalePoint4": 0.5,
+    "expandedSameTargetScale": 0.65,
+    "freeRingScale": 1.25,
+    "cutTime": 0.4,
+    "cutMinVertexDistance": 0.002,
+    "worldHeightOffset": 0.02
+  },
+  "unknowns": [
+    "Exact visual pixel match is not established from original synchronized captures. Original shader names and decompressed programs are retained; current Unity built-in shader is used.",
+    "Original ParticleSystem autoRandomSeed retained; particle randomness is not claimed frame-exact.",
+    "Native TrailRenderer time/position history follows Unity engine time; editor-only AdvanceFrame without engine updates does not reproduce its temporal trail geometry."
+  ],
+  "implementation": [
+    "UnityProject/Assets/AreaBattle/Scripts/RecoveredGestureVisuals.cs",
+    "UnityProject/Assets/AreaBattle/Editor/RecoveredGestureImporter.cs"
+  ],
+  "fingerprints": [
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/gesture-visual-runtime.json",
+      "sha256": "b889581b6788f32d19b0b2a9c947ebfb40de63dcee55cef5d5e521e1b79b498e"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/gesture-visuals/LineArrow.prefab.template",
+      "sha256": "fdc99a62bfb7153af255a18d3887a6624e599634c1d9e5b37203dae5c07d8135"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/gesture-visuals/LineRanderCut.prefab.template",
+      "sha256": "f191003ba5d041b958daf254396fb6bd04ab62541db28a254270249e3a2e251c"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/gesture-visuals/hdzd_eff_SphereTrails.prefab.template",
+      "sha256": "2e70b89725e483048ed5b84f0802495857961e5e370dd00da917a0504551afe8"
+    }
+  ],
+  "validation": "Importer.Run defines seven source-derived checks; root orchestrator must run Unity import/compile and merge results before claiming pass."
+}

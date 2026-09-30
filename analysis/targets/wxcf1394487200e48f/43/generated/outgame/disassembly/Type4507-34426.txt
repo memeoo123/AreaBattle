@@ -1,0 +1,75 @@
+; Original class: X`nPj
+; Type4507.OnInit; wasmcode function 14653; offset=7198505 size=230
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006dd72a  i32.const [5009918]
+006dd72f  i32.load8_u [0, 0]
+006dd732  i32.eqz []
+006dd733  if [-64]
+006dd735    i32.const [3947148]
+006dd73a    call [900] ; 
+006dd73d    i32.const [3920892]
+006dd742    call [900] ; 
+006dd745    i32.const [3932388]
+006dd74a    call [900] ; 
+006dd74d    i32.const [4023348] ; METHOD X`nPj.jrnw~
+006dd752    call [900] ; 
+006dd755    i32.const [4023352] ; METHOD X`nPj.pU`Vnx
+006dd75a    call [900] ; 
+006dd75d    i32.const [4023344] ; METHOD X`nPj.de~`~YY
+006dd762    call [900] ; 
+006dd765    i32.const [4078632] ; STRING "WarWin"
+006dd76a    call [900] ; 
+006dd76d    i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+006dd772    call [900] ; 
+006dd775    i32.const [5009918]
+006dd77a    i32.const [1]
+006dd77c    i32.store8 [0, 0]
+006dd77f  end []
+006dd780  i32.const [3947148]
+006dd785  i32.load [2, 0]
+006dd788  call [903] ; 
+006dd78b  local.set [1]
+006dd78d  local.get [1]
+006dd78f  local.get [0]
+006dd791  i32.const [4023344] ; METHOD X`nPj.de~`~YY
+006dd796  i32.load [2, 0]
+006dd799  i32.const [0]
+006dd79b  call [1067] ; EventHandler..ctor
+006dd79e  i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+006dd7a3  i32.load [2, 0]
+006dd7a6  local.get [1]
+006dd7a8  i32.const [0]
+006dd7aa  call [1146] ; MsgDispatcher.AddEventListener
+006dd7ad  i32.const [3947148]
+006dd7b2  i32.load [2, 0]
+006dd7b5  call [903] ; 
+006dd7b8  local.set [1]
+006dd7ba  local.get [1]
+006dd7bc  local.get [0]
+006dd7be  i32.const [4023352] ; METHOD X`nPj.pU`Vnx
+006dd7c3  i32.load [2, 0]
+006dd7c6  i32.const [0]
+006dd7c8  call [1067] ; EventHandler..ctor
+006dd7cb  i32.const [4078632] ; STRING "WarWin"
+006dd7d0  i32.load [2, 0]
+006dd7d3  local.get [1]
+006dd7d5  i32.const [0]
+006dd7d7  call [1146] ; MsgDispatcher.AddEventListener
+006dd7da  i32.const [3920892]
+006dd7df  i32.load [2, 0]
+006dd7e2  call [903] ; 
+006dd7e5  local.set [1]
+006dd7e7  local.get [1]
+006dd7e9  local.get [0]
+006dd7eb  i32.const [4023348] ; METHOD X`nPj.jrnw~
+006dd7f0  i32.load [2, 0]
+006dd7f3  i32.const [0]
+006dd7f5  call [1057] ; 
+006dd7f8  i32.const [3932388]
+006dd7fd  i32.load [2, 0]
+006dd800  call [901] ; 
+006dd803  i32.const [900001]
+006dd807  local.get [1]
+006dd809  i32.const [0]
+006dd80b  call [1973] ; GameStatisticsExpansion.RegisteredValueFunc
+006dd80e  end []

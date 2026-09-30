@@ -1,0 +1,39 @@
+{
+  "status": "action_registration_verified_concrete_owner_pending",
+  "source": [
+    "disassembly/Type3135-23911.txt",
+    "disassembly/Type3134-23947.txt",
+    "sdk-function-initialization-generics.json",
+    "disassembly/Type2886-22400.txt"
+  ],
+  "verified": [
+    "First yield is WaitForEndOfFrame with no premature registration",
+    "Twelve actions registered through Add in source order",
+    "Second yield is CustomYieldInstruction with keepWaiting=false",
+    "Native button consumes registered login action",
+    "Duplicate Add fails after earlier registrations without rollback"
+  ],
+  "functionIdsInOrder": [
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    17,
+    19,
+    20,
+    21,
+    22
+  ],
+  "remaining": [
+    "Concrete action owner and platform manager implementations",
+    "Production SDK startup scheduling",
+    "Production account/menu/persistence/build/E2E"
+  ],
+  "checks": 558,
+  "freshAdsPlaymodeChecks": 7,
+  "priorFlyPlaymodeChecks": 8,
+  "dynamicScope": "Initialization timing covered by iterator contract tests and actual native button invocation; fresh Ads PlayMode regression does not yet schedule this initialization coroutine."
+}

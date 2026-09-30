@@ -1,0 +1,74 @@
+; Proj_xqzdPlayUI.OpenLater wasmcode function18059
+007a17c2 i32.const [5007466]
+007a17c7 i32.load8_u [0, 0]
+007a17ca i32.eqz []
+007a17cb if [-64]
+007a17cd   i32.const [3927888] ; type: Action
+007a17d2   call [900] ; 
+007a17d5   i32.const [4010004] ; method: Proj_xqzdPlayUI.Qf{U
+007a17da   call [900] ; 
+007a17dd   i32.const [4009992] ; method: Proj_xqzdPlayUI.dxW{
+007a17e2   call [900] ; 
+007a17e5   i32.const [4009996] ; method: Proj_xqzdPlayUI.ole`b
+007a17ea   call [900] ; 
+007a17ed   i32.const [3925968]
+007a17f2   call [900] ; 
+007a17f5   i32.const [5007466]
+007a17fa   i32.const [1]
+007a17fc   i32.store8 [0, 0]
+007a17ff end []
+007a1800 local.get [0]
+007a1802 i32.load [2, 180]
+007a1806 local.set [1]
+007a1808 i32.const [3927888] ; type: Action
+007a180d i32.load [2, 0]
+007a1810 call [903] ; 
+007a1813 local.set [2]
+007a1815 local.get [2]
+007a1817 local.get [0]
+007a1819 i32.const [4009992] ; method: Proj_xqzdPlayUI.dxW{
+007a181e i32.load [2, 0]
+007a1821 i32.const [0]
+007a1823 call [1002] ; Action..ctor
+007a1826 local.get [1]
+007a1828 local.get [2]
+007a182a i32.const [0]
+007a182c call [1121] ; UIExtension.AddClick
+007a182f local.get [0]
+007a1831 i32.load [2, 200]
+007a1835 local.set [1]
+007a1837 i32.const [3927888] ; type: Action
+007a183c i32.load [2, 0]
+007a183f call [903] ; 
+007a1842 local.set [2]
+007a1844 local.get [2]
+007a1846 local.get [0]
+007a1848 i32.const [4009996] ; method: Proj_xqzdPlayUI.ole`b
+007a184d i32.load [2, 0]
+007a1850 i32.const [0]
+007a1852 call [1002] ; Action..ctor
+007a1855 local.get [1]
+007a1857 local.get [2]
+007a1859 i32.const [0]
+007a185b call [1121] ; UIExtension.AddClick
+007a185e local.get [0]
+007a1860 i32.load [2, 216]
+007a1864 i32.const [0]
+007a1866 call [3247] ; UIVideoBtn.RemoveVideoBtnListeners
+007a1869 local.get [0]
+007a186b i32.load [2, 216]
+007a186f local.set [1]
+007a1871 i32.const [3925968]
+007a1876 i32.load [2, 0]
+007a1879 call [903] ; 
+007a187c local.set [2]
+007a187e local.get [2]
+007a1880 local.get [0]
+007a1882 i32.const [4010004] ; method: Proj_xqzdPlayUI.Qf{U
+007a1887 i32.load [2, 0]
+007a188a call [1224] ; 
+007a188d local.get [1]
+007a188f local.get [2]
+007a1891 i32.const [0]
+007a1893 call [1961] ; UIVideoBtn.AddVideoPlayCallBack
+007a1896 end []

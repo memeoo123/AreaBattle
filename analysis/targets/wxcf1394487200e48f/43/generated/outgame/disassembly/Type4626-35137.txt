@@ -1,0 +1,100 @@
+; Original class: ActivityConfigMgr
+; Type4626.GetTaskActivityConfig; wasmcode function 13369; offset=6478506 size=257
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0062daab  global.get [0]
+0062daad  i32.const [16]
+0062daaf  i32.sub []
+0062dab0  local.set [2]
+0062dab2  local.get [2]
+0062dab4  global.set [0]
+0062dab6  i32.const [5001672]
+0062dabb  i32.load8_u [0, 0]
+0062dabe  i32.eqz []
+0062dabf  if [-64]
+0062dac1    i32.const [3929208]
+0062dac6    call [900] ; 
+0062dac9    i32.const [3957648]
+0062dace    call [900] ; 
+0062dad1    i32.const [3934404]
+0062dad6    call [900] ; 
+0062dad9    i32.const [3926996]
+0062dade    call [900] ; 
+0062dae1    i32.const [4105240] ; STRING "活跃度表不包含ID:"
+0062dae6    call [900] ; 
+0062dae9    i32.const [5001672]
+0062daee    i32.const [1]
+0062daf0    i32.store8 [0, 0]
+0062daf3  end []
+0062daf4  local.get [2]
+0062daf6  i32.const [0]
+0062daf8  i32.store [2, 12]
+0062dafb  local.get [0]
+0062dafd  i32.load [2, 88]
+0062db00  local.set [0]
+0062db02  local.get [2]
+0062db04  local.get [1]
+0062db06  i32.store [2, 8]
+0062db09  local.get [0]
+0062db0b  i32.const [3934404]
+0062db10  i32.load [2, 0]
+0062db13  local.get [2]
+0062db15  i32.const [8]
+0062db17  i32.add []
+0062db18  call [910] ; 
+0062db1b  local.get [2]
+0062db1d  i32.const [12]
+0062db1f  i32.add []
+0062db20  i32.const [3957648]
+0062db25  i32.load [2, 0]
+0062db28  call [1017] ; 
+0062db2b  i32.eqz []
+0062db2c  if [-64]
+0062db2e    i32.const [3926996]
+0062db33    i32.load [2, 0]
+0062db36    i32.const [2]
+0062db38    call [909] ; 
+0062db3b    local.set [0]
+0062db3d    local.get [0]
+0062db3f    i32.const [4105240] ; STRING "活跃度表不包含ID:"
+0062db44    i32.load [2, 0]
+0062db47    call [905] ; 
+0062db4a    local.get [0]
+0062db4c    i32.const [4105240] ; STRING "活跃度表不包含ID:"
+0062db51    i32.load [2, 0]
+0062db54    i32.store [2, 16]
+0062db57    local.get [2]
+0062db59    local.get [1]
+0062db5b    i32.store [2, 4]
+0062db5e    i32.const [3934404]
+0062db63    i32.load [2, 0]
+0062db66    local.get [2]
+0062db68    i32.const [4]
+0062db6a    i32.add []
+0062db6b    call [910] ; 
+0062db6e    local.set [1]
+0062db70    local.get [0]
+0062db72    local.get [1]
+0062db74    call [905] ; 
+0062db77    local.get [0]
+0062db79    local.get [1]
+0062db7b    i32.store [2, 20]
+0062db7e    i32.const [3929208]
+0062db83    i32.load [2, 0]
+0062db86    call [901] ; 
+0062db89    local.get [0]
+0062db8b    i32.const [0]
+0062db8d    i32.const [2087] ; TABLE CLog.Error
+0062db90    global.set [3]
+0062db92    i32.const [2087] ; TABLE CLog.Error
+0062db95    call_indirect [0, 0]
+0062db98  end []
+0062db99  local.get [2]
+0062db9b  i32.load [2, 12]
+0062db9e  local.set [0]
+0062dba0  local.get [2]
+0062dba2  i32.const [16]
+0062dba4  i32.add []
+0062dba5  global.set [0]
+0062dba7  local.get [0]
+0062dba9  return []
+0062dbaa  end []

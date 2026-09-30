@@ -1,0 +1,22 @@
+{
+  "status": "main_start_binding_verified_production_entry_pending",
+  "source": [
+    "disassembly/Type4399-33679.txt",
+    "disassembly/Type4399-33681.txt",
+    "disassembly/Type4399-33685.txt"
+  ],
+  "verified": [
+    "Fields228 and164 identify btnStart and btnNewStart",
+    "Both handlers request SetPlaySate(3,false), then PlayerVoice(1,2001)",
+    "Menu composition callback binds all pages before initial main activation",
+    "Imported original start buttons invoke source command order"
+  ],
+  "scope": "Native Button binding is reconstruction integration; full UIExtension.AddClick behavior and remaining OpenLater actions are not claimed restored.",
+  "remaining": [
+    "Production scene startup owner",
+    "Original LevelControl.SetPlaySate state3 lifecycle and battle transition",
+    "Account/data owner, complete main-page lifecycle, return/persistence/E2E"
+  ],
+  "checks": 562,
+  "freshPlayMode": false
+}

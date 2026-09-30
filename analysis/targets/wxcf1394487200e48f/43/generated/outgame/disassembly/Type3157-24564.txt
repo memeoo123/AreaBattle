@@ -1,0 +1,84 @@
+; Original class: AdsManager
+; Type3157.GetRemoveAdsState_Override; wasmcode function 8346; offset=4011410 size=238
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+003d3593  i32.const [5010557]
+003d3598  i32.load8_u [0, 0]
+003d359b  i32.eqz []
+003d359c  if [-64]
+003d359e    i32.const [3929208]
+003d35a3    call [900] ; 
+003d35a6    i32.const [3929224]
+003d35ab    call [900] ; 
+003d35ae    i32.const [3926996]
+003d35b3    call [900] ; 
+003d35b6    i32.const [4103340] ; STRING "去广告标记2为1"
+003d35bb    call [900] ; 
+003d35be    i32.const [4103336] ; STRING "去广告标记1为1"
+003d35c3    call [900] ; 
+003d35c6    i32.const [5010557]
+003d35cb    i32.const [1]
+003d35cd    i32.store8 [0, 0]
+003d35d0  end []
+003d35d1  i32.const [4103336] ; STRING "去广告标记1为1"
+003d35d6  local.set [0]
+003d35d8  block [-64]
+003d35da    i32.const [4103336] ; STRING "去广告标记1为1"
+003d35df    i32.const [4103336] ; STRING "去广告标记1为1"
+003d35e4    call [8345] ; AdsManager.GetRemoveAdsState
+003d35e7    i32.const [1]
+003d35e9    i32.ne []
+003d35ea    if [-64]
+003d35ec      i32.const [0]
+003d35ee      local.set [1]
+003d35f0      i32.const [3929224]
+003d35f5      i32.load [2, 0]
+003d35f8      call [901] ; 
+003d35fb      i32.const [5010999]
+003d3600      i32.load8_u [0, 0]
+003d3603      i32.eqz []
+003d3604      if [-64]
+003d3606        i32.const [3929224]
+003d360b        call [900] ; 
+003d360e        i32.const [5010999]
+003d3613        i32.const [1]
+003d3615        i32.store8 [0, 0]
+003d3618      end []
+003d3619      i32.const [3929224]
+003d361e      i32.load [2, 0]
+003d3621      call [901] ; 
+003d3624      i32.const [4103340] ; STRING "去广告标记2为1"
+003d3629      local.set [0]
+003d362b      i32.const [3929224]
+003d3630      i32.load [2, 0]
+003d3633      i32.load [2, 92]
+003d3636      i32.load [2, 0]
+003d3639      i32.load [2, 20]
+003d363c      i32.const [1]
+003d363e      i32.ne []
+003d363f      br_if [1]
+003d3641    end []
+003d3642    i32.const [3926996]
+003d3647    i32.load [2, 0]
+003d364a    i32.const [1]
+003d364c    call [909] ; 
+003d364f    local.set [1]
+003d3651    local.get [1]
+003d3653    local.get [0]
+003d3655    i32.load [2, 0]
+003d3658    call [905] ; 
+003d365b    local.get [1]
+003d365d    local.get [0]
+003d365f    i32.load [2, 0]
+003d3662    i32.store [2, 16]
+003d3665    i32.const [3929208]
+003d366a    i32.load [2, 0]
+003d366d    call [901] ; 
+003d3670    local.get [1]
+003d3672    i32.const [0]
+003d3674    call [1495] ; CLog.ReleaseLog
+003d3677    i32.const [1]
+003d3679    local.set [1]
+003d367b  end []
+003d367c  local.get [1]
+003d367e  return []
+003d367f  end []

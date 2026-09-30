@@ -1,0 +1,39 @@
+; Type4193.SkillEnd; wasmcode function 14251; offset=7019379 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+006b1b76  i32.const [5010360]
+006b1b7b  i32.load8_u [0, 0]
+006b1b7e  i32.eqz []
+006b1b7f  if [-64]
+006b1b81    i32.const [3947148]
+006b1b86    call [900] ; 
+006b1b89    i32.const [3944712]
+006b1b8e    call [900] ; 
+006b1b91    i32.const [4027084] ; METHOD fgTUWs[.MZij~s
+006b1b96    call [900] ; 
+006b1b99    i32.const [5010360]
+006b1b9e    i32.const [1]
+006b1ba0    i32.store8 [0, 0]
+006b1ba3  end []
+006b1ba4  i32.const [3944712]
+006b1ba9  i32.load [2, 0]
+006b1bac  call [901] ; 
+006b1baf  i32.const [3944712]
+006b1bb4  i32.load [2, 0]
+006b1bb7  i32.load [2, 92]
+006b1bba  i32.load [2, 60]
+006b1bbd  local.set [1]
+006b1bbf  i32.const [3947148]
+006b1bc4  i32.load [2, 0]
+006b1bc7  call [903] ; 
+006b1bca  local.set [2]
+006b1bcc  local.get [2]
+006b1bce  local.get [0]
+006b1bd0  i32.const [4027084] ; METHOD fgTUWs[.MZij~s
+006b1bd5  i32.load [2, 0]
+006b1bd8  i32.const [0]
+006b1bda  call [1067] ; EventHandler..ctor
+006b1bdd  local.get [1]
+006b1bdf  local.get [2]
+006b1be1  i32.const [0]
+006b1be3  call [1185] ; MsgDispatcher.RemoveEventListener
+006b1be6  end []

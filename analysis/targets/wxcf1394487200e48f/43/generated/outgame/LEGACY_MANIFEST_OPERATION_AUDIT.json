@@ -1,0 +1,33 @@
+{
+  "atUtc": "2026-09-30T04:04:58.560269+00:00",
+  "sourceMethods": [
+    23789,
+    23790,
+    23791,
+    23792,
+    23793,
+    23794,
+    23835
+  ],
+  "implementation": [
+    "OutgameLegacyManifestOperation",
+    "IOutgameLegacyManagerOperation shared update queue",
+    "OutgameLegacyBundleRuntime.LoadManifest"
+  ],
+  "semantics": [
+    "Base update obtains loaded wrapper and starts native AssetBundle.LoadAssetAsync once; derived operation remains queued until request done.",
+    "Done publishes typed manifest (including null) then Update false. Explicit repeated Update republishes.",
+    "IsDone has no request: error null false, any nonnull error logs and true, including 0 and empty; manager Update still true on missing wrapper.",
+    "LoadManifest existing loaded bundle Unload(true) then remove, Load(name,true), construct AssetBundleManifest operation and add shared queue; previous Manifest not cleared."
+  ],
+  "validation": {
+    "passed": true,
+    "integratedChecks": 644,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "pendingEvidence": [
+    "Original manager native/static owner and full startup composition pending."
+  ],
+  "followUpVerification": "NATIVE_MANIFEST_STARTUP_AUDIT.json"
+}

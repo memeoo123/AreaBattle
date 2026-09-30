@@ -1,0 +1,90 @@
+{
+  "atUtc": "2026-09-28T10:36:21.746070+00:00",
+  "fireLevelInference": {
+    "skill": 2,
+    "level": 10,
+    "status": "strong-visual-inference",
+    "basis": "24 red-head crossing runs in screen band y1035..1080, visually reviewed. The first run contains two distinct ascending heads (both visible at52.74325); subsequent23 runs each show one distinct head, total25. Recovered config210 is the only level with25 projectiles. Native recording frame deltas drive25 production launches. This is not an original account profile read.",
+    "caveat": "Threshold pulses alone are not projectile identities; manual image review disambiguates the first merged run and rejects trailing embers. Cross-band times are not launch times."
+  },
+  "originalCount": {
+    "detectorRuns": 24,
+    "firstRunDistinctHeads": 2,
+    "otherRunsDistinctHeads": 23,
+    "total": 25,
+    "contactSheet": "fire-tip-upper-candidates.png",
+    "rawMeasurements": "fire-tip-upper-pulses.json",
+    "recordingSha256": "439e6d33828fb2b98be78f2085ce28dbbbcc06f4706be8e9f0ac5ba2a5493bd0"
+  },
+  "committedInputs": {
+    "scope": "Observed committed input order and native-frame visible-state times; pointer sampling and presentation latency not separated.",
+    "events": [
+      {
+        "pts": 4.10254,
+        "previousPts": 4.08523,
+        "kind": "connect",
+        "source": 2,
+        "target": 5,
+        "expectedOutgoing": 1
+      },
+      {
+        "pts": 5.81944,
+        "previousPts": 5.80334,
+        "kind": "connect",
+        "source": 1,
+        "target": 5,
+        "expectedOutgoing": 1
+      },
+      {
+        "pts": 7.73713,
+        "previousPts": 7.72049,
+        "kind": "connect",
+        "source": 1,
+        "target": 2,
+        "expectedOutgoing": 2
+      },
+      {
+        "pts": 13.00674,
+        "previousPts": 12.98981,
+        "kind": "cut",
+        "source": 1,
+        "target": 2,
+        "expectedOutgoing": 1
+      },
+      {
+        "pts": 15.19104,
+        "previousPts": 15.17443,
+        "kind": "connect",
+        "source": 1,
+        "target": 2,
+        "expectedOutgoing": 2
+      },
+      {
+        "pts": 23.39533,
+        "previousPts": 23.3786,
+        "kind": "cut",
+        "source": 1,
+        "target": 2,
+        "expectedOutgoing": 1
+      },
+      {
+        "pts": 24.89574,
+        "previousPts": 24.87938,
+        "kind": "connect",
+        "source": 2,
+        "target": 1,
+        "expectedOutgoing": 2
+      }
+    ]
+  },
+  "tests": [
+    "video871-fire25-recorded-frame-step-candidate",
+    "video871-seven-committed-line-inputs-capacity-sequence"
+  ],
+  "passed": true,
+  "limitations": [
+    "Recorded video PTS includes render/input latency; exact engine input timestamp remains bounded by adjacent frames.",
+    "Seven-input test verifies acceptance and outgoing capacity order, not unobserved initial soldiers/RNG or complete battle timing.",
+    "Fire replay uses a controlled static tower fixture and native video frame intervals; target choices are not claimed to match original random choices."
+  ]
+}

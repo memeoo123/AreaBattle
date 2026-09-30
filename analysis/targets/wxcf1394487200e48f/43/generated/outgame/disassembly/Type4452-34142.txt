@@ -1,0 +1,66 @@
+; Original class: ProcedureStarGame
+; Type4452.GotoGameScene; wasmcode function 11033; offset=5338702 size=199
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0051764f  i32.const [5009781]
+00517654  i32.load8_u [0, 0]
+00517657  i32.eqz []
+00517658  if [-64]
+0051765a    i32.const [3953616]
+0051765f    call [900] ; 
+00517662    i32.const [3953528]
+00517667    call [900] ; 
+0051766a    i32.const [3948068]
+0051766f    call [900] ; 
+00517672    i32.const [3935996]
+00517677    call [900] ; 
+0051767a    i32.const [4009840] ; METHOD ProcedureStarGame.rb~`ils
+0051767f    call [900] ; 
+00517682    i32.const [3938016]
+00517687    call [900] ; 
+0051768a    i32.const [4055244] ; STRING "GamePlay"
+0051768f    call [900] ; 
+00517692    i32.const [5009781]
+00517697    i32.const [1]
+00517699    i32.store8 [0, 0]
+0051769c  end []
+0051769d  i32.const [3948068]
+005176a2  i32.load [2, 0]
+005176a5  call [903] ; 
+005176a8  local.set [1]
+005176aa  local.get [1]
+005176ac  local.get [0]
+005176ae  i32.const [4009840] ; METHOD ProcedureStarGame.rb~`ils
+005176b3  i32.load [2, 0]
+005176b6  i32.const [0]
+005176b8  call [1853] ; LoadAssetCompleteHandler..ctor
+005176bb  i32.const [3938016]
+005176c0  i32.load [2, 0]
+005176c3  call [901] ; 
+005176c6  i32.const [4055244] ; STRING "GamePlay"
+005176cb  i32.load [2, 0]
+005176ce  local.get [1]
+005176d0  i32.const [0]
+005176d2  i32.const [0]
+005176d4  i32.const [0]
+005176d6  call [10687] ; ResLoadHelper.LoadScene
+005176d9  i32.const [3935996]
+005176de  i32.load [2, 0]
+005176e1  i32.load [2, 92]
+005176e4  i32.const [1]
+005176e6  i32.store8 [0, 0]
+005176e9  i32.const [3953616]
+005176ee  i32.load [2, 0]
+005176f1  call [935] ; 
+005176f4  local.get [0]
+005176f6  call [8378] ; x~bjQc.OnLateInit
+005176f9  i32.const [3953528]
+005176fe  i32.load [2, 0]
+00517701  call [935] ; 
+00517704  local.set [0]
+00517706  local.get [0]
+00517708  i32.const [1]
+0051770a  i32.store8 [0, 8]
+0051770d  local.get [0]
+0051770f  i32.const [1]
+00517711  i32.store [2, 16]
+00517714  end []

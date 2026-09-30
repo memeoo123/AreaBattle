@@ -1,0 +1,20 @@
+; Original class: AppSetting
+; Type3375.get_PlatformName; wasmcode function 2620; offset=822875 size=49
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+000c8e5c  i32.const [5011356]
+000c8e61  i32.load8_u [0, 0]
+000c8e64  i32.eqz []
+000c8e65  if [-64]
+000c8e67    i32.const [3941128]
+000c8e6c    call [900] ; 
+000c8e6f    i32.const [5011356]
+000c8e74    i32.const [1]
+000c8e76    i32.store8 [0, 0]
+000c8e79  end []
+000c8e7a  i32.const [3941128]
+000c8e7f  i32.load [2, 0]
+000c8e82  call [901] ; 
+000c8e85  i32.const [0]
+000c8e87  call [9643] ; Utility.GetPlatformName
+000c8e8a  return []
+000c8e8b  end []

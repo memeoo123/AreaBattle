@@ -1,0 +1,35 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.NewOrderInfoByGameStatic; wasmcode1 function 38437; offset=14430444 size=94
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00dc30ed  i32.const [5005414]
+00dc30f2  i32.load8_u [0, 0]
+00dc30f5  i32.eqz []
+00dc30f6  if [-64]
+00dc30f8    i32.const [4057288] ; STRING "ISDK NewOrderInfoByGameStatic productID: "
+00dc30fd    i32.const [1605]
+00dc3100    call_indirect [0, 0]
+00dc3103    i32.const [4039336] ; STRING ", ext: "
+00dc3108    i32.const [1605]
+00dc310b    call_indirect [0, 0]
+00dc310e    i32.const [5005414]
+00dc3113    i32.const [1]
+00dc3115    i32.store8 [0, 0]
+00dc3118  end []
+00dc3119  i32.const [4057288] ; STRING "ISDK NewOrderInfoByGameStatic productID: "
+00dc311e  i32.load [2, 0]
+00dc3121  local.get [1]
+00dc3123  i32.const [4039336] ; STRING ", ext: "
+00dc3128  i32.load [2, 0]
+00dc312b  local.get [2]
+00dc312d  i32.const [0]
+00dc312f  i32.const [1863] ; TABLE String.Concat
+00dc3132  call_indirect [9, 0]
+00dc3135  local.get [1]
+00dc3137  i32.const [9037] ; TABLE XYXLOG.IAPLog
+00dc313b  call_indirect [4, 0]
+00dc313e  local.get [1]
+00dc3140  local.get [2]
+00dc3142  i32.const [0]
+00dc3144  i32.const [0]
+00dc3146  call [13243] ; IAPMgr.NewOrderInfoByGameStatic
+00dc3149  end []

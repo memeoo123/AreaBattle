@@ -1,0 +1,51 @@
+; uLYb~V.Execute; wasmcode function 13608; offset=6563336 size=132
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00642609  i32.const [5010316]
+0064260e  i32.load8_u [0, 0]
+00642611  i32.eqz []
+00642612  if [-64]
+00642614    i32.const [3953440]
+00642619    call [900] ; 
+0064261c    i32.const [3944712] ; type: Event
+00642621    call [900] ; 
+00642624    i32.const [5010316]
+00642629    i32.const [1]
+0064262b    i32.store8 [0, 0]
+0064262e  end []
+0064262f  local.get [0]
+00642631  i32.load8_u [0, 16]
+00642634  i32.eqz []
+00642635  if [-64]
+00642637    local.get [0]
+00642639    i32.const [0]
+0064263b    i32.store [2, 28]
+0064263e    local.get [0]
+00642640    i32.const [1]
+00642642    i32.store8 [0, 16]
+00642645  end []
+00642646  i32.const [3953440]
+0064264b  i32.load [2, 0]
+0064264e  call [935] ; 
+00642651  i32.load8_u [0, 52]
+00642654  if [-64]
+00642656    i32.const [3944712] ; type: Event
+0064265b    i32.load [2, 0]
+0064265e    call [901] ; 
+00642661    i32.const [3944712] ; type: Event
+00642666    i32.load [2, 0]
+00642669    i32.load [2, 92]
+0064266c    i32.load [2, 40]
+0064266f    i32.const [0]
+00642671    call [1317] ; 
+00642674  end []
+00642675  local.get [0]
+00642677  i32.const [0]
+00642679  call [1388] ; 
+0064267c  local.get [0]
+0064267e  local.get [0]
+00642680  call [8506] ; uLYb~V.Tool2Skill
+00642683  i32.const [0]
+00642685  call [1227] ; 
+00642688  i32.store [2, 44]
+0064268b  end []
+

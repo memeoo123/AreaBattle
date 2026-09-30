@@ -1,0 +1,42 @@
+; Original class: ResLoadHelper
+; Type3393.LoadAsset; wasmcode function 2240; offset=696374 size=110
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+000aa037  i32.const [5011602]
+000aa03c  i32.load8_u [0, 0]
+000aa03f  i32.eqz []
+000aa040  if [-64]
+000aa042    i32.const [4000624]
+000aa047    call [900] ; 
+000aa04a    i32.const [3932308]
+000aa04f    call [900] ; 
+000aa052    i32.const [3938016]
+000aa057    call [900] ; 
+000aa05a    i32.const [5011602]
+000aa05f    i32.const [1]
+000aa061    i32.store8 [0, 0]
+000aa064  end []
+000aa065  i32.const [3938016]
+000aa06a  i32.load [2, 0]
+000aa06d  call [901] ; 
+000aa070  i32.const [0]
+000aa072  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+000aa075  if [-64]
+000aa077    i32.const [3932308]
+000aa07c    i32.load [2, 0]
+000aa07f    call [901] ; 
+000aa082    i32.const [4000624]
+000aa087    i32.load [2, 0]
+000aa08a    call [1051] ; 
+000aa08d    local.get [0]
+000aa08f    local.get [1]
+000aa091    local.get [2]
+000aa093    i32.const [0]
+000aa095    call [4845] ; ResourcesModule.LoadAsset
+000aa098    local.set [0]
+000aa09a  else []
+000aa09b    i32.const [0]
+000aa09d    local.set [0]
+000aa09f  end []
+000aa0a0  local.get [0]
+000aa0a2  return []
+000aa0a3  end []

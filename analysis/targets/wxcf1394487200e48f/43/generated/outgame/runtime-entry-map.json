@@ -1,0 +1,30 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "partial",
+  "runtimePages": {
+    "id": "runtime-pages",
+    "value": {
+      "2": "ShopUI",
+      "3": "Proj_xqzdStartUI",
+      "4": "CommanderUI"
+    },
+    "source": [
+      "disassembly/Type4296-32705.txt",
+      "disassembly/Type4296-32729.txt",
+      "disassembly/Type4296-32714.txt",
+      "disassembly/Type4296-32708.txt",
+      "disassembly/Type4296-32698.txt"
+    ],
+    "offsets": [
+      "00477334..00477365",
+      "00280811..0028083e"
+    ],
+    "correction": "Legacy MenuTabConfig id4 inactive HerosDetailUI must not suppress actual CommanderUI runtime route. IDs1/5 runtime calls exist but have no mapped page transform in this method; investigate visibility before including as valid navigation."
+  },
+  "pending": [
+    "Map remaining overlay/popup buttons and runtime hiding of tab1/5.",
+    "Resolve OpenAllMenuItemUI generic coroutine type arguments.",
+    "Bind actual page views and transitions, source HUD assets and battle return."
+  ],
+  "methodInventoryCount": 323
+}

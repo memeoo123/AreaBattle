@@ -1,0 +1,49 @@
+; Original class: DBTSDKManager
+; Type3135.Update; wasmcode function 20049; offset=9009612 size=124
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008979cd  i32.const [4988641]
+008979d2  i32.load8_u [0, 0]
+008979d5  i32.eqz []
+008979d6  if [-64]
+008979d8    i32.const [3938304]
+008979dd    call [900] ; 
+008979e0    i32.const [4044348] ; STRING "AndroidBackKey"
+008979e5    call [900] ; 
+008979e8    i32.const [4988641]
+008979ed    i32.const [1]
+008979ef    i32.store8 [0, 0]
+008979f2  end []
+008979f3  local.get [0]
+008979f5  i32.load8_u [0, 44]
+008979f8  if [-64]
+008979fa    block [-64]
+008979fc      local.get [0]
+008979fe      i32.load8_u [0, 20]
+00897a01      br_if [0]
+00897a03      i32.const [27]
+00897a05      i32.const [0]
+00897a07      call [2038] ; Input.GetKeyDown
+00897a0a      i32.eqz []
+00897a0b      br_if [0]
+00897a0d      i32.const [4044348] ; STRING "AndroidBackKey"
+00897a12      i32.load [2, 0]
+00897a15      i32.const [0]
+00897a17      call [1317] ; MsgDispatcher.SendMessage
+00897a1a      i32.const [3938304]
+00897a1f      i32.load [2, 0]
+00897a22      i32.load [2, 92]
+00897a25      i32.load [2, 0]
+00897a28      i32.const [0]
+00897a2a      i32.const [22987] ; TABLE SDKToolManager.ShowExitDialog
+00897a2e      global.set [3]
+00897a30      i32.const [22987] ; TABLE SDKToolManager.ShowExitDialog
+00897a34      call_indirect [0, 0]
+00897a37    end []
+00897a38    local.get [0]
+00897a3a    local.get [0]
+00897a3c    call [12683] ; DBTSDKManager.CheckTestMode
+00897a3f    local.get [0]
+00897a41    local.get [0]
+00897a43    call [12679] ; DBTSDKManager.UpdateSDKCallBack
+00897a46  end []
+00897a47  end []

@@ -1,0 +1,83 @@
+; Original class: CommanderItem
+; Type4334.InitializeComponent; wasmcode function 20192; offset=9070488 size=260
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a6799  i32.const [5008829]
+008a679e  i32.load8_u [0, 0]
+008a67a1  i32.eqz []
+008a67a2  if [-64]
+008a67a4    i32.const [4018588]
+008a67a9    call [900] ; 
+008a67ac    i32.const [4018624]
+008a67b1    call [900] ; 
+008a67b4    i32.const [4098100] ; STRING "textLv"
+008a67b9    call [900] ; 
+008a67bc    i32.const [4089952] ; STRING "imgIcon"
+008a67c1    call [900] ; 
+008a67c4    i32.const [4093576] ; STRING "objLock"
+008a67c9    call [900] ; 
+008a67cc    i32.const [4090096] ; STRING "imgSelected"
+008a67d1    call [900] ; 
+008a67d4    i32.const [4093696] ; STRING "objUnlock"
+008a67d9    call [900] ; 
+008a67dc    i32.const [4090184] ; STRING "imgUsed"
+008a67e1    call [900] ; 
+008a67e4    i32.const [4090048] ; STRING "imgRedDot"
+008a67e9    call [900] ; 
+008a67ec    i32.const [5008829]
+008a67f1    i32.const [1]
+008a67f3    i32.store8 [0, 0]
+008a67f6  end []
+008a67f7  local.get [0]
+008a67f9  local.get [0]
+008a67fb  i32.const [4089952] ; STRING "imgIcon"
+008a6800  i32.load [2, 0]
+008a6803  i32.const [4018588]
+008a6808  i32.load [2, 0]
+008a680b  call [970] ; 
+008a680e  i32.store [2, 44]
+008a6811  local.get [0]
+008a6813  local.get [0]
+008a6815  i32.const [4090096] ; STRING "imgSelected"
+008a681a  i32.load [2, 0]
+008a681d  i32.const [4018588]
+008a6822  i32.load [2, 0]
+008a6825  call [970] ; 
+008a6828  i32.store [2, 48]
+008a682b  local.get [0]
+008a682d  local.get [0]
+008a682f  i32.const [4093576] ; STRING "objLock"
+008a6834  i32.load [2, 0]
+008a6837  i32.const [0]
+008a6839  call [1116] ; UIObject.Get
+008a683c  i32.store [2, 52]
+008a683f  local.get [0]
+008a6841  local.get [0]
+008a6843  i32.const [4093696] ; STRING "objUnlock"
+008a6848  i32.load [2, 0]
+008a684b  i32.const [0]
+008a684d  call [1116] ; UIObject.Get
+008a6850  i32.store [2, 56]
+008a6853  local.get [0]
+008a6855  local.get [0]
+008a6857  i32.const [4098100] ; STRING "textLv"
+008a685c  i32.load [2, 0]
+008a685f  i32.const [4018624]
+008a6864  i32.load [2, 0]
+008a6867  call [970] ; 
+008a686a  i32.store [2, 60]
+008a686d  local.get [0]
+008a686f  local.get [0]
+008a6871  i32.const [4090184] ; STRING "imgUsed"
+008a6876  i32.load [2, 0]
+008a6879  i32.const [4018588]
+008a687e  i32.load [2, 0]
+008a6881  call [970] ; 
+008a6884  i32.store [2, 64]
+008a6887  local.get [0]
+008a6889  local.get [0]
+008a688b  i32.const [4090048] ; STRING "imgRedDot"
+008a6890  i32.load [2, 0]
+008a6893  i32.const [0]
+008a6895  call [1116] ; UIObject.Get
+008a6898  i32.store [2, 68]
+008a689b  end []

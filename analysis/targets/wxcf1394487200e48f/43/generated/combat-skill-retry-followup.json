@@ -1,0 +1,41 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "status": "source-backed C# checkpoint; Unity validation pending parent integrated run",
+  "skill12": {
+    "reuse": [
+      "SkillControl f10350 @004bc3a0..004bc401 dictionary112 TryGetValue assigns cachedCommander116; existing calls Upgrade, new only Produce+Init",
+      "CommanderBase.Reset f20199 @008a6a89..008a6b1f iterates skillList8 without replacement",
+      "SkillControl reset helper f4799 @001943ae..001943d9 calls Commander.Reset"
+    ],
+    "reset": "Type4191.Reset @007987e4..00798824 clears active16 elapsed28 target44 timer48; closes current handles52 and56; no await cancellation or handle-list cleanup",
+    "continuation": "MoveNext @00512ee2..00512f48 reads current skill.target44 position68/72/76 and replaces current handle56 with Effect419; no active/camp guard; plays2032 then2033",
+    "implementation": "Retain cached player skill12 across ordinary Restart; keep visual await remaining time; read current target when resumed; preserve only current aim and shot handle fields for Reset close. Enemy old closure survives but its skill state is not reused without separate PvP lifecycle evidence.",
+    "nullTarget": "Source WASM directly dereferences target44 with no guard. Original-runtime null/low-memory behavior remains unknown. Reconstruction emits explicit async-target-unresolved diagnostic with no invented Effect419/audio/runtime fault."
+  },
+  "skill2": {
+    "reset": "Type4170.Reset @006425e0..00642605 clears active16 elapsed28 and StopCoroutine44; does not hide any emitted Bullet",
+    "retry": "LevelControl.OnGamePlayState f7630 branch table @0037a14c maps Again10 to end0037a50f; path0037a510..0037a555 invokes InitGameData, f5935 and Ready3, not ClearModelEntityCache",
+    "poolClear": "Verified direct ClearModelEntityCache f4379 call@0037a414 belongs Victory8 branch, not Again10. Additional callers LoadPrefabControl.InitData, PVPController.OnGamePlayState, DiceFightHandler are separate scope. See combat-retry-pool-xrefs.json.",
+    "implementation": "Retain existing Active skill2 projectiles and their elapsed/callback identity across Restart; cancel pending launch waits; retain cached player run2 and reset Active/Elapsed. Callback uses current retained Tower camp/score.",
+    "remainingUnknown": "Victory8 ClearModelEntityCache specifically excludes Skill2 clones by distinct owner/reference and UI parent; see combat-async-owner-audit.json. Application/controller disposal and global resource shutdown remain separate. No whole-view/new Simulation lifetime claim."
+  },
+  "hudBoss": {
+    "diagnosis": "Boss bloodbar source background is visible in captures, but LevelBg later sibling overlays central fill with challenge label. Static active flags, native Slider PPtr, sprites and source coordinates are valid.",
+    "source": [
+      "Proj_xqzdPlayUI.f11010 @00514d7f..00514d8c sets LevelBg active for CurLevel>=1",
+      "@00514e3f..00514e51 sets LevelBg active for LevelType2 challenge",
+      "@00514ed4..00514ede activates Boss slider only; does not hide LevelBg",
+      "@00514f4f..00514f5e special singleton.byte8 forces LevelBg active again"
+    ],
+    "decision": "No unsupported coordinate or visibility fix applied. Native source-layer overlap requires matched original visual validation; partial-health rendering can isolate actual fill."
+  },
+  "goldenCases": [
+    "skill02-retry-stops-launches-but-retains-flying-bullet",
+    "skill12-retry-retains-await-and-reuses-current-target",
+    "skill12-retry-null-target-is-explicit-unresolved-continuation",
+    "skill12-reset-closes-current-handles-after-overlapping-awaits"
+  ]
+}

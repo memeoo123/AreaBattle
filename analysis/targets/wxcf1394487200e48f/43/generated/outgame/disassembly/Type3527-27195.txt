@@ -1,0 +1,29 @@
+; Original class: YOResourcesModule
+; Type3527.GetLoacalVerDesc; wasmcode1 function 5268; offset=1783941 size=66
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001b3886  i32.const [4989570]
+001b388b  i32.load8_u [0, 0]
+001b388e  i32.eqz []
+001b388f  if [-64]
+001b3891    i32.const [4087240] ; STRING "empty"
+001b3896    i32.const [1605]
+001b3899    call_indirect [0, 0]
+001b389c    i32.const [4989570]
+001b38a1    i32.const [1]
+001b38a3    i32.store8 [0, 0]
+001b38a6  end []
+001b38a7  local.get [0]
+001b38a9  i32.load [2, 20]
+001b38ac  local.set [0]
+001b38ae  local.get [0]
+001b38b0  i32.eqz []
+001b38b1  if [-64]
+001b38b3    i32.const [4087240] ; STRING "empty"
+001b38b8    i32.load [2, 0]
+001b38bb    return []
+001b38bc  end []
+001b38bd  local.get [0]
+001b38bf  i32.const [0]
+001b38c1  call [23561] ; ResourcePackage.GetPackageVerDesc
+001b38c5  return []
+001b38c6  end []

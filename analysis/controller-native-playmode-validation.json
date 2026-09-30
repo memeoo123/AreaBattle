@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Five real controller bindings with native persistent pool root and deferred Destroy; explicit platform and in-memory storage fixtures. No full38-controller Main, real login or Player claim.",
+    "checks": [
+        "Production bindings resolve same initialized data-pool managers",
+        "Process and clock initialized through real logic module",
+        "Default native pool root persists and stays hidden",
+        "Pool survives active-scene transition",
+        "Local-data listeners use the bound server-time instance",
+        "Unscaled logic update works on native paused frame",
+        "Shutdown clears slots before native deferred destruction",
+        "Disposed local-data controller no longer receives events",
+        "Native frame destroys persistent root and its pooled child",
+        "Later resolver creates a new usable native pool"
+    ]
+}

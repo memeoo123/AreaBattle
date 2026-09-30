@@ -1,0 +1,33 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetChannelGiftGoods; wasmcode1 function 38452; offset=14432209 size=91
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc37d2  i32.const [5005419]
+00dc37d7  i32.load8_u [0, 0]
+00dc37da  i32.eqz []
+00dc37db  if [-64]
+00dc37dd    i32.const [3915772]
+00dc37e2    i32.const [1605]
+00dc37e5    call_indirect [0, 0]
+00dc37e8    i32.const [4023300] ; METHOD XYXCommon_DBT_ISDK.OnGetChannelGiftGoods
+00dc37ed    i32.const [1605]
+00dc37f0    call_indirect [0, 0]
+00dc37f3    i32.const [5005419]
+00dc37f8    i32.const [1]
+00dc37fa    i32.store8 [0, 0]
+00dc37fd  end []
+00dc37fe  i32.const [3915772]
+00dc3803  i32.load [2, 0]
+00dc3806  i32.const [109007]
+00dc380a  call_indirect [2, 0]
+00dc380d  local.set [1]
+00dc380f  local.get [1]
+00dc3811  local.get [0]
+00dc3813  i32.const [4023300] ; METHOD XYXCommon_DBT_ISDK.OnGetChannelGiftGoods
+00dc3818  i32.load [2, 0]
+00dc381b  i32.const [0]
+00dc381d  i32.const [11338]
+00dc3821  call_indirect [6, 0]
+00dc3824  local.get [1]
+00dc3826  i32.const [0]
+00dc3828  call [10267] ; XYX_Gift.GetChannelGiftGoods
+00dc382b  end []

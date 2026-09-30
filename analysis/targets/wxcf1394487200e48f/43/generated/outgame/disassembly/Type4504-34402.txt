@@ -1,0 +1,215 @@
+; Original class: x~bjQc
+; Type4504.VePx^hP; wasmcode function 6348; offset=2292728 size=494
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127), (1, 126)]
+0022fbfd  global.get [0]
+0022fbff  i32.const [16]
+0022fc01  i32.sub []
+0022fc02  local.set [1]
+0022fc04  local.get [1]
+0022fc06  global.set [0]
+0022fc08  i32.const [5009908]
+0022fc0d  i32.load8_u [0, 0]
+0022fc10  i32.eqz []
+0022fc11  if [-64]
+0022fc13    i32.const [3953544]
+0022fc18    call [900] ; 
+0022fc1b    i32.const [3953440]
+0022fc20    call [900] ; 
+0022fc23    i32.const [5009908]
+0022fc28    i32.const [1]
+0022fc2a    i32.store8 [0, 0]
+0022fc2d  end []
+0022fc2e  local.get [1]
+0022fc30  i32.const [0]
+0022fc32  i32.store [2, 12]
+0022fc35  block [-64]
+0022fc37    i32.const [3953544]
+0022fc3c    i32.load [2, 0]
+0022fc3f    call [935] ; 
+0022fc42    i32.load8_u [0, 32]
+0022fc45    if [-64]
+0022fc47      i32.const [3953544]
+0022fc4c      i32.load [2, 0]
+0022fc4f      call [935] ; 
+0022fc52      i32.const [0]
+0022fc54      call [1848] ; ServerTimeModule.GetNowTimestampLong
+0022fc57      local.set [4]
+0022fc59      local.get [4]
+0022fc5b      local.get [0]
+0022fc5d      i64.load [3, 48]
+0022fc60      i64.lt_s []
+0022fc61      if [-64]
+0022fc63        local.get [0]
+0022fc65        i32.const [1]
+0022fc67        local.get [0]
+0022fc69        call [3673] ; x~bjQc.Suo}k{
+0022fc6c        br [2]
+0022fc6e      end []
+0022fc6f      local.get [0]
+0022fc71      i64.load [3, 40]
+0022fc74      local.get [4]
+0022fc76      i64.gt_s []
+0022fc77      if [-64]
+0022fc79        local.get [0]
+0022fc7b        i64.load [3, 32]
+0022fc7e        local.get [4]
+0022fc80        i64.gt_s []
+0022fc81        if [-64]
+0022fc83          local.get [0]
+0022fc85          local.get [0]
+0022fc87          call [2052] ; x~bjQc.get_Status
+0022fc8a          i32.const [1]
+0022fc8c          i32.le_s []
+0022fc8d          if [-64]
+0022fc8f            i32.const [0]
+0022fc91            call [1653] ; ADHelper.get_Instance
+0022fc94            local.set [2]
+0022fc96            local.get [0]
+0022fc98            i32.load [2, 12]
+0022fc9b            local.set [3]
+0022fc9d            local.get [1]
+0022fc9f            i32.const [3953440]
+0022fca4            i32.load [2, 0]
+0022fca7            call [935] ; 
+0022fcaa            i32.const [0]
+0022fcac            call [1254] ; LevelControl.get_CurLevel
+0022fcaf            i32.store [2, 12]
+0022fcb2            local.get [2]
+0022fcb4            local.get [3]
+0022fcb6            local.get [1]
+0022fcb8            i32.const [12]
+0022fcba            i32.add []
+0022fcbb            i32.const [0]
+0022fcbd            call [966] ; Int32.ToString
+0022fcc0            i32.const [0]
+0022fcc2            i32.const [0]
+0022fcc4            i32.const [0]
+0022fcc6            i32.const [15879] ; TABLE ADHelper.Report_activity_warmup
+0022fcca            global.set [3]
+0022fccc            i32.const [15879] ; TABLE ADHelper.Report_activity_warmup
+0022fcd0            call_indirect [11, 0]
+0022fcd3          end []
+0022fcd4          local.get [0]
+0022fcd6          i32.const [2]
+0022fcd8          local.get [0]
+0022fcda          call [3673] ; x~bjQc.Suo}k{
+0022fcdd        end []
+0022fcde        local.get [0]
+0022fce0        i32.load [2, 24]
+0022fce3        i32.const [3953440]
+0022fce8        i32.load [2, 0]
+0022fceb        call [935] ; 
+0022fcee        i32.const [0]
+0022fcf0        call [1254] ; LevelControl.get_CurLevel
+0022fcf3        i32.ge_s []
+0022fcf4        br_if [2]
+0022fcf6        local.get [0]
+0022fcf8        i64.load [3, 32]
+0022fcfb        local.get [4]
+0022fcfd        i64.le_s []
+0022fcfe        if [-64]
+0022fd00          local.get [0]
+0022fd02          local.get [0]
+0022fd04          call [2052] ; x~bjQc.get_Status
+0022fd07          i32.const [3]
+0022fd09          i32.le_s []
+0022fd0a          if [-64]
+0022fd0c            i32.const [0]
+0022fd0e            call [1653] ; ADHelper.get_Instance
+0022fd11            local.set [2]
+0022fd13            local.get [0]
+0022fd15            i32.load [2, 12]
+0022fd18            local.set [3]
+0022fd1a            local.get [1]
+0022fd1c            i32.const [3953440]
+0022fd21            i32.load [2, 0]
+0022fd24            call [935] ; 
+0022fd27            i32.const [0]
+0022fd29            call [1254] ; LevelControl.get_CurLevel
+0022fd2c            i32.store [2, 12]
+0022fd2f            local.get [2]
+0022fd31            local.get [3]
+0022fd33            local.get [1]
+0022fd35            i32.const [12]
+0022fd37            i32.add []
+0022fd38            i32.const [0]
+0022fd3a            call [966] ; Int32.ToString
+0022fd3d            i32.const [0]
+0022fd3f            i32.const [0]
+0022fd41            i32.const [0]
+0022fd43            i32.const [15895] ; TABLE ADHelper.Report_activity_unlock
+0022fd47            global.set [3]
+0022fd49            i32.const [15895] ; TABLE ADHelper.Report_activity_unlock
+0022fd4d            call_indirect [11, 0]
+0022fd50          end []
+0022fd51          local.get [0]
+0022fd53          i32.const [4]
+0022fd55          local.get [0]
+0022fd57          call [3673] ; x~bjQc.Suo}k{
+0022fd5a          br [3]
+0022fd5c        end []
+0022fd5d        local.get [0]
+0022fd5f        i32.const [3]
+0022fd61        local.get [0]
+0022fd63        call [3673] ; x~bjQc.Suo}k{
+0022fd66        br [2]
+0022fd68      end []
+0022fd69      local.get [0]
+0022fd6b      local.get [0]
+0022fd6d      call [2052] ; x~bjQc.get_Status
+0022fd70      i32.const [5]
+0022fd72      i32.ne []
+0022fd73      if [-64]
+0022fd75        i32.const [0]
+0022fd77        call [1653] ; ADHelper.get_Instance
+0022fd7a        local.set [2]
+0022fd7c        local.get [0]
+0022fd7e        i32.load [2, 12]
+0022fd81        local.set [3]
+0022fd83        local.get [1]
+0022fd85        i32.const [3953440]
+0022fd8a        i32.load [2, 0]
+0022fd8d        call [935] ; 
+0022fd90        i32.const [0]
+0022fd92        call [1254] ; LevelControl.get_CurLevel
+0022fd95        i32.store [2, 12]
+0022fd98        local.get [2]
+0022fd9a        local.get [3]
+0022fd9c        local.get [1]
+0022fd9e        i32.const [12]
+0022fda0        i32.add []
+0022fda1        i32.const [0]
+0022fda3        call [966] ; Int32.ToString
+0022fda6        i32.const [0]
+0022fda8        i32.const [0]
+0022fdaa        i32.const [0]
+0022fdac        call [4547] ; ADHelper.Report_activity_complete
+0022fdaf      end []
+0022fdb0      local.get [0]
+0022fdb2      i32.const [5]
+0022fdb4      local.get [0]
+0022fdb6      call [3673] ; x~bjQc.Suo}k{
+0022fdb9      br [1]
+0022fdbb    end []
+0022fdbc    local.get [0]
+0022fdbe    local.get [0]
+0022fdc0    call [2052] ; x~bjQc.get_Status
+0022fdc3    i32.const [3]
+0022fdc5    i32.lt_s []
+0022fdc6    br_if [0]
+0022fdc8    local.get [0]
+0022fdca    local.get [0]
+0022fdcc    call [2052] ; x~bjQc.get_Status
+0022fdcf    i32.const [4]
+0022fdd1    i32.gt_s []
+0022fdd2    br_if [0]
+0022fdd4    local.get [0]
+0022fdd6    i32.const [6]
+0022fdd8    local.get [0]
+0022fdda    call [3673] ; x~bjQc.Suo}k{
+0022fddd  end []
+0022fdde  local.get [1]
+0022fde0  i32.const [16]
+0022fde2  i32.add []
+0022fde3  global.set [0]
+0022fde5  end []

@@ -1,0 +1,232 @@
+; Original class: CommanderUI
+; Type4307.Wslh{g; wasmcode function 12847; offset=6181722 size=634
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+005e535d  global.get [0]
+005e535f  i32.const [16]
+005e5361  i32.sub []
+005e5362  local.set [2]
+005e5364  local.get [2]
+005e5366  global.set [0]
+005e5368  i32.const [5008217]
+005e536d  i32.load8_u [0, 0]
+005e5370  i32.eqz []
+005e5371  if [-64]
+005e5373    i32.const [3953568]
+005e5378    call [900] ; 
+005e537b    i32.const [3953576]
+005e5380    call [900] ; 
+005e5383    i32.const [3953344]
+005e5388    call [900] ; 
+005e538b    i32.const [3957276]
+005e5390    call [900] ; 
+005e5393    i32.const [3934404]
+005e5398    call [900] ; 
+005e539b    i32.const [3978976]
+005e53a0    call [900] ; 
+005e53a3    i32.const [3926996]
+005e53a8    call [900] ; 
+005e53ab    i32.const [4027100] ; METHOD <>c.bqYy
+005e53b0    call [900] ; 
+005e53b3    i32.const [3944664]
+005e53b8    call [900] ; 
+005e53bb    i32.const [3940924]
+005e53c0    call [900] ; 
+005e53c3    i32.const [4075040] ; STRING "Tips.NoItem"
+005e53c8    call [900] ; 
+005e53cb    i32.const [4034536] ; STRING ""
+005e53d0    call [900] ; 
+005e53d3    i32.const [5008217]
+005e53d8    i32.const [1]
+005e53da    i32.store8 [0, 0]
+005e53dd  end []
+005e53de  local.get [2]
+005e53e0  i32.const [0]
+005e53e2  i32.store [2, 12]
+005e53e5  local.get [1]
+005e53e7  i32.const [0]
+005e53e9  call [1711] ; CommanderData.get_config
+005e53ec  i32.load [2, 32]
+005e53ef  i32.const [0]
+005e53f1  i32.const [3978976]
+005e53f6  i32.load [2, 0]
+005e53f9  call [930] ; 
+005e53fc  i32.load [2, 8]
+005e53ff  i32.load [2, 16]
+005e5402  local.set [3]
+005e5404  local.get [1]
+005e5406  i32.const [0]
+005e5408  call [3393] ; CommanderData.get_NextCost
+005e540b  local.set [4]
+005e540d  block [-64]
+005e540f    i32.const [3953568]
+005e5414    i32.load [2, 0]
+005e5417    call [935] ; 
+005e541a    local.get [3]
+005e541c    local.get [4]
+005e541e    i32.const [0]
+005e5420    call [4745] ; ToolControl.IsEnough
+005e5423    i32.eqz []
+005e5424    if [-64]
+005e5426      i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+005e5429      i32.const [0]
+005e542b      call [1892] ; AudioExtention.PlayVoice
+005e542e      local.get [3]
+005e5430      i32.const [8001]
+005e5433      i32.ge_s []
+005e5434      if [-64]
+005e5436        i32.const [3953576]
+005e543b        i32.load [2, 0]
+005e543e        call [935] ; 
+005e5441        local.set [3]
+005e5443        i32.const [0]
+005e5445        call [1220] ; GameModule.get_Lang
+005e5448        local.get [0]
+005e544a        i32.load [2, 148]
+005e544e        i32.const [0]
+005e5450        call [1243] ; LangModule.Get
+005e5453        local.set [0]
+005e5455        i32.const [3944664]
+005e545a        i32.load [2, 0]
+005e545d        call [901] ; 
+005e5460        i32.const [3944664]
+005e5465        i32.load [2, 0]
+005e5468        i32.load [2, 92]
+005e546b        i32.load [2, 8]
+005e546e        local.set [1]
+005e5470        local.get [1]
+005e5472        i32.eqz []
+005e5473        if [-64]
+005e5475          i32.const [3944664]
+005e547a          i32.load [2, 0]
+005e547d          call [901] ; 
+005e5480          i32.const [3944664]
+005e5485          i32.load [2, 0]
+005e5488          i32.load [2, 92]
+005e548b          i32.load [2, 0]
+005e548e          local.set [4]
+005e5490          i32.const [3940924]
+005e5495          i32.load [2, 0]
+005e5498          call [903] ; 
+005e549b          local.set [1]
+005e549d          local.get [1]
+005e549f          local.get [4]
+005e54a1          i32.const [4027100] ; METHOD <>c.bqYy
+005e54a6          i32.load [2, 0]
+005e54a9          i32.const [0]
+005e54ab          call [1153] ; UnityAction..ctor
+005e54ae          i32.const [3944664]
+005e54b3          i32.load [2, 0]
+005e54b6          i32.load [2, 92]
+005e54b9          local.get [1]
+005e54bb          i32.store [2, 8]
+005e54be          i32.const [3944664]
+005e54c3          i32.load [2, 0]
+005e54c6          i32.load [2, 92]
+005e54c9          drop []
+005e54ca        end []
+005e54cb        local.get [3]
+005e54cd        local.get [0]
+005e54cf        local.get [1]
+005e54d1        i32.const [0]
+005e54d3        i32.const [4034536] ; STRING ""
+005e54d8        i32.load [2, 0]
+005e54db        i32.const [0]
+005e54dd        i32.const [16036] ; TABLE UIControl.ShowCommonTip
+005e54e1        global.set [3]
+005e54e3        i32.const [16036] ; TABLE UIControl.ShowCommonTip
+005e54e7        call_indirect [11, 0]
+005e54ea        br [2]
+005e54ec      end []
+005e54ed      i32.const [0]
+005e54ef      call [1060] ; ConfigMgr.get_Instance
+005e54f2      i32.load [2, 84]
+005e54f5      local.set [0]
+005e54f7      local.get [2]
+005e54f9      local.get [3]
+005e54fb      i32.store [2, 8]
+005e54fe      local.get [0]
+005e5500      i32.const [3934404]
+005e5505      i32.load [2, 0]
+005e5508      local.get [2]
+005e550a      i32.const [8]
+005e550c      i32.add []
+005e550d      call [910] ; 
+005e5510      i32.const [3957276]
+005e5515      i32.load [2, 0]
+005e5518      call [982] ; 
+005e551b      local.set [1]
+005e551d      i32.const [3953576]
+005e5522      i32.load [2, 0]
+005e5525      call [935] ; 
+005e5528      local.set [3]
+005e552a      i32.const [0]
+005e552c      call [1220] ; GameModule.get_Lang
+005e552f      local.set [4]
+005e5531      i32.const [3926996]
+005e5536      i32.load [2, 0]
+005e5539      i32.const [1]
+005e553b      call [909] ; 
+005e553e      local.set [0]
+005e5540      local.get [1]
+005e5542      i32.load [2, 32]
+005e5545      i32.const [0]
+005e5547      call [1551] ; Lang.get_Value
+005e554a      local.set [1]
+005e554c      local.get [0]
+005e554e      local.get [1]
+005e5550      call [905] ; 
+005e5553      local.get [0]
+005e5555      local.get [1]
+005e5557      i32.store [2, 16]
+005e555a      local.get [3]
+005e555c      local.get [4]
+005e555e      i32.const [4075040] ; STRING "Tips.NoItem"
+005e5563      i32.load [2, 0]
+005e5566      local.get [0]
+005e5568      i32.const [0]
+005e556a      call [1597] ; LangModule.GetFormat
+005e556d      i32.const [0]
+005e556f      call [2225] ; UIControl.ShowToast
+005e5572      br [1]
+005e5574    end []
+005e5575    i32.const [2025]
+005e5578    i32.const [0]
+005e557a    call [1892] ; AudioExtention.PlayVoice
+005e557d    local.get [0]
+005e557f    local.get [2]
+005e5581    call [6196] ; CommanderUI.h^ZMRew
+005e5584    local.get [0]
+005e5586    local.get [2]
+005e5588    call [8109] ; CommanderUI.CloseCommanderTabGuild
+005e558b    i32.const [3953344]
+005e5590    i32.load [2, 0]
+005e5593    call [935] ; 
+005e5596    local.get [1]
+005e5598    i32.load [2, 12]
+005e559b    local.get [2]
+005e559d    i32.const [12]
+005e559f    i32.add []
+005e55a0    i32.const [0]
+005e55a2    call [8117] ; CommanderControl.{Oc
+005e55a5    i32.eqz []
+005e55a6    br_if [0]
+005e55a8    local.get [0]
+005e55aa    i32.load [2, 112]
+005e55ad    i32.const [0]
+005e55af    call [5151] ; CommanderItem.RefreshCommander
+005e55b2    local.get [0]
+005e55b4    local.get [2]
+005e55b6    call [5148] ; CommanderUI.RefreshSelectedCommanderInfo
+005e55b9    local.get [0]
+005e55bb    local.get [2]
+005e55bd    call [5147] ; CommanderUI.RefreshUpgrade
+005e55c0    local.get [0]
+005e55c2    i32.load [2, 152]
+005e55c6    i32.const [0]
+005e55c8    call [7453] ; ParticleSystem.Play
+005e55cb  end []
+005e55cc  local.get [2]
+005e55ce  i32.const [16]
+005e55d0  i32.add []
+005e55d1  global.set [0]
+005e55d3  end []

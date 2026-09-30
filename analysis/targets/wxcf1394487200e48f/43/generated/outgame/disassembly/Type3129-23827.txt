@@ -1,0 +1,60 @@
+; Original class: AssetBundleManager
+; Type3129.LoadAssetAsync; wasmcode function 20668; offset=9261701 size=166
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+008d5286  i32.const [4988541]
+008d528b  i32.load8_u [0, 0]
+008d528e  i32.eqz []
+008d528f  if [-64]
+008d5291    i32.const [3928328]
+008d5296    call [900] ; 
+008d5299    i32.const [3928344]
+008d529e    call [900] ; 
+008d52a1    i32.const [3972116]
+008d52a6    call [900] ; 
+008d52a9    i32.const [3938016]
+008d52ae    call [900] ; 
+008d52b1    i32.const [4988541]
+008d52b6    i32.const [1]
+008d52b8    i32.store8 [0, 0]
+008d52bb  end []
+008d52bc  i32.const [3938016]
+008d52c1  i32.load [2, 0]
+008d52c4  call [901] ; 
+008d52c7  i32.const [0]
+008d52c9  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+008d52cc  drop []
+008d52cd  i32.const [3928344]
+008d52d2  i32.load [2, 0]
+008d52d5  call [901] ; 
+008d52d8  local.get [0]
+008d52da  local.get [0]
+008d52dc  call [5206] ; AssetBundleManager.RemapVariantName
+008d52df  local.set [3]
+008d52e1  local.get [3]
+008d52e3  i32.const [0]
+008d52e5  local.get [0]
+008d52e7  call [3666] ; AssetBundleManager.LoadAssetBundle
+008d52ea  i32.const [3928328]
+008d52ef  i32.load [2, 0]
+008d52f2  call [903] ; 
+008d52f5  local.set [0]
+008d52f7  local.get [0]
+008d52f9  local.get [3]
+008d52fb  i32.store [2, 8]
+008d52fe  local.get [0]
+008d5300  local.get [1]
+008d5302  i32.store [2, 12]
+008d5305  local.get [0]
+008d5307  local.get [2]
+008d5309  i32.store [2, 20]
+008d530c  i32.const [3928344]
+008d5311  i32.load [2, 0]
+008d5314  i32.load [2, 92]
+008d5317  i32.load [2, 28]
+008d531a  local.get [0]
+008d531c  i32.const [3972116]
+008d5321  i32.load [2, 0]
+008d5324  call [941] ; 
+008d5327  local.get [0]
+008d5329  return []
+008d532a  end []

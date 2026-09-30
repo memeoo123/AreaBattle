@@ -1,0 +1,67 @@
+; Original class: XYXADControl
+; Type7567.ShowVideoStatic; wasmcode function 9325; offset=4536329 size=181
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0045380c  i32.const [5005739]
+00453811  i32.load8_u [0, 0]
+00453814  i32.eqz []
+00453815  if [-64]
+00453817    i32.const [3915488]
+0045381c    call [900] ; 
+0045381f    i32.const [4031832] ; METHOD <>c__DisplayClass18_0.<ShowVideoStatic>g__DataCallBack|0
+00453824    call [900] ; 
+00453827    i32.const [3949808]
+0045382c    call [900] ; 
+0045382f    i32.const [4069636] ; STRING "ShowVideoStatic:"
+00453834    call [900] ; 
+00453837    i32.const [5005739]
+0045383c    i32.const [1]
+0045383e    i32.store8 [0, 0]
+00453841  end []
+00453842  i32.const [3949808]
+00453847  i32.load [2, 0]
+0045384a  call [903] ; 
+0045384d  local.set [1]
+0045384f  local.get [1]
+00453851  local.get [0]
+00453853  i32.store [2, 8]
+00453856  local.get [1]
+00453858  i32.const [8]
+0045385a  i32.add []
+0045385b  i32.const [0]
+0045385d  call [966] ; Int32.ToString
+00453860  local.set [0]
+00453862  i32.const [4069636] ; STRING "ShowVideoStatic:"
+00453867  i32.load [2, 0]
+0045386a  local.get [0]
+0045386c  i32.const [0]
+0045386e  call [921] ; String.Concat
+00453871  i32.const [0]
+00453873  call [2349] ; XYXLOG.Warning
+00453876  local.get [1]
+00453878  call [1083] ; BridgeManager.get_xyxFunc
+0045387b  local.set [0]
+0045387d  i32.const [3915488]
+00453882  i32.load [2, 0]
+00453885  call [903] ; 
+00453888  local.set [2]
+0045388a  local.get [2]
+0045388c  local.get [1]
+0045388e  i32.const [4031832] ; METHOD <>c__DisplayClass18_0.<ShowVideoStatic>g__DataCallBack|0
+00453893  i32.load [2, 0]
+00453896  i32.const [0]
+00453898  call [1004] ; 
+0045389b  local.get [0]
+0045389d  local.set [1]
+0045389f  local.get [0]
+004538a1  i32.load [2, 0]
+004538a4  local.set [0]
+004538a6  local.get [1]
+004538a8  local.get [2]
+004538aa  local.get [0]
+004538ac  i32.load [2, 440]
+004538b0  local.get [0]
+004538b2  i32.load [2, 436]
+004538b6  global.set [3]
+004538b8  global.get [3]
+004538ba  call_indirect [2, 0]
+004538bd  end []

@@ -1,0 +1,175 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3957892,
+      "encodedUsage": "0xc0007fd5",
+      "methodSpecIndex": 16362,
+      "methodSpecAddress": 679352,
+      "methodSpec": [
+        10520,
+        891,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 6849,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 2929,
+            "name": "AssetOperationHandle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3966740,
+      "encodedUsage": "0xc00090bb",
+      "methodSpecIndex": 18525,
+      "methodSpecAddress": 705308,
+      "methodSpec": [
+        10552,
+        891,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "Dispose",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 6849,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 2929,
+            "name": "AssetOperationHandle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3966744,
+      "encodedUsage": "0xc00090bd",
+      "methodSpecIndex": 18526,
+      "methodSpecAddress": 705320,
+      "methodSpec": [
+        10550,
+        891,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "MoveNext",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 6849,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 2929,
+            "name": "AssetOperationHandle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3966748,
+      "encodedUsage": "0xc00090bf",
+      "methodSpecIndex": 18527,
+      "methodSpecAddress": 705332,
+      "methodSpec": [
+        10551,
+        891,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "get_Current",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 6849,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 2929,
+            "name": "AssetOperationHandle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3970564,
+      "encodedUsage": "0xc000970b",
+      "methodSpecIndex": 19333,
+      "methodSpecAddress": 715004,
+      "methodSpec": [
+        10636,
+        891,
+        -1
+      ],
+      "declaringType": "KeyValuePair`2",
+      "method": "get_Value",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 6849,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 2929,
+            "name": "AssetOperationHandle"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

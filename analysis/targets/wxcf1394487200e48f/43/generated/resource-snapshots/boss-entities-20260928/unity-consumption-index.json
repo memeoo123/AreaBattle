@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "snapshot": "boss-entities-20260928",
+  "sourceManifest": "generated/resource-snapshots/boss-entities-20260928/acquisition-manifest.json",
+  "prefabs": [
+    {
+      "name": "boss01",
+      "assetPath": "assets/gameres/bundleres/model/entity/boss01.prefab",
+      "root": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:1340524183715397125",
+      "flatData": "generated/resource-snapshots/boss-entities-20260928/prefabs/boss01.flat.json",
+      "nodeCount": 10,
+      "bindingCount": 0,
+      "dependencyCount": 61,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    },
+    {
+      "name": "boss02",
+      "assetPath": "assets/gameres/bundleres/model/entity/boss02.prefab",
+      "root": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-8821823304576018547",
+      "flatData": "generated/resource-snapshots/boss-entities-20260928/prefabs/boss02.flat.json",
+      "nodeCount": 10,
+      "bindingCount": 0,
+      "dependencyCount": 70,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    },
+    {
+      "name": "bosssoldier1",
+      "assetPath": "assets/gameres/bundleres/model/entity/bosssoldier1.prefab",
+      "root": "CAB-00f5755f1c988a9722cbc3238004bfdf:-7480038615564240810",
+      "flatData": "generated/resource-snapshots/boss-entities-20260928/prefabs/bosssoldier1.flat.json",
+      "nodeCount": 3,
+      "bindingCount": 0,
+      "dependencyCount": 20,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    },
+    {
+      "name": "bosssoldier2",
+      "assetPath": "assets/gameres/bundleres/model/entity/bosssoldier2.prefab",
+      "root": "CAB-71eaaec95335b868bad1572e7073e552:6117705946438673630",
+      "flatData": "generated/resource-snapshots/boss-entities-20260928/prefabs/bosssoldier2.flat.json",
+      "nodeCount": 3,
+      "bindingCount": 0,
+      "dependencyCount": 20,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    }
+  ],
+  "newObjectCounts": {
+    "AssetBundle": 20,
+    "Material": 15,
+    "Shader": 5,
+    "Transform": 26,
+    "ParticleSystem": 9,
+    "GameObject": 26,
+    "ParticleSystemRenderer": 9,
+    "SpriteRenderer": 2,
+    "Texture2D": 13,
+    "MonoBehaviour": 16,
+    "TextAsset": 10,
+    "MeshRenderer": 5,
+    "MonoScript": 13,
+    "MeshFilter": 5,
+    "Mesh": 6,
+    "BoxCollider": 2,
+    "Sprite": 1
+  },
+  "resources": [
+    {
+      "id": "CAB-7d4479f1bec767008efa46f41d1566b8:4553062147701365356",
+      "type": "Material",
+      "name": "hdzd_effect_boss05_04",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/materials/effect/hdzd_effect_boss05_04.mat_750ccc1ff1c056fdb4fa9da18b5d10b6.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_04__CAB-7d4479f1bec767008efa46f41d1566b8__4553062147701365356.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_04__CAB-7d4479f1bec767008efa46f41d1566b8__4553062147701365356.json",
+          "sha256": "cb675167671b391b804ce78cb72ad7145da3efcd383820ad06fa0c15756bdf7a",
+          "bytes": 3240
+        }
+      ]
+    },
+    {
+      "id": "CAB-a55aff82698c813f8a9bfd4e1e1c8bba:7534611222308457480",
+      "type": "Material",
+      "name": "hdzd_effect_boss05_11",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/materials/effect/hdzd_effect_boss05_11.mat_ebf5fc7e52210034dfb18dc5465e4a25.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_11__CAB-a55aff82698c813f8a9bfd4e1e1c8bba__7534611222308457480.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_11__CAB-a55aff82698c813f8a9bfd4e1e1c8bba__7534611222308457480.json",
+          "sha256": "a1c99489b4c5ee3e58bae8e69b325eff98e70b72763b9fd7628ed6250699e2d3",
+          "bytes": 3178
+        }
+      ]
+    },
+    {
+      "id": "CAB-05c48c94023bdeb89a7e5a1874d6ac7b:521642052905442715",
+      "type": "Material",
+      "name": "hdzd_effect_boss05_12",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/materials/effect/hdzd_effect_boss05_12.mat_08e432dca341e89378f00a6e2e5a2656.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_12__CAB-05c48c94023bdeb89a7e5a1874d6ac7b__521642052905442715.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_12__CAB-05c48c94023bdeb89a7e5a1874d6ac7b__521642052905442715.json",
+          "sha256": "208dccd1ca4302369c1538fa7f1df10ac74830c1fd19919a967e4d3bc9765fa8",
+          "bytes": 3296
+        }
+      ]
+    },
+    {
+      "id": "CAB-96ba804c0ac54fb0f8bb9121d4549416:6675367035657028552",
+      "type": "Material",
+      "name": "hdzd_effect_boss05_13",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/materials/effect/hdzd_effect_boss05_13.mat_fe538b88d9ba08d64fdf9a9e0ad25832.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_13__CAB-96ba804c0ac54fb0f8bb9121d4549416__6675367035657028552.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/hdzd_effect_boss05_13__CAB-96ba804c0ac54fb0f8bb9121d4549416__6675367035657028552.json",
+          "sha256": "d9c9f83b170162db4457aafdcae191074d2d8e4d988cd350e80b949c11d2c659",
+          "bytes": 3265
+        }
+      ]
+    },
+    {
+      "id": "CAB-b6a8f441387f2e4785ca096a2a5d5f43:846749304657458347",
+      "type": "Material",
+      "name": "Hdzd_Effect_Wy_015",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/materials/effect/hdzd_effect_wy_015.mat_8fbf71328c3e252833dcf6c3e629fb89.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_015__CAB-b6a8f441387f2e4785ca096a2a5d5f43__846749304657458347.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_015__CAB-b6a8f441387f2e4785ca096a2a5d5f43__846749304657458347.json",
+          "sha256": "1e8126c5f19b4709e4c96e49e8b12910f898e27a51d6181d36efdb68f1617e22",
+          "bytes": 2643
+        }
+      ]
+    },
+    {
+      "id": "CAB-f15c7194971d9bcafb974e9f5ce14748:6287807201682963934",
+      "type": "Material",
+      "name": "Hdzd_Effect_Wy_016",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/materials/effect/hdzd_effect_wy_016.mat_c0ea30accb129756fe3854b907a04880.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_016__CAB-f15c7194971d9bcafb974e9f5ce14748__6287807201682963934.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_016__CAB-f15c7194971d9bcafb974e9f5ce14748__6287807201682963934.json",
+          "sha256": "3a5dcec1ae8af3b1ab32ee689b940fef2e2342b87d14bb6d79b5a8b69c01526b",
+          "bytes": 1242
+        }
+      ]
+    },
+    {
+      "id": "CAB-4db238bc9e9987e4ced09a3fec965cb7:6805949067949570932",
+      "type": "Material",
+      "name": "Hdzd_Effect_Wy_017",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/materials/effect/hdzd_effect_wy_017.mat_a6d62a132489b7c213157e22d6643be5.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_017__CAB-4db238bc9e9987e4ced09a3fec965cb7__6805949067949570932.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_017__CAB-4db238bc9e9987e4ced09a3fec965cb7__6805949067949570932.json",
+          "sha256": "33d8ba78c303669e9c6b33d6340c5fb807daef9b34d48a1b8200b612e37929ac",
+          "bytes": 1273
+        }
+      ]
+    },
+    {
+      "id": "CAB-66bf6a128175277bb7e11f9579bdd020:-4794325471353287459",
+      "type": "Material",
+      "name": "Hdzd_Effect_Wy_024",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/materials/effect/hdzd_effect_wy_024.mat_7146334b9926aee5b29e22eaa3107912.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_024__CAB-66bf6a128175277bb7e11f9579bdd020__-4794325471353287459.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Hdzd_Effect_Wy_024__CAB-66bf6a128175277bb7e11f9579bdd020__-4794325471353287459.json",
+          "sha256": "d4039f92338985bf34d89716c1e385154078a761ffa58f5c5228635f3d31f4bc",
+          "bytes": 1272
+        }
+      ]
+    },
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-6562632805628259368",
+      "type": "Material",
+      "name": "Sprites-Default",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Sprites-Default__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-6562632805628259368.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Sprites-Default__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-6562632805628259368.json",
+          "sha256": "17654f9f36fbe56c4de6374b400346cc5eb7a2439bbb17dac2106ff5377d8bbd",
+          "bytes": 1695
+        }
+      ]
+    },
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-5963863879902103030",
+      "type": "Texture2D",
+      "name": "npc24",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-5963863879902103030.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-5963863879902103030.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-5963863879902103030.texture.json",
+          "sha256": "5fa347f226a92faea4a28523d00473fe14e0226e620f3180639e1cb99a9b150e",
+          "bytes": 832579
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-a5cbcddbf71a9f47f7352c65479f1e75__-5963863879902103030.png",
+          "sha256": "bcf879874e6d0616de573e266cfbb4b572b0dac9341a8d4db650128fc4c61f87",
+          "bytes": 195863
+        }
+      ]
+    },
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:5158438402429060213",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"mesh\"",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-a5cbcddbf71a9f47f7352c65479f1e75__5158438402429060213.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-a5cbcddbf71a9f47f7352c65479f1e75__5158438402429060213.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-a5cbcddbf71a9f47f7352c65479f1e75__5158438402429060213.mesh.json",
+          "sha256": "c2e3dc80041bee61bdb6bae32e670d0f9997554a0f942b0c1bff70e3cc302fb9",
+          "bytes": 124641
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-a5cbcddbf71a9f47f7352c65479f1e75__5158438402429060213.obj",
+          "sha256": "1c1760a29bf3c0f75481de5eb49e5ac524deb17dd4f7715077de37e9a93bb362",
+          "bytes": 43410
+        }
+      ]
+    },
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:7647240371114772536",
+      "type": "Material",
+      "name": "npc24_Material",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc24_Material__CAB-a5cbcddbf71a9f47f7352c65479f1e75__7647240371114772536.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc24_Material__CAB-a5cbcddbf71a9f47f7352c65479f1e75__7647240371114772536.json",
+          "sha256": "b23a262e1f5153865cc36e275b6fffba94dee0e63f1bf9ed5d9d52de5c3271c6",
+          "bytes": 1841
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-6562632805628259368",
+      "type": "Material",
+      "name": "Sprites-Default",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Sprites-Default__CAB-4cbdf2fb4ff783260c6b88a76e110815__-6562632805628259368.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/Sprites-Default__CAB-4cbdf2fb4ff783260c6b88a76e110815__-6562632805628259368.json",
+          "sha256": "17654f9f36fbe56c4de6374b400346cc5eb7a2439bbb17dac2106ff5377d8bbd",
+          "bytes": 1695
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-5980869217840884250",
+      "type": "Texture2D",
+      "name": "cloud",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/cloud__CAB-4cbdf2fb4ff783260c6b88a76e110815__-5980869217840884250.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/cloud__CAB-4cbdf2fb4ff783260c6b88a76e110815__-5980869217840884250.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/cloud__CAB-4cbdf2fb4ff783260c6b88a76e110815__-5980869217840884250.texture.json",
+          "sha256": "62b3387b0d1afdae625231b567c14897f7bb94e6c171043339ed77d3ad7a2a90",
+          "bytes": 31105
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/cloud__CAB-4cbdf2fb4ff783260c6b88a76e110815__-5980869217840884250.png",
+          "sha256": "a22e94e4ea3a7e3eacc567c01e18143b159735703ad7684c7fe553b6ddff1eec",
+          "bytes": 18111
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-4079494545068326741",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"cloud\"",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__cloud___CAB-4cbdf2fb4ff783260c6b88a76e110815__-4079494545068326741.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__cloud___CAB-4cbdf2fb4ff783260c6b88a76e110815__-4079494545068326741.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__cloud___CAB-4cbdf2fb4ff783260c6b88a76e110815__-4079494545068326741.mesh.json",
+          "sha256": "4802e8844f59e36fc5af20f3370564fbfc6d106c925eaab95d0030cb344d43a9",
+          "bytes": 2200
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__cloud___CAB-4cbdf2fb4ff783260c6b88a76e110815__-4079494545068326741.obj",
+          "sha256": "28a2fc45396622dc96e0c67481e0c1cd0ca6205388623faa599c95da819bcfda",
+          "bytes": 604
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-1385716274512422456",
+      "type": "Material",
+      "name": "npc26_Material",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc26_Material__CAB-4cbdf2fb4ff783260c6b88a76e110815__-1385716274512422456.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc26_Material__CAB-4cbdf2fb4ff783260c6b88a76e110815__-1385716274512422456.json",
+          "sha256": "7d519d5d9b787a86b57ea5e09a941ee58b5a2d0fb198e0a487382e5206b45981",
+          "bytes": 1840
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-219523296002504731",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"mesh\"",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-4cbdf2fb4ff783260c6b88a76e110815__-219523296002504731.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-4cbdf2fb4ff783260c6b88a76e110815__-219523296002504731.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-4cbdf2fb4ff783260c6b88a76e110815__-219523296002504731.mesh.json",
+          "sha256": "8a081b64589ecfd05000e6317c7a244801ec250d867a42a4143905dc1049e042",
+          "bytes": 74341
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-4cbdf2fb4ff783260c6b88a76e110815__-219523296002504731.obj",
+          "sha256": "a62992078b244d9b0dbe9d1ccb370102b5323b5dac82066529b1f029cd36872e",
+          "bytes": 24785
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:5309498733521422699",
+      "type": "Texture2D",
+      "name": "npc26",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-4cbdf2fb4ff783260c6b88a76e110815__5309498733521422699.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-4cbdf2fb4ff783260c6b88a76e110815__5309498733521422699.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-4cbdf2fb4ff783260c6b88a76e110815__5309498733521422699.texture.json",
+          "sha256": "ef9af5368895b0ced9f4db2d20d114d65ac5a1278598d3c15bc790af88b6e788",
+          "bytes": 422179
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-4cbdf2fb4ff783260c6b88a76e110815__5309498733521422699.png",
+          "sha256": "83733651347e707b1d7210be8c7a06713c8e15ffa1648ee7fabef89e63f836b7",
+          "bytes": 144670
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:8308315085901773528",
+      "type": "Material",
+      "name": "cloud_Material",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/cloud_Material__CAB-4cbdf2fb4ff783260c6b88a76e110815__8308315085901773528.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/cloud_Material__CAB-4cbdf2fb4ff783260c6b88a76e110815__8308315085901773528.json",
+          "sha256": "7d9f1fe975a6517dd795c72558ff1cbc011b612f24026325bcf3895aa0cdf89b",
+          "bytes": 1653
+        }
+      ]
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:8827180936604299418",
+      "type": "Mesh",
+      "name": "Cylinder002",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Cylinder002__CAB-4cbdf2fb4ff783260c6b88a76e110815__8827180936604299418.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Cylinder002__CAB-4cbdf2fb4ff783260c6b88a76e110815__8827180936604299418.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Cylinder002__CAB-4cbdf2fb4ff783260c6b88a76e110815__8827180936604299418.mesh.json",
+          "sha256": "2b1c2134dd1f98793c07418b913e22f823f1316ff2406caba09e6eaaf6f287d1",
+          "bytes": 63728
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Cylinder002__CAB-4cbdf2fb4ff783260c6b88a76e110815__8827180936604299418.obj",
+          "sha256": "a1e11101ea38bc8bea880f31a11e665e1cd38d5ee12cdaf75b58f3be864c508f",
+          "bytes": 30518
+        }
+      ]
+    },
+    {
+      "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-5963863879902103030",
+      "type": "Texture2D",
+      "name": "npc24",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-00f5755f1c988a9722cbc3238004bfdf__-5963863879902103030.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-00f5755f1c988a9722cbc3238004bfdf__-5963863879902103030.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-00f5755f1c988a9722cbc3238004bfdf__-5963863879902103030.texture.json",
+          "sha256": "5fa347f226a92faea4a28523d00473fe14e0226e620f3180639e1cb99a9b150e",
+          "bytes": 832579
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc24__CAB-00f5755f1c988a9722cbc3238004bfdf__-5963863879902103030.png",
+          "sha256": "bcf879874e6d0616de573e266cfbb4b572b0dac9341a8d4db650128fc4c61f87",
+          "bytes": 195863
+        }
+      ]
+    },
+    {
+      "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-2603831564701725293",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"mesh\"",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-00f5755f1c988a9722cbc3238004bfdf__-2603831564701725293.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-00f5755f1c988a9722cbc3238004bfdf__-2603831564701725293.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-00f5755f1c988a9722cbc3238004bfdf__-2603831564701725293.mesh.json",
+          "sha256": "c2e3dc80041bee61bdb6bae32e670d0f9997554a0f942b0c1bff70e3cc302fb9",
+          "bytes": 124641
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-00f5755f1c988a9722cbc3238004bfdf__-2603831564701725293.obj",
+          "sha256": "1c1760a29bf3c0f75481de5eb49e5ac524deb17dd4f7715077de37e9a93bb362",
+          "bytes": 43410
+        }
+      ]
+    },
+    {
+      "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:7647240371114772536",
+      "type": "Material",
+      "name": "npc24_Material",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc24_Material__CAB-00f5755f1c988a9722cbc3238004bfdf__7647240371114772536.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc24_Material__CAB-00f5755f1c988a9722cbc3238004bfdf__7647240371114772536.json",
+          "sha256": "b23a262e1f5153865cc36e275b6fffba94dee0e63f1bf9ed5d9d52de5c3271c6",
+          "bytes": 1841
+        }
+      ]
+    },
+    {
+      "id": "CAB-71eaaec95335b868bad1572e7073e552:-2278264700483194077",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"mesh\"",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-71eaaec95335b868bad1572e7073e552__-2278264700483194077.mesh.json",
+        "obj": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-71eaaec95335b868bad1572e7073e552__-2278264700483194077.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-71eaaec95335b868bad1572e7073e552__-2278264700483194077.mesh.json",
+          "sha256": "a6554c0f378518273e84f20fadfca964c478a45bc5ae5bf36ee53e88ad29ceea",
+          "bytes": 74246
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__mesh___CAB-71eaaec95335b868bad1572e7073e552__-2278264700483194077.obj",
+          "sha256": "5baca85c41dcc5f1623fd88aefbe4cce355274daaa13d2bd1233915c236f86e8",
+          "bytes": 24753
+        }
+      ]
+    },
+    {
+      "id": "CAB-71eaaec95335b868bad1572e7073e552:-1385716274512422456",
+      "type": "Material",
+      "name": "npc26_Material",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc26_Material__CAB-71eaaec95335b868bad1572e7073e552__-1385716274512422456.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Material/npc26_Material__CAB-71eaaec95335b868bad1572e7073e552__-1385716274512422456.json",
+          "sha256": "7d519d5d9b787a86b57ea5e09a941ee58b5a2d0fb198e0a487382e5206b45981",
+          "bytes": 1840
+        }
+      ]
+    },
+    {
+      "id": "CAB-71eaaec95335b868bad1572e7073e552:5309498733521422699",
+      "type": "Texture2D",
+      "name": "npc26",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-71eaaec95335b868bad1572e7073e552__5309498733521422699.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-71eaaec95335b868bad1572e7073e552__5309498733521422699.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-71eaaec95335b868bad1572e7073e552__5309498733521422699.texture.json",
+          "sha256": "ef9af5368895b0ced9f4db2d20d114d65ac5a1278598d3c15bc790af88b6e788",
+          "bytes": 422179
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/npc26__CAB-71eaaec95335b868bad1572e7073e552__5309498733521422699.png",
+          "sha256": "83733651347e707b1d7210be8c7a06713c8e15ffa1648ee7fabef89e63f836b7",
+          "bytes": 144670
+        }
+      ]
+    },
+    {
+      "id": "CAB-d54385dddab02ca30cf5913a1fa59c2b:-3958406060727655641",
+      "type": "Texture2D",
+      "name": "HD_effect_boss05_02",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/textures/effect/hd_effect_boss05_02.png_f4c9bcbe7f88f2c598fd185069374fdf.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/HD_effect_boss05_02__CAB-d54385dddab02ca30cf5913a1fa59c2b__-3958406060727655641.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/HD_effect_boss05_02__CAB-d54385dddab02ca30cf5913a1fa59c2b__-3958406060727655641.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/HD_effect_boss05_02__CAB-d54385dddab02ca30cf5913a1fa59c2b__-3958406060727655641.texture.json",
+          "sha256": "95333663a4264f198a1bb122435d49f1c074b657af702169d8c085fe872f0080",
+          "bytes": 31119
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/HD_effect_boss05_02__CAB-d54385dddab02ca30cf5913a1fa59c2b__-3958406060727655641.png",
+          "sha256": "a46c630055aebe95c25b460f9946da13f97ffd6d33955c1652ca79a7928fb53e",
+          "bytes": 36121
+        }
+      ]
+    },
+    {
+      "id": "CAB-ce613d1c3d736ead306d9e6dc7b6058b:2236001822647334300",
+      "type": "Texture2D",
+      "name": "hdzd_effect_boss05_03",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_boss05_03.png_07c2f7deb9bb82ab05b0483d096ceaf4.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_03__CAB-ce613d1c3d736ead306d9e6dc7b6058b__2236001822647334300.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_03__CAB-ce613d1c3d736ead306d9e6dc7b6058b__2236001822647334300.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_03__CAB-ce613d1c3d736ead306d9e6dc7b6058b__2236001822647334300.texture.json",
+          "sha256": "22d0a647b8b364ca1a7d7bd9585dc6134e8532e97a22af1ba99e01530308e57e",
+          "bytes": 60017
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_03__CAB-ce613d1c3d736ead306d9e6dc7b6058b__2236001822647334300.png",
+          "sha256": "406c39d11c92806031efe1b6aec7e23d5ab44564eae6ad70d064c78b23f86078",
+          "bytes": 4638
+        }
+      ]
+    },
+    {
+      "id": "CAB-79f1f8a5fa95c1e53b703981f18a5ed3:8879120120627136298",
+      "type": "Texture2D",
+      "name": "hdzd_effect_boss05_11",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_boss05_11.png_44a38fdeb41f89492f5b256fe8f10078.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_11__CAB-79f1f8a5fa95c1e53b703981f18a5ed3__8879120120627136298.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_11__CAB-79f1f8a5fa95c1e53b703981f18a5ed3__8879120120627136298.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_11__CAB-79f1f8a5fa95c1e53b703981f18a5ed3__8879120120627136298.texture.json",
+          "sha256": "31e5a957e1aa1703c087b72023b00ab542756137aa1e87150e9b4efc437c33dd",
+          "bytes": 60017
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/hdzd_effect_boss05_11__CAB-79f1f8a5fa95c1e53b703981f18a5ed3__8879120120627136298.png",
+          "sha256": "9306177651b7bd2f21dc831f999c189b41da8a21f6743ba0daa9a138e207d1c3",
+          "bytes": 30394
+        }
+      ]
+    },
+    {
+      "id": "CAB-f51e4c991feec958d99ec4cbc3aed821:-2300754960120560666",
+      "type": "Texture2D",
+      "name": "Hdzd_Effect_Wy_015",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_wy_015.png_4a823d0c6527a1a87659c57557ba7367.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_015__CAB-f51e4c991feec958d99ec4cbc3aed821__-2300754960120560666.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_015__CAB-f51e4c991feec958d99ec4cbc3aed821__-2300754960120560666.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_015__CAB-f51e4c991feec958d99ec4cbc3aed821__-2300754960120560666.texture.json",
+          "sha256": "a01fe55a0e60aee0e6ebf2a32504c7643581faf1afffbd4984ccdaa0c3cbe156",
+          "bytes": 60014
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_015__CAB-f51e4c991feec958d99ec4cbc3aed821__-2300754960120560666.png",
+          "sha256": "45d1992c8de797edbc01627e6da3c204d3f18f927e3cef43c5ee54c31646ae99",
+          "bytes": 21316
+        }
+      ]
+    },
+    {
+      "id": "CAB-a04b65a577389720809bf7b5356c35ff:6885679224877601033",
+      "type": "Texture2D",
+      "name": "Hdzd_Effect_Wy_016",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_wy_016.png_7850bdcadf3ac413f28f3de0657c3be7.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_016__CAB-a04b65a577389720809bf7b5356c35ff__6885679224877601033.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_016__CAB-a04b65a577389720809bf7b5356c35ff__6885679224877601033.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_016__CAB-a04b65a577389720809bf7b5356c35ff__6885679224877601033.texture.json",
+          "sha256": "e1f231c5ee209fce4956b646dc8d8caa51542d069c1ee049b5b0a7d83a7d39f7",
+          "bytes": 16333
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_016__CAB-a04b65a577389720809bf7b5356c35ff__6885679224877601033.png",
+          "sha256": "3a7efb07d6b4f084424d6891e1e70b9d4013105de4b5eb2ef01c238771608f08",
+          "bytes": 14463
+        }
+      ]
+    },
+    {
+      "id": "CAB-93196612f804ab504c38bb0096815b6f:-6005661280426067994",
+      "type": "Texture2D",
+      "name": "Hdzd_Effect_Wy_017",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_wy_017.png_ed5c35c5c3e24ce32ba415be8710aae4.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_017__CAB-93196612f804ab504c38bb0096815b6f__-6005661280426067994.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_017__CAB-93196612f804ab504c38bb0096815b6f__-6005661280426067994.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_017__CAB-93196612f804ab504c38bb0096815b6f__-6005661280426067994.texture.json",
+          "sha256": "271ac2cc076ff33df5852252ebdf01a7cfc92448d567341e86312779993e572b",
+          "bytes": 16333
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_017__CAB-93196612f804ab504c38bb0096815b6f__-6005661280426067994.png",
+          "sha256": "95f1923d5ea69c4d8afa5cfda6e26423d23834fc23e760cc3792183ac1d4d7a8",
+          "bytes": 9364
+        }
+      ]
+    },
+    {
+      "id": "CAB-cf8e3fbf6c19327b512402a4587f76ee:5165969037243374941",
+      "type": "Texture2D",
+      "name": "Hdzd_Effect_Wy_024",
+      "source": "generated/resource-snapshots/skill-effects-20260928/source-bundles/textures/effect/hdzd_effect_wy_024.png_9e36dfa54ad017d373e8b05722859969.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_024__CAB-cf8e3fbf6c19327b512402a4587f76ee__5165969037243374941.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_024__CAB-cf8e3fbf6c19327b512402a4587f76ee__5165969037243374941.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_024__CAB-cf8e3fbf6c19327b512402a4587f76ee__5165969037243374941.texture.json",
+          "sha256": "ded8106c20b6fb25e501652f08cc0b36bcdcc593d5b9a729aafd3c516b0f3654",
+          "bytes": 60014
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/Hdzd_Effect_Wy_024__CAB-cf8e3fbf6c19327b512402a4587f76ee__5165969037243374941.png",
+          "sha256": "a1554117fa3e338be8c28ef4cf35077ac0a33abc512a266b2d097968ebdf6ec9",
+          "bytes": 37903
+        }
+      ]
+    },
+    {
+      "id": "CAB-4d00759d5772dfcc8e3d84f53a1802fb:5842148792199500003",
+      "type": "Sprite",
+      "name": "bossshadow",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/textures/shadow/bossshadow.png_3a1af33f447cc2428ba884cb204cd71d.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.png",
+        "pngCanvas": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 128.0,
+        "height": 128.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 50.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 4.076120376586914,
+        "y": 3.064629077911377
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.json",
+          "sha256": "f50bdd218f2742f153cf21c946713e22a34ee50213ce63f8f4471c97cb64562c",
+          "bytes": 5732
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.png",
+          "sha256": "49170db20beb25f6b9cc283ede0541432ba7281f96d22ec391cdadccc3ac7c2c",
+          "bytes": 2491
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Sprite/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__5842148792199500003.canvas.png",
+          "sha256": "0fdd8dd6a9c6bbe3eeeafbadf8972cd8cc211c0ee591f7ab4204e726ef86131f",
+          "bytes": 2600
+        }
+      ]
+    },
+    {
+      "id": "CAB-4d00759d5772dfcc8e3d84f53a1802fb:7241091381952891169",
+      "type": "Texture2D",
+      "name": "bossshadow",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/textures/shadow/bossshadow.png_3a1af33f447cc2428ba884cb204cd71d.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__7241091381952891169.texture.json",
+        "png": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__7241091381952891169.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__7241091381952891169.texture.json",
+          "sha256": "2c199c2895592805db9bd364859c3f4970f05c428fc0541d2865bf64c37ef987",
+          "bytes": 16325
+        },
+        {
+          "path": "generated/resource-snapshots/boss-entities-20260928/unity-assets/Texture2D/bossshadow__CAB-4d00759d5772dfcc8e3d84f53a1802fb__7241091381952891169.png",
+          "sha256": "a0500ecc613133bfb5f37a8e3f3c51291f16f99371594c304bc5a9e30f97fbb8",
+          "bytes": 2439
+        }
+      ]
+    }
+  ],
+  "baselinePreserved": true,
+  "newObjectCount": 183,
+  "reusedObjectCount": 10436,
+  "validation": {
+    "sourceBundlesVerified": 20,
+    "newSourceBundles": 9,
+    "exportErrors": [],
+    "runtimeImported": false,
+    "targetCodeExecuted": false
+  }
+}

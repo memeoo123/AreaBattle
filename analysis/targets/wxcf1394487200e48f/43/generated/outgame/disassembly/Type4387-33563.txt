@@ -1,0 +1,68 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.V~olw; wasmcode1 function 54170; offset=17937452 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0111b42f  i32.const [5007401]
+0111b434  i32.load8_u [0, 0]
+0111b437  i32.eqz []
+0111b438  if [-64]
+0111b43a    i32.const [3953576]
+0111b43f    i32.const [1605]
+0111b442    call_indirect [0, 0]
+0111b445    i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b44a    i32.const [1605]
+0111b44d    call_indirect [0, 0]
+0111b450    i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b455    i32.const [1605]
+0111b458    call_indirect [0, 0]
+0111b45b    i32.const [3940924]
+0111b460    i32.const [1605]
+0111b463    call_indirect [0, 0]
+0111b466    i32.const [4104528] ; STRING "未传入购买类型，默认使用老版本商品配置表的getType字段"
+0111b46b    i32.const [1605]
+0111b46e    call_indirect [0, 0]
+0111b471    i32.const [4106372] ; STRING "重复注册活动ID:"
+0111b476    i32.const [1605]
+0111b479    call_indirect [0, 0]
+0111b47c    i32.const [5007401]
+0111b481    i32.const [1]
+0111b483    i32.store8 [0, 0]
+0111b486  end []
+0111b487  i32.const [3953576]
+0111b48c  i32.load [2, 0]
+0111b48f  i32.const [10272]
+0111b493  call_indirect [2, 0]
+0111b496  local.set [1]
+0111b498  i32.const [3940924]
+0111b49d  i32.load [2, 0]
+0111b4a0  i32.const [109007]
+0111b4a4  call_indirect [2, 0]
+0111b4a7  local.set [2]
+0111b4a9  local.get [2]
+0111b4ab  local.get [0]
+0111b4ad  i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b4b2  i32.load [2, 0]
+0111b4b5  i32.const [0]
+0111b4b7  i32.const [54239] ; TABLE UnityAction..ctor
+0111b4bb  call_indirect [6, 0]
+0111b4be  i32.const [3940924]
+0111b4c3  i32.load [2, 0]
+0111b4c6  i32.const [109007]
+0111b4ca  call_indirect [2, 0]
+0111b4cd  local.set [3]
+0111b4cf  local.get [3]
+0111b4d1  local.get [0]
+0111b4d3  i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b4d8  i32.load [2, 0]
+0111b4db  i32.const [0]
+0111b4dd  i32.const [54239] ; TABLE UnityAction..ctor
+0111b4e1  call_indirect [6, 0]
+0111b4e4  local.get [1]
+0111b4e6  i32.const [4104528] ; STRING "未传入购买类型，默认使用老版本商品配置表的getType字段"
+0111b4eb  i32.load [2, 0]
+0111b4ee  local.get [2]
+0111b4f0  local.get [3]
+0111b4f2  i32.const [4106372] ; STRING "重复注册活动ID:"
+0111b4f7  i32.load [2, 0]
+0111b4fa  i32.const [0]
+0111b4fc  call [3228] ; UIControl.ShowCommonTip
+0111b4ff  end []

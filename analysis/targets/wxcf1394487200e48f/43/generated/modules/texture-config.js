@@ -1,0 +1,4 @@
+define("texture-config.js", function(require, module, exports) {
+  "use strict";
+  GameGlobal.USED_TEXTURE_COMPRESSION = !1, GameGlobal.TEXTURE_PARALLEL_BUNDLE = !1, GameGlobal.TEXTURE_BUNDLES = "";
+});

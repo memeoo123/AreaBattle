@@ -1,0 +1,36 @@
+; Original class: RaceActivityControl
+; Type3982..ctor; wasmcode function 17984; offset=7981003 size=99
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0079c7cc  i32.const [5010172]
+0079c7d1  i32.load8_u [0, 0]
+0079c7d4  i32.eqz []
+0079c7d5  if [-64]
+0079c7d7    i32.const [3953508]
+0079c7dc    call [900] ; 
+0079c7df    i32.const [3977224]
+0079c7e4    call [900] ; 
+0079c7e7    i32.const [3923944]
+0079c7ec    call [900] ; 
+0079c7ef    i32.const [5010172]
+0079c7f4    i32.const [1]
+0079c7f6    i32.store8 [0, 0]
+0079c7f9  end []
+0079c7fa  i32.const [3923944]
+0079c7ff  i32.load [2, 0]
+0079c802  call [903] ; 
+0079c805  local.set [1]
+0079c807  local.get [1]
+0079c809  i32.const [5]
+0079c80b  i32.const [3977224]
+0079c810  i32.load [2, 0]
+0079c813  call [1178] ; 
+0079c816  local.get [0]
+0079c818  local.get [1]
+0079c81a  i32.store [2, 12]
+0079c81d  local.get [0]
+0079c81f  i32.const [1]
+0079c821  i32.store8 [0, 24]
+0079c824  i32.const [3953508]
+0079c829  i32.load [2, 0]
+0079c82c  drop []
+0079c82d  end []

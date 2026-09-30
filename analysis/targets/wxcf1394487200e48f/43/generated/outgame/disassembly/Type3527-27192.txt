@@ -1,0 +1,22 @@
+; Original class: YOResourcesModule
+; Type3527.GetAppVer; wasmcode1 function 7004; offset=2367952 size=55
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+002421d1  i32.const [4989567]
+002421d6  i32.load8_u [0, 0]
+002421d9  i32.eqz []
+002421da  if [-64]
+002421dc    i32.const [3928172]
+002421e1    i32.const [1605]
+002421e4    call_indirect [0, 0]
+002421e7    i32.const [4989567]
+002421ec    i32.const [1]
+002421ee    i32.store8 [0, 0]
+002421f1  end []
+002421f2  i32.const [3928172]
+002421f7  i32.load [2, 0]
+002421fa  i32.load [2, 92]
+002421fd  i32.load [2, 0]
+00242200  i32.const [0]
+00242202  call [3075] ; AppInfoManager.GetVersionName
+00242205  return []
+00242206  end []

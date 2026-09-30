@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T09:08:30.000860+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "AUDIO_NODE_ACTION_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T09:08:30.000860+00:00",
+    "scope": "Source Parallel/Sequence/Single node state, AudioActionBase async/lifecycle/volume, native Unity object boundaries in integrated checks",
+    "checksPassed": 860,
+    "newIntegratedChecks": 33,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Concrete Once/Loop/Fade/LoopFade playback, original resource/update/AudioManager host, fresh PlayMode/audio output or complete outgame Player"
+  },
+  "findings": [
+    "OutgameAudioNodes implements source native node roots with parent transform reset/layer inheritance, Parallel/Sequence/Single scheduling, pause/stop/destroy, and AudioPlayStart/End message order. IOutgameAudioAction/newAudio are required concrete playback dependencies, not synthetic success defaults.",
+    "Parallel registers only at action start, so pending asynchronous loads cannot be stopped through its active map. Constructor-time callback observes null captured action but still publishes. Stop uses key snapshot under lock and source loop-index removal; StopByGUID only delegates Stop. Pause enumerates live dictionary, skips unloaded/destroyed native sources. Destroy clears collection/root without cancelling untracked actions, late events remain possible.",
+    "Sequence starts first action before enqueue (synchronous completion source stale queue behavior retained); type2 coerced to1. End dequeues before message then starts next. Stop sets flag, dequeues source-loaded actions only, ignores voice, then destroys root/nulls queue/resets flag; callback failure leaves partial dequeue and flag. Pause visits all loaded queue entries, including not started entries.",
+    "Single consumes first ID only (null/empty=>0), returns null handles, overwrites pending before stopping current. End clears current before event and promotes/plays pending before pending clear. Stop can start pending via completion before destroying root. Destroy retains pending, so late completion can promote it.",
+    "OutgameAudioAction abstract production base restores hash GUID, source fields, virtual Awake/update registration/remove-add volume subscription, source async-void Play/config guards and assignment order, typed volume message, native pause/unpause, and partial-failure disposal. Source late awaited success after Dispose still assigns source and calls Start without resubscribing or restoring released config. No invented cancellation or once-only cleanup.",
+    "860 integrated checks pass,33 new (20 node +13 action). Native GameObject/AudioSource fields are used in editor tests; action implementation, loading, scheduling and async errors use explicit probes/manual SynchronizationContext. No fresh PlayMode or audible playback claim. Method map4969; business lifecycle remains11/38,27 remaining."
+  ],
+  "remaining": [
+    "Implement concrete Once/Loop/Fade/LoopFade actions including source SDK branch, async resource operations and countdown behavior. Restore AudioManager/config/native root/listener/node ownership and AudioCompositeBase.NewAudio override/factory; wire shared UI/controller to complete native playback and verify it.",
+    "Continue remaining27 controllers and full Main/module/config/account/menu entry; finish all objective subsystems, preserved combat/data, persistence/restart/failure/return flows and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-action-integrated.log",
+    "earlierNodeLog": "analysis/audio-node-integrated.log"
+  },
+  "disassembledMethodMapCount": 4969
+}

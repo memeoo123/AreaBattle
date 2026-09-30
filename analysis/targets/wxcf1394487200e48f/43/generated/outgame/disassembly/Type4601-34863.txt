@@ -1,0 +1,35 @@
+; Original class: LoginProcedureBase
+; Type4601.loginCallback; wasmcode function 18753; offset=8468005 size=91
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00813626  i32.const [5001505]
+0081362b  i32.load8_u [0, 0]
+0081362e  i32.eqz []
+0081362f  if [-64]
+00813631    i32.const [3922404]
+00813636    call [900] ; 
+00813639    i32.const [3938520]
+0081363e    call [900] ; 
+00813641    i32.const [5001505]
+00813646    i32.const [1]
+00813648    i32.store8 [0, 0]
+0081364b  end []
+0081364c  i32.const [3938520]
+00813651  i32.load [2, 0]
+00813654  call [903] ; 
+00813657  local.set [3]
+00813659  local.get [3]
+0081365b  local.get [2]
+0081365d  i32.store [2, 12]
+00813660  local.get [3]
+00813662  local.get [1]
+00813664  i32.store [2, 8]
+00813667  i32.const [5]
+00813669  i32.const [3922404]
+0081366e  i32.load [2, 0]
+00813671  local.get [0]
+00813673  i32.load [2, 16]
+00813676  local.get [0]
+00813678  i32.const [4]
+0081367a  local.get [3]
+0081367c  call [1510] ; 
+0081367f  end []

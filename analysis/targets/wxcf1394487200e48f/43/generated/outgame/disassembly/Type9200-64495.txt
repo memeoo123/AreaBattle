@@ -1,0 +1,85 @@
+; Original class: <>c
+; Type9200.<InitAD>b__5_0; wasmcode function 15357; offset=7401092 size=226
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0070ee85  i32.const [5006942]
+0070ee8a  i32.load8_u [0, 0]
+0070ee8d  i32.eqz []
+0070ee8e  if [-64]
+0070ee90    i32.const [3927760]
+0070ee95    call [900] ; 
+0070ee98    i32.const [3936304]
+0070ee9d    call [900] ; 
+0070eea0    i32.const [4035324] ; STRING " OnAudioInterruptionBegin"
+0070eea5    call [900] ; 
+0070eea8    i32.const [4035328] ; STRING " OnAudioInterruptionBegin:  "
+0070eead    call [900] ; 
+0070eeb0    i32.const [5006942]
+0070eeb5    i32.const [1]
+0070eeb7    i32.store8 [0, 0]
+0070eeba  end []
+0070eebb  block [-64]
+0070eebd    block [-64]
+0070eebf      local.get [1]
+0070eec1      if [-64]
+0070eec3        block [-64]
+0070eec5          block [-64]
+0070eec7            local.get [1]
+0070eec9            i32.load [2, 8]
+0070eecc            local.set [0]
+0070eece            local.get [0]
+0070eed0            if [-64]
+0070eed2              i32.const [0]
+0070eed4              local.set [2]
+0070eed6              local.get [0]
+0070eed8              i32.load [2, 8]
+0070eedb              br_if [2]
+0070eedd            end []
+0070eede          end []
+0070eedf          i32.const [1]
+0070eee1          local.set [2]
+0070eee3        end []
+0070eee4        local.get [2]
+0070eee6        i32.eqz []
+0070eee7        br_if [1]
+0070eee9      end []
+0070eeea      i32.const [3927760]
+0070eeef      i32.load [2, 0]
+0070eef2      call [901] ; 
+0070eef5      i32.const [3927760]
+0070eefa      i32.load [2, 0]
+0070eefd      i32.load [2, 92]
+0070ef00      i32.load [2, 0]
+0070ef03      i32.const [4035324] ; STRING " OnAudioInterruptionBegin"
+0070ef08      i32.load [2, 0]
+0070ef0b      i32.const [0]
+0070ef0d      call [921] ; String.Concat
+0070ef10      local.set [0]
+0070ef12      br [1]
+0070ef14    end []
+0070ef15    i32.const [3927760]
+0070ef1a    i32.load [2, 0]
+0070ef1d    call [901] ; 
+0070ef20    i32.const [3927760]
+0070ef25    i32.load [2, 0]
+0070ef28    i32.load [2, 92]
+0070ef2b    i32.load [2, 0]
+0070ef2e    i32.const [4035328] ; STRING " OnAudioInterruptionBegin:  "
+0070ef33    i32.load [2, 0]
+0070ef36    local.get [1]
+0070ef38    i32.load [2, 8]
+0070ef3b    i32.const [0]
+0070ef3d    call [955] ; String.Concat
+0070ef40    local.set [0]
+0070ef42  end []
+0070ef43  local.get [0]
+0070ef45  i32.const [0]
+0070ef47  call [999] ; XYXLOG.Log
+0070ef4a  i32.const [3936304]
+0070ef4f  i32.load [2, 0]
+0070ef52  call [901] ; 
+0070ef55  i32.const [3936304]
+0070ef5a  i32.load [2, 0]
+0070ef5d  i32.load [2, 92]
+0070ef60  i32.const [1]
+0070ef62  i32.store8 [0, 64]
+0070ef65  end []

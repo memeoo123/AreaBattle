@@ -1,0 +1,29 @@
+; Original class: StorePurchaseUI
+; Type4412.ShowUI; wasmcode1 function 46767; offset=16497523 size=83
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00fbbb74  i32.const [5007024]
+00fbbb79  i32.load8_u [0, 0]
+00fbbb7c  i32.eqz []
+00fbbb7d  if [-64]
+00fbbb7f    i32.const [3953576]
+00fbbb84    i32.const [1605]
+00fbbb87    call_indirect [0, 0]
+00fbbb8a    i32.const [4034536] ; STRING ""
+00fbbb8f    i32.const [1605]
+00fbbb92    call_indirect [0, 0]
+00fbbb95    i32.const [5007024]
+00fbbb9a    i32.const [1]
+00fbbb9c    i32.store8 [0, 0]
+00fbbb9f  end []
+00fbbba0  i32.const [3953576]
+00fbbba5  i32.load [2, 0]
+00fbbba8  i32.const [10272]
+00fbbbac  call_indirect [2, 0]
+00fbbbaf  i32.load [2, 16]
+00fbbbb2  i32.const [6]
+00fbbbb4  i32.const [4034536] ; STRING ""
+00fbbbb9  i32.load [2, 0]
+00fbbbbc  i32.const [0]
+00fbbbbe  i32.const [17203] ; TABLE TopInfoUI.RendererPart
+00fbbbc2  call_indirect [6, 0]
+00fbbbc5  end []

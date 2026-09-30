@@ -1,0 +1,480 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyShowAdError; wasmcode function 2987; offset=920508 size=1223
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+000e0bbf  global.get [0]
+000e0bc1  i32.const [16]
+000e0bc3  i32.sub []
+000e0bc4  local.set [3]
+000e0bc6  local.get [3]
+000e0bc8  global.set [0]
+000e0bca  local.get [3]
+000e0bcc  local.get [1]
+000e0bce  i32.store [2, 12]
+000e0bd1  i32.const [5004954]
+000e0bd6  i32.load8_u [0, 0]
+000e0bd9  i32.eqz []
+000e0bda  if [-64]
+000e0bdc    i32.const [3930104]
+000e0be1    call [900] ; 
+000e0be4    i32.const [3984752]
+000e0be9    call [900] ; 
+000e0bec    i32.const [3927212]
+000e0bf1    call [900] ; 
+000e0bf4    i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0bf9    call [900] ; 
+000e0bfc    i32.const [4106252] ; STRING "距离小程序插屏广告或者激励视频广告上次播放时间间隔不足，不允许展示插屏广告"
+000e0c01    call [900] ; 
+000e0c04    i32.const [4057236] ; STRING "INTERSTITAL"
+000e0c09    call [900] ; 
+000e0c0c    i32.const [4096328] ; STRING "setDeviceOrientation:fail: requestDeviceOrientation fail"
+000e0c11    call [900] ; 
+000e0c14    i32.const [4045420] ; STRING "BANNER"
+000e0c19    call [900] ; 
+000e0c1c    i32.const [4077760] ; STRING "VIDEO"
+000e0c21    call [900] ; 
+000e0c24    i32.const [4084724] ; STRING "can't invoke show() while other video-ad is showed"
+000e0c29    call [900] ; 
+000e0c2c    i32.const [4035744] ; STRING " errMsg:"
+000e0c31    call [900] ; 
+000e0c34    i32.const [4093392] ; STRING "notifyShowAdError"
+000e0c39    call [900] ; 
+000e0c3c    i32.const [5004954]
+000e0c41    i32.const [1]
+000e0c43    i32.store8 [0, 0]
+000e0c46  end []
+000e0c47  block [-64]
+000e0c49    local.get [0]
+000e0c4b    i32.load [2, 12]
+000e0c4e    i32.const [5]
+000e0c50    i32.eq []
+000e0c51    br_if [0]
+000e0c53    local.get [0]
+000e0c55    i32.load [2, 8]
+000e0c58    i32.const [4093392] ; STRING "notifyShowAdError"
+000e0c5d    i32.load [2, 0]
+000e0c60    i32.const [0]
+000e0c62    call [921] ; String.Concat
+000e0c65    i32.const [0]
+000e0c67    call [999] ; XYXLOG.Log
+000e0c6a    local.get [0]
+000e0c6c    i32.const [5]
+000e0c6e    i32.store [2, 12]
+000e0c71    local.get [0]
+000e0c73    local.get [0]
+000e0c75    call [4474] ; DAUAdsAdapter.stopShowTimeout
+000e0c78    block [-64]
+000e0c7a      local.get [0]
+000e0c7c      i32.load [2, 20]
+000e0c7f      i32.load [2, 16]
+000e0c82      local.set [1]
+000e0c84      local.get [1]
+000e0c86      i32.eqz []
+000e0c87      br_if [0]
+000e0c89      local.get [1]
+000e0c8b      i32.const [4057236] ; STRING "INTERSTITAL"
+000e0c90      i32.load [2, 0]
+000e0c93      i32.const [0]
+000e0c95      call [1237] ; String.Contains
+000e0c98      i32.eqz []
+000e0c99      br_if [0]
+000e0c9b      block [-64]
+000e0c9d        local.get [2]
+000e0c9f        if [-64]
+000e0ca1          local.get [2]
+000e0ca3          i32.const [4106252] ; STRING "距离小程序插屏广告或者激励视频广告上次播放时间间隔不足，不允许展示插屏广告"
+000e0ca8          i32.load [2, 0]
+000e0cab          i32.const [0]
+000e0cad          call [1237] ; String.Contains
+000e0cb0          br_if [1]
+000e0cb2        end []
+000e0cb3        local.get [0]
+000e0cb5        i32.load [2, 0]
+000e0cb8        local.set [1]
+000e0cba        local.get [0]
+000e0cbc        local.get [1]
+000e0cbe        i32.load [2, 240]
+000e0cc2        local.get [1]
+000e0cc4        i32.load [2, 236]
+000e0cc8        global.set [3]
+000e0cca        global.get [3]
+000e0ccc        call_indirect [1, 0]
+000e0ccf        i32.const [458]
+000e0cd2        i32.eq []
+000e0cd3        br_if [0]
+000e0cd5        local.get [0]
+000e0cd7        i32.load [2, 0]
+000e0cda        local.set [1]
+000e0cdc        local.get [0]
+000e0cde        local.get [1]
+000e0ce0        i32.load [2, 240]
+000e0ce4        local.get [1]
+000e0ce6        i32.load [2, 236]
+000e0cea        global.set [3]
+000e0cec        global.get [3]
+000e0cee        call_indirect [1, 0]
+000e0cf1        i32.const [459]
+000e0cf4        i32.ne []
+000e0cf5        br_if [1]
+000e0cf7      end []
+000e0cf8      i32.const [3927212]
+000e0cfd      i32.load [2, 0]
+000e0d00      i32.const [5]
+000e0d02      call [909] ; 
+000e0d05      local.set [1]
+000e0d07      local.get [0]
+000e0d09      i32.load [2, 8]
+000e0d0c      local.set [4]
+000e0d0e      local.get [1]
+000e0d10      local.get [4]
+000e0d12      call [905] ; 
+000e0d15      local.get [1]
+000e0d17      local.get [4]
+000e0d19      i32.store [2, 16]
+000e0d1c      local.get [1]
+000e0d1e      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0d23      i32.load [2, 0]
+000e0d26      call [905] ; 
+000e0d29      local.get [1]
+000e0d2b      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0d30      i32.load [2, 0]
+000e0d33      i32.store [2, 20]
+000e0d36      local.get [3]
+000e0d38      i32.const [12]
+000e0d3a      i32.add []
+000e0d3b      i32.const [0]
+000e0d3d      call [966] ; Int32.ToString
+000e0d40      local.set [4]
+000e0d42      local.get [1]
+000e0d44      local.get [4]
+000e0d46      call [905] ; 
+000e0d49      local.get [1]
+000e0d4b      local.get [4]
+000e0d4d      i32.store [2, 24]
+000e0d50      local.get [1]
+000e0d52      i32.const [4035744] ; STRING " errMsg:"
+000e0d57      i32.load [2, 0]
+000e0d5a      call [905] ; 
+000e0d5d      local.get [1]
+000e0d5f      i32.const [4035744] ; STRING " errMsg:"
+000e0d64      i32.load [2, 0]
+000e0d67      i32.store [2, 28]
+000e0d6a      local.get [1]
+000e0d6c      local.get [2]
+000e0d6e      call [905] ; 
+000e0d71      local.get [1]
+000e0d73      local.get [2]
+000e0d75      i32.store [2, 32]
+000e0d78      local.get [1]
+000e0d7a      i32.const [0]
+000e0d7c      call [1024] ; String.Concat
+000e0d7f      i32.const [0]
+000e0d81      call [999] ; XYXLOG.Log
+000e0d84      i32.const [3984752]
+000e0d89      i32.load [2, 0]
+000e0d8c      call [1203] ; 
+000e0d8f      i32.const [0]
+000e0d91      call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+000e0d94      local.get [0]
+000e0d96      local.get [0]
+000e0d98      call [3386] ; DAUAdsAdapter.getNewReportParam
+000e0d9b      local.get [3]
+000e0d9d      i32.load [2, 12]
+000e0da0      local.get [2]
+000e0da2      i32.const [0]
+000e0da4      call [5750] ; ReporterSDK.NewReportDBTAdShowError
+000e0da7      local.get [0]
+000e0da9      local.get [3]
+000e0dab      i32.load [2, 12]
+000e0dae      local.get [2]
+000e0db0      local.get [0]
+000e0db2      call [6175] ; DAUAdsAdapter.reportShowFail
+000e0db5      local.get [0]
+000e0db7      i32.load [2, 32]
+000e0dba      local.set [1]
+000e0dbc      local.get [1]
+000e0dbe      i32.eqz []
+000e0dbf      br_if [1]
+000e0dc1      i32.const [5]
+000e0dc3      i32.const [3930104]
+000e0dc8      i32.load [2, 0]
+000e0dcb      local.get [1]
+000e0dcd      local.get [0]
+000e0dcf      call [1027] ; 
+000e0dd2      br [1]
+000e0dd4    end []
+000e0dd5    block [-64]
+000e0dd7      local.get [0]
+000e0dd9      i32.load [2, 20]
+000e0ddc      i32.load [2, 16]
+000e0ddf      local.set [1]
+000e0de1      local.get [1]
+000e0de3      i32.eqz []
+000e0de4      br_if [0]
+000e0de6      local.get [1]
+000e0de8      i32.const [4077760] ; STRING "VIDEO"
+000e0ded      i32.load [2, 0]
+000e0df0      i32.const [0]
+000e0df2      call [1237] ; String.Contains
+000e0df5      local.set [1]
+000e0df7      local.get [2]
+000e0df9      i32.eqz []
+000e0dfa      br_if [0]
+000e0dfc      local.get [1]
+000e0dfe      i32.eqz []
+000e0dff      br_if [0]
+000e0e01      block [-64]
+000e0e03        local.get [2]
+000e0e05        i32.const [4084724] ; STRING "can't invoke show() while other video-ad is showed"
+000e0e0a        i32.load [2, 0]
+000e0e0d        i32.const [0]
+000e0e0f        call [1237] ; String.Contains
+000e0e12        br_if [0]
+000e0e14        local.get [2]
+000e0e16        i32.const [4096328] ; STRING "setDeviceOrientation:fail: requestDeviceOrientation fail"
+000e0e1b        i32.load [2, 0]
+000e0e1e        i32.const [0]
+000e0e20        call [1237] ; String.Contains
+000e0e23        br_if [0]
+000e0e25        local.get [0]
+000e0e27        i32.load [2, 0]
+000e0e2a        local.set [1]
+000e0e2c        local.get [0]
+000e0e2e        local.get [1]
+000e0e30        i32.load [2, 240]
+000e0e34        local.get [1]
+000e0e36        i32.load [2, 236]
+000e0e3a        global.set [3]
+000e0e3c        global.get [3]
+000e0e3e        call_indirect [1, 0]
+000e0e41        i32.const [458]
+000e0e44        i32.ne []
+000e0e45        br_if [1]
+000e0e47      end []
+000e0e48      i32.const [3927212]
+000e0e4d      i32.load [2, 0]
+000e0e50      i32.const [5]
+000e0e52      call [909] ; 
+000e0e55      local.set [1]
+000e0e57      local.get [0]
+000e0e59      i32.load [2, 8]
+000e0e5c      local.set [4]
+000e0e5e      local.get [1]
+000e0e60      local.get [4]
+000e0e62      call [905] ; 
+000e0e65      local.get [1]
+000e0e67      local.get [4]
+000e0e69      i32.store [2, 16]
+000e0e6c      local.get [1]
+000e0e6e      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0e73      i32.load [2, 0]
+000e0e76      call [905] ; 
+000e0e79      local.get [1]
+000e0e7b      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0e80      i32.load [2, 0]
+000e0e83      i32.store [2, 20]
+000e0e86      local.get [3]
+000e0e88      i32.const [12]
+000e0e8a      i32.add []
+000e0e8b      i32.const [0]
+000e0e8d      call [966] ; Int32.ToString
+000e0e90      local.set [4]
+000e0e92      local.get [1]
+000e0e94      local.get [4]
+000e0e96      call [905] ; 
+000e0e99      local.get [1]
+000e0e9b      local.get [4]
+000e0e9d      i32.store [2, 24]
+000e0ea0      local.get [1]
+000e0ea2      i32.const [4035744] ; STRING " errMsg:"
+000e0ea7      i32.load [2, 0]
+000e0eaa      call [905] ; 
+000e0ead      local.get [1]
+000e0eaf      i32.const [4035744] ; STRING " errMsg:"
+000e0eb4      i32.load [2, 0]
+000e0eb7      i32.store [2, 28]
+000e0eba      local.get [1]
+000e0ebc      local.get [2]
+000e0ebe      call [905] ; 
+000e0ec1      local.get [1]
+000e0ec3      local.get [2]
+000e0ec5      i32.store [2, 32]
+000e0ec8      local.get [1]
+000e0eca      i32.const [0]
+000e0ecc      call [1024] ; String.Concat
+000e0ecf      i32.const [0]
+000e0ed1      call [999] ; XYXLOG.Log
+000e0ed4      i32.const [3984752]
+000e0ed9      i32.load [2, 0]
+000e0edc      call [1203] ; 
+000e0edf      i32.const [0]
+000e0ee1      call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+000e0ee4      local.get [0]
+000e0ee6      local.get [0]
+000e0ee8      call [3386] ; DAUAdsAdapter.getNewReportParam
+000e0eeb      local.get [3]
+000e0eed      i32.load [2, 12]
+000e0ef0      local.get [2]
+000e0ef2      i32.const [0]
+000e0ef4      call [5750] ; ReporterSDK.NewReportDBTAdShowError
+000e0ef7      local.get [0]
+000e0ef9      local.get [3]
+000e0efb      i32.load [2, 12]
+000e0efe      local.get [2]
+000e0f00      local.get [0]
+000e0f02      call [6175] ; DAUAdsAdapter.reportShowFail
+000e0f05      local.get [0]
+000e0f07      i32.load [2, 32]
+000e0f0a      local.set [1]
+000e0f0c      local.get [1]
+000e0f0e      i32.eqz []
+000e0f0f      br_if [1]
+000e0f11      i32.const [5]
+000e0f13      i32.const [3930104]
+000e0f18      i32.load [2, 0]
+000e0f1b      local.get [1]
+000e0f1d      local.get [0]
+000e0f1f      call [1027] ; 
+000e0f22      br [1]
+000e0f24    end []
+000e0f25    block [-64]
+000e0f27      i32.const [4045420] ; STRING "BANNER"
+000e0f2c      i32.load [2, 0]
+000e0f2f      local.get [0]
+000e0f31      i32.load [2, 20]
+000e0f34      i32.load [2, 16]
+000e0f37      i32.const [0]
+000e0f39      call [1019] ; String.Equals
+000e0f3c      if [-64]
+000e0f3e        local.get [0]
+000e0f40        i32.load [2, 28]
+000e0f43        i32.const [1]
+000e0f45        i32.ne []
+000e0f46        br_if [1]
+000e0f48      end []
+000e0f49      i32.const [3927212]
+000e0f4e      i32.load [2, 0]
+000e0f51      i32.const [5]
+000e0f53      call [909] ; 
+000e0f56      local.set [1]
+000e0f58      local.get [0]
+000e0f5a      i32.load [2, 8]
+000e0f5d      local.set [4]
+000e0f5f      local.get [1]
+000e0f61      local.get [4]
+000e0f63      call [905] ; 
+000e0f66      local.get [1]
+000e0f68      local.get [4]
+000e0f6a      i32.store [2, 16]
+000e0f6d      local.get [1]
+000e0f6f      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0f74      i32.load [2, 0]
+000e0f77      call [905] ; 
+000e0f7a      local.get [1]
+000e0f7c      i32.const [4063320] ; STRING "NewReportDBTAdShowError errCode:"
+000e0f81      i32.load [2, 0]
+000e0f84      i32.store [2, 20]
+000e0f87      local.get [3]
+000e0f89      i32.const [12]
+000e0f8b      i32.add []
+000e0f8c      i32.const [0]
+000e0f8e      call [966] ; Int32.ToString
+000e0f91      local.set [4]
+000e0f93      local.get [1]
+000e0f95      local.get [4]
+000e0f97      call [905] ; 
+000e0f9a      local.get [1]
+000e0f9c      local.get [4]
+000e0f9e      i32.store [2, 24]
+000e0fa1      local.get [1]
+000e0fa3      i32.const [4035744] ; STRING " errMsg:"
+000e0fa8      i32.load [2, 0]
+000e0fab      call [905] ; 
+000e0fae      local.get [1]
+000e0fb0      i32.const [4035744] ; STRING " errMsg:"
+000e0fb5      i32.load [2, 0]
+000e0fb8      i32.store [2, 28]
+000e0fbb      local.get [1]
+000e0fbd      local.get [2]
+000e0fbf      call [905] ; 
+000e0fc2      local.get [1]
+000e0fc4      local.get [2]
+000e0fc6      i32.store [2, 32]
+000e0fc9      local.get [1]
+000e0fcb      i32.const [0]
+000e0fcd      call [1024] ; String.Concat
+000e0fd0      i32.const [0]
+000e0fd2      call [999] ; XYXLOG.Log
+000e0fd5      i32.const [3984752]
+000e0fda      i32.load [2, 0]
+000e0fdd      call [1203] ; 
+000e0fe0      i32.const [0]
+000e0fe2      call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+000e0fe5      local.get [0]
+000e0fe7      local.get [0]
+000e0fe9      call [3386] ; DAUAdsAdapter.getNewReportParam
+000e0fec      local.get [3]
+000e0fee      i32.load [2, 12]
+000e0ff1      local.get [2]
+000e0ff3      i32.const [0]
+000e0ff5      call [5750] ; ReporterSDK.NewReportDBTAdShowError
+000e0ff8      local.get [0]
+000e0ffa      i32.load [2, 32]
+000e0ffd      local.set [1]
+000e0fff      local.get [1]
+000e1001      i32.eqz []
+000e1002      br_if [1]
+000e1004      i32.const [7]
+000e1006      i32.const [3930104]
+000e100b      i32.load [2, 0]
+000e100e      local.get [1]
+000e1010      local.get [0]
+000e1012      call [953] ; 
+000e1015      br_if [1]
+000e1017      local.get [0]
+000e1019      local.get [3]
+000e101b      i32.load [2, 12]
+000e101e      local.get [2]
+000e1020      local.get [0]
+000e1022      call [6175] ; DAUAdsAdapter.reportShowFail
+000e1025      br [1]
+000e1027    end []
+000e1028    i32.const [4045420] ; STRING "BANNER"
+000e102d    i32.load [2, 0]
+000e1030    local.get [0]
+000e1032    i32.load [2, 20]
+000e1035    i32.load [2, 16]
+000e1038    i32.const [0]
+000e103a    call [1019] ; String.Equals
+000e103d    local.set [2]
+000e103f    local.get [0]
+000e1041    i32.load [2, 32]
+000e1044    local.set [1]
+000e1046    local.get [2]
+000e1048    if [-64]
+000e104a      local.get [1]
+000e104c      i32.eqz []
+000e104d      br_if [1]
+000e104f      i32.const [7]
+000e1051      i32.const [3930104]
+000e1056      i32.load [2, 0]
+000e1059      local.get [1]
+000e105b      local.get [0]
+000e105d      call [953] ; 
+000e1060      drop []
+000e1061      br [1]
+000e1063    end []
+000e1064    local.get [1]
+000e1066    i32.eqz []
+000e1067    br_if [0]
+000e1069    i32.const [5]
+000e106b    i32.const [3930104]
+000e1070    i32.load [2, 0]
+000e1073    local.get [1]
+000e1075    local.get [0]
+000e1077    call [1027] ; 
+000e107a  end []
+000e107b  local.get [3]
+000e107d  i32.const [16]
+000e107f  i32.add []
+000e1080  global.set [0]
+000e1082  end []

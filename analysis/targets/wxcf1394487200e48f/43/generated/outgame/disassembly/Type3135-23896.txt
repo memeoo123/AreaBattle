@@ -1,0 +1,66 @@
+; Original class: DBTSDKManager
+; Type3135.set_OtherPlatformSdk; wasmcode function 12678; offset=6108693 size=169
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+005d3618  i32.const [4988605]
+005d361d  i32.load8_u [0, 0]
+005d3620  i32.eqz []
+005d3621  if [-64]
+005d3623    i32.const [3929208]
+005d3628    call [900] ; 
+005d362b    i32.const [3926996]
+005d3630    call [900] ; 
+005d3633    i32.const [4105948] ; STRING "设置其他渠道SDK："
+005d3638    call [900] ; 
+005d363b    i32.const [4988605]
+005d3640    i32.const [1]
+005d3642    i32.store8 [0, 0]
+005d3645  end []
+005d3646  local.get [0]
+005d3648  local.get [1]
+005d364a  i32.store [2, 16]
+005d364d  i32.const [3926996]
+005d3652  i32.load [2, 0]
+005d3655  i32.const [1]
+005d3657  call [909] ; 
+005d365a  local.set [0]
+005d365c  i32.const [4105948] ; STRING "设置其他渠道SDK："
+005d3661  i32.load [2, 0]
+005d3664  local.set [3]
+005d3666  local.get [1]
+005d3668  if [-64]
+005d366a    local.get [1]
+005d366c    local.set [2]
+005d366e    local.get [1]
+005d3670    i32.load [2, 0]
+005d3673    local.set [1]
+005d3675    local.get [2]
+005d3677    local.get [1]
+005d3679    i32.load [2, 216]
+005d367d    local.get [1]
+005d367f    i32.load [2, 212]
+005d3683    global.set [3]
+005d3685    global.get [3]
+005d3687    call_indirect [1, 0]
+005d368a    local.set [1]
+005d368c  else []
+005d368d    i32.const [0]
+005d368f    local.set [1]
+005d3691  end []
+005d3692  local.get [3]
+005d3694  local.get [1]
+005d3696  i32.const [0]
+005d3698  call [921] ; String.Concat
+005d369b  local.set [1]
+005d369d  local.get [0]
+005d369f  local.get [1]
+005d36a1  call [905] ; 
+005d36a4  local.get [0]
+005d36a6  local.get [1]
+005d36a8  i32.store [2, 16]
+005d36ab  i32.const [3929208]
+005d36b0  i32.load [2, 0]
+005d36b3  call [901] ; 
+005d36b6  local.get [0]
+005d36b8  i32.const [0]
+005d36ba  call [1541] ; CLog.dZz£
+005d36bd  end []

@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1000000000001
+GameObject:
+  serializedVersion: 6
+  m_Component:
+    - component:
+        fileID: 1000000000002
+  m_Layer: 31
+  m_Name: "bossSoldier1"
+  m_IsActive: 1
+  m_ObjectHideFlags: 0
+  m_TagString: "Untagged"
+  m_Icon:
+    fileID: 0
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &1000000000002
+Transform:
+  m_GameObject:
+    fileID: 1000000000001
+  m_LocalRotation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  m_LocalPosition:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  m_LocalScale:
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  m_Children:
+    - fileID: 1000000000004
+    - fileID: 1000000000006
+  m_Father:
+    fileID: 0
+  m_ObjectHideFlags: 0
+--- !u!1 &1000000000003
+GameObject:
+  serializedVersion: 6
+  m_Component:
+    - component:
+        fileID: 1000000000004
+  m_Layer: 0
+  m_Name: "shadowRoot"
+  m_IsActive: 1
+  m_ObjectHideFlags: 0
+  m_TagString: "Untagged"
+  m_Icon:
+    fileID: 0
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &1000000000004
+Transform:
+  m_GameObject:
+    fileID: 1000000000003
+  m_LocalRotation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  m_LocalPosition:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  m_LocalScale:
+    x: 3.0
+    y: 3.0
+    z: 3.0
+  m_Children: []
+  m_Father:
+    fileID: 1000000000002
+  m_ObjectHideFlags: 0
+--- !u!1 &1000000000005
+GameObject:
+  serializedVersion: 6
+  m_Component:
+    - component:
+        fileID: 1000000000006
+    - component:
+        fileID: 1000000000007
+    - component:
+        fileID: 1000000000008
+    - component:
+        fileID: 1000000000009
+  m_Layer: 31
+  m_Name: "mesh"
+  m_IsActive: 1
+  m_ObjectHideFlags: 0
+  m_TagString: "Untagged"
+  m_Icon:
+    fileID: 0
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &1000000000006
+Transform:
+  m_GameObject:
+    fileID: 1000000000005
+  m_LocalRotation:
+    x: -0.0
+    y: -0.0
+    z: -0.0
+    w: 1.0
+  m_LocalPosition:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  m_LocalScale:
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  m_Children: []
+  m_Father:
+    fileID: 1000000000002
+  m_ObjectHideFlags: 0
+--- !u!23 &1000000000007
+MeshRenderer:
+  m_GameObject:
+    fileID: 1000000000005
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset:
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 0.0
+  m_LightmapTilingOffsetDynamic:
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 0.0
+  m_Materials:
+    - fileID: "__FILEID_53__"
+      guid: "__GUID_53__"
+      type: 2
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot:
+    fileID: 0
+  m_ProbeAnchor:
+    fileID: 0
+  m_LightProbeVolumeOverride:
+    fileID: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams:
+    fileID: 0
+  m_EnlightenVertexStream:
+    fileID: 0
+  m_ObjectHideFlags: 0
+--- !u!114 &1000000000008
+MonoBehaviour:
+  m_GameObject:
+    fileID: 1000000000005
+  m_Enabled: 1
+  m_Script:
+    fileID: "__FILEID_56__"
+    guid: "__GUID_56__"
+    type: 2
+  m_Name: ""
+  skeletonDataAsset:
+    fileID: "__FILEID_57__"
+    guid: "__GUID_57__"
+    type: 2
+  initialSkinName: ""
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0.0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  updateTiming: 1
+  unscaledTime: 0
+  _animationName: "run"
+  loop: 1
+  timeScale: 1.0
+  m_ObjectHideFlags: 0
+--- !u!33 &1000000000009
+MeshFilter:
+  m_GameObject:
+    fileID: 1000000000005
+  m_Mesh:
+    fileID: "__FILEID_63__"
+    guid: "__GUID_63__"
+    type: 2
+  m_ObjectHideFlags: 0

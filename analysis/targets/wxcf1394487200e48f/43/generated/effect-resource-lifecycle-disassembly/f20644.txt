@@ -1,0 +1,94 @@
+008d1cf3 i32.const [5011611]
+008d1cf8 i32.load8_u [0, 0]
+008d1cfb i32.eqz []
+008d1cfc if [-64]
+008d1cfe   i32.const [3928344] ; type: AssetBundleManager
+008d1d03   call [900] ; 
+008d1d06   i32.const [3960524]
+008d1d0b   call [900] ; 
+008d1d0e   i32.const [3960300]
+008d1d13   call [900] ; 
+008d1d16   i32.const [3919032]
+008d1d1b   call [900] ; 
+008d1d1e   i32.const [3918956]
+008d1d23   call [900] ; 
+008d1d26   i32.const [5011611]
+008d1d2b   i32.const [1]
+008d1d2d   i32.store8 [0, 0]
+008d1d30 end []
+008d1d31 block [-64]
+008d1d33   local.get [0]
+008d1d35   i32.load8_u [0, 8]
+008d1d38   if [-64]
+008d1d3a     local.get [0]
+008d1d3c     i32.load [2, 12]
+008d1d3f     local.set [0]
+008d1d41     local.get [0]
+008d1d43     i32.eqz []
+008d1d44     br_if [1]
+008d1d46     local.get [0]
+008d1d48     i32.load [2, 32]
+008d1d4b     local.get [0]
+008d1d4d     i32.load [2, 20]
+008d1d50     local.get [0]
+008d1d52     i32.load [2, 12]
+008d1d55     global.set [3]
+008d1d57     global.get [3]
+008d1d59     call_indirect [0, 0]
+008d1d5c     return []
+008d1d5d   end []
+008d1d5e   i32.const [3928344] ; type: AssetBundleManager
+008d1d63   i32.load [2, 0]
+008d1d66   call [901] ; 
+008d1d69   i32.const [5011830]
+008d1d6e   i32.load8_u [0, 0]
+008d1d71   i32.eqz []
+008d1d72   if [-64]
+008d1d74     i32.const [3928344] ; type: AssetBundleManager
+008d1d79     call [900] ; 
+008d1d7c     i32.const [5011830]
+008d1d81     i32.const [1]
+008d1d83     i32.store8 [0, 0]
+008d1d86   end []
+008d1d87   i32.const [3928344] ; type: AssetBundleManager
+008d1d8c   i32.load [2, 0]
+008d1d8f   call [901] ; 
+008d1d92   i32.const [3928344] ; type: AssetBundleManager
+008d1d97   i32.load [2, 0]
+008d1d9a   i32.load [2, 92]
+008d1d9d   i32.const [1]
+008d1d9f   i32.store [2, 0]
+008d1da2   i32.const [0]
+008d1da4   call [13175] ; 
+008d1da7   i32.const [3918956]
+008d1dac   i32.load [2, 0]
+008d1daf   call [903] ; 
+008d1db2   local.set [1]
+008d1db4   local.get [1]
+008d1db6   i32.const [3960300]
+008d1dbb   i32.load [2, 0]
+008d1dbe   call [951] ; 
+008d1dc1   local.get [0]
+008d1dc3   local.get [1]
+008d1dc5   i32.store [2, 16]
+008d1dc8   i32.const [3919032]
+008d1dcd   i32.load [2, 0]
+008d1dd0   call [903] ; 
+008d1dd3   local.set [1]
+008d1dd5   local.get [1]
+008d1dd7   i32.const [3960524]
+008d1ddc   i32.load [2, 0]
+008d1ddf   call [951] ; 
+008d1de2   local.get [0]
+008d1de4   local.get [1]
+008d1de6   i32.store [2, 20]
+008d1de9   i32.const [0]
+008d1deb   call [1388] ; 
+008d1dee   local.get [0]
+008d1df0   local.get [0]
+008d1df2   call [13162] ; AssetbundleModule.LoadManifest
+008d1df5   i32.const [0]
+008d1df7   call [1227] ; 
+008d1dfa   drop []
+008d1dfb end []
+008d1dfc end []

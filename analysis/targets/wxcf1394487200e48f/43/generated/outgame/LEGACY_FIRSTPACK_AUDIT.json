@@ -1,0 +1,34 @@
+{
+  "atUtc": "2026-09-30T03:51:29.707584+00:00",
+  "sourceMethods": [
+    29876,
+    29877,
+    29878,
+    29913
+  ],
+  "implemented": [
+    "OutgameLegacyFirstPack",
+    "OutgameLegacyPackRegistry"
+  ],
+  "semantics": [
+    "Iterator logs then loads exact firstpack.unity3d; null operation logs error and exits without completion.",
+    "Yields StartCoroutine(operation) token then dereferences result.Bundle without catch or null checks.",
+    "Reads live List<string> during registration. One AssetBundle registered for all aliases before completion log/callback.",
+    "Registry ContainsKey then Unity Object equality; duplicate reads new pack.name and emits literal misspelled placeholder. Conflicts preserve old owner; new keys Add even null bundle.",
+    "Completion Action is expected to read current module callback when module is composed."
+  ],
+  "genericEvidence": "legacy-firstpack-generics.json",
+  "validation": {
+    "passed": true,
+    "integratedChecks": 638,
+    "freshPlayMode": false,
+    "freshPlayer": false,
+    "nativeBundleInIntegratedTest": "Existing rebuilt ValentineUI bundle loaded via AssetBundle.LoadFromFile, then unloaded in finally"
+  },
+  "next": [
+    "ResourcesModule.Initialize29875 and ResourcesMono integration",
+    "Original firstpack Resources TextAsset and service configuration selection",
+    "Full config/account/menu production entry"
+  ],
+  "qualification": "Coroutine sequencing directly exercised with operation probe; no new complete native startup PlayMode. Prior native10 checks remain historical."
+}

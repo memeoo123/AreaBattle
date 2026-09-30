@@ -1,0 +1,40 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.o`cXT; wasmcode function 7406; offset=2921691 size=107
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002c94dc  i32.const [5007393]
+002c94e1  i32.load8_u [0, 0]
+002c94e4  i32.eqz []
+002c94e5  if [-64]
+002c94e7    i32.const [3936516]
+002c94ec    call [900] ; 
+002c94ef    i32.const [3937288]
+002c94f4    call [900] ; 
+002c94f7    i32.const [5007393]
+002c94fc    i32.const [1]
+002c94fe    i32.store8 [0, 0]
+002c9501  end []
+002c9502  i32.const [3937288]
+002c9507  i32.load [2, 0]
+002c950a  i32.load [2, 92]
+002c950d  i32.const [0]
+002c950f  i32.store [2, 0]
+002c9512  i32.const [3937288]
+002c9517  i32.load [2, 0]
+002c951a  i32.load [2, 92]
+002c951d  drop []
+002c951e  local.get [0]
+002c9520  i32.const [0]
+002c9522  i32.store8 [0, 48]
+002c9525  i32.const [0]
+002c9527  call [5165] ; Canvas.ForceUpdateCanvases
+002c952a  local.get [0]
+002c952c  i32.const [0]
+002c952e  call [943] ; Component.get_gameObject
+002c9531  local.set [0]
+002c9533  i32.const [3936516]
+002c9538  i32.load [2, 0]
+002c953b  call [901] ; 
+002c953e  local.get [0]
+002c9540  i32.const [0]
+002c9542  call [1165] ; Object.Destroy
+002c9545  end []

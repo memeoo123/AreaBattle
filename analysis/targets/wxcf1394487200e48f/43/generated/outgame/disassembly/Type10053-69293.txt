@@ -1,0 +1,22 @@
+; Original class: Event
+; Type10053.Internal_SetNativeEvent; wasmcode function 7896; offset=3774235 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0039971c  i32.const [4981560]
+00399721  i32.load [2, 0]
+00399724  local.set [1]
+00399726  local.get [1]
+00399728  i32.eqz []
+00399729  if [-64]
+0039972b    i32.const [1197081]
+00399730    call [923] ; 
+00399733    local.set [1]
+00399735    i32.const [4981560]
+0039973a    local.get [1]
+0039973c    i32.store [2, 0]
+0039973f  end []
+00399740  local.get [0]
+00399742  local.get [1]
+00399744  global.set [3]
+00399746  global.get [3]
+00399748  call_indirect [3, 0]
+0039974b  end []

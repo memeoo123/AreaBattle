@@ -1,0 +1,25 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Original audio2001 rebuilt into a native Windows bundle. Actual first-pack branch uses an explicit test mapping, not an assertion of original firstpack membership. Legacy file transport, AssetBundleRequest, reference release, UpdateManager, AudioManager and native one-shot/reentry are actual. Config is read from rebuilt original firstpack. Modern module acquisition and full Main/Player remain pending.",
+    "checks": [
+        "First-pack test mapping uses real synchronous AssetBundle.LoadAsset<AudioClip> basename route",
+        "First-pack branch bypasses async manager acquisition",
+        "Rebuilt original firstpack configuration bundle loads natively",
+        "AudioManager reads actual original55+53 configs directly from native AssetBundle",
+        "IEnumerator await catches synchronous MoveNext failure without hanging",
+        "Native await retains original asset operation exception",
+        "Legacy route starts actual file UnityWebRequest and registered native asset operation",
+        "Actual native request produces original button clip with one bundle reference",
+        "Asset operation is detached from manager while await reaches completion",
+        "Original2001 plays through manager, resource helper, actual AssetBundleRequest and native source",
+        "Second load retains shared bundle ownership",
+        "Natural one-shot completion releases exactly its bundle reference",
+        "Missing native asset returns null with source diagnostic after await",
+        "Explicit owners release to zero and queue source delayed unload",
+        "Native delayed unload destroys original loaded clip",
+        "Same original path starts a fresh download after release",
+        "Reentry obtains fresh native clip and reference",
+        "Reentry cleanup leaves no clip, action update or manager node ownership"
+    ]
+}

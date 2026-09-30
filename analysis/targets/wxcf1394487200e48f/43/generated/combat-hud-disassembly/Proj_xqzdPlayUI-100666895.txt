@@ -1,0 +1,90 @@
+; Proj_xqzdPlayUI.Refresh wasmcode function18058
+007a16cd i32.const [5007460]
+007a16d2 i32.load8_u [0, 0]
+007a16d5 i32.eqz []
+007a16d6 if [-64]
+007a16d8   i32.const [3953440]
+007a16dd   call [900] ; 
+007a16e0   i32.const [3953480]
+007a16e5   call [900] ; 
+007a16e8   i32.const [5007460]
+007a16ed   i32.const [1]
+007a16ef   i32.store8 [0, 0]
+007a16f2 end []
+007a16f3 block [-64]
+007a16f5   i32.const [3953480]
+007a16fa   i32.load [2, 0]
+007a16fd   call [935] ; 
+007a1700   i32.load8_u [0, 8]
+007a1703   if [-64]
+007a1705     local.get [0]
+007a1707     local.get [0]
+007a1709     call [11011] ; Proj_xqzdPlayUI.c^MUh
+007a170c     br [1]
+007a170e   end []
+007a170f   local.get [0]
+007a1711   local.get [0]
+007a1713   call [11010] ; Proj_xqzdPlayUI.kcWa{ia
+007a1716 end []
+007a1717 local.get [0]
+007a1719 local.get [0]
+007a171b call [11012] ; Proj_xqzdPlayUI.pozLM
+007a171e i32.const [3953440]
+007a1723 i32.load [2, 0]
+007a1726 call [935] ; 
+007a1729 i32.load8_u [0, 53]
+007a172c if [-64]
+007a172e   local.get [0]
+007a1730   i32.load [2, 184]
+007a1734   i32.const [3953440]
+007a1739   i32.load [2, 0]
+007a173c   call [935] ; 
+007a173f   i32.load [2, 60]
+007a1742   i32.load [2, 44]
+007a1745   f32.convert_i32_s []
+007a1746   i32.const [0]
+007a1748   call [5664] ; Slider.set_maxValue
+007a174b   local.get [0]
+007a174d   i32.load [2, 184]
+007a1751   local.set [1]
+007a1753   local.get [1]
+007a1755   local.set [2]
+007a1757   i32.const [3953440]
+007a175c   i32.load [2, 0]
+007a175f   call [935] ; 
+007a1762   i32.load [2, 60]
+007a1765   i32.load [2, 44]
+007a1768   f32.convert_i32_s []
+007a1769   local.set [3]
+007a176b   local.get [1]
+007a176d   i32.load [2, 0]
+007a1770   local.set [1]
+007a1772   local.get [2]
+007a1774   local.get [3]
+007a1776   local.get [1]
+007a1778   i32.const [376]
+007a177b   i32.add []
+007a177c   i32.load [2, 192]
+007a1780   local.get [1]
+007a1782   i32.load [2, 564]
+007a1786   global.set [3]
+007a1788   global.get [3]
+007a178a   call_indirect [18, 0]
+007a178d end []
+007a178e i32.const [3953440]
+007a1793 i32.load [2, 0]
+007a1796 call [935] ; 
+007a1799 f32.const [1.0]
+007a179e i32.const [0]
+007a17a0 call [4974] ; LevelControl.SetLevelSpeed
+007a17a3 local.get [0]
+007a17a5 i32.load [2, 216]
+007a17a9 i32.const [0]
+007a17ab call [943] ; Component.get_gameObject
+007a17ae i32.const [0]
+007a17b0 i32.const [0]
+007a17b2 call [949] ; GameObject.SetActive
+007a17b5 local.get [0]
+007a17b7 local.get [0]
+007a17b9 call [7404] ; Proj_xqzdPlayUI.chUQme
+007a17bc end []

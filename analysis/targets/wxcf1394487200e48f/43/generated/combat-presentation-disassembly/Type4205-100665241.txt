@@ -1,0 +1,64 @@
+; Type4205.OnDragBeginHandle; wasmcode function 14646; offset=7196963 size=182
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+006dd126  i32.const [5010382]
+006dd12b  i32.load8_u [0, 0]
+006dd12e  i32.eqz []
+006dd12f  if [-64]
+006dd131    i32.const [3989352]
+006dd136    call [900] ; 
+006dd139    i32.const [3948068]
+006dd13e    call [900] ; 
+006dd141    i32.const [3936516]
+006dd146    call [900] ; 
+006dd149    i32.const [3938016]
+006dd14e    call [900] ; 
+006dd151    i32.const [4027088] ; METHOD Yit}sW.jYaSs|
+006dd156    call [900] ; 
+006dd159    i32.const [5010382]
+006dd15e    i32.const [1]
+006dd160    i32.store8 [0, 0]
+006dd163  end []
+006dd164  local.get [0]
+006dd166  i32.load [2, 100]
+006dd169  local.set [1]
+006dd16b  i32.const [3936516]
+006dd170  i32.load [2, 0]
+006dd173  call [901] ; 
+006dd176  local.get [1]
+006dd178  i32.const [0]
+006dd17a  i32.const [0]
+006dd17c  call [940] ; Object.op_Equality
+006dd17f  if [-64]
+006dd181    i32.const [0]
+006dd183    call [1758] ; GameModule.get_Effect
+006dd186    i32.const [633]
+006dd189    i32.const [0]
+006dd18b    call [4444] ; EffectModule.GetEffectDataById
+006dd18e    i32.const [0]
+006dd190    call [5062] ; GameDefine.GetEffectPath
+006dd193    local.set [1]
+006dd195    i32.const [3948068]
+006dd19a    i32.load [2, 0]
+006dd19d    call [903] ; 
+006dd1a0    local.set [2]
+006dd1a2    local.get [2]
+006dd1a4    local.get [0]
+006dd1a6    i32.const [4027088] ; METHOD Yit}sW.jYaSs|
+006dd1ab    i32.load [2, 0]
+006dd1ae    i32.const [0]
+006dd1b0    call [1853] ; LoadAssetCompleteHandler..ctor
+006dd1b3    i32.const [3989352]
+006dd1b8    i32.load [2, 0]
+006dd1bb    call [1032] ; 
+006dd1be    local.set [0]
+006dd1c0    i32.const [3938016]
+006dd1c5    i32.load [2, 0]
+006dd1c8    call [901] ; 
+006dd1cb    local.get [1]
+006dd1cd    local.get [2]
+006dd1cf    local.get [0]
+006dd1d1    i32.const [0]
+006dd1d3    call [2240] ; ResLoadHelper.LoadAsset
+006dd1d6    drop []
+006dd1d7  end []
+006dd1d8  end []

@@ -1,0 +1,26 @@
+; Original class: CommanderUI
+; Type4307.InitCommanderItem; wasmcode function 12852; offset=6184664 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005e5ed9  i32.const [5008204]
+005e5ede  i32.load8_u [0, 0]
+005e5ee1  i32.eqz []
+005e5ee2  if [-64]
+005e5ee4    i32.const [3944668]
+005e5ee9    call [900] ; 
+005e5eec    i32.const [5008204]
+005e5ef1    i32.const [1]
+005e5ef3    i32.store8 [0, 0]
+005e5ef6  end []
+005e5ef7  i32.const [3944668]
+005e5efc  i32.load [2, 0]
+005e5eff  call [903] ; 
+005e5f02  local.set [1]
+005e5f04  local.get [1]
+005e5f06  i32.const [0]
+005e5f08  i32.store [2, 8]
+005e5f0b  local.get [1]
+005e5f0d  local.get [0]
+005e5f0f  i32.store [2, 16]
+005e5f12  local.get [1]
+005e5f14  return []
+005e5f15  end []

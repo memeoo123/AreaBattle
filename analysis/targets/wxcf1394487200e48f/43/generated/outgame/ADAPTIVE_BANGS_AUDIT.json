@@ -1,0 +1,31 @@
+{
+  "status": "source-webgl-bangs-start-chain-restored-and-attached",
+  "atUtc": "2026-09-30T02:36:47.422211+00:00",
+  "source": [
+    "disassembly/Type3615-28034.txt",
+    "disassembly/Type3615-28028.txt",
+    "disassembly/Type3615-28022.txt",
+    "disassembly/Type3615-28012.txt",
+    "disassembly/Type3615-28029.txt",
+    "disassembly/Type3615-28015.txt",
+    "adaptive-bangs-generics.json"
+  ],
+  "verified": [
+    "Start snapshots screen width/height and original offsets before Apply",
+    "Every Apply restores max then min baseline before calculating/logging/publishing settings",
+    "Explicit WebGL pixel>=0 converts using module.canvas RectTransform sizeDelta and captured screen axis, with ceil",
+    "Negative/unset pixel uses orientation ratio>2 ->85 else0; no safeArea substitution",
+    "Portrait top and optional bottom; landscape left and optional right",
+    "Disabled adaptation still publishes BangsPixel/IsBangs and restores baseline",
+    "Original UIRoot imports enabled Need=true/DoubleEnded=false; root callback injects actual module canvas for native Start"
+  ],
+  "integratedChecks": 606,
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false,
+  "remaining": [
+    "Actual platform SetBangsPixel transport",
+    "Complete native startup timing validation",
+    "AtlasLoader and production module/account/menu composition",
+    "Other obfuscated helper reachability remains separate; no entire-class claim"
+  ]
+}

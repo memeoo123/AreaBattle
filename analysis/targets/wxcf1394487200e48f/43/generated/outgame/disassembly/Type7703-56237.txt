@@ -1,0 +1,19 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.LoginComStatic; wasmcode function 14676; offset=7201158 size=48
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006de187  i32.const [5005423]
+006de18c  i32.load8_u [0, 0]
+006de18f  i32.eqz []
+006de190  if [-64]
+006de192    i32.const [3942528]
+006de197    call [900] ; 
+006de19a    i32.const [5005423]
+006de19f    i32.const [1]
+006de1a1    i32.store8 [0, 0]
+006de1a4  end []
+006de1a5  i32.const [3942528]
+006de1aa  i32.load [2, 0]
+006de1ad  call [901] ; 
+006de1b0  i32.const [0]
+006de1b2  call [9317] ; XYXLogin.LoginStatic
+006de1b5  end []

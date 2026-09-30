@@ -1,0 +1,32 @@
+; Original class: BuffControl
+; Type4025..ctor; wasmcode function 20395; offset=9193061 size=90
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008c4666  i32.const [5008670]
+008c466b  i32.load8_u [0, 0]
+008c466e  i32.eqz []
+008c466f  if [-64]
+008c4671    i32.const [3953332]
+008c4676    call [900] ; 
+008c4679    i32.const [3955320]
+008c467e    call [900] ; 
+008c4681    i32.const [3917416]
+008c4686    call [900] ; 
+008c4689    i32.const [5008670]
+008c468e    i32.const [1]
+008c4690    i32.store8 [0, 0]
+008c4693  end []
+008c4694  i32.const [3917416]
+008c4699  i32.load [2, 0]
+008c469c  call [903] ; 
+008c469f  local.set [1]
+008c46a1  local.get [1]
+008c46a3  i32.const [3955320]
+008c46a8  i32.load [2, 0]
+008c46ab  call [951] ; 
+008c46ae  local.get [0]
+008c46b0  local.get [1]
+008c46b2  i32.store [2, 8]
+008c46b5  i32.const [3953332]
+008c46ba  i32.load [2, 0]
+008c46bd  drop []
+008c46be  end []

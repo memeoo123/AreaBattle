@@ -1,0 +1,40 @@
+{
+  "status": "original-bootstrap-root-and-page-real-playmode-verified",
+  "atUtc": "2026-09-30T02:39:39.230664+00:00",
+  "report": "analysis/outgame-ui-lifecycle-playmode-validation.json",
+  "log": "analysis/unity-bootstrap-lifecycle-playmode.log",
+  "playMode": {
+    "passed": true,
+    "scope": "Real original bootstrap Awake, UIRoot Start and open/init/outlet/canvas/animation/close lifecycle; platform height injected, page business hooks/provider isolated, no production account/native bundles",
+    "checks": [
+      "Original bootstrap Awake publishes source display settings and binds original camera",
+      "Root callback assigns module canvas before native bangs Start",
+      "Real page binds all thirteen original root outlets",
+      "Native Start applies source pixel conversion after bootstrap/root setup even while timeScale is zero",
+      "Opening animation waits while paused and retains initialized page/resources",
+      "Real OpenUI follows live initialized sorted page",
+      "Source initialization and OpenLater run in order across actual animation coroutine",
+      "Hide occurs with disposed flag while native object still exists",
+      "Dispose clears references before deferred native destruction and resource releases",
+      "Close notification follows actual native destruction and all handle releases",
+      "Second end-of-frame occurs after hide/dispose frame",
+      "Real close releases main, dynamic and custom handles in order"
+    ],
+    "error": "",
+    "openFrame": 57,
+    "hideFrame": 130,
+    "disposeFrame": 130,
+    "closeFrame": 131,
+    "batchMode": false,
+    "bootstrapFrame": 1,
+    "bangsFrame": 4,
+    "bangsPixels": 89.0
+  },
+  "integratedChecks": 606,
+  "limitations": [
+    "Platform-provided100px is injected test input",
+    "Page business hooks and provider acquisition isolated",
+    "Full account/menu/production bootstrap and Player not complete"
+  ],
+  "next": "Restore AtlasLoader legacy subscription/request/cache callback and compose production module owner"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "piggy_inventory_rules_and_main_provider_verified_production_events_pending",
+  "source": [
+    "disassembly/Type3874-30169.txt",
+    "disassembly/Type3874-30172.txt",
+    "disassembly/Type3874-30173.txt",
+    "disassembly/Type3874-30178.txt"
+  ],
+  "verified": [
+    "Current level>=30 bank visibility; collectNum>999 full",
+    "Win8 adds20 via setter, requested amount reported before upper cap1000; lower bound not invented",
+    "Reset setter0 then collectAdNum0 then activity reset report; PaySuccess empty",
+    "Uses existing profile inventory fields and survives explicit later save/reload",
+    "Main menu level and bank indicators now validated with concrete progression/bank providers"
+  ],
+  "remaining": [
+    "Production gameplay event subscribe/unsubscribe and owner initialization",
+    "ADHelper live reporting provider; tests use explicit report sink",
+    "Easter/time service and complete account/bootstrap/Player E2E"
+  ],
+  "checks": 575,
+  "freshPlayMode": false
+}

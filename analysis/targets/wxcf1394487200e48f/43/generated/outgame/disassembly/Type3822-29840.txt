@@ -1,0 +1,22 @@
+; Original class: PatchManifest
+; Type3822.TryGetValue; wasmcode function 7452; offset=2939322 size=53
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+002cd9bb  i32.const [4988208]
+002cd9c0  i32.load8_u [0, 0]
+002cd9c3  i32.eqz []
+002cd9c4  if [-64]
+002cd9c6    i32.const [3959900]
+002cd9cb    call [900] ; 
+002cd9ce    i32.const [4988208]
+002cd9d3    i32.const [1]
+002cd9d5    i32.store8 [0, 0]
+002cd9d8  end []
+002cd9d9  local.get [0]
+002cd9db  i32.load [2, 24]
+002cd9de  local.get [1]
+002cd9e0  local.get [2]
+002cd9e2  i32.const [3959900]
+002cd9e7  i32.load [2, 0]
+002cd9ea  call [1017] ; 
+002cd9ed  return []
+002cd9ee  end []

@@ -1,0 +1,234 @@
+; Original class: ResourcesModule
+; Type3832.Initialize; wasmcode function 17743; offset=7862871 size=663
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0077fa58  i32.const [4988223]
+0077fa5d  i32.load8_u [0, 0]
+0077fa60  i32.eqz []
+0077fa61  if [-64]
+0077fa63    i32.const [3928344]
+0077fa68    call [900] ; 
+0077fa6b    i32.const [3929208]
+0077fa70    call [900] ; 
+0077fa73    i32.const [4000952]
+0077fa78    call [900] ; 
+0077fa7b    i32.const [4001100]
+0077fa80    call [900] ; 
+0077fa83    i32.const [3932344]
+0077fa88    call [900] ; 
+0077fa8b    i32.const [3933092]
+0077fa90    call [900] ; 
+0077fa93    i32.const [4003800]
+0077fa98    call [900] ; 
+0077fa9b    i32.const [3934780]
+0077faa0    call [900] ; 
+0077faa3    i32.const [3926996]
+0077faa8    call [900] ; 
+0077faab    i32.const [3936516]
+0077fab0    call [900] ; 
+0077fab3    i32.const [3938016]
+0077fab8    call [900] ; 
+0077fabb    i32.const [3913716]
+0077fac0    call [900] ; 
+0077fac3    i32.const [4012472]
+0077fac8    call [900] ; 
+0077facb    i32.const [3927284]
+0077fad0    call [900] ; 
+0077fad3    i32.const [3940520]
+0077fad8    call [900] ; 
+0077fadb    i32.const [4088004] ; STRING "firstpack.unity3d"
+0077fae0    call [900] ; 
+0077fae3    i32.const [4088000] ; STRING "firstpack"
+0077fae8    call [900] ; 
+0077faeb    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+0077faf0    call [900] ; 
+0077faf3    i32.const [4067944] ; STRING "ResourcesMono"
+0077faf8    call [900] ; 
+0077fafb    i32.const [4988223]
+0077fb00    i32.const [1]
+0077fb02    i32.store8 [0, 0]
+0077fb05  end []
+0077fb06  block [-64]
+0077fb08    local.get [0]
+0077fb0a    i32.load8_u [0, 8]
+0077fb0d    if [-64]
+0077fb0f      local.get [0]
+0077fb11      i32.load [2, 12]
+0077fb14      local.set [0]
+0077fb16      local.get [0]
+0077fb18      i32.eqz []
+0077fb19      br_if [1]
+0077fb1b      local.get [0]
+0077fb1d      i32.load [2, 32]
+0077fb20      local.get [0]
+0077fb22      i32.load [2, 20]
+0077fb25      local.get [0]
+0077fb27      i32.load [2, 12]
+0077fb2a      global.set [3]
+0077fb2c      global.get [3]
+0077fb2e      call_indirect [0, 0]
+0077fb31      return []
+0077fb32    end []
+0077fb33    i32.const [3938016]
+0077fb38    i32.load [2, 0]
+0077fb3b    call [901] ; 
+0077fb3e    i32.const [0]
+0077fb40    call [2476] ; ResLoadHelper.CheckUseRightResLoad
+0077fb43    drop []
+0077fb44    i32.const [3928344]
+0077fb49    i32.load [2, 0]
+0077fb4c    call [901] ; 
+0077fb4f    local.get [0]
+0077fb51    i32.const [3928344]
+0077fb56    i32.load [2, 0]
+0077fb59    i32.load [2, 92]
+0077fb5c    i32.load [2, 36]
+0077fb5f    i32.const [4000952]
+0077fb64    i32.load [2, 0]
+0077fb67    call [1091] ; 
+0077fb6a    i32.store [2, 16]
+0077fb6d    i32.const [3927284]
+0077fb72    i32.load [2, 0]
+0077fb75    i32.const [1]
+0077fb77    call [909] ; 
+0077fb7a    local.set [1]
+0077fb7c    i32.const [3913716]
+0077fb81    i32.load [2, 0]
+0077fb84    local.set [2]
+0077fb86    i32.const [3940520]
+0077fb8b    i32.load [2, 0]
+0077fb8e    call [901] ; 
+0077fb91    local.get [2]
+0077fb93    i32.const [0]
+0077fb95    call [912] ; Type.GetTypeFromHandle
+0077fb98    local.set [2]
+0077fb9a    local.get [1]
+0077fb9c    local.get [2]
+0077fb9e    call [905] ; 
+0077fba1    local.get [1]
+0077fba3    local.get [2]
+0077fba5    i32.store [2, 16]
+0077fba8    i32.const [3932344]
+0077fbad    i32.load [2, 0]
+0077fbb0    call [903] ; 
+0077fbb3    local.set [2]
+0077fbb5    local.get [2]
+0077fbb7    i32.const [4067944] ; STRING "ResourcesMono"
+0077fbbc    i32.load [2, 0]
+0077fbbf    local.get [1]
+0077fbc1    i32.const [0]
+0077fbc3    call [2696] ; GameObject..ctor
+0077fbc6    local.get [0]
+0077fbc8    local.get [2]
+0077fbca    i32.store [2, 24]
+0077fbcd    local.get [0]
+0077fbcf    i32.load [2, 24]
+0077fbd2    local.set [1]
+0077fbd4    i32.const [3936516]
+0077fbd9    i32.load [2, 0]
+0077fbdc    call [901] ; 
+0077fbdf    i32.const [0]
+0077fbe1    local.get [1]
+0077fbe3    i32.const [0]
+0077fbe5    call [946] ; Object.op_Inequality
+0077fbe8    if [-64]
+0077fbea      local.get [0]
+0077fbec      local.get [0]
+0077fbee      i32.load [2, 24]
+0077fbf1      i32.const [4001100]
+0077fbf6      i32.load [2, 0]
+0077fbf9      call [1091] ; 
+0077fbfc      i32.store [2, 20]
+0077fbff    end []
+0077fc00    local.get [0]
+0077fc02    i32.const [1]
+0077fc04    i32.store8 [0, 8]
+0077fc07    block [-64]
+0077fc09      block [-64]
+0077fc0b        i32.const [0]
+0077fc0d        i32.const [3933092]
+0077fc12        i32.load [2, 0]
+0077fc15        local.get [0]
+0077fc17        i32.load [2, 56]
+0077fc1a        i32.const [4088004] ; STRING "firstpack.unity3d"
+0077fc1f        i32.load [2, 0]
+0077fc22        call [953] ; 
+0077fc25        i32.load [2, 16]
+0077fc28        local.set [1]
+0077fc2a        local.get [1]
+0077fc2c        if [-64]
+0077fc2e          i32.const [0]
+0077fc30          local.set [2]
+0077fc32          local.get [1]
+0077fc34          i32.load [2, 8]
+0077fc37          br_if [2]
+0077fc39        end []
+0077fc3a      end []
+0077fc3b      i32.const [1]
+0077fc3d      local.set [2]
+0077fc3f    end []
+0077fc40    local.get [2]
+0077fc42    i32.eqz []
+0077fc43    if [-64]
+0077fc45      i32.const [4088000] ; STRING "firstpack"
+0077fc4a      i32.load [2, 0]
+0077fc4d      i32.const [4012472]
+0077fc52      i32.load [2, 0]
+0077fc55      call [1490] ; 
+0077fc58      i32.const [0]
+0077fc5a      call [1904] ; TextAsset.get_text
+0077fc5d      local.set [1]
+0077fc5f      i32.const [3934780]
+0077fc64      i32.load [2, 0]
+0077fc67      call [901] ; 
+0077fc6a      local.get [1]
+0077fc6c      i32.const [4003800]
+0077fc71      i32.load [2, 0]
+0077fc74      call [1105] ; 
+0077fc77      local.set [1]
+0077fc79      i32.const [0]
+0077fc7b      call [1388] ; UpdateManager.get_Instance
+0077fc7e      local.get [0]
+0077fc80      local.get [1]
+0077fc82      local.get [0]
+0077fc84      call [10675] ; ResourcesModule.LoadFirstPack
+0077fc87      i32.const [0]
+0077fc89      call [1227] ; MonoBehaviour.StartCoroutine
+0077fc8c      drop []
+0077fc8d      return []
+0077fc8e    end []
+0077fc8f    i32.const [3926996]
+0077fc94    i32.load [2, 0]
+0077fc97    i32.const [1]
+0077fc99    call [909] ; 
+0077fc9c    local.set [1]
+0077fc9e    local.get [1]
+0077fca0    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+0077fca5    i32.load [2, 0]
+0077fca8    call [905] ; 
+0077fcab    local.get [1]
+0077fcad    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+0077fcb2    i32.load [2, 0]
+0077fcb5    i32.store [2, 16]
+0077fcb8    i32.const [3929208]
+0077fcbd    i32.load [2, 0]
+0077fcc0    call [901] ; 
+0077fcc3    local.get [1]
+0077fcc5    i32.const [0]
+0077fcc7    call [2095] ; CLog.wKÂL
+0077fcca    local.get [0]
+0077fccc    i32.load [2, 12]
+0077fccf    local.set [0]
+0077fcd1    local.get [0]
+0077fcd3    i32.eqz []
+0077fcd4    br_if [0]
+0077fcd6    local.get [0]
+0077fcd8    i32.load [2, 32]
+0077fcdb    local.get [0]
+0077fcdd    i32.load [2, 20]
+0077fce0    local.get [0]
+0077fce2    i32.load [2, 12]
+0077fce5    global.set [3]
+0077fce7    global.get [3]
+0077fce9    call_indirect [0, 0]
+0077fcec  end []
+0077fced  end []

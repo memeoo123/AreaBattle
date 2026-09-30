@@ -1,0 +1,97 @@
+; Original class: CommanderItem
+; Type4334.RefreshRedDot; wasmcode function 6200; offset=2216844 size=232
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0021d38d  i32.const [5008827]
+0021d392  i32.load8_u [0, 0]
+0021d395  i32.eqz []
+0021d396  if [-64]
+0021d398    i32.const [3953568]
+0021d39d    call [900] ; 
+0021d3a0    i32.const [3978976]
+0021d3a5    call [900] ; 
+0021d3a8    i32.const [5008827]
+0021d3ad    i32.const [1]
+0021d3af    i32.store8 [0, 0]
+0021d3b2  end []
+0021d3b3  local.get [0]
+0021d3b5  i32.load [2, 68]
+0021d3b8  i32.const [0]
+0021d3ba  i32.const [0]
+0021d3bc  call [949] ; GameObject.SetActive
+0021d3bf  block [-64]
+0021d3c1    local.get [0]
+0021d3c3    i32.load [2, 48]
+0021d3c6    i32.const [0]
+0021d3c8    call [943] ; Component.get_gameObject
+0021d3cb    i32.const [0]
+0021d3cd    call [1586] ; GameObject.get_activeSelf
+0021d3d0    br_if [0]
+0021d3d2    local.get [0]
+0021d3d4    i32.load [2, 40]
+0021d3d7    i32.const [0]
+0021d3d9    call [3651] ; CommanderData.get_Max
+0021d3dc    br_if [0]
+0021d3de    local.get [0]
+0021d3e0    i32.load [2, 40]
+0021d3e3    i32.const [0]
+0021d3e5    call [6201] ; CommanderData.get_Unlockable
+0021d3e8    i32.eqz []
+0021d3e9    br_if [0]
+0021d3eb    local.get [0]
+0021d3ed    i32.load [2, 40]
+0021d3f0    i32.const [0]
+0021d3f2    call [1711] ; CommanderData.get_config
+0021d3f5    i32.load [2, 20]
+0021d3f8    i32.const [2]
+0021d3fa    i32.eq []
+0021d3fb    br_if [0]
+0021d3fd    local.get [0]
+0021d3ff    i32.load [2, 40]
+0021d402    local.set [1]
+0021d404    local.get [0]
+0021d406    i32.load [2, 40]
+0021d409    i32.load [2, 16]
+0021d40c    i32.const [0]
+0021d40e    i32.gt_s []
+0021d40f    if [-64]
+0021d411      local.get [1]
+0021d413      i32.const [0]
+0021d415      call [1711] ; CommanderData.get_config
+0021d418      i32.load [2, 32]
+0021d41b      i32.const [0]
+0021d41d      i32.const [3978976]
+0021d422      i32.load [2, 0]
+0021d425      call [930] ; 
+0021d428      i32.load [2, 8]
+0021d42b      i32.load [2, 16]
+0021d42e      local.set [1]
+0021d430      i32.const [3953568]
+0021d435      i32.load [2, 0]
+0021d438      call [935] ; 
+0021d43b      local.get [1]
+0021d43d      i32.const [0]
+0021d43f      call [3512] ; ToolControl.GetItemNum
+0021d442      local.set [1]
+0021d444      local.get [0]
+0021d446      i32.load [2, 68]
+0021d449      local.get [0]
+0021d44b      i32.load [2, 40]
+0021d44e      i32.const [0]
+0021d450      call [3393] ; CommanderData.get_NextCost
+0021d453      local.get [1]
+0021d455      i32.le_s []
+0021d456      i32.const [0]
+0021d458      call [949] ; GameObject.SetActive
+0021d45b      return []
+0021d45c    end []
+0021d45d    local.get [1]
+0021d45f    i32.const [0]
+0021d461    call [8115] ; CommanderData.IsCanUnlock
+0021d464    local.set [1]
+0021d466    local.get [0]
+0021d468    i32.load [2, 68]
+0021d46b    local.get [1]
+0021d46d    i32.const [0]
+0021d46f    call [949] ; GameObject.SetActive
+0021d472  end []
+0021d473  end []

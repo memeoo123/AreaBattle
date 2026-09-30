@@ -1,0 +1,85 @@
+; Original class: okgQQ
+; Type4104.baceL|i; wasmcode function 13847; offset=6760800 size=249
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(4, 127)]
+00672963  i32.const [5008511]
+00672968  i32.load8_u [0, 0]
+0067296b  i32.eqz []
+0067296c  if [-64]
+0067296e    i32.const [3953456]
+00672973    call [900] ; 
+00672976    i32.const [4012496]
+0067297b    call [900] ; 
+0067297e    i32.const [4012520]
+00672983    call [900] ; 
+00672986    i32.const [4013044]
+0067298b    call [900] ; 
+0067298e    i32.const [3986652]
+00672993    call [900] ; 
+00672996    i32.const [3986664]
+0067299b    call [900] ; 
+0067299e    i32.const [3925928]
+006729a3    call [900] ; 
+006729a6    i32.const [5008511]
+006729ab    i32.const [1]
+006729ad    i32.store8 [0, 0]
+006729b0  end []
+006729b1  local.get [1]
+006729b3  local.get [0]
+006729b5  i32.load [2, 16]
+006729b8  i32.const [0]
+006729ba  call [2887] ; UtilitHelper.ToFileName
+006729bd  i32.const [4012520]
+006729c2  i32.load [2, 0]
+006729c5  call [2074] ; 
+006729c8  i32.const [0]
+006729ca  call [1904] ; TextAsset.get_text
+006729cd  local.set [4]
+006729cf  local.get [0]
+006729d1  i32.load [2, 8]
+006729d4  local.set [2]
+006729d6  local.get [1]
+006729d8  i32.const [1]
+006729da  i32.const [4012496]
+006729df  i32.load [2, 0]
+006729e2  call [2564] ; 
+006729e5  local.set [5]
+006729e7  local.get [1]
+006729e9  i32.const [2]
+006729eb  i32.const [4012496]
+006729f0  i32.load [2, 0]
+006729f3  call [2564] ; 
+006729f6  local.set [1]
+006729f8  i32.const [4013044]
+006729fd  i32.load [2, 0]
+00672a00  call [2663] ; 
+00672a03  local.set [6]
+00672a05  i32.const [3925928]
+00672a0a  i32.load [2, 0]
+00672a0d  call [903] ; 
+00672a10  local.set [3]
+00672a12  local.get [3]
+00672a14  local.get [5]
+00672a16  local.get [1]
+00672a18  local.get [6]
+00672a1a  i32.const [3986652]
+00672a1f  i32.load [2, 0]
+00672a22  call [9998] ; 
+00672a25  local.get [2]
+00672a27  local.get [3]
+00672a29  i32.store [2, 32]
+00672a2c  local.get [4]
+00672a2e  local.get [0]
+00672a30  i32.load [2, 8]
+00672a33  i32.load [2, 32]
+00672a36  i32.const [3986664]
+00672a3b  i32.load [2, 0]
+00672a3e  call [6972] ; 
+00672a41  i32.const [0]
+00672a43  call [7663] ; JsonUtility.FromJsonOverwrite
+00672a46  i32.const [3953456]
+00672a4b  i32.load [2, 0]
+00672a4e  call [935] ; 
+00672a51  local.get [0]
+00672a53  local.get [0]
+00672a55  call [11493] ; LoadPrefabControl.PreLoad
+00672a58  end []

@@ -1,0 +1,27 @@
+; Original class: MenuTabUI
+; Type4379.l{igkQ; wasmcode function 5890; offset=2085768 size=67
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001fd389  i32.const [5009022]
+001fd38e  i32.load8_u [0, 0]
+001fd391  i32.eqz []
+001fd392  if [-64]
+001fd394    i32.const [3953384]
+001fd399    call [900] ; 
+001fd39c    i32.const [5009022]
+001fd3a1    i32.const [1]
+001fd3a3    i32.store8 [0, 0]
+001fd3a6  end []
+001fd3a7  local.get [0]
+001fd3a9  i32.const [3]
+001fd3ab  local.get [0]
+001fd3ad  call [3577] ; MenuTabUI.CheckUI
+001fd3b0  if [-64]
+001fd3b2    i32.const [3953384]
+001fd3b7    i32.load [2, 0]
+001fd3ba    call [935] ; 
+001fd3bd    i32.const [0]
+001fd3bf    f32.const [0.0]
+001fd3c4    i32.const [0]
+001fd3c6    call [3946] ; GameControl.MoveCamera
+001fd3c9  end []
+001fd3ca  end []

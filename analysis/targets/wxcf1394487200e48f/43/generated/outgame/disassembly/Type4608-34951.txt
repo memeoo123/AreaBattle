@@ -1,0 +1,32 @@
+; Original class: LoginSDK_XYX
+; Type4608.][Wm]x; wasmcode1 function 25831; offset=9890748 size=91
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0096ebbd  i32.const [5001567]
+0096ebc2  i32.load8_u [0, 0]
+0096ebc5  i32.eqz []
+0096ebc6  if [-64]
+0096ebc8    i32.const [3928180]
+0096ebcd    i32.const [1605]
+0096ebd0    call_indirect [0, 0]
+0096ebd3    i32.const [4050144] ; STRING "CutOverLogin"
+0096ebd8    i32.const [1605]
+0096ebdb    call_indirect [0, 0]
+0096ebde    i32.const [5001567]
+0096ebe3    i32.const [1]
+0096ebe5    i32.store8 [0, 0]
+0096ebe8  end []
+0096ebe9  i32.const [3928180]
+0096ebee  i32.load [2, 0]
+0096ebf1  i32.load [2, 92]
+0096ebf4  i32.load [2, 0]
+0096ebf7  local.get [0]
+0096ebf9  i32.load [2, 24]
+0096ebfc  i32.const [0]
+0096ebfe  i32.const [22805] ; TABLE AppUserManager.LoginComStatic
+0096ec02  call_indirect [5, 0]
+0096ec05  i32.const [4050144] ; STRING "CutOverLogin"
+0096ec0a  i32.load [2, 0]
+0096ec0d  i32.const [0]
+0096ec0f  i32.const [9222] ; TABLE MsgDispatcher.SendMessage
+0096ec13  call_indirect [4, 0]
+0096ec16  end []

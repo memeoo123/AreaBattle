@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43",
+    "windowTitle": "冲向那座塔",
+    "engine": "unity",
+    "engineVersion": "2021.3.56f2"
+  },
+  "currentStage": "representative-levels-and-core-method-analysis",
+  "implementationReady": true,
+  "unknowns": [
+    {
+      "id": "U-006",
+      "subject": "soldier-entity-reference-mapping",
+      "status": "unknown",
+      "reason": "SoldierConfig EntityID 501, 650, 601 do not directly match EntityModelConfig.id. Five of eight rows do match.",
+      "verification": "Trace skin/model remapping in Soldier.Init and GetSoldierObj before treating these as missing assets."
+    },
+    {
+      "id": "U-001",
+      "subject": "representative-level-layout",
+      "status": "unknown",
+      "reason": "Raw layouts for level_0/1/2 recovered and reference-validated; runtime transform and screen comparison pending.",
+      "verification": "Trace coordinate conversion in LevelControl and compare a representative original game frame."
+    },
+    {
+      "id": "U-002",
+      "subject": "exact-combat-and-spawn-equations",
+      "status": "unknown",
+      "reason": "3493 gameplay methods resolved through the Assembly-CSharp module and WASM table; 3445 have local function bodies. Spawn base formula recovered, complete collision/occupation/buff paths pending.",
+      "verification": "Continue Tower.SoldierCollision/ChangeScore, derive field offsets and virtual call targets, then validate original gameplay outcomes."
+    },
+    {
+      "id": "U-003",
+      "subject": "active-LevelConfig-versus-LevelBConfig",
+      "status": "unknown",
+      "reason": "Both tables contain 561 records; active selection has not been traced.",
+      "verification": "Trace configuration selection and LevelControl.InitGameByLevelConfig/OnLevelCfgLoad."
+    },
+    {
+      "id": "U-004",
+      "subject": "runtime-complete-code-and-assets",
+      "status": "unknown",
+      "reason": "Two code packages cached; wasmcode2 declared but absent. Resource catalog has 2040 entries and only partial local coverage.",
+      "verification": "Inspect feature-controlled wasmcode2 loading for this desktop mode and build the dependency closure for one representative level."
+    },
+    {
+      "id": "U-005",
+      "subject": "win-loss-state-transitions",
+      "status": "unknown",
+      "reason": "LevelControl and gameplay state symbols available, branch behavior not yet reconstructed.",
+      "verification": "Trace OnGamePlayState/SetPlaySate and confirm original gameplay success/failure transitions."
+    }
+  ],
+  "outputs": {
+    "tables": "table-schemas.json",
+    "symbols": "gameplay-symbols.json",
+    "resources": "resource-catalog.json",
+    "levels": "level-summary.json",
+    "dispatch": "dispatch-model.json",
+    "methodMap": "gameplay-method-map.json"
+  },
+  "goldenCases": "not-created: exact runtime outcomes not verified",
+  "updatedAtUtc": "2026-09-28T10:36:21.347857+00:00",
+  "stage": "source-derived-full-in-level-integration",
+  "completeLayoutCount": 639,
+  "numericOracleCases": 18,
+  "sourceDerivedCombatCases": 10,
+  "unityProject": "E:/Projects/AreaBattle/UnityProject",
+  "unityEditor": "6000.0.68f1",
+  "limitations": [
+    "Level871 static entry reference compared; full matched visual/audio replay remains unavailable",
+    "Source RNG and resource-load latency are not matched to a captured original session",
+    "Daily initial/refill selection and unobserved async asset-load races remain explicit"
+  ],
+  "ordinaryMechanicsCases": 42,
+  "standaloneSmoke": {
+    "passed": true,
+    "retryTopologyPreserved": true,
+    "simulationReused": true,
+    "frames": 600,
+    "spawnsBeforeRetry": 9,
+    "spawnsAfterRetry": 9,
+    "lineCount": 15,
+    "error": ""
+  },
+  "integratedMechanicsCases": 259
+}

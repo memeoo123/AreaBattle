@@ -1,0 +1,81 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3953480,
+      "encodedUsage": "0xc000775f",
+      "methodSpecIndex": 15279,
+      "methodSpecAddress": 666356,
+      "methodSpec": [
+        26934,
+        562,
+        -1
+      ],
+      "declaringType": "ControlBase`1",
+      "method": "get_I",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4009,
+            "name": "PVPController"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3953360,
+      "encodedUsage": "0xc0007723",
+      "methodSpecIndex": 15249,
+      "methodSpecAddress": 665996,
+      "methodSpec": [
+        26934,
+        547,
+        -1
+      ],
+      "declaringType": "ControlBase`1",
+      "method": "get_I",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4038,
+            "name": "DiceGameControl"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

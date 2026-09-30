@@ -1,0 +1,71 @@
+; Original class: AssetBundleManager
+; Type3129.LoadAssetBundle; wasmcode function 3666; offset=1151455 size=195
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+001191e0  i32.const [4988538]
+001191e5  i32.load8_u [0, 0]
+001191e8  i32.eqz []
+001191e9  if [-64]
+001191eb    i32.const [3928344]
+001191f0    call [900] ; 
+001191f3    i32.const [3930676]
+001191f8    call [900] ; 
+001191fb    i32.const [3936516]
+00119200    call [900] ; 
+00119203    i32.const [4066116] ; STRING "Please initialize AssetBundleManifest by calling AssetBundleManager.Initialize()"
+00119208    call [900] ; 
+0011920b    i32.const [4988538]
+00119210    i32.const [1]
+00119212    i32.store8 [0, 0]
+00119215  end []
+00119216  block [-64]
+00119218    local.get [1]
+0011921a    br_if [0]
+0011921c    i32.const [3928344]
+00119221    i32.load [2, 0]
+00119224    call [901] ; 
+00119227    i32.const [3928344]
+0011922c    i32.load [2, 0]
+0011922f    i32.load [2, 92]
+00119232    i32.load [2, 12]
+00119235    local.set [2]
+00119237    i32.const [3936516]
+0011923c    i32.load [2, 0]
+0011923f    call [901] ; 
+00119242    local.get [2]
+00119244    i32.const [0]
+00119246    i32.const [0]
+00119248    call [940] ; Object.op_Equality
+0011924b    i32.eqz []
+0011924c    br_if [0]
+0011924e    i32.const [3930676]
+00119253    i32.load [2, 0]
+00119256    call [901] ; 
+00119259    i32.const [4066116] ; STRING "Please initialize AssetBundleManifest by calling AssetBundleManager.Initialize()"
+0011925e    i32.load [2, 0]
+00119261    i32.const [0]
+00119263    i32.const [2369] ; TABLE Debug.LogError
+00119266    global.set [3]
+00119268    i32.const [2369] ; TABLE Debug.LogError
+0011926b    call_indirect [0, 0]
+0011926e    return []
+0011926f  end []
+00119270  i32.const [3928344]
+00119275  i32.load [2, 0]
+00119278  call [901] ; 
+0011927b  block [-64]
+0011927d    local.get [0]
+0011927f    i32.const [0]
+00119281    i32.const [1]
+00119283    local.get [1]
+00119285    call [4020] ; AssetBundleManager.LoadAssetBundleInternal
+00119288    br_if [0]
+0011928a    local.get [1]
+0011928c    br_if [0]
+0011928e    i32.const [3928344]
+00119293    i32.load [2, 0]
+00119296    call [901] ; 
+00119299    local.get [0]
+0011929b    local.get [1]
+0011929d    call [8249] ; AssetBundleManager.LoadDependencies
+001192a0  end []
+001192a1  end []

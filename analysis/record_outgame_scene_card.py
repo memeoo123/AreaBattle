@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-item-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==342
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='scene-card-source-template-resolved';s['validation'].update(integratedChecksPassed=342,skinItemActionChecksPassed=9)
+s['nextActions']=['Recover skin ordering and full ShopUI assembly/listeners using source SkinItem template for soldier and scene controllers.','Bind original sprites/activity/video providers and full account startup effects.','Complete remaining outgame systems and playable build/end-to-end validation.']
+for sub in s['subsystems']:
+ if sub['id']=='skins-cosmetics':sub.update(implementation='Native shared SkinItem template now supports scene controller overrides; full page assembly/providers pending',validation='7 manager and9 item/native-card checks pass; subsystem incomplete')
+write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['scene-skin-actions']['limitations']=['Scene visual provider and full page binding pending'];s['subsystemGates']['scene-native-template']={'implementationReady':True,'scope':'Native source scene card template and button routing','rules':['UIObject.Get uses binding dictionary and logs missing keys; no implicit alias discovered.','ShopUI.InitializeComponent stores SkinItem at runtime field172 and Content_scene at196. Creation coroutine Type4407.MoveNext allocates SceneSkinItem then BaseItem.Instantiate using field172 and Content_scene transform; stale sceneSkinItem template is not used in this creation branch.','OutgameSkinItemView accepts explicit scene action controller to route choose/buy overrides; inherited render/video behavior shared.'],'source':['disassembly/Type3559-27439.txt','disassembly/Type4408-33770.txt','disassembly/Type4407-33808.txt:006743d4-00674489'],'implementation':['OutgameSkinItemView.cs'],'validation':'Cloned source SkinItem into Content_scene; actual buy and choose Button events invoke scene override, BuyScene statistic and scene-style effects, update live equipment and badge.'};write(p,s)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['sourceMethodsIndexed']=771;write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='ShopUI coroutine shared template and SceneSkinItem overrides') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Source scene template creation and native scene button routes','checksPassed':342,'outgameChecksPassed':75,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 场景卡片原模板路径确认（342项）\n已解决上一检查点的模板名称差异：UIObject.Get未发现名称别名；ShopUI创建协程 Type4407.MoveNext在分配SceneSkinItem后，传入ShopUI字段172（SkinItem模板）和字段196（Content_scene）创建场景卡片，并非名为sceneSkinItem的旧模板。OutgameSkinItemView据此支持独立场景操作控制器，共享原模板显示逻辑。原模板克隆进场景Content，实际购买/选择按钮验证BuyScene统计、场景切换、装备与使用中标记。Unity退出0，342集成检查通过（原267+关外75），原方法索引771。完整商店生成/排序/监听、实际活动/广告/场景视觉与账户启动仍未完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions','outgameSkinItemView','outgameSceneSkinActions','outgameSceneSkinView']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','342 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 342 checks; full goal remains incomplete.')

@@ -1,0 +1,130 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.UokYyr; wasmcode function 7400; offset=2920840 size=365
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+002c918b  global.get [0]
+002c918d  i32.const [16]
+002c918f  i32.sub []
+002c9190  local.set [1]
+002c9192  local.get [1]
+002c9194  global.set [0]
+002c9196  i32.const [5007502]
+002c919b  i32.load8_u [0, 0]
+002c919e  i32.eqz []
+002c919f  if [-64]
+002c91a1    i32.const [3927888]
+002c91a6    call [900] ; 
+002c91a9    i32.const [3953360]
+002c91ae    call [900] ; 
+002c91b1    i32.const [3947148]
+002c91b6    call [900] ; 
+002c91b9    i32.const [3934404]
+002c91be    call [900] ; 
+002c91c1    i32.const [3926996]
+002c91c6    call [900] ; 
+002c91c9    i32.const [4010048] ; METHOD Proj_xqzdStartUI.TL|LfN
+002c91ce    call [900] ; 
+002c91d1    i32.const [4010100] ; METHOD Proj_xqzdStartUI.xbQn
+002c91d6    call [900] ; 
+002c91d9    i32.const [4010080] ; METHOD Proj_xqzdStartUI.qil`
+002c91de    call [900] ; 
+002c91e1    i32.const [4062868] ; STRING "Mxtz_DataChange"
+002c91e6    call [900] ; 
+002c91e9    i32.const [4059952] ; STRING "Item_ItemChange"
+002c91ee    call [900] ; 
+002c91f1    i32.const [5007502]
+002c91f6    i32.const [1]
+002c91f8    i32.store8 [0, 0]
+002c91fb  end []
+002c91fc  i32.const [3953360]
+002c9201  i32.load [2, 0]
+002c9204  call [935] ; 
+002c9207  i32.const [0]
+002c9209  call [6143] ; DiceGameControl.IsUnlock
+002c920c  local.set [2]
+002c920e  local.get [0]
+002c9210  i32.load [2, 140]
+002c9214  i32.const [0]
+002c9216  call [943] ; Component.get_gameObject
+002c9219  local.get [2]
+002c921b  i32.const [0]
+002c921d  call [949] ; GameObject.SetActive
+002c9220  local.get [2]
+002c9222  if [-64]
+002c9224    local.get [0]
+002c9226    i32.load [2, 140]
+002c922a    local.set [2]
+002c922c    i32.const [3927888]
+002c9231    i32.load [2, 0]
+002c9234    call [903] ; 
+002c9237    local.set [3]
+002c9239    local.get [3]
+002c923b    local.get [0]
+002c923d    i32.const [4010048] ; METHOD Proj_xqzdStartUI.TL|LfN
+002c9242    i32.load [2, 0]
+002c9245    i32.const [0]
+002c9247    call [1002] ; Action..ctor
+002c924a    local.get [2]
+002c924c    local.get [3]
+002c924e    i32.const [0]
+002c9250    call [1121] ; UIExtension.AddClick
+002c9253    i32.const [3947148]
+002c9258    i32.load [2, 0]
+002c925b    call [903] ; 
+002c925e    local.set [2]
+002c9260    local.get [2]
+002c9262    local.get [0]
+002c9264    i32.const [4010100] ; METHOD Proj_xqzdStartUI.xbQn
+002c9269    i32.load [2, 0]
+002c926c    i32.const [0]
+002c926e    call [1067] ; EventHandler..ctor
+002c9271    i32.const [4062868] ; STRING "Mxtz_DataChange"
+002c9276    i32.load [2, 0]
+002c9279    local.get [2]
+002c927b    i32.const [0]
+002c927d    call [1146] ; MsgDispatcher.AddEventListener
+002c9280    i32.const [3947148]
+002c9285    i32.load [2, 0]
+002c9288    call [903] ; 
+002c928b    local.set [2]
+002c928d    local.get [2]
+002c928f    local.get [0]
+002c9291    i32.const [4010080] ; METHOD Proj_xqzdStartUI.qil`
+002c9296    i32.load [2, 0]
+002c9299    i32.const [0]
+002c929b    call [1067] ; EventHandler..ctor
+002c929e    i32.const [4059952] ; STRING "Item_ItemChange"
+002c92a3    i32.load [2, 0]
+002c92a6    local.get [2]
+002c92a8    i32.const [0]
+002c92aa    call [1146] ; MsgDispatcher.AddEventListener
+002c92ad    i32.const [3926996]
+002c92b2    i32.load [2, 0]
+002c92b5    i32.const [1]
+002c92b7    call [909] ; 
+002c92ba    local.set [2]
+002c92bc    local.get [1]
+002c92be    i32.const [2]
+002c92c0    i32.store [2, 12]
+002c92c3    i32.const [3934404]
+002c92c8    i32.load [2, 0]
+002c92cb    local.get [1]
+002c92cd    i32.const [12]
+002c92cf    i32.add []
+002c92d0    call [910] ; 
+002c92d3    local.set [3]
+002c92d5    local.get [2]
+002c92d7    local.get [3]
+002c92d9    call [905] ; 
+002c92dc    local.get [2]
+002c92de    local.get [3]
+002c92e0    i32.store [2, 16]
+002c92e3    local.get [0]
+002c92e5    local.get [2]
+002c92e7    local.get [0]
+002c92e9    call [11003] ; Proj_xqzdStartUI.xbQn
+002c92ec  end []
+002c92ed  local.get [1]
+002c92ef  i32.const [16]
+002c92f1  i32.add []
+002c92f2  global.set [0]
+002c92f4  end []

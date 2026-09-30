@@ -1,0 +1,39 @@
+; Original class: StorePurchaseUI
+; Type4412.OpenLater; wasmcode1 function 46770; offset=16497847 size=114
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00fbbcb8  i32.const [5007029]
+00fbbcbd  i32.load8_u [0, 0]
+00fbbcc0  i32.eqz []
+00fbbcc1  if [-64]
+00fbbcc3    i32.const [3947148]
+00fbbcc8    i32.const [1605]
+00fbbccb    call_indirect [0, 0]
+00fbbcce    i32.const [4015452] ; METHOD StorePurchaseUI.fi`{Vo
+00fbbcd3    i32.const [1605]
+00fbbcd6    call_indirect [0, 0]
+00fbbcd9    i32.const [4075200] ; STRING "ToolChange"
+00fbbcde    i32.const [1605]
+00fbbce1    call_indirect [0, 0]
+00fbbce4    i32.const [5007029]
+00fbbce9    i32.const [1]
+00fbbceb    i32.store8 [0, 0]
+00fbbcee  end []
+00fbbcef  i32.const [3947148]
+00fbbcf4  i32.load [2, 0]
+00fbbcf7  i32.const [109007]
+00fbbcfb  call_indirect [2, 0]
+00fbbcfe  local.set [1]
+00fbbd00  local.get [1]
+00fbbd02  local.get [0]
+00fbbd04  i32.const [4015452] ; METHOD StorePurchaseUI.fi`{Vo
+00fbbd09  i32.load [2, 0]
+00fbbd0c  i32.const [0]
+00fbbd0e  i32.const [24682] ; TABLE EventHandler..ctor
+00fbbd12  call_indirect [6, 0]
+00fbbd15  i32.const [4075200] ; STRING "ToolChange"
+00fbbd1a  i32.load [2, 0]
+00fbbd1d  local.get [1]
+00fbbd1f  i32.const [0]
+00fbbd21  i32.const [24665] ; TABLE MsgDispatcher.AddEventListener
+00fbbd25  call_indirect [5, 0]
+00fbbd28  end []

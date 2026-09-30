@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==343
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='skin-stable-source-order';s['validation'].update(integratedChecksPassed=343,skinRecordChecksPassed=8)
+s['nextActions']=['Recover full ShopUI assembly/filtering/listeners using verified ordered skin indices and shared source template.','Bind original sprites/activity/video providers and full account startup effects.','Complete remaining outgame systems and playable build/end-to-end validation.'];write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['skin-source-order']={'implementationReady':True,'scope':'Manager initialization ordered lookup used by shop lists','rules':['GetOrder derives id%100 plus1 for non-map, unchanged for type4; derived1 returns -99 even when sortNo is nonzero. Other rows use nonzero sortNo else derived.','Generic metadata resolution confirms Enumerable.OrderBy followed by ToDictionary with key/value selectors. Stable ties preserve held/config dictionary insertion order; saved skin list remains untouched.'],'source':['disassembly/Type4150-31737.txt','disassembly/Type4150-31738.txt','disassembly/Type4150-31739.txt','skin-order-generic-resolution.json'],'implementation':['OutgameSkinCatalog.cs'],'validation':'Original tables, reordered held defaults, explicit/sentinel/fallback keys and saved-list preservation verified.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='SkinManager GetOrder/OrderBy initialization') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original skin initialization stable sorting','checksPassed':343,'outgameChecksPassed':76,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 皮肤原排序（343项）\n静态泛型元数据证明原初始化使用 Enumerable.OrderBy(GetOrder).ToDictionary，而非推测ThenBy。已加入有序兵种/场景索引，默认项派生值1优先-99，其他项按非零sortNo或id余数规则排序；同值保留已持有记录/缺省补齐插入顺序，存档列表不重排。真实配置与乱序持有记录用例通过；Unity退出0，343集成检查（原267+关外76）。完整ShopUI创建/过滤/事件、提供者、启动和新构建仍待完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions','outgameSkinItemView','outgameSceneSkinActions','outgameSceneSkinView','outgameSkinOrder']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','343 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 343 checks; full goal remains incomplete.')

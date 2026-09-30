@@ -1,0 +1,42 @@
+{
+  "atUtc": "2026-09-30T10:51:17.911756+00:00",
+  "status": "shared-item-config-implemented-owner-composition-incomplete",
+  "sourceEvidence": "SHARED_ITEM_CONFIG_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T10:51:17.911756+00:00",
+    "scope": "Shared item config4534 metadata schemas, source-default legacy Unity JSON, groups/cache/queries/owner slot",
+    "checksPassed": 1020,
+    "newIntegratedChecks": 12,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full ItemManager/factory/ItemModule controller; full Main and outgame Player"
+  },
+  "implementedLifecycleControllers": 13,
+  "remainingLifecycleControllers": 25,
+  "findings": [
+    "Original ItemConfigMgr4534 constructor34551 creates fields8/12/16/20/32/36 only. Package/reward group dictionaries remain null. get_Instance34554 creates/publishes instance without InitMgr. Restored explicit owner slot preserves this separation.",
+    "InitMgr34550 selected Unity JSON route reads item/package/reward/product tables in order then calls34558. No clear. Source MemoryPack/alternate parser branches explicitly outside this implementation; InitLegacyUnityJson method names its supported route.",
+    "Shared GameItemConfig4527/GamePackageConfig4529/GameProductConfig4531/GameRewardConfig4533 and helper Lang3490/ListArrayInt3452 generated from metadata offsets/types in separate SharedItemConfig namespace; project GameItemConfig3942 remains distinct. Four UniqueID bodies34514/34523/34532/34541 confirmed boxing field8. Actual firstpack JSON reads79/4/16/10 records. Shared product groupID/itemId defaults0 because project-specific JSON lacks them; no guessed remapping.",
+    "BuildGroups34558 replaces package dictionary then enumerates rows, groups by packageId, keyed by packageRewardId. Outer/inner writes use Dictionary.set_Item (generic usages3954552/3955676). Then replaces reward dictionary grouped by rewardId, keyed by rewardItemId (3954568/3955688 set_Item). Duplicate row IDs overwrite, source row IDs need not equal table dictionary keys. Prefix failures retain partial replacement and skip later phases.",
+    "Product helper34552 enumerates Products.Values, row offset84 groupID, creates list using dictionary Add (3954820), then appends each row. Does not clear existing product groups; repeated initialization appends duplicate references.",
+    "GetPackageRewards34553/GetRewardItems34555 return existing live group; missing returns fresh empty dictionary without adding it. Calls before index creation fail on null as source.",
+    "GetRewardItemRanges34560 builds cache on miss from reward dictionary, stores original row reference at offset12 and snapshots row.weight(offset28) into inherited RandomObject3392 int offset8. Publishes cache using set_Item3954972 only after successful enumeration. Returns new list populated by live indexed loop, shares cached elements. Cache survives group rebuild, including missing-group empty caches.",
+    "GetGameItemConfig34557 uses receiver Items.TryGetValue. GetGameProductConfig34559 uses current singleton Products.TryGetValue. Existing null row returns null without log. Miss emits source object-array prefix and boxed id.",
+    "Dispose34556 clears range cache, then product groups, then current singleton slot. Four tables and package/reward groups survive. No try/finally; second-clear failure prevents slot reset. Stale object disposal clears replacement slot."
+  ],
+  "remaining": [
+    "Continue ItemManager4500 and original FactoryBase4486/VirtualItem/PackageItem production behavior, then bind ItemModuleControl3875 using distinct shared config manager. Complete remaining25 controller lifecycles, full source-default legacy Main/account/menu/business graph and persistence/restart/failure/return flows, then runnable outgame Player acceptance. Modern alternate acquisition remains explicit unimplemented branch, not default startup prerequisite.",
+    "No full ItemManager4500/factory or ItemModuleControl3875 binding yet; controller lifecycle remains13/38.",
+    "Only selected source-default legacy Unity JSON route implemented here; MemoryPack and alternate parser routes not claimed.",
+    "No new native PlayMode, Player build, real platform/account or full menu flow validation in this milestone."
+  ],
+  "disassembledMethodMapCount": 5147,
+  "artifacts": {
+    "integratedLog": "analysis/shared-item-config-integrated.log"
+  }
+}

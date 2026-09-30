@@ -1,0 +1,5767 @@
+[
+  {
+    "name": "GuideDConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 12,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "guildLv": [
+        "int"
+      ],
+      "guildsmallLv": [
+        "int"
+      ],
+      "nextGuildStage": [
+        "int"
+      ],
+      "title": [
+        "str"
+      ],
+      "explain": [
+        "str"
+      ],
+      "button": [
+        "str"
+      ],
+      "picture": [
+        "str"
+      ],
+      "param": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GuideDConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -9128716354027096124,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GuideDConfig__-9128716354027096124.bytes",
+    "sha256": "83c534fdd5e524fac7a9c87832f269f5038274465ee2bec365a389955a7f4f61",
+    "samples": [
+      {
+        "id": 1,
+        "guildLv": 0,
+        "guildsmallLv": 0,
+        "nextGuildStage": 2,
+        "title": "guide/11",
+        "explain": "guide/12",
+        "button": "guide/13",
+        "picture": "guideUI_icon1",
+        "param": "hdzd_effect_yindao"
+      },
+      {
+        "id": 2,
+        "guildLv": -1,
+        "guildsmallLv": 0,
+        "nextGuildStage": 3,
+        "title": "",
+        "explain": "",
+        "button": "",
+        "picture": "",
+        "param": ""
+      }
+    ]
+  },
+  {
+    "name": "PubAchievementAccConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "rewards": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubAchievementAccConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -8439402073775959007,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubAchievementAccConfig__-8439402073775959007.bytes",
+    "sha256": "dacd2609ae455fd03bf70e574ad42cf27c6785b7db39c0008ed8e2f7f559e92c",
+    "samples": [
+      {
+        "id": 30,
+        "rewards": [
+          {
+            "datas": [
+              1000,
+              100
+            ]
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "rewards": [
+          {
+            "datas": [
+              1000,
+              100
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AIReplayFactorConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 6,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "ReplayNum": [
+        "int"
+      ],
+      "ReplayFactor": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AIReplayFactorConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -7950828548619319804,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AIReplayFactorConfig__-7950828548619319804.bytes",
+    "sha256": "6a0be049f8f14b431a900dcd104eb4d39c67462abb071326e2ade00eb2e3655e",
+    "samples": [
+      {
+        "id": 1,
+        "ReplayNum": 0,
+        "ReplayFactor": 1.0
+      },
+      {
+        "id": 2,
+        "ReplayNum": 1,
+        "ReplayFactor": 0.9
+      }
+    ]
+  },
+  {
+    "name": "GameItemConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 79,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "type1": [
+        "int"
+      ],
+      "type2": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "atlasName": [
+        "str"
+      ],
+      "ItemIcon": [
+        "str"
+      ],
+      "quality": [
+        "int"
+      ],
+      "name": [
+        "dict"
+      ],
+      "detail": [
+        "dict"
+      ],
+      "item_game": [
+        "str"
+      ],
+      "paramInt": [
+        "int"
+      ],
+      "paramString": [
+        "str"
+      ],
+      "activeParam": [
+        "int"
+      ],
+      "useParam1": [
+        "str"
+      ],
+      "useParam2": [
+        "str"
+      ],
+      "useParam3": [
+        "str"
+      ],
+      "effectHours": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GameItemConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -7862284296360514927,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GameItemConfig__-7862284296360514927.bytes",
+    "sha256": "7b6e1211e613eb8bd91dff7042189429f33cea9406af89be53f032730a383c1f",
+    "samples": [
+      {
+        "id": 1001,
+        "type1": 1,
+        "type2": 1,
+        "icon": "jinbi",
+        "atlasName": "PublicIcon",
+        "ItemIcon": "jinbi",
+        "quality": 1,
+        "name": {
+          "key": "item_name_1001"
+        },
+        "detail": {
+          "key": "item_des_1001"
+        },
+        "item_game": "",
+        "paramInt": 0,
+        "paramString": "",
+        "activeParam": 0,
+        "useParam1": "",
+        "useParam2": "",
+        "useParam3": "",
+        "effectHours": 0
+      },
+      {
+        "id": 1002,
+        "type1": 1,
+        "type2": 2,
+        "icon": "Pulbic_diamond",
+        "atlasName": "PublicIcon",
+        "ItemIcon": "Pulbic_diamond",
+        "quality": 2,
+        "name": {
+          "key": "item_name_1002"
+        },
+        "detail": {
+          "key": "item_des_1002"
+        },
+        "item_game": "",
+        "paramInt": 0,
+        "paramString": "",
+        "activeParam": 0,
+        "useParam1": "",
+        "useParam2": "",
+        "useParam3": "",
+        "effectHours": 0
+      }
+    ]
+  },
+  {
+    "name": "DiceShopTypeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 2,
+    "fields": {
+      "shopId": [
+        "int"
+      ],
+      "name": [
+        "dict"
+      ],
+      "refreshPeriod": [
+        "int"
+      ],
+      "refreshParams": [
+        "list"
+      ],
+      "capacity": [
+        "int"
+      ],
+      "refreshAD": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DiceShopTypeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -7646518478848143338,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DiceShopTypeConfig__-7646518478848143338.bytes",
+    "sha256": "049e70281b50552de9e90abeaf241261c2e5f0192c50fad61bdd6887e0d3859f",
+    "samples": [
+      {
+        "shopId": 12,
+        "name": {
+          "key": "碎片合成"
+        },
+        "refreshPeriod": 0,
+        "refreshParams": [],
+        "capacity": 0,
+        "refreshAD": 0
+      },
+      {
+        "shopId": 13,
+        "name": {
+          "key": "积分商店"
+        },
+        "refreshPeriod": 3,
+        "refreshParams": [
+          0
+        ],
+        "capacity": 6,
+        "refreshAD": 5
+      }
+    ]
+  },
+  {
+    "name": "ChannelProcedureConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 5,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "UIStyle": [
+        "int"
+      ],
+      "ConfigMode": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ChannelProcedureConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -7132671587746365239,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ChannelProcedureConfig__-7132671587746365239.bytes",
+    "sha256": "1b8e4bbe84005ea555b31b369c2c61e1a1c570d63be73ac7fcdf9946d7d82809",
+    "samples": [
+      {
+        "id": 1,
+        "UIStyle": 1,
+        "ConfigMode": 1
+      },
+      {
+        "id": 2,
+        "UIStyle": 2,
+        "ConfigMode": 2
+      }
+    ]
+  },
+  {
+    "name": "GlobalValueConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 9,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "ValueName": [
+        "str"
+      ],
+      "Value1": [
+        "int"
+      ],
+      "Content1": [
+        "str"
+      ],
+      "Value2": [
+        "int"
+      ],
+      "Content2": [
+        "str"
+      ],
+      "EffectID": [
+        "int"
+      ],
+      "Content3": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GlobalValueConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6931177931584895852,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GlobalValueConfig__-6931177931584895852.bytes",
+    "sha256": "b2df6bfa465ef69fc3f53fdb11655a9da9871bde7f40fd17e0efdea53eed937e",
+    "samples": [
+      {
+        "id": 1,
+        "ValueName": "recoveryTime",
+        "Value1": 1,
+        "Content1": "",
+        "Value2": 0,
+        "Content2": "",
+        "EffectID": 0,
+        "Content3": ""
+      },
+      {
+        "id": 2,
+        "ValueName": "numberTime",
+        "Value1": 300,
+        "Content1": "",
+        "Value2": 0,
+        "Content2": "",
+        "EffectID": 0,
+        "Content3": ""
+      }
+    ]
+  },
+  {
+    "name": "CommanderConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 6,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "name": [
+        "str"
+      ],
+      "maxLevel": [
+        "int"
+      ],
+      "unlockType": [
+        "int"
+      ],
+      "describe": [
+        "str"
+      ],
+      "unlockLevel": [
+        "int"
+      ],
+      "unlockPrice": [
+        "list"
+      ],
+      "skills": [
+        "list"
+      ],
+      "EntityId": [
+        "int"
+      ],
+      "IconName": [
+        "str"
+      ],
+      "usePercent": [
+        "int"
+      ],
+      "headport": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CommanderConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6913773876419992183,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CommanderConfig__-6913773876419992183.bytes",
+    "sha256": "7bd9636abe4a9a1ec7506cbf25b4631d2307b96344d831cf4a9c3d3eaf6093f7",
+    "samples": [
+      {
+        "id": 1,
+        "name": "CommanderName.1",
+        "maxLevel": 28,
+        "unlockType": 1,
+        "describe": "",
+        "unlockLevel": 6,
+        "unlockPrice": [
+          {
+            "datas": [
+              1001,
+              0
+            ]
+          }
+        ],
+        "skills": [
+          1,
+          2,
+          3
+        ],
+        "EntityId": 8031,
+        "IconName": "touxiang01",
+        "usePercent": 35,
+        "headport": "Tx_hero02"
+      },
+      {
+        "id": 2,
+        "name": "CommanderName.2",
+        "maxLevel": 28,
+        "unlockType": 1,
+        "describe": "",
+        "unlockLevel": 6,
+        "unlockPrice": [
+          {
+            "datas": [
+              1001,
+              10000
+            ]
+          }
+        ],
+        "skills": [
+          4,
+          5,
+          6
+        ],
+        "EntityId": 8032,
+        "IconName": "touxiang02",
+        "usePercent": 25,
+        "headport": "Tx_hero01"
+      }
+    ]
+  },
+  {
+    "name": "PubnoviceAccRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 8,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "activityId": [
+        "int"
+      ],
+      "accValue": [
+        "int"
+      ],
+      "des": [
+        "dict"
+      ],
+      "rewards": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubnoviceAccRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6705659444330658913,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubnoviceAccRewardConfig__-6705659444330658913.bytes",
+    "sha256": "d08cf1fc415934c0dda016c91ef26f9735ca662e24cf3e2ec2472ecd024efe33",
+    "samples": [
+      {
+        "id": 1,
+        "activityId": 1301,
+        "accValue": 80,
+        "des": {
+          "key": ""
+        },
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              50
+            ]
+          },
+          {
+            "datas": [
+              1005,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "activityId": 1301,
+        "accValue": 160,
+        "des": {
+          "key": ""
+        },
+        "rewards": [
+          {
+            "datas": [
+              5001,
+              1
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              50
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SkillConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 180,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "duration": [
+        "float"
+      ],
+      "data1": [
+        "float"
+      ],
+      "data2": [
+        "float"
+      ],
+      "data3": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SkillConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6703543179063321378,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SkillConfig__-6703543179063321378.bytes",
+    "sha256": "75a8fa1ea8f8941c0682b904c453ba0f25a82016c6ec163bf99e2444a60f4b8c",
+    "samples": [
+      {
+        "id": 101,
+        "duration": 5.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      {
+        "id": 102,
+        "duration": 6.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      }
+    ]
+  },
+  {
+    "name": "GuideTipsConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "name": [
+        "dict"
+      ],
+      "des": [
+        "dict"
+      ],
+      "unlockLevel": [
+        "int"
+      ],
+      "reward": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GuideTipsConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6647093747350793917,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GuideTipsConfig__-6647093747350793917.bytes",
+    "sha256": "43ebe646329802dfef9614b2d11a4f2815fd23154ac22f9a78b161f29bbe6083",
+    "samples": [
+      {
+        "id": 1,
+        "name": {
+          "key": "StrategyTips_1"
+        },
+        "des": {
+          "key": "StrategyDes_1"
+        },
+        "unlockLevel": 2,
+        "reward": [
+          1001,
+          50
+        ]
+      },
+      {
+        "id": 2,
+        "name": {
+          "key": "StrategyTips_2"
+        },
+        "des": {
+          "key": "StrategyDes_2"
+        },
+        "unlockLevel": 3,
+        "reward": [
+          1001,
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CampConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "bossModelId": [
+        "int"
+      ],
+      "bossSoldierId": [
+        "int"
+      ],
+      "LineColor": [
+        "str"
+      ],
+      "BasitionMaterial": [
+        "str"
+      ],
+      "soldierColor0": [
+        "str"
+      ],
+      "soldierColor1": [
+        "str"
+      ],
+      "soldierColor2": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CampConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -6301436022806810094,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CampConfig__-6301436022806810094.bytes",
+    "sha256": "f8cef76655955c9d28ecde1abdb428ce342f06d12cfee9f2c37ce3ad872b121b",
+    "samples": [
+      {
+        "id": 0,
+        "bossModelId": 0,
+        "bossSoldierId": 0,
+        "LineColor": "939393",
+        "BasitionMaterial": "model/HD4_jianzhu0",
+        "soldierColor0": "13557C",
+        "soldierColor1": "13557C",
+        "soldierColor2": "13EAEE"
+      },
+      {
+        "id": 1,
+        "bossModelId": 0,
+        "bossSoldierId": 0,
+        "LineColor": "2885ff",
+        "BasitionMaterial": "model/HD4_jianzhu1",
+        "soldierColor0": "0649A3",
+        "soldierColor1": "13557C",
+        "soldierColor2": "13EAEE"
+      }
+    ]
+  },
+  {
+    "name": "LanguageConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 742,
+    "fields": {
+      "id": [
+        "str"
+      ],
+      "zh_cn": [
+        "str"
+      ],
+      "zh_tw": [
+        "str"
+      ],
+      "en": [
+        "str"
+      ],
+      "sp": [
+        "str"
+      ],
+      "po": [
+        "str"
+      ],
+      "ru": [
+        "str"
+      ],
+      "fr": [
+        "str"
+      ],
+      "ge": [
+        "str"
+      ],
+      "ja": [
+        "str"
+      ],
+      "ko": [
+        "str"
+      ],
+      "In": [
+        "str"
+      ],
+      "It": [
+        "str"
+      ],
+      "Vi": [
+        "str"
+      ],
+      "Ma": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/LanguageConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -5565050805735190543,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/LanguageConfig__-5565050805735190543.bytes",
+    "sha256": "f9fce3fd7538ccf78f7a2cb11609bc6299fa0b17e93e8df9082183ea16e68a15",
+    "samples": [
+      {
+        "id": "CommonGameModule.CommonNoviceTaskUITemp.pageName",
+        "zh_cn": "第{0}天",
+        "zh_tw": "",
+        "en": "XXXXXXXXXXX",
+        "sp": "",
+        "po": "",
+        "ru": "",
+        "fr": "",
+        "ge": "",
+        "ja": "",
+        "ko": "",
+        "In": "",
+        "It": "",
+        "Vi": "",
+        "Ma": ""
+      },
+      {
+        "id": "CommonGameModule.CommonNoviceTaskUITemp.Liveness",
+        "zh_cn": "活跃度:{0}",
+        "zh_tw": "",
+        "en": "",
+        "sp": "",
+        "po": "",
+        "ru": "",
+        "fr": "",
+        "ge": "",
+        "ja": "",
+        "ko": "",
+        "In": "",
+        "It": "",
+        "Vi": "",
+        "Ma": ""
+      }
+    ]
+  },
+  {
+    "name": "DrawConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 24,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "item": [
+        "int"
+      ],
+      "num": [
+        "int"
+      ],
+      "weight": [
+        "int"
+      ],
+      "prob": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DrawConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -5451492300871841887,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DrawConfig__-5451492300871841887.bytes",
+    "sha256": "b09b12f135b1101d20284ab6b8b6985a5ee4ea8c19ba28590c0a20198c74daa1",
+    "samples": [
+      {
+        "id": 1,
+        "item": 8001,
+        "num": 1,
+        "weight": 5,
+        "prob": "0.010040160642570281"
+      },
+      {
+        "id": 2,
+        "item": 8002,
+        "num": 1,
+        "weight": 5,
+        "prob": "0.010040160642570281"
+      }
+    ]
+  },
+  {
+    "name": "PubnoviceTaskConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 49,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "activityId": [
+        "int"
+      ],
+      "day": [
+        "int"
+      ],
+      "permission": [
+        "int"
+      ],
+      "showType": [
+        "list"
+      ],
+      "conditionParams": [
+        "list"
+      ],
+      "des": [
+        "dict"
+      ],
+      "expand": [
+        "list"
+      ],
+      "rewards": [
+        "list"
+      ],
+      "showCompleted": [
+        "int"
+      ],
+      "allLifeStatistics": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubnoviceTaskConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -5444288893428502782,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubnoviceTaskConfig__-5444288893428502782.bytes",
+    "sha256": "2b5587f702dc764d01daa3b691a5a835484f0839780763b505b5cfed6cca3c00",
+    "samples": [
+      {
+        "id": 1301101,
+        "activityId": 1301,
+        "day": 1,
+        "permission": 2,
+        "showType": [],
+        "conditionParams": [
+          {
+            "datas": [
+              10015,
+              10
+            ]
+          }
+        ],
+        "des": {
+          "key": "PubnoviceTask_1"
+        },
+        "expand": [],
+        "rewards": [
+          {
+            "datas": [
+              1301,
+              10
+            ]
+          }
+        ],
+        "showCompleted": 1,
+        "allLifeStatistics": 1
+      },
+      {
+        "id": 1301102,
+        "activityId": 1301,
+        "day": 1,
+        "permission": 2,
+        "showType": [],
+        "conditionParams": [
+          {
+            "datas": [
+              10002,
+              2
+            ]
+          }
+        ],
+        "des": {
+          "key": "PubnoviceTask_2"
+        },
+        "expand": [],
+        "rewards": [
+          {
+            "datas": [
+              1301,
+              20
+            ]
+          }
+        ],
+        "showCompleted": 1,
+        "allLifeStatistics": 0
+      }
+    ]
+  },
+  {
+    "name": "ArenaDailyRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 9,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "rankRange": [
+        "list"
+      ],
+      "itemId": [
+        "list"
+      ],
+      "itemCount": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaDailyRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -5291949767505368177,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaDailyRewardConfig__-5291949767505368177.bytes",
+    "sha256": "d5d4f8ecc223b97e931c61a1c87259f2b3a40cf0ad87bee3f62fb0132adfb682",
+    "samples": [
+      {
+        "id": 1,
+        "rankRange": [
+          1,
+          3
+        ],
+        "itemId": [
+          1001,
+          1002
+        ],
+        "itemCount": [
+          1000,
+          80
+        ]
+      },
+      {
+        "id": 2,
+        "rankRange": [
+          4,
+          10
+        ],
+        "itemId": [
+          1001,
+          1002
+        ],
+        "itemCount": [
+          750,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AllSkillBConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 18,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "gameItem": [
+        "int"
+      ],
+      "unLockLevel": [
+        "int"
+      ],
+      "castType": [
+        "int"
+      ],
+      "price": [
+        "int"
+      ],
+      "diamondPrice": [
+        "int"
+      ],
+      "useType": [
+        "int"
+      ],
+      "targetType": [
+        "int"
+      ],
+      "dataType": [
+        "list"
+      ],
+      "describeData": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AllSkillBConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4999575253526897695,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AllSkillBConfig__-4999575253526897695.bytes",
+    "sha256": "e12511c27e5dd5736ead2cae7ac840518c40ff9f025a25da884b8f03c4c59c4c",
+    "samples": [
+      {
+        "id": 1,
+        "gameItem": 2001,
+        "unLockLevel": 2,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "gameItem": 2002,
+        "unLockLevel": 8,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 4,
+        "dataType": [
+          0,
+          3,
+          2
+        ],
+        "describeData": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ArenaConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "unlockLevel": [
+        "int"
+      ],
+      "seasonDurationDay": [
+        "int"
+      ],
+      "refreshTime": [
+        "int"
+      ],
+      "inheritanceRatio": [
+        "int"
+      ],
+      "aiheritanceRation": [
+        "int"
+      ],
+      "aiCupRange": [
+        "list"
+      ],
+      "combatReward": [
+        "list"
+      ],
+      "playinitCup": [
+        "int"
+      ],
+      "aiBaseNum": [
+        "int"
+      ],
+      "initialCupUpperLimit": [
+        "int"
+      ],
+      "initialCupLowerLimit": [
+        "int"
+      ],
+      "motivatVideoReward": [
+        "list"
+      ],
+      "daymotivatCount": [
+        "int"
+      ],
+      "freeChallengeCount": [
+        "int"
+      ],
+      "challengeCD": [
+        "int"
+      ],
+      "skipChallengerCD": [
+        "list"
+      ],
+      "AdAddChallengeCount": [
+        "int"
+      ],
+      "buyChallengeCast": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4777016425401468763,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaConfig__-4777016425401468763.bytes",
+    "sha256": "85bc3f9a82616b846e3f89902a200b19b3e000362abbb63692d6fd0ebe5a3e5c",
+    "samples": [
+      {
+        "unlockLevel": 23,
+        "seasonDurationDay": 14,
+        "refreshTime": 0,
+        "inheritanceRatio": 25,
+        "aiheritanceRation": 25,
+        "aiCupRange": [
+          16,
+          -16
+        ],
+        "combatReward": [
+          {
+            "datas": [
+              1001,
+              50,
+              100
+            ]
+          }
+        ],
+        "playinitCup": 1000,
+        "aiBaseNum": 1000,
+        "initialCupUpperLimit": 3000,
+        "initialCupLowerLimit": 0,
+        "motivatVideoReward": [
+          2,
+          200
+        ],
+        "daymotivatCount": 3,
+        "freeChallengeCount": 5,
+        "challengeCD": 300,
+        "skipChallengerCD": [
+          1001,
+          500
+        ],
+        "AdAddChallengeCount": 5,
+        "buyChallengeCast": [
+          {
+            "datas": [
+              1001,
+              500
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              1000
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              1500
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              2000
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              2500
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PubTaskActivityConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 1,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "name": [
+        "dict"
+      ],
+      "type": [
+        "int"
+      ],
+      "param": [
+        "int"
+      ],
+      "refreshPeriod": [
+        "int"
+      ],
+      "refreshParams": [
+        "list"
+      ],
+      "freeRefreshTimes": [
+        "int"
+      ],
+      "extraRefreshTimes": [
+        "int"
+      ],
+      "extraCondition": [
+        "str"
+      ],
+      "extraParams": [
+        "str"
+      ],
+      "列1": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubTaskActivityConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4545609427948813253,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubTaskActivityConfig__-4545609427948813253.bytes",
+    "sha256": "a4d01a9d529a6889b20407604befa67e3efb327e9195d7675f609654394a4705",
+    "samples": [
+      {
+        "id": 130001,
+        "icon": "",
+        "name": {
+          "key": "每日任务"
+        },
+        "type": 1,
+        "param": 1300001,
+        "refreshPeriod": 2,
+        "refreshParams": [
+          24
+        ],
+        "freeRefreshTimes": 0,
+        "extraRefreshTimes": 0,
+        "extraCondition": "",
+        "extraParams": "",
+        "列1": 1
+      }
+    ]
+  },
+  {
+    "name": "CountryConfigConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 23,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "LangKey": [
+        "int"
+      ],
+      "countryFlagName": [
+        "str"
+      ],
+      "countryCode": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CountryConfigConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4402679814705778510,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CountryConfigConfig__-4402679814705778510.bytes",
+    "sha256": "ca0ff8ea1013558b5aeea57982b5dfd87eefce14a9f662d0690441e8a7c05b03",
+    "samples": [
+      {
+        "id": 1,
+        "LangKey": 1,
+        "countryFlagName": "country_zh",
+        "countryCode": [
+          "cn",
+          "tw",
+          "hk",
+          "mo"
+        ]
+      },
+      {
+        "id": 2,
+        "LangKey": 2,
+        "countryFlagName": "country_en",
+        "countryCode": [
+          "io",
+          "gb",
+          "vg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneEffectConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "sceneId": [
+        "int"
+      ],
+      "idleEffect": [
+        "str"
+      ],
+      "gameEffect": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SceneEffectConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4340394549084871643,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SceneEffectConfig__-4340394549084871643.bytes",
+    "sha256": "be6d7f7c2110cb73070c33775aa60e4de5f36a92ba2d0cc66355d0fee70f3c37",
+    "samples": [
+      {
+        "sceneId": 7,
+        "idleEffect": "effect/eff_idle_GuBao",
+        "gameEffect": "effect/eff_game_GuBao"
+      },
+      {
+        "sceneId": 8,
+        "idleEffect": "effect/idle_eff_HuoShan",
+        "gameEffect": "effect/hdzd_eff_HuoShan"
+      }
+    ]
+  },
+  {
+    "name": "StatisticEventConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "BuySkin": [
+        "int"
+      ],
+      "BuyScene": [
+        "int"
+      ],
+      "DailyCommUpgrade": [
+        "int"
+      ],
+      "DailyRaceGetLv": [
+        "int"
+      ],
+      "DailyCompleteLv": [
+        "int"
+      ],
+      "DailyWatchAds": [
+        "int"
+      ],
+      "DailyUseProp": [
+        "int"
+      ],
+      "MegicFinishOnce": [
+        "int"
+      ],
+      "DailyArenaWin": [
+        "int"
+      ],
+      "ArenaCombatCount": [
+        "int"
+      ],
+      "SelectCard": [
+        "int"
+      ],
+      "RaceGetLv": [
+        "int"
+      ],
+      "UseProp": [
+        "int"
+      ],
+      "MoveToXLevel": [
+        "int"
+      ],
+      "PassXLevel": [
+        "int"
+      ],
+      "HaveSkinNum": [
+        "int"
+      ],
+      "HaveSceneNum": [
+        "int"
+      ],
+      "UseSkill1": [
+        "int"
+      ],
+      "UseSkill2": [
+        "int"
+      ],
+      "UseSkill3": [
+        "int"
+      ],
+      "UseSkill4": [
+        "int"
+      ],
+      "UseSkill5": [
+        "int"
+      ],
+      "UseSkill6": [
+        "int"
+      ],
+      "HczzqLevelID": [
+        "int"
+      ],
+      "HczzqUnlocakSoldier1": [
+        "int"
+      ],
+      "HczzqUnlocakSoldier2": [
+        "int"
+      ],
+      "UpTower": [
+        "int"
+      ],
+      "CommanderUpgrade": [
+        "int"
+      ],
+      "ArenaWin": [
+        "int"
+      ],
+      "ArenaRank": [
+        "int"
+      ],
+      "Pass": [
+        "int"
+      ],
+      "CommanderUpgradeTotal": [
+        "int"
+      ],
+      "UseCoinTotal": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/StatisticEventConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4327593631075841171,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/StatisticEventConfig__-4327593631075841171.bytes",
+    "sha256": "964af74aff84ddb25927cc0503df41c7c1151af3efa77ee932a2da6b9c69544a",
+    "samples": [
+      {
+        "BuySkin": 110001,
+        "BuyScene": 110002,
+        "DailyCommUpgrade": 120003,
+        "DailyRaceGetLv": 110005,
+        "DailyCompleteLv": 110006,
+        "DailyWatchAds": 110007,
+        "DailyUseProp": 110008,
+        "MegicFinishOnce": 120002,
+        "DailyArenaWin": 130001,
+        "ArenaCombatCount": 130002,
+        "SelectCard": 110003,
+        "RaceGetLv": 220001,
+        "UseProp": 210004,
+        "MoveToXLevel": 200001,
+        "PassXLevel": 200002,
+        "HaveSkinNum": 210001,
+        "HaveSceneNum": 210002,
+        "UseSkill1": 210005,
+        "UseSkill2": 210006,
+        "UseSkill3": 210007,
+        "UseSkill4": 210008,
+        "UseSkill5": 210009,
+        "UseSkill6": 210010,
+        "HczzqLevelID": 220005,
+        "HczzqUnlocakSoldier1": 220002,
+        "HczzqUnlocakSoldier2": 220003,
+        "UpTower": 220004,
+        "CommanderUpgrade": 210003,
+        "ArenaWin": 230001,
+        "ArenaRank": 230002,
+        "Pass": 220006,
+        "CommanderUpgradeTotal": 220007,
+        "UseCoinTotal": 220008
+      }
+    ]
+  },
+  {
+    "name": "DiceShopConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 42,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "storeType": [
+        "int"
+      ],
+      "itemConfig": [
+        "list"
+      ],
+      "getType": [
+        "int"
+      ],
+      "price": [
+        "str"
+      ],
+      "videoBtnId": [
+        "int"
+      ],
+      "buyLimit": [
+        "int"
+      ],
+      "buyLimitParam": [
+        "int"
+      ],
+      "weight": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DiceShopConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4321295559514838004,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DiceShopConfig__-4321295559514838004.bytes",
+    "sha256": "cbd8e3a8cc46361b5ea746316bc56a3ad82d2bb72b482009aec634c4c4268573",
+    "samples": [
+      {
+        "id": 5002,
+        "storeType": 12,
+        "itemConfig": [
+          {
+            "datas": [
+              5002,
+              1
+            ]
+          }
+        ],
+        "getType": 2,
+        "price": "8101;100",
+        "videoBtnId": 0,
+        "buyLimit": 2,
+        "buyLimitParam": 1,
+        "weight": 0
+      },
+      {
+        "id": 5003,
+        "storeType": 12,
+        "itemConfig": [
+          {
+            "datas": [
+              5003,
+              1
+            ]
+          }
+        ],
+        "getType": 2,
+        "price": "8101;100",
+        "videoBtnId": 0,
+        "buyLimit": 2,
+        "buyLimitParam": 1,
+        "weight": 0
+      }
+    ]
+  },
+  {
+    "name": "BossConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 26,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "DelayTime": [
+        "int"
+      ],
+      "ActionTime": [
+        "list"
+      ],
+      "Skill1": [
+        "list"
+      ],
+      "Skill2": [
+        "list"
+      ],
+      "skill1_Hit": [
+        "int"
+      ],
+      "skill1_duration": [
+        "float"
+      ],
+      "skill1_first": [
+        "float"
+      ],
+      "skill1_second": [
+        "float"
+      ],
+      "skill2_Hit": [
+        "int"
+      ],
+      "skill2_duration": [
+        "float"
+      ],
+      "skill2_first": [
+        "float"
+      ],
+      "skill2_second": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/BossConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4278250707991355666,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/BossConfig__-4278250707991355666.bytes",
+    "sha256": "a5f39b3544fb9cff8521b7739f3e2a67208ba5498abe2801b46f85be6f48c93b",
+    "samples": [
+      {
+        "id": 1,
+        "DelayTime": 12000,
+        "ActionTime": [
+          17000
+        ],
+        "Skill1": [
+          1,
+          10
+        ],
+        "Skill2": [
+          1,
+          0
+        ],
+        "skill1_Hit": 3,
+        "skill1_duration": 5.0,
+        "skill1_first": 0.5,
+        "skill1_second": 1.5,
+        "skill2_Hit": 20,
+        "skill2_duration": 0.0,
+        "skill2_first": 0.0,
+        "skill2_second": 0.0
+      },
+      {
+        "id": 2,
+        "DelayTime": 15000,
+        "ActionTime": [
+          16000
+        ],
+        "Skill1": [
+          1,
+          10
+        ],
+        "Skill2": [
+          1,
+          0
+        ],
+        "skill1_Hit": 2,
+        "skill1_duration": 2.0,
+        "skill1_first": 3.0,
+        "skill1_second": 3.0,
+        "skill2_Hit": 5,
+        "skill2_duration": 3.0,
+        "skill2_first": 10.0,
+        "skill2_second": 0.5
+      }
+    ]
+  },
+  {
+    "name": "LimitedProductConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 1,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "productId": [
+        "int"
+      ],
+      "isActive": [
+        "bool"
+      ],
+      "limitedTime": [
+        "int"
+      ],
+      "levelId": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/LimitedProductConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -4049270450653498183,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/LimitedProductConfig__-4049270450653498183.bytes",
+    "sha256": "82809fee28562dcf9227f1d93f232abec2b945640cf39754811a7ec54dd17aae",
+    "samples": [
+      {
+        "id": 1,
+        "productId": 100201,
+        "isActive": true,
+        "limitedTime": 24,
+        "levelId": 6
+      }
+    ]
+  },
+  {
+    "name": "MLanguageImageConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 2,
+    "fields": {
+      "id": [
+        "str"
+      ],
+      "zh_cn": [
+        "list"
+      ],
+      "zh_tw": [
+        "list"
+      ],
+      "en": [
+        "list"
+      ],
+      "sp": [
+        "list"
+      ],
+      "po": [
+        "list"
+      ],
+      "ru": [
+        "list"
+      ],
+      "fr": [
+        "list"
+      ],
+      "ge": [
+        "list"
+      ],
+      "ja": [
+        "list"
+      ],
+      "ko": [
+        "list"
+      ],
+      "In": [
+        "list"
+      ],
+      "It": [
+        "list"
+      ],
+      "Vi": [
+        "list"
+      ],
+      "Ma": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/MLanguageImageConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -3707332582620369402,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/MLanguageImageConfig__-3707332582620369402.bytes",
+    "sha256": "547b7641b5eed3da403bdf3382468ab90bcd80f889db27a22bb8c34d73e5b10f",
+    "samples": [
+      {
+        "id": "logo",
+        "zh_cn": [
+          "logo_cn",
+          "LogoUI"
+        ],
+        "zh_tw": [
+          "logo_cn",
+          "LogoUI"
+        ],
+        "en": [
+          "logo",
+          "LogoUI"
+        ],
+        "sp": [
+          "logo",
+          "LogoUI"
+        ],
+        "po": [
+          "logo",
+          "LogoUI"
+        ],
+        "ru": [
+          "logo",
+          "LogoUI"
+        ],
+        "fr": [
+          "logo",
+          "LogoUI"
+        ],
+        "ge": [
+          "logo",
+          "LogoUI"
+        ],
+        "ja": [
+          "logo",
+          "LogoUI"
+        ],
+        "ko": [
+          "logo",
+          "LogoUI"
+        ],
+        "In": [
+          "logo",
+          "LogoUI"
+        ],
+        "It": [
+          "logo",
+          "LogoUI"
+        ],
+        "Vi": [
+          "logo",
+          "LogoUI"
+        ],
+        "Ma": [
+          "logo",
+          "LogoUI"
+        ]
+      },
+      {
+        "id": "defeat",
+        "zh_cn": [
+          "wenzi03",
+          "FailUI"
+        ],
+        "zh_tw": [
+          "wenzi05",
+          "FailUI"
+        ],
+        "en": [
+          "wenzi05",
+          "FailUI"
+        ],
+        "sp": [
+          null,
+          ""
+        ],
+        "po": [
+          "defete_pr",
+          "FailUI"
+        ],
+        "ru": [
+          null,
+          ""
+        ],
+        "fr": [
+          null,
+          ""
+        ],
+        "ge": [
+          null,
+          ""
+        ],
+        "ja": [
+          null,
+          ""
+        ],
+        "ko": [
+          null,
+          ""
+        ],
+        "In": [
+          null,
+          ""
+        ],
+        "It": [
+          null,
+          ""
+        ],
+        "Vi": [
+          null,
+          ""
+        ],
+        "Ma": [
+          null,
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AgentGradeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "AgentPath": [
+        "str"
+      ],
+      "AgentName": [
+        "str"
+      ],
+      "SkillUseId": [
+        "int"
+      ],
+      "ActionRate": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AgentGradeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -3678470880819570928,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AgentGradeConfig__-3678470880819570928.bytes",
+    "sha256": "af4de418f53140ebd52725017f3ee69f5d26ba13e29d5ebcc7975ad685d7e0a1",
+    "samples": [
+      {
+        "id": 1,
+        "AgentPath": "model/mlagent/agent 0",
+        "AgentName": "Agent 0",
+        "SkillUseId": 1,
+        "ActionRate": 1.0
+      },
+      {
+        "id": 2,
+        "AgentPath": "model/mlagent/agent 0",
+        "AgentName": "Agent 1",
+        "SkillUseId": 2,
+        "ActionRate": 0.95
+      }
+    ]
+  },
+  {
+    "name": "UIMonitorConfigConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 41,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "nodeId": [
+        "int"
+      ],
+      "offect": [
+        "list"
+      ],
+      "scale": [
+        "list"
+      ],
+      "tipsEvent": [
+        "list"
+      ],
+      "hintStyle": [
+        "str"
+      ],
+      "hintType": [
+        "int"
+      ],
+      "monoType": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/UIMonitorConfigConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2919785485982046731,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/UIMonitorConfigConfig__-2919785485982046731.bytes",
+    "sha256": "2a0aa06f1ea21badac0d7b16a94e33417c54557c26f74bc5bcc4e282d3aa08af",
+    "samples": [
+      {
+        "id": 1,
+        "nodeId": 1,
+        "offect": [
+          0.0,
+          50.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "tipsEvent": [
+          "btnOpen1",
+          "btnOpen2",
+          "btnOpen3",
+          "toggleATD",
+          "toggleCarFetter",
+          "btnATDCuOpenTen",
+          "btnATDSliverOpenTen",
+          "btnATDGoldOpenTen"
+        ],
+        "hintStyle": "ui/mainmenu/hintpoint.prefab",
+        "hintType": 1,
+        "monoType": ""
+      },
+      {
+        "id": 2,
+        "nodeId": 3,
+        "offect": [
+          -9.0,
+          35.0
+        ],
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "tipsEvent": [
+          "RefreshCu"
+        ],
+        "hintStyle": "ui/mainmenu/hintpoint.prefab",
+        "hintType": 1,
+        "monoType": ""
+      }
+    ]
+  },
+  {
+    "name": "SoldierConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 8,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "EntityID": [
+        "int"
+      ],
+      "shipType": [
+        "int"
+      ],
+      "hp": [
+        "int"
+      ],
+      "attack": [
+        "int"
+      ],
+      "occupy": [
+        "int"
+      ],
+      "reinforce": [
+        "int"
+      ],
+      "voyage": [
+        "int"
+      ],
+      "param1": [
+        "float"
+      ],
+      "param2": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SoldierConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2767867352703041124,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SoldierConfig__-2767867352703041124.bytes",
+    "sha256": "f9bb1f5e6a20ddff27f4257dcb29700e4cc36f11b495709ce8c9bc7d35388cd4",
+    "samples": [
+      {
+        "id": 1,
+        "EntityID": 501,
+        "shipType": 1,
+        "hp": 1,
+        "attack": 1,
+        "occupy": 1,
+        "reinforce": 1,
+        "voyage": 5,
+        "param1": 0.0,
+        "param2": 0.0
+      },
+      {
+        "id": 2,
+        "EntityID": 650,
+        "shipType": 2,
+        "hp": 2,
+        "attack": 2,
+        "occupy": 1,
+        "reinforce": 2,
+        "voyage": 5,
+        "param1": 0.0,
+        "param2": 0.0
+      }
+    ]
+  },
+  {
+    "name": "PubdailyLivenessConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "livenessValue": [
+        "int"
+      ],
+      "activityID": [
+        "int"
+      ],
+      "rewards": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubdailyLivenessConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2652210540928640416,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubdailyLivenessConfig__-2652210540928640416.bytes",
+    "sha256": "a65acf230ba35187205a090511e10b2ab5b4a7143462e0221f3abe8d707612b5",
+    "samples": [
+      {
+        "id": 1,
+        "livenessValue": 30,
+        "activityID": 130001,
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              50
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "livenessValue": 60,
+        "activityID": 130001,
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              100
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GuideConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 12,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "guildLv": [
+        "int"
+      ],
+      "guildsmallLv": [
+        "int"
+      ],
+      "nextGuildStage": [
+        "int"
+      ],
+      "title": [
+        "str"
+      ],
+      "explain": [
+        "str"
+      ],
+      "button": [
+        "str"
+      ],
+      "picture": [
+        "str"
+      ],
+      "param": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GuideConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2570221420212009271,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GuideConfig__-2570221420212009271.bytes",
+    "sha256": "8e09747653e9fbb0b9d0fec1d6082209f282915bd8298e229cc9fe348823384f",
+    "samples": [
+      {
+        "id": 1,
+        "guildLv": 0,
+        "guildsmallLv": 0,
+        "nextGuildStage": 2,
+        "title": "guide/11",
+        "explain": "guide/12",
+        "button": "guide/13",
+        "picture": "guideUI_icon1",
+        "param": "hdzd_effect_yindao"
+      },
+      {
+        "id": 2,
+        "guildLv": -1,
+        "guildsmallLv": 0,
+        "nextGuildStage": 3,
+        "title": "",
+        "explain": "",
+        "button": "",
+        "picture": "",
+        "param": ""
+      }
+    ]
+  },
+  {
+    "name": "NewRankSettingConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "intPlayerRank": [
+        "int"
+      ],
+      "HM_RankShowNum": [
+        "int"
+      ],
+      "HM_UpPlayerNum": [
+        "int"
+      ],
+      "HM_LowPlayerNum": [
+        "int"
+      ],
+      "HM_RankGapRag": [
+        "list"
+      ],
+      "GM_RankGapRe": [
+        "list"
+      ],
+      "moveDownOneT": [
+        "int"
+      ],
+      "playerItemScaleT": [
+        "int"
+      ],
+      "playerItemscaleV": [
+        "int"
+      ],
+      "playerItemRankChangeT": [
+        "int"
+      ],
+      "rankSliderT": [
+        "int"
+      ],
+      "playerItemLargeScaleT": [
+        "int"
+      ],
+      "playerItemSmallScaleT": [
+        "int"
+      ],
+      "playerItemLargeScaleN": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/NewRankSettingConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2556753006374123169,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/NewRankSettingConfig__-2556753006374123169.bytes",
+    "sha256": "82debd6911924f34f48dc53b6486356f99b579690640b8ec3d67856b56449d44",
+    "samples": [
+      {
+        "intPlayerRank": 20000,
+        "HM_RankShowNum": 100,
+        "HM_UpPlayerNum": 6,
+        "HM_LowPlayerNum": 3,
+        "HM_RankGapRag": [
+          1,
+          99
+        ],
+        "GM_RankGapRe": [
+          1,
+          5
+        ],
+        "moveDownOneT": 200,
+        "playerItemScaleT": 300,
+        "playerItemscaleV": 11,
+        "playerItemRankChangeT": 5000,
+        "rankSliderT": 1000,
+        "playerItemLargeScaleT": 400,
+        "playerItemSmallScaleT": 200,
+        "playerItemLargeScaleN": 15
+      }
+    ]
+  },
+  {
+    "name": "CommanderUpgradeBConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 28,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "upgradeCost": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CommanderUpgradeBConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2518609363525732876,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CommanderUpgradeBConfig__-2518609363525732876.bytes",
+    "sha256": "9d1fc1360aceff3874a1ecd68766392862aebdb2f72afc8092fd516f85c4f5c0",
+    "samples": [
+      {
+        "id": 1,
+        "upgradeCost": 5
+      },
+      {
+        "id": 2,
+        "upgradeCost": 8
+      }
+    ]
+  },
+  {
+    "name": "LargeNumConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 108,
+    "fields": {
+      "mag": [
+        "int"
+      ],
+      "magName": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/LargeNumConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2313789674284110916,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/LargeNumConfig__-2313789674284110916.bytes",
+    "sha256": "c5c9695106e3a3f8cf1e4b288de1434e5b2950a72521fd1dd8730e2ba978b8e6",
+    "samples": [
+      {
+        "mag": 3,
+        "magName": "K"
+      },
+      {
+        "mag": 6,
+        "magName": "M"
+      }
+    ]
+  },
+  {
+    "name": "SummerRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 2,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "itemId": [
+        "list"
+      ],
+      "itemCount": [
+        "list"
+      ],
+      "giftWay": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SummerRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2228245878408143149,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SummerRewardConfig__-2228245878408143149.bytes",
+    "sha256": "9d1ac0aaeb3e1a73d5c354d597abe728f2eea83a9068be28ea2562f850b8a9e1",
+    "samples": [
+      {
+        "id": 1,
+        "itemId": [
+          2001,
+          2002,
+          2003
+        ],
+        "itemCount": [
+          2,
+          2,
+          2
+        ],
+        "giftWay": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "itemId": [
+          310,
+          6
+        ],
+        "itemCount": [
+          1,
+          1
+        ],
+        "giftWay": [
+          99998,
+          99999
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LevelConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 561,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "LevelType": [
+        "list"
+      ],
+      "SceneId": [
+        "int"
+      ],
+      "SceneId2": [
+        "int"
+      ],
+      "SceneId3": [
+        "int"
+      ],
+      "SceneId4": [
+        "int"
+      ],
+      "SceneId5": [
+        "int"
+      ],
+      "SceneId6": [
+        "int"
+      ],
+      "SceneId7": [
+        "int"
+      ],
+      "SceneId8": [
+        "int"
+      ],
+      "SceneId9": [
+        "int"
+      ],
+      "SceneId10": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/LevelConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -2174716100685924796,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/LevelConfig__-2174716100685924796.bytes",
+    "sha256": "29b712bef52ac7294cb8892015579e89ce178111974043465a49c6fe57cb0592",
+    "samples": [
+      {
+        "id": 0,
+        "LevelType": [
+          1,
+          0,
+          0
+        ],
+        "SceneId": 0,
+        "SceneId2": 0,
+        "SceneId3": 0,
+        "SceneId4": 0,
+        "SceneId5": 0,
+        "SceneId6": 0,
+        "SceneId7": 0,
+        "SceneId8": 0,
+        "SceneId9": 0,
+        "SceneId10": 0
+      },
+      {
+        "id": 1,
+        "LevelType": [
+          1,
+          0,
+          0
+        ],
+        "SceneId": 1,
+        "SceneId2": 0,
+        "SceneId3": 0,
+        "SceneId4": 0,
+        "SceneId5": 0,
+        "SceneId6": 0,
+        "SceneId7": 0,
+        "SceneId8": 0,
+        "SceneId9": 0,
+        "SceneId10": 0
+      }
+    ]
+  },
+  {
+    "name": "DiceGameConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 24,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "pos": [
+        "str"
+      ],
+      "siblingIndex": [
+        "int"
+      ],
+      "type": [
+        "int"
+      ],
+      "rewards": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DiceGameConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -1806157171993080797,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DiceGameConfig__-1806157171993080797.bytes",
+    "sha256": "390d4d362de90143368a25e35d3091463dfb6fc3355d876b0fd72c83fb7c4d76",
+    "samples": [
+      {
+        "id": 1,
+        "pos": "0.00;-197.00",
+        "siblingIndex": 23,
+        "type": 1,
+        "rewards": [
+          {
+            "datas": [
+              11001,
+              100
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pos": "-109.00;-128.00",
+        "siblingIndex": 22,
+        "type": 1,
+        "rewards": [
+          {
+            "datas": [
+              11001,
+              5
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SpecialLevelConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 20,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "SceneId": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SpecialLevelConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -1609422139377177832,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SpecialLevelConfig__-1609422139377177832.bytes",
+    "sha256": "b4d64d2b97f6ad935c78159ed69942c0fc7191d6fff8befcc22a17e2b57741fc",
+    "samples": [
+      {
+        "id": 1,
+        "SceneId": 2001
+      },
+      {
+        "id": 2,
+        "SceneId": 2002
+      }
+    ]
+  },
+  {
+    "name": "RankRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 12,
+    "fields": {
+      "ID": [
+        "int"
+      ],
+      "type": [
+        "int"
+      ],
+      "rank": [
+        "int"
+      ],
+      "reward": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/RankRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -806105131745585972,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/RankRewardConfig__-806105131745585972.bytes",
+    "sha256": "a376ba98a86cfd0f5880140ceabd92deff1a892b5f226e2929239ede1ec12bfa",
+    "samples": [
+      {
+        "ID": 1,
+        "type": 1,
+        "rank": 1,
+        "reward": [
+          {
+            "datas": [
+              1002,
+              10
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              200
+            ]
+          }
+        ]
+      },
+      {
+        "ID": 2,
+        "type": 1,
+        "rank": 5,
+        "reward": [
+          {
+            "datas": [
+              1002,
+              5
+            ]
+          },
+          {
+            "datas": [
+              1001,
+              100
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "WXAMSConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 59,
+    "fields": {
+      "Id": [
+        "int"
+      ],
+      "PlacementId": [
+        "int"
+      ],
+      "ReportLable": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/WXAMSConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -470316582424064309,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/WXAMSConfig__-470316582424064309.bytes",
+    "sha256": "4d16f223d5efe82f9ae25a1e37898a54c6ba2974eea1255f7275faf8ddbcbb45",
+    "samples": [
+      {
+        "Id": 1,
+        "PlacementId": 4,
+        "ReportLable": "ShopUI_sendGold"
+      },
+      {
+        "Id": 2,
+        "PlacementId": 67,
+        "ReportLable": "ShopUI_sendSkin1"
+      }
+    ]
+  },
+  {
+    "name": "MatchLevelConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 61,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "title": [
+        "str"
+      ],
+      "MaxScore": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/MatchLevelConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -419787790640830558,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/MatchLevelConfig__-419787790640830558.bytes",
+    "sha256": "87f99fd5ba672a98b0249314e9338e15bf58f02fa38e84bc1a73677937456de4",
+    "samples": [
+      {
+        "id": 1,
+        "title": "一级列兵",
+        "MaxScore": 50
+      },
+      {
+        "id": 2,
+        "title": "二级列兵",
+        "MaxScore": 100
+      }
+    ]
+  },
+  {
+    "name": "AIConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 212,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "AIType": [
+        "int"
+      ],
+      "DelayTime": [
+        "int"
+      ],
+      "ActionTime": [
+        "list"
+      ],
+      "ActionNum": [
+        "int"
+      ],
+      "Protect": [
+        "list"
+      ],
+      "Defend": [
+        "list"
+      ],
+      "Reinforce": [
+        "list"
+      ],
+      "Occupy": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AIConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -95149560525830249,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AIConfig__-95149560525830249.bytes",
+    "sha256": "7c1a24f3cc6783b4d1ecd08752c638e8437aea4b85c57bdd89eb53ab86296f93",
+    "samples": [
+      {
+        "id": 1,
+        "AIType": 2,
+        "DelayTime": 10000,
+        "ActionTime": [
+          5000,
+          10000
+        ],
+        "ActionNum": 1,
+        "Protect": [
+          10,
+          0
+        ],
+        "Defend": [
+          10,
+          0
+        ],
+        "Reinforce": [
+          10,
+          0
+        ],
+        "Occupy": [
+          10,
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "AIType": 2,
+        "DelayTime": 9800,
+        "ActionTime": [
+          4900,
+          9800
+        ],
+        "ActionNum": 1,
+        "Protect": [
+          10,
+          0
+        ],
+        "Defend": [
+          10,
+          0
+        ],
+        "Reinforce": [
+          10,
+          0
+        ],
+        "Occupy": [
+          10,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AgentSkillUseConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 9,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "total": [
+        "int"
+      ],
+      "DelayTime": [
+        "float"
+      ],
+      "rate_skill1": [
+        "int"
+      ],
+      "space_skill1": [
+        "float"
+      ],
+      "rate_skill2": [
+        "int"
+      ],
+      "space_skill2": [
+        "float"
+      ],
+      "rate_skill3": [
+        "int"
+      ],
+      "space_skill3": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AgentSkillUseConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": -75906465665993299,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AgentSkillUseConfig__-75906465665993299.bytes",
+    "sha256": "56a2df8b73013a54bdf6a9a1e5174a33276ea9af0e6edd2310dc508b67c8f8d9",
+    "samples": [
+      {
+        "id": 1,
+        "total": 6,
+        "DelayTime": 40.0,
+        "rate_skill1": 15,
+        "space_skill1": 50.0,
+        "rate_skill2": 10,
+        "space_skill2": 60.0,
+        "rate_skill3": 15,
+        "space_skill3": 65.0
+      },
+      {
+        "id": 2,
+        "total": 5,
+        "DelayTime": 45.0,
+        "rate_skill1": 15,
+        "space_skill1": 50.0,
+        "rate_skill2": 10,
+        "space_skill2": 50.0,
+        "rate_skill3": 12,
+        "space_skill3": 70.0
+      }
+    ]
+  },
+  {
+    "name": "OnceAudioConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "AudioInfos",
+    "rowCount": 53,
+    "fields": {
+      "Name": [
+        "str"
+      ],
+      "Length": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/OnceAudioConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 101477137330599891,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/OnceAudioConfig__101477137330599891.bytes",
+    "sha256": "4da2ad1a00bf3967498dd33dab1bd22c7d332ce7ac854aea103d8a04f527edb5",
+    "samples": [
+      {
+        "Name": "Audio/Once/boss/boss1_1.mp3",
+        "Length": "5.25"
+      },
+      {
+        "Name": "Audio/Once/boss/boss1_2_1.wav",
+        "Length": "0.76"
+      }
+    ]
+  },
+  {
+    "name": "MenuTabConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 5,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "isActive": [
+        "bool"
+      ],
+      "icon": [
+        "str"
+      ],
+      "title": [
+        "dict"
+      ],
+      "uiName": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/MenuTabConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 217408806575976121,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/MenuTabConfig__217408806575976121.bytes",
+    "sha256": "03969021130da56551908fd84449fa18132e0ee14557f3103b728019e56eb4a5",
+    "samples": [
+      {
+        "id": 1,
+        "isActive": true,
+        "icon": "tubiao01",
+        "title": {
+          "key": "MenuTabUI.store"
+        },
+        "uiName": "StorePurchaseUI"
+      },
+      {
+        "id": 2,
+        "isActive": true,
+        "icon": "tubiao02",
+        "title": {
+          "key": "MenuTabUI.skins"
+        },
+        "uiName": "ShopUI"
+      }
+    ]
+  },
+  {
+    "name": "GameProductConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 16,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "isActive": [
+        "int"
+      ],
+      "orderId": [
+        "int"
+      ],
+      "storeType": [
+        "int"
+      ],
+      "name": [
+        "dict"
+      ],
+      "detail": [
+        "dict"
+      ],
+      "PackTag": [
+        "dict"
+      ],
+      "NoAds": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "itemConfig": [
+        "list"
+      ],
+      "getType": [
+        "int"
+      ],
+      "price": [
+        "str"
+      ],
+      "priceText": [
+        "dict"
+      ],
+      "videoBtnId": [
+        "int"
+      ],
+      "buyLimit": [
+        "int"
+      ],
+      "buyLimitParam": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GameProductConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 271155378108439094,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GameProductConfig__271155378108439094.bytes",
+    "sha256": "d72b77359c22ef571e3fb4fa45e35f96424520a800c1fe6b57410b8959e98d5a",
+    "samples": [
+      {
+        "id": 100101,
+        "isActive": 1,
+        "orderId": 10,
+        "storeType": 2,
+        "name": {
+          "key": ""
+        },
+        "detail": {
+          "key": ""
+        },
+        "PackTag": {
+          "key": ""
+        },
+        "NoAds": 0,
+        "icon": "jibitubiao02",
+        "itemConfig": [
+          {
+            "datas": [
+              1001,
+              300
+            ]
+          }
+        ],
+        "getType": 1,
+        "price": "12",
+        "priceText": {
+          "key": ""
+        },
+        "videoBtnId": 0,
+        "buyLimit": 1,
+        "buyLimitParam": 2
+      },
+      {
+        "id": 100102,
+        "isActive": 1,
+        "orderId": 11,
+        "storeType": 2,
+        "name": {
+          "key": ""
+        },
+        "detail": {
+          "key": ""
+        },
+        "PackTag": {
+          "key": ""
+        },
+        "NoAds": 0,
+        "icon": "jibitubiao03",
+        "itemConfig": [
+          {
+            "datas": [
+              1001,
+              2250
+            ]
+          }
+        ],
+        "getType": 2,
+        "price": "90",
+        "priceText": {
+          "key": ""
+        },
+        "videoBtnId": 0,
+        "buyLimit": 0,
+        "buyLimitParam": 0
+      }
+    ]
+  },
+  {
+    "name": "DicePointConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 6,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "weight": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DicePointConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 528421613706867016,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DicePointConfig__528421613706867016.bytes",
+    "sha256": "0c352995c074daf6fd39c2311fa8e0a38886a882ca5b09f4458cd58a9f225285",
+    "samples": [
+      {
+        "id": 1,
+        "weight": 100
+      },
+      {
+        "id": 2,
+        "weight": 100
+      }
+    ]
+  },
+  {
+    "name": "RaceConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "raceActReward": [
+        "list"
+      ],
+      "raceActAiSpeed": [
+        "list"
+      ],
+      "raceActTargetLVRange": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/RaceConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 573562799608089732,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/RaceConfig__573562799608089732.bytes",
+    "sha256": "21802eeb0cd7ba66037f5aa3a921d7c5f9bded665c984dbd074b03c5085afb1e",
+    "samples": [
+      {
+        "raceActReward": [
+          500,
+          300,
+          200
+        ],
+        "raceActAiSpeed": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "raceActTargetLVRange": [
+          5,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneSkinConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 15,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "skinType": [
+        "int"
+      ],
+      "iconName": [
+        "str"
+      ],
+      "idleIconName": [
+        "str"
+      ],
+      "gameIconName": [
+        "str"
+      ],
+      "prefabId": [
+        "int"
+      ],
+      "castType": [
+        "int"
+      ],
+      "price": [
+        "int"
+      ],
+      "DiamondPrice": [
+        "int"
+      ],
+      "lockState": [
+        "int"
+      ],
+      "sortNo": [
+        "int"
+      ],
+      "actNo": [
+        "int"
+      ],
+      "special": [
+        "int"
+      ],
+      "tag": [
+        "str"
+      ],
+      "describe": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SceneSkinConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 1208445266077871043,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SceneSkinConfig__1208445266077871043.bytes",
+    "sha256": "54cfca2295f303d231123c3635d519dfaece56e0f28ad1a639bcff8a63a4aa50",
+    "samples": [
+      {
+        "id": 1,
+        "skinType": 4,
+        "iconName": "tubiao01",
+        "idleIconName": "scene_skin_idle1",
+        "gameIconName": "scene_skin_game1",
+        "prefabId": 12001,
+        "castType": 1002,
+        "price": 0,
+        "DiamondPrice": 0,
+        "lockState": 2,
+        "sortNo": 0,
+        "actNo": 0,
+        "special": 0,
+        "tag": "",
+        "describe": ""
+      },
+      {
+        "id": 2,
+        "skinType": 4,
+        "iconName": "tubiao02",
+        "idleIconName": "scene_skin_idle2",
+        "gameIconName": "scene_skin_game2",
+        "prefabId": 12002,
+        "castType": 1001,
+        "price": 1000,
+        "DiamondPrice": 0,
+        "lockState": 1,
+        "sortNo": 0,
+        "actNo": 0,
+        "special": 1,
+        "tag": "",
+        "describe": ""
+      }
+    ]
+  },
+  {
+    "name": "PubActivityConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 9,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "module": [
+        "str"
+      ],
+      "uniqueId": [
+        "str"
+      ],
+      "parentActivityID": [
+        "list"
+      ],
+      "activityName": [
+        "dict"
+      ],
+      "open": [
+        "int"
+      ],
+      "areaID": [
+        "int"
+      ],
+      "btnPriority": [
+        "int"
+      ],
+      "popPriority": [
+        "int"
+      ],
+      "noticeAutoPop": [
+        "int"
+      ],
+      "launchPopType": [
+        "int"
+      ],
+      "noticeType": [
+        "list"
+      ],
+      "noticeParams": [
+        "list"
+      ],
+      "noticeDes": [
+        "dict"
+      ],
+      "launchType": [
+        "list"
+      ],
+      "launchParams": [
+        "list"
+      ],
+      "overType": [
+        "list"
+      ],
+      "overParams": [
+        "list"
+      ],
+      "closeType": [
+        "list"
+      ],
+      "closeParams": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubActivityConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 1486502507070037394,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubActivityConfig__1486502507070037394.bytes",
+    "sha256": "026a012226582f2dd8dd68671c3cb0825d01f2c833226e764cced083c99ffdf1",
+    "samples": [
+      {
+        "id": 130001,
+        "module": "player_daily_task",
+        "uniqueId": "",
+        "parentActivityID": [
+          1300001
+        ],
+        "activityName": {
+          "key": "每日任务"
+        },
+        "open": 1,
+        "areaID": 1,
+        "btnPriority": 3,
+        "popPriority": 3,
+        "noticeAutoPop": 0,
+        "launchPopType": 0,
+        "noticeType": [],
+        "noticeParams": [],
+        "noticeDes": {
+          "key": ""
+        },
+        "launchType": [],
+        "launchParams": [],
+        "overType": [],
+        "overParams": [],
+        "closeType": [],
+        "closeParams": []
+      },
+      {
+        "id": 1601001,
+        "module": "player_achievement",
+        "uniqueId": "",
+        "parentActivityID": [],
+        "activityName": {
+          "key": "成就"
+        },
+        "open": 1,
+        "areaID": 1,
+        "btnPriority": 3,
+        "popPriority": 3,
+        "noticeAutoPop": 0,
+        "launchPopType": 0,
+        "noticeType": [],
+        "noticeParams": [],
+        "noticeDes": {
+          "key": ""
+        },
+        "launchType": [],
+        "launchParams": [],
+        "overType": [],
+        "overParams": [],
+        "closeType": [],
+        "closeParams": []
+      }
+    ]
+  },
+  {
+    "name": "PubNTActivityConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 1,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "name": [
+        "dict"
+      ],
+      "accType": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubNTActivityConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 1603732408752247851,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubNTActivityConfig__1603732408752247851.bytes",
+    "sha256": "7c95519377232a2a76455b983cb943a7d85ff663911952316b7d2b765f4be062",
+    "samples": [
+      {
+        "id": 1301,
+        "icon": "",
+        "name": {
+          "key": "PubnoviceTask_name"
+        },
+        "accType": 1
+      }
+    ]
+  },
+  {
+    "name": "HeadBoxConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 8,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "lockIcon": [
+        "str"
+      ],
+      "atlas": [
+        "str"
+      ],
+      "name": [
+        "dict"
+      ],
+      "des": [
+        "dict"
+      ],
+      "weight": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/HeadBoxConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 1695004663484185210,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/HeadBoxConfig__1695004663484185210.bytes",
+    "sha256": "df9a6efb6cf23e76b4ed83649ea831bcb1be0ea7c0f08733bfee710ff1f64595",
+    "samples": [
+      {
+        "id": 1,
+        "icon": "Tx_frame01_small",
+        "lockIcon": "Tx_frame01_small_lock",
+        "atlas": "Headport",
+        "name": {
+          "key": ""
+        },
+        "des": {
+          "key": ""
+        },
+        "weight": 10000
+      },
+      {
+        "id": 2,
+        "icon": "Tx_frame02_small",
+        "lockIcon": "Tx_frame02_small_lock",
+        "atlas": "Headport",
+        "name": {
+          "key": ""
+        },
+        "des": {
+          "key": ""
+        },
+        "weight": 10000
+      }
+    ]
+  },
+  {
+    "name": "CommanderBConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 6,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "name": [
+        "str"
+      ],
+      "maxLevel": [
+        "int"
+      ],
+      "unlockType": [
+        "int"
+      ],
+      "describe": [
+        "str"
+      ],
+      "unlockLevel": [
+        "int"
+      ],
+      "unlockPrice": [
+        "list"
+      ],
+      "skills": [
+        "list"
+      ],
+      "EntityId": [
+        "int"
+      ],
+      "IconName": [
+        "str"
+      ],
+      "usePercent": [
+        "int"
+      ],
+      "headport": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CommanderBConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 1895016442835563938,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CommanderBConfig__1895016442835563938.bytes",
+    "sha256": "36bcf81ff0c620de5878a62258f3da5fa2393c9362a5466395c21aac7d141fce",
+    "samples": [
+      {
+        "id": 1,
+        "name": "CommanderName.1",
+        "maxLevel": 28,
+        "unlockType": 1,
+        "describe": "",
+        "unlockLevel": 2,
+        "unlockPrice": [
+          {
+            "datas": [
+              8001,
+              0
+            ]
+          }
+        ],
+        "skills": [
+          1,
+          2,
+          3
+        ],
+        "EntityId": 8031,
+        "IconName": "touxiang01",
+        "usePercent": 35,
+        "headport": "Tx_hero02"
+      },
+      {
+        "id": 2,
+        "name": "CommanderName.2",
+        "maxLevel": 28,
+        "unlockType": 1,
+        "describe": "",
+        "unlockLevel": 12,
+        "unlockPrice": [
+          {
+            "datas": [
+              8002,
+              0
+            ]
+          }
+        ],
+        "skills": [
+          4,
+          5,
+          6
+        ],
+        "EntityId": 8032,
+        "IconName": "touxiang02",
+        "usePercent": 25,
+        "headport": "Tx_hero01"
+      }
+    ]
+  },
+  {
+    "name": "DailyChallengeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "awardId": [
+        "list"
+      ],
+      "awardCount": [
+        "list"
+      ],
+      "challengeLevel": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DailyChallengeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2089662072014509601,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DailyChallengeConfig__2089662072014509601.bytes",
+    "sha256": "c23b0ef9d7f05bae267f54d3f054700f10a15810702bb923c2e2ad4bdc17444e",
+    "samples": [
+      {
+        "id": 1,
+        "awardId": [
+          1001
+        ],
+        "awardCount": [
+          100
+        ],
+        "challengeLevel": [
+          131,
+          39,
+          78,
+          41,
+          112,
+          31,
+          132,
+          138,
+          69,
+          105,
+          65,
+          30,
+          47,
+          127,
+          111,
+          96,
+          63,
+          64,
+          125,
+          56,
+          27,
+          34,
+          90,
+          60,
+          66,
+          71,
+          26,
+          84,
+          62,
+          50
+        ]
+      },
+      {
+        "id": 2,
+        "awardId": [
+          1001
+        ],
+        "awardCount": [
+          150
+        ],
+        "challengeLevel": [
+          101,
+          121,
+          20,
+          124,
+          104,
+          134,
+          114,
+          35,
+          25,
+          123,
+          113,
+          130,
+          33,
+          109,
+          117,
+          122,
+          110,
+          102,
+          44,
+          51,
+          107,
+          106,
+          40,
+          100,
+          80,
+          136,
+          133,
+          137,
+          280,
+          70
+        ]
+      }
+    ]
+  },
+  {
+    "name": "FirstChargeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "itemIds": [
+        "list"
+      ],
+      "itemCounts": [
+        "list"
+      ],
+      "iconAltas": [
+        "list"
+      ],
+      "iconNames": [
+        "list"
+      ],
+      "nameLange": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/FirstChargeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2339787394431058783,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/FirstChargeConfig__2339787394431058783.bytes",
+    "sha256": "4ad864fa07d55dab2a638351b9c890dc710631c3b80788e35e876bf382af3b98",
+    "samples": [
+      {
+        "id": 1,
+        "itemIds": [
+          3003,
+          2007,
+          2008,
+          2009
+        ],
+        "itemCounts": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "iconAltas": [
+          "FirstChargeUI",
+          "PublicIcon"
+        ],
+        "iconNames": [
+          "Firstcharge_icon_dgl",
+          "heroSkill7",
+          "heroSkill8",
+          "heroSkill9"
+        ],
+        "nameLange": [
+          "CommanderName.3",
+          "Commander.SkillName.7",
+          "Commander.SkillName.8",
+          "Commander.SkillName.9"
+        ]
+      },
+      {
+        "id": 2,
+        "itemIds": [
+          118,
+          218,
+          318
+        ],
+        "itemCounts": [
+          1,
+          1,
+          1
+        ],
+        "iconAltas": [
+          "SkinAndToolIcon"
+        ],
+        "iconNames": [
+          "bubing18",
+          "dupaibing18",
+          "qibing18"
+        ],
+        "nameLange": [
+          "ShopUI.Infantry",
+          "ShopUI.Mauler",
+          "ShopUI.Cavalry"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ArenaInitAiSocreConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "rankRnage": [
+        "list"
+      ],
+      "maxCup": [
+        "int"
+      ],
+      "minCup": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaInitAiSocreConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2539553000908373710,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaInitAiSocreConfig__2539553000908373710.bytes",
+    "sha256": "f10373a552b268f7567ec45aaafd34f4f11d0ffe62400c44b1242fbe3b19aab8",
+    "samples": [
+      {
+        "id": 1,
+        "rankRnage": [
+          1,
+          3
+        ],
+        "maxCup": 2300,
+        "minCup": 2194
+      },
+      {
+        "id": 2,
+        "rankRnage": [
+          4,
+          10
+        ],
+        "maxCup": 2289,
+        "minCup": 2173
+      }
+    ]
+  },
+  {
+    "name": "GuidebookConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 11,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "name": [
+        "dict"
+      ],
+      "guideId": [
+        "int"
+      ],
+      "reward": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GuidebookConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2571188361016394428,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GuidebookConfig__2571188361016394428.bytes",
+    "sha256": "02d487916a630c15de34f15adbd27fef453311731166f654d5947dbebec39e9c",
+    "samples": [
+      {
+        "id": 1,
+        "name": {
+          "key": "连接、断开"
+        },
+        "guideId": 1,
+        "reward": [
+          1001,
+          50
+        ]
+      },
+      {
+        "id": 2,
+        "name": {
+          "key": "胜利目标"
+        },
+        "guideId": 3,
+        "reward": [
+          1001,
+          50
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PubTaskGroupConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 1,
+    "fields": {
+      "Id": [
+        "int"
+      ],
+      "activityId": [
+        "int"
+      ],
+      "taskGroupId": [
+        "int"
+      ],
+      "taskGroupCount": [
+        "int"
+      ],
+      "taskGroupRandom": [
+        "int"
+      ],
+      "freeRefreshTimes": [
+        "int"
+      ],
+      "extraRefreshTimes": [
+        "int"
+      ],
+      "extraCondition": [
+        "int"
+      ],
+      "extraParams": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubTaskGroupConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2630718141116007544,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubTaskGroupConfig__2630718141116007544.bytes",
+    "sha256": "1d18a6f086b102e6c7a4d0ff2427664a54d382054549031e06cda97f24a038c5",
+    "samples": [
+      {
+        "Id": 10001001,
+        "activityId": 130001,
+        "taskGroupId": 10001,
+        "taskGroupCount": 8,
+        "taskGroupRandom": 10000,
+        "freeRefreshTimes": 0,
+        "extraRefreshTimes": 0,
+        "extraCondition": 0,
+        "extraParams": ""
+      }
+    ]
+  },
+  {
+    "name": "ArenaSeasonRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 9,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "rankRange": [
+        "list"
+      ],
+      "itemId": [
+        "list"
+      ],
+      "itemCount": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaSeasonRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 2667409767115992374,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaSeasonRewardConfig__2667409767115992374.bytes",
+    "sha256": "c4eac69d1053486032a1015aedb6fd1a2d8dded50835a88beb0296ad02bf01e5",
+    "samples": [
+      {
+        "id": 1,
+        "rankRange": [
+          1,
+          3
+        ],
+        "itemId": [
+          1001,
+          1002
+        ],
+        "itemCount": [
+          10000,
+          250
+        ]
+      },
+      {
+        "id": 2,
+        "rankRange": [
+          4,
+          10
+        ],
+        "itemId": [
+          1001,
+          1002
+        ],
+        "itemCount": [
+          8000,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AllSkillConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 18,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "gameItem": [
+        "int"
+      ],
+      "unLockLevel": [
+        "int"
+      ],
+      "castType": [
+        "int"
+      ],
+      "price": [
+        "int"
+      ],
+      "diamondPrice": [
+        "int"
+      ],
+      "useType": [
+        "int"
+      ],
+      "targetType": [
+        "int"
+      ],
+      "dataType": [
+        "list"
+      ],
+      "describeData": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AllSkillConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 3213978923827772668,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AllSkillConfig__3213978923827772668.bytes",
+    "sha256": "def918f61fc56a95120280a3d64bf6777e14f478a65492cbb5d9bbb9ad60d694",
+    "samples": [
+      {
+        "id": 1,
+        "gameItem": 2001,
+        "unLockLevel": 6,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      {
+        "id": 2,
+        "gameItem": 2002,
+        "unLockLevel": 14,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 4,
+        "dataType": [
+          0,
+          3,
+          2
+        ],
+        "describeData": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ArenaCupRangeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "rankRange": [
+        "list"
+      ],
+      "growCup": [
+        "list"
+      ],
+      "reduceCup": [
+        "list"
+      ],
+      "mapId": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaCupRangeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 3260006603384421920,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaCupRangeConfig__3260006603384421920.bytes",
+    "sha256": "5fa5167490e9c5108af409c4ff28b68d922c3762507ff9f13ec8e7d9164c0140",
+    "samples": [
+      {
+        "id": 1,
+        "rankRange": [
+          1,
+          3
+        ],
+        "growCup": [
+          5,
+          9
+        ],
+        "reduceCup": [
+          5,
+          9
+        ],
+        "mapId": [
+          1,
+          20
+        ]
+      },
+      {
+        "id": 2,
+        "rankRange": [
+          4,
+          10
+        ],
+        "growCup": [
+          6,
+          9
+        ],
+        "reduceCup": [
+          6,
+          9
+        ],
+        "mapId": [
+          1,
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PubActivitySettingConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "dailyTaskResetDate": [
+        "str"
+      ],
+      "dailyTaskCountLimit": [
+        "int"
+      ],
+      "slotOrignalNumber": [
+        "int"
+      ],
+      "signOfCalendarLoop": [
+        "int"
+      ],
+      "signOfActiveOnlyLoop": [
+        "int"
+      ],
+      "signOfActiveLoginLoop": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubActivitySettingConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 3701973705647019143,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubActivitySettingConfig__3701973705647019143.bytes",
+    "sha256": "4af10557b28f252c55c41938ddae5f1b34d1e38f62c831e1c268424525ce8682",
+    "samples": [
+      {
+        "dailyTaskResetDate": "00:00",
+        "dailyTaskCountLimit": 8,
+        "slotOrignalNumber": 4,
+        "signOfCalendarLoop": 1,
+        "signOfActiveOnlyLoop": 0,
+        "signOfActiveLoginLoop": 1
+      }
+    ]
+  },
+  {
+    "name": "ArenaInheritanceConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "basecup": [
+        "int"
+      ],
+      "inheritancup": [
+        "int"
+      ],
+      "sym": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ArenaInheritanceConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 4218645146614627867,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ArenaInheritanceConfig__4218645146614627867.bytes",
+    "sha256": "0c886234da043ee4fa8101bdc8a7a1a2c6cad7d44bac36f44dcb08203d3d57e9",
+    "samples": [
+      {
+        "id": 1,
+        "basecup": 2000,
+        "inheritancup": 1000,
+        "sym": "="
+      },
+      {
+        "id": 2,
+        "basecup": 3499,
+        "inheritancup": 1000,
+        "sym": "-"
+      }
+    ]
+  },
+  {
+    "name": "VideoBtnConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 65,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "VideFlag": [
+        "int"
+      ],
+      "showType": [
+        "int"
+      ],
+      "AudioId": [
+        "int"
+      ],
+      "ReportLable": [
+        "str"
+      ],
+      "videoParam1": [
+        "str"
+      ],
+      "videoParam2": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/VideoBtnConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 4295101266711776800,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/VideoBtnConfig__4295101266711776800.bytes",
+    "sha256": "7f12b2bf14bb56c254194369111b5f2518a151697f5e382a1192ebd7dbb52368",
+    "samples": [
+      {
+        "id": 1001,
+        "VideFlag": 0,
+        "showType": 1,
+        "AudioId": 1,
+        "ReportLable": "ShopUI_sendGold",
+        "videoParam1": "",
+        "videoParam2": ""
+      },
+      {
+        "id": 1002,
+        "VideFlag": 0,
+        "showType": 1,
+        "AudioId": 1,
+        "ReportLable": "ShopUI_sendSkin1",
+        "videoParam1": "",
+        "videoParam2": ""
+      }
+    ]
+  },
+  {
+    "name": "EffectConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 52,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "type": [
+        "int"
+      ],
+      "res": [
+        "str"
+      ],
+      "duration": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/EffectConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 4457373774231681195,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/EffectConfig__4457373774231681195.bytes",
+    "sha256": "72d834628532fcb33f1c54f5f7ad1cd08fad9654036ae97579bfe7393c76bbe8",
+    "samples": [
+      {
+        "id": 104,
+        "type": 3,
+        "res": "hit",
+        "duration": 1.0
+      },
+      {
+        "id": 105,
+        "type": 3,
+        "res": "LevelUp",
+        "duration": 1.5
+      }
+    ]
+  },
+  {
+    "name": "GuideBConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 12,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "guildLv": [
+        "int"
+      ],
+      "guildsmallLv": [
+        "int"
+      ],
+      "nextGuildStage": [
+        "int"
+      ],
+      "title": [
+        "str"
+      ],
+      "explain": [
+        "str"
+      ],
+      "button": [
+        "str"
+      ],
+      "picture": [
+        "str"
+      ],
+      "param": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GuideBConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 4840464386566547377,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GuideBConfig__4840464386566547377.bytes",
+    "sha256": "44e48c29ced5bcad071c1763abca776c9616e776ed41976a9e4d918064b29b09",
+    "samples": [
+      {
+        "id": 1,
+        "guildLv": 0,
+        "guildsmallLv": 0,
+        "nextGuildStage": 2,
+        "title": "guide/11",
+        "explain": "guide/12",
+        "button": "guide/13",
+        "picture": "guideUI_icon1",
+        "param": "hdzd_effect_yindao"
+      },
+      {
+        "id": 2,
+        "guildLv": -1,
+        "guildsmallLv": 0,
+        "nextGuildStage": 3,
+        "title": "",
+        "explain": "",
+        "button": "",
+        "picture": "",
+        "param": ""
+      }
+    ]
+  },
+  {
+    "name": "CommanderUpgradeConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 28,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "upgradeCost": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/CommanderUpgradeConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5001200238407422519,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/CommanderUpgradeConfig__5001200238407422519.bytes",
+    "sha256": "d4a7427671fe2f308410f3f45a46c994f166a3617902c7333c474dc27d5cd8ba",
+    "samples": [
+      {
+        "id": 1,
+        "upgradeCost": 250
+      },
+      {
+        "id": 2,
+        "upgradeCost": 250
+      }
+    ]
+  },
+  {
+    "name": "HeadportConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 4,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "icon": [
+        "str"
+      ],
+      "lockIcon": [
+        "str"
+      ],
+      "atlas": [
+        "str"
+      ],
+      "name": [
+        "dict"
+      ],
+      "des": [
+        "dict"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/HeadportConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5417164788248809058,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/HeadportConfig__5417164788248809058.bytes",
+    "sha256": "13e263164b04f6dd5611662f6fe4a37100e2f0e660578db1b3bc0389c582f23f",
+    "samples": [
+      {
+        "id": 1,
+        "icon": "Tx_man01",
+        "lockIcon": "",
+        "atlas": "Headport",
+        "name": {
+          "key": ""
+        },
+        "des": {
+          "key": ""
+        }
+      },
+      {
+        "id": 2,
+        "icon": "Tx_man02",
+        "lockIcon": "",
+        "atlas": "Headport",
+        "name": {
+          "key": ""
+        },
+        "des": {
+          "key": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "AudioConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 55,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "VoiceType": [
+        "int"
+      ],
+      "Atype": [
+        "int"
+      ],
+      "Ptype": [
+        "int"
+      ],
+      "StartTime": [
+        "int"
+      ],
+      "EndTime": [
+        "int"
+      ],
+      "Vol": [
+        "float"
+      ],
+      "ResPath": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AudioConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5490421804193382520,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AudioConfig__5490421804193382520.bytes",
+    "sha256": "6b61aa7f6506bd985b32f2a025be3d3dbef6c0e05e4982862481218341ee48cd",
+    "samples": [
+      {
+        "id": 1001,
+        "VoiceType": 1,
+        "Atype": 1,
+        "Ptype": 4,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 0.4,
+        "ResPath": "Audio/Loop/hcrzd_GameBGM.wav"
+      },
+      {
+        "id": 1002,
+        "VoiceType": 1,
+        "Atype": 1,
+        "Ptype": 2,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 0.5,
+        "ResPath": "Audio/Loop/hcrzd_MainBGM.wav"
+      }
+    ]
+  },
+  {
+    "name": "DispatchConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "scoreLimit": [
+        "int"
+      ],
+      "maxLine": [
+        "int"
+      ],
+      "addSpace": [
+        "int"
+      ],
+      "swanpSpaceOne": [
+        "int"
+      ],
+      "swanpSpaceTwo": [
+        "int"
+      ],
+      "swanpSpaceThree": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/DispatchConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5713594364214325515,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/DispatchConfig__5713594364214325515.bytes",
+    "sha256": "8ff06c868dff8170de18b222b0be82e387dd9bbf195318d996165a664ac99526",
+    "samples": [
+      {
+        "id": 1,
+        "scoreLimit": 9,
+        "maxLine": 1,
+        "addSpace": 2000,
+        "swanpSpaceOne": 1111,
+        "swanpSpaceTwo": 1282,
+        "swanpSpaceThree": 1515
+      },
+      {
+        "id": 2,
+        "scoreLimit": 29,
+        "maxLine": 2,
+        "addSpace": 2000,
+        "swanpSpaceOne": 1032,
+        "swanpSpaceTwo": 1185,
+        "swanpSpaceThree": 1391
+      }
+    ]
+  },
+  {
+    "name": "RankSubConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 6,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "areaValue": [
+        "int"
+      ],
+      "randValue": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/RankSubConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5808781226943855651,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/RankSubConfig__5808781226943855651.bytes",
+    "sha256": "36d52a40180a4cf7dd73c763d762eeb215ae5f6788c43265717b60b5b9af4697",
+    "samples": [
+      {
+        "id": 1,
+        "areaValue": 100,
+        "randValue": [
+          1,
+          10
+        ]
+      },
+      {
+        "id": 2,
+        "areaValue": 500,
+        "randValue": [
+          10,
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AILevelFactorConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 11,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "MaxLevel": [
+        "int"
+      ],
+      "LevelFactor": [
+        "float"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AILevelFactorConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5840363475089986563,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AILevelFactorConfig__5840363475089986563.bytes",
+    "sha256": "c2ab339442579a2613faba242b0f9e230effc8f8a7565a9d686ed047b5f0cbbf",
+    "samples": [
+      {
+        "id": 1,
+        "MaxLevel": 10,
+        "LevelFactor": 1.0
+      },
+      {
+        "id": 2,
+        "MaxLevel": 30,
+        "LevelFactor": 0.95
+      }
+    ]
+  },
+  {
+    "name": "PubAchievementConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 127,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "sort": [
+        "int"
+      ],
+      "type": [
+        "int"
+      ],
+      "priority": [
+        "int"
+      ],
+      "permission": [
+        "int"
+      ],
+      "showCondition": [
+        "list"
+      ],
+      "contentType": [
+        "int"
+      ],
+      "content": [
+        "int"
+      ],
+      "des": [
+        "dict"
+      ],
+      "number": [
+        "int"
+      ],
+      "rewards": [
+        "list"
+      ],
+      "count": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubAchievementConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 5982419667931615589,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubAchievementConfig__5982419667931615589.bytes",
+    "sha256": "f9f4fb2dfd3100519b0ed970dbd3bb1af09b7496cd7f1c37b28ccca4605543f0",
+    "samples": [
+      {
+        "id": 1,
+        "sort": 0,
+        "type": 1,
+        "priority": 1,
+        "permission": 0,
+        "showCondition": [],
+        "contentType": 10015,
+        "content": 0,
+        "des": {
+          "key": "Task.TotalCompLv"
+        },
+        "number": 30,
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              200
+            ]
+          }
+        ],
+        "count": 0
+      },
+      {
+        "id": 2,
+        "sort": 0,
+        "type": 1,
+        "priority": 2,
+        "permission": 0,
+        "showCondition": [],
+        "contentType": 10015,
+        "content": 0,
+        "des": {
+          "key": "Task.TotalCompLv"
+        },
+        "number": 50,
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              200
+            ]
+          }
+        ],
+        "count": 0
+      }
+    ]
+  },
+  {
+    "name": "FuncSettingConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "BossLevel": [
+        "int"
+      ],
+      "HeroSetting": [
+        "bool"
+      ],
+      "HeroPreUnlockLevel": [
+        "int"
+      ],
+      "useNewUIMask": [
+        "bool"
+      ],
+      "useNewMask": [
+        "bool"
+      ],
+      "ValentineSetting": [
+        "int"
+      ],
+      "SummerSetting": [
+        "int"
+      ],
+      "RaceActivity": [
+        "int"
+      ],
+      "SigninBChannel": [
+        "bool"
+      ],
+      "dontShowInsertAfterSeeToolVideo": [
+        "int"
+      ],
+      "dontShowInsertIfSeeOverVideo": [
+        "int"
+      ],
+      "ShowInsertADPerXLevel": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/FuncSettingConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 6129162431596375721,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/FuncSettingConfig__6129162431596375721.bytes",
+    "sha256": "a3cb22bfb0f950bd0ddec60a6b74c7d18af9c18c805d2c1fcb4db56b0ebb206f",
+    "samples": [
+      {
+        "BossLevel": 1,
+        "HeroSetting": false,
+        "HeroPreUnlockLevel": 13,
+        "useNewUIMask": false,
+        "useNewMask": false,
+        "ValentineSetting": 0,
+        "SummerSetting": 1,
+        "RaceActivity": 1,
+        "SigninBChannel": true,
+        "dontShowInsertAfterSeeToolVideo": 0,
+        "dontShowInsertIfSeeOverVideo": 0,
+        "ShowInsertADPerXLevel": 1
+      }
+    ]
+  },
+  {
+    "name": "GamePackageConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 4,
+    "fields": {
+      "packageRewardId": [
+        "int"
+      ],
+      "packageId": [
+        "int"
+      ],
+      "rewardId": [
+        "int"
+      ],
+      "rewardRandom": [
+        "int"
+      ],
+      "rewardItemCount": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GamePackageConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 6197252676343137830,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GamePackageConfig__6197252676343137830.bytes",
+    "sha256": "e8fa9f10ab8369fd2f404d635e53809f2a4edbe2e4b79a2f3fb18ece8e36645b",
+    "samples": [
+      {
+        "packageRewardId": 200001,
+        "packageId": 20000,
+        "rewardId": 101,
+        "rewardRandom": 10000,
+        "rewardItemCount": 2
+      },
+      {
+        "packageRewardId": 200011,
+        "packageId": 20001,
+        "rewardId": 201,
+        "rewardRandom": 10000,
+        "rewardItemCount": 1
+      }
+    ]
+  },
+  {
+    "name": "ChannelConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 3,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "noAB": [
+        "int"
+      ],
+      "channelA": [
+        "int"
+      ],
+      "channelB": [
+        "int"
+      ],
+      "channelC": [
+        "int"
+      ],
+      "channelD": [
+        "int"
+      ],
+      "channelE": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/ChannelConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 6229322200138959554,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/ChannelConfig__6229322200138959554.bytes",
+    "sha256": "269b2496a69a9a15a0d6dbe4947db389246ee4db5586c6e5709637cb1f53b55a",
+    "samples": [
+      {
+        "id": 1,
+        "noAB": 1,
+        "channelA": 1,
+        "channelB": 2,
+        "channelC": 3,
+        "channelD": 4,
+        "channelE": 5
+      },
+      {
+        "id": 2,
+        "noAB": 1,
+        "channelA": 1,
+        "channelB": 2,
+        "channelC": 3,
+        "channelD": 4,
+        "channelE": 5
+      }
+    ]
+  },
+  {
+    "name": "EntityModelConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 155,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "AssetName": [
+        "str"
+      ],
+      "PathEnum": [
+        "int"
+      ],
+      "runtimeLoad": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/EntityModelConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 6663195425835169985,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/EntityModelConfig__6663195425835169985.bytes",
+    "sha256": "470c20cd2107123991942bcefd18fc5b4cc4c35759a2001f6475995d0fc0f643",
+    "samples": [
+      {
+        "id": 1,
+        "AssetName": "FightPlane",
+        "PathEnum": 1,
+        "runtimeLoad": 0
+      },
+      {
+        "id": 10,
+        "AssetName": "LineRander_single",
+        "PathEnum": 1,
+        "runtimeLoad": 0
+      }
+    ]
+  },
+  {
+    "name": "AINameConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 98,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "zh_cn": [
+        "str"
+      ],
+      "en": [
+        "str"
+      ],
+      "ja": [
+        "str"
+      ],
+      "ko": [
+        "str"
+      ],
+      "ru": [
+        "str"
+      ],
+      "sp": [
+        "str"
+      ],
+      "fr": [
+        "str"
+      ],
+      "po": [
+        "str"
+      ],
+      "ge": [
+        "str"
+      ],
+      "In": [
+        "str"
+      ],
+      "It": [
+        "str"
+      ],
+      "Ma": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/AINameConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 7249736845360693390,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/AINameConfig__7249736845360693390.bytes",
+    "sha256": "6a891b3d9b99736d5da56065abafa8da060b25e80366639ba31b4f6e5b2faca7",
+    "samples": [
+      {
+        "id": 1,
+        "zh_cn": "伍六七",
+        "en": "Adam",
+        "ja": "TAKAHASI",
+        "ko": "어마어마",
+        "ru": "Александр",
+        "sp": "Noél",
+        "fr": "Adam",
+        "po": "Akinori",
+        "ge": "Rex",
+        "In": "Yunani",
+        "It": "Alessandro",
+        "Ma": "Nasi Lemak"
+      },
+      {
+        "id": 2,
+        "zh_cn": "阿强",
+        "en": "Aiden",
+        "ja": "蓮",
+        "ko": "연주아빠",
+        "ru": "Максим",
+        "sp": "BigDip",
+        "fr": "Agent007",
+        "po": "Thor",
+        "ge": "IHas",
+        "In": "Melvin",
+        "It": "Alberto",
+        "Ma": "3nable"
+      }
+    ]
+  },
+  {
+    "name": "SettingConfig",
+    "status": "confirmed",
+    "shape": "singleton-object",
+    "rowKey": null,
+    "rowCount": 1,
+    "fields": {
+      "showInterst_finishLevel": [
+        "int"
+      ],
+      "showInterst_nofinishLevel": [
+        "int"
+      ],
+      "levelNo_showEvaluate": [
+        "int"
+      ],
+      "levelNo_showInterst": [
+        "int"
+      ],
+      "levelNo_showReplayInterst": [
+        "int"
+      ],
+      "levelNo_showBanner": [
+        "int"
+      ],
+      "NoFirstCharge": [
+        "bool"
+      ],
+      "arrowTowerAttackRate": [
+        "list"
+      ],
+      "arrowTowerAttackRegion": [
+        "list"
+      ],
+      "arrowTowerRegionBaseScale": [
+        "float"
+      ],
+      "storeAdDiamondCount": [
+        "int"
+      ],
+      "storeAdGoldCount": [
+        "int"
+      ],
+      "storeAdSendDiamond": [
+        "list"
+      ],
+      "accelerationRate": [
+        "float"
+      ],
+      "accelerationDiamondCount": [
+        "int"
+      ],
+      "towerUnlock": [
+        "int"
+      ],
+      "diceunlock": [
+        "int"
+      ],
+      "buyDiceTimes_mainlevel": [
+        "int"
+      ],
+      "buyDiceTimes_AD": [
+        "int"
+      ],
+      "buyDiceTimes_gole": [
+        "int"
+      ],
+      "buyDiceCost": [
+        "list"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SettingConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 7556785494126941093,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SettingConfig__7556785494126941093.bytes",
+    "sha256": "486f37a84fca1f6a23dc6516eccff1875e46eff0a5040443d58fc32808f27745",
+    "samples": [
+      {
+        "showInterst_finishLevel": 1,
+        "showInterst_nofinishLevel": 1,
+        "levelNo_showEvaluate": 3,
+        "levelNo_showInterst": 5,
+        "levelNo_showReplayInterst": 6,
+        "levelNo_showBanner": 4,
+        "NoFirstCharge": false,
+        "arrowTowerAttackRate": [
+          1.8,
+          1.3,
+          0.8
+        ],
+        "arrowTowerAttackRegion": [
+          0.7,
+          1.0,
+          1.4
+        ],
+        "arrowTowerRegionBaseScale": 0.44,
+        "storeAdDiamondCount": 3,
+        "storeAdGoldCount": 5,
+        "storeAdSendDiamond": [
+          20,
+          20,
+          20
+        ],
+        "accelerationRate": 1.5,
+        "accelerationDiamondCount": 10,
+        "towerUnlock": 3,
+        "diceunlock": 20,
+        "buyDiceTimes_mainlevel": 5,
+        "buyDiceTimes_AD": 5,
+        "buyDiceTimes_gole": 5,
+        "buyDiceCost": [
+          {
+            "datas": [
+              1001,
+              1000
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GameRewardConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 10,
+    "fields": {
+      "rewardItemId": [
+        "int"
+      ],
+      "rewardId": [
+        "int"
+      ],
+      "itemId": [
+        "int"
+      ],
+      "itemCountMin": [
+        "int"
+      ],
+      "itemCountMax": [
+        "int"
+      ],
+      "weight": [
+        "int"
+      ],
+      "rewardOrder": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/GameRewardConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 7871652322985850502,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/GameRewardConfig__7871652322985850502.bytes",
+    "sha256": "f0395e66cd41f51b08b8f04b0d745996252c50be22a2a8ee58d11454b1d4162c",
+    "samples": [
+      {
+        "rewardItemId": 10101,
+        "rewardId": 101,
+        "itemId": 1001,
+        "itemCountMin": 10,
+        "itemCountMax": 20,
+        "weight": 100,
+        "rewardOrder": 1
+      },
+      {
+        "rewardItemId": 10102,
+        "rewardId": 101,
+        "itemId": 1002,
+        "itemCountMin": 5,
+        "itemCountMax": 10,
+        "weight": 100,
+        "rewardOrder": 2
+      }
+    ]
+  },
+  {
+    "name": "PubTaskConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 8,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "taskGroupId": [
+        "int"
+      ],
+      "weight": [
+        "int"
+      ],
+      "taskTypeId": [
+        "int"
+      ],
+      "conditionParams": [
+        "list"
+      ],
+      "des": [
+        "dict"
+      ],
+      "rewards": [
+        "list"
+      ],
+      "liveness": [
+        "int"
+      ],
+      "showCompleted": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/PubTaskConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 8592570677058278029,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/PubTaskConfig__8592570677058278029.bytes",
+    "sha256": "c2e23fdf95c91fbb660d34371aee395193b0f62dab52887e8f73a27b286420e5",
+    "samples": [
+      {
+        "id": 1,
+        "taskGroupId": 10001,
+        "weight": 1,
+        "taskTypeId": 1000,
+        "conditionParams": [
+          {
+            "datas": [
+              110006,
+              1
+            ]
+          }
+        ],
+        "des": {
+          "key": "Task.CompleteLv"
+        },
+        "rewards": [
+          {
+            "datas": [
+              1001,
+              50
+            ]
+          },
+          {
+            "datas": [
+              1003,
+              20
+            ]
+          }
+        ],
+        "liveness": 20,
+        "showCompleted": 0
+      },
+      {
+        "id": 2,
+        "taskGroupId": 10001,
+        "weight": 1,
+        "taskTypeId": 1001,
+        "conditionParams": [
+          {
+            "datas": [
+              110007,
+              1
+            ]
+          }
+        ],
+        "des": {
+          "key": "Task.WitchVideo"
+        },
+        "rewards": [
+          {
+            "datas": [
+              1002,
+              10
+            ]
+          },
+          {
+            "datas": [
+              1003,
+              20
+            ]
+          }
+        ],
+        "liveness": 20,
+        "showCompleted": 0
+      }
+    ]
+  },
+  {
+    "name": "LevelBConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 561,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "LevelType": [
+        "list"
+      ],
+      "SceneId": [
+        "int"
+      ],
+      "SceneId2": [
+        "int"
+      ],
+      "SceneId3": [
+        "int"
+      ],
+      "SceneId4": [
+        "int"
+      ],
+      "SceneId5": [
+        "int"
+      ],
+      "SceneId6": [
+        "int"
+      ],
+      "SceneId7": [
+        "int"
+      ],
+      "SceneId8": [
+        "int"
+      ],
+      "SceneId9": [
+        "int"
+      ],
+      "SceneId10": [
+        "int"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/LevelBConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 8870680710692892781,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/LevelBConfig__8870680710692892781.bytes",
+    "sha256": "b140040ee04c30c770502c0af39ee63ea75e4d50d64edbb31731f75e1de543f9",
+    "samples": [
+      {
+        "id": 0,
+        "LevelType": [
+          1,
+          0,
+          0
+        ],
+        "SceneId": 0,
+        "SceneId2": 0,
+        "SceneId3": 0,
+        "SceneId4": 0,
+        "SceneId5": 0,
+        "SceneId6": 0,
+        "SceneId7": 0,
+        "SceneId8": 0,
+        "SceneId9": 0,
+        "SceneId10": 0
+      },
+      {
+        "id": 1,
+        "LevelType": [
+          1,
+          0,
+          0
+        ],
+        "SceneId": 999,
+        "SceneId2": 0,
+        "SceneId3": 0,
+        "SceneId4": 0,
+        "SceneId5": 0,
+        "SceneId6": 0,
+        "SceneId7": 0,
+        "SceneId8": 0,
+        "SceneId9": 0,
+        "SceneId10": 0
+      }
+    ]
+  },
+  {
+    "name": "SkinConfig",
+    "status": "confirmed",
+    "shape": "record-list",
+    "rowKey": "Datas",
+    "rowCount": 81,
+    "fields": {
+      "id": [
+        "int"
+      ],
+      "skinType": [
+        "int"
+      ],
+      "iconName": [
+        "str"
+      ],
+      "prefabId": [
+        "int"
+      ],
+      "castType": [
+        "int"
+      ],
+      "price": [
+        "int"
+      ],
+      "DiamondPrice": [
+        "int"
+      ],
+      "lockState": [
+        "int"
+      ],
+      "sortNo": [
+        "int"
+      ],
+      "actNo": [
+        "int"
+      ],
+      "special": [
+        "int"
+      ],
+      "tag": [
+        "str"
+      ],
+      "describe": [
+        "str"
+      ]
+    },
+    "duplicateIds": [],
+    "output": "generated/tables/SkinConfig.json",
+    "source": "work/cache/StreamingAssets/WebGL/Proj_hdzd/firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d",
+    "assetFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+    "pathId": 9046385973283505896,
+    "textAsset": "generated/assets/firstpack_ff021c07522462d993a45b8f8bca6b05/SkinConfig__9046385973283505896.bytes",
+    "sha256": "9982e1c7b863d9e79a9139a768102b720134bf41217d925ab87717005ac96e07",
+    "samples": [
+      {
+        "id": 100,
+        "skinType": 1,
+        "iconName": "bubing00",
+        "prefabId": 1000,
+        "castType": 1001,
+        "price": 0,
+        "DiamondPrice": 0,
+        "lockState": 2,
+        "sortNo": 0,
+        "actNo": 0,
+        "special": 0,
+        "tag": "",
+        "describe": "typename_00"
+      },
+      {
+        "id": 101,
+        "skinType": 1,
+        "iconName": "bubing01",
+        "prefabId": 1001,
+        "castType": 1001,
+        "price": 350,
+        "DiamondPrice": 0,
+        "lockState": 1,
+        "sortNo": 2,
+        "actNo": 0,
+        "special": 0,
+        "tag": "",
+        "describe": "typename_01"
+      }
+    ]
+  }
+]

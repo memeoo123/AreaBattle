@@ -1,0 +1,75 @@
+; Original class: ShopUI
+; Type4408.Y[gNUY; wasmcode1 function 48397; offset=16907972 size=220
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0101fec5  i32.const [5007558]
+0101feca  i32.load8_u [0, 0]
+0101fecd  i32.eqz []
+0101fece  if [-64]
+0101fed0    i32.const [3953568]
+0101fed5    i32.const [1605]
+0101fed8    call_indirect [0, 0]
+0101fedb    i32.const [3953536]
+0101fee0    i32.const [1605]
+0101fee3    call_indirect [0, 0]
+0101fee6    i32.const [3953576]
+0101feeb    i32.const [1605]
+0101feee    call_indirect [0, 0]
+0101fef1    i32.const [4034536] ; STRING ""
+0101fef6    i32.const [1605]
+0101fef9    call_indirect [0, 0]
+0101fefc    i32.const [4096508] ; STRING "shopUItips_nodraw"
+0101ff01    i32.const [1605]
+0101ff04    call_indirect [0, 0]
+0101ff07    i32.const [5007558]
+0101ff0c    i32.const [1]
+0101ff0e    i32.store8 [0, 0]
+0101ff11  end []
+0101ff12  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+0101ff15  i32.const [0]
+0101ff17  i32.const [13880] ; TABLE AudioExtention.PlayVoice
+0101ff1b  call_indirect [4, 0]
+0101ff1e  i32.const [3953536]
+0101ff23  i32.load [2, 0]
+0101ff26  i32.const [10272]
+0101ff2a  call_indirect [2, 0]
+0101ff2d  i32.const [0]
+0101ff2f  call [7735] ; SelectCardControl.CanSelectCard
+0101ff32  i32.eqz []
+0101ff33  if [-64]
+0101ff35    i32.const [3953576]
+0101ff3a    i32.load [2, 0]
+0101ff3d    i32.const [10272]
+0101ff41    call_indirect [2, 0]
+0101ff44    i32.const [0]
+0101ff46    i32.const [9490] ; TABLE GameModule.get_Lang
+0101ff4a    call_indirect [2, 0]
+0101ff4d    i32.const [4096508] ; STRING "shopUItips_nodraw"
+0101ff52    i32.load [2, 0]
+0101ff55    i32.const [0]
+0101ff57    i32.const [9491] ; TABLE LangModule.Get
+0101ff5b    call_indirect [3, 0]
+0101ff5e    i32.const [0]
+0101ff60    i32.const [16035] ; TABLE UIControl.ShowToast
+0101ff64    call_indirect [5, 0]
+0101ff67    return []
+0101ff68  end []
+0101ff69  i32.const [3953568]
+0101ff6e  i32.load [2, 0]
+0101ff71  i32.const [10272]
+0101ff75  call_indirect [2, 0]
+0101ff78  i32.const [1001]
+0101ff7b  i32.const [-100]
+0101ff7e  i32.const [1]
+0101ff80  i32.const [4034536] ; STRING ""
+0101ff85  i32.load [2, 0]
+0101ff88  i32.const [1]
+0101ff8a  i32.const [0]
+0101ff8c  i32.const [9502] ; TABLE ToolControl.ToolChange
+0101ff90  call_indirect [15, 0]
+0101ff93  if [-64]
+0101ff95    i32.const [0]
+0101ff97    i32.const [1]
+0101ff99    i32.const [0]
+0101ff9b    call [7705] ; ShopUI.oe]nS|
+0101ff9e  end []
+0101ff9f  end []

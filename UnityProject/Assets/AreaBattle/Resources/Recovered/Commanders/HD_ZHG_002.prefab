@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1000000000001
+GameObject:
+  serializedVersion: 6
+  m_Component:
+    - component:
+        fileID: 1000000000002
+    - component:
+        fileID: 1000000000003
+    - component:
+        fileID: 1000000000004
+    - component:
+        fileID: 1000000000005
+  m_Layer: 5
+  m_Name: "HD_ZHG_002"
+  m_IsActive: 1
+  m_ObjectHideFlags: 0
+  m_TagString: "Untagged"
+  m_Icon:
+    fileID: 0
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+--- !u!4 &1000000000002
+Transform:
+  m_GameObject:
+    fileID: 1000000000001
+  m_LocalRotation:
+    x: 0.0
+    y: 1.0
+    z: 0.0
+    w: 0.0
+  m_LocalPosition:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  m_LocalScale:
+    x: 1.0
+    y: 1.0
+    z: 0.0
+  m_Children: []
+  m_Father:
+    fileID: 0
+  m_ObjectHideFlags: 0
+--- !u!23 &1000000000003
+MeshRenderer:
+  m_GameObject:
+    fileID: 1000000000001
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset:
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 0.0
+  m_LightmapTilingOffsetDynamic:
+    x: 1.0
+    y: 1.0
+    z: 0.0
+    w: 0.0
+  m_Materials:
+    - fileID: 2100000
+      guid: "bc2aa9cc1032b234890ffcffae768a72"
+      type: 2
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot:
+    fileID: 0
+  m_ProbeAnchor:
+    fileID: 0
+  m_LightProbeVolumeOverride:
+    fileID: 0
+  m_SortingLayerID: -1848281927
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams:
+    fileID: 0
+  m_EnlightenVertexStream:
+    fileID: 0
+  m_ObjectHideFlags: 0
+--- !u!114 &1000000000004
+MonoBehaviour:
+  m_GameObject:
+    fileID: 1000000000001
+  m_Enabled: 1
+  m_Script:
+    fileID: 11500000
+    guid: "d247ba06193faa74d9335f5481b2b56c"
+    type: 3
+  m_Name: ""
+  skeletonDataAsset:
+    fileID: 11400000
+    guid: "dc94373f8e846b446af6c8080cd1cc38"
+    type: 2
+  initialSkinName: ""
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0.0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  updateTiming: 1
+  unscaledTime: 0
+  _animationName: "idle"
+  loop: 1
+  timeScale: 1.0
+  m_ObjectHideFlags: 0
+--- !u!33 &1000000000005
+MeshFilter:
+  m_GameObject:
+    fileID: 1000000000001
+  m_Mesh:
+    fileID: 4300000
+    guid: "b548e8e03e515604c8f8efeb2171c984"
+    type: 2
+  m_ObjectHideFlags: 0

@@ -1,0 +1,209 @@
+{
+  "atUtc": "2026-09-28T11:09:28.446526+00:00",
+  "status": "bounded-state-divergence-confirmed",
+  "originalFire": {
+    "startScore": 5,
+    "endScore": 0,
+    "observedSequence": [
+      5,
+      3,
+      1,
+      0
+    ],
+    "minimumTwoPointHits": 3,
+    "firstHitBracket": {
+      "previousPts": 57.11237,
+      "pts": 57.12886,
+      "before": 5,
+      "after": 3,
+      "mse": 23.153846153846153
+    },
+    "limitations": "Particles obscure later digit transitions; zero clamps damage, so score alone cannot count further hits at zero. Attribution to fire uses the input trace (no incoming player line during fire) and source two-point damage."
+  },
+  "replayFire": {
+    "hits": 1,
+    "startScore": 5,
+    "endScore": 3,
+    "events": [
+      {
+        "pts": 55.528289794921875,
+        "value": 3.0,
+        "kind": "score",
+        "tower": 6,
+        "line": 0,
+        "camp": 2,
+        "previousCamp": 2,
+        "soldier": 0
+      }
+    ]
+  },
+  "originalRegen": {
+    "events": [
+      {
+        "previousPts": 63.61593,
+        "pts": 63.63302,
+        "before": 0,
+        "after": 1,
+        "mse": 2.5524475524475525
+      },
+      {
+        "previousPts": 65.61685,
+        "pts": 65.63439,
+        "before": 1,
+        "after": 2,
+        "mse": 1.743006993006993
+      }
+    ],
+    "interval": 2.0013699999999943
+  },
+  "replayRegen": {
+    "events": [
+      {
+        "pts": 66.06693267822266,
+        "value": 4.0,
+        "kind": "score",
+        "tower": 6,
+        "line": 0,
+        "camp": 2,
+        "previousCamp": 2,
+        "soldier": 0
+      },
+      {
+        "pts": 68.06816864013672,
+        "value": 5.0,
+        "kind": "score",
+        "tower": 6,
+        "line": 0,
+        "camp": 2,
+        "previousCamp": 2,
+        "soldier": 0
+      }
+    ],
+    "interval": 2.0012359619140625
+  },
+  "originalLateDamage": {
+    "previousPts": 69.23584,
+    "pts": 69.25234,
+    "before": 2,
+    "after": 1,
+    "mse": 0.9807692307692307
+  },
+  "replayScores": [
+    {
+      "pts": 55.528289794921875,
+      "value": 3.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 66.06693267822266,
+      "value": 4.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 68.06816864013672,
+      "value": 5.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 68.36831665039062,
+      "value": 4.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 69.2523422241211,
+      "value": 3.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 70.53611755371094,
+      "value": 2.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 75.1385269165039,
+      "value": 1.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 2,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 76.64022827148438,
+      "value": 0.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 2,
+      "soldier": 0
+    },
+    {
+      "pts": 76.95619201660156,
+      "value": 1.0,
+      "kind": "score",
+      "tower": 6,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    }
+  ],
+  "capture": {
+    "originalRoofColorBracket": [
+      73.62087,
+      73.63778
+    ],
+    "originalScoreZeroBracket": [
+      73.6042,
+      73.62087
+    ],
+    "replayPts": 76.64022827148438,
+    "delayAgainstFirstBlueRoof": 3.0024482714843685
+  },
+  "interpretation": "Original enters the later attack with2 points after two regenerations, replay with5. Both measured regeneration intervals are2.001s. Original score drops2->1 at69.25234; replay has already received one attack at68.36832 and its second at69.25234. Different health and arrival histories prevent attributing the complete capture delay to movement speed or the regeneration formula.",
+  "limitations": [
+    "First regeneration phase and complete intervening soldier collision histories are not matched.",
+    "Three-point excess does not by itself prove an exact three-second capture delay.",
+    "No score override, seed search, speed change or production edit was applied."
+  ],
+  "evidence": [
+    "tower6-score-pixels.json",
+    "fire-tower6-score-review.png",
+    "tower6-unclassified-review.png",
+    "tower6-capture-pixels.json",
+    "full-replay-events.json",
+    "full-input-trace.json"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "atUtc": "2026-09-28T10:36:21.894371+00:00",
+  "status": "full-observed-input-replay-with-mismatches",
+  "matchedReplay": false,
+  "inputs": 25,
+  "acceptedInputs": 24,
+  "rejectedInputs": [
+    {
+      "pts": 75.63934326171875,
+      "kind": "connect",
+      "accepted": false,
+      "source": 6,
+      "target": 7,
+      "sourceCamp": 2,
+      "targetCamp": 2,
+      "outgoing": 1,
+      "expectedOutgoing": 1
+    }
+  ],
+  "campMatches": 84,
+  "scoreMatches": 38,
+  "towerObservations": 84,
+  "originalVictoryPts": 86.0442,
+  "replayVictoryPts": 86.74529266357422,
+  "victoryDelaySeconds": 0.7010926635742152,
+  "finalPhase": "Victory",
+  "visualGaps": [
+    "Video comparison now explicitly selects original soldier102 pointed-hat/star-staff asset. Original account and per-camp skin selection remain inferred, not read.",
+    "First checkpoint has the same three opposing line pairs3-7,4-7,6-7, but different soldier positions and two differing tower scores. Source line topology alone does not establish matching initial state."
+  ],
+  "nextWork": "Compare initial dispatch, collision and capture timing without fitting RNG seeds or forcing scores; continue matched animation and UI timing review.",
+  "evidence": [
+    {
+      "path": "full-input-trace.json",
+      "sha256": "68eea884b290030c9f0275d7cb3b32f1e2d3bd19ffaf21d34c4e5a8edd626d32"
+    },
+    {
+      "path": "full-replay-fixture.json",
+      "sha256": "f33b1519bb37bc9e7dcf56ef38f5fce7776914c40f9eb7f646da61d4e38a3c07"
+    },
+    {
+      "path": "full-replay-diagnostic.json",
+      "sha256": "552a17d5bee7c40ba104d27b42dc1cfbd37313affed8a71521c7e0420d7dd6b0"
+    },
+    {
+      "path": "late-capacity-candidates.json",
+      "sha256": "7abd24298e40465f39e54b9f6e71e7090dc6337b6abac6a8fe7d613f7072f853"
+    },
+    {
+      "path": "late-input-review/index.json",
+      "sha256": "33cfe7bef874fa3790cb2e894b769e6e55b435316173b02b0fd44d7b2b534736"
+    },
+    {
+      "path": "late-input-review-extra/index.json",
+      "sha256": "096e60a61568afb3ed31ca8fa842d6e3e88b5076640e6b817ad7573026663db9"
+    },
+    {
+      "path": "late-second-dot-refinement.json",
+      "sha256": "46eb93307a39332768d42c88e634c5b4a183a6eedeea49ebeae929973ecf3fe1"
+    },
+    {
+      "path": "full-replay-first-checkpoint.png",
+      "sha256": "15280888413a909d214860e6a647bfda5805f403541a24cbd68a0d6e4cb3aeff"
+    },
+    {
+      "path": "full-replay-victory.png",
+      "sha256": "3328e403aa1a49059db25bf00f7411d14218465efcb199286d7f916dbe05dd77"
+    }
+  ]
+}

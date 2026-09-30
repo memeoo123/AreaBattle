@@ -1,0 +1,53 @@
+; Original class: M}]i
+; Type4115.cMcpa; wasmcode function 15174; offset=7370935 size=140
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007078b8  i32.const [5008539]
+007078bd  i32.load8_u [0, 0]
+007078c0  i32.eqz []
+007078c1  if [-64]
+007078c3    i32.const [4008864]
+007078c8    call [900] ; 
+007078cb    i32.const [3936516]
+007078d0    call [900] ; 
+007078d3    i32.const [4012508]
+007078d8    call [900] ; 
+007078db    i32.const [5008539]
+007078e0    i32.const [1]
+007078e2    i32.store8 [0, 0]
+007078e5  end []
+007078e6  local.get [1]
+007078e8  local.get [0]
+007078ea  i32.load [2, 8]
+007078ed  i32.const [0]
+007078ef  call [2887] ; UtilitHelper.ToFileName
+007078f2  i32.const [4012508]
+007078f7  i32.load [2, 0]
+007078fa  call [2074] ; 
+007078fd  local.set [1]
+007078ff  i32.const [3936516]
+00707904  i32.load [2, 0]
+00707907  call [901] ; 
+0070790a  local.get [1]
+0070790c  i32.const [4008864]
+00707911  i32.load [2, 0]
+00707914  call [1465] ; 
+00707917  local.set [1]
+00707919  local.get [0]
+0070791b  i32.load [2, 12]
+0070791e  local.set [2]
+00707920  local.get [2]
+00707922  if [-64]
+00707924    local.get [2]
+00707926    i32.load [2, 32]
+00707929    local.get [1]
+0070792b    local.get [0]
+0070792d    i32.load [2, 16]
+00707930    local.get [2]
+00707932    i32.load [2, 20]
+00707935    local.get [2]
+00707937    i32.load [2, 12]
+0070793a    global.set [3]
+0070793c    global.get [3]
+0070793e    call_indirect [7, 0]
+00707941  end []
+00707942  end []

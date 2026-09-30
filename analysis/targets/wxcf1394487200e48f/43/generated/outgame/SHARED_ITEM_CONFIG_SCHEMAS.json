@@ -1,0 +1,357 @@
+{
+  "4529": {
+    "name": "GamePackageConfig",
+    "fields": [
+      {
+        "name": "packageRewardId",
+        "type": "int",
+        "offset": 8
+      },
+      {
+        "name": "packageId",
+        "type": "int",
+        "offset": 12
+      },
+      {
+        "name": "rewardId",
+        "type": "int",
+        "offset": 16
+      },
+      {
+        "name": "rewardRandom",
+        "type": "int",
+        "offset": 20
+      },
+      {
+        "name": "rewardItemCount",
+        "type": "int",
+        "offset": 24
+      }
+    ]
+  },
+  "4531": {
+    "name": "GameProductConfig",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int",
+        "offset": 8
+      },
+      {
+        "name": "itemId",
+        "type": "int",
+        "offset": 12
+      },
+      {
+        "name": "name",
+        "type": "Lang",
+        "offset": 16
+      },
+      {
+        "name": "detail",
+        "type": "Lang",
+        "offset": 20
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "offset": 24
+      },
+      {
+        "name": "itemCount",
+        "type": "int",
+        "offset": 28
+      },
+      {
+        "name": "buyTypeOrder",
+        "type": "int[]",
+        "offset": 32
+      },
+      {
+        "name": "iapPrice",
+        "type": "Lang",
+        "offset": 36
+      },
+      {
+        "name": "IapGameKey",
+        "type": "string",
+        "offset": 40
+      },
+      {
+        "name": "price",
+        "type": "string",
+        "offset": 44
+      },
+      {
+        "name": "videoBtnId",
+        "type": "int",
+        "offset": 48
+      },
+      {
+        "name": "iapBuyTimes",
+        "type": "int",
+        "offset": 52
+      },
+      {
+        "name": "adsBuyTimes",
+        "type": "int",
+        "offset": 56
+      },
+      {
+        "name": "freeBuyTimes",
+        "type": "int",
+        "offset": 60
+      },
+      {
+        "name": "costItemPriceTypes",
+        "type": "int[]",
+        "offset": 64
+      },
+      {
+        "name": "costItemPriceParams",
+        "type": "List<ListArrayInt>",
+        "offset": 68
+      },
+      {
+        "name": "costItemBuyTimesArray",
+        "type": "int[]",
+        "offset": 72
+      },
+      {
+        "name": "buyLimit",
+        "type": "int",
+        "offset": 76
+      },
+      {
+        "name": "storeID",
+        "type": "int",
+        "offset": 80
+      },
+      {
+        "name": "groupID",
+        "type": "int",
+        "offset": 84
+      },
+      {
+        "name": "order",
+        "type": "int",
+        "offset": 88
+      },
+      {
+        "name": "fixedTag",
+        "type": "int",
+        "offset": 92
+      },
+      {
+        "name": "forceRefreshTag",
+        "type": "int",
+        "offset": 96
+      },
+      {
+        "name": "refreshType",
+        "type": "int",
+        "offset": 100
+      },
+      {
+        "name": "refreshConditionParam",
+        "type": "string[]",
+        "offset": 104
+      },
+      {
+        "name": "randomWeight",
+        "type": "int",
+        "offset": 108
+      },
+      {
+        "name": "unEnoughShow",
+        "type": "int",
+        "offset": 112
+      },
+      {
+        "name": "tag",
+        "type": "Lang",
+        "offset": 116
+      },
+      {
+        "name": "refreshPeriod",
+        "type": "int[]",
+        "offset": 120
+      },
+      {
+        "name": "Expired",
+        "type": "int",
+        "offset": 124
+      },
+      {
+        "name": "param",
+        "type": "string",
+        "offset": 128
+      },
+      {
+        "name": "getType",
+        "type": "int",
+        "offset": 132
+      },
+      {
+        "name": "buyLimitParam",
+        "type": "int",
+        "offset": 136
+      },
+      {
+        "name": "priceType",
+        "type": "int",
+        "offset": 140
+      },
+      {
+        "name": "priceCalParam",
+        "type": "int[]",
+        "offset": 144
+      }
+    ]
+  },
+  "4533": {
+    "name": "GameRewardConfig",
+    "fields": [
+      {
+        "name": "rewardItemId",
+        "type": "int",
+        "offset": 8
+      },
+      {
+        "name": "rewardId",
+        "type": "int",
+        "offset": 12
+      },
+      {
+        "name": "itemId",
+        "type": "int",
+        "offset": 16
+      },
+      {
+        "name": "itemCountMin",
+        "type": "int",
+        "offset": 20
+      },
+      {
+        "name": "itemCountMax",
+        "type": "int",
+        "offset": 24
+      },
+      {
+        "name": "weight",
+        "type": "int",
+        "offset": 28
+      },
+      {
+        "name": "rewardOrder",
+        "type": "int",
+        "offset": 32
+      }
+    ]
+  },
+  "3452": {
+    "name": "ListArrayInt",
+    "fields": [
+      {
+        "name": "datas",
+        "type": "int[]",
+        "offset": 8
+      }
+    ]
+  },
+  "4527": {
+    "name": "GameItemConfig",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int",
+        "offset": 8
+      },
+      {
+        "name": "type1",
+        "type": "int",
+        "offset": 12
+      },
+      {
+        "name": "type2",
+        "type": "int",
+        "offset": 16
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "offset": 20
+      },
+      {
+        "name": "useFeatureParam",
+        "type": "string",
+        "offset": 24
+      },
+      {
+        "name": "quality",
+        "type": "int",
+        "offset": 28
+      },
+      {
+        "name": "name",
+        "type": "Lang",
+        "offset": 32
+      },
+      {
+        "name": "detail",
+        "type": "Lang",
+        "offset": 36
+      },
+      {
+        "name": "item_game",
+        "type": "string",
+        "offset": 40
+      },
+      {
+        "name": "paramInt",
+        "type": "int",
+        "offset": 44
+      },
+      {
+        "name": "paramString",
+        "type": "string",
+        "offset": 48
+      },
+      {
+        "name": "activeParam",
+        "type": "int",
+        "offset": 52
+      },
+      {
+        "name": "useParam1",
+        "type": "string",
+        "offset": 56
+      },
+      {
+        "name": "useParam2",
+        "type": "string",
+        "offset": 60
+      },
+      {
+        "name": "useParam3",
+        "type": "string",
+        "offset": 64
+      },
+      {
+        "name": "effectHours",
+        "type": "int",
+        "offset": 68
+      }
+    ]
+  },
+  "3490": {
+    "name": "Lang",
+    "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "offset": 8
+      }
+    ]
+  }
+}

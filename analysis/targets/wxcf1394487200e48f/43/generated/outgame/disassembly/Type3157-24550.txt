@@ -1,0 +1,26 @@
+; Original class: AdsManager
+; Type3157.Wait05; wasmcode function 6330; offset=2280300 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0022cb6d  i32.const [5010547]
+0022cb72  i32.load8_u [0, 0]
+0022cb75  i32.eqz []
+0022cb76  if [-64]
+0022cb78    i32.const [3944076]
+0022cb7d    call [900] ; 
+0022cb80    i32.const [5010547]
+0022cb85    i32.const [1]
+0022cb87    i32.store8 [0, 0]
+0022cb8a  end []
+0022cb8b  i32.const [3944076]
+0022cb90  i32.load [2, 0]
+0022cb93  call [903] ; 
+0022cb96  local.set [1]
+0022cb98  local.get [1]
+0022cb9a  i32.const [0]
+0022cb9c  i32.store [2, 8]
+0022cb9f  local.get [1]
+0022cba1  local.get [0]
+0022cba3  i32.store [2, 16]
+0022cba6  local.get [1]
+0022cba8  return []
+0022cba9  end []

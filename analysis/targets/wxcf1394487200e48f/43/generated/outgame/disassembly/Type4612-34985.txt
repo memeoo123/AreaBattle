@@ -1,0 +1,69 @@
+; Original class: LoginSynData
+; Type4612.OnUpdate; wasmcode function 18741; offset=8464767 size=182
+; signature={'args': [127, 127, 125, 125, 127], 'returns': []}; localGroups=[]
+00812980  i32.const [5001593]
+00812985  i32.load8_u [0, 0]
+00812988  i32.eqz []
+00812989  if [-64]
+0081298b    i32.const [3932304]
+00812990    call [900] ; 
+00812993    i32.const [3932476]
+00812998    call [900] ; 
+0081299b    i32.const [4103464] ; STRING "同步数据超时"
+008129a0    call [900] ; 
+008129a3    i32.const [5001593]
+008129a8    i32.const [1]
+008129aa    i32.store8 [0, 0]
+008129ad  end []
+008129ae  local.get [0]
+008129b0  local.get [1]
+008129b2  local.get [2]
+008129b4  local.get [3]
+008129b6  local.get [0]
+008129b8  call [3898] ; LoginStateBase.OnUpdate
+008129bb  local.get [0]
+008129bd  f32.load [2, 20]
+008129c0  local.get [2]
+008129c2  f32.add []
+008129c3  local.set [2]
+008129c5  local.get [0]
+008129c7  local.get [2]
+008129c9  f32.store [2, 20]
+008129cc  local.get [2]
+008129ce  f32.const [30.0]
+008129d3  f32.ge []
+008129d4  if [-64]
+008129d6    local.get [0]
+008129d8    i32.load [2, 24]
+008129db    local.set [1]
+008129dd    i32.const [3932476]
+008129e2    i32.load [2, 0]
+008129e5    call [901] ; 
+008129e8    local.get [1]
+008129ea    i32.const [0]
+008129ec    call [4409] ; GlobalData.set_LoginUserID
+008129ef    i32.const [0]
+008129f1    call [1910] ; GamePath.get_Instance
+008129f4    i32.const [0]
+008129f6    call [5051] ; GamePath.ReshMineGameDataPath
+008129f9    i32.const [3932304]
+008129fe    i32.load [2, 0]
+00812a01    call [901] ; 
+00812a04    i32.const [0]
+00812a06    call [3620] ; GameDataVersionMgr.get_Instance
+00812a09    i32.const [0]
+00812a0b    i32.const [27160] ; TABLE GameDataVersionMgr.CloseSynData
+00812a0f    global.set [3]
+00812a11    i32.const [27160] ; TABLE GameDataVersionMgr.CloseSynData
+00812a15    call_indirect [0, 0]
+00812a18    local.get [0]
+00812a1a    i32.const [4]
+00812a1c    i32.const [4103464] ; STRING "同步数据超时"
+00812a21    i32.load [2, 0]
+00812a24    local.get [0]
+00812a26    i32.const [18166] ; TABLE LoginStateBase.{xx{YV
+00812a2a    global.set [3]
+00812a2c    i32.const [18166] ; TABLE LoginStateBase.{xx{YV
+00812a30    call_indirect [7, 0]
+00812a33  end []
+00812a34  end []

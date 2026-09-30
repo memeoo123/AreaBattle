@@ -1,0 +1,11 @@
+; Original class: PiggyBankControl
+; Type3874.get_IsFull; wasmcode function 5828; offset=2050246 size=18
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001f48c7  i32.const [0]
+001f48c9  call [1438] ; GameModule.get_LocalData
+001f48cc  i32.load [2, 20]
+001f48cf  i32.load [2, 36]
+001f48d2  i32.const [999]
+001f48d5  i32.gt_s []
+001f48d6  return []
+001f48d7  end []

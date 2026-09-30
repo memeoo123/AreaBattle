@@ -1,0 +1,16 @@
+; Original class: Event
+; Type10053.CopyFrom; wasmcode1 function 3430; offset=1111862 size=28
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0010f737  local.get [1]
+0010f739  i32.load [2, 8]
+0010f73c  local.get [0]
+0010f73e  i32.load [2, 8]
+0010f741  i32.ne []
+0010f742  if [-64]
+0010f744    local.get [0]
+0010f746    local.get [1]
+0010f748    i32.load [2, 8]
+0010f74b    local.get [1]
+0010f74d    call [13755] ; Event.CopyFromPtr
+0010f750  end []
+0010f751  end []

@@ -1,0 +1,34 @@
+{
+  "status": "distinct-source-bootstrap-prefabs-imported-and-page-composition-verified",
+  "atUtc": "2026-09-30T02:33:04.274183+00:00",
+  "source": [
+    "ui-root-evidence.json",
+    "ui-bootstrap-schema.json",
+    "ui-bootstrap-import.json"
+  ],
+  "prefabs": [
+    "Recovered/UiBootstrap/SceneUICanvas/UICanvas",
+    "Recovered/UiBootstrap/ResourceUICanvas/UICanvas"
+  ],
+  "verified": [
+    "Both original tags20010 resolve to GFUICanvas using original TagManager index10; existing tags retained",
+    "Source camera and Canvas fields imported with native serialization versions and cross-reference",
+    "Camera viewport0,0,1,1, culling32, near0/far50, ortho6.4, depth10, noHDR/MSAA",
+    "Distinct root transform, scaler, aspect and adaptive fields survive saved-prefab reload",
+    "Actual SceneUICanvas now parents original UIRoot and modern Valentine page in concrete load lifecycle check"
+  ],
+  "validation": {
+    "passed": true,
+    "prefabs": 2,
+    "scope": "Source native components, camera references, transforms, tags and serialized adaptive values; AtlasLoader and production startup pending"
+  },
+  "integratedChecks": 605,
+  "remaining": [
+    "AtlasLoader not attached; original auto-load serialized flag retained in manifest",
+    "AdaptiveBangs behavior on UIRoot",
+    "Actual module startup/resource dispatch, account/menu composition and Player validation"
+  ],
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false,
+  "followupBangsAudit": "ADAPTIVE_BANGS_AUDIT.json"
+}

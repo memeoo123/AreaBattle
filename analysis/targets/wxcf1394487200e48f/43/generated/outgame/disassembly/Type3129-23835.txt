@@ -1,0 +1,110 @@
+; Original class: AssetBundleManager
+; Type3129.LoadManifest; wasmcode function 13173; offset=6305823 size=339
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+00603822  i32.const [4988549]
+00603827  i32.load8_u [0, 0]
+0060382a  i32.eqz []
+0060382b  if [-64]
+0060382d    i32.const [3928336]
+00603832    call [900] ; 
+00603835    i32.const [3928344]
+0060383a    call [900] ; 
+0060383d    i32.const [3911580]
+00603842    call [900] ; 
+00603845    i32.const [3959604]
+0060384a    call [900] ; 
+0060384d    i32.const [3959608]
+00603852    call [900] ; 
+00603855    i32.const [3959620]
+0060385a    call [900] ; 
+0060385d    i32.const [3972116]
+00603862    call [900] ; 
+00603865    i32.const [3940520]
+0060386a    call [900] ; 
+0060386d    i32.const [4044968] ; STRING "AssetBundleManifest"
+00603872    call [900] ; 
+00603875    i32.const [4988549]
+0060387a    i32.const [1]
+0060387c    i32.store8 [0, 0]
+0060387f  end []
+00603880  i32.const [3928344]
+00603885  i32.load [2, 0]
+00603888  call [901] ; 
+0060388b  i32.const [3928344]
+00603890  i32.load [2, 0]
+00603893  i32.load [2, 92]
+00603896  i32.load [2, 16]
+00603899  local.get [0]
+0060389b  i32.const [3959604]
+006038a0  i32.load [2, 0]
+006038a3  call [987] ; 
+006038a6  if [-64]
+006038a8    i32.const [3928344]
+006038ad    i32.load [2, 0]
+006038b0    call [901] ; 
+006038b3    i32.const [3928344]
+006038b8    i32.load [2, 0]
+006038bb    i32.load [2, 92]
+006038be    i32.load [2, 16]
+006038c1    local.get [0]
+006038c3    i32.const [3959620]
+006038c8    i32.load [2, 0]
+006038cb    call [982] ; 
+006038ce    i32.load [2, 8]
+006038d1    i32.const [1]
+006038d3    i32.const [0]
+006038d5    call [2423] ; AssetBundle.Unload
+006038d8    i32.const [3928344]
+006038dd    i32.load [2, 0]
+006038e0    i32.load [2, 92]
+006038e3    i32.load [2, 16]
+006038e6    local.get [0]
+006038e8    i32.const [3959608]
+006038ed    i32.load [2, 0]
+006038f0    call [1202] ; 
+006038f3    drop []
+006038f4  end []
+006038f5  i32.const [3928344]
+006038fa  i32.load [2, 0]
+006038fd  call [901] ; 
+00603900  local.get [0]
+00603902  i32.const [1]
+00603904  local.get [0]
+00603906  call [3666] ; AssetBundleManager.LoadAssetBundle
+00603909  i32.const [3911580]
+0060390e  i32.load [2, 0]
+00603911  local.set [1]
+00603913  i32.const [3940520]
+00603918  i32.load [2, 0]
+0060391b  call [901] ; 
+0060391e  local.get [1]
+00603920  i32.const [0]
+00603922  call [912] ; Type.GetTypeFromHandle
+00603925  local.set [2]
+00603927  i32.const [3928336]
+0060392c  i32.load [2, 0]
+0060392f  call [903] ; 
+00603932  local.set [1]
+00603934  i32.const [4044968] ; STRING "AssetBundleManifest"
+00603939  i32.load [2, 0]
+0060393c  local.set [3]
+0060393e  local.get [1]
+00603940  local.get [0]
+00603942  i32.store [2, 8]
+00603945  local.get [1]
+00603947  local.get [3]
+00603949  i32.store [2, 12]
+0060394c  local.get [1]
+0060394e  local.get [2]
+00603950  i32.store [2, 20]
+00603953  i32.const [3928344]
+00603958  i32.load [2, 0]
+0060395b  i32.load [2, 92]
+0060395e  i32.load [2, 28]
+00603961  local.get [1]
+00603963  i32.const [3972116]
+00603968  i32.load [2, 0]
+0060396b  call [941] ; 
+0060396e  local.get [1]
+00603970  return []
+00603971  end []

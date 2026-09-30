@@ -1,0 +1,31 @@
+; Tower.GetSoldierEntity; wasmcode function 15521; offset=7495192 size=78
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00725e19  i32.const [5007191]
+00725e1e  i32.load8_u [0, 0]
+00725e21  i32.eqz []
+00725e22  if [-64]
+00725e24    i32.const [3953440]
+00725e29    call [900] ; 
+00725e2c    i32.const [5007191]
+00725e31    i32.const [1]
+00725e33    i32.store8 [0, 0]
+00725e36  end []
+00725e37  i32.const [3953440]
+00725e3c  i32.load [2, 0]
+00725e3f  call [935] ; 
+00725e42  i32.const [0]
+00725e44  call [7633] ; LevelControl.GetEmptySoldier
+00725e47  local.set [1]
+00725e49  local.get [1]
+00725e4b  local.get [0]
+00725e4d  i32.load [2, 12]
+00725e50  i32.load [2, 52]
+00725e53  local.get [0]
+00725e55  i32.load [2, 20]
+00725e58  local.get [0]
+00725e5a  i32.load [2, 28]
+00725e5d  local.get [0]
+00725e5f  call [7126] ; Soldier.Init
+00725e62  local.get [1]
+00725e64  return []
+00725e65  end []

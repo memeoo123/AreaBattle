@@ -1,0 +1,20 @@
+; Original class: DBTSDKManager
+; Type3135.applicationWillResignActive; wasmcode1 function 66240; offset=21040521 size=52
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01410d8a  i32.const [4988637]
+01410d8f  i32.load8_u [0, 0]
+01410d92  i32.eqz []
+01410d93  if [-64]
+01410d95    i32.const [4054824] ; STRING "GF_ApplicationWillResignActive"
+01410d9a    i32.const [1605]
+01410d9d    call_indirect [0, 0]
+01410da0    i32.const [4988637]
+01410da5    i32.const [1]
+01410da7    i32.store8 [0, 0]
+01410daa  end []
+01410dab  i32.const [4054824] ; STRING "GF_ApplicationWillResignActive"
+01410db0  i32.load [2, 0]
+01410db3  i32.const [0]
+01410db5  i32.const [9222] ; TABLE MsgDispatcher.SendMessage
+01410db9  call_indirect [4, 0]
+01410dbc  end []

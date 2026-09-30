@@ -1,0 +1,8 @@
+from pathlib import Path
+p=Path('analysis/flow_evidence.py');s=p.read_text(encoding='utf-8')
+s=s.replace("('GameControl','.cctor')]","('GameControl','.cctor'),('@11337',),('@1622',),('@18543',),('@5043',),('@12170',)]")
+s=s.replace("OnGamePlayState Pause(7) calls audio virtual pause(true). This branch does not set Time.timeScale=0.","OnGamePlayState common preamble calls GlobalData.PauseGame(state==7), forwarding changeTimeScale=true to GameFrameEntry.PauseGame; Time.timeScale=0 on Pause and1 for any non-Pause transition. Case7 also pauses audio.")
+s=s.replace("Relative controller scheduling order not yet resolved.","AICampController -> LevelControl (active towers and victory refresh) -> WayLineControl. MineGameMain registers them in this order and MineGameLogicModule.Update traverses the insertion list.")
+s=s.replace("w('1a33de','1a33ec'),'flow_pause_api", "w('1a33de','1a33ec'),w('37a032','37a039'),w('1a754b','1a7551'),w('5a1118','5a1127'),w('5516ee','5516fd'),w('55179c','5517ab'),w('55184a','551859'),w('82b54','82b63'),w('7f77f4','7f78d3'),'flow_pause_api")
+s=s.replace("unknowns=[", "facts += [fact('ordinary-wave-scope','inferred',{'observation':'Recovered ordinary level path creates the serialized tower set once. Recovered LevelControl.Updata only updates active towers and periodically refreshes camp totals; it contains no independent wave-spawn timer. AI acts through tower connections.','limit':'This supports no additional scheduled enemy waves for the selected ordinary slice. It is not a global absence proof across boss, commander, skill, or special mode code.'},[w('56ac0c','56acef'),w('81f516','81f736'),w('631633','632d15')])]\nunknowns=[")
+p.write_text(s,encoding='utf-8')

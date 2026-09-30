@@ -1,0 +1,17 @@
+; Original class: SimpleCoroutineAwaiter
+; Type2875.System.Runtime.CompilerServices.INotifyCompletion.OnCompleted; wasmcode function 15990; offset=7717151 size=31
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0075c120  local.get [0]
+0075c122  i32.load [2, 16]
+0075c125  i32.eqz []
+0075c126  local.get [0]
+0075c128  call [3340] ; IEnumeratorAwaitExtensions.IP¨»
+0075c12b  local.get [0]
+0075c12d  i32.load8_u [0, 8]
+0075c130  i32.eqz []
+0075c131  local.get [0]
+0075c133  call [3340] ; IEnumeratorAwaitExtensions.IP¨»
+0075c136  local.get [0]
+0075c138  local.get [1]
+0075c13a  i32.store [2, 16]
+0075c13d  end []

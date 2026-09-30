@@ -1,0 +1,20 @@
+; Original class: ItemBagControl
+; Type4097..ctor; wasmcode function 19001; offset=8540561 size=48
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00825192  i32.const [5008459]
+00825197  i32.load8_u [0, 0]
+0082519a  i32.eqz []
+0082519b  if [-64]
+0082519d    i32.const [3953420]
+008251a2    call [900] ; 
+008251a5    i32.const [5008459]
+008251aa    i32.const [1]
+008251ac    i32.store8 [0, 0]
+008251af  end []
+008251b0  local.get [0]
+008251b2  i32.const [-1]
+008251b4  i32.store [2, 24]
+008251b7  i32.const [3953420]
+008251bc  i32.load [2, 0]
+008251bf  drop []
+008251c0  end []

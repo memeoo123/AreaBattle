@@ -1,0 +1,37 @@
+; Original class: Soldier
+; Type4222..cctor; wasmcode function 15866; offset=7631614 size=106
+; signature={'args': [127], 'returns': []}; localGroups=[]
+007472ff  i32.const [5007175]
+00747304  i32.load8_u [0, 0]
+00747307  i32.eqz []
+00747308  if [-64]
+0074730a    i32.const [3927120]
+0074730f    call [900] ; 
+00747312    i32.const [3939112]
+00747317    call [900] ; 
+0074731a    i32.const [4032292]
+0074731f    call [900] ; 
+00747322    i32.const [5007175]
+00747327    i32.const [1]
+00747329    i32.store8 [0, 0]
+0074732c  end []
+0074732d  i32.const [3927120]
+00747332  i32.load [2, 0]
+00747335  i32.const [3]
+00747337  call [909] ; 
+0074733a  local.set [0]
+0074733c  local.get [0]
+0074733e  i32.const [4032292]
+00747343  i32.load [2, 0]
+00747346  i32.const [0]
+00747348  call [1043] ; RuntimeHelpers.InitializeArray
+0074734b  i32.const [3939112]
+00747350  i32.load [2, 0]
+00747353  i32.load [2, 92]
+00747356  local.get [0]
+00747358  i32.store [2, 0]
+0074735b  i32.const [3939112]
+00747360  i32.load [2, 0]
+00747363  i32.load [2, 92]
+00747366  drop []
+00747367  end []

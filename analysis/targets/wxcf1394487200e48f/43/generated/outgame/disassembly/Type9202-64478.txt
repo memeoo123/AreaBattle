@@ -1,0 +1,276 @@
+; Original class: ADModule
+; Type9202.ShowVideo; wasmcode function 13422; offset=6503089 size=777
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 125)]
+00633ab4  i32.const [5006931]
+00633ab9  i32.load8_u [0, 0]
+00633abc  i32.eqz []
+00633abd  if [-64]
+00633abf    i32.const [3988656] ; METHOD ADModule.<ShowVideo>b__38_0
+00633ac4    call [900] ; 
+00633ac7    i32.const [3988660] ; METHOD ADModule.<ShowVideo>b__38_1
+00633acc    call [900] ; 
+00633acf    i32.const [3927760]
+00633ad4    call [900] ; 
+00633ad7    i32.const [3915488]
+00633adc    call [900] ; 
+00633adf    i32.const [3936304]
+00633ae4    call [900] ; 
+00633ae7    i32.const [4035380] ; STRING " ShowVideo no video ready"
+00633aec    call [900] ; 
+00633aef    i32.const [4035388] ; STRING " ShowVideo videoShowing"
+00633af4    call [900] ; 
+00633af7    i32.const [4035368] ; STRING " ShowVideo Failed no video ready"
+00633afc    call [900] ; 
+00633aff    i32.const [4078168] ; STRING "VideoAdShow"
+00633b04    call [900] ; 
+00633b07    i32.const [4035376] ; STRING " ShowVideo isDoubleClick"
+00633b0c    call [900] ; 
+00633b0f    i32.const [4035364] ; STRING " ShowVideo"
+00633b14    call [900] ; 
+00633b17    i32.const [4035372] ; STRING " ShowVideo firstDayNoAd"
+00633b1c    call [900] ; 
+00633b1f    i32.const [5006931]
+00633b24    i32.const [1]
+00633b26    i32.store8 [0, 0]
+00633b29  end []
+00633b2a  local.get [0]
+00633b2c  i32.const [0]
+00633b2e  i32.store [2, 20]
+00633b31  local.get [0]
+00633b33  i32.load [2, 20]
+00633b36  local.get [2]
+00633b38  i32.const [0]
+00633b3a  call [1031] ; Delegate.Combine
+00633b3d  local.set [1]
+00633b3f  local.get [0]
+00633b41  local.get [1]
+00633b43  i32.const [3915488]
+00633b48  i32.load [2, 0]
+00633b4b  call [938] ; 
+00633b4e  i32.store [2, 20]
+00633b51  local.get [1]
+00633b53  i32.const [3915488]
+00633b58  i32.load [2, 0]
+00633b5b  call [938] ; 
+00633b5e  drop []
+00633b5f  block [-64]
+00633b61    block [-64]
+00633b63      block [-64]
+00633b65        local.get [0]
+00633b67        local.get [0]
+00633b69        call [5240] ; ADModule.getFilterType
+00633b6c        br_if [0]
+00633b6e        local.get [0]
+00633b70        local.get [0]
+00633b72        i32.const [64502] ; TABLE ADModule.isDoubleClick
+00633b76        global.set [3]
+00633b78        i32.const [64502] ; TABLE ADModule.isDoubleClick
+00633b7c        call_indirect [1, 0]
+00633b7f        i32.eqz []
+00633b80        br_if [0]
+00633b82        i32.const [3927760]
+00633b87        i32.load [2, 0]
+00633b8a        call [901] ; 
+00633b8d        i32.const [3927760]
+00633b92        i32.load [2, 0]
+00633b95        i32.load [2, 92]
+00633b98        i32.load [2, 0]
+00633b9b        i32.const [4035376] ; STRING " ShowVideo isDoubleClick"
+00633ba0        i32.load [2, 0]
+00633ba3        i32.const [0]
+00633ba5        call [921] ; String.Concat
+00633ba8        i32.const [0]
+00633baa        call [999] ; XYXLOG.Log
+00633bad        br [1]
+00633baf      end []
+00633bb0      block [-64]
+00633bb2        local.get [0]
+00633bb4        local.get [0]
+00633bb6        call [5240] ; ADModule.getFilterType
+00633bb9        i32.const [1]
+00633bbb        i32.ne []
+00633bbc        br_if [0]
+00633bbe        local.get [0]
+00633bc0        i32.load8_u [0, 25]
+00633bc3        i32.eqz []
+00633bc4        br_if [0]
+00633bc6        i32.const [3927760]
+00633bcb        i32.load [2, 0]
+00633bce        call [901] ; 
+00633bd1        i32.const [3927760]
+00633bd6        i32.load [2, 0]
+00633bd9        i32.load [2, 92]
+00633bdc        i32.load [2, 0]
+00633bdf        i32.const [4035388] ; STRING " ShowVideo videoShowing"
+00633be4        i32.load [2, 0]
+00633be7        i32.const [0]
+00633be9        call [921] ; String.Concat
+00633bec        i32.const [0]
+00633bee        call [999] ; XYXLOG.Log
+00633bf1        br [1]
+00633bf3      end []
+00633bf4      i32.const [0]
+00633bf6      call [1342] ; Time.get_realtimeSinceStartup
+00633bf9      local.set [4]
+00633bfb      local.get [0]
+00633bfd      i32.const [1]
+00633bff      i32.store8 [0, 25]
+00633c02      local.get [0]
+00633c04      local.get [4]
+00633c06      f32.store [2, 28]
+00633c09      i32.const [3927760]
+00633c0e      i32.load [2, 0]
+00633c11      call [901] ; 
+00633c14      i32.const [3927760]
+00633c19      i32.load [2, 0]
+00633c1c      i32.load [2, 92]
+00633c1f      i32.load8_u [0, 4]
+00633c22      if [-64]
+00633c24        i32.const [3927760]
+00633c29        i32.load [2, 0]
+00633c2c        call [901] ; 
+00633c2f        i32.const [3927760]
+00633c34        i32.load [2, 0]
+00633c37        i32.load [2, 92]
+00633c3a        i32.load [2, 0]
+00633c3d        i32.const [4035372] ; STRING " ShowVideo firstDayNoAd"
+00633c42        i32.load [2, 0]
+00633c45        i32.const [0]
+00633c47        call [921] ; String.Concat
+00633c4a        i32.const [0]
+00633c4c        call [999] ; XYXLOG.Log
+00633c4f        br [2]
+00633c51      end []
+00633c52      local.get [0]
+00633c54      i32.load8_u [0, 10]
+00633c57      i32.eqz []
+00633c58      if [-64]
+00633c5a        i32.const [3927760]
+00633c5f        i32.load [2, 0]
+00633c62        call [901] ; 
+00633c65        i32.const [3927760]
+00633c6a        i32.load [2, 0]
+00633c6d        i32.load [2, 92]
+00633c70        i32.load [2, 0]
+00633c73        i32.const [4035368] ; STRING " ShowVideo Failed no video ready"
+00633c78        i32.load [2, 0]
+00633c7b        i32.const [0]
+00633c7d        call [921] ; String.Concat
+00633c80        i32.const [0]
+00633c82        call [999] ; XYXLOG.Log
+00633c85        br [2]
+00633c87      end []
+00633c88      i32.const [3936304]
+00633c8d      i32.load [2, 0]
+00633c90      call [901] ; 
+00633c93      i32.const [0]
+00633c95      call [1381] ; NewAdsManager.get_Instance
+00633c98      i32.const [0]
+00633c9a      call [5866] ; NewAdsManager.isVideoReady
+00633c9d      i32.eqz []
+00633c9e      if [-64]
+00633ca0        i32.const [3927760]
+00633ca5        i32.load [2, 0]
+00633ca8        call [901] ; 
+00633cab        i32.const [3927760]
+00633cb0        i32.load [2, 0]
+00633cb3        i32.load [2, 92]
+00633cb6        i32.load [2, 0]
+00633cb9        i32.const [4035380] ; STRING " ShowVideo no video ready"
+00633cbe        i32.load [2, 0]
+00633cc1        i32.const [0]
+00633cc3        call [921] ; String.Concat
+00633cc6        i32.const [0]
+00633cc8        call [999] ; XYXLOG.Log
+00633ccb        local.get [0]
+00633ccd        local.get [0]
+00633ccf        call [13421] ; ADModule.autoCloseVideo
+00633cd2      end []
+00633cd3      i32.const [3936304]
+00633cd8      i32.load [2, 0]
+00633cdb      call [901] ; 
+00633cde      i32.const [3936304]
+00633ce3      i32.load [2, 0]
+00633ce6      i32.load [2, 92]
+00633ce9      i32.const [0]
+00633ceb      i32.store8 [0, 64]
+00633cee      i32.const [3927760]
+00633cf3      i32.load [2, 0]
+00633cf6      call [901] ; 
+00633cf9      i32.const [3927760]
+00633cfe      i32.load [2, 0]
+00633d01      i32.load [2, 92]
+00633d04      i32.load [2, 0]
+00633d07      i32.const [4035364] ; STRING " ShowVideo"
+00633d0c      i32.load [2, 0]
+00633d0f      i32.const [0]
+00633d11      call [921] ; String.Concat
+00633d14      i32.const [0]
+00633d16      call [999] ; XYXLOG.Log
+00633d19      i32.const [0]
+00633d1b      call [1381] ; NewAdsManager.get_Instance
+00633d1e      local.set [1]
+00633d20      i32.const [3915488]
+00633d25      i32.load [2, 0]
+00633d28      call [903] ; 
+00633d2b      local.set [2]
+00633d2d      local.get [2]
+00633d2f      local.get [0]
+00633d31      i32.const [3988656] ; METHOD ADModule.<ShowVideo>b__38_0
+00633d36      i32.load [2, 0]
+00633d39      i32.const [0]
+00633d3b      call [1004] ; 
+00633d3e      i32.const [3915488]
+00633d43      i32.load [2, 0]
+00633d46      call [903] ; 
+00633d49      local.set [3]
+00633d4b      local.get [3]
+00633d4d      local.get [0]
+00633d4f      i32.const [3988660] ; METHOD ADModule.<ShowVideo>b__38_1
+00633d54      i32.load [2, 0]
+00633d57      i32.const [0]
+00633d59      call [1004] ; 
+00633d5c      local.get [1]
+00633d5e      local.get [2]
+00633d60      local.get [3]
+00633d62      i32.const [0]
+00633d64      i32.const [0]
+00633d66      call [7513] ; NewAdsManager.showVideo
+00633d69      i32.const [4078168] ; STRING "VideoAdShow"
+00633d6e      i32.load [2, 0]
+00633d71      i32.const [0]
+00633d73      call [1317] ; MsgDispatcher.SendMessage
+00633d76      return []
+00633d77    end []
+00633d78    local.get [0]
+00633d7a    i32.load [2, 20]
+00633d7d    local.set [1]
+00633d7f    local.get [1]
+00633d81    if [-64]
+00633d83      local.get [1]
+00633d85      i32.const [0]
+00633d87      i32.const [0]
+00633d89      call [1336] ; 
+00633d8c    end []
+00633d8d    local.get [0]
+00633d8f    i32.const [0]
+00633d91    i32.store [2, 20]
+00633d94    return []
+00633d95  end []
+00633d96  local.get [0]
+00633d98  i32.load [2, 20]
+00633d9b  local.set [1]
+00633d9d  local.get [1]
+00633d9f  if [-64]
+00633da1    local.get [1]
+00633da3    i32.const [0]
+00633da5    i32.const [0]
+00633da7    call [1336] ; 
+00633daa  end []
+00633dab  local.get [0]
+00633dad  i32.const [0]
+00633daf  i32.store [2, 20]
+00633db2  local.get [0]
+00633db4  i32.const [0]
+00633db6  i32.store8 [0, 25]
+00633db9  end []

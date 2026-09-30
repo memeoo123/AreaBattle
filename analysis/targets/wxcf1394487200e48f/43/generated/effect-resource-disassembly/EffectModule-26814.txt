@@ -1,0 +1,26 @@
+; EffectModule..ctor; wasmcode function 19819; offset=8905978 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0087e4fb  i32.const [4989041]
+0087e500  i32.load8_u [0, 0]
+0087e503  i32.eqz []
+0087e504  if [-64]
+0087e506    i32.const [3955272]
+0087e50b    call [900] ; 
+0087e50e    i32.const [3917408]
+0087e513    call [900] ; 
+0087e516    i32.const [4989041]
+0087e51b    i32.const [1]
+0087e51d    i32.store8 [0, 0]
+0087e520  end []
+0087e521  i32.const [3917408]
+0087e526  i32.load [2, 0]
+0087e529  call [903] ; 
+0087e52c  local.set [1]
+0087e52e  local.get [1]
+0087e530  i32.const [3955272]
+0087e535  i32.load [2, 0]
+0087e538  call [951] ; 
+0087e53b  local.get [0]
+0087e53d  local.get [1]
+0087e53f  i32.store [2, 16]
+0087e542  end []

@@ -1,0 +1,67 @@
+; Original class: ProcedureBase
+; Type3660.OnLeave; wasmcode function 7415; offset=2922624 size=186
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+002c9881  i32.const [4987648]
+002c9886  i32.load8_u [0, 0]
+002c9889  i32.eqz []
+002c988a  if [-64]
+002c988c    i32.const [3929208]
+002c9891    call [900] ; 
+002c9894    i32.const [3968524]
+002c9899    call [900] ; 
+002c989c    i32.const [3926996]
+002c98a1    call [900] ; 
+002c98a4    i32.const [4060556] ; STRING "Leave '"
+002c98a9    call [900] ; 
+002c98ac    i32.const [4038328] ; STRING "' procedure."
+002c98b1    call [900] ; 
+002c98b4    i32.const [4987648]
+002c98b9    i32.const [1]
+002c98bb    i32.store8 [0, 0]
+002c98be  end []
+002c98bf  i32.const [3968524]
+002c98c4  i32.load [2, 0]
+002c98c7  drop []
+002c98c8  i32.const [3926996]
+002c98cd  i32.load [2, 0]
+002c98d0  i32.const [1]
+002c98d2  call [909] ; 
+002c98d5  local.set [1]
+002c98d7  local.get [0]
+002c98d9  call [962] ; 
+002c98dc  local.set [0]
+002c98de  local.get [0]
+002c98e0  local.set [2]
+002c98e2  local.get [0]
+002c98e4  i32.load [2, 0]
+002c98e7  local.set [0]
+002c98e9  local.get [2]
+002c98eb  local.get [0]
+002c98ed  i32.load [2, 400]
+002c98f1  local.get [0]
+002c98f3  i32.load [2, 396]
+002c98f7  global.set [3]
+002c98f9  global.get [3]
+002c98fb  call_indirect [1, 0]
+002c98fe  local.set [0]
+002c9900  i32.const [4060556] ; STRING "Leave '"
+002c9905  i32.load [2, 0]
+002c9908  local.get [0]
+002c990a  i32.const [4038328] ; STRING "' procedure."
+002c990f  i32.load [2, 0]
+002c9912  i32.const [0]
+002c9914  call [955] ; String.Concat
+002c9917  local.set [0]
+002c9919  local.get [1]
+002c991b  local.get [0]
+002c991d  call [905] ; 
+002c9920  local.get [1]
+002c9922  local.get [0]
+002c9924  i32.store [2, 16]
+002c9927  i32.const [3929208]
+002c992c  i32.load [2, 0]
+002c992f  call [901] ; 
+002c9932  local.get [1]
+002c9934  i32.const [0]
+002c9936  call [5181] ; CLog.LogProcedure
+002c9939  end []

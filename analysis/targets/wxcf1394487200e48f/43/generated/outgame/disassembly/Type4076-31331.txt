@@ -1,0 +1,10 @@
+; Original class: GuideBookControl
+; Type4076.IsGetBookReward; wasmcode function 6008; offset=2114520 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+002043d9  local.get [0]
+002043db  i32.load [2, 8]
+002043de  local.get [1]
+002043e0  local.get [1]
+002043e2  call [11901] ; GuideBookDataManager.ContainsGuide
+002043e5  return []
+002043e6  end []

@@ -1,0 +1,22 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetQryGivenGiftStatic; wasmcode1 function 38444; offset=14430838 size=58
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc3277  i32.const [5005418]
+00dc327c  i32.load8_u [0, 0]
+00dc327f  i32.eqz []
+00dc3280  if [-64]
+00dc3282    i32.const [4057284] ; STRING "ISDK GetQryGivenGiftStatic"
+00dc3287    i32.const [1605]
+00dc328a    call_indirect [0, 0]
+00dc328d    i32.const [5005418]
+00dc3292    i32.const [1]
+00dc3294    i32.store8 [0, 0]
+00dc3297  end []
+00dc3298  i32.const [4057284] ; STRING "ISDK GetQryGivenGiftStatic"
+00dc329d  i32.load [2, 0]
+00dc32a0  i32.const [0]
+00dc32a2  i32.const [9037] ; TABLE XYXLOG.IAPLog
+00dc32a6  call_indirect [4, 0]
+00dc32a9  i32.const [0]
+00dc32ab  call [18057] ; XYX_Gift.RequestIapGift
+00dc32af  end []

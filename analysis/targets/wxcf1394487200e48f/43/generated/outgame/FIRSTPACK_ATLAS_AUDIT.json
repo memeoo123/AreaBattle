@@ -1,0 +1,33 @@
+{
+  "atUtc": "2026-09-30T04:20:47.812566+00:00",
+  "manifest": "firstpack-atlas-import.json",
+  "sourceAtlasObjects": [
+    "CAB-a14f3eb3adf948afc8e578331928efaf:-8765619488925222913",
+    "CAB-a14f3eb3adf948afc8e578331928efaf:1669954366182109888"
+  ],
+  "validation": {
+    "passed": true,
+    "error": "",
+    "atlases": 2,
+    "sprites": 63,
+    "checks": [
+      "PublicUI: all source sprite names, dimensions, pivot, border and PPU verified; native atlas lookup complete",
+      "PublicBtn: all source sprite names, dimensions, pivot, border and PPU verified; native atlas lookup complete"
+    ]
+  },
+  "integratedChecks": 645,
+  "assets": [
+    "Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI.spriteatlas",
+    "Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn.spriteatlas"
+  ],
+  "preserved": "63 original canvas PNG byte hashes, names, pivots, borders, PPU and dimensions (absolute tolerance .0001 pixels for original float artifacts).",
+  "repacked": "Native SpriteAtlas, FullRect sprite meshes, no rotation/tight packing, padding4, default platform4096/RGBA32 uncompressed. Runtime source bundle has no editor packing settings; these are explicit reconstruction settings.",
+  "repair": "First attempt flagged source127.999992 vs imported128 dimension. Next native pack crashed with unset platform max size; explicit default platform settings fixed and successful reimport/repack plus regression verified.",
+  "remaining": [
+    "TipUI source prefab recovery",
+    "Native built bundle GetSprite and combined nonempty firstpack startup",
+    "Original atlas layout/compression/filtering and pixel-rendering equivalence not claimed"
+  ],
+  "freshPlayMode": false,
+  "freshPlayer": false
+}

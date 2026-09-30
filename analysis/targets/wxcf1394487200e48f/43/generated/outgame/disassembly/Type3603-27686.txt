@@ -1,0 +1,22 @@
+; Original class: InputManager
+; Type3603.AddScaleListener; wasmcode function 11794; offset=5754619 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0057cefc  i32.const [4989897]
+0057cf01  i32.load8_u [0, 0]
+0057cf04  i32.eqz []
+0057cf05  if [-64]
+0057cf07    i32.const [3934348]
+0057cf0c    call [900] ; 
+0057cf0f    i32.const [4989897]
+0057cf14    i32.const [1]
+0057cf16    i32.store8 [0, 0]
+0057cf19  end []
+0057cf1a  i32.const [3934348]
+0057cf1f  i32.load [2, 0]
+0057cf22  call [901] ; 
+0057cf25  local.get [0]
+0057cf27  call [1623] ; InputManager.get_Instance
+0057cf2a  local.get [0]
+0057cf2c  local.get [0]
+0057cf2e  call [11787] ; InputManager.²io§F
+0057cf31  end []

@@ -1,0 +1,107 @@
+; Original class: LoginSuccess
+; Type4611.OnEnter; wasmcode function 18744; offset=8465421 size=314
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00812c0e  i32.const [5001588]
+00812c13  i32.load8_u [0, 0]
+00812c16  i32.eqz []
+00812c17  if [-64]
+00812c19    i32.const [3920444]
+00812c1e    call [900] ; 
+00812c21    i32.const [3968592]
+00812c26    call [900] ; 
+00812c29    i32.const [3922404]
+00812c2e    call [900] ; 
+00812c31    i32.const [3935500]
+00812c36    call [900] ; 
+00812c39    i32.const [4005868] ; METHOD LoginSuccess.R^LOxo
+00812c3e    call [900] ; 
+00812c41    i32.const [4005876] ; METHOD LoginSuccess.U^NOlq
+00812c46    call [900] ; 
+00812c49    i32.const [4005872] ; METHOD LoginSuccess.ilOfio
+00812c4e    call [900] ; 
+00812c51    i32.const [3939452]
+00812c56    call [900] ; 
+00812c59    i32.const [5001588]
+00812c5e    i32.const [1]
+00812c60    i32.store8 [0, 0]
+00812c63  end []
+00812c64  local.get [0]
+00812c66  local.get [1]
+00812c68  local.get [0]
+00812c6a  call [3134] ; LoginStateBase.OnEnter
+00812c6d  i32.const [3920444]
+00812c72  i32.load [2, 0]
+00812c75  call [903] ; 
+00812c78  local.set [2]
+00812c7a  local.get [2]
+00812c7c  local.get [0]
+00812c7e  i32.const [4005868] ; METHOD LoginSuccess.R^LOxo
+00812c83  i32.load [2, 0]
+00812c86  call [2089] ; 
+00812c89  local.get [0]
+00812c8b  i32.const [3]
+00812c8d  local.get [2]
+00812c8f  i32.const [3968592]
+00812c94  i32.load [2, 0]
+00812c97  call [2968] ; 
+00812c9a  i32.const [3920444]
+00812c9f  i32.load [2, 0]
+00812ca2  call [903] ; 
+00812ca5  local.set [2]
+00812ca7  local.get [2]
+00812ca9  local.get [0]
+00812cab  i32.const [4005876] ; METHOD LoginSuccess.U^NOlq
+00812cb0  i32.load [2, 0]
+00812cb3  call [2089] ; 
+00812cb6  local.get [0]
+00812cb8  i32.const [5]
+00812cba  local.get [2]
+00812cbc  i32.const [3968592]
+00812cc1  i32.load [2, 0]
+00812cc4  call [2968] ; 
+00812cc7  i32.const [3920444]
+00812ccc  i32.load [2, 0]
+00812ccf  call [903] ; 
+00812cd2  local.set [2]
+00812cd4  local.get [2]
+00812cd6  local.get [0]
+00812cd8  i32.const [4005872] ; METHOD LoginSuccess.ilOfio
+00812cdd  i32.load [2, 0]
+00812ce0  call [2089] ; 
+00812ce3  local.get [0]
+00812ce5  i32.const [7]
+00812ce7  local.get [2]
+00812ce9  i32.const [3968592]
+00812cee  i32.load [2, 0]
+00812cf1  call [2968] ; 
+00812cf4  i32.const [3935500]
+00812cf9  i32.load [2, 0]
+00812cfc  i32.load [2, 92]
+00812cff  i32.load8_u [0, 0]
+00812d02  if [-64]
+00812d04    i32.const [1]
+00812d06    i32.const [3922404]
+00812d0b    i32.load [2, 0]
+00812d0e    local.get [1]
+00812d10    call [918] ; 
+00812d13    local.set [0]
+00812d15    local.get [0]
+00812d17    local.set [1]
+00812d19    local.get [0]
+00812d1b    i32.load [2, 0]
+00812d1e    local.set [0]
+00812d20    local.get [1]
+00812d22    i32.const [1]
+00812d24    i32.const [3939452]
+00812d29    i32.load [2, 0]
+00812d2c    i32.load [2, 92]
+00812d2f    i32.load [2, 0]
+00812d32    local.get [0]
+00812d34    i32.load [2, 312]
+00812d38    local.get [0]
+00812d3a    i32.load [2, 308]
+00812d3e    global.set [3]
+00812d40    global.get [3]
+00812d42    call_indirect [7, 0]
+00812d45  end []
+00812d46  end []

@@ -1,0 +1,14 @@
+; Original class: FileManager
+; Type3622.CheckDirection; wasmcode function 2701; offset=843524 size=21
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000cdf05  local.get [1]
+000cdf07  i32.const [0]
+000cdf09  call [2406] ; Directory.Exists
+000cdf0c  i32.eqz []
+000cdf0d  if [-64]
+000cdf0f    local.get [1]
+000cdf11    i32.const [0]
+000cdf13    call [3637] ; Directory.CreateDirectory
+000cdf16    drop []
+000cdf17  end []
+000cdf18  end []

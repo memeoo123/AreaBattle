@@ -1,0 +1,39 @@
+; Original class: MainTabItemUI
+; Type4376.OpenLater; wasmcode1 function 57541; offset=18809121 size=114
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011f0122  i32.const [5009017]
+011f0127  i32.load8_u [0, 0]
+011f012a  i32.eqz []
+011f012b  if [-64]
+011f012d    i32.const [3947148]
+011f0132    i32.const [1605]
+011f0135    call_indirect [0, 0]
+011f0138    i32.const [4005936] ; METHOD MainTabItemUI.RefreshItemNum
+011f013d    i32.const [1605]
+011f0140    call_indirect [0, 0]
+011f0143    i32.const [4075200] ; STRING "ToolChange"
+011f0148    i32.const [1605]
+011f014b    call_indirect [0, 0]
+011f014e    i32.const [5009017]
+011f0153    i32.const [1]
+011f0155    i32.store8 [0, 0]
+011f0158  end []
+011f0159  i32.const [3947148]
+011f015e  i32.load [2, 0]
+011f0161  i32.const [109007]
+011f0165  call_indirect [2, 0]
+011f0168  local.set [1]
+011f016a  local.get [1]
+011f016c  local.get [0]
+011f016e  i32.const [4005936] ; METHOD MainTabItemUI.RefreshItemNum
+011f0173  i32.load [2, 0]
+011f0176  i32.const [0]
+011f0178  i32.const [24682] ; TABLE EventHandler..ctor
+011f017c  call_indirect [6, 0]
+011f017f  i32.const [4075200] ; STRING "ToolChange"
+011f0184  i32.load [2, 0]
+011f0187  local.get [1]
+011f0189  i32.const [0]
+011f018b  i32.const [24665] ; TABLE MsgDispatcher.AddEventListener
+011f018f  call_indirect [5, 0]
+011f0192  end []

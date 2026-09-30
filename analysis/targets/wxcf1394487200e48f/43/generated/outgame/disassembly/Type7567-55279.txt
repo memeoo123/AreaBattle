@@ -1,0 +1,23 @@
+; Original class: XYXADControl
+; Type7567.trackVideo; wasmcode function 9324; offset=4536278 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+004537d9  local.get [0]
+004537db  call [1083] ; BridgeManager.get_xyxFunc
+004537de  local.set [1]
+004537e0  local.get [0]
+004537e2  local.set [2]
+004537e4  local.get [1]
+004537e6  i32.load [2, 0]
+004537e9  local.set [0]
+004537eb  local.get [1]
+004537ed  local.get [2]
+004537ef  local.get [0]
+004537f1  i32.const [304]
+004537f4  i32.add []
+004537f5  i32.load [2, 192]
+004537f9  local.get [0]
+004537fb  i32.load [2, 492]
+004537ff  global.set [3]
+00453801  global.get [3]
+00453803  call_indirect [2, 0]
+00453806  end []

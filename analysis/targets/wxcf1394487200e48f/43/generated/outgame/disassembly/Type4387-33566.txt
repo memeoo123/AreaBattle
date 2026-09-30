@@ -1,0 +1,37 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.^RSoo; wasmcode function 11023; offset=5335241 size=105
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 125)]
+005168cc  i32.const [5007404]
+005168d1  i32.load8_u [0, 0]
+005168d4  i32.eqz []
+005168d5  if [-64]
+005168d7    i32.const [3927888]
+005168dc    call [900] ; 
+005168df    i32.const [4009916] ; METHOD Proj_xqzdLoadingUI.wM|V
+005168e4    call [900] ; 
+005168e7    i32.const [5007404]
+005168ec    i32.const [1]
+005168ee    i32.store8 [0, 0]
+005168f1  end []
+005168f2  f32.const [0.6000000238418579]
+005168f7  f32.const [0.800000011920929]
+005168fc  i32.const [0]
+005168fe  call [4874] ; Random.Range
+00516901  local.set [2]
+00516903  i32.const [3927888]
+00516908  i32.load [2, 0]
+0051690b  call [903] ; 
+0051690e  local.set [1]
+00516910  local.get [1]
+00516912  local.get [0]
+00516914  i32.const [4009916] ; METHOD Proj_xqzdLoadingUI.wM|V
+00516919  i32.load [2, 0]
+0051691c  i32.const [0]
+0051691e  call [1002] ; Action..ctor
+00516921  local.get [0]
+00516923  local.get [2]
+00516925  f32.const [1.0]
+0051692a  local.get [1]
+0051692c  local.get [0]
+0051692e  call [5809] ; Proj_xqzdLoadingUI.gurX
+00516931  end []

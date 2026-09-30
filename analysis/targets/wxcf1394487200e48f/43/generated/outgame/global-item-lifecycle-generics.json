@@ -1,0 +1,160 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3981916,
+      "encodedUsage": "0xc000acbf",
+      "methodSpecIndex": 22111,
+      "methodSpecAddress": 748340,
+      "methodSpec": [
+        2201,
+        162,
+        -1
+      ],
+      "declaringType": "Nullable`1",
+      "method": ".ctor",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3981928,
+      "encodedUsage": "0xc000acc5",
+      "methodSpecIndex": 22114,
+      "methodSpecAddress": 748376,
+      "methodSpec": [
+        2202,
+        162,
+        -1
+      ],
+      "declaringType": "Nullable`1",
+      "method": "get_HasValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3981932,
+      "encodedUsage": "0xc000acc7",
+      "methodSpecIndex": 22115,
+      "methodSpecAddress": 748388,
+      "methodSpec": [
+        2203,
+        162,
+        -1
+      ],
+      "declaringType": "Nullable`1",
+      "method": "get_Value",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3955840,
+      "encodedUsage": "0xc0007bd3",
+      "methodSpecIndex": 15849,
+      "methodSpecAddress": 673196,
+      "methodSpec": [
+        10517,
+        749,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4548,
+            "name": "ItemUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3955848,
+      "encodedUsage": "0xc0007bd7",
+      "methodSpecIndex": 15851,
+      "methodSpecAddress": 673220,
+      "methodSpec": [
+        10510,
+        749,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4548,
+            "name": "ItemUserData"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

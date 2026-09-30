@@ -1,0 +1,11 @@
+; Original class: SkinItem
+; Type4364.SetSelectedStatus; wasmcode function 15912; offset=7651492 size=19
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0074c0a5  local.get [0]
+0074c0a7  i32.load [2, 92]
+0074c0aa  i32.const [0]
+0074c0ac  call [943] ; Component.get_gameObject
+0074c0af  local.get [1]
+0074c0b1  i32.const [0]
+0074c0b3  call [949] ; GameObject.SetActive
+0074c0b6  end []

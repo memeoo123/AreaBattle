@@ -1,0 +1,77 @@
+{
+  "atUtc": "2026-09-30T05:26:59.922701+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameProcedurePreLoad.cs",
+  "sourceMethods": [
+    34119,
+    34120,
+    34122,
+    34123,
+    34124,
+    34125,
+    34126,
+    34127,
+    34128,
+    34131,
+    34132
+  ],
+  "sourceTypeFullName": "Proj_hdzd.Procedure.ProcedurePreLoad",
+  "sourceEvidence": {
+    "sourceFsmOwnerType": {
+      "index": 3659,
+      "name": "IProcedureManager",
+      "genericInstantiation": 1598
+    },
+    "changeTarget": {
+      "usage": 3968504,
+      "method": 29301,
+      "methodInstantiation": 5095,
+      "targetType": 4452,
+      "targetName": "ProcedureStarGame"
+    },
+    "statisticConfig": {
+      "type": 3969,
+      "field80": "ArenaRank",
+      "configManagerField260": "statisticEventConfig"
+    },
+    "statisticsProviderParameter": "object[] ignored; long return EventCount(current ArenaRank key)",
+    "waitInstructionUsage3941940": "UnityEngine.WaitUntil",
+    "activityInit35226": "ActivityControl.Init(ActivityInitData), called with null"
+  },
+  "sequence": [
+    "OnInit stores FSM owner",
+    "OnEnter logs original type and initializes user net module",
+    "Register ArenaRank value provider then initialize statistics with async-void callback",
+    "Callback initializes ActivityControl with null data",
+    "Await native WaitUntil(LoginCtrl flag64 && flag65), short circuit flag64",
+    "LogWarning LoginComplete",
+    "LocalDataControl.Handle1_03VersionBug",
+    "Stored FSM ChangeState<ProcedureStarGame>(Array.Empty<object>())"
+  ],
+  "implementationNotes": [
+    "Native default uses previously recovered OutgameUnityAwait; integration tests inject controlled Task completion and inspect actual WaitUntil.keepWaiting",
+    "No successful-login flag writes, timeouts, retry or cancellation added",
+    "Statistics callback retains async-void surface; public Task continuation allows fault verification",
+    "Original base event cleanup remains required host boundary; parameterized inherited enter remains empty",
+    "Corrected prior concrete-owner projection to IOutgameProcedureManager across state manager and tests"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:26:59.922701+00:00",
+    "scope": "Concrete ProcedurePreLoad source sequence, native WaitUntil predicate, async completion and interface-owned FSM correction",
+    "checksPassed": 672,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Native-frame waiting in this test run or real login/activity/version repair/StarGame/full production composition",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Actual LoginCtrl InitUserNetModule and flags composition",
+    "ActivityControl.Init(null) service composition",
+    "LocalDataControl31593 Handle1_03VersionBug full implementation",
+    "Original ProcedureStarGame OnEnter34154 and base state event cleanup",
+    "Main30617/38-controls/menu/Player end-to-end"
+  ]
+}

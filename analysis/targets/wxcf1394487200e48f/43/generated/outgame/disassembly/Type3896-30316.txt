@@ -1,0 +1,27 @@
+; Original class: UIUtils
+; Type3896.SetActive; wasmcode function 2288; offset=702096 size=64
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000ab691  i32.const [5009966]
+000ab696  i32.load8_u [0, 0]
+000ab699  i32.eqz []
+000ab69a  if [-64]
+000ab69c    i32.const [3936516]
+000ab6a1    call [900] ; 
+000ab6a4    i32.const [5009966]
+000ab6a9    i32.const [1]
+000ab6ab    i32.store8 [0, 0]
+000ab6ae  end []
+000ab6af  i32.const [3936516]
+000ab6b4  i32.load [2, 0]
+000ab6b7  call [901] ; 
+000ab6ba  local.get [0]
+000ab6bc  i32.const [0]
+000ab6be  i32.const [0]
+000ab6c0  call [946] ; Object.op_Inequality
+000ab6c3  if [-64]
+000ab6c5    local.get [0]
+000ab6c7    local.get [1]
+000ab6c9    i32.const [0]
+000ab6cb    call [949] ; GameObject.SetActive
+000ab6ce  end []
+000ab6cf  end []

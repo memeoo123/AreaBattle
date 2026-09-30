@@ -1,0 +1,95 @@
+; Original class: PlayerControl
+; Type4462.M{`rR; wasmcode function 18221; offset=8098953 size=270
+; signature={'args': [127, 125, 125, 127], 'returns': []}; localGroups=[]
+007b948a  i32.const [5009822]
+007b948f  i32.load8_u [0, 0]
+007b9492  i32.eqz []
+007b9493  if [-64]
+007b9495    i32.const [3993048]
+007b949a    call [900] ; 
+007b949d    i32.const [3953384]
+007b94a2    call [900] ; 
+007b94a5    i32.const [3953576]
+007b94aa    call [900] ; 
+007b94ad    i32.const [3953440]
+007b94b2    call [900] ; 
+007b94b5    i32.const [3944720]
+007b94ba    call [900] ; 
+007b94bd    i32.const [3936516]
+007b94c2    call [900] ; 
+007b94c5    i32.const [4075356] ; STRING "Trigger"
+007b94ca    call [900] ; 
+007b94cd    i32.const [5009822]
+007b94d2    i32.const [1]
+007b94d4    i32.store8 [0, 0]
+007b94d7  end []
+007b94d8  block [-64]
+007b94da    i32.const [3953440]
+007b94df    i32.load [2, 0]
+007b94e2    call [935] ; 
+007b94e5    i32.load [2, 8]
+007b94e8    i32.const [2]
+007b94ea    i32.ne []
+007b94eb    br_if [0]
+007b94ed    i32.const [3953576]
+007b94f2    i32.load [2, 0]
+007b94f5    call [935] ; 
+007b94f8    i32.load [2, 44]
+007b94fb    i32.const [3]
+007b94fd    i32.ne []
+007b94fe    br_if [0]
+007b9500    i32.const [3953384]
+007b9505    i32.load [2, 0]
+007b9508    call [935] ; 
+007b950b    i32.load [2, 16]
+007b950e    local.set [3]
+007b9510    i32.const [3944720]
+007b9515    i32.load [2, 0]
+007b9518    call [901] ; 
+007b951b    local.get [0]
+007b951d    local.get [1]
+007b951f    local.get [2]
+007b9521    local.get [3]
+007b9523    i32.const [3944720]
+007b9528    i32.load [2, 0]
+007b952b    i32.load [2, 92]
+007b952e    i32.load [2, 112]
+007b9531    local.get [0]
+007b9533    call [11066] ; PlayerControl.~nUmh
+007b9536    i32.eqz []
+007b9537    br_if [0]
+007b9539    local.get [0]
+007b953b    i32.const [128]
+007b953e    i32.add []
+007b953f    local.set [0]
+007b9541    local.get [0]
+007b9543    i32.const [0]
+007b9545    call [2570] ; RaycastHit.get_transform
+007b9548    i32.const [3993048]
+007b954d    i32.load [2, 0]
+007b9550    call [1010] ; 
+007b9553    local.set [3]
+007b9555    i32.const [3936516]
+007b955a    i32.load [2, 0]
+007b955d    call [901] ; 
+007b9560    local.get [3]
+007b9562    i32.const [0]
+007b9564    i32.const [0]
+007b9566    call [946] ; Object.op_Inequality
+007b9569    i32.eqz []
+007b956a    br_if [0]
+007b956c    local.get [0]
+007b956e    i32.const [0]
+007b9570    call [2570] ; RaycastHit.get_transform
+007b9573    i32.const [3993048]
+007b9578    i32.load [2, 0]
+007b957b    call [1010] ; 
+007b957e    i32.const [4075356] ; STRING "Trigger"
+007b9583    i32.load [2, 0]
+007b9586    i32.const [0]
+007b9588    i32.const [51487] ; TABLE Animator.SetTrigger
+007b958c    global.set [3]
+007b958e    i32.const [51487] ; TABLE Animator.SetTrigger
+007b9592    call_indirect [2, 0]
+007b9595  end []
+007b9596  end []

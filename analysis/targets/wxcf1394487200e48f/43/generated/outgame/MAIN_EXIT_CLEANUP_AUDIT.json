@@ -1,0 +1,45 @@
+{
+  "atUtc": "2026-09-30T05:40:14.012984+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameMainExit.cs",
+  "sourceMethod": 30618,
+  "sourceEvidence": {
+    "3934192": "IapManager type3169 Instance static0, IapProcedure instance12",
+    "3935996": "MineGameMain type3974 EnterGame static0",
+    "MainField37": "source obfuscated exit flag",
+    "sourceBody": "disassembly/Type3974-30618.txt"
+  },
+  "sequence": [
+    "Log original release message",
+    "AudioManager.Instance.Destroy",
+    "Main field37=true",
+    "IapManager.Instance.IapProcedure=null",
+    "Object.Destroy(main.gameObject)",
+    "Resolve UpdateManager.Instance then Object.Destroy(gameObject)",
+    "UserDataPrefs.OnSave again",
+    "MsgDispatcher.ClearEvent replaces shared dispatcher",
+    "MineGameMain.EnterGame=false"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:40:14.012984+00:00",
+    "scope": "MineGameMain30618 exit cleanup integrated with ProcedureExitGame/preferences/shared dispatcher",
+    "checksPassed": 682,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Native deferred-destruction frame timing, audio/IAP concrete services or complete production lifecycle",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "testLimitations": [
+    "Uses native GameObjects but injected DestroyImmediate for ordered fixture inspection; production default Object.Destroy remains deferred",
+    "Preferences use in-memory file route, no user files changed",
+    "Audio/IAP/flags retain explicit service callbacks"
+  ],
+  "remaining": [
+    "Production Main owner/service binding",
+    "Native frame teardown and Unity OnDestroy consequences",
+    "Actual 38-controller/startup graph and complete outgame Player verification"
+  ]
+}

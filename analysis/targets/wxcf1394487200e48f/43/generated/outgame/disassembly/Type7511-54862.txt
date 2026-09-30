@@ -1,0 +1,31 @@
+; Original class: BaseController
+; Type7511.addCacheList; wasmcode function 6256; offset=2237669 size=80
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+002224e6  i32.const [5005042]
+002224eb  i32.load8_u [0, 0]
+002224ee  i32.eqz []
+002224ef  if [-64]
+002224f1    i32.const [3973060]
+002224f6    call [900] ; 
+002224f9    i32.const [3973068]
+002224fe    call [900] ; 
+00222501    i32.const [5005042]
+00222506    i32.const [1]
+00222508    i32.store8 [0, 0]
+0022250b  end []
+0022250c  local.get [0]
+0022250e  i32.load [2, 72]
+00222511  local.get [1]
+00222513  i32.const [3973068]
+00222518  i32.load [2, 0]
+0022251b  call [1209] ; 
+0022251e  i32.eqz []
+0022251f  if [-64]
+00222521    local.get [0]
+00222523    i32.load [2, 72]
+00222526    local.get [1]
+00222528    i32.const [3973060]
+0022252d    i32.load [2, 0]
+00222530    call [941] ; 
+00222533  end []
+00222534  end []

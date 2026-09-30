@@ -1,0 +1,26 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.PreloadRecommend; wasmcode1 function 68398; offset=21657501 size=67
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014a779e  i32.const [5006726]
+014a77a3  i32.load8_u [0, 0]
+014a77a6  i32.eqz []
+014a77a7  if [-64]
+014a77a9    i32.const [3938284]
+014a77ae    i32.const [1605]
+014a77b1    call_indirect [0, 0]
+014a77b4    i32.const [5006726]
+014a77b9    i32.const [1]
+014a77bb    i32.store8 [0, 0]
+014a77be  end []
+014a77bf  i32.const [3938284]
+014a77c4  i32.load [2, 0]
+014a77c7  i32.const [1149]
+014a77ca  call_indirect [0, 0]
+014a77cd  i32.const [0]
+014a77cf  i32.const [64606] ; TABLE SDKHandle.get_Instance
+014a77d3  call_indirect [2, 0]
+014a77d6  drop []
+014a77d7  i32.const [0]
+014a77d9  i32.const [0]
+014a77db  call [22985] ; SDKHandle.PreloadRecommend
+014a77df  end []

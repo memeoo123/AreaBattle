@@ -1,0 +1,62 @@
+; Original class: AppSetting
+; Type3375.SetCultureBasedOnSetting; wasmcode function 5218; offset=1807526 size=177
+; signature={'args': [127], 'returns': []}; localGroups=[]
+001b94a7  i32.const [5011372]
+001b94ac  i32.load8_u [0, 0]
+001b94af  i32.eqz []
+001b94b0  if [-64]
+001b94b2    i32.const [3928176]
+001b94b7    call [900] ; 
+001b94ba    i32.const [3930020]
+001b94bf    call [900] ; 
+001b94c2    i32.const [4087300] ; STRING "en-US"
+001b94c7    call [900] ; 
+001b94ca    i32.const [5011372]
+001b94cf    i32.const [1]
+001b94d1    i32.store8 [0, 0]
+001b94d4  end []
+001b94d5  i32.const [3928176]
+001b94da  i32.load [2, 0]
+001b94dd  call [901] ; 
+001b94e0  i32.const [5011424]
+001b94e5  i32.load8_u [0, 0]
+001b94e8  i32.eqz []
+001b94e9  if [-64]
+001b94eb    i32.const [3928176]
+001b94f0    call [900] ; 
+001b94f3    i32.const [5011424]
+001b94f8    i32.const [1]
+001b94fa    i32.store8 [0, 0]
+001b94fd  end []
+001b94fe  i32.const [3928176]
+001b9503  i32.load [2, 0]
+001b9506  call [901] ; 
+001b9509  i32.const [3928176]
+001b950e  i32.load [2, 0]
+001b9511  i32.load [2, 92]
+001b9514  i32.load8_u [0, 83]
+001b9517  local.set [0]
+001b9519  i32.const [3930020]
+001b951e  i32.load [2, 0]
+001b9521  call [901] ; 
+001b9524  block [-64]
+001b9526    local.get [0]
+001b9528    if [-64]
+001b952a      i32.const [0]
+001b952c      call [958] ; CultureInfo.get_InvariantCulture
+001b952f      local.set [0]
+001b9531      br [1]
+001b9533    end []
+001b9534    i32.const [4087300] ; STRING "en-US"
+001b9539    i32.load [2, 0]
+001b953c    i32.const [0]
+001b953e    call [12712] ; CultureInfo.CreateSpecificCulture
+001b9541    local.set [0]
+001b9543  end []
+001b9544  i32.const [3930020]
+001b9549  i32.load [2, 0]
+001b954c  call [901] ; 
+001b954f  local.get [0]
+001b9551  i32.const [0]
+001b9553  call [12709] ; CultureInfo.set_CurrentCulture
+001b9556  end []

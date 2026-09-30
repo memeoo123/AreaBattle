@@ -1,0 +1,26 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.AppQuit; wasmcode1 function 68435; offset=21661655 size=68
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014a87d8  i32.const [5006686]
+014a87dd  i32.load8_u [0, 0]
+014a87e0  i32.eqz []
+014a87e1  if [-64]
+014a87e3    i32.const [3931700]
+014a87e8    i32.const [1605]
+014a87eb    call_indirect [0, 0]
+014a87ee    i32.const [5006686]
+014a87f3    i32.const [1]
+014a87f5    i32.store8 [0, 0]
+014a87f8  end []
+014a87f9  i32.const [3931700]
+014a87fe  i32.load [2, 0]
+014a8801  i32.const [109007]
+014a8805  call_indirect [2, 0]
+014a8808  local.set [0]
+014a880a  local.get [0]
+014a880c  i32.const [0]
+014a880e  call [28652] ; ExitMiniProgramOption..ctor
+014a8812  local.get [0]
+014a8814  i32.const [0]
+014a8816  call [18490] ; WX.ExitMiniProgram
+014a881a  end []

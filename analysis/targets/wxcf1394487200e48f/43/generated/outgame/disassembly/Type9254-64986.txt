@@ -1,0 +1,38 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.MiniGameCommonGetUserLabel; wasmcode function 20420; offset=9197665 size=100
+; signature={'args': [127, 127, 127, 127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+008c5862  i32.const [5006730]
+008c5867  i32.load8_u [0, 0]
+008c586a  i32.eqz []
+008c586b  if [-64]
+008c586d    i32.const [3938284]
+008c5872    call [900] ; 
+008c5875    i32.const [3984736]
+008c587a    call [900] ; 
+008c587d    i32.const [5006730]
+008c5882    i32.const [1]
+008c5884    i32.store8 [0, 0]
+008c5887  end []
+008c5888  i32.const [3984736]
+008c588d  i32.load [2, 0]
+008c5890  call [1728] ; 
+008c5893  i32.load8_u [0, 76]
+008c5896  if [-64]
+008c5898    i32.const [3938284]
+008c589d    i32.load [2, 0]
+008c58a0    call [901] ; 
+008c58a3    local.get [1]
+008c58a5    call [1581] ; SDKHandle.get_Instance
+008c58a8    local.get [1]
+008c58aa    local.get [2]
+008c58ac    local.get [3]
+008c58ae    local.get [4]
+008c58b0    local.get [5]
+008c58b2    local.get [6]
+008c58b4    local.get [1]
+008c58b6    i32.const [64660] ; TABLE SDKHandle.MiniGameCommonGetUserLabel
+008c58ba    global.set [3]
+008c58bc    i32.const [64660] ; TABLE SDKHandle.MiniGameCommonGetUserLabel
+008c58c0    call_indirect [17, 0]
+008c58c3  end []
+008c58c4  end []

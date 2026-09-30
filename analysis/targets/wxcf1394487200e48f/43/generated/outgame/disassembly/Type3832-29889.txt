@@ -1,0 +1,63 @@
+; Original class: ResourcesModule
+; Type3832.Load; wasmcode function 10674; offset=5188679 size=162
+; signature={'args': [127, 127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+004f2c48  i32.const [4988234]
+004f2c4d  i32.load8_u [0, 0]
+004f2c50  i32.eqz []
+004f2c51  if [-64]
+004f2c53    i32.const [3968952]
+004f2c58    call [900] ; 
+004f2c5b    i32.const [3948068]
+004f2c60    call [900] ; 
+004f2c63    i32.const [3938016]
+004f2c68    call [900] ; 
+004f2c6b    i32.const [4988234]
+004f2c70    i32.const [1]
+004f2c72    i32.store8 [0, 0]
+004f2c75  end []
+004f2c76  i32.const [3938016]
+004f2c7b  i32.load [2, 0]
+004f2c7e  call [901] ; 
+004f2c81  i32.const [0]
+004f2c83  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f2c86  drop []
+004f2c87  local.get [0]
+004f2c89  local.get [1]
+004f2c8b  i32.const [1]
+004f2c8d  local.get [1]
+004f2c8f  local.get [1]
+004f2c91  call [7269] ; ResourcesModule.CreateLoader
+004f2c94  local.set [1]
+004f2c96  local.get [1]
+004f2c98  i32.load [2, 12]
+004f2c9b  local.get [3]
+004f2c9d  i32.const [0]
+004f2c9f  call [1031] ; Delegate.Combine
+004f2ca2  local.set [2]
+004f2ca4  local.get [1]
+004f2ca6  local.get [2]
+004f2ca8  i32.const [3948068]
+004f2cad  i32.load [2, 0]
+004f2cb0  call [937] ; 
+004f2cb3  i32.store [2, 12]
+004f2cb6  local.get [2]
+004f2cb8  i32.const [3948068]
+004f2cbd  i32.load [2, 0]
+004f2cc0  call [937] ; 
+004f2cc3  drop []
+004f2cc4  local.get [1]
+004f2cc6  local.get [4]
+004f2cc8  i32.store [2, 8]
+004f2ccb  local.get [0]
+004f2ccd  i32.const [1]
+004f2ccf  i32.store8 [0, 32]
+004f2cd2  local.get [0]
+004f2cd4  i32.load [2, 40]
+004f2cd7  local.get [1]
+004f2cd9  i32.const [3968952]
+004f2cde  i32.load [2, 0]
+004f2ce1  call [1001] ; 
+004f2ce4  drop []
+004f2ce5  local.get [1]
+004f2ce7  return []
+004f2ce8  end []

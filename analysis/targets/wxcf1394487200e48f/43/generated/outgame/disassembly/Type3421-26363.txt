@@ -1,0 +1,53 @@
+; Original class: AudioManager
+; Type3421.MoveAudioListen; wasmcode function 13125; offset=6291332 size=137
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005fff85  i32.const [5011686]
+005fff8a  i32.load8_u [0, 0]
+005fff8d  i32.eqz []
+005fff8e  if [-64]
+005fff90    i32.const [4000632]
+005fff95    call [900] ; 
+005fff98    i32.const [3932308]
+005fff9d    call [900] ; 
+005fffa0    i32.const [3936516]
+005fffa5    call [900] ; 
+005fffa8    i32.const [5011686]
+005fffad    i32.const [1]
+005fffaf    i32.store8 [0, 0]
+005fffb2  end []
+005fffb3  i32.const [3932308]
+005fffb8  i32.load [2, 0]
+005fffbb  call [901] ; 
+005fffbe  i32.const [4000632]
+005fffc3  i32.load [2, 0]
+005fffc6  call [1051] ; 
+005fffc9  i32.load [2, 24]
+005fffcc  local.set [2]
+005fffce  local.get [0]
+005fffd0  local.get [0]
+005fffd2  call [13122] ; AudioManager.k«`X^
+005fffd5  block [-64]
+005fffd7    local.get [1]
+005fffd9    i32.const [1]
+005fffdb    i32.ne []
+005fffdc    br_if [0]
+005fffde    i32.const [3936516]
+005fffe3    i32.load [2, 0]
+005fffe6    call [901] ; 
+005fffe9    local.get [2]
+005fffeb    i32.const [0]
+005fffed    i32.const [0]
+005fffef    call [946] ; Object.op_Inequality
+005ffff2    i32.eqz []
+005ffff3    br_if [0]
+005ffff5    local.get [0]
+005ffff7    i32.load [2, 8]
+005ffffa    i32.const [0]
+005ffffc    call [977] ; Component.get_transform
+005fffff    local.get [2]
+00600001    i32.const [0]
+00600003    call [977] ; Component.get_transform
+00600006    i32.const [0]
+00600008    call [1424] ; Transform.SetParent
+0060000b  end []
+0060000c  end []

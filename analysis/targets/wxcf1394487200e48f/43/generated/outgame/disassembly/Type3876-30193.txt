@@ -1,0 +1,85 @@
+; Original class: AutoCanvasLayer
+; Type3876.Start; wasmcode function 20515; offset=9211857 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008c8fd4  i32.const [5025289]
+008c8fd9  i32.load8_u [0, 0]
+008c8fdc  i32.eqz []
+008c8fdd  if [-64]
+008c8fdf    i32.const [3993068]
+008c8fe4    call [900] ; 
+008c8fe7    i32.const [3936516]
+008c8fec    call [900] ; 
+008c8fef    i32.const [5025289]
+008c8ff4    i32.const [1]
+008c8ff6    i32.store8 [0, 0]
+008c8ff9  end []
+008c8ffa  local.get [0]
+008c8ffc  i32.load [2, 16]
+008c8fff  local.set [1]
+008c9001  i32.const [3936516]
+008c9006  i32.load [2, 0]
+008c9009  call [901] ; 
+008c900c  local.get [1]
+008c900e  i32.const [0]
+008c9010  i32.const [0]
+008c9012  call [940] ; Object.op_Equality
+008c9015  if [-64]
+008c9017    local.get [0]
+008c9019    local.get [0]
+008c901b    i32.const [3993068]
+008c9020    i32.load [2, 0]
+008c9023    call [1010] ; 
+008c9026    i32.store [2, 16]
+008c9029  end []
+008c902a  local.get [0]
+008c902c  i32.const [0]
+008c902e  call [977] ; Component.get_transform
+008c9031  local.get [0]
+008c9033  call [5584] ; TransformTools.FindNearCanvas
+008c9036  local.set [1]
+008c9038  local.get [0]
+008c903a  i32.load [2, 16]
+008c903d  local.set [2]
+008c903f  i32.const [3936516]
+008c9044  i32.load [2, 0]
+008c9047  call [901] ; 
+008c904a  block [-64]
+008c904c    local.get [2]
+008c904e    i32.const [0]
+008c9050    i32.const [0]
+008c9052    call [946] ; Object.op_Inequality
+008c9055    i32.eqz []
+008c9056    br_if [0]
+008c9058    i32.const [3936516]
+008c905d    i32.load [2, 0]
+008c9060    call [901] ; 
+008c9063    local.get [1]
+008c9065    i32.const [0]
+008c9067    i32.const [0]
+008c9069    call [946] ; Object.op_Inequality
+008c906c    i32.eqz []
+008c906d    br_if [0]
+008c906f    local.get [0]
+008c9071    i32.load [2, 16]
+008c9074    local.get [1]
+008c9076    i32.const [0]
+008c9078    call [2414] ; Canvas.get_sortingLayerID
+008c907b    i32.const [0]
+008c907d    call [2270] ; Canvas.set_sortingLayerID
+008c9080    local.get [0]
+008c9082    i32.load [2, 16]
+008c9085    i32.const [1]
+008c9087    i32.const [0]
+008c9089    call [2009] ; Canvas.set_overrideSorting
+008c908c    local.get [0]
+008c908e    i32.load [2, 16]
+008c9091    local.get [1]
+008c9093    i32.const [0]
+008c9095    call [2047] ; Canvas.get_sortingOrder
+008c9098    local.get [0]
+008c909a    i32.load [2, 12]
+008c909d    i32.add []
+008c909e    i32.const [0]
+008c90a0    call [1697] ; Canvas.set_sortingOrder
+008c90a3  end []
+008c90a4  end []

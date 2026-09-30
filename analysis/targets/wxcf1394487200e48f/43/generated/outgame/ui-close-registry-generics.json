@@ -1,0 +1,142 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3958676,
+      "encodedUsage": "0xc000815d",
+      "methodSpecIndex": 16558,
+      "methodSpecAddress": 681704,
+      "methodSpec": [
+        10517,
+        944,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3544,
+            "name": "BaseUI"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958684,
+      "encodedUsage": "0xc0008161",
+      "methodSpecIndex": 16560,
+      "methodSpecAddress": 681728,
+      "methodSpec": [
+        10529,
+        944,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Remove",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3544,
+            "name": "BaseUI"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958692,
+      "encodedUsage": "0xc0008165",
+      "methodSpecIndex": 16562,
+      "methodSpecAddress": 681752,
+      "methodSpec": [
+        10510,
+        944,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3544,
+            "name": "BaseUI"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 4000632,
+      "encodedUsage": "0xc000bfa9",
+      "methodSpecIndex": 24532,
+      "methodSpecAddress": 777392,
+      "methodSpec": [
+        26446,
+        -1,
+        5504
+      ],
+      "declaringType": "GameFrameEntry",
+      "method": "GetModule",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3558,
+            "name": "UIModule"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

@@ -1,0 +1,216 @@
+; Original class: AudioManager
+; Type3421.CreateNode; wasmcode function 6271; offset=2247944 size=551
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+00224d0b  global.get [0]
+00224d0d  i32.const [16]
+00224d0f  i32.sub []
+00224d10  local.set [3]
+00224d12  local.get [3]
+00224d14  global.set [0]
+00224d16  i32.const [5011689]
+00224d1b  i32.load8_u [0, 0]
+00224d1e  i32.eqz []
+00224d1f  if [-64]
+00224d21    i32.const [3928536]
+00224d26    call [900] ; 
+00224d29    i32.const [3928540]
+00224d2e    call [900] ; 
+00224d31    i32.const [3928548]
+00224d36    call [900] ; 
+00224d39    i32.const [3955240]
+00224d3e    call [900] ; 
+00224d41    i32.const [3955244]
+00224d46    call [900] ; 
+00224d49    i32.const [3974436]
+00224d4e    call [900] ; 
+00224d51    i32.const [3923380]
+00224d56    call [900] ; 
+00224d59    i32.const [3936516]
+00224d5e    call [900] ; 
+00224d61    i32.const [4096252] ; STRING "sequence_"
+00224d66    call [900] ; 
+00224d69    i32.const [4094456] ; STRING "parallel_"
+00224d6e    call [900] ; 
+00224d71    i32.const [4096672] ; STRING "single_"
+00224d76    call [900] ; 
+00224d79    i32.const [5011689]
+00224d7e    i32.const [1]
+00224d80    i32.store8 [0, 0]
+00224d83  end []
+00224d84  local.get [0]
+00224d86  i32.load [2, 12]
+00224d89  local.set [4]
+00224d8b  i32.const [3936516]
+00224d90  i32.load [2, 0]
+00224d93  call [901] ; 
+00224d96  local.get [4]
+00224d98  i32.const [0]
+00224d9a  i32.const [0]
+00224d9c  call [940] ; Object.op_Equality
+00224d9f  if [-64]
+00224da1    local.get [0]
+00224da3    local.get [3]
+00224da5    call [8221] ; AudioManager.¬DF»
+00224da8  end []
+00224da9  i32.const [0]
+00224dab  local.set [4]
+00224dad  block [-64]
+00224daf    local.get [0]
+00224db1    i32.load [2, 16]
+00224db4    local.set [5]
+00224db6    local.get [5]
+00224db8    i32.eqz []
+00224db9    br_if [0]
+00224dbb    i32.const [3955240]
+00224dc0    i32.load [2, 0]
+00224dc3    drop []
+00224dc4    local.get [5]
+00224dc6    i32.load [2, 16]
+00224dc9    local.get [5]
+00224dcb    i32.load [2, 24]
+00224dce    i32.sub []
+00224dcf    i32.const [1]
+00224dd1    i32.lt_s []
+00224dd2    br_if [0]
+00224dd4    local.get [0]
+00224dd6    i32.load [2, 16]
+00224dd9    i32.const [3955244]
+00224dde    i32.load [2, 0]
+00224de1    call [1554] ; 
+00224de4    local.set [5]
+00224de6    i32.const [3923380]
+00224deb    i32.load [2, 0]
+00224dee    call [903] ; 
+00224df1    local.set [4]
+00224df3    local.get [4]
+00224df5    local.get [5]
+00224df7    i32.const [3974436]
+00224dfc    i32.load [2, 0]
+00224dff    call [1350] ; 
+00224e02  end []
+00224e03  local.get [3]
+00224e05  i32.const [1]
+00224e07  i32.const [10000]
+00224e0b  local.get [4]
+00224e0d  local.get [3]
+00224e0f  call [9866] ; G~.RandomId
+00224e12  i32.store [2, 12]
+00224e15  i32.const [3936516]
+00224e1a  i32.load [2, 0]
+00224e1d  call [901] ; 
+00224e20  local.get [2]
+00224e22  i32.const [0]
+00224e24  i32.const [0]
+00224e26  call [940] ; Object.op_Equality
+00224e29  if [-64]
+00224e2b    local.get [0]
+00224e2d    i32.load [2, 12]
+00224e30    local.set [2]
+00224e32  end []
+00224e33  i32.const [0]
+00224e35  local.set [4]
+00224e37  block [-64]
+00224e39    block [-64]
+00224e3b      block [-64]
+00224e3d        block [-64]
+00224e3f          local.get [1]
+00224e41          i32.const [1]
+00224e43          i32.sub []
+00224e44          br_table [0, 1, 2, 3]
+00224e4a        end []
+00224e4b        local.get [3]
+00224e4d        i32.const [12]
+00224e4f        i32.add []
+00224e50        i32.const [0]
+00224e52        call [966] ; Int32.ToString
+00224e55        local.set [1]
+00224e57        i32.const [4094456] ; STRING "parallel_"
+00224e5c        i32.load [2, 0]
+00224e5f        local.get [1]
+00224e61        i32.const [0]
+00224e63        call [921] ; String.Concat
+00224e66        local.set [1]
+00224e68        local.get [3]
+00224e6a        i32.load [2, 12]
+00224e6d        local.set [5]
+00224e6f        i32.const [3928536]
+00224e74        i32.load [2, 0]
+00224e77        call [903] ; 
+00224e7a        local.set [4]
+00224e7c        local.get [4]
+00224e7e        local.get [2]
+00224e80        local.get [5]
+00224e82        local.get [1]
+00224e84        local.get [3]
+00224e86        call [13114] ; AudioParallel..ctor
+00224e89        br [2]
+00224e8b      end []
+00224e8c      local.get [3]
+00224e8e      i32.const [12]
+00224e90      i32.add []
+00224e91      i32.const [0]
+00224e93      call [966] ; Int32.ToString
+00224e96      local.set [1]
+00224e98      i32.const [4096252] ; STRING "sequence_"
+00224e9d      i32.load [2, 0]
+00224ea0      local.get [1]
+00224ea2      i32.const [0]
+00224ea4      call [921] ; String.Concat
+00224ea7      local.set [1]
+00224ea9      local.get [3]
+00224eab      i32.load [2, 12]
+00224eae      local.set [5]
+00224eb0      i32.const [3928540]
+00224eb5      i32.load [2, 0]
+00224eb8      call [903] ; 
+00224ebb      local.set [4]
+00224ebd      local.get [4]
+00224ebf      local.get [2]
+00224ec1      local.get [5]
+00224ec3      local.get [1]
+00224ec5      local.get [3]
+00224ec7      i32.const [24356] ; TABLE AudioSequence..ctor
+00224ecb      global.set [3]
+00224ecd      i32.const [24356] ; TABLE AudioSequence..ctor
+00224ed1      call_indirect [8, 0]
+00224ed4      br [1]
+00224ed6    end []
+00224ed7    local.get [3]
+00224ed9    i32.const [12]
+00224edb    i32.add []
+00224edc    i32.const [0]
+00224ede    call [966] ; Int32.ToString
+00224ee1    local.set [1]
+00224ee3    i32.const [4096672] ; STRING "single_"
+00224ee8    i32.load [2, 0]
+00224eeb    local.get [1]
+00224eed    i32.const [0]
+00224eef    call [921] ; String.Concat
+00224ef2    local.set [1]
+00224ef4    local.get [3]
+00224ef6    i32.load [2, 12]
+00224ef9    local.set [5]
+00224efb    i32.const [3928548]
+00224f00    i32.load [2, 0]
+00224f03    call [903] ; 
+00224f06    local.set [4]
+00224f08    local.get [4]
+00224f0a    local.get [2]
+00224f0c    local.get [5]
+00224f0e    local.get [1]
+00224f10    local.get [3]
+00224f12    call [13112] ; AudioSingle..ctor
+00224f15  end []
+00224f16  local.get [0]
+00224f18  local.get [3]
+00224f1a  i32.load [2, 12]
+00224f1d  local.get [4]
+00224f1f  local.get [3]
+00224f21  call [13123] ; AudioManager.¦[p¼
+00224f24  local.get [3]
+00224f26  i32.const [16]
+00224f28  i32.add []
+00224f29  global.set [0]
+00224f2b  local.get [4]
+00224f2d  return []
+00224f2e  end []

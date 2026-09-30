@@ -1,0 +1,59 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "atUtc": "2026-09-28T07:06:44.927830+00:00",
+  "status": "source-derived-correction-validated",
+  "rules": [
+    {
+      "id": "ai-shuffle-unity-domain",
+      "source": [
+        "generated/flow-evidence.json#AI-source-and-target-order",
+        "generated/random-source-disassembly/9710.txt:0x46fa68-0x46fb91",
+        "generated/random-source-disassembly/1883.txt",
+        "generated/random-source-disassembly/10951.txt"
+      ],
+      "fact": "AIGoToAction calls generic shuffle9710 before ConfigMgr.GetAIActionNum. Shuffle iterates every source, samples Unity integer Range(0,Count) each iteration including self swaps. It does not consume RandomHelper stream.",
+      "internalCall": {
+        "staticMemoryOffset": "0x1d0755",
+        "name": "UnityEngine.Random::RandomRangeInt(System.Int32,System.Int32)"
+      }
+    },
+    {
+      "id": "managed-random-session-lifetime",
+      "source": [
+        "generated/random-helper-map.json",
+        "generated/random-source-disassembly/RandomHelper-26197.txt:0x79af54-0x79af75",
+        "generated/random-source-disassembly/3859.txt",
+        "generated/random-helper-static-access.json"
+      ],
+      "fact": "RandomHelper in GFRunning.dll has one System.Random field. Static constructor allocates parameterless System.Random and assigns static instance. Both recovered WASM modules have69 decoded type-reference candidate functions;11 direct static-base accesses include9 instance reads,1 assignment in static constructor,1 unused base. No direct reset writer found. Reflection or generated aliases are outside this search."
+    }
+  ],
+  "implementation": [
+    "UnityProject/Assets/AreaBattle/Scripts/BattleSimulation.cs:RunAI uses UnityEngine.Random.Range by default; recorded-index hook available",
+    "Representative replay seeds and restores Unity state independently from managed fixture seed",
+    "BattleSimulation creates/injects managed random once; Restart retains it.",
+    "BattleView shares a lazy session System.Random across new views and new levels. RandomSourceOverride is available for explicit fixtures; representative replay injects seed4305."
+  ],
+  "verification": {
+    "integratedCases": 232,
+    "allPassed": true,
+    "tests": [
+      "ai-shuffle-consumes-separate-unity-stream",
+      "ai-shuffle-recorded-index-range-and-stream-isolation",
+      "ai-shuffle-retry-does-not-reset-unity-stream",
+      "managed-random-retry-retains-stream",
+      "managed-random-shared-between-battles",
+      "managed-random-seeded-fixture-continues-after-retry"
+    ],
+    "build": "Succeeded",
+    "playerSmokeFrames": 600
+  },
+  "remaining": [
+    "No captured original Unity RNG state or RandomHelper initial seed.",
+    "Unity2021-to-Unity6 RNG sequence equivalence is not claimed.",
+    "Original pre-battle draws from lobby and original session initial state are not captured; no full original sequence match is asserted."
+  ]
+}

@@ -1,0 +1,43 @@
+; Original class: ResourcesModule
+; Type3832.CreateResourcesInfo; wasmcode function 10679; offset=5189338 size=107
+; signature={'args': [127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+004f2edb  i32.const [4988239]
+004f2ee0  i32.load8_u [0, 0]
+004f2ee3  i32.eqz []
+004f2ee4  if [-64]
+004f2ee6    i32.const [3960104]
+004f2eeb    call [900] ; 
+004f2eee    i32.const [3938044]
+004f2ef3    call [900] ; 
+004f2ef6    i32.const [4988239]
+004f2efb    i32.const [1]
+004f2efd    i32.store8 [0, 0]
+004f2f00  end []
+004f2f01  local.get [2]
+004f2f03  i32.eqz []
+004f2f04  if [-64]
+004f2f06    i32.const [3938044]
+004f2f0b    i32.load [2, 0]
+004f2f0e    call [903] ; 
+004f2f11    local.set [2]
+004f2f13  end []
+004f2f14  local.get [2]
+004f2f16  local.get [1]
+004f2f18  i32.load [2, 28]
+004f2f1b  i32.const [0]
+004f2f1d  call [1374] ; String.ToLower
+004f2f20  i32.store [2, 20]
+004f2f23  local.get [2]
+004f2f25  local.get [3]
+004f2f27  i32.store [2, 16]
+004f2f2a  local.get [0]
+004f2f2c  i32.load [2, 52]
+004f2f2f  local.get [2]
+004f2f31  i32.load [2, 20]
+004f2f34  local.get [2]
+004f2f36  i32.const [3960104]
+004f2f3b  i32.load [2, 0]
+004f2f3e  call [1058] ; 
+004f2f41  local.get [2]
+004f2f43  return []
+004f2f44  end []

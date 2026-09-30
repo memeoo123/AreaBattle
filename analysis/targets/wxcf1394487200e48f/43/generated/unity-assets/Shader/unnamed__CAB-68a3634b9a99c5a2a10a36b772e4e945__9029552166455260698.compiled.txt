@@ -1,0 +1,62 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/bingzhui" {
+Properties {
+
+[Enum(Off,0,On,1)] _ZwriteCtrl ("ZwriteCtrl", Float) = 0.0
+
+[Enum(UnityEngine.Rendering.CullMode)] _CullModeCtrl ("CullModeCtrl", Float) = 0.0
+
+[Enum(UnityEngine.Rendering.BlendMode)] _SrcAlpha ("SrcAlpha", Float) = 5.0
+
+[Enum(UnityEngine.Rendering.BlendMode)] _DesValue ("DesValue", Float) = 1.0
+
+_Texture_Color ("Texture _Color ", Color) = (1,1,1,1)
+
+_Texture ("Texture ", 2D) = "white" { }
+
+_Texture_uv ("Texture_uv", Vector) = (0,0,0,0)
+
+_Texture_noise ("Texture_noise", 2D) = "white" { }
+
+_Texture_noiseuv ("Texture_noiseuv", Vector) = (0,0,0,0)
+
+_Texture_noise_int ("Texture_noise_int", Float) = 0.0
+
+_Fresnel_Color ("Fresnel_Color ", Color) = (1,1,1,1)
+
+_Fresnel_scale ("Fresnel_scale", Float) = 1.0
+
+_Fresnel_power ("Fresnel_power", Float) = 5.0
+
+_colortex ("colortex", 2D) = "white" { }
+
+_Alpha ("Alpha", Float) = 1.0
+
+_texcoord ("", 2D) = "white" { }
+
+__dirty ("", Float) = 1.0
+
+}
+SubShader {
+ Tags { "IGNOREPROJECTOR" = "true" "IsEmissive" = "true" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" }
+ Pass {
+ Name "FORWARD"
+  Tags { "IGNOREPROJECTOR" = "true" "IsEmissive" = "true" "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 58943
+}
+ Pass {
+ Name "FORWARD"
+  Tags { "IGNOREPROJECTOR" = "true" "IsEmissive" = "true" "LIGHTMODE" = "FORWARDADD" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 112477
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

@@ -1,0 +1,73 @@
+; Type4188.Execute; wasmcode function 15181; offset=7372479 size=182
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00707ec0  i32.const [5010346]
+00707ec5  i32.load8_u [0, 0]
+00707ec8  i32.eqz []
+00707ec9  if [-64]
+00707ecb    i32.const [3977960]
+00707ed0    call [900] ; 
+00707ed3    i32.const [3977948]
+00707ed8    call [900] ; 
+00707edb    i32.const [3924052]
+00707ee0    call [900] ; 
+00707ee3    i32.const [5010346]
+00707ee8    i32.const [1]
+00707eea    i32.store8 [0, 0]
+00707eed  end []
+00707eee  local.get [0]
+00707ef0  i32.load8_u [0, 16]
+00707ef3  i32.eqz []
+00707ef4  if [-64]
+00707ef6    local.get [0]
+00707ef8    i32.const [0]
+00707efa    i32.store [2, 28]
+00707efd    local.get [0]
+00707eff    i32.const [1]
+00707f01    i32.store8 [0, 16]
+00707f04  end []
+00707f05  block [-64]
+00707f07    block [-64]
+00707f09      local.get [0]
+00707f0b      i32.load [2, 56]
+00707f0e      local.set [1]
+00707f10      local.get [1]
+00707f12      i32.eqz []
+00707f13      if [-64]
+00707f15        i32.const [3924052]
+00707f1a        i32.load [2, 0]
+00707f1d        call [903] ; 
+00707f20        local.set [1]
+00707f22        local.get [1]
+00707f24        i32.const [3977948]
+00707f29        i32.load [2, 0]
+00707f2c        call [944] ; 
+00707f2f        local.get [0]
+00707f31        local.get [1]
+00707f33        i32.store [2, 56]
+00707f36        br [2]
+00707f38      end []
+00707f39    end []
+00707f3a    local.get [1]
+00707f3c    i32.const [3977960]
+00707f41    i32.load [2, 0]
+00707f44    call [1013] ; 
+00707f47  end []
+00707f48  local.get [0]
+00707f4a  i32.const [0]
+00707f4c  call [1388] ; 
+00707f4f  local.get [0]
+00707f51  local.get [0]
+00707f53  call [9894] ; Type4188.Tool1Skill
+00707f56  i32.const [0]
+00707f58  call [1227] ; 
+00707f5b  i32.store [2, 44]
+00707f5e  local.get [0]
+00707f60  i32.const [0]
+00707f62  call [1388] ; 
+00707f65  local.get [0]
+00707f67  local.get [0]
+00707f69  call [9895] ; Type4188.Tool1Skill_attack
+00707f6c  i32.const [0]
+00707f6e  call [1227] ; 
+00707f71  i32.store [2, 48]
+00707f74  end []

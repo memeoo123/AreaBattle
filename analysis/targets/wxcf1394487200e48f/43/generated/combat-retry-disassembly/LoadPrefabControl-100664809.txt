@@ -1,0 +1,65 @@
+; LoadPrefabControl.]^ggtik; wasmcode function 11491; offset=5643174 size=191
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00561ba7  i32.const [5008529]
+00561bac  i32.load8_u [0, 0]
+00561baf  i32.eqz []
+00561bb0  if [-64]
+00561bb2    i32.const [3954796]
+00561bb7    call [900] ; 
+00561bba    i32.const [3954808]
+00561bbf    call [900] ; 
+00561bc2    i32.const [3954812]
+00561bc7    call [900] ; 
+00561bca    i32.const [3973760]
+00561bcf    call [900] ; 
+00561bd2    i32.const [3973756]
+00561bd7    call [900] ; 
+00561bda    i32.const [3923232]
+00561bdf    call [900] ; 
+00561be2    i32.const [5008529]
+00561be7    i32.const [1]
+00561be9    i32.store8 [0, 0]
+00561bec  end []
+00561bed  local.get [0]
+00561bef  i32.load [2, 20]
+00561bf2  local.get [1]
+00561bf4  i32.const [3954796]
+00561bf9  i32.load [2, 0]
+00561bfc  call [1129] ; 
+00561bff  local.set [3]
+00561c01  local.get [0]
+00561c03  i32.load [2, 20]
+00561c06  local.set [0]
+00561c08  local.get [3]
+00561c0a  if [-64]
+00561c0c    local.get [0]
+00561c0e    local.get [1]
+00561c10    i32.const [3954808]
+00561c15    i32.load [2, 0]
+00561c18    call [1128] ; 
+00561c1b    local.get [2]
+00561c1d    i32.const [3973760]
+00561c22    i32.load [2, 0]
+00561c25    call [941] ; 
+00561c28    return []
+00561c29  end []
+00561c2a  i32.const [3923232]
+00561c2f  i32.load [2, 0]
+00561c32  call [903] ; 
+00561c35  local.set [3]
+00561c37  local.get [3]
+00561c39  i32.const [3973756]
+00561c3e  i32.load [2, 0]
+00561c41  call [944] ; 
+00561c44  local.get [3]
+00561c46  local.get [2]
+00561c48  i32.const [3973760]
+00561c4d  i32.load [2, 0]
+00561c50  call [941] ; 
+00561c53  local.get [0]
+00561c55  local.get [1]
+00561c57  local.get [3]
+00561c59  i32.const [3954812]
+00561c5e  i32.load [2, 0]
+00561c61  call [1308] ; 
+00561c64  end []

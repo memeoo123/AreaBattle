@@ -1,0 +1,12 @@
+; Original class: ItemManager
+; Type4500.GetItemNum; wasmcode1 function 26697; offset=10320430 size=23
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[]
+009d7a2f  i32.const [0]
+009d7a31  i32.const [10204] ; TABLE GlobalItemManager.get_Instance
+009d7a35  call_indirect [2, 0]
+009d7a38  local.get [1]
+009d7a3a  i32.const [0]
+009d7a3c  i32.const [17843] ; TABLE GlobalItemManager.GetItemCount
+009d7a40  call_indirect [24, 0]
+009d7a43  return []
+009d7a44  end []

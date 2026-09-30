@@ -1,0 +1,38 @@
+{
+    "schemaVersion": "1.0",
+    "unityVersion": "6000.0.68f1",
+    "passed": true,
+    "checks": [
+        {
+            "id": "representative-production-topology-and-locked-skills",
+            "result": "pass",
+            "detail": "layout5; physicsPairs=15"
+        },
+        {
+            "id": "representative-legal-cut-and-pause",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "representative-natural-victory",
+            "result": "pass",
+            "detail": "policy=0;seconds=23.99992;inputs=31"
+        },
+        {
+            "id": "representative-retry-original-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "representative-idle-observation",
+            "result": "pass",
+            "detail": "state=Running;seconds=180.0064; AIType0 camp3 excludes player targets, so idle defeat is not assumed"
+        },
+        {
+            "id": "representative-natural-defeat-after-legal-input",
+            "result": "pass",
+            "detail": "seconds=107.1519;inputs=4"
+        }
+    ],
+    "limitations": "Natural-input connected replay on layout5 and production Physics topology. Does not establish live-original temporal or visual equivalence, special modes or all layouts."
+}

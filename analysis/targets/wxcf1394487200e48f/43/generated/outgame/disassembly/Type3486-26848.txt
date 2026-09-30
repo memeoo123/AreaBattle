@@ -1,0 +1,28 @@
+; Original class: GlobalData
+; Type3486.get_LoginUserID; wasmcode function 3934; offset=1244035 size=81
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0012fb84  i32.const [4989059]
+0012fb89  i32.load8_u [0, 0]
+0012fb8c  i32.eqz []
+0012fb8d  if [-64]
+0012fb8f    i32.const [3941104]
+0012fb94    call [900] ; 
+0012fb97    i32.const [4054892] ; STRING "GF_LoginUserID"
+0012fb9c    call [900] ; 
+0012fb9f    i32.const [4034536] ; STRING ""
+0012fba4    call [900] ; 
+0012fba7    i32.const [4989059]
+0012fbac    i32.const [1]
+0012fbae    i32.store8 [0, 0]
+0012fbb1  end []
+0012fbb2  i32.const [3941104]
+0012fbb7  i32.load [2, 0]
+0012fbba  call [901] ; 
+0012fbbd  i32.const [4054892] ; STRING "GF_LoginUserID"
+0012fbc2  i32.load [2, 0]
+0012fbc5  i32.const [4034536] ; STRING ""
+0012fbca  i32.load [2, 0]
+0012fbcd  i32.const [0]
+0012fbcf  call [5522] ; UserDataPrefs.GetString
+0012fbd2  return []
+0012fbd3  end []

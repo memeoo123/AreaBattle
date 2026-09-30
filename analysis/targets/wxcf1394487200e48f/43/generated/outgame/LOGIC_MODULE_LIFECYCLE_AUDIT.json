@@ -1,0 +1,51 @@
+{
+  "atUtc": "2026-09-30T05:14:14.500910+00:00",
+  "status": "partial-subsystem",
+  "sourceType": 3499,
+  "sourceMethods": [
+    26939,
+    26940,
+    26941,
+    26942,
+    26943,
+    26944,
+    26945,
+    26946
+  ],
+  "implementation": "UnityProject/Assets/AreaBattle/Scripts/OutgameLogicModule.cs",
+  "interface": {
+    "type": 3498,
+    "methods": {
+      "26936": "OnInit slot0",
+      "26937": "Updata slot1",
+      "26938": "OnDispose slot2"
+    }
+  },
+  "behaviors": [
+    "Priority12; Initialize always replaces list, sets flag then invokes current callback",
+    "Register checks Contains; duplicate warning; add before optional immediate initialization",
+    "InitCtrl sets auto-registration before data-pool initialization; false logs fast mode and returns",
+    "True initialization uses live indexed list so newly appended controls initialize in same pass",
+    "Update enumerates and forwards both time deltas; mutation and callback exceptions propagate",
+    "Shutdown releases data pool before enumerated controller disposal; clear only after successful completion; initialized flag retained",
+    "Start is empty"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:14:14.500910+00:00",
+    "scope": "Original MineGameLogicModule registration, live initialization, update and shutdown lifecycle",
+    "checksPassed": 665,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Concrete 38-controller registration, ProcedureManager FSM and full account/menu startup",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Concrete 38-controller instances and registration",
+    "Actual data-pool release composition",
+    "Procedure FSM lifecycle and Main30617 production composition",
+    "Complete account/menu and Player validation"
+  ]
+}

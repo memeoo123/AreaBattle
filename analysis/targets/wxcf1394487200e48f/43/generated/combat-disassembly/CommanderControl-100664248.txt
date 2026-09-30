@@ -1,0 +1,9 @@
+; CommanderControl.GetCommanderData; wasmcode function 5152; offset=1766795 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+001af58c  local.get [0]
+001af58e  i32.load [2, 8]
+001af591  local.get [1]
+001af593  local.get [1]
+001af595  call [6199] ; CommanderManager.GetCommanderData
+001af598  return []
+001af599  end []

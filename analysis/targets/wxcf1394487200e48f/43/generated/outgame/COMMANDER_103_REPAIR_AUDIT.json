@@ -1,0 +1,50 @@
+{
+  "atUtc": "2026-09-30T05:30:26.329599+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameLegacyCommanderRepair.cs",
+  "sourceMethods": [
+    31593,
+    31019
+  ],
+  "sourceEvidence": {
+    "localField9": "dealOldComm byte",
+    "localField44": "firstChargeData",
+    "chargeField8": "hasCharge",
+    "chargeField9": "rewardState; bit0 tested",
+    "commanderField12": "Id",
+    "commanderField16": "curLevel",
+    "commanderField20": "skillsData",
+    "skillField12": "skillLevel",
+    "configOwnerField260": "statisticEventConfig",
+    "statisticField72": "CommanderUpgrade",
+    "usage3955480": "Dictionary<int,CommanderData>.get_Values metadata10507 inst733"
+  },
+  "sequence": [
+    "AppInfoManager.Instance.IsInstallVersion() true returns before local access",
+    "Exact dealOldComm==1 returns; otherwise assign1 then warning",
+    "Read current firstCharge; if hasCharge and rewardState bit0, getCommander3; level<=0 sets1 then SetEventCount(current upgrade event,3,1)",
+    "Capture current CommanderUpgrade event key then enumerate CommanderManager dictionary values",
+    "GameValue(eventKey,new object[]{commander.Id}); only if previous>current level restore",
+    "Clamp previous through float min28 and lower bound0 then assign level",
+    "Loop i<level sets skill[i%3].level=1; loop i<level-1 increments skill[i%3].level",
+    "No save callback, rollback or marker reset occurs in method"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:30:26.329599+00:00",
+    "scope": "Original LocalDataControl Handle1_03VersionBug commander/statistic/skill repair",
+    "checksPassed": 675,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Live user-save migration or complete PreLoad service/StarGame/Main/menu startup",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "PreLoad service composition must supply real managers and statistics",
+    "Actual startup save scheduling remains surrounding lifecycle work",
+    "Complete ProcedureStarGame/Main/menu and native Player verification"
+  ],
+  "userDataModified": false
+}

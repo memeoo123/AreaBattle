@@ -1,0 +1,728 @@
+; Original class: LevelControl
+; Type4107.OnGamePlayState; wasmcode function 7630; offset=3645172 size=1934
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+00379ef7  global.get [0]
+00379ef9  i32.const [16]
+00379efb  i32.sub []
+00379efc  local.set [2]
+00379efe  local.get [2]
+00379f00  global.set [0]
+00379f02  i32.const [5008506]
+00379f07  i32.load8_u [0, 0]
+00379f0a  i32.eqz []
+00379f0b  if [-64]
+00379f0d    i32.const [3927888]
+00379f12    call [900] ; 
+00379f15    i32.const [3928180]
+00379f1a    call [900] ; 
+00379f1d    i32.const [3989352]
+00379f22    call [900] ; 
+00379f25    i32.const [3953592]
+00379f2a    call [900] ; 
+00379f2d    i32.const [3953560]
+00379f32    call [900] ; 
+00379f35    i32.const [3953320]
+00379f3a    call [900] ; 
+00379f3d    i32.const [3953456]
+00379f42    call [900] ; 
+00379f45    i32.const [3953360]
+00379f4a    call [900] ; 
+00379f4d    i32.const [3953384]
+00379f52    call [900] ; 
+00379f55    i32.const [3953576]
+00379f5a    call [900] ; 
+00379f5d    i32.const [3953440]
+00379f62    call [900] ; 
+00379f65    i32.const [3953304]
+00379f6a    call [900] ; 
+00379f6d    i32.const [3953448]
+00379f72    call [900] ; 
+00379f75    i32.const [3953480]
+00379f7a    call [900] ; 
+00379f7d    i32.const [3953344]
+00379f82    call [900] ; 
+00379f85    i32.const [3953400]
+00379f8a    call [900] ; 
+00379f8d    i32.const [3930144]
+00379f92    call [900] ; 
+00379f95    i32.const [3944712]
+00379f9a    call [900] ; 
+00379f9d    i32.const [3932476]
+00379fa2    call [900] ; 
+00379fa5    i32.const [3926888]
+00379faa    call [900] ; 
+00379fad    i32.const [4005356] ; METHOD LevelControl.OwsNd
+00379fb2    call [900] ; 
+00379fb5    i32.const [4005360] ; METHOD LevelControl.l]k^{k`
+00379fba    call [900] ; 
+00379fbd    i32.const [3926996]
+00379fc2    call [900] ; 
+00379fc5    i32.const [3944728]
+00379fca    call [900] ; 
+00379fcd    i32.const [3940492]
+00379fd2    call [900] ; 
+00379fd5    i32.const [4018248]
+00379fda    call [900] ; 
+00379fdd    i32.const [4018260]
+00379fe2    call [900] ; 
+00379fe5    i32.const [4018264]
+00379fea    call [900] ; 
+00379fed    i32.const [4018316]
+00379ff2    call [900] ; 
+00379ff5    i32.const [4018328]
+00379ffa    call [900] ; 
+00379ffd    i32.const [4018412]
+0037a002    call [900] ; 
+0037a005    i32.const [4018472]
+0037a00a    call [900] ; 
+0037a00d    i32.const [4018476]
+0037a012    call [900] ; 
+0037a015    i32.const [5008506]
+0037a01a    i32.const [1]
+0037a01c    i32.store8 [0, 0]
+0037a01f  end []
+0037a020  local.get [0]
+0037a022  local.get [1]
+0037a024  i32.store [2, 8]
+0037a027  i32.const [3932476]
+0037a02c  i32.load [2, 0]
+0037a02f  call [901] ; 
+0037a032  local.get [1]
+0037a034  i32.const [7]
+0037a036  i32.eq []
+0037a037  i32.const [0]
+0037a039  call [5043] ; GlobalData.PauseGame
+0037a03c  i32.const [3953320]
+0037a041  i32.load [2, 0]
+0037a044  call [935] ; 
+0037a047  local.get [0]
+0037a049  i32.load [2, 8]
+0037a04c  i32.const [0]
+0037a04e  call [13135] ; AudioControl.OnGamePlayState
+0037a051  i32.const [3953592]
+0037a056  i32.load [2, 0]
+0037a059  call [935] ; 
+0037a05c  local.get [0]
+0037a05e  i32.load [2, 8]
+0037a061  i32.const [0]
+0037a063  call [9381] ; WayLineControl.OnGamePlayState
+0037a066  i32.const [3953304]
+0037a06b  i32.load [2, 0]
+0037a06e  call [935] ; 
+0037a071  local.get [0]
+0037a073  i32.load [2, 8]
+0037a076  i32.const [0]
+0037a078  call [13410] ; AICampController.OnGamePlayState
+0037a07b  i32.const [3953560]
+0037a080  i32.load [2, 0]
+0037a083  call [935] ; 
+0037a086  local.get [0]
+0037a088  i32.load [2, 8]
+0037a08b  i32.const [0]
+0037a08d  call [10351] ; SkillControl.OnGamePlayState
+0037a090  i32.const [3944712]
+0037a095  i32.load [2, 0]
+0037a098  call [901] ; 
+0037a09b  i32.const [3944712]
+0037a0a0  i32.load [2, 0]
+0037a0a3  i32.load [2, 92]
+0037a0a6  i32.load [2, 4]
+0037a0a9  local.set [4]
+0037a0ab  i32.const [3926996]
+0037a0b0  i32.load [2, 0]
+0037a0b3  i32.const [1]
+0037a0b5  call [909] ; 
+0037a0b8  local.set [3]
+0037a0ba  local.get [2]
+0037a0bc  local.get [1]
+0037a0be  i32.store [2, 12]
+0037a0c1  i32.const [3944728]
+0037a0c6  i32.load [2, 0]
+0037a0c9  local.get [2]
+0037a0cb  i32.const [12]
+0037a0cd  i32.add []
+0037a0ce  call [910] ; 
+0037a0d1  local.set [1]
+0037a0d3  local.get [3]
+0037a0d5  local.get [1]
+0037a0d7  call [905] ; 
+0037a0da  local.get [3]
+0037a0dc  local.get [1]
+0037a0de  i32.store [2, 16]
+0037a0e1  local.get [4]
+0037a0e3  local.get [3]
+0037a0e5  i32.const [0]
+0037a0e7  call [1230] ; MsgDispatcher.SendMessage
+0037a0ea  block [-64]
+0037a0ec    block [-64]
+0037a0ee      i32.const [3953480]
+0037a0f3      i32.load [2, 0]
+0037a0f6      call [935] ; 
+0037a0f9      i32.load8_u [0, 8]
+0037a0fc      i32.eqz []
+0037a0fd      if [-64]
+0037a0ff        i32.const [3953360]
+0037a104        i32.load [2, 0]
+0037a107        call [935] ; 
+0037a10a        i32.load8_u [0, 8]
+0037a10d        i32.eqz []
+0037a10e        br_if [1]
+0037a110      end []
+0037a111      i32.const [3953384]
+0037a116      i32.load [2, 0]
+0037a119      call [935] ; 
+0037a11c      local.get [0]
+0037a11e      local.get [0]
+0037a120      call [7819] ; GameControl.SetCameraSize
+0037a123      br [1]
+0037a125    end []
+0037a126    block [-64]
+0037a128      block [-64]
+0037a12a        block [-64]
+0037a12c          block [-64]
+0037a12e            block [-64]
+0037a130              block [-64]
+0037a132                block [-64]
+0037a134                  block [-64]
+0037a136                    block [-64]
+0037a138                      block [-64]
+0037a13a                        block [-64]
+0037a13c                          block [-64]
+0037a13e                            block [-64]
+0037a140                              block [-64]
+0037a142                                block [-64]
+0037a144                                  local.get [0]
+0037a146                                  i32.load [2, 8]
+0037a149                                  i32.const [1]
+0037a14b                                  i32.sub []
+0037a14c                                  br_table [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 10, 11, 12, 14, 15]
+0037a15e                                end []
+0037a15f                                i32.const [0]
+0037a161                                call [1653] ; ADHelper.get_Instance
+0037a164                                local.get [0]
+0037a166                                local.get [0]
+0037a168                                call [1254] ; LevelControl.get_CurLevel
+0037a16b                                i32.store [2, 32]
+0037a16e                                i32.const [0]
+0037a170                                call [1060] ; ConfigMgr.get_Instance
+0037a173                                i32.const [0]
+0037a175                                call [12787] ; ConfigMgr.InitChanelData
+0037a178                                local.get [0]
+0037a17a                                i32.const [2]
+0037a17c                                i32.const [0]
+0037a17e                                local.get [0]
+0037a180                                call [1444] ; LevelControl.SetPlaySate
+0037a183                                drop []
+0037a184                                i32.const [3928180]
+0037a189                                i32.load [2, 0]
+0037a18c                                i32.load [2, 92]
+0037a18f                                i32.load [2, 0]
+0037a192                                i32.const [0]
+0037a194                                call [13255] ; AppUserManager.ShowUpdateDalogStatic
+0037a197                                br [14]
+0037a199                              end []
+0037a19a                              i32.const [3953384]
+0037a19f                              i32.load [2, 0]
+0037a1a2                              call [935] ; 
+0037a1a5                              local.get [0]
+0037a1a7                              call [12186] ; GameControl.X~fvY
+0037a1aa                              i32.const [0]
+0037a1ac                              call [1821] ; UIAudioManager.get_Instance
+0037a1af                              i32.const [0]
+0037a1b1                              i32.const [0]
+0037a1b3                              call [3072] ; UIAudioManager.StopParallelNode
+0037a1b6                              local.get [0]
+0037a1b8                              local.get [0]
+0037a1ba                              local.get [0]
+0037a1bc                              call [1254] ; LevelControl.get_CurLevel
+0037a1bf                              local.get [0]
+0037a1c1                              call [11594] ; LevelControl.YlzMiq
+0037a1c4                              br [13]
+0037a1c6                            end []
+0037a1c7                            i32.const [3953576]
+0037a1cc                            i32.load [2, 0]
+0037a1cf                            call [935] ; 
+0037a1d2                            i32.const [0]
+0037a1d4                            call [6921] ; UIControl.OpenLoadingUI
+0037a1d7                            local.set [1]
+0037a1d9                            local.get [1]
+0037a1db                            i32.const [1]
+0037a1dd                            i32.store8 [0, 48]
+0037a1e0                            local.get [1]
+0037a1e2                            i32.const [1084227584]
+0037a1e8                            i32.store [2, 40]
+0037a1eb                            local.get [0]
+0037a1ed                            local.get [0]
+0037a1ef                            call [5936] ; LevelControl.InitEnemySkin
+0037a1f2                            local.get [0]
+0037a1f4                            i32.const [0]
+0037a1f6                            i32.store8 [0, 53]
+0037a1f9                            i32.const [0]
+0037a1fb                            call [1143] ; GameModule.get_UI
+0037a1fe                            i32.const [4018316]
+0037a203                            i32.load [2, 0]
+0037a206                            call [1503] ; 
+0037a209                            local.set [1]
+0037a20b                            local.get [1]
+0037a20d                            if [-64]
+0037a20f                              local.get [1]
+0037a211                              i32.const [0]
+0037a213                              call [7563] ; MenuTabUI.DoClose
+0037a216                            end []
+0037a217                            i32.const [3930144]
+0037a21c                            i32.load [2, 0]
+0037a21f                            call [901] ; 
+0037a222                            i32.const [0]
+0037a224                            call [3987] ; DOTween.Sequence
+0037a227                            local.set [1]
+0037a229                            local.get [1]
+0037a22b                            f32.const [0.5]
+0037a230                            i32.const [0]
+0037a232                            call [5575] ; TweenSettingsExtensions.AppendInterval
+0037a235                            drop []
+0037a236                            i32.const [3940492]
+0037a23b                            i32.load [2, 0]
+0037a23e                            call [903] ; 
+0037a241                            local.set [3]
+0037a243                            local.get [3]
+0037a245                            local.get [0]
+0037a247                            i32.const [4005360] ; METHOD LevelControl.l]k^{k`
+0037a24c                            i32.load [2, 0]
+0037a24f                            i32.const [0]
+0037a251                            call [1373] ; TweenCallback..ctor
+0037a254                            local.get [1]
+0037a256                            local.get [3]
+0037a258                            i32.const [0]
+0037a25a                            call [4731] ; TweenSettingsExtensions.AppendCallback
+0037a25d                            drop []
+0037a25e                            br [12]
+0037a260                          end []
+0037a261                          i32.const [3953576]
+0037a266                          i32.load [2, 0]
+0037a269                          call [935] ; 
+0037a26c                          i32.const [0]
+0037a26e                          call [6924] ; UIControl.CloseLoadingUI
+0037a271                          block [-64]
+0037a273                            local.get [0]
+0037a275                            i32.load8_u [0, 28]
+0037a278                            i32.eqz []
+0037a279                            if [-64]
+0037a27b                              i32.const [0]
+0037a27d                              call [1438] ; GameModule.get_LocalData
+0037a280                              i32.load [2, 20]
+0037a283                              i32.load [2, 16]
+0037a286                              i32.const [1]
+0037a288                              i32.ne []
+0037a289                              br_if [1]
+0037a28b                              local.get [0]
+0037a28d                              local.get [0]
+0037a28f                              call [1254] ; LevelControl.get_CurLevel
+0037a292                              i32.const [3953344]
+0037a297                              i32.load [2, 0]
+0037a29a                              call [935] ; 
+0037a29d                              i32.const [0]
+0037a29f                              call [12865] ; CommanderControl.GetMinUnlockLevel
+0037a2a2                              i32.lt_s []
+0037a2a3                              br_if [1]
+0037a2a5                            end []
+0037a2a6                            local.get [0]
+0037a2a8                            i32.load8_u [0, 98]
+0037a2ab                            br_if [0]
+0037a2ad                            i32.const [0]
+0037a2af                            call [1143] ; GameModule.get_UI
+0037a2b2                            i32.const [3989352]
+0037a2b7                            i32.load [2, 0]
+0037a2ba                            call [1032] ; 
+0037a2bd                            i32.const [4018412]
+0037a2c2                            i32.load [2, 0]
+0037a2c5                            call [1367] ; 
+0037a2c8                            drop []
+0037a2c9                            br [12]
+0037a2cb                          end []
+0037a2cc                          local.get [0]
+0037a2ce                          i32.const [5]
+0037a2d0                          i32.const [0]
+0037a2d2                          local.get [0]
+0037a2d4                          call [1444] ; LevelControl.SetPlaySate
+0037a2d7                          drop []
+0037a2d8                          br [11]
+0037a2da                        end []
+0037a2db                        i32.const [0]
+0037a2dd                        call [1438] ; GameModule.get_LocalData
+0037a2e0                        i32.load [2, 20]
+0037a2e3                        i32.const [0]
+0037a2e5                        i32.store [2, 16]
+0037a2e8                        i32.const [0]
+0037a2ea                        call [1587] ; GameModule.get_ADHelper
+0037a2ed                        i32.const [0]
+0037a2ef                        local.get [0]
+0037a2f1                        local.get [0]
+0037a2f3                        call [1254] ; LevelControl.get_CurLevel
+0037a2f6                        i32.const [0]
+0037a2f8                        call [5244] ; ADHelper.ReportLevelState
+0037a2fb                        block [-64]
+0037a2fd                          local.get [0]
+0037a2ff                          i32.load8_u [0, 52]
+0037a302                          if [-64]
+0037a304                            i32.const [3953400]
+0037a309                            i32.load [2, 0]
+0037a30c                            call [935] ; 
+0037a30f                            local.get [0]
+0037a311                            call [4406] ; GuideControl.EnterNextStage
+0037a314                            local.get [0]
+0037a316                            local.get [0]
+0037a318                            call [1254] ; LevelControl.get_CurLevel
+0037a31b                            br_if [1]
+0037a31d                            i32.const [0]
+0037a31f                            call [1653] ; ADHelper.get_Instance
+0037a322                            i32.const [0]
+0037a324                            call [13432] ; ADHelper.Report_ams_tutorial_start
+0037a327                            br [1]
+0037a329                          end []
+0037a32a                          local.get [0]
+0037a32c                          local.get [0]
+0037a32e                          call [4973] ; LevelControl.ShowMyCampEffect
+0037a331                          local.get [0]
+0037a333                          i32.const [6]
+0037a335                          i32.const [1]
+0037a337                          local.get [0]
+0037a339                          call [1444] ; LevelControl.SetPlaySate
+0037a33c                          drop []
+0037a33d                        end []
+0037a33e                        i32.const [0]
+0037a340                        call [1821] ; UIAudioManager.get_Instance
+0037a343                        local.set [0]
+0037a345                        i32.const [3926888]
+0037a34a                        i32.load [2, 0]
+0037a34d                        i32.const [1]
+0037a34f                        call [909] ; 
+0037a352                        local.set [1]
+0037a354                        local.get [1]
+0037a356                        i32.const [1002]
+0037a359                        i32.store [2, 16]
+0037a35c                        local.get [0]
+0037a35e                        i32.const [1]
+0037a360                        local.get [1]
+0037a362                        i32.const [0]
+0037a364                        call [2462] ; UIAudioManager.Play
+0037a367                        drop []
+0037a368                        br [10]
+0037a36a                      end []
+0037a36b                      block [-64]
+0037a36d                        local.get [0]
+0037a36f                        i32.load8_u [0, 53]
+0037a372                        i32.eqz []
+0037a373                        br_if [0]
+0037a375                        local.get [0]
+0037a377                        i32.load [2, 60]
+0037a37a                        local.set [1]
+0037a37c                        local.get [1]
+0037a37e                        i32.eqz []
+0037a37f                        br_if [0]
+0037a381                        local.get [1]
+0037a383                        i32.const [0]
+0037a385                        i32.const [15407] ; TABLE Boss.PlayRainSound
+0037a389                        global.set [3]
+0037a38b                        i32.const [15407] ; TABLE Boss.PlayRainSound
+0037a38f                        call_indirect [0, 0]
+0037a392                      end []
+0037a393                      local.get [0]
+0037a395                      local.get [0]
+0037a397                      f32.load [2, 104]
+0037a39a                      local.get [0]
+0037a39c                      call [4974] ; LevelControl.SetLevelSpeed
+0037a39f                      i32.const [0]
+0037a3a1                      call [1821] ; UIAudioManager.get_Instance
+0037a3a4                      i32.load [2, 8]
+0037a3a7                      local.set [0]
+0037a3a9                      local.get [0]
+0037a3ab                      if [-64]
+0037a3ad                        local.get [0]
+0037a3af                        local.set [1]
+0037a3b1                        local.get [0]
+0037a3b3                        i32.load [2, 0]
+0037a3b6                        local.set [0]
+0037a3b8                        local.get [1]
+0037a3ba                        i32.const [0]
+0037a3bc                        local.get [0]
+0037a3be                        i32.load [2, 248]
+0037a3c2                        local.get [0]
+0037a3c4                        i32.load [2, 244]
+0037a3c8                        global.set [3]
+0037a3ca                        global.get [3]
+0037a3cc                        call_indirect [2, 0]
+0037a3cf                      end []
+0037a3d0                      br [9]
+0037a3d2                    end []
+0037a3d3                    i32.const [0]
+0037a3d5                    call [1821] ; UIAudioManager.get_Instance
+0037a3d8                    i32.load [2, 8]
+0037a3db                    local.set [0]
+0037a3dd                    local.get [0]
+0037a3df                    if [-64]
+0037a3e1                      local.get [0]
+0037a3e3                      local.set [1]
+0037a3e5                      local.get [0]
+0037a3e7                      i32.load [2, 0]
+0037a3ea                      local.set [0]
+0037a3ec                      local.get [1]
+0037a3ee                      i32.const [1]
+0037a3f0                      local.get [0]
+0037a3f2                      i32.load [2, 248]
+0037a3f6                      local.get [0]
+0037a3f8                      i32.load [2, 244]
+0037a3fc                      global.set [3]
+0037a3fe                      global.get [3]
+0037a400                      call_indirect [2, 0]
+0037a403                    end []
+0037a404                    br [8]
+0037a406                  end []
+0037a407                  i32.const [3953456]
+0037a40c                  i32.load [2, 0]
+0037a40f                  call [935] ; 
+0037a412                  local.get [0]
+0037a414                  call [4379] ; LoadPrefabControl.ClearModelEntityCache
+0037a417                  i32.const [0]
+0037a419                  call [1143] ; GameModule.get_UI
+0037a41c                  i32.const [4018264]
+0037a421                  i32.load [2, 0]
+0037a424                  call [1877] ; 
+0037a427                  i32.const [0]
+0037a429                  call [1143] ; GameModule.get_UI
+0037a42c                  i32.const [3989352]
+0037a431                  i32.load [2, 0]
+0037a434                  call [1032] ; 
+0037a437                  i32.const [4018476]
+0037a43c                  i32.load [2, 0]
+0037a43f                  call [1367] ; 
+0037a442                  drop []
+0037a443                  block [-64]
+0037a445                    local.get [0]
+0037a447                    i32.load8_u [0, 52]
+0037a44a                    i32.eqz []
+0037a44b                    br_if [0]
+0037a44d                    local.get [0]
+0037a44f                    local.get [0]
+0037a451                    call [1254] ; LevelControl.get_CurLevel
+0037a454                    br_if [0]
+0037a456                    i32.const [0]
+0037a458                    call [1653] ; ADHelper.get_Instance
+0037a45b                    i32.const [0]
+0037a45d                    call [13433] ; ADHelper.Report_ams_tutorial_finish
+0037a460                  end []
+0037a461                  i32.const [0]
+0037a463                  call [1821] ; UIAudioManager.get_Instance
+0037a466                  i32.const [1]
+0037a468                  i32.const [0]
+0037a46a                  call [3072] ; UIAudioManager.StopParallelNode
+0037a46d                  i32.const [0]
+0037a46f                  call [1143] ; GameModule.get_UI
+0037a472                  i32.const [4018248]
+0037a477                  i32.load [2, 0]
+0037a47a                  call [1877] ; 
+0037a47d                  local.get [0]
+0037a47f                  i32.const [0]
+0037a481                  local.get [0]
+0037a483                  call [5935] ; LevelControl.Zibr{
+0037a486                  i32.const [3953448]
+0037a48b                  i32.load [2, 0]
+0037a48e                  call [935] ; 
+0037a491                  i32.const [0]
+0037a493                  call [11587] ; LevelRankControl.OnLevelWin
+0037a496                  i32.const [3953360]
+0037a49b                  i32.load [2, 0]
+0037a49e                  call [935] ; 
+0037a4a1                  i32.const [0]
+0037a4a3                  call [12551] ; DiceGameControl.OnLevelWin
+0037a4a6                  br [7]
+0037a4a8                end []
+0037a4a9                i32.const [0]
+0037a4ab                call [1587] ; GameModule.get_ADHelper
+0037a4ae                i32.const [3]
+0037a4b0                i32.const [3953440]
+0037a4b5                i32.load [2, 0]
+0037a4b8                call [935] ; 
+0037a4bb                local.get [0]
+0037a4bd                call [1254] ; LevelControl.get_CurLevel
+0037a4c0                i32.const [0]
+0037a4c2                call [5244] ; ADHelper.ReportLevelState
+0037a4c5                i32.const [0]
+0037a4c7                call [1143] ; GameModule.get_UI
+0037a4ca                i32.const [4018264]
+0037a4cf                i32.load [2, 0]
+0037a4d2                call [1877] ; 
+0037a4d5                i32.const [0]
+0037a4d7                call [1143] ; GameModule.get_UI
+0037a4da                i32.const [3989352]
+0037a4df                i32.load [2, 0]
+0037a4e2                call [1032] ; 
+0037a4e5                i32.const [4018472]
+0037a4ea                i32.load [2, 0]
+0037a4ed                call [1367] ; 
+0037a4f0                drop []
+0037a4f1                i32.const [0]
+0037a4f3                call [1821] ; UIAudioManager.get_Instance
+0037a4f6                i32.const [1]
+0037a4f8                i32.const [0]
+0037a4fa                call [3072] ; UIAudioManager.StopParallelNode
+0037a4fd                i32.const [0]
+0037a4ff                call [1143] ; GameModule.get_UI
+0037a502                i32.const [4018248]
+0037a507                i32.load [2, 0]
+0037a50a                call [1877] ; 
+0037a50d                br [6]
+0037a50f              end []
+0037a510              i32.const [0]
+0037a512              call [1821] ; UIAudioManager.get_Instance
+0037a515              i32.const [0]
+0037a517              i32.const [0]
+0037a519              call [3072] ; UIAudioManager.StopParallelNode
+0037a51c              i32.const [0]
+0037a51e              call [1143] ; GameModule.get_UI
+0037a521              i32.const [4018248]
+0037a526              i32.load [2, 0]
+0037a529              call [1877] ; 
+0037a52c              i32.const [0]
+0037a52e              call [1438] ; GameModule.get_LocalData
+0037a531              i32.load [2, 20]
+0037a534              i32.const [1]
+0037a536              i32.store [2, 16]
+0037a539              local.get [0]
+0037a53b              local.get [0]
+0037a53d              call [3327] ; LevelControl.InitGameData
+0037a540              local.get [0]
+0037a542              i32.const [0]
+0037a544              local.get [0]
+0037a546              call [5935] ; LevelControl.Zibr{
+0037a549              local.get [0]
+0037a54b              i32.const [3]
+0037a54d              i32.const [1]
+0037a54f              local.get [0]
+0037a551              call [1444] ; LevelControl.SetPlaySate
+0037a554              drop []
+0037a555              br [5]
+0037a557            end []
+0037a558            i32.const [0]
+0037a55a            call [1821] ; UIAudioManager.get_Instance
+0037a55d            i32.const [0]
+0037a55f            i32.const [0]
+0037a561            call [3072] ; UIAudioManager.StopParallelNode
+0037a564            i32.const [0]
+0037a566            call [1143] ; GameModule.get_UI
+0037a569            i32.const [4018248]
+0037a56e            i32.load [2, 0]
+0037a571            call [1877] ; 
+0037a574            local.get [0]
+0037a576            local.get [0]
+0037a578            call [3327] ; LevelControl.InitGameData
+0037a57b            local.get [0]
+0037a57d            local.get [0]
+0037a57f            local.get [0]
+0037a581            call [1254] ; LevelControl.get_CurLevel
+0037a584            i32.const [1]
+0037a586            i32.add []
+0037a587            local.get [0]
+0037a589            call [5934] ; LevelControl.set_CurLevel
+0037a58c            i32.const [0]
+0037a58e            call [1143] ; GameModule.get_UI
+0037a591            i32.const [4018260]
+0037a596            i32.load [2, 0]
+0037a599            call [1877] ; 
+0037a59c            local.get [0]
+0037a59e            i32.const [3]
+0037a5a0            i32.const [1]
+0037a5a2            local.get [0]
+0037a5a4            call [1444] ; LevelControl.SetPlaySate
+0037a5a7            drop []
+0037a5a8            br [4]
+0037a5aa          end []
+0037a5ab          i32.const [0]
+0037a5ad          call [1143] ; GameModule.get_UI
+0037a5b0          i32.const [4018328]
+0037a5b5          i32.load [2, 0]
+0037a5b8          call [1503] ; 
+0037a5bb          drop []
+0037a5bc          br [3]
+0037a5be        end []
+0037a5bf        i32.const [0]
+0037a5c1        call [1821] ; UIAudioManager.get_Instance
+0037a5c4        i32.const [0]
+0037a5c6        i32.const [0]
+0037a5c8        call [3072] ; UIAudioManager.StopParallelNode
+0037a5cb        i32.const [0]
+0037a5cd        call [1143] ; GameModule.get_UI
+0037a5d0        i32.const [4018248]
+0037a5d5        i32.load [2, 0]
+0037a5d8        call [1877] ; 
+0037a5db        local.get [0]
+0037a5dd        local.get [0]
+0037a5df        call [3327] ; LevelControl.InitGameData
+0037a5e2        local.get [0]
+0037a5e4        local.get [0]
+0037a5e6        local.get [0]
+0037a5e8        call [3906] ; LevelControl.get_SmallLevelIndex
+0037a5eb        i32.const [1]
+0037a5ed        i32.add []
+0037a5ee        local.get [0]
+0037a5f0        call [5935] ; LevelControl.Zibr{
+0037a5f3        local.get [0]
+0037a5f5        i32.const [3]
+0037a5f7        i32.const [1]
+0037a5f9        local.get [0]
+0037a5fb        call [1444] ; LevelControl.SetPlaySate
+0037a5fe        drop []
+0037a5ff        br [2]
+0037a601      end []
+0037a602      i32.const [0]
+0037a604      call [1587] ; GameModule.get_ADHelper
+0037a607      i32.const [0]
+0037a609      i32.store8 [0, 28]
+0037a60c      i32.const [0]
+0037a60e      call [3252] ; TransitionAnima.get_I
+0037a611      local.set [1]
+0037a613      i32.const [3927888]
+0037a618      i32.load [2, 0]
+0037a61b      call [903] ; 
+0037a61e      local.set [3]
+0037a620      local.get [3]
+0037a622      local.get [0]
+0037a624      i32.const [4005356] ; METHOD LevelControl.OwsNd
+0037a629      i32.load [2, 0]
+0037a62c      i32.const [0]
+0037a62e      call [1002] ; Action..ctor
+0037a631      local.get [1]
+0037a633      local.get [3]
+0037a635      i32.const [0]
+0037a637      call [4222] ; TransitionAnima.Hide
+0037a63a      br [1]
+0037a63c    end []
+0037a63d    i32.const [0]
+0037a63f    call [1821] ; UIAudioManager.get_Instance
+0037a642    i32.const [0]
+0037a644    i32.const [0]
+0037a646    call [3072] ; UIAudioManager.StopParallelNode
+0037a649    i32.const [0]
+0037a64b    call [1143] ; GameModule.get_UI
+0037a64e    i32.const [4018248]
+0037a653    i32.load [2, 0]
+0037a656    call [1877] ; 
+0037a659    i32.const [0]
+0037a65b    call [1438] ; GameModule.get_LocalData
+0037a65e    i32.load [2, 20]
+0037a661    i32.const [1]
+0037a663    i32.store [2, 16]
+0037a666    local.get [0]
+0037a668    local.get [0]
+0037a66a    call [3327] ; LevelControl.InitGameData
+0037a66d    local.get [0]
+0037a66f    i32.const [3]
+0037a671    i32.const [1]
+0037a673    local.get [0]
+0037a675    call [1444] ; LevelControl.SetPlaySate
+0037a678    drop []
+0037a679  end []
+0037a67a  local.get [2]
+0037a67c  i32.const [16]
+0037a67e  i32.add []
+0037a67f  global.set [0]
+0037a681  end []

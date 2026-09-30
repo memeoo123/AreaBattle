@@ -1,0 +1,262 @@
+; Original class: XYXADControl
+; Type7567.ShowInterstitialStatic; wasmcode function 6762; offset=2552666 size=773
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0026f35d  i32.const [5005738]
+0026f362  i32.load8_u [0, 0]
+0026f365  i32.eqz []
+0026f366  if [-64]
+0026f368    i32.const [3915488]
+0026f36d    call [900] ; 
+0026f370    i32.const [3927996]
+0026f375    call [900] ; 
+0026f378    i32.const [3936304]
+0026f37d    call [900] ; 
+0026f380    i32.const [3984752]
+0026f385    call [900] ; 
+0026f388    i32.const [4031820] ; METHOD <>c.<ShowInterstitialStatic>b__15_0
+0026f38d    call [900] ; 
+0026f390    i32.const [4031824] ; METHOD <>c.<ShowInterstitialStatic>b__15_1
+0026f395    call [900] ; 
+0026f398    i32.const [4031828] ; METHOD <>c__DisplayClass15_0.<ShowInterstitialStatic>b__2
+0026f39d    call [900] ; 
+0026f3a0    i32.const [3949804]
+0026f3a5    call [900] ; 
+0026f3a8    i32.const [3949800]
+0026f3ad    call [900] ; 
+0026f3b0    i32.const [3941520]
+0026f3b5    call [900] ; 
+0026f3b8    i32.const [4057236] ; STRING "INTERSTITAL"
+0026f3bd    call [900] ; 
+0026f3c0    i32.const [4090584] ; STRING "inter1_show_video"
+0026f3c5    call [900] ; 
+0026f3c8    i32.const [5005738]
+0026f3cd    i32.const [1]
+0026f3cf    i32.store8 [0, 0]
+0026f3d2  end []
+0026f3d3  i32.const [3949804]
+0026f3d8  i32.load [2, 0]
+0026f3db  call [903] ; 
+0026f3de  local.set [2]
+0026f3e0  local.get [2]
+0026f3e2  local.get [1]
+0026f3e4  i32.store [2, 8]
+0026f3e7  i32.const [3936304]
+0026f3ec  i32.load [2, 0]
+0026f3ef  call [901] ; 
+0026f3f2  i32.const [0]
+0026f3f4  call [1381] ; NewAdsManager.get_Instance
+0026f3f7  drop []
+0026f3f8  i32.const [5006032]
+0026f3fd  i32.load8_u [0, 0]
+0026f400  i32.eqz []
+0026f401  if [-64]
+0026f403    i32.const [3936304]
+0026f408    call [900] ; 
+0026f40b    i32.const [5006032]
+0026f410    i32.const [1]
+0026f412    i32.store8 [0, 0]
+0026f415  end []
+0026f416  i32.const [3936304]
+0026f41b  i32.load [2, 0]
+0026f41e  call [901] ; 
+0026f421  i32.const [3936304]
+0026f426  i32.load [2, 0]
+0026f429  i32.load [2, 92]
+0026f42c  i32.load [2, 40]
+0026f42f  local.set [1]
+0026f431  i32.const [3941520]
+0026f436  i32.load [2, 0]
+0026f439  call [901] ; 
+0026f43c  block [-64]
+0026f43e    local.get [1]
+0026f440    local.get [2]
+0026f442    call [4678] ; VideoReplaceIntersUtil.needShow
+0026f445    i32.eqz []
+0026f446    br_if [0]
+0026f448    i32.const [3927996]
+0026f44d    i32.load [2, 0]
+0026f450    call [901] ; 
+0026f453    local.get [2]
+0026f455    i32.const [65975] ; TABLE AdsUtil.canInterShow
+0026f459    global.set [3]
+0026f45b    i32.const [65975] ; TABLE AdsUtil.canInterShow
+0026f45f    call_indirect [4, 0]
+0026f462    i32.eqz []
+0026f463    br_if [0]
+0026f465    i32.const [3984752]
+0026f46a    i32.load [2, 0]
+0026f46d    call [1203] ; 
+0026f470    local.get [2]
+0026f472    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+0026f475    i32.const [4090584] ; STRING "inter1_show_video"
+0026f47a    i32.load [2, 0]
+0026f47d    i32.const [0]
+0026f47f    call [2925] ; ReporterSDK.NewReportInsertAll
+0026f482    i32.const [3984752]
+0026f487    i32.load [2, 0]
+0026f48a    call [1203] ; 
+0026f48d    local.get [2]
+0026f48f    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+0026f492    i32.const [4090584] ; STRING "inter1_show_video"
+0026f497    i32.load [2, 0]
+0026f49a    i32.const [0]
+0026f49c    call [2924] ; ReporterSDK.NewReportInsertSelect
+0026f49f    i32.const [3949800]
+0026f4a4    i32.load [2, 0]
+0026f4a7    call [901] ; 
+0026f4aa    i32.const [4057236] ; STRING "INTERSTITAL"
+0026f4af    i32.load [2, 0]
+0026f4b2    local.set [2]
+0026f4b4    i32.const [3949800]
+0026f4b9    i32.load [2, 0]
+0026f4bc    i32.load [2, 92]
+0026f4bf    i32.load [2, 4]
+0026f4c2    local.set [0]
+0026f4c4    local.get [0]
+0026f4c6    i32.eqz []
+0026f4c7    if [-64]
+0026f4c9      i32.const [3949800]
+0026f4ce      i32.load [2, 0]
+0026f4d1      call [901] ; 
+0026f4d4      i32.const [3949800]
+0026f4d9      i32.load [2, 0]
+0026f4dc      i32.load [2, 92]
+0026f4df      i32.load [2, 0]
+0026f4e2      local.set [1]
+0026f4e4      i32.const [3915488]
+0026f4e9      i32.load [2, 0]
+0026f4ec      call [903] ; 
+0026f4ef      local.set [0]
+0026f4f1      local.get [0]
+0026f4f3      local.get [1]
+0026f4f5      i32.const [4031820] ; METHOD <>c.<ShowInterstitialStatic>b__15_0
+0026f4fa      i32.load [2, 0]
+0026f4fd      i32.const [0]
+0026f4ff      call [1004] ; 
+0026f502      i32.const [3949800]
+0026f507      i32.load [2, 0]
+0026f50a      i32.load [2, 92]
+0026f50d      local.get [0]
+0026f50f      i32.store [2, 4]
+0026f512      i32.const [3949800]
+0026f517      i32.load [2, 0]
+0026f51a      i32.load [2, 92]
+0026f51d      drop []
+0026f51e    end []
+0026f51f    i32.const [3949800]
+0026f524    i32.load [2, 0]
+0026f527    call [901] ; 
+0026f52a    i32.const [3949800]
+0026f52f    i32.load [2, 0]
+0026f532    i32.load [2, 92]
+0026f535    i32.load [2, 8]
+0026f538    local.set [1]
+0026f53a    local.get [1]
+0026f53c    i32.eqz []
+0026f53d    if [-64]
+0026f53f      i32.const [3949800]
+0026f544      i32.load [2, 0]
+0026f547      call [901] ; 
+0026f54a      i32.const [3949800]
+0026f54f      i32.load [2, 0]
+0026f552      i32.load [2, 92]
+0026f555      i32.load [2, 0]
+0026f558      local.set [3]
+0026f55a      i32.const [3915488]
+0026f55f      i32.load [2, 0]
+0026f562      call [903] ; 
+0026f565      local.set [1]
+0026f567      local.get [1]
+0026f569      local.get [3]
+0026f56b      i32.const [4031824] ; METHOD <>c.<ShowInterstitialStatic>b__15_1
+0026f570      i32.load [2, 0]
+0026f573      i32.const [0]
+0026f575      call [1004] ; 
+0026f578      i32.const [3949800]
+0026f57d      i32.load [2, 0]
+0026f580      i32.load [2, 92]
+0026f583      local.get [1]
+0026f585      i32.store [2, 8]
+0026f588      i32.const [3949800]
+0026f58d      i32.load [2, 0]
+0026f590      i32.load [2, 92]
+0026f593      drop []
+0026f594    end []
+0026f595    i32.const [3941520]
+0026f59a    i32.load [2, 0]
+0026f59d    call [901] ; 
+0026f5a0    local.get [2]
+0026f5a2    local.get [0]
+0026f5a4    local.get [1]
+0026f5a6    local.get [0]
+0026f5a8    i32.const [66033] ; TABLE VideoReplaceIntersUtil.show
+0026f5ac    global.set [3]
+0026f5ae    i32.const [66033] ; TABLE VideoReplaceIntersUtil.show
+0026f5b2    call_indirect [7, 0]
+0026f5b5    return []
+0026f5b6  end []
+0026f5b7  i32.const [3984752]
+0026f5bc  i32.load [2, 0]
+0026f5bf  call [1203] ; 
+0026f5c2  local.get [2]
+0026f5c4  call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+0026f5c7  local.get [2]
+0026f5c9  i32.load [2, 8]
+0026f5cc  i32.const [0]
+0026f5ce  call [2925] ; ReporterSDK.NewReportInsertAll
+0026f5d1  local.get [2]
+0026f5d3  call [1083] ; BridgeManager.get_xyxFunc
+0026f5d6  local.set [1]
+0026f5d8  local.get [1]
+0026f5da  local.set [3]
+0026f5dc  local.get [1]
+0026f5de  i32.load [2, 0]
+0026f5e1  local.set [1]
+0026f5e3  local.get [3]
+0026f5e5  local.get [1]
+0026f5e7  i32.load [2, 448]
+0026f5eb  local.get [1]
+0026f5ed  i32.load [2, 444]
+0026f5f1  global.set [3]
+0026f5f3  global.get [3]
+0026f5f5  call_indirect [1, 0]
+0026f5f8  if [-64]
+0026f5fa    i32.const [3984752]
+0026f5ff    i32.load [2, 0]
+0026f602    call [1203] ; 
+0026f605    local.get [2]
+0026f607    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+0026f60a    local.get [2]
+0026f60c    i32.load [2, 8]
+0026f60f    i32.const [0]
+0026f611    call [2924] ; ReporterSDK.NewReportInsertSelect
+0026f614    local.get [2]
+0026f616    call [1083] ; BridgeManager.get_xyxFunc
+0026f619    local.set [1]
+0026f61b    i32.const [3915488]
+0026f620    i32.load [2, 0]
+0026f623    call [903] ; 
+0026f626    local.set [3]
+0026f628    local.get [3]
+0026f62a    local.get [2]
+0026f62c    i32.const [4031828] ; METHOD <>c__DisplayClass15_0.<ShowInterstitialStatic>b__2
+0026f631    i32.load [2, 0]
+0026f634    i32.const [0]
+0026f636    call [1004] ; 
+0026f639    local.get [0]
+0026f63b    local.set [2]
+0026f63d    local.get [1]
+0026f63f    i32.load [2, 0]
+0026f642    local.set [0]
+0026f644    local.get [1]
+0026f646    local.get [2]
+0026f648    local.get [3]
+0026f64a    local.get [0]
+0026f64c    i32.load [2, 456]
+0026f650    local.get [0]
+0026f652    i32.load [2, 452]
+0026f656    global.set [3]
+0026f658    global.get [3]
+0026f65a    call_indirect [7, 0]
+0026f65d  end []
+0026f65e  end []

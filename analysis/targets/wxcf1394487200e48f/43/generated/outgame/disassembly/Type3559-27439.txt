@@ -1,0 +1,76 @@
+; Original class: UIObject
+; Type3559.Get; wasmcode function 1116; offset=402156 size=190
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+000622ed  global.get [0]
+000622ef  i32.const [16]
+000622f1  i32.sub []
+000622f2  local.set [2]
+000622f4  local.get [2]
+000622f6  global.set [0]
+000622f8  i32.const [4989695]
+000622fd  i32.load8_u [0, 0]
+00062300  i32.eqz []
+00062301  if [-64]
+00062303    i32.const [3929208]
+00062308    call [900] ; 
+0006230b    i32.const [3959124]
+00062310    call [900] ; 
+00062313    i32.const [3926996]
+00062318    call [900] ; 
+0006231b    i32.const [4104940] ; STRING "未找到GameObject对象,请在UIOutlet中设置:"
+00062320    call [900] ; 
+00062323    i32.const [4989695]
+00062328    i32.const [1]
+0006232a    i32.store8 [0, 0]
+0006232d  end []
+0006232e  local.get [2]
+00062330  i32.const [0]
+00062332  i32.store [2, 12]
+00062335  local.get [0]
+00062337  i32.load [2, 8]
+0006233a  local.get [1]
+0006233c  local.get [2]
+0006233e  i32.const [12]
+00062340  i32.add []
+00062341  i32.const [3959124]
+00062346  i32.load [2, 0]
+00062349  call [1017] ; 
+0006234c  i32.eqz []
+0006234d  if [-64]
+0006234f    i32.const [3926996]
+00062354    i32.load [2, 0]
+00062357    i32.const [1]
+00062359    call [909] ; 
+0006235c    local.set [0]
+0006235e    i32.const [4104940] ; STRING "未找到GameObject对象,请在UIOutlet中设置:"
+00062363    i32.load [2, 0]
+00062366    local.get [1]
+00062368    i32.const [0]
+0006236a    call [921] ; String.Concat
+0006236d    local.set [1]
+0006236f    local.get [0]
+00062371    local.get [1]
+00062373    call [905] ; 
+00062376    local.get [0]
+00062378    local.get [1]
+0006237a    i32.store [2, 16]
+0006237d    i32.const [3929208]
+00062382    i32.load [2, 0]
+00062385    call [901] ; 
+00062388    local.get [0]
+0006238a    i32.const [0]
+0006238c    i32.const [2087] ; TABLE CLog.Error
+0006238f    global.set [3]
+00062391    i32.const [2087] ; TABLE CLog.Error
+00062394    call_indirect [0, 0]
+00062397  end []
+00062398  local.get [2]
+0006239a  i32.load [2, 12]
+0006239d  local.set [0]
+0006239f  local.get [2]
+000623a1  i32.const [16]
+000623a3  i32.add []
+000623a4  global.set [0]
+000623a6  local.get [0]
+000623a8  return []
+000623a9  end []

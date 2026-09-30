@@ -1,0 +1,84 @@
+{
+  "atUtc": "2026-09-30T05:21:08.798182+00:00",
+  "status": "partial-subsystem",
+  "implementations": [
+    "OutgameFsm.cs",
+    "OutgameProcedureManager.cs"
+  ],
+  "genericEvidence": "procedure-fsm-generics.json",
+  "sourceMethods": [
+    28658,
+    28659,
+    28660,
+    28661,
+    28662,
+    28663,
+    28664,
+    29257,
+    29262,
+    29263,
+    29264,
+    29265,
+    29266,
+    29270,
+    29281,
+    29282,
+    29283,
+    29284,
+    29285,
+    29286,
+    29287,
+    29288,
+    29289,
+    29290,
+    29291,
+    27496,
+    27497
+  ],
+  "resolvedEvidence": {
+    "4002616": "IFsmManager.CreateFsm<IProcedureManager> metadata29309; generic inst1598 -> source type3659",
+    "4002632": "IFsmManager.DestroyFsm<IProcedureManager> metadata29311; generic inst1598 -> source type3659",
+    "TypeSlot26": "Type.get_FullName metadata2774",
+    "27497": "Text.GetFullName: owner.FullName plus nonempty name separated by dot"
+  },
+  "behaviors": [
+    "Incremental state dictionary insertion precedes OnInit; duplicates fail after prior states initialized",
+    "Start publishes state/reset time before OnEnter; empty args choose no-args overload",
+    "Change checks target before leave(false), then publishes next/reset/enter; no rollback or reentrancy guard",
+    "Update increments scaled state time before passing both deltas",
+    "Shutdown leaves(true), clears current/time, destroys all states, clears map and sets destroyed; exceptions interrupt later writes",
+    "Manager publishes created FSM only after constructor initialization; name+owner-type identity; live indexed updates",
+    "Procedure manager Update is empty; FSM manager owns updates; shutdown destroys registered FSM before clearing fields and initialized flag"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:21:08.798182+00:00",
+    "scope": "Original procedure manager and FSM creation/start/change/update/shutdown lifecycle",
+    "checksPassed": 669,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "FSM event/data APIs, concrete original procedures, Main30617/account/menu production composition",
+    "commands": [
+      "extract_procedure_fsm_generics.py",
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Original Fsm event/data surfaces and base state event subscription cleanup",
+    "Actual PreLoad/StarGame/ExitGame classes and async login/statistics wiring",
+    "Complete 38-controller and Main30617 production composition",
+    "Native PlayMode and Player end-to-end validation"
+  ],
+  "nextEvidence": {
+    "preloadOnEnter": 34122,
+    "loginNetInitializationThenStatisticsRegistration": 34120,
+    "statisticsKeyConfigOffset": 80,
+    "statisticsConfigOwnerOffset": 260,
+    "statisticsInitializeCallback": 34126,
+    "asyncMoveNext": 34132,
+    "waitPredicate": 34131,
+    "waitPredicateSource": "LoginCtrl bool64 && bool65"
+  },
+  "ownerTypeCorrectionAtUtc": "2026-09-30T05:26:59.922701+00:00",
+  "ownerTypeCorrection": "Replaced concrete class owner with interface owner; previous audit label was incorrect."
+}

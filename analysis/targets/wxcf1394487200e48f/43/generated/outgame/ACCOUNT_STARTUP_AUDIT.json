@@ -1,0 +1,1407 @@
+{
+  "schemaVersion": "1.0",
+  "target": "wxcf1394487200e48f/43",
+  "status": "in_progress",
+  "implementationReady": false,
+  "sourceMethodsIndexed": 2044,
+  "confirmed": [
+    {
+      "fact": "LevelControl.RealCurLevel always returns LocalDataManager.data.LevelID. CurLevel returns this only when eSpecialState(field24)==0; otherwise returns SpecialLevel(field16). SpecialLevel setter writes only field16.",
+      "source": [
+        "disassembly/Type4107-31480.txt",
+        "disassembly/Type4107-31495.txt",
+        "disassembly/Type4107-31496.txt",
+        "disassembly/Type4107-31512.txt"
+      ]
+    },
+    {
+      "fact": "set_CurLevel does nothing while eSpecialState!=0. In normal mode it writes LevelID, sets statistic event10015 to value-1, then invokes local manager save virtual method. No clamping is present in this setter.",
+      "source": "disassembly/Type4107-31470.txt"
+    },
+    {
+      "fact": "LocalData constructor initializes reference records/lists and season_pass=1. It does not seed LevelID or scalar currencies. New data creation is not evidence that the user-facing first level should display0; later initialization still needs tracing.",
+      "source": "disassembly/Type4120-31634.txt"
+    },
+    {
+      "fact": "LocalDataManager.UpdateDataCallBack creates LocalData on absent/empty or null decoded data; then InitLimitedBagInfo, InitToolDictData, DeadOldData and RegisterSaveData in this order. Legacy migration is an explicit required startup path.",
+      "source": "disassembly/Type4119-31618.txt"
+    },
+    {
+      "fact": "LoginCtrl.Init delegates to LoginProcedureBase.Init with an empty secondary string and sets field20 true. LoginSuccess starts an original coroutine, which loads pack2. LoginComplete delegates to base and then closes UI. Full base/procedure callbacks remain to be traced.",
+      "source": [
+        "disassembly/Type4244-32387.txt",
+        "disassembly/Type4244-32386.txt",
+        "disassembly/Type4241-32390.txt",
+        "disassembly/Type4244-32383.txt"
+      ]
+    },
+    {
+      "fact": "ProcedurePreLoad initializes user net module, registers statistics provider then initializes statistics with callback. ProcedureStarGame migrates skin and commander data from registered local string before prefab initialization and GotoGameScene.",
+      "source": [
+        "disassembly/Type4451-34120.txt",
+        "disassembly/Type4451-34123.txt",
+        "disassembly/Type4452-34135.txt"
+      ]
+    },
+    {
+      "fact": "GamePlay load callback dispatches event, reports EnterGameHome with current level, initializes rank and seven-day activity, calls SetPlaySate(1), closes loading and reports interactive. State1 initializes channel data then immediately switches state2; state2 loads current level config.",
+      "source": [
+        "disassembly/Type4452-34141.txt",
+        "disassembly/Type4107-31525.txt",
+        "disassembly/Type4107-31489.txt"
+      ]
+    },
+    {
+      "fact": "LevelConfig contains id0->SceneId0 and LevelControl normal state2 resolves current level through ConfigMgr.GetLevelConfig. No blanket level0-to1 clamp should be invented. Full first-account login initialization is not yet proven.",
+      "source": [
+        "tables/LevelConfig.json",
+        "disassembly/Type3907-30397.txt",
+        "disassembly/Type4107-31489.txt"
+      ]
+    },
+    {
+      "fact": "InitChanelData reads online hcrzd_ABtest, keeps existing value on null/empty and otherwise Int32.Parse assigns field268. Full channel table swap and failure policy need follow-up.",
+      "source": "disassembly/Type3907-30419.txt"
+    },
+    {
+      "fact": "DealUnsafeStr performs ordinal String.Replace(bank,collect) on the whole local JSON. Existing nonempty toolCounts suppress old-field migration. Empty toolCounts parses OldToolPropertyClass, then initializes tool rows and overwrites only old values !=-1. Six old fields default2 and map2001 iceNum/2002 supportNum/2003 toolnum_4/2004 fireNum/2005 upgradeNum/2006 toolnum_5.",
+      "source": [
+        "disassembly/Type4119-31618.txt",
+        "disassembly/Type4119-31627.txt",
+        "disassembly/Type4119-31633.txt",
+        "disassembly/Type4119-31626.txt",
+        "disassembly/Type4125-31641.txt",
+        "disassembly/Type4125-31642.txt"
+      ]
+    },
+    {
+      "fact": "CommanderManager.DealOldData replaces manager data when commanderDatas is nonempty, then InitData preserves held records and adds missing config rows. Stored skillId/order, curLevel/isNew and UsedCommanderId remain unchanged. This is not a merge-by-highest-level operation.",
+      "source": [
+        "disassembly/Type4028-31018.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4029-31022.txt"
+      ]
+    },
+    {
+      "fact": "Missing/empty/decoded-null manager data creates four used records types1..4 selecting first matching lockState2 (type4 scene table, others soldier table by skinType). Existing {} does not auto-repair empty used list.",
+      "source": [
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31734.txt",
+        "disassembly/Type4145-31755.txt"
+      ]
+    },
+    {
+      "fact": "Index held valid skin records; preserve u and set isNew from newSkins membership. Missing configured skins append with u=(lockState==2). Refresh skinType/sortNo/special/castType from ISkin config. Keep invalid saved records outside lookup.",
+      "source": [
+        "disassembly/Type4150-31737.txt",
+        "disassembly/Type4150-31738.txt",
+        "disassembly/Type4150-31740.txt",
+        "disassembly/Type4150-31741.txt",
+        "skin-record-fields.json"
+      ]
+    },
+    {
+      "fact": "OldData.list_playerskin(skinId,isUnlock) overwrites matching soldier u; sceneMapDatas(sceneId,isUnlock) overwrites matching scene u. Unknown IDs ignored. False values relock; no equip normalization/new-flag/save effect.",
+      "source": "disassembly/Type4150-31730.txt"
+    },
+    {
+      "fact": "LoginProcedureBase.Init registers nine concrete FSM types: IdelState, CheckServerConnection, ServerConnectionOver, LoginSDK, LoginSDK_XYX, LoginServer, LoginSynData, CutoverLoginSynData, LoginSuccess. Registration is not proof that all execute linearly.",
+      "source": [
+        "login-stage-types.json",
+        "disassembly/Type4601-34860.txt"
+      ]
+    },
+    {
+      "fact": "LoginSynData.OnEnter subscribes GF_LoginSynDataOver and GF_ReceiveDataUploaded (not a failure message), snapshots previous LoginUserID and calls UserLogin(Uid,IsNewDevice,IsNewPlayer). Sync completion reports success; current IsNewPlayer=true requests upload and waits. Upload completion or old-player sync completion sets LoginStateBase.LoginSuccess=true then changes to LoginSuccess. OnLeave removes both callbacks.",
+      "source": [
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34989.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt"
+      ]
+    },
+    {
+      "fact": "LoginSynData elapsed timer accumulates scaled elapsed argument; at >=30 seconds restores prior LoginUserID, refreshes user data path, closes sync, then invokes inherited failure handler code4/message 同步数据超时. Inherited state Enter resets timer. Runtime state preserves ordering through required host providers.",
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4610-34970.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json"
+      ],
+      "implementation": "OutgameLoginSync.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "LoginStateBase failure handler first sends LoginProgress4. Mode field28==0 logs switch failure, clears static LoginSuccess, changes FSM to LoginSuccess, then calls owner LoginFail(5,message), without timer reset. Any nonzero mode logs normal failure, resets timer0, changes to IdelState, then calls LoginFail(originalError,message). Generic targets and virtual slot14 resolved. HTTP message handlers instead call virtual slot10; base slot10 only logs network error, so HTTP errors must not be routed unconditionally to this terminal handler.",
+      "source": [
+        "disassembly/Type4610-34974.txt",
+        "disassembly/Type4610-34967.txt",
+        "disassembly/Type4610-34968.txt",
+        "disassembly/Type4610-34969.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json"
+      ],
+      "implementation": "OutgameLoginFailure.cs"
+    },
+    {
+      "fact": "LoginSuccess.OnEnter invokes base first, subscribes FSM events3/5/7, then calls owner LoginComplete(true,emptyString) only when static LoginSuccess flag is true. Event3 changes to LoginSDK_XYX; events5/7 change to IdelState. OnLeave explicitly unsubscribes3 and5 then calls base, with no explicit unsubscribe7. Generic SubscribeEvent/UnsubscribeEvent and transition targets resolved. Full owner FSM event storage/lifetime is still a required dependency.",
+      "source": [
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34979.txt",
+        "disassembly/Type4611-34980.txt",
+        "disassembly/Type4611-34981.txt",
+        "disassembly/Type4611-34983.txt",
+        "login-success-generic-resolution.json"
+      ],
+      "implementation": "OutgameLoginSuccess.cs"
+    },
+    {
+      "fact": "GameDataVersionMgr.UserLogin compares uid.ToString with prior LoginUserID ordinally. It records changed-user flag and updates LoginUserID/path even for same user. New-device argument forces reload eligibility. IsSynLocalData==0 AND new-player argument forces upload and skips the manager reload loop, overriding changed-user/new-device reload eligibility. Otherwise reload occurs iff changed user or new device. Routing extracted separately from unresolved downstream version and HTTP work.",
+      "source": [
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type4612-34990.txt",
+        "login-sync-fields.json"
+      ],
+      "implementation": "OutgameLoginDataPlan.cs"
+    },
+    {
+      "fact": "GameDataVer constructor defaults versionNumber=-1. AddGameVer rejects null/empty keys with error log, creates missing key then increments unchecked i32 and calls persistence. Completion waits for both GameReportDataVer lists20/24 empty; ForceUpload sets IsSynLocalData1 before reporting success, clearing field16, persisting and sending GF_LoginSynDataOver. CloseSynData clears field16, sets40, clears both lists and fields28/18, preserving local/server version dictionaries and without completion event.",
+      "source": [
+        "disassembly/Type3792-29601.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-generic-resolution.json",
+        "data-version-fields.json"
+      ],
+      "implementation": "OutgameDataVersionState.cs"
+    },
+    {
+      "fact": "Active WebGL version storage uses MineGameName+GameDataVer via FileManager and ISDK.WebGlSetStringSync/GetStringSync slots303/304. Computed filesystem .txt path is discarded in this build. Original unity-sdk/storage.js updates cache immediately and serializes asynchronous wx.setStorage/removeStorage/clearStorage via complete callbacks. Failure logs but does not roll back cache. Missing reads cache a null sentinel; delete-all prevents old backend reads. String API implementation added with required storage backend; numeric JS coercion excluded.",
+      "source": [
+        "disassembly/Type3466-26724.txt",
+        "disassembly/Type3466-26728.txt",
+        "storage-sdk-slot-candidates.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json"
+      ],
+      "implementation": "OutgameSdkStringStorage.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Version persistence writes a JSON array of local dictionary values under MineGameName+GameDataVer and marks source field29 before serialization. Load reads storage then clears local versions, deserializes and Dictionary.Add inserts each dataKey before the missing-manager initializer. Added codec preserving int32 precision/default -1 and a separate explicit-directory desktop backend. Original LitJson malformed-input compatibility and live platform transport remain unverified.",
+      "source": [
+        "disassembly/Type3795-29604.txt",
+        "disassembly/Type3795-29606.txt",
+        "disassembly/Type3466-26724.txt",
+        "disassembly/Type3466-26728.txt"
+      ],
+      "implementation": [
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "GameDataVersionMgr f12180 adds missing synchronized manager keys with version -1, retains existing records, snapshots Local.Keys and removes keys without a participating manager, then saves exactly once even if unchanged. DataManagerBase offset9 is the participation flag and slot4 is get_DataKey. Added LoadManagers integration; concrete production manager registry remains pending.",
+      "source": [
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json"
+      ],
+      "implementation": [
+        "OutgameDataVersionState.cs",
+        "OutgameDataVersionStorage.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Complete Assembly-CSharp DataManagerBase hierarchy inventory: 25 derived classes, 21 direct ModelRegister attributes with constructor args decoded from metadata v31. Namespace Proj_hdzd has16, CommonGameModule has5, four classes unmarked. All marked managers autoSyn=true and compressData=false. Registration f12652 initializes before dictionary set_Item; pool init resets save-disable and dictionary then upload queue. SaveData tests disable/dictionary rather than the separate ready flag, skips null and Debug.LogError logs individual failures while continuing. Runtime registry resource imported; concrete recovered manager factories remain pending.",
+      "source": [
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26751.txt",
+        "disassembly/Type3464-26704.txt"
+      ],
+      "implementation": [
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "Resources/Data/OutgameManagerRegistration.json"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "DataManagerBase f20028 validates keys before save and warns/toasts without aborting invalid keys. Identifier accepts optional @, Unicode letters/underscore first, then letters/digits/underscore, max511 UTF16 chars. UTF8 MD5 dedup precedes compression/local enable check and is bypassed by current LoginProcedure byte8. Local f8029 writes only when ILoginProcedure static int0>=10; version increment remains inside local-enabled branch even below10. Upload remains outside local-enabled branch; both version and upload require autoSyn plus server use or procedure-byte8 AND login-static-byte4. Digest is updated before local write and not rolled back on async failure. Read uses source MineGameName+DataKey and optional required decompression. Added storage component connects SDK cache/queue and version state; concrete manager lifecycle remains pending.",
+      "source": [
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt"
+      ],
+      "implementation": "OutgameDataManagerStorage.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Concrete OutgameCommanderManager implements source init/update callback/save lifecycle. Initial update requests server data only when allowServer, server mode and autoSyn; otherwise reads original local key. Empty callback creates default UsedCommanderId1 and fills configs with level0/skill1. Current original commander JSON codec preserves isNew/Id/curLevel/skillsData and UsedCommanderId, preserves held valid state and serializes live valid dictionary values at save. Original metadata registration flags and all6 source commander configs exercised through pool; actual isolated desktop file written and reloaded through a fresh manager. Server callback provider and full startup still incomplete.",
+      "source": [
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt"
+      ],
+      "implementation": [
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Concrete skin manager publishes instance before initial data update, requests server callback when required or loads local original key. Metadata field flags and custom attributes prove SkinData private s/u have SerializeField and skinType/sortNo/special/isNew/castType have NonSerialized. Dedicated source serializer excludes those transient fields while projecting newSkins and usedSkin through original PrepareSave. Held unknown skin records remain in serialized list. Legacy ownership migration neither saves nor changes equipment/new flags. Actual isolated file restart with source configs and ModelRegister selection verifies ownership/new/equipment. Required live account/provider connection remains pending.",
+      "source": [
+        "disassembly/Type4150-31728.txt",
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31732.txt",
+        "skin-serialization-fields.json"
+      ],
+      "implementation": [
+        "OutgameSkinManager.cs",
+        "OutgameSkinCatalog.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Full source LocalData metadata has19 fields,18 serialized; dailyChallengeData is NonSerialized. Source ctor initializes nested/list fields and season_pass1 without setting LevelID1. Local manager initializes limited bags before tools/legacy/register-save callback, and prepares limited bag list before source JSON storage. Bag filtering uses GameProductConfig[id=ItemBagId].isActive==1, converts long milliseconds from fixed TimeModule epoch 1970-01-01 08:00 unspecified, skips zero or expiry<=DateTime.Now, and Dictionary.Add retains duplicate failure. Held bag isActive flag does not filter. Local record retains byte flags, first-charge int64, jump/purchased/season/group/daily fields across actual isolated file restart. Required DataManagerSave registration provider remains pending.",
+      "source": [
+        "local-data-serialization-schema.json",
+        "local-limited-bag-resolution.json",
+        "disassembly/Type4119-31618.txt",
+        "disassembly/Type4119-31628.txt",
+        "disassembly/Type4119-31630.txt",
+        "disassembly/Type4119-31632.txt",
+        "disassembly/Type3534-27293.txt"
+      ],
+      "implementation": [
+        "OutgameLocalRecord.cs",
+        "OutgameLocalDataManager.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "DataManagerSave lazily stores registered string then original String.GetHashCode per data key, replacing prior values. Before singleton initialization GetRegStringValue returns null without reading manager, after initialization missing key throws. Null registration updates raw string before hash throws, leaving prior hash. Original hash f10222 uses alternating UTF16 accumulators5381, times33 xor, stops at zero and combines with1566083941. ProcedureStarGame f11032 reads registered LocalData original string for SkinManager.DealOldData then CommanderManager.DealOldData before prefab/scene entry. Coordinated migration now connected across three concrete managers; commander dictionary rebuild prevents later saving stale premigration values. Saving does not update registry baseline. Full page setup/prefab/scene startup remains pending.",
+      "source": [
+        "data-save-registry-resolution.json",
+        "disassembly/Type4246-32419.txt",
+        "disassembly/Type4246-32417.txt",
+        "disassembly/Type102-566.txt",
+        "disassembly/Type102-567.txt",
+        "disassembly/Type4452-34135.txt"
+      ],
+      "implementation": [
+        "OutgameDataSaveRegistry.cs",
+        "OutgameCommanderManager.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Post-data ProcedureStarGame f11032 resolves Show<MenuTabUI>, virtual slot9 BaseUI.SetVisible(false), Show<CommonGetRewardUI>, then migration/prefab init/GotoGameScene. LoadScene GamePlay receives handler,false,null-progress. After request returns it sets MineGameMain.EnterGame=true, invokes type4504 OnLateInit, and sets RedDotControl source field8=true/field16=1. Callback f18161 sends Event.LoadGameScreen, reports EnterGameHome with current level reread, initializes level rank and seven-day activity, sets play state1, closes loading and reports interactive empty string. No synthetic once guard or callback deferral; exceptions stop subsequent source effects. Runtime flow implemented against required production UI/resource/activity host, still not connected to full scene startup.",
+      "source": [
+        "startup-page-resolution.json",
+        "startup-scene-fields.json",
+        "disassembly/Type4452-34135.txt",
+        "disassembly/Type4452-34142.txt",
+        "disassembly/Type4452-34141.txt"
+      ],
+      "implementation": "OutgameStartupEntry.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "LoadPrefabControl InitData f11495 calls ClearModelEntityCache f4379, clears prefab/pool/root dictionaries in order, Resources.Load<LevelEditorCfg>(LevelEditor).IsEditor=false. ClearModelEntityCache selects IDs 1000..6999 or 9033/9034, destroys root GameObject before clearing/removing matching List<GameObject>, accumulates keys and removes them from root dictionary after enumeration. Other roots remain alive; InitData drops their cache references without destroying them. No null guards or transactional rollback added. Actual Unity objects validated using immediate destroy injection in editor; runtime defaults to original Object.Destroy. Production cache/resource routing still incomplete.",
+      "source": [
+        "startup-prefab-resolution.json",
+        "prefab-cache-resolution.json",
+        "prefab-cache-fields.json",
+        "disassembly/Type4117-31554.txt",
+        "disassembly/Type4117-31563.txt"
+      ],
+      "implementation": "OutgamePrefabCache.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "GlobalData.CheckNewDay compares UserDataPrefs Day default0 to SDK GetDaysByFirstLaunch, then rereads old Day and SDK days, updates Day, emits GameEnterNewDay(new,old) without save. Backward day changes trigger; listener failure retains Day. SDKToolManager forwards platform virtual slot203 or returns0 with absent platform. Managed UserDataPrefs keeps UserDataList records Key/StrVar/IntVar/FloatVar, initializes once, platform-owned branch defers; invalid entries skipped and duplicate keys overwrite. Setters preserve other typed columns; null strings ignored. Save uses MD5 before FileManager UserData.txt write, suppresses unchanged retries even after failed write, reports current login user. Original JSON field schema and real isolated persistence tested; complete parser edge compatibility, file/SDK production providers and full startup pending.",
+      "source": [
+        "user-prefs-resolution.json",
+        "user-prefs-fields.json",
+        "disassembly/Type3486-26871.txt",
+        "disassembly/Type3566-27464.txt",
+        "disassembly/Type3566-27474.txt"
+      ],
+      "implementation": "OutgameUserPreferences.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "FileManager ReadWebGLFile/SaveWebGLFile call ISDK slots304/303 using unchanged keys; XYXCommon_DBT_ISDK forwards Bridge slots56/55; Bridge_WX_XYXFunction invokes WXBase string storage. UserData.txt is not game-name/UID-prefixed here. Connected original preferences through this routing and SDK queue into actual isolated desktop files. ReportSaveUserData happens after enqueue returns, before completion; failed backend write keeps SDK cache and preference MD5, so unchanged retry remains suppressed; changed record writes proceed. ISDK GetDaysByFirstLaunch default returns0, CanReadLocalData defaulttrue, XYXCommon ownership reads Bridge slot54; concrete complete hierarchy/selected platform day behavior still pending.",
+      "source": [
+        "disassembly/Type3622-28205.txt",
+        "disassembly/Type3622-28219.txt",
+        "disassembly/Type7703-56243.txt",
+        "disassembly/Type7703-56244.txt",
+        "disassembly/Type9254-64935.txt",
+        "disassembly/Type9254-64936.txt",
+        "storage-sdk-slot-candidates.json",
+        "sdk-storage-source.json",
+        "sdk-day-initialization-slots.json"
+      ],
+      "implementation": "OutgameWebGlFileStorage.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Metadata inheritance XYXCommon_DBT_ISDK type7703 -> ISDK3146 shows no override for slot203; ISDK.GetDaysByFirstLaunch f972 returns0. Bridge_WX_XYXFunction9254 -> IXYXFunction7581 shows no override for slot54; IXYXFunction.CanReadLocalData f1048 returns true. Thus this exact WX branch uses managed UserDataPrefs initialization and constant zero SDK day, not DateTime calendar progression. OutgameWxPreferenceSession composes recovered prefs/file/SDK/new-day behavior without inventing clock semantics. Test loads legacy Day12, emits(0,12) once without saving, persists explicitly and fresh session emits nothing. Scope is these recovered platform classes; complete app activation/login/daily consumers remain incomplete.",
+      "source": [
+        "platform-prefs-hierarchy.json",
+        "disassembly/Type3146-24165.txt",
+        "disassembly/Type7581-55502.txt"
+      ],
+      "implementation": "OutgameWxPreferenceSession.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ProcedureStarGame.OnEnter builds Dictionary<string,int> with WXAMSConfig.ReportLable(offset16) -> PlacementId(offset12), using Add before WXAMS.SetVideoMapping. WXAMS dispatches Bridge slot115; Bridge_WX_XYXFunction.SetVideoMapping simply stores dictionary reference at offset32. OnNewEvent video placement section uses mapping lookup: positive ID preserved, nonpositive/missing log distinct exact errors then set68. Dictionary absent/null label exceptions are not hidden. Imported all59 original rows and verified representative economy/skin/tool labels, shared reference mutation, duplicate failure and fallback errors. Complete OnNewEvent filtering/JSON/event reporting and actual ad reward callbacks remain incomplete.",
+      "source": [
+        "disassembly/Type4452-34154.txt",
+        "disassembly/Type7574-55421.txt",
+        "disassembly/Type9254-64899.txt",
+        "disassembly/Type9254-64900.txt",
+        "startup-prefab-resolution.json",
+        "user-prefs-fields.json"
+      ],
+      "implementation": "OutgameVideoMapping.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ADModule source ShowVideo replaces callback before filtering. Empty or1 ad_click_lock_enable selects showing lock; other values select strict realtime delta<1. Constructor sets Ready=true and LastClick=-1. Accepted request records showing/time before firstDayNoAd or not-ready failure. Native not-ready schedules scaled WaitForSeconds10 after canceling prior timer, then still calls showVideo and sends VideoAdShow. Shown(false) cancels timer/resets showing but retains callback; Closed resets showing then invokes current callback, clears it and emits close event. String1/0 invokes and clears only callback; -1 reports unknow and warns, unknown leaves callback; null callback logs empty. No callback-finally/once guard added; throwing recipients preserve source partial state. Actual native adapter/reward consumers remain pending.",
+      "source": [
+        "disassembly/Type9202-64456.txt",
+        "disassembly/Type9202-64478.txt",
+        "disassembly/Type9202-64480.txt",
+        "disassembly/Type9202-64481.txt",
+        "disassembly/Type9202-64482.txt",
+        "disassembly/Type9202-64484.txt",
+        "disassembly/Type9202-64487.txt",
+        "disassembly/Type9202-64491.txt",
+        "disassembly/Type9202-64492.txt"
+      ],
+      "implementation": "OutgameRewardVideo.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "NewAdsManager showVideo calls fixNoClose before platform checks. Xiaomi/weixin repair when InterVideoShowing closes video then interstitial controllers; alipay/zijie only closes interstitial in later branch. State is reread after callbacks. Remaining InterVideoShowing calls closed(false), missing video calls shown(false), valid video receives source bool at offset20 then virtual slot8 show. BaseController slot6 resolves close. isVideoReady returns false for missing controller otherwise delegates readiness. Concrete controller and native advertising integration still pending. WXFunctionManger CheckFunctionActive warns then rereads module flag8; this entry gate extracted but not yet implemented.",
+      "source": [
+        "disassembly/Type7544-55102.txt",
+        "disassembly/Type7544-55103.txt",
+        "disassembly/Type7544-55075.txt",
+        "ad-controller-slots.json"
+      ],
+      "implementation": "OutgameAdRequestRouter.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "WXFunctionManger caches module at offset20, CheckFunctionActive reads offset8, warns and rereads flag when disabled. Inactive ShowVideo returns without reward callback; inactive AdsIsReady adds second warning; missing module throws. OutgameAdModuleEntry implements this gate and OutgameRewardVideoControllerHost connects existing ADModule state to NewAdsManager router: native readiness delegates router, clears sourceFlag64, forwards show optionfalse. Integration demonstrates shown(true) does not reward, close(false/true) forwards exact result; absent controller shown(false) cancels timeout but retains pending callback, then outer VideoAdShow still emitted. No fabricated failure completion added. Concrete native controllers and gameplay reward consumers still pending.",
+      "source": [
+        "disassembly/Type9240-64771.txt",
+        "disassembly/Type9240-64773.txt",
+        "disassembly/Type9240-64776.txt",
+        "disassembly/Type9202-64478.txt",
+        "disassembly/Type7544-55102.txt",
+        "disassembly/Type9202-64492.txt"
+      ],
+      "implementation": "OutgameAdModuleEntry.cs + OutgameRewardVideoControllerHost.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "SerialVideoController.show and EchelonVideoController.show reset source byte92=false, read realtime into float52, store shown callback28, create reward callback32 that unconditionally sets byte92=true and ignores incoming bool, and close callback36 that invokes captured original closed callback with current byte92, ignoring incoming close bool. Then call BaseController.showAd with source arguments0,0. SerialVideoController.close enumerates getPlatList. Only adapters state(offset12)==4 are finished, followed by NewAdsManager.setIsInterVideoShow(false), then current close callback36(false). Consequently wrapper reports current byte92 instead of false. Callback field is not cleared by these wrappers; repeated closes of multiple state4 adapters can invoke repeatedly.",
+      "source": [
+        "disassembly/Type7521-54950.txt",
+        "disassembly/Type7521-54951.txt",
+        "disassembly/Type7521-54952.txt",
+        "disassembly/Type7520-54953.txt",
+        "disassembly/Type7520-54954.txt",
+        "disassembly/Type7520-54955.txt",
+        "disassembly/Type7533-55035.txt",
+        "disassembly/Type7533-55036.txt",
+        "disassembly/Type7533-55037.txt",
+        "disassembly/Type7532-55038.txt",
+        "disassembly/Type7532-55039.txt",
+        "disassembly/Type7532-55040.txt"
+      ],
+      "status": "source-confirmed; concrete controller implementation pending"
+    },
+    {
+      "fact": "BaseController.isReady accepts (adapter.state==2 && adapter.canShow()) OR adapter.isCacheRequest(). Table1746 resolves wasmcode function1545, a virtual dispatch helper using supplied slot8. Metadata slot8 is DAUAdsAdapter.isCacheRequest, base returns true. canShow bypasses interval unless guarantee/non-BANNER, then negates interval>realtime-sharedLastShowTime. finish calls virtual onFinishClearCache before state0. Implemented OutgameAdReadiness/OutgameAdAdapterState,431 checks pass.",
+      "source": [
+        "disassembly/Type7511-54847.txt",
+        "disassembly/Type7488-54711.txt",
+        "disassembly/Type7488-54715.txt",
+        "disassembly/Type7488-54719.txt",
+        "disassembly/Type7488-54720.txt",
+        "ad-adapter-slots.json",
+        "ad-readiness-vcall-helper.txt"
+      ],
+      "implementation": "OutgameAdReadiness.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "BaseController.showAd cache selection sorts in place. Bidding only when flag==1, cache count==cacheAmount and source allPlatHasPrice accepts; PriceComparer ascending signed price, last item selected, no priority update. Otherwise ascending priority rotates strictly above last priority, excluding guarantee entries, then wraps only to first item if non-guarantee. Both comparers return0 for either null argument. Source allPlatHasPrice is an explicit policy boundary, not invented. 433 integrated checks pass.",
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7507-54877.txt",
+        "disassembly/Type7508-54879.txt"
+      ],
+      "implementation": "OutgameAdCacheSelection.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "allPlatHasPrice appends platformId and getRealPrice to log text, reads getRealPrice again and rejects only zero. Logs prefix through failing item, or all entries on success; empty accepts. getRealPrice caches nonzero values; zero reads Utils_PlayerPrefs.GetInt(realPrice+adz.zkey+platformId+[local yyyy-MM-dd when flag==1],0), preserving repeat reads and no spontaneous nonzero invalidation at midnight. Slot9 resolves isHighPriority for upcoming request queue restoration. 435 integrated checks pass.",
+      "source": [
+        "disassembly/Type7511-54852.txt",
+        "disassembly/Type7488-54701.txt",
+        "ad-price-fields-and-request-slot.json"
+      ],
+      "implementation": [
+        "OutgameAdCacheSelection.cs",
+        "OutgameAdPriceCache.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "BaseController.showAd clears realRequestList on non-continuation, calls getPlatList separately for high/non-high passes, excludes cache candidates, deduplicates via Contains, checks isHighPriority virtual slot9 (base false). Nonempty rebuilt queue reports only if zkey Contains INTERSTITAL. Then first.Handle runs before rereading queue and Remove(first). Continuation bypasses rebuild/report. 437 integrated checks pass. Additional source branch inspected: weixin platform fallback requires isGuarantee && state2 && canShow; no fallback and empty continuation reports failure, with INTERSTITAL4 close(true) before report. Complete showAd composition pending.",
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7488-54716.txt",
+        "ad-price-fields-and-request-slot.json"
+      ],
+      "implementation": [
+        "OutgameAdRequestQueue.cs",
+        "OutgameAdReadiness.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "OutgameAdShowFlow composes original BaseController.showAd, isShowing state4 scan, and removeCacheList Contains/Remove. Initial INTERSTITAL report precedes busy gates; busy closes VIDEO only. Requests run before fallback/cache. weixin fallback selects first guarantee/state2/canShow adapter in direct platList. Empty continuation with no fallback reports failure (INTERSTITAL4 close(true) first) but still continues to cache selection. Final selected must be state2; VIDEO clock resets -1 before ShowAd, cache removed only afterward and reread after callback. 440 integrated checks pass. Native SDK adapter/event initialization not yet connected.",
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7511-54849.txt",
+        "disassembly/Type7511-54863.txt"
+      ],
+      "implementation": "OutgameAdShowFlow.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "OutgameVideoController implements source shared Serial/Echelon show/close wrappers and IOutgameAdController. Reads realtime before clearing completion flag; stores shown callback and closures, reward closure unconditionally sets completed=true while close closure ignores argument and reads current flag. Close scans state4 candidates, finishes then clears shared flag then calls current close wrapper, retaining callback for subsequent entries. Reward entry now tested through module/router/restored controller/show flow with test adapter. 443 checks pass; native SDK events and variant initialization incomplete.",
+      "source": [
+        "video-controller-callback-audit.json",
+        "disassembly/Type7533-55035.txt",
+        "disassembly/Type7533-55036.txt"
+      ],
+      "implementation": "OutgameVideoController.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "WxVideoAdapter native lifecycle located; explicit null close does not reward, late shown callback respects isClosed, empty show-failure message only logs. Source-only analysis; latest runtime validation remains443.",
+      "source": [
+        "WX_VIDEO_ADAPTER_AUDIT.json",
+        "wx-video-fields.json"
+      ]
+    },
+    {
+      "fact": "Usage3984736 is SingleScriptObject<WXBuildSetting>.I; field76 is MiniGameCommonPlugin. WxVideoAdapter loading restores multiton=false only for one configured id, adunit- prefix, load/error listeners, state5 automatic load flag, reuse via scaled WaitForSeconds0.1 before notify success, destroy before clearing native reference. Native handle implementation and DAU base notification chain still pending.445 checks pass.",
+      "source": [
+        "WX_VIDEO_ADAPTER_AUDIT.json",
+        "wx-video-config-resolution.json",
+        "wx-build-setting-fields.json"
+      ],
+      "implementation": "OutgameWxVideoLoading.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "DAUAdsAdapter notify success/fail/show/close/reward restored sharing adapter state; interface7534 slots0/1/2/5/6 resolved. Source function4475 is stopLoadTimeout for metadata54676 despite duplicate-name annotation. Success state2 then stop-load/report/listener, rereads cache/busy and may clear then state3/fail or start show. Shown only state2, close suppresses only state5, reward no dedup.447 checks pass; native/listener production connection incomplete.",
+      "source": [
+        "ad-notify-listener-slots.json",
+        "disassembly/Type7488-54684.txt"
+      ],
+      "implementation": "OutgameAdNotifications.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "notifyShowAdError suppresses state5 then sets5/stops show timeout. INTERSTITAL specific interval error or platform458/459 uses reports then closed; VIDEO requires nonnull message and specific busy/orientation error or platform458 for same route. General enabled reporting invokes bool onShowFail and reportsShowFail only when listener exists and returnsfalse; disabled banner still invokes listener but no reports. Click sets clicked before first reports; repeats still NewReportAdClick(true).449 checks pass.",
+      "source": [
+        "disassembly/Type7488-54687.txt",
+        "disassembly/Type7488-54689.txt"
+      ],
+      "implementation": "OutgameAdNotifications.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Controller listener source located and indexed. Shared onShowFail retry rule and serial close preloading dependencies identified; exact controller variant and remaining virtual dispatch unresolved. Source-only turn, runtime checks remain449.",
+      "source": [
+        "AD_CONTROLLER_LISTENER_AUDIT.json"
+      ]
+    },
+    {
+      "fact": "Controller slot5 resolves load and slot9 checkRequest. Shared function3370 in Serial close is stopVideoShowLoad metadata54994. OutgameSerialControllerLifecycle restores close callback before subsequent state/flag reads, timer reset, interstitial chain, video preload cancellation/cacheAmount update, load before banner restoration. ShowFail rechecks type/readiness after failure callback then retries showAd(false,true) or closes.451 checks pass; concrete hosts/native wiring pending.",
+      "source": [
+        "controller-request-slots.json",
+        "disassembly/Type7527-54996.txt",
+        "disassembly/Type7527-54998.txt"
+      ],
+      "implementation": "OutgameSerialControllerLifecycle.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Serial preload requests first state0/3/5 candidate, binds missing listener on every visited entry, removes before Handle. videoShowLoad checks count>=2 then rereads count to cacheAmount=count-1, stops old handle, starts WaitForSeconds2 then virtual load. Stop clears handle only after stop callback; completed handle retained. CheckRequest prints state, calls base when request-end or cache full, otherwise serial loads next.453 checks pass.",
+      "source": [
+        "disassembly/Type7527-54987.txt",
+        "disassembly/Type7527-54992.txt",
+        "disassembly/Type7526-55004.txt"
+      ],
+      "implementation": "OutgameSerialAdPreload.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Serial loading entry binds absent non-cache listeners then fetches platform list again for request-list rebuild. Cache candidates state0/3/5 included; only cacheAmount==1 and non-BANNER breaks after first, no general count cap. Nonempty non-banner reports rota then serial loads. isRequestEnd null/empty true; getNowCacheNum counts state2 in platform list.455 checks pass; full native/controller wiring incomplete.",
+      "source": [
+        "disassembly/Type7527-54986.txt",
+        "disassembly/Type7511-54860.txt"
+      ],
+      "implementation": "OutgameSerialAdPreload.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Serial onReceiveAdSuccess cache branch deduplicates cache then reqCallback(true) then checkRequest. Noncache INTERSTITAL updates last priority only with idsInfo. INTERSTITAL4 auto flag rechecked then cleared before onlyShowInter4(true). VIDEO load event always sent, logs realtime then rereads; only timestamp != -1 and delta<=3 and platform883/142 autoshows. Fail reqCallback(false) precedes cache decision, noncache showAd(true,false), cache checkRequest.457 checks pass.",
+      "source": [
+        "disassembly/Type7527-54988.txt",
+        "disassembly/Type7527-54989.txt"
+      ],
+      "implementation": "OutgameSerialControllerLifecycle.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Adapter slot11 resolves waitCloseReportShow metadata54721. Serial OnShowAd invokes business shown(true) first, rereads type, hides banner/timer1 except BANNER/NATIVE_SPLASH, BANNER timer2, interstitial reports only if !waitCloseReportShow, shared showing for INTERSTITAL or VIDEO, video preload last. OnRealShowAd reports delayed platform result for nonnull interstitial candidate with waitCloseReportShow. CreateListener now binds actual notifying adapter callbacks to serial lifecycle.459 checks pass; production host/native adapter incomplete.",
+      "source": [
+        "disassembly/Type7527-54990.txt",
+        "disassembly/Type7527-54991.txt"
+      ],
+      "implementation": "OutgameSerialControllerLifecycle.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "DAU adapter Handle unconditionally sets state1, starts load timer for cache or show timer for noncache, reports then starts native request. Show stops previous show timer before starting anew. Both timeouts use WaitForSecondsRealtime. Load timeout only state1 clears then notifiesfail. Show timeout has audio-interrupted VIDEO recovery to notifyShowAd(true,true), else clears, state5, close listener then timeout report. CustomParam.video_ad_timeout resolved; defaults5, nonempty invalid parse0, rota<5 uses banner5/other60.461 checks pass.",
+      "source": [
+        "ad-timeout-types.json",
+        "ad-timeout-config-resolution.json",
+        "disassembly/Type7487-54735.txt"
+      ],
+      "implementation": "OutgameAdTimeouts.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Wx native display/close flow now connected to loading handle and notifying adapter. Close sets isClosed, unregisters current native close listener, clears autoload, then rewards/counts/prediction request before notifyClose. Null close increments total only; partial plugin close reports show; ended reward notification precedes success count. Late show avoids notifyShow but still AMS event. Empty failure text logs only.463 checks pass; live handle/prediction response/reporting host pending.",
+      "source": [
+        "disassembly/Type9186-64361.txt",
+        "disassembly/Type9186-64362.txt",
+        "disassembly/Type9186-64366.txt",
+        "disassembly/Type9186-64367.txt"
+      ],
+      "implementation": "OutgameWxVideoPresentation.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Concrete Wx video adapter composes recovered loading/presentation/notification/timeouts/price cache using one source identity. Notification cancellation routes to owned timers. Actual serial listener receives native load, show and close callbacks; controlled handle proves reward completion, load timeout recovery and delayed autoload reuse.466 integrated checks pass; live SDK and production initialization remain pending.",
+      "source": [
+        "disassembly/Type9186-64358.txt",
+        "disassembly/Type9186-64360.txt",
+        "disassembly/Type9186-64361.txt",
+        "disassembly/Type9186-64362.txt"
+      ],
+      "implementation": "OutgameWxVideoAdapter.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Original NewAdsManager VIDEO branch selects SerialVideoController, sets cache1 before setAdz, then bidding and conditionally immediate load using global NewAdsRequestDelayEnable. Runtime implements this post-publication order and lazy platform list behavior. Source constructor defaults corrected: cache1/videoShowTime-1/DAU- prefix.470 integrated checks pass; effective remote config and full production init remain pending.",
+      "source": [
+        "VIDEO_CONTROLLER_INITIALIZATION_AUDIT.json",
+        "disassembly/Type7544-55066.txt",
+        "disassembly/Type7511-54865.txt"
+      ],
+      "implementation": [
+        "OutgameVideoController.cs",
+        "OutgameAdPlatformList.cs",
+        "OutgameAdShowFlow.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "DAU adapter init stores config references before prefix/JSON work. Parse gate is day-clear key OR banner key with exact BANNER zone; parse both optional flags, TryParse failure writes0, empty field preserves prior value. Wx canRequest inherited constant true. Ctor interval20/bannerError1; configured platform from IdsInfo differs from native883.473 checks pass.",
+      "source": [
+        "disassembly/Type7488-54668.txt",
+        "disassembly/Type7488-54724.txt",
+        "disassembly/Type7488-54725.txt",
+        "disassembly/Type7488-54712.txt"
+      ],
+      "implementation": [
+        "OutgameAdConfiguration.cs",
+        "OutgameWxVideoAdapter.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ADModule.createAdAdapter firstDayNoAd suppresses before key access. Platform >=10001 normalizes by100; maps banners424/484/883, interstitials424/425/883, video883 and native variants883. WX manager factory caches module and bypasses CheckFunctionActive.476 checks pass including extended88301 config through source list, init, serial preload and native loaded callback.",
+      "source": [
+        "disassembly/Type9202-64479.txt",
+        "disassembly/Type9240-64778.txt",
+        "disassembly/Type9254-64922.txt"
+      ],
+      "implementation": [
+        "OutgameAdAdapterFactory.cs",
+        "OutgameAdModuleEntry.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Serial configuration binding now performs base TAG/config/getPlatList/cache clamp first, then serial TAG replacement. Shared mutable list used by source getPlatList and show flow; callback replacement is reread before append. Empty creation retries on each getter; zero count does not clamp; rebinding nonempty list preserves adapters and their original config.479 integrated checks pass.",
+      "source": [
+        "disassembly/Type7511-54833.txt",
+        "disassembly/Type7527-54985.txt",
+        "disassembly/Type7511-54865.txt"
+      ],
+      "implementation": [
+        "OutgameSerialAdConfiguration.cs",
+        "OutgameAdPlatformList.cs",
+        "OutgameAdShowFlow.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Base checkRequest captures cache count and showing, counts showing as one toward capacity. Full capacity reports success unless BANNER and returns; below capacity reports success for nonzero cache, otherwise failure and VIDEO false event, then reload. Reload truncates float, min15, BANNER banRefreshTime otherwise reqInterTime; realtime coroutine calls virtual load and retains completed handle.482 checks pass including actual serial/native failure to scheduled retry and cache success.",
+      "source": [
+        "disassembly/Type7511-54864.txt",
+        "disassembly/Type7511-54855.txt",
+        "disassembly/Type7511-54856.txt",
+        "disassembly/Type7510-54883.txt"
+      ],
+      "implementation": [
+        "OutgameAdRequestCompletion.cs",
+        "OutgameSerialAdPreload.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "OutgameSerialVideoSession composes source factory, config binding, controller, serial listener, preload and completion. Internal lifecycle load/check/stop/preload/count route to owned modules, not reporting-host stubs.485 checks pass including complete and partial watches followed by automatic reload, native failure retry, and second adapter preloading while first displays then capacity restoration/refill.",
+      "source": [
+        "disassembly/Type7544-55066.txt",
+        "disassembly/Type7527-54996.txt",
+        "disassembly/Type7527-54999.txt",
+        "disassembly/Type7511-54864.txt"
+      ],
+      "implementation": "OutgameSerialVideoSession.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "StoreDataManager lifecycle and nested StoreData/CoinData/FreeDiamondData source extracted. Original settings identify gold-ad count5, diamond-ad count3 and reward array[20,20,20]. Creation resets diamond first then coin; empty input still invokes JSON decode after initial creation. Store manager remains unimplemented; see STORE_MANAGER_AUDIT.json for serialization/consumer gaps.",
+      "source": [
+        "STORE_MANAGER_AUDIT.json",
+        "store-manager-fields.json",
+        "store-config-fields.json"
+      ],
+      "implementation": "pending"
+    },
+    {
+      "fact": "Store wire excludes maxCount and numArray: backing maxCount private with CompilerGenerated only, numArray private+NotSerialized. Constructor int array recovered from field21124 default80816 as20/20/20. Store model implementation should serialize only coin count, diamond count and lastRewardTime.",
+      "source": [
+        "store-serialization-fields.json",
+        "store-default-array.json"
+      ],
+      "implementation": "pending"
+    },
+    {
+      "fact": "Store model/manager implemented with source constructor/reset/private field serialization and create-decode-create ordering. Unity tests confirm runtime fields excluded, source ctor defaults restored, local isolated file restart preserves counts/time and server route defers. StoreDataManager4092 has no source registration attribute; earlier plan to connect automatic provider was corrected.488 checks pass, actual registration/page reachability unresolved.",
+      "source": [
+        "STORE_MANAGER_AUDIT.json",
+        "data-manager-registration-roster.json",
+        "store-serialization-fields.json",
+        "store-default-array.json"
+      ],
+      "implementation": "OutgameStoreDataManager.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ItemManager4500 is original registered provider and delegates callback/init/save/release to GlobalItemManager. Global records differ from LocalData inventory: itemCount/price arrays/prices/time are Int64. Source missing decode creates lists and sets saveTimestamp,lastExitDayOfYear=-1, whereas held {} stayszero.490 checks pass for wire/defaults; global initialization consumers and registration provider not implemented.",
+      "source": [
+        "global-item-fields.json",
+        "disassembly/Type4542-34588.txt",
+        "disassembly/Type4500-34335.txt",
+        "data-manager-registration-roster.json"
+      ],
+      "implementation": "OutgameItemRecords.cs",
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Resolved generic calls prove Dictionary.Clear/Add, config ContainsKey, and list iteration. Global initialization retains configured records only, uses Add (duplicate failure), replaces snapshots and shallow clones. Product UID caches GetHashCode if0. Existing snapshot updates only selected fields; original haveBuyTimes self-write targets live record, not snapshot.493 checks pass; complete runtime remains pending.",
+      "source": [
+        "global-item-init-generics.json",
+        "disassembly/Type4542-34586.txt",
+        "disassembly/Type4542-34587.txt",
+        "disassembly/Type4542-34583.txt",
+        "disassembly/Type4542-34596.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemIndexes.cs",
+        "OutgameItemRecords.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Global save clears and rebuilds product then item lists from live dictionaries, captures timestamp target before clock callbacks and rereads data for JSON serialization. Host clock called twice, local clock once when absent.496 checks pass.",
+      "source": [
+        "global-item-save-generics.json",
+        "disassembly/Type4542-34576.txt",
+        "disassembly/Type4542-34579.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemPersistence.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "TimeHelper uses TimeModule static offset32 initialized to DateTime(1970,1,1,8,0,0). Source subtracts ticks without timezone normalization, converts TotalMilliseconds to Int64 toward zero; reverse uses AddMilliseconds. Default item persistence wired.497 checks pass.",
+      "source": [
+        "item-timestamp-evidence.json",
+        "disassembly/Type3531-27247.txt",
+        "disassembly/Type3531-27248.txt",
+        "disassembly/Type3534-27293.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemPersistence.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Global item init installs clock host before decode, syncs time/registers Nullable<Int32> update handle before product/item indexes, then sets dirty and registers statistics10020. Query consumes boxed Int32 first argument and returns live Int64 count. Release removes handle then disposes config then clears singleton.500 checks pass.",
+      "source": [
+        "global-item-lifecycle-generics.json",
+        "disassembly/Type4542-34588.txt",
+        "disassembly/Type4542-34580.txt",
+        "disassembly/Type4542-34577.txt",
+        "disassembly/Type4542-34593.txt",
+        "disassembly/Type4542-34570.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemLifecycle.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "GlobalItemManager.Update accumulates deltaTime, only when >1 subtracts1 once and compares DayOfYear. Iterates live product Values; buyLimit1 resets on different day,3 interval,4 hours,5 weekdays. Always calls IItemManager.Update slot0 after successful pass/every sub-threshold frame. Hour rollover uses invalid-at-month-end day+1 constructor; weekdays use AddDays.504 checks pass.",
+      "source": [
+        "global-item-update-generics.json",
+        "product-config-fields.json",
+        "disassembly/Type4542-34584.txt",
+        "disassembly/Type4542-34582.txt",
+        "disassembly/Type4542-34585.txt",
+        "disassembly/Type4542-34569.txt"
+      ],
+      "implementation": [
+        "OutgameProductUpdates.cs",
+        "OutgameGlobalItemLifecycle.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "HaveBuyCounts generic is List<ProductBuyCount>, with key:Int32 and buyCount:List<ItemGetTypeBuyCount>; corrected prior flat key/value model and revised golden wire fixture. Reset modes0/1/3/4/5 clear histories and recalculate price; daily assigns buyCount before price,3-5 after.2 returns without messages, unknown modes send messages only. Snapshot uses config id rather than UID.506 checks pass.",
+      "source": [
+        "product-reset-generics.json",
+        "product-buy-count-evidence.json",
+        "disassembly/Type4542-34595.txt",
+        "disassembly/Type4542-34574.txt"
+      ],
+      "implementation": [
+        "OutgameProductResets.cs",
+        "OutgameItemRecords.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Recovered array/scalar price branch formulas, compact-array-index behavior, detached missing count lookups, Int32 arithmetic and float conversion. Native power table109076 resolves to wasmcode1055 and extracted. Runtime price implementation and exception/random details remain pending.",
+      "source": [
+        "PRODUCT_PRICE_AUDIT.json",
+        "product-price-generics.json",
+        "disassembly/NativePricePower-109076.txt"
+      ]
+    },
+    {
+      "fact": "Price control-flow confirms each array exception logs and continues, scalar exception logs and retains prior value. RandomHelper integer overload uses Random.Next(min,unchecked(max+1)). Implemented six array/scalar formulas with separate per-item/product counts, compact indexing, only-null allocation, Int32 wrap/float cast, detached missing lookups; reset composition passes.509 checks pass; random/power provider equivalence pending.",
+      "source": [
+        "product-price-control-flow.json",
+        "product-price-generics.json",
+        "disassembly/Type3391-26192.txt"
+      ],
+      "implementation": [
+        "OutgameProductPrices.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Generic price random table7643 maps to wasmcode2673 forwarding10954; list selection calls shared Random.Next(count) then list index. Source cctor creates one parameterless System.Random. Shared source extracted from BattleView and reused by prices; existing battle overrides retained.511 checks pass including all267 battle checks. Original runtime seed/timing parity remains unclaimed.",
+      "source": [
+        "disassembly/GenericPriceRandom-7643.txt",
+        "../combat-disassembly/Raw-10954.txt",
+        "disassembly/Type3391-26192.txt",
+        "disassembly/Type3391-26197.txt"
+      ],
+      "implementation": [
+        "GameRandomSource.cs",
+        "OutgameProductPrices.cs",
+        "BattleView.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Two distinct GameProductConfig types confirmed: Proj_hdzd3943 and ItemModule4531. Current original table lacks common price/refresh fields. Common loader generic target resolved, UnityJson uses short Type.Name; active loader format/path still pending.",
+      "source": [
+        "ITEM_CONFIG_LOADING_AUDIT.json",
+        "item-config-loader-generics.json"
+      ]
+    },
+    {
+      "fact": "ShopItem4362.SetData reads Proj_hdzd product.itemConfig[0] first id/count, price string display then Int32.Parse. Click calls ToolChange(1002,-price,true,empty,true), on success reward ToolChange, voice(1,2017), extra ReportToolGet category1 with Global.CoinCost and current balance, then virtual Refresh. Real dispatcher and original16-row table tests pass.513 checks pass; complete store UI/account not connected.",
+      "source": [
+        "disassembly/Type4362-33336.txt",
+        "disassembly/Type4362-33333.txt",
+        "disassembly/Type4362-33337.txt"
+      ],
+      "implementation": [
+        "OutgameProjectShopItem.cs"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ShopUI coroutine33808 selects only storeType11; original16-row table yields10001..10004. Native prefab buttons tested with actual inventory. Legacy StorePurchaseUI coroutine33860 only hides templates and yields once; it does not populate the product catalog.",
+      "source": [
+        "disassembly/Type4407-33808.txt",
+        "disassembly/Type4411-33860.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "ShopUI video success callbacks request50 gold/20 diamonds at source button position. NewFlyTool with missing target returns-1 without grant; otherwise allocates id, resolves root, applies inventory before starting/tracking coroutine and timestamp. ToolChange overload sets notify/report true and refreshTop false. Native label uses localized ShopUI.toolvalue1 plus ToolValue.",
+      "source": [
+        "disassembly/Type4408-33801.txt",
+        "disassembly/Type4408-33779.txt",
+        "disassembly/Type4058-31217.txt",
+        "disassembly/Type4256-32536.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Fly collection only changes display, never grants again. Source request.callback is Action, not integer mode; addMoneyShow gates text only. Last arrival corrects remainder then invokes callback. Baseline subtracts amount only for gold/diamonds when displayed text equals current inventory.",
+      "source": [
+        "disassembly/Type4057-31241.txt",
+        "disassembly/Type4056-31238.txt",
+        "disassembly/Type4053-31227.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Recovered original goldItem,diamondItem,strengthItem prefabs. Missing two bundles acquired from original catalog URL, exact MD5/size verified. Original sprite render identity and geometry used for exported pixel reuse; all matching copies have same hash. Actual Unity prefab geometry and sprite binding tests pass.",
+      "source": [
+        "fly-ui-evidence.json",
+        "fly-ui-import.json"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "EffectControl.StopEffect enqueues existing coroutine ids without deduplication. Updata drains pending before timeout scan. Timeout uses Time.time>nextCheck and age>4; nextCheck += Time.time+1. Removal kills child tween ids with complete=true, stops coroutine, removes both dictionaries then subids.",
+      "source": [
+        "disassembly/Type4058-31221.txt",
+        "disassembly/Type4058-31223.txt",
+        "disassembly/Type4058-31219.txt",
+        "disassembly/Type4058-31209.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Fly source wait usage3941924 resolves to WaitForSecondsRealtime6855. Each icon yields shared .025s object; final wait uses shared1.1s object. Source movement is .4s OutCirc21 then .5s InCirc20, both independent update. Return completion wires collection; final coroutine queues StopEffect then kills global Target_Tween with complete=false.",
+      "source": [
+        "disassembly/Type4057-31241.txt",
+        "disassembly/Type4055-31235.txt",
+        "disassembly/Type4056-31237.txt",
+        "disassembly/Type4058-31218.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Original effect registry starts id1, uses monitor around postincrement/add, allocates fly_{id}_{oldSubCount}, returns-1 for missing count, removes without recycling. EaseManager circular20/21 branches use float division and sqrt; restored expression order verified at endpoints/midpoints.",
+      "source": [
+        "disassembly/Type4054-31230.txt",
+        "disassembly/Type4054-31229.txt",
+        "disassembly/Type9974-68862.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "TweenManager.PlayForward completed tween sets isPlaying/isBackwards false and does not restart. Original DOTween .cctor defaultEaseType76=6 OutQuad. Native scoped runner verifies paused target pulse .2s to(1.2,1.2,0), return .2s to(1,1,0), independent movement and kill-complete callback once.",
+      "source": [
+        "disassembly/Type9962-68833.txt",
+        "disassembly/Type9871-68377.txt",
+        "disassembly/Type4057-31241.txt",
+        "disassembly/Type4055-31234.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Scatter consumes shared inclusive angle0..360 then radius10..20, radius/10f and angle*.017f, y sin evaluated before x cos. Runtime composes real economic/coroutine/tween/id/cleanup classes; source wrappers play voice before target-null grant suppression.",
+      "source": [
+        "disassembly/Type4058-31210.txt",
+        "disassembly/Type4058-31214.txt",
+        "disassembly/Type4058-31216.txt"
+      ],
+      "validation": "analysis/outgame-login-sync-validation.json"
+    },
+    {
+      "fact": "Actual Unity Play Mode successfully ran simultaneous gold/diamond effects at timeScale0. Ten original prefabs spawned/returned, native labels reached150/27, callbacks2, saves2 only, active effects and pending cleanup0. Explicit pool fixture, not original NormalPool.",
+      "validation": "analysis/outgame-fly-playmode-validation.json"
+    },
+    {
+      "fact": "Original NormalPool object3665 unspawn remembers parent, hides, reparents to poolRoot with worldPositionStays=false; spawn restores remembered live parent then activates without local-transform reset. Release forwards Target to resource helper. Used restored lifecycle in successful8-check actual fly Play Mode rerun.",
+      "source": [
+        "disassembly/Type3665-28675.txt",
+        "disassembly/Type3665-28677.txt",
+        "disassembly/Type3665-28678.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Original NormalPool object3665 unspawn remembers parent, hides, reparents to poolRoot with worldPositionStays=false; spawn restores remembered live parent then activates without local-transform reset. Release forwards Target to resource helper. Used restored lifecycle in successful8-check actual fly Play Mode rerun.",
+      "source": [
+        "disassembly/Type3665-28675.txt",
+        "disassembly/Type3665-28677.txt",
+        "disassembly/Type3665-28678.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Resolved23 original generic object/pool methods via metadata method specs and code registration. Restored Object<T> count/timestamp/lifecycle wrapper, used by actual fly Play Mode fixture. Full NormalPool still incomplete.",
+      "source": [
+        "normal-pool-generic-bodies.json",
+        "disassembly/PoolGeneric-28724.txt",
+        "disassembly/PoolGeneric-28725.txt",
+        "disassembly/PoolGeneric-28726.txt",
+        "disassembly/PoolGeneric-28727.txt",
+        "disassembly/PoolGeneric-28728.txt",
+        "disassembly/PoolGeneric-28729.txt",
+        "disassembly/PoolGeneric-28730.txt",
+        "disassembly/PoolGeneric-28731.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Resolved50 original ObjectPool generic context slots, confirming LinkedList/AddLast/node operations. Pool selection and release now implemented and used by fly Play Mode; NormalPool resource providers pending.",
+      "source": [
+        "normal-pool-generic-bodies.json",
+        "normal-pool-rgctx.json",
+        "disassembly/PoolGeneric-28732.txt",
+        "disassembly/PoolGeneric-28733.txt",
+        "disassembly/PoolGeneric-28734.txt",
+        "disassembly/PoolGeneric-28735.txt",
+        "disassembly/PoolGeneric-28736.txt",
+        "disassembly/PoolGeneric-28737.txt",
+        "disassembly/PoolGeneric-28738.txt",
+        "disassembly/PoolGeneric-28739.txt",
+        "disassembly/PoolGeneric-28740.txt",
+        "disassembly/PoolGeneric-28741.txt",
+        "disassembly/PoolGeneric-28742.txt",
+        "disassembly/PoolGeneric-28743.txt",
+        "disassembly/PoolGeneric-28744.txt",
+        "disassembly/PoolGeneric-28745.txt",
+        "disassembly/PoolGeneric-28746.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "NormalPool loading callbacks and first-completion cache restored from28681/28684/28685/28687..28690; actual fly Play Mode now uses adapter. Original provider internals and pool destruction pending.",
+      "source": [
+        "disassembly/Type3667-28681.txt",
+        "disassembly/Type3667-28683.txt",
+        "disassembly/Type3667-28684.txt",
+        "disassembly/Type3667-28685.txt",
+        "disassembly/Type3666-28687.txt",
+        "disassembly/Type3666-28688.txt",
+        "disassembly/Type3666-28689.txt",
+        "disassembly/Type3666-28690.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "NormalPool destruction order restored from28679; generic resolution confirms new handle Values and old info Values/Clear. ReleaseUIForm and GlobalUnityEngineAPI.Destroy bodies extracted. Provider integration and production flow pending.",
+      "source": [
+        "disassembly/Type3667-28679.txt",
+        "normal-pool-destroy-generics.json",
+        "disassembly/Type3664-28674.txt",
+        "disassembly/Type3595-27679.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Asset handle core restored from22893/22902/22905/22906 and base22916/22917; default native prefab activation/name behavior from22982. Provider loading and completion subscriptions remain pending.",
+      "source": [
+        "disassembly/Type2929-22893.txt",
+        "disassembly/Type2929-22901.txt",
+        "disassembly/Type2929-22902.txt",
+        "disassembly/Type2929-22905.txt",
+        "disassembly/Type2929-22906.txt",
+        "disassembly/Type2930-22916.txt",
+        "disassembly/Type2930-22917.txt",
+        "disassembly/Type2945-22982.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Asset handle Completed event restored from22907/22900/22899 with immediate callbacks and retained multicast semantics. Provider-driven completion still pending.",
+      "source": [
+        "disassembly/Type2929-22899.txt",
+        "disassembly/Type2929-22900.txt",
+        "disassembly/Type2929-22907.txt",
+        "disassembly/Type2930-22916.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Provider completion/refcounts restored from23019/23029/23031/23034/23035 and generic23030; actual fly Play Mode uses provider-driven handle events. Original loader and bundle lifetime integration pending.",
+      "source": [
+        "disassembly/Type2954-23019.txt",
+        "disassembly/Type2954-23029.txt",
+        "disassembly/Type2954-23031.txt",
+        "disassembly/Type2954-23034.txt",
+        "disassembly/Type2954-23035.txt",
+        "disassembly/ProviderGeneric-23030.txt",
+        "provider-completion-generics.json",
+        "provider-create-handle-generic.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Provider.Destroy23028 and dependency group Reference22973/Release22969 restored with partial failure semantics. Source bundle acquisition/manager scheduling pending.",
+      "source": [
+        "disassembly/Type2954-23028.txt",
+        "disassembly/Type2939-22969.txt",
+        "disassembly/Type2939-22973.txt",
+        "bundle-dependency-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "ShopUI OpenLater/Dispose event binding restored and original prefab feedback label verified. Source lifecycle owner/message/video host integration still pending.",
+      "source": [
+        "disassembly/Type4408-33786.txt",
+        "disassembly/Type4408-33773.txt",
+        "shop-dispose-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "String MsgDispatcher and concrete shop lifecycle message host restored; native ShopUI refresh/disposal verified. Video host and account/menu owner integration remain pending.",
+      "source": [
+        "disassembly/Type3485-26817.txt",
+        "disassembly/Type3485-26820.txt",
+        "disassembly/Type3485-26822.txt",
+        "disassembly/Type3485-26824.txt",
+        "disassembly/Type3485-26825.txt",
+        "disassembly/Type3485-26828.txt",
+        "disassembly/Type3485-26830.txt",
+        "disassembly/Type3485-26831.txt",
+        "disassembly/Type3485-26835.txt",
+        "disassembly/Type3485-26836.txt",
+        "message-dispatcher-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "UIVideoBtn completion/listener subset restored and connected to native ShopUI reward callbacks. Original click/ad host and production account/menu composition remain pending.",
+      "source": [
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "video-button-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "UIVideoBtn source click and cooldown core restored with callback mutation/error boundaries. Corrected DelayReport argument to source Int32 and implemented scaled report coroutine. Native Button adapter and actual ad/platform/account composition pending.",
+      "source": [
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Native OutgameVideoButton implements original configuration/state/report/click flow against explicit SDK host. Native callbacks validated; original ShopUI videoIDs1001/1006 identified. Page composition and real SDK integration remain pending.",
+      "source": [
+        "disassembly/Type10741-74403.txt",
+        "disassembly/Type10741-74404.txt",
+        "disassembly/Type10741-74405.txt",
+        "disassembly/Type10741-74406.txt",
+        "disassembly/Type10741-74407.txt",
+        "disassembly/Type10741-74408.txt",
+        "disassembly/Type10741-74409.txt",
+        "disassembly/Type10741-74410.txt",
+        "disassembly/Type10741-74411.txt",
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74418.txt",
+        "disassembly/Type10741-74419.txt",
+        "disassembly/Type10741-74420.txt",
+        "disassembly/Type10741-74421.txt",
+        "disassembly/Type10741-74422.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10741-74424.txt",
+        "disassembly/Type10741-74425.txt",
+        "disassembly/Type10741-74426.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "disassembly/Type10741-74430.txt",
+        "disassembly/Type10741-74431.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json",
+        "ui-import.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Original ShopUI now imports five native video buttons. Inactive-page binding connects actual prefab pointer events through video host/lifecycle to inventory and saving. SDK fixture remains explicit; production account/config/platform host pending.",
+      "source": [
+        "disassembly/Type10741-74403.txt",
+        "disassembly/Type10741-74404.txt",
+        "disassembly/Type10741-74405.txt",
+        "disassembly/Type10741-74406.txt",
+        "disassembly/Type10741-74407.txt",
+        "disassembly/Type10741-74408.txt",
+        "disassembly/Type10741-74409.txt",
+        "disassembly/Type10741-74410.txt",
+        "disassembly/Type10741-74411.txt",
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74418.txt",
+        "disassembly/Type10741-74419.txt",
+        "disassembly/Type10741-74420.txt",
+        "disassembly/Type10741-74421.txt",
+        "disassembly/Type10741-74422.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10741-74424.txt",
+        "disassembly/Type10741-74425.txt",
+        "disassembly/Type10741-74426.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "disassembly/Type10741-74430.txt",
+        "disassembly/Type10741-74431.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json",
+        "ui-import.json",
+        "video-manager-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Original65row video configuration asset and manager cache semantics restored; shop integration now uses original JSON data. Global config mode selection, SDK/report/account host remain pending.",
+      "source": [
+        "disassembly/Type3843-29987.txt",
+        "disassembly/Type3843-29988.txt",
+        "disassembly/Type3843-29989.txt",
+        "disassembly/Type3843-29990.txt",
+        "disassembly/VideoConfigGeneric-26612.txt",
+        "disassembly/VideoConfigGeneric-26619.txt",
+        "video-manager-generics.json",
+        "video-config-generic.json",
+        "video-config-rgctx.json",
+        "VIDEO_CONFIG_ASSET_EVIDENCE.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "AdsManager request/result core restored including delegate replacement before throttling and message-before-reward order. Shop integration uses recovered core; concrete SDK, raw parser, await runner and production account remain pending.",
+      "source": [
+        "disassembly/Type3157-24562.txt",
+        "disassembly/Type3157-24567.txt",
+        "disassembly/Type3157-24568.txt",
+        "disassembly/Type3157-24569.txt",
+        "disassembly/Type3157-24589.txt",
+        "disassembly/Type3157-24619.txt",
+        "disassembly/Type3155-24626.txt",
+        "ads-callback-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "GFRunning.Json and Util.DataParse restored and connected to raw-string shop callback integration. Concrete SDK, Unity await runner and production account remain pending.",
+      "source": [
+        "disassembly/Type3196-25122.txt",
+        "disassembly/Type3133-23875.txt",
+        "disassembly/Type3132-23876.txt",
+        "disassembly/Type3132-23877.txt",
+        "disassembly/Type3132-23878.txt",
+        "disassembly/Type3132-23879.txt",
+        "disassembly/Type3132-23880.txt",
+        "disassembly/Type3132-23881.txt",
+        "disassembly/Type3132-23882.txt",
+        "disassembly/Type3132-23883.txt",
+        "disassembly/Type3132-23884.txt",
+        "disassembly/Type3132-23885.txt",
+        "disassembly/Type3132-23886.txt",
+        "disassembly/Type3132-23887.txt",
+        "disassembly/Type3132-23888.txt",
+        "disassembly/Type3132-23889.txt",
+        "disassembly/Type3132-23890.txt",
+        "callback-json-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-fly-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "Unity await runner restored;7 actual PlayMode checks verify original ShopUI native startup, real-time advertisement wait while paused, raw callback and scaled delayed reports after resume. Concrete SDK and production account remain pending.",
+      "source": [
+        "disassembly/Type2883-22358.txt",
+        "disassembly/Type2883-22359.txt",
+        "disassembly/Type2883-22360.txt",
+        "disassembly/Type2875-22366.txt",
+        "disassembly/Type2875-22367.txt",
+        "disassembly/Type2875-22368.txt",
+        "disassembly/Type2875-22369.txt",
+        "disassembly/Type2875-22370.txt",
+        "disassembly/Type2878-22384.txt",
+        "disassembly/Type2881-22391.txt",
+        "disassembly/Type3373-26053.txt",
+        "disassembly/Type3373-26072.txt",
+        "disassembly/Type3374-26078.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-ads-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "DBTSDKManager button registration/readiness subset restored and exercised through actual native Start in fresh7check PlayMode. Complete SDK state owner and concrete platform/account integration remain pending.",
+      "source": [
+        "disassembly/Type3135-23907.txt",
+        "disassembly/Type3135-23908.txt",
+        "disassembly/Type3135-23910.txt",
+        "disassembly/Type3135-23912.txt",
+        "sdk-button-registry-generics.json"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-ads-playmode-validation.json"
+      ]
+    },
+    {
+      "fact": "SDK function state cache restored and IsOpen second parameter corrected to force-refresh semantics. Fresh7check native PlayMode uses shared state cache; platform capability queries and account integration remain pending.",
+      "source": [
+        "disassembly/Type3135-23913.txt",
+        "disassembly/Type3135-23914.txt",
+        "disassembly/Type3394-26224.txt"
+      ],
+      "validation": [
+        "analysis/outgame-login-sync-validation.json",
+        "analysis/outgame-ads-playmode-validation.json"
+      ]
+    }
+  ],
+  "next": [
+    "Restore ProcedureStarGame.OnEnter video mapping/events/daily checks and connect shared prefab caches/resource loader.",
+    "Connect production menu/reward/loading/resource/activity providers to OutgameStartupEntry.",
+    "Complete remaining data managers/login synchronization and verify actual player end-to-end."
+  ],
+  "notClaimed": [
+    "Login or platform behavior reproduced",
+    "Fresh-account grants established",
+    "New lobby player built"
+  ]
+}

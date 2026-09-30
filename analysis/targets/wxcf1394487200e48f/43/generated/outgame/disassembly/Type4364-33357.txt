@@ -1,0 +1,129 @@
+; Original class: SkinItem
+; Type4364.U}|UX; wasmcode function 15911; offset=7651154 size=337
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0074bf55  global.get [0]
+0074bf57  i32.const [16]
+0074bf59  i32.sub []
+0074bf5a  local.set [1]
+0074bf5c  local.get [1]
+0074bf5e  global.set [0]
+0074bf60  i32.const [5008961]
+0074bf65  i32.load8_u [0, 0]
+0074bf68  i32.eqz []
+0074bf69  if [-64]
+0074bf6b    i32.const [3933916]
+0074bf70    call [900] ; 
+0074bf73    i32.const [3934404]
+0074bf78    call [900] ; 
+0074bf7b    i32.const [3926996]
+0074bf80    call [900] ; 
+0074bf83    i32.const [4048412] ; STRING "ChooseSkin"
+0074bf88    call [900] ; 
+0074bf8b    i32.const [5008961]
+0074bf90    i32.const [1]
+0074bf92    i32.store8 [0, 0]
+0074bf95  end []
+0074bf96  local.get [0]
+0074bf98  i32.load [2, 44]
+0074bf9b  i32.eqz []
+0074bf9c  if [-64]
+0074bf9e    i32.const [0]
+0074bfa0    call [1193] ; GameModule.get_Audio
+0074bfa3    i32.const [1]
+0074bfa5    i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+0074bfa8    i32.const [0]
+0074bfaa    call [1201] ; Extension.PlayerVoice
+0074bfad    i32.const [3926996]
+0074bfb2    i32.load [2, 0]
+0074bfb5    i32.const [1]
+0074bfb7    call [909] ; 
+0074bfba    local.set [2]
+0074bfbc    local.get [1]
+0074bfbe    i32.const [0]
+0074bfc0    i32.const [3933916]
+0074bfc5    i32.load [2, 0]
+0074bfc8    local.get [0]
+0074bfca    i32.load [2, 52]
+0074bfcd    call [918] ; 
+0074bfd0    i32.store [2, 12]
+0074bfd3    i32.const [3934404]
+0074bfd8    i32.load [2, 0]
+0074bfdb    local.get [1]
+0074bfdd    i32.const [12]
+0074bfdf    i32.add []
+0074bfe0    call [910] ; 
+0074bfe3    local.set [3]
+0074bfe5    local.get [2]
+0074bfe7    local.get [3]
+0074bfe9    call [905] ; 
+0074bfec    local.get [2]
+0074bfee    local.get [3]
+0074bff0    i32.store [2, 16]
+0074bff3    i32.const [4048412] ; STRING "ChooseSkin"
+0074bff8    i32.load [2, 0]
+0074bffb    local.get [2]
+0074bffd    i32.const [0]
+0074bfff    call [1230] ; MsgDispatcher.SendMessage
+0074c002    i32.const [0]
+0074c004    call [1587] ; GameModule.get_ADHelper
+0074c007    i32.const [0]
+0074c009    i32.const [3933916]
+0074c00e    i32.load [2, 0]
+0074c011    local.get [0]
+0074c013    i32.load [2, 52]
+0074c016    call [918] ; 
+0074c019    i32.const [3]
+0074c01b    i32.const [0]
+0074c01d    call [5242] ; ADHelper.ReportToolUse
+0074c020    local.get [0]
+0074c022    i32.load [2, 40]
+0074c025    local.set [2]
+0074c027    local.get [2]
+0074c029    if [-64]
+0074c02b      local.get [2]
+0074c02d      i32.load [2, 32]
+0074c030      local.get [0]
+0074c032      local.get [2]
+0074c034      i32.load [2, 20]
+0074c037      local.get [2]
+0074c039      i32.load [2, 12]
+0074c03c      global.set [3]
+0074c03e      global.get [3]
+0074c040      call_indirect [2, 0]
+0074c043    end []
+0074c044    local.get [0]
+0074c046    i32.load [2, 120]
+0074c049    i32.const [0]
+0074c04b    call [943] ; Component.get_gameObject
+0074c04e    local.set [2]
+0074c050    i32.const [5009954]
+0074c055    i32.load8_u [0, 0]
+0074c058    i32.eqz []
+0074c059    if [-64]
+0074c05b      i32.const [3939048]
+0074c060      call [900] ; 
+0074c063      i32.const [5009954]
+0074c068      i32.const [1]
+0074c06a      i32.store8 [0, 0]
+0074c06d    end []
+0074c06e    local.get [2]
+0074c070    i32.const [3939048]
+0074c075    i32.load [2, 0]
+0074c078    i32.load [2, 92]
+0074c07b    i32.load [2, 0]
+0074c07e    i32.const [0]
+0074c080    i32.const [3933916]
+0074c085    i32.load [2, 0]
+0074c088    local.get [0]
+0074c08a    i32.load [2, 52]
+0074c08d    call [918] ; 
+0074c090    i32.const [0]
+0074c092    call [4266] ; SkinManager.CheckSkinNew2Modify
+0074c095    i32.const [0]
+0074c097    call [949] ; GameObject.SetActive
+0074c09a  end []
+0074c09b  local.get [1]
+0074c09d  i32.const [16]
+0074c09f  i32.add []
+0074c0a0  global.set [0]
+0074c0a2  end []

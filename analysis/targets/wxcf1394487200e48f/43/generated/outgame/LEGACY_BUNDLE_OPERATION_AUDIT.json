@@ -1,0 +1,40 @@
+{
+  "atUtc": "2026-09-30T03:15:40.792025+00:00",
+  "status": "partial-subsystem-verified",
+  "methods": [
+    23773,
+    23774,
+    23775,
+    23795,
+    23796,
+    23797,
+    23798,
+    23799,
+    23839
+  ],
+  "behavior": [
+    "Constructor captures request once using mapped name",
+    "Update refreshes result and error via GetLoadedAssetBundle(name,out string error,out int referenceCount); reference count ignored, result null means continue Update",
+    "IEnumerator MoveNext only negates IsDone and does not call Update; Current null, Reset no-op",
+    "Non-null result wrapper is done with progress1, regardless of contained AssetBundle nullness",
+    "Absent result: missing captured request or null error means pending; literal error 0 means pending, other errors (including empty) log and complete",
+    "IsDone catches Exception during error comparison/logging, logs exception and returns false",
+    "Progress otherwise returns zero for missing request or native request.downloadProgress",
+    "LoadAsync logs original name if enabled, remaps variant, loads mapped name with false flag, constructs operation then adds it to shared operations list"
+  ],
+  "implementation": "OutgameLegacyBundleOperation implements existing package operation interface; OutgameLegacyBundleRequests restores dispatch. Downloader and manager operation Update loop remain explicit external seams.",
+  "validation": {
+    "integratedChecks": 620,
+    "freshPlayMode": false,
+    "freshPlayer": false,
+    "nativeRequest": "Created/disposed UnityWebRequest for capture/progress tests; no SendWebRequest or network transfer."
+  },
+  "limitations": [
+    "GetLoadedAssetBundle dependency/refcount registry, manager Update operation pumping, variant mapping and native downloader not implemented here.",
+    "No positive AssetBundle-to-UI native loading validation yet."
+  ],
+  "correction": {
+    "atUtc": "2026-09-30T03:18:26.762020+00:00",
+    "detail": "Third out int of GetLoadedAssetBundle23812 is a missing-dependency marker (0 default, 1 when a direct dependency wrapper is absent), not referenceCount. Runtime previously ignored it; naming corrected."
+  }
+}

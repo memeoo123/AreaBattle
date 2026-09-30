@@ -1,0 +1,8 @@
+{
+    "passed": false,
+    "error": "System.TimeoutException: Native UI end-of-frame sequence timed out\r\n  at AreaBattle.EditorTools.OutgameUiPlayModeValidation.Poll () [0x00016] in E:\\Projects\\AreaBattle\\UnityProject\\Assets\\AreaBattle\\Editor\\OutgameUiPlayModeValidation.cs:40 ",
+    "scope": "Native UIControl/TopInfo/MenuTab with original prefabs and default WaitForEndOfFrame menu loading. Menu data/role/account callbacks are explicit fixtures; no complete Main or Player claim.",
+    "checks": [
+        "Home entry starts main immediately before native end-of-frame waits"
+    ]
+}

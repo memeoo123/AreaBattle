@@ -1,0 +1,66 @@
+; Original class: CommanderItem
+; Type4334.y]; wasmcode function 20189; offset=9070212 size=167
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+008a6687  global.get [0]
+008a6689  i32.const [16]
+008a668b  i32.sub []
+008a668c  local.set [2]
+008a668e  local.get [2]
+008a6690  global.set [0]
+008a6692  i32.const [5008828]
+008a6697  i32.load8_u [0, 0]
+008a669a  i32.eqz []
+008a669b  if [-64]
+008a669d    i32.const [3957124]
+008a66a2    call [900] ; 
+008a66a5    i32.const [3934404]
+008a66aa    call [900] ; 
+008a66ad    i32.const [4048912] ; STRING "CommanderUI"
+008a66b2    call [900] ; 
+008a66b5    i32.const [5008828]
+008a66ba    i32.const [1]
+008a66bc    i32.store8 [0, 0]
+008a66bf  end []
+008a66c0  local.get [0]
+008a66c2  local.get [1]
+008a66c4  i32.store [2, 40]
+008a66c7  local.get [0]
+008a66c9  i32.load [2, 44]
+008a66cc  local.set [3]
+008a66ce  i32.const [0]
+008a66d0  call [1060] ; ConfigMgr.get_Instance
+008a66d3  i32.load [2, 196]
+008a66d7  local.set [4]
+008a66d9  local.get [2]
+008a66db  local.get [1]
+008a66dd  i32.load [2, 12]
+008a66e0  i32.store [2, 12]
+008a66e3  local.get [3]
+008a66e5  local.get [4]
+008a66e7  i32.const [3934404]
+008a66ec  i32.load [2, 0]
+008a66ef  local.get [2]
+008a66f1  i32.const [12]
+008a66f3  i32.add []
+008a66f4  call [910] ; 
+008a66f7  i32.const [3957124]
+008a66fc  i32.load [2, 0]
+008a66ff  call [982] ; 
+008a6702  i32.load [2, 44]
+008a6705  i32.const [4048912] ; STRING "CommanderUI"
+008a670a  i32.load [2, 0]
+008a670d  i32.const [0]
+008a670f  i32.const [0]
+008a6711  call [1300] ; UIExtension.SetSprite
+008a6714  drop []
+008a6715  local.get [0]
+008a6717  local.get [0]
+008a6719  call [5151] ; CommanderItem.RefreshCommander
+008a671c  local.get [0]
+008a671e  local.get [0]
+008a6720  call [6200] ; CommanderItem.RefreshRedDot
+008a6723  local.get [2]
+008a6725  i32.const [16]
+008a6727  i32.add []
+008a6728  global.set [0]
+008a672a  end []

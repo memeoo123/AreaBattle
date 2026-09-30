@@ -1,0 +1,109 @@
+; Original class: MineGameMain
+; Type3974.~SW; wasmcode function 11336; offset=5575352 size=334
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005512b9  i32.const [5010134]
+005512be  i32.load8_u [0, 0]
+005512c1  i32.eqz []
+005512c2  if [-64]
+005512c4    i32.const [3947148]
+005512c9    call [900] ; 
+005512cc    i32.const [4000608]
+005512d1    call [900] ; 
+005512d4    i32.const [4000616]
+005512d9    call [900] ; 
+005512dc    i32.const [3932308]
+005512e1    call [900] ; 
+005512e4    i32.const [3935000]
+005512e9    call [900] ; 
+005512ec    i32.const [4008012] ; METHOD MineGameMain.LiZUh
+005512f1    call [900] ; 
+005512f4    i32.const [4009776]
+005512f9    call [900] ; 
+005512fc    i32.const [3937964]
+00551301    call [900] ; 
+00551304    i32.const [4053296] ; STRING "ExitGame"
+00551309    call [900] ; 
+0055130c    i32.const [4103880] ; STRING "开始初始化进游戏前的逻辑"
+00551311    call [900] ; 
+00551314    i32.const [4103896] ; STRING "开始游戏"
+00551319    call [900] ; 
+0055131c    i32.const [5010134]
+00551321    i32.const [1]
+00551323    i32.store8 [0, 0]
+00551326  end []
+00551327  local.get [0]
+00551329  i32.const [4103880] ; STRING "开始初始化进游戏前的逻辑"
+0055132e  i32.load [2, 0]
+00551331  local.get [0]
+00551333  call [2125] ; MineGameMain.O{P^xr
+00551336  local.get [0]
+00551338  local.get [0]
+0055133a  call [11334] ; MineGameMain.luSmgbx
+0055133d  local.get [0]
+0055133f  local.get [0]
+00551341  call [11333] ; MineGameMain.uMlm
+00551344  local.get [0]
+00551346  local.get [0]
+00551348  call [11337] ; MineGameMain.NSe~i
+0055134b  i32.const [0]
+0055134d  call [2848] ; AudioManager.get_Instance
+00551350  i32.const [0]
+00551352  call [8222] ; AudioManager.InitAudioManager
+00551355  i32.const [3932308]
+0055135a  i32.load [2, 0]
+0055135d  call [901] ; 
+00551360  i32.const [4000608]
+00551365  i32.load [2, 0]
+00551368  call [1051] ; 
+0055136b  i32.const [1]
+0055136d  i32.const [0]
+0055136f  call [5881] ; MineGameLogicModule.InitCtrl
+00551372  local.get [0]
+00551374  i32.const [0]
+00551376  i32.store8 [0, 38]
+00551379  local.get [0]
+0055137b  i32.const [1]
+0055137d  i32.store8 [0, 24]
+00551380  i32.const [3935000]
+00551385  i32.load [2, 0]
+00551388  call [901] ; 
+0055138b  i32.const [0]
+0055138d  call [11658] ; LangFont.SetLangFont
+00551390  local.get [0]
+00551392  i32.const [4103896] ; STRING "开始游戏"
+00551397  i32.load [2, 0]
+0055139a  local.get [0]
+0055139c  call [2125] ; MineGameMain.O{P^xr
+0055139f  i32.const [0]
+005513a1  call [6054] ; GameFrameEntry.CommonSettings
+005513a4  i32.const [3937964]
+005513a9  i32.load [2, 0]
+005513ac  call [901] ; 
+005513af  i32.const [3937964]
+005513b4  i32.load [2, 0]
+005513b7  i32.load [2, 92]
+005513ba  i32.load [2, 8]
+005513bd  i32.const [0]
+005513bf  call [5757] ; ReportManager.StartMineGame
+005513c2  i32.const [3947148]
+005513c7  i32.load [2, 0]
+005513ca  call [903] ; 
+005513cd  local.set [1]
+005513cf  local.get [1]
+005513d1  local.get [0]
+005513d3  i32.const [4008012] ; METHOD MineGameMain.LiZUh
+005513d8  i32.load [2, 0]
+005513db  i32.const [0]
+005513dd  call [1067] ; EventHandler..ctor
+005513e0  i32.const [4053296] ; STRING "ExitGame"
+005513e5  i32.load [2, 0]
+005513e8  local.get [1]
+005513ea  i32.const [0]
+005513ec  call [1146] ; MsgDispatcher.AddEventListener
+005513ef  i32.const [4000616]
+005513f4  i32.load [2, 0]
+005513f7  call [1051] ; 
+005513fa  i32.const [4009776]
+005513ff  i32.load [2, 0]
+00551402  call [11036] ; 
+00551405  end []

@@ -1,0 +1,45 @@
+; Original class: xEv·
+; Type3820.GetGFVersion; wasmcode function 13445; offset=6511908 size=109
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00635d25  i32.const [4988201]
+00635d2a  i32.load8_u [0, 0]
+00635d2d  i32.eqz []
+00635d2e  if [-64]
+00635d30    i32.const [4039208] ; STRING ","
+00635d35    call [900] ; 
+00635d38    i32.const [4087240] ; STRING "empty"
+00635d3d    call [900] ; 
+00635d40    i32.const [4988201]
+00635d45    i32.const [1]
+00635d47    i32.store8 [0, 0]
+00635d4a  end []
+00635d4b  local.get [0]
+00635d4d  i32.load [2, 8]
+00635d50  local.set [0]
+00635d52  local.get [0]
+00635d54  if [-64]
+00635d56    local.get [0]
+00635d58    i32.load [2, 28]
+00635d5b    i32.const [4039208] ; STRING ","
+00635d60    i32.load [2, 0]
+00635d63    i32.const [0]
+00635d65    i32.const [0]
+00635d67    call [1905] ; String.Split
+00635d6a    local.set [0]
+00635d6c    local.get [0]
+00635d6e    i32.load [2, 12]
+00635d71    i32.const [1]
+00635d73    i32.ge_s []
+00635d74    if [-64]
+00635d76      local.get [0]
+00635d78      i32.load [2, 16]
+00635d7b      return []
+00635d7c    end []
+00635d7d    i32.const [4087240] ; STRING "empty"
+00635d82    i32.load [2, 0]
+00635d85    return []
+00635d86  end []
+00635d87  i32.const [4087240] ; STRING "empty"
+00635d8c  i32.load [2, 0]
+00635d8f  return []
+00635d90  end []

@@ -1,0 +1,40 @@
+; Original class: x~bjQc
+; Type4504.OnInit; wasmcode function 13444; offset=6511791 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00635cb2  i32.const [5009897]
+00635cb7  i32.load8_u [0, 0]
+00635cba  i32.eqz []
+00635cbb  if [-64]
+00635cbd    i32.const [3947148]
+00635cc2    call [900] ; 
+00635cc5    i32.const [3944712]
+00635cca    call [900] ; 
+00635ccd    i32.const [4026132] ; METHOD x~bjQc.edsgn
+00635cd2    call [900] ; 
+00635cd5    i32.const [5009897]
+00635cda    i32.const [1]
+00635cdc    i32.store8 [0, 0]
+00635cdf  end []
+00635ce0  i32.const [3944712]
+00635ce5  i32.load [2, 0]
+00635ce8  call [901] ; 
+00635ceb  i32.const [3944712]
+00635cf0  i32.load [2, 0]
+00635cf3  i32.load [2, 92]
+00635cf6  i32.load [2, 4]
+00635cf9  local.set [1]
+00635cfb  i32.const [3947148]
+00635d00  i32.load [2, 0]
+00635d03  call [903] ; 
+00635d06  local.set [2]
+00635d08  local.get [2]
+00635d0a  local.get [0]
+00635d0c  i32.const [4026132] ; METHOD x~bjQc.edsgn
+00635d11  i32.load [2, 0]
+00635d14  i32.const [0]
+00635d16  call [1067] ; EventHandler..ctor
+00635d19  local.get [1]
+00635d1b  local.get [2]
+00635d1d  i32.const [0]
+00635d1f  call [1146] ; MsgDispatcher.AddEventListener
+00635d22  end []

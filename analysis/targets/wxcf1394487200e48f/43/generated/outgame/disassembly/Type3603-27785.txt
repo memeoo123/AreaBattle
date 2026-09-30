@@ -1,0 +1,22 @@
+; Original class: InputManager
+; Type3603.RemoveTouchEndListener; wasmcode function 7700; offset=3664113 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0037e8f2  i32.const [4989970]
+0037e8f7  i32.load8_u [0, 0]
+0037e8fa  i32.eqz []
+0037e8fb  if [-64]
+0037e8fd    i32.const [3934348]
+0037e902    call [900] ; 
+0037e905    i32.const [4989970]
+0037e90a    i32.const [1]
+0037e90c    i32.store8 [0, 0]
+0037e90f  end []
+0037e910  i32.const [3934348]
+0037e915  i32.load [2, 0]
+0037e918  call [901] ; 
+0037e91b  local.get [0]
+0037e91d  call [1623] ; InputManager.get_Instance
+0037e920  local.get [0]
+0037e922  local.get [0]
+0037e924  call [7697] ; InputManager.½N¯
+0037e927  end []

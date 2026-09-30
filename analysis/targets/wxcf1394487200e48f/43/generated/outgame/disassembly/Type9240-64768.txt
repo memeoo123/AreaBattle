@@ -1,0 +1,73 @@
+; Original class: WXFunctionManger
+; Type9240.HideBanner; wasmcode function 9548; offset=4588015 size=192
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+004601f2  i32.const [5006584]
+004601f7  i32.load8_u [0, 0]
+004601fa  i32.eqz []
+004601fb  if [-64]
+004601fd    i32.const [3911392]
+00460202    call [900] ; 
+00460205    i32.const [3927760]
+0046020a    call [900] ; 
+0046020d    i32.const [3940520]
+00460212    call [900] ; 
+00460215    i32.const [3941756]
+0046021a    call [900] ; 
+0046021d    i32.const [5006584]
+00460222    i32.const [1]
+00460224    i32.store8 [0, 0]
+00460227  end []
+00460228  local.get [0]
+0046022a  i32.const [20]
+0046022c  i32.add []
+0046022d  local.set [1]
+0046022f  local.get [0]
+00460231  i32.load [2, 20]
+00460234  local.set [0]
+00460236  local.get [0]
+00460238  i32.eqz []
+00460239  if [-64]
+0046023b    i32.const [3941756]
+00460240    i32.load [2, 0]
+00460243    i32.load [2, 92]
+00460246    i32.load [2, 4]
+00460249    local.set [0]
+0046024b    i32.const [3911392]
+00460250    i32.load [2, 0]
+00460253    local.set [2]
+00460255    i32.const [3940520]
+0046025a    i32.load [2, 0]
+0046025d    call [901] ; 
+00460260    local.get [0]
+00460262    local.get [2]
+00460264    i32.const [0]
+00460266    call [912] ; Type.GetTypeFromHandle
+00460269    local.get [0]
+0046026b    call [2540] ; WXModuleManager.GetModuleBase
+0046026e    local.set [0]
+00460270    local.get [1]
+00460272    local.get [0]
+00460274    i32.const [3927760]
+00460279    i32.load [2, 0]
+0046027c    call [924] ; 
+0046027f    i32.store [2, 0]
+00460282    local.get [0]
+00460284    i32.const [3927760]
+00460289    i32.load [2, 0]
+0046028c    call [924] ; 
+0046028f    drop []
+00460290    local.get [1]
+00460292    i32.load [2, 0]
+00460295    local.set [0]
+00460297  end []
+00460298  local.get [0]
+0046029a  local.get [0]
+0046029c  local.get [0]
+0046029e  call [3485] ; WXFunctionManger.CheckFunctionActive
+004602a1  if [-64]
+004602a3    local.get [1]
+004602a5    i32.load [2, 0]
+004602a8    i32.const [0]
+004602aa    call [13426] ; ADModule.HideBanner
+004602ad  end []
+004602ae  end []

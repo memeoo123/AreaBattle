@@ -1,0 +1,177 @@
+; Original class: Path
+; Type1122.Combine; wasmcode function 1595; offset=529859 size=461
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+000815c4  i32.const [5023473]
+000815c9  i32.load8_u [0, 0]
+000815cc  i32.eqz []
+000815cd  if [-64]
+000815cf    i32.const [3936928]
+000815d4    call [900] ; 
+000815d7    i32.const [5023473]
+000815dc    i32.const [1]
+000815de    i32.store8 [0, 0]
+000815e1  end []
+000815e2  block [-64]
+000815e4    block [-64]
+000815e6      block [-64]
+000815e8        local.get [0]
+000815ea        if [-64]
+000815ec          local.get [1]
+000815ee          i32.eqz []
+000815ef          br_if [1]
+000815f1          block [-64]
+000815f3            local.get [0]
+000815f5            i32.load [2, 8]
+000815f8            i32.eqz []
+000815f9            br_if [0]
+000815fb            local.get [1]
+000815fd            i32.load [2, 8]
+00081600            i32.eqz []
+00081601            if [-64]
+00081603              local.get [0]
+00081605              return []
+00081606            end []
+00081607            i32.const [3936928]
+0008160c            i32.load [2, 0]
+0008160f            call [901] ; 
+00081612            local.get [0]
+00081614            i32.const [3936928]
+00081619            i32.load [2, 0]
+0008161c            i32.load [2, 92]
+0008161f            i32.load [2, 0]
+00081622            i32.const [0]
+00081624            call [1823] ; String.IndexOfAny
+00081627            i32.const [-1]
+00081629            i32.ne []
+0008162a            br_if [3]
+0008162c            i32.const [3936928]
+00081631            i32.load [2, 0]
+00081634            call [901] ; 
+00081637            local.get [1]
+00081639            i32.const [3936928]
+0008163e            i32.load [2, 0]
+00081641            i32.load [2, 92]
+00081644            i32.load [2, 0]
+00081647            i32.const [0]
+00081649            call [1823] ; String.IndexOfAny
+0008164c            i32.const [-1]
+0008164e            i32.ne []
+0008164f            br_if [3]
+00081651            i32.const [3936928]
+00081656            i32.load [2, 0]
+00081659            call [901] ; 
+0008165c            local.get [1]
+0008165e            local.get [1]
+00081660            call [4341] ; Path.IsPathRooted
+00081663            br_if [0]
+00081665            local.get [0]
+00081667            local.get [0]
+00081669            i32.load [2, 8]
+0008166c            i32.const [1]
+0008166e            i32.sub []
+0008166f            i32.const [0]
+00081671            call [936] ; String.get_Chars
+00081674            local.set [2]
+00081676            i32.const [3936928]
+0008167b            i32.load [2, 0]
+0008167e            call [901] ; 
+00081681            block [-64]
+00081683              local.get [2]
+00081685              i32.const [3936928]
+0008168a              i32.load [2, 0]
+0008168d              i32.load [2, 92]
+00081690              i32.load16_u [1, 6]
+00081693              i32.eq []
+00081694              br_if [0]
+00081696              i32.const [3936928]
+0008169b              i32.load [2, 0]
+0008169e              call [901] ; 
+000816a1              local.get [2]
+000816a3              i32.const [3936928]
+000816a8              i32.load [2, 0]
+000816ab              i32.load [2, 92]
+000816ae              i32.load16_u [1, 4]
+000816b1              i32.eq []
+000816b2              br_if [0]
+000816b4              i32.const [3936928]
+000816b9              i32.load [2, 0]
+000816bc              call [901] ; 
+000816bf              local.get [2]
+000816c1              i32.const [3936928]
+000816c6              i32.load [2, 0]
+000816c9              i32.load [2, 92]
+000816cc              i32.load16_u [1, 16]
+000816cf              i32.eq []
+000816d0              br_if [0]
+000816d2              i32.const [3936928]
+000816d7              i32.load [2, 0]
+000816da              call [901] ; 
+000816dd              local.get [0]
+000816df              i32.const [3936928]
+000816e4              i32.load [2, 0]
+000816e7              i32.load [2, 92]
+000816ea              i32.load [2, 12]
+000816ed              local.get [1]
+000816ef              i32.const [0]
+000816f1              call [955] ; String.Concat
+000816f4              return []
+000816f5            end []
+000816f6            local.get [0]
+000816f8            local.get [1]
+000816fa            i32.const [0]
+000816fc            call [921] ; String.Concat
+000816ff            local.set [1]
+00081701          end []
+00081702          local.get [1]
+00081704          return []
+00081705        end []
+00081706        i32.const [3928236]
+0008170b        call [902] ; 
+0008170e        call [903] ; 
+00081711        local.set [0]
+00081713        local.get [0]
+00081715        i32.const [4094536] ; STRING "path1"
+0008171a        call [902] ; 
+0008171d        i32.const [0]
+0008171f        i32.const [3161] ; TABLE ArgumentNullException..ctor
+00081722        global.set [3]
+00081724        i32.const [3161] ; TABLE ArgumentNullException..ctor
+00081727        call_indirect [2, 0]
+0008172a        br [2]
+0008172c      end []
+0008172d      i32.const [3928236]
+00081732      call [902] ; 
+00081735      call [903] ; 
+00081738      local.set [0]
+0008173a      local.get [0]
+0008173c      i32.const [4094540] ; STRING "path2"
+00081741      call [902] ; 
+00081744      i32.const [0]
+00081746      i32.const [3161] ; TABLE ArgumentNullException..ctor
+00081749      global.set [3]
+0008174b      i32.const [3161] ; TABLE ArgumentNullException..ctor
+0008174e      call_indirect [2, 0]
+00081751      br [1]
+00081753    end []
+00081754    i32.const [3928232]
+00081759    call [902] ; 
+0008175c    call [903] ; 
+0008175f    local.set [0]
+00081761    local.get [0]
+00081763    i32.const [4057544] ; STRING "Illegal characters in path."
+00081768    call [902] ; 
+0008176b    i32.const [0]
+0008176d    i32.const [1249] ; TABLE ArgumentException..ctor
+00081770    global.set [3]
+00081772    i32.const [1249] ; TABLE ArgumentException..ctor
+00081775    call_indirect [2, 0]
+00081778  end []
+00081779  local.get [0]
+0008177b  i32.const [4009444] ; METHOD Path.Combine
+00081780  call [902] ; 
+00081783  i32.const [1106]
+00081786  global.set [3]
+00081788  i32.const [1106]
+0008178b  call_indirect [0, 0]
+0008178e  unreachable []
+0008178f  end []

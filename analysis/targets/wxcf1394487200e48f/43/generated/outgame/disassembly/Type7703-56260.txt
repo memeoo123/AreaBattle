@@ -1,0 +1,21 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GotoTermsServiceStatic; wasmcode1 function 38441; offset=14430710 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc31f7  i32.const [5005434]
+00dc31fc  i32.load8_u [0, 0]
+00dc31ff  i32.eqz []
+00dc3200  if [-64]
+00dc3202    i32.const [3937248]
+00dc3207    i32.const [1605]
+00dc320a    call_indirect [0, 0]
+00dc320d    i32.const [5005434]
+00dc3212    i32.const [1]
+00dc3214    i32.store8 [0, 0]
+00dc3217  end []
+00dc3218  i32.const [3937248]
+00dc321d  i32.load [2, 0]
+00dc3220  i32.const [1149]
+00dc3223  call_indirect [0, 0]
+00dc3226  local.get [0]
+00dc3228  call [24328] ; PrivacyPolicyMgr.ShowUserAgreement
+00dc322c  end []

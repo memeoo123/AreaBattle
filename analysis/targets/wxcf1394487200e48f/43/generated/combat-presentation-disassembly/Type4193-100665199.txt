@@ -1,0 +1,56 @@
+; Type4193.Execute; wasmcode function 14252; offset=7019497 size=154
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+006b1bec  i32.const [5010359]
+006b1bf1  i32.load8_u [0, 0]
+006b1bf4  i32.eqz []
+006b1bf5  if [-64]
+006b1bf7    i32.const [3947148]
+006b1bfc    call [900] ; 
+006b1bff    i32.const [3944712]
+006b1c04    call [900] ; 
+006b1c07    i32.const [4027084] ; METHOD fgTUWs[.MZij~s
+006b1c0c    call [900] ; 
+006b1c0f    i32.const [5010359]
+006b1c14    i32.const [1]
+006b1c16    i32.store8 [0, 0]
+006b1c19  end []
+006b1c1a  i32.const [0]
+006b1c1c  call [1193] ; GameModule.get_Audio
+006b1c1f  i32.const [1]
+006b1c21  i32.const [2034] ; TABLE FileDescriptor.BuildFrom
+006b1c24  i32.const [0]
+006b1c26  call [1201] ; Extension.PlayerVoice
+006b1c29  i32.const [3944712]
+006b1c2e  i32.load [2, 0]
+006b1c31  call [901] ; 
+006b1c34  i32.const [3944712]
+006b1c39  i32.load [2, 0]
+006b1c3c  i32.load [2, 92]
+006b1c3f  i32.load [2, 60]
+006b1c42  local.set [1]
+006b1c44  i32.const [3947148]
+006b1c49  i32.load [2, 0]
+006b1c4c  call [903] ; 
+006b1c4f  local.set [2]
+006b1c51  local.get [2]
+006b1c53  local.get [0]
+006b1c55  i32.const [4027084] ; METHOD fgTUWs[.MZij~s
+006b1c5a  i32.load [2, 0]
+006b1c5d  i32.const [0]
+006b1c5f  call [1067] ; EventHandler..ctor
+006b1c62  local.get [1]
+006b1c64  local.get [2]
+006b1c66  i32.const [0]
+006b1c68  call [1146] ; MsgDispatcher.AddEventListener
+006b1c6b  local.get [0]
+006b1c6d  i32.load8_u [0, 16]
+006b1c70  i32.eqz []
+006b1c71  if [-64]
+006b1c73    local.get [0]
+006b1c75    i32.const [0]
+006b1c77    i32.store [2, 28]
+006b1c7a    local.get [0]
+006b1c7c    i32.const [1]
+006b1c7e    i32.store8 [0, 16]
+006b1c81  end []
+006b1c82  end []

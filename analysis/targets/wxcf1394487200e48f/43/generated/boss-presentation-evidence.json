@@ -1,0 +1,843 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "rules": [
+    {
+      "id": "current-layout-model-bindings",
+      "status": "confirmed",
+      "value": {
+        "99998": {
+          "camp": 6,
+          "bossSkillId": 998,
+          "entity": 802,
+          "soldierConfig": 12,
+          "soldierEntity": 9002
+        },
+        "99999": {
+          "camp": 5,
+          "bossSkillId": 999,
+          "entity": 801,
+          "soldierConfig": 11,
+          "soldierEntity": 9001
+        }
+      },
+      "evidence": [
+        "Boss.Init wasmcode1 f68533 @0x14ad7d4..0x14ad86c",
+        "Boss.GetSoldierEntity f68534 @0x14ade64..0x14adebe",
+        "generated/tables/CampConfig.json",
+        "generated/tables/SoldierConfig.json",
+        "generated/tables/EntityModelConfig.json"
+      ]
+    },
+    {
+      "id": "boss-transform",
+      "status": "confirmed",
+      "value": {
+        "position": "StarInfoCfg.pos / 100, Unity world position",
+        "worldEuler": [
+          0,
+          0,
+          0
+        ],
+        "rootScale": [
+          1,
+          1,
+          1
+        ],
+        "serializedAngleScaleConsumed": false,
+        "meshLocalPosition": [
+          0,
+          0,
+          -0.014000000432133675
+        ],
+        "meshLocalRotation": [
+          0.30070576071739197,
+          0,
+          0,
+          0.9537169933319092
+        ],
+        "meshLocalScale": [
+          0.05000000074505806,
+          0.05000000074505806,
+          0.05000000074505806
+        ]
+      },
+      "evidence": [
+        "Boss transform f68532 @0x14ad500..0x14ad663; zero caller Euler -> table14878 @0x14ad575",
+        "StarInfoCfg.SetTransform f7094 @0x29233e..0x292450",
+        "generated/flow-evidence.json coordinate-decimal-places/tower-world-position",
+        "boss01/boss02 source flat nodes mesh"
+      ]
+    },
+    {
+      "id": "boss-collider",
+      "status": "confirmed",
+      "value": {
+        "type": "BoxCollider",
+        "enabled": true,
+        "isTrigger": false,
+        "rootLocalSize": [
+          0.2800000011920929,
+          0.30000001192092896,
+          0.20000000298023224
+        ],
+        "rootLocalCenter": [
+          0,
+          0.07000000029802322,
+          0
+        ],
+        "dynamicChanges": "Boss.Init and transform callback do not write Collider fields",
+        "tag": "Boss.Init explicitly assigns Tags.Tag2, not source prefab tag0"
+      },
+      "evidence": [
+        "boss01/boss02 root native BoxCollider component",
+        "Boss.Init f68533 @0x14ad873..0x14ad89e GameObject.set_tag table53636",
+        "Boss transform f68532 @0x14ad500..0x14ad663"
+      ]
+    },
+    {
+      "id": "spine-original-data",
+      "status": "confirmed",
+      "value": {
+        "version": "4.1.16",
+        "scale": 0.009999999776482582,
+        "defaultMix": 0.20000000298023224,
+        "npc24": {
+          "bones": 94,
+          "slots": 25,
+          "ik": 2,
+          "path": 2
+        },
+        "npc26": {
+          "bones": 60,
+          "slots": 17,
+          "ik": 2,
+          "deform": "dead animation"
+        },
+        "cloud": {
+          "bones": 3,
+          "slots": 2
+        },
+        "mainAnimations": [
+          "attack",
+          "dead",
+          "idle",
+          "run",
+          "victory"
+        ],
+        "bossInitial": "idle loop",
+        "soldierInitial": "run loop"
+      },
+      "evidence": [
+        "resource-snapshots/boss-entities-20260928/spine-sources.json",
+        "source SkeletonAnimation and SkeletonDataAsset serialized fields"
+      ]
+    },
+    {
+      "id": "boss-shadow",
+      "status": "confirmed",
+      "value": {
+        "child": "bossshadow",
+        "color": "ConfigMgr.GetCampColor(camp)",
+        "sortingOrder": -6
+      },
+      "evidence": [
+        "Boss transform f68532 @0x14ad5f0..0x14ad650"
+      ]
+    },
+    {
+      "id": "boss-soldier-transform",
+      "status": "confirmed",
+      "value": {
+        "scale": 0.01600000075995922,
+        "position": "Soldier.Position",
+        "euler": "(camera.localEulerAngles.x,0,0), horizontal flip applies only shipType<=3",
+        "sortingLayer": "Default",
+        "sortingOrder": -5
+      },
+      "evidence": [
+        "Soldier setup f10312 @0x4b53bb..0x4b53cd shipType>=4 branch",
+        "Soldier.InitPosInfo f7127 @0x2958af..0x2959a3",
+        "Soldier.GetSoldierObj f10317 @0x4b58ba..0x4b5959"
+      ]
+    },
+    {
+      "id": "boss-soldier-animation",
+      "status": "confirmed",
+      "value": {
+        "PlayAniFalse": "run loop",
+        "PlayAniTrue": "dead nonloop",
+        "deathDrift": "independent X/Z random[-.1,.1], Y0; tween duration cached dead animation duration minus.05"
+      },
+      "evidence": [
+        "Soldier.PlayAni f7125 @0x295638..0x2956bf",
+        "Soldier death f10315 @0x4b561e..0x4b569b"
+      ]
+    },
+    {
+      "id": "boss-action-animation-clocks",
+      "status": "confirmed",
+      "value": {
+        "1": "attack nonloop -> WaitForSeconds(1) -> hit logic -> idle loop",
+        "6": "attack nonloop -> WaitForSeconds(1) -> hit logic -> idle loop",
+        "2": "attack nonloop -> WaitForSeconds(1) -> fire loop, each iteration including last yields WaitForSeconds(skill2_duration/skill2_first) -> idle loop",
+        "5": "attack nonloop; independent Running Tower.Update dt accumulator > skill1_duration returns idle loop and disables rain root",
+        "interruption": "BossUseSkill stops prior coroutine before switch; unknown/no-op action cancels pending coroutine without automatically returning idle"
+      },
+      "evidence": [
+        "BossUseSkill f31312 @0xb8935c..0xb8940c",
+        "action1 coroutine f46042 @0xf9c28e..0xf9c7ea",
+        "action2 coroutine f40243 @0xe16940..0xe170ac",
+        "action6 coroutine f42687 @0xea741c..0xea7918",
+        "Boss3UseSkill1 f31313 @0xb89461..0xb894a2",
+        "Boss.Update @0x14ad1b6..0x14ad233"
+      ]
+    },
+    {
+      "id": "rain-visual-placement",
+      "status": "confirmed",
+      "value": {
+        "effectRoot": "hdzd_effect_boss05_01_1",
+        "worldPosition": "chosen player tower position",
+        "Rain.localPositionY": "1.2 - effectRoot.localPosition.z * .696",
+        "cloud.localPositionY": ".7 - effectRoot.localPosition.z * .696",
+        "enabled": "effect root SetActive(true)"
+      },
+      "evidence": [
+        "Boss3UseSkill1 @0xb8956f..0xb89632; table10695 target method requires explicit API confirmation before implementing field interpretation",
+        "flow_boss_api.py resolves wasmcode1 direct f10695=GFRunning.UnityExtension.SetLocalPositionY, table25271; table53978=get_localPosition"
+      ]
+    },
+    {
+      "id": "boss-retry-lifecycle",
+      "status": "confirmed",
+      "value": {
+        "clear": "stops retained action coroutine, disables rain204 and effect100/104, clears raining224 and elapsed220",
+        "init": "initializes original SkeletonAnimation and sets idle loop",
+        "noInventedDeath": "Boss.ChangeScore forwards Tower.ChangeScore then emits BossHealthChange. No Boss dead/victory animation transition found; exact dead literal reference exists only in Soldier.PlayAni."
+      },
+      "evidence": [
+        "Boss.Clear f68535 @0x14adf93..0x14ae03f",
+        "Boss.Init f68533 @0x14ade3e..0x14ade55",
+        "Boss.ChangeScore f68536 @0x14ae046..0x14ae05f",
+        "Complete WASM literal4086392 use scan: only wasmcode f7125"
+      ]
+    },
+    {
+      "id": "boss-soldier-dynamic-shadow",
+      "status": "confirmed",
+      "value": {
+        "entity": 9034,
+        "AssetName": "QBDyShadow",
+        "parent": "shadowRoot",
+        "name": "shadow",
+        "localPosition": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "evidence": [
+        "Soldier setup f10312 @0x4b546d..0x4b54e0",
+        "Soldier.SetShadow f7124 @0x295558..0x295629",
+        "generated/tables/EntityModelConfig.json"
+      ]
+    }
+  ],
+  "sourceAssets": [
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-2805175160648972110",
+      "name": "npc24.atlas",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "sourceSha256": "6b837a7ae969659c542e180c851fa6aa2800f2c53f9df3a2bdd0b23c794160af",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.atlas.txt",
+      "sha256": "c4157e8af951387fc2cdd0ecfacf723a8ca08ad6a0fdb90a1a2a83854a08ed81"
+    },
+    {
+      "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-2613148055829038102",
+      "name": "npc24",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+      "sourceSha256": "6b837a7ae969659c542e180c851fa6aa2800f2c53f9df3a2bdd0b23c794160af",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.txt",
+      "sha256": "2f1fd97dd7c4adabb53505e37fb2de9a44ee2675e68759bb79ca5096ff8f3783",
+      "version": "4.1.16",
+      "bones": 94,
+      "slots": 25,
+      "ik": [
+        {
+          "name": "line01_IK",
+          "bones": [
+            "bone2",
+            "bone3"
+          ],
+          "target": "bone5"
+        },
+        {
+          "name": "line02_IK",
+          "order": 1,
+          "bones": [
+            "bone4",
+            "bone15"
+          ],
+          "target": "bone16",
+          "bendPositive": false
+        }
+      ],
+      "transformConstraints": null,
+      "pathConstraints": [
+        {
+          "name": "line01",
+          "order": 2,
+          "bones": [
+            "bone2a",
+            "bone2b",
+            "bone2c",
+            "bone2d",
+            "bone2e",
+            "bone2f",
+            "bone2g",
+            "bone2h",
+            "bone2i",
+            "bone2j",
+            "bone2k",
+            "bone2l"
+          ],
+          "target": "line01",
+          "spacingMode": "percent",
+          "rotateMode": "chainScale",
+          "spacing": 0.084
+        },
+        {
+          "name": "line02",
+          "order": 3,
+          "bones": [
+            "bone4a",
+            "bone4b",
+            "bone4c",
+            "bone4d",
+            "bone4e",
+            "bone4f",
+            "bone4g",
+            "bone4h",
+            "bone4i",
+            "bone4j",
+            "bone4k",
+            "bone4l"
+          ],
+          "target": "line02",
+          "spacingMode": "percent",
+          "rotateMode": "chainScale",
+          "spacing": 0.083
+        }
+      ],
+      "animations": {
+        "attack": [
+          "slots",
+          "bones"
+        ],
+        "dead": [
+          "slots",
+          "bones"
+        ],
+        "idle": [
+          "slots",
+          "bones"
+        ],
+        "run": [
+          "slots",
+          "bones"
+        ],
+        "victory": [
+          "slots",
+          "bones"
+        ]
+      }
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-4925732027355184233",
+      "name": "cloud",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/cloud.txt",
+      "sha256": "ed96fc6f445d2fe6b2421d8c524fcf0b2c9fd1e92f0eb7a11dc92b43d8bb1bb3",
+      "version": "4.1.16",
+      "bones": 3,
+      "slots": 2,
+      "ik": null,
+      "transformConstraints": null,
+      "pathConstraints": null,
+      "animations": {
+        "animation": [
+          "bones"
+        ]
+      }
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-667853312334905757",
+      "name": "npc26",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.txt",
+      "sha256": "58776d769c4adbf54b425306668a8b58f88166ea5a48abd5418048e7c3942e4d",
+      "version": "4.1.16",
+      "bones": 60,
+      "slots": 17,
+      "ik": [
+        {
+          "name": "L_leg",
+          "order": 1,
+          "bones": [
+            "bone34",
+            "bone35"
+          ],
+          "target": "L_leg",
+          "bendPositive": false
+        },
+        {
+          "name": "R_leg",
+          "bones": [
+            "bone32",
+            "bone33"
+          ],
+          "target": "R_leg",
+          "bendPositive": false
+        }
+      ],
+      "transformConstraints": null,
+      "pathConstraints": null,
+      "animations": {
+        "attack": [
+          "bones"
+        ],
+        "dead": [
+          "bones",
+          "ik",
+          "attachments"
+        ],
+        "idle": [
+          "bones"
+        ],
+        "run": [
+          "bones",
+          "ik"
+        ],
+        "victory": [
+          "bones"
+        ]
+      }
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-69053168959669514",
+      "name": "cloud.atlas",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/cloud.atlas.txt",
+      "sha256": "5a54d0584a2c68ac7917864f42abe3033eea5af6c65a5ed94266a239c663e8bb"
+    },
+    {
+      "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:3822428077056672803",
+      "name": "npc26.atlas",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+      "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.atlas.txt",
+      "sha256": "faea02520a11fbc41945fe3b72830ae5c2e3aba688846eaf6338d0b7454db7f6"
+    },
+    {
+      "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-2805175160648972110",
+      "name": "npc24.atlas",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+      "sourceSha256": "8f072181544f14ce3e4e9ac58fda7f15769dab1ffdf3f08d386ef672ac5dba4d",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.atlas.txt",
+      "sha256": "c4157e8af951387fc2cdd0ecfacf723a8ca08ad6a0fdb90a1a2a83854a08ed81"
+    },
+    {
+      "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-2613148055829038102",
+      "name": "npc24",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+      "sourceSha256": "8f072181544f14ce3e4e9ac58fda7f15769dab1ffdf3f08d386ef672ac5dba4d",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.txt",
+      "sha256": "2f1fd97dd7c4adabb53505e37fb2de9a44ee2675e68759bb79ca5096ff8f3783",
+      "version": "4.1.16",
+      "bones": 94,
+      "slots": 25,
+      "ik": [
+        {
+          "name": "line01_IK",
+          "bones": [
+            "bone2",
+            "bone3"
+          ],
+          "target": "bone5"
+        },
+        {
+          "name": "line02_IK",
+          "order": 1,
+          "bones": [
+            "bone4",
+            "bone15"
+          ],
+          "target": "bone16",
+          "bendPositive": false
+        }
+      ],
+      "transformConstraints": null,
+      "pathConstraints": [
+        {
+          "name": "line01",
+          "order": 2,
+          "bones": [
+            "bone2a",
+            "bone2b",
+            "bone2c",
+            "bone2d",
+            "bone2e",
+            "bone2f",
+            "bone2g",
+            "bone2h",
+            "bone2i",
+            "bone2j",
+            "bone2k",
+            "bone2l"
+          ],
+          "target": "line01",
+          "spacingMode": "percent",
+          "rotateMode": "chainScale",
+          "spacing": 0.084
+        },
+        {
+          "name": "line02",
+          "order": 3,
+          "bones": [
+            "bone4a",
+            "bone4b",
+            "bone4c",
+            "bone4d",
+            "bone4e",
+            "bone4f",
+            "bone4g",
+            "bone4h",
+            "bone4i",
+            "bone4j",
+            "bone4k",
+            "bone4l"
+          ],
+          "target": "line02",
+          "spacingMode": "percent",
+          "rotateMode": "chainScale",
+          "spacing": 0.083
+        }
+      ],
+      "animations": {
+        "attack": [
+          "slots",
+          "bones"
+        ],
+        "dead": [
+          "slots",
+          "bones"
+        ],
+        "idle": [
+          "slots",
+          "bones"
+        ],
+        "run": [
+          "slots",
+          "bones"
+        ],
+        "victory": [
+          "slots",
+          "bones"
+        ]
+      }
+    },
+    {
+      "id": "CAB-71eaaec95335b868bad1572e7073e552:-667853312334905757",
+      "name": "npc26",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+      "sourceSha256": "8e50655f05bf88c6ec1b891f5b91c3482e3fdc09c09aec7d4aecef2f8b9b90cb",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.txt",
+      "sha256": "58776d769c4adbf54b425306668a8b58f88166ea5a48abd5418048e7c3942e4d",
+      "version": "4.1.16",
+      "bones": 60,
+      "slots": 17,
+      "ik": [
+        {
+          "name": "L_leg",
+          "order": 1,
+          "bones": [
+            "bone34",
+            "bone35"
+          ],
+          "target": "L_leg",
+          "bendPositive": false
+        },
+        {
+          "name": "R_leg",
+          "bones": [
+            "bone32",
+            "bone33"
+          ],
+          "target": "R_leg",
+          "bendPositive": false
+        }
+      ],
+      "transformConstraints": null,
+      "pathConstraints": null,
+      "animations": {
+        "attack": [
+          "bones"
+        ],
+        "dead": [
+          "bones",
+          "ik",
+          "attachments"
+        ],
+        "idle": [
+          "bones"
+        ],
+        "run": [
+          "bones",
+          "ik"
+        ],
+        "victory": [
+          "bones"
+        ]
+      }
+    },
+    {
+      "id": "CAB-71eaaec95335b868bad1572e7073e552:3822428077056672803",
+      "name": "npc26.atlas",
+      "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+      "sourceSha256": "8e50655f05bf88c6ec1b891f5b91c3482e3fdc09c09aec7d4aecef2f8b9b90cb",
+      "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.atlas.txt",
+      "sha256": "faea02520a11fbc41945fe3b72830ae5c2e3aba688846eaf6338d0b7454db7f6"
+    }
+  ],
+  "nativeManifest": "generated/resource-snapshots/boss-entities-20260928/prepared/native-import.json",
+  "runtime": {
+    "repository": "https://github.com/EsotericSoftware/spine-runtimes",
+    "branch": "4.1",
+    "commit": "77a5db0ec6d16331f5efbaa7662bba9355bd3424",
+    "path": "UnityProject/Assets/AreaBattle/ThirdParty/Spine41",
+    "license": "LICENSE",
+    "provenance": "PROVENANCE.json",
+    "originalSourceModified": false
+  },
+  "implementation": {
+    "Importer": "RecoveredBossImporter.Import",
+    "validation": "RecoveredBossValidation.Run: 6 passed including fresh-process atlas material and production special scene/retry",
+    "clock": "RecoveredBossVisual.Step(unityScaledDelta) disables automatic SkeletonAnimation and manually updates skeleton/mesh + native PS",
+    "ViewIntegration": "Source model/collider, Boss soldier with shadow9034, action1/2/5/6 animation clock and rain target, retry lifecycle connected. BattleSkillPresentation owns later attached Boss status effects."
+  },
+  "remaining": [
+    "Boss action2 original projectile/impact resource consumer still not connected in this slice (core Projectile102 exists).",
+    "Other inactive children of entity821 recorded but not imported as whole; require confirmed consumers before adding.",
+    "Original matched-frame capture acceptance pending; full goal remains incomplete."
+  ],
+  "evidenceFiles": [
+    {
+      "path": "analysis\\flow_boss_methods.txt",
+      "sha256": "936df5935c2dfdbd2bf961339257602157d9075bfc4973066e87fa94a2d240f6"
+    },
+    {
+      "path": "analysis\\flow_boss_soldier_methods.txt",
+      "sha256": "063124ada7d58ba60c5c12ca952d51f3d9fe4b6eb1632a2bd912c7634c71a06d"
+    },
+    {
+      "path": "analysis\\flow_boss_transform.txt",
+      "sha256": "178498e7a98adfe87e2e99c3846e88943b0b85c5ae6a8ab0547a43c50b0a0859"
+    },
+    {
+      "path": "analysis\\flow_boss_coroutines.txt",
+      "sha256": "fb8ae440922ee546e30ced800c11754c1d8772a17240a2e20b00c2e8871c2501"
+    }
+  ],
+  "validation": {
+    "import": {
+      "passed": true,
+      "prefabCount": 4,
+      "resourceCount": 75,
+      "prefabs": [
+        {
+          "name": "boss01",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/Bosses/boss01.prefab",
+          "sourceRoot": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:1340524183715397125",
+          "particleSystems": 5,
+          "renderers": 7,
+          "trails": 0,
+          "animations": 0,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "boss02",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/Bosses/boss02.prefab",
+          "sourceRoot": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-8821823304576018547",
+          "particleSystems": 4,
+          "renderers": 7,
+          "trails": 0,
+          "animations": 0,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "bossSoldier1",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/Bosses/bossSoldier1.prefab",
+          "sourceRoot": "CAB-00f5755f1c988a9722cbc3238004bfdf:-7480038615564240810",
+          "particleSystems": 0,
+          "renderers": 1,
+          "trails": 0,
+          "animations": 0,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "bossSoldier2",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/Bosses/bossSoldier2.prefab",
+          "sourceRoot": "CAB-71eaaec95335b868bad1572e7073e552:6117705946438673630",
+          "particleSystems": 0,
+          "renderers": 1,
+          "trails": 0,
+          "animations": 0,
+          "skinnedRenderers": 0
+        }
+      ],
+      "scope": "Four original models, native source components and Spine 4.1.16 skeleton/atlas data. Pinned official Spine 4.1 runtime; original game executable components excluded. Frame comparison remains pending."
+    },
+    "mechanicsAndPresentation": {
+      "schemaVersion": "1.0",
+      "unityVersion": "6000.0.68f1",
+      "passed": true,
+      "checks": [
+        {
+          "id": "boss-four-original-spine-models",
+          "result": "pass",
+          "detail": ""
+        },
+        {
+          "id": "boss-source-colliders-and-mesh-transform",
+          "result": "pass",
+          "detail": ""
+        },
+        {
+          "id": "boss-spine-manual-clock-and-deformation",
+          "result": "pass",
+          "detail": ""
+        },
+        {
+          "id": "boss-soldier-source-scale-and-death",
+          "result": "pass",
+          "detail": ""
+        },
+        {
+          "id": "boss-cloud-original-spine",
+          "result": "pass",
+          "detail": ""
+        },
+        {
+          "id": "boss-production-view-model-collider-clock",
+          "result": "pass",
+          "detail": ""
+        }
+      ],
+      "limitations": "Original Boss prefab and Spine data checks; original matched-frame visual acceptance remains pending."
+    },
+    "embeddedImport": {
+      "passed": true,
+      "prefabCount": 4,
+      "resourceCount": 59,
+      "packedCurves": 32,
+      "curveSamples": 6072,
+      "prefabs": [
+        {
+          "name": "Hdzd_Effect_Wy_speedDown",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/BossEmbedded/Hdzd_Effect_Wy_speedDown.prefab",
+          "sourceRoot": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-7484581989977586475",
+          "particleSystems": 2,
+          "renderers": 6,
+          "trails": 0,
+          "animations": 0,
+          "animators": 1,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "Hdzd_Effect_Wy_speedUp",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/BossEmbedded/Hdzd_Effect_Wy_speedUp.prefab",
+          "sourceRoot": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-2700617283758054626",
+          "particleSystems": 4,
+          "renderers": 8,
+          "trails": 0,
+          "animations": 0,
+          "animators": 1,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "Hdzd_Effect_icicle",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/BossEmbedded/Hdzd_Effect_icicle.prefab",
+          "sourceRoot": "CAB-68a3634b9a99c5a2a10a36b772e4e945:8217516532788768465",
+          "particleSystems": 8,
+          "renderers": 8,
+          "trails": 0,
+          "animations": 0,
+          "animators": 1,
+          "skinnedRenderers": 0
+        },
+        {
+          "name": "QBDyShadow",
+          "prefab": "Assets/AreaBattle/Resources/Recovered/BossEmbedded/QBDyShadow.prefab",
+          "sourceRoot": "CAB-68a3634b9a99c5a2a10a36b772e4e945:5543199552207237062",
+          "particleSystems": 0,
+          "renderers": 1,
+          "trails": 0,
+          "animations": 0,
+          "animators": 1,
+          "skinnedRenderers": 0
+        }
+      ],
+      "scope": "Native source components/curves/renderer fields; original Bullet code excluded. Custom shaders translated from retained original GLES. Current-engine mip generation is reported in source manifest."
+    },
+    "particleReadback": {
+      "native": "generated/resource-snapshots/boss-entities-20260928/particle-roundtrip-validation.json",
+      "embedded": "generated/resource-snapshots/boss-entities-20260928/embedded-particle-migration-evidence.json"
+    },
+    "screenshots": [
+      {
+        "path": "analysis/captures/boss99998-spine-5seconds.png",
+        "sha256": "f7a43d1a11cf0ba8b64882933ecd76b083a5c98db91e0dae3d805df1e2f155fb"
+      },
+      {
+        "path": "analysis/captures/boss99998-spine-action-03seconds.png",
+        "sha256": "a044f847da6436a8a61090dcca39b9aa6eb8e48b323ba4cf7581cfa7e8643e30"
+      },
+      {
+        "path": "analysis/captures/boss99998-spine-initial.png",
+        "sha256": "23e5f00d6ce41163cdf436871ba108bdc83599a8158574b0466f90e0557c7e38"
+      },
+      {
+        "path": "analysis/captures/boss99998-spine-retry.png",
+        "sha256": "f01bee752fe4659b6de817d46ae802f609aecad0ed600fffb6dc76faa9b455fd"
+      },
+      {
+        "path": "analysis/captures/boss99999-spine-5seconds.png",
+        "sha256": "933a1f277e30bd24ba9947231093b1d2d8fb93e03b8035a3c5cdbd760c27b2ea"
+      },
+      {
+        "path": "analysis/captures/boss99999-spine-action-03seconds.png",
+        "sha256": "e54055bd99cc21abe0b8a3fb48a96ec53c3e231744b1376aa830f1087162f6aa"
+      },
+      {
+        "path": "analysis/captures/boss99999-spine-initial.png",
+        "sha256": "502499e39b05aa8aa8c21ee00fffa42670b5f5824a593c8a72183129f2249fbf"
+      },
+      {
+        "path": "analysis/captures/boss99999-spine-retry.png",
+        "sha256": "fcc58864e7b4299b55bfcc716f53450d2ee0da82cd002236bbc3c047a936d6ac"
+      }
+    ],
+    "acceptance": "Fresh process rendered visibility verified by tool image inspection; not original-frame pixel equivalence."
+  }
+}

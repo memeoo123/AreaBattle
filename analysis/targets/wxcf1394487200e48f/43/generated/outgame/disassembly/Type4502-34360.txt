@@ -1,0 +1,20 @@
+; Original class: SevendayActivityControl
+; Type4502.IsUnlock; wasmcode function 4809; offset=1659203 size=33
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00195144  block [-64]
+00195146    local.get [0]
+00195148    i32.load [2, 8]
+0019514b    if [-64]
+0019514d      i32.const [1]
+0019514f      local.set [1]
+00195151      local.get [0]
+00195153      local.get [0]
+00195155      call [5689] ; SevendayActivityControl.IsInActivity
+00195158      br_if [1]
+0019515a    end []
+0019515b    i32.const [0]
+0019515d    local.set [1]
+0019515f  end []
+00195160  local.get [1]
+00195162  return []
+00195163  end []

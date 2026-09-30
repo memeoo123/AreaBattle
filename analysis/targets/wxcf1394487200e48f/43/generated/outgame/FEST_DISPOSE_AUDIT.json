@@ -1,0 +1,21 @@
+{
+  "status": "immediate_close_and_dispose_restored_async_owner_pending",
+  "source": [
+    "disassembly/Type3544-27328.txt",
+    "disassembly/Type3544-27338.txt",
+    "disassembly/Type4438-34025.txt",
+    "disassembly/Type3558-27401.txt"
+  ],
+  "verified": [
+    "CloseBefore virtual slot22 before disposed flag then Object.Destroy request then Dispose slot12",
+    "Dispose clears objectList8/gameObject12/transform16/args44, sets disposed26, retains rectTransform20",
+    "Fest Dispose then sends CheckUISortAfterStartUIShow with null args, repeated disposal repeats send",
+    "Original prefab used; injected destroy records ordering without claiming Unity deferred timing"
+  ],
+  "remaining": [
+    "Async _closeUI27347 and original CloseSelf/UIModule routing",
+    "Actual production owner and deferred destruction PlayMode",
+    "Full Player E2E"
+  ],
+  "integratedChecks": 587
+}

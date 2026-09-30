@@ -1,0 +1,57 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Blend" {
+Properties {
+
+[Enum(Off, 0, On, 1)] _ZwriteCtrl1 ("ZwriteCtrl", Float) = 0.0
+
+[Enum(UnityEngine.Rendering.CullMode)] _CullModeCtrl1 ("CullModeCtrl", Float) = 0.0
+
+[Enum(UnityEngine.Rendering.BlendMode)] _SrcAlpha1 ("SrcAlpha", Float) = 5.0
+
+[Enum(UnityEngine.Rendering.BlendMode)] _DesValue1 ("DesValue", Float) = 1.0
+
+_Main_color ("主贴图颜色", Color) = (1,1,1,1)
+
+_Main_tex ("主贴图", 2D) = "white" { }
+
+_Vector0 ("主帖图流动方向", Vector) = (0,0,0,0)
+
+_TextureSample0 ("扭曲帖图", 2D) = "white" { }
+
+_Float1 ("扭曲强度", Range(0, 1)) = 0.0
+
+_Vector1 ("扭曲帖图流动方向", Vector) = (0,0,0,0)
+
+_TextureSample1 ("遮罩图", 2D) = "white" { }
+
+_TextureSample3 ("扭曲遮罩图", 2D) = "white" { }
+
+[Toggle(_KEYWORD0)] _Keyword0 ("Dissolve", Float) = 0.0
+
+_TextureSample2 ("溶解图", 2D) = "white" { }
+
+_Float4 ("软硬边溶解", Range(0, 1)) = 0.0
+
+}
+SubShader {
+ Tags { "IsEmissive" = "true" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" }
+ Pass {
+ Name "FORWARD"
+  Tags { "IsEmissive" = "true" "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" "SHADOWSUPPORT" = "true" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 11574
+}
+ Pass {
+ Name "FORWARD"
+  Tags { "IsEmissive" = "true" "LIGHTMODE" = "FORWARDADD" "QUEUE" = "Overlay+0" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 86548
+}
+}
+}

@@ -1,0 +1,25 @@
+; Original class: FestActUI
+; Type4438.yQUd; wasmcode function 3513; offset=1096346 size=53
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0010ba9b  i32.const [0]
+0010ba9d  call [1193] ; GameModule.get_Audio
+0010baa0  i32.const [1]
+0010baa2  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+0010baa5  i32.const [0]
+0010baa7  call [1201] ; Extension.PlayerVoice
+0010baaa  local.get [0]
+0010baac  local.set [1]
+0010baae  local.get [0]
+0010bab0  i32.load [2, 0]
+0010bab3  local.set [0]
+0010bab5  local.get [1]
+0010bab7  local.get [0]
+0010bab9  i32.const [120]
+0010babc  i32.add []
+0010babd  i32.load [2, 192]
+0010bac1  local.get [0]
+0010bac3  i32.load [2, 308]
+0010bac7  global.set [3]
+0010bac9  global.get [3]
+0010bacb  call_indirect [0, 0]
+0010bace  end []

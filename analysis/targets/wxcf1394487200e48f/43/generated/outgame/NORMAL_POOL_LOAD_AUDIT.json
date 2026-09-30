@@ -1,0 +1,37 @@
+{
+  "status": "spawn_cache_callbacks_verified_native_provider_pending",
+  "source": [
+    "disassembly/Type3667-28681.txt",
+    "disassembly/Type3667-28683.txt",
+    "disassembly/Type3667-28684.txt",
+    "disassembly/Type3667-28685.txt",
+    "disassembly/Type3666-28687.txt",
+    "disassembly/Type3666-28688.txt",
+    "disassembly/Type3666-28689.txt",
+    "disassembly/Type3666-28690.txt"
+  ],
+  "verified": [
+    "Pool hit returns target without resource load",
+    "Concurrent misses issue separate loads; first completed non-null handle cached; every callback instantiates its delivered handle",
+    "Cached handle creates additional instances while original pooled instances are in use",
+    "Null cached-mode completion performs no callback",
+    "Instances registered as spawned before caller completion",
+    "Actual fly coroutine now uses NormalPool adapter and recovered native prefab resources"
+  ],
+  "staticOnly": [
+    "Legacy ResourcesInfo name resolution and synchronous Assetbundle callback branch",
+    "Invalid mainObject warns and notifies null then continues instead of returning"
+  ],
+  "remaining": [
+    "NormalPool DestroyObjectPool: remove from manager, destroy root, unload resource/asset caches in source order",
+    "Original NewResLoadHelper and ReleaseUIForm provider internals",
+    "Production account and page resource composition",
+    "Full Player build and end-to-end acceptance"
+  ],
+  "knownDifferences": [
+    "Host interfaces expose original provider operations; recovered native resources currently supplied in isolated fixture",
+    "Pool exception/logging differences retained"
+  ],
+  "checks": 528,
+  "playmodeChecks": 8
+}

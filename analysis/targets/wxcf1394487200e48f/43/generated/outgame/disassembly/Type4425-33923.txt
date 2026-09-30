@@ -1,0 +1,25 @@
+; Original class: TopInfoUI
+; Type4425.Tgbz; wasmcode function 15528; offset=7497608 size=68
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00726789  i32.const [5007070]
+0072678e  i32.load8_u [0, 0]
+00726791  i32.eqz []
+00726792  if [-64]
+00726794    i32.const [3989352]
+00726799    call [900] ; 
+0072679c    i32.const [4018548]
+007267a1    call [900] ; 
+007267a4    i32.const [5007070]
+007267a9    i32.const [1]
+007267ab    i32.store8 [0, 0]
+007267ae  end []
+007267af  i32.const [0]
+007267b1  call [1143] ; GameModule.get_UI
+007267b4  i32.const [3989352]
+007267b9  i32.load [2, 0]
+007267bc  call [1032] ; 
+007267bf  i32.const [4018548]
+007267c4  i32.load [2, 0]
+007267c7  call [1367] ; 
+007267ca  drop []
+007267cb  end []

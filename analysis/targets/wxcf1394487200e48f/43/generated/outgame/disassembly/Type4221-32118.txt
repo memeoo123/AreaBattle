@@ -1,0 +1,63 @@
+; Original class: EffectCellection
+; Type4221.Destory; wasmcode function 19826; offset=8908104 size=151
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0087ed49  i32.const [5007181]
+0087ed4e  i32.load8_u [0, 0]
+0087ed51  i32.eqz []
+0087ed52  if [-64]
+0087ed54    i32.const [3936516]
+0087ed59    call [900] ; 
+0087ed5c    i32.const [5007181]
+0087ed61    i32.const [1]
+0087ed63    i32.store8 [0, 0]
+0087ed66  end []
+0087ed67  local.get [0]
+0087ed69  local.get [0]
+0087ed6b  call [6118] ; EffectCellection.Clear
+0087ed6e  local.get [0]
+0087ed70  i32.load [2, 8]
+0087ed73  local.set [1]
+0087ed75  i32.const [3936516]
+0087ed7a  i32.load [2, 0]
+0087ed7d  call [901] ; 
+0087ed80  local.get [0]
+0087ed82  i32.const [8]
+0087ed84  i32.add []
+0087ed85  local.set [0]
+0087ed87  block [-64]
+0087ed89    local.get [1]
+0087ed8b    i32.const [0]
+0087ed8d    i32.const [0]
+0087ed8f    call [946] ; Object.op_Inequality
+0087ed92    i32.eqz []
+0087ed93    br_if [0]
+0087ed95    local.get [0]
+0087ed97    i32.load [2, 0]
+0087ed9a    i32.const [0]
+0087ed9c    call [943] ; Component.get_gameObject
+0087ed9f    local.set [1]
+0087eda1    i32.const [3936516]
+0087eda6    i32.load [2, 0]
+0087eda9    call [901] ; 
+0087edac    local.get [1]
+0087edae    i32.const [0]
+0087edb0    i32.const [0]
+0087edb2    call [946] ; Object.op_Inequality
+0087edb5    i32.eqz []
+0087edb6    br_if [0]
+0087edb8    local.get [0]
+0087edba    i32.load [2, 0]
+0087edbd    i32.const [0]
+0087edbf    call [943] ; Component.get_gameObject
+0087edc2    local.set [1]
+0087edc4    i32.const [3936516]
+0087edc9    i32.load [2, 0]
+0087edcc    call [901] ; 
+0087edcf    local.get [1]
+0087edd1    i32.const [0]
+0087edd3    call [1165] ; Object.Destroy
+0087edd6  end []
+0087edd7  local.get [0]
+0087edd9  i32.const [0]
+0087eddb  i32.store [2, 0]
+0087edde  end []

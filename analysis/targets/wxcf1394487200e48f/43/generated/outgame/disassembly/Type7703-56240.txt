@@ -1,0 +1,21 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.ServerLoginAppOtherTypeStatic; wasmcode1 function 38428; offset=14429193 size=54
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00dc2c0a  i32.const [5005426]
+00dc2c0f  i32.load8_u [0, 0]
+00dc2c12  i32.eqz []
+00dc2c13  if [-64]
+00dc2c15    i32.const [3942528]
+00dc2c1a    i32.const [1605]
+00dc2c1d    call_indirect [0, 0]
+00dc2c20    i32.const [5005426]
+00dc2c25    i32.const [1]
+00dc2c27    i32.store8 [0, 0]
+00dc2c2a  end []
+00dc2c2b  i32.const [3942528]
+00dc2c30  i32.load [2, 0]
+00dc2c33  i32.const [1149]
+00dc2c36  call_indirect [0, 0]
+00dc2c39  i32.const [0]
+00dc2c3b  call [7175] ; XYXLogin.Login3
+00dc2c3e  end []

@@ -1,0 +1,29 @@
+; Original class: DBTSDKManager
+; Type3135.CheckVideoIsReady; wasmcode function 12682; offset=6109845 size=70
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d3a96  i32.const [4988615]
+005d3a9b  i32.load8_u [0, 0]
+005d3a9e  i32.eqz []
+005d3a9f  if [-64]
+005d3aa1    i32.const [3927988]
+005d3aa6    call [900] ; 
+005d3aa9    i32.const [4988615]
+005d3aae    i32.const [1]
+005d3ab0    i32.store8 [0, 0]
+005d3ab3  end []
+005d3ab4  i32.const [5]
+005d3ab6  i32.const [0]
+005d3ab8  i32.const [0]
+005d3aba  call [2073] ; SDKExtension.IsOpen
+005d3abd  if [-64]
+005d3abf    local.get [0]
+005d3ac1    i32.const [3927988]
+005d3ac6    i32.load [2, 0]
+005d3ac9    i32.load [2, 92]
+005d3acc    i32.load [2, 0]
+005d3acf    i32.const [0]
+005d3ad1    call [4538] ; AdsManager.isVideoReady
+005d3ad4    local.get [0]
+005d3ad6    call [6173] ; DBTSDKManager.ChangeVideoBtnState
+005d3ad9  end []
+005d3ada  end []

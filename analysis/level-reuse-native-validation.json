@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Original native obstacle instance/pool across reset and immediate reentry; native EffectCellection children/root deferred destruction. Tower/Soldier and EffectModule callbacks are explicit fixture services; full battle/Main or real effect-module behavior is not claimed.",
+    "checks": [
+        "Source level initialization creates one pooled original Entity81 instance",
+        "Reset hides native obstacle and clears level list while preserving pool/template",
+        "All-soldier reset closes registered effects and clears native root reference, retaining entity",
+        "Effect children and collection root survive until native frame boundary",
+        "Reset retains source object pools/playstate and clears only source check flags plus line field168",
+        "Immediate reentry reuses the same native obstacle without instantiating a second entity",
+        "Frame boundary removes only scheduled effect subtree; reused obstacle and level asset survive",
+        "Second reset still clears inactive soldier, with no fabricated close for empty native effect root",
+        "After deferred destruction source SetEntity recreates a correctly parented collection root",
+        "Final effect cleanup does not destroy retained pooled entity or configuration"
+    ]
+}

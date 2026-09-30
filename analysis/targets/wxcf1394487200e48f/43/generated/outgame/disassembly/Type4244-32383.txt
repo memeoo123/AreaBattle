@@ -1,0 +1,24 @@
+; Original class: LoginCtrl
+; Type4244.LoginComplete; wasmcode function 18758; offset=8468698 size=59
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+008138db  i32.const [5007329]
+008138e0  i32.load8_u [0, 0]
+008138e3  i32.eqz []
+008138e4  if [-64]
+008138e6    i32.const [4018256]
+008138eb    call [900] ; 
+008138ee    i32.const [5007329]
+008138f3    i32.const [1]
+008138f5    i32.store8 [0, 0]
+008138f8  end []
+008138f9  local.get [0]
+008138fb  local.get [1]
+008138fd  local.get [2]
+008138ff  i32.const [0]
+00813901  call [11466] ; LoginProcedureBase.LoginComplete
+00813904  i32.const [0]
+00813906  call [1143] ; GameModule.get_UI
+00813909  i32.const [4018256]
+0081390e  i32.load [2, 0]
+00813911  call [1877] ; 
+00813914  end []

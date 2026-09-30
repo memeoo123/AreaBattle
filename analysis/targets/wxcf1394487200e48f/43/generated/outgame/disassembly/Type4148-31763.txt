@@ -1,0 +1,42 @@
+; Original class: OldData
+; Type4148..ctor; wasmcode function 18368; offset=8271979 size=122
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007e386c  i32.const [5010264]
+007e3871  i32.load8_u [0, 0]
+007e3874  i32.eqz []
+007e3875  if [-64]
+007e3877    i32.const [3976688]
+007e387c    call [900] ; 
+007e387f    i32.const [3975688]
+007e3884    call [900] ; 
+007e3887    i32.const [3923828]
+007e388c    call [900] ; 
+007e388f    i32.const [3923620]
+007e3894    call [900] ; 
+007e3897    i32.const [5010264]
+007e389c    i32.const [1]
+007e389e    i32.store8 [0, 0]
+007e38a1  end []
+007e38a2  i32.const [3923620]
+007e38a7  i32.load [2, 0]
+007e38aa  call [903] ; 
+007e38ad  local.set [1]
+007e38af  local.get [1]
+007e38b1  i32.const [3975688]
+007e38b6  i32.load [2, 0]
+007e38b9  call [944] ; 
+007e38bc  local.get [0]
+007e38be  local.get [1]
+007e38c0  i32.store [2, 8]
+007e38c3  i32.const [3923828]
+007e38c8  i32.load [2, 0]
+007e38cb  call [903] ; 
+007e38ce  local.set [1]
+007e38d0  local.get [1]
+007e38d2  i32.const [3976688]
+007e38d7  i32.load [2, 0]
+007e38da  call [944] ; 
+007e38dd  local.get [0]
+007e38df  local.get [1]
+007e38e1  i32.store [2, 12]
+007e38e4  end []

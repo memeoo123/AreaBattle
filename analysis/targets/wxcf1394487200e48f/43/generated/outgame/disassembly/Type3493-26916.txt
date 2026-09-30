@@ -1,0 +1,236 @@
+; Original class: LangModule
+; Type3493.ReadLangData; wasmcode function 11654; offset=5697297 size=685
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127)]
+0056ef14  i32.const [4989117]
+0056ef19  i32.load8_u [0, 0]
+0056ef1c  i32.eqz []
+0056ef1d  if [-64]
+0056ef1f    i32.const [3928176]
+0056ef24    call [900] ; 
+0056ef27    i32.const [3929208]
+0056ef2c    call [900] ; 
+0056ef2f    i32.const [3993516]
+0056ef34    call [900] ; 
+0056ef37    i32.const [3929800]
+0056ef3c    call [900] ; 
+0056ef3f    i32.const [3959564]
+0056ef44    call [900] ; 
+0056ef47    i32.const [3959572]
+0056ef4c    call [900] ; 
+0056ef4f    i32.const [3974668]
+0056ef54    call [900] ; 
+0056ef57    i32.const [3974672]
+0056ef5c    call [900] ; 
+0056ef5f    i32.const [3926996]
+0056ef64    call [900] ; 
+0056ef67    i32.const [4105804] ; STRING "表[语言表]中有相同键("
+0056ef6c    call [900] ; 
+0056ef6f    i32.const [4060416] ; STRING "Lang:设置多语言数据"
+0056ef74    call [900] ; 
+0056ef77    i32.const [4060424] ; STRING "Lang:配置文件AB资源为null"
+0056ef7c    call [900] ; 
+0056ef7f    i32.const [4039048] ; STRING ")"
+0056ef84    call [900] ; 
+0056ef87    i32.const [4060440] ; STRING "LanguageConfig"
+0056ef8c    call [900] ; 
+0056ef8f    i32.const [4989117]
+0056ef94    i32.const [1]
+0056ef96    i32.store8 [0, 0]
+0056ef99  end []
+0056ef9a  block [-64]
+0056ef9c    local.get [0]
+0056ef9e    i32.load8_u [0, 32]
+0056efa1    br_if [0]
+0056efa3    i32.const [3929800]
+0056efa8    i32.load [2, 0]
+0056efab    call [901] ; 
+0056efae    block [-64]
+0056efb0      i32.const [3929800]
+0056efb5      i32.load [2, 0]
+0056efb8      i32.load [2, 92]
+0056efbb      i32.load [2, 4]
+0056efbe      br_if [0]
+0056efc0      i32.const [3928176]
+0056efc5      i32.load [2, 0]
+0056efc8      call [901] ; 
+0056efcb      i32.const [5011829]
+0056efd0      i32.load8_u [0, 0]
+0056efd3      i32.eqz []
+0056efd4      if [-64]
+0056efd6        i32.const [3928176]
+0056efdb        call [900] ; 
+0056efde        i32.const [5011829]
+0056efe3        i32.const [1]
+0056efe5        i32.store8 [0, 0]
+0056efe8      end []
+0056efe9      i32.const [3928176]
+0056efee      i32.load [2, 0]
+0056eff1      call [901] ; 
+0056eff4      i32.const [3928176]
+0056eff9      i32.load [2, 0]
+0056effc      i32.load [2, 92]
+0056efff      i32.load8_u [0, 36]
+0056f002      br_if [0]
+0056f004      i32.const [3926996]
+0056f009      i32.load [2, 0]
+0056f00c      i32.const [1]
+0056f00e      call [909] ; 
+0056f011      local.set [0]
+0056f013      local.get [0]
+0056f015      i32.const [4060424] ; STRING "Lang:配置文件AB资源为null"
+0056f01a      i32.load [2, 0]
+0056f01d      call [905] ; 
+0056f020      local.get [0]
+0056f022      i32.const [4060424] ; STRING "Lang:配置文件AB资源为null"
+0056f027      i32.load [2, 0]
+0056f02a      i32.store [2, 16]
+0056f02d      i32.const [3929208]
+0056f032      i32.load [2, 0]
+0056f035      call [901] ; 
+0056f038      local.get [0]
+0056f03a      i32.const [0]
+0056f03c      i32.const [2087] ; TABLE CLog.Error
+0056f03f      global.set [3]
+0056f041      i32.const [2087] ; TABLE CLog.Error
+0056f044      call_indirect [0, 0]
+0056f047      return []
+0056f048    end []
+0056f049    i32.const [3926996]
+0056f04e    i32.load [2, 0]
+0056f051    i32.const [1]
+0056f053    call [909] ; 
+0056f056    local.set [1]
+0056f058    local.get [1]
+0056f05a    i32.const [4060416] ; STRING "Lang:设置多语言数据"
+0056f05f    i32.load [2, 0]
+0056f062    call [905] ; 
+0056f065    local.get [1]
+0056f067    i32.const [4060416] ; STRING "Lang:设置多语言数据"
+0056f06c    i32.load [2, 0]
+0056f06f    i32.store [2, 16]
+0056f072    i32.const [3929208]
+0056f077    i32.load [2, 0]
+0056f07a    call [901] ; 
+0056f07d    local.get [1]
+0056f07f    i32.const [0]
+0056f081    call [2845] ; CLog.LangLog
+0056f084    i32.const [3929800]
+0056f089    i32.load [2, 0]
+0056f08c    call [901] ; 
+0056f08f    block [-64]
+0056f091      i32.const [4060440] ; STRING "LanguageConfig"
+0056f096      i32.load [2, 0]
+0056f099      i32.const [3993516]
+0056f09e      i32.load [2, 0]
+0056f0a1      call [4480] ; 
+0056f0a4      local.set [2]
+0056f0a6      local.get [2]
+0056f0a8      i32.eqz []
+0056f0a9      br_if [0]
+0056f0ab      i32.const [0]
+0056f0ad      local.set [1]
+0056f0af      loop [-64]
+0056f0b1        i32.const [3974668]
+0056f0b6        i32.load [2, 0]
+0056f0b9        drop []
+0056f0ba        local.get [1]
+0056f0bc        local.get [2]
+0056f0be        i32.load [2, 12]
+0056f0c1        i32.ge_s []
+0056f0c2        br_if [1]
+0056f0c4        block [-64]
+0056f0c6          local.get [0]
+0056f0c8          i32.load [2, 24]
+0056f0cb          local.get [2]
+0056f0cd          local.get [1]
+0056f0cf          i32.const [3974672]
+0056f0d4          i32.load [2, 0]
+0056f0d7          call [930] ; 
+0056f0da          i32.load [2, 8]
+0056f0dd          i32.const [3959572]
+0056f0e2          i32.load [2, 0]
+0056f0e5          call [987] ; 
+0056f0e8          if [-64]
+0056f0ea            i32.const [3926996]
+0056f0ef            i32.load [2, 0]
+0056f0f2            i32.const [1]
+0056f0f4            call [909] ; 
+0056f0f7            local.set [4]
+0056f0f9            local.get [2]
+0056f0fb            local.get [1]
+0056f0fd            i32.const [3974672]
+0056f102            i32.load [2, 0]
+0056f105            call [930] ; 
+0056f108            local.set [3]
+0056f10a            i32.const [4105804] ; STRING "表[语言表]中有相同键("
+0056f10f            i32.load [2, 0]
+0056f112            local.get [3]
+0056f114            i32.load [2, 8]
+0056f117            i32.const [4039048] ; STRING ")"
+0056f11c            i32.load [2, 0]
+0056f11f            i32.const [0]
+0056f121            call [955] ; String.Concat
+0056f124            local.set [3]
+0056f126            local.get [4]
+0056f128            local.get [3]
+0056f12a            call [905] ; 
+0056f12d            local.get [4]
+0056f12f            local.get [3]
+0056f131            i32.store [2, 16]
+0056f134            i32.const [3929208]
+0056f139            i32.load [2, 0]
+0056f13c            call [901] ; 
+0056f13f            local.get [4]
+0056f141            i32.const [0]
+0056f143            i32.const [2087] ; TABLE CLog.Error
+0056f146            global.set [3]
+0056f148            i32.const [2087] ; TABLE CLog.Error
+0056f14b            call_indirect [0, 0]
+0056f14e            br [1]
+0056f150          end []
+0056f151          local.get [0]
+0056f153          i32.load [2, 24]
+0056f156          local.get [2]
+0056f158          local.get [1]
+0056f15a          i32.const [3974672]
+0056f15f          i32.load [2, 0]
+0056f162          call [930] ; 
+0056f165          i32.load [2, 8]
+0056f168          local.get [2]
+0056f16a          local.get [1]
+0056f16c          i32.const [3974672]
+0056f171          i32.load [2, 0]
+0056f174          call [930] ; 
+0056f177          i32.const [3959564]
+0056f17c          i32.load [2, 0]
+0056f17f          call [932] ; 
+0056f182        end []
+0056f183        local.get [1]
+0056f185        i32.const [1]
+0056f187        i32.add []
+0056f188        local.set [1]
+0056f18a        br [0]
+0056f18c      end []
+0056f18d      unreachable []
+0056f18e    end []
+0056f18f    local.get [0]
+0056f191    i32.const [1]
+0056f193    i32.store8 [0, 32]
+0056f196    local.get [0]
+0056f198    i32.load [2, 36]
+0056f19b    local.set [1]
+0056f19d    local.get [1]
+0056f19f    i32.eqz []
+0056f1a0    br_if [0]
+0056f1a2    local.get [0]
+0056f1a4    local.get [1]
+0056f1a6    local.get [1]
+0056f1a8    i32.const [24755] ; TABLE LangModule.ApplyOnlineLangList
+0056f1ac    global.set [3]
+0056f1ae    i32.const [24755] ; TABLE LangModule.ApplyOnlineLangList
+0056f1b2    call_indirect [2, 0]
+0056f1b5    local.get [0]
+0056f1b7    i32.const [0]
+0056f1b9    i32.store [2, 36]
+0056f1bc  end []
+0056f1bd  end []

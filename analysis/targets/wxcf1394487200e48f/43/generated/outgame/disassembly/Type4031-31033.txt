@@ -1,0 +1,24 @@
+; Original class: CommanderSkillData
+; Type4031.get_Unlock; wasmcode function 8111; offset=3844897 size=57
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+003aab22  i32.const [5008695]
+003aab27  i32.load8_u [0, 0]
+003aab2a  i32.eqz []
+003aab2b  if [-64]
+003aab2d    i32.const [3953440]
+003aab32    call [900] ; 
+003aab35    i32.const [5008695]
+003aab3a    i32.const [1]
+003aab3c    i32.store8 [0, 0]
+003aab3f  end []
+003aab40  i32.const [3953440]
+003aab45  i32.load [2, 0]
+003aab48  call [935] ; 
+003aab4b  i32.const [0]
+003aab4d  call [3326] ; LevelControl.get_RealCurLevel
+003aab50  local.get [0]
+003aab52  local.get [0]
+003aab54  call [6198] ; CommanderSkillData.get_UnlockLevel
+003aab57  i32.ge_s []
+003aab58  return []
+003aab59  end []

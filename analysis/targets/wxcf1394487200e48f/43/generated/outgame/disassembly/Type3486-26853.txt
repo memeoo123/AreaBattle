@@ -1,0 +1,29 @@
+; Original class: GlobalData
+; Type3486.get_LastShowEvaluateUIDay; wasmcode1 function 27710; offset=10537282 size=80
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00a0c943  i32.const [4989064]
+00a0c948  i32.load8_u [0, 0]
+00a0c94b  i32.eqz []
+00a0c94c  if [-64]
+00a0c94e    i32.const [3941104]
+00a0c953    i32.const [1605]
+00a0c956    call_indirect [0, 0]
+00a0c959    i32.const [4054880] ; STRING "GF_LastShowEvaluateUIDay"
+00a0c95e    i32.const [1605]
+00a0c961    call_indirect [0, 0]
+00a0c964    i32.const [4989064]
+00a0c969    i32.const [1]
+00a0c96b    i32.store8 [0, 0]
+00a0c96e  end []
+00a0c96f  i32.const [3941104]
+00a0c974  i32.load [2, 0]
+00a0c977  i32.const [1149]
+00a0c97a  call_indirect [0, 0]
+00a0c97d  i32.const [4054880] ; STRING "GF_LastShowEvaluateUIDay"
+00a0c982  i32.load [2, 0]
+00a0c985  i32.const [-1]
+00a0c987  i32.const [0]
+00a0c989  i32.const [25250] ; TABLE UserDataPrefs.GetInt
+00a0c98d  call_indirect [3, 0]
+00a0c990  return []
+00a0c991  end []

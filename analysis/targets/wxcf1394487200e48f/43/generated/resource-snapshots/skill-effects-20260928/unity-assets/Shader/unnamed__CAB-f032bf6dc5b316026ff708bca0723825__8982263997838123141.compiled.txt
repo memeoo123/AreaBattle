@@ -1,0 +1,19 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Unlit/Simple" {
+Properties {
+
+}
+SubShader {
+ LOD 100
+ Tags { "RenderType" = "Opaque" }
+ Pass {
+  LOD 100
+  Tags { "RenderType" = "Opaque" }
+  GpuProgramID 8828
+}
+}
+}

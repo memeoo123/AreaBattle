@@ -1,0 +1,50 @@
+; Original shared generic: ProcedureManager.StartProcedure
+; ProcedureFsmGeneric.StartProcedure; wasmcode function 11036; offset=5339123 size=127
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+005177f6  local.get [1]
+005177f8  i32.load [2, 28]
+005177fb  i32.eqz []
+005177fc  if [-64]
+005177fe    i32.const [3989352]
+00517803    call [900] ; 
+00517806    local.get [1]
+00517808    call [954] ; 
+0051780b  end []
+0051780c  local.get [0]
+0051780e  i32.load [2, 20]
+00517811  local.set [0]
+00517813  local.get [0]
+00517815  i32.eqz []
+00517816  if [-64]
+00517818    i32.const [3932324]
+0051781d    call [902] ; 
+00517820    call [903] ; 
+00517823    local.set [0]
+00517825    local.get [0]
+00517827    i32.const [4079600] ; STRING "You must initialize procedure first."
+0051782c    call [902] ; 
+0051782f    i32.const [0]
+00517831    i32.const [10659] ; TABLE GameFrameworkException..ctor
+00517835    global.set [3]
+00517837    i32.const [10659] ; TABLE GameFrameworkException..ctor
+0051783b    call_indirect [2, 0]
+0051783e    local.get [0]
+00517840    i32.const [4009772]
+00517845    call [902] ; 
+00517848    i32.const [1106]
+0051784b    global.set [3]
+0051784d    i32.const [1106]
+00517850    call_indirect [0, 0]
+00517853    unreachable []
+00517854  end []
+00517855  i32.const [3989352]
+0051785a  i32.load [2, 0]
+0051785d  call [1032] ; 
+00517860  local.set [2]
+00517862  local.get [1]
+00517864  i32.load [2, 28]
+00517867  i32.load [2, 0]
+0051786a  local.get [0]
+0051786c  local.get [2]
+0051786e  call [7801] ; 
+00517871  end []

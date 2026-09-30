@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "validationLevel": "Static bytecode control-flow and literal evidence; original-game live interaction not observed",
+  "rules": [
+    {
+      "id": "adjacency-cache",
+      "status": "confirmed",
+      "statement": "GetStarAllLine(towerIndex) lazily creates one list in the dictionary at WayLineControl+136; it is a candidate adjacency list, not the active outgoing-line count.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-GetStarAllLine-100665552.txt",
+          "wasmByteStart": "00154469",
+          "wasmByteEnd": "001544c3",
+          "sha256": "97a30d20c30b3a7863f6e1bbe79c5c0fc7939c39c6ece313bcc1d01fbbd49d90"
+        }
+      ]
+    },
+    {
+      "id": "adjacency-generation",
+      "status": "confirmed",
+      "statement": "InitStarLine async MoveNext waits for level readiness and one EndOfFrame, then iterates active tower pairs i<j and calls GetWayLineEntity. It next builds each tower adjacency by collecting every pooled WayLine.IsContainTower(tower), then sorts by ascending LineLength.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/__zX_lp-MoveNext-100665604.txt",
+          "wasmByteStart": "00486cc2",
+          "wasmByteEnd": "00486ce0",
+          "sha256": "0fa65cf5e466090804c9cca8e78d88cb287e75d9bd108b3a127b841f97f5f017"
+        },
+        {
+          "path": "generated/controls-disassembly/__zX_lp-MoveNext-100665604.txt",
+          "wasmByteStart": "00487425",
+          "wasmByteEnd": "00487579",
+          "sha256": "0fa65cf5e466090804c9cca8e78d88cb287e75d9bd108b3a127b841f97f5f017"
+        },
+        {
+          "path": "generated/controls-disassembly/__zX_lp-MoveNext-100665604.txt",
+          "wasmByteStart": "00486e1c",
+          "wasmByteEnd": "004871ef",
+          "sha256": "0fa65cf5e466090804c9cca8e78d88cb287e75d9bd108b3a127b841f97f5f017"
+        },
+        {
+          "path": "generated/controls-disassembly/__c-TnyuYV_-100665602.txt",
+          "wasmByteStart": "0070f0fb",
+          "wasmByteEnd": "0070f111",
+          "sha256": "1a092d9ad2b3b32b8284ceb77bf516a91b6082f99eeed8b0b371743ee31ae0a2"
+        },
+        {
+          "path": "generated/controls-disassembly/CoreProbe-function2297-2297.txt",
+          "wasmByteStart": "000ab9c2",
+          "wasmByteEnd": "000ab9f1",
+          "sha256": "f054fa5ba7eefc05e4b7940e893382c56bdfca114d4dc7b3311e3a5a1f2cc51c"
+        }
+      ],
+      "asyncTypeDefinitionIndex": 4238,
+      "asyncMoveNextFunction": 9892,
+      "sort": "lineA.LineLength.CompareTo(lineB.LineLength)",
+      "tieRule": "No secondary key in comparator; do not claim a stable tie order."
+    },
+    {
+      "id": "capsule-blocking",
+      "status": "confirmed",
+      "statement": "Potential lines use tower world positions and Physics overlap-capsule radius 0.029999999329447746 in the GamePlayer1 layer. Any collider whose GameObject differs from both endpoint GameObjects blocks creation. Existing pair lookup happens before this new-line test.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-GetWayLineEntity-100665560.txt",
+          "wasmByteStart": "00270e25",
+          "wasmByteEnd": "00270ed5",
+          "sha256": "bae38ce33633505568e39499538f442949829313271cd144aa7e77e0204adc18"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-GetOverlapCapsuleGameObj-100665583.txt",
+          "wasmByteStart": "0018a3f7",
+          "wasmByteEnd": "0018a407",
+          "sha256": "84c123cb41fdeb40eba1d0cc8ed1803bc6a647ca247b1d072a1c77a5069ea59d"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_oWgo__-100665571.txt",
+          "wasmByteStart": "001d699e",
+          "wasmByteEnd": "001d6a16",
+          "sha256": "c0284ac450824333dfecee44c26240c739d32f79b31ecc225a429910c9203c63"
+        },
+        {
+          "path": "generated/controls-disassembly/Layers-.cctor-100665864.txt",
+          "wasmByteStart": "00821183",
+          "wasmByteEnd": "0082118b",
+          "sha256": "07e297a02caee7a7dac8468d0f961bb640761f6859553069af88d5db652e98b1"
+        }
+      ],
+      "radius": 0.029999999329447746,
+      "layer": "GamePlayer1"
+    },
+    {
+      "id": "line-direction-states",
+      "status": "confirmed",
+      "statement": "WayLine canonical endpoints are small/large tower index. State 0 none, 1 small→large, 2 large→small, 3 both. SetLineState rejects already-both and already-same-direction. Adding the reverse direction between same-camp towers replaces direction; different camps become bidirectional.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLine-SetLineState-100665522.txt",
+          "wasmByteStart": "0027025e",
+          "wasmByteEnd": "002702a4",
+          "sha256": "f627f9e6160bc536e856c7f164fba51e5895d47553d951a5e4579e48ec731f52"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLine-IsFromThisTower-100665529.txt",
+          "wasmByteStart": "00122c56",
+          "wasmByteEnd": "00122ca4",
+          "sha256": "e740df00dde60e7bcaf239d0d6d8037729189c053751a238f185825bb5d75911"
+        }
+      ],
+      "states": {
+        "0": "none",
+        "1": "small-to-large",
+        "2": "large-to-small",
+        "3": "bidirectional"
+      }
+    },
+    {
+      "id": "remove-outgoing-only",
+      "status": "confirmed",
+      "statement": "RemoveStarAllLine(tower) iterates WayLines but removes only IsFromThisTower=true. In a bidirectional line RemoveLine(tower) leaves the opposite direction. Inbound-only lines remain. This corrects any earlier interpretation that camp-change deletes every touching line.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-RemoveStarAllLine-100665555.txt",
+          "wasmByteStart": "00270b18",
+          "wasmByteEnd": "00270b38",
+          "sha256": "84253303636a164fff249a22309c8b46d6450a033c9a08d59688e7fadce10bfd"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLine-RemoveLine-100665524.txt",
+          "wasmByteStart": "00270675",
+          "wasmByteEnd": "002706a8",
+          "sha256": "7dbafef6bd966f522693e04a8c76ebe66f95cab0039a1a2fae9b00bbe24cd66f"
+        }
+      ],
+      "transitionCases": [
+        {
+          "before": 3,
+          "remove": "small",
+          "after": 2
+        },
+        {
+          "before": 3,
+          "remove": "large",
+          "after": 1
+        },
+        {
+          "before": 1,
+          "remove": "small",
+          "after": 0
+        },
+        {
+          "before": 1,
+          "remove": "large",
+          "after": 1
+        },
+        {
+          "before": 2,
+          "remove": "small",
+          "after": 2
+        },
+        {
+          "before": 2,
+          "remove": "large",
+          "after": 0
+        }
+      ]
+    },
+    {
+      "id": "line-count-outgoing",
+      "status": "confirmed",
+      "statement": "GetTowerAllLine filters IsFromThisTower; SetTowerLineNum writes that list count through virtual slot 9. Incoming lines therefore do not consume the tower outgoing count.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-GetTowerAllLine-100665577.txt",
+          "wasmByteStart": "0027123c",
+          "wasmByteEnd": "00271246",
+          "sha256": "abf185eabff24a798d5f318a714af27fdfebbc19970df6ad68b3841efc8b0c86"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-SetTowerLineNum-100665597.txt",
+          "wasmByteStart": "002709b3",
+          "wasmByteEnd": "002709ed",
+          "sha256": "261d2e036c5b5f4190b83d0125e6efefcb7bfaf8fe1ed78cfe8106a89dcdc63d"
+        }
+      ]
+    },
+    {
+      "id": "ai-connect-validation",
+      "status": "confirmed",
+      "statement": "AITryConnectLine rejects ArrowTower, source state 4 (Unlinkable per combat evidence), self target, and failed virtual get_IsCanAddLine. It obtains the pair and calls SetLineState only if a non-null line exists.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-AITryConnectLine-100665563.txt",
+          "wasmByteStart": "006e334c",
+          "wasmByteEnd": "006e33aa",
+          "sha256": "8f8e0267abb8259dbd60f9fdaabc48533511e42bf2cb9e3c8aab04a69d03a927"
+        }
+      ]
+    },
+    {
+      "id": "press-player-source",
+      "status": "confirmed",
+      "statement": "Touch-down handler f14747 is gated by CanDraw and an overlay/input-block flag, raycasts tower/obstacle layer GamePlayer1, resolves the GameObject to a tower, requires source camp == LevelControl.playerCamp, and requires virtual get_IsCanAddLine. Rejected selection clears source fields. It preserves original tutorial-specific level-2 gate instead of inventing generic behavior.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-M____rR-100665576.txt",
+          "wasmByteStart": "006e2988",
+          "wasmByteEnd": "006e2a81",
+          "sha256": "a0a15857d3804349916cb99dd3cf5bbc23e0f9832ba95d9eb20b04f179a9a645"
+        }
+      ],
+      "handlerFunction": 14747,
+      "sourceObjectField": 116,
+      "sourceTowerField": 124,
+      "pendingTargetObjectField": 120,
+      "dragActiveField": 64
+    },
+    {
+      "id": "drag-preview-release-commit",
+      "status": "confirmed",
+      "statement": "Touch-move f9378 projects pointer to Scenes10 ground, updates preview and potential target; it does not call SetLineState. Touch-up f14746 calls f9379 only when source and target objects exist, then resets selection, active flag, cutting marker and preview. f9379 requires distinct valid towers, stored selected source identity, and source capacity, then GetWayLineEntity and SetLineState.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_uZly_h-100665574.txt",
+          "wasmByteStart": "004579dc",
+          "wasmByteEnd": "00457b4f",
+          "sha256": "686d7a3d554d1d63e11e567965ff721d3f8e154671a30f602043c7bc8713187f"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-O_PYk_S-100665554.txt",
+          "wasmByteStart": "006e28e6",
+          "wasmByteEnd": "006e2928",
+          "sha256": "030f30d4ca16cdf47dcf7e0467822a570b5d297e49dd879f767cf2ac33f9a811"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_xt_lM_-100665584.txt",
+          "wasmByteStart": "00458628",
+          "wasmByteEnd": "004586e8",
+          "sha256": "4e6dc456e1e9d4a82cff9443762958ae10c6a186e32ff6794a9d4635e362eab8"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-n__fO_a-100665570.txt",
+          "wasmByteStart": "0018a1f7",
+          "wasmByteEnd": "0018a247",
+          "sha256": "9a42cfae3512c24279c4ecffa1de6d396e4a921772b8157c369a0a43d0a2ff96"
+        }
+      ]
+    },
+    {
+      "id": "nearest-drag-collider",
+      "status": "confirmed",
+      "statement": "Preview helper f9377 excludes the source GameObject and chooses the nearest collider by world-space Euclidean transform-position distance, starting at 1000. It replaces on <=, so equal-distance candidates choose the last collider in the engine-provided result order.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-q_VST__-100665580.txt",
+          "wasmByteStart": "00457859",
+          "wasmByteEnd": "00457955",
+          "sha256": "463e14071c462155eafaa56e8f1cd8f82e288b2729c8f1821345a2958a54bdbd"
+        }
+      ],
+      "maxInitialDistance": 1000,
+      "replaceOnEqual": true
+    },
+    {
+      "id": "cut-player-direction",
+      "status": "confirmed",
+      "statement": "When dragging from empty ground, f9378 checks the segment between previous/current world points against GameNPC1, obtains the WayLine from the hit object, and calls RemoveLine(LevelControl.playerCamp). That overload removes direction(s) whose source endpoint camp matches the player; enemy outbound direction survives a bidirectional cut.",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_uZly_h-100665574.txt",
+          "wasmByteStart": "00458525",
+          "wasmByteEnd": "004585dd",
+          "sha256": "686d7a3d554d1d63e11e567965ff721d3f8e154671a30f602043c7bc8713187f"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLine-RemoveLine-100665494.txt",
+          "wasmByteStart": "00457451",
+          "wasmByteEnd": "00457483",
+          "sha256": "8f95623c0337bbbd8b17665a5e300f377da5fe0f9ed38024c205530e9934e894"
+        }
+      ],
+      "layer": "GameNPC1"
+    },
+    {
+      "id": "interaction-feedback",
+      "status": "confirmed",
+      "statement": "Press tower plays audio ID 2015; successful pair obtained on release plays 2007; a cut hit plays 2008. Connection/cut paths request a 50 ms vibration (type 2).",
+      "evidence": [
+        {
+          "path": "generated/controls-disassembly/WayLineControl-M____rR-100665576.txt",
+          "wasmByteStart": "006e2a02",
+          "wasmByteEnd": "006e2a0e",
+          "sha256": "a0a15857d3804349916cb99dd3cf5bbc23e0f9832ba95d9eb20b04f179a9a645"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_xt_lM_-100665584.txt",
+          "wasmByteStart": "004586ba",
+          "wasmByteEnd": "004586dd",
+          "sha256": "4e6dc456e1e9d4a82cff9443762958ae10c6a186e32ff6794a9d4635e362eab8"
+        },
+        {
+          "path": "generated/controls-disassembly/WayLineControl-_uZly_h-100665574.txt",
+          "wasmByteStart": "0045859e",
+          "wasmByteEnd": "004585c1",
+          "sha256": "686d7a3d554d1d63e11e567965ff721d3f8e154671a30f602043c7bc8713187f"
+        }
+      ],
+      "audio": {
+        "press": 2015,
+        "connect": 2007,
+        "cut": 2008
+      },
+      "vibrateMs": 50
+    }
+  ],
+  "crossReferences": [
+    {
+      "path": "generated/combat-evidence.json",
+      "rules": [
+        "tower-capacity-grade",
+        "arrow-basic"
+      ],
+      "claim": "Ordinary tower maximum outgoing slots 1/2/3 at trunc(score)<=9 / <=29 / >29; ArrowTower refuses outgoing connection. Combat agent verified source functions."
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "preview-segment-style",
+      "status": "unknown",
+      "description": "Exact WayLineCircle.DrawParaLine preview shape/color choices across every blocked/nearest-target branch are not yet normalized into a standalone behavioral model.",
+      "verificationPlan": "Read WayLineCircle implementation and compare a captured drag path with source overlay."
+    },
+    {
+      "id": "input-live-baseline",
+      "status": "unknown",
+      "description": "No live original-game touch trace or visual baseline was obtained by this subtask.",
+      "verificationPlan": "Replay own-tower drag, blocker drag, enemy reverse line and empty-ground cut in original game and restored build."
+    },
+    {
+      "id": "tutorial-special-branches",
+      "status": "unknown",
+      "description": "Level-2 tutorial-specific press restrictions remain in bytecode evidence; full tutorial phase integration belongs to level-flow recovery.",
+      "verificationPlan": "Cross-reference LevelControl.CurLevel and GuideControl phase predicates before enabling original tutorial gates."
+    }
+  ]
+}

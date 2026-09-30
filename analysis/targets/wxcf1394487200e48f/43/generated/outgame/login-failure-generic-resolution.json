@@ -1,0 +1,93 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3968540,
+      "encodedUsage": "0xc00093fb",
+      "methodSpecIndex": 18941,
+      "methodSpecAddress": 710300,
+      "methodSpec": [
+        29301,
+        1599,
+        5098
+      ],
+      "declaringType": "FsmState`1",
+      "method": "ChangeState",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4601,
+            "name": "LoginProcedureBase"
+          }
+        ],
+        [
+          {
+            "type": "0x120000",
+            "data": 4606,
+            "name": "IdelState"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3968556,
+      "encodedUsage": "0xc0009403",
+      "methodSpecIndex": 18945,
+      "methodSpecAddress": 710348,
+      "methodSpec": [
+        29301,
+        1599,
+        5102
+      ],
+      "declaringType": "FsmState`1",
+      "method": "ChangeState",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4601,
+            "name": "LoginProcedureBase"
+          }
+        ],
+        [
+          {
+            "type": "0x120000",
+            "data": 4611,
+            "name": "LoginSuccess"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

@@ -1,0 +1,145 @@
+; Original class: RankControl
+; Type4134.OnInit; wasmcode function 17949; offset=7972768 size=385
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0079a7a1  i32.const [5008571]
+0079a7a6  i32.load8_u [0, 0]
+0079a7a9  i32.eqz []
+0079a7aa  if [-64]
+0079a7ac    i32.const [4037132] ; STRING "#FCFFB6"
+0079a7b1    call [900] ; 
+0079a7b4    i32.const [4037128] ; STRING "#6D69A1"
+0079a7b9    call [900] ; 
+0079a7bc    i32.const [4037120] ; STRING "#00BFCF"
+0079a7c1    call [900] ; 
+0079a7c4    i32.const [5008571]
+0079a7c9    i32.const [1]
+0079a7cb    i32.store8 [0, 0]
+0079a7ce  end []
+0079a7cf  i32.const [4037132] ; STRING "#FCFFB6"
+0079a7d4  i32.load [2, 0]
+0079a7d7  local.get [0]
+0079a7d9  i32.const [24]
+0079a7db  i32.add []
+0079a7dc  i32.const [0]
+0079a7de  call [3180] ; ColorUtility.TryParseHtmlString
+0079a7e1  drop []
+0079a7e2  i32.const [4037128] ; STRING "#6D69A1"
+0079a7e7  i32.load [2, 0]
+0079a7ea  local.get [0]
+0079a7ec  i32.const [40]
+0079a7ee  i32.add []
+0079a7ef  i32.const [0]
+0079a7f1  call [3180] ; ColorUtility.TryParseHtmlString
+0079a7f4  drop []
+0079a7f5  i32.const [4037120] ; STRING "#00BFCF"
+0079a7fa  i32.load [2, 0]
+0079a7fd  local.get [0]
+0079a7ff  i32.const [56]
+0079a801  i32.add []
+0079a802  i32.const [0]
+0079a804  call [3180] ; ColorUtility.TryParseHtmlString
+0079a807  drop []
+0079a808  local.get [0]
+0079a80a  i32.const [0]
+0079a80c  call [1060] ; ConfigMgr.get_Instance
+0079a80f  i32.load [2, 264]
+0079a813  i32.load [2, 16]
+0079a816  i32.store [2, 80]
+0079a819  local.get [0]
+0079a81b  i32.const [0]
+0079a81d  call [1060] ; ConfigMgr.get_Instance
+0079a820  i32.load [2, 264]
+0079a824  i32.load [2, 20]
+0079a827  i32.store [2, 84]
+0079a82a  local.get [0]
+0079a82c  i32.const [0]
+0079a82e  call [1060] ; ConfigMgr.get_Instance
+0079a831  i32.load [2, 264]
+0079a835  i32.load [2, 12]
+0079a838  i32.store [2, 76]
+0079a83b  local.get [0]
+0079a83d  i32.const [0]
+0079a83f  call [1060] ; ConfigMgr.get_Instance
+0079a842  i32.load [2, 264]
+0079a846  i32.load [2, 24]
+0079a849  i32.load [2, 16]
+0079a84c  i32.store [2, 92]
+0079a84f  local.get [0]
+0079a851  i32.const [0]
+0079a853  call [1060] ; ConfigMgr.get_Instance
+0079a856  i32.load [2, 264]
+0079a85a  i32.load [2, 24]
+0079a85d  i32.load [2, 20]
+0079a860  i32.store [2, 88]
+0079a863  local.get [0]
+0079a865  i32.const [0]
+0079a867  call [1060] ; ConfigMgr.get_Instance
+0079a86a  i32.load [2, 264]
+0079a86e  i32.load [2, 32]
+0079a871  f32.convert_i32_s []
+0079a872  f32.const [1000.0]
+0079a877  f32.div []
+0079a878  f32.store [2, 104]
+0079a87b  local.get [0]
+0079a87d  i32.const [0]
+0079a87f  call [1060] ; ConfigMgr.get_Instance
+0079a882  i32.load [2, 264]
+0079a886  i32.load [2, 40]
+0079a889  f32.convert_i32_s []
+0079a88a  f32.const [1000.0]
+0079a88f  f32.div []
+0079a890  f32.store [2, 108]
+0079a893  local.get [0]
+0079a895  i32.const [0]
+0079a897  call [1060] ; ConfigMgr.get_Instance
+0079a89a  i32.load [2, 264]
+0079a89e  i32.load [2, 44]
+0079a8a1  f32.convert_i32_s []
+0079a8a2  f32.const [1000.0]
+0079a8a7  f32.div []
+0079a8a8  f32.store [2, 112]
+0079a8ab  local.get [0]
+0079a8ad  i32.const [0]
+0079a8af  call [1060] ; ConfigMgr.get_Instance
+0079a8b2  i32.load [2, 264]
+0079a8b6  i32.load [2, 48]
+0079a8b9  f32.convert_i32_s []
+0079a8ba  f32.const [10.0]
+0079a8bf  f32.div []
+0079a8c0  f32.store [2, 116]
+0079a8c3  local.get [0]
+0079a8c5  i32.const [0]
+0079a8c7  call [1060] ; ConfigMgr.get_Instance
+0079a8ca  i32.load [2, 264]
+0079a8ce  i32.load [2, 36]
+0079a8d1  f32.convert_i32_s []
+0079a8d2  f32.const [10.0]
+0079a8d7  f32.div []
+0079a8d8  f32.store [2, 120]
+0079a8db  local.get [0]
+0079a8dd  i32.const [0]
+0079a8df  call [1060] ; ConfigMgr.get_Instance
+0079a8e2  i32.load [2, 264]
+0079a8e6  i32.load [2, 28]
+0079a8e9  i32.load [2, 16]
+0079a8ec  i32.store [2, 124]
+0079a8ef  local.get [0]
+0079a8f1  i32.const [0]
+0079a8f3  call [1060] ; ConfigMgr.get_Instance
+0079a8f6  i32.load [2, 264]
+0079a8fa  i32.load [2, 28]
+0079a8fd  i32.load [2, 20]
+0079a900  i32.store [2, 128]
+0079a904  local.get [0]
+0079a906  local.get [0]
+0079a908  call [10942] ; RankControl.Tsff
+0079a90b  local.get [0]
+0079a90d  local.get [0]
+0079a90f  call [10946] ; RankControl.InitDefaultRankList
+0079a912  local.get [0]
+0079a914  local.get [0]
+0079a916  call [10945] ; RankControl.InitPlayerRank
+0079a919  local.get [0]
+0079a91b  local.get [0]
+0079a91d  call [7384] ; RankControl.InitHomeInfo
+0079a920  end []

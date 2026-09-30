@@ -1,0 +1,23 @@
+; Original class: TweenManager
+; Type9962.ResetCapacities; wasmcode1 function 20617; offset=8306013 size=59
+; signature={'args': [127], 'returns': []}; localGroups=[]
+007ebd5e  i32.const [4985493]
+007ebd63  i32.load8_u [0, 0]
+007ebd66  i32.eqz []
+007ebd67  if [-64]
+007ebd69    i32.const [3940500]
+007ebd6e    i32.const [1605]
+007ebd71    call_indirect [0, 0]
+007ebd74    i32.const [4985493]
+007ebd79    i32.const [1]
+007ebd7b    i32.store8 [0, 0]
+007ebd7e  end []
+007ebd7f  i32.const [3940500]
+007ebd84  i32.load [2, 0]
+007ebd87  i32.const [1149]
+007ebd8a  call_indirect [0, 0]
+007ebd8d  i32.const [200]
+007ebd90  i32.const [50]
+007ebd92  i32.const [0]
+007ebd94  call [10935] ; TweenManager.SetCapacities
+007ebd97  end []

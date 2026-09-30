@@ -1,0 +1,148 @@
+; Original class: }Okqvk
+; Type4561.CreatePool; wasmcode function 9911; offset=4761867 size=418
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+0048a90e  i32.const [5001169]
+0048a913  i32.load8_u [0, 0]
+0048a916  i32.eqz []
+0048a917  if [-64]
+0048a919    i32.const [3929208]
+0048a91e    call [900] ; 
+0048a921    i32.const [3954204]
+0048a926    call [900] ; 
+0048a929    i32.const [3954208]
+0048a92e    call [900] ; 
+0048a931    i32.const [3973760]
+0048a936    call [900] ; 
+0048a939    i32.const [3973756]
+0048a93e    call [900] ; 
+0048a941    i32.const [3973780]
+0048a946    call [900] ; 
+0048a949    i32.const [3923232]
+0048a94e    call [900] ; 
+0048a951    i32.const [3926996]
+0048a956    call [900] ; 
+0048a959    i32.const [4008864]
+0048a95e    call [900] ; 
+0048a961    i32.const [3936516]
+0048a966    call [900] ; 
+0048a969    i32.const [4094868] ; STRING "prefab 加载错误，请检查"
+0048a96e    call [900] ; 
+0048a971    i32.const [5001169]
+0048a976    i32.const [1]
+0048a978    i32.store8 [0, 0]
+0048a97b  end []
+0048a97c  i32.const [3936516]
+0048a981  i32.load [2, 0]
+0048a984  call [901] ; 
+0048a987  local.get [1]
+0048a989  i32.const [0]
+0048a98b  i32.const [0]
+0048a98d  call [940] ; Object.op_Equality
+0048a990  if [-64]
+0048a992    i32.const [3926996]
+0048a997    i32.load [2, 0]
+0048a99a    i32.const [1]
+0048a99c    call [909] ; 
+0048a99f    local.set [3]
+0048a9a1    local.get [3]
+0048a9a3    i32.const [4094868] ; STRING "prefab 加载错误，请检查"
+0048a9a8    i32.load [2, 0]
+0048a9ab    call [905] ; 
+0048a9ae    local.get [3]
+0048a9b0    i32.const [4094868] ; STRING "prefab 加载错误，请检查"
+0048a9b5    i32.load [2, 0]
+0048a9b8    i32.store [2, 16]
+0048a9bb    i32.const [3929208]
+0048a9c0    i32.load [2, 0]
+0048a9c3    call [901] ; 
+0048a9c6    local.get [3]
+0048a9c8    i32.const [0]
+0048a9ca    i32.const [2087] ; TABLE CLog.Error
+0048a9cd    global.set [3]
+0048a9cf    i32.const [2087] ; TABLE CLog.Error
+0048a9d2    call_indirect [0, 0]
+0048a9d5  end []
+0048a9d6  i32.const [3936516]
+0048a9db  i32.load [2, 0]
+0048a9de  call [901] ; 
+0048a9e1  block [-64]
+0048a9e3    local.get [1]
+0048a9e5    i32.const [0]
+0048a9e7    i32.const [0]
+0048a9e9    call [946] ; Object.op_Inequality
+0048a9ec    i32.eqz []
+0048a9ed    br_if [0]
+0048a9ef    local.get [0]
+0048a9f1    i32.load [2, 12]
+0048a9f4    local.get [1]
+0048a9f6    i32.const [3954208]
+0048a9fb    i32.load [2, 0]
+0048a9fe    call [987] ; 
+0048aa01    br_if [0]
+0048aa03    i32.const [3923232]
+0048aa08    i32.load [2, 0]
+0048aa0b    call [903] ; 
+0048aa0e    local.set [3]
+0048aa10    local.get [3]
+0048aa12    i32.const [3973756]
+0048aa17    i32.load [2, 0]
+0048aa1a    call [944] ; 
+0048aa1d    local.get [0]
+0048aa1f    i32.load [2, 12]
+0048aa22    local.get [1]
+0048aa24    local.get [3]
+0048aa26    i32.const [3954204]
+0048aa2b    i32.load [2, 0]
+0048aa2e    call [932] ; 
+0048aa31    local.get [2]
+0048aa33    i32.const [1]
+0048aa35    i32.lt_s []
+0048aa36    br_if [0]
+0048aa38    local.get [1]
+0048aa3a    i32.const [0]
+0048aa3c    call [1586] ; GameObject.get_activeSelf
+0048aa3f    local.set [5]
+0048aa41    local.get [1]
+0048aa43    i32.const [0]
+0048aa45    i32.const [0]
+0048aa47    call [949] ; GameObject.SetActive
+0048aa4a    loop [-64]
+0048aa4c      i32.const [3973780]
+0048aa51      i32.load [2, 0]
+0048aa54      drop []
+0048aa55      local.get [2]
+0048aa57      local.get [3]
+0048aa59      i32.load [2, 12]
+0048aa5c      i32.gt_s []
+0048aa5d      if [-64]
+0048aa5f        i32.const [3936516]
+0048aa64        i32.load [2, 0]
+0048aa67        call [901] ; 
+0048aa6a        local.get [1]
+0048aa6c        i32.const [4008864]
+0048aa71        i32.load [2, 0]
+0048aa74        call [1465] ; 
+0048aa77        local.set [4]
+0048aa79        local.get [4]
+0048aa7b        i32.const [0]
+0048aa7d        call [1008] ; GameObject.get_transform
+0048aa80        local.get [0]
+0048aa82        i32.load [2, 8]
+0048aa85        i32.const [0]
+0048aa87        call [1008] ; GameObject.get_transform
+0048aa8a        i32.const [0]
+0048aa8c        call [1424] ; Transform.SetParent
+0048aa8f        local.get [3]
+0048aa91        local.get [4]
+0048aa93        i32.const [3973760]
+0048aa98        i32.load [2, 0]
+0048aa9b        call [941] ; 
+0048aa9e        br [1]
+0048aaa0      end []
+0048aaa1    end []
+0048aaa2    local.get [1]
+0048aaa4    local.get [5]
+0048aaa6    i32.const [0]
+0048aaa8    call [949] ; GameObject.SetActive
+0048aaab  end []
+0048aaac  end []

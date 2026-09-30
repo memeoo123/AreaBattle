@@ -1,0 +1,40 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.IsInstallVersion; wasmcode function 14679; offset=7201249 size=115
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+006de1e2  i32.const [5005407]
+006de1e7  i32.load8_u [0, 0]
+006de1ea  i32.eqz []
+006de1eb  if [-64]
+006de1ed    i32.const [3937976]
+006de1f2    call [900] ; 
+006de1f5    i32.const [3941148]
+006de1fa    call [900] ; 
+006de1fd    i32.const [4034536] ; STRING ""
+006de202    call [900] ; 
+006de205    i32.const [5005407]
+006de20a    i32.const [1]
+006de20c    i32.store8 [0, 0]
+006de20f  end []
+006de210  i32.const [3937976]
+006de215  i32.load [2, 0]
+006de218  call [901] ; 
+006de21b  i32.const [3937976]
+006de220  i32.load [2, 0]
+006de223  i32.load [2, 92]
+006de226  i32.load [2, 52]
+006de229  local.set [0]
+006de22b  i32.const [3941148]
+006de230  i32.load [2, 0]
+006de233  call [901] ; 
+006de236  local.get [0]
+006de238  i32.const [4034536] ; STRING ""
+006de23d  i32.load [2, 0]
+006de240  i32.const [0]
+006de242  call [1615] ; Utils_PlayerPrefs.GetString
+006de245  i32.const [0]
+006de247  call [1120] ; XYXGlobalConfig.get_I
+006de24a  i32.load [2, 16]
+006de24d  i32.const [0]
+006de24f  call [928] ; String.op_Equality
+006de252  return []
+006de253  end []

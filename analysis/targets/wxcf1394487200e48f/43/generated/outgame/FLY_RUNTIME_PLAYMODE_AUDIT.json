@@ -1,0 +1,27 @@
+{
+  "status": "isolated_real_playmode_passed_original_pool_page_pending",
+  "integratedChecks": 522,
+  "playmodeChecks": 8,
+  "report": "analysis/outgame-fly-playmode-validation.json",
+  "runtimeFrames": 28893,
+  "editorPolls": 28894,
+  "elapsedRealtime": 3.0001003742218018,
+  "scaledElapsed": 0.0,
+  "verified": [
+    "Both rewards saved immediately before animation completion",
+    "Two actual Unity coroutines registered concurrently",
+    "Native icon Transforms move while Time.timeScale is zero",
+    "Both original five-icon sequences spawn and return all ten prefabs",
+    "Real native labels and both completion callbacks reach their endpoints",
+    "Collection does not grant or save rewards twice",
+    "Realtime coroutine finish and Update drain cleanup while scaled time is paused",
+    "Scaled game time remains paused throughout validation"
+  ],
+  "harnessRecovery": "First delayed startup callback was interrupted by editor shortcut preference access exception. Replaced delayCall startup with direct EnteredPlayMode callback; successful runs exited0. Unrelated shortcut preference warning still logged. No editor preferences modified.",
+  "limits": [
+    "Pool is an explicit instantiate/deactivate fixture, not recovered NormalPool",
+    "Audio is a fixture; no platform/ad/account access",
+    "This is actual dynamic execution, not matched screenshot/recording visual validation",
+    "Full lobby/build/end-to-end objective remains incomplete"
+  ]
+}

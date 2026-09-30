@@ -1,0 +1,21 @@
+{
+  "status": "package_entry_and_cleanup_gate_restored_internal_pass_pending",
+  "source": [
+    "disassembly/Type3388-26180.txt",
+    "disassembly/Type3527-27207.txt",
+    "disassembly/Type3080-23609.txt",
+    "disassembly/Type2927-22872.txt",
+    "resource-module-selection.json"
+  ],
+  "verified": [
+    "GetNewResModule flag40 selects KeWanResLoadModule or YOResourcesModule",
+    "YO package null skips; package calls Update then UnloadUnusedAssets synchronously",
+    "Resource system source flag24 false warns; true invokes cleanup ten times",
+    "No request coalescing at recovered layers; exception propagates"
+  ],
+  "remaining": [
+    "Source resource-system Update22867 and cleanup pass22864",
+    "Concrete runtime close/resource ownership and Player E2E"
+  ],
+  "integratedChecks": 590
+}

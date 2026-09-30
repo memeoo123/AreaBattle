@@ -1,0 +1,56 @@
+; Original class: SkinManager
+; Type4150..ctor; wasmcode function 15901; offset=7648583 size=162
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0074b548  i32.const [5010262]
+0074b54d  i32.load8_u [0, 0]
+0074b550  i32.eqz []
+0074b551  if [-64]
+0074b553    i32.const [3956672]
+0074b558    call [900] ; 
+0074b55b    i32.const [3962480]
+0074b560    call [900] ; 
+0074b563    i32.const [3919544]
+0074b568    call [900] ; 
+0074b56b    i32.const [3917684]
+0074b570    call [900] ; 
+0074b573    i32.const [5010262]
+0074b578    i32.const [1]
+0074b57a    i32.store8 [0, 0]
+0074b57d  end []
+0074b57e  i32.const [3917684]
+0074b583  i32.load [2, 0]
+0074b586  call [903] ; 
+0074b589  local.set [1]
+0074b58b  local.get [1]
+0074b58d  i32.const [3956672]
+0074b592  i32.load [2, 0]
+0074b595  call [951] ; 
+0074b598  local.get [0]
+0074b59a  local.get [1]
+0074b59c  i32.store [2, 24]
+0074b59f  i32.const [3917684]
+0074b5a4  i32.load [2, 0]
+0074b5a7  call [903] ; 
+0074b5aa  local.set [1]
+0074b5ac  local.get [1]
+0074b5ae  i32.const [3956672]
+0074b5b3  i32.load [2, 0]
+0074b5b6  call [951] ; 
+0074b5b9  local.get [0]
+0074b5bb  local.get [1]
+0074b5bd  i32.store [2, 28]
+0074b5c0  i32.const [3919544]
+0074b5c5  i32.load [2, 0]
+0074b5c8  call [903] ; 
+0074b5cb  local.set [1]
+0074b5cd  local.get [1]
+0074b5cf  i32.const [3962480]
+0074b5d4  i32.load [2, 0]
+0074b5d7  call [951] ; 
+0074b5da  local.get [0]
+0074b5dc  local.get [1]
+0074b5de  i32.store [2, 32]
+0074b5e1  local.get [0]
+0074b5e3  i32.const [0]
+0074b5e5  call [3381] ; DataManagerBase..ctor
+0074b5e8  end []

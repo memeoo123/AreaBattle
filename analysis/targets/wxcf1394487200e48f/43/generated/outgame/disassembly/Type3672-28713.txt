@@ -1,0 +1,27 @@
+; Original class: ObjectPoolManager
+; Type3672..ctor; wasmcode function 18411; offset=8286278 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007e7047  i32.const [4987668]
+007e704c  i32.load8_u [0, 0]
+007e704f  i32.eqz []
+007e7050  if [-64]
+007e7052    i32.const [3959772]
+007e7057    call [900] ; 
+007e705a    i32.const [3918668]
+007e705f    call [900] ; 
+007e7062    i32.const [4987668]
+007e7067    i32.const [1]
+007e7069    i32.store8 [0, 0]
+007e706c  end []
+007e706d  i32.const [3918668]
+007e7072  i32.load [2, 0]
+007e7075  call [903] ; 
+007e7078  local.set [1]
+007e707a  local.get [1]
+007e707c  i32.const [3959772]
+007e7081  i32.load [2, 0]
+007e7084  call [951] ; 
+007e7087  local.get [0]
+007e7089  local.get [1]
+007e708b  i32.store [2, 16]
+007e708e  end []

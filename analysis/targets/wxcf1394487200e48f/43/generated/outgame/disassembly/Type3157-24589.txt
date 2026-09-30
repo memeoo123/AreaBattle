@@ -1,0 +1,46 @@
+; Original class: AdsManager
+; Type3157.ShowVideoStatic; wasmcode function 20946; offset=9444153 size=115
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00901b3a  i32.const [5010579]
+00901b3f  i32.load8_u [0, 0]
+00901b42  i32.eqz []
+00901b43  if [-64]
+00901b45    i32.const [3930128]
+00901b4a    call [900] ; 
+00901b4d    i32.const [5010579]
+00901b52    i32.const [1]
+00901b54    i32.store8 [0, 0]
+00901b57  end []
+00901b58  i32.const [3930128]
+00901b5d  i32.load [2, 0]
+00901b60  call [901] ; 
+00901b63  i32.const [0]
+00901b65  call [974] ; DBTSDKManager.get_Instance
+00901b68  i32.load [2, 16]
+00901b6b  if [-64]
+00901b6d    i32.const [3930128]
+00901b72    i32.load [2, 0]
+00901b75    call [901] ; 
+00901b78    i32.const [0]
+00901b7a    call [974] ; DBTSDKManager.get_Instance
+00901b7d    i32.load [2, 16]
+00901b80    local.set [0]
+00901b82    local.get [0]
+00901b84    local.set [3]
+00901b86    local.get [0]
+00901b88    i32.load [2, 0]
+00901b8b    i32.const [2488] ; TABLE Json.E»E{}
+00901b8e    i32.add []
+00901b8f    local.set [0]
+00901b91    local.get [3]
+00901b93    local.get [1]
+00901b95    local.get [2]
+00901b97    local.get [0]
+00901b99    i32.load [2, 192]
+00901b9d    local.get [0]
+00901b9f    i32.load [2, 188]
+00901ba3    global.set [3]
+00901ba5    global.get [3]
+00901ba7    call_indirect [7, 0]
+00901baa  end []
+00901bab  end []

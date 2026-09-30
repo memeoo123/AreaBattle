@@ -1,0 +1,142 @@
+; Original class: TopInfoUI
+; Type4425.Awake; wasmcode function 15531; offset=7500036 size=416
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00727107  i32.const [5007071]
+0072710c  i32.load8_u [0, 0]
+0072710f  i32.eqz []
+00727110  if [-64]
+00727112    i32.const [3927888]
+00727117    call [900] ; 
+0072711a    i32.const [3995120]
+0072711f    call [900] ; 
+00727122    i32.const [3930256]
+00727127    call [900] ; 
+0072712a    i32.const [3947148]
+0072712f    call [900] ; 
+00727132    i32.const [4017396] ; METHOD TopInfoUI.Tgbz
+00727137    call [900] ; 
+0072713a    i32.const [4017404] ; METHOD TopInfoUI.T|LXw
+0072713f    call [900] ; 
+00727142    i32.const [4017400] ; METHOD TopInfoUI.rvp}mR
+00727147    call [900] ; 
+0072714a    i32.const [4061088] ; STRING "LoadStartingUI"
+0072714f    call [900] ; 
+00727152    i32.const [4090044] ; STRING "imgRed"
+00727157    call [900] ; 
+0072715a    i32.const [4045372] ; STRING "Avatar_Refresh_OnAuth"
+0072715f    call [900] ; 
+00727162    i32.const [5007071]
+00727167    i32.const [1]
+00727169    i32.store8 [0, 0]
+0072716c  end []
+0072716d  i32.const [3947148]
+00727172  i32.load [2, 0]
+00727175  call [903] ; 
+00727178  local.set [1]
+0072717a  local.get [1]
+0072717c  local.get [0]
+0072717e  i32.const [4017404] ; METHOD TopInfoUI.T|LXw
+00727183  i32.load [2, 0]
+00727186  i32.const [0]
+00727188  call [1067] ; EventHandler..ctor
+0072718b  i32.const [4061088] ; STRING "LoadStartingUI"
+00727190  i32.load [2, 0]
+00727193  local.get [1]
+00727195  i32.const [0]
+00727197  call [1146] ; MsgDispatcher.AddEventListener
+0072719a  i32.const [3947148]
+0072719f  i32.load [2, 0]
+007271a2  call [903] ; 
+007271a5  local.set [1]
+007271a7  local.get [1]
+007271a9  local.get [0]
+007271ab  i32.const [4017400] ; METHOD TopInfoUI.rvp}mR
+007271b0  i32.load [2, 0]
+007271b3  i32.const [0]
+007271b5  call [1067] ; EventHandler..ctor
+007271b8  i32.const [4045372] ; STRING "Avatar_Refresh_OnAuth"
+007271bd  i32.load [2, 0]
+007271c0  local.get [1]
+007271c2  i32.const [0]
+007271c4  call [1146] ; MsgDispatcher.AddEventListener
+007271c7  i32.const [3930256]
+007271cc  i32.load [2, 0]
+007271cf  call [901] ; 
+007271d2  local.get [0]
+007271d4  i32.const [0]
+007271d6  call [1309] ; DataManagerPool.get_Instance
+007271d9  i32.const [3995120]
+007271de  i32.load [2, 0]
+007271e1  call [1609] ; 
+007271e4  i32.store [2, 100]
+007271e7  local.get [0]
+007271e9  i32.load [2, 176]
+007271ed  local.set [1]
+007271ef  i32.const [3927888]
+007271f4  i32.load [2, 0]
+007271f7  call [903] ; 
+007271fa  local.set [2]
+007271fc  local.get [2]
+007271fe  local.get [0]
+00727200  i32.const [4017396] ; METHOD TopInfoUI.Tgbz
+00727205  i32.load [2, 0]
+00727208  i32.const [0]
+0072720a  call [1002] ; Action..ctor
+0072720d  local.get [1]
+0072720f  local.get [2]
+00727211  i32.const [0]
+00727213  call [1723] ; UIExtension.AddClick
+00727216  local.get [0]
+00727218  i32.load [2, 208]
+0072721c  local.set [1]
+0072721e  i32.const [3927888]
+00727223  i32.load [2, 0]
+00727226  call [903] ; 
+00727229  local.set [2]
+0072722b  local.get [2]
+0072722d  local.get [0]
+0072722f  i32.const [4017396] ; METHOD TopInfoUI.Tgbz
+00727234  i32.load [2, 0]
+00727237  i32.const [0]
+00727239  call [1002] ; Action..ctor
+0072723c  local.get [1]
+0072723e  local.get [2]
+00727240  i32.const [0]
+00727242  call [1723] ; UIExtension.AddClick
+00727245  local.get [0]
+00727247  i32.load [2, 204]
+0072724b  i32.const [0]
+0072724d  i32.const [0]
+0072724f  call [949] ; GameObject.SetActive
+00727252  local.get [0]
+00727254  local.get [0]
+00727256  i32.load [2, 176]
+0072725a  i32.const [0]
+0072725c  call [1008] ; GameObject.get_transform
+0072725f  i32.const [4090044] ; STRING "imgRed"
+00727264  i32.load [2, 0]
+00727267  i32.const [0]
+00727269  call [1102] ; Transform.Find
+0072726c  i32.const [0]
+0072726e  call [943] ; Component.get_gameObject
+00727271  i32.store [2, 120]
+00727274  local.get [0]
+00727276  i32.load [2, 176]
+0072727a  i32.const [1]
+0072727c  i32.const [0]
+0072727e  call [949] ; GameObject.SetActive
+00727281  local.get [0]
+00727283  i32.load [2, 208]
+00727287  i32.const [0]
+00727289  i32.const [0]
+0072728b  call [949] ; GameObject.SetActive
+0072728e  local.get [0]
+00727290  local.get [0]
+00727292  call [5598] ; TopInfoUI.RefreshInfo
+00727295  local.get [0]
+00727297  local.get [0]
+00727299  call [10065] ; TopInfoUI.TfUaOPX
+0072729c  local.get [0]
+0072729e  local.get [0]
+007272a0  call [5596] ; TopInfoUI.^msTiN
+007272a3  end []

@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "scope": "Actual Unity Play Mode, original ShopUI/config, native Button, real coroutine await; explicit SDK/report fixture, no account or user data",
+    "checks": [
+        "Actual Start binds SDK function and readiness before pointer click",
+        "Native pointer schedules real wait without immediate SDK completion",
+        "Real await resumes to source show message then SDK call with original videoID",
+        "Raw SDK result resumes native completion callback while timeScale is zero",
+        "Realtime SDK request delay is approximately0.2seconds",
+        "Scaled button report coroutine stays suspended during pause",
+        "Scaled one-second delayed report runs after game time resumes"
+    ],
+    "error": "",
+    "frames": 21531,
+    "elapsed": 2.3279874324798586,
+    "requestToPlatform": 0.2038431167602539
+}

@@ -1,0 +1,32 @@
+; Original class: <>c
+; Type7702.<CheckThirdSensitiveInfoStatic>b__2_0; wasmcode1 function 43601; offset=15524928 size=95
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00ece441  i32.const [5005444]
+00ece446  i32.load8_u [0, 0]
+00ece449  i32.eqz []
+00ece44a  if [-64]
+00ece44c    i32.const [3938304]
+00ece451    i32.const [1605]
+00ece454    call_indirect [0, 0]
+00ece457    i32.const [4097420] ; STRING "success"
+00ece45c    i32.const [1605]
+00ece45f    call_indirect [0, 0]
+00ece462    i32.const [4041452] ; STRING "200"
+00ece467    i32.const [1605]
+00ece46a    call_indirect [0, 0]
+00ece46d    i32.const [5005444]
+00ece472    i32.const [1]
+00ece474    i32.store8 [0, 0]
+00ece477  end []
+00ece478  i32.const [3938304]
+00ece47d  i32.load [2, 0]
+00ece480  i32.load [2, 92]
+00ece483  i32.load [2, 0]
+00ece486  i32.const [4041452] ; STRING "200"
+00ece48b  i32.load [2, 0]
+00ece48e  i32.const [4097420] ; STRING "success"
+00ece493  i32.load [2, 0]
+00ece496  local.get [1]
+00ece498  i32.const [0]
+00ece49a  call [22927] ; SDKToolManager.checkThirdSensitiveInfoCallback_XYX
+00ece49e  end []

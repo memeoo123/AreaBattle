@@ -1,0 +1,24 @@
+; Original class: Path
+; Type1122.GetFileNameWithoutExtension; wasmcode function 3562; offset=1117698 size=58
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00110e03  i32.const [5023479]
+00110e08  i32.load8_u [0, 0]
+00110e0b  i32.eqz []
+00110e0c  if [-64]
+00110e0e    i32.const [3936928]
+00110e13    call [900] ; 
+00110e16    i32.const [5023479]
+00110e1b    i32.const [1]
+00110e1d    i32.store8 [0, 0]
+00110e20  end []
+00110e21  i32.const [3936928]
+00110e26  i32.load [2, 0]
+00110e29  call [901] ; 
+00110e2c  local.get [0]
+00110e2e  local.get [0]
+00110e30  call [3561] ; Path.GetFileName
+00110e33  i32.const [0]
+00110e35  local.get [0]
+00110e37  call [11120] ; Path.ChangeExtension
+00110e3a  return []
+00110e3b  end []

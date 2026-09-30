@@ -1,0 +1,21 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "GameControl -> LoadPrefabControl -> ResLoadHelper -> legacy scheduler/package/download runtime -> native AssetBundle, using rebuilt original assets and local file patch URLs. Entity preparation/acquisition/reuse/deferred cleanup included. Full Main/account/Player, preload host composition and original remote URLs remain unverified.",
+    "requests": 5,
+    "checks": [
+        "Native manifest starts asynchronously before scene loading",
+        "Game InitScene queues original texture path through concrete loader",
+        "Native cold preparation caches original prefab without instantiating an entity",
+        "Native downloaded home texture reaches GameControl through source callbacks",
+        "Prefab resource callback retains original arguments",
+        "Source EntityModel11001 prefab and battle texture load through complete native graph",
+        "String prefab and id-based scene path preserve distinct names/ownership",
+        "Warm prefab and game-sprite caches reuse templates without new downloads",
+        "Native entity clone is registered and named under source GameObject EntityRoot",
+        "Native inactive entity is reused by activeSelf without another request",
+        "ClearModelEntityCache drops9033 bookkeeping immediately, preserves11001 and schedules native root destruction",
+        "Deferred Object.Destroy removes native pooled root and child on frame boundary while retaining template and main root",
+        "Controller disposal preserves loaded native assets while clearing singleton slots"
+    ]
+}

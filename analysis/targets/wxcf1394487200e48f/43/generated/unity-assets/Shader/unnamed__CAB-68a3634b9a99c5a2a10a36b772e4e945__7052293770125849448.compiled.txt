@@ -1,0 +1,73 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Fire Ruan Dissolves Noise" {
+Properties {
+
+[Enum(Static,0,Offset,1)] _UVOffset ("UVOffset", Float) = 0.0
+
+_MainColor ("Main Color", Color) = (2,2,2,1)
+
+_MainTex ("Main Tex", 2D) = "white" { }
+
+_MainSpeed_X ("Main Speed_X", Float) = 0.0
+
+_MainSpeed_Y ("Main Speed_Y", Float) = 0.0
+
+_MainTexTiling_xyOffset_zw ("Main Tex Tiling_xy Offset_zw", Vector) = (1,1,0,0)
+
+_MaskTexture ("Mask Texture ", 2D) = "white" { }
+
+_MaskX ("MaskX", Float) = 0.0
+
+_MaskY ("MaskY", Float) = 0.0
+
+_MaskTexTiling_xyOffset_zw ("Mask Tex Tiling_xy Offset_zw", Vector) = (1,1,0,0)
+
+_HuoDissolutionTexture ("Huo Dissolution Texture", 2D) = "white" { }
+
+_HuoDissolutionTexturespeedx ("Huo Dissolution Texture speed x", Float) = -1.0
+
+_HuoDissolutionTexturespeedy ("Huo Dissolution Texture speed y", Float) = -1.0
+
+_EdgeColor ("EdgeColor", Color) = (1,1,1,1)
+
+_Edge ("Edge", Range(0, 1)) = 0.0
+
+_DissolvesTexture ("Dissolves Texture", 2D) = "white" { }
+
+_DissolvesTexture1 ("Dissolves Texture Tiling Offset", Vector) = (1,1,0,0)
+
+_Hardness ("Hardness", Range(0, 0.99)) = 0.9900000095367432
+
+_Dissolves ("Dissolves", Range(0, 1)) = 0.7250465750694275
+
+[Enum(Mode,0,Particle,1)] _DissolvesMode ("Dissolves Mode", Float) = 0.0
+
+_NoiseTexture ("Noise Texture", 2D) = "white" { }
+
+_NoiseTexTiling_xyOffset_zw ("Noise Tex Tiling_xy Offset_zw", Vector) = (1,1,0,0)
+
+_Noise ("Noise", Range(0, 1)) = 0.0
+
+_NoiseSpendX ("Noise Spend X", Float) = 0.0
+
+_NoiseSpendY ("Noise Spend Y", Float) = 0.0
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 22049
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

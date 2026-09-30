@@ -1,0 +1,47 @@
+; Original class: TimeModule
+; Type3534.Update; wasmcode function 15568; offset=7510366 size=131
+; signature={'args': [127, 125, 125, 127], 'returns': []}; localGroups=[(1, 126)]
+00729961  i32.const [4989602]
+00729966  i32.load8_u [0, 0]
+00729969  i32.eqz []
+0072996a  if [-64]
+0072996c    i32.const [3930616]
+00729971    call [900] ; 
+00729974    i32.const [3940180]
+00729979    call [900] ; 
+0072997c    i32.const [4989602]
+00729981    i32.const [1]
+00729983    i32.store8 [0, 0]
+00729986  end []
+00729987  i32.const [3930616]
+0072998c  i32.load [2, 0]
+0072998f  call [901] ; 
+00729992  i32.const [0]
+00729994  call [1287] ; DateTime.get_Now
+00729997  local.set [4]
+00729999  i32.const [3940180]
+0072999e  i32.load [2, 0]
+007299a1  call [901] ; 
+007299a4  i32.const [3940180]
+007299a9  i32.load [2, 0]
+007299ac  i32.load [2, 92]
+007299af  local.get [4]
+007299b1  i64.store [3, 0]
+007299b4  local.get [0]
+007299b6  i32.const [3940180]
+007299bb  i32.load [2, 0]
+007299be  i32.load [2, 92]
+007299c1  i64.load [3, 0]
+007299c4  i32.const [0]
+007299c6  call [1342] ; Time.get_realtimeSinceStartup
+007299c9  local.get [0]
+007299cb  call [10096] ; TimeModule.CheckTime
+007299ce  local.get [0]
+007299d0  local.get [1]
+007299d2  local.get [2]
+007299d4  local.get [0]
+007299d6  call [10100] ; TimeModule.CheckLoopTimer
+007299d9  local.get [0]
+007299db  local.get [0]
+007299dd  call [10095] ; TimeModule.CheckUnityTimer
+007299e0  end []

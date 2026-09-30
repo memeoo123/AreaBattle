@@ -1,0 +1,11 @@
+; Original class: AudioOnceAction
+; Type3415.OnDispose; wasmcode function 13130; offset=6295231 size=19
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00600ec0  local.get [0]
+00600ec2  i32.load [2, 36]
+00600ec5  local.get [0]
+00600ec7  call [5563] ; G~.DestroyAudioSource
+00600eca  local.get [0]
+00600ecc  i32.const [0]
+00600ece  i32.store [2, 36]
+00600ed1  end []

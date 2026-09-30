@@ -1,0 +1,401 @@
+; Unknown.13447; wasmcode function 13447; offset=6512389 size=1105
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(3, 127), (1, 125)]
+00635f0a i32.const [0] ; TABLE 
+00635f0c local.set [1]
+00635f0e i32.const [4989701] ; TABLE 
+00635f13 i32.load8_u [0, 0]
+00635f16 i32.eqz []
+00635f17 if [-64]
+00635f19 i32.const [3929208] ; TABLE ; type: CLog
+00635f1e call [900] ; 
+00635f21 i32.const [3917012] ; TABLE 
+00635f26 call [900] ; 
+00635f29 i32.const [3917032] ; TABLE 
+00635f2e call [900] ; 
+00635f31 i32.const [3930144] ; TABLE ; type: DOTween
+00635f36 call [900] ; 
+00635f39 i32.const [4000972] ; TABLE 
+00635f3e call [900] ; 
+00635f41 i32.const [4001252] ; TABLE 
+00635f46 call [900] ; 
+00635f49 i32.const [4031292] ; TABLE ; method: Kwkaq.£`zºa
+00635f4e call [900] ; 
+00635f51 i32.const [4031296] ; TABLE ; method: Kwkaq.À¯LB
+00635f56 call [900] ; 
+00635f59 i32.const [3949216] ; TABLE ; type: Kwkaq
+00635f5e call [900] ; 
+00635f61 i32.const [3926996] ; TABLE 
+00635f66 call [900] ; 
+00635f69 i32.const [3936516] ; TABLE ; type: Object
+00635f6e call [900] ; 
+00635f71 i32.const [4017556] ; TABLE 
+00635f76 call [900] ; 
+00635f79 i32.const [4017560] ; TABLE 
+00635f7e call [900] ; 
+00635f81 i32.const [4017616] ; TABLE 
+00635f86 call [900] ; 
+00635f89 i32.const [4031284] ; TABLE ; method: <>c.QinP¼ 
+00635f8e call [900] ; 
+00635f91 i32.const [4031288] ; TABLE ; method: <>c.]º¸µJ
+00635f96 call [900] ; 
+00635f99 i32.const [3949212] ; TABLE ; type: <>c
+00635f9e call [900] ; 
+00635fa1 i32.const [3941920] ; TABLE ; type: WaitForSeconds
+00635fa6 call [900] ; 
+00635fa9 i32.const [4097824] ; TABLE ; literal: 'target[{0}]找到了CanvasGroup，优先使用CanvasGroup控制UI渐隐'
+00635fae call [900] ; 
+00635fb1 i32.const [4989701] ; TABLE 
+00635fb6 i32.const [1] ; TABLE 
+00635fb8 i32.store8 [0, 0]
+00635fbb end []
+00635fbc i32.const [-1]
+00635fbe local.set [2]
+00635fc0 block [-64]
+00635fc2 block [-64]
+00635fc4 block [-64]
+00635fc6 local.get [0]
+00635fc8 i32.load [2, 8]
+00635fcb br_table [0, 1, 1, 1, 2]
+00635fd2 end []
+00635fd3 local.get [0]
+00635fd5 i32.const [-1]
+00635fd7 i32.store [2, 8]
+00635fda local.get [0]
+00635fdc i32.load [2, 16]
+00635fdf i32.eqz []
+00635fe0 br_if [1]
+00635fe2 local.get [0]
+00635fe4 i32.load [2, 20]
+00635fe7 local.set [2]
+00635fe9 i32.const [3936516] ; TABLE ; type: Object
+00635fee i32.load [2, 0]
+00635ff1 call [901] ; 
+00635ff4 local.get [2]
+00635ff6 i32.const [0] ; TABLE 
+00635ff8 i32.const [0] ; TABLE 
+00635ffa call [940] ; Object.op_Equality
+00635ffd br_if [1]
+00635fff block [-64]
+00636001 block [-64]
+00636003 block [-64]
+00636005 block [-64]
+00636007 local.get [0]
+00636009 i32.load [2, 16]
+0063600c i32.const [1] ; TABLE 
+0063600e i32.sub []
+0063600f br_table [0, 0, 1, 2, 5]
+00636016 end []
+00636017 i32.const [3949216] ; TABLE ; type: Kwkaq
+0063601c i32.load [2, 0]
+0063601f call [903] ; 
+00636022 local.set [1]
+00636024 local.get [1]
+00636026 local.get [0]
+00636028 i32.load [2, 20]
+0063602b i32.const [4000972] ; TABLE 
+00636030 i32.load [2, 0]
+00636033 call [1091] ; 
+00636036 i32.store [2, 8]
+00636039 local.get [1]
+0063603b i32.load [2, 8]
+0063603e local.set [2]
+00636040 i32.const [3936516] ; TABLE ; type: Object
+00636045 i32.load [2, 0]
+00636048 call [901] ; 
+0063604b block [-64]
+0063604d local.get [2]
+0063604f i32.const [0] ; TABLE 
+00636051 i32.const [0] ; TABLE 
+00636053 call [946] ; Object.op_Inequality
+00636056 if [-64]
+00636058 i32.const [3926996] ; TABLE 
+0063605d i32.load [2, 0]
+00636060 i32.const [1] ; TABLE 
+00636062 call [909] ; 
+00636065 local.set [2]
+00636067 i32.const [4097824] ; TABLE ; literal: 'target[{0}]找到了CanvasGroup，优先使用CanvasGroup控制UI渐隐'
+0063606c i32.load [2, 0]
+0063606f local.get [0]
+00636071 i32.load [2, 20]
+00636074 i32.const [0] ; TABLE 
+00636076 call [1015] ; String.Format
+00636079 local.set [3]
+0063607b local.get [2]
+0063607d local.get [3]
+0063607f call [905] ; 
+00636082 local.get [2]
+00636084 local.get [3]
+00636086 i32.store [2, 16]
+00636089 i32.const [3929208] ; TABLE ; type: CLog
+0063608e i32.load [2, 0]
+00636091 call [901] ; 
+00636094 local.get [2]
+00636096 i32.const [0] ; TABLE 
+00636098 i32.const [25430] ; TABLE CLog.UILog
+0063609c global.set [3]
+0063609e i32.const [25430] ; TABLE CLog.UILog
+006360a2 call_indirect [0, 0]
+006360a5 local.get [0]
+006360a7 i32.load [2, 16]
+006360aa local.set [3]
+006360ac i32.const [3949212] ; TABLE ; type: <>c
+006360b1 i32.load [2, 0]
+006360b4 call [901] ; 
+006360b7 i32.const [3949212] ; TABLE ; type: <>c
+006360bc i32.load [2, 0]
+006360bf i32.load [2, 92]
+006360c2 local.set [2]
+006360c4 local.get [3]
+006360c6 i32.const [1] ; TABLE 
+006360c8 i32.eq []
+006360c9 if [-64]
+006360cb local.get [2]
+006360cd i32.load [2, 4]
+006360d0 local.set [2]
+006360d2 local.get [2]
+006360d4 i32.eqz []
+006360d5 if [-64]
+006360d7 i32.const [3949212] ; TABLE ; type: <>c
+006360dc i32.load [2, 0]
+006360df call [901] ; 
+006360e2 i32.const [3949212] ; TABLE ; type: <>c
+006360e7 i32.load [2, 0]
+006360ea i32.load [2, 92]
+006360ed i32.load [2, 0]
+006360f0 local.set [3]
+006360f2 i32.const [3917012] ; TABLE 
+006360f7 i32.load [2, 0]
+006360fa call [903] ; 
+006360fd local.set [2]
+006360ff local.get [2]
+00636101 local.get [3]
+00636103 i32.const [4031288] ; TABLE ; method: <>c.]º¸µJ
+00636108 i32.load [2, 0]
+0063610b call [1913] ; 
+0063610e i32.const [3949212] ; TABLE ; type: <>c
+00636113 i32.load [2, 0]
+00636116 i32.load [2, 92]
+00636119 local.get [2]
+0063611b i32.store [2, 4]
+0063611e i32.const [3949212] ; TABLE ; type: <>c
+00636123 i32.load [2, 0]
+00636126 i32.load [2, 92]
+00636129 drop []
+0063612a end []
+0063612b i32.const [3917032] ; TABLE 
+00636130 i32.load [2, 0]
+00636133 call [903] ; 
+00636136 local.set [3]
+00636138 local.get [3]
+0063613a local.get [1]
+0063613c i32.const [4031292] ; TABLE ; method: Kwkaq.£`zºa
+00636141 i32.load [2, 0]
+00636144 call [1912] ; 
+00636147 local.get [0]
+00636149 f32.load [2, 24]
+0063614c local.set [5]
+0063614e i32.const [3930144] ; TABLE ; type: DOTween
+00636153 i32.load [2, 0]
+00636156 call [901] ; 
+00636159 local.get [2]
+0063615b local.get [3]
+0063615d f32.const [1.0]
+00636162 local.get [5]
+00636164 i32.const [0] ; TABLE 
+00636166 call [3986] ; DOTween.To
+00636169 drop []
+0063616a br [2]
+0063616c end []
+0063616d local.get [2]
+0063616f i32.load [2, 8]
+00636172 local.set [2]
+00636174 local.get [2]
+00636176 i32.eqz []
+00636177 if [-64]
+00636179 i32.const [3949212] ; TABLE ; type: <>c
+0063617e i32.load [2, 0]
+00636181 call [901] ; 
+00636184 i32.const [3949212] ; TABLE ; type: <>c
+00636189 i32.load [2, 0]
+0063618c i32.load [2, 92]
+0063618f i32.load [2, 0]
+00636192 local.set [3]
+00636194 i32.const [3917012] ; TABLE 
+00636199 i32.load [2, 0]
+0063619c call [903] ; 
+0063619f local.set [2]
+006361a1 local.get [2]
+006361a3 local.get [3]
+006361a5 i32.const [4031284] ; TABLE ; method: <>c.QinP¼ 
+006361aa i32.load [2, 0]
+006361ad call [1913] ; 
+006361b0 i32.const [3949212] ; TABLE ; type: <>c
+006361b5 i32.load [2, 0]
+006361b8 i32.load [2, 92]
+006361bb local.get [2]
+006361bd i32.store [2, 8]
+006361c0 i32.const [3949212] ; TABLE ; type: <>c
+006361c5 i32.load [2, 0]
+006361c8 i32.load [2, 92]
+006361cb drop []
+006361cc end []
+006361cd i32.const [3917032] ; TABLE 
+006361d2 i32.load [2, 0]
+006361d5 call [903] ; 
+006361d8 local.set [3]
+006361da local.get [3]
+006361dc local.get [1]
+006361de i32.const [4031296] ; TABLE ; method: Kwkaq.À¯LB
+006361e3 i32.load [2, 0]
+006361e6 call [1912] ; 
+006361e9 local.get [0]
+006361eb f32.load [2, 24]
+006361ee local.set [5]
+006361f0 i32.const [3930144] ; TABLE ; type: DOTween
+006361f5 i32.load [2, 0]
+006361f8 call [901] ; 
+006361fb local.get [2]
+006361fd local.get [3]
+006361ff f32.const [0.0]
+00636204 local.get [5]
+00636206 i32.const [0] ; TABLE 
+00636208 call [3986] ; DOTween.To
+0063620b drop []
+0063620c br [1]
+0063620e end []
+0063620f local.get [0]
+00636211 i32.load [2, 20]
+00636214 i32.const [4001252] ; TABLE 
+00636219 i32.load [2, 0]
+0063621c call [1947] ; 
+0063621f local.set [2]
+00636221 local.get [2]
+00636223 i32.load [2, 12]
+00636226 local.set [1]
+00636228 loop [-64]
+0063622a local.get [1]
+0063622c i32.const [1] ; TABLE 
+0063622e i32.sub []
+0063622f local.set [1]
+00636231 local.get [1]
+00636233 i32.const [-1]
+00636235 i32.le_s []
+00636236 br_if [1]
+00636238 local.get [0]
+0063623a i32.load [2, 16]
+0063623d local.set [3]
+0063623f local.get [2]
+00636241 local.get [1]
+00636243 i32.const [2] ; TABLE 
+00636245 i32.shl []
+00636246 i32.add []
+00636247 i32.load [2, 16]
+0063624a f32.const [0.0]
+0063624f local.get [0]
+00636251 f32.load [2, 24]
+00636254 i32.const [0] ; TABLE 
+00636256 call [12672] ; DOTweenModuleUI.DOFade
+00636259 local.set [4]
+0063625b local.get [3]
+0063625d i32.const [1] ; TABLE 
+0063625f i32.ne []
+00636260 br_if [0]
+00636262 local.get [4]
+00636264 i32.const [4017556] ; TABLE 
+00636269 i32.load [2, 0]
+0063626c call [9980] ; 
+0063626f br [0]
+00636271 end []
+00636272 unreachable []
+00636273 end []
+00636274 local.get [0]
+00636276 f32.load [2, 24]
+00636279 local.set [5]
+0063627b i32.const [3941920] ; TABLE ; type: WaitForSeconds
+00636280 i32.load [2, 0]
+00636283 call [903] ; 
+00636286 local.set [1]
+00636288 local.get [1]
+0063628a local.get [5]
+0063628c f32.store [2, 8]
+0063628f local.get [0]
+00636291 local.get [1]
+00636293 i32.store [2, 12]
+00636296 i32.const [1] ; TABLE 
+00636298 local.set [2]
+0063629a br [2]
+0063629c end []
+0063629d local.get [0]
+0063629f i32.load [2, 20]
+006362a2 i32.const [0] ; TABLE 
+006362a4 call [1008] ; GameObject.get_transform
+006362a7 f32.const [0.0]
+006362ac local.get [0]
+006362ae f32.load [2, 24]
+006362b1 i32.const [0] ; TABLE 
+006362b3 call [4269] ; ShortcutExtensions.DOScale
+006362b6 i32.const [27] ; TABLE 
+006362b8 i32.const [4017616] ; TABLE 
+006362bd i32.load [2, 0]
+006362c0 call [1458] ; 
+006362c3 i32.const [4017560] ; TABLE 
+006362c8 i32.load [2, 0]
+006362cb call [9980] ; 
+006362ce local.get [0]
+006362d0 f32.load [2, 24]
+006362d3 local.set [5]
+006362d5 i32.const [3941920] ; TABLE ; type: WaitForSeconds
+006362da i32.load [2, 0]
+006362dd call [903] ; 
+006362e0 local.set [1]
+006362e2 local.get [1]
+006362e4 local.get [5]
+006362e6 f32.store [2, 8]
+006362e9 local.get [0]
+006362eb local.get [1]
+006362ed i32.store [2, 12]
+006362f0 i32.const [2] ; TABLE 
+006362f2 local.set [2]
+006362f4 br [1]
+006362f6 end []
+006362f7 local.get [0]
+006362f9 i32.load [2, 20]
+006362fc i32.const [0] ; TABLE 
+006362fe call [1008] ; GameObject.get_transform
+00636301 f32.const [0.0]
+00636306 local.get [0]
+00636308 f32.load [2, 24]
+0063630b i32.const [0] ; TABLE 
+0063630d call [4269] ; ShortcutExtensions.DOScale
+00636310 i32.const [26] ; TABLE 
+00636312 i32.const [4017616] ; TABLE 
+00636317 i32.load [2, 0]
+0063631a call [1458] ; 
+0063631d drop []
+0063631e local.get [0]
+00636320 f32.load [2, 24]
+00636323 local.set [5]
+00636325 i32.const [3941920] ; TABLE ; type: WaitForSeconds
+0063632a i32.load [2, 0]
+0063632d call [903] ; 
+00636330 local.set [1]
+00636332 local.get [1]
+00636334 local.get [5]
+00636336 f32.store [2, 8]
+00636339 local.get [0]
+0063633b local.get [1]
+0063633d i32.store [2, 12]
+00636340 i32.const [3] ; TABLE 
+00636342 local.set [2]
+00636344 end []
+00636345 i32.const [1] ; TABLE 
+00636347 local.set [1]
+00636349 end []
+0063634a local.get [0]
+0063634c local.get [2]
+0063634e i32.store [2, 8]
+00636351 end []
+00636352 local.get [1]
+00636354 return []
+00636355 end []
+

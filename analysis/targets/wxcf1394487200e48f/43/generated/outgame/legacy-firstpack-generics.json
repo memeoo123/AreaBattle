@@ -1,0 +1,257 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3958592,
+      "encodedUsage": "0xc0008133",
+      "methodSpecIndex": 16537,
+      "methodSpecAddress": 681452,
+      "methodSpec": [
+        10512,
+        939,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10956,
+            "name": "AssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958596,
+      "encodedUsage": "0xc0008135",
+      "methodSpecIndex": 16538,
+      "methodSpecAddress": 681464,
+      "methodSpec": [
+        10517,
+        939,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10956,
+            "name": "AssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958600,
+      "encodedUsage": "0xc0008137",
+      "methodSpecIndex": 16539,
+      "methodSpecAddress": 681476,
+      "methodSpec": [
+        10510,
+        939,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10956,
+            "name": "AssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3977284,
+      "encodedUsage": "0xc000a3ff",
+      "methodSpecIndex": 20991,
+      "methodSpecAddress": 734900,
+      "methodSpec": [
+        10644,
+        243,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "get_Count",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3977288,
+      "encodedUsage": "0xc000a401",
+      "methodSpecIndex": 20992,
+      "methodSpecAddress": 734912,
+      "methodSpec": [
+        10650,
+        243,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 4003800,
+      "encodedUsage": "0xc000c1bd",
+      "methodSpecIndex": 24798,
+      "methodSpecAddress": 780584,
+      "methodSpec": [
+        71878,
+        -1,
+        5566
+      ],
+      "declaringType": "JsonMapper",
+      "method": "ToObject",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x150000",
+            "data": 3762652,
+            "name": null
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4012472,
+      "encodedUsage": "0xc000c919",
+      "methodSpecIndex": 25740,
+      "methodSpecAddress": 791888,
+      "methodSpec": [
+        50673,
+        -1,
+        4450
+      ],
+      "declaringType": "Resources",
+      "method": "Load",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 6842,
+            "name": "TextAsset"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4000952,
+      "encodedUsage": "0xc000c03d",
+      "methodSpecIndex": 24606,
+      "methodSpecAddress": 778280,
+      "methodSpec": [
+        50751,
+        -1,
+        5542
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponent",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3129,
+            "name": "AssetBundleManager"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4001100,
+      "encodedUsage": "0xc000c087",
+      "methodSpecIndex": 24643,
+      "methodSpecAddress": 778724,
+      "methodSpec": [
+        50751,
+        -1,
+        5552
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponent",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3833,
+            "name": "ResourcesMono"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

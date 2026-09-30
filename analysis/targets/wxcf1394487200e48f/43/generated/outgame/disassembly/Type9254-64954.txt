@@ -1,0 +1,23 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.GetGameClubData; wasmcode1 function 68415; offset=21659100 size=58
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+014a7ddd  i32.const [5006711]
+014a7de2  i32.load8_u [0, 0]
+014a7de5  i32.eqz []
+014a7de6  if [-64]
+014a7de8    i32.const [3932292]
+014a7ded    i32.const [1605]
+014a7df0    call_indirect [0, 0]
+014a7df3    i32.const [5006711]
+014a7df8    i32.const [1]
+014a7dfa    i32.store8 [0, 0]
+014a7dfd  end []
+014a7dfe  i32.const [3932292]
+014a7e03  i32.load [2, 0]
+014a7e06  i32.const [1149]
+014a7e09  call_indirect [0, 0]
+014a7e0c  local.get [1]
+014a7e0e  i32.const [0]
+014a7e10  call [27839] ; GameClubTools.GetData
+014a7e14  return []
+014a7e15  end []

@@ -1,0 +1,33 @@
+; Original class: CommanderItem
+; Type4334.Awake; wasmcode function 20193; offset=9070749 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a68a0  i32.const [5008831]
+008a68a5  i32.load8_u [0, 0]
+008a68a8  i32.eqz []
+008a68a9  if [-64]
+008a68ab    i32.const [3927888]
+008a68b0    call [900] ; 
+008a68b3    i32.const [3992832] ; METHOD CommanderItem.OnClick
+008a68b8    call [900] ; 
+008a68bb    i32.const [5008831]
+008a68c0    i32.const [1]
+008a68c2    i32.store8 [0, 0]
+008a68c5  end []
+008a68c6  local.get [0]
+008a68c8  i32.load [2, 12]
+008a68cb  local.set [1]
+008a68cd  i32.const [3927888]
+008a68d2  i32.load [2, 0]
+008a68d5  call [903] ; 
+008a68d8  local.set [2]
+008a68da  local.get [2]
+008a68dc  local.get [0]
+008a68de  i32.const [3992832] ; METHOD CommanderItem.OnClick
+008a68e3  i32.load [2, 0]
+008a68e6  i32.const [0]
+008a68e8  call [1002] ; Action..ctor
+008a68eb  local.get [1]
+008a68ed  local.get [2]
+008a68ef  i32.const [0]
+008a68f1  call [1723] ; UIExtension.AddClick
+008a68f4  end []

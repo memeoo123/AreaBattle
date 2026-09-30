@@ -1,0 +1,29 @@
+﻿{
+  "atUtc": "2026-09-30T04:39:17.291936+00:00",
+  "status": "passed-local-fixture",
+  "buildReport": "analysis/firstpack-native-build-validation.json",
+  "playModeReport": "analysis/firstpack-native-startup-validation.json",
+  "originalAliases": 7,
+  "bundle": {
+    "sha256": "0df3a9abb648c34ce9dd9d3d1a20c16026c917bfef082825d5c038cb8ab20899",
+    "bytes": 4635198,
+    "addresses": 91
+  },
+  "nativeChecks": 15,
+  "sourceMethods": [
+    29875,
+    29876,
+    29877,
+    29878,
+    29913,
+    23815,
+    23835
+  ],
+  "limitations": [
+    "Rebuilt Windows native pack, not original WebGL pack binary",
+    "Synthetic local patch URLs; original platform/server selection not validated",
+    "Scheduler pumped from editor; native bundle manager owns download/operation Update",
+    "Imported scene canvas remains local bootstrap asset",
+    "No complete configuration manager/account/menu production composition or fresh Player build"
+  ]
+}

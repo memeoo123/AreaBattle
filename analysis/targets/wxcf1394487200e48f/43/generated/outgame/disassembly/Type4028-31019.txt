@@ -1,0 +1,20 @@
+; Original class: CommanderManager
+; Type4028.GetCommanderDatas; wasmcode function 4485; offset=1485312 size=49
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0016aa01  i32.const [5008686]
+0016aa06  i32.load8_u [0, 0]
+0016aa09  i32.eqz []
+0016aa0a  if [-64]
+0016aa0c    i32.const [3955480]
+0016aa11    call [900] ; 
+0016aa14    i32.const [5008686]
+0016aa19    i32.const [1]
+0016aa1b    i32.store8 [0, 0]
+0016aa1e  end []
+0016aa1f  local.get [0]
+0016aa21  i32.load [2, 24]
+0016aa24  i32.const [3955480]
+0016aa29  i32.load [2, 0]
+0016aa2c  call [1138] ; 
+0016aa2f  return []
+0016aa30  end []

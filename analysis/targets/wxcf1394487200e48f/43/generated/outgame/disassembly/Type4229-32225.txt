@@ -1,0 +1,40 @@
+; Original class: UserInfoManager
+; Type4229.CheckInstallVersion; wasmcode function 6840; offset=2575356 size=102
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00274bfd  i32.const [5007231]
+00274c02  i32.load8_u [0, 0]
+00274c05  i32.eqz []
+00274c06  if [-64]
+00274c08    i32.const [3928172]
+00274c0d    call [900] ; 
+00274c10    i32.const [3953544]
+00274c15    call [900] ; 
+00274c18    i32.const [5007231]
+00274c1d    i32.const [1]
+00274c1f    i32.store8 [0, 0]
+00274c22  end []
+00274c23  block [-64]
+00274c25    i32.const [3928172]
+00274c2a    i32.load [2, 0]
+00274c2d    i32.load [2, 92]
+00274c30    i32.load [2, 0]
+00274c33    i32.const [0]
+00274c35    call [4528] ; AppInfoManager.IsInstallVersion
+00274c38    br_if [0]
+00274c3a    local.get [0]
+00274c3c    i32.load [2, 20]
+00274c3f    local.set [0]
+00274c41    local.get [0]
+00274c43    i64.load [3, 32]
+00274c46    i64.const [0]
+00274c48    i64.ne []
+00274c49    br_if [0]
+00274c4b    local.get [0]
+00274c4d    i32.const [3953544]
+00274c52    i32.load [2, 0]
+00274c55    call [935] ; 
+00274c58    i32.const [0]
+00274c5a    call [1848] ; ServerTimeModule.GetNowTimestampLong
+00274c5d    i64.store [3, 32]
+00274c60  end []
+00274c61  end []

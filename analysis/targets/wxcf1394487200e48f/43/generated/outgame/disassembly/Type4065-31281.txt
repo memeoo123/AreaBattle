@@ -1,0 +1,22 @@
+; Original class: GuideControl
+; Type4065.ny]vld; wasmcode function 19294; offset=8650584 size=56
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0083ff59  i32.const [5008378]
+0083ff5e  i32.load8_u [0, 0]
+0083ff61  i32.eqz []
+0083ff62  if [-64]
+0083ff64    i32.const [3953592]
+0083ff69    call [900] ; 
+0083ff6c    i32.const [5008378]
+0083ff71    i32.const [1]
+0083ff73    i32.store8 [0, 0]
+0083ff76  end []
+0083ff77  i32.const [3953592]
+0083ff7c  i32.load [2, 0]
+0083ff7f  call [935] ; 
+0083ff82  i32.const [1]
+0083ff84  i32.store8 [0, 128]
+0083ff88  local.get [0]
+0083ff8a  local.get [0]
+0083ff8c  call [4406] ; GuideControl.EnterNextStage
+0083ff8f  end []

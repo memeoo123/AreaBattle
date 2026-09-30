@@ -1,0 +1,27 @@
+; Original class: ADModule
+; Type9202.HideBanner; wasmcode function 13426; offset=6506665 size=74
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006348aa  i32.const [5006917]
+006348af  i32.load8_u [0, 0]
+006348b2  i32.eqz []
+006348b3  if [-64]
+006348b5    i32.const [3936304]
+006348ba    call [900] ; 
+006348bd    i32.const [4045516] ; STRING "BannerOnHide"
+006348c2    call [900] ; 
+006348c5    i32.const [5006917]
+006348ca    i32.const [1]
+006348cc    i32.store8 [0, 0]
+006348cf  end []
+006348d0  i32.const [3936304]
+006348d5  i32.load [2, 0]
+006348d8  call [901] ; 
+006348db  i32.const [0]
+006348dd  call [1381] ; NewAdsManager.get_Instance
+006348e0  i32.const [0]
+006348e2  call [11270] ; NewAdsManager.hideBanner
+006348e5  i32.const [4045516] ; STRING "BannerOnHide"
+006348ea  i32.load [2, 0]
+006348ed  i32.const [0]
+006348ef  call [1317] ; MsgDispatcher.SendMessage
+006348f2  end []

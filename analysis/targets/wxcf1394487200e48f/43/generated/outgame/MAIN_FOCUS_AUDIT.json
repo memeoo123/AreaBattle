@@ -1,0 +1,41 @@
+{
+  "atUtc": "2026-09-30T05:45:43.044758+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameMainFocus.cs",
+  "sourceMethod": 30604,
+  "genericEvidence": {
+    "4018328": "UIModule.GetUI<Proj_xqzdPlayUI> metadata27403 inst6058 type4394",
+    "4018480": "UIModule.Show<Proj_xqzdPauseUI> metadata27397 inst6057 type4393",
+    "3953440": "ControlBase<LevelControl>.get_I type4107 field8",
+    "3953480": "ControlBase<PVPController>.get_I type4009 flag8",
+    "GlobalData28": "source obfuscated global flag; only suppresses GamePause"
+  },
+  "sequence": [
+    "Log OnApplicationFocus： plus Boolean.ToString",
+    "If !shared EnterGame return",
+    "If !GlobalData28 send GamePause object[]{!focus}",
+    "If focus regained return",
+    "If PlayUI exists and LevelControl field8==6 and !PVPController flag8 show PauseUI with Array.Empty<object>",
+    "CLog.LogByColor red loss/upload message",
+    "UserDataPrefs.OnSave",
+    "DataManagerPool.SaveData",
+    "Log 数据存储完成"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:45:43.044758+00:00",
+    "scope": "MineGameMain OnApplicationFocus pause and preference/data-pool save behavior",
+    "checksPassed": 688,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "OS focus events or actual UI/platform service production composition",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Actual UI lookup/show bindings and global/PVP owners",
+    "Native OS focus callbacks via production main component",
+    "Main30617 startup/service graph and complete Player validation"
+  ]
+}

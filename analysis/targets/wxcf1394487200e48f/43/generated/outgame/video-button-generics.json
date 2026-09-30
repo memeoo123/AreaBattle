@@ -1,0 +1,81 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3986880,
+      "encodedUsage": "0xc000b541",
+      "methodSpecIndex": 23200,
+      "methodSpecAddress": 761408,
+      "methodSpec": [
+        51529,
+        129,
+        -1
+      ],
+      "declaringType": "UnityEvent`1",
+      "method": "AddListener",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80020000",
+            "data": 154,
+            "name": "Boolean"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3986884,
+      "encodedUsage": "0xc000b543",
+      "methodSpecIndex": 23201,
+      "methodSpecAddress": 761420,
+      "methodSpec": [
+        51534,
+        129,
+        -1
+      ],
+      "declaringType": "UnityEvent`1",
+      "method": "Invoke",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80020000",
+            "data": 154,
+            "name": "Boolean"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

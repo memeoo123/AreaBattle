@@ -1,0 +1,26 @@
+; Original class: DBTSDKManager
+; Type3135.InitSDKOpenFunction; wasmcode function 20050; offset=9009737 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00897a4a  i32.const [4988614]
+00897a4f  i32.load8_u [0, 0]
+00897a52  i32.eqz []
+00897a53  if [-64]
+00897a55    i32.const [3944812]
+00897a5a    call [900] ; 
+00897a5d    i32.const [4988614]
+00897a62    i32.const [1]
+00897a64    i32.store8 [0, 0]
+00897a67  end []
+00897a68  i32.const [3944812]
+00897a6d  i32.load [2, 0]
+00897a70  call [903] ; 
+00897a73  local.set [1]
+00897a75  local.get [1]
+00897a77  i32.const [0]
+00897a79  i32.store [2, 8]
+00897a7c  local.get [1]
+00897a7e  local.get [0]
+00897a80  i32.store [2, 16]
+00897a83  local.get [1]
+00897a85  return []
+00897a86  end []

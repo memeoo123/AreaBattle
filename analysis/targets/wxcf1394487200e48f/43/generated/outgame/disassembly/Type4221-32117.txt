@@ -1,0 +1,30 @@
+; Original class: EffectCellection
+; Type4221.Display; wasmcode1 function 29225; offset=11221924 size=80
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00ab3ba5  i32.const [5007180]
+00ab3baa  i32.load8_u [0, 0]
+00ab3bad  i32.eqz []
+00ab3bae  if [-64]
+00ab3bb0    i32.const [3955812]
+00ab3bb5    i32.const [1605]
+00ab3bb8    call_indirect [0, 0]
+00ab3bbb    i32.const [5007180]
+00ab3bc0    i32.const [1]
+00ab3bc2    i32.store8 [0, 0]
+00ab3bc5  end []
+00ab3bc6  i32.const [0]
+00ab3bc8  i32.const [9428] ; TABLE GameModule.get_Effect
+00ab3bcc  call_indirect [2, 0]
+00ab3bcf  local.get [0]
+00ab3bd1  i32.load [2, 16]
+00ab3bd4  local.get [1]
+00ab3bd6  i32.const [3955812]
+00ab3bdb  i32.load [2, 0]
+00ab3bde  i32.const [10267]
+00ab3be2  call_indirect [3, 0]
+00ab3be5  i32.const [0]
+00ab3be7  call [29221] ; EffectModule.Get
+00ab3beb  i32.const [1]
+00ab3bed  i32.const [0]
+00ab3bef  call [31646] ; BaseEffect.SetActive
+00ab3bf3  end []

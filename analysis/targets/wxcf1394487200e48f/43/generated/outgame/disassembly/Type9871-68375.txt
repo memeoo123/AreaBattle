@@ -1,0 +1,39 @@
+; Original class: DOTween
+; Type9871.InitCheck; wasmcode function 8035; offset=3824825 size=104
+; signature={'args': [127], 'returns': []}; localGroups=[]
+003a5cba  i32.const [4985538]
+003a5cbf  i32.load8_u [0, 0]
+003a5cc2  i32.eqz []
+003a5cc3  if [-64]
+003a5cc5    i32.const [3930144]
+003a5cca    call [900] ; 
+003a5ccd    i32.const [4985538]
+003a5cd2    i32.const [1]
+003a5cd4    i32.store8 [0, 0]
+003a5cd7  end []
+003a5cd8  i32.const [3930144]
+003a5cdd  i32.load [2, 0]
+003a5ce0  call [901] ; 
+003a5ce3  block [-64]
+003a5ce5    i32.const [3930144]
+003a5cea    i32.load [2, 0]
+003a5ced    i32.load [2, 92]
+003a5cf0    i32.load8_u [0, 124]
+003a5cf3    br_if [0]
+003a5cf5    i32.const [0]
+003a5cf7    call [1950] ; Application.get_isPlaying
+003a5cfa    i32.eqz []
+003a5cfb    br_if [0]
+003a5cfd    i32.const [3930144]
+003a5d02    i32.load [2, 0]
+003a5d05    call [901] ; 
+003a5d08    i32.const [0]
+003a5d0a    call [8032] ; DOTween.get_isQuitting
+003a5d0d    br_if [0]
+003a5d0f    i32.const [3930144]
+003a5d14    i32.load [2, 0]
+003a5d17    call [901] ; 
+003a5d1a    i32.const [0]
+003a5d1c    call [12670] ; DOTween.AutoInit
+003a5d1f  end []
+003a5d20  end []

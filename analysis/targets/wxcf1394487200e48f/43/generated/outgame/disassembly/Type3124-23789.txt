@@ -1,0 +1,17 @@
+; Original class: AssetBundleLoadAssetOperationFull
+; Type3124.Progress; wasmcode function 13180; offset=6309053 size=29
+; signature={'args': [127, 127], 'returns': [125]}; localGroups=[]
+006044be  local.get [0]
+006044c0  i32.load [2, 24]
+006044c3  local.set [0]
+006044c5  local.get [0]
+006044c7  i32.eqz []
+006044c8  if [-64]
+006044ca    f32.const [0.0]
+006044cf    return []
+006044d0  end []
+006044d1  local.get [0]
+006044d3  i32.const [0]
+006044d5  call [4523] ; AsyncOperation.get_progress
+006044d8  return []
+006044d9  end []

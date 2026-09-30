@@ -1,0 +1,28 @@
+; <>c..cctor; wasmcode1 function 42924; offset=15404163 size=80
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00eb0c84  i32.const [5007334]
+00eb0c89  i32.load8_u [0, 0]
+00eb0c8c  i32.eqz []
+00eb0c8d  if [-64]
+00eb0c8f    i32.const [3947024] ; type: <>c
+00eb0c94    i32.const [1605]
+00eb0c97    call_indirect [0, 0]
+00eb0c9a    i32.const [5007334]
+00eb0c9f    i32.const [1]
+00eb0ca1    i32.store8 [0, 0]
+00eb0ca4  end []
+00eb0ca5  i32.const [3947024] ; type: <>c
+00eb0caa  i32.load [2, 0]
+00eb0cad  i32.const [109007]
+00eb0cb1  call_indirect [2, 0]
+00eb0cb4  local.set [0]
+00eb0cb6  i32.const [3947024] ; type: <>c
+00eb0cbb  i32.load [2, 0]
+00eb0cbe  i32.load [2, 92]
+00eb0cc1  local.get [0]
+00eb0cc3  i32.store [2, 0]
+00eb0cc6  i32.const [3947024] ; type: <>c
+00eb0ccb  i32.load [2, 0]
+00eb0cce  i32.load [2, 92]
+00eb0cd1  drop []
+00eb0cd2  end []

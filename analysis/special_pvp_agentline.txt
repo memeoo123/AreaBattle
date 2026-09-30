@@ -1,0 +1,43 @@
+; PVPController.bn^Uy; wasmcode function 11174; offset=5504942 size=113
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0053ffaf  i32.const [5008598]
+0053ffb4  i32.load8_u [0, 0]
+0053ffb7  i32.eqz []
+0053ffb8  if [-64]
+0053ffba    i32.const [3953312]
+0053ffbf    call [900] ; 
+0053ffc2    i32.const [3937424] ; type: PvpRendererUIComp
+0053ffc7    call [900] ; 
+0053ffca    i32.const [5008598]
+0053ffcf    i32.const [1]
+0053ffd1    i32.store8 [0, 0]
+0053ffd4  end []
+0053ffd5  local.get [1]
+0053ffd7  i32.const [0]
+0053ffd9  call [1008] ; 
+0053ffdc  local.set [2]
+0053ffde  i32.const [3937424] ; type: PvpRendererUIComp
+0053ffe3  i32.load [2, 0]
+0053ffe6  call [903] ; 
+0053ffe9  local.set [1]
+0053ffeb  local.get [1]
+0053ffed  local.get [2]
+0053ffef  local.get [0]
+0053fff1  call [10980] ; PvpRendererUIComp..ctor
+0053fff4  local.get [0]
+0053fff6  local.get [1]
+0053fff8  i32.store [2, 64]
+0053fffb  local.get [0]
+0053fffd  i32.load [2, 64]
+00540000  i32.const [3953312]
+00540005  i32.load [2, 0]
+00540008  call [935] ; 
+0054000b  i32.load [2, 20]
+0054000e  i32.load [2, 20]
+00540011  i32.load [2, 72]
+00540014  local.get [0]
+00540016  i32.load [2, 40]
+00540019  local.get [0]
+0054001b  call [10982] ; PvpRendererUIComp.Renderer
+0054001e  end []
+

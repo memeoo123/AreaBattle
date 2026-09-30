@@ -1,0 +1,40 @@
+; Original class: DiceShopControl
+; Type4047.OnInit; wasmcode function 19938; offset=8962074 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0088c01d  i32.const [5008769]
+0088c022  i32.load8_u [0, 0]
+0088c025  i32.eqz []
+0088c026  if [-64]
+0088c028    i32.const [3996752] ; METHOD DiceShopControl.Lilao
+0088c02d    call [900] ; 
+0088c030    i32.const [3947148]
+0088c035    call [900] ; 
+0088c038    i32.const [3944712]
+0088c03d    call [900] ; 
+0088c040    i32.const [5008769]
+0088c045    i32.const [1]
+0088c047    i32.store8 [0, 0]
+0088c04a  end []
+0088c04b  i32.const [3944712]
+0088c050  i32.load [2, 0]
+0088c053  call [901] ; 
+0088c056  i32.const [3944712]
+0088c05b  i32.load [2, 0]
+0088c05e  i32.load [2, 92]
+0088c061  i32.load [2, 12]
+0088c064  local.set [1]
+0088c066  i32.const [3947148]
+0088c06b  i32.load [2, 0]
+0088c06e  call [903] ; 
+0088c071  local.set [2]
+0088c073  local.get [2]
+0088c075  local.get [0]
+0088c077  i32.const [3996752] ; METHOD DiceShopControl.Lilao
+0088c07c  i32.load [2, 0]
+0088c07f  i32.const [0]
+0088c081  call [1067] ; EventHandler..ctor
+0088c084  local.get [1]
+0088c086  local.get [2]
+0088c088  i32.const [0]
+0088c08a  call [1146] ; MsgDispatcher.AddEventListener
+0088c08d  end []

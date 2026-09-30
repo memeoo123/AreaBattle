@@ -1,0 +1,24 @@
+; Original class: SDKExtension
+; Type3394.IsOpen; wasmcode function 2073; offset=630268 size=58
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00099dfd  i32.const [5011609]
+00099e02  i32.load8_u [0, 0]
+00099e05  i32.eqz []
+00099e06  if [-64]
+00099e08    i32.const [3930128]
+00099e0d    call [900] ; 
+00099e10    i32.const [5011609]
+00099e15    i32.const [1]
+00099e17    i32.store8 [0, 0]
+00099e1a  end []
+00099e1b  i32.const [3930128]
+00099e20  i32.load [2, 0]
+00099e23  call [901] ; 
+00099e26  i32.const [0]
+00099e28  call [974] ; DBTSDKManager.get_Instance
+00099e2b  local.get [0]
+00099e2d  local.get [1]
+00099e2f  i32.const [0]
+00099e31  call [12681] ; DBTSDKManager.GetSDKOpenFunctionState
+00099e34  return []
+00099e35  end []

@@ -1,0 +1,102 @@
+; Original class: ItemConfigMgr
+; Type4534.GetGameItemConfig; wasmcode function 4986; offset=1721010 size=263
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+001a42b5  global.get [0]
+001a42b7  i32.const [16]
+001a42b9  i32.sub []
+001a42ba  local.set [2]
+001a42bc  local.get [2]
+001a42be  global.set [0]
+001a42c0  i32.const [5001123]
+001a42c5  i32.load8_u [0, 0]
+001a42c8  i32.eqz []
+001a42c9  if [-64]
+001a42cb    i32.const [3929208]
+001a42d0    call [900] ; 
+001a42d3    i32.const [3957252]
+001a42d8    call [900] ; 
+001a42db    i32.const [3934404]
+001a42e0    call [900] ; 
+001a42e3    i32.const [3926996]
+001a42e8    call [900] ; 
+001a42eb    i32.const [4106324] ; STRING "道具表配置中不包含id"
+001a42f0    call [900] ; 
+001a42f3    i32.const [5001123]
+001a42f8    i32.const [1]
+001a42fa    i32.store8 [0, 0]
+001a42fd  end []
+001a42fe  local.get [2]
+001a4300  i32.const [0]
+001a4302  i32.store [2, 12]
+001a4305  local.get [0]
+001a4307  i32.load [2, 8]
+001a430a  local.set [0]
+001a430c  local.get [2]
+001a430e  local.get [1]
+001a4310  i32.store [2, 8]
+001a4313  block [-64]
+001a4315    local.get [0]
+001a4317    i32.const [3934404]
+001a431c    i32.load [2, 0]
+001a431f    local.get [2]
+001a4321    i32.const [8]
+001a4323    i32.add []
+001a4324    call [910] ; 
+001a4327    local.get [2]
+001a4329    i32.const [12]
+001a432b    i32.add []
+001a432c    i32.const [3957252]
+001a4331    i32.load [2, 0]
+001a4334    call [1017] ; 
+001a4337    if [-64]
+001a4339      local.get [2]
+001a433b      i32.load [2, 12]
+001a433e      local.set [3]
+001a4340      br [1]
+001a4342    end []
+001a4343    i32.const [3926996]
+001a4348    i32.load [2, 0]
+001a434b    i32.const [2]
+001a434d    call [909] ; 
+001a4350    local.set [0]
+001a4352    local.get [0]
+001a4354    i32.const [4106324] ; STRING "道具表配置中不包含id"
+001a4359    i32.load [2, 0]
+001a435c    call [905] ; 
+001a435f    local.get [0]
+001a4361    i32.const [4106324] ; STRING "道具表配置中不包含id"
+001a4366    i32.load [2, 0]
+001a4369    i32.store [2, 16]
+001a436c    local.get [2]
+001a436e    local.get [1]
+001a4370    i32.store [2, 4]
+001a4373    i32.const [3934404]
+001a4378    i32.load [2, 0]
+001a437b    local.get [2]
+001a437d    i32.const [4]
+001a437f    i32.add []
+001a4380    call [910] ; 
+001a4383    local.set [1]
+001a4385    local.get [0]
+001a4387    local.get [1]
+001a4389    call [905] ; 
+001a438c    local.get [0]
+001a438e    local.get [1]
+001a4390    i32.store [2, 20]
+001a4393    i32.const [3929208]
+001a4398    i32.load [2, 0]
+001a439b    call [901] ; 
+001a439e    local.get [0]
+001a43a0    i32.const [0]
+001a43a2    i32.const [2087] ; TABLE CLog.Error
+001a43a5    global.set [3]
+001a43a7    i32.const [2087] ; TABLE CLog.Error
+001a43aa    call_indirect [0, 0]
+001a43ad  end []
+001a43ae  local.get [2]
+001a43b0  i32.const [16]
+001a43b2  i32.add []
+001a43b3  global.set [0]
+001a43b5  local.get [3]
+001a43b7  return []
+001a43b8  end []

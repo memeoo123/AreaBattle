@@ -1,0 +1,48 @@
+; Original class: ServerTimeModule
+; Type4034.GetTodayOfYear; wasmcode function 3535; offset=1103757 size=116
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 126)]
+0010d790  global.get [0]
+0010d792  i32.const [16]
+0010d794  i32.sub []
+0010d795  local.set [1]
+0010d797  local.get [1]
+0010d799  global.set [0]
+0010d79b  i32.const [5008714]
+0010d7a0  i32.load8_u [0, 0]
+0010d7a3  i32.eqz []
+0010d7a4  if [-64]
+0010d7a6    i32.const [3930616]
+0010d7ab    call [900] ; 
+0010d7ae    i32.const [3940172]
+0010d7b3    call [900] ; 
+0010d7b6    i32.const [5008714]
+0010d7bb    i32.const [1]
+0010d7bd    i32.store8 [0, 0]
+0010d7c0  end []
+0010d7c1  local.get [0]
+0010d7c3  i64.load [3, 16]
+0010d7c6  local.set [2]
+0010d7c8  i32.const [3940172]
+0010d7cd  i32.load [2, 0]
+0010d7d0  call [901] ; 
+0010d7d3  local.get [1]
+0010d7d5  local.get [2]
+0010d7d7  i32.const [0]
+0010d7d9  call [1664] ; TimeHelper.ToDateTime
+0010d7dc  i64.store [3, 8]
+0010d7df  i32.const [3930616]
+0010d7e4  i32.load [2, 0]
+0010d7e7  call [901] ; 
+0010d7ea  local.get [1]
+0010d7ec  i32.const [8]
+0010d7ee  i32.add []
+0010d7ef  i32.const [0]
+0010d7f1  call [4459] ; DateTime.get_DayOfYear
+0010d7f4  local.set [0]
+0010d7f6  local.get [1]
+0010d7f8  i32.const [16]
+0010d7fa  i32.add []
+0010d7fb  global.set [0]
+0010d7fd  local.get [0]
+0010d7ff  return []
+0010d800  end []

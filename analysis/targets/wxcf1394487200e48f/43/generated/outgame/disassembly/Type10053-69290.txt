@@ -1,0 +1,22 @@
+; Original class: Event
+; Type10053.Internal_Destroy; wasmcode function 19757; offset=8849144 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008706f9  i32.const [4981548]
+008706fe  i32.load [2, 0]
+00870701  local.set [1]
+00870703  local.get [1]
+00870705  i32.eqz []
+00870706  if [-64]
+00870708    i32.const [1196937]
+0087070d    call [923] ; 
+00870710    local.set [1]
+00870712    i32.const [4981548]
+00870717    local.get [1]
+00870719    i32.store [2, 0]
+0087071c  end []
+0087071d  local.get [0]
+0087071f  local.get [1]
+00870721  global.set [3]
+00870723  global.get [3]
+00870725  call_indirect [3, 0]
+00870728  end []

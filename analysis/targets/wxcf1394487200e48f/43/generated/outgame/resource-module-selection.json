@@ -1,0 +1,81 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 4000600,
+      "encodedUsage": "0xc000bf99",
+      "methodSpecIndex": 24524,
+      "methodSpecAddress": 777296,
+      "methodSpec": [
+        26446,
+        -1,
+        5496
+      ],
+      "declaringType": "GameFrameEntry",
+      "method": "GetModule",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3511,
+            "name": "KeWanResLoadModule"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4000640,
+      "encodedUsage": "0xc000bfad",
+      "methodSpecIndex": 24534,
+      "methodSpecAddress": 777416,
+      "methodSpec": [
+        26446,
+        -1,
+        5506
+      ],
+      "declaringType": "GameFrameEntry",
+      "method": "GetModule",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3527,
+            "name": "YOResourcesModule"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

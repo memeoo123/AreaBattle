@@ -1,0 +1,60 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyVideoRewarded; wasmcode function 12697; offset=6113155 size=169
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d4784  i32.const [5004955]
+005d4789  i32.load8_u [0, 0]
+005d478c  i32.eqz []
+005d478d  if [-64]
+005d478f    i32.const [3928200]
+005d4794    call [900] ; 
+005d4797    i32.const [3930104]
+005d479c    call [900] ; 
+005d479f    i32.const [4100188] ; STRING "video_click_level"
+005d47a4    call [900] ; 
+005d47a7    i32.const [4093396] ; STRING "notifyVideoRewarded"
+005d47ac    call [900] ; 
+005d47af    i32.const [4077760] ; STRING "VIDEO"
+005d47b4    call [900] ; 
+005d47b7    i32.const [5004955]
+005d47bc    i32.const [1]
+005d47be    i32.store8 [0, 0]
+005d47c1  end []
+005d47c2  local.get [0]
+005d47c4  i32.load [2, 8]
+005d47c7  i32.const [4093396] ; STRING "notifyVideoRewarded"
+005d47cc  i32.load [2, 0]
+005d47cf  i32.const [0]
+005d47d1  call [921] ; String.Concat
+005d47d4  i32.const [0]
+005d47d6  call [999] ; XYXLOG.Log
+005d47d9  local.get [0]
+005d47db  local.get [0]
+005d47dd  call [12693] ; DAUAdsAdapter.reportVideoComplete
+005d47e0  local.get [0]
+005d47e2  i32.load [2, 32]
+005d47e5  local.set [1]
+005d47e7  local.get [1]
+005d47e9  if [-64]
+005d47eb    i32.const [6]
+005d47ed    i32.const [3930104]
+005d47f2    i32.load [2, 0]
+005d47f5    local.get [1]
+005d47f7    call [1044] ; 
+005d47fa  end []
+005d47fb  i32.const [4077760] ; STRING "VIDEO"
+005d4800  i32.load [2, 0]
+005d4803  local.get [0]
+005d4805  i32.load [2, 20]
+005d4808  i32.load [2, 16]
+005d480b  i32.const [0]
+005d480d  call [1019] ; String.Equals
+005d4810  if [-64]
+005d4812    i32.const [3928200]
+005d4817    i32.load [2, 0]
+005d481a    call [901] ; 
+005d481d    i32.const [4100188] ; STRING "video_click_level"
+005d4822    i32.load [2, 0]
+005d4825    i32.const [0]
+005d4827    call [6310] ; AppsflyerUtil.handleAdsLevel
+005d482a  end []
+005d482b  end []

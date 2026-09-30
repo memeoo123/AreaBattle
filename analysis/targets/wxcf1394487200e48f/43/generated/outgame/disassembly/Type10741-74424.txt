@@ -1,0 +1,142 @@
+; Original class: UIVideoBtn
+; Type10741.ReportVideoPlayOver; wasmcode function 9774; offset=4676987 size=368
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127)]
+00475d7e  i32.const [5001944]
+00475d83  i32.load8_u [0, 0]
+00475d86  i32.eqz []
+00475d87  if [-64]
+00475d89    i32.const [3928176]
+00475d8e    call [900] ; 
+00475d91    i32.const [3937964]
+00475d96    call [900] ; 
+00475d99    i32.const [4100244] ; STRING "videoalive_"
+00475d9e    call [900] ; 
+00475da1    i32.const [4100240] ; STRING "videoalive"
+00475da6    call [900] ; 
+00475da9    i32.const [4100256] ; STRING "videounlock"
+00475dae    call [900] ; 
+00475db1    i32.const [4100260] ; STRING "videounlock_"
+00475db6    call [900] ; 
+00475db9    i32.const [4100252] ; STRING "videoreward_"
+00475dbe    call [900] ; 
+00475dc1    i32.const [4034536] ; STRING ""
+00475dc6    call [900] ; 
+00475dc9    i32.const [4100248] ; STRING "videoreward"
+00475dce    call [900] ; 
+00475dd1    i32.const [5001944]
+00475dd6    i32.const [1]
+00475dd8    i32.store8 [0, 0]
+00475ddb  end []
+00475ddc  i32.const [3937964]
+00475de1  i32.load [2, 0]
+00475de4  call [901] ; 
+00475de7  i32.const [3937964]
+00475dec  i32.load [2, 0]
+00475def  i32.load [2, 92]
+00475df2  i32.load [2, 8]
+00475df5  local.get [0]
+00475df7  i32.load [2, 208]
+00475dfb  local.get [0]
+00475dfd  i32.load [2, 212]
+00475e01  local.get [0]
+00475e03  i32.load [2, 216]
+00475e07  i32.const [0]
+00475e09  call [5758] ; ReportManager.NewReportVideoSuccess
+00475e0c  local.get [0]
+00475e0e  i32.load [2, 196]
+00475e12  local.set [2]
+00475e14  local.get [2]
+00475e16  i32.load [2, 32]
+00475e19  local.set [1]
+00475e1b  block [-64]
+00475e1d    block [-64]
+00475e1f      local.get [2]
+00475e21      i32.load [2, 12]
+00475e24      local.set [2]
+00475e26      local.get [2]
+00475e28      i32.const [2]
+00475e2a      i32.gt_u []
+00475e2b      if [-64]
+00475e2d        i32.const [4034536] ; STRING ""
+00475e32        i32.load [2, 0]
+00475e35        local.set [2]
+00475e37        local.get [2]
+00475e39        local.set [3]
+00475e3b        br [2]
+00475e3d      end []
+00475e3e    end []
+00475e3f    local.get [2]
+00475e41    i32.const [2]
+00475e43    i32.shl []
+00475e44    local.set [2]
+00475e46    local.get [2]
+00475e48    i32.const [1707996]
+00475e4d    i32.add []
+00475e4e    i32.load [2, 0]
+00475e51    i32.load [2, 0]
+00475e54    local.set [3]
+00475e56    i32.const [3928176]
+00475e5b    i32.load [2, 0]
+00475e5e    call [901] ; 
+00475e61    i32.const [0]
+00475e63    call [1318] ; AppSetting.get_MineGameName
+00475e66    local.set [4]
+00475e68    local.get [2]
+00475e6a    i32.const [1708008]
+00475e6f    i32.add []
+00475e70    i32.load [2, 0]
+00475e73    i32.load [2, 0]
+00475e76    local.get [4]
+00475e78    i32.const [0]
+00475e7a    call [921] ; String.Concat
+00475e7d    local.set [2]
+00475e7f  end []
+00475e80  i32.const [3928176]
+00475e85  i32.load [2, 0]
+00475e88  call [901] ; 
+00475e8b  local.get [0]
+00475e8d  local.get [3]
+00475e8f  i32.const [0]
+00475e91  call [1318] ; AppSetting.get_MineGameName
+00475e94  i32.const [1]
+00475e96  local.get [0]
+00475e98  call [6901] ; UIVideoBtn.ReportEvent
+00475e9b  block [-64]
+00475e9d    local.get [1]
+00475e9f    if [-64]
+00475ea1      i32.const [0]
+00475ea3      local.set [3]
+00475ea5      local.get [1]
+00475ea7      i32.load [2, 8]
+00475eaa      br_if [1]
+00475eac    end []
+00475ead    i32.const [1]
+00475eaf    local.set [3]
+00475eb1  end []
+00475eb2  local.get [3]
+00475eb4  i32.eqz []
+00475eb5  if [-64]
+00475eb7    local.get [0]
+00475eb9    local.get [2]
+00475ebb    local.get [1]
+00475ebd    i32.const [1]
+00475ebf    local.get [0]
+00475ec1    call [6901] ; UIVideoBtn.ReportEvent
+00475ec4    return []
+00475ec5  end []
+00475ec6  local.get [0]
+00475ec8  local.set [1]
+00475eca  local.get [0]
+00475ecc  i32.load [2, 0]
+00475ecf  local.set [0]
+00475ed1  local.get [1]
+00475ed3  local.get [0]
+00475ed5  i32.const [368]
+00475ed8  i32.add []
+00475ed9  i32.load [2, 192]
+00475edd  local.get [0]
+00475edf  i32.load [2, 556]
+00475ee3  global.set [3]
+00475ee5  global.get [3]
+00475ee7  call_indirect [0, 0]
+00475eea  end []

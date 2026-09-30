@@ -1,0 +1,37 @@
+; Original class: GlobalItemManager
+; Type4542.GetItemCount; wasmcode function 5042; offset=1733826 size=94
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[(1, 126)]
+001a74c5  i32.const [5001148]
+001a74ca  i32.load8_u [0, 0]
+001a74cd  i32.eqz []
+001a74ce  if [-64]
+001a74d0    i32.const [3955840]
+001a74d5    call [900] ; 
+001a74d8    i32.const [3955848]
+001a74dd    call [900] ; 
+001a74e0    i32.const [5001148]
+001a74e5    i32.const [1]
+001a74e7    i32.store8 [0, 0]
+001a74ea  end []
+001a74eb  local.get [0]
+001a74ed  i32.load [2, 36]
+001a74f0  local.get [1]
+001a74f2  i32.const [3955840]
+001a74f7  i32.load [2, 0]
+001a74fa  call [1129] ; 
+001a74fd  if [-64]
+001a74ff    local.get [0]
+001a7501    i32.load [2, 36]
+001a7504    local.get [1]
+001a7506    i32.const [3955848]
+001a750b    i32.load [2, 0]
+001a750e    call [1128] ; 
+001a7511    i64.load [3, 16]
+001a7514    local.set [3]
+001a7516  else []
+001a7517    i64.const [0]
+001a7519    local.set [3]
+001a751b  end []
+001a751c  local.get [3]
+001a751e  return []
+001a751f  end []

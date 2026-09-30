@@ -1,0 +1,79 @@
+; AudioLoopFadeAction.OnStop wasmcode f20577 offset=9228208 size=200
+008ccfb3 i32.const [5011653]
+008ccfb8 i32.load8_u [0, 0]
+008ccfbb i32.eqz []
+008ccfbc if [-64]
+008ccfbe   i32.const [3927888] ; type: Action
+008ccfc3   call [900] ; 
+008ccfc6   i32.const [3990816] ; method: AudioLoopFadeAction.mK¾yL
+008ccfcb   call [900] ; 
+008ccfce   i32.const [3936516] ; type: Object
+008ccfd3   call [900] ; 
+008ccfd6   i32.const [5011653]
+008ccfdb   i32.const [1]
+008ccfdd   i32.store8 [0, 0]
+008ccfe0 end []
+008ccfe1 local.get [0]
+008ccfe3 i32.load8_u [0, 60]
+008ccfe6 i32.eqz []
+008ccfe7 if [-64]
+008ccfe9   i32.const [3927888] ; type: Action
+008ccfee   i32.load [2, 0]
+008ccff1   call [903] ; 
+008ccff4   local.set [1]
+008ccff6   local.get [1]
+008ccff8   local.get [0]
+008ccffa   i32.const [3990816] ; method: AudioLoopFadeAction.mK¾yL
+008ccfff   i32.load [2, 0]
+008cd002   i32.const [0]
+008cd004   call [1002] ; 
+008cd007   local.get [0]
+008cd009   i32.const [1]
+008cd00b   i32.store8 [0, 60]
+008cd00e   local.get [0]
+008cd010   i32.load [2, 36]
+008cd013   local.set [2]
+008cd015   i32.const [3936516] ; type: Object
+008cd01a   i32.load [2, 0]
+008cd01d   call [901] ; 
+008cd020   local.get [2]
+008cd022   i32.const [0]
+008cd024   i32.const [0]
+008cd026   call [946] ; 
+008cd029   if [-64]
+008cd02b     local.get [0]
+008cd02d     local.get [0]
+008cd02f     i32.load [2, 36]
+008cd032     i32.const [0]
+008cd034     call [8215] ; 
+008cd037     local.get [0]
+008cd039     local.get [0]
+008cd03b     call [8229] ; 
+008cd03e     f32.mul []
+008cd03f     f32.store [2, 48]
+008cd042   end []
+008cd043   local.get [0]
+008cd045   local.get [0]
+008cd047   i32.load [2, 36]
+008cd04a   i32.const [0]
+008cd04c   local.get [1]
+008cd04e   local.get [0]
+008cd050   call [6272] ; AudioLoopFadeAction.F½¶i
+008cd053   return []
+008cd054 end []
+008cd055 local.get [0]
+008cd057 i32.load [2, 76]
+008cd05a local.set [1]
+008cd05c local.get [1]
+008cd05e if [-64]
+008cd060   local.get [1]
+008cd062   i32.const [0]
+008cd064   i32.const [2075]
+008cd067   global.set [3]
+008cd069   i32.const [2075]
+008cd06c   call_indirect [0, 0]
+008cd06f end []
+008cd070 local.get [0]
+008cd072 local.get [0]
+008cd074 call [4019] ; 
+008cd077 end []

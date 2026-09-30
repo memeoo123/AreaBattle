@@ -1,0 +1,43 @@
+; Original class: DiceGameControl
+; Type4038.Lilao; wasmcode function 19957; offset=8966783 size=106
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0088d280  i32.const [5008745]
+0088d285  i32.load8_u [0, 0]
+0088d288  i32.eqz []
+0088d289  if [-64]
+0088d28b    i32.const [3995084]
+0088d290    call [900] ; 
+0088d293    i32.const [3930256]
+0088d298    call [900] ; 
+0088d29b    i32.const [5008745]
+0088d2a0    i32.const [1]
+0088d2a2    i32.store8 [0, 0]
+0088d2a5  end []
+0088d2a6  local.get [0]
+0088d2a8  i32.load [2, 16]
+0088d2ab  local.set [1]
+0088d2ad  local.get [1]
+0088d2af  i32.eqz []
+0088d2b0  if [-64]
+0088d2b2    i32.const [3930256]
+0088d2b7    i32.load [2, 0]
+0088d2ba    call [901] ; 
+0088d2bd    local.get [0]
+0088d2bf    i32.const [16]
+0088d2c1    i32.add []
+0088d2c2    local.set [0]
+0088d2c4    local.get [0]
+0088d2c6    i32.const [0]
+0088d2c8    call [1309] ; DataManagerPool.get_Instance
+0088d2cb    i32.const [3995084]
+0088d2d0    i32.load [2, 0]
+0088d2d3    call [1609] ; 
+0088d2d6    i32.store [2, 0]
+0088d2d9    local.get [0]
+0088d2db    i32.load [2, 0]
+0088d2de    local.set [1]
+0088d2e0  end []
+0088d2e1  local.get [1]
+0088d2e3  local.get [0]
+0088d2e5  call [12544] ; DiceGameDataManager.InitDailyData
+0088d2e8  end []

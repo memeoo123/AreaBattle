@@ -1,0 +1,45 @@
+{
+  "atUtc": "2026-09-30T05:48:47.332208+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameMainPreGameStartup.cs",
+  "sourceMethods": [
+    30617,
+    30622,
+    30608
+  ],
+  "controllerRoster": "PRE_GAME_REGISTRATION_ROSTER.json",
+  "sequence": [
+    "initializing log",
+    "OutgamePreGameSettings.Initialize",
+    "Factory-create PreLoad/StarGame/ExitGame in source order then ProcedureManager.Register",
+    "38 source controller IDs; resolve logic module before each controller; RegisterLogicCtr(false)",
+    "AudioManager.InitAudioManager",
+    "Resolve logic module again then InitCtrl(true)",
+    "ResourcesOnly=false, ModulesReady=true",
+    "LangFont.SetLangFont",
+    "start-game log",
+    "GameFrameEntry.CommonSettings",
+    "ReportManager.StartMineGame",
+    "Register ExitGame listener bound to MainExit",
+    "Resolve ProcedureManager again then StartProcedure<OutgameProcedurePreLoad>"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:48:47.332208+00:00",
+    "scope": "Main30617 configuration-complete startup composition with three concrete procedures and source38 registration order",
+    "checksPassed": 690,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "38 production controller instances, real platform services or complete playable startup",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Required control resolver must return actual38 recovered services; tests use trace fixtures",
+    "Platform/audio/language/common/report dependencies need concrete composition",
+    "Native Main owner/core-to-config-to-pre-game flow still pending",
+    "FSM event cleanup and debug command implementations pending",
+    "Full outgame Player validation"
+  ]
+}

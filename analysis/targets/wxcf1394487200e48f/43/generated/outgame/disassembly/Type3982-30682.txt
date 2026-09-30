@@ -1,0 +1,140 @@
+; Original class: RaceActivityControl
+; Type3982.CheckShowStartPanel; wasmcode function 10965; offset=5310941 size=391
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+005109e0  i32.const [0]
+005109e2  local.set [1]
+005109e4  i32.const [5010165]
+005109e9  i32.load8_u [0, 0]
+005109ec  i32.eqz []
+005109ed  if [-64]
+005109ef    i32.const [3915772]
+005109f4    call [900] ; 
+005109f7    i32.const [3927888]
+005109fc    call [900] ; 
+005109ff    i32.const [3989352]
+00510a04    call [900] ; 
+00510a07    i32.const [3929792]
+00510a0c    call [900] ; 
+00510a0f    i32.const [3953440]
+00510a14    call [900] ; 
+00510a17    i32.const [3977244]
+00510a1c    call [900] ; 
+00510a1f    i32.const [3977268]
+00510a24    call [900] ; 
+00510a27    i32.const [3977284]
+00510a2c    call [900] ; 
+00510a2f    i32.const [4010516] ; METHOD RaceActivityControl.o`m|f
+00510a34    call [900] ; 
+00510a37    i32.const [4010520] ; METHOD RaceActivityControl.ploPVyb
+00510a3c    call [900] ; 
+00510a3f    i32.const [4018504]
+00510a44    call [900] ; 
+00510a47    i32.const [5010165]
+00510a4c    i32.const [1]
+00510a4e    i32.store8 [0, 0]
+00510a51  end []
+00510a52  block [-64]
+00510a54    i32.const [3953440]
+00510a59    i32.load [2, 0]
+00510a5c    call [935] ; 
+00510a5f    i32.const [0]
+00510a61    call [3326] ; LevelControl.get_RealCurLevel
+00510a64    i32.const [7]
+00510a66    i32.lt_s []
+00510a67    br_if [0]
+00510a69    local.get [0]
+00510a6b    i32.load [2, 16]
+00510a6e    local.set [2]
+00510a70    local.get [2]
+00510a72    i32.load [2, 20]
+00510a75    i32.load [2, 20]
+00510a78    i32.const [1]
+00510a7a    i32.lt_s []
+00510a7b    br_if [0]
+00510a7d    local.get [2]
+00510a7f    i32.load [2, 20]
+00510a82    i32.load8_u [0, 8]
+00510a85    br_if [0]
+00510a87    local.get [2]
+00510a89    i32.load [2, 20]
+00510a8c    i32.load8_u [0, 24]
+00510a8f    br_if [0]
+00510a91    i32.const [3977284]
+00510a96    i32.load [2, 0]
+00510a99    drop []
+00510a9a    local.get [0]
+00510a9c    i32.load [2, 12]
+00510a9f    i32.load [2, 12]
+00510aa2    i32.const [2]
+00510aa4    i32.ge_s []
+00510aa5    if [-64]
+00510aa7      local.get [0]
+00510aa9      i32.load [2, 12]
+00510aac      local.set [1]
+00510aae      i32.const [3977284]
+00510ab3      i32.load [2, 0]
+00510ab6      drop []
+00510ab7      local.get [1]
+00510ab9      i32.const [1]
+00510abb      local.get [1]
+00510abd      i32.load [2, 12]
+00510ac0      i32.const [1]
+00510ac2      i32.sub []
+00510ac3      i32.const [3977268]
+00510ac8      i32.load [2, 0]
+00510acb      call [2579] ; 
+00510ace    end []
+00510acf    i32.const [3929792]
+00510ad4    i32.load [2, 0]
+00510ad7    call [901] ; 
+00510ada    i32.const [1]
+00510adc    local.set [1]
+00510ade    i32.const [4]
+00510ae0    i32.const [1]
+00510ae2    i32.const [0]
+00510ae4    call [3391] ; ConfigHelper.RandAIInfo
+00510ae7    local.set [2]
+00510ae9    i32.const [3915772]
+00510aee    i32.load [2, 0]
+00510af1    call [903] ; 
+00510af4    local.set [3]
+00510af6    local.get [3]
+00510af8    local.get [0]
+00510afa    i32.const [4010516] ; METHOD RaceActivityControl.o`m|f
+00510aff    i32.load [2, 0]
+00510b02    i32.const [0]
+00510b04    call [1004] ; 
+00510b07    local.get [2]
+00510b09    local.get [3]
+00510b0b    i32.const [3977244]
+00510b10    i32.load [2, 0]
+00510b13    call [5916] ; 
+00510b16    local.get [0]
+00510b18    i32.const [1]
+00510b1a    call [10964] ; RaceActivityControl.CheckTargetLevel
+00510b1d    i32.const [0]
+00510b1f    call [1143] ; GameModule.get_UI
+00510b22    i32.const [3989352]
+00510b27    i32.load [2, 0]
+00510b2a    call [1032] ; 
+00510b2d    i32.const [4018504]
+00510b32    i32.load [2, 0]
+00510b35    call [1367] ; 
+00510b38    local.set [2]
+00510b3a    i32.const [3927888]
+00510b3f    i32.load [2, 0]
+00510b42    call [903] ; 
+00510b45    local.set [3]
+00510b47    local.get [3]
+00510b49    local.get [0]
+00510b4b    i32.const [4010520] ; METHOD RaceActivityControl.ploPVyb
+00510b50    i32.load [2, 0]
+00510b53    i32.const [0]
+00510b55    call [1002] ; Action..ctor
+00510b58    local.get [2]
+00510b5a    local.get [3]
+00510b5c    i32.store [2, 100]
+00510b5f  end []
+00510b60  local.get [1]
+00510b62  return []
+00510b63  end []

@@ -1,0 +1,183 @@
+; Original class: ShopUI
+; Type4408.|i^gY[; wasmcode1 function 48399; offset=16908328 size=530
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0102002b  i32.const [5007560]
+01020030  i32.load8_u [0, 0]
+01020033  i32.eqz []
+01020034  if [-64]
+01020036    i32.const [3927888]
+0102003b    i32.const [1605]
+0102003e    call_indirect [0, 0]
+01020041    i32.const [4030228] ; METHOD <>c.MdSQmZ
+01020046    i32.const [1605]
+01020049    call_indirect [0, 0]
+0102004c    i32.const [3948352]
+01020051    i32.const [1605]
+01020054    call_indirect [0, 0]
+01020057    i32.const [4078212] ; STRING "Viewport/Content/Shop_Coin/title/btnBoxTip"
+0102005c    i32.const [1605]
+0102005f    call_indirect [0, 0]
+01020062    i32.const [4078208] ; STRING "Viewport/Content/Shop_Coin"
+01020067    i32.const [1605]
+0102006a    call_indirect [0, 0]
+0102006d    i32.const [4045456] ; STRING "Background/imgLine"
+01020072    i32.const [1605]
+01020075    call_indirect [0, 0]
+01020078    i32.const [5007560]
+0102007d    i32.const [1]
+0102007f    i32.store8 [0, 0]
+01020082  end []
+01020083  local.get [0]
+01020085  local.get [0]
+01020087  call [22449] ; ShopUI.TUUl
+0102008b  local.get [0]
+0102008d  i32.load [2, 168]
+01020091  i32.const [0]
+01020093  i32.const [8016] ; TABLE Component.get_transform
+01020096  call_indirect [1, 0]
+01020099  i32.const [0]
+0102009b  i32.const [54008] ; TABLE Transform.SetAsFirstSibling
+0102009f  call_indirect [4, 0]
+010200a2  local.get [0]
+010200a4  i32.load [2, 168]
+010200a8  i32.const [0]
+010200aa  i32.const [8016] ; TABLE Component.get_transform
+010200ad  call_indirect [1, 0]
+010200b0  i32.const [4045456] ; STRING "Background/imgLine"
+010200b5  i32.load [2, 0]
+010200b8  i32.const [0]
+010200ba  i32.const [9463] ; TABLE Transform.Find
+010200be  call_indirect [3, 0]
+010200c1  i32.const [0]
+010200c3  i32.const [2414] ; TABLE Component.get_gameObject
+010200c6  call_indirect [1, 0]
+010200c9  i32.const [1]
+010200cb  i32.const [0]
+010200cd  i32.const [2416] ; TABLE GameObject.SetActive
+010200d0  call_indirect [5, 0]
+010200d3  local.get [0]
+010200d5  i32.load [2, 164]
+010200d9  i32.const [0]
+010200db  i32.const [8016] ; TABLE Component.get_transform
+010200de  call_indirect [1, 0]
+010200e1  i32.const [4045456] ; STRING "Background/imgLine"
+010200e6  i32.load [2, 0]
+010200e9  i32.const [0]
+010200eb  i32.const [9463] ; TABLE Transform.Find
+010200ef  call_indirect [3, 0]
+010200f2  i32.const [0]
+010200f4  i32.const [2414] ; TABLE Component.get_gameObject
+010200f7  call_indirect [1, 0]
+010200fa  i32.const [0]
+010200fc  i32.const [0]
+010200fe  i32.const [2416] ; TABLE GameObject.SetActive
+01020101  call_indirect [5, 0]
+01020104  local.get [0]
+01020106  i32.load [2, 124]
+01020109  i32.const [0]
+0102010b  i32.const [2556] ; TABLE GameObject.get_transform
+0102010e  call_indirect [1, 0]
+01020111  i32.const [4078208] ; STRING "Viewport/Content/Shop_Coin"
+01020116  i32.load [2, 0]
+01020119  i32.const [0]
+0102011b  i32.const [9463] ; TABLE Transform.Find
+0102011f  call_indirect [3, 0]
+01020122  i32.const [0]
+01020124  i32.const [2414] ; TABLE Component.get_gameObject
+01020127  call_indirect [1, 0]
+0102012a  i32.const [1]
+0102012c  i32.const [0]
+0102012e  i32.const [2416] ; TABLE GameObject.SetActive
+01020131  call_indirect [5, 0]
+01020134  local.get [0]
+01020136  local.get [0]
+01020138  i32.load [2, 124]
+0102013b  i32.const [0]
+0102013d  i32.const [2556] ; TABLE GameObject.get_transform
+01020140  call_indirect [1, 0]
+01020143  i32.const [4078212] ; STRING "Viewport/Content/Shop_Coin/title/btnBoxTip"
+01020148  i32.load [2, 0]
+0102014b  i32.const [0]
+0102014d  i32.const [9463] ; TABLE Transform.Find
+01020151  call_indirect [3, 0]
+01020154  i32.const [0]
+01020156  i32.const [2414] ; TABLE Component.get_gameObject
+01020159  call_indirect [1, 0]
+0102015c  i32.store [2, 140]
+01020160  local.get [0]
+01020162  i32.load [2, 140]
+01020166  local.set [2]
+01020168  i32.const [3948352]
+0102016d  i32.load [2, 0]
+01020170  i32.const [1149]
+01020173  call_indirect [0, 0]
+01020176  i32.const [3948352]
+0102017b  i32.load [2, 0]
+0102017e  i32.load [2, 92]
+01020181  i32.load [2, 4]
+01020184  local.set [1]
+01020186  local.get [1]
+01020188  i32.eqz []
+01020189  if [-64]
+0102018b    i32.const [3948352]
+01020190    i32.load [2, 0]
+01020193    i32.const [1149]
+01020196    call_indirect [0, 0]
+01020199    i32.const [3948352]
+0102019e    i32.load [2, 0]
+010201a1    i32.load [2, 92]
+010201a4    i32.load [2, 0]
+010201a7    local.set [3]
+010201a9    i32.const [3927888]
+010201ae    i32.load [2, 0]
+010201b1    i32.const [109007]
+010201b5    call_indirect [2, 0]
+010201b8    local.set [1]
+010201ba    local.get [1]
+010201bc    local.get [3]
+010201be    i32.const [4030228] ; METHOD <>c.MdSQmZ
+010201c3    i32.load [2, 0]
+010201c6    i32.const [0]
+010201c8    i32.const [4366] ; TABLE Action..ctor
+010201cb    call_indirect [6, 0]
+010201ce    i32.const [3948352]
+010201d3    i32.load [2, 0]
+010201d6    i32.load [2, 92]
+010201d9    local.get [1]
+010201db    i32.store [2, 4]
+010201de    i32.const [3948352]
+010201e3    i32.load [2, 0]
+010201e6    i32.load [2, 92]
+010201e9    drop []
+010201ea  end []
+010201eb  local.get [2]
+010201ed  local.get [1]
+010201ef  i32.const [0]
+010201f1  i32.const [9647] ; TABLE UIExtension.AddClick
+010201f5  call_indirect [5, 0]
+010201f8  local.get [0]
+010201fa  i32.load [2, 168]
+010201fe  i32.const [1]
+01020200  i32.const [0]
+01020202  i32.const [1613] ; TABLE Toggle.set_isOn
+01020205  call_indirect [5, 0]
+01020208  local.get [0]
+0102020a  i32.load [2, 124]
+0102020d  i32.const [1]
+0102020f  i32.const [0]
+01020211  i32.const [2416] ; TABLE GameObject.SetActive
+01020214  call_indirect [5, 0]
+01020217  local.get [0]
+01020219  i32.const [1]
+0102021b  local.get [0]
+0102021d  i32.load [2, 168]
+01020221  local.get [0]
+01020223  i32.const [17060] ; TABLE ShopUI.X|}y{vW
+01020227  call_indirect [6, 0]
+0102022a  local.get [0]
+0102022c  local.get [0]
+0102022e  call [22448] ; ShopUI.`WVlUk
+01020232  local.get [0]
+01020234  local.get [0]
+01020236  call [11598] ; ShopUI.q^ZMYPj
+01020239  end []

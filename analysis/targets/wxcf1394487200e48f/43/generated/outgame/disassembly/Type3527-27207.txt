@@ -1,0 +1,13 @@
+; Original class: YOResourcesModule
+; Type3527.UnloadUnusedAssets; wasmcode1 function 36873; offset=14064602 size=22
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00d69bdb  local.get [0]
+00d69bdd  i32.load [2, 20]
+00d69be0  local.set [0]
+00d69be2  local.get [0]
+00d69be4  if [-64]
+00d69be6    local.get [0]
+00d69be8    i32.const [0]
+00d69bea    call [23551] ; ResourcePackage.UnloadUnusedAssets
+00d69bee  end []
+00d69bef  end []

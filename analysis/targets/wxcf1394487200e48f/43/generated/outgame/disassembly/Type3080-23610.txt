@@ -1,0 +1,18 @@
+; Original class: ResourcePackage
+; Type3080.Whµhnµ; wasmcode1 function 11981; offset=4269136 size=32
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00412451  local.get [0]
+00412453  i32.load [2, 32]
+00412456  local.get [1]
+00412458  i32.const [0]
+0041245a  call [17178] ; ZM£¨K.LoadAssetAsync
+0041245e  local.set [0]
+00412460  local.get [2]
+00412462  if [-64]
+00412464    local.get [0]
+00412466    i32.const [0]
+00412468    call [9112] ; AssetOperationHandle.WaitForAsyncComplete
+0041246b  end []
+0041246c  local.get [0]
+0041246e  return []
+0041246f  end []

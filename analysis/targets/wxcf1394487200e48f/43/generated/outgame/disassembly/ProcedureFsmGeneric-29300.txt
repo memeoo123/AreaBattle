@@ -1,0 +1,81 @@
+; Original shared generic: FsmState`1.UnsubscribeEvent
+; ProcedureFsmGeneric.UnsubscribeEvent; wasmcode function 12255; offset=5950242 size=204
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005acb23  local.get [2]
+005acb25  if [-64]
+005acb27    local.get [3]
+005acb29    i32.load [2, 16]
+005acb2c    i32.load [2, 96]
+005acb2f    i32.load [2, 20]
+005acb32    i32.load [2, 0]
+005acb35    local.get [3]
+005acb37    i32.load [2, 16]
+005acb3a    i32.load [2, 96]
+005acb3d    i32.load [2, 20]
+005acb40    local.get [0]
+005acb42    i32.load [2, 8]
+005acb45    local.get [1]
+005acb47    call [3333] ; 
+005acb4a    if [-64]
+005acb4c      local.get [0]
+005acb4e      i32.load [2, 8]
+005acb51      local.set [0]
+005acb53      local.get [3]
+005acb55      i32.load [2, 16]
+005acb58      i32.load [2, 96]
+005acb5b      i32.load [2, 28]
+005acb5e      i32.load [2, 0]
+005acb61      local.get [3]
+005acb63      i32.load [2, 16]
+005acb66      i32.load [2, 96]
+005acb69      i32.load [2, 28]
+005acb6c      local.get [0]
+005acb6e      local.get [1]
+005acb70      call [1023] ; 
+005acb73      local.get [2]
+005acb75      i32.const [0]
+005acb77      call [1056] ; Delegate.Remove
+005acb7a      local.set [2]
+005acb7c      local.get [3]
+005acb7e      i32.load [2, 16]
+005acb81      i32.load [2, 96]
+005acb84      i32.load [2, 24]
+005acb87      i32.load [2, 0]
+005acb8a      local.get [3]
+005acb8c      i32.load [2, 16]
+005acb8f      i32.load [2, 96]
+005acb92      i32.load [2, 24]
+005acb95      local.get [0]
+005acb97      local.get [1]
+005acb99      local.get [2]
+005acb9b      local.get [3]
+005acb9d      i32.load [2, 16]
+005acba0      i32.load [2, 96]
+005acba3      i32.const [4]
+005acba5      call [904] ; 
+005acba8      call [938] ; 
+005acbab      call [1144] ; 
+005acbae    end []
+005acbaf    return []
+005acbb0  end []
+005acbb1  i32.const [3932324]
+005acbb6  call [902] ; 
+005acbb9  call [903] ; 
+005acbbc  local.set [0]
+005acbbe  local.get [0]
+005acbc0  i32.const [4053156] ; STRING "Event handler is invalid."
+005acbc5  call [902] ; 
+005acbc8  i32.const [0]
+005acbca  i32.const [10659] ; TABLE GameFrameworkException..ctor
+005acbce  global.set [3]
+005acbd0  i32.const [10659] ; TABLE GameFrameworkException..ctor
+005acbd4  call_indirect [2, 0]
+005acbd7  local.get [0]
+005acbd9  i32.const [3968608]
+005acbde  call [902] ; 
+005acbe1  i32.const [1106]
+005acbe4  global.set [3]
+005acbe6  i32.const [1106]
+005acbe9  call_indirect [0, 0]
+005acbec  unreachable []
+005acbed  end []

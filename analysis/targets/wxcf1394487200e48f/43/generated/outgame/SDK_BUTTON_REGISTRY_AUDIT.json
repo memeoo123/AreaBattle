@@ -1,0 +1,28 @@
+{
+  "status": "sdk_button_registry_verified_concrete_platform_pending",
+  "source": [
+    "disassembly/Type3135-23907.txt",
+    "disassembly/Type3135-23908.txt",
+    "disassembly/Type3135-23910.txt",
+    "disassembly/Type3135-23912.txt",
+    "sdk-button-registry-generics.json"
+  ],
+  "verified": [
+    "Function registration retains duplicate Button entries and duplicate native onClick listeners",
+    "Registration appends before SetActive(IsOpen) and optional platform callback, then cleans destroyed entries",
+    "Cleanup traverses list backwards using Unity null equality",
+    "CheckVideoIsReady queries feature5 then readiness; ChangeVideoBtnState queries feature5 again",
+    "Change sets feature15 before cleanup and enumerating registered feature5 buttons implementing original video-state interface",
+    "Only video-state-capable buttons receive ready2/not-ready1 state",
+    "Actual native ShopUI Start now registers through recovered registry and uses real source readiness refresh path"
+  ],
+  "remaining": [
+    "Complete SDK function state owner and refresh APIs",
+    "Concrete platform implementation selected during SDK startup",
+    "Production account/menu/report owner and full persistence/build/E2E"
+  ],
+  "checks": 554,
+  "freshAdsPlaymodeChecks": 7,
+  "priorFlyPlaymodeChecks": 8,
+  "dynamicScope": "Fresh actual Unity PlayMode with restored registry; readiness source and SDK/report transport remain fixtures; historical fly PlayMode not rerun"
+}

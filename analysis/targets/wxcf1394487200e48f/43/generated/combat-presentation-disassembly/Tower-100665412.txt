@@ -1,0 +1,100 @@
+; Tower.TfUaOPX; wasmcode function 10049; offset=4823361 size=284
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00499942  i32.const [5007202]
+00499947  i32.load8_u [0, 0]
+0049994a  i32.eqz []
+0049994b  if [-64]
+0049994d    i32.const [4000940]
+00499952    call [900] ; 
+00499955    i32.const [4093532] ; STRING "objEffectRoot/hero_sanjiao_blue"
+0049995a    call [900] ; 
+0049995d    i32.const [4093524] ; STRING "objEffectRoot/Hdzd_Effect_icicle"
+00499962    call [900] ; 
+00499965    i32.const [4093516] ; STRING "objEffectRoot/Hdzd_Effect_Wy_speedDown"
+0049996a    call [900] ; 
+0049996d    i32.const [4093520] ; STRING "objEffectRoot/Hdzd_Effect_Wy_speedUp"
+00499972    call [900] ; 
+00499975    i32.const [4093536] ; STRING "objEffectRoot/hero_sanjiao_red"
+0049997a    call [900] ; 
+0049997d    i32.const [5007202]
+00499982    i32.const [1]
+00499984    i32.store8 [0, 0]
+00499987  end []
+00499988  local.get [0]
+0049998a  local.get [0]
+0049998c  i32.load [2, 16]
+0049998f  i32.const [0]
+00499991  call [1008] ; GameObject.get_transform
+00499994  i32.const [4093524] ; STRING "objEffectRoot/Hdzd_Effect_icicle"
+00499999  i32.load [2, 0]
+0049999c  i32.const [0]
+0049999e  call [1102] ; Transform.Find
+004999a1  i32.const [0]
+004999a3  call [943] ; Component.get_gameObject
+004999a6  i32.store [2, 92]
+004999a9  local.get [0]
+004999ab  local.get [0]
+004999ad  i32.load [2, 92]
+004999b0  i32.const [4000940]
+004999b5  i32.load [2, 0]
+004999b8  call [1091] ; 
+004999bb  i32.store [2, 96]
+004999be  local.get [0]
+004999c0  local.get [0]
+004999c2  i32.load [2, 16]
+004999c5  i32.const [0]
+004999c7  call [1008] ; GameObject.get_transform
+004999ca  i32.const [4093536] ; STRING "objEffectRoot/hero_sanjiao_red"
+004999cf  i32.load [2, 0]
+004999d2  i32.const [0]
+004999d4  call [1102] ; Transform.Find
+004999d7  i32.const [0]
+004999d9  call [943] ; Component.get_gameObject
+004999dc  i32.store [2, 100]
+004999df  local.get [0]
+004999e1  local.get [0]
+004999e3  i32.load [2, 16]
+004999e6  i32.const [0]
+004999e8  call [1008] ; GameObject.get_transform
+004999eb  i32.const [4093532] ; STRING "objEffectRoot/hero_sanjiao_blue"
+004999f0  i32.load [2, 0]
+004999f3  i32.const [0]
+004999f5  call [1102] ; Transform.Find
+004999f8  i32.const [0]
+004999fa  call [943] ; Component.get_gameObject
+004999fd  i32.store [2, 104]
+00499a00  local.get [0]
+00499a02  local.get [0]
+00499a04  i32.load [2, 16]
+00499a07  i32.const [0]
+00499a09  call [1008] ; GameObject.get_transform
+00499a0c  i32.const [4093520] ; STRING "objEffectRoot/Hdzd_Effect_Wy_speedUp"
+00499a11  i32.load [2, 0]
+00499a14  i32.const [0]
+00499a16  call [1102] ; Transform.Find
+00499a19  i32.const [0]
+00499a1b  call [943] ; Component.get_gameObject
+00499a1e  i32.store [2, 152]
+00499a22  local.get [0]
+00499a24  local.get [0]
+00499a26  i32.load [2, 16]
+00499a29  i32.const [0]
+00499a2b  call [1008] ; GameObject.get_transform
+00499a2e  i32.const [4093516] ; STRING "objEffectRoot/Hdzd_Effect_Wy_speedDown"
+00499a33  i32.load [2, 0]
+00499a36  i32.const [0]
+00499a38  call [1102] ; Transform.Find
+00499a3b  i32.const [0]
+00499a3d  call [943] ; Component.get_gameObject
+00499a40  i32.store [2, 156]
+00499a44  local.get [0]
+00499a46  i32.load [2, 100]
+00499a49  i32.const [0]
+00499a4b  i32.const [0]
+00499a4d  call [949] ; GameObject.SetActive
+00499a50  local.get [0]
+00499a52  i32.load [2, 104]
+00499a55  i32.const [0]
+00499a57  i32.const [0]
+00499a59  call [949] ; GameObject.SetActive
+00499a5c  end []

@@ -1,0 +1,42 @@
+; Original class: ItemManagerData
+; Type4544..ctor; wasmcode function 11719; offset=5735012 size=122
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00578265  i32.const [5001156]
+0057826a  i32.load8_u [0, 0]
+0057826d  i32.eqz []
+0057826e  if [-64]
+00578270    i32.const [3975788]
+00578275    call [900] ; 
+00578278    i32.const [3974552]
+0057827d    call [900] ; 
+00578280    i32.const [3923648]
+00578285    call [900] ; 
+00578288    i32.const [3923396]
+0057828d    call [900] ; 
+00578290    i32.const [5001156]
+00578295    i32.const [1]
+00578297    i32.store8 [0, 0]
+0057829a  end []
+0057829b  i32.const [3923396]
+005782a0  i32.load [2, 0]
+005782a3  call [903] ; 
+005782a6  local.set [1]
+005782a8  local.get [1]
+005782aa  i32.const [3974552]
+005782af  i32.load [2, 0]
+005782b2  call [944] ; 
+005782b5  local.get [0]
+005782b7  local.get [1]
+005782b9  i32.store [2, 20]
+005782bc  i32.const [3923648]
+005782c1  i32.load [2, 0]
+005782c4  call [903] ; 
+005782c7  local.set [1]
+005782c9  local.get [1]
+005782cb  i32.const [3975788]
+005782d0  i32.load [2, 0]
+005782d3  call [944] ; 
+005782d6  local.get [0]
+005782d8  local.get [1]
+005782da  i32.store [2, 24]
+005782dd  end []

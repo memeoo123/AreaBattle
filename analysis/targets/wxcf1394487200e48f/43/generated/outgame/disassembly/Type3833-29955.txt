@@ -1,0 +1,20 @@
+; Original class: ResourcesMono
+; Type3833.Awake; wasmcode function 17737; offset=7862009 size=50
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0077f6fa  i32.const [4988289]
+0077f6ff  i32.load8_u [0, 0]
+0077f702  i32.eqz []
+0077f703  if [-64]
+0077f705    i32.const [3936516]
+0077f70a    call [900] ; 
+0077f70d    i32.const [4988289]
+0077f712    i32.const [1]
+0077f714    i32.store8 [0, 0]
+0077f717  end []
+0077f718  i32.const [3936516]
+0077f71d  i32.load [2, 0]
+0077f720  call [901] ; 
+0077f723  local.get [0]
+0077f725  i32.const [0]
+0077f727  call [1111] ; Object.DontDestroyOnLoad
+0077f72a  end []

@@ -1,0 +1,29 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetOnlineConfigParams; wasmcode function 14682; offset=7201385 size=78
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+006de26a  i32.const [5005411]
+006de26f  i32.load8_u [0, 0]
+006de272  i32.eqz []
+006de273  if [-64]
+006de275    i32.const [3984752]
+006de27a    call [900] ; 
+006de27d    i32.const [3939452]
+006de282    call [900] ; 
+006de285    i32.const [5005411]
+006de28a    i32.const [1]
+006de28c    i32.store8 [0, 0]
+006de28f  end []
+006de290  i32.const [3984752]
+006de295  i32.load [2, 0]
+006de298  call [1203] ; 
+006de29b  i32.const [0]
+006de29d  call [2457] ; XYXSDKModuleMgr.get_onlineParamManager
+006de2a0  local.get [1]
+006de2a2  i32.const [3939452]
+006de2a7  i32.load [2, 0]
+006de2aa  i32.load [2, 92]
+006de2ad  i32.load [2, 0]
+006de2b0  local.get [1]
+006de2b2  call [4354] ; OnlineParamManager.GetParamInNewOrCache
+006de2b5  return []
+006de2b6  end []

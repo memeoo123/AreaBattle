@@ -1,0 +1,44 @@
+; Original class: MenuTabUI
+; Type4379.}LhrXs; wasmcode function 18607; offset=8390513 size=110
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00800772  i32.const [5009023]
+00800777  i32.load8_u [0, 0]
+0080077a  i32.eqz []
+0080077b  if [-64]
+0080077d    i32.const [3953576]
+00800782    call [900] ; 
+00800785    i32.const [3953344]
+0080078a    call [900] ; 
+0080078d    i32.const [5009023]
+00800792    i32.const [1]
+00800794    i32.store8 [0, 0]
+00800797  end []
+00800798  i32.const [0]
+0080079a  call [1193] ; GameModule.get_Audio
+0080079d  i32.const [1]
+0080079f  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+008007a2  i32.const [0]
+008007a4  call [1201] ; Extension.PlayerVoice
+008007a7  block [-64]
+008007a9    local.get [0]
+008007ab    i32.const [4]
+008007ad    local.get [0]
+008007af    call [3577] ; MenuTabUI.CheckUI
+008007b2    i32.eqz []
+008007b3    br_if [0]
+008007b5    i32.const [3953344]
+008007ba    i32.load [2, 0]
+008007bd    call [935] ; 
+008007c0    i32.const [0]
+008007c2    call [8118] ; CommanderControl.ShowCommanderGuild
+008007c5    i32.eqz []
+008007c6    br_if [0]
+008007c8    local.get [0]
+008007ca    i32.const [3953576]
+008007cf    i32.load [2, 0]
+008007d2    call [935] ; 
+008007d5    i32.load [2, 36]
+008007d8    local.get [0]
+008007da    call [11392] ; MenuTabUI.CloseTabGuild
+008007dd  end []
+008007de  end []

@@ -1,0 +1,47 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "atUtc": "2026-09-28T08:16:02.460750+00:00",
+  "rules": [
+    {
+      "id": "retry-player-camp-highlight",
+      "status": "confirmed",
+      "rule": "Again10 enters Enter3 after clearing data. The normal loading/StartPlay5 path calls ShowMyCampEffect before Running6 whenever guide does not take over. Retry therefore repeats the three-second effect107 for current player towers; local adapter triggers it after restored towers and presentation.",
+      "evidence": [
+        "original871-disassembly/wasmcode-7630.txt:0x37a510-0x37a555",
+        "original871-disassembly/wasmcode-7630.txt:0x37a2fb-0x37a339",
+        "original871-disassembly/wasmcode-4973.txt"
+      ],
+      "limitation": "Original asynchronous reload latency remains unmeasured; this correction establishes ordering, not a matched wall-clock delay."
+    },
+    {
+      "id": "commander-complete-subscription",
+      "status": "confirmed",
+      "rule": "SkillUI.Awake subscribes to Event.UseSkill and initializes its busy flag false. Its use handler f15918 returns while busy, otherwise adds an AnimationState.Complete delegate and starts the non-looping skill animation. No completion delegate is registered by the prefab load callback f15922. Before the first cast the idle TrackEntry must survive loop completion. f15919 clears busy and returns to looping idle. Original per-accepted-cast delegate addition is retained.",
+      "evidence": [
+        "dynamic-ui-disassembly/skillui-awake.txt:0x74cf19-0x74cf5f",
+        "dynamic-ui-disassembly/event-cctor.txt:0x8704a2-0x8704b5",
+        "original871-disassembly/wasmcode-15918.txt:0x74c8fc-0x74c9c9",
+        "original871-disassembly/wasmcode-15919.txt",
+        "original871-disassembly/wasmcode-15922.txt"
+      ]
+    }
+  ],
+  "dailyPoolAudit": "daily-pool-all-wasm-callsite-audit.json",
+  "dailyPoolConclusion": "Expanded from mapped gameplay methods to all 90641 local defined WASM bodies. No direct constructor calls/table constants found; initial fill/refill remains unknown. Reflection, unavailable module bodies and persisted/server inputs are not ruled out.",
+  "validation": {
+    "caseCount": 240,
+    "passed": true,
+    "build": {
+      "result": "Succeeded",
+      "size": "274050973",
+      "errors": 0,
+      "warnings": 5
+    },
+    "smokeFrames": 600,
+    "sourceWarnings": "Five CS0618 obsolete Unity API warnings in original Spine4.1 runtime; no compile errors."
+  },
+  "fullGoalComplete": false
+}

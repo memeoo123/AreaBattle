@@ -1,0 +1,29 @@
+; Original class: ItemBagControl
+; Type4097.OnInit; wasmcode function 19003; offset=8541052 size=79
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0082537d  i32.const [5008463]
+00825382  i32.load8_u [0, 0]
+00825385  i32.eqz []
+00825386  if [-64]
+00825388    i32.const [3995108]
+0082538d    call [900] ; 
+00825390    i32.const [3930256]
+00825395    call [900] ; 
+00825398    i32.const [5008463]
+0082539d    i32.const [1]
+0082539f    i32.store8 [0, 0]
+008253a2  end []
+008253a3  i32.const [3930256]
+008253a8  i32.load [2, 0]
+008253ab  call [901] ; 
+008253ae  local.get [0]
+008253b0  i32.const [0]
+008253b2  call [1309] ; DataManagerPool.get_Instance
+008253b5  i32.const [3995108]
+008253ba  i32.load [2, 0]
+008253bd  call [1609] ; 
+008253c0  i32.store [2, 8]
+008253c3  local.get [0]
+008253c5  local.get [0]
+008253c7  call [7680] ; ItemBagControl.InitLimitedBag
+008253ca  end []

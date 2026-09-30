@@ -1,0 +1,51 @@
+; Original class: LoginCtrl
+; Type4244.Tg{~N; wasmcode function 18755; offset=8468182 size=150
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008136d7  i32.const [5007317]
+008136dc  i32.load8_u [0, 0]
+008136df  i32.eqz []
+008136e0  if [-64]
+008136e2    i32.const [4003800]
+008136e7    call [900] ; 
+008136ea    i32.const [3934780]
+008136ef    call [900] ; 
+008136f2    i32.const [3938048]
+008136f7    call [900] ; 
+008136fa    i32.const [4012472]
+008136ff    call [900] ; 
+00813702    i32.const [4094372] ; STRING "pack2"
+00813707    call [900] ; 
+0081370a    i32.const [5007317]
+0081370f    i32.const [1]
+00813711    i32.store8 [0, 0]
+00813714  end []
+00813715  i32.const [4094372] ; STRING "pack2"
+0081371a  i32.load [2, 0]
+0081371d  i32.const [4012472]
+00813722  i32.load [2, 0]
+00813725  call [1490] ; 
+00813728  i32.const [0]
+0081372a  call [1904] ; TextAsset.get_text
+0081372d  local.set [2]
+0081372f  i32.const [3934780]
+00813734  i32.load [2, 0]
+00813737  call [901] ; 
+0081373a  local.get [2]
+0081373c  i32.const [4003800]
+00813741  i32.load [2, 0]
+00813744  call [1105] ; 
+00813747  local.set [2]
+00813749  local.get [1]
+0081374b  i32.load [2, 16]
+0081374e  local.set [1]
+00813750  i32.const [3938048]
+00813755  i32.load [2, 0]
+00813758  call [901] ; 
+0081375b  local.get [2]
+0081375d  local.get [1]
+0081375f  i32.const [0]
+00813761  call [10682] ; ResourcesModule.AddABPack
+00813764  local.get [0]
+00813766  i32.const [1]
+00813768  i32.store8 [0, 65]
+0081376b  end []

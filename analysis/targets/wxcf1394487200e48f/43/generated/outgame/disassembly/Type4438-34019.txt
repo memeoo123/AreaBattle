@@ -1,0 +1,33 @@
+; Original class: FestActUI
+; Type4438.VgLpNV; wasmcode1 function 62941; offset=20247034 size=85
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0134f1fb  i32.const [5007127]
+0134f200  i32.load8_u [0, 0]
+0134f203  i32.eqz []
+0134f204  if [-64]
+0134f206    i32.const [4018316]
+0134f20b    i32.const [1605]
+0134f20e    call_indirect [0, 0]
+0134f211    i32.const [5007127]
+0134f216    i32.const [1]
+0134f218    i32.store8 [0, 0]
+0134f21b  end []
+0134f21c  local.get [0]
+0134f21e  local.get [0]
+0134f220  i32.const [17304] ; TABLE FestActUI.yQUd
+0134f224  call_indirect [4, 0]
+0134f227  i32.const [0]
+0134f229  i32.const [9436] ; TABLE GameModule.get_UI
+0134f22d  call_indirect [2, 0]
+0134f230  i32.const [4018316]
+0134f235  i32.load [2, 0]
+0134f238  i32.const [109279]
+0134f23c  call_indirect [1, 0]
+0134f23f  local.set [0]
+0134f241  local.get [0]
+0134f243  if [-64]
+0134f245    local.get [0]
+0134f247    i32.const [0]
+0134f249    call [25459] ; MenuTabUI.OpenSkinUIPage
+0134f24d  end []
+0134f24e  end []

@@ -1,0 +1,20 @@
+{
+  "status": "two_reverse_passes_and_registry_mutations_restored",
+  "source": [
+    "disassembly/Type2927-22864.txt",
+    "resource-cleanup-pass-generics.json"
+  ],
+  "verified": [
+    "Generic metadata confirms List.RemoveAt and Dictionary<string,loader>.Remove",
+    "Reverse TryDestroyAllProviders pass precedes reverse CanDestroy pass",
+    "Capture registry key before virtual Destroy then remove list then dictionary",
+    "Failure before removals leaves registry entries",
+    "Concrete pass composed with ten-pass unload entry"
+  ],
+  "remaining": [
+    "Loader TryDestroyAllProviders22963 and CanDestroy22962",
+    "Resource system Update22867 and production owner",
+    "PlayMode/Player E2E"
+  ],
+  "integratedChecks": 591
+}

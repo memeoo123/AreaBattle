@@ -1,0 +1,61 @@
+; Soldier.SetSoldierColor; wasmcode function 5663; offset=1990236 size=169
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+001e5e5d  i32.const [5007165]
+001e5e62  i32.load8_u [0, 0]
+001e5e65  i32.eqz []
+001e5e66  if [-64]
+001e5e68    i32.const [4001180]
+001e5e6d    call [900] ; 
+001e5e70    i32.const [4001096]
+001e5e75    call [900] ; 
+001e5e78    i32.const [3939112]
+001e5e7d    call [900] ; 
+001e5e80    i32.const [4051160] ; STRING "Default"
+001e5e85    call [900] ; 
+001e5e88    i32.const [5007165]
+001e5e8d    i32.const [1]
+001e5e8f    i32.store8 [0, 0]
+001e5e92  end []
+001e5e93  i32.const [3939112]
+001e5e98  i32.load [2, 0]
+001e5e9b  call [901] ; 
+001e5e9e  local.get [0]
+001e5ea0  local.get [1]
+001e5ea2  local.get [0]
+001e5ea4  call [7123] ; Soldier.WsxLfz
+001e5ea7  i32.const [0]
+001e5ea9  call [4416] ; GameObject.CompareTag
+001e5eac  i32.eqz []
+001e5ead  if [-64]
+001e5eaf    i32.const [3939112]
+001e5eb4    i32.load [2, 0]
+001e5eb7    call [901] ; 
+001e5eba    local.get [0]
+001e5ebc    local.get [1]
+001e5ebe    local.get [0]
+001e5ec0    call [7123] ; Soldier.WsxLfz
+001e5ec3    i32.const [0]
+001e5ec5    call [7804] ; GameObject.set_tag
+001e5ec8    local.get [0]
+001e5eca    i32.const [4001180]
+001e5ecf    i32.load [2, 0]
+001e5ed2    call [1322] ; 
+001e5ed5    local.get [1]
+001e5ed7    local.get [0]
+001e5ed9    call [10316] ; Soldier.SetSoldierColor
+001e5edc    local.get [0]
+001e5ede    i32.const [4001096]
+001e5ee3    i32.load [2, 0]
+001e5ee6    call [1091] ; 
+001e5ee9    local.set [0]
+001e5eeb    local.get [0]
+001e5eed    i32.const [4051160] ; STRING "Default"
+001e5ef2    i32.load [2, 0]
+001e5ef5    i32.const [0]
+001e5ef7    call [3846] ; Renderer.set_sortingLayerName
+001e5efa    local.get [0]
+001e5efc    i32.const [-5]
+001e5efe    i32.const [0]
+001e5f00    call [2784] ; Renderer.set_sortingOrder
+001e5f03  end []
+001e5f04  end []

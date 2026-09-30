@@ -1,0 +1,39 @@
+; Type4200.SkillEnd; wasmcode function 15177; offset=7371185 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007079b4  i32.const [5010374]
+007079b9  i32.load8_u [0, 0]
+007079bc  i32.eqz []
+007079bd  if [-64]
+007079bf    i32.const [3947148]
+007079c4    call [900] ; 
+007079c7    i32.const [3944712]
+007079cc    call [900] ; 
+007079cf    i32.const [4027092]
+007079d4    call [900] ; 
+007079d7    i32.const [5010374]
+007079dc    i32.const [1]
+007079de    i32.store8 [0, 0]
+007079e1  end []
+007079e2  i32.const [3944712]
+007079e7  i32.load [2, 0]
+007079ea  call [901] ; 
+007079ed  i32.const [3944712]
+007079f2  i32.load [2, 0]
+007079f5  i32.load [2, 92]
+007079f8  i32.load [2, 60]
+007079fb  local.set [1]
+007079fd  i32.const [3947148]
+00707a02  i32.load [2, 0]
+00707a05  call [903] ; 
+00707a08  local.set [2]
+00707a0a  local.get [2]
+00707a0c  local.get [0]
+00707a0e  i32.const [4027092]
+00707a13  i32.load [2, 0]
+00707a16  i32.const [0]
+00707a18  call [1067] ; 
+00707a1b  local.get [1]
+00707a1d  local.get [2]
+00707a1f  i32.const [0]
+00707a21  call [1185] ; 
+00707a24  end []

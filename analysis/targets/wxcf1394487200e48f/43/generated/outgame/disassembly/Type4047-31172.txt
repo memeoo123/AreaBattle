@@ -1,0 +1,92 @@
+; Original class: DiceShopControl
+; Type4047.GetShopDatas; wasmcode function 12537; offset=6056965 size=233
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+005c6c08  global.get [0]
+005c6c0a  i32.const [16]
+005c6c0c  i32.sub []
+005c6c0d  local.set [2]
+005c6c0f  local.get [2]
+005c6c11  global.set [0]
+005c6c13  i32.const [5008765]
+005c6c18  i32.load8_u [0, 0]
+005c6c1b  i32.eqz []
+005c6c1c  if [-64]
+005c6c1e    i32.const [3929208]
+005c6c23    call [900] ; 
+005c6c26    i32.const [3954776]
+005c6c2b    call [900] ; 
+005c6c2e    i32.const [3934404]
+005c6c33    call [900] ; 
+005c6c36    i32.const [3926996]
+005c6c3b    call [900] ; 
+005c6c3e    i32.const [4104972] ; STRING "未找到类型为 {0} 的商店数据，请检查"
+005c6c43    call [900] ; 
+005c6c46    i32.const [5008765]
+005c6c4b    i32.const [1]
+005c6c4d    i32.store8 [0, 0]
+005c6c50  end []
+005c6c51  local.get [2]
+005c6c53  i32.const [0]
+005c6c55  i32.store [2, 12]
+005c6c58  block [-64]
+005c6c5a    local.get [0]
+005c6c5c    i32.load [2, 24]
+005c6c5f    local.get [1]
+005c6c61    local.get [2]
+005c6c63    i32.const [12]
+005c6c65    i32.add []
+005c6c66    i32.const [3954776]
+005c6c6b    i32.load [2, 0]
+005c6c6e    call [1134] ; 
+005c6c71    if [-64]
+005c6c73      local.get [2]
+005c6c75      i32.load [2, 12]
+005c6c78      local.set [0]
+005c6c7a      br [1]
+005c6c7c    end []
+005c6c7d    i32.const [0]
+005c6c7f    local.set [0]
+005c6c81    i32.const [3926996]
+005c6c86    i32.load [2, 0]
+005c6c89    i32.const [1]
+005c6c8b    call [909] ; 
+005c6c8e    local.set [3]
+005c6c90    local.get [2]
+005c6c92    local.get [1]
+005c6c94    i32.store [2, 8]
+005c6c97    i32.const [3934404]
+005c6c9c    i32.load [2, 0]
+005c6c9f    local.get [2]
+005c6ca1    i32.const [8]
+005c6ca3    i32.add []
+005c6ca4    call [910] ; 
+005c6ca7    local.set [1]
+005c6ca9    i32.const [4104972] ; STRING "未找到类型为 {0} 的商店数据，请检查"
+005c6cae    i32.load [2, 0]
+005c6cb1    local.get [1]
+005c6cb3    i32.const [0]
+005c6cb5    call [1015] ; String.Format
+005c6cb8    local.set [1]
+005c6cba    local.get [3]
+005c6cbc    local.get [1]
+005c6cbe    call [905] ; 
+005c6cc1    local.get [3]
+005c6cc3    local.get [1]
+005c6cc5    i32.store [2, 16]
+005c6cc8    i32.const [3929208]
+005c6ccd    i32.load [2, 0]
+005c6cd0    call [901] ; 
+005c6cd3    local.get [3]
+005c6cd5    i32.const [0]
+005c6cd7    i32.const [2087] ; TABLE CLog.Error
+005c6cda    global.set [3]
+005c6cdc    i32.const [2087] ; TABLE CLog.Error
+005c6cdf    call_indirect [0, 0]
+005c6ce2  end []
+005c6ce3  local.get [2]
+005c6ce5  i32.const [16]
+005c6ce7  i32.add []
+005c6ce8  global.set [0]
+005c6cea  local.get [0]
+005c6cec  return []
+005c6ced  end []

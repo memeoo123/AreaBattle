@@ -1,0 +1,134 @@
+; Proj_xqzdOverUI.pXj}ht; wasmcode function 11014; offset=5331213 size=375
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+00515910  i32.const [5007411]
+00515915  i32.load8_u [0, 0]
+00515918  i32.eqz []
+00515919  if [-64]
+0051591b    i32.const [3953568]
+00515920    call [900] ; 
+00515923    i32.const [3953440]
+00515928    call [900] ; 
+0051592b    i32.const [4009940] ; method: Proj_xqzdOverUI.sybjRh
+00515930    call [900] ; 
+00515933    i32.const [3937580] ; type: RandomHelper
+00515938    call [900] ; 
+0051593b    i32.const [4017616]
+00515940    call [900] ; 
+00515943    i32.const [4017644]
+00515948    call [900] ; 
+0051594b    i32.const [3949340] ; type: UpdateHandle
+00515950    call [900] ; 
+00515953    i32.const [4034536] ; literal: ''
+00515958    call [900] ; 
+0051595b    i32.const [5007411]
+00515960    i32.const [1]
+00515962    i32.store8 [0, 0]
+00515965  end []
+00515966  local.get [0]
+00515968  i32.load [2, 200]
+0051596c  i32.const [0]
+0051596e  i32.const [0]
+00515970  call [949] ; 
+00515973  local.get [0]
+00515975  i32.load [2, 176]
+00515979  i32.const [1]
+0051597b  i32.const [0]
+0051597d  call [949] ; 
+00515980  local.get [0]
+00515982  i32.const [1]
+00515984  i32.store8 [0, 97]
+00515987  local.get [0]
+00515989  i32.load [2, 240]
+0051598d  i32.const [0]
+0051598f  call [977] ; 
+00515992  f32.const [320.0]
+00515997  f32.const [1.2000000476837158]
+0051599c  i32.const [0]
+0051599e  i32.const [0]
+005159a0  call [7169] ; 
+005159a3  i32.const [1]
+005159a5  i32.const [4017644]
+005159aa  i32.load [2, 0]
+005159ad  call [9970] ; 
+005159b0  i32.const [32]
+005159b2  i32.const [4017616]
+005159b7  i32.load [2, 0]
+005159ba  call [1458] ; 
+005159bd  drop []
+005159be  i32.const [3937580] ; type: RandomHelper
+005159c3  i32.load [2, 0]
+005159c6  call [901] ; 
+005159c9  local.get [0]
+005159cb  i32.const [50]
+005159cd  i32.const [70]
+005159d0  i32.const [0]
+005159d2  call [1621] ; 
+005159d5  i32.store [2, 104]
+005159d8  local.get [0]
+005159da  i32.load [2, 196]
+005159de  local.set [1]
+005159e0  local.get [1]
+005159e2  local.set [2]
+005159e4  local.get [0]
+005159e6  i32.const [104]
+005159e9  i32.add []
+005159ea  i32.const [0]
+005159ec  call [966] ; 
+005159ef  local.set [3]
+005159f1  local.get [1]
+005159f3  i32.load [2, 0]
+005159f6  local.set [1]
+005159f8  local.get [2]
+005159fa  local.get [3]
+005159fc  local.get [1]
+005159fe  i32.load [2, 760]
+00515a02  local.get [1]
+00515a04  i32.load [2, 756]
+00515a08  global.set [3]
+00515a0a  global.get [3]
+00515a0c  call_indirect [2, 0]
+00515a0f  local.get [0]
+00515a11  i32.load [2, 100]
+00515a14  i32.const [-1]
+00515a16  i32.eq []
+00515a17  if [-64]
+00515a19    i32.const [3949340] ; type: UpdateHandle
+00515a1e    i32.load [2, 0]
+00515a21    call [903] ; 
+00515a24    local.set [1]
+00515a26    local.get [1]
+00515a28    local.get [0]
+00515a2a    i32.const [4009940] ; method: Proj_xqzdOverUI.sybjRh
+00515a2f    i32.load [2, 0]
+00515a32    i32.const [0]
+00515a34    call [2351] ; 
+00515a37    local.get [0]
+00515a39    local.get [1]
+00515a3b    i32.const [0]
+00515a3d    call [2890] ; 
+00515a40    i32.store [2, 100]
+00515a43  end []
+00515a44  i32.const [0]
+00515a46  call [1587] ; GameModule.get_ADHelper
+00515a49  i32.const [3953440]
+00515a4e  i32.load [2, 0]
+00515a51  call [935] ; 
+00515a54  i32.const [0]
+00515a56  call [1254] ; LevelControl.get_CurLevel
+00515a59  i32.const [1]
+00515a5b  i32.const [0]
+00515a5d  call [3013] ; ADHelper.ShowBanner
+00515a60  i32.const [3953568]
+00515a65  i32.load [2, 0]
+00515a68  call [935] ; 
+00515a6b  i32.const [1001]
+00515a6e  local.get [0]
+00515a70  i32.load [2, 104]
+00515a73  i32.const [0]
+00515a75  i32.const [4034536] ; literal: ''
+00515a7a  i32.load [2, 0]
+00515a7d  i32.const [0]
+00515a7f  call [2291] ; ToolControl.ToolChange
+00515a82  drop []
+00515a83  end []
+

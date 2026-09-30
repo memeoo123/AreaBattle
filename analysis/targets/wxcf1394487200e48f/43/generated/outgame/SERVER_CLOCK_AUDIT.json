@@ -1,0 +1,25 @@
+{
+  "status": "source_clock_and_countdown_verified_native_sdk_provider_pending",
+  "source": [
+    "disassembly/Type4034-31057.txt",
+    "disassembly/Type4034-31063.txt",
+    "disassembly/Type4034-31064.txt",
+    "disassembly/Type4034-31067.txt",
+    "disassembly/Type4034-31062.txt"
+  ],
+  "verified": [
+    "Guarded init subscribes GamePause and refreshes twice; positive SDK results are read twice per refresh",
+    "Tick uses realtime accumulated strictly>1 seconds, subtracting once; SDK nonpositive falls back to original local epoch",
+    "First day observation silent; later day-of-year change emits RefreshNetTime then Time_NewDay",
+    "Debug offset applies only long timestamp getter; seconds/calendar use raw timestamp",
+    "Dispose removes pause listener and clears owner via supplied callback",
+    "Activity countdown validated against concrete restored server clock"
+  ],
+  "remaining": [
+    "Live SDK clock/network/release adapters and production tick owner",
+    "Activity manager/config timestamps and full menu bootstrap",
+    "Calendar week helper and full server/platform/Player E2E"
+  ],
+  "checks": 578,
+  "freshPlayMode": false
+}

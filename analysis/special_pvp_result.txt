@@ -1,0 +1,111 @@
+; PVPController.cfhPz; wasmcode function 18344; offset=8260646 size=287
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007e0c27  i32.const [5008601]
+007e0c2c  i32.load8_u [0, 0]
+007e0c2f  i32.eqz []
+007e0c30  if [-64]
+007e0c32    i32.const [3929208] ; type: CLog
+007e0c37    call [900] ; 
+007e0c3a    i32.const [3953440]
+007e0c3f    call [900] ; 
+007e0c42    i32.const [3926996]
+007e0c47    call [900] ; 
+007e0c4a    i32.const [4106440] ; literal: '阵营信息获取失败，无法判定胜负'
+007e0c4f    call [900] ; 
+007e0c52    i32.const [5008601]
+007e0c57    i32.const [1]
+007e0c59    i32.store8 [0, 0]
+007e0c5c  end []
+007e0c5d  block [-64]
+007e0c5f    local.get [0]
+007e0c61    i32.load [2, 64]
+007e0c64    local.set [1]
+007e0c66    local.get [1]
+007e0c68    i32.eqz []
+007e0c69    br_if [0]
+007e0c6b    local.get [1]
+007e0c6d    local.get [0]
+007e0c6f    call [10981] ; PvpRendererUIComp.Zj|TX~L
+007e0c72    i32.const [3953440]
+007e0c77    i32.load [2, 0]
+007e0c7a    call [935] ; 
+007e0c7d    i32.load [2, 8]
+007e0c80    i32.const [6]
+007e0c82    i32.ne []
+007e0c83    br_if [0]
+007e0c85    i32.const [3953440]
+007e0c8a    i32.load [2, 0]
+007e0c8d    call [935] ; 
+007e0c90    local.get [0]
+007e0c92    i32.load [2, 12]
+007e0c95    i32.const [0]
+007e0c97    call [3592] ; LevelControl.GetCampInfoByCampId
+007e0c9a    local.set [0]
+007e0c9c    i32.const [3953440]
+007e0ca1    i32.load [2, 0]
+007e0ca4    call [935] ; 
+007e0ca7    i32.const [3953440]
+007e0cac    i32.load [2, 0]
+007e0caf    call [935] ; 
+007e0cb2    i32.load [2, 12]
+007e0cb5    i32.const [0]
+007e0cb7    call [3592] ; LevelControl.GetCampInfoByCampId
+007e0cba    local.set [1]
+007e0cbc    local.get [0]
+007e0cbe    i32.const [0]
+007e0cc0    local.get [1]
+007e0cc2    select []
+007e0cc3    i32.eqz []
+007e0cc4    if [-64]
+007e0cc6      i32.const [3926996]
+007e0ccb      i32.load [2, 0]
+007e0cce      i32.const [1]
+007e0cd0      call [909] ; 
+007e0cd3      local.set [0]
+007e0cd5      local.get [0]
+007e0cd7      i32.const [4106440] ; literal: '阵营信息获取失败，无法判定胜负'
+007e0cdc      i32.load [2, 0]
+007e0cdf      call [905] ; 
+007e0ce2      local.get [0]
+007e0ce4      i32.const [4106440] ; literal: '阵营信息获取失败，无法判定胜负'
+007e0ce9      i32.load [2, 0]
+007e0cec      i32.store [2, 16]
+007e0cef      i32.const [3929208] ; type: CLog
+007e0cf4      i32.load [2, 0]
+007e0cf7      call [901] ; 
+007e0cfa      local.get [0]
+007e0cfc      i32.const [0]
+007e0cfe      call [1156] ; 
+007e0d01      return []
+007e0d02    end []
+007e0d03    local.get [0]
+007e0d05    i32.load [2, 40]
+007e0d08    i32.const [0]
+007e0d0a    i32.le_s []
+007e0d0b    if [-64]
+007e0d0d      i32.const [3953440]
+007e0d12      i32.load [2, 0]
+007e0d15      call [935] ; 
+007e0d18      i32.const [8]
+007e0d1a      i32.const [0]
+007e0d1c      i32.const [0]
+007e0d1e      call [1444] ; LevelControl.SetPlaySate
+007e0d21      drop []
+007e0d22      return []
+007e0d23    end []
+007e0d24    local.get [1]
+007e0d26    i32.load [2, 40]
+007e0d29    i32.const [0]
+007e0d2b    i32.gt_s []
+007e0d2c    br_if [0]
+007e0d2e    i32.const [3953440]
+007e0d33    i32.load [2, 0]
+007e0d36    call [935] ; 
+007e0d39    i32.const [9]
+007e0d3b    i32.const [0]
+007e0d3d    i32.const [0]
+007e0d3f    call [1444] ; LevelControl.SetPlaySate
+007e0d42    drop []
+007e0d43  end []
+007e0d44  end []
+

@@ -1,0 +1,28 @@
+; Original class: ADModule
+; Type9202.<ShowVideo>b__38_0; wasmcode function 21047; offset=9494585 size=65
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0090e03a  i32.const [5006939]
+0090e03f  i32.load8_u [0, 0]
+0090e042  i32.eqz []
+0090e043  if [-64]
+0090e045    i32.const [4078164] ; STRING "VideoAdOnShowSuccess"
+0090e04a    call [900] ; 
+0090e04d    i32.const [5006939]
+0090e052    i32.const [1]
+0090e054    i32.store8 [0, 0]
+0090e057  end []
+0090e058  local.get [0]
+0090e05a  local.get [0]
+0090e05c  call [6343] ; ADModule.cancelAutoCloseVideo
+0090e05f  local.get [1]
+0090e061  if [-64]
+0090e063    i32.const [4078164] ; STRING "VideoAdOnShowSuccess"
+0090e068    i32.load [2, 0]
+0090e06b    i32.const [0]
+0090e06d    call [1317] ; MsgDispatcher.SendMessage
+0090e070    return []
+0090e071  end []
+0090e072  local.get [0]
+0090e074  i32.const [0]
+0090e076  i32.store8 [0, 25]
+0090e079  end []

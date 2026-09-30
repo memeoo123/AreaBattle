@@ -1,0 +1,17 @@
+; Original class: LevelControl
+; Type4107.get_CurLevel; wasmcode function 1254; offset=424965 size=29
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00067c06  local.get [0]
+00067c08  i32.load [2, 24]
+00067c0b  i32.eqz []
+00067c0c  if [-64]
+00067c0e    i32.const [0]
+00067c10    call [1438] ; GameModule.get_LocalData
+00067c13    i32.load [2, 20]
+00067c16    i32.load [2, 12]
+00067c19    return []
+00067c1a  end []
+00067c1b  local.get [0]
+00067c1d  i32.load [2, 16]
+00067c20  return []
+00067c21  end []

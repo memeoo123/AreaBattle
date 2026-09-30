@@ -1,0 +1,25 @@
+; Original class: GlobalData
+; Type3486.get_Day; wasmcode function 4410; offset=1462420 size=67
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00165095  i32.const [4989093]
+0016509a  i32.load8_u [0, 0]
+0016509d  i32.eqz []
+0016509e  if [-64]
+001650a0    i32.const [3941104]
+001650a5    call [900] ; 
+001650a8    i32.const [4050932] ; STRING "Day"
+001650ad    call [900] ; 
+001650b0    i32.const [4989093]
+001650b5    i32.const [1]
+001650b7    i32.store8 [0, 0]
+001650ba  end []
+001650bb  i32.const [3941104]
+001650c0  i32.load [2, 0]
+001650c3  call [901] ; 
+001650c6  i32.const [4050932] ; STRING "Day"
+001650cb  i32.load [2, 0]
+001650ce  i32.const [0]
+001650d0  i32.const [0]
+001650d2  call [2888] ; UserDataPrefs.GetInt
+001650d5  return []
+001650d6  end []

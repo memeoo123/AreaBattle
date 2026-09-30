@@ -1,0 +1,79 @@
+; Original class: TopInfoUI
+; Type4425.Dispose; wasmcode1 function 44871; offset=16018881 size=239
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00f46dc2  i32.const [5007069]
+00f46dc7  i32.load8_u [0, 0]
+00f46dca  i32.eqz []
+00f46dcb  if [-64]
+00f46dcd    i32.const [3947148]
+00f46dd2    i32.const [1605]
+00f46dd5    call_indirect [0, 0]
+00f46dd8    i32.const [4017404] ; METHOD TopInfoUI.T|LXw
+00f46ddd    i32.const [1605]
+00f46de0    call_indirect [0, 0]
+00f46de3    i32.const [4017400] ; METHOD TopInfoUI.rvp}mR
+00f46de8    i32.const [1605]
+00f46deb    call_indirect [0, 0]
+00f46dee    i32.const [4061088] ; STRING "LoadStartingUI"
+00f46df3    i32.const [1605]
+00f46df6    call_indirect [0, 0]
+00f46df9    i32.const [4045372] ; STRING "Avatar_Refresh_OnAuth"
+00f46dfe    i32.const [1605]
+00f46e01    call_indirect [0, 0]
+00f46e04    i32.const [5007069]
+00f46e09    i32.const [1]
+00f46e0b    i32.store8 [0, 0]
+00f46e0e  end []
+00f46e0f  i32.const [3947148]
+00f46e14  i32.load [2, 0]
+00f46e17  i32.const [109007]
+00f46e1b  call_indirect [2, 0]
+00f46e1e  local.set [1]
+00f46e20  local.get [1]
+00f46e22  local.get [0]
+00f46e24  i32.const [4017404] ; METHOD TopInfoUI.T|LXw
+00f46e29  i32.load [2, 0]
+00f46e2c  i32.const [0]
+00f46e2e  i32.const [24682] ; TABLE EventHandler..ctor
+00f46e32  call_indirect [6, 0]
+00f46e35  i32.const [4061088] ; STRING "LoadStartingUI"
+00f46e3a  i32.load [2, 0]
+00f46e3d  local.get [1]
+00f46e3f  i32.const [0]
+00f46e41  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00f46e45  call_indirect [5, 0]
+00f46e48  i32.const [3947148]
+00f46e4d  i32.load [2, 0]
+00f46e50  i32.const [109007]
+00f46e54  call_indirect [2, 0]
+00f46e57  local.set [1]
+00f46e59  local.get [1]
+00f46e5b  local.get [0]
+00f46e5d  i32.const [4017400] ; METHOD TopInfoUI.rvp}mR
+00f46e62  i32.load [2, 0]
+00f46e65  i32.const [0]
+00f46e67  i32.const [24682] ; TABLE EventHandler..ctor
+00f46e6b  call_indirect [6, 0]
+00f46e6e  i32.const [4045372] ; STRING "Avatar_Refresh_OnAuth"
+00f46e73  i32.load [2, 0]
+00f46e76  local.get [1]
+00f46e78  i32.const [0]
+00f46e7a  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00f46e7e  call_indirect [5, 0]
+00f46e81  i32.const [0]
+00f46e83  i32.const [9428] ; TABLE GameModule.get_Effect
+00f46e87  call_indirect [2, 0]
+00f46e8a  local.get [0]
+00f46e8c  i32.load [2, 104]
+00f46e8f  i32.const [0]
+00f46e91  i32.const [9515] ; TABLE EffectModule.Close
+00f46e95  call_indirect [5, 0]
+00f46e98  i32.const [0]
+00f46e9a  i32.const [9428] ; TABLE GameModule.get_Effect
+00f46e9e  call_indirect [2, 0]
+00f46ea1  local.get [0]
+00f46ea3  i32.load [2, 108]
+00f46ea6  i32.const [0]
+00f46ea8  i32.const [9515] ; TABLE EffectModule.Close
+00f46eac  call_indirect [5, 0]
+00f46eaf  end []

@@ -1,0 +1,68 @@
+; Original class: CommanderItem
+; Type4334.RefreshCommander; wasmcode function 5151; offset=1766632 size=162
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+001af4eb  i32.const [5008833]
+001af4f0  i32.load8_u [0, 0]
+001af4f3  i32.eqz []
+001af4f4  if [-64]
+001af4f6    i32.const [4048916] ; STRING "CommanderUI.Level"
+001af4fb    call [900] ; 
+001af4fe    i32.const [5008833]
+001af503    i32.const [1]
+001af505    i32.store8 [0, 0]
+001af508  end []
+001af509  local.get [0]
+001af50b  i32.load [2, 40]
+001af50e  i32.load [2, 16]
+001af511  i32.const [0]
+001af513  i32.gt_s []
+001af514  local.set [1]
+001af516  local.get [0]
+001af518  i32.load [2, 52]
+001af51b  local.get [1]
+001af51d  i32.eqz []
+001af51e  i32.const [0]
+001af520  call [949] ; GameObject.SetActive
+001af523  local.get [0]
+001af525  i32.load [2, 56]
+001af528  local.get [1]
+001af52a  i32.const [0]
+001af52c  call [949] ; GameObject.SetActive
+001af52f  local.get [0]
+001af531  i32.load [2, 60]
+001af534  local.set [1]
+001af536  local.get [1]
+001af538  local.set [2]
+001af53a  i32.const [0]
+001af53c  call [1220] ; GameModule.get_Lang
+001af53f  i32.const [4048916] ; STRING "CommanderUI.Level"
+001af544  i32.load [2, 0]
+001af547  i32.const [0]
+001af549  call [1243] ; LangModule.Get
+001af54c  local.get [0]
+001af54e  i32.load [2, 40]
+001af551  i32.const [16]
+001af553  i32.add []
+001af554  i32.const [0]
+001af556  call [966] ; Int32.ToString
+001af559  i32.const [0]
+001af55b  call [921] ; String.Concat
+001af55e  local.set [3]
+001af560  local.get [1]
+001af562  i32.load [2, 0]
+001af565  local.set [1]
+001af567  local.get [2]
+001af569  local.get [3]
+001af56b  local.get [1]
+001af56d  i32.const [568]
+001af570  i32.add []
+001af571  i32.load [2, 192]
+001af575  local.get [1]
+001af577  i32.load [2, 756]
+001af57b  global.set [3]
+001af57d  global.get [3]
+001af57f  call_indirect [2, 0]
+001af582  local.get [0]
+001af584  local.get [0]
+001af586  call [6200] ; CommanderItem.RefreshRedDot
+001af589  end []

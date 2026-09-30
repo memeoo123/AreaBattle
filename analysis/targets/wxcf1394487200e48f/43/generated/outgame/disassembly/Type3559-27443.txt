@@ -1,0 +1,30 @@
+; Original class: UIObject
+; Type3559..ctor; wasmcode function 6907; offset=2620822 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0027fd97  i32.const [4989698]
+0027fd9c  i32.load8_u [0, 0]
+0027fd9f  i32.eqz []
+0027fda0  if [-64]
+0027fda2    i32.const [3959112]
+0027fda7    call [900] ; 
+0027fdaa    i32.const [3918368]
+0027fdaf    call [900] ; 
+0027fdb2    i32.const [4989698]
+0027fdb7    i32.const [1]
+0027fdb9    i32.store8 [0, 0]
+0027fdbc  end []
+0027fdbd  i32.const [3918368]
+0027fdc2  i32.load [2, 0]
+0027fdc5  call [903] ; 
+0027fdc8  local.set [1]
+0027fdca  local.get [1]
+0027fdcc  i32.const [3959112]
+0027fdd1  i32.load [2, 0]
+0027fdd4  call [951] ; 
+0027fdd7  local.get [0]
+0027fdd9  local.get [1]
+0027fddb  i32.store [2, 8]
+0027fdde  local.get [0]
+0027fde0  i32.const [1]
+0027fde2  i32.store8 [0, 24]
+0027fde5  end []

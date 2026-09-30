@@ -1,0 +1,25 @@
+; Original class: EchelonController
+; Type7518.onClickAd; wasmcode1 function 64192; offset=20479830 size=65
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01387f57  i32.const [5005078]
+01387f5c  i32.load8_u [0, 0]
+01387f5f  i32.eqz []
+01387f60  if [-64]
+01387f62    i32.const [4093880] ; STRING "onClickAd"
+01387f67    i32.const [1605]
+01387f6a    call_indirect [0, 0]
+01387f6d    i32.const [5005078]
+01387f72    i32.const [1]
+01387f74    i32.store8 [0, 0]
+01387f77  end []
+01387f78  local.get [0]
+01387f7a  i32.load [2, 8]
+01387f7d  i32.const [4093880] ; STRING "onClickAd"
+01387f82  i32.load [2, 0]
+01387f85  i32.const [0]
+01387f87  i32.const [1476] ; TABLE String.Concat
+01387f8a  call_indirect [3, 0]
+01387f8d  i32.const [0]
+01387f8f  i32.const [8833] ; TABLE XYXLOG.Log
+01387f93  call_indirect [4, 0]
+01387f96  end []

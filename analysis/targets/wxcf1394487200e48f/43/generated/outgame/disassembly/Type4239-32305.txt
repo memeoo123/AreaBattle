@@ -1,0 +1,59 @@
+; Original class: WayLineControl
+; Type4239.O|PYkS; wasmcode function 14746; offset=7219356 size=145
+; signature={'args': [127, 125, 125, 127], 'returns': []}; localGroups=[]
+006e289d  i32.const [5007281]
+006e28a2  i32.load8_u [0, 0]
+006e28a5  i32.eqz []
+006e28a6  if [-64]
+006e28a8    i32.const [3953560]
+006e28ad    call [900] ; 
+006e28b0    i32.const [3936516]
+006e28b5    call [900] ; 
+006e28b8    i32.const [5007281]
+006e28bd    i32.const [1]
+006e28bf    i32.store8 [0, 0]
+006e28c2  end []
+006e28c3  i32.const [3953560]
+006e28c8  i32.load [2, 0]
+006e28cb  call [935] ; 
+006e28ce  i32.load8_u [0, 88]
+006e28d1  i32.eqz []
+006e28d2  if [-64]
+006e28d4    local.get [0]
+006e28d6    i32.load [2, 116]
+006e28d9    local.set [3]
+006e28db    i32.const [3936516]
+006e28e0    i32.load [2, 0]
+006e28e3    call [901] ; 
+006e28e6    block [-64]
+006e28e8      local.get [3]
+006e28ea      i32.const [0]
+006e28ec      i32.const [0]
+006e28ee      call [946] ; Object.op_Inequality
+006e28f1      i32.eqz []
+006e28f2      br_if [0]
+006e28f4      local.get [0]
+006e28f6      i32.load [2, 120]
+006e28f9      local.set [3]
+006e28fb      i32.const [3936516]
+006e2900      i32.load [2, 0]
+006e2903      call [901] ; 
+006e2906      local.get [3]
+006e2908      i32.const [0]
+006e290a      i32.const [0]
+006e290c      call [946] ; Object.op_Inequality
+006e290f      i32.eqz []
+006e2910      br_if [0]
+006e2912      local.get [0]
+006e2914      local.get [0]
+006e2916      i32.load [2, 116]
+006e2919      local.get [0]
+006e291b      i32.load [2, 120]
+006e291e      local.get [0]
+006e2920      call [9379] ; WayLineControl.xt~lM]
+006e2923    end []
+006e2924    local.get [0]
+006e2926    local.get [0]
+006e2928    call [4669] ; WayLineControl.nfOa
+006e292b  end []
+006e292c  end []

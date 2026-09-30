@@ -1,0 +1,56 @@
+; Original class: DBTSDKManager
+; Type3135.InitDBTSDK; wasmcode function 12680; offset=6109139 size=174
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d37d4  i32.const [4988613]
+005d37d9  i32.load8_u [0, 0]
+005d37dc  i32.eqz []
+005d37dd  if [-64]
+005d37df    i32.const [3994652]
+005d37e4    call [900] ; 
+005d37e7    i32.const [3994656]
+005d37ec    call [900] ; 
+005d37ef    i32.const [3994660]
+005d37f4    call [900] ; 
+005d37f7    i32.const [3994664]
+005d37fc    call [900] ; 
+005d37ff    i32.const [3994668]
+005d3804    call [900] ; 
+005d3807    i32.const [3994672]
+005d380c    call [900] ; 
+005d380f    i32.const [4057908] ; STRING "InitSDKOpenFunction"
+005d3814    call [900] ; 
+005d3817    i32.const [4988613]
+005d381c    i32.const [1]
+005d381e    i32.store8 [0, 0]
+005d3821  end []
+005d3822  local.get [0]
+005d3824  i32.const [3994652]
+005d3829  i32.load [2, 0]
+005d382c  call [4473] ; 
+005d382f  local.get [0]
+005d3831  i32.const [3994664]
+005d3836  i32.load [2, 0]
+005d3839  call [4473] ; 
+005d383c  local.get [0]
+005d383e  i32.const [3994668]
+005d3843  i32.load [2, 0]
+005d3846  call [4473] ; 
+005d3849  local.get [0]
+005d384b  i32.const [3994656]
+005d3850  i32.load [2, 0]
+005d3853  call [4473] ; 
+005d3856  local.get [0]
+005d3858  i32.const [3994660]
+005d385d  i32.load [2, 0]
+005d3860  call [4473] ; 
+005d3863  local.get [0]
+005d3865  i32.const [3994672]
+005d386a  i32.load [2, 0]
+005d386d  call [4473] ; 
+005d3870  local.get [0]
+005d3872  i32.const [4057908] ; STRING "InitSDKOpenFunction"
+005d3877  i32.load [2, 0]
+005d387a  i32.const [0]
+005d387c  call [11322] ; MonoBehaviour.StartCoroutine
+005d387f  drop []
+005d3880  end []

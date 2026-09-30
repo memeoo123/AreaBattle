@@ -1,0 +1,29 @@
+; DiceGameControl.pVbaMd; wasmcode function 12549; offset=6060235 size=78
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005c78cc  i32.const [5008738]
+005c78d1  i32.load8_u [0, 0]
+005c78d4  i32.eqz []
+005c78d5  if [-64]
+005c78d7    i32.const [4010572]
+005c78dc    call [900] ; 
+005c78df    i32.const [3937580] ; type: RandomHelper
+005c78e4    call [900] ; 
+005c78e7    i32.const [5008738]
+005c78ec    i32.const [1]
+005c78ee    i32.store8 [0, 0]
+005c78f1  end []
+005c78f2  local.get [0]
+005c78f4  i32.load [2, 28]
+005c78f7  local.set [0]
+005c78f9  i32.const [3937580] ; type: RandomHelper
+005c78fe  i32.load [2, 0]
+005c7901  call [901] ; 
+005c7904  local.get [0]
+005c7906  i32.const [4010572]
+005c790b  i32.load [2, 0]
+005c790e  call [4877] ; 
+005c7911  i32.load [2, 12]
+005c7914  i32.load [2, 8]
+005c7917  return []
+005c7918  end []
+

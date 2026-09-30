@@ -1,0 +1,65 @@
+; Original class: LoginCtrl
+; Type4244.SuccessToConnectionServer; wasmcode function 18756; offset=8468334 size=184
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00813771  i32.const [5007318]
+00813776  i32.load8_u [0, 0]
+00813779  i32.eqz []
+0081377a  if [-64]
+0081377c    i32.const [3929208]
+00813781    call [900] ; 
+00813784    i32.const [3926996]
+00813789    call [900] ; 
+0081378c    i32.const [4061268] ; STRING "Login:SuccessToConnectionServer"
+00813791    call [900] ; 
+00813794    i32.const [4061272] ; STRING "Login:WX OpenId = "
+00813799    call [900] ; 
+0081379c    i32.const [5007318]
+008137a1    i32.const [1]
+008137a3    i32.store8 [0, 0]
+008137a6  end []
+008137a7  i32.const [3926996]
+008137ac  i32.load [2, 0]
+008137af  i32.const [1]
+008137b1  call [909] ; 
+008137b4  local.set [1]
+008137b6  local.get [1]
+008137b8  i32.const [4061268] ; STRING "Login:SuccessToConnectionServer"
+008137bd  i32.load [2, 0]
+008137c0  call [905] ; 
+008137c3  local.get [1]
+008137c5  i32.const [4061268] ; STRING "Login:SuccessToConnectionServer"
+008137ca  i32.load [2, 0]
+008137cd  i32.store [2, 16]
+008137d0  i32.const [3929208]
+008137d5  i32.load [2, 0]
+008137d8  call [901] ; 
+008137db  local.get [1]
+008137dd  i32.const [0]
+008137df  call [1156] ; CLog.Warning
+008137e2  i32.const [3926996]
+008137e7  i32.load [2, 0]
+008137ea  i32.const [1]
+008137ec  call [909] ; 
+008137ef  local.set [1]
+008137f1  i32.const [0]
+008137f3  call [1307] ; XYXGlobalData.get_OpenID
+008137f6  local.set [2]
+008137f8  i32.const [4061272] ; STRING "Login:WX OpenId = "
+008137fd  i32.load [2, 0]
+00813800  local.get [2]
+00813802  i32.const [0]
+00813804  call [921] ; String.Concat
+00813807  local.set [2]
+00813809  local.get [1]
+0081380b  local.get [2]
+0081380d  call [905] ; 
+00813810  local.get [1]
+00813812  local.get [2]
+00813814  i32.store [2, 16]
+00813817  local.get [1]
+00813819  i32.const [0]
+0081381b  call [1156] ; CLog.Warning
+0081381e  local.get [0]
+00813820  i32.const [0]
+00813822  call [11465] ; LoginProcedureBase.Login
+00813825  end []

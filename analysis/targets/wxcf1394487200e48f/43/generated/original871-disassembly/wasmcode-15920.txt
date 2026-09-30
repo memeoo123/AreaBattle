@@ -1,0 +1,36 @@
+; SkillUI..ctor; wasmcode function 15920; offset=7653980 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+0074ca5f  i32.const [5007006]
+0074ca64  i32.load8_u [0, 0]
+0074ca67  i32.eqz []
+0074ca68  if [-64]
+0074ca6a    i32.const [4069768] ; literal: 'SkillUI.itemPointNum'
+0074ca6f    call [900] ; 
+0074ca72    i32.const [5007006]
+0074ca77    i32.const [1]
+0074ca79    i32.store8 [0, 0]
+0074ca7c  end []
+0074ca7d  local.get [0]
+0074ca7f  i32.const [4069768] ; literal: 'SkillUI.itemPointNum'
+0074ca84  i32.load [2, 0]
+0074ca87  i32.store [2, 108]
+0074ca8a  local.get [0]
+0074ca8c  i32.const [0]
+0074ca8e  call [1521] ; 
+0074ca91  i64.const [8589934593]
+0074ca97  local.set [2]
+0074ca99  local.get [0]
+0074ca9b  local.get [2]
+0074ca9d  i32.wrap_i64 []
+0074ca9e  i32.store [2, 48]
+0074caa1  local.get [0]
+0074caa3  local.get [2]
+0074caa5  i64.const [32]
+0074caa7  i64.shr_u []
+0074caa8  i32.wrap_i64 []
+0074caa9  i32.store [2, 52]
+0074caac  local.get [0]
+0074caae  i32.const [1]
+0074cab0  i32.store [2, 40]
+0074cab3  end []
+

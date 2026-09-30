@@ -1,0 +1,29 @@
+{
+  "status": "native_feedback_and_fly_entry_verified_animation_host_pending",
+  "checks": 515,
+  "sourceMethodsIndexed": 1940,
+  "source": [
+    "disassembly/Type4408-33778.txt",
+    "disassembly/Type4408-33788.txt",
+    "disassembly/Type4408-33779.txt",
+    "disassembly/Type4408-33801.txt",
+    "disassembly/Type4058-31217.txt",
+    "disassembly/Type4053-31227.txt",
+    "disassembly/Type4256-32536.txt"
+  ],
+  "verified": [
+    "Original native tool-value text refresh ignores event payload",
+    "Failed video callback has no effect request",
+    "Successful gold/diamond callback forwards50/20, effectRoot, source button world position and flags true/0/true",
+    "Missing currency target suppresses NewFlyTool grant and scheduling",
+    "Real inventory grant/report/save occurs before animation; no immediate top refresh",
+    "Animation failure preserves prior grant and prevents subsequent tracking"
+  ],
+  "pending": [
+    "Source effect animation coroutine and cleanup",
+    "FlyMoney/FlyDiamonds audio and real currency-target wrappers",
+    "Bind live video completion handlers during ShopUI.OpenLater and remove listeners on Dispose",
+    "Full page lifecycle and account providers"
+  ],
+  "correction": "Effect callback argument is Action Completion=null in ShopUI, not integer Mode. Last boolean is addMoneyShow. Native feedback and fly-start signatures corrected at516."
+}

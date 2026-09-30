@@ -1,0 +1,41 @@
+{
+  "atUtc": "2026-09-30T11:15:44.816717+00:00",
+  "status": "seven-virtual-entities-implemented-packages-and-full-owners-pending",
+  "sourceEvidence": "VIRTUAL_ITEMS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T11:15:44.816717+00:00",
+    "scope": "All seven virtual item entities, real CommanderManager unlock, source head-box unlock/list events and Dice point notification methods",
+    "checksPassed": 1063,
+    "newIntegratedChecks": 13,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Package entities/randomness, full UserInfo/Dice/UI owners, live SDK/report delivery, full outgame Player"
+  },
+  "implementedLifecycleControllers": 14,
+  "remainingLifecycleControllers": 24,
+  "findings": [
+    "VirtualItem_Commander4493 AddItem34315/AddItemOnlyModel34313 invoke virtual Use slot7 unchanged long count. Use34314 ignores quantity, current CommanderControl.Manager.UnlockCommander(config.paramInt), then current UIControl.CommanderUI.RefreshCommanderItem(config.paramInt), reads config param again after resolving UI. No base item stock mutation/report.",
+    "CommanderManager31013 GetCommanderData uses TryGetValue and returns null on miss.31015 UnlockCommander unconditionally writes CommanderData4030.curLevel(offset16)=1; existing higher level is reset, missing row throws. Added these real methods to existing manager; no invented unlock price or protection.",
+    "VirtualItem_HeadBox4497 Add34323/OnlyModel34325 likewise virtual Use34324 ignoring quantity, current UserInfoControl.UnlockHeadBox(config.paramInt).32198 checks HaveHeadBox then AddHeadBox. Manager32228 reads actual UserInfoData.field52 List<int>.Contains;32229 List.Add then UserInfo_HeadBoxUnlock(id). Control guard skips duplicates; direct manager Add permits duplicates. OutgameHeadBoxInventory restores these methods against explicit current owner-list provider; full UserInfoManager/control lifecycle not claimed.",
+    "VirtualItem_HeroPiece4498 Add34327/OnlyModel34326/Use34329 call original virtual/base behavior; no extra crafting, consume or unlock. Shared WASM labels ActivityVirtualItemBase are aliases; type metadata establishes actual parent VirtualItemBase4492.",
+    "VirtualItem_Strength4499 Add34330 invokes base Add then sends Event.SP_CHANGE with null args; Use34331 invokes base Use then same event. Inherited AddItemOnlyModel does not send SP. Source Event4271 field56 and cctor32607 SP_CHANGE confirmed. Failure before notification skips it without reverting prior base effects.",
+    "VirtualItem_GamePoints4495 Add34318 and OnlyModel34319 execute respective base first then current DiceGameControl.AddPoint(low32 count). DiceGameControl31102 discards caller quantity and invokes DiceGameDataManager.ChangePoint with zeros.31135 ChangePoint ignores receiver/delta, gets31144 GetPoint = low32 current GlobalItemManager.GetItemCount(11001), clamps returned/message value to max(value,0), sends Mxtz_DataChange(1,result), returns result. It never adds count or repairs global stock. Restored narrow OutgameDicePoints service, not full4038 lifecycle.",
+    "Factory service now constructs all seven supported virtual source types. Only PackageOpenAuto4490 and PackageOpenManual4491 remain explicit AdditionalConstructors. Original unsupported type2=6/7/9 remain null rather than invented entities.13 new checks load actual79-row shared item table and exercise concrete constructor/real reward engine and real CommanderManager, while UI refresh/reporting and profile ownership remain explicit service boundaries."
+  ],
+  "remaining": [
+    "Restore PackageItemBase4489 and PackageOpenAuto4490/Manual4491 including original weighted selection, long quantities, temporary rewards and use/report/debit ordering. Then complete production owner composition for UserInfo/CommanderUI/Dice/reporting plus24 remaining controller lifecycles/full Main/account/menu/business flows and runnable outgame Player.",
+    "Package entities and random reward selection not restored yet.",
+    "Head-box owner list and CommanderUI refresh must be supplied by full production UserInfo/UI owners; restoring narrow methods does not complete those controllers.",
+    "Dice points service only restores31102/31135/31144, not full DiceGameControl4038. Lifecycle count remains14/38.",
+    "No new native PlayMode or outgame Player; real reports/SDK/accounts/full Main not claimed."
+  ],
+  "disassembledMethodMapCount": 5170,
+  "artifacts": {
+    "integratedLog": "analysis/virtual-items-integrated.log"
+  }
+}

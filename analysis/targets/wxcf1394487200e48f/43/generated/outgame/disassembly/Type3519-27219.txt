@@ -1,0 +1,24 @@
+; Original class: GameRemoteServices
+; Type3519.GetVersionUrl; wasmcode1 function 61843; offset=19922283 size=59
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+012ffd6c  i32.const [4989582]
+012ffd71  i32.load8_u [0, 0]
+012ffd74  i32.eqz []
+012ffd75  if [-64]
+012ffd77    i32.const [4040180] ; STRING "/"
+012ffd7c    i32.const [1605]
+012ffd7f    call_indirect [0, 0]
+012ffd82    i32.const [4989582]
+012ffd87    i32.const [1]
+012ffd89    i32.store8 [0, 0]
+012ffd8c  end []
+012ffd8d  local.get [0]
+012ffd8f  i32.load [2, 8]
+012ffd92  i32.const [4040180] ; STRING "/"
+012ffd97  i32.load [2, 0]
+012ffd9a  local.get [1]
+012ffd9c  i32.const [0]
+012ffd9e  i32.const [1241] ; TABLE String.Concat
+012ffda1  call_indirect [8, 0]
+012ffda4  return []
+012ffda5  end []

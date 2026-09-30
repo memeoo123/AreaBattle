@@ -1,0 +1,115 @@
+{
+  "status": "isolated-original-scheduler-oracle",
+  "runtime": "v24.14.0",
+  "originalBodyUnchanged": true,
+  "source": {
+    "function": 21038,
+    "offset": 9492148,
+    "size": 149,
+    "bodySha256": "e18b6603c95ab93bf22f8d3fac70d80e31100837808658640c372e3940722043",
+    "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+    "harnessSha256": "4e06207b00b91d596eb20dd375795d6591eed3feb7e479849da1f456fa75459e"
+  },
+  "stubs": {
+    "900": "metadata guard already set",
+    "935": "controller pointer",
+    "1060": "config pointer",
+    "12796": "fixture interval, does not exercise RNG",
+    "13413": "count invocation only, does not execute AI policy"
+  },
+  "limitations": [
+    "Scheduler arithmetic/control flow only; not original random stream, AI policy or complete initialization."
+  ],
+  "cases": [
+    {
+      "id": "delay-positive",
+      "delay": 0.4,
+      "timer": 0,
+      "dt": 0.1,
+      "interval": 0.2,
+      "expectedDelay": 0.30000001192092896,
+      "expectedTimer": 0,
+      "expectedActions": 0
+    },
+    {
+      "id": "delay-crosses-zero",
+      "delay": 0.1,
+      "timer": 0,
+      "dt": 0.2,
+      "interval": 0.2,
+      "expectedDelay": -0.10000000149011612,
+      "expectedTimer": 0,
+      "expectedActions": 0
+    },
+    {
+      "id": "delay-exact-zero",
+      "delay": 0.1,
+      "timer": 0,
+      "dt": 0.1,
+      "interval": 0.2,
+      "expectedDelay": 0,
+      "expectedTimer": 0,
+      "expectedActions": 0
+    },
+    {
+      "id": "timer-exact-zero",
+      "delay": 0,
+      "timer": 0.125,
+      "dt": 0.125,
+      "interval": 0.2,
+      "expectedDelay": 0,
+      "expectedTimer": 0,
+      "expectedActions": 0
+    },
+    {
+      "id": "first-running-frame",
+      "delay": 0,
+      "timer": 0,
+      "dt": 0.016666666666666666,
+      "interval": 0.2,
+      "expectedDelay": 0,
+      "expectedTimer": 0.18333333730697632,
+      "expectedActions": 1
+    },
+    {
+      "id": "negative-delay-next-frame",
+      "delay": -0.1,
+      "timer": 0,
+      "dt": 0.016666666666666666,
+      "interval": 0.4,
+      "expectedDelay": -0.10000000149011612,
+      "expectedTimer": 0.38333332538604736,
+      "expectedActions": 1
+    },
+    {
+      "id": "timer-residual",
+      "delay": 0,
+      "timer": 0.1,
+      "dt": 0.15,
+      "interval": 0.4,
+      "expectedDelay": 0,
+      "expectedTimer": 0.3499999940395355,
+      "expectedActions": 1
+    },
+    {
+      "id": "large-delta-one-action",
+      "delay": 0,
+      "timer": 0,
+      "dt": 0.7,
+      "interval": 0.2,
+      "expectedDelay": 0,
+      "expectedTimer": -0.5,
+      "expectedActions": 1
+    },
+    {
+      "id": "negative-timer-zero-delta",
+      "delay": 0,
+      "timer": -0.3,
+      "dt": 0,
+      "interval": 0.2,
+      "expectedDelay": 0,
+      "expectedTimer": -0.10000000894069672,
+      "expectedActions": 1
+    }
+  ]
+}

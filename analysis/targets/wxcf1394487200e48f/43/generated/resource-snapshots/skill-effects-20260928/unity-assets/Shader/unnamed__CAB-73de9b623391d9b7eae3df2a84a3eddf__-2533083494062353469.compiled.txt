@@ -1,0 +1,29 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Alpha Blend" {
+Properties {
+
+_MainColor ("Main Color", Color) = (1,1,1,1)
+
+_MainTex ("Main Tex", 2D) = "white" { }
+
+_texcoord ("", 2D) = "white" { }
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 21041
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

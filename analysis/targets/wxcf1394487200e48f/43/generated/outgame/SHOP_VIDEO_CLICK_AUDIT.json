@@ -1,0 +1,32 @@
+{
+  "status": "click_core_and_delay_verified_native_adapter_pending",
+  "source": [
+    "disassembly/Type10741-74413.txt",
+    "disassembly/Type10741-74414.txt",
+    "disassembly/Type10741-74415.txt",
+    "disassembly/Type10741-74417.txt",
+    "disassembly/Type10741-74423.txt",
+    "disassembly/Type10740-74434.txt",
+    "video-button-generics.json",
+    "video-button-virtual-slots.json"
+  ],
+  "verified": [
+    "Missing data skips audio and all other effects",
+    "PlayAudio executes before cooldown gates; global play gate precedes click gate",
+    "Update uses strict greater-than unscaled clock deadlines; click never expires timers itself",
+    "Click locks one second before click report, UnityEvent and base Button.OnPointerClick",
+    "Button state re-read after callbacks; only state2 sets shared five-second lock, reports play, then shows ad",
+    "Exceptions preserve prior state changes and stop later calls",
+    "Completion does not reset shared cooldown",
+    "DelayReport argument is Int32, not bool; WaitForSeconds uses scaled time; create report before SDK flag15(false) gate and ready report"
+  ],
+  "remaining": [
+    "Native Button subclass adapter and original serialized properties",
+    "Button configuration, readiness/state and reporting implementation",
+    "Actual AdsManager/platform callback host",
+    "Production account/menu composition, persistence/build/E2E"
+  ],
+  "checks": 542,
+  "priorPlaymodeChecks": 8,
+  "dynamicScope": "Integrated editor checks with explicit ad result fixture; no real SDK or fresh PlayMode claim"
+}

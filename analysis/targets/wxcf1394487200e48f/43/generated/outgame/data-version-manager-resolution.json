@@ -1,0 +1,374 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3959072,
+      "encodedUsage": "0xc000821b",
+      "methodSpecIndex": 16653,
+      "methodSpecAddress": 682844,
+      "methodSpec": [
+        10517,
+        977,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959076,
+      "encodedUsage": "0xc000821d",
+      "methodSpecIndex": 16654,
+      "methodSpecAddress": 682856,
+      "methodSpec": [
+        10529,
+        977,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Remove",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959088,
+      "encodedUsage": "0xc0008223",
+      "methodSpecIndex": 16657,
+      "methodSpecAddress": 682892,
+      "methodSpec": [
+        10504,
+        977,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Keys",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3961756,
+      "encodedUsage": "0xc0008749",
+      "methodSpecIndex": 17316,
+      "methodSpecAddress": 690800,
+      "methodSpec": [
+        10507,
+        1219,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Values",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 288,
+            "name": "Type"
+          },
+          {
+            "type": "0x120000",
+            "data": 3465,
+            "name": "DataManagerBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3998516,
+      "encodedUsage": "0xc000be8d",
+      "methodSpecIndex": 24390,
+      "methodSpecAddress": 775688,
+      "methodSpec": [
+        43249,
+        -1,
+        243
+      ],
+      "declaringType": "Enumerable",
+      "method": "ToList",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3964448,
+      "encodedUsage": "0xc0008c7d",
+      "methodSpecIndex": 17982,
+      "methodSpecAddress": 698792,
+      "methodSpec": [
+        10698,
+        243,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "Dispose",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3964452,
+      "encodedUsage": "0xc0008c7f",
+      "methodSpecIndex": 17983,
+      "methodSpecAddress": 698804,
+      "methodSpec": [
+        10699,
+        243,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "MoveNext",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3964456,
+      "encodedUsage": "0xc0008c81",
+      "methodSpecIndex": 17984,
+      "methodSpecAddress": 698816,
+      "methodSpec": [
+        10701,
+        243,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "get_Current",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3967116,
+      "encodedUsage": "0xc0009177",
+      "methodSpecIndex": 18619,
+      "methodSpecAddress": 706436,
+      "methodSpec": [
+        10593,
+        1219,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "Dispose",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 288,
+            "name": "Type"
+          },
+          {
+            "type": "0x120000",
+            "data": 3465,
+            "name": "DataManagerBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3967120,
+      "encodedUsage": "0xc0009179",
+      "methodSpecIndex": 18620,
+      "methodSpecAddress": 706448,
+      "methodSpec": [
+        10594,
+        1219,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "MoveNext",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 288,
+            "name": "Type"
+          },
+          {
+            "type": "0x120000",
+            "data": 3465,
+            "name": "DataManagerBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3967124,
+      "encodedUsage": "0xc000917b",
+      "methodSpecIndex": 18621,
+      "methodSpecAddress": 706460,
+      "methodSpec": [
+        10595,
+        1219,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "get_Current",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 288,
+            "name": "Type"
+          },
+          {
+            "type": "0x120000",
+            "data": 3465,
+            "name": "DataManagerBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3977248,
+      "encodedUsage": "0xc000a3ed",
+      "methodSpecIndex": 20982,
+      "methodSpecAddress": 734792,
+      "methodSpec": [
+        10674,
+        243,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3987804,
+      "encodedUsage": "0xc000b70b",
+      "methodSpecIndex": 23429,
+      "methodSpecAddress": 764156,
+      "methodSpec": [
+        10579,
+        1219,
+        -1
+      ],
+      "declaringType": "ValueCollection",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 288,
+            "name": "Type"
+          },
+          {
+            "type": "0x120000",
+            "data": 3465,
+            "name": "DataManagerBase"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

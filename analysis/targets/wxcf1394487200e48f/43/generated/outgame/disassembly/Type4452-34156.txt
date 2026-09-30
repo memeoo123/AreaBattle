@@ -1,0 +1,28 @@
+; Original class: ProcedureStarGame
+; Type4452.TakLz; wasmcode1 function 54297; offset=17958558 size=73
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0112069f  i32.const [5009791]
+011206a4  i32.load8_u [0, 0]
+011206a7  i32.eqz []
+011206a8  if [-64]
+011206aa    i32.const [3953360]
+011206af    i32.const [1605]
+011206b2    call_indirect [0, 0]
+011206b5    i32.const [5009791]
+011206ba    i32.const [1]
+011206bc    i32.store8 [0, 0]
+011206bf  end []
+011206c0  local.get [1]
+011206c2  i32.const [0]
+011206c4  i32.const [2502] ; TABLE Int32.Parse
+011206c7  call_indirect [1, 0]
+011206ca  local.set [0]
+011206cc  i32.const [3953360]
+011206d1  i32.load [2, 0]
+011206d4  i32.const [10272]
+011206d8  call_indirect [2, 0]
+011206db  local.get [0]
+011206dd  i32.const [0]
+011206df  i32.const [14567] ; TABLE DiceGameControl.GM_AddTzNum
+011206e3  call_indirect [5, 0]
+011206e6  end []

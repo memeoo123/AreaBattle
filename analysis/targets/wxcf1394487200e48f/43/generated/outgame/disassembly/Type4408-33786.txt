@@ -1,0 +1,136 @@
+; Original class: ShopUI
+; Type4408.OpenLater; wasmcode function 16003; offset=7719816 size=422
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0075cb8b  i32.const [5007563]
+0075cb90  i32.load8_u [0, 0]
+0075cb93  i32.eqz []
+0075cb94  if [-64]
+0075cb96    i32.const [3993256]
+0075cb9b    call [900] ; 
+0075cb9e    i32.const [3947148]
+0075cba3    call [900] ; 
+0075cba6    i32.const [4013892] ; METHOD ShopUI.L|L{^
+0075cbab    call [900] ; 
+0075cbae    i32.const [4013896] ; METHOD ShopUI.OnToolChange
+0075cbb3    call [900] ; 
+0075cbb6    i32.const [4013900] ; METHOD ShopUI.RQfihup
+0075cbbb    call [900] ; 
+0075cbbe    i32.const [4013904] ; METHOD ShopUI.RefreshSkinState
+0075cbc3    call [900] ; 
+0075cbc6    i32.const [4013920] ; METHOD ShopUI.Y^Prra]
+0075cbcb    call [900] ; 
+0075cbce    i32.const [4013924] ; METHOD ShopUI.lokqz
+0075cbd3    call [900] ; 
+0075cbd6    i32.const [3925968]
+0075cbdb    call [900] ; 
+0075cbde    i32.const [4075200] ; STRING "ToolChange"
+0075cbe3    call [900] ; 
+0075cbe6    i32.const [4048416] ; STRING "ChooseSoldier"
+0075cbeb    call [900] ; 
+0075cbee    i32.const [4077844] ; STRING "ValnetineStatueChanged"
+0075cbf3    call [900] ; 
+0075cbf6    i32.const [4048412] ; STRING "ChooseSkin"
+0075cbfb    call [900] ; 
+0075cbfe    i32.const [5007563]
+0075cc03    i32.const [1]
+0075cc05    i32.store8 [0, 0]
+0075cc08  end []
+0075cc09  i32.const [3947148]
+0075cc0e  i32.load [2, 0]
+0075cc11  call [903] ; 
+0075cc14  local.set [1]
+0075cc16  local.get [1]
+0075cc18  local.get [0]
+0075cc1a  i32.const [4013920] ; METHOD ShopUI.Y^Prra]
+0075cc1f  i32.load [2, 0]
+0075cc22  i32.const [0]
+0075cc24  call [1067] ; EventHandler..ctor
+0075cc27  i32.const [4048412] ; STRING "ChooseSkin"
+0075cc2c  i32.load [2, 0]
+0075cc2f  local.get [1]
+0075cc31  i32.const [0]
+0075cc33  call [1146] ; MsgDispatcher.AddEventListener
+0075cc36  i32.const [3947148]
+0075cc3b  i32.load [2, 0]
+0075cc3e  call [903] ; 
+0075cc41  local.set [1]
+0075cc43  local.get [1]
+0075cc45  local.get [0]
+0075cc47  i32.const [4013892] ; METHOD ShopUI.L|L{^
+0075cc4c  i32.load [2, 0]
+0075cc4f  i32.const [0]
+0075cc51  call [1067] ; EventHandler..ctor
+0075cc54  i32.const [4048416] ; STRING "ChooseSoldier"
+0075cc59  i32.load [2, 0]
+0075cc5c  local.get [1]
+0075cc5e  i32.const [0]
+0075cc60  call [1146] ; MsgDispatcher.AddEventListener
+0075cc63  i32.const [3947148]
+0075cc68  i32.load [2, 0]
+0075cc6b  call [903] ; 
+0075cc6e  local.set [1]
+0075cc70  local.get [1]
+0075cc72  local.get [0]
+0075cc74  i32.const [4013904] ; METHOD ShopUI.RefreshSkinState
+0075cc79  i32.load [2, 0]
+0075cc7c  i32.const [0]
+0075cc7e  call [1067] ; EventHandler..ctor
+0075cc81  i32.const [4077844] ; STRING "ValnetineStatueChanged"
+0075cc86  i32.load [2, 0]
+0075cc89  local.get [1]
+0075cc8b  i32.const [0]
+0075cc8d  call [1146] ; MsgDispatcher.AddEventListener
+0075cc90  i32.const [3947148]
+0075cc95  i32.load [2, 0]
+0075cc98  call [903] ; 
+0075cc9b  local.set [1]
+0075cc9d  local.get [1]
+0075cc9f  local.get [0]
+0075cca1  i32.const [4013896] ; METHOD ShopUI.OnToolChange
+0075cca6  i32.load [2, 0]
+0075cca9  i32.const [0]
+0075ccab  call [1067] ; EventHandler..ctor
+0075ccae  i32.const [4075200] ; STRING "ToolChange"
+0075ccb3  i32.load [2, 0]
+0075ccb6  local.get [1]
+0075ccb8  i32.const [0]
+0075ccba  call [1146] ; MsgDispatcher.AddEventListener
+0075ccbd  local.get [0]
+0075ccbf  i32.load [2, 148]
+0075ccc3  i32.const [3993256]
+0075ccc8  i32.load [2, 0]
+0075cccb  call [1010] ; 
+0075ccce  local.set [1]
+0075ccd0  i32.const [3925968]
+0075ccd5  i32.load [2, 0]
+0075ccd8  call [903] ; 
+0075ccdb  local.set [2]
+0075ccdd  local.get [2]
+0075ccdf  local.get [0]
+0075cce1  i32.const [4013924] ; METHOD ShopUI.lokqz
+0075cce6  i32.load [2, 0]
+0075cce9  call [1224] ; 
+0075ccec  local.get [1]
+0075ccee  local.get [2]
+0075ccf0  i32.const [0]
+0075ccf2  call [1961] ; UIVideoBtn.AddVideoPlayCallBack
+0075ccf5  local.get [0]
+0075ccf7  i32.load [2, 236]
+0075ccfb  i32.const [3993256]
+0075cd00  i32.load [2, 0]
+0075cd03  call [1010] ; 
+0075cd06  local.set [1]
+0075cd08  i32.const [3925968]
+0075cd0d  i32.load [2, 0]
+0075cd10  call [903] ; 
+0075cd13  local.set [2]
+0075cd15  local.get [2]
+0075cd17  local.get [0]
+0075cd19  i32.const [4013900] ; METHOD ShopUI.RQfihup
+0075cd1e  i32.load [2, 0]
+0075cd21  call [1224] ; 
+0075cd24  local.get [1]
+0075cd26  local.get [2]
+0075cd28  i32.const [0]
+0075cd2a  call [1961] ; UIVideoBtn.AddVideoPlayCallBack
+0075cd2d  end []

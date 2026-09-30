@@ -1,0 +1,21 @@
+; Type4174.IsEffective; wasmcode function 15155; offset=7364191 size=53
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00705e60  i32.const [5010327]
+00705e65  i32.load8_u [0, 0]
+00705e68  i32.eqz []
+00705e69  if [-64]
+00705e6b    i32.const [3953440]
+00705e70    call [900] ; 
+00705e73    i32.const [5010327]
+00705e78    i32.const [1]
+00705e7a    i32.store8 [0, 0]
+00705e7d  end []
+00705e7e  local.get [1]
+00705e80  i32.load [2, 20]
+00705e83  i32.const [3953440]
+00705e88  i32.load [2, 0]
+00705e8b  call [935] ; 
+00705e8e  i32.load [2, 12]
+00705e91  i32.ne []
+00705e92  return []
+00705e93  end []

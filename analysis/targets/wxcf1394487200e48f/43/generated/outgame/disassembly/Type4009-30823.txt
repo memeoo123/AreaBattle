@@ -1,0 +1,458 @@
+; Original class: PVPController
+; Type4009.OnGamePlayState; wasmcode function 18347; offset=8262794 size=1273
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+007e148d  global.get [0]
+007e148f  i32.const [16]
+007e1491  i32.sub []
+007e1492  local.set [2]
+007e1494  local.get [2]
+007e1496  global.set [0]
+007e1498  i32.const [5008597]
+007e149d  i32.load8_u [0, 0]
+007e14a0  i32.eqz []
+007e14a1  if [-64]
+007e14a3    i32.const [3927888]
+007e14a8    call [900] ; 
+007e14ab    i32.const [3989352]
+007e14b0    call [900] ; 
+007e14b3    i32.const [3928952]
+007e14b8    call [900] ; 
+007e14bb    i32.const [3929208]
+007e14c0    call [900] ; 
+007e14c3    i32.const [3953312]
+007e14c8    call [900] ; 
+007e14cb    i32.const [3953456]
+007e14d0    call [900] ; 
+007e14d3    i32.const [3953440]
+007e14d8    call [900] ; 
+007e14db    i32.const [3947148]
+007e14e0    call [900] ; 
+007e14e3    i32.const [3944712]
+007e14e8    call [900] ; 
+007e14eb    i32.const [4000580]
+007e14f0    call [900] ; 
+007e14f3    i32.const [3932388]
+007e14f8    call [900] ; 
+007e14fb    i32.const [3934404]
+007e1500    call [900] ; 
+007e1503    i32.const [3926996]
+007e1508    call [900] ; 
+007e150b    i32.const [4009216] ; METHOD PVPController.}YzPygw
+007e1510    call [900] ; 
+007e1513    i32.const [4009220] ; METHOD PVPController.cfhPz
+007e1518    call [900] ; 
+007e151b    i32.const [3944728]
+007e1520    call [900] ; 
+007e1523    i32.const [4018264]
+007e1528    call [900] ; 
+007e152b    i32.const [4018272]
+007e1530    call [900] ; 
+007e1533    i32.const [4018280]
+007e1538    call [900] ; 
+007e153b    i32.const [4018464]
+007e1540    call [900] ; 
+007e1543    i32.const [4018492]
+007e1548    call [900] ; 
+007e154b    i32.const [5008597]
+007e1550    i32.const [1]
+007e1552    i32.store8 [0, 0]
+007e1555  end []
+007e1556  block [-64]
+007e1558    local.get [0]
+007e155a    i32.load8_u [0, 8]
+007e155d    i32.eqz []
+007e155e    br_if [0]
+007e1560    block [-64]
+007e1562      block [-64]
+007e1564        block [-64]
+007e1566          block [-64]
+007e1568            block [-64]
+007e156a              block [-64]
+007e156c                block [-64]
+007e156e                  local.get [1]
+007e1570                  i32.load [2, 16]
+007e1573                  i32.const [3944728]
+007e1578                  i32.load [2, 0]
+007e157b                  call [920] ; 
+007e157e                  i32.load [2, 0]
+007e1581                  i32.const [3]
+007e1583                  i32.sub []
+007e1584                  br_table [0, 1, 2, 7, 7, 3, 4, 5, 6, 7]
+007e1590                end []
+007e1591                i32.const [3953312]
+007e1596                i32.load [2, 0]
+007e1599                call [935] ; 
+007e159c                i32.const [1]
+007e159e                local.get [0]
+007e15a0                call [5213] ; ArenaControl.GetCombatMap
+007e15a3                drop []
+007e15a4                i32.const [3953440]
+007e15a9                i32.load [2, 0]
+007e15ac                call [935] ; 
+007e15af                i32.const [0]
+007e15b1                call [5936] ; LevelControl.InitEnemySkin
+007e15b4                local.get [0]
+007e15b6                i32.const [3953312]
+007e15bb                i32.load [2, 0]
+007e15be                call [935] ; 
+007e15c1                local.get [0]
+007e15c3                call [8273] ; ArenaControl.GetPkEnemy
+007e15c6                i32.store [2, 40]
+007e15c9                i32.const [3926996]
+007e15ce                i32.load [2, 0]
+007e15d1                i32.const [4]
+007e15d3                call [909] ; 
+007e15d6                local.set [1]
+007e15d8                local.get [2]
+007e15da                local.get [0]
+007e15dc                i32.load [2, 40]
+007e15df                i32.load [2, 12]
+007e15e2                i32.store [2, 12]
+007e15e5                i32.const [3934404]
+007e15ea                i32.load [2, 0]
+007e15ed                local.get [2]
+007e15ef                i32.const [12]
+007e15f1                i32.add []
+007e15f2                call [910] ; 
+007e15f5                local.set [3]
+007e15f7                local.get [1]
+007e15f9                local.get [3]
+007e15fb                call [905] ; 
+007e15fe                local.get [1]
+007e1600                local.get [3]
+007e1602                i32.store [2, 16]
+007e1605                local.get [0]
+007e1607                i32.load [2, 40]
+007e160a                i32.load [2, 24]
+007e160d                local.set [3]
+007e160f                local.get [1]
+007e1611                local.get [3]
+007e1613                call [905] ; 
+007e1616                local.get [1]
+007e1618                local.get [3]
+007e161a                i32.store [2, 20]
+007e161d                local.get [2]
+007e161f                local.get [0]
+007e1621                i32.load [2, 40]
+007e1624                i32.load [2, 8]
+007e1627                i32.store [2, 8]
+007e162a                i32.const [3934404]
+007e162f                i32.load [2, 0]
+007e1632                local.get [2]
+007e1634                i32.const [8]
+007e1636                i32.add []
+007e1637                call [910] ; 
+007e163a                local.set [3]
+007e163c                local.get [1]
+007e163e                local.get [3]
+007e1640                call [905] ; 
+007e1643                local.get [1]
+007e1645                local.get [3]
+007e1647                i32.store [2, 24]
+007e164a                local.get [2]
+007e164c                local.get [0]
+007e164e                i32.load [2, 40]
+007e1651                i32.load [2, 20]
+007e1654                i32.store [2, 4]
+007e1657                i32.const [3934404]
+007e165c                i32.load [2, 0]
+007e165f                local.get [2]
+007e1661                i32.const [4]
+007e1663                i32.add []
+007e1664                call [910] ; 
+007e1667                local.set [3]
+007e1669                local.get [1]
+007e166b                local.get [3]
+007e166d                call [905] ; 
+007e1670                local.get [1]
+007e1672                local.get [3]
+007e1674                i32.store [2, 28]
+007e1677                i32.const [3929208]
+007e167c                i32.load [2, 0]
+007e167f                call [901] ; 
+007e1682                local.get [1]
+007e1684                i32.const [0]
+007e1686                call [1156] ; CLog.Warning
+007e1689                i32.const [0]
+007e168b                call [3252] ; TransitionAnima.get_I
+007e168e                local.set [1]
+007e1690                i32.const [3927888]
+007e1695                i32.load [2, 0]
+007e1698                call [903] ; 
+007e169b                local.set [3]
+007e169d                local.get [3]
+007e169f                local.get [0]
+007e16a1                i32.const [4009216] ; METHOD PVPController.}YzPygw
+007e16a6                i32.load [2, 0]
+007e16a9                i32.const [0]
+007e16ab                call [1002] ; Action..ctor
+007e16ae                local.get [1]
+007e16b0                local.get [3]
+007e16b2                i32.const [0]
+007e16b4                call [4222] ; TransitionAnima.Hide
+007e16b7                br [6]
+007e16b9              end []
+007e16ba              i32.const [0]
+007e16bc              call [1143] ; GameModule.get_UI
+007e16bf              i32.const [3989352]
+007e16c4              i32.load [2, 0]
+007e16c7              call [1032] ; 
+007e16ca              i32.const [4018464]
+007e16cf              i32.load [2, 0]
+007e16d2              call [1367] ; 
+007e16d5              drop []
+007e16d6              br [5]
+007e16d8            end []
+007e16d9            i32.const [3953440]
+007e16de            i32.load [2, 0]
+007e16e1            call [935] ; 
+007e16e4            i32.const [6]
+007e16e6            i32.const [1]
+007e16e8            i32.const [0]
+007e16ea            call [1444] ; LevelControl.SetPlaySate
+007e16ed            drop []
+007e16ee            i32.const [3944712]
+007e16f3            i32.load [2, 0]
+007e16f6            call [901] ; 
+007e16f9            i32.const [3944712]
+007e16fe            i32.load [2, 0]
+007e1701            i32.load [2, 92]
+007e1704            i32.load [2, 16]
+007e1707            local.set [1]
+007e1709            i32.const [3947148]
+007e170e            i32.load [2, 0]
+007e1711            call [903] ; 
+007e1714            local.set [3]
+007e1716            local.get [3]
+007e1718            local.get [0]
+007e171a            i32.const [4009220] ; METHOD PVPController.cfhPz
+007e171f            i32.load [2, 0]
+007e1722            i32.const [0]
+007e1724            call [1067] ; EventHandler..ctor
+007e1727            local.get [1]
+007e1729            local.get [3]
+007e172b            i32.const [0]
+007e172d            call [1185] ; MsgDispatcher.RemoveEventListener
+007e1730            i32.const [3944712]
+007e1735            i32.load [2, 0]
+007e1738            i32.load [2, 92]
+007e173b            i32.load [2, 16]
+007e173e            local.set [1]
+007e1740            i32.const [3947148]
+007e1745            i32.load [2, 0]
+007e1748            call [903] ; 
+007e174b            local.set [3]
+007e174d            local.get [3]
+007e174f            local.get [0]
+007e1751            i32.const [4009220] ; METHOD PVPController.cfhPz
+007e1756            i32.load [2, 0]
+007e1759            i32.const [0]
+007e175b            call [1067] ; EventHandler..ctor
+007e175e            local.get [1]
+007e1760            local.get [3]
+007e1762            i32.const [0]
+007e1764            call [1146] ; MsgDispatcher.AddEventListener
+007e1767            br [4]
+007e1769          end []
+007e176a          i32.const [0]
+007e176c          call [1143] ; GameModule.get_UI
+007e176f          local.set [1]
+007e1771          i32.const [3926996]
+007e1776          i32.load [2, 0]
+007e1779          i32.const [1]
+007e177b          call [909] ; 
+007e177e          local.set [0]
+007e1780          local.get [2]
+007e1782          i32.const [1]
+007e1784          i32.store8 [0, 3]
+007e1787          i32.const [3928952]
+007e178c          i32.load [2, 0]
+007e178f          local.get [2]
+007e1791          i32.const [3]
+007e1793          i32.add []
+007e1794          call [910] ; 
+007e1797          local.set [3]
+007e1799          local.get [0]
+007e179b          local.get [3]
+007e179d          call [905] ; 
+007e17a0          local.get [0]
+007e17a2          local.get [3]
+007e17a4          i32.store [2, 16]
+007e17a7          local.get [1]
+007e17a9          local.get [0]
+007e17ab          i32.const [4018492]
+007e17b0          i32.load [2, 0]
+007e17b3          call [1367] ; 
+007e17b6          local.set [0]
+007e17b8          local.get [0]
+007e17ba          local.set [1]
+007e17bc          local.get [0]
+007e17be          i32.load [2, 0]
+007e17c1          local.set [0]
+007e17c3          local.get [1]
+007e17c5          i32.const [0]
+007e17c7          local.get [0]
+007e17c9          i32.load [2, 264]
+007e17cd          local.get [0]
+007e17cf          i32.load [2, 260]
+007e17d3          global.set [3]
+007e17d5          global.get [3]
+007e17d7          call_indirect [2, 0]
+007e17da          i32.const [0]
+007e17dc          call [1143] ; GameModule.get_UI
+007e17df          i32.const [4018280]
+007e17e4          i32.load [2, 0]
+007e17e7          call [1877] ; 
+007e17ea          i32.const [0]
+007e17ec          call [1143] ; GameModule.get_UI
+007e17ef          i32.const [4018272]
+007e17f4          i32.load [2, 0]
+007e17f7          call [1877] ; 
+007e17fa          i32.const [0]
+007e17fc          call [1587] ; GameModule.get_ADHelper
+007e17ff          i32.const [3953440]
+007e1804          i32.load [2, 0]
+007e1807          call [935] ; 
+007e180a          i32.const [0]
+007e180c          call [1254] ; LevelControl.get_CurLevel
+007e180f          i32.const [1]
+007e1811          i32.const [0]
+007e1813          call [6344] ; ADHelper.ShowADInterst
+007e1816          drop []
+007e1817          i32.const [0]
+007e1819          call [1143] ; GameModule.get_UI
+007e181c          i32.const [1]
+007e181e          i32.const [4000580]
+007e1823          i32.load [2, 0]
+007e1826          call [5061] ; 
+007e1829          drop []
+007e182a          i32.const [0]
+007e182c          call [1286] ; GameModule.get_Config
+007e182f          i32.load [2, 260]
+007e1833          i32.load [2, 36]
+007e1836          local.set [0]
+007e1838          i32.const [3932388]
+007e183d          i32.load [2, 0]
+007e1840          call [901] ; 
+007e1843          local.get [0]
+007e1845          i64.const [1]
+007e1847          i32.const [0]
+007e1849          call [2087] ; GameStatisticsExpansion.AddEventCount
+007e184c          i32.const [0]
+007e184e          call [1286] ; GameModule.get_Config
+007e1851          i32.load [2, 260]
+007e1855          i32.load [2, 76]
+007e1858          i64.const [1]
+007e185a          i32.const [0]
+007e185c          call [2087] ; GameStatisticsExpansion.AddEventCount
+007e185f          br [3]
+007e1861        end []
+007e1862        i32.const [0]
+007e1864        call [1143] ; GameModule.get_UI
+007e1867        i32.const [4018280]
+007e186c        i32.load [2, 0]
+007e186f        call [1877] ; 
+007e1872        i32.const [0]
+007e1874        call [1143] ; GameModule.get_UI
+007e1877        i32.const [4018272]
+007e187c        i32.load [2, 0]
+007e187f        call [1877] ; 
+007e1882        i32.const [0]
+007e1884        call [1143] ; GameModule.get_UI
+007e1887        local.set [1]
+007e1889        i32.const [3926996]
+007e188e        i32.load [2, 0]
+007e1891        i32.const [1]
+007e1893        call [909] ; 
+007e1896        local.set [0]
+007e1898        local.get [2]
+007e189a        i32.const [0]
+007e189c        i32.store8 [0, 2]
+007e189f        i32.const [3928952]
+007e18a4        i32.load [2, 0]
+007e18a7        local.get [2]
+007e18a9        i32.const [2]
+007e18ab        i32.add []
+007e18ac        call [910] ; 
+007e18af        local.set [3]
+007e18b1        local.get [0]
+007e18b3        local.get [3]
+007e18b5        call [905] ; 
+007e18b8        local.get [0]
+007e18ba        local.get [3]
+007e18bc        i32.store [2, 16]
+007e18bf        local.get [1]
+007e18c1        local.get [0]
+007e18c3        i32.const [4018492]
+007e18c8        i32.load [2, 0]
+007e18cb        call [1367] ; 
+007e18ce        drop []
+007e18cf        br [2]
+007e18d1      end []
+007e18d2      local.get [0]
+007e18d4      i32.load [2, 16]
+007e18d7      local.set [0]
+007e18d9      local.get [0]
+007e18db      i32.eqz []
+007e18dc      br_if [1]
+007e18de      local.get [0]
+007e18e0      local.set [1]
+007e18e2      local.get [0]
+007e18e4      i32.load [2, 0]
+007e18e7      local.set [0]
+007e18e9      local.get [1]
+007e18eb      local.get [0]
+007e18ed      i32.load [2, 240]
+007e18f1      local.get [0]
+007e18f3      i32.load [2, 236]
+007e18f7      global.set [3]
+007e18f9      global.get [3]
+007e18fb      call_indirect [0, 0]
+007e18fe      br [1]
+007e1900    end []
+007e1901    i32.const [0]
+007e1903    call [1143] ; GameModule.get_UI
+007e1906    i32.const [4018264]
+007e190b    i32.load [2, 0]
+007e190e    call [1877] ; 
+007e1911    i32.const [3953456]
+007e1916    i32.load [2, 0]
+007e1919    call [935] ; 
+007e191c    i32.const [0]
+007e191e    call [4379] ; LoadPrefabControl.ClearModelEntityCache
+007e1921    i32.const [3953440]
+007e1926    i32.load [2, 0]
+007e1929    call [935] ; 
+007e192c    i32.const [0]
+007e192e    call [3327] ; LevelControl.InitGameData
+007e1931    i32.const [3944712]
+007e1936    i32.load [2, 0]
+007e1939    call [901] ; 
+007e193c    i32.const [3944712]
+007e1941    i32.load [2, 0]
+007e1944    i32.load [2, 92]
+007e1947    i32.load [2, 16]
+007e194a    local.set [1]
+007e194c    i32.const [3947148]
+007e1951    i32.load [2, 0]
+007e1954    call [903] ; 
+007e1957    local.set [3]
+007e1959    local.get [3]
+007e195b    local.get [0]
+007e195d    i32.const [4009220] ; METHOD PVPController.cfhPz
+007e1962    i32.load [2, 0]
+007e1965    i32.const [0]
+007e1967    call [1067] ; EventHandler..ctor
+007e196a    local.get [1]
+007e196c    local.get [3]
+007e196e    i32.const [0]
+007e1970    call [1185] ; MsgDispatcher.RemoveEventListener
+007e1973    local.get [0]
+007e1975    i32.const [0]
+007e1977    i32.store8 [0, 8]
+007e197a  end []
+007e197b  local.get [2]
+007e197d  i32.const [16]
+007e197f  i32.add []
+007e1980  global.set [0]
+007e1982  end []

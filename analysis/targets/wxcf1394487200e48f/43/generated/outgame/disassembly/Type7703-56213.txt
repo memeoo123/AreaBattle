@@ -1,0 +1,100 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.OnNewEvent; wasmcode function 14673; offset=7200808 size=263
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+006de029  i32.const [5005409]
+006de02e  i32.load8_u [0, 0]
+006de031  i32.eqz []
+006de032  if [-64]
+006de034    i32.const [3984752]
+006de039    call [900] ; 
+006de03c    i32.const [4090328] ; STRING "in_app_purchase"
+006de041    call [900] ; 
+006de044    i32.const [4094604] ; STRING "pay_fail"
+006de049    call [900] ; 
+006de04c    i32.const [4100228] ; STRING "video_show"
+006de051    call [900] ; 
+006de054    i32.const [4094600] ; STRING "pay_click"
+006de059    call [900] ; 
+006de05c    i32.const [4094620] ; STRING "pay_success"
+006de061    call [900] ; 
+006de064    i32.const [5005409]
+006de069    i32.const [1]
+006de06b    i32.store8 [0, 0]
+006de06e  end []
+006de06f  block [-64]
+006de071    block [-64]
+006de073      block [-64]
+006de075        block [-64]
+006de077          local.get [1]
+006de079          i32.const [4090328] ; STRING "in_app_purchase"
+006de07e          i32.load [2, 0]
+006de081          i32.const [0]
+006de083          call [1019] ; String.Equals
+006de086          br_if [0]
+006de088          local.get [1]
+006de08a          i32.const [4094604] ; STRING "pay_fail"
+006de08f          i32.load [2, 0]
+006de092          i32.const [0]
+006de094          call [1019] ; String.Equals
+006de097          br_if [0]
+006de099          local.get [1]
+006de09b          i32.const [4094620] ; STRING "pay_success"
+006de0a0          i32.load [2, 0]
+006de0a3          i32.const [0]
+006de0a5          call [1019] ; String.Equals
+006de0a8          br_if [0]
+006de0aa          local.get [1]
+006de0ac          i32.const [4094600] ; STRING "pay_click"
+006de0b1          i32.load [2, 0]
+006de0b4          i32.const [0]
+006de0b6          call [1019] ; String.Equals
+006de0b9          br_if [0]
+006de0bb          local.get [1]
+006de0bd          i32.const [4100228] ; STRING "video_show"
+006de0c2          i32.load [2, 0]
+006de0c5          i32.const [0]
+006de0c7          call [1019] ; String.Equals
+006de0ca          i32.eqz []
+006de0cb          br_if [1]
+006de0cd        end []
+006de0ce        local.get [1]
+006de0d0        i32.const [4100228] ; STRING "video_show"
+006de0d5        i32.load [2, 0]
+006de0d8        i32.const [0]
+006de0da        call [1019] ; String.Equals
+006de0dd        br_if [1]
+006de0df        br [2]
+006de0e1      end []
+006de0e2      i32.const [3984752]
+006de0e7      i32.load [2, 0]
+006de0ea      call [1203] ; 
+006de0ed      i32.const [0]
+006de0ef      call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+006de0f2      local.get [1]
+006de0f4      local.get [2]
+006de0f6      i32.const [0]
+006de0f8      local.get [1]
+006de0fa      call [2302] ; ReporterSDK.OnNewEvent
+006de0fd    end []
+006de0fe    i32.const [0]
+006de100    call [1083] ; BridgeManager.get_xyxFunc
+006de103    local.set [0]
+006de105    local.get [0]
+006de107    local.set [3]
+006de109    local.get [0]
+006de10b    i32.load [2, 0]
+006de10e    local.set [0]
+006de110    local.get [3]
+006de112    local.get [1]
+006de114    local.get [2]
+006de116    local.get [0]
+006de118    i32.const [112]
+006de11b    i32.add []
+006de11c    i32.load [2, 192]
+006de120    local.get [0]
+006de122    i32.load [2, 300]
+006de126    global.set [3]
+006de128    global.get [3]
+006de12a    call_indirect [7, 0]
+006de12d  end []
+006de12e  end []

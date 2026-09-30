@@ -1,0 +1,41 @@
+{
+  "atUtc": "2026-09-30T08:37:07.428785+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "PLAYER_CONTROL_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T08:37:07.428785+00:00",
+    "scope": "Player4462 lifecycle/model owners/home animation timers/native source category drag/touch scene raycast, shared registry/LogicModule",
+    "checksPassed": 792,
+    "newIntegratedChecks": 14,
+    "nativePlayModeChecks": 10,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgamePlayerControlPlayModeValidation.Run"
+    ],
+    "notClaimed": "Shared source InputManager production host, all skin resource imports, full actual Main/account/platform/UI integration or complete outgame Player build"
+  },
+  "findings": [
+    "OutgamePlayerControl4462 now implements OnInit/Updata/OnDispose, native models/animations, rotation events, selection, visibility, first-ad counter reset, equipped/random skin delegation and native scene touch. Actual BindPlayer factory resolves shared controller. Ten lifecycle implementations are method-level coverage, not ten complete gameplay controllers.",
+    "OnInit installs LoadGameScreen, RotateSoldier then touch; repeated initialization adds duplicate subscriptions. OnDispose clears registry then only animation cache before one-at-a-time listener removal. Roots/models/selection/timers and native objects remain. InitLoadModel reads GameScene roots independently, resets model dictionary then Dictionary.Add retained roots1/2/3, captures positions then scales then three equipped skin loads. Reentry source duplicate-root exception preserved with partial reset.",
+    "Home state2 increments all scaled timers first, strict>11.7/13.7/14.7, zeros before once-only refresh; no remainder/catch-up. Periodic refresh catches System.Exception into source warning array. Page2 drag is checked independently from home state. Button down must be above integer half-height, horizontal range200, six ordered transform writes, release strict>.3, wrapped selection and ChooseSoldier before finger clear. Page change/hidden root retains drag state.",
+    "OutgameModelRotation now shares mutable controller fields for both event selection and drag. Event selection changed from paired position/scale writes to exact all-positions-before-scales source order, retaining first position on a later missing-root failure.",
+    "Original TagManager layer names restored at existing source indices8..31; only previously blank slots filled and nonblank conflicts asserted absent. Scenes11 is31. Touch gate Levelstate2/UIpage3 then HomeCamera ray to floatMax with 1<<NameToLayer, cached hit and xy write preserving z. Native hit Animator is resolved twice before Trigger, matching source.",
+    "Original source model callback reads placement188 and scale184 live, separate from raypoint172; controller now provides those getters. Animation uses live SkinCatalog and source native Unity-null check for destroyed cached components. Existing model dictionary replacement and completion fallback behavior retained.",
+    "Native PlayMode drives actual Player via LogicModule and LoadGameScreen over original imported roots, three original baked models and source prefab loader. Native drag/ChooseSoldier, ray hit/Animator trigger, relax-to-idle completion, timed refresh, shutdown and late captured fallback all pass. Input events and collider/AnimatorController are explicit test probes, not original SDK or matched scene-interaction content.",
+    "792 integrated (14 new) and10 new native checks pass. Corrected stale lifecycle matrix generator: Level4107 was implemented earlier but matrix still said8; matrix and audit now agree on10/38, remaining28. No source inference from empty lifecycle bodies."
+  ],
+  "remaining": [
+    "Restore actual shared InputManager host and remaining28 controllers; supply full UI/Main/module/account entry. Complete skin/native resource set and matched UI interactions.",
+    "Finish remaining Level/Tower/Soldier/WayLine/AI/effect services and actual state/prepared/UI production composition without replacing existing independent combat kernel.",
+    "Every full objective subsystem and persistence/restart/failure/return-flow plus runnable Player build acceptance remain open."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/player-control-integrated-final.log",
+    "nativeLog": "analysis/player-control-native.log",
+    "nativeReport": "analysis/player-control-native-validation.json"
+  },
+  "disassembledMethodMapCount": 4681
+}

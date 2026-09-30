@@ -1,0 +1,125 @@
+; DailyChallengeActivity.OnInit; wasmcode1 function 66172; offset=21023446 size=390
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127), (1, 126)]
+0140cadb  i32.const [5010147]
+0140cae0  i32.load8_u [0, 0]
+0140cae3  i32.eqz []
+0140cae4  if [-64]
+0140cae6    i32.const [3994824] ; method: DailyChallengeActivity.RkP}Vk
+0140caeb    i32.const [1605]
+0140caee    call_indirect [0, 0]
+0140caf1    i32.const [3994832] ; method: DailyChallengeActivity.efqfn
+0140caf6    i32.const [1605]
+0140caf9    call_indirect [0, 0]
+0140cafc    i32.const [3994828] ; method: DailyChallengeActivity.aobX]Xk
+0140cb01    i32.const [1605]
+0140cb04    call_indirect [0, 0]
+0140cb07    i32.const [3911948]
+0140cb0c    i32.const [1605]
+0140cb0f    call_indirect [0, 0]
+0140cb12    i32.const [3947148] ; type: EventHandler
+0140cb17    i32.const [1605]
+0140cb1a    call_indirect [0, 0]
+0140cb1d    i32.const [3937816] ; type: RefreshDelegate
+0140cb22    i32.const [1605]
+0140cb25    call_indirect [0, 0]
+0140cb28    i32.const [3940196] ; type: TimeToRefreshControl
+0140cb2d    i32.const [1605]
+0140cb30    call_indirect [0, 0]
+0140cb33    i32.const [3940520] ; type: Type
+0140cb38    i32.const [1605]
+0140cb3b    call_indirect [0, 0]
+0140cb3e    i32.const [4078632] ; literal: 'WarWin'
+0140cb43    i32.const [1605]
+0140cb46    call_indirect [0, 0]
+0140cb49    i32.const [5010147]
+0140cb4e    i32.const [1]
+0140cb50    i32.store8 [0, 0]
+0140cb53  end []
+0140cb54  i32.const [3947148] ; type: EventHandler
+0140cb59  i32.load [2, 0]
+0140cb5c  i32.const [109007]
+0140cb60  call_indirect [2, 0]
+0140cb63  local.set [1]
+0140cb65  local.get [1]
+0140cb67  local.get [0]
+0140cb69  i32.const [3994828] ; method: DailyChallengeActivity.aobX]Xk
+0140cb6e  i32.load [2, 0]
+0140cb71  i32.const [0]
+0140cb73  i32.const [24682]
+0140cb77  call_indirect [6, 0]
+0140cb7a  i32.const [4078632] ; literal: 'WarWin'
+0140cb7f  i32.load [2, 0]
+0140cb82  local.get [1]
+0140cb84  i32.const [0]
+0140cb86  i32.const [24665]
+0140cb8a  call_indirect [5, 0]
+0140cb8d  i32.const [3940196] ; type: TimeToRefreshControl
+0140cb92  i32.load [2, 0]
+0140cb95  i32.const [1149]
+0140cb98  call_indirect [0, 0]
+0140cb9b  i32.const [0]
+0140cb9d  i32.const [17995] ; table candidate: TimeToRefreshControl.get_I
+0140cba1  call_indirect [2, 0]
+0140cba4  local.set [1]
+0140cba6  i32.const [0]
+0140cba8  i32.const [15943] ; table candidate: GameModule.get_LocalData
+0140cbac  call_indirect [2, 0]
+0140cbaf  i32.load [2, 20]
+0140cbb2  i32.load [2, 64]
+0140cbb5  i64.load [3, 8]
+0140cbb8  local.set [4]
+0140cbba  i32.const [3937816] ; type: RefreshDelegate
+0140cbbf  i32.load [2, 0]
+0140cbc2  i32.const [109007]
+0140cbc6  call_indirect [2, 0]
+0140cbc9  local.set [2]
+0140cbcb  local.get [2]
+0140cbcd  local.get [0]
+0140cbcf  i32.const [3994832] ; method: DailyChallengeActivity.efqfn
+0140cbd4  i32.load [2, 0]
+0140cbd7  i32.const [0]
+0140cbd9  i32.const [17974] ; table candidate: RefreshDelegate..ctor
+0140cbdd  call_indirect [6, 0]
+0140cbe0  i32.const [3937816] ; type: RefreshDelegate
+0140cbe5  i32.load [2, 0]
+0140cbe8  i32.const [109007]
+0140cbec  call_indirect [2, 0]
+0140cbef  local.set [3]
+0140cbf1  local.get [3]
+0140cbf3  local.get [0]
+0140cbf5  i32.const [3994824] ; method: DailyChallengeActivity.RkP}Vk
+0140cbfa  i32.load [2, 0]
+0140cbfd  i32.const [0]
+0140cbff  i32.const [17974] ; table candidate: RefreshDelegate..ctor
+0140cc03  call_indirect [6, 0]
+0140cc06  local.get [1]
+0140cc08  i32.const [0]
+0140cc0a  local.get [4]
+0140cc0c  local.get [2]
+0140cc0e  local.get [3]
+0140cc10  i32.const [86400]
+0140cc14  i32.const [0]
+0140cc16  i32.const [17983] ; table candidate: TimeToRefreshControl.AddRefreshHandle
+0140cc1a  call_indirect [240, 0]
+0140cc1e  i32.const [3911948]
+0140cc23  i32.load [2, 0]
+0140cc26  local.set [0]
+0140cc28  i32.const [3940520] ; type: Type
+0140cc2d  i32.load [2, 0]
+0140cc30  i32.const [1149]
+0140cc33  call_indirect [0, 0]
+0140cc36  i32.const [103003]
+0140cc3a  local.get [0]
+0140cc3c  i32.const [0]
+0140cc3e  i32.const [1188]
+0140cc41  call_indirect [1, 0]
+0140cc44  i32.const [3911948]
+0140cc49  i32.load [2, 0]
+0140cc4c  i32.const [0]
+0140cc4e  i32.const [1188]
+0140cc51  call_indirect [1, 0]
+0140cc54  i32.const [0]
+0140cc56  call [32272] ; ActivityExtend.BindPopUI
+0140cc5a  drop []
+0140cc5b  end []
+

@@ -1,0 +1,189 @@
+; Original shared generic: ConfigRead.£O±x·
+; ConfigReadGeneric.£O±x·; wasmcode function 20110; offset=9037685 size=490
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0089e778  global.get [0]
+0089e77a  i32.const [16]
+0089e77c  i32.sub []
+0089e77d  local.set [5]
+0089e77f  local.get [5]
+0089e781  global.set [0]
+0089e783  local.get [5]
+0089e785  local.get [3]
+0089e787  i32.store [2, 12]
+0089e78a  local.get [4]
+0089e78c  i32.load [2, 28]
+0089e78f  i32.eqz []
+0089e790  if [-64]
+0089e792    i32.const [3929208]
+0089e797    call [900] ; 
+0089e79a    i32.const [3929800]
+0089e79f    call [900] ; 
+0089e7a2    i32.const [3929804]
+0089e7a7    call [900] ; 
+0089e7aa    i32.const [3926996]
+0089e7af    call [900] ; 
+0089e7b2    i32.const [3936516]
+0089e7b7    call [900] ; 
+0089e7ba    i32.const [4106352] ; STRING "配置文件不存在"
+0089e7bf    call [900] ; 
+0089e7c2    i32.const [4049224] ; STRING "ConfigType error"
+0089e7c7    call [900] ; 
+0089e7ca    local.get [4]
+0089e7cc    call [954] ; 
+0089e7cf  end []
+0089e7d0  i32.const [3936516]
+0089e7d5  i32.load [2, 0]
+0089e7d8  call [901] ; 
+0089e7db  block [-64]
+0089e7dd    local.get [1]
+0089e7df    i32.const [0]
+0089e7e1    i32.const [0]
+0089e7e3    call [946] ; Object.op_Inequality
+0089e7e6    if [-64]
+0089e7e8      block [-64]
+0089e7ea        block [-64]
+0089e7ec          block [-64]
+0089e7ee            block [-64]
+0089e7f0              local.get [3]
+0089e7f2              br_table [0, 1, 2, 3]
+0089e7f8            end []
+0089e7f9            local.get [1]
+0089e7fb            i32.const [0]
+0089e7fd            call [1904] ; TextAsset.get_text
+0089e800            local.set [1]
+0089e802            i32.const [3929800]
+0089e807            i32.load [2, 0]
+0089e80a            call [901] ; 
+0089e80d            local.get [4]
+0089e80f            i32.load [2, 28]
+0089e812            i32.load [2, 4]
+0089e815            i32.load [2, 0]
+0089e818            local.get [4]
+0089e81a            i32.load [2, 28]
+0089e81d            i32.load [2, 4]
+0089e820            i32.const [0]
+0089e822            local.get [1]
+0089e824            local.get [0]
+0089e826            local.get [2]
+0089e828            call [1397] ; 
+0089e82b            br [4]
+0089e82d          end []
+0089e82e          local.get [1]
+0089e830          i32.const [0]
+0089e832          call [1904] ; TextAsset.get_text
+0089e835          local.set [1]
+0089e837          i32.const [3929800]
+0089e83c          i32.load [2, 0]
+0089e83f          call [901] ; 
+0089e842          local.get [4]
+0089e844          i32.load [2, 28]
+0089e847          i32.load [2, 8]
+0089e84a          i32.load [2, 0]
+0089e84d          local.get [4]
+0089e84f          i32.load [2, 28]
+0089e852          i32.load [2, 8]
+0089e855          i32.const [0]
+0089e857          local.get [1]
+0089e859          local.get [0]
+0089e85b          local.get [2]
+0089e85d          call [1397] ; 
+0089e860          br [3]
+0089e862        end []
+0089e863        local.get [1]
+0089e865        i32.const [0]
+0089e867        call [4763] ; TextAsset.get_bytes
+0089e86a        local.set [1]
+0089e86c        i32.const [3929800]
+0089e871        i32.load [2, 0]
+0089e874        call [901] ; 
+0089e877        local.get [4]
+0089e879        i32.load [2, 28]
+0089e87c        i32.load [2, 12]
+0089e87f        i32.load [2, 0]
+0089e882        local.get [4]
+0089e884        i32.load [2, 28]
+0089e887        i32.load [2, 12]
+0089e88a        i32.const [0]
+0089e88c        local.get [1]
+0089e88e        local.get [0]
+0089e890        local.get [2]
+0089e892        call [1397] ; 
+0089e895        br [2]
+0089e897      end []
+0089e898      i32.const [3926996]
+0089e89d      i32.load [2, 0]
+0089e8a0      i32.const [1]
+0089e8a2      call [909] ; 
+0089e8a5      local.set [0]
+0089e8a7      i32.const [3929804]
+0089e8ac      i32.load [2, 0]
+0089e8af      local.set [1]
+0089e8b1      local.get [5]
+0089e8b3      i32.const [-1]
+0089e8b5      i32.store [2, 4]
+0089e8b8      local.get [5]
+0089e8ba      local.get [1]
+0089e8bc      i32.store [2, 0]
+0089e8bf      local.get [5]
+0089e8c1      local.get [5]
+0089e8c3      i32.load [2, 12]
+0089e8c6      i32.store [2, 8]
+0089e8c9      local.get [5]
+0089e8cb      i32.const [0]
+0089e8cd      call [1009] ; Enum.ToString
+0089e8d0      local.set [1]
+0089e8d2      i32.const [4049224] ; STRING "ConfigType error"
+0089e8d7      i32.load [2, 0]
+0089e8da      local.get [1]
+0089e8dc      i32.const [0]
+0089e8de      call [921] ; String.Concat
+0089e8e1      local.set [1]
+0089e8e3      local.get [0]
+0089e8e5      local.get [1]
+0089e8e7      call [905] ; 
+0089e8ea      local.get [0]
+0089e8ec      local.get [1]
+0089e8ee      i32.store [2, 16]
+0089e8f1      i32.const [3929208]
+0089e8f6      i32.load [2, 0]
+0089e8f9      call [901] ; 
+0089e8fc      local.get [0]
+0089e8fe      i32.const [0]
+0089e900      i32.const [2087] ; TABLE CLog.Error
+0089e903      global.set [3]
+0089e905      i32.const [2087] ; TABLE CLog.Error
+0089e908      call_indirect [0, 0]
+0089e90b      br [1]
+0089e90d    end []
+0089e90e    i32.const [3926996]
+0089e913    i32.load [2, 0]
+0089e916    i32.const [1]
+0089e918    call [909] ; 
+0089e91b    local.set [0]
+0089e91d    i32.const [4106352] ; STRING "配置文件不存在"
+0089e922    i32.load [2, 0]
+0089e925    local.get [2]
+0089e927    i32.const [0]
+0089e929    call [921] ; String.Concat
+0089e92c    local.set [1]
+0089e92e    local.get [0]
+0089e930    local.get [1]
+0089e932    call [905] ; 
+0089e935    local.get [0]
+0089e937    local.get [1]
+0089e939    i32.store [2, 16]
+0089e93c    i32.const [3929208]
+0089e941    i32.load [2, 0]
+0089e944    call [901] ; 
+0089e947    local.get [0]
+0089e949    i32.const [0]
+0089e94b    i32.const [2087] ; TABLE CLog.Error
+0089e94e    global.set [3]
+0089e950    i32.const [2087] ; TABLE CLog.Error
+0089e953    call_indirect [0, 0]
+0089e956  end []
+0089e957  local.get [5]
+0089e959  i32.const [16]
+0089e95b  i32.add []
+0089e95c  global.set [0]
+0089e95e  end []

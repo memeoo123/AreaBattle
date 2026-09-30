@@ -1,0 +1,26 @@
+; Original class: UIModule
+; Type3558.wait2Fram; wasmcode function 6909; offset=2620978 size=62
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0027fe33  i32.const [4989679]
+0027fe38  i32.load8_u [0, 0]
+0027fe3b  i32.eqz []
+0027fe3c  if [-64]
+0027fe3e    i32.const [3949196]
+0027fe43    call [900] ; 
+0027fe46    i32.const [4989679]
+0027fe4b    i32.const [1]
+0027fe4d    i32.store8 [0, 0]
+0027fe50  end []
+0027fe51  i32.const [3949196]
+0027fe56  i32.load [2, 0]
+0027fe59  call [903] ; 
+0027fe5c  local.set [0]
+0027fe5e  local.get [0]
+0027fe60  i32.const [0]
+0027fe62  i32.store [2, 8]
+0027fe65  local.get [0]
+0027fe67  local.get [1]
+0027fe69  i32.store [2, 16]
+0027fe6c  local.get [0]
+0027fe6e  return []
+0027fe6f  end []

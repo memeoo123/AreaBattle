@@ -1,0 +1,22 @@
+; Original class: InputManager
+; Type3603.AddTouchMoveListener; wasmcode function 11792; offset=5754507 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0057ce8c  i32.const [4989956]
+0057ce91  i32.load8_u [0, 0]
+0057ce94  i32.eqz []
+0057ce95  if [-64]
+0057ce97    i32.const [3934348]
+0057ce9c    call [900] ; 
+0057ce9f    i32.const [4989956]
+0057cea4    i32.const [1]
+0057cea6    i32.store8 [0, 0]
+0057cea9  end []
+0057ceaa  i32.const [3934348]
+0057ceaf  i32.load [2, 0]
+0057ceb2  call [901] ; 
+0057ceb5  local.get [0]
+0057ceb7  call [1623] ; InputManager.get_Instance
+0057ceba  local.get [0]
+0057cebc  local.get [0]
+0057cebe  call [11788] ; InputManager.¡Fe¡s
+0057cec1  end []

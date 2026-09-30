@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-login-sync-validation.json');play=read(w/'analysis/outgame-fly-playmode-validation.json')
+assert r['passed'] and len(r['checks'])==553 and v['passed'] and play['passed'] and len(play['checks'])==8
+sources=['disassembly/Type3196-25122.txt','disassembly/Type3133-23875.txt']+['disassembly/Type3132-'+str(i)+'.txt' for i in range(23876,23891)]+['callback-json-generics.json']
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='callback-json';s['validation'].update(integratedChecksPassed=553,loginSyncChecksPassed=len(v['checks']));write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['callback-json']={'implementationReady':True,'productionConnected':False,'source':sources,'implementation':['OutgameCallbackJson.cs','OutgameAdsVideoFlow.cs','OutgameShopVideoBindings.cs'],'scope':'Original GFRunning.Json/Util.DataParse parser restored, including duplicate keys, partial strings, numeric failure values and non-object root cast. Shop chain accepts raw JSON callback. Actual SDK and Unity await runner remain pending.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='GFRunning Json parser and Util.DataParse source') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original callback JSON parsing and raw-string-to-shop-reward integration','checksPassed':553,'outgameChecksPassed':286,'freshPlayerBuild':False,'freshPlayerSmoke':False,'playModeReport':'analysis/outgame-fly-playmode-validation.json','playModeChecksPassed':8,'freshPlayModeRun':False,'notClaimed':'Complete pooling, production account or full lobby'};write(p,s)
+audit={'status':'raw_callback_parser_verified_runtime_wait_pending','source':sources,'verified':['Util.DataParse logs before deserializing and casts result to dictionary','Dictionary duplicate keys overwrite earlier values; source generic set_Item resolved','Numbers without decimal point use Int64.TryParse, otherwise Double.TryParse with default culture; failures retain zero','String escapes, Unicode code units, ignored unknown escapes and unterminated partial strings retained','Null input returns null; non-object roots cast to null; parser accepts trailing input and redundant commas','Original ShopUI/config/ad flow now receives raw platform-format JSON through AfterVideo and real parser'],'remaining':['Unity IEnumeratorAwait runtime runner and real PlayMode timing','Concrete DBTSDKManager platform adapter and readiness','Production account/menu/report owner and full persistence/build/E2E'],'checks':553,'priorPlaymodeChecks':8,'dynamicScope':'Raw JSON through recovered parser/ad flow and original prefab; platform and waits remain fixtures; previous fly PlayMode not rerun'}
+write(o/'CALLBACK_JSON_AUDIT.json',audit)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['confirmed'].append({'fact':'GFRunning.Json and Util.DataParse restored and connected to raw-string shop callback integration. Concrete SDK, Unity await runner and production account remain pending.','source':sources,'validation':['analysis/outgame-login-sync-validation.json','analysis/outgame-fly-playmode-validation.json']});write(p,s)
+note='\n\n## 平台回调JSON解析（553项）\n提取Util、IEnumeratorAwaitExtensions、SimpleCoroutineAwaiter和Json及嵌套解析器，索引2353。恢复GFRunning.Json/Util.DataParse：先日志再解析并as字典；重复键覆盖；不含小数点走Int64.TryParse，含小数点走Double.TryParse，按原默认culture且失败为0；保留字符串转义、Unicode、未知转义忽略、未闭合字符串返回部分值、多余逗号及尾随内容规则。原ShopUI、原配置、广告核心发奖验证改为输入平台格式JSON字符串经AfterVideo解析。553项集成通过，Unity退出0；此前8项飞币PlayMode未重跑。Unity等待运行器及真实PlayMode时序、具体SDK/就绪和生产账号菜单仍未完成。\n'
+
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+subprocess.run(b+['set-check']+a+['--name','outgameCallbackJson','--result','pass','--evidence','553 integrated checks; prior8 PlayMode checks not rerun. Concrete SDK/await runner/account composition and production flows pending.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded553; full goal active.')

@@ -1,0 +1,93 @@
+; Original class: X`nPj
+; Type4507.OnDispose; wasmcode1 function 38307; offset=14409608 size=286
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dbdf89  i32.const [5009924]
+00dbdf8e  i32.load8_u [0, 0]
+00dbdf91  i32.eqz []
+00dbdf92  if [-64]
+00dbdf94    i32.const [3947148]
+00dbdf99    i32.const [1605]
+00dbdf9c    call_indirect [0, 0]
+00dbdf9f    i32.const [4023340] ; METHOD X`nPj.RefreshData
+00dbdfa4    i32.const [1605]
+00dbdfa7    call_indirect [0, 0]
+00dbdfaa    i32.const [4023352] ; METHOD X`nPj.pU`Vnx
+00dbdfaf    i32.const [1605]
+00dbdfb2    call_indirect [0, 0]
+00dbdfb5    i32.const [4023344] ; METHOD X`nPj.de~`~YY
+00dbdfba    i32.const [1605]
+00dbdfbd    call_indirect [0, 0]
+00dbdfc0    i32.const [4061088] ; STRING "LoadStartingUI"
+00dbdfc5    i32.const [1605]
+00dbdfc8    call_indirect [0, 0]
+00dbdfcb    i32.const [4078632] ; STRING "WarWin"
+00dbdfd0    i32.const [1605]
+00dbdfd3    call_indirect [0, 0]
+00dbdfd6    i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+00dbdfdb    i32.const [1605]
+00dbdfde    call_indirect [0, 0]
+00dbdfe1    i32.const [5009924]
+00dbdfe6    i32.const [1]
+00dbdfe8    i32.store8 [0, 0]
+00dbdfeb  end []
+00dbdfec  i32.const [3947148]
+00dbdff1  i32.load [2, 0]
+00dbdff4  i32.const [109007]
+00dbdff8  call_indirect [2, 0]
+00dbdffb  local.set [1]
+00dbdffd  local.get [1]
+00dbdfff  local.get [0]
+00dbe001  i32.const [4023344] ; METHOD X`nPj.de~`~YY
+00dbe006  i32.load [2, 0]
+00dbe009  i32.const [0]
+00dbe00b  i32.const [24682] ; TABLE EventHandler..ctor
+00dbe00f  call_indirect [6, 0]
+00dbe012  i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+00dbe017  i32.load [2, 0]
+00dbe01a  local.get [1]
+00dbe01c  i32.const [0]
+00dbe01e  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00dbe022  call_indirect [5, 0]
+00dbe025  i32.const [3947148]
+00dbe02a  i32.load [2, 0]
+00dbe02d  i32.const [109007]
+00dbe031  call_indirect [2, 0]
+00dbe034  local.set [1]
+00dbe036  local.get [1]
+00dbe038  local.get [0]
+00dbe03a  i32.const [4023340] ; METHOD X`nPj.RefreshData
+00dbe03f  i32.load [2, 0]
+00dbe042  i32.const [0]
+00dbe044  i32.const [24682] ; TABLE EventHandler..ctor
+00dbe048  call_indirect [6, 0]
+00dbe04b  i32.const [4061088] ; STRING "LoadStartingUI"
+00dbe050  i32.load [2, 0]
+00dbe053  local.get [1]
+00dbe055  i32.const [0]
+00dbe057  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00dbe05b  call_indirect [5, 0]
+00dbe05e  i32.const [3947148]
+00dbe063  i32.load [2, 0]
+00dbe066  i32.const [109007]
+00dbe06a  call_indirect [2, 0]
+00dbe06d  local.set [1]
+00dbe06f  local.get [1]
+00dbe071  local.get [0]
+00dbe073  i32.const [4023352] ; METHOD X`nPj.pU`Vnx
+00dbe078  i32.load [2, 0]
+00dbe07b  i32.const [0]
+00dbe07d  i32.const [24682] ; TABLE EventHandler..ctor
+00dbe081  call_indirect [6, 0]
+00dbe084  i32.const [4078632] ; STRING "WarWin"
+00dbe089  i32.load [2, 0]
+00dbe08c  local.get [1]
+00dbe08e  i32.const [0]
+00dbe090  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00dbe094  call_indirect [5, 0]
+00dbe097  local.get [0]
+00dbe099  i32.const [0]
+00dbe09b  i32.store [2, 8]
+00dbe09e  local.get [0]
+00dbe0a0  i32.const [0]
+00dbe0a2  i32.store [2, 12]
+00dbe0a5  end []

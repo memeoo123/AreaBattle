@@ -1,0 +1,164 @@
+{
+  "status": "partial",
+  "confirmed": [
+    {
+      "fact": "ChangeSkinUse creates per-category cache dictionary if missing, then helper checks skinId key; absent loads model and always invokes display helper immediately; callback invokes it again after load.",
+      "source": [
+        "disassembly/Type4462-34205.txt",
+        "disassembly/Type4462-34197.txt"
+      ]
+    },
+    {
+      "fact": "LoadModel uses SkinConfig prefabId; category3 adds1000 and selects9034, other categories9033. Entity callback sets active, parent(false), source local position, zero Euler angles, source uniform scale and recursive parent layer. Auxiliary callback parents attachment(false), sets localPosition zero, then assigns cache[config.skinType][config.id] and invokes completion.",
+      "source": [
+        "disassembly/Type4462-34194.txt",
+        "disassembly/Type4458-34213.txt",
+        "disassembly/Type4459-34215.txt"
+      ]
+    },
+    {
+      "fact": "InitFirstAdsItem(0) clears all3 fields; types1/2/3 clear corresponding single field; others no-op.",
+      "source": [
+        "disassembly/Type4462-34195.txt"
+      ]
+    },
+    {
+      "fact": "Display activates only requested cache key, then calls equipped animation helper. Cache setter replaces existing entry; in-flight loads are not deduplicated and late completion displays its own requested key. Auxiliary transform scale/rotation are not rewritten.",
+      "source": [
+        "disassembly/Type4462-34205.txt",
+        "disassembly/Type4462-34197.txt",
+        "disassembly/Type4462-34194.txt",
+        "disassembly/Type4458-34213.txt",
+        "disassembly/Type4459-34215.txt",
+        "disassembly/Type4462-34210.txt",
+        "player-cache-generic-resolution.json"
+      ]
+    },
+    {
+      "fact": "Animation helper reads currently equipped ID, applies Soldier.SetSoldierColor before activeSelf guard, caches animator, invokes unresolved virtual reset, plays relax nonlooping and assigns completion. Completion rereads equipped ID and plays idle looping on its cached animator or captured fallback.",
+      "source": [
+        "disassembly/Type4462-34211.txt",
+        "disassembly/Type4461-34219.txt"
+      ]
+    },
+    {
+      "fact": "Virtual slot11 offset280 resolves Reset, slot5 offset232 resolves Play. SpineAnimator operates MeshFilter, clip meshes and MaterialPropertyBlock _AnimTime/_AnimLoop. Source Reset zeros offsets32/36/40/44 and paused/loop flags but does not clear offset48 completion callback. Completion Update resets before invoking callback, clears it after invocation.",
+      "source": [
+        "disassembly/Type4462-34211.txt",
+        "disassembly/Type4461-34219.txt",
+        "disassembly/Type4523-34506.txt",
+        "disassembly/Type4523-34490.txt",
+        "player-animation-virtual-resolution.json",
+        "disassembly/Type4523-34502.txt",
+        "disassembly/Type4523-34509.txt"
+      ]
+    },
+    {
+      "fact": "Baked renderer implemented against actual four imported source clip lists. wasmcode1 Pause table109163 resolves wasmcode f1272, float remainder implementation. Source f32 addition at completion needs explicit rounding under Unity Mono; strict boundary regression caught and fixed. No source clip in imported four needs alternate mesh.",
+      "source": [
+        "disassembly/Type4523-34490.txt",
+        "disassembly/Type4523-34492.txt",
+        "disassembly/Type4523-34493.txt",
+        "disassembly/Type4523-34498.txt",
+        "disassembly/Type4523-34502.txt",
+        "disassembly/Type4523-34503.txt",
+        "disassembly/Type4523-34504.txt",
+        "disassembly/Type4523-34506.txt",
+        "disassembly/Type4523-34507.txt",
+        "disassembly/Type4523-34509.txt",
+        "disassembly/NativePauseRemainder-1272.txt",
+        "baked-model-clips.json"
+      ]
+    },
+    {
+      "fact": "GameControl singleton and GameSceneMono generic types resolved. Source fields NormalGroup44/DefenseGroup41/AttackGroup42 map categories1/2/3; initial positions (-4,.2,0)/(4,.2,0)/(0,-1,0), scales .85/.85/1, layer31. Source constructor curSelectNo3, model scale1/localPosition0. Original HomeCamera47 and ancestor transforms imported.",
+      "source": [
+        "model-roots.json",
+        "player-scene-singletons.json",
+        "player-scene-components.json",
+        "disassembly/Type4462-34192.txt",
+        "disassembly/Type4462-34201.txt"
+      ]
+    },
+    {
+      "fact": "Soldier.SetSoldierColor(GameObject,int) skips all work if camp tag already matches; otherwise changes tag, colors first child MeshRenderer and sets root Renderer Default/-5. Renderer overload indexes ColorHelper.GetSoldierColor(max(camp,1)-1). Tag mapping static constants and source current LevelControl camp value remain to resolve.",
+      "source": [
+        "player-scene-components.json"
+      ],
+      "functions": [
+        5663,
+        10316,
+        7123
+      ]
+    },
+    {
+      "fact": "Tags.cctor resolves camp1..6 toTag5..10 and fallbackTag9. MPBExtension uses _Color, preserving renderer property block. Concrete adapter implemented and original palette reused from verified imported soldier data. EntityModelConfig resolves attack default display4000=soldier_400; auxiliaries9033=BBDyShadow,9034=QBDyShadow.",
+      "sourceFunctions": [
+        15702,
+        7123,
+        5663,
+        10316,
+        11448,
+        18723
+      ],
+      "source": [
+        "../tables/EntityModelConfig.json"
+      ]
+    },
+    {
+      "fact": "soldier_400 display asset imported separately:256 vertices, idle and relax only; original packed texture hash verified. BBDyShadow native SpriteRenderer+Animator+original clip imported. ModelAssets maps source IDs to instantiated native prefabs. ModelRoots.Connect wires color, animation, initial equipment loading in1/2/3 order.",
+      "source": [
+        "baked-model-clips.json",
+        "shadow-prepared/native-import.json",
+        "model400-prepared/runtime-data.json"
+      ],
+      "validation": "analysis/outgame-baked-animation-validation.json"
+    },
+    {
+      "fact": "RotateSoldier f18219 swaps initial captured positions/scales without tween, initialselected3, nextWrap(4)=1/previousWrap(0)=3. MenuTab skin handler invokes MoveCamera(true,.5), moves GameSceneMono.soldierRoot localPosition to Vector3.up*.5. Camera-only snapshot established original models render correctly; shop snapshot became visible after applying this source offset.",
+      "source": [
+        "disassembly/Type4462-34198.txt",
+        "disassembly/Type4379-33473.txt",
+        "disassembly/Type4064-31261.txt"
+      ]
+    },
+    {
+      "fact": "MoveCamera complete transform/visibility logic implemented with explicit original background references, not subset child indexes. Original child1 Transform40 is meshHomeScene GameObject18 (MeshFilter52,MeshRenderer50); main backdrop Renderer49 belongsGameObject4. Generic static metadata3928176 resolves AppSetting type3375, fieldoffset4 supplies viewport additive height.",
+      "source": [
+        "model-roots.json",
+        "disassembly/Type4064-31261.txt",
+        "disassembly/Type4064-31270.txt"
+      ]
+    },
+    {
+      "fact": "Original two meshHomeScene nodes imported with native components/shared material and original idle1 texture. Disambiguated duplicate source names using source IDs4/18. Original material/texture references checked directly; texture runtime name is source-ID based after export, so name substring is not valid evidence. AppSetting field metadata14510 BangsPixel offset4 confirmed via native fieldOffsets table; cctor does not initialize it so managed initial zero.",
+      "source": [
+        "background-prepared/native-import.json",
+        "viewport-height-evidence.json"
+      ],
+      "capture": "analysis/captures/outgame-shop-attack-fixture.png"
+    },
+    {
+      "fact": "Scene style cache/load and callback sequencing implemented, including late callback writes old texture while effect helper reads current ID. NotifyShop follows helper immediately, before asynchronous texture completion, and occurs on repeated selected ID.",
+      "source": [
+        "disassembly/Type4064-31271.txt",
+        "disassembly/Type4064-31267.txt",
+        "disassembly/Type4063-31277.txt",
+        "disassembly/Type4064-31255.txt",
+        "disassembly/Type4064-31264.txt"
+      ]
+    },
+    {
+      "fact": "All15 original scene idle textures acquired and exported from26 catalog-verified bundle closure (3827007bytes). Three scene idle effect prefabs and dependencies included. Concrete texture provider and uncompressed PNG imports preserve dimensions and source settings; no replacement art.",
+      "source": [
+        "scene-texture-import.json",
+        "scene-texture-coverage.json"
+      ]
+    }
+  ],
+  "pending": [
+    "Idle scene effect helper and native import for scenes7/8/9",
+    "BangsPixel/current camp/full account-menu lifecycle",
+    "Swipe/remaining soldier skins/original visual acceptance"
+  ]
+}

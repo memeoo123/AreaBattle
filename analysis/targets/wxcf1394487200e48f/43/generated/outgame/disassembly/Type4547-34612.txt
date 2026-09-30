@@ -1,0 +1,14 @@
+; Original class: ProductUserData
+; Type4547.Config; wasmcode1 function 2064; offset=697835 size=25
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000aa5ec  local.get [0]
+000aa5ee  i32.const [7656] ; TABLE ItemConfigMgr.get_Instance
+000aa5f1  call_indirect [2, 0]
+000aa5f4  drop []
+000aa5f5  local.get [0]
+000aa5f7  local.get [0]
+000aa5f9  i32.load [2, 12]
+000aa5fc  local.get [0]
+000aa5fe  call [26703] ; ItemConfigMgr.GetGameProductConfig
+000aa602  return []
+000aa603  end []

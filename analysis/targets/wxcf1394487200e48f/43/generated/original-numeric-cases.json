@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "generatedAt": "2026-09-28T03:34:45.514Z",
+  "mode": "isolated original arithmetic; not full-game runtime validation",
+  "runtime": "v24.14.0",
+  "sources": [
+    {
+      "method": "GetSpawnTime",
+      "module": "wasmcode",
+      "function": 13071,
+      "offset": 6269135,
+      "size": 197,
+      "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+      "bodySha256": "fd73fb47d02341f8e4f6359b867426073a104a7bdfd3b85ab23e95ee23ceac8b",
+      "harnessSha256": "6814d93941959a9c70bdddccce529b329c42e0c6720fde3b08613f4e651d359b",
+      "imports": [],
+      "memoryPages": 1
+    },
+    {
+      "method": "GetDispatchLineNum",
+      "module": "wasmcode1",
+      "function": 68963,
+      "offset": 21853751,
+      "size": 55,
+      "sourceSha256": "2c7769c7b98b69036e9e453bd3688a17c27fdd60ed606ebd729952a7156673d3",
+      "bodySha256": "ea40112bfb2a23f0b238cd4a614bf44adc0cd8da4d3b8a3cf0cb36b8b188adda",
+      "harnessSha256": "6555d6d8bd8ac9786625944f626b3c6337137504119379d47edcacb18387c931",
+      "imports": [],
+      "memoryPages": 1
+    },
+    {
+      "method": "GetDispatchAddScoreTime",
+      "module": "wasmcode",
+      "function": 13072,
+      "offset": 6269333,
+      "size": 62,
+      "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+      "bodySha256": "5a27e68bd4cab30dd29ba09a523e296bfe048cb636704273ce382a04d07b4874",
+      "harnessSha256": "480ecb1b0b3278a574ab49ccbf80f5a5cb0f5b93d80d0950a1d66a8d0278d647",
+      "imports": [],
+      "memoryPages": 1
+    },
+    {
+      "method": "GetDispatchScoreNum",
+      "module": "wasmcode1",
+      "function": 68962,
+      "offset": 21853695,
+      "size": 55,
+      "sourceSha256": "2c7769c7b98b69036e9e453bd3688a17c27fdd60ed606ebd729952a7156673d3",
+      "bodySha256": "3f3f753eb1f999e14acd49c3a0ddb416eb40a2616d504dcbb32ef74deca55a38",
+      "harnessSha256": "a453574e7f746da6230c05a7171ef59f82cad1ca0d762dc0bec351a8f3995c75",
+      "imports": [],
+      "memoryPages": 1
+    }
+  ],
+  "cases": [
+    {
+      "id": "original-GetSpawnTime-0-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 1
+      },
+      "expected": 1.1109999418258667,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-0-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 2
+      },
+      "expected": 1.281999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-0-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 3
+      },
+      "expected": 1.5149999856948853,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 1
+      },
+      "expected": 1.031999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 2
+      },
+      "expected": 1.184999942779541,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 3
+      },
+      "expected": 1.3910000324249268,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 1
+      },
+      "expected": 0.9610000252723694,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 2
+      },
+      "expected": 1.0980000495910645,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 3
+      },
+      "expected": 1.281999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetDispatchLineNum-0",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 0
+      },
+      "expected": 1,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchLineNum-1",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 1
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchLineNum-2",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 2
+      },
+      "expected": 3,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-0",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 0
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-1",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 1
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-2",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 2
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-0",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 0
+      },
+      "expected": 9,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-1",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 1
+      },
+      "expected": 29,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-2",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 2
+      },
+      "expected": 65,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    }
+  ]
+}

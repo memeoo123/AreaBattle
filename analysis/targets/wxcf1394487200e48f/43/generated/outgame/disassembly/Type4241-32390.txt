@@ -1,0 +1,77 @@
+; Original class: Ly^}
+; Type4241.MoveNext; wasmcode function 18732; offset=8462588 size=204
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+008120ff  i32.const [0]
+00812101  local.set [1]
+00812103  i32.const [5007333]
+00812108  i32.load8_u [0, 0]
+0081210b  i32.eqz []
+0081210c  if [-64]
+0081210e    i32.const [3989352]
+00812113    call [900] ; 
+00812116    i32.const [3948068]
+0081211b    call [900] ; 
+0081211e    i32.const [4005784] ; METHOD LoginCtrl.Tg{~N
+00812123    call [900] ; 
+00812126    i32.const [3938016]
+0081212b    call [900] ; 
+0081212e    i32.const [4094372] ; STRING "pack2"
+00812133    call [900] ; 
+00812136    i32.const [5007333]
+0081213b    i32.const [1]
+0081213d    i32.store8 [0, 0]
+00812140  end []
+00812141  i32.const [-1]
+00812143  local.set [2]
+00812145  block [-64]
+00812147    block [-64]
+00812149      block [-64]
+0081214b        local.get [0]
+0081214d        i32.load [2, 8]
+00812150        br_table [0, 1, 2]
+00812155      end []
+00812156      local.get [0]
+00812158      i32.const [-1]
+0081215a      i32.store [2, 8]
+0081215d      local.get [0]
+0081215f      i32.load [2, 16]
+00812162      local.set [1]
+00812164      i32.const [3948068]
+00812169      i32.load [2, 0]
+0081216c      call [903] ; 
+0081216f      local.set [2]
+00812171      local.get [2]
+00812173      local.get [1]
+00812175      i32.const [4005784] ; METHOD LoginCtrl.Tg{~N
+0081217a      i32.load [2, 0]
+0081217d      i32.const [0]
+0081217f      call [1853] ; LoadAssetCompleteHandler..ctor
+00812182      i32.const [3989352]
+00812187      i32.load [2, 0]
+0081218a      call [1032] ; 
+0081218d      local.set [1]
+0081218f      i32.const [3938016]
+00812194      i32.load [2, 0]
+00812197      call [901] ; 
+0081219a      i32.const [4094372] ; STRING "pack2"
+0081219f      i32.load [2, 0]
+008121a2      local.get [2]
+008121a4      local.get [1]
+008121a6      i32.const [0]
+008121a8      call [2240] ; ResLoadHelper.LoadAsset
+008121ab      drop []
+008121ac      local.get [0]
+008121ae      i32.const [0]
+008121b0      i32.store [2, 12]
+008121b3      i32.const [1]
+008121b5      local.set [2]
+008121b7      i32.const [1]
+008121b9      local.set [1]
+008121bb    end []
+008121bc    local.get [0]
+008121be    local.get [2]
+008121c0    i32.store [2, 8]
+008121c3  end []
+008121c4  local.get [1]
+008121c6  return []
+008121c7  end []

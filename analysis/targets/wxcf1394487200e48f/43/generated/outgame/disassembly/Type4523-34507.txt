@@ -1,0 +1,43 @@
+; Original class: SpineAnimator
+; Type4523..cctor; wasmcode function 15838; offset=7624749 size=126
+; signature={'args': [127], 'returns': []}; localGroups=[]
+0074582e  i32.const [5001087]
+00745833  i32.load8_u [0, 0]
+00745836  i32.eqz []
+00745837  if [-64]
+00745839    i32.const [3939160]
+0074583e    call [900] ; 
+00745841    i32.const [4081332] ; STRING "_AnimLoop"
+00745846    call [900] ; 
+00745849    i32.const [4081336] ; STRING "_AnimTime"
+0074584e    call [900] ; 
+00745851    i32.const [5001087]
+00745856    i32.const [1]
+00745858    i32.store8 [0, 0]
+0074585b  end []
+0074585c  i32.const [3939160]
+00745861  i32.load [2, 0]
+00745864  i32.load [2, 92]
+00745867  i32.const [2]
+00745869  call [919] ; 
+0074586c  i32.const [4081336] ; STRING "_AnimTime"
+00745871  i32.load [2, 0]
+00745874  i32.const [0]
+00745876  call [1212] ; Shader.PropertyToID
+00745879  local.set [0]
+0074587b  i32.const [3939160]
+00745880  i32.load [2, 0]
+00745883  i32.load [2, 92]
+00745886  local.get [0]
+00745888  i32.store [2, 4]
+0074588b  i32.const [4081332] ; STRING "_AnimLoop"
+00745890  i32.load [2, 0]
+00745893  i32.const [0]
+00745895  call [1212] ; Shader.PropertyToID
+00745898  local.set [0]
+0074589a  i32.const [3939160]
+0074589f  i32.load [2, 0]
+007458a2  i32.load [2, 92]
+007458a5  local.get [0]
+007458a7  i32.store [2, 8]
+007458aa  end []

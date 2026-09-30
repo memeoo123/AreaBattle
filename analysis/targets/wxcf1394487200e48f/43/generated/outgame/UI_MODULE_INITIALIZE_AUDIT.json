@@ -1,0 +1,53 @@
+{
+  "status": "source-ui-module-initialize-composed-and-native-verified",
+  "atUtc": "2026-09-30T02:48:22.887514+00:00",
+  "source": [
+    "disassembly/Type3558-27385.txt",
+    "ui-root-generic.json"
+  ],
+  "implementation": "OutgameUiModuleInitialization.cs",
+  "verified": [
+    "Initialized reentry invokes current completion without tag lookup or load",
+    "Original log/find GFUICanvas/child UICamera/GetComponent/persist/mode sequence",
+    "Missing canvas logs both source errors and continues persistence/load route",
+    "Legacy branch resolves module twice: LoadPrefab then virtualslot7 ResourcesModule.Update29880(0,0)",
+    "Concrete root completion and display settings reused",
+    "Native PlayMode confirms actual tagged lookup, original camera and DontDestroyOnLoad scene before ready"
+  ],
+  "integratedChecks": 609,
+  "playMode": {
+    "passed": true,
+    "scope": "Real original bootstrap Awake, UIRoot Start and open/init/outlet/canvas/animation/close lifecycle; platform height injected, page business hooks/provider isolated, no production account/native bundles",
+    "checks": [
+      "Original bootstrap Awake publishes source display settings and binds original camera",
+      "Native module finds tagged canvas/camera and persists root before initialization completes",
+      "Root callback assigns module canvas before native bangs Start",
+      "Real page binds all thirteen original root outlets",
+      "Opening animation waits while paused and retains initialized page/resources",
+      "Native Start applies source pixel conversion after bootstrap/root setup even while timeScale is zero",
+      "Real OpenUI follows live initialized sorted page",
+      "Source initialization and OpenLater run in order across actual animation coroutine",
+      "Hide occurs with disposed flag while native object still exists",
+      "Dispose clears references before deferred native destruction and resource releases",
+      "Close notification follows actual native destruction and all handle releases",
+      "Second end-of-frame occurs after hide/dispose frame",
+      "Real close releases main, dynamic and custom handles in order"
+    ],
+    "error": "",
+    "openFrame": 58,
+    "hideFrame": 136,
+    "disposeFrame": 136,
+    "closeFrame": 137,
+    "batchMode": false,
+    "bootstrapFrame": 1,
+    "bangsFrame": 4,
+    "bangsPixels": 89.0
+  },
+  "report": "analysis/outgame-ui-lifecycle-playmode-validation.json",
+  "remaining": [
+    "Root acquisition uses explicit resource adapters; original transport and Instantiate overload pending",
+    "Atlas native owner and actual resource-mode configuration",
+    "Complete production account/menu/battle-return and Player validation"
+  ],
+  "freshPlayerBuild": false
+}

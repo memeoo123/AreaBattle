@@ -1,0 +1,46 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.d]rOTs]; wasmcode function 18035; offset=7993922 size=131
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0079fa43  i32.const [5007486]
+0079fa48  i32.load8_u [0, 0]
+0079fa4b  i32.eqz []
+0079fa4c  if [-64]
+0079fa4e    i32.const [3989352]
+0079fa53    call [900] ; 
+0079fa56    i32.const [3953448]
+0079fa5b    call [900] ; 
+0079fa5e    i32.const [4018456]
+0079fa63    call [900] ; 
+0079fa66    i32.const [5007486]
+0079fa6b    i32.const [1]
+0079fa6d    i32.store8 [0, 0]
+0079fa70  end []
+0079fa71  i32.const [0]
+0079fa73  call [1193] ; GameModule.get_Audio
+0079fa76  i32.const [1]
+0079fa78  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+0079fa7b  i32.const [0]
+0079fa7d  call [1201] ; Extension.PlayerVoice
+0079fa80  i32.const [0]
+0079fa82  call [1143] ; GameModule.get_UI
+0079fa85  i32.const [3989352]
+0079fa8a  i32.load [2, 0]
+0079fa8d  call [1032] ; 
+0079fa90  i32.const [4018456]
+0079fa95  i32.load [2, 0]
+0079fa98  call [1367] ; 
+0079fa9b  drop []
+0079fa9c  i32.const [3953448]
+0079faa1  i32.load [2, 0]
+0079faa4  call [935] ; 
+0079faa7  i32.const [0]
+0079faa9  i32.store8 [0, 12]
+0079faac  local.get [0]
+0079faae  i32.load [2, 124]
+0079fab1  i32.const [3953448]
+0079fab6  i32.load [2, 0]
+0079fab9  call [935] ; 
+0079fabc  i32.load8_u [0, 12]
+0079fabf  i32.const [0]
+0079fac1  call [949] ; GameObject.SetActive
+0079fac4  end []

@@ -1,0 +1,90 @@
+; Original class: ShopUI
+; Type4408..ctor; wasmcode function 15996; offset=7718063 size=259
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+0075c4b2  i32.const [5007572]
+0075c4b7  i32.load8_u [0, 0]
+0075c4ba  i32.eqz []
+0075c4bb  if [-64]
+0075c4bd    i32.const [3954976]
+0075c4c2    call [900] ; 
+0075c4c5    i32.const [3956172]
+0075c4ca    call [900] ; 
+0075c4cd    i32.const [3955628]
+0075c4d2    call [900] ; 
+0075c4d5    i32.const [3917484]
+0075c4da    call [900] ; 
+0075c4dd    i32.const [3917344]
+0075c4e2    call [900] ; 
+0075c4e5    i32.const [3917588]
+0075c4ea    call [900] ; 
+0075c4ed    i32.const [3976852]
+0075c4f2    call [900] ; 
+0075c4f5    i32.const [3923868]
+0075c4fa    call [900] ; 
+0075c4fd    i32.const [5007572]
+0075c502    i32.const [1]
+0075c504    i32.store8 [0, 0]
+0075c507  end []
+0075c508  i32.const [3917484]
+0075c50d  i32.load [2, 0]
+0075c510  call [903] ; 
+0075c513  local.set [1]
+0075c515  local.get [1]
+0075c517  i32.const [3955628]
+0075c51c  i32.load [2, 0]
+0075c51f  call [951] ; 
+0075c522  local.get [0]
+0075c524  local.get [1]
+0075c526  i32.store [2, 104]
+0075c529  i32.const [3917344]
+0075c52e  i32.load [2, 0]
+0075c531  call [903] ; 
+0075c534  local.set [1]
+0075c536  local.get [1]
+0075c538  i32.const [3954976]
+0075c53d  i32.load [2, 0]
+0075c540  call [951] ; 
+0075c543  local.get [0]
+0075c545  local.get [1]
+0075c547  i32.store [2, 108]
+0075c54a  i32.const [3917588]
+0075c54f  i32.load [2, 0]
+0075c552  call [903] ; 
+0075c555  local.set [1]
+0075c557  local.get [1]
+0075c559  i32.const [3956172]
+0075c55e  i32.load [2, 0]
+0075c561  call [951] ; 
+0075c564  local.get [0]
+0075c566  local.get [1]
+0075c568  i32.store [2, 112]
+0075c56b  i32.const [3923868]
+0075c570  i32.load [2, 0]
+0075c573  call [903] ; 
+0075c576  local.set [1]
+0075c578  local.get [1]
+0075c57a  i32.const [3976852]
+0075c57f  i32.load [2, 0]
+0075c582  call [944] ; 
+0075c585  local.get [0]
+0075c587  local.get [1]
+0075c589  i32.store [2, 116]
+0075c58c  local.get [0]
+0075c58e  i32.const [0]
+0075c590  call [1521] ; BaseUI..ctor
+0075c593  i64.const [5]
+0075c595  local.set [2]
+0075c597  local.get [0]
+0075c599  local.get [2]
+0075c59b  i32.wrap_i64 []
+0075c59c  i32.store [2, 48]
+0075c59f  local.get [0]
+0075c5a1  local.get [2]
+0075c5a3  i64.const [32]
+0075c5a5  i64.shr_u []
+0075c5a6  i32.wrap_i64 []
+0075c5a7  i32.store [2, 52]
+0075c5aa  local.get [0]
+0075c5ac  i32.const [1]
+0075c5ae  i32.store [2, 40]
+0075c5b1  end []

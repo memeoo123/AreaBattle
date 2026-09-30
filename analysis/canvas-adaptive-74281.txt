@@ -1,0 +1,19 @@
+; Original class: CanvasAdaptive
+; Type10722.WidthControlsHeight; wasmcode function 8154; offset=3871429 size=39
+; signature={'args': [127, 125, 127], 'returns': []}; localGroups=[]
+003b12c6 local.get [0]
+003b12c8 i32.load [2, 16]
+003b12cb local.get [0]
+003b12cd f32.load [2, 28]
+003b12d0 f32.store [2, 36]
+003b12d3 local.get [0]
+003b12d5 i32.load [2, 12]
+003b12d8 i32.const [1]
+003b12da i32.const [0]
+003b12dc call [6300] ; AspectRatioFitter.set_aspectMode
+003b12df local.get [0]
+003b12e1 i32.load [2, 12]
+003b12e4 local.get [1]
+003b12e6 i32.const [0]
+003b12e8 call [6299] ; AspectRatioFitter.set_aspectRatio
+003b12eb end []

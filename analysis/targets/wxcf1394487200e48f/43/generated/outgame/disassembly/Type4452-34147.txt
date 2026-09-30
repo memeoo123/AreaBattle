@@ -1,0 +1,30 @@
+; Original class: ProcedureStarGame
+; Type4452.kQzmqWm; wasmcode function 18162; offset=8066207 size=73
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b14a0  i32.const [5009784]
+007b14a5  i32.load8_u [0, 0]
+007b14a8  i32.eqz []
+007b14a9  if [-64]
+007b14ab    i32.const [3953440]
+007b14b0    call [900] ; 
+007b14b3    i32.const [5009784]
+007b14b8    i32.const [1]
+007b14ba    i32.store8 [0, 0]
+007b14bd  end []
+007b14be  i32.const [3953440]
+007b14c3  i32.load [2, 0]
+007b14c6  call [935] ; 
+007b14c9  i32.load [2, 8]
+007b14cc  i32.const [6]
+007b14ce  i32.eq []
+007b14cf  if [-64]
+007b14d1    i32.const [3953440]
+007b14d6    i32.load [2, 0]
+007b14d9    call [935] ; 
+007b14dc    i32.const [8]
+007b14de    i32.const [0]
+007b14e0    i32.const [0]
+007b14e2    call [1444] ; LevelControl.SetPlaySate
+007b14e5    drop []
+007b14e6  end []
+007b14e7  end []

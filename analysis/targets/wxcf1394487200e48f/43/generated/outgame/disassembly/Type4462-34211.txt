@@ -1,0 +1,221 @@
+; Original class: PlayerControl
+; Type4462.fogm; wasmcode function 11064; offset=5347964 size=623
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00519a7f  i32.const [5009829]
+00519a84  i32.load8_u [0, 0]
+00519a87  i32.eqz []
+00519a88  if [-64]
+00519a8a    i32.const [3927888]
+00519a8f    call [900] ; 
+00519a92    i32.const [3929208]
+00519a97    call [900] ; 
+00519a9a    i32.const [3953440]
+00519a9f    call [900] ; 
+00519aa2    i32.const [3956192]
+00519aa7    call [900] ; 
+00519aaa    i32.const [3955644]
+00519aaf    call [900] ; 
+00519ab2    i32.const [3956200]
+00519ab7    call [900] ; 
+00519aba    i32.const [3955656]
+00519abf    call [900] ; 
+00519ac2    i32.const [4001124]
+00519ac7    call [900] ; 
+00519aca    i32.const [3926996]
+00519acf    call [900] ; 
+00519ad2    i32.const [3936516]
+00519ad7    call [900] ; 
+00519ada    i32.const [3939112]
+00519adf    call [900] ; 
+00519ae2    i32.const [4036724] ; STRING " 没有SpineAnimtor"
+00519ae7    call [900] ; 
+00519aea    i32.const [4095460] ; STRING "relax"
+00519aef    call [900] ; 
+00519af2    i32.const [3947688]
+00519af7    call [900] ; 
+00519afa    i32.const [4029744] ; METHOD yNcfqN.vszfhvr
+00519aff    call [900] ; 
+00519b02    i32.const [5009829]
+00519b07    i32.const [1]
+00519b09    i32.store8 [0, 0]
+00519b0c  end []
+00519b0d  i32.const [3947688]
+00519b12  i32.load [2, 0]
+00519b15  call [903] ; 
+00519b18  local.set [3]
+00519b1a  local.get [3]
+00519b1c  local.get [0]
+00519b1e  i32.store [2, 12]
+00519b21  local.get [3]
+00519b23  local.get [2]
+00519b25  i32.store [2, 8]
+00519b28  i32.const [5009954]
+00519b2d  i32.load8_u [0, 0]
+00519b30  i32.eqz []
+00519b31  if [-64]
+00519b33    i32.const [3939048]
+00519b38    call [900] ; 
+00519b3b    i32.const [5009954]
+00519b40    i32.const [1]
+00519b42    i32.store8 [0, 0]
+00519b45  end []
+00519b46  block [-64]
+00519b48    i32.const [3939048]
+00519b4d    i32.load [2, 0]
+00519b50    i32.load [2, 92]
+00519b53    i32.load [2, 0]
+00519b56    local.get [3]
+00519b58    i32.load [2, 8]
+00519b5b    i32.const [0]
+00519b5d    call [2660] ; SkinManager.GetUserSkinId
+00519b60    local.set [2]
+00519b62    local.get [1]
+00519b64    local.get [2]
+00519b66    i32.const [3955644]
+00519b6b    i32.load [2, 0]
+00519b6e    call [1129] ; 
+00519b71    i32.eqz []
+00519b72    br_if [0]
+00519b74    local.get [1]
+00519b76    local.get [2]
+00519b78    i32.const [3955656]
+00519b7d    i32.load [2, 0]
+00519b80    call [1128] ; 
+00519b83    local.set [1]
+00519b85    i32.const [3953440]
+00519b8a    i32.load [2, 0]
+00519b8d    call [935] ; 
+00519b90    i32.load [2, 12]
+00519b93    local.set [4]
+00519b95    i32.const [3939112]
+00519b9a    i32.load [2, 0]
+00519b9d    call [901] ; 
+00519ba0    local.get [1]
+00519ba2    local.get [4]
+00519ba4    i32.const [0]
+00519ba6    call [5663] ; Soldier.SetSoldierColor
+00519ba9    local.get [1]
+00519bab    i32.const [0]
+00519bad    call [1586] ; GameObject.get_activeSelf
+00519bb0    i32.eqz []
+00519bb1    br_if [0]
+00519bb3    local.get [0]
+00519bb5    i32.load [2, 212]
+00519bb9    local.get [2]
+00519bbb    local.get [3]
+00519bbd    i32.const [16]
+00519bbf    i32.add []
+00519bc0    i32.const [3956200]
+00519bc5    i32.load [2, 0]
+00519bc8    call [1134] ; 
+00519bcb    i32.eqz []
+00519bcc    if [-64]
+00519bce      local.get [3]
+00519bd0      local.get [1]
+00519bd2      i32.const [4001124]
+00519bd7      i32.load [2, 0]
+00519bda      call [1091] ; 
+00519bdd      i32.store [2, 16]
+00519be0      local.get [0]
+00519be2      i32.load [2, 212]
+00519be6      local.get [2]
+00519be8      local.get [3]
+00519bea      i32.load [2, 16]
+00519bed      i32.const [3956192]
+00519bf2      i32.load [2, 0]
+00519bf5      call [1049] ; 
+00519bf8    end []
+00519bf9    local.get [3]
+00519bfb    i32.load [2, 16]
+00519bfe    local.set [0]
+00519c00    i32.const [3936516]
+00519c05    i32.load [2, 0]
+00519c08    call [901] ; 
+00519c0b    local.get [0]
+00519c0d    i32.const [0]
+00519c0f    i32.const [0]
+00519c11    call [940] ; Object.op_Equality
+00519c14    if [-64]
+00519c16      i32.const [3926996]
+00519c1b      i32.load [2, 0]
+00519c1e      i32.const [1]
+00519c20      call [909] ; 
+00519c23      local.set [0]
+00519c25      local.get [1]
+00519c27      i32.const [0]
+00519c29      call [1115] ; Object.get_name
+00519c2c      i32.const [4036724] ; STRING " 没有SpineAnimtor"
+00519c31      i32.load [2, 0]
+00519c34      i32.const [0]
+00519c36      call [921] ; String.Concat
+00519c39      local.set [1]
+00519c3b      local.get [0]
+00519c3d      local.get [1]
+00519c3f      call [905] ; 
+00519c42      local.get [0]
+00519c44      local.get [1]
+00519c46      i32.store [2, 16]
+00519c49      i32.const [3929208]
+00519c4e      i32.load [2, 0]
+00519c51      call [901] ; 
+00519c54      local.get [0]
+00519c56      i32.const [0]
+00519c58      i32.const [2087] ; TABLE CLog.Error
+00519c5b      global.set [3]
+00519c5d      i32.const [2087] ; TABLE CLog.Error
+00519c60      call_indirect [0, 0]
+00519c63      return []
+00519c64    end []
+00519c65    local.get [3]
+00519c67    i32.load [2, 16]
+00519c6a    local.set [0]
+00519c6c    local.get [0]
+00519c6e    local.set [1]
+00519c70    local.get [0]
+00519c72    i32.load [2, 0]
+00519c75    local.set [0]
+00519c77    local.get [1]
+00519c79    local.get [0]
+00519c7b    i32.load [2, 280]
+00519c7f    local.get [0]
+00519c81    i32.load [2, 276]
+00519c85    global.set [3]
+00519c87    global.get [3]
+00519c89    call_indirect [0, 0]
+00519c8c    local.get [3]
+00519c8e    i32.load [2, 16]
+00519c91    local.set [0]
+00519c93    local.get [0]
+00519c95    local.set [1]
+00519c97    local.get [0]
+00519c99    i32.load [2, 0]
+00519c9c    local.set [0]
+00519c9e    local.get [1]
+00519ca0    i32.const [4095460] ; STRING "relax"
+00519ca5    i32.load [2, 0]
+00519ca8    i32.const [0]
+00519caa    local.get [0]
+00519cac    i32.load [2, 232]
+00519cb0    local.get [0]
+00519cb2    i32.load [2, 228]
+00519cb6    global.set [3]
+00519cb8    global.get [3]
+00519cba    call_indirect [7, 0]
+00519cbd    local.get [3]
+00519cbf    i32.load [2, 16]
+00519cc2    local.set [0]
+00519cc4    i32.const [3927888]
+00519cc9    i32.load [2, 0]
+00519ccc    call [903] ; 
+00519ccf    local.set [1]
+00519cd1    local.get [1]
+00519cd3    local.get [3]
+00519cd5    i32.const [4029744] ; METHOD yNcfqN.vszfhvr
+00519cda    i32.load [2, 0]
+00519cdd    i32.const [0]
+00519cdf    call [1002] ; Action..ctor
+00519ce2    local.get [0]
+00519ce4    local.get [1]
+00519ce6    i32.store [2, 48]
+00519ce9  end []
+00519cea  end []

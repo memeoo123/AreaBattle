@@ -1,0 +1,47 @@
+; Original class: ResourcesModule
+; Type3832.Update; wasmcode function 17741; offset=7862531 size=125
+; signature={'args': [127, 125, 125, 127], 'returns': []}; localGroups=[]
+0077f904  i32.const [4988227]
+0077f909  i32.load8_u [0, 0]
+0077f90c  i32.eqz []
+0077f90d  if [-64]
+0077f90f    i32.const [3928176]
+0077f914    call [900] ; 
+0077f917    i32.const [4988227]
+0077f91c    i32.const [1]
+0077f91e    i32.store8 [0, 0]
+0077f921  end []
+0077f922  i32.const [3928176]
+0077f927  i32.load [2, 0]
+0077f92a  call [901] ; 
+0077f92d  i32.const [5011829]
+0077f932  i32.load8_u [0, 0]
+0077f935  i32.eqz []
+0077f936  if [-64]
+0077f938    i32.const [3928176]
+0077f93d    call [900] ; 
+0077f940    i32.const [5011829]
+0077f945    i32.const [1]
+0077f947    i32.store8 [0, 0]
+0077f94a  end []
+0077f94b  i32.const [3928176]
+0077f950  i32.load [2, 0]
+0077f953  call [901] ; 
+0077f956  block [-64]
+0077f958    i32.const [3928176]
+0077f95d    i32.load [2, 0]
+0077f960    i32.load [2, 92]
+0077f963    i32.load8_u [0, 36]
+0077f966    br_if [0]
+0077f968    local.get [0]
+0077f96a    i32.load8_u [0, 32]
+0077f96d    i32.eqz []
+0077f96e    br_if [0]
+0077f970    local.get [0]
+0077f972    local.get [0]
+0077f974    call [10681] ; ResourcesModule.CheckNewLoaders
+0077f977    local.get [0]
+0077f979    local.get [0]
+0077f97b    call [10680] ; ResourcesModule.CheckQueue
+0077f97e  end []
+0077f97f  end []

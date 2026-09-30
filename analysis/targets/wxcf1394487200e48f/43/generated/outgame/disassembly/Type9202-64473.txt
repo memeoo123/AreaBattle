@@ -1,0 +1,107 @@
+; Original class: ADModule
+; Type9202.ShowInterstitial; wasmcode function 13423; offset=6503868 size=313
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00633dbd  i32.const [5006927]
+00633dc2  i32.load8_u [0, 0]
+00633dc5  i32.eqz []
+00633dc6  if [-64]
+00633dc8    i32.const [3988648] ; METHOD ADModule.<ShowInterstitial>b__29_0
+00633dcd    call [900] ; 
+00633dd0    i32.const [3988652] ; METHOD ADModule.<ShowInterstitial>b__29_1
+00633dd5    call [900] ; 
+00633dd8    i32.const [3927760]
+00633ddd    call [900] ; 
+00633de0    i32.const [3915488]
+00633de5    call [900] ; 
+00633de8    i32.const [3936304]
+00633ded    call [900] ; 
+00633df0    i32.const [4058032] ; STRING "InsertSelect Success"
+00633df5    call [900] ; 
+00633df8    i32.const [4035360] ; STRING " ShowInterstitial firstDayNoAd"
+00633dfd    call [900] ; 
+00633e00    i32.const [5006927]
+00633e05    i32.const [1]
+00633e07    i32.store8 [0, 0]
+00633e0a  end []
+00633e0b  i32.const [3927760]
+00633e10  i32.load [2, 0]
+00633e13  call [901] ; 
+00633e16  i32.const [3927760]
+00633e1b  i32.load [2, 0]
+00633e1e  i32.load [2, 92]
+00633e21  i32.load8_u [0, 4]
+00633e24  if [-64]
+00633e26    i32.const [3927760]
+00633e2b    i32.load [2, 0]
+00633e2e    call [901] ; 
+00633e31    i32.const [3927760]
+00633e36    i32.load [2, 0]
+00633e39    i32.load [2, 92]
+00633e3c    i32.load [2, 0]
+00633e3f    i32.const [4035360] ; STRING " ShowInterstitial firstDayNoAd"
+00633e44    i32.load [2, 0]
+00633e47    i32.const [0]
+00633e49    call [921] ; String.Concat
+00633e4c    i32.const [0]
+00633e4e    call [999] ; XYXLOG.Log
+00633e51    return []
+00633e52  end []
+00633e53  local.get [0]
+00633e55  local.get [2]
+00633e57  i32.store [2, 12]
+00633e5a  block [-64]
+00633e5c    local.get [0]
+00633e5e    i32.load8_u [0, 25]
+00633e61    br_if [0]
+00633e63    local.get [0]
+00633e65    local.get [0]
+00633e67    call [8372] ; ADModule.CanShowInterAD
+00633e6a    i32.eqz []
+00633e6b    br_if [0]
+00633e6d    i32.const [3927760]
+00633e72    i32.load [2, 0]
+00633e75    call [901] ; 
+00633e78    i32.const [3927760]
+00633e7d    i32.load [2, 0]
+00633e80    i32.load [2, 92]
+00633e83    i32.load [2, 0]
+00633e86    i32.const [4058032] ; STRING "InsertSelect Success"
+00633e8b    i32.load [2, 0]
+00633e8e    i32.const [0]
+00633e90    call [921] ; String.Concat
+00633e93    i32.const [0]
+00633e95    call [999] ; XYXLOG.Log
+00633e98    i32.const [3936304]
+00633e9d    i32.load [2, 0]
+00633ea0    call [901] ; 
+00633ea3    i32.const [0]
+00633ea5    call [1381] ; NewAdsManager.get_Instance
+00633ea8    local.set [1]
+00633eaa    i32.const [3915488]
+00633eaf    i32.load [2, 0]
+00633eb2    call [903] ; 
+00633eb5    local.set [2]
+00633eb7    local.get [2]
+00633eb9    local.get [0]
+00633ebb    i32.const [3988648] ; METHOD ADModule.<ShowInterstitial>b__29_0
+00633ec0    i32.load [2, 0]
+00633ec3    i32.const [0]
+00633ec5    call [1004] ; 
+00633ec8    i32.const [3915488]
+00633ecd    i32.load [2, 0]
+00633ed0    call [903] ; 
+00633ed3    local.set [3]
+00633ed5    local.get [3]
+00633ed7    local.get [0]
+00633ed9    i32.const [3988652] ; METHOD ADModule.<ShowInterstitial>b__29_1
+00633ede    i32.load [2, 0]
+00633ee1    i32.const [0]
+00633ee3    call [1004] ; 
+00633ee6    local.get [1]
+00633ee8    local.get [2]
+00633eea    local.get [3]
+00633eec    i32.const [0]
+00633eee    i32.const [0]
+00633ef0    call [5864] ; NewAdsManager.showInterstitial
+00633ef3  end []
+00633ef4  end []

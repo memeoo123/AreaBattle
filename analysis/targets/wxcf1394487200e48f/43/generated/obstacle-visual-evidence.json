@@ -1,0 +1,148 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "sourceSnapshot": "generated/resource-snapshots/obstacle-visuals-20260928",
+  "coverage": {
+    "entityIds": [
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      94,
+      96,
+      98
+    ],
+    "prefabCount": 15,
+    "rendererCount": 125,
+    "uniqueMeshes": 1,
+    "uniqueMaterials": 1,
+    "uniqueTextures": 1,
+    "unresolvedReferences": 0,
+    "sourceColliders": 125,
+    "importedVisualColliders": 0
+  },
+  "sourcePreservation": true,
+  "rules": [
+    {
+      "id": "obstacle-native-mesh",
+      "status": "confirmed",
+      "fact": "All15 used prefabs reuse HD3_wall native geometry; no UnityPy OBJ X mirror or winding reversal is applied.",
+      "source": {
+        "id": "CAB-d1e0db418281b7eefd4ea44394873e5d:-4260555571800234629",
+        "name": "HD3_wall",
+        "sourceBundle": "work/cache/StreamingAssets/WebGL/Proj_hdzd/model/hd3_wall.fbx_8dbaba64c4bd1a4619bc9cfb4607bab4.unity3d",
+        "files": [
+          {
+            "kind": "meshNative",
+            "path": "generated/unity-assets/Mesh/HD3_wall__CAB-d1e0db418281b7eefd4ea44394873e5d__-4260555571800234629.mesh.json",
+            "sha256": "7bb1961bd69903c57961ddaf2008956d9673be8a62015b00ff0346bf2f2db3c6"
+          },
+          {
+            "kind": "obj",
+            "path": "generated/unity-assets/Mesh/HD3_wall__CAB-d1e0db418281b7eefd4ea44394873e5d__-4260555571800234629.obj",
+            "sha256": "5fa5a9ce8bd1bc8cece180fadc026e9db57521ae6bf7b077eb6192bcf66ee272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "obstacle-opaque-unlit",
+      "status": "confirmed",
+      "fact": "Every used renderer references wall material\u2192unity_builtin_extra shader10752, whose original parsed name is Unlit/Texture. GLES2 fragment returns sampled MainTex.rgb and alpha1. Render state opaque, Src=One,Dst=Zero,Cull=Back,ZWrite=On. Material texture scale1,offset0.",
+      "source": {
+        "id": "CAB-843eb557cece3c6a9f62becbab248702:1306239314704058819",
+        "name": "wall",
+        "source": {
+          "id": "CAB-843eb557cece3c6a9f62becbab248702:1306239314704058819",
+          "name": "wall",
+          "sourceBundle": "work/cache/StreamingAssets/WebGL/Proj_hdzd/materials/ui/wall.mat_543f683ddc5519e7e996b240abef423e.unity3d",
+          "files": [
+            {
+              "kind": "typetree",
+              "path": "generated/unity-assets/Material/wall__CAB-843eb557cece3c6a9f62becbab248702__1306239314704058819.json",
+              "sha256": "d9a1b88e39fbaa62432389dc0dca29180103846adb4e8262ed4f31486da6aecc"
+            }
+          ]
+        },
+        "shader": "Unlit/Texture",
+        "shaderSourceId": "unity_builtin_extra:10752",
+        "shaderEvidence": "generated/resource-snapshots/obstacle-visuals-20260928/shaders/builtin10752.json",
+        "renderQueue": -1,
+        "scale": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "offset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "textureId": "CAB-8db25324197f74672eeedf5f9121139f:3242212619330821887"
+      }
+    },
+    {
+      "id": "obstacle-source-transforms",
+      "status": "confirmed",
+      "fact": "277 hierarchy nodes and125 renderer/collider nodes retain original local positions, quaternions, scales, active flags and layer. Runtime replaces original root transform with level cfg/100; visual child root identity prevents applying prefab scale twice.",
+      "source": "generated/obstacle-evidence.json:transform SetTransform f11209"
+    },
+    {
+      "id": "visual-only-attachment",
+      "status": "implementation-adapter",
+      "fact": "Prefab contains MeshFilter/MeshRenderer only. Attach beside existing checked collision data by nesting under its root; existing125colliders/physics topology are unchanged. No debug collider cubes or new collision meshes."
+    }
+  ],
+  "unknowns": [
+    "Original matched-frame visual acceptance remains pending. Built-in shader uses the current Unity Unlit/Texture implementation; original GLES/name/state retained for comparison."
+  ],
+  "goldens": {
+    "meshVertices": 1178,
+    "meshIndices": 2436,
+    "subMeshCount": 1,
+    "textureSize": [
+      256,
+      256
+    ],
+    "prefabRenderers": {
+      "81": 1,
+      "82": 2,
+      "83": 3,
+      "84": 4,
+      "85": 5,
+      "86": 8,
+      "87": 8,
+      "88": 16,
+      "89": 7,
+      "90": 12,
+      "91": 11,
+      "92": 20,
+      "94": 4,
+      "96": 9,
+      "98": 15
+    },
+    "rootAttachTransform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+; Original class: RankControl
+; Type4134.gRNb; wasmcode function 10939; offset=5300378 size=114
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0050e09b  i32.const [5008590]
+0050e0a0  i32.load8_u [0, 0]
+0050e0a3  i32.eqz []
+0050e0a4  if [-64]
+0050e0a6    i32.const [3929792]
+0050e0ab    call [900] ; 
+0050e0ae    i32.const [5008590]
+0050e0b3    i32.const [1]
+0050e0b5    i32.store8 [0, 0]
+0050e0b8  end []
+0050e0b9  local.get [0]
+0050e0bb  local.get [0]
+0050e0bd  call [2930] ; RankControl.get_CurPlayerRank
+0050e0c0  local.set [1]
+0050e0c2  i32.const [3929792]
+0050e0c7  i32.load [2, 0]
+0050e0ca  call [901] ; 
+0050e0cd  local.get [1]
+0050e0cf  i32.const [0]
+0050e0d1  call [12800] ; ConfigHelper.GetRandomRankDownNum
+0050e0d4  local.set [1]
+0050e0d6  local.get [0]
+0050e0d8  local.get [0]
+0050e0da  call [2930] ; RankControl.get_CurPlayerRank
+0050e0dd  local.get [1]
+0050e0df  i32.const [0]
+0050e0e1  local.get [1]
+0050e0e3  i32.const [0]
+0050e0e5  i32.gt_s []
+0050e0e6  select []
+0050e0e7  i32.sub []
+0050e0e8  local.set [0]
+0050e0ea  local.get [0]
+0050e0ec  local.get [0]
+0050e0ee  call [4872] ; RankControl.get_rankMgr
+0050e0f1  local.set [1]
+0050e0f3  local.get [0]
+0050e0f5  i32.const [1]
+0050e0f7  local.get [0]
+0050e0f9  i32.const [1]
+0050e0fb  i32.gt_s []
+0050e0fc  select []
+0050e0fd  local.set [0]
+0050e0ff  local.get [1]
+0050e101  local.get [0]
+0050e103  i32.const [0]
+0050e105  call [7382] ; RankManager.SetRank
+0050e108  local.get [0]
+0050e10a  return []
+0050e10b  end []

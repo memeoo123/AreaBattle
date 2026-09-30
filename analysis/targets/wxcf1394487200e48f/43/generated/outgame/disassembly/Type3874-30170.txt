@@ -1,0 +1,43 @@
+; Original class: PiggyBankControl
+; Type3874.OnInit; wasmcode function 18235; offset=8102006 size=123
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007ba079  i32.const [5025275]
+007ba07e  i32.load8_u [0, 0]
+007ba081  i32.eqz []
+007ba082  if [-64]
+007ba084    i32.const [3947148]
+007ba089    call [900] ; 
+007ba08c    i32.const [3944712]
+007ba091    call [900] ; 
+007ba094    i32.const [4009532] ; METHOD PiggyBankControl.OnGamePlayState
+007ba099    call [900] ; 
+007ba09c    i32.const [5025275]
+007ba0a1    i32.const [1]
+007ba0a3    i32.store8 [0, 0]
+007ba0a6  end []
+007ba0a7  local.get [0]
+007ba0a9  i32.const [1]
+007ba0ab  i32.store8 [0, 8]
+007ba0ae  i32.const [3944712]
+007ba0b3  i32.load [2, 0]
+007ba0b6  call [901] ; 
+007ba0b9  i32.const [3944712]
+007ba0be  i32.load [2, 0]
+007ba0c1  i32.load [2, 92]
+007ba0c4  i32.load [2, 4]
+007ba0c7  local.set [1]
+007ba0c9  i32.const [3947148]
+007ba0ce  i32.load [2, 0]
+007ba0d1  call [903] ; 
+007ba0d4  local.set [2]
+007ba0d6  local.get [2]
+007ba0d8  local.get [0]
+007ba0da  i32.const [4009532] ; METHOD PiggyBankControl.OnGamePlayState
+007ba0df  i32.load [2, 0]
+007ba0e2  i32.const [0]
+007ba0e4  call [1067] ; EventHandler..ctor
+007ba0e7  local.get [1]
+007ba0e9  local.get [2]
+007ba0eb  i32.const [0]
+007ba0ed  call [1146] ; MsgDispatcher.AddEventListener
+007ba0f0  end []

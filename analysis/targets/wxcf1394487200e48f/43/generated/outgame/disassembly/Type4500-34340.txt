@@ -1,0 +1,72 @@
+; Original class: ItemManager
+; Type4500.AddRewards; wasmcode function 18996; offset=8538888 size=186
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00824b09  i32.const [5009880]
+00824b0e  i32.load8_u [0, 0]
+00824b11  i32.eqz []
+00824b12  if [-64]
+00824b14    i32.const [3953568]
+00824b19    call [900] ; 
+00824b1c    i32.const [3976600]
+00824b21    call [900] ; 
+00824b24    i32.const [3976604]
+00824b29    call [900] ; 
+00824b2c    i32.const [4034536] ; STRING ""
+00824b31    call [900] ; 
+00824b34    i32.const [5009880]
+00824b39    i32.const [1]
+00824b3b    i32.store8 [0, 0]
+00824b3e  end []
+00824b3f  i32.const [0]
+00824b41  local.set [0]
+00824b43  loop [-64]
+00824b45    i32.const [3976600]
+00824b4a    i32.load [2, 0]
+00824b4d    drop []
+00824b4e    local.get [0]
+00824b50    local.get [1]
+00824b52    i32.load [2, 12]
+00824b55    i32.lt_s []
+00824b56    if [-64]
+00824b58      local.get [1]
+00824b5a      local.get [0]
+00824b5c      i32.const [3976604]
+00824b61      i32.load [2, 0]
+00824b64      call [930] ; 
+00824b67      i32.load [2, 8]
+00824b6a      i32.const [0]
+00824b6c      call [2585] ; ItemHelper.GetGoodsType
+00824b6f      i32.const [6]
+00824b71      i32.ne []
+00824b72      if [-64]
+00824b74        i32.const [3953568]
+00824b79        i32.load [2, 0]
+00824b7c        call [935] ; 
+00824b7f        local.get [1]
+00824b81        local.get [0]
+00824b83        i32.const [3976604]
+00824b88        i32.load [2, 0]
+00824b8b        call [930] ; 
+00824b8e        i32.load [2, 8]
+00824b91        local.get [1]
+00824b93        local.get [0]
+00824b95        i32.const [3976604]
+00824b9a        i32.load [2, 0]
+00824b9d        call [930] ; 
+00824ba0        i32.load [2, 16]
+00824ba3        i32.const [0]
+00824ba5        i32.const [4034536] ; STRING ""
+00824baa        i32.load [2, 0]
+00824bad        i32.const [0]
+00824baf        i32.const [0]
+00824bb1        call [1799] ; ToolControl.ToolChange
+00824bb4        drop []
+00824bb5      end []
+00824bb6      local.get [0]
+00824bb8      i32.const [1]
+00824bba      i32.add []
+00824bbb      local.set [0]
+00824bbd      br [1]
+00824bbf    end []
+00824bc0  end []
+00824bc1  end []

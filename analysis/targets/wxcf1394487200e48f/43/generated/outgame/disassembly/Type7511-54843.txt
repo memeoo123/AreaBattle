@@ -1,0 +1,37 @@
+; Original class: BaseController
+; Type7511.load; wasmcode function 20512; offset=9211686 size=90
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008c8f27  i32.const [5005030]
+008c8f2c  i32.load8_u [0, 0]
+008c8f2f  i32.eqz []
+008c8f30  if [-64]
+008c8f32    i32.const [4091808] ; STRING "load "
+008c8f37    call [900] ; 
+008c8f3a    i32.const [5005030]
+008c8f3f    i32.const [1]
+008c8f41    i32.store8 [0, 0]
+008c8f44  end []
+008c8f45  local.get [0]
+008c8f47  i32.load [2, 8]
+008c8f4a  i32.const [4091808] ; STRING "load "
+008c8f4f  i32.load [2, 0]
+008c8f52  i32.const [0]
+008c8f54  call [921] ; String.Concat
+008c8f57  i32.const [0]
+008c8f59  call [999] ; XYXLOG.Log
+008c8f5c  local.get [0]
+008c8f5e  local.set [1]
+008c8f60  local.get [0]
+008c8f62  i32.load [2, 0]
+008c8f65  local.set [0]
+008c8f67  local.get [1]
+008c8f69  local.get [0]
+008c8f6b  i32.const [56]
+008c8f6d  i32.add []
+008c8f6e  i32.load [2, 192]
+008c8f72  local.get [0]
+008c8f74  i32.load [2, 244]
+008c8f78  global.set [3]
+008c8f7a  global.get [3]
+008c8f7c  call_indirect [0, 0]
+008c8f7f  end []

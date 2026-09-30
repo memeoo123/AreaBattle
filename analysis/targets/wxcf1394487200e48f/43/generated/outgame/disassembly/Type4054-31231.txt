@@ -1,0 +1,30 @@
+; Original class: uXMss
+; Type4054..ctor; wasmcode function 8502; offset=4152217 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003f5b9a  i32.const [5008805]
+003f5b9f  i32.load8_u [0, 0]
+003f5ba2  i32.eqz []
+003f5ba3  if [-64]
+003f5ba5    i32.const [3955780]
+003f5baa    call [900] ; 
+003f5bad    i32.const [3917512]
+003f5bb2    call [900] ; 
+003f5bb5    i32.const [5008805]
+003f5bba    i32.const [1]
+003f5bbc    i32.store8 [0, 0]
+003f5bbf  end []
+003f5bc0  local.get [0]
+003f5bc2  i32.const [1]
+003f5bc4  i32.store [2, 8]
+003f5bc7  i32.const [3917512]
+003f5bcc  i32.load [2, 0]
+003f5bcf  call [903] ; 
+003f5bd2  local.set [1]
+003f5bd4  local.get [1]
+003f5bd6  i32.const [3955780]
+003f5bdb  i32.load [2, 0]
+003f5bde  call [951] ; 
+003f5be1  local.get [0]
+003f5be3  local.get [1]
+003f5be5  i32.store [2, 12]
+003f5be8  end []

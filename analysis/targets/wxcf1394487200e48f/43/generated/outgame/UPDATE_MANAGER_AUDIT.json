@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T10:03:41.730607+00:00",
+  "status": "source-update-owner-restored-composition-pending",
+  "sourceEvidence": "UPDATE_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T10:03:41.730607+00:00",
+    "scope": "Source UpdateManager traced public APIs and real MonoBehaviour Update/FixedUpdate bound to source audio actions",
+    "checksPassed": 959,
+    "newIntegratedChecks": 21,
+    "nativePlayModeChecks": 23,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameUpdateManagerPlayModeValidation.Run"
+    ],
+    "notClaimed": "Alternate obfuscated entrypoints, AudioManager/resource/config ownership, full Main/account/menu or complete outgame Player"
+  },
+  "findings": [
+    "OutgameUpdateManager is a real MonoBehaviour singleton with source-named GameObject, lazy reuse/create and DontDestroyOnLoad. BindAudio uses source global owner lookup for add/remove, no fixture update fallback.",
+    "959 integrated checks passed,21 new. 23 native checks passed: actual MonoBehaviour automatically updates recovered1001/2001 audio, fixed callback runs, Dispose queues then Update removes callback, singleton destruction/recreation yields empty new ownership.",
+    "Source deferred removal, duplicate delegate equality/index quirks, pause gates and failure prefix state preserved.35 obfuscated alternatives recorded separately; no fake semantic merging.",
+    "Business lifecycle coverage remains11/38,27 remaining; method map5058. No complete outgame Player build/acceptance claim."
+  ],
+  "remaining": [
+    "Restore AudioManager3421 configuration/root/listener/node ownership and3424 audio resource helpers; bind production services to actual shared UpdateManager and TimeModule.",
+    "Continue remaining27 controller lifecycles and complete Main/account/module/menu graph, business flows, persistence/restart/failure/return and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/update-manager-integrated.log",
+    "nativeLog": "analysis/update-manager-native.log",
+    "nativeReport": "analysis/update-manager-native-validation.json"
+  },
+  "disassembledMethodMapCount": 5058
+}

@@ -1,0 +1,14 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Real GameControl and imported original scene references, native recovered home textures/effects and deferred destruction. Local synchronous resource adapter; battle asset11001/loading transport, full Main and Player not claimed.",
+    "checks": [
+        "Production binding discovers original tagged scene and all four cameras",
+        "Three recovered original native effects share one selection cache",
+        "Returning to skin7 reuses native texture/effect identity",
+        "Native home/game camera and root cycle",
+        "ClearRenderModel uses deferred native destruction",
+        "Source disposal releases singleton but preserves scene/resources",
+        "Next native frame removes unlock model while scene remains"
+    ]
+}

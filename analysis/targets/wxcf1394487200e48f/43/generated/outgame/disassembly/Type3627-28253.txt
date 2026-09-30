@@ -1,0 +1,39 @@
+; Original class: Json
+; Type3627..ctor; wasmcode function 7654; offset=3651674 size=115
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0037b85b  i32.const [4988950]
+0037b860  i32.load8_u [0, 0]
+0037b863  i32.eqz []
+0037b864  if [-64]
+0037b866    i32.const [3955856]
+0037b86b    call [900] ; 
+0037b86e    i32.const [3917520]
+0037b873    call [900] ; 
+0037b876    i32.const [4080920] ; STRING "\\w*(?'Open'\\[)[^\\(^\\]]+(?'-Open'\\])(?(Open)(?!))"
+0037b87b    call [900] ; 
+0037b87e    i32.const [4080924] ; STRING "\\w*(?'Open'\\{)[^\\(^\\}]+(?'-Open'\\})(?(Open)(?!))"
+0037b883    call [900] ; 
+0037b886    i32.const [4988950]
+0037b88b    i32.const [1]
+0037b88d    i32.store8 [0, 0]
+0037b890  end []
+0037b891  local.get [0]
+0037b893  i32.const [4080924] ; STRING "\\w*(?'Open'\\{)[^\\(^\\}]+(?'-Open'\\})(?(Open)(?!))"
+0037b898  i32.load [2, 0]
+0037b89b  i32.store [2, 8]
+0037b89e  local.get [0]
+0037b8a0  i32.const [4080920] ; STRING "\\w*(?'Open'\\[)[^\\(^\\]]+(?'-Open'\\])(?(Open)(?!))"
+0037b8a5  i32.load [2, 0]
+0037b8a8  i32.store [2, 12]
+0037b8ab  i32.const [3917520]
+0037b8b0  i32.load [2, 0]
+0037b8b3  call [903] ; 
+0037b8b6  local.set [1]
+0037b8b8  local.get [1]
+0037b8ba  i32.const [3955856]
+0037b8bf  i32.load [2, 0]
+0037b8c2  call [951] ; 
+0037b8c5  local.get [0]
+0037b8c7  local.get [1]
+0037b8c9  i32.store [2, 20]
+0037b8cc  end []

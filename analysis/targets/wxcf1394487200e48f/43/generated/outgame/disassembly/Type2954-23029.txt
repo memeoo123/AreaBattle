@@ -1,0 +1,19 @@
+; Original class: Y¿
+; Type2954.CanDestroy; wasmcode1 function 42675; offset=15360662 size=30
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00ea6297  local.get [0]
+00ea6299  local.get [0]
+00ea629b  call [2333] ; Y¿.get_IsDone
+00ea629e  if [-64]
+00ea62a0    local.get [0]
+00ea62a2    i32.load [2, 48]
+00ea62a5    i32.const [1]
+00ea62a7    i32.lt_s []
+00ea62a8    local.set [0]
+00ea62aa  else []
+00ea62ab    i32.const [0]
+00ea62ad    local.set [0]
+00ea62af  end []
+00ea62b0  local.get [0]
+00ea62b2  return []
+00ea62b3  end []

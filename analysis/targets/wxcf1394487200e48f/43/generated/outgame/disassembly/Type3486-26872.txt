@@ -1,0 +1,24 @@
+; Original class: GlobalData
+; Type3486.D¿ty»; wasmcode function 3936; offset=1244185 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0012fc1a  i32.const [4989083]
+0012fc1f  i32.load8_u [0, 0]
+0012fc22  i32.eqz []
+0012fc23  if [-64]
+0012fc25    i32.const [3941104]
+0012fc2a    call [900] ; 
+0012fc2d    i32.const [4054896] ; STRING "GF_NetReport_UserRatio"
+0012fc32    call [900] ; 
+0012fc35    i32.const [4989083]
+0012fc3a    i32.const [1]
+0012fc3c    i32.store8 [0, 0]
+0012fc3f  end []
+0012fc40  i32.const [3941104]
+0012fc45  i32.load [2, 0]
+0012fc48  call [901] ; 
+0012fc4b  i32.const [4054896] ; STRING "GF_NetReport_UserRatio"
+0012fc50  i32.load [2, 0]
+0012fc53  local.get [0]
+0012fc55  i32.const [0]
+0012fc57  call [2749] ; UserDataPrefs.SetInt
+0012fc5a  end []

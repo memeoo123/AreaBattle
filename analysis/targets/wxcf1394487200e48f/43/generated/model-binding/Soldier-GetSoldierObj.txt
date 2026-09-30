@@ -1,0 +1,195 @@
+; Soldier.GetSoldierObj; wasmcode function 10317; offset=4937584 size=501
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+004b5773  global.get [0]
+004b5775  i32.const [16]
+004b5777  i32.sub []
+004b5778  local.set [0]
+004b577a  local.get [0]
+004b577c  global.set [0]
+004b577e  i32.const [5007163]
+004b5783  i32.load8_u [0, 0]
+004b5786  i32.eqz []
+004b5787  if [-64]
+004b5789    i32.const [3953456]
+004b578e    call [900] ; 
+004b5791    i32.const [3953440]
+004b5796    call [900] ; 
+004b5799    i32.const [3953496]
+004b579e    call [900] ; 
+004b57a1    i32.const [3957836]
+004b57a6    call [900] ; 
+004b57a9    i32.const [4001184]
+004b57ae    call [900] ; 
+004b57b1    i32.const [3934404] ; type: Int32
+004b57b6    call [900] ; 
+004b57b9    i32.const [3936516] ; type: Object
+004b57be    call [900] ; 
+004b57c1    i32.const [3939112] ; type: Soldier
+004b57c6    call [900] ; 
+004b57c9    i32.const [4051160] ; literal: 'Default'
+004b57ce    call [900] ; 
+004b57d1    i32.const [5007163]
+004b57d6    i32.const [1]
+004b57d8    i32.store8 [0, 0]
+004b57db  end []
+004b57dc  block [-64]
+004b57de    local.get [1]
+004b57e0    i32.const [9]
+004b57e2    i32.le_s []
+004b57e3    if [-64]
+004b57e5      i32.const [3953440]
+004b57ea      i32.load [2, 0]
+004b57ed      call [935] ; 
+004b57f0      i32.load [2, 12]
+004b57f3      local.set [5]
+004b57f5      i32.const [3953496]
+004b57fa      i32.load [2, 0]
+004b57fd      call [935] ; 
+004b5800      local.set [4]
+004b5802      block [-64]
+004b5804        local.get [2]
+004b5806        local.get [5]
+004b5808        i32.eq []
+004b5809        if [-64]
+004b580b          local.get [4]
+004b580d          local.get [1]
+004b580f          i32.const [0]
+004b5811          call [5822] ; PlayerControl.GetSkinEntityByType
+004b5814          local.set [1]
+004b5816          br [1]
+004b5818        end []
+004b5819        local.get [4]
+004b581b        local.get [1]
+004b581d        local.get [2]
+004b581f        i32.const [0]
+004b5821        call [7428] ; PlayerControl.GetSkinEntityByRandomType
+004b5824        local.set [1]
+004b5826      end []
+004b5827      i32.const [3953456]
+004b582c      i32.load [2, 0]
+004b582f      call [935] ; 
+004b5832      local.get [1]
+004b5834      i32.const [0]
+004b5836      call [11498] ; LoadPrefabControl.Contains
+004b5839      i32.eqz []
+004b583a      if [-64]
+004b583c        local.get [3]
+004b583e        i32.eqz []
+004b583f        br_if [2]
+004b5841        local.get [3]
+004b5843        i32.load [2, 32]
+004b5846        i32.const [0]
+004b5848        local.get [3]
+004b584a        i32.load [2, 20]
+004b584d        local.get [3]
+004b584f        i32.load [2, 12]
+004b5852        global.set [3]
+004b5854        global.get [3]
+004b5856        call_indirect [2, 0]
+004b5859        br [2]
+004b585b      end []
+004b585c      i32.const [3953456]
+004b5861      i32.load [2, 0]
+004b5864      call [935] ; 
+004b5867      local.get [1]
+004b5869      i32.const [0]
+004b586b      call [2391] ; LoadPrefabControl.GetEntityNow
+004b586e      local.set [1]
+004b5870      local.get [3]
+004b5872      if [-64]
+004b5874        local.get [3]
+004b5876        i32.load [2, 32]
+004b5879        local.get [1]
+004b587b        local.get [3]
+004b587d        i32.load [2, 20]
+004b5880        local.get [3]
+004b5882        i32.load [2, 12]
+004b5885        global.set [3]
+004b5887        global.get [3]
+004b5889        call_indirect [2, 0]
+004b588c      end []
+004b588d      i32.const [3936516] ; type: Object
+004b5892      i32.load [2, 0]
+004b5895      call [901] ; 
+004b5898      local.get [1]
+004b589a      i32.const [0]
+004b589c      i32.const [0]
+004b589e      call [940] ; 
+004b58a1      br_if [1]
+004b58a3      i32.const [3939112] ; type: Soldier
+004b58a8      i32.load [2, 0]
+004b58ab      call [901] ; 
+004b58ae      local.get [1]
+004b58b0      local.get [2]
+004b58b2      local.get [0]
+004b58b4      call [5663] ; Soldier.SetSoldierColor
+004b58b7      br [1]
+004b58b9    end []
+004b58ba    i32.const [0]
+004b58bc    call [1060] ; ConfigMgr.get_Instance
+004b58bf    i32.load [2, 152]
+004b58c3    local.set [2]
+004b58c5    local.get [0]
+004b58c7    local.get [1]
+004b58c9    i32.store [2, 12]
+004b58cc    local.get [2]
+004b58ce    i32.const [3934404] ; type: Int32
+004b58d3    i32.load [2, 0]
+004b58d6    local.get [0]
+004b58d8    i32.const [12]
+004b58da    i32.add []
+004b58db    call [910] ; 
+004b58de    i32.const [3957836]
+004b58e3    i32.load [2, 0]
+004b58e6    call [982] ; 
+004b58e9    i32.load [2, 12]
+004b58ec    local.set [1]
+004b58ee    i32.const [3953456]
+004b58f3    i32.load [2, 0]
+004b58f6    call [935] ; 
+004b58f9    local.get [1]
+004b58fb    i32.const [0]
+004b58fd    call [2391] ; LoadPrefabControl.GetEntityNow
+004b5900    local.set [1]
+004b5902    local.get [3]
+004b5904    if [-64]
+004b5906      local.get [3]
+004b5908      i32.load [2, 32]
+004b590b      local.get [1]
+004b590d      local.get [3]
+004b590f      i32.load [2, 20]
+004b5912      local.get [3]
+004b5914      i32.load [2, 12]
+004b5917      global.set [3]
+004b5919      global.get [3]
+004b591b      call_indirect [2, 0]
+004b591e    end []
+004b591f    i32.const [3936516] ; type: Object
+004b5924    i32.load [2, 0]
+004b5927    call [901] ; 
+004b592a    local.get [1]
+004b592c    i32.const [0]
+004b592e    i32.const [0]
+004b5930    call [940] ; 
+004b5933    br_if [0]
+004b5935    local.get [1]
+004b5937    i32.const [4001184]
+004b593c    i32.load [2, 0]
+004b593f    call [1322] ; 
+004b5942    local.set [1]
+004b5944    local.get [1]
+004b5946    i32.const [4051160] ; literal: 'Default'
+004b594b    i32.load [2, 0]
+004b594e    i32.const [0]
+004b5950    call [3846] ; 
+004b5953    local.get [1]
+004b5955    i32.const [-5]
+004b5957    i32.const [0]
+004b5959    call [2784] ; 
+004b595c  end []
+004b595d  local.get [0]
+004b595f  i32.const [16]
+004b5961  i32.add []
+004b5962  global.set [0]
+004b5964  end []
+

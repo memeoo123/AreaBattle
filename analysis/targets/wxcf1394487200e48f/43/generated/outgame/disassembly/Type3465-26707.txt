@@ -1,0 +1,23 @@
+; Original class: DataManagerBase
+; Type3465.get_DataKey; wasmcode function 2091; offset=633969 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0009ac72  local.get [0]
+0009ac74  call [962] ; 
+0009ac77  local.set [0]
+0009ac79  local.get [0]
+0009ac7b  local.set [1]
+0009ac7d  local.get [0]
+0009ac7f  i32.load [2, 0]
+0009ac82  i32.const [-64]
+0009ac84  i32.sub []
+0009ac85  local.set [0]
+0009ac87  local.get [1]
+0009ac89  local.get [0]
+0009ac8b  i32.load [2, 192]
+0009ac8f  local.get [0]
+0009ac91  i32.load [2, 188]
+0009ac95  global.set [3]
+0009ac97  global.get [3]
+0009ac99  call_indirect [1, 0]
+0009ac9c  return []
+0009ac9d  end []

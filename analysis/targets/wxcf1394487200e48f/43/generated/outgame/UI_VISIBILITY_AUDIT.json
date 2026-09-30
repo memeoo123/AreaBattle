@@ -1,0 +1,25 @@
+{
+  "status": "concrete_visibility_integrated_full_page_lifecycle_pending",
+  "source": [
+    "disassembly/Type3559-27434.txt",
+    "disassembly/Type3559-27435.txt",
+    "disassembly/Type3544-27322.txt",
+    "disassembly/Type3594-27678.txt",
+    "disassembly/MenuPageGeneric-32617.txt"
+  ],
+  "verified": [
+    "Before and virtual implementation run before logical visible flag changes; GF_VisibleUI is sent afterward",
+    "Repeated SetVisible calls retain callbacks and messages",
+    "Hidden GameObjects remain active with zero localScale, visible objects receive unit localScale",
+    "Actual imported menu page transitions now use recovered visibility instead of disabling page objects",
+    "Unity-destroyed object is skipped but logical state/message still update"
+  ],
+  "remaining": [
+    "Full BaseUI resource load and page-specific VisibleImp handlers",
+    "Concrete menu creation/visibility host and production startup",
+    "Fresh PlayMode lifecycle/coroutine validation and Player E2E"
+  ],
+  "checks": 571,
+  "freshPlayMode": false,
+  "supersededMenuIntegration": "PAGE_VISIBILITY_AUDIT.json: base semantics remain valid, but Shop/Commander have active-state overrides; universal menu integration claim superseded."
+}

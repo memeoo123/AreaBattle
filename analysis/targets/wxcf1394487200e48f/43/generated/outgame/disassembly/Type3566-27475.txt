@@ -1,0 +1,38 @@
+; Original class: UserDataPrefs
+; Type3566.GetInt; wasmcode function 2888; offset=889339 size=100
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+000d91fc  i32.const [4989717]
+000d9201  i32.load8_u [0, 0]
+000d9204  i32.eqz []
+000d9205  if [-64]
+000d9207    i32.const [3934404]
+000d920c    call [900] ; 
+000d920f    i32.const [3941104]
+000d9214    call [900] ; 
+000d9217    i32.const [4989717]
+000d921c    i32.const [1]
+000d921e    i32.store8 [0, 0]
+000d9221  end []
+000d9222  i32.const [3941104]
+000d9227  i32.load [2, 0]
+000d922a  call [901] ; 
+000d922d  local.get [0]
+000d922f  i32.const [3941104]
+000d9234  i32.load [2, 0]
+000d9237  i32.load [2, 92]
+000d923a  i32.load [2, 4]
+000d923d  local.get [1]
+000d923f  call [5520] ; UserDataPrefs.uHC´ZT
+000d9242  local.set [0]
+000d9244  local.get [0]
+000d9246  if [-64]
+000d9248    local.get [0]
+000d924a    i32.const [3934404]
+000d924f    i32.load [2, 0]
+000d9252    call [920] ; 
+000d9255    i32.load [2, 0]
+000d9258    local.set [1]
+000d925a  end []
+000d925b  local.get [1]
+000d925d  return []
+000d925e  end []

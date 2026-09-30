@@ -1,0 +1,42 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.RefreshLimitedBagInfo; wasmcode function 7402; offset=2921292 size=103
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002c934d  i32.const [5007496]
+002c9352  i32.load8_u [0, 0]
+002c9355  i32.eqz []
+002c9356  if [-64]
+002c9358    i32.const [3953424]
+002c935d    call [900] ; 
+002c9360    i32.const [5007496]
+002c9365    i32.const [1]
+002c9367    i32.store8 [0, 0]
+002c936a  end []
+002c936b  i32.const [3953424]
+002c9370  i32.load [2, 0]
+002c9373  call [935] ; 
+002c9376  i32.const [0]
+002c9378  call [5971] ; ItemBagControl.IsLimitedBagExited
+002c937b  if [-64]
+002c937d    local.get [0]
+002c937f    i32.load [2, 184]
+002c9383    i32.const [0]
+002c9385    call [943] ; Component.get_gameObject
+002c9388    i32.const [1]
+002c938a    i32.const [0]
+002c938c    call [949] ; GameObject.SetActive
+002c938f    i32.const [3953424]
+002c9394    i32.load [2, 0]
+002c9397    call [935] ; 
+002c939a    i32.const [0]
+002c939c    call [5972] ; ItemBagControl.GetLimitedLeftTime
+002c939f    drop []
+002c93a0    local.get [0]
+002c93a2    local.get [0]
+002c93a4    local.get [0]
+002c93a6    call [7403] ; Proj_xqzdStartUI.RefreshLimitTime
+002c93a9    return []
+002c93aa  end []
+002c93ab  local.get [0]
+002c93ad  local.get [0]
+002c93af  call [5807] ; Proj_xqzdStartUI.CloseLimitedBag
+002c93b2  end []

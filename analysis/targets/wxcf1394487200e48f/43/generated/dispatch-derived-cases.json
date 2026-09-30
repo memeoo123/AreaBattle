@@ -1,0 +1,28 @@
+{
+  "kind": "static-derived-reference-cases",
+  "originalRuntimeValidated": false,
+  "cases": [
+    {
+      "input": {
+        "gradeIndex": 0,
+        "lineCount": 1
+      },
+      "expectedApprox": 1.111
+    },
+    {
+      "input": {
+        "gradeIndex": 1,
+        "lineCount": 2
+      },
+      "expectedApprox": 1.185
+    },
+    {
+      "input": {
+        "gradeIndex": 2,
+        "lineCount": 3
+      },
+      "expectedApprox": 1.282
+    }
+  ],
+  "evidence": "dispatch-model.json; GetSpawnTime reads config field and divides by 1000. These are not runtime-validated golden cases."
+}

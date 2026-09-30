@@ -1,0 +1,38 @@
+{
+  "atUtc": "2026-09-30T08:49:52.757436+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "INPUT_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T08:49:52.757436+00:00",
+    "scope": "Shared source InputManager native singleton/Update/OnGUI, mouse/touch/multi/key event boundaries and default PlayerInput subscription",
+    "checksPassed": 811,
+    "newIntegratedChecks": 19,
+    "nativePlayModeChecks": 10,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameInputManagerPlayModeValidation.Run"
+    ],
+    "notClaimed": "OS/device input injection, original CLog policy, full actual Main/account/platform/UI composition or complete outgame Player build"
+  },
+  "findings": [
+    "Native OutgameInputManager MonoBehaviour singleton follows Find named InputManager -> GetComponent -> AddComponent -> DontDestroyOnLoad, using Unity destroyed-null semantics. Update calls CheckTouch; OnGUI calls key handler. Android/iPhone/WebGL choose touch through original short-circuit platform reads; other platforms use mouse.",
+    "Mouse source reads independent XY/press positions; Down > Up > Held. Movement uses exact coordinate inequality. Mouse Click precedes End; touch End/Canceled precedes Click, strict distance<MoveStep50, live callback state and exceptions preserved. No invented UI blocking, debounce, cancel suppression or WebGL mouse fallback.",
+    "Multi-touch rebuilds active list each frame, original array indices, excludes ended/canceled, dispatches Hold when none moved (including all Began), Move when any moved. Scale is current-first-two distance minus previous-first-two distance divided by50, after callback, with live mutable list. Active<2 returns; zero count dispatches MultiEnd only if retained count>=1. No synthesized MultiBegin.",
+    "Keys initialize list even for absent event; only GUI key events update. Repeated KeyDown avoids duplicate Down but still Hold; KeyUp invokes before removal using live HeldKey. Hold receives live list; zero KeyCode preserves current key. Shutdown clears14 delegates and preserves history/owner; registration supports duplicates and one-at-a-time removal. Begin registration logs before combination, preserving failure ordering.",
+    "OutgamePlayerInput default constructor now registers directly with actual InputManager; explicit adapters retained for probes. Native run verifies Unity Update -> default input -> Player.OnTouchBegin -> source native ray gate; disposal unsubscribes, other listeners remain, Shutdown clears old subscriptions while frames continue, persistent-scene placement and destroyed-owner recreation verified.",
+    "811 integrated checks (19 new) and10 native pass. Native device reads are explicitly scripted, not OS input or original matched replay. Original CLog policy remains a supplied host boundary (default Unity debug sink). InputManager is framework type3603, so controller roster remains10/38 method-level implementations,28 remaining."
+  ],
+  "remaining": [
+    "Restore remaining28 actual controller lifecycles and business methods, and full Main/module/config/account/menu composition. Shared CLog policy and actual device validation remain open.",
+    "Finish remaining Level/Tower/Soldier/WayLine/AI/effect services and native resource set; complete all objective outgame subsystems, persistence/restart/failure/return flows and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/input-manager-integrated-final.log",
+    "nativeLog": "analysis/input-manager-native-final.log",
+    "nativeReport": "analysis/input-manager-native-validation.json"
+  },
+  "disassembledMethodMapCount": 4821
+}

@@ -1,0 +1,36 @@
+; Original class: AsyncCoroutineRunner
+; Type3373.u¢Iq; wasmcode1 function 69628; offset=22061144 size=93
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0150a059  i32.const [5011322]
+0150a05e  i32.load8_u [0, 0]
+0150a061  i32.eqz []
+0150a062  if [-64]
+0150a064    i32.const [3936516]
+0150a069    i32.const [1605]
+0150a06c    call_indirect [0, 0]
+0150a06f    i32.const [5011322]
+0150a074    i32.const [1]
+0150a076    i32.store8 [0, 0]
+0150a079  end []
+0150a07a  local.get [0]
+0150a07c  i32.const [0]
+0150a07e  i32.const [2414] ; TABLE Component.get_gameObject
+0150a081  call_indirect [1, 0]
+0150a084  i32.const [-23]
+0150a086  i32.const [0]
+0150a088  i32.const [8528] ; TABLE Object.set_hideFlags
+0150a08c  call_indirect [5, 0]
+0150a08f  local.get [0]
+0150a091  i32.const [0]
+0150a093  i32.const [2414] ; TABLE Component.get_gameObject
+0150a096  call_indirect [1, 0]
+0150a099  local.set [0]
+0150a09b  i32.const [3936516]
+0150a0a0  i32.load [2, 0]
+0150a0a3  i32.const [1149]
+0150a0a6  call_indirect [0, 0]
+0150a0a9  local.get [0]
+0150a0ab  i32.const [0]
+0150a0ad  i32.const [8794] ; TABLE Object.DontDestroyOnLoad
+0150a0b1  call_indirect [4, 0]
+0150a0b4  end []

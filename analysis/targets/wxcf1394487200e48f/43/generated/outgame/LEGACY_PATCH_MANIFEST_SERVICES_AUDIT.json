@@ -1,0 +1,42 @@
+{
+  "atUtc": "2026-09-30T03:48:04.056561+00:00",
+  "sourceMethods": [
+    29813,
+    29818,
+    29823,
+    29824,
+    29825,
+    29826,
+    29827,
+    29829,
+    29830,
+    29831,
+    29832,
+    29834,
+    29838,
+    29839,
+    29840
+  ],
+  "implementation": [
+    "OutgameLegacyPatchManifest",
+    "OutgameLegacyManifestServices",
+    "OutgameLegacyPatchBundleServices",
+    "OutgameLegacyStreamingBundleServices"
+  ],
+  "semantics": [
+    "Header resourceVersion/date/GFVersion; >=4 columns enables encryption and preserves seed verbatim. Newline split retains CR.",
+    "Rows with <4 columns ignored, exactly5 uses override version, >=6 uses manifest version. UInt64 size and Dictionary.Add exceptions retained.",
+    "Patch services append slash to root regardless existing slash or null; streaming services re-read path every lookup and do not add slash.",
+    "Successful records populate source fields and optional exact diagnostic log; missing warns then returns empty LocalPath record. Resolver emits second warning.",
+    "Streaming manifest assignment happens after construction so parser exception preserves previous manifest; empty input logs and installs empty manifest with null GFVersion.",
+    "Framework metadata defaults only for absent manifest; source Split and Trim behavior retained."
+  ],
+  "genericEvidence": "legacy-patch-manifest-generics.json",
+  "validation": {
+    "integratedChecks": 635,
+    "nativeChecks": 10,
+    "nativeReport": "analysis/outgame-native-bundle-ui-validation.json",
+    "freshPlayer": false
+  },
+  "qualification": "Native fixture uses synthetic patch text referencing rebuilt original UI bundle and explicit local directory. Does not prove original manifest location/config, server URLs, ResourceModule firstpack or complete account/menu startup."
+}

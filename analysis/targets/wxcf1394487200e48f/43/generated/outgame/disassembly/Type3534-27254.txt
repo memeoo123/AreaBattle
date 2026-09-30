@@ -1,0 +1,52 @@
+; Original class: TimeModule
+; Type3534.Start; wasmcode function 15569; offset=7510499 size=154
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007299e4  i32.const [4989601]
+007299e9  i32.load8_u [0, 0]
+007299ec  i32.eqz []
+007299ed  if [-64]
+007299ef    i32.const [3947148]
+007299f4    call [900] ; 
+007299f7    i32.const [4017148] ; METHOD TimeModule.GameFocus
+007299fc    call [900] ; 
+007299ff    i32.const [4017152] ; METHOD TimeModule.GamePause
+00729a04    call [900] ; 
+00729a07    i32.const [4054900] ; STRING "GF_NewGamePause"
+00729a0c    call [900] ; 
+00729a0f    i32.const [4054844] ; STRING "GF_GameFocus"
+00729a14    call [900] ; 
+00729a17    i32.const [4989601]
+00729a1c    i32.const [1]
+00729a1e    i32.store8 [0, 0]
+00729a21  end []
+00729a22  i32.const [3947148]
+00729a27  i32.load [2, 0]
+00729a2a  call [903] ; 
+00729a2d  local.set [1]
+00729a2f  local.get [1]
+00729a31  local.get [0]
+00729a33  i32.const [4017152] ; METHOD TimeModule.GamePause
+00729a38  i32.load [2, 0]
+00729a3b  i32.const [0]
+00729a3d  call [1067] ; EventHandler..ctor
+00729a40  i32.const [4054900] ; STRING "GF_NewGamePause"
+00729a45  i32.load [2, 0]
+00729a48  local.get [1]
+00729a4a  i32.const [0]
+00729a4c  call [1146] ; MsgDispatcher.AddEventListener
+00729a4f  i32.const [3947148]
+00729a54  i32.load [2, 0]
+00729a57  call [903] ; 
+00729a5a  local.set [1]
+00729a5c  local.get [1]
+00729a5e  local.get [0]
+00729a60  i32.const [4017148] ; METHOD TimeModule.GameFocus
+00729a65  i32.load [2, 0]
+00729a68  i32.const [0]
+00729a6a  call [1067] ; EventHandler..ctor
+00729a6d  i32.const [4054844] ; STRING "GF_GameFocus"
+00729a72  i32.load [2, 0]
+00729a75  local.get [1]
+00729a77  i32.const [0]
+00729a79  call [1146] ; MsgDispatcher.AddEventListener
+00729a7c  end []

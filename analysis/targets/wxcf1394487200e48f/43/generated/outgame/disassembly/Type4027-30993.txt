@@ -1,0 +1,26 @@
+; Original class: CommanderControl
+; Type4027.OnInit; wasmcode function 20195; offset=9070880 size=72
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a6921  i32.const [5008673]
+008a6926  i32.load8_u [0, 0]
+008a6929  i32.eqz []
+008a692a  if [-64]
+008a692c    i32.const [3995080]
+008a6931    call [900] ; 
+008a6934    i32.const [3930256]
+008a6939    call [900] ; 
+008a693c    i32.const [5008673]
+008a6941    i32.const [1]
+008a6943    i32.store8 [0, 0]
+008a6946  end []
+008a6947  i32.const [3930256]
+008a694c  i32.load [2, 0]
+008a694f  call [901] ; 
+008a6952  local.get [0]
+008a6954  i32.const [0]
+008a6956  call [1309] ; DataManagerPool.get_Instance
+008a6959  i32.const [3995080]
+008a695e  i32.load [2, 0]
+008a6961  call [1609] ; 
+008a6964  i32.store [2, 8]
+008a6967  end []

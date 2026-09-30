@@ -1,0 +1,78 @@
+; Original class: DiamondLimitedControl
+; Type4093.OnInit; wasmcode function 19964; offset=8968877 size=235
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0088daae  i32.const [5008448]
+0088dab3  i32.load8_u [0, 0]
+0088dab6  i32.eqz []
+0088dab7  if [-64]
+0088dab9    i32.const [3995116]
+0088dabe    call [900] ; 
+0088dac1    i32.const [3930256]
+0088dac6    call [900] ; 
+0088dac9    i32.const [3996660] ; METHOD DiamondLimitedControl.`Uis
+0088dace    call [900] ; 
+0088dad1    i32.const [3996656] ; METHOD DiamondLimitedControl.tQuOrO
+0088dad6    call [900] ; 
+0088dad9    i32.const [3947148]
+0088dade    call [900] ; 
+0088dae1    i32.const [4057408] ; STRING "IapSuccess"
+0088dae6    call [900] ; 
+0088dae9    i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+0088daee    call [900] ; 
+0088daf1    i32.const [5008448]
+0088daf6    i32.const [1]
+0088daf8    i32.store8 [0, 0]
+0088dafb  end []
+0088dafc  i32.const [3930256]
+0088db01  i32.load [2, 0]
+0088db04  call [901] ; 
+0088db07  local.get [0]
+0088db09  i32.const [0]
+0088db0b  call [1309] ; DataManagerPool.get_Instance
+0088db0e  i32.const [3995116]
+0088db13  i32.load [2, 0]
+0088db16  call [1609] ; 
+0088db19  i32.store [2, 8]
+0088db1c  local.get [0]
+0088db1e  i64.const [600000]
+0088db22  i64.store [3, 40]
+0088db25  local.get [0]
+0088db27  i64.const [86400000]
+0088db2c  i64.store [3, 32]
+0088db2f  local.get [0]
+0088db31  local.get [0]
+0088db33  call [6147] ; DiamondLimitedControl.InitData
+0088db36  local.get [0]
+0088db38  i32.const [1]
+0088db3a  i32.store8 [0, 52]
+0088db3d  i32.const [3947148]
+0088db42  i32.load [2, 0]
+0088db45  call [903] ; 
+0088db48  local.set [1]
+0088db4a  local.get [1]
+0088db4c  local.get [0]
+0088db4e  i32.const [3996660] ; METHOD DiamondLimitedControl.`Uis
+0088db53  i32.load [2, 0]
+0088db56  i32.const [0]
+0088db58  call [1067] ; EventHandler..ctor
+0088db5b  i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+0088db60  i32.load [2, 0]
+0088db63  local.get [1]
+0088db65  i32.const [0]
+0088db67  call [1146] ; MsgDispatcher.AddEventListener
+0088db6a  i32.const [3947148]
+0088db6f  i32.load [2, 0]
+0088db72  call [903] ; 
+0088db75  local.set [1]
+0088db77  local.get [1]
+0088db79  local.get [0]
+0088db7b  i32.const [3996656] ; METHOD DiamondLimitedControl.tQuOrO
+0088db80  i32.load [2, 0]
+0088db83  i32.const [0]
+0088db85  call [1067] ; EventHandler..ctor
+0088db88  i32.const [4057408] ; STRING "IapSuccess"
+0088db8d  i32.load [2, 0]
+0088db90  local.get [1]
+0088db92  i32.const [0]
+0088db94  call [1146] ; MsgDispatcher.AddEventListener
+0088db97  end []

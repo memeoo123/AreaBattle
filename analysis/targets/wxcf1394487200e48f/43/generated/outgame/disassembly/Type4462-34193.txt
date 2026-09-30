@@ -1,0 +1,22 @@
+; Original class: PlayerControl
+; Type4462.`yMXZ{; wasmcode function 18218; offset=8097421 size=55
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b8e8e  i32.const [5009813]
+007b8e93  i32.load8_u [0, 0]
+007b8e96  i32.eqz []
+007b8e97  if [-64]
+007b8e99    i32.const [3953384]
+007b8e9e    call [900] ; 
+007b8ea1    i32.const [5009813]
+007b8ea6    i32.const [1]
+007b8ea8    i32.store8 [0, 0]
+007b8eab  end []
+007b8eac  i32.const [3953384]
+007b8eb1  i32.load [2, 0]
+007b8eb4  call [935] ; 
+007b8eb7  i32.const [0]
+007b8eb9  call [12187] ; GameControl.InitScene
+007b8ebc  local.get [0]
+007b8ebe  local.get [0]
+007b8ec0  call [11068] ; PlayerControl.InitLoadModel
+007b8ec3  end []

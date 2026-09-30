@@ -1,0 +1,27 @@
+; Original class: UIVideoBtn
+; Type10741.VideoIsReadyReport; wasmcode function 5548; offset=1941695 size=72
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001da0c0  i32.const [5001941]
+001da0c5  i32.load8_u [0, 0]
+001da0c8  i32.eqz []
+001da0c9  if [-64]
+001da0cb    i32.const [3937964]
+001da0d0    call [900] ; 
+001da0d3    i32.const [5001941]
+001da0d8    i32.const [1]
+001da0da    i32.store8 [0, 0]
+001da0dd  end []
+001da0de  i32.const [3937964]
+001da0e3  i32.load [2, 0]
+001da0e6  call [901] ; 
+001da0e9  i32.const [3937964]
+001da0ee  i32.load [2, 0]
+001da0f1  i32.load [2, 92]
+001da0f4  i32.load [2, 8]
+001da0f7  i32.const [2]
+001da0f9  i32.const [0]
+001da0fb  call [3099] ; ReportManager.TrackVideo
+001da0fe  local.get [0]
+001da100  i32.const [2]
+001da102  i32.store [2, 200]
+001da106  end []

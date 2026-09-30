@@ -1,0 +1,50 @@
+; Type3408.mK¾yL; wasmcode function 20592; offset=9229549 size=120
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008cd4ee  i32.const [5011638]
+008cd4f3  i32.load8_u [0, 0]
+008cd4f6  i32.eqz []
+008cd4f7  if [-64]
+008cd4f9    i32.const [3936516]
+008cd4fe    call [900] ; 
+008cd501    i32.const [5011638]
+008cd506    i32.const [1]
+008cd508    i32.store8 [0, 0]
+008cd50b  end []
+008cd50c  local.get [0]
+008cd50e  i32.load [2, 36]
+008cd511  local.set [1]
+008cd513  i32.const [3936516]
+008cd518  i32.load [2, 0]
+008cd51b  call [901] ; 
+008cd51e  local.get [1]
+008cd520  i32.const [0]
+008cd522  i32.const [0]
+008cd524  call [946] ; Object.op_Inequality
+008cd527  if [-64]
+008cd529    local.get [0]
+008cd52b    i32.load [2, 36]
+008cd52e    i32.const [0]
+008cd530    call [5200] ; AudioSource.Stop
+008cd533  end []
+008cd534  local.get [0]
+008cd536  local.get [0]
+008cd538  call [5202] ; AudioActionBase.OnEndCall
+008cd53b  local.get [0]
+008cd53d  i32.load [2, 76]
+008cd540  local.set [1]
+008cd542  local.get [1]
+008cd544  if [-64]
+008cd546    local.get [1]
+008cd548    i32.const [0]
+008cd54a    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cd54d    global.set [3]
+008cd54f    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cd552    call_indirect [0, 0]
+008cd555  end []
+008cd556  local.get [0]
+008cd558  local.get [0]
+008cd55a  call [4019] ; AudioActionBase.Dispose
+008cd55d  local.get [0]
+008cd55f  i32.const [0]
+008cd561  i32.store8 [0, 60]
+008cd564  end []

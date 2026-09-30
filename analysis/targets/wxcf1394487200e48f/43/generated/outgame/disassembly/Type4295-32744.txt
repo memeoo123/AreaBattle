@@ -1,0 +1,23 @@
+; Original class: zTSr`
+; Type4295.kMmy; wasmcode function 8376; offset=4019303 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003d5468  local.get [0]
+003d546a  i32.load [2, 8]
+003d546d  local.get [0]
+003d546f  i32.load [2, 12]
+003d5472  i32.const [0]
+003d5474  call [1130] ; Transform.get_parent
+003d5477  i32.const [0]
+003d5479  call [1424] ; Transform.SetParent
+003d547c  local.get [0]
+003d547e  i32.load [2, 16]
+003d5481  i32.const [1]
+003d5483  i32.store8 [0, 48]
+003d5486  local.get [0]
+003d5488  i32.load [2, 12]
+003d548b  i32.const [0]
+003d548d  call [943] ; Component.get_gameObject
+003d5490  i32.const [0]
+003d5492  i32.const [0]
+003d5494  call [949] ; GameObject.SetActive
+003d5497  end []

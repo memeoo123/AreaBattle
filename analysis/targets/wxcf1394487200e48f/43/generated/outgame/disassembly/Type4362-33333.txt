@@ -1,0 +1,52 @@
+; Original class: ShopItem
+; Type4362.qyoahL; wasmcode function 16008; offset=7722450 size=130
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0075d5d3  i32.const [5008944]
+0075d5d8  i32.load8_u [0, 0]
+0075d5db  i32.eqz []
+0075d5dc  if [-64]
+0075d5de    i32.const [3953568]
+0075d5e3    call [900] ; 
+0075d5e6    i32.const [4034536] ; STRING ""
+0075d5eb    call [900] ; 
+0075d5ee    i32.const [5008944]
+0075d5f3    i32.const [1]
+0075d5f5    i32.store8 [0, 0]
+0075d5f8  end []
+0075d5f9  i32.const [3953568]
+0075d5fe  i32.load [2, 0]
+0075d601  call [935] ; 
+0075d604  i32.const [1002]
+0075d607  i32.const [0]
+0075d609  local.get [0]
+0075d60b  i32.load [2, 56]
+0075d60e  i32.sub []
+0075d60f  i32.const [1]
+0075d611  i32.const [4034536] ; STRING ""
+0075d616  i32.load [2, 0]
+0075d619  i32.const [1]
+0075d61b  i32.const [0]
+0075d61d  call [1799] ; ToolControl.ToolChange
+0075d620  if [-64]
+0075d622    local.get [0]
+0075d624    local.get [0]
+0075d626    i32.load [2, 48]
+0075d629    local.get [0]
+0075d62b    call [10404] ; ShopItem.gmP}gv
+0075d62e    local.get [0]
+0075d630    local.set [1]
+0075d632    local.get [0]
+0075d634    i32.load [2, 0]
+0075d637    local.set [0]
+0075d639    local.get [1]
+0075d63b    local.get [0]
+0075d63d    i32.const [104]
+0075d640    i32.add []
+0075d641    i32.load [2, 192]
+0075d645    local.get [0]
+0075d647    i32.load [2, 292]
+0075d64b    global.set [3]
+0075d64d    global.get [3]
+0075d64f    call_indirect [0, 0]
+0075d652  end []
+0075d653  end []

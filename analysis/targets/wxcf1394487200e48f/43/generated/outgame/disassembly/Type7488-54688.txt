@@ -1,0 +1,49 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyCloseAd; wasmcode function 2840; offset=877451 size=119
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+000d638c  i32.const [5004953]
+000d6391  i32.load8_u [0, 0]
+000d6394  i32.eqz []
+000d6395  if [-64]
+000d6397    i32.const [3930104]
+000d639c    call [900] ; 
+000d639f    i32.const [4093372] ; STRING "notifyCloseAd"
+000d63a4    call [900] ; 
+000d63a7    i32.const [5004953]
+000d63ac    i32.const [1]
+000d63ae    i32.store8 [0, 0]
+000d63b1  end []
+000d63b2  block [-64]
+000d63b4    local.get [0]
+000d63b6    i32.load [2, 12]
+000d63b9    i32.const [5]
+000d63bb    i32.eq []
+000d63bc    br_if [0]
+000d63be    local.get [0]
+000d63c0    i32.load [2, 8]
+000d63c3    i32.const [4093372] ; STRING "notifyCloseAd"
+000d63c8    i32.load [2, 0]
+000d63cb    i32.const [0]
+000d63cd    call [921] ; String.Concat
+000d63d0    i32.const [0]
+000d63d2    call [999] ; XYXLOG.Log
+000d63d5    local.get [0]
+000d63d7    i32.const [5]
+000d63d9    i32.store [2, 12]
+000d63dc    local.get [0]
+000d63de    local.get [0]
+000d63e0    call [4474] ; DAUAdsAdapter.stopShowTimeout
+000d63e3    local.get [0]
+000d63e5    i32.load [2, 32]
+000d63e8    local.set [1]
+000d63ea    local.get [1]
+000d63ec    i32.eqz []
+000d63ed    br_if [0]
+000d63ef    i32.const [5]
+000d63f1    i32.const [3930104]
+000d63f6    i32.load [2, 0]
+000d63f9    local.get [1]
+000d63fb    local.get [0]
+000d63fd    call [1027] ; 
+000d6400  end []
+000d6401  end []

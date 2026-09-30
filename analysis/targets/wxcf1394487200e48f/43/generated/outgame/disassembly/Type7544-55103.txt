@@ -1,0 +1,38 @@
+; Original class: NewAdsManager
+; Type7544.isVideoReady; wasmcode function 5866; offset=2070707 size=100
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001f98b4  i32.const [5005177]
+001f98b9  i32.load8_u [0, 0]
+001f98bc  i32.eqz []
+001f98bd  if [-64]
+001f98bf    i32.const [3936304]
+001f98c4    call [900] ; 
+001f98c7    i32.const [5005177]
+001f98cc    i32.const [1]
+001f98ce    i32.store8 [0, 0]
+001f98d1  end []
+001f98d2  i32.const [3936304]
+001f98d7  i32.load [2, 0]
+001f98da  call [901] ; 
+001f98dd  i32.const [3936304]
+001f98e2  i32.load [2, 0]
+001f98e5  i32.load [2, 92]
+001f98e8  i32.load [2, 28]
+001f98eb  if [-64]
+001f98ed    i32.const [3936304]
+001f98f2    i32.load [2, 0]
+001f98f5    call [901] ; 
+001f98f8    i32.const [3936304]
+001f98fd    i32.load [2, 0]
+001f9900    i32.load [2, 92]
+001f9903    i32.load [2, 28]
+001f9906    i32.const [0]
+001f9908    call [2330] ; BaseController.isReady
+001f990b    local.set [0]
+001f990d  else []
+001f990e    i32.const [0]
+001f9910    local.set [0]
+001f9912  end []
+001f9913  local.get [0]
+001f9915  return []
+001f9916  end []

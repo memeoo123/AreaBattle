@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-item-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==346
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='original-toggle-persistent-bindings';s['validation'].update(integratedChecksPassed=346,skinItemActionChecksPassed=12)
+s['nextActions']=['Recover source initial shop toggle selection and lifecycle; bind actual skin icons.','Bind activity/video/scene providers and full account startup effects.','Complete remaining outgame systems and playable build/end-to-end validation.'];write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['toggle-original-bindings']={'implementationReady':True,'scope':'Recovered native ToggleGroup/graphic and dynamic bool SetActive persistent events','rules':['Import source ToggleGroup.allowSwitchOff, local graphic/group references and persistent dynamic-bool SetActive targets in serialized order with original call state. Unsupported calls or external references fail explicitly.','Original shop tabs activate the category content and Label_on through serialized onValueChanged events; group ensures mutual exclusion.'],'source':['ui-import.json'],'implementation':['RecoveredHudImporter.cs'],'validation':'Persistent scene target and group/graphic references verified. Isolated editor instance temporarily enables RuntimeOnly callbacks in editor, then true native isOn switches category content and selected labels; saved prefab keeps original call states.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='Original Toggle serialized persistent bindings') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original ToggleGroup graphics and persistent content events','checksPassed':346,'outgameChecksPassed':79,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 原Toggle内容绑定（346项）\n恢复ToggleGroup互斥配置、Toggle.graphic/group引用与原onValueChanged动态bool SetActive持久事件，保持原目标、顺序和CallState；不支持的事件/外部引用明确拒绝。原预制体事件已指向分类内容和Label_on。隔离编辑器实例临时允许RuntimeOnly事件在编辑器执行后，真实isOn变化验证互斥、内容和选中标签切换；保存的预制体保留原调用状态。Unity退出0，346集成检查（原267+关外79）。初始页签选择、真实图标/活动/广告/场景与账户生命周期、新构建仍未完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions','outgameSkinItemView','outgameSceneSkinActions','outgameSceneSkinView','outgameSkinOrder','outgameShopSkinLists','outgameShopTabs','outgameToggleBindings']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','346 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 346 checks; full goal remains incomplete.')

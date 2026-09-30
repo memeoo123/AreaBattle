@@ -1,0 +1,12 @@
+; Original class: ItemModuleControl
+; Type3875.GetItemConfig; wasmcode1 function 26696; offset=10320408 size=21
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+009d7a19  i32.const [0]
+009d7a1b  i32.const [7656] ; TABLE ItemConfigMgr.get_Instance
+009d7a1e  call_indirect [2, 0]
+009d7a21  local.get [1]
+009d7a23  i32.const [0]
+009d7a25  i32.const [7706] ; TABLE ItemConfigMgr.GetGameItemConfig
+009d7a28  call_indirect [3, 0]
+009d7a2b  return []
+009d7a2c  end []

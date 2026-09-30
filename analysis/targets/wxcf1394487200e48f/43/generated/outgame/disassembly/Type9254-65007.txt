@@ -1,0 +1,48 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254..cctor; wasmcode function 20401; offset=9193782 size=143
+; signature={'args': [127], 'returns': []}; localGroups=[]
+008c4937  i32.const [5006744]
+008c493c  i32.load8_u [0, 0]
+008c493f  i32.eqz []
+008c4940  if [-64]
+008c4942    i32.const [3929036]
+008c4947    call [900] ; 
+008c494a    i32.const [3938296]
+008c494f    call [900] ; 
+008c4952    i32.const [4100604] ; STRING "wxminigame"
+008c4957    call [900] ; 
+008c495a    i32.const [4100384] ; STRING "weixin"
+008c495f    call [900] ; 
+008c4962    i32.const [5006744]
+008c4967    i32.const [1]
+008c4969    i32.store8 [0, 0]
+008c496c  end []
+008c496d  i32.const [3938296]
+008c4972  i32.load [2, 0]
+008c4975  call [903] ; 
+008c4978  local.set [0]
+008c497a  local.get [0]
+008c497c  i32.const [0]
+008c497e  call [10572] ; SDKModuleSetting..ctor
+008c4981  local.get [0]
+008c4983  i32.const [4100384] ; STRING "weixin"
+008c4988  i32.load [2, 0]
+008c498b  i32.store [2, 12]
+008c498e  local.get [0]
+008c4990  i32.const [4100384] ; STRING "weixin"
+008c4995  i32.load [2, 0]
+008c4998  i32.store [2, 16]
+008c499b  local.get [0]
+008c499d  i32.const [4100604] ; STRING "wxminigame"
+008c49a2  i32.load [2, 0]
+008c49a5  i32.store [2, 8]
+008c49a8  i32.const [3929036]
+008c49ad  i32.load [2, 0]
+008c49b0  i32.load [2, 92]
+008c49b3  local.get [0]
+008c49b5  i32.store [2, 0]
+008c49b8  i32.const [3929036]
+008c49bd  i32.load [2, 0]
+008c49c0  i32.load [2, 92]
+008c49c3  drop []
+008c49c4  end []

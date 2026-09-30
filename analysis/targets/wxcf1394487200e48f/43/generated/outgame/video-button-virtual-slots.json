@@ -1,0 +1,198 @@
+{
+  "methods": [
+    {
+      "metadata": 74403,
+      "name": "get_btnstate",
+      "slot": 65535
+    },
+    {
+      "metadata": 74404,
+      "name": "set_btnstate",
+      "slot": 65535
+    },
+    {
+      "metadata": 74405,
+      "name": "Awake",
+      "slot": 4
+    },
+    {
+      "metadata": 74406,
+      "name": "ResetVideoBtnData",
+      "slot": 65535
+    },
+    {
+      "metadata": 74407,
+      "name": "SetVideoBtnData",
+      "slot": 65535
+    },
+    {
+      "metadata": 74408,
+      "name": "GetVideoBtnData",
+      "slot": 65535
+    },
+    {
+      "metadata": 74409,
+      "name": "Start",
+      "slot": 6
+    },
+    {
+      "metadata": 74410,
+      "name": "OnEnable",
+      "slot": 5
+    },
+    {
+      "metadata": 74411,
+      "name": "CheckCanShowVideo",
+      "slot": 65535
+    },
+    {
+      "metadata": 74412,
+      "name": "OnDestroy",
+      "slot": 8
+    },
+    {
+      "metadata": 74413,
+      "name": "Update",
+      "slot": 65535
+    },
+    {
+      "metadata": 74414,
+      "name": "CheckClickVideoBtnCD",
+      "slot": 65535
+    },
+    {
+      "metadata": 74415,
+      "name": "OnPointerClick",
+      "slot": 41
+    },
+    {
+      "metadata": 74416,
+      "name": "VideoCallBack",
+      "slot": 65535
+    },
+    {
+      "metadata": 74417,
+      "name": "PlayAudio",
+      "slot": 44
+    },
+    {
+      "metadata": 74418,
+      "name": "SetButtonState",
+      "slot": 43
+    },
+    {
+      "metadata": 74419,
+      "name": "SetGay",
+      "slot": 45
+    },
+    {
+      "metadata": 74420,
+      "name": "CreateVideoReport",
+      "slot": 65535
+    },
+    {
+      "metadata": 74421,
+      "name": "VideoIsReadyReport",
+      "slot": 65535
+    },
+    {
+      "metadata": 74422,
+      "name": "VideoClickReport",
+      "slot": 65535
+    },
+    {
+      "metadata": 74423,
+      "name": "DelayReport",
+      "slot": 65535
+    },
+    {
+      "metadata": 74424,
+      "name": "ReportVideoPlayOver",
+      "slot": 65535
+    },
+    {
+      "metadata": 74425,
+      "name": "CustomizeReport",
+      "slot": 46
+    },
+    {
+      "metadata": 74426,
+      "name": "ReportEvent",
+      "slot": 65535
+    },
+    {
+      "metadata": 74427,
+      "name": "AddVideoBtnEvent",
+      "slot": 65535
+    },
+    {
+      "metadata": 74428,
+      "name": "AddVideoPlayCallBack",
+      "slot": 65535
+    },
+    {
+      "metadata": 74429,
+      "name": "RemoveVideoBtnListeners",
+      "slot": 65535
+    },
+    {
+      "metadata": 74430,
+      "name": "VideoBtnShow",
+      "slot": 47
+    },
+    {
+      "metadata": 74431,
+      "name": ".ctor",
+      "slot": 65535
+    }
+  ],
+  "clickVirtualCall": {
+    "methodPointerOffset": 540,
+    "methodInfoOffset": 544,
+    "method": "PlayAudio",
+    "slot": 44,
+    "vtableBase": 188,
+    "reason": "Other source virtual call SetGay at548/552 maps slot45 at same base."
+  },
+  "delayReport": {
+    "parameterMetadata": [
+      7863,
+      134217792,
+      17864
+    ],
+    "parameterName": "n",
+    "parameterType": "Int32",
+    "waitUsage": 3941920,
+    "waitType": "WaitForSeconds",
+    "secondsAtCompletion": 1,
+    "source": [
+      "Type10741-74423",
+      "Type10740-74434"
+    ]
+  },
+  "successReportSwitch": {
+    "source": "Type10741-74424",
+    "baseNamesTable": 1707996,
+    "scopedNamesTable": 1708008,
+    "flags": {
+      "0": [
+        "videoreward",
+        "videoreward_"
+      ],
+      "1": [
+        "videoalive",
+        "videoalive_"
+      ],
+      "2": [
+        "videounlock",
+        "videounlock_"
+      ]
+    },
+    "invalidFlag": [
+      "",
+      ""
+    ],
+    "label": "Data.ReportLable, not override field",
+    "customize": "only null or empty data label invokes virtual CustomizeReport"
+  }
+}

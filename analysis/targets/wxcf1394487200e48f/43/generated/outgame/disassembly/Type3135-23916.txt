@@ -1,0 +1,53 @@
+; Original class: DBTSDKManager
+; Type3135.AdsVideoFunction; wasmcode function 20051; offset=9009801 size=154
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00897a8a  i32.const [4988623]
+00897a8f  i32.load8_u [0, 0]
+00897a92  i32.eqz []
+00897a93  if [-64]
+00897a95    i32.const [3930128]
+00897a9a    call [900] ; 
+00897a9d    i32.const [3932316]
+00897aa2    call [900] ; 
+00897aa5    i32.const [3938304]
+00897aaa    call [900] ; 
+00897aad    i32.const [4068740] ; STRING "Sdk_NoAdsTips"
+00897ab2    call [900] ; 
+00897ab5    i32.const [4988623]
+00897aba    i32.const [1]
+00897abc    i32.store8 [0, 0]
+00897abf  end []
+00897ac0  i32.const [3930128]
+00897ac5  i32.load [2, 0]
+00897ac8  call [901] ; 
+00897acb  block [-64]
+00897acd    i32.const [3930128]
+00897ad2    i32.load [2, 0]
+00897ad5    i32.load [2, 92]
+00897ad8    i32.load8_u [0, 5]
+00897adb    br_if [0]
+00897add    i32.const [15]
+00897adf    i32.const [0]
+00897ae1    i32.const [0]
+00897ae3    call [2073] ; SDKExtension.IsOpen
+00897ae6    br_if [0]
+00897ae8    i32.const [3938304]
+00897aed    i32.load [2, 0]
+00897af0    i32.load [2, 92]
+00897af3    i32.load [2, 0]
+00897af6    local.set [0]
+00897af8    i32.const [3932316]
+00897afd    i32.load [2, 0]
+00897b00    call [901] ; 
+00897b03    local.get [0]
+00897b05    i32.const [4068740] ; STRING "Sdk_NoAdsTips"
+00897b0a    i32.load [2, 0]
+00897b0d    i32.const [0]
+00897b0f    i32.const [24510] ; TABLE GameFrameWorkLang.Get
+00897b13    global.set [3]
+00897b15    i32.const [24510] ; TABLE GameFrameWorkLang.Get
+00897b19    call_indirect [1, 0]
+00897b1c    i32.const [0]
+00897b1e    call [1311] ; SDKToolManager.ShowToast
+00897b21  end []
+00897b22  end []

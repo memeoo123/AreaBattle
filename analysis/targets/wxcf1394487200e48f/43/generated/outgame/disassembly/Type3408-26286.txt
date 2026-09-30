@@ -1,0 +1,37 @@
+; Original class: AudioFadeAction
+; Type3408.OnDispose; wasmcode function 20596; offset=9230311 size=97
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008cd7e8  i32.const [5011635]
+008cd7ed  i32.load8_u [0, 0]
+008cd7f0  i32.eqz []
+008cd7f1  if [-64]
+008cd7f3    i32.const [4000628]
+008cd7f8    call [900] ; 
+008cd7fb    i32.const [3932308]
+008cd800    call [900] ; 
+008cd803    i32.const [5011635]
+008cd808    i32.const [1]
+008cd80a    i32.store8 [0, 0]
+008cd80d  end []
+008cd80e  local.get [0]
+008cd810  i32.load [2, 72]
+008cd813  if [-64]
+008cd815    i32.const [3932308]
+008cd81a    i32.load [2, 0]
+008cd81d    call [901] ; 
+008cd820    i32.const [4000628]
+008cd825    i32.load [2, 0]
+008cd828    call [1051] ; 
+008cd82b    local.get [0]
+008cd82d    i32.load [2, 72]
+008cd830    i32.const [0]
+008cd832    call [3796] ; TimeModule.RemoveTime
+008cd835  end []
+008cd836  local.get [0]
+008cd838  i32.load [2, 36]
+008cd83b  local.get [0]
+008cd83d  call [5563] ; G~.DestroyAudioSource
+008cd840  local.get [0]
+008cd842  i32.const [0]
+008cd844  i32.store [2, 36]
+008cd847  end []

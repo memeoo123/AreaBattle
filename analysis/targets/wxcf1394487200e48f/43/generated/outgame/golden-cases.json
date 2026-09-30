@@ -1,0 +1,1952 @@
+{
+  "schemaVersion": "1.0",
+  "target": "wxcf1394487200e48f/43",
+  "scope": "Commander, local inventory and tool dispatch source cores; complete account, UI and external integrations remain incomplete.",
+  "cases": [
+    {
+      "id": "outgame-commander-original-cost-boundaries",
+      "expected": {
+        "levels": [
+          0,
+          1,
+          5,
+          6,
+          14,
+          15,
+          27,
+          28
+        ],
+        "costs": [
+          10000,
+          250,
+          250,
+          500,
+          500,
+          1000,
+          1000,
+          10000
+        ],
+        "commander": 2
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-level-gate-distinct-from-affordability",
+      "expected": {
+        "commander": 3,
+        "levelUnlockThreshold": 22,
+        "currencyAffordabilityIndependent": true
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-unlock-insufficient-and-exact-cost",
+      "expected": {
+        "commander": 2,
+        "insufficientCoins": 9999,
+        "unlockCost": 10000,
+        "resultLevel": 1,
+        "changedSkillSlot": -1
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-upgrade-rotates-source-skills",
+      "expected": {
+        "commander": 2,
+        "fromLevel": 1,
+        "upgrades": 3,
+        "coinCost": 750,
+        "resultSkillLevels": [
+          2,
+          2,
+          2
+        ]
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-full-28-level-cap-and-price-total",
+      "expected": {
+        "commander": 2,
+        "fromLevel": 1,
+        "upgrades": 27,
+        "totalCoinCost": 18750,
+        "resultLevel": 28,
+        "resultSkillLevels": [
+          10,
+          10,
+          10
+        ],
+        "maxUpgradeRejected": true
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-diamond-unlock-and-upgrade-currency",
+      "expected": {
+        "commander": 5,
+        "currency": 1002,
+        "unlockCost": 500,
+        "firstUpgradeCost": 250
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-commander-upgrade-rejection-does-not-mutate",
+      "expected": {
+        "commander": 2,
+        "fromLevel": 1,
+        "coins": 249,
+        "accepted": false,
+        "mutations": 0
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-core"
+    },
+    {
+      "id": "outgame-inventory-seeds-only-configured-missing-records",
+      "expected": {
+        "missingConfiguredItems": 18,
+        "seedCount": 2,
+        "scalarInitialGrant": 0
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-inventory-reload-does-not-refill-exhausted-tools",
+      "expected": {
+        "held2001": 0,
+        "held2002": 7,
+        "consumed2003": 0,
+        "afterRoundtrip": [
+          0,
+          7,
+          0
+        ],
+        "rowCount": 18
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-inventory-source-currency-routing",
+      "expected": {
+        "scalarIds": [
+          1001,
+          1002,
+          1004,
+          1005
+        ],
+        "rejectedAbsentIds": [
+          1003,
+          7999
+        ]
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-inventory-insufficient-debit-is-atomic",
+      "expected": {
+        "overdraftAccepted": false,
+        "exactDebitAccepted": true,
+        "partialMutation": false
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-inventory-source-overflow-rejected-before-store",
+      "expected": {
+        "initialGold": 2147483647,
+        "delta": 1,
+        "accepted": false,
+        "finalGold": 2147483647
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-inventory-integrates-commander-spend-and-roundtrip",
+      "expected": {
+        "initialGold": 10250,
+        "commander2UnlockAndFirstUpgrade": true,
+        "finalGold": 0,
+        "commanderLevel": 2,
+        "skillLevels": [
+          2,
+          1,
+          1
+        ]
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.local-inventory-core"
+    },
+    {
+      "id": "outgame-tool-gold-debit-orders-statistics-notification-save",
+      "expected": {
+        "trace": [
+          "top",
+          "gold-spent:4",
+          "changed:1001",
+          "cost:1001:1:4:6",
+          "save"
+        ],
+        "balance": 6
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-failed-debit-still-notifies-and-saves",
+      "expected": {
+        "trace": [
+          "top",
+          "changed:1001",
+          "save"
+        ],
+        "balance": 3,
+        "accepted": false
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-skill-duplicate-notification-is-source-behavior",
+      "expected": {
+        "failedTrace": [
+          "changed:2001",
+          "changed:2001",
+          "save"
+        ],
+        "successfulGainBalance": 3
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-disabled-report-keeps-skill-local-event",
+      "expected": {
+        "disabledReportSkillTrace": [
+          "changed:2001",
+          "save"
+        ],
+        "disabledReportGenericTrace": [
+          "save"
+        ]
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-positive-overflow-source-report-not-success",
+      "expected": {
+        "accepted": false,
+        "reportedGain": 1,
+        "balance": 2147483647
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-unknown-id-source-no-op-success-save",
+      "expected": {
+        "id": 999999,
+        "type": 0,
+        "accepted": true,
+        "trace": [
+          "save"
+        ]
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-generic-item-delegates-not-local-balance",
+      "expected": {
+        "id": 1003,
+        "type": 6,
+        "delegatedSignedDelta": true,
+        "missingEntityWarning": true,
+        "strengthUnchanged": true
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-tool-source-type-boundaries",
+      "expected": {
+        "scene": [
+          1,
+          99
+        ],
+        "soldier": [
+          100,
+          399
+        ],
+        "skill": [
+          2001,
+          2999
+        ],
+        "explicit": {
+          "1001": 1,
+          "1002": 2,
+          "1005": 7
+        }
+      },
+      "result": "pass",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.tool-dispatch-core"
+    },
+    {
+      "id": "outgame-profile-source-commander-defaults",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-record-initialization",
+      "validationScope": "Source defaults plus reconstruction disk persistence, not platform persistence parity"
+    },
+    {
+      "id": "outgame-profile-initialize-preserves-held-progress",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-record-initialization",
+      "validationScope": "Source defaults plus reconstruction disk persistence, not platform persistence parity"
+    },
+    {
+      "id": "outgame-profile-disk-upgrade-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-record-initialization",
+      "validationScope": "Source defaults plus reconstruction disk persistence, not platform persistence parity"
+    },
+    {
+      "id": "outgame-profile-corrupt-save-preserved",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-record-initialization",
+      "validationScope": "Source defaults plus reconstruction disk persistence, not platform persistence parity"
+    },
+    {
+      "id": "outgame-profile-future-version-preserved",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-record-initialization",
+      "validationScope": "Source defaults plus reconstruction disk persistence, not platform persistence parity"
+    },
+    {
+      "id": "outgame-menu-runtime-routes-override-legacy-table",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.runtime-menu-navigation"
+    },
+    {
+      "id": "outgame-menu-first-entry-and-repeated-selection",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.runtime-menu-navigation"
+    },
+    {
+      "id": "outgame-menu-transition-lock-direction-and-return",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.runtime-menu-navigation"
+    },
+    {
+      "id": "outgame-menu-commander-overlay-boundary",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.runtime-menu-navigation"
+    },
+    {
+      "id": "outgame-commander-select-preview-versus-equip",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-page-actions"
+    },
+    {
+      "id": "outgame-commander-ui-level-gate-before-free-unlock",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-page-actions"
+    },
+    {
+      "id": "outgame-commander-unlock-save-before-autoequip",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-page-actions"
+    },
+    {
+      "id": "outgame-commander-ui-insufficient-no-mutation",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-page-actions"
+    },
+    {
+      "id": "outgame-commander-ui-upgrade-does-not-show-unlock",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "OUTGAME_RESTORE_SPEC.json#subsystemGates.commander-page-actions"
+    },
+    {
+      "id": "outgame-ui-original-layout-MenuTabUI",
+      "result": "pass",
+      "detail": "68 source nodes and 0 scroll/mask/fitter controls retained",
+      "sourceContract": "ui-import.json original node hierarchy"
+    },
+    {
+      "id": "outgame-ui-original-layout-Proj_xqzdStartUI",
+      "result": "pass",
+      "detail": "78 source nodes and 0 scroll/mask/fitter controls retained",
+      "sourceContract": "ui-import.json original node hierarchy"
+    },
+    {
+      "id": "outgame-ui-original-layout-CommanderUI",
+      "result": "pass",
+      "detail": "115 source nodes and 11 scroll/mask/fitter controls retained",
+      "sourceContract": "ui-import.json original node hierarchy"
+    },
+    {
+      "id": "outgame-ui-original-layout-ShopUI",
+      "result": "pass",
+      "detail": "165 source nodes and 16 scroll/mask/fitter controls retained",
+      "sourceContract": "ui-import.json original node hierarchy"
+    },
+    {
+      "id": "outgame-view-original-button-skin-main-roundtrip",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIControl.OpenMenuItemUI, MenuTabUI.Awake/OpenLater plus ui-import bindings"
+    },
+    {
+      "id": "outgame-view-commander-overlay-and-rapid-click",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIControl.OpenMenuItemUI, MenuTabUI.Awake/OpenLater plus ui-import bindings"
+    },
+    {
+      "id": "outgame-view-dynamic-card-unlock-upgrade-disk",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderItem and CommanderUI source methods plus original prefab bindings"
+    },
+    {
+      "id": "outgame-view-localized-price-and-max",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderItem and CommanderUI source methods plus original prefab bindings"
+    },
+    {
+      "id": "outgame-view-detail-hidden-on-enter-and-leave",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderItem and CommanderUI source methods plus original prefab bindings"
+    },
+    {
+      "id": "outgame-skill-cards-real-level-gates-and-rotation",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderItem and CommanderUI source methods plus original prefab bindings"
+    },
+    {
+      "id": "outgame-skill-detail-click-and-source-values",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderUI f8108/f12846/f12849 and CommanderItem.OnClick f20191; original prefab bindings"
+    },
+    {
+      "id": "outgame-skill-detail-comparison-grid",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderUI f8108/f12846/f12849 and CommanderItem.OnClick f20191; original prefab bindings"
+    },
+    {
+      "id": "outgame-skill-detail-retained-slot-on-commander-change",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderUI f8108/f12846/f12849 and CommanderItem.OnClick f20191; original prefab bindings"
+    },
+    {
+      "id": "outgame-level-normal-progress-persist-and-statistic",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LevelControl real/current/special getters and normal setter"
+    },
+    {
+      "id": "outgame-level-special-mode-keeps-real-progress",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LevelControl real/current/special getters and normal setter"
+    },
+    {
+      "id": "outgame-level-source-zero-not-clamped",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LevelControl real/current/special getters and normal setter"
+    },
+    {
+      "id": "outgame-original-local-legacy-tool-mapping-and-rename",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LocalDataManager.UpdateDataCallBack/DealUnsafeStr/DeadOldData and OldToolPropertyClass"
+    },
+    {
+      "id": "outgame-original-local-modern-precedence-and-legacy-sentinel",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LocalDataManager.UpdateDataCallBack/DealUnsafeStr/DeadOldData and OldToolPropertyClass"
+    },
+    {
+      "id": "outgame-original-local-empty-defaults",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LocalDataManager.UpdateDataCallBack/DealUnsafeStr/DeadOldData and OldToolPropertyClass"
+    },
+    {
+      "id": "outgame-original-local-restart-and-failed-import-preservation",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "LocalDataManager.UpdateDataCallBack/DealUnsafeStr/DeadOldData and OldToolPropertyClass"
+    },
+    {
+      "id": "outgame-original-commander-replace-and-preserve-records",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderManager.DealOldData/InitData and original record field identities"
+    },
+    {
+      "id": "outgame-original-commander-empty-keeps-held",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderManager.DealOldData/InitData and original record field identities"
+    },
+    {
+      "id": "outgame-original-commander-upgrade-and-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderManager.DealOldData/InitData and original record field identities"
+    },
+    {
+      "id": "outgame-original-commander-view-held-skill-identity",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "CommanderManager.DealOldData/InitData and original record field identities"
+    },
+    {
+      "id": "outgame-skin-source-defaults-and-existing-empty-distinction",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager.UpdateDataCallBack/InitSoliderSkinData/InitSceneMapData/DealOldData"
+    },
+    {
+      "id": "outgame-skin-held-records-and-config-metadata",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager.UpdateDataCallBack/InitSoliderSkinData/InitSceneMapData/DealOldData"
+    },
+    {
+      "id": "outgame-skin-legacy-bidirectional-flags-only",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager.UpdateDataCallBack/InitSoliderSkinData/InitSceneMapData/DealOldData"
+    },
+    {
+      "id": "outgame-skin-migration-disk-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager.UpdateDataCallBack/InitSoliderSkinData/InitSceneMapData/DealOldData"
+    },
+    {
+      "id": "outgame-skin-unlock-source-effects-and-idempotence",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager unlock/equip/mark-new/OnSave"
+    },
+    {
+      "id": "outgame-skin-equip-and-new-flag-source-semantics",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager unlock/equip/mark-new/OnSave"
+    },
+    {
+      "id": "outgame-skin-save-projection-and-disk-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager unlock/equip/mark-new/OnSave"
+    },
+    {
+      "id": "outgame-skin-buy-insufficient-source-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem purchase/select/video callbacks"
+    },
+    {
+      "id": "outgame-skin-buy-dispatch-save-before-equip-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem purchase/select/video callbacks"
+    },
+    {
+      "id": "outgame-skin-video-success-failure-source-callbacks",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem purchase/select/video callbacks"
+    },
+    {
+      "id": "outgame-skin-select-state-and-callback-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem purchase/select/video callbacks"
+    },
+    {
+      "id": "outgame-skin-native-buy-button-and-used-badge",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem native button/state flow"
+    },
+    {
+      "id": "outgame-skin-native-activity-state-transitions",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem native button/state flow"
+    },
+    {
+      "id": "outgame-scene-purchase-equip-before-unlock-save",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SceneSkinItem source overrides"
+    },
+    {
+      "id": "outgame-scene-selection-distinct-source-semantics",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SceneSkinItem source overrides"
+    },
+    {
+      "id": "outgame-scene-native-shared-template-buttons",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "ShopUI coroutine shared template and SceneSkinItem overrides"
+    },
+    {
+      "id": "outgame-skin-source-order-stable-held-ties",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinManager GetOrder/OrderBy initialization"
+    },
+    {
+      "id": "outgame-shop-skin-list-native-grouping-and-refresh",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "ShopUI source skin list construction"
+    },
+    {
+      "id": "outgame-shop-native-tabs-title-rotation-red-dots",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "ShopUI toggle/title/red-dot callback"
+    },
+    {
+      "id": "outgame-shop-imported-toggle-group-content-events",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Toggle serialized persistent bindings"
+    },
+    {
+      "id": "outgame-shop-original-initial-category-selection",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "ShopUI.Awake initial category"
+    },
+    {
+      "id": "outgame-shop-all-original-skin-posters",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "SkinItem original atlas icon lookup"
+    },
+    {
+      "id": "outgame-shop-equipment-listener-category-refresh",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "ShopUI ChooseSkin listener"
+    },
+    {
+      "id": "outgame-player-model-two-stage-load-placement-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "PlayerControl two-stage model-load lifecycle"
+    },
+    {
+      "id": "outgame-player-model-late-callback-and-attack-routing",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "PlayerControl two-stage model-load lifecycle"
+    },
+    {
+      "id": "outgame-player-model-duplicate-pending-cache-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "PlayerControl two-stage model-load lifecycle"
+    },
+    {
+      "id": "outgame-player-animation-reset-relax-current-equipment-idle",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "PlayerControl animation helper and completion"
+    },
+    {
+      "id": "outgame-player-animation-color-active-guard-missing-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "PlayerControl animation helper and completion"
+    },
+    {
+      "id": "outgame-baked-original-prefabs-clip-renderer-completion",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original SpineAnimator baked renderer"
+    },
+    {
+      "id": "outgame-baked-pause-resume-fallback-and-autoplay",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original SpineAnimator baked renderer"
+    },
+    {
+      "id": "outgame-original-model-roots-home-camera-bindings",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original GameSceneMono group/camera references"
+    },
+    {
+      "id": "outgame-source-soldier-color-tag-short-circuit-renderer",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Soldier.SetSoldierColor and tag switch"
+    },
+    {
+      "id": "outgame-original-attack-display-model400",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Real source default model presentation chain"
+    },
+    {
+      "id": "outgame-default-models-native-roots-shadows-color-animation",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Real source default model presentation chain"
+    },
+    {
+      "id": "outgame-source-model-category-rotation-slots",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original PlayerControl rotation slot selection"
+    },
+    {
+      "id": "outgame-source-scene-enter-exit-exact-guard",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "GameControl scene movement and aspect branches"
+    },
+    {
+      "id": "outgame-source-scene-wide-narrow-aspect-branches",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "GameControl scene movement and aspect branches"
+    },
+    {
+      "id": "outgame-original-background-native-mesh-material-texture",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Native original home scene background resources"
+    },
+    {
+      "id": "outgame-scene-style-cache-late-callback-shop-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original GameControl scene style cache and callbacks"
+    },
+    {
+      "id": "outgame-all15-original-scene-texture-resource-binding",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "All original SceneSkinConfig idle textures"
+    },
+    {
+      "id": "outgame-scene-effect-cache-late-callback-duplicate-add",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original scene effect cache and callback behavior"
+    },
+    {
+      "id": "outgame-scene-effect-source-config-offset-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original scene effect cache and callback behavior"
+    },
+    {
+      "id": "outgame-three-native-scene-effects-spine-particles-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original native scene effects, Spine animation and particles"
+    },
+    {
+      "id": "outgame-menu-native-view-scene-switch-request-timing",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Native menu accepted-request scene binding"
+    },
+    {
+      "id": "outgame-login-sync-old-player-success-and-unsubscribe",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login sync state, upload wait and timeout"
+    },
+    {
+      "id": "outgame-login-sync-new-player-awaits-upload",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login sync state, upload wait and timeout"
+    },
+    {
+      "id": "outgame-login-sync-timeout-boundary-restores-user",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login sync state, upload wait and timeout"
+    },
+    {
+      "id": "outgame-login-sync-callback-reads-current-new-player-flag",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login sync state, upload wait and timeout"
+    },
+    {
+      "id": "outgame-login-failure-normal-reset-idle-notification-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login failure state ordering"
+    },
+    {
+      "id": "outgame-login-failure-account-switch-preserves-timer",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login failure state ordering"
+    },
+    {
+      "id": "outgame-login-success-registers-before-reentrant-completion",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login success event and completion ordering"
+    },
+    {
+      "id": "outgame-login-success-false-flag-does-not-complete",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login success event and completion ordering"
+    },
+    {
+      "id": "outgame-login-data-new-player-upload-precedes-reload",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login data upload versus reload routing"
+    },
+    {
+      "id": "outgame-login-data-existing-user-and-device-reload-matrix",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original login data upload versus reload routing"
+    },
+    {
+      "id": "outgame-data-version-increment-first-zero-and-overflow",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original data version increment and synchronization completion"
+    },
+    {
+      "id": "outgame-data-version-completion-queues-save-before-message",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original data version increment and synchronization completion"
+    },
+    {
+      "id": "outgame-data-version-close-preserves-records-no-completion",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original data version increment and synchronization completion"
+    },
+    {
+      "id": "outgame-sdk-storage-async-failure-cache-and-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original SDK string storage queue and failure semantics"
+    },
+    {
+      "id": "outgame-sdk-storage-missing-cache-delete-and-default-key",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original SDK string storage queue and failure semantics"
+    },
+    {
+      "id": "outgame-version-json-original-records-defaults-duplicate-keys",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original version records and isolated persistence restart"
+    },
+    {
+      "id": "outgame-version-storage-real-file-restart-and-completion-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original version records and isolated persistence restart"
+    },
+    {
+      "id": "outgame-manager-versions-add-prune-preserve-and-save-once",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source manager version reconciliation after local record loading"
+    },
+    {
+      "id": "outgame-manager-versions-load-reconcile-persisted-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source manager version reconciliation after local record loading"
+    },
+    {
+      "id": "outgame-manager-pool-registration-order-filter-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original metadata manager roster and registration/save lifecycle"
+    },
+    {
+      "id": "outgame-manager-pool-save-guards-and-exception-continuation",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original metadata manager roster and registration/save lifecycle"
+    },
+    {
+      "id": "outgame-manager-pool-initialization-failure-retains-prefix",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original metadata manager roster and registration/save lifecycle"
+    },
+    {
+      "id": "outgame-manager-pool-original-metadata-catalog-selection",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original metadata manager roster and registration/save lifecycle"
+    },
+    {
+      "id": "outgame-manager-storage-login-gate-version-and-upload-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DataManagerBase local storage, digest and sync pipeline"
+    },
+    {
+      "id": "outgame-manager-storage-local-disable-force-and-compression",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DataManagerBase local storage, digest and sync pipeline"
+    },
+    {
+      "id": "outgame-manager-storage-identifier-warning-does-not-abort",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DataManagerBase local storage, digest and sync pipeline"
+    },
+    {
+      "id": "outgame-commander-manager-original-json-load-save-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete commander manager original storage and restart lifecycle"
+    },
+    {
+      "id": "outgame-commander-manager-download-route-and-empty-reset",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete commander manager original storage and restart lifecycle"
+    },
+    {
+      "id": "outgame-commander-original-config-pool-file-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete commander manager original storage and restart lifecycle"
+    },
+    {
+      "id": "outgame-skin-original-wire-fields-new-flags-and-held-records",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete skin manager original wire fields and restart lifecycle"
+    },
+    {
+      "id": "outgame-skin-manager-instance-download-and-legacy-save",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete skin manager original wire fields and restart lifecycle"
+    },
+    {
+      "id": "outgame-skin-manager-original-registry-real-file-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete skin manager original wire fields and restart lifecycle"
+    },
+    {
+      "id": "outgame-local-record-complete-fields-and-long-precision",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete LocalData serialized schema and limited bag restart lifecycle"
+    },
+    {
+      "id": "outgame-local-limited-bag-source-clock-filter-and-duplicate",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete LocalData serialized schema and limited bag restart lifecycle"
+    },
+    {
+      "id": "outgame-local-manager-full-record-actual-file-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Concrete LocalData serialized schema and limited bag restart lifecycle"
+    },
+    {
+      "id": "outgame-save-registry-source-hash-null-and-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original save registry and coordinated local skin commander migration"
+    },
+    {
+      "id": "outgame-local-skin-commander-registry-startup-migration",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original save registry and coordinated local skin commander migration"
+    },
+    {
+      "id": "outgame-startup-entry-page-migration-scene-callback-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original post-data startup page and scene callback ordering"
+    },
+    {
+      "id": "outgame-startup-entry-synchronous-callback-and-failure",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original post-data startup page and scene callback ordering"
+    },
+    {
+      "id": "outgame-prefab-cache-original-ranges-and-object-lifetime",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original prefab cache initialization and selective model root cleanup"
+    },
+    {
+      "id": "outgame-prefab-init-clear-order-and-missing-resource",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original prefab cache initialization and selective model root cleanup"
+    },
+    {
+      "id": "outgame-prefab-cache-failure-preserves-source-partial-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original prefab cache initialization and selective model root cleanup"
+    },
+    {
+      "id": "outgame-user-preferences-original-fields-init-and-overwrite",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original managed preference records and SDK-day transition"
+    },
+    {
+      "id": "outgame-user-preferences-save-failure-and-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original managed preference records and SDK-day transition"
+    },
+    {
+      "id": "outgame-new-day-rereads-update-event-and-backward-days",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original managed preference records and SDK-day transition"
+    },
+    {
+      "id": "outgame-new-day-event-failure-retains-write-and-no-repeat",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original managed preference records and SDK-day transition"
+    },
+    {
+      "id": "outgame-preference-webgl-sdk-queue-key-and-actual-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original preferences through WebGL file routing and SDK queue"
+    },
+    {
+      "id": "outgame-preference-webgl-async-failure-retains-cache-digest",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original preferences through WebGL file routing and SDK queue"
+    },
+    {
+      "id": "outgame-original-wx-preferences-inherited-zero-day-and-managed-init",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original concrete WX preference ownership and inherited day behavior"
+    },
+    {
+      "id": "outgame-video-mapping-original-table-and-reference-semantics",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video placement table and bridge mapping resolution"
+    },
+    {
+      "id": "outgame-video-mapping-fallback-errors-and-missing-setup",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video placement table and bridge mapping resolution"
+    },
+    {
+      "id": "outgame-reward-video-source-ready-lock-and-callback-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule rewarded-video lifecycle and callbacks"
+    },
+    {
+      "id": "outgame-reward-video-timeout-show-failure-and-close-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule rewarded-video lifecycle and callbacks"
+    },
+    {
+      "id": "outgame-reward-video-string-results-and-callback-throw",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule rewarded-video lifecycle and callbacks"
+    },
+    {
+      "id": "outgame-ad-router-interstitial-block-vs-missing-controller",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original NewAdsManager request/controller routing"
+    },
+    {
+      "id": "outgame-ad-router-platform-close-reentrancy-and-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original NewAdsManager request/controller routing"
+    },
+    {
+      "id": "outgame-ad-entry-source-module-gate-cache-and-warning-reread",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original entry-to-ad-controller integrated lifecycle"
+    },
+    {
+      "id": "outgame-ad-entry-module-router-controller-full-callback-chain",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original entry-to-ad-controller integrated lifecycle"
+    },
+    {
+      "id": "outgame-ad-entry-missing-controller-retains-source-pending-result",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original entry-to-ad-controller integrated lifecycle"
+    },
+    {
+      "id": "outgame-ad-readiness-cache-alternative-and-interval-boundary",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original readiness virtual dispatch and adapter timing policy"
+    },
+    {
+      "id": "outgame-ad-adapter-clock-reread-finish-and-source-exceptions",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original readiness virtual dispatch and adapter timing policy"
+    },
+    {
+      "id": "outgame-ad-cache-priority-rotation-and-guarantee-fallback",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original cache selection comparers, bidding gates and priority rotation"
+    },
+    {
+      "id": "outgame-ad-cache-bidding-gates-and-platform-preference",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original cache selection comparers, bidding gates and priority rotation"
+    },
+    {
+      "id": "outgame-ad-price-validity-reread-zero-and-negative",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original price validity and adapter price cache"
+    },
+    {
+      "id": "outgame-ad-price-storage-date-key-and-zero-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original price validity and adapter price cache"
+    },
+    {
+      "id": "outgame-ad-request-queue-two-pass-priority-dedup",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original two-pass real request queue and callback ordering"
+    },
+    {
+      "id": "outgame-ad-request-queue-callback-mutation-and-failure",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original two-pass real request queue and callback ordering"
+    },
+    {
+      "id": "outgame-ad-show-flow-request-then-cache-display-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original composed advertisement show control flow"
+    },
+    {
+      "id": "outgame-ad-show-flow-weixin-guarantee-and-platform-preference",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original composed advertisement show control flow"
+    },
+    {
+      "id": "outgame-ad-show-flow-busy-gates-and-interstitial4-failure",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original composed advertisement show control flow"
+    },
+    {
+      "id": "outgame-video-controller-completion-flag-close-and-repeat",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video controller callback lifecycle and composed reward route"
+    },
+    {
+      "id": "outgame-video-controller-close-cleanup-failure-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video controller callback lifecycle and composed reward route"
+    },
+    {
+      "id": "outgame-video-entry-through-restored-controller-to-show-flow",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video controller callback lifecycle and composed reward route"
+    },
+    {
+      "id": "outgame-wx-video-load-reuse-autoload-and-delay",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original WxVideoAdapter loading and reuse lifecycle"
+    },
+    {
+      "id": "outgame-wx-video-load-error-and-destroy-exceptions",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original WxVideoAdapter loading and reuse lifecycle"
+    },
+    {
+      "id": "outgame-ad-notifications-request-listener-reread-and-busy-cleanup",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter notification state transitions and listener ordering"
+    },
+    {
+      "id": "outgame-ad-notifications-display-close-and-reward-gates",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter notification state transitions and listener ordering"
+    },
+    {
+      "id": "outgame-ad-show-error-special-close-vs-listener-retry",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter error routing and repeated click reports"
+    },
+    {
+      "id": "outgame-ad-banner-error-switch-and-click-repeat-report",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter error routing and repeated click reports"
+    },
+    {
+      "id": "outgame-serial-close-callback-before-preload-and-banner",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial controller close, reward and retry lifecycle"
+    },
+    {
+      "id": "outgame-controller-show-failure-callback-controls-retry-route",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial controller close, reward and retry lifecycle"
+    },
+    {
+      "id": "outgame-serial-preload-state-scan-and-remove-before-request",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial preload timing and request scan"
+    },
+    {
+      "id": "outgame-serial-video-preload-count-reread-delay-and-stop",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial preload timing and request scan"
+    },
+    {
+      "id": "outgame-serial-load-entry-rebuild-cap-and-listener-binding",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial loading entry and request-list construction"
+    },
+    {
+      "id": "outgame-serial-load-state-filter-and-cache-count",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial loading entry and request-list construction"
+    },
+    {
+      "id": "outgame-serial-receive-success-cache-callback-and-video-window",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial receive callbacks and video auto-show boundary"
+    },
+    {
+      "id": "outgame-serial-receive-inter4-auto-and-noncache-priority",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial receive callbacks and video auto-show boundary"
+    },
+    {
+      "id": "outgame-serial-show-listener-notification-chain",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial shown event and notification listener binding"
+    },
+    {
+      "id": "outgame-serial-show-report-delay-and-callback-type-reread",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial shown event and notification listener binding"
+    },
+    {
+      "id": "outgame-ad-timeout-config-source-defaults-and-invalid-values",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter request and timeout lifecycle"
+    },
+    {
+      "id": "outgame-ad-timeout-native-request-and-expiry-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original adapter request and timeout lifecycle"
+    },
+    {
+      "id": "outgame-wx-video-close-count-reward-and-late-show",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Wx video native show and close callback lifecycle"
+    },
+    {
+      "id": "outgame-wx-video-null-partial-and-empty-show-errors",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Wx video native show and close callback lifecycle"
+    },
+    {
+      "id": "outgame-wx-adapter-preload-native-controller-reward-chain",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Wx video adapter composition and controller callback lifecycle"
+    },
+    {
+      "id": "outgame-wx-adapter-load-timeout-failure-and-retry",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Wx video adapter composition and controller callback lifecycle"
+    },
+    {
+      "id": "outgame-wx-adapter-autoload-retains-native-and-delays-success",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original Wx video adapter composition and controller callback lifecycle"
+    },
+    {
+      "id": "outgame-video-source-initialization-order-and-defaults",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video initialization and lazy platform adapter construction"
+    },
+    {
+      "id": "outgame-video-source-request-delay-skips-immediate-load",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video initialization and lazy platform adapter construction"
+    },
+    {
+      "id": "outgame-ad-platform-list-normalizes-inters-and-caches",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video initialization and lazy platform adapter construction"
+    },
+    {
+      "id": "outgame-ad-platform-list-empty-retries-and-retains-partial-work",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original video initialization and lazy platform adapter construction"
+    },
+    {
+      "id": "outgame-wx-adapter-source-init-config-gates-and-defaults",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DAU adapter initialization and retained configuration semantics"
+    },
+    {
+      "id": "outgame-wx-adapter-retains-source-config-references",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DAU adapter initialization and retained configuration semantics"
+    },
+    {
+      "id": "outgame-wx-adapter-init-banner-and-parse-failure-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original DAU adapter initialization and retained configuration semantics"
+    },
+    {
+      "id": "outgame-ad-factory-source-platform-mapping",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule platform factory mapping and source WxVideo construction chain"
+    },
+    {
+      "id": "outgame-ad-factory-first-day-and-cached-inactive-module",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule platform factory mapping and source WxVideo construction chain"
+    },
+    {
+      "id": "outgame-ad-factory-platform-list-source-init-to-native-request",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ADModule platform factory mapping and source WxVideo construction chain"
+    },
+    {
+      "id": "outgame-serial-source-set-adz-cache-clamp-and-reference",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial controller configuration and shared platform-list binding"
+    },
+    {
+      "id": "outgame-serial-source-set-adz-empty-retry-and-failure-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial controller configuration and shared platform-list binding"
+    },
+    {
+      "id": "outgame-serial-platform-list-reentrant-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial controller configuration and shared platform-list binding"
+    },
+    {
+      "id": "outgame-ad-request-completion-source-cache-and-reload",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original request completion and realtime reload lifecycle"
+    },
+    {
+      "id": "outgame-ad-request-completion-banner-delay-and-reentrant-type",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original request completion and realtime reload lifecycle"
+    },
+    {
+      "id": "outgame-serial-native-failure-automatically-schedules-retry",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original request completion and realtime reload lifecycle"
+    },
+    {
+      "id": "outgame-serial-video-session-native-reward-and-auto-reload",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial video session composed lifecycle"
+    },
+    {
+      "id": "outgame-serial-video-session-native-failure-retry",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial video session composed lifecycle"
+    },
+    {
+      "id": "outgame-serial-video-session-multiple-adapters-preload-during-show",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original serial video session composed lifecycle"
+    },
+    {
+      "id": "outgame-store-source-new-data-and-wire-roundtrip",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original store data model, manager lifecycle and isolated persistence"
+    },
+    {
+      "id": "outgame-store-source-empty-decode-and-server-routing",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original store data model, manager lifecycle and isolated persistence"
+    },
+    {
+      "id": "outgame-store-original-registration-exclusion-and-file-restart",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original store data model, manager lifecycle and isolated persistence"
+    },
+    {
+      "id": "outgame-item-original-wire-preserves-int64-and-product-counters",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item and product record wire format"
+    },
+    {
+      "id": "outgame-item-original-empty-versus-held-default-record",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item and product record wire format"
+    },
+    {
+      "id": "outgame-global-item-index-filter-identity-and-shallow-snapshot",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item/product indexes and snapshots"
+    },
+    {
+      "id": "outgame-global-item-index-duplicate-failure-retains-partial-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item/product indexes and snapshots"
+    },
+    {
+      "id": "outgame-global-item-snapshot-update-source-field-selection",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item/product indexes and snapshots"
+    },
+    {
+      "id": "outgame-global-item-save-rebuilds-live-lists-before-time",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item save and clock semantics"
+    },
+    {
+      "id": "outgame-global-item-save-failure-and-reentrant-time-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item save and clock semantics"
+    },
+    {
+      "id": "outgame-global-item-clock-host-replacement-and-local-fallback",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item save and clock semantics"
+    },
+    {
+      "id": "outgame-item-time-original-eight-hour-epoch-and-milliseconds",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original item timestamp epoch and conversion"
+    },
+    {
+      "id": "outgame-global-item-lifecycle-init-order-and-reinitialize",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item initialization and release lifecycle"
+    },
+    {
+      "id": "outgame-global-item-lifecycle-init-failure-retains-source-stage",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item initialization and release lifecycle"
+    },
+    {
+      "id": "outgame-global-item-lifecycle-release-failure-and-time-resync",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global item initialization and release lifecycle"
+    },
+    {
+      "id": "outgame-product-update-lifecycle-threshold-and-day-comparison",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global product scheduling"
+    },
+    {
+      "id": "outgame-product-interval-refresh-boundary-catchup-and-overflow",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global product scheduling"
+    },
+    {
+      "id": "outgame-product-hour-and-week-refresh-original-calendar-boundaries",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global product scheduling"
+    },
+    {
+      "id": "outgame-product-update-failure-and-source-parameter-gates",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original global product scheduling"
+    },
+    {
+      "id": "outgame-product-reset-modes-price-order-and-original-snapshot-key",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original product resets and nested purchase records"
+    },
+    {
+      "id": "outgame-product-reset-integrated-schedule-and-failure-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original product resets and nested purchase records"
+    },
+    {
+      "id": "outgame-product-prices-all-source-formulas-and-distinct-counts",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original product array and scalar price formulas"
+    },
+    {
+      "id": "outgame-product-price-source-indexing-errors-and-held-values",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original product array and scalar price formulas"
+    },
+    {
+      "id": "outgame-product-price-reset-composition-and-numeric-conversion",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original product array and scalar price formulas"
+    },
+    {
+      "id": "outgame-original-random-range-list-dispatch-and-boundaries",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original shared product and battle random source"
+    },
+    {
+      "id": "outgame-random-shared-stream-interleaves-price-and-battle-draws",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original shared product and battle random source"
+    },
+    {
+      "id": "outgame-project-shop-original-table-and-real-currency-purchase",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original project ShopItem purchase flow"
+    },
+    {
+      "id": "outgame-project-shop-original-parse-failure-and-first-reward-only",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original project ShopItem purchase flow"
+    },
+    {
+      "id": "outgame-shop-native-four-product-buttons-and-rebuild",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Native ShopUI product cards and actual inventory purchase"
+    },
+    {
+      "id": "outgame-shop-native-video-feedback-and-immediate-fly-grant",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Native ShopUI feedback and source fly-tool grant entry"
+    },
+    {
+      "id": "outgame-fly-collection-source-count-remainder-and-callback-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source fly-tool collection display and completion"
+    },
+    {
+      "id": "outgame-fly-currency-original-prefabs-and-sprite-bindings",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original fly currency prefab assets"
+    },
+    {
+      "id": "outgame-fly-cleanup-deferred-stop-strict-time-and-failure-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source fly-tool cleanup and timing"
+    },
+    {
+      "id": "outgame-fly-coroutine-native-icons-realtime-waits-and-arrivals",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source fly-tool animation coroutine"
+    },
+    {
+      "id": "outgame-fly-global-id-registry-and-source-circular-easing",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Source fly effect id registry and circular easing"
+    },
+    {
+      "id": "outgame-fly-native-tween-forward-pulse-and-independent-movement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Native fly forward tween execution subset"
+    },
+    {
+      "id": "outgame-fly-scatter-source-draw-order-and-runtime-missing-target",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Fly runtime composition and source scatter"
+    },
+    {
+      "id": "outgame-original-pooled-prefab-parent-and-visibility-lifecycle",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original pooled prefab lifecycle"
+    },
+    {
+      "id": "outgame-pooled-prefab-base-initialization",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original pooled prefab base initialization"
+    },
+    {
+      "id": "outgame-pool-entry-source-count-and-timestamp",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-pool-source-first-free-and-release-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-pool-expiry-filter-and-unscaled-update",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-normal-pool-deferred-cache-and-reuse",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-normal-pool-destruction-order-and-retained-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-asset-handle-validity-release-and-native-instance",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-asset-handle-completion-subscriptions",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-provider-completion-snapshot-release-and-task",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-provider-bundle-destruction-and-partial-failure",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-shop-page-lifecycle-feedback-connection",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-message-dispatcher-original-multicast-semantics",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-shop-concrete-message-host-refresh",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Object<T> shared source wrapper"
+    },
+    {
+      "id": "outgame-video-completion-source-report-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn completion/listener source subset"
+    },
+    {
+      "id": "outgame-shop-native-video-event-to-inventory",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn completion/listener source subset"
+    },
+    {
+      "id": "outgame-video-click-shared-cooldown-and-source-order",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn click and delay-report source"
+    },
+    {
+      "id": "outgame-video-click-mutation-and-failure-boundaries",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn click and delay-report source"
+    },
+    {
+      "id": "outgame-video-click-to-completion-event-chain",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn click and delay-report source"
+    },
+    {
+      "id": "outgame-video-delay-report-scaled-wait-and-sdk-gate",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn click and delay-report source"
+    },
+    {
+      "id": "outgame-native-video-button-pointer-to-sdk-callback",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn native configuration and reporting source"
+    },
+    {
+      "id": "outgame-native-video-button-config-lock-and-state",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn native configuration and reporting source"
+    },
+    {
+      "id": "outgame-native-video-button-disabled-base-does-not-cancel-video",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "UIVideoBtn native configuration and reporting source"
+    },
+    {
+      "id": "outgame-shop-original-imported-video-buttons",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ShopUI serialized video components and UIVideoBtn source"
+    },
+    {
+      "id": "outgame-shop-prefab-pointer-through-video-host-to-inventory",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "Original ShopUI serialized video components and UIVideoBtn source"
+    },
+    {
+      "id": "outgame-video-manager-cache-reset-and-source-json",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "VideoBtnManager cache and ConfigRead JSON branch source"
+    },
+    {
+      "id": "outgame-video-manager-null-and-failed-load",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "VideoBtnManager cache and ConfigRead JSON branch source"
+    },
+    {
+      "id": "outgame-ads-video-delay-gate-and-callback-replacement",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "AdsManager video async and result-dispatch source"
+    },
+    {
+      "id": "outgame-ads-video-result-failure-and-interruption",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "AdsManager video async and result-dispatch source"
+    },
+    {
+      "id": "outgame-callback-json-original-permissive-semantics",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "GFRunning Json parser and Util.DataParse source"
+    },
+    {
+      "id": "outgame-callback-json-string-and-error-boundaries",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "GFRunning Json parser and Util.DataParse source"
+    },
+    {
+      "id": "outgame-sdk-button-registry-original-bind-and-readiness",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager button registration and readiness source"
+    },
+    {
+      "id": "outgame-sdk-function-state-refresh-not-fallback",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-sdk-capabilities-numeric-rules-and-cache",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-sdk-button-refresh-cached-state-and-dead-entries",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-sdk-action-initialization-yields-and-binding",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-sdk-actions-original-manager-routing",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-xyx-video-platform-callback-conversion",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    },
+    {
+      "id": "outgame-sdk-xyx-wx-module-controller-reward-chain",
+      "result": "pass",
+      "detail": "",
+      "sourceContract": "DBTSDKManager function state cache and SDKExtension source"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "source_close_registry_composed_with_async_state_machine",
+  "source": [
+    "disassembly/Type3558-27401.txt",
+    "disassembly/Type3544-27326.txt",
+    "ui-close-registry-generics.json"
+  ],
+  "verified": [
+    "Dictionary<string,BaseUI> ContainsKey, get_Item, Remove before _closeUI",
+    "CloseAction before module and source-name resolution",
+    "Missing/reentrant close skipped after removal; exception does not restore registration",
+    "Concrete async close preserves animation and both frame waits after registry removal"
+  ],
+  "remaining": [
+    "Production original page creation/registration and runtime type-name mapping",
+    "Concrete animation/frame/resource host",
+    "Full production entry and Player"
+  ],
+  "integratedChecks": 593
+}

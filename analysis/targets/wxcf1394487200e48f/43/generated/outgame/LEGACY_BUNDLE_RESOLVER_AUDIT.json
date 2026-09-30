@@ -1,0 +1,44 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "atUtc": "2026-09-30T03:43:01.253038+00:00",
+  "sourceMethods": [
+    23813,
+    23872,
+    29826,
+    29828,
+    29834
+  ],
+  "implemented": [
+    "AssetBundleManager23813 queries current IBundleServices.GetAssetBundleInfo without normalizing name; dereferences record then writes offset16/0 from bool IsEncrypAB; LocalPath null/empty warns and returns null; whitespace accepted; preserves record identity and exceptions.",
+    "Utility3130 cctor23872 initializes AssetUnloadinterval to 60; exposed as initial default only, runtime writers not yet audited."
+  ],
+  "recordProjection": {
+    "sourceType": 3817,
+    "fields": {
+      "LocalPath": 16,
+      "IsEncrypAB": 28
+    },
+    "qualification": "Only consumed fields projected. Complete BundleAssetInfo constructor diagnostics and other fields not implemented."
+  },
+  "sourceFindings": [
+    "ResourcesModule.bundleServices field56 is IBundleServices(type3819), GetAssetBundleInfo29828 slot0.",
+    "Implementations3818/3820 use PatchManifest.TryGetValue and create BundleAssetInfo. 3818 prefix field12; 3820 AppSetting.ABStreamingAssetsPath. Both missing branches warn Not found element in patch manifest : and return empty-path record.",
+    "BundleAssetInfo full ctor29818 assigns fields8/name,16/local,20/remote,24/version,28/encryption,12/obfuscatedName,32/randomSeed,36/isInApp."
+  ],
+  "methodMapCount": 3658,
+  "validation": {
+    "integratedChecks": 632,
+    "passed": true,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "pending": [
+    "PatchManifest services/initialization and full record construction",
+    "Utility runtime writes and manager unload-disable configuration",
+    "ResourcesModule.Initialize/firstpack",
+    "Production config/account/menu composition"
+  ]
+}

@@ -1,0 +1,48 @@
+; Original class: Y¿
+; Type2954.WaitForAsyncComplete; wasmcode1 function 20209; offset=8028383 size=115
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007a80e0  i32.const [4986135]
+007a80e5  i32.load8_u [0, 0]
+007a80e8  i32.eqz []
+007a80e9  if [-64]
+007a80eb    i32.const [4078620] ; STRING "WaitForAsyncComplete failed to loading : "
+007a80f0    i32.const [1605]
+007a80f3    call_indirect [0, 0]
+007a80f6    i32.const [4986135]
+007a80fb    i32.const [1]
+007a80fd    i32.store8 [0, 0]
+007a8100  end []
+007a8101  local.get [0]
+007a8103  i32.const [1]
+007a8105  i32.store8 [0, 64]
+007a8108  local.get [0]
+007a810a  i32.load [2, 0]
+007a810d  local.set [1]
+007a810f  local.get [0]
+007a8111  local.get [1]
+007a8113  i32.const [32]
+007a8115  i32.add []
+007a8116  i32.load [2, 192]
+007a811a  local.get [1]
+007a811c  i32.load [2, 220]
+007a8120  call_indirect [4, 0]
+007a8123  local.get [0]
+007a8125  local.get [0]
+007a8127  call [2333] ; Y¿.get_IsDone
+007a812a  i32.eqz []
+007a812b  if [-64]
+007a812d    local.get [0]
+007a812f    i32.load [2, 16]
+007a8132    local.get [0]
+007a8134    call [1622] ; AssetInfo.get_AssetPath
+007a8137    local.set [0]
+007a8139    i32.const [4078620] ; STRING "WaitForAsyncComplete failed to loading : "
+007a813e    i32.load [2, 0]
+007a8141    local.get [0]
+007a8143    i32.const [0]
+007a8145    i32.const [1476] ; TABLE String.Concat
+007a8148    call_indirect [3, 0]
+007a814b    i32.const [0]
+007a814d    call [1299] ; ¼¤±TÀ.Warning
+007a8150  end []
+007a8151  end []

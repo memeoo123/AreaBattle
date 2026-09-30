@@ -1,0 +1,59 @@
+; Original class: LoginServer
+; Type4609.OnLeave; wasmcode function 18748; offset=8466174 size=173
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00812eff  i32.const [5001576]
+00812f04  i32.load8_u [0, 0]
+00812f07  i32.eqz []
+00812f08  if [-64]
+00812f0a    i32.const [3947148]
+00812f0f    call [900] ; 
+00812f12    i32.const [3920444]
+00812f17    call [900] ; 
+00812f1a    i32.const [3968596]
+00812f1f    call [900] ; 
+00812f22    i32.const [4005856] ; METHOD LoginServer.itk
+00812f27    call [900] ; 
+00812f2a    i32.const [4005852] ; METHOD LoginServer.bmmYz
+00812f2f    call [900] ; 
+00812f32    i32.const [4054928] ; STRING "GF_ReceiveLogin"
+00812f37    call [900] ; 
+00812f3a    i32.const [5001576]
+00812f3f    i32.const [1]
+00812f41    i32.store8 [0, 0]
+00812f44  end []
+00812f45  local.get [0]
+00812f47  local.get [1]
+00812f49  local.get [2]
+00812f4b  local.get [0]
+00812f4d  call [3133] ; LoginStateBase.OnLeave
+00812f50  i32.const [3947148]
+00812f55  i32.load [2, 0]
+00812f58  call [903] ; 
+00812f5b  local.set [1]
+00812f5d  local.get [1]
+00812f5f  local.get [0]
+00812f61  i32.const [4005856] ; METHOD LoginServer.itk
+00812f66  i32.load [2, 0]
+00812f69  i32.const [0]
+00812f6b  call [1067] ; EventHandler..ctor
+00812f6e  i32.const [4054928] ; STRING "GF_ReceiveLogin"
+00812f73  i32.load [2, 0]
+00812f76  local.get [1]
+00812f78  i32.const [0]
+00812f7a  call [1185] ; MsgDispatcher.RemoveEventListener
+00812f7d  i32.const [3920444]
+00812f82  i32.load [2, 0]
+00812f85  call [903] ; 
+00812f88  local.set [1]
+00812f8a  local.get [1]
+00812f8c  local.get [0]
+00812f8e  i32.const [4005852] ; METHOD LoginServer.bmmYz
+00812f93  i32.load [2, 0]
+00812f96  call [2089] ; 
+00812f99  local.get [0]
+00812f9b  i32.const [6]
+00812f9d  local.get [1]
+00812f9f  i32.const [3968596]
+00812fa4  i32.load [2, 0]
+00812fa7  call [3163] ; 
+00812faa  end []

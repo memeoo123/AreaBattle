@@ -1,0 +1,37 @@
+{
+  "atUtc": "2026-09-28T10:36:21.819508+00:00",
+  "status": "executed-with-mismatches",
+  "matchedReplay": false,
+  "acceptedInputs": 10,
+  "checkpointCount": 7,
+  "campMatches": 49,
+  "totalTowerObservations": 49,
+  "scoreMatches": 27,
+  "earliestCheckedMismatchPts": 1.0170600414276123,
+  "preRecordingSeconds": 9.547019958496094,
+  "maximumScoreDifference": 8.0,
+  "conclusion": "Initial mismatch predates first player input. Regeneration-phase calibration alone does not recover unknown original soldiers/AI/RNG. Do not retune source mechanics to fit this recording.",
+  "nextWork": "Trace later original player inputs and compare initial opposing-line soldiers/AI dispatch timing; preserve unknown RNG rather than searching seeds for a visual fit.",
+  "evidence": [
+    {
+      "path": "timed-replay-fixture.json",
+      "sha256": "9c5d59d4bdd13b6b6275cabc42aca0126b18919248917bded2dcc1168a74940c"
+    },
+    {
+      "path": "timed-replay-diagnostic.json",
+      "sha256": "a28a13149117e3e1e274defd2054f5db6fed9c5ebc0ce32b5f51637158cb600b"
+    },
+    {
+      "path": "timed-replay-initial-9seconds.json",
+      "sha256": "7bd10f8090de01bc68328a66bce093f14470e346274a29885c0f121a5feecdf5"
+    },
+    {
+      "path": "regen-phase-evidence.json",
+      "sha256": "ed91ba0c7a1992e7fcdbd138a8ca43ee9a9d47201ab0c6fc3b2d7bdfe74b9235"
+    },
+    {
+      "path": "early-input-trace.json",
+      "sha256": "befe63abcbe6cc41884ee959a41623f3300c2b2b9aa23e5c92c673d56c832eb5"
+    }
+  ]
+}

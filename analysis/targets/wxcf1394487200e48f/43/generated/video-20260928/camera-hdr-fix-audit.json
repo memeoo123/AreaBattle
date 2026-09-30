@@ -1,0 +1,50 @@
+{
+  "atUtc": "2026-09-29T03:12:13.997741+00:00",
+  "status": "source-camera-flags-restored",
+  "sourceCamera": "generated\\assets\\gameplay.unity_6a7134d1d26bb7354ce61871131a7a4c\\Camera__46.json",
+  "sourceSha256": "d6cc854af86831d6d26f8b56d3783f16bae35f3bc77fa701c3fd8c7ac878a79f",
+  "sourceGameObject": "GameCamera / pathID8",
+  "sourceFlags": {
+    "allowHDR": false,
+    "allowMSAA": false
+  },
+  "implementation": "BattleView initializes both flags explicitly; previously relied on new Camera defaults. UI camera already had both false.",
+  "shaderAndMaterialChanged": false,
+  "numericReplayUnchanged": true,
+  "metrics": {
+    "roi": [
+      534,
+      775,
+      638,
+      898
+    ],
+    "originalNearWhite": 10,
+    "beforeNearWhite": 2883,
+    "afterNearWhite": 177,
+    "beforeMAE": 25.599202626641652,
+    "afterMAE": 17.47441109026475,
+    "limitation": "Fixed spatial ROI at same video PTS. Includes tower, background and particles; not a full-image acceptance metric."
+  },
+  "validation": {
+    "integratedChecks": 262,
+    "build": {
+      "result": "Succeeded",
+      "size": "274522705",
+      "errors": 0,
+      "warnings": 5
+    },
+    "smokeFrames": 600,
+    "resourceIntegrityPassed": true
+  },
+  "comparison": "generated/video-20260928/ice-camera-fix-comparison.png",
+  "limitations": [
+    "Residual ice particle, edge and sampling differences remain; no full visual pass.",
+    "Original RNG and pre-recording state remain unknown; full numeric match is still incomplete."
+  ],
+  "references": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/direct3d11/d3d10-graphics-programming-guide-output-merger-stage",
+      "role": "Background: normalized versus floating-point render-target blend clamping. The local source camera flags, not this document, determine restored settings."
+    }
+  ]
+}

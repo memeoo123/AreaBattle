@@ -1,0 +1,36 @@
+; Original class: EchelonController
+; Type7518.onVideoRewarded; wasmcode1 function 64190; offset=20479514 size=90
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01387e1b  i32.const [5005080]
+01387e20  i32.load8_u [0, 0]
+01387e23  i32.eqz []
+01387e24  if [-64]
+01387e26    i32.const [4093976] ; STRING "onVideoRewarded"
+01387e2b    i32.const [1605]
+01387e2e    call_indirect [0, 0]
+01387e31    i32.const [5005080]
+01387e36    i32.const [1]
+01387e38    i32.store8 [0, 0]
+01387e3b  end []
+01387e3c  local.get [0]
+01387e3e  i32.load [2, 8]
+01387e41  i32.const [4093976] ; STRING "onVideoRewarded"
+01387e46  i32.load [2, 0]
+01387e49  i32.const [0]
+01387e4b  i32.const [1476] ; TABLE String.Concat
+01387e4e  call_indirect [3, 0]
+01387e51  i32.const [0]
+01387e53  i32.const [8833] ; TABLE XYXLOG.Log
+01387e57  call_indirect [4, 0]
+01387e5a  local.get [0]
+01387e5c  i32.load [2, 32]
+01387e5f  local.set [0]
+01387e61  local.get [0]
+01387e63  if [-64]
+01387e65    local.get [0]
+01387e67    i32.const [0]
+01387e69    i32.const [0]
+01387e6b    i32.const [8695]
+01387e6f    call_indirect [5, 0]
+01387e72  end []
+01387e73  end []

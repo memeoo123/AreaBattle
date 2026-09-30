@@ -1,0 +1,49 @@
+; Original class: ResLoadHelper
+; Type3393.LoadMaterial; wasmcode function 10690; offset=5190811 size=142
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+004f349c  i32.const [5011603]
+004f34a1  i32.load8_u [0, 0]
+004f34a4  i32.eqz []
+004f34a5  if [-64]
+004f34a7    i32.const [4000624]
+004f34ac    call [900] ; 
+004f34af    i32.const [3932308]
+004f34b4    call [900] ; 
+004f34b7    i32.const [3938016]
+004f34bc    call [900] ; 
+004f34bf    i32.const [4061808] ; STRING "Materials/"
+004f34c4    call [900] ; 
+004f34c7    i32.const [4040108] ; STRING ".mat"
+004f34cc    call [900] ; 
+004f34cf    i32.const [5011603]
+004f34d4    i32.const [1]
+004f34d6    i32.store8 [0, 0]
+004f34d9  end []
+004f34da  i32.const [3938016]
+004f34df  i32.load [2, 0]
+004f34e2  call [901] ; 
+004f34e5  local.get [0]
+004f34e7  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f34ea  if [-64]
+004f34ec    i32.const [4061808] ; STRING "Materials/"
+004f34f1    i32.load [2, 0]
+004f34f4    local.get [0]
+004f34f6    i32.const [4040108] ; STRING ".mat"
+004f34fb    i32.load [2, 0]
+004f34fe    i32.const [0]
+004f3500    call [955] ; String.Concat
+004f3503    local.set [0]
+004f3505    i32.const [3932308]
+004f350a    i32.load [2, 0]
+004f350d    call [901] ; 
+004f3510    i32.const [4000624]
+004f3515    i32.load [2, 0]
+004f3518    call [1051] ; 
+004f351b    local.get [0]
+004f351d    local.get [1]
+004f351f    local.get [2]
+004f3521    i32.const [0]
+004f3523    call [4845] ; ResourcesModule.LoadAsset
+004f3526    drop []
+004f3527  end []
+004f3528  end []

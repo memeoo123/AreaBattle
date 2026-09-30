@@ -1,0 +1,35 @@
+{
+  "status": "source-canvas-adaptation-and-native-lifecycle-implemented",
+  "atUtc": "2026-09-30T02:25:20.982156+00:00",
+  "source": [
+    "disassembly/Type10722-74278.txt",
+    "disassembly/Type10722-74279.txt",
+    "disassembly/Type10722-74281.txt",
+    "disassembly/Type10722-74282.txt",
+    "disassembly/Type10722-74283.txt",
+    "canvas-adaptive-generics.json",
+    "ui-bootstrap-schema.json"
+  ],
+  "verified": [
+    "Awake gets CanvasScaler, reuses/adds AspectRatioFitter and preserves enabled state",
+    "Reference resolution overwrites whRatioConst; sets shared portrait/fixedWidth fields",
+    "Portrait ratio <=design or landscape selects width factor; wider portrait selects height factor",
+    "Aspect mode and ratio applied before recording ratio and starting diagnostic coroutine",
+    "Same aspect at different pixel sizes does not trigger; repeated1920/1080 does not trigger",
+    "Ratio change adapts, logs, then sends GameAspectChange with null arguments",
+    "Diagnostic yields source WaitForSeconds(1), then reads current design/screen values"
+  ],
+  "implementation": [
+    "OutgameCanvasAdaptation.cs",
+    "OutgameCanvasAdaptive.cs"
+  ],
+  "integratedChecks": 605,
+  "precision": "Explicit float cast in Update rounds current ratio to source f32 before equality; test covers unchanged1920/1080. Diagnostic assertion uses1e-6 tolerance for intermediate arithmetic.",
+  "remaining": [
+    "Bootstrap importer and actual production owner",
+    "AdaptiveBangs and AtlasLoader behavior",
+    "Full account/menu and Player validation"
+  ],
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false
+}

@@ -1,0 +1,27 @@
+; Original class: LevelRankDataManager
+; Type4471.OnSave; wasmcode function 18892; offset=8515930 size=58
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0081f15d  local.get [0]
+0081f15f  local.set [1]
+0081f161  local.get [0]
+0081f163  i32.load [2, 20]
+0081f166  i32.const [0]
+0081f168  call [1584] ; JsonUtility.ToJson
+0081f16b  i32.const [0]
+0081f16d  call [9638] ; Utils_GZipCompress.GetStringByDataset
+0081f170  local.set [2]
+0081f172  local.get [0]
+0081f174  i32.load [2, 0]
+0081f177  i32.const [-64]
+0081f179  i32.sub []
+0081f17a  local.set [0]
+0081f17c  local.get [1]
+0081f17e  local.get [2]
+0081f180  local.get [0]
+0081f182  i32.load [2, 192]
+0081f186  local.get [0]
+0081f188  i32.load [2, 188]
+0081f18c  global.set [3]
+0081f18e  global.get [3]
+0081f190  call_indirect [2, 0]
+0081f193  end []

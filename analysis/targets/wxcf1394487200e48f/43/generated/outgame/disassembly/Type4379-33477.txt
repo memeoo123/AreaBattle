@@ -1,0 +1,172 @@
+; Original class: MenuTabUI
+; Type4379.InitializeComponent; wasmcode function 18611; offset=8392021 size=551
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00800d56  i32.const [5009032]
+00800d5b  i32.load8_u [0, 0]
+00800d5e  i32.eqz []
+00800d5f  if [-64]
+00800d61    i32.const [4018584]
+00800d66    call [900] ; 
+00800d69    i32.const [4018588]
+00800d6e    call [900] ; 
+00800d71    i32.const [4093664] ; STRING "objShopUnSelected"
+00800d76    call [900] ; 
+00800d79    i32.const [4093612] ; STRING "objOtherUnSelected"
+00800d7e    call [900] ; 
+00800d81    i32.const [4093680] ; STRING "objSkinSelected"
+00800d86    call [900] ; 
+00800d89    i32.const [4090136] ; STRING "imgSkinDot"
+00800d8e    call [900] ; 
+00800d91    i32.const [4093584] ; STRING "objMainUnSelected"
+00800d96    call [900] ; 
+00800d99    i32.const [4089868] ; STRING "imgCommanderDot2"
+00800d9e    call [900] ; 
+00800da1    i32.const [4093684] ; STRING "objSkinUnSelected"
+00800da6    call [900] ; 
+00800da9    i32.const [4090176] ; STRING "imgUpgradeLock"
+00800dae    call [900] ; 
+00800db1    i32.const [4089880] ; STRING "imgCommanderLock"
+00800db6    call [900] ; 
+00800db9    i32.const [4089864] ; STRING "imgCommanderDot1"
+00800dbe    call [900] ; 
+00800dc1    i32.const [4093560] ; STRING "objItemSelected"
+00800dc6    call [900] ; 
+00800dc9    i32.const [4093660] ; STRING "objShopSelected"
+00800dce    call [900] ; 
+00800dd1    i32.const [4071540] ; STRING "TabContent"
+00800dd6    call [900] ; 
+00800dd9    i32.const [4093608] ; STRING "objOtherSelected"
+00800dde    call [900] ; 
+00800de1    i32.const [4089872] ; STRING "imgCommanderDot3"
+00800de6    call [900] ; 
+00800de9    i32.const [4093580] ; STRING "objMainSelected"
+00800dee    call [900] ; 
+00800df1    i32.const [4093564] ; STRING "objItemUnSelected"
+00800df6    call [900] ; 
+00800df9    i32.const [5009032]
+00800dfe    i32.const [1]
+00800e00    i32.store8 [0, 0]
+00800e03  end []
+00800e04  local.get [0]
+00800e06  local.get [0]
+00800e08  i32.const [4071540] ; STRING "TabContent"
+00800e0d  i32.load [2, 0]
+00800e10  i32.const [4018584]
+00800e15  i32.load [2, 0]
+00800e18  call [970] ; 
+00800e1b  i32.store [2, 144]
+00800e1f  local.get [0]
+00800e21  local.get [0]
+00800e23  i32.const [4093664] ; STRING "objShopUnSelected"
+00800e28  i32.load [2, 0]
+00800e2b  i32.const [0]
+00800e2d  call [1116] ; UIObject.Get
+00800e30  i32.store [2, 148]
+00800e34  local.get [0]
+00800e36  local.get [0]
+00800e38  i32.const [4093660] ; STRING "objShopSelected"
+00800e3d  i32.load [2, 0]
+00800e40  i32.const [0]
+00800e42  call [1116] ; UIObject.Get
+00800e45  i32.store [2, 152]
+00800e49  local.get [0]
+00800e4b  local.get [0]
+00800e4d  i32.const [4093684] ; STRING "objSkinUnSelected"
+00800e52  i32.load [2, 0]
+00800e55  i32.const [0]
+00800e57  call [1116] ; UIObject.Get
+00800e5a  i32.store [2, 156]
+00800e5e  local.get [0]
+00800e60  local.get [0]
+00800e62  i32.const [4093680] ; STRING "objSkinSelected"
+00800e67  i32.load [2, 0]
+00800e6a  i32.const [0]
+00800e6c  call [1116] ; UIObject.Get
+00800e6f  i32.store [2, 160]
+00800e73  local.get [0]
+00800e75  local.get [0]
+00800e77  i32.const [4093584] ; STRING "objMainUnSelected"
+00800e7c  i32.load [2, 0]
+00800e7f  i32.const [0]
+00800e81  call [1116] ; UIObject.Get
+00800e84  i32.store [2, 164]
+00800e88  local.get [0]
+00800e8a  local.get [0]
+00800e8c  i32.const [4093580] ; STRING "objMainSelected"
+00800e91  i32.load [2, 0]
+00800e94  i32.const [0]
+00800e96  call [1116] ; UIObject.Get
+00800e99  i32.store [2, 168]
+00800e9d  local.get [0]
+00800e9f  local.get [0]
+00800ea1  i32.const [4093612] ; STRING "objOtherUnSelected"
+00800ea6  i32.load [2, 0]
+00800ea9  i32.const [0]
+00800eab  call [1116] ; UIObject.Get
+00800eae  i32.store [2, 172]
+00800eb2  local.get [0]
+00800eb4  local.get [0]
+00800eb6  i32.const [4093608] ; STRING "objOtherSelected"
+00800ebb  i32.load [2, 0]
+00800ebe  i32.const [0]
+00800ec0  call [1116] ; UIObject.Get
+00800ec3  i32.store [2, 176]
+00800ec7  local.get [0]
+00800ec9  local.get [0]
+00800ecb  i32.const [4089880] ; STRING "imgCommanderLock"
+00800ed0  i32.load [2, 0]
+00800ed3  i32.const [4018588]
+00800ed8  i32.load [2, 0]
+00800edb  call [970] ; 
+00800ede  i32.store [2, 180]
+00800ee2  local.get [0]
+00800ee4  local.get [0]
+00800ee6  i32.const [4093564] ; STRING "objItemUnSelected"
+00800eeb  i32.load [2, 0]
+00800eee  i32.const [0]
+00800ef0  call [1116] ; UIObject.Get
+00800ef3  i32.store [2, 184]
+00800ef7  local.get [0]
+00800ef9  local.get [0]
+00800efb  i32.const [4090176] ; STRING "imgUpgradeLock"
+00800f00  i32.load [2, 0]
+00800f03  i32.const [4018588]
+00800f08  i32.load [2, 0]
+00800f0b  call [970] ; 
+00800f0e  i32.store [2, 188]
+00800f12  local.get [0]
+00800f14  local.get [0]
+00800f16  i32.const [4093560] ; STRING "objItemSelected"
+00800f1b  i32.load [2, 0]
+00800f1e  i32.const [0]
+00800f20  call [1116] ; UIObject.Get
+00800f23  i32.store [2, 192]
+00800f27  local.get [0]
+00800f29  local.get [0]
+00800f2b  i32.const [4089864] ; STRING "imgCommanderDot1"
+00800f30  i32.load [2, 0]
+00800f33  i32.const [0]
+00800f35  call [1116] ; UIObject.Get
+00800f38  i32.store [2, 196]
+00800f3c  local.get [0]
+00800f3e  local.get [0]
+00800f40  i32.const [4089868] ; STRING "imgCommanderDot2"
+00800f45  i32.load [2, 0]
+00800f48  i32.const [0]
+00800f4a  call [1116] ; UIObject.Get
+00800f4d  i32.store [2, 200]
+00800f51  local.get [0]
+00800f53  local.get [0]
+00800f55  i32.const [4089872] ; STRING "imgCommanderDot3"
+00800f5a  i32.load [2, 0]
+00800f5d  i32.const [0]
+00800f5f  call [1116] ; UIObject.Get
+00800f62  i32.store [2, 204]
+00800f66  local.get [0]
+00800f68  local.get [0]
+00800f6a  i32.const [4090136] ; STRING "imgSkinDot"
+00800f6f  i32.load [2, 0]
+00800f72  i32.const [0]
+00800f74  call [1116] ; UIObject.Get
+00800f77  i32.store [2, 208]
+00800f7b  end []

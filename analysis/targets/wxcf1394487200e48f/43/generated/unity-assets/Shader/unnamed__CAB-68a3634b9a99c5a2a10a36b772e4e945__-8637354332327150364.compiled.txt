@@ -1,0 +1,58 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Spine/SkeletonGraphic" {
+Properties {
+
+_MainTex ("Sprite Texture", 2D) = "white" { }
+
+[Toggle(_STRAIGHT_ALPHA_INPUT)] _StraightAlphaInput ("Straight Alpha Texture", Float) = 0.0
+
+[Toggle(_CANVAS_GROUP_COMPATIBLE)] _CanvasGroupCompatible ("CanvasGroup Compatible", Float) = 1.0
+
+_Color ("Tint", Color) = (1,1,1,1)
+
+[Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp ("Stencil Comparison", Float) = 8.0
+
+_Stencil ("Stencil ID", Float) = 0.0
+
+[Enum(UnityEngine.Rendering.StencilOp)] _StencilOp ("Stencil Operation", Float) = 0.0
+
+_StencilWriteMask ("Stencil Write Mask", Float) = 255.0
+
+_StencilReadMask ("Stencil Read Mask", Float) = 255.0
+
+_ColorMask ("Color Mask", Float) = 15.0
+
+[Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0.0
+
+_OutlineWidth ("Outline Width", Range(0, 8)) = 3.0
+
+_OutlineColor ("Outline Color", Color) = (1,1,0,1)
+
+_OutlineReferenceTexWidth ("Reference Texture Width", Float) = 1024.0
+
+_ThresholdEnd ("Outline Threshold", Range(0, 1)) = 0.25
+
+_OutlineSmoothness ("Outline Smoothness", Range(0, 1)) = 1.0
+
+[MaterialToggle(_USE8NEIGHBOURHOOD_ON)] _Use8Neighbourhood ("Sample 8 Neighbours", Float) = 1.0
+
+_OutlineMipLevel ("Outline Mip Level", Range(0, 3)) = 0.0
+
+}
+SubShader {
+ Tags { "CanUseSpriteAtlas" = "true" "IGNOREPROJECTOR" = "true" "PreviewType" = "Plane" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Normal"
+  Tags { "CanUseSpriteAtlas" = "true" "IGNOREPROJECTOR" = "true" "PreviewType" = "Plane" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZTest Off
+ ZWrite Off
+ Cull Off
+  GpuProgramID 45805
+}
+}
+CustomEditor "SpineShaderWithOutlineGUI"
+}

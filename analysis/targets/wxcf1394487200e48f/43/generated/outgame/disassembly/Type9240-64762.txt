@@ -1,0 +1,22 @@
+; Original class: WXFunctionManger
+; Type9240.PlayAudio; wasmcode1 function 39998; offset=14744619 size=41
+; signature={'args': [127, 127, 125, 127, 127, 127], 'returns': []}; localGroups=[]
+00e0fc2c  local.get [0]
+00e0fc2e  i32.load [2, 16]
+00e0fc31  local.set [0]
+00e0fc33  local.get [4]
+00e0fc35  if [-64]
+00e0fc37    local.get [0]
+00e0fc39    local.get [1]
+00e0fc3b    i32.const [0]
+00e0fc3d    call [31741] ; AudioModule.playRightNow
+00e0fc41    return []
+00e0fc42  end []
+00e0fc43  local.get [0]
+00e0fc45  local.get [1]
+00e0fc47  local.get [2]
+00e0fc49  local.get [3]
+00e0fc4b  i32.const [1]
+00e0fc4d  i32.const [0]
+00e0fc4f  call [31743] ; AudioModule.playAfterDownload
+00e0fc53  end []

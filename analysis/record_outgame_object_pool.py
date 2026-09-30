@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-login-sync-validation.json');play=read(w/'analysis/outgame-fly-playmode-validation.json')
+assert r['passed'] and len(r['checks'])==527 and v['passed'] and play['passed'] and len(play['checks'])==8
+sources=['normal-pool-generic-bodies.json','normal-pool-rgctx.json']+['disassembly/PoolGeneric-'+str(i)+'.txt' for i in range(28732,28747)]
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='object-pool-selection-release';s['validation'].update(integratedChecksPassed=527,loginSyncChecksPassed=len(v['checks']));write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['object-pool-selection-release']={'implementationReady':True,'productionConnected':False,'source':sources,'implementation':['OutgameObjectPool.cs'],'scope':'Original linked-list pool, first-free spawn, registration/return release, expiry and capacity selection, unscaled update and shutdown. Actual fly Play Mode uses pool; original resource providers remain pending. Exception class and diagnostic logging differ from original.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='Object<T> shared source wrapper') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original pooled object count/lifecycle wrapper','checksPassed':527,'outgameChecksPassed':260,'freshPlayerBuild':False,'freshPlayerSmoke':False,'playModeReport':'analysis/outgame-fly-playmode-validation.json','playModeChecksPassed':8,'notClaimed':'Complete pooling, production account or full lobby'};write(p,s)
+audit={'status':'pool_collection_implemented_resource_provider_pending','source':sources,'verified':['Register AddLast then Release; Spawn first same-name available entry in list order','Unspawn reference-matches original target and calls Release after lifecycle','Only unoccupied unlocked entries are automatic release candidates','Expired<=cutoff entries released first independent of quota; remaining quota selection swaps node values by ascending priority then timestamp','Capacity/expiry changes trigger release; update accumulates realElapsedSeconds and uses source float comparison','Remove entry before release callback; shutdown also removes active entries'],'remaining':['Original NormalPool synchronous/asynchronous load and release helpers','Production page/account wiring and full build/E2E','Exercise reuse across consecutive Play Mode reward runs'],'knownDifferences':['InvalidOperationException replaces GameFrameworkException','Original diagnostic log formatting not connected'],'checks':527,'playmodeChecks':8}
+write(o/'NORMAL_POOL_COLLECTION_AUDIT.json',audit)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['confirmed'].append({'fact':'Resolved50 original ObjectPool generic context slots, confirming LinkedList/AddLast/node operations. Pool selection and release now implemented and used by fly Play Mode; NormalPool resource providers pending.','source':sources,'validation':['analysis/outgame-login-sync-validation.json','analysis/outgame-fly-playmode-validation.json']});write(p,s)
+note='\n\n## 原池集合、复用与释放（527项 + 独立8项动态检查）\n通过GFRunning模块的50项ObjectPool RGCTX确认LinkedList、AddLast、枚举、节点读写、移除与对象方法绑定。新增OutgameObjectPool，恢复注册顺序的首个同名空闲取用、托管引用归还、容量/到期筛选、原选择排序、非缩放自动释放与Shutdown先移除后释放。动态飞币夹具已由独立包装改用此真实池实现。527项集成及8项真实Play Mode均通过，Unity均退出0。异常类和诊断日志仍有已知差异；资源加载仍为隔离依赖，原NormalPool加载/释放、页面账号接入与完整构建验收未完成。\n' 
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+subprocess.run(b+['set-check']+a+['--name','outgameObjectPoolSelectionRelease','--result','pass','--evidence','527 integrated checks and8 independent actual Play Mode checks; complete pool and production flows pending.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded527; full goal active.')

@@ -1,0 +1,87 @@
+; EffectModule.GetEffectDataById; wasmcode function 4444; offset=1472262 size=223
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00167707  global.get [0]
+00167709  i32.const [16]
+0016770b  i32.sub []
+0016770c  local.set [2]
+0016770e  local.get [2]
+00167710  global.set [0]
+00167712  i32.const [4989031]
+00167717  i32.load8_u [0, 0]
+0016771a  i32.eqz []
+0016771b  if [-64]
+0016771d    i32.const [3929208]
+00167722    call [900] ; 
+00167725    i32.const [3955576]
+0016772a    call [900] ; 
+0016772d    i32.const [3934404]
+00167732    call [900] ; 
+00167735    i32.const [3926996]
+0016773a    call [900] ; 
+0016773d    i32.const [4104944] ; STRING "未找到ID[{0}]为的特效"
+00167742    call [900] ; 
+00167745    i32.const [4989031]
+0016774a    i32.const [1]
+0016774c    i32.store8 [0, 0]
+0016774f  end []
+00167750  local.get [2]
+00167752  i32.const [0]
+00167754  i32.store [2, 12]
+00167757  local.get [0]
+00167759  i32.load [2, 20]
+0016775c  local.get [1]
+0016775e  local.get [2]
+00167760  i32.const [12]
+00167762  i32.add []
+00167763  i32.const [3955576]
+00167768  i32.load [2, 0]
+0016776b  call [1134] ; 
+0016776e  i32.eqz []
+0016776f  if [-64]
+00167771    i32.const [3926996]
+00167776    i32.load [2, 0]
+00167779    i32.const [1]
+0016777b    call [909] ; 
+0016777e    local.set [0]
+00167780    local.get [2]
+00167782    local.get [1]
+00167784    i32.store [2, 8]
+00167787    i32.const [3934404]
+0016778c    i32.load [2, 0]
+0016778f    local.get [2]
+00167791    i32.const [8]
+00167793    i32.add []
+00167794    call [910] ; 
+00167797    local.set [1]
+00167799    i32.const [4104944] ; STRING "未找到ID[{0}]为的特效"
+0016779e    i32.load [2, 0]
+001677a1    local.get [1]
+001677a3    i32.const [0]
+001677a5    call [1015] ; String.Format
+001677a8    local.set [1]
+001677aa    local.get [0]
+001677ac    local.get [1]
+001677ae    call [905] ; 
+001677b1    local.get [0]
+001677b3    local.get [1]
+001677b5    i32.store [2, 16]
+001677b8    i32.const [3929208]
+001677bd    i32.load [2, 0]
+001677c0    call [901] ; 
+001677c3    local.get [0]
+001677c5    i32.const [0]
+001677c7    i32.const [2087] ; TABLE CLog.Error
+001677ca    global.set [3]
+001677cc    i32.const [2087] ; TABLE CLog.Error
+001677cf    call_indirect [0, 0]
+001677d2  end []
+001677d3  local.get [2]
+001677d5  i32.load [2, 12]
+001677d8  local.set [0]
+001677da  local.get [2]
+001677dc  i32.const [16]
+001677de  i32.add []
+001677df  global.set [0]
+001677e1  local.get [0]
+001677e3  return []
+001677e4  end []

@@ -1,0 +1,41 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Sword" {
+Properties {
+
+_TintCd ("TintCd", Color) = (1,1,1,1)
+
+_Main_Tex ("Main_Tex", 2D) = "white" { }
+
+_TexPanner ("TexPanner", Vector) = (0,0,0,0)
+
+_CdMult ("CdMult", Float) = 10.0
+
+_CdPower ("CdPower", Float) = 0.0
+
+_Edge_Power ("Edge_Power", Range(0, 5)) = 0.0
+
+_EdgeCD ("EdgeCD", Color) = (1,1,1,1)
+
+_Edgel_Mult ("Edgel_Mult", Range(0, 1)) = 0.0
+
+_AlphaPower ("AlphaPower", Float) = 0.0
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 33619
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

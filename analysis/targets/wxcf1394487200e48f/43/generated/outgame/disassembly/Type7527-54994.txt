@@ -1,0 +1,18 @@
+; Original class: SerialController
+; Type7527.stopVideoShowLoad; wasmcode function 3370; offset=1050841 size=32
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001008da  local.get [0]
+001008dc  i32.load [2, 84]
+001008df  local.set [1]
+001008e1  local.get [1]
+001008e3  if [-64]
+001008e5    local.get [1]
+001008e7    i32.const [0]
+001008e9    call [2611] ; CallFrameworkAdapter.Call_StopCoroutine
+001008ec    local.get [0]
+001008ee    i32.const [84]
+001008f1    i32.add []
+001008f2    i32.const [0]
+001008f4    i32.store [2, 0]
+001008f7  end []
+001008f8  end []

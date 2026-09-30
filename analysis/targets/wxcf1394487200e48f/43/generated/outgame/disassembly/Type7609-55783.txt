@@ -1,0 +1,78 @@
+; Original class: XYXLogin
+; Type7609.LoginToMiniServer; wasmcode function 9316; offset=4535267 size=241
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+004533e6  i32.const [5005973]
+004533eb  i32.load8_u [0, 0]
+004533ee  i32.eqz []
+004533ef  if [-64]
+004533f1    i32.const [3915916]
+004533f6    call [900] ; 
+004533f9    i32.const [3932980]
+004533fe    call [900] ; 
+00453401    i32.const [3984752]
+00453406    call [900] ; 
+00453409    i32.const [4031844] ; METHOD <>c__DisplayClass10_0.<LoginToMiniServer>g__TransCallBack|0
+0045340e    call [900] ; 
+00453411    i32.const [3949816]
+00453416    call [900] ; 
+00453419    i32.const [3942528]
+0045341e    call [900] ; 
+00453421    i32.const [4079244] ; STRING "XYXLogin"
+00453426    call [900] ; 
+00453429    i32.const [4070340] ; STRING "Start LoginToMiniServer"
+0045342e    call [900] ; 
+00453431    i32.const [5005973]
+00453436    i32.const [1]
+00453438    i32.store8 [0, 0]
+0045343b  end []
+0045343c  i32.const [3949816]
+00453441  i32.load [2, 0]
+00453444  call [903] ; 
+00453447  local.set [2]
+00453449  local.get [2]
+0045344b  local.get [1]
+0045344d  i32.store [2, 8]
+00453450  i32.const [3984752]
+00453455  i32.load [2, 0]
+00453458  call [1203] ; 
+0045345b  local.get [2]
+0045345d  call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+00453460  i32.const [0]
+00453462  call [7286] ; ReporterSDK.NewReportLoginSuccess
+00453465  i32.const [3942528]
+0045346a  i32.load [2, 0]
+0045346d  call [901] ; 
+00453470  i32.const [3942528]
+00453475  i32.load [2, 0]
+00453478  i32.load [2, 92]
+0045347b  i32.load [2, 8]
+0045347e  i32.const [4070340] ; STRING "Start LoginToMiniServer"
+00453483  i32.load [2, 0]
+00453486  i32.const [0]
+00453488  call [1433] ; XYXLOG.Log
+0045348b  local.get [2]
+0045348d  call [9308] ; XYXURLDefine.get_LoginUrl
+00453490  local.set [1]
+00453492  i32.const [3915916]
+00453497  i32.load [2, 0]
+0045349a  call [903] ; 
+0045349d  local.set [3]
+0045349f  local.get [3]
+004534a1  local.get [2]
+004534a3  i32.const [4031844] ; METHOD <>c__DisplayClass10_0.<LoginToMiniServer>g__TransCallBack|0
+004534a8  i32.load [2, 0]
+004534ab  i32.const [0]
+004534ad  call [1113] ; 
+004534b0  i32.const [3932980]
+004534b5  i32.load [2, 0]
+004534b8  call [901] ; 
+004534bb  local.get [1]
+004534bd  local.get [0]
+004534bf  local.get [3]
+004534c1  i32.const [4079244] ; STRING "XYXLogin"
+004534c6  i32.load [2, 0]
+004534c9  i32.const [0]
+004534cb  call [3924] ; HttpTools.GetHttpContent
+004534ce  i32.const [0]
+004534d0  call [2253] ; HttpTools.StartCoroutine
+004534d3  end []

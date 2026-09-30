@@ -1,0 +1,18 @@
+; Original class: ADModule
+; Type9202.cancelAutoCloseVideo; wasmcode function 6343; offset=2291668 size=31
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0022f7d5  local.get [0]
+0022f7d7  i32.load [2, 32]
+0022f7da  local.set [1]
+0022f7dc  local.get [1]
+0022f7de  if [-64]
+0022f7e0    local.get [1]
+0022f7e2    i32.const [0]
+0022f7e4    call [2611] ; CallFrameworkAdapter.Call_StopCoroutine
+0022f7e7    local.get [0]
+0022f7e9    i32.const [32]
+0022f7eb    i32.add []
+0022f7ec    i32.const [0]
+0022f7ee    i32.store [2, 0]
+0022f7f1  end []
+0022f7f2  end []

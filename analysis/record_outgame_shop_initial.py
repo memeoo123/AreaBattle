@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-item-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==347
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='shop-original-initial-selection';s['validation'].update(integratedChecksPassed=347,skinItemActionChecksPassed=13)
+s['nextActions']=['Bind actual skin icon resources and source shop lifecycle/events.','Bind activity/video/scene providers and full account startup effects.','Complete remaining outgame systems and playable build/end-to-end validation.'];write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['shop-initial-selection']={'implementationReady':True,'scope':'ShopUI.Awake initial content/selected-toggle branch only','rules':['Hide normal/defense/attack/scene content and shop content first. Held selected type2/3 selects corresponding Toggle and refreshes red dots. Other values normalize1, select normal, explicitly enable normal group, explicitly invoke normal change callback and refresh red dots.','Source default branch may invoke callback both through Toggle change and explicit call; reconstruction preserves this instead of suppressing notification.'],'source':['disassembly/Type4408-33784.txt:0075d3cb-0075d4f9'],'implementation':['OutgameShopTabs.cs'],'validation':'Fresh original prefabs verify held type2/3 and invalid99 fallback1, correct initial group, scene/shop hidden. Editor fixture enables original RuntimeOnly persistent events for execution.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='ShopUI.Awake initial category') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original ShopUI initial selected category and content state','checksPassed':347,'outgameChecksPassed':80,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 原商店初始选择（347项）\n补ShopUI.Awake初始分支：先隐藏四类皮肤和Shop内容；持有类别2/3选对应Toggle，其他值归1，显式启用normal并重复原变更回调，再刷新红点。保留原默认分支可能产生两次通知的顺序。使用新原预制体分别验证2/3/99初值与fallback，场景/Shop保持隐藏。Unity退出0，347集成检查（原267+关外80）。真实图标、完整生命周期/事件与平台提供者、账户启动和新构建仍未完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions','outgameSkinItemView','outgameSceneSkinActions','outgameSceneSkinView','outgameSkinOrder','outgameShopSkinLists','outgameShopTabs','outgameToggleBindings','outgameShopInitialSelection']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','347 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 347 checks; full goal remains incomplete.')

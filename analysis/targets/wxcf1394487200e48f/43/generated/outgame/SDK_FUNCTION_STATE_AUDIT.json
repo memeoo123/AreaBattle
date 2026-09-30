@@ -1,0 +1,25 @@
+{
+  "status": "sdk_state_cache_verified_platform_capabilities_pending",
+  "source": [
+    "disassembly/Type3135-23913.txt",
+    "disassembly/Type3135-23914.txt",
+    "disassembly/Type3394-26224.txt"
+  ],
+  "verified": [
+    "SDKExtension.IsOpen forwards bool as IsRefresh to GetSDKOpenFunctionState",
+    "Cache miss queries source then stores; cached values queried again only when refresh=true",
+    "SetSDKFunctionState distinguishes Add from overwrite and logs before mutation",
+    "Readiness callback sets cached feature15 before changing button states",
+    "Native PlayMode registry reads/writes recovered state cache"
+  ],
+  "correction": "Earlier SDK15 defaulttrue/defaultfalse wording was incorrect; arguments are forced refresh true/false. Native-video audit and generation script corrected. No invented fallback implemented.",
+  "remaining": [
+    "GetState full source capability switch and concrete platform implementations",
+    "Full SDK state refresh APIs and platform initialization",
+    "Production account/menu/report owner and full persistence/build/E2E"
+  ],
+  "checks": 555,
+  "freshAdsPlaymodeChecks": 7,
+  "priorFlyPlaymodeChecks": 8,
+  "dynamicScope": "Fresh actual Unity PlayMode using restored cache and registry; platform capability resolver and SDK/report transport remain fixtures"
+}

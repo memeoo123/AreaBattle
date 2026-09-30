@@ -1,0 +1,48 @@
+; Original shared generic: FsmState`1.ChangeState
+; ProcedureFsmGeneric.ChangeState; wasmcode function 12257; offset=5950693 size=119
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005acce6  local.get [3]
+005acce8  call [954] ; 
+005acceb  local.get [1]
+005acced  local.get [3]
+005accef  i32.load [2, 16]
+005accf2  i32.load [2, 96]
+005accf5  i32.const [9]
+005accf7  call [904] ; 
+005accfa  call [937] ; 
+005accfd  local.set [0]
+005accff  local.get [0]
+005acd01  i32.eqz []
+005acd02  if [-64]
+005acd04    i32.const [3932324]
+005acd09    call [902] ; 
+005acd0c    call [903] ; 
+005acd0f    local.set [0]
+005acd11    local.get [0]
+005acd13    i32.const [4053676] ; STRING "FSM is invalid."
+005acd18    call [902] ; 
+005acd1b    i32.const [0]
+005acd1d    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005acd21    global.set [3]
+005acd23    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005acd27    call_indirect [2, 0]
+005acd2a    local.get [0]
+005acd2c    i32.const [3968600]
+005acd31    call [902] ; 
+005acd34    i32.const [1106]
+005acd37    global.set [3]
+005acd39    i32.const [1106]
+005acd3c    call_indirect [0, 0]
+005acd3f    unreachable []
+005acd40  end []
+005acd41  local.get [3]
+005acd43  i32.load [2, 28]
+005acd46  i32.load [2, 0]
+005acd49  i32.load [2, 0]
+005acd4c  local.get [3]
+005acd4e  i32.load [2, 28]
+005acd51  i32.load [2, 0]
+005acd54  local.get [0]
+005acd56  local.get [2]
+005acd58  call [948] ; 
+005acd5b  end []

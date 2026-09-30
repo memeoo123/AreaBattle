@@ -1,0 +1,212 @@
+00713e6e global.get [0]
+00713e70 i32.const [16]
+00713e72 i32.sub []
+00713e73 local.set [3]
+00713e75 local.get [3]
+00713e77 global.set [0]
+00713e79 i32.const [0]
+00713e7b local.set [1]
+00713e7d i32.const [5011621]
+00713e82 i32.load8_u [0, 0]
+00713e85 i32.eqz []
+00713e86 if [-64]
+00713e88   i32.const [3928176] ; type: AppSetting
+00713e8d   call [900] ; 
+00713e90   i32.const [3928344] ; type: AssetBundleManager
+00713e95   call [900] ; 
+00713e98   i32.const [3929208] ; type: CLog
+00713e9d   call [900] ; 
+00713ea0   i32.const [3934404] ; type: Int32
+00713ea5   call [900] ; 
+00713ea8   i32.const [3926996]
+00713ead   call [900] ; 
+00713eb0   i32.const [4044996] STRING "AssetbundleModule初始化完成" ; literal: 'AssetbundleModule初始化完成'
+00713eb5   call [900] ; 
+00713eb8   i32.const [4105452] STRING "的Manifest文件加载失败" ; literal: '的Manifest文件加载失败'
+00713ebd   call [900] ; 
+00713ec0   i32.const [5011621]
+00713ec5   i32.const [1]
+00713ec7   i32.store8 [0, 0]
+00713eca end []
+00713ecb local.get [0]
+00713ecd i32.load [2, 16]
+00713ed0 local.set [4]
+00713ed2 block [-64]
+00713ed4   block [-64]
+00713ed6     block [-64]
+00713ed8       block [-64]
+00713eda         block [-64]
+00713edc           local.get [0]
+00713ede           i32.load [2, 8]
+00713ee1           br_table [0, 1, 2, 3, 4]
+00713ee8         end []
+00713ee9         local.get [0]
+00713eeb         i32.const [-1]
+00713eed         i32.store [2, 8]
+00713ef0         i32.const [3928176] ; type: AppSetting
+00713ef5         i32.load [2, 0]
+00713ef8         call [901] ; 
+00713efb         i32.const [0]
+00713efd         call [1318] ; 
+00713f00         local.set [2]
+00713f02         i32.const [3928344] ; type: AssetBundleManager
+00713f07         i32.load [2, 0]
+00713f0a         call [901] ; 
+00713f0d         local.get [2]
+00713f0f         i32.const [0]
+00713f11         call [13173] ; 
+00713f14         local.set [2]
+00713f16         local.get [2]
+00713f18         i32.eqz []
+00713f19         if [-64]
+00713f1b           i32.const [3926996]
+00713f20           i32.load [2, 0]
+00713f23           i32.const [1]
+00713f25           call [909] ; 
+00713f28           local.set [0]
+00713f2a           i32.const [3928176] ; type: AppSetting
+00713f2f           i32.load [2, 0]
+00713f32           call [901] ; 
+00713f35           i32.const [0]
+00713f37           call [1318] ; 
+00713f3a           i32.const [4105452] STRING "的Manifest文件加载失败" ; literal: '的Manifest文件加载失败'
+00713f3f           i32.load [2, 0]
+00713f42           i32.const [0]
+00713f44           call [921] ; 
+00713f47           local.set [2]
+00713f49           local.get [0]
+00713f4b           local.get [2]
+00713f4d           call [905] ; 
+00713f50           local.get [0]
+00713f52           local.get [2]
+00713f54           i32.store [2, 16]
+00713f57           i32.const [3929208] ; type: CLog
+00713f5c           i32.load [2, 0]
+00713f5f           call [901] ; 
+00713f62           local.get [0]
+00713f64           i32.const [0]
+00713f66           call [2095] ; 
+00713f69           local.get [4]
+00713f6b           i32.const [1]
+00713f6d           i32.store8 [0, 8]
+00713f70           local.get [4]
+00713f72           i32.load [2, 12]
+00713f75           local.set [0]
+00713f77           local.get [0]
+00713f79           i32.eqz []
+00713f7a           br_if [4]
+00713f7c           local.get [0]
+00713f7e           i32.load [2, 32]
+00713f81           local.get [0]
+00713f83           i32.load [2, 20]
+00713f86           local.get [0]
+00713f88           i32.load [2, 12]
+00713f8b           global.set [3]
+00713f8d           global.get [3]
+00713f8f           call_indirect [0, 0]
+00713f92           br [4]
+00713f94         end []
+00713f95         local.get [0]
+00713f97         i32.const [0]
+00713f99         call [1388] ; 
+00713f9c         local.get [2]
+00713f9e         i32.const [0]
+00713fa0         call [1227] ; 
+00713fa3         i32.store [2, 12]
+00713fa6         i32.const [1]
+00713fa8         local.set [1]
+00713faa         local.get [0]
+00713fac         i32.const [1]
+00713fae         i32.store [2, 8]
+00713fb1         br [3]
+00713fb3       end []
+00713fb4       local.get [0]
+00713fb6       i32.const [-1]
+00713fb8       i32.store [2, 8]
+00713fbb       i32.const [1]
+00713fbd       local.set [1]
+00713fbf       local.get [4]
+00713fc1       i32.const [1]
+00713fc3       i32.store8 [0, 8]
+00713fc6       local.get [3]
+00713fc8       i32.const [0]
+00713fca       i32.store [2, 12]
+00713fcd       local.get [0]
+00713fcf       i32.const [3934404] ; type: Int32
+00713fd4       i32.load [2, 0]
+00713fd7       local.get [3]
+00713fd9       i32.const [12]
+00713fdb       i32.add []
+00713fdc       call [910] ; 
+00713fdf       i32.store [2, 12]
+00713fe2       local.get [0]
+00713fe4       i32.const [2]
+00713fe6       i32.store [2, 8]
+00713fe9       br [2]
+00713feb     end []
+00713fec     local.get [0]
+00713fee     i32.const [-1]
+00713ff0     i32.store [2, 8]
+00713ff3     local.get [3]
+00713ff5     i32.const [0]
+00713ff7     i32.store [2, 8]
+00713ffa     local.get [0]
+00713ffc     i32.const [3934404] ; type: Int32
+00714001     i32.load [2, 0]
+00714004     local.get [3]
+00714006     i32.const [8]
+00714008     i32.add []
+00714009     call [910] ; 
+0071400c     i32.store [2, 12]
+0071400f     local.get [0]
+00714011     i32.const [3]
+00714013     i32.store [2, 8]
+00714016     i32.const [1]
+00714018     local.set [1]
+0071401a     br [1]
+0071401c   end []
+0071401d   local.get [0]
+0071401f   i32.const [-1]
+00714021   i32.store [2, 8]
+00714024   i32.const [3926996]
+00714029   i32.load [2, 0]
+0071402c   i32.const [1]
+0071402e   call [909] ; 
+00714031   local.set [0]
+00714033   local.get [0]
+00714035   i32.const [4044996] STRING "AssetbundleModule初始化完成" ; literal: 'AssetbundleModule初始化完成'
+0071403a   i32.load [2, 0]
+0071403d   call [905] ; 
+00714040   local.get [0]
+00714042   i32.const [4044996] STRING "AssetbundleModule初始化完成" ; literal: 'AssetbundleModule初始化完成'
+00714047   i32.load [2, 0]
+0071404a   i32.store [2, 16]
+0071404d   i32.const [3929208] ; type: CLog
+00714052   i32.load [2, 0]
+00714055   call [901] ; 
+00714058   local.get [0]
+0071405a   i32.const [0]
+0071405c   call [2095] ; 
+0071405f   local.get [4]
+00714061   i32.load [2, 12]
+00714064   local.set [0]
+00714066   local.get [0]
+00714068   i32.eqz []
+00714069   br_if [0]
+0071406b   local.get [0]
+0071406d   i32.load [2, 32]
+00714070   local.get [0]
+00714072   i32.load [2, 20]
+00714075   local.get [0]
+00714077   i32.load [2, 12]
+0071407a   global.set [3]
+0071407c   global.get [3]
+0071407e   call_indirect [0, 0]
+00714081 end []
+00714082 local.get [3]
+00714084 i32.const [16]
+00714086 i32.add []
+00714087 global.set [0]
+00714089 local.get [1]
+0071408b return []
+0071408c end []

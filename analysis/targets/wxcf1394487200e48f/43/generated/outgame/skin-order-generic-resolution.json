@@ -1,0 +1,152 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3998100,
+      "encodedUsage": "0xc000bddb",
+      "methodSpecIndex": 24301,
+      "methodSpecAddress": 774620,
+      "methodSpec": [
+        43231,
+        -1,
+        1771
+      ],
+      "declaringType": "Enumerable",
+      "method": "OrderBy",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x80150000",
+            "data": 3755020,
+            "name": null
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3998424,
+      "encodedUsage": "0xc000be61",
+      "methodSpecIndex": 24368,
+      "methodSpecAddress": 775424,
+      "methodSpec": [
+        43251,
+        -1,
+        5470
+      ],
+      "declaringType": "Enumerable",
+      "method": "ToDictionary",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x80150000",
+            "data": 3755020,
+            "name": null
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4147,
+            "name": "SkinData"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3970400,
+      "encodedUsage": "0xc00096b9",
+      "methodSpecIndex": 19292,
+      "methodSpecAddress": 714512,
+      "methodSpec": [
+        10635,
+        791,
+        -1
+      ],
+      "declaringType": "KeyValuePair`2",
+      "method": "get_Key",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4147,
+            "name": "SkinData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3970404,
+      "encodedUsage": "0xc00096bb",
+      "methodSpecIndex": 19293,
+      "methodSpecAddress": 714524,
+      "methodSpec": [
+        10636,
+        791,
+        -1
+      ],
+      "declaringType": "KeyValuePair`2",
+      "method": "get_Value",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4147,
+            "name": "SkinData"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

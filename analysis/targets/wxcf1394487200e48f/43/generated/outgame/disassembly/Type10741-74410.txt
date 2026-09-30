@@ -1,0 +1,95 @@
+; Original class: UIVideoBtn
+; Type10741.OnEnable; wasmcode function 15034; offset=7314330 size=237
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006f9b9b  i32.const [5001935]
+006f9ba0  i32.load8_u [0, 0]
+006f9ba3  i32.eqz []
+006f9ba4  if [-64]
+006f9ba6    i32.const [3929208]
+006f9bab    call [900] ; 
+006f9bae    i32.const [3926996]
+006f9bb3    call [900] ; 
+006f9bb6    i32.const [4105316] ; STRING "激励视频多次激活，CD未好"
+006f9bbb    call [900] ; 
+006f9bbe    i32.const [5001935]
+006f9bc3    i32.const [1]
+006f9bc5    i32.store8 [0, 0]
+006f9bc8  end []
+006f9bc9  local.get [0]
+006f9bcb  i32.const [0]
+006f9bcd  call [4277] ; Selectable.OnEnable
+006f9bd0  i32.const [0]
+006f9bd2  call [1264] ; Time.get_time
+006f9bd5  local.get [0]
+006f9bd7  f32.load [2, 224]
+006f9bdb  f32.lt []
+006f9bdc  if [-64]
+006f9bde    i32.const [3926996]
+006f9be3    i32.load [2, 0]
+006f9be6    i32.const [1]
+006f9be8    call [909] ; 
+006f9beb    local.set [0]
+006f9bed    local.get [0]
+006f9bef    i32.const [4105316] ; STRING "激励视频多次激活，CD未好"
+006f9bf4    i32.load [2, 0]
+006f9bf7    call [905] ; 
+006f9bfa    local.get [0]
+006f9bfc    i32.const [4105316] ; STRING "激励视频多次激活，CD未好"
+006f9c01    i32.load [2, 0]
+006f9c04    i32.store [2, 16]
+006f9c07    i32.const [3929208]
+006f9c0c    i32.load [2, 0]
+006f9c0f    call [901] ; 
+006f9c12    local.get [0]
+006f9c14    i32.const [0]
+006f9c16    call [1069] ; CLog.Log
+006f9c19    return []
+006f9c1a  end []
+006f9c1b  local.get [0]
+006f9c1d  i32.const [0]
+006f9c1f  call [1264] ; Time.get_time
+006f9c22  f32.const [0.5]
+006f9c27  f32.add []
+006f9c28  f32.store [2, 224]
+006f9c2c  block [-64]
+006f9c2e    local.get [0]
+006f9c30    i32.load8_u [0, 204]
+006f9c34    if [-64]
+006f9c36      local.get [0]
+006f9c38      i32.load [2, 196]
+006f9c3c      local.set [1]
+006f9c3e      local.get [1]
+006f9c40      br_if [1]
+006f9c42    end []
+006f9c43    local.get [0]
+006f9c45    i32.const [0]
+006f9c47    call [943] ; Component.get_gameObject
+006f9c4a    i32.const [0]
+006f9c4c    i32.const [0]
+006f9c4e    call [949] ; GameObject.SetActive
+006f9c51    return []
+006f9c52  end []
+006f9c53  local.get [0]
+006f9c55  i32.load8_u [0, 205]
+006f9c59  if [-64]
+006f9c5b    local.get [0]
+006f9c5d    i32.const [1]
+006f9c5f    local.get [0]
+006f9c61    call [6900] ; UIVideoBtn.VideoBtnShow
+006f9c64    local.get [0]
+006f9c66    i32.load [2, 196]
+006f9c6a    local.set [1]
+006f9c6c  end []
+006f9c6d  local.get [1]
+006f9c6f  i32.load [2, 16]
+006f9c72  if [-64]
+006f9c74    local.get [0]
+006f9c76    local.get [0]
+006f9c78    i32.const [1]
+006f9c7a    local.get [0]
+006f9c7c    call [6902] ; UIVideoBtn.DelayReport
+006f9c7f    i32.const [0]
+006f9c81    call [1227] ; MonoBehaviour.StartCoroutine
+006f9c84    drop []
+006f9c85  end []
+006f9c86  end []

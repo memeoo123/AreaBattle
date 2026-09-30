@@ -1,0 +1,23 @@
+{
+  "status": "original_local_activity_config_imported_online_selection_pending",
+  "source": [
+    "disassembly/Type4265-32590.txt",
+    "disassembly/Type4265-32593.txt",
+    "generated/tables/PubActivityConfig.json"
+  ],
+  "tableSha256": "3a5d1082c12e038b536b18e973d09d096936a57e3bb5e45c0f49827ea2a0ca57",
+  "verified": [
+    "All9 local activity rows imported without edits",
+    "Launch condition10000 parsed exact yyyyMMddHHmmss;10015 level parsed as integer",
+    "First overParams/noticeParams parsed regardless of their condition type; missing row gives zero tuple",
+    "Activity103002 is 情人节活动: start2022-02-13 end2022-02-27 notice2023-02-10 unlock6; inconsistency preserved",
+    "Configuration binds actual state and countdown timestamps; failed date logs source message"
+  ],
+  "remaining": [
+    "ActivityConfigMgr online/local strategy selection",
+    "Controller OnLateInit, FestActManager storage/reward integration",
+    "Production startup and Player E2E"
+  ],
+  "checks": 580,
+  "freshPlayMode": false
+}

@@ -1,0 +1,26 @@
+; Original class: FileManager
+; Type3622.CopyFile; wasmcode function 12291; offset=5976007 size=56
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005b2fc8  local.get [1]
+005b2fca  local.get [1]
+005b2fcc  local.get [1]
+005b2fce  call [4430] ; FileManager.IsFileExists
+005b2fd1  if [-64]
+005b2fd3    local.get [0]
+005b2fd5    local.get [2]
+005b2fd7    i32.const [1]
+005b2fd9    local.get [1]
+005b2fdb    i32.const [25960] ; TABLE FileManager.CheckFileSavePath
+005b2fdf    global.set [3]
+005b2fe1    i32.const [25960] ; TABLE FileManager.CheckFileSavePath
+005b2fe5    call_indirect [7, 0]
+005b2fe8    local.get [1]
+005b2fea    local.get [2]
+005b2fec    i32.const [1]
+005b2fee    i32.const [0]
+005b2ff0    i32.const [74412] ; TABLE File.Copy
+005b2ff4    global.set [3]
+005b2ff6    i32.const [74412] ; TABLE File.Copy
+005b2ffa    call_indirect [7, 0]
+005b2ffd  end []
+005b2ffe  end []

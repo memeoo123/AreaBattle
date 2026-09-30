@@ -1,0 +1,297 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "static-confirmed-ready-for-import-validation",
+  "rules": [
+    {
+      "id": "wayline-runtime-width",
+      "fact": "Config113 Content1 splits to width=.1, moveSpeed=-.1*initial gameTimeScale (config101=1), tilingPerUnit=16. Init calls LineRenderer.startWidth only on each source one-key curve.",
+      "sources": [
+        "wasmcode f12780 @005deec3..005df02c",
+        "f2941 @000de2ae..000de33a",
+        "GlobalValueConfig id113"
+      ]
+    },
+    {
+      "id": "wayline-direction-prefab",
+      "fact": "direction0 hides line; direction2 reverses small/large endpoints. direction3 AND different camps selects double prefab11; otherwise single10. Colors are LevelControl.GetCampColor(from/to). Collider enabled iff either camp is player.",
+      "sources": [
+        "f9366 @00456d68..00456db0",
+        "f9387 @004590e0..00459108,00459161..004591a7,0045922d..0045940c",
+        "f6783 @0027138c..00271395"
+      ]
+    },
+    {
+      "id": "wayline-camp-palette",
+      "fact": "CampConfig.LineColor is parsed from #+hex by ConfigMgr f12781 and cached in dictionary272. LevelControl.GetCampColor forwards ConfigMgr.GetCampColor, fallback Color.green for absent camp.",
+      "sources": [
+        "f12781 @005df209..005df25b",
+        "f4385 @00163b8b..00163b96",
+        "f8087 @003a96e1..003a976a",
+        "generated/tables/CampConfig.json"
+      ]
+    },
+    {
+      "id": "wayline-geometry",
+      "fact": "Endpoints get world up*.02. Arrow segments add another up*.001. Single is from\u2192to; double uses from\u2192midpoint and to\u2192midpoint. Both complete segments use their origin camp color.",
+      "sources": [
+        "f7618 @0037857d..00378645,0037864a..00378e40"
+      ]
+    },
+    {
+      "id": "wayline-modes",
+      "fact": "SetLine args5 enableCollider, args6 showArrow. Both bg renderers enabled=!showArrow; arrow1 enabled=showArrow. Double arrow2 is not changed and retains prefab enabled=true. Ordinary GetLineObj passes showArrow=true. Single preview should use showArrow=false.",
+      "sources": [
+        "f7618 @003788bf..003788cb,00378e21..00378e56",
+        "f9387 @00459406..0045940c"
+      ]
+    },
+    {
+      "id": "wayline-material",
+      "fact": "Each segment sets _Tex scale=(distance*16,1), MPB _Vspeed=-.1 and _color=campColor. MPB is shared and retains both fields.",
+      "sources": [
+        "f7616 @00378124..003782d3",
+        "f2581 @000c6e38..000c6ef5",
+        "f2941 @000de2d0..000de33a"
+      ]
+    },
+    {
+      "id": "wayline-fragment",
+      "fact": "Time is signed fmod(_Time.y,200000); UV=(uv+time*(_Vspeed,_Uspeed))*_Tex_ST.xy+offset; output rgb=texture.rgb*_color.rgb; alpha=clamp(texture.a*_opacity,0,1), color alpha and vertex color ignored. Blend SrcAlpha OneMinusSrcAlpha, ZWriteOff, CullOff, LEqual. Material opacity1, Uspeed0.",
+      "sources": [
+        {
+          "path": "generated/unity-assets/ShaderEvidence/Shader_Forge_Effect_miaozhun.platform0.segment0.strings.txt",
+          "sha256": "b926bd91901eb6966a07937c34fbe36e82f2ebb09cbe993ada71132739212ca4"
+        },
+        {
+          "path": "generated/unity-assets/ShaderEvidence/Shader_Forge_Effect_miaozhun.typetree.json",
+          "sha256": "127da22fe83279055e081612a3a90a9bc1c6b04d860df06b58321c5906317d4b"
+        }
+      ]
+    },
+    {
+      "id": "wayline-collider",
+      "fact": "Enabled collider at endpoint midpoint (already y+.02), root LookAt(to), BoxCollider size(.1,.1,length). No endpoint trimming.",
+      "sources": [
+        "f7618 @00378e59..00378fc6"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "8658665558910628909",
+      "name": "xqzd_effect_Line",
+      "path": "generated/unity-assets/Texture2D/xqzd_effect_Line__CAB-68a3634b9a99c5a2a10a36b772e4e945__8658665558910628909.png",
+      "sha256": "795407f2b4a8778d85a0fe3902810ce654d8e4bbd158c8a2f5d137f036ad4c94",
+      "width": 32,
+      "height": 64,
+      "mipmap": false,
+      "srgb": true,
+      "settings": {
+        "m_FilterMode": 1,
+        "m_Aniso": 1,
+        "m_MipBias": 0.0,
+        "m_WrapU": 0,
+        "m_WrapV": 0,
+        "m_WrapW": 0
+      }
+    },
+    {
+      "id": "636028116967155276",
+      "name": "xqzd_effect_Line2",
+      "path": "generated/unity-assets/Texture2D/xqzd_effect_Line2__CAB-68a3634b9a99c5a2a10a36b772e4e945__636028116967155276.png",
+      "sha256": "5480cd3549f38c46f474c807b06d8b2b451f0f53a355daa51984cef059f3a935",
+      "width": 46,
+      "height": 66,
+      "mipmap": false,
+      "srgb": true,
+      "settings": {
+        "m_FilterMode": 1,
+        "m_Aniso": 1,
+        "m_MipBias": 0.0,
+        "m_WrapU": 0,
+        "m_WrapV": 0,
+        "m_WrapW": 0
+      }
+    },
+    {
+      "path": "generated/unity-assets/ShaderEvidence/Shader_Forge_Effect_miaozhun.platform0.segment0.strings.txt",
+      "sha256": "b926bd91901eb6966a07937c34fbe36e82f2ebb09cbe993ada71132739212ca4"
+    },
+    {
+      "path": "generated/unity-assets/ShaderEvidence/Shader_Forge_Effect_miaozhun.typetree.json",
+      "sha256": "127da22fe83279055e081612a3a90a9bc1c6b04d860df06b58321c5906317d4b"
+    }
+  ],
+  "goldenCases": [
+    {
+      "id": "line-unit-single",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          1,
+          0,
+          0
+        ],
+        "direction": 1
+      },
+      "expected": {
+        "arrowPositions": [
+          [
+            0,
+            0.021,
+            0
+          ],
+          [
+            1,
+            0.021,
+            0
+          ]
+        ],
+        "textureScale": [
+          16,
+          1
+        ],
+        "startWidth": 0.1,
+        "bgEnabled": false
+      }
+    },
+    {
+      "id": "line-double-four-units",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          0,
+          0,
+          4
+        ],
+        "direction": 3,
+        "differentCamps": true
+      },
+      "expected": {
+        "arrow1": [
+          [
+            0,
+            0.021,
+            0
+          ],
+          [
+            0,
+            0.021,
+            2
+          ]
+        ],
+        "arrow2": [
+          [
+            0,
+            0.021,
+            4
+          ],
+          [
+            0,
+            0.021,
+            2
+          ]
+        ],
+        "eachTextureScale": [
+          32,
+          1
+        ]
+      }
+    },
+    {
+      "id": "line-direction2",
+      "input": {
+        "small": [
+          0,
+          0,
+          0
+        ],
+        "large": [
+          1,
+          0,
+          0
+        ],
+        "direction": 2
+      },
+      "expected": {
+        "arrowPositions": [
+          [
+            1,
+            0.021,
+            0
+          ],
+          [
+            0,
+            0.021,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "line-shader-time",
+      "input": {
+        "uv": [
+          0.5,
+          0.25
+        ],
+        "time": 2,
+        "speed": [
+          -0.1,
+          0
+        ],
+        "tiling": [
+          16,
+          1
+        ]
+      },
+      "expected": {
+        "uv": [
+          4.8,
+          0.25
+        ]
+      }
+    },
+    {
+      "id": "line-collider",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          0,
+          0,
+          4
+        ],
+        "playerInvolved": true
+      },
+      "expected": {
+        "position": [
+          0,
+          0.02,
+          2
+        ],
+        "size": [
+          0.1,
+          0.1,
+          4
+        ]
+      }
+    }
+  ],
+  "unknowns": [
+    "Original matched-frame rendering remains unvalidated. Shader is source-equivalent GLSL\u2192HLSL translation, not original source file.",
+    "Cut trail prefab is inventoried separately; this scope does not synthesize a cut effect.",
+    "Double preview arrow2 unchanged behavior preserved, although known drag preview uses single."
+  ]
+}

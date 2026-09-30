@@ -1,0 +1,31 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.OpenAuthorizeSetting; wasmcode1 function 68399; offset=21657569 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014a77e2  i32.const [5006721]
+014a77e7  i32.load8_u [0, 0]
+014a77ea  i32.eqz []
+014a77eb  if [-64]
+014a77ed    i32.const [3936692]
+014a77f2    i32.const [1605]
+014a77f5    call_indirect [0, 0]
+014a77f8    i32.const [5006721]
+014a77fd    i32.const [1]
+014a77ff    i32.store8 [0, 0]
+014a7802  end []
+014a7803  i32.const [0]
+014a7805  i32.const [64797] ; TABLE WX_Handler.get_Instance
+014a7809  call_indirect [2, 0]
+014a780c  drop []
+014a780d  i32.const [3936692]
+014a7812  i32.load [2, 0]
+014a7815  i32.const [109007]
+014a7819  call_indirect [2, 0]
+014a781c  local.set [0]
+014a781e  local.get [0]
+014a7820  i32.const [0]
+014a7822  call [24771] ; OpenSettingOption..ctor
+014a7826  local.get [0]
+014a7828  local.get [0]
+014a782a  local.get [0]
+014a782c  call [18471] ; WX_Handler.OpenAuthorizeSetting
+014a7830  end []

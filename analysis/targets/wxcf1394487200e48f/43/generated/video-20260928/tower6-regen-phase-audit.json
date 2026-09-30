@@ -1,0 +1,49 @@
+{
+  "atUtc": "2026-09-29T02:33:06.896598+00:00",
+  "status": "regen-phase-delay-decomposed",
+  "originalWithdrawal": {
+    "previousPts": 62.88203,
+    "pts": 62.89878,
+    "before": true,
+    "after": false,
+    "beforePixels": 142,
+    "pixels": 0
+  },
+  "replayBeforeWithdrawal": {
+    "pts": 65.25019836425781,
+    "score": 3.0,
+    "regen": 1.183332920074463,
+    "outgoing": 1,
+    "lineDirection": 1,
+    "targetCamp": 2
+  },
+  "replayAfterWithdrawal": {
+    "pts": 65.26663970947266,
+    "score": 3.0,
+    "regen": 1.1997742652893066,
+    "outgoing": 0,
+    "lineDirection": 0,
+    "targetCamp": 2
+  },
+  "originalFirstRegen": 63.63302,
+  "replayFirstRegen": 66.06693267822266,
+  "withdrawalDelay": 2.367859709472654,
+  "firstRegenDelay": 2.4339126782226543,
+  "postWithdrawalDelayDifference": 0.06605296875000022,
+  "replayNumericBaselineIdentical": true,
+  "interpretation": "The2.43391s first-regeneration delay consists of2.36786s later outgoing-line removal and0.06605s difference in time remaining until regeneration. This is timing decomposition, not an independent proof of the cause of the later capture.",
+  "sourceMechanism": "BattleSimulation.RunAI action1 removes outgoing lines and reconnects against incoming enemies. The source list is shuffled. RegenAccumulator is preserved while outgoing lines block regeneration. This diagnostic does not reproduce the original session shuffle state.",
+  "correction": "Original tower6 outgoing disappears while tower7 remains green. Neither original nor replay supports treating capture of tower7 as the immediate trigger for tower6 first regeneration.",
+  "limitations": [
+    "Original withdrawal uses visible capacity-dot change; replay records simulation state after a frame.",
+    "Original accumulated regen at withdrawal is not directly observable.",
+    "Original source-selection order and earlier incoming-line histories remain unknown."
+  ],
+  "evidence": [
+    "tower6-outgoing-pixels.json",
+    "tower6-outgoing-review.png",
+    "tower6-replay-timing.json",
+    "tower6-capture-audit.json",
+    "full-replay-diagnostic.json"
+  ]
+}

@@ -1,0 +1,28 @@
+; Original class: Text
+; Type8277.AssignDefaultFont; wasmcode1 function 45389; offset=16137353 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00f63c8a  i32.const [4985221]
+00f63c8f  i32.load8_u [0, 0]
+00f63c92  i32.eqz []
+00f63c93  if [-64]
+00f63c95    i32.const [4012428]
+00f63c9a    i32.const [1605]
+00f63c9d    call_indirect [0, 0]
+00f63ca0    i32.const [4044764] ; STRING "Arial.ttf"
+00f63ca5    i32.const [1605]
+00f63ca8    call_indirect [0, 0]
+00f63cab    i32.const [4985221]
+00f63cb0    i32.const [1]
+00f63cb2    i32.store8 [0, 0]
+00f63cb5  end []
+00f63cb6  local.get [0]
+00f63cb8  i32.const [4044764] ; STRING "Arial.ttf"
+00f63cbd  i32.load [2, 0]
+00f63cc0  i32.const [4012428]
+00f63cc5  i32.load [2, 0]
+00f63cc8  i32.const [110439]
+00f63ccc  call_indirect [1, 0]
+00f63ccf  local.get [0]
+00f63cd1  i32.const [63381] ; TABLE Text.set_font
+00f63cd5  call_indirect [5, 0]
+00f63cd8  end []

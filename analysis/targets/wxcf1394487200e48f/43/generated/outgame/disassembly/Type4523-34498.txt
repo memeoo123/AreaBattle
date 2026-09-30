@@ -1,0 +1,27 @@
+; Original class: SpineAnimator
+; Type4523.U~^; wasmcode function 4255; offset=1412557 size=63
+; signature={'args': [127, 127], 'returns': [125]}; localGroups=[]
+00158dce  i32.const [5001082]
+00158dd3  i32.load8_u [0, 0]
+00158dd6  i32.eqz []
+00158dd7  if [-64]
+00158dd9    i32.const [3939160]
+00158dde    call [900] ; 
+00158de1    i32.const [5001082]
+00158de6    i32.const [1]
+00158de8    i32.store8 [0, 0]
+00158deb  end []
+00158dec  i32.const [3939160]
+00158df1  i32.load [2, 0]
+00158df4  call [901] ; 
+00158df7  i32.const [0]
+00158df9  call [7107] ; SpineAnimator.buxg[~
+00158dfc  if [-64]
+00158dfe    i32.const [0]
+00158e00    call [1264] ; Time.get_time
+00158e03    return []
+00158e04  end []
+00158e05  i32.const [0]
+00158e07  call [5605] ; Time.get_timeSinceLevelLoad
+00158e0a  return []
+00158e0b  end []

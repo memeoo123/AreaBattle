@@ -1,0 +1,101 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "rules": [],
+  "unknowns": [],
+  "functions": [
+    {
+      "class": "GlobalData",
+      "method": "get_SoundGameVolume",
+      "token": 100667808,
+      "module": "wasmcode",
+      "function": 7782,
+      "signature": {
+        "args": [
+          127
+        ],
+        "returns": [
+          125
+        ]
+      },
+      "body": {
+        "offset": 3733325,
+        "size": 70,
+        "typeIndex": 20
+      },
+      "locals": [],
+      "disassembly": [
+        "0038f74e i32.const [4989075]",
+        "0038f753 i32.load8_u [0, 0]",
+        "0038f756 i32.eqz []",
+        "0038f757 if [-64]",
+        "0038f759   i32.const [3941104] ; type: UserDataPrefs",
+        "0038f75e   call [900] ; ",
+        "0038f761   i32.const [4069960] ; literal: 'SoundGameVolume'",
+        "0038f766   call [900] ; ",
+        "0038f769   i32.const [4989075]",
+        "0038f76e   i32.const [1]",
+        "0038f770   i32.store8 [0, 0]",
+        "0038f773 end []",
+        "0038f774 i32.const [3941104] ; type: UserDataPrefs",
+        "0038f779 i32.load [2, 0]",
+        "0038f77c call [901] ; ",
+        "0038f77f i32.const [4069960] ; literal: 'SoundGameVolume'",
+        "0038f784 i32.load [2, 0]",
+        "0038f787 f32.const [1.0]",
+        "0038f78c i32.const [0]",
+        "0038f78e call [6843] ; ",
+        "0038f791 return []",
+        "0038f792 end []"
+      ]
+    },
+    {
+      "class": "GlobalData",
+      "method": "set_SoundGameVolume",
+      "token": 100667814,
+      "module": "wasmcode1",
+      "function": 13344,
+      "signature": {
+        "args": [
+          125,
+          127
+        ],
+        "returns": []
+      },
+      "body": {
+        "offset": 4718898,
+        "size": 75,
+        "typeIndex": 78
+      },
+      "locals": [],
+      "disassembly": [
+        "00480133 i32.const [4989081]",
+        "00480138 i32.load8_u [0, 0]",
+        "0048013b i32.eqz []",
+        "0048013c if [-64]",
+        "0048013e   i32.const [3941104] ; type: UserDataPrefs",
+        "00480143   i32.const [1605]",
+        "00480146   call_indirect [0, 0]",
+        "00480149   i32.const [4069960] ; literal: 'SoundGameVolume'",
+        "0048014e   i32.const [1605]",
+        "00480151   call_indirect [0, 0]",
+        "00480154   i32.const [4989081]",
+        "00480159   i32.const [1]",
+        "0048015b   i32.store8 [0, 0]",
+        "0048015e end []",
+        "0048015f i32.const [3941104] ; type: UserDataPrefs",
+        "00480164 i32.load [2, 0]",
+        "00480167 i32.const [1149]",
+        "0048016a call_indirect [0, 0]",
+        "0048016d i32.const [4069960] ; literal: 'SoundGameVolume'",
+        "00480172 i32.load [2, 0]",
+        "00480175 local.get [0]",
+        "00480177 i32.const [0]",
+        "00480179 call [10630] ; ",
+        "0048017c end []"
+      ]
+    }
+  ]
+}

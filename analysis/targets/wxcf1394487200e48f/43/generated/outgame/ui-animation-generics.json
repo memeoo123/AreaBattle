@@ -1,0 +1,150 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 4000972,
+      "encodedUsage": "0xc000c047",
+      "methodSpecIndex": 24611,
+      "methodSpecAddress": 778340,
+      "methodSpec": [
+        50751,
+        -1,
+        3035
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponent",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 10903,
+            "name": "CanvasGroup"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4001252,
+      "encodedUsage": "0xc000c0d3",
+      "methodSpecIndex": 24681,
+      "methodSpecAddress": 779180,
+      "methodSpec": [
+        50773,
+        -1,
+        481
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponentsInChildren",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 8198,
+            "name": "Graphic"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4017556,
+      "encodedUsage": "0xc000ca71",
+      "methodSpecIndex": 25912,
+      "methodSpecAddress": 793952,
+      "methodSpec": [
+        68460,
+        -1,
+        6043
+      ],
+      "declaringType": "TweenSettingsExtensions",
+      "method": "From",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x150000",
+            "data": 3781532,
+            "name": null
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4017560,
+      "encodedUsage": "0xc000ca73",
+      "methodSpecIndex": 25913,
+      "methodSpecAddress": 793964,
+      "methodSpec": [
+        68460,
+        -1,
+        6042
+      ],
+      "declaringType": "TweenSettingsExtensions",
+      "method": "From",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x150000",
+            "data": 3781772,
+            "name": null
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4017616,
+      "encodedUsage": "0xc000ca8f",
+      "methodSpecIndex": 25927,
+      "methodSpecAddress": 794132,
+      "methodSpec": [
+        68451,
+        -1,
+        6042
+      ],
+      "declaringType": "TweenSettingsExtensions",
+      "method": "SetEase",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x150000",
+            "data": 3781772,
+            "name": null
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

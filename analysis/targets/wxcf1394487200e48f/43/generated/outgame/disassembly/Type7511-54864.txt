@@ -1,0 +1,237 @@
+; Original class: BaseController
+; Type7511.checkRequest; wasmcode function 5196; offset=1800770 size=603
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+001b7a45  global.get [0]
+001b7a47  i32.const [16]
+001b7a49  i32.sub []
+001b7a4a  local.set [3]
+001b7a4c  local.get [3]
+001b7a4e  global.set [0]
+001b7a50  i32.const [5005044]
+001b7a55  i32.load8_u [0, 0]
+001b7a58  i32.eqz []
+001b7a59  if [-64]
+001b7a5b    i32.const [3928952]
+001b7a60    call [900] ; 
+001b7a63    i32.const [3926996]
+001b7a68    call [900] ; 
+001b7a6b    i32.const [3927212]
+001b7a70    call [900] ; 
+001b7a73    i32.const [4084940] ; STRING "checkRequest cacheAmount:"
+001b7a78    call [900] ; 
+001b7a7b    i32.const [4036200] ; STRING " nowCacheNum:"
+001b7a80    call [900] ; 
+001b7a83    i32.const [4045420] ; STRING "BANNER"
+001b7a88    call [900] ; 
+001b7a8b    i32.const [4078180] ; STRING "VideoLoadSuccessEvent"
+001b7a90    call [900] ; 
+001b7a93    i32.const [4077760] ; STRING "VIDEO"
+001b7a98    call [900] ; 
+001b7a9b    i32.const [4035844] ; STRING " hasShow:"
+001b7aa0    call [900] ; 
+001b7aa3    i32.const [5005044]
+001b7aa8    i32.const [1]
+001b7aaa    i32.store8 [0, 0]
+001b7aad  end []
+001b7aae  local.get [3]
+001b7ab0  local.get [0]
+001b7ab2  i32.const [0]
+001b7ab4  call [5195] ; BaseController.getNowCacheNum
+001b7ab7  i32.store [2, 12]
+001b7aba  local.get [3]
+001b7abc  local.get [0]
+001b7abe  i32.const [0]
+001b7ac0  call [4016] ; BaseController.isShowing
+001b7ac3  i32.store8 [0, 11]
+001b7ac6  i32.const [3927212]
+001b7acb  i32.load [2, 0]
+001b7ace  i32.const [7]
+001b7ad0  call [909] ; 
+001b7ad3  local.set [1]
+001b7ad5  local.get [0]
+001b7ad7  i32.load [2, 8]
+001b7ada  local.set [2]
+001b7adc  local.get [1]
+001b7ade  local.get [2]
+001b7ae0  call [905] ; 
+001b7ae3  local.get [1]
+001b7ae5  local.get [2]
+001b7ae7  i32.store [2, 16]
+001b7aea  local.get [1]
+001b7aec  i32.const [4084940] ; STRING "checkRequest cacheAmount:"
+001b7af1  i32.load [2, 0]
+001b7af4  call [905] ; 
+001b7af7  local.get [1]
+001b7af9  i32.const [4084940] ; STRING "checkRequest cacheAmount:"
+001b7afe  i32.load [2, 0]
+001b7b01  i32.store [2, 20]
+001b7b04  local.get [0]
+001b7b06  i32.const [44]
+001b7b08  i32.add []
+001b7b09  i32.const [0]
+001b7b0b  call [966] ; Int32.ToString
+001b7b0e  local.set [2]
+001b7b10  local.get [1]
+001b7b12  local.get [2]
+001b7b14  call [905] ; 
+001b7b17  local.get [1]
+001b7b19  local.get [2]
+001b7b1b  i32.store [2, 24]
+001b7b1e  local.get [1]
+001b7b20  i32.const [4035844] ; STRING " hasShow:"
+001b7b25  i32.load [2, 0]
+001b7b28  call [905] ; 
+001b7b2b  local.get [1]
+001b7b2d  i32.const [4035844] ; STRING " hasShow:"
+001b7b32  i32.load [2, 0]
+001b7b35  i32.store [2, 28]
+001b7b38  i32.const [3928952]
+001b7b3d  i32.load [2, 0]
+001b7b40  call [901] ; 
+001b7b43  local.get [3]
+001b7b45  i32.const [11]
+001b7b47  i32.add []
+001b7b48  i32.const [0]
+001b7b4a  call [1148] ; Boolean.ToString
+001b7b4d  local.set [2]
+001b7b4f  local.get [1]
+001b7b51  local.get [2]
+001b7b53  call [905] ; 
+001b7b56  local.get [1]
+001b7b58  local.get [2]
+001b7b5a  i32.store [2, 32]
+001b7b5d  local.get [1]
+001b7b5f  i32.const [4036200] ; STRING " nowCacheNum:"
+001b7b64  i32.load [2, 0]
+001b7b67  call [905] ; 
+001b7b6a  local.get [1]
+001b7b6c  i32.const [4036200] ; STRING " nowCacheNum:"
+001b7b71  i32.load [2, 0]
+001b7b74  i32.store [2, 36]
+001b7b77  local.get [3]
+001b7b79  i32.const [12]
+001b7b7b  i32.add []
+001b7b7c  i32.const [0]
+001b7b7e  call [966] ; Int32.ToString
+001b7b81  local.set [2]
+001b7b83  local.get [1]
+001b7b85  local.get [2]
+001b7b87  call [905] ; 
+001b7b8a  local.get [1]
+001b7b8c  local.get [2]
+001b7b8e  i32.store [2, 40]
+001b7b91  local.get [1]
+001b7b93  i32.const [0]
+001b7b95  call [1024] ; String.Concat
+001b7b98  i32.const [0]
+001b7b9a  call [999] ; XYXLOG.Log
+001b7b9d  block [-64]
+001b7b9f    block [-64]
+001b7ba1      local.get [3]
+001b7ba3      i32.load [2, 12]
+001b7ba6      local.set [1]
+001b7ba8      local.get [1]
+001b7baa      i32.const [1]
+001b7bac      i32.add []
+001b7bad      local.get [1]
+001b7baf      local.get [3]
+001b7bb1      i32.load8_u [0, 11]
+001b7bb4      select []
+001b7bb5      local.set [1]
+001b7bb7      local.get [1]
+001b7bb9      local.get [0]
+001b7bbb      i32.load [2, 44]
+001b7bbe      i32.ge_s []
+001b7bbf      if [-64]
+001b7bc1        i32.const [4045420] ; STRING "BANNER"
+001b7bc6        i32.load [2, 0]
+001b7bc9        local.get [0]
+001b7bcb        i32.load [2, 12]
+001b7bce        i32.load [2, 16]
+001b7bd1        i32.const [0]
+001b7bd3        call [1019] ; String.Equals
+001b7bd6        br_if [2]
+001b7bd8        local.get [0]
+001b7bda        local.get [1]
+001b7bdc        call [4014] ; BaseController.reportRotaRequestAdSuccess
+001b7bdf        br [2]
+001b7be1      end []
+001b7be2    end []
+001b7be3    local.get [3]
+001b7be5    i32.load [2, 12]
+001b7be8    local.set [1]
+001b7bea    i32.const [4045420] ; STRING "BANNER"
+001b7bef    i32.load [2, 0]
+001b7bf2    local.get [0]
+001b7bf4    i32.load [2, 12]
+001b7bf7    i32.load [2, 16]
+001b7bfa    i32.const [0]
+001b7bfc    call [1019] ; String.Equals
+001b7bff    local.set [2]
+001b7c01    block [-64]
+001b7c03      local.get [1]
+001b7c05      i32.const [1]
+001b7c07      i32.ge_s []
+001b7c08      if [-64]
+001b7c0a        local.get [2]
+001b7c0c        br_if [1]
+001b7c0e        local.get [0]
+001b7c10        local.get [1]
+001b7c12        call [4014] ; BaseController.reportRotaRequestAdSuccess
+001b7c15        br [1]
+001b7c17      end []
+001b7c18      local.get [2]
+001b7c1a      i32.eqz []
+001b7c1b      if [-64]
+001b7c1d        local.get [0]
+001b7c1f        local.get [1]
+001b7c21        i32.const [65687] ; TABLE BaseController.reportRotaRequestAdFail
+001b7c25        global.set [3]
+001b7c27        i32.const [65687] ; TABLE BaseController.reportRotaRequestAdFail
+001b7c2b        call_indirect [0, 0]
+001b7c2e      end []
+001b7c2f      i32.const [4077760] ; STRING "VIDEO"
+001b7c34      i32.load [2, 0]
+001b7c37      local.get [0]
+001b7c39      i32.load [2, 12]
+001b7c3c      i32.load [2, 16]
+001b7c3f      i32.const [0]
+001b7c41      call [1019] ; String.Equals
+001b7c44      i32.eqz []
+001b7c45      br_if [0]
+001b7c47      i32.const [3926996]
+001b7c4c      i32.load [2, 0]
+001b7c4f      i32.const [1]
+001b7c51      call [909] ; 
+001b7c54      local.set [1]
+001b7c56      local.get [3]
+001b7c58      i32.const [0]
+001b7c5a      i32.store8 [0, 10]
+001b7c5d      i32.const [3928952]
+001b7c62      i32.load [2, 0]
+001b7c65      local.get [3]
+001b7c67      i32.const [10]
+001b7c69      i32.add []
+001b7c6a      call [910] ; 
+001b7c6d      local.set [2]
+001b7c6f      local.get [1]
+001b7c71      local.get [2]
+001b7c73      call [905] ; 
+001b7c76      local.get [1]
+001b7c78      local.get [2]
+001b7c7a      i32.store [2, 16]
+001b7c7d      i32.const [4078180] ; STRING "VideoLoadSuccessEvent"
+001b7c82      i32.load [2, 0]
+001b7c85      local.get [1]
+001b7c87      i32.const [0]
+001b7c89      call [1230] ; MsgDispatcher.SendMessage
+001b7c8c    end []
+001b7c8d    local.get [0]
+001b7c8f    local.get [1]
+001b7c91    call [13091] ; BaseController.reload
+001b7c94  end []
+001b7c95  local.get [3]
+001b7c97  i32.const [16]
+001b7c99  i32.add []
+001b7c9a  global.set [0]
+001b7c9c  end []

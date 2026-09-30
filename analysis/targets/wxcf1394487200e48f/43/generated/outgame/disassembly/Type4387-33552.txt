@@ -1,0 +1,45 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.Close; wasmcode function 11024; offset=5335347 size=120
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 125)]
+00516936  i32.const [5007392]
+0051693b  i32.load8_u [0, 0]
+0051693e  i32.eqz []
+0051693f  if [-64]
+00516941    i32.const [3927888]
+00516946    call [900] ; 
+00516949    i32.const [4009908] ; METHOD Proj_xqzdLoadingUI.o`cXT
+0051694e    call [900] ; 
+00516951    i32.const [5007392]
+00516956    i32.const [1]
+00516958    i32.store8 [0, 0]
+0051695b  end []
+0051695c  local.get [0]
+0051695e  i32.const [1]
+00516960  i32.store8 [0, 37]
+00516963  local.get [0]
+00516965  i32.load8_u [0, 36]
+00516968  if [-64]
+0051696a    f32.const [1.0]
+0051696f    local.get [0]
+00516971    i32.load [2, 16]
+00516974    f32.load [2, 144]
+00516978    f32.sub []
+00516979    local.set [2]
+0051697b    i32.const [3927888]
+00516980    i32.load [2, 0]
+00516983    call [903] ; 
+00516986    local.set [1]
+00516988    local.get [1]
+0051698a    local.get [0]
+0051698c    i32.const [4009908] ; METHOD Proj_xqzdLoadingUI.o`cXT
+00516991    i32.load [2, 0]
+00516994    i32.const [0]
+00516996    call [1002] ; Action..ctor
+00516999    local.get [0]
+0051699b    f32.const [1.0]
+005169a0    local.get [2]
+005169a2    local.get [1]
+005169a4    local.get [0]
+005169a6    call [5809] ; Proj_xqzdLoadingUI.gurX
+005169a9  end []
+005169aa  end []

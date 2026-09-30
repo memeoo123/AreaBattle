@@ -1,0 +1,32 @@
+; Original class: PiggyBankControl
+; Type3874.GetBankState; wasmcode function 11080; offset=5353802 size=70
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0051b14b  i32.const [5025274]
+0051b150  i32.load8_u [0, 0]
+0051b153  i32.eqz []
+0051b154  if [-64]
+0051b156    i32.const [3953440]
+0051b15b    call [900] ; 
+0051b15e    i32.const [5025274]
+0051b163    i32.const [1]
+0051b165    i32.store8 [0, 0]
+0051b168  end []
+0051b169  i32.const [3953440]
+0051b16e  i32.load [2, 0]
+0051b171  call [935] ; 
+0051b174  i32.const [0]
+0051b176  call [1254] ; LevelControl.get_CurLevel
+0051b179  i32.const [30]
+0051b17b  i32.ge_s []
+0051b17c  if [-64]
+0051b17e    i32.const [2]
+0051b180    i32.const [1]
+0051b182    i32.const [0]
+0051b184    i32.const [0]
+0051b186    call [5828] ; PiggyBankControl.get_IsFull
+0051b189    select []
+0051b18a    return []
+0051b18b  end []
+0051b18c  i32.const [0]
+0051b18e  return []
+0051b18f  end []

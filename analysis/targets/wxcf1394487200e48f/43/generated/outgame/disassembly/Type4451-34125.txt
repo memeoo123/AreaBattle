@@ -1,0 +1,26 @@
+; Original class: ProcedurePreLoad
+; Type4451.NwMSSe; wasmcode function 18172; offset=8068913 size=65
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[]
+007b1f32  i32.const [5009771]
+007b1f37  i32.load8_u [0, 0]
+007b1f3a  i32.eqz []
+007b1f3b  if [-64]
+007b1f3d    i32.const [3932388]
+007b1f42    call [900] ; 
+007b1f45    i32.const [5009771]
+007b1f4a    i32.const [1]
+007b1f4c    i32.store8 [0, 0]
+007b1f4f  end []
+007b1f50  i32.const [0]
+007b1f52  call [1060] ; ConfigMgr.get_Instance
+007b1f55  i32.load [2, 260]
+007b1f59  i32.load [2, 80]
+007b1f5c  local.set [0]
+007b1f5e  i32.const [3932388]
+007b1f63  i32.load [2, 0]
+007b1f66  call [901] ; 
+007b1f69  local.get [0]
+007b1f6b  i32.const [0]
+007b1f6d  call [6043] ; GameStatisticsExpansion.EventCount
+007b1f70  return []
+007b1f71  end []

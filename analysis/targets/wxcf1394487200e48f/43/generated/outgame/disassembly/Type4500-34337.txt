@@ -1,0 +1,25 @@
+; Original class: ItemManager
+; Type4500.OnSave; wasmcode function 18994; offset=8538783 size=53
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00824aa2  local.get [0]
+00824aa4  local.set [1]
+00824aa6  i32.const [0]
+00824aa8  call [2040] ; GlobalItemManager.get_Instance
+00824aab  i32.const [0]
+00824aad  call [12043] ; GlobalItemManager.OnSave
+00824ab0  local.set [2]
+00824ab2  local.get [0]
+00824ab4  i32.load [2, 0]
+00824ab7  i32.const [-64]
+00824ab9  i32.sub []
+00824aba  local.set [0]
+00824abc  local.get [1]
+00824abe  local.get [2]
+00824ac0  local.get [0]
+00824ac2  i32.load [2, 192]
+00824ac6  local.get [0]
+00824ac8  i32.load [2, 188]
+00824acc  global.set [3]
+00824ace  global.get [3]
+00824ad0  call_indirect [2, 0]
+00824ad3  end []

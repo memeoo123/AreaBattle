@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.AddMulTouchHoldListener; wasmcode1 function 59955; offset=19452484 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128d245  i32.const [4989915]
+0128d24a  i32.load8_u [0, 0]
+0128d24d  i32.eqz []
+0128d24e  if [-64]
+0128d250    i32.const [3934348]
+0128d255    i32.const [1605]
+0128d258    call_indirect [0, 0]
+0128d25b    i32.const [4989915]
+0128d260    i32.const [1]
+0128d262    i32.store8 [0, 0]
+0128d265  end []
+0128d266  i32.const [3934348]
+0128d26b  i32.load [2, 0]
+0128d26e  i32.const [1149]
+0128d271  call_indirect [0, 0]
+0128d274  local.get [0]
+0128d276  i32.const [25515] ; TABLE InputManager.get_Instance
+0128d27a  call_indirect [2, 0]
+0128d27d  local.get [0]
+0128d27f  local.get [0]
+0128d281  call [26998] ; InputManager.Ogº±X
+0128d285  end []

@@ -1,0 +1,25 @@
+{
+  "status": "native_forward_tween_subset_verified_composition_pending",
+  "checks": 521,
+  "source": [
+    "disassembly/Type9962-68833.txt",
+    "disassembly/Type9962-68831.txt",
+    "disassembly/Type9962-68826.txt",
+    "disassembly/Type9962-68824.txt",
+    "disassembly/Type9871-68377.txt",
+    "disassembly/Type9974-68862.txt"
+  ],
+  "verified": [
+    "Real Transform OutCirc position at half/full duration using unscaled delta while scaled delta0",
+    "Target tween starts paused, completes without auto-kill and does not restart on subsequent PlayForward",
+    "Completion starts return-scale tween; global Target_Tween id kills retained pulse",
+    "Kill complete sets endpoint and invokes callback once",
+    "Original .cctor default ease6 restored as -t*(t-2)"
+  ],
+  "limits": [
+    "Runner only exposes forward single-loop fly movement/scale, not complete DOTween API",
+    "Project-level DOTween settings overrides, global time scales, callback error/safe-mode logs and destroyed-target behavior not comprehensively matched",
+    "Pool scheduling, source random scatter and integrated concurrent effects pending",
+    "No player animation capture or matched visual verification"
+  ]
+}

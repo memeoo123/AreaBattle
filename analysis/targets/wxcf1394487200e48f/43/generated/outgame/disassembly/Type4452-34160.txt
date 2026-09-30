@@ -1,0 +1,36 @@
+; Original class: ProcedureStarGame
+; Type4452.cRzj|; wasmcode function 18164; offset=8066363 size=84
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b153c  i32.const [5009795]
+007b1541  i32.load8_u [0, 0]
+007b1544  i32.eqz []
+007b1545  if [-64]
+007b1547    i32.const [3928952]
+007b154c    call [900] ; 
+007b154f    i32.const [5009795]
+007b1554    i32.const [1]
+007b1556    i32.store8 [0, 0]
+007b1559  end []
+007b155a  block [-64]
+007b155c    local.get [1]
+007b155e    i32.eqz []
+007b155f    br_if [0]
+007b1561    local.get [1]
+007b1563    i32.load [2, 12]
+007b1566    i32.eqz []
+007b1567    br_if [0]
+007b1569    local.get [1]
+007b156b    i32.load [2, 16]
+007b156e    i32.const [3928952]
+007b1573    i32.load [2, 0]
+007b1576    call [920] ; 
+007b1579    i32.load8_u [0, 0]
+007b157c    i32.eqz []
+007b157d    br_if [0]
+007b157f    local.get [0]
+007b1581    f32.const [0.0]
+007b1586    i32.const [1]
+007b1588    local.get [1]
+007b158a    call [7411] ; ProcedureStarGame.vNkd^n
+007b158d  end []
+007b158e  end []

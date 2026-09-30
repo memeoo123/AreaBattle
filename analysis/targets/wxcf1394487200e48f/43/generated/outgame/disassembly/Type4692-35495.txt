@@ -1,0 +1,24 @@
+; Original class: TaskMgr
+; Type4692.OnInit; wasmcode function 15686; offset=7554516 size=59
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007345d5  i32.const [5001449]
+007345da  i32.load8_u [0, 0]
+007345dd  i32.eqz []
+007345de  if [-64]
+007345e0    i32.const [3939884]
+007345e5    call [900] ; 
+007345e8    i32.const [5001449]
+007345ed    i32.const [1]
+007345ef    i32.store8 [0, 0]
+007345f2  end []
+007345f3  i32.const [3939884]
+007345f8  i32.load [2, 0]
+007345fb  call [903] ; 
+007345fe  local.set [1]
+00734600  local.get [1]
+00734602  local.get [0]
+00734604  call [10174] ; TaskOffStrategy..ctor
+00734607  local.get [0]
+00734609  local.get [1]
+0073460b  i32.store [2, 24]
+0073460e  end []

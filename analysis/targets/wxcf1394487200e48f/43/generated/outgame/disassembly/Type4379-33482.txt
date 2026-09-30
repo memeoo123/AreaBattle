@@ -1,0 +1,49 @@
+; Original class: MenuTabUI
+; Type4379.VisibleImp; wasmcode function 18606; offset=8390391 size=121
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008006f8  i32.const [5009037]
+008006fd  i32.load8_u [0, 0]
+00800700  i32.eqz []
+00800701  if [-64]
+00800703    i32.const [3953576]
+00800708    call [900] ; 
+0080070b    i32.const [4062080] ; STRING "MenuTabDispose"
+00800710    call [900] ; 
+00800713    i32.const [5009037]
+00800718    i32.const [1]
+0080071a    i32.store8 [0, 0]
+0080071d  end []
+0080071e  local.get [0]
+00800720  local.get [1]
+00800722  i32.const [0]
+00800724  call [6908] ; UIObject.VisibleImp
+00800727  local.get [1]
+00800729  if [-64]
+0080072b    i32.const [3953576]
+00800730    i32.load [2, 0]
+00800733    call [935] ; 
+00800736    i32.const [0]
+00800738    call [6922] ; UIControl.OpenAllMenuItemUI
+0080073b    local.get [0]
+0080073d    local.get [0]
+0080073f    call [5890] ; MenuTabUI.l{igkQ
+00800742    local.get [0]
+00800744    local.get [0]
+00800746    local.get [0]
+00800748    call [11390] ; MenuTabUI.OnCheckShowStartPanel
+0080074b    local.get [0]
+0080074d    local.get [0]
+0080074f    call [11387] ; MenuTabUI.cbqW}V
+00800752    local.get [0]
+00800754    local.get [0]
+00800756    call [11386] ; MenuTabUI.kyr{O}{
+00800759    local.get [0]
+0080075b    local.get [0]
+0080075d    call [7562] ; MenuTabUI.mplyla
+00800760    return []
+00800761  end []
+00800762  i32.const [4062080] ; STRING "MenuTabDispose"
+00800767  i32.load [2, 0]
+0080076a  i32.const [0]
+0080076c  call [1317] ; MsgDispatcher.SendMessage
+0080076f  end []

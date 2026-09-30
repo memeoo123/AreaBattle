@@ -1,0 +1,58 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "User supplied screenshot; user confirms just entered level without input.",
+  "path": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\evidence\\original-reference\\level871-entry-user.png",
+  "sha256": "dcf5c3a16b0470bdb1c188efeda212d3c0838bb10fdda80cded603b6b394d03f",
+  "originalDimensions": [
+    723,
+    1337
+  ],
+  "gameViewportEstimate": {
+    "x": 0,
+    "y": 55,
+    "width": 723,
+    "height": 1282,
+    "visibleHeight": 1263,
+    "status": "inferred from window dimensions and source-aligned anchors; bottom19px occluded"
+  },
+  "normalLevel": 871,
+  "resolvedLevelIdentity": 134,
+  "layoutId": 120,
+  "observations": [
+    "7 tower positions/camps and scores15/15/5/5/5/5/65 match layout120",
+    "Player blue circles visible at towers1,2",
+    "Green outgoing from tower7 to3,4,6; red opposing direction6to7 visible",
+    "Commander portrait, generic tool points27 and each tool cost1 visible; no per-skill red stock bubble",
+    "Border decorations visible; score/capacity markers above tower flags"
+  ],
+  "scope": "Entry screenshot plus supplied paused-to-victory recording; video supports bounded runtime checkpoints, not synchronized full replay.",
+  "comparison": "generated/original871-visual-comparison.json",
+  "videos": [
+    {
+      "id": "video-20260928",
+      "path": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\evidence\\original-reference\\video-20260928\\original.mp4",
+      "sha256": "439e6d33828fb2b98be78f2085ce28dbbbcc06f4706be8e9f0ac5ba2a5493bd0",
+      "bytes": 114604266,
+      "durationSeconds": 90.52,
+      "dimensions": [
+        720,
+        1334
+      ],
+      "decodedFrames": 5421,
+      "gameViewport": {
+        "x": 0,
+        "y": 54,
+        "width": 720,
+        "height": 1280,
+        "status": "inferred from video titlebar and portrait viewport"
+      },
+      "suppliedPath": "C:/Users/jiachengwei/Desktop/AreaBattle/QQ20260928-163219-HD.mp4",
+      "initialState": "Already paused, with blue tower scores19/19; not a fresh entry recording.",
+      "userSkillLevelAnswer": "Unknown; no original account profile was accessed.",
+      "evidence": "generated/video-20260928/original-video-evidence.json"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "source-default-legacy-confirmed-no-direct-enable-write-found",
+  "atUtc": "2026-09-30T02:51:00.872454+00:00",
+  "source": [
+    "disassembly/Type3375-26113.txt",
+    "disassembly/Type3375-26095.txt",
+    "disassembly/Type3974-30610.txt",
+    "resource-mode-writer-candidates.json"
+  ],
+  "findings": [
+    "AppSetting.get_UseNewRes26113 reads static byte offset36",
+    "AppSetting cctor26095 does not assign field36; managed static zero initialization supplies false",
+    "Byte-pattern scan covers90641 bodies in both original WASM modules; single candidate MineGameMain.Awake30610",
+    "Decoded candidate writes local.get0 instance field36 to zero at007f7694..007f7698, not AppSetting static36",
+    "MineGameMain Awake sets AppSetting static28 from instance16, then persists main, initializes UserDataPrefs and initializes module resolved by4000636"
+  ],
+  "decision": "Use source default legacy as production baseline unless an actual runtime writer/override is evidenced. Existing forced-modern PlayMode only validates that branch, not original production mode.",
+  "limits": [
+    "Candidate byte scan is not complete symbolic dataflow",
+    "Indirect writes, reflection and external platform overrides not excluded",
+    "No claim of observed original runtime flag value"
+  ],
+  "next": [
+    "Resolve MineGameMain first module generic4000636 and ready callback4008020",
+    "Complete legacy root/page Instantiate and resources module owner",
+    "Bind native AtlasLoader for source legacy startup",
+    "Compose account/menu through original main startup"
+  ]
+}

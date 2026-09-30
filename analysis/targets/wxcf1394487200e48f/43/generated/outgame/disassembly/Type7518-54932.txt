@@ -1,0 +1,18 @@
+; Original class: EchelonController
+; Type7518.stopLoadNext; wasmcode function 12449; offset=6026679 size=32
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005bf5b8  local.get [0]
+005bf5ba  i32.load [2, 88]
+005bf5bd  local.set [1]
+005bf5bf  local.get [1]
+005bf5c1  if [-64]
+005bf5c3    local.get [1]
+005bf5c5    i32.const [0]
+005bf5c7    call [2611] ; CallFrameworkAdapter.Call_StopCoroutine
+005bf5ca    local.get [0]
+005bf5cc    i32.const [88]
+005bf5cf    i32.add []
+005bf5d0    i32.const [0]
+005bf5d2    i32.store [2, 0]
+005bf5d5  end []
+005bf5d6  end []

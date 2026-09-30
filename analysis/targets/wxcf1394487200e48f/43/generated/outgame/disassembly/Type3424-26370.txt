@@ -1,0 +1,23 @@
+; Original class: G~
+; Type3424.RandomId; wasmcode function 9866; offset=4733931 size=55
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00483bec  i32.const [5011690]
+00483bf1  i32.load8_u [0, 0]
+00483bf4  i32.eqz []
+00483bf5  if [-64]
+00483bf7    i32.const [3941136]
+00483bfc    call [900] ; 
+00483bff    i32.const [5011690]
+00483c04    i32.const [1]
+00483c06    i32.store8 [0, 0]
+00483c09  end []
+00483c0a  i32.const [3941136]
+00483c0f  i32.load [2, 0]
+00483c12  call [901] ; 
+00483c15  local.get [0]
+00483c17  local.get [1]
+00483c19  local.get [2]
+00483c1b  i32.const [0]
+00483c1d  call [6831] ; Utils.RandomId
+00483c20  return []
+00483c21  end []

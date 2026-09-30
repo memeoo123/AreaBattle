@@ -1,0 +1,30 @@
+; Original class: TaskMgr
+; Type4692..ctor; wasmcode function 15683; offset=7554165 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00734476  i32.const [5001452]
+0073447b  i32.load8_u [0, 0]
+0073447e  i32.eqz []
+0073447f  if [-64]
+00734481    i32.const [3955376]
+00734486    call [900] ; 
+00734489    i32.const [3917428]
+0073448e    call [900] ; 
+00734491    i32.const [5001452]
+00734496    i32.const [1]
+00734498    i32.store8 [0, 0]
+0073449b  end []
+0073449c  i32.const [3917428]
+007344a1  i32.load [2, 0]
+007344a4  call [903] ; 
+007344a7  local.set [1]
+007344a9  local.get [1]
+007344ab  i32.const [3955376]
+007344b0  i32.load [2, 0]
+007344b3  call [951] ; 
+007344b6  local.get [0]
+007344b8  local.get [1]
+007344ba  i32.store [2, 28]
+007344bd  local.get [0]
+007344bf  local.get [0]
+007344c1  call [2269] ; CommonModuleManagerBase..ctor
+007344c4  end []

@@ -1,0 +1,23 @@
+; Original class: DBTSDKManager
+; Type3135.ShowLoginFunction; wasmcode1 function 66249; offset=21041315 size=60
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014110a4  i32.const [4988624]
+014110a9  i32.load8_u [0, 0]
+014110ac  i32.eqz []
+014110ad  if [-64]
+014110af    i32.const [3928180]
+014110b4    i32.const [1605]
+014110b7    call_indirect [0, 0]
+014110ba    i32.const [4988624]
+014110bf    i32.const [1]
+014110c1    i32.store8 [0, 0]
+014110c4  end []
+014110c5  i32.const [3928180]
+014110ca  i32.load [2, 0]
+014110cd  i32.load [2, 92]
+014110d0  i32.load [2, 0]
+014110d3  i32.const [1]
+014110d5  i32.const [0]
+014110d7  i32.const [22805] ; TABLE AppUserManager.LoginComStatic
+014110db  call_indirect [5, 0]
+014110de  end []

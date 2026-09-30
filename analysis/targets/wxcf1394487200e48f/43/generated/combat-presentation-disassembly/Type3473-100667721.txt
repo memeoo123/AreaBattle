@@ -1,0 +1,22 @@
+; Type3473.SetStateMachine; wasmcode function 13405; offset=6490489 size=55
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0063097a  i32.const [4989016]
+0063097f  i32.load8_u [0, 0]
+00630982  i32.eqz []
+00630983  if [-64]
+00630985    i32.const [3928420]
+0063098a    call [900] ; 
+0063098d    i32.const [4989016]
+00630992    i32.const [1]
+00630994    i32.store8 [0, 0]
+00630997  end []
+00630998  i32.const [3928420]
+0063099d  i32.load [2, 0]
+006309a0  call [901] ; 
+006309a3  local.get [0]
+006309a5  i32.const [4]
+006309a7  i32.add []
+006309a8  local.get [1]
+006309aa  i32.const [0]
+006309ac  call [1815] ; AsyncTaskMethodBuilder.SetStateMachine
+006309af  end []

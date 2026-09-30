@@ -1,0 +1,22 @@
+; Original class: ProcessControl
+; Type3903.OnInit; wasmcode function 18160; offset=8065870 size=41
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+007b1351  i64.const [0]
+007b1353  local.set [2]
+007b1355  local.get [0]
+007b1357  local.get [2]
+007b1359  i32.wrap_i64 []
+007b135a  i32.store [2, 16]
+007b135d  local.get [0]
+007b135f  local.get [2]
+007b1361  i64.const [32]
+007b1363  i64.shr_u []
+007b1364  i32.wrap_i64 []
+007b1365  i32.store [2, 20]
+007b1368  local.get [0]
+007b136a  i32.const [0]
+007b136c  i32.store8 [0, 8]
+007b136f  local.get [0]
+007b1371  local.get [0]
+007b1373  call [11030] ; ProcessControl.InitProcedure
+007b1376  end []

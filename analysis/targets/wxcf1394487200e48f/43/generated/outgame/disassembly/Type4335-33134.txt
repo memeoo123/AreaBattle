@@ -1,0 +1,29 @@
+; Original class: CommanderSkillItem
+; Type4335.WONeQ|V; wasmcode function 20184; offset=9068916 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a6175  i32.const [5008838]
+008a617a  i32.load8_u [0, 0]
+008a617d  i32.eqz []
+008a617e  if [-64]
+008a6180    i32.const [4018288]
+008a6185    call [900] ; 
+008a6188    i32.const [5008838]
+008a618d    i32.const [1]
+008a618f    i32.store8 [0, 0]
+008a6192  end []
+008a6193  i32.const [0]
+008a6195  call [1193] ; GameModule.get_Audio
+008a6198  i32.const [1]
+008a619a  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+008a619d  i32.const [0]
+008a619f  call [1201] ; Extension.PlayerVoice
+008a61a2  i32.const [0]
+008a61a4  call [1143] ; GameModule.get_UI
+008a61a7  i32.const [4018288]
+008a61ac  i32.load [2, 0]
+008a61af  call [1503] ; 
+008a61b2  local.get [0]
+008a61b4  i32.load [2, 48]
+008a61b7  i32.const [0]
+008a61b9  call [8108] ; CommanderUI.RefreshSelectedSkillInfo
+008a61bc  end []

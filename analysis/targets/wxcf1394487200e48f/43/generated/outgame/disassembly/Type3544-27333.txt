@@ -1,0 +1,34 @@
+; Original class: BaseUI
+; Type3544.showLoading; wasmcode function 20473; offset=9204804 size=92
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008c7445  i32.const [4989653]
+008c744a  i32.load8_u [0, 0]
+008c744d  i32.eqz []
+008c744e  if [-64]
+008c7450    i32.const [4000632]
+008c7455    call [900] ; 
+008c7458    i32.const [3932308]
+008c745d    call [900] ; 
+008c7460    i32.const [4989653]
+008c7465    i32.const [1]
+008c7467    i32.store8 [0, 0]
+008c746a  end []
+008c746b  local.get [0]
+008c746d  i32.load8_u [0, 56]
+008c7470  if [-64]
+008c7472    i32.const [3932308]
+008c7477    i32.load [2, 0]
+008c747a    call [901] ; 
+008c747d    i32.const [4000632]
+008c7482    i32.load [2, 0]
+008c7485    call [1051] ; 
+008c7488    local.get [0]
+008c748a    i32.const [25179] ; TABLE UIModule.get_Loading
+008c748e    global.set [3]
+008c7490    i32.const [25179] ; TABLE UIModule.get_Loading
+008c7494    call_indirect [1, 0]
+008c7497    i32.const [1]
+008c7499    i32.const [0]
+008c749b    call [3955] ; ExtensionMethods.SetVisible
+008c749e  end []
+008c749f  end []

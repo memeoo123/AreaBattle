@@ -1,0 +1,121 @@
+{
+  "atUtc": "2026-09-28T11:02:09.767088+00:00",
+  "status": "one-score-divergence-explained",
+  "originalScoreTransitions": [
+    {
+      "previousPts": 57.06246,
+      "pts": 57.07979,
+      "before": 32,
+      "after": 34,
+      "mse": 0.0
+    },
+    {
+      "previousPts": 57.47935,
+      "pts": 57.4964,
+      "before": 34,
+      "after": 36,
+      "mse": 2.9006410256410255
+    },
+    {
+      "previousPts": 57.89606,
+      "pts": 57.91323,
+      "before": 36,
+      "after": 38,
+      "mse": 17.92200854700855
+    }
+  ],
+  "replayScoreTransitions": [
+    {
+      "pts": 53.82735061645508,
+      "value": 34.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 54.027320861816406,
+      "value": 36.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 54.84489822387695,
+      "value": 38.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 55.27803039550781,
+      "value": 40.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 56.52899169921875,
+      "value": 42.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 57.16331100463867,
+      "value": 44.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    },
+    {
+      "pts": 58.21348190307617,
+      "value": 46.0,
+      "kind": "score",
+      "tower": 2,
+      "line": 0,
+      "camp": 1,
+      "previousCamp": 1,
+      "soldier": 0
+    }
+  ],
+  "originalFriendlyHits": 3,
+  "replayFriendlyHits": 7,
+  "healPerHit": 2,
+  "explainedScoreDifference": 8,
+  "evidence": {
+    "originalPixel": "fire-blue2-score-pixels.json",
+    "replay": "full-replay-events.json",
+    "sourceSelector": [
+      "fire-target-source/2673.txt",
+      "fire-target-source/10954.txt"
+    ],
+    "sourceEnemySkinInitialization": "generated/model-binding/LevelControl-InitEnemySkin.txt"
+  },
+  "mechanism": "Fire coroutine gathers active towers, selects through shared RandomHelper list selector, then heals same-camp targets by2. Tower2 has outgoing lines and no incoming line in this interval, so no regeneration/arrival contribution.",
+  "originalSelector": "Function2673 delegates to10954;10954 reads shared System.Random, obtains list count, calls the virtual count-bound random method, then indexes the list. No camp weighting in this helper.",
+  "knownSequenceGap": "Original InitEnemySkin makes3 random selections for each of3 enemy skin slots. The explicit reconstructed video cosmetic fixture does not reproduce these original selections, prior account/session draws or unknown random state.",
+  "interpretation": "The8-point excess at blue2 is exactly four extra random heals, not evidence of wrong healing strength. This explains this tower only, not tower6 capture delay or the complete random sequence.",
+  "limitations": [
+    "Original full25 target sequence has not been recovered.",
+    "Enemy-skin initialization range depends on original config selection; no arbitrary nine-call offset or seed fitting is applied.",
+    "Do not infer full gameplay equivalence from one explained score."
+  ]
+}

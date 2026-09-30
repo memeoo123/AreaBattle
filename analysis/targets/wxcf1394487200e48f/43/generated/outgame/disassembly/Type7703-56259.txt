@@ -1,0 +1,21 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GotoPrivacyPolicyStatic; wasmcode1 function 38442; offset=14430766 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc322f  i32.const [5005433]
+00dc3234  i32.load8_u [0, 0]
+00dc3237  i32.eqz []
+00dc3238  if [-64]
+00dc323a    i32.const [3937248]
+00dc323f    i32.const [1605]
+00dc3242    call_indirect [0, 0]
+00dc3245    i32.const [5005433]
+00dc324a    i32.const [1]
+00dc324c    i32.store8 [0, 0]
+00dc324f  end []
+00dc3250  i32.const [3937248]
+00dc3255  i32.load [2, 0]
+00dc3258  i32.const [1149]
+00dc325b  call_indirect [0, 0]
+00dc325e  local.get [0]
+00dc3260  call [24329] ; PrivacyPolicyMgr.ShowPrivacyPolicy
+00dc3264  end []

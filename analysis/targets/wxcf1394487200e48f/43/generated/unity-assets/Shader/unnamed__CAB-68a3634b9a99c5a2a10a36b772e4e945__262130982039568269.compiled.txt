@@ -1,0 +1,47 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "tex" {
+Properties {
+
+_ASEOutlineColor ("Outline Color", Color) = (0.188679,0.179794,0.171769,0)
+
+_ASEOutlineWidth ("Outline Width", Float) = 0.004999999888241291
+
+_TextureSample0 ("Texture Sample 0", 2D) = "white" { }
+
+_texcoord ("", 2D) = "white" { }
+
+__dirty ("", Float) = 1.0
+
+}
+SubShader {
+ Tags { "IsEmissive" = "true" "QUEUE" = "Geometry+0" "RenderType" = "Opaque" }
+ Pass {
+ Name "FORWARD"
+  Tags { "LIGHTMODE" = "FORWARDBASE" }
+ Cull Front
+  GpuProgramID 64369
+}
+ Pass {
+ Name "FORWARD"
+  Tags { "IsEmissive" = "true" "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Geometry+0" "RenderType" = "Opaque" "SHADOWSUPPORT" = "true" }
+  GpuProgramID 81331
+}
+ Pass {
+ Name "FORWARD"
+  Tags { "IsEmissive" = "true" "LIGHTMODE" = "FORWARDADD" "QUEUE" = "Geometry+0" "RenderType" = "Opaque" "SHADOWSUPPORT" = "true" }
+ ZWrite Off
+  GpuProgramID 177592
+}
+ Pass {
+ Name "ShadowCaster"
+  Tags { "IsEmissive" = "true" "LIGHTMODE" = "SHADOWCASTER" "QUEUE" = "Geometry+0" "RenderType" = "Opaque" "SHADOWSUPPORT" = "true" }
+  GpuProgramID 261998
+}
+}
+Fall back "Diffuse"
+CustomEditor "ASEMaterialInspector"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "shared_dispatch_verified_concrete_hosts_pending",
+  "source": [
+    "disassembly/Type4107-31525.txt",
+    "disassembly/Type4107-31479.txt",
+    "play-state-control-generics.json"
+  ],
+  "verified": [
+    "Set state then PauseGame(request==7)",
+    "Audio/WayLine/AI/Skill receive current stored state in sequence",
+    "Event receives original requested state",
+    "PVP active short-circuits Dice query; either mode bypasses state branches and adjusts camera",
+    "Reentrant notification state changes affect later reads and final branch"
+  ],
+  "remaining": [
+    "Concrete common-state host and full branch table",
+    "Production startup/account/menu ownership",
+    "Actual scene loading, persistence and Player E2E"
+  ],
+  "checks": 564,
+  "freshPlayMode": false
+}

@@ -1,0 +1,81 @@
+; Original class: DAUAdsAdapter
+; Type7488.reportRequest; wasmcode function 12695; offset=6112795 size=208
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+005d461e  global.get [0]
+005d4620  i32.const [16]
+005d4622  i32.sub []
+005d4623  local.set [2]
+005d4625  local.get [2]
+005d4627  global.set [0]
+005d4629  i32.const [5004960]
+005d462e  i32.load8_u [0, 0]
+005d4631  i32.eqz []
+005d4632  if [-64]
+005d4634    i32.const [3930112]
+005d4639    call [900] ; 
+005d463c    i32.const [4036696] ; STRING " 广告返回 uptype=2 fillTime:"
+005d4641    call [900] ; 
+005d4644    i32.const [3943536]
+005d4649    call [900] ; 
+005d464c    i32.const [5004960]
+005d4651    i32.const [1]
+005d4653    i32.store8 [0, 0]
+005d4656  end []
+005d4657  local.get [2]
+005d4659  i32.const [0]
+005d465b  call [1342] ; Time.get_realtimeSinceStartup
+005d465e  local.get [0]
+005d4660  f32.load [2, 48]
+005d4663  f32.sub []
+005d4664  f32.store [2, 12]
+005d4667  local.get [0]
+005d4669  i32.load [2, 8]
+005d466c  local.set [1]
+005d466e  local.get [2]
+005d4670  i32.const [12]
+005d4672  i32.add []
+005d4673  i32.const [0]
+005d4675  call [1247] ; Single.ToString
+005d4678  local.set [3]
+005d467a  local.get [1]
+005d467c  i32.const [4036696] ; STRING " 广告返回 uptype=2 fillTime:"
+005d4681  i32.load [2, 0]
+005d4684  local.get [3]
+005d4686  i32.const [0]
+005d4688  call [955] ; String.Concat
+005d468b  i32.const [0]
+005d468d  call [999] ; XYXLOG.Log
+005d4690  i32.const [3943536]
+005d4695  i32.load [2, 0]
+005d4698  call [903] ; 
+005d469b  local.set [1]
+005d469d  local.get [1]
+005d469f  i32.const [0]
+005d46a1  call [2456] ; ads_up_event..ctor
+005d46a4  local.get [0]
+005d46a6  local.get [1]
+005d46a8  local.get [1]
+005d46aa  call [3642] ; DAUAdsAdapter.setInfo
+005d46ad  local.get [1]
+005d46af  i64.const [4611686018427387904]
+005d46ba  i64.store [3, 80]
+005d46bd  local.get [1]
+005d46bf  local.get [2]
+005d46c1  i32.const [12]
+005d46c3  i32.add []
+005d46c4  i32.const [0]
+005d46c6  call [1247] ; Single.ToString
+005d46c9  i32.store [2, 104]
+005d46cc  i32.const [3930112]
+005d46d1  i32.load [2, 0]
+005d46d4  call [901] ; 
+005d46d7  local.get [1]
+005d46d9  call [2513] ; DAUEventConstant.get_Instance
+005d46dc  local.get [1]
+005d46de  local.get [1]
+005d46e0  call [2512] ; DAUEventConstant.reportSever
+005d46e3  local.get [2]
+005d46e5  i32.const [16]
+005d46e7  i32.add []
+005d46e8  global.set [0]
+005d46ea  end []

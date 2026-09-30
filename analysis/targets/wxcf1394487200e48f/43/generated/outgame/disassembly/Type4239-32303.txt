@@ -1,0 +1,55 @@
+; Original class: WayLineControl
+; Type4239.GetStarAllLine; wasmcode function 4182; offset=1393704 size=160
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0015442b  i32.const [5007279]
+00154430  i32.load8_u [0, 0]
+00154433  i32.eqz []
+00154434  if [-64]
+00154436    i32.const [3955012]
+0015443b    call [900] ; 
+0015443e    i32.const [3955016]
+00154443    call [900] ; 
+00154446    i32.const [3955024]
+0015444b    call [900] ; 
+0015444e    i32.const [3978488]
+00154453    call [900] ; 
+00154456    i32.const [3924136]
+0015445b    call [900] ; 
+0015445e    i32.const [5007279]
+00154463    i32.const [1]
+00154465    i32.store8 [0, 0]
+00154468  end []
+00154469  local.get [0]
+0015446b  i32.load [2, 136]
+0015446f  local.get [1]
+00154471  i32.const [3955016]
+00154476  i32.load [2, 0]
+00154479  call [1129] ; 
+0015447c  i32.eqz []
+0015447d  if [-64]
+0015447f    local.get [0]
+00154481    i32.load [2, 136]
+00154485    local.set [2]
+00154487    i32.const [3924136]
+0015448c    i32.load [2, 0]
+0015448f    call [903] ; 
+00154492    local.set [3]
+00154494    local.get [3]
+00154496    i32.const [3978488]
+0015449b    i32.load [2, 0]
+0015449e    call [944] ; 
+001544a1    local.get [2]
+001544a3    local.get [1]
+001544a5    local.get [3]
+001544a7    i32.const [3955012]
+001544ac    i32.load [2, 0]
+001544af    call [1049] ; 
+001544b2  end []
+001544b3  local.get [0]
+001544b5  i32.load [2, 136]
+001544b9  local.get [1]
+001544bb  i32.const [3955024]
+001544c0  i32.load [2, 0]
+001544c3  call [1128] ; 
+001544c6  return []
+001544c7  end []

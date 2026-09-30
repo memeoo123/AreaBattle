@@ -1,0 +1,110 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3968592,
+      "encodedUsage": "0xc0009415",
+      "methodSpecIndex": 18954,
+      "methodSpecAddress": 710456,
+      "methodSpec": [
+        29299,
+        1599,
+        -1
+      ],
+      "declaringType": "FsmState`1",
+      "method": "SubscribeEvent",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4601,
+            "name": "LoginProcedureBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3968596,
+      "encodedUsage": "0xc0009417",
+      "methodSpecIndex": 18955,
+      "methodSpecAddress": 710468,
+      "methodSpec": [
+        29300,
+        1599,
+        -1
+      ],
+      "declaringType": "FsmState`1",
+      "method": "UnsubscribeEvent",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4601,
+            "name": "LoginProcedureBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3968548,
+      "encodedUsage": "0xc00093ff",
+      "methodSpecIndex": 18943,
+      "methodSpecAddress": 710324,
+      "methodSpec": [
+        29301,
+        1599,
+        5100
+      ],
+      "declaringType": "FsmState`1",
+      "method": "ChangeState",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4601,
+            "name": "LoginProcedureBase"
+          }
+        ],
+        [
+          {
+            "type": "0x120000",
+            "data": 4608,
+            "name": "LoginSDK_XYX"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

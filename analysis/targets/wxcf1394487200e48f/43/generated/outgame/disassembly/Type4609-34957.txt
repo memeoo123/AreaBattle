@@ -1,0 +1,31 @@
+; Original class: LoginServer
+; Type4609.cchp}; wasmcode1 function 57697; offset=18844518 size=73
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+011f8b67  i32.const [5001569]
+011f8b6c  i32.load8_u [0, 0]
+011f8b6f  i32.eqz []
+011f8b70  if [-64]
+011f8b72    i32.const [4105616] ; STRING "网络异常"
+011f8b77    i32.const [1605]
+011f8b7a    call_indirect [0, 0]
+011f8b7d    i32.const [5001569]
+011f8b82    i32.const [1]
+011f8b84    i32.store8 [0, 0]
+011f8b87  end []
+011f8b88  local.get [0]
+011f8b8a  local.get [1]
+011f8b8c  local.get [2]
+011f8b8e  local.get [1]
+011f8b90  i32.const [18161] ; TABLE LoginStateBase.cchp}
+011f8b94  call_indirect [6, 0]
+011f8b97  local.get [1]
+011f8b99  i32.const [3]
+011f8b9b  i32.eq []
+011f8b9c  if [-64]
+011f8b9e    local.get [0]
+011f8ba0    i32.const [4105616] ; STRING "网络异常"
+011f8ba5    i32.load [2, 0]
+011f8ba8    local.get [1]
+011f8baa    call [8171] ; LoginServer.Nohli}
+011f8bad  end []
+011f8bae  end []

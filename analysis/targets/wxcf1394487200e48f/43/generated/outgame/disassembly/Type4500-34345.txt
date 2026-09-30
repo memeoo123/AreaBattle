@@ -1,0 +1,29 @@
+; Original class: ItemManager
+; Type4500..ctor; wasmcode function 18992; offset=8538689 size=76
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00824a42  i32.const [5009884]
+00824a47  i32.load8_u [0, 0]
+00824a4a  i32.eqz []
+00824a4b  if [-64]
+00824a4d    i32.const [3971040]
+00824a52    call [900] ; 
+00824a55    i32.const [3922672]
+00824a5a    call [900] ; 
+00824a5d    i32.const [5009884]
+00824a62    i32.const [1]
+00824a64    i32.store8 [0, 0]
+00824a67  end []
+00824a68  i32.const [3922672]
+00824a6d  i32.load [2, 0]
+00824a70  call [903] ; 
+00824a73  local.set [1]
+00824a75  i32.const [3971040]
+00824a7a  i32.load [2, 0]
+00824a7d  drop []
+00824a7e  local.get [0]
+00824a80  local.get [1]
+00824a82  i32.store [2, 20]
+00824a85  local.get [0]
+00824a87  i32.const [0]
+00824a89  call [3381] ; DataManagerBase..ctor
+00824a8c  end []

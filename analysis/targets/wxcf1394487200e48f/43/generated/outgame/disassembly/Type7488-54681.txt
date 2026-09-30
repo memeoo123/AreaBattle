@@ -1,0 +1,18 @@
+; Original class: DAUAdsAdapter
+; Type7488.stopShowTimeout; wasmcode function 4474; offset=1481303 size=31
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00169a58  local.get [0]
+00169a5a  i32.load [2, 40]
+00169a5d  local.set [1]
+00169a5f  local.get [1]
+00169a61  if [-64]
+00169a63    local.get [1]
+00169a65    i32.const [0]
+00169a67    call [2611] ; CallFrameworkAdapter.Call_StopCoroutine
+00169a6a    local.get [0]
+00169a6c    i32.const [40]
+00169a6e    i32.add []
+00169a6f    i32.const [0]
+00169a71    i32.store [2, 0]
+00169a74  end []
+00169a75  end []

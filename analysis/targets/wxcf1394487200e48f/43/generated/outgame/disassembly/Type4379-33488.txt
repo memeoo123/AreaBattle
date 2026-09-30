@@ -1,0 +1,27 @@
+; Original class: MenuTabUI
+; Type4379.VstQw; wasmcode function 18609; offset=8390985 size=67
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0080094a  i32.const [5009042]
+0080094f  i32.load8_u [0, 0]
+00800952  i32.eqz []
+00800953  if [-64]
+00800955    i32.const [4061088] ; STRING "LoadStartingUI"
+0080095a    call [900] ; 
+0080095d    i32.const [5009042]
+00800962    i32.const [1]
+00800964    i32.store8 [0, 0]
+00800967  end []
+00800968  i32.const [0]
+0080096a  call [1193] ; GameModule.get_Audio
+0080096d  i32.const [1]
+0080096f  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+00800972  i32.const [0]
+00800974  call [1201] ; Extension.PlayerVoice
+00800977  local.get [0]
+00800979  local.get [0]
+0080097b  call [5890] ; MenuTabUI.l{igkQ
+0080097e  i32.const [4061088] ; STRING "LoadStartingUI"
+00800983  i32.load [2, 0]
+00800986  i32.const [0]
+00800988  call [1317] ; MsgDispatcher.SendMessage
+0080098b  end []

@@ -1,0 +1,22 @@
+; Original class: LoginSynData
+; Type4612.USY{qg; wasmcode function 11458; offset=5626716 size=56
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0055db5d  i32.const [5001597]
+0055db62  i32.load8_u [0, 0]
+0055db65  i32.eqz []
+0055db66  if [-64]
+0055db68    i32.const [3932944]
+0055db6d    call [900] ; 
+0055db70    i32.const [5001597]
+0055db75    i32.const [1]
+0055db77    i32.store8 [0, 0]
+0055db7a  end []
+0055db7b  i32.const [3932944]
+0055db80  i32.load [2, 0]
+0055db83  call [901] ; 
+0055db86  i32.const [0]
+0055db88  call [2587] ; HttpManager.get_Instance
+0055db8b  i32.load [2, 12]
+0055db8e  i32.const [0]
+0055db90  call [11456] ; LoginTransmitter.RequestDataUploaded
+0055db93  end []

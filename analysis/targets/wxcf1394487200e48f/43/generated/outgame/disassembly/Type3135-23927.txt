@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.OpenPrivacyRecall; wasmcode1 function 66252; offset=21042498 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01411543  i32.const [4988633]
+01411548  i32.load8_u [0, 0]
+0141154b  i32.eqz []
+0141154c  if [-64]
+0141154e    i32.const [3928172]
+01411553    i32.const [1605]
+01411556    call_indirect [0, 0]
+01411559    i32.const [4988633]
+0141155e    i32.const [1]
+01411560    i32.store8 [0, 0]
+01411563  end []
+01411564  i32.const [3928172]
+01411569  i32.load [2, 0]
+0141156c  i32.load [2, 92]
+0141156f  i32.load [2, 0]
+01411572  i32.const [0]
+01411574  call [32056] ; AppInfoManager.OpenPrivacyRecallActStatic
+01411578  end []

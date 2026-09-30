@@ -1,0 +1,19 @@
+; Type4170.Reset; wasmcode function 13607; offset=6563295 size=39
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006425e0  local.get [0]
+006425e2  i32.const [0]
+006425e4  i32.store8 [0, 16]
+006425e7  local.get [0]
+006425e9  i32.const [0]
+006425eb  i32.store [2, 28]
+006425ee  local.get [0]
+006425f0  i32.load [2, 44]
+006425f3  if [-64]
+006425f5    i32.const [0]
+006425f7    call [1388] ; UpdateManager.get_Instance
+006425fa    local.get [0]
+006425fc    i32.load [2, 44]
+006425ff    i32.const [0]
+00642601    call [2082] ; MonoBehaviour.StopCoroutine
+00642604  end []
+00642605  end []

@@ -1,0 +1,248 @@
+; Original class: UserDataPrefs
+; Type3566.OnSave; wasmcode function 1820; offset=588490 size=761
+; signature={'args': [127], 'returns': []}; localGroups=[(2, 127)]
+0008facd  i32.const [4989706]
+0008fad2  i32.load8_u [0, 0]
+0008fad5  i32.eqz []
+0008fad6  if [-64]
+0008fad8    i32.const [3929208]
+0008fadd    call [900] ; 
+0008fae0    i32.const [3930256]
+0008fae5    call [900] ; 
+0008fae8    i32.const [3960704]
+0008faed    call [900] ; 
+0008faf0    i32.const [3960708]
+0008faf5    call [900] ; 
+0008faf8    i32.const [3960712]
+0008fafd    call [900] ; 
+0008fb00    i32.const [3978236]
+0008fb05    call [900] ; 
+0008fb08    i32.const [3924096]
+0008fb0d    call [900] ; 
+0008fb10    i32.const [3926996]
+0008fb15    call [900] ; 
+0008fb18    i32.const [3937964]
+0008fb1d    call [900] ; 
+0008fb20    i32.const [3941104]
+0008fb25    call [900] ; 
+0008fb28    i32.const [3941096]
+0008fb2d    call [900] ; 
+0008fb30    i32.const [4077660] ; STRING "UserDataPrefs数据存储功能被禁用了"
+0008fb35    call [900] ; 
+0008fb38    i32.const [4077648] ; STRING "UserData.txt"
+0008fb3d    call [900] ; 
+0008fb40    i32.const [4054892] ; STRING "GF_LoginUserID"
+0008fb45    call [900] ; 
+0008fb48    i32.const [4077664] ; STRING "UserData数据没有发生变化，不存储"
+0008fb4d    call [900] ; 
+0008fb50    i32.const [4099824] ; STRING "userId空"
+0008fb55    call [900] ; 
+0008fb58    i32.const [4105508] ; STRING "空"
+0008fb5d    call [900] ; 
+0008fb60    i32.const [4989706]
+0008fb65    i32.const [1]
+0008fb67    i32.store8 [0, 0]
+0008fb6a  end []
+0008fb6b  i32.const [3930256]
+0008fb70  i32.load [2, 0]
+0008fb73  call [901] ; 
+0008fb76  i32.const [3930256]
+0008fb7b  i32.load [2, 0]
+0008fb7e  i32.load [2, 92]
+0008fb81  i32.load8_u [0, 4]
+0008fb84  if [-64]
+0008fb86    i32.const [3926996]
+0008fb8b    i32.load [2, 0]
+0008fb8e    i32.const [1]
+0008fb90    call [909] ; 
+0008fb93    local.set [0]
+0008fb95    local.get [0]
+0008fb97    i32.const [4077660] ; STRING "UserDataPrefs数据存储功能被禁用了"
+0008fb9c    i32.load [2, 0]
+0008fb9f    call [905] ; 
+0008fba2    local.get [0]
+0008fba4    i32.const [4077660] ; STRING "UserDataPrefs数据存储功能被禁用了"
+0008fba9    i32.load [2, 0]
+0008fbac    i32.store [2, 16]
+0008fbaf    i32.const [3929208]
+0008fbb4    i32.load [2, 0]
+0008fbb7    call [901] ; 
+0008fbba    local.get [0]
+0008fbbc    i32.const [0]
+0008fbbe    call [1156] ; CLog.Warning
+0008fbc1    return []
+0008fbc2  end []
+0008fbc3  i32.const [3941104]
+0008fbc8  i32.load [2, 0]
+0008fbcb  call [901] ; 
+0008fbce  i32.const [3941104]
+0008fbd3  i32.load [2, 0]
+0008fbd6  i32.load [2, 92]
+0008fbd9  i32.load [2, 12]
+0008fbdc  if [-64]
+0008fbde    i32.const [0]
+0008fbe0    call [1910] ; GamePath.get_Instance
+0008fbe3    i32.load [2, 24]
+0008fbe6    i32.const [4077648] ; STRING "UserData.txt"
+0008fbeb    i32.load [2, 0]
+0008fbee    i32.const [0]
+0008fbf0    call [921] ; String.Concat
+0008fbf3    drop []
+0008fbf4    i32.const [3941096]
+0008fbf9    i32.load [2, 0]
+0008fbfc    call [903] ; 
+0008fbff    local.set [0]
+0008fc01    local.get [0]
+0008fc03    i32.const [0]
+0008fc05    i32.store [2, 8]
+0008fc08    i32.const [3941104]
+0008fc0d    i32.load [2, 0]
+0008fc10    call [901] ; 
+0008fc13    i32.const [3941104]
+0008fc18    i32.load [2, 0]
+0008fc1b    i32.load [2, 92]
+0008fc1e    i32.load [2, 12]
+0008fc21    if [-64]
+0008fc23      i32.const [3941104]
+0008fc28      i32.load [2, 0]
+0008fc2b      call [901] ; 
+0008fc2e      i32.const [3941104]
+0008fc33      i32.load [2, 0]
+0008fc36      i32.load [2, 92]
+0008fc39      i32.load [2, 12]
+0008fc3c      i32.const [3960712]
+0008fc41      i32.load [2, 0]
+0008fc44      call [1138] ; 
+0008fc47      local.set [1]
+0008fc49      i32.const [3924096]
+0008fc4e      i32.load [2, 0]
+0008fc51      call [903] ; 
+0008fc54      local.set [2]
+0008fc56      local.get [2]
+0008fc58      local.get [1]
+0008fc5a      i32.const [3978236]
+0008fc5f      i32.load [2, 0]
+0008fc62      call [1350] ; 
+0008fc65      local.get [0]
+0008fc67      local.get [2]
+0008fc69      i32.store [2, 8]
+0008fc6c    end []
+0008fc6d    local.get [0]
+0008fc6f    i32.const [0]
+0008fc71    call [7655] ; Json.ToJson
+0008fc74    local.set [1]
+0008fc76    local.get [1]
+0008fc78    i32.const [0]
+0008fc7a    call [5904] ; MD5Utils.MD5
+0008fc7d    local.set [0]
+0008fc7f    i32.const [3941104]
+0008fc84    i32.load [2, 0]
+0008fc87    call [901] ; 
+0008fc8a    i32.const [3941104]
+0008fc8f    i32.load [2, 0]
+0008fc92    i32.load [2, 92]
+0008fc95    i32.load [2, 20]
+0008fc98    local.get [0]
+0008fc9a    i32.const [0]
+0008fc9c    call [1019] ; String.Equals
+0008fc9f    if [-64]
+0008fca1      i32.const [3926996]
+0008fca6      i32.load [2, 0]
+0008fca9      i32.const [1]
+0008fcab      call [909] ; 
+0008fcae      local.set [0]
+0008fcb0      local.get [0]
+0008fcb2      i32.const [4077664] ; STRING "UserData数据没有发生变化，不存储"
+0008fcb7      i32.load [2, 0]
+0008fcba      call [905] ; 
+0008fcbd      local.get [0]
+0008fcbf      i32.const [4077664] ; STRING "UserData数据没有发生变化，不存储"
+0008fcc4      i32.load [2, 0]
+0008fcc7      i32.store [2, 16]
+0008fcca      i32.const [3929208]
+0008fccf      i32.load [2, 0]
+0008fcd2      call [901] ; 
+0008fcd5      local.get [0]
+0008fcd7      i32.const [0]
+0008fcd9      call [1069] ; CLog.Log
+0008fcdc      return []
+0008fcdd    end []
+0008fcde    i32.const [3941104]
+0008fce3    i32.load [2, 0]
+0008fce6    call [901] ; 
+0008fce9    i32.const [3941104]
+0008fcee    i32.load [2, 0]
+0008fcf1    i32.load [2, 92]
+0008fcf4    local.get [0]
+0008fcf6    i32.store [2, 20]
+0008fcf9    i32.const [3941104]
+0008fcfe    i32.load [2, 0]
+0008fd01    i32.load [2, 92]
+0008fd04    drop []
+0008fd05    i32.const [0]
+0008fd07    call [1809] ; FileManager.get_Instance
+0008fd0a    i32.const [4077648] ; STRING "UserData.txt"
+0008fd0f    i32.load [2, 0]
+0008fd12    local.get [1]
+0008fd14    i32.const [0]
+0008fd16    call [3362] ; FileManager.SaveWebGLFile
+0008fd19    i32.const [4105508] ; STRING "空"
+0008fd1e    i32.load [2, 0]
+0008fd21    local.set [0]
+0008fd23    i32.const [3941104]
+0008fd28    i32.load [2, 0]
+0008fd2b    i32.load [2, 92]
+0008fd2e    i32.load [2, 12]
+0008fd31    i32.const [4054892] ; STRING "GF_LoginUserID"
+0008fd36    i32.load [2, 0]
+0008fd39    i32.const [3960704]
+0008fd3e    i32.load [2, 0]
+0008fd41    call [987] ; 
+0008fd44    if [-64]
+0008fd46      i32.const [3941104]
+0008fd4b      i32.load [2, 0]
+0008fd4e      call [901] ; 
+0008fd51      block [-64]
+0008fd53        block [-64]
+0008fd55          i32.const [3941104]
+0008fd5a          i32.load [2, 0]
+0008fd5d          i32.load [2, 92]
+0008fd60          i32.load [2, 12]
+0008fd63          i32.const [4054892] ; STRING "GF_LoginUserID"
+0008fd68          i32.load [2, 0]
+0008fd6b          i32.const [3960708]
+0008fd70          i32.load [2, 0]
+0008fd73          call [982] ; 
+0008fd76          i32.load [2, 12]
+0008fd79          local.set [0]
+0008fd7b          local.get [0]
+0008fd7d          if [-64]
+0008fd7f            i32.const [0]
+0008fd81            local.set [1]
+0008fd83            local.get [0]
+0008fd85            i32.load [2, 8]
+0008fd88            br_if [2]
+0008fd8a          end []
+0008fd8b        end []
+0008fd8c        i32.const [1]
+0008fd8e        local.set [1]
+0008fd90      end []
+0008fd91      i32.const [4099824] ; STRING "userId空"
+0008fd96      i32.load [2, 0]
+0008fd99      local.get [0]
+0008fd9b      local.get [1]
+0008fd9d      select []
+0008fd9e      local.set [0]
+0008fda0    end []
+0008fda1    i32.const [3937964]
+0008fda6    i32.load [2, 0]
+0008fda9    call [901] ; 
+0008fdac    i32.const [3937964]
+0008fdb1    i32.load [2, 0]
+0008fdb4    i32.load [2, 92]
+0008fdb7    i32.load [2, 8]
+0008fdba    local.get [0]
+0008fdbc    i32.const [0]
+0008fdbe    call [4308] ; ReportManager.ReportSaveUserData
+0008fdc1  end []
+0008fdc2  end []

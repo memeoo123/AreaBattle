@@ -1,0 +1,53 @@
+{
+  "atUtc": "2026-09-30T04:09:12.302578+00:00",
+  "sourceMethods": [
+    23788,
+    23794,
+    23835
+  ],
+  "genericEvidence": "manifest-asset-generic.json",
+  "genericBody": "disassembly/ManifestAssetGeneric-23788.txt",
+  "castHelpers": [
+    "disassembly/ManifestCastHelper-983.txt",
+    "disassembly/ManifestCastHelper-938.txt",
+    "disassembly/ManifestCastHelper-4119.txt"
+  ],
+  "findings": [
+    "Generic23788 resolves through original tables to wasmcode20679; null request or unfinished request returns default null; done reads asset, safe type test983/4119 then checked cast938 of already filtered reference. Wrong type yields null.",
+    "Manifest operation Update calls GetAsset, retaining second IsDone query from generic body.",
+    "Native fixture now calls Runtime.LoadManifest with null initial Manifest; actual UnityWebRequestAssetBundle -> download registry -> AssetBundle.LoadAssetAsync -> publication -> downstream page load, with no synchronous LoadFromFile manifest preload."
+  ],
+  "validation": {
+    "integratedChecks": 644,
+    "nativeReport": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 3,
+      "assetFrame": 5,
+      "pageFrame": 7,
+      "manifestRequestFrame": 1,
+      "manifestReadyFrame": 3,
+      "downloadedBytes": 2377959,
+      "manifestBytes": 1570,
+      "checks": [
+        "Unified runtime uses recovered initial variant/unload state",
+        "Manifest is absent before native startup request",
+        "LoadManifest starts native download before manifest publication",
+        "Native manifest download and asset request publish through manager update",
+        "Published native manifest supplies subsequent dependency and variant queries",
+        "Parsed patch manifest and recovered service/resolver supply native file URL",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native AssetBundle.Unload(true) runs through recovered cleanup with zero-delay fixture"
+      ]
+    },
+    "freshPlayer": false
+  },
+  "qualification": "Local rebuilt manifest1570 bytes, page2377959 bytes; explicit fixture patch and dependency name mapping/zero unload delay. Native manager/static owner and original account/main startup remain pending."
+}

@@ -1,0 +1,16 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "GameControl -> LoadPrefabControl -> ResLoadHelper -> legacy scheduler/package/download runtime -> native AssetBundle, using rebuilt original assets and local file patch URLs. Full Main/account/Player and original remote URLs remain unverified.",
+    "requests": 5,
+    "checks": [
+        "Native manifest starts asynchronously before scene loading",
+        "Game InitScene queues original texture path through concrete loader",
+        "Native downloaded home texture reaches GameControl through source callbacks",
+        "Prefab resource callback retains original arguments",
+        "Source EntityModel11001 prefab and battle texture load through complete native graph",
+        "String prefab and id-based scene path preserve distinct names/ownership",
+        "Warm prefab and game-sprite caches reuse templates without new downloads",
+        "Controller disposal preserves loaded native assets while clearing singleton slots"
+    ]
+}

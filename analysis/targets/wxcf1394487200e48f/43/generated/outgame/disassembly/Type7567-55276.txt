@@ -1,0 +1,23 @@
+; Original class: XYXADControl
+; Type7567.IsVideoReadyStatic; wasmcode function 9327; offset=4536561 size=48
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+004538f4  i32.const [0]
+004538f6  call [1083] ; BridgeManager.get_xyxFunc
+004538f9  local.set [0]
+004538fb  local.get [0]
+004538fd  local.set [1]
+004538ff  local.get [0]
+00453901  i32.load [2, 0]
+00453904  local.set [0]
+00453906  local.get [1]
+00453908  local.get [0]
+0045390a  i32.const [240]
+0045390d  i32.add []
+0045390e  i32.load [2, 192]
+00453912  local.get [0]
+00453914  i32.load [2, 428]
+00453918  global.set [3]
+0045391a  global.get [3]
+0045391c  call_indirect [1, 0]
+0045391f  return []
+00453920  end []

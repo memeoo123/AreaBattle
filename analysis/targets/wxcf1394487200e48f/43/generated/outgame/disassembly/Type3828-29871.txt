@@ -1,0 +1,40 @@
+; Original class: ResourcesInfo
+; Type3828.ÂL}o; wasmcode function 10683; offset=5190158 size=105
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004f320f  i32.const [4988217]
+004f3214  i32.load8_u [0, 0]
+004f3217  i32.eqz []
+004f3218  if [-64]
+004f321a    i32.const [3936516]
+004f321f    call [900] ; 
+004f3222    i32.const [4988217]
+004f3227    i32.const [1]
+004f3229    i32.store8 [0, 0]
+004f322c  end []
+004f322d  i32.const [3936516]
+004f3232  i32.load [2, 0]
+004f3235  call [901] ; 
+004f3238  local.get [1]
+004f323a  i32.const [0]
+004f323c  i32.const [0]
+004f323e  call [940] ; Object.op_Equality
+004f3241  if [-64]
+004f3243    i32.const [3931644]
+004f3248    call [902] ; 
+004f324b    call [903] ; 
+004f324e    local.set [0]
+004f3250    local.get [0]
+004f3252    i32.const [4066120] ; STRING "Please set the user!"
+004f3257    call [902] ; 
+004f325a    i32.const [0]
+004f325c    call [1096] ; Exception..ctor
+004f325f    local.get [0]
+004f3261    i32.const [4012528] ; METHOD ResourcesInfo.ÂL}o
+004f3266    call [902] ; 
+004f3269    i32.const [1106]
+004f326c    global.set [3]
+004f326e    i32.const [1106]
+004f3271    call_indirect [0, 0]
+004f3274    unreachable []
+004f3275  end []
+004f3276  end []

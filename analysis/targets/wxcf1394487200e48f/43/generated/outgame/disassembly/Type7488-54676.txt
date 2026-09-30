@@ -1,0 +1,18 @@
+; Original class: DAUAdsAdapter
+; Type7488.stopLoadTimeout; wasmcode function 4475; offset=1481335 size=31
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00169a78  local.get [0]
+00169a7a  i32.load [2, 36]
+00169a7d  local.set [1]
+00169a7f  local.get [1]
+00169a81  if [-64]
+00169a83    local.get [1]
+00169a85    i32.const [0]
+00169a87    call [2611] ; CallFrameworkAdapter.Call_StopCoroutine
+00169a8a    local.get [0]
+00169a8c    i32.const [36]
+00169a8e    i32.add []
+00169a8f    i32.const [0]
+00169a91    i32.store [2, 0]
+00169a94  end []
+00169a95  end []

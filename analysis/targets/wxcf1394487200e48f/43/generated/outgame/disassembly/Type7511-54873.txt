@@ -1,0 +1,73 @@
+; Original class: BaseController
+; Type7511.reportIntersRequest; wasmcode function 8208; offset=3889288 size=210
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+003b588b  i32.const [5005053]
+003b5890  i32.load8_u [0, 0]
+003b5893  i32.eqz []
+003b5894  if [-64]
+003b5896    i32.const [3930112]
+003b589b    call [900] ; 
+003b589e    i32.const [4036740] ; STRING " 游戏位请求 uptype=5"
+003b58a3    call [900] ; 
+003b58a6    i32.const [4077760] ; STRING "VIDEO"
+003b58ab    call [900] ; 
+003b58ae    i32.const [4100160] ; STRING "video uptype 5 not report"
+003b58b3    call [900] ; 
+003b58b6    i32.const [3943536]
+003b58bb    call [900] ; 
+003b58be    i32.const [5005053]
+003b58c3    i32.const [1]
+003b58c5    i32.store8 [0, 0]
+003b58c8  end []
+003b58c9  i32.const [4077760] ; STRING "VIDEO"
+003b58ce  i32.load [2, 0]
+003b58d1  local.get [0]
+003b58d3  i32.load [2, 12]
+003b58d6  i32.load [2, 16]
+003b58d9  i32.const [0]
+003b58db  call [1019] ; String.Equals
+003b58de  local.set [2]
+003b58e0  local.get [0]
+003b58e2  i32.load [2, 8]
+003b58e5  local.set [1]
+003b58e7  local.get [2]
+003b58e9  if [-64]
+003b58eb    local.get [1]
+003b58ed    i32.const [4100160] ; STRING "video uptype 5 not report"
+003b58f2    i32.load [2, 0]
+003b58f5    i32.const [0]
+003b58f7    call [921] ; String.Concat
+003b58fa    i32.const [0]
+003b58fc    call [999] ; XYXLOG.Log
+003b58ff    return []
+003b5900  end []
+003b5901  local.get [1]
+003b5903  i32.const [4036740] ; STRING " 游戏位请求 uptype=5"
+003b5908  i32.load [2, 0]
+003b590b  i32.const [0]
+003b590d  call [921] ; String.Concat
+003b5910  i32.const [0]
+003b5912  call [999] ; XYXLOG.Log
+003b5915  i32.const [3943536]
+003b591a  i32.load [2, 0]
+003b591d  call [903] ; 
+003b5920  local.set [1]
+003b5922  local.get [1]
+003b5924  i32.const [0]
+003b5926  call [2456] ; ads_up_event..ctor
+003b5929  local.get [0]
+003b592b  local.get [1]
+003b592d  local.get [0]
+003b592f  call [4013] ; BaseController.setInfo
+003b5932  local.get [1]
+003b5934  i64.const [4617315517961601024]
+003b593f  i64.store [3, 80]
+003b5942  i32.const [3930112]
+003b5947  i32.load [2, 0]
+003b594a  call [901] ; 
+003b594d  local.get [0]
+003b594f  call [2513] ; DAUEventConstant.get_Instance
+003b5952  local.get [1]
+003b5954  local.get [0]
+003b5956  call [2512] ; DAUEventConstant.reportSever
+003b5959  end []

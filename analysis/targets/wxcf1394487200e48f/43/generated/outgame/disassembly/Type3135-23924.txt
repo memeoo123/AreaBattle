@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.StartRestore; wasmcode1 function 66244; offset=21040932 size=54
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01410f25  i32.const [4988630]
+01410f2a  i32.load8_u [0, 0]
+01410f2d  i32.eqz []
+01410f2e  if [-64]
+01410f30    i32.const [3934192]
+01410f35    i32.const [1605]
+01410f38    call_indirect [0, 0]
+01410f3b    i32.const [4988630]
+01410f40    i32.const [1]
+01410f42    i32.store8 [0, 0]
+01410f45  end []
+01410f46  i32.const [3934192]
+01410f4b  i32.load [2, 0]
+01410f4e  i32.load [2, 92]
+01410f51  i32.load [2, 0]
+01410f54  i32.const [0]
+01410f56  call [13204] ; IapManager.StartRestoreStatic
+01410f59  end []

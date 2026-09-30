@@ -1,0 +1,31 @@
+; Original class: CommanderItem
+; Type4334.OnClick; wasmcode function 20191; offset=9070409 size=77
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a674a  i32.const [5008830]
+008a674f  i32.load8_u [0, 0]
+008a6752  i32.eqz []
+008a6753  if [-64]
+008a6755    i32.const [4018288]
+008a675a    call [900] ; 
+008a675d    i32.const [5008830]
+008a6762    i32.const [1]
+008a6764    i32.store8 [0, 0]
+008a6767  end []
+008a6768  i32.const [0]
+008a676a  call [1193] ; GameModule.get_Audio
+008a676d  i32.const [1]
+008a676f  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+008a6772  i32.const [0]
+008a6774  call [1201] ; Extension.PlayerVoice
+008a6777  local.get [0]
+008a6779  local.get [0]
+008a677b  call [5150] ; CommanderItem.b}jR
+008a677e  i32.const [0]
+008a6780  call [1143] ; GameModule.get_UI
+008a6783  i32.const [4018288]
+008a6788  i32.load [2, 0]
+008a678b  call [1503] ; 
+008a678e  i32.const [-1]
+008a6790  i32.const [0]
+008a6792  call [8108] ; CommanderUI.RefreshSelectedSkillInfo
+008a6795  end []

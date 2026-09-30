@@ -1,0 +1,1699 @@
+{
+  "schemaVersion": "1.0",
+  "target": "wxcf1394487200e48f/43",
+  "objective": "关外逻辑完全复原",
+  "status": "in_progress",
+  "declaredClaim": "incomplete",
+  "startedAtUtc": "2026-09-29T06:56:31.829550+00:00",
+  "lastUpdatedAtUtc": "2026-09-30T11:36:58.438897+00:00",
+  "currentStage": "global-item-slot-owner",
+  "previousBattlefieldWorkPreserved": true,
+  "subsystems": [
+    {
+      "id": "entry-navigation",
+      "classes": [
+        "Proj_xqzdStartUI",
+        "MenuTabUI",
+        "MainTabItemUI",
+        "TopInfoUI",
+        "UnknownTabUI",
+        "ProcessControl"
+      ],
+      "sourceMethodCount": 113,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "Runtime2/3/4 routes confirmed; legacy MenuTabConfig is not authoritative for CommanderUI reachability.",
+      "implementation": "Source switch state, commander overlay and imported original menu/page views connected; real account entry/providers pending",
+      "validation": "4 navigation checks pass; full playable lobby pending"
+    },
+    {
+      "id": "profile-save-login",
+      "classes": [
+        "LocalDataManager",
+        "LocalData",
+        "LocalDataControl",
+        "DataManagerSave",
+        "LoginCtrl",
+        "UserInfoManager"
+      ],
+      "sourceMethodCount": 92,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "commander defaults confirmed; complete login/migration pending",
+      "implementation": "isolated reconstruction JSON disk envelope with replacement backup; not original wire format",
+      "validation": "5 profile checks pass; production menu binding pending"
+    },
+    {
+      "id": "commander-progression",
+      "classes": [
+        "CommanderManager",
+        "CommanderData",
+        "CommanderControl",
+        "CommanderUI",
+        "CommanderItem",
+        "CommanderSkillItem"
+      ],
+      "sourceMethodCount": 96,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "Core, original page/card/skill detail formatting and click state confirmed; full guide/migration/model lifecycle pending",
+      "implementation": "Core, initialization, action controller and dynamic original page including prices/skill descriptions/comparison rows implemented with supplied held profile; production consumers pending",
+      "validation": "7 commander view checks plus existing core/action checks; editor detail capture inspected, no player entry"
+    },
+    {
+      "id": "currency-items-packages",
+      "classes": [
+        "ItemManager",
+        "ItemModuleControl",
+        "ToolControl",
+        "GlobalItemManager",
+        "PackageItemBase",
+        "PackageItem_OpenAuto",
+        "PackageItem_OpenManual"
+      ],
+      "sourceMethodCount": 76,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "Shared config, all nine entity factories, rewards/package rules and source singleton ownership confirmed by dedicated audits.",
+      "implementation": "Actual item manager/module, shared config, inventory/rewards, nine entities and lazy global owner implemented. Full product/provider/Main composition remains pending.",
+      "validation": "1087 integrated checks across the project; latest10 verify source singleton and ItemManager startup/save/restart. Package/Tool chain covered in preceding milestone. Full subsystem/runtime incomplete."
+    },
+    {
+      "id": "store-payment",
+      "classes": [
+        "StorePurchaseUI",
+        "StoreDataManager",
+        "ProductUserData",
+        "IapControl",
+        "FirstChargeData",
+        "ItemGetTypeBuyCount"
+      ],
+      "sourceMethodCount": 48,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "skins-cosmetics",
+      "classes": [
+        "ShopUI",
+        "SkinManager",
+        "SkinData",
+        "PlayerSkinData",
+        "SceneSkinItem",
+        "SkinRewardUI"
+      ],
+      "sourceMethodCount": 84,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "Skin records, migration, unlock/equip/new flags and save projection confirmed",
+      "implementation": "Native shared SkinItem template now supports scene controller overrides; full page assembly/providers pending",
+      "validation": "7 manager and9 item/native-card checks pass; subsystem incomplete"
+    },
+    {
+      "id": "normal-special-daily-entry",
+      "classes": [
+        "LevelControl",
+        "LevelData",
+        "DailyChallengeActivity",
+        "DailyChallengeLevelPool",
+        "DailyChallengeUI"
+      ],
+      "sourceMethodCount": 100,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "arena-match-ranks",
+      "classes": [
+        "ArenaControl",
+        "ArenaManager",
+        "ArenaUI",
+        "MatchControl",
+        "MatchManager",
+        "RankManager",
+        "RankControl",
+        "LevelRankControl"
+      ],
+      "sourceMethodCount": 215,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "daily-tasks-achievements",
+      "classes": [
+        "TaskMgr",
+        "TaskPanelUI",
+        "TaskData",
+        "AchievementMgr",
+        "AchievementData",
+        "NoviceTaskManager"
+      ],
+      "sourceMethodCount": 52,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "seven-day-activity",
+      "classes": [
+        "SevendayActivityControl",
+        "ActivityManager",
+        "ActivityControl",
+        "ChildTaskActivity",
+        "LimitTimeTaskActivity"
+      ],
+      "sourceMethodCount": 84,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "limited-offers-seasonal",
+      "classes": [
+        "LimitedBagManager",
+        "DiamondLimitedControl",
+        "PiggyBankControl",
+        "FestActManager",
+        "ValentineUI",
+        "RaceActivityControl"
+      ],
+      "sourceMethodCount": 79,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "dice-select-card",
+      "classes": [
+        "DiceGameControl",
+        "DiceShopControl",
+        "SelectCardControl",
+        "HczzqControl"
+      ],
+      "sourceMethodCount": 88,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "guidebook-notices-settings",
+      "classes": [
+        "GuideBookControl",
+        "GuideBookUI",
+        "NoticeUI",
+        "Proj_xqzdStartSetupUI",
+        "AudioControl"
+      ],
+      "sourceMethodCount": 72,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "ads-platform-callbacks",
+      "classes": [
+        "ADHelper",
+        "LoginSDK_XYX",
+        "IapControl",
+        "SkipAdUI",
+        "GiveGiftUI"
+      ],
+      "sourceMethodCount": 74,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "clock-refresh-offline",
+      "classes": [
+        "ServerTimeModule",
+        "TimeToRefreshControl",
+        "DailyRefresher",
+        "WeeklyRefresher",
+        "ConstTimeRefresher"
+      ],
+      "sourceMethodCount": 46,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    },
+    {
+      "id": "rewards-battle-return",
+      "classes": [
+        "RewardUI",
+        "CommonGetRewardUI",
+        "AwardGetUI",
+        "Proj_xqzdOverUI",
+        "Proj_xqzdFailUI",
+        "GameStatisticsManager"
+      ],
+      "sourceMethodCount": 98,
+      "reachability": "candidate; verify active config, callers and runtime entry",
+      "evidenceStatus": "pending",
+      "implementation": "pending",
+      "validation": "pending"
+    }
+  ],
+  "acceptance": [
+    "All version-enabled out-of-battle entry points mapped to source and implemented or excluded with evidence.",
+    "Source-derived rules and config amounts; no invented initial balances, time rules or rewards.",
+    "Transactions, callback outcomes, save/reload, reset/date-boundary and battle-return cases verified.",
+    "Operable menus plus new Windows build and end-to-end player smoke.",
+    "Original services/platform-only outcomes must be explicitly unverified until evidenced; offline mocks do not establish server parity."
+  ],
+  "artifacts": {
+    "methodMap": "generated/outgame/method-map.json",
+    "spec": "generated/outgame/OUTGAME_RESTORE_SPEC.json",
+    "goldenCases": "generated/outgame/golden-cases.json",
+    "uiEvidence": "generated/outgame/ui-evidence.json",
+    "uiImport": "generated/outgame/ui-import.json",
+    "uiRootAudit": "generated/outgame/UI_ROOT_AUDIT.json",
+    "uiRootInitializationAudit": "generated/outgame/UI_ROOT_INITIALIZATION_AUDIT.json",
+    "canvasAdaptiveAudit": "generated/outgame/CANVAS_ADAPTIVE_AUDIT.json",
+    "uiBootstrapAudit": "generated/outgame/UI_BOOTSTRAP_IMPORT_AUDIT.json",
+    "adaptiveBangsAudit": "generated/outgame/ADAPTIVE_BANGS_AUDIT.json",
+    "uiBootstrapPlayModeAudit": "generated/outgame/UI_BOOTSTRAP_PLAYMODE_AUDIT.json",
+    "atlasLoaderAudit": "generated/outgame/ATLAS_LOADER_AUDIT.json",
+    "atlasCacheAudit": "generated/outgame/ATLAS_CACHE_AUDIT.json",
+    "uiModuleInitializeAudit": "generated/outgame/UI_MODULE_INITIALIZE_AUDIT.json",
+    "resourceModeAudit": "generated/outgame/RESOURCE_MODE_AUDIT.json",
+    "coreStartupAudit": "generated/outgame/CORE_MODULE_STARTUP_AUDIT.json",
+    "legacyUiResourceAudit": "generated/outgame/LEGACY_UI_RESOURCE_AUDIT.json",
+    "legacyResourceSchedulerAudit": "generated/outgame/LEGACY_RESOURCE_SCHEDULER_AUDIT.json",
+    "legacyAssetLoaderLifetimeAudit": "generated/outgame/LEGACY_ASSET_LOADER_LIFETIME_AUDIT.json",
+    "legacyPackageCoroutineAudit": "generated/outgame/LEGACY_PACKAGE_COROUTINE_AUDIT.json",
+    "legacyBundleOperationAudit": "generated/outgame/LEGACY_BUNDLE_OPERATION_AUDIT.json",
+    "legacyBundleRegistryAudit": "generated/outgame/LEGACY_BUNDLE_REGISTRY_AUDIT.json",
+    "legacyDownloadUpdateAudit": "generated/outgame/LEGACY_DOWNLOAD_UPDATE_AUDIT.json",
+    "nativeBundleUiAudit": "generated/outgame/NATIVE_BUNDLE_UI_AUDIT.json",
+    "legacyBundleUnloadAudit": "generated/outgame/LEGACY_BUNDLE_UNLOAD_AUDIT.json",
+    "legacyBundleReuseAudit": "generated/outgame/LEGACY_BUNDLE_REUSE_AUDIT.json",
+    "legacyBundleAcquisitionAudit": "generated/outgame/LEGACY_BUNDLE_ACQUISITION_AUDIT.json",
+    "legacyBundleDependenciesAudit": "generated/outgame/LEGACY_BUNDLE_DEPENDENCIES_AUDIT.json",
+    "legacyBundleResolverAudit": "generated/outgame/LEGACY_BUNDLE_RESOLVER_AUDIT.json",
+    "legacyPatchManifestServicesAudit": "generated/outgame/LEGACY_PATCH_MANIFEST_SERVICES_AUDIT.json",
+    "legacyFirstPackAudit": "generated/outgame/LEGACY_FIRSTPACK_AUDIT.json",
+    "legacyResourceInitializationAudit": "generated/outgame/LEGACY_RESOURCE_INITIALIZATION_AUDIT.json",
+    "originalPackListsAudit": "generated/outgame/ORIGINAL_PACK_LISTS_AUDIT.json",
+    "legacyBundleRuntimeAudit": "generated/outgame/LEGACY_BUNDLE_RUNTIME_AUDIT.json",
+    "legacyManifestOperationAudit": "generated/outgame/LEGACY_MANIFEST_OPERATION_AUDIT.json",
+    "nativeManifestStartupAudit": "generated/outgame/NATIVE_MANIFEST_STARTUP_AUDIT.json",
+    "nativeResourceManagerAudit": "generated/outgame/NATIVE_RESOURCE_MANAGER_AUDIT.json",
+    "firstpackRawAssetsAudit": "generated/outgame/FIRSTPACK_RAW_ASSETS_AUDIT.json",
+    "firstpackAtlasAudit": "generated/outgame/FIRSTPACK_ATLAS_AUDIT.json",
+    "tipUiSourceAudit": "generated/outgame/TIP_UI_SOURCE_AUDIT.json",
+    "nativeFirstPackStartupAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\NATIVE_FIRSTPACK_STARTUP_AUDIT.json",
+    "configInitializationRoster": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\CONFIG_INITIALIZATION_ROSTER.json",
+    "configReadGenerics": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\config-read-generics.json",
+    "legacyConfigReadAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\LEGACY_CONFIG_READ_AUDIT.json",
+    "configPostprocessAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\CONFIG_POSTPROCESS_AUDIT.json",
+    "configPresentationStartupAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\CONFIG_PRESENTATION_STARTUP_AUDIT.json",
+    "legacyConfigManagerAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\LEGACY_CONFIG_MANAGER_AUDIT.json",
+    "mainConfigStartupAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\MAIN_CONFIG_STARTUP_AUDIT.json",
+    "preGameSettingsAudit": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\PRE_GAME_SETTINGS_AUDIT.json",
+    "preGameRegistrationRoster": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\outgame\\PRE_GAME_REGISTRATION_ROSTER.json"
+  },
+  "nextActions": [
+    "Implement source registered manager providers and original data key/save semantics, then connect UserLogin data reload/upload/download.",
+    "Trace first LevelID assignment and connect account initialization to menu.",
+    "Complete remaining outgame systems and runnable end-to-end build."
+  ],
+  "unknowns": [
+    "Original fresh-profile defaults and migration formats",
+    "Source active A/B tables and remote flags",
+    "Payment/ad completion vs cancellation and persistence ordering",
+    "Time source, reset boundaries and activity enablement",
+    "Reachability of packaged shared modules"
+  ],
+  "validation": {
+    "compile": "pass",
+    "integratedChecksPassed": 1087,
+    "commanderCoreChecksPassed": 7,
+    "report": "E:\\Projects\\AreaBattle\\analysis\\outgame-commander-validation.json",
+    "newPlayerBuild": false,
+    "playableLobby": false,
+    "localInventoryChecksPassed": 6,
+    "toolDispatchChecksPassed": 8,
+    "profileChecksPassed": 5,
+    "menuNavigationChecksPassed": 4,
+    "commanderActionChecksPassed": 5,
+    "uiHierarchyChecksPassed": 4,
+    "menuViewChecksPassed": 2,
+    "sourceUiScrollMaskFitComponents": 27,
+    "commanderViewChecksPassed": 7,
+    "levelProgressionChecksPassed": 3,
+    "originalLocalDataChecksPassed": 4,
+    "originalCommanderChecksPassed": 4,
+    "skinRecordChecksPassed": 8,
+    "skinItemActionChecksPassed": 15,
+    "playerModelChecksPassed": 5,
+    "bakedAnimationChecksPassed": 15,
+    "menuChecksPassed": 5,
+    "loginSyncChecksPassed": 222,
+    "uiClosePlayModeChecksPassed": 6,
+    "uiLifecyclePlayModeChecksPassed": 9,
+    "uiRootStaticValidation": {
+      "passed": true,
+      "nodes": 13,
+      "canvases": 9,
+      "raycasters": 8,
+      "images": 3,
+      "scope": "Reloaded static prefab against source manifest; AdaptiveBangs and production startup pending"
+    },
+    "uiBootstrapImport": {
+      "passed": true,
+      "prefabs": 2,
+      "scope": "Source native components, camera references, transforms, tags and serialized adaptive values; AtlasLoader and production startup pending"
+    },
+    "uiBootstrapPlayMode": {
+      "passed": true,
+      "scope": "Real original bootstrap Awake, UIRoot Start and open/init/outlet/canvas/animation/close lifecycle; platform height injected, page business hooks/provider isolated, no production account/native bundles",
+      "checks": [
+        "Original bootstrap Awake publishes source display settings and binds original camera",
+        "Native module finds tagged canvas/camera and persists root before initialization completes",
+        "Root callback assigns module canvas before native bangs Start",
+        "Real page binds all thirteen original root outlets",
+        "Opening animation waits while paused and retains initialized page/resources",
+        "Native Start applies source pixel conversion after bootstrap/root setup even while timeScale is zero",
+        "Real OpenUI follows live initialized sorted page",
+        "Source initialization and OpenLater run in order across actual animation coroutine",
+        "Hide occurs with disposed flag while native object still exists",
+        "Dispose clears references before deferred native destruction and resource releases",
+        "Close notification follows actual native destruction and all handle releases",
+        "Second end-of-frame occurs after hide/dispose frame",
+        "Real close releases main, dynamic and custom handles in order"
+      ],
+      "error": "",
+      "openFrame": 58,
+      "hideFrame": 136,
+      "disposeFrame": 136,
+      "closeFrame": 137,
+      "batchMode": false,
+      "bootstrapFrame": 1,
+      "bangsFrame": 4,
+      "bangsPixels": 89.0
+    },
+    "legacyUiPlayMode": {
+      "passed": true,
+      "batchMode": false,
+      "loadFrame": 1,
+      "completeFrame": 3,
+      "error": "",
+      "scope": "Native legacy root/page instantiation and two-frame completion through cached page initialization; imported local asset adapter, no original bundle transport/account/business composition",
+      "checks": [
+        "Resource acquisition receives original UI path: UI/UIRoot",
+        "Legacy resource pump receives zero deltas during UI initialization",
+        "Legacy root is active under persistent native canvas",
+        "Resource acquisition receives original UI path: UI/FestActUI/ValentineUI",
+        "Native scheduler leaves page hidden before two-frame completion",
+        "Two native frame yields complete while game time is paused",
+        "Hidden page callback preserves resource identity and original layer",
+        "Concrete legacy open binds thirteen original outlets, activates and sorts the page"
+      ]
+    },
+    "nativeBundleUi": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 3,
+      "assetFrame": 5,
+      "pageFrame": 7,
+      "manifestRequestFrame": 1,
+      "manifestReadyFrame": 3,
+      "downloadedBytes": 2377959,
+      "manifestBytes": 1570,
+      "checks": [
+        "Original manager object is native and persists across scene changes",
+        "ResourcesModule resolves actual native manager and completes no-firstpack branch",
+        "ResourcesMono native Awake persists the resource coroutine host",
+        "Unified runtime uses recovered initial variant/unload state",
+        "Manifest is absent before native startup request",
+        "LoadManifest starts native download before manifest publication",
+        "Native manifest download and asset request publish through manager update",
+        "Published native manifest supplies subsequent dependency and variant queries",
+        "Parsed patch manifest and recovered service/resolver supply native file URL",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native manager Update completes AssetBundle.Unload(true) with zero-delay fixture"
+      ]
+    },
+    "firstPackNativeBuild": {
+      "passed": true,
+      "error": "",
+      "sha256": "0df3a9abb648c34ce9dd9d3d1a20c16026c917bfef082825d5c038cb8ab20899",
+      "bytes": 4635198,
+      "assetAddresses": 91,
+      "configs": 85,
+      "fonts": 2,
+      "atlases": 2,
+      "prefabs": 2,
+      "checks": [
+        "All91 original addresses resolve in rebuilt native bundle",
+        "All85 bundled configurations preserve source bytes",
+        "Both fonts, both atlas sprite lookups and both UI prefabs resolve",
+        "UIRoot/TipUI basename loading and native animation dependencies preserved"
+      ]
+    },
+    "firstPackNativeStartup": {
+      "passed": true,
+      "error": "",
+      "scope": "Rebuilt original firstpack through native manager Update, local synthetic patch URLs and recovered initialization/package/UI chain. Scheduler is editor-pumped; online values are absent and material requests are collected; SDK and post-config account/platform/full production startup remain explicit fixture boundaries.",
+      "requests": 2,
+      "aliases": 7,
+      "configs": 85,
+      "initializedFrame": 4,
+      "tipFrame": 7,
+      "checks": [
+        "Native asynchronously published manifest contains original firstpack bundle name",
+        "Nonempty firstpack path marks initialized before asynchronous completion",
+        "Firstpack coroutine completes once with native persistent ResourcesMono",
+        "All seven original aliases share the downloaded native firstpack",
+        "UIRoot alias resolves native firstpack owner",
+        "Configuration alias resolves native firstpack owner",
+        "All 85 configuration payloads remain byte-exact after asynchronous alias loading",
+        "Main config completion initializes all64 original configurations before advancing",
+        "Asynchronously downloaded configuration builds original derived indexes and globals",
+        "Main SDK/config transition advances without waiting for ten fixture material requests",
+        "Bundled UIRoot initializes under native scene canvas",
+        "TipUI alias preserves two-frame hidden loading while paused",
+        "TipUI prefab instantiates from shared firstpack owner",
+        "Native TipUI opens with all six original outlet bindings",
+        "Native TipUI retains both bundled legacy animation clips",
+        "Downloaded atlas sprite resolves: PublicUI",
+        "Downloaded atlas sprite resolves: PublicBtn",
+        "Only manifest and firstpack are downloaded; alias loads issue no extra requests"
+      ]
+    },
+    "nativeConfigRead": {
+      "tables": 58,
+      "valueConfigs": 6,
+      "rows": 2724,
+      "passed": true
+    },
+    "controllerLifecycles": {
+      "atUtc": "2026-09-30T06:20:45.764375+00:00",
+      "scope": "Complete38-controller slot/ancestry audit; five concrete controller lifecycles and shared service bindings; native pool/message/time lifecycle",
+      "checksPassed": 699,
+      "nativePlayModeChecks": 10,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "notClaimed": "Remaining33 production controllers, full Main/account service graph, actual platform/server behavior or complete playable outgame",
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameControllerPlayModeValidation.Run"
+      ]
+    },
+    "controllerNativePlayMode": {
+      "passed": true,
+      "error": "",
+      "scope": "Five real controller bindings with native persistent pool root and deferred Destroy; explicit platform and in-memory storage fixtures. No full38-controller Main, real login or Player claim.",
+      "checks": [
+        "Production bindings resolve same initialized data-pool managers",
+        "Process and clock initialized through real logic module",
+        "Default native pool root persists and stays hidden",
+        "Pool survives active-scene transition",
+        "Local-data listeners use the bound server-time instance",
+        "Unscaled logic update works on native paused frame",
+        "Shutdown clears slots before native deferred destruction",
+        "Disposed local-data controller no longer receives events",
+        "Native frame destroys persistent root and its pooled child",
+        "Later resolver creates a new usable native pool"
+      ]
+    },
+    "uiController": {
+      "atUtc": "2026-09-30T06:41:52.412368+00:00",
+      "scope": "UIControl lifecycle/state transitions, original TopInfo prefab/part rendering, native MenuTab visibility and actual rendered end-of-frame loading",
+      "checksPassed": 705,
+      "nativePlayModeChecks": 6,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "notClaimed": "Full menu data/role/page callbacks, account/avatar/SDK integration, remaining32 controllers, complete Main or Player build",
+      "commands": [
+        "RecoveredHudImporter.ImportTopInfoBatch",
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameUiPlayModeValidation.RunRendered"
+      ],
+      "batchModeLimitation": "Batch-mode UI run timed out at first WaitForEndOfFrame; source wait unchanged, failed report retained in analysis/ui-native-batch-timeout.json"
+    },
+    "uiControllerNativePlayMode": {
+      "passed": true,
+      "error": "",
+      "scope": "Native UIControl/TopInfo/MenuTab with original prefabs and default WaitForEndOfFrame menu loading. Menu data/role/account callbacks are explicit fixtures; no complete Main or Player claim.",
+      "checks": [
+        "Home entry starts main immediately before native end-of-frame waits",
+        "Native end-of-frame loads preserve original page order while timeScale is zero",
+        "Battle state closes native menu and top, preserving active root",
+        "Result state activates original header parts on popup layer",
+        "Return to home reuses native pages and restores top ordering",
+        "Disposed UI controller removes state listener and clears registry"
+      ]
+    },
+    "gameController": {
+      "atUtc": "2026-09-30T06:54:09.703281+00:00",
+      "scope": "GameControl concrete lifecycle/shared scene state, original GameSceneMono references, native texture/effect reuse and deferred unlock-model destruction",
+      "checksPassed": 711,
+      "nativePlayModeChecks": 7,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "notClaimed": "Original resource transport, battle asset11001 acquisition, remaining31 controller lifecycles, full Main/account/menu composition or complete playable outgame",
+      "commands": [
+        "prepare_outgame_model_roots.py",
+        "OutgameModelRootsImporter.ImportBatch",
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameGamePlayModeValidation.Run"
+      ]
+    },
+    "gameControllerNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Real GameControl and imported original scene references, native recovered home textures/effects and deferred destruction. Local synchronous resource adapter; battle asset11001/loading transport, full Main and Player not claimed.",
+      "checks": [
+        "Production binding discovers original tagged scene and all four cameras",
+        "Three recovered original native effects share one selection cache",
+        "Returning to skin7 reuses native texture/effect identity",
+        "Native home/game camera and root cycle",
+        "ClearRenderModel uses deferred native destruction",
+        "Source disposal releases singleton but preserves scene/resources",
+        "Next native frame removes unlock model while scene remains"
+      ]
+    },
+    "prefabLoader": {
+      "atUtc": "2026-09-30T07:06:29.704060+00:00",
+      "scope": "Source Path/ResLoadHelper/LoadPrefabControl loading branches and GameControl integration through native bundle runtime",
+      "checksPassed": 718,
+      "nativePlayModeChecks": 8,
+      "nativeRequests": 5,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "notClaimed": "LoadPrefabControl entity-pool/preload business paths, remaining30 controller lifecycles, actual remote URLs/services, full Main/account/Player",
+      "commands": [
+        "OutgamePrefabLoaderBundles.Build",
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgamePrefabLoaderPlayModeValidation.Run"
+      ]
+    },
+    "prefabLoaderNative": {
+      "passed": true,
+      "error": "",
+      "scope": "GameControl -> LoadPrefabControl -> ResLoadHelper -> legacy scheduler/package/download runtime -> native AssetBundle, using rebuilt original assets and local file patch URLs. Full Main/account/Player and original remote URLs remain unverified.",
+      "requests": 5,
+      "checks": [
+        "Native manifest starts asynchronously before scene loading",
+        "Game InitScene queues original texture path through concrete loader",
+        "Native downloaded home texture reaches GameControl through source callbacks",
+        "Prefab resource callback retains original arguments",
+        "Source EntityModel11001 prefab and battle texture load through complete native graph",
+        "String prefab and id-based scene path preserve distinct names/ownership",
+        "Warm prefab and game-sprite caches reuse templates without new downloads",
+        "Controller disposal preserves loaded native assets while clearing singleton slots"
+      ]
+    },
+    "entityPreload": {
+      "atUtc": "2026-09-30T07:21:11.890389+00:00",
+      "scope": "LoadPrefabControl entity acquisition/template preparation/shared preload queues, native bundle pool reuse/deferred destruction",
+      "checksPassed": 729,
+      "nativePlayModeChecks": 13,
+      "nativeRequests": 5,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "notClaimed": "Concrete LevelControl/PlayerControl/loading-page preload host, remaining30 controller lifecycles, Main/account/full outgame Player or original remote services",
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameEntityPoolPlayModeValidation.Run"
+      ]
+    },
+    "entityPoolNative": {
+      "passed": true,
+      "error": "",
+      "scope": "GameControl -> LoadPrefabControl -> ResLoadHelper -> legacy scheduler/package/download runtime -> native AssetBundle, using rebuilt original assets and local file patch URLs. Entity preparation/acquisition/reuse/deferred cleanup included. Full Main/account/Player, preload host composition and original remote URLs remain unverified.",
+      "requests": 5,
+      "checks": [
+        "Native manifest starts asynchronously before scene loading",
+        "Game InitScene queues original texture path through concrete loader",
+        "Native cold preparation caches original prefab without instantiating an entity",
+        "Native downloaded home texture reaches GameControl through source callbacks",
+        "Prefab resource callback retains original arguments",
+        "Source EntityModel11001 prefab and battle texture load through complete native graph",
+        "String prefab and id-based scene path preserve distinct names/ownership",
+        "Warm prefab and game-sprite caches reuse templates without new downloads",
+        "Native entity clone is registered and named under source GameObject EntityRoot",
+        "Native inactive entity is reused by activeSelf without another request",
+        "ClearModelEntityCache drops9033 bookkeeping immediately, preserves11001 and schedules native root destruction",
+        "Deferred Object.Destroy removes native pooled root and child on frame boundary while retaining template and main root",
+        "Controller disposal preserves loaded native assets while clearing singleton slots"
+      ]
+    },
+    "levelLoading": {
+      "atUtc": "2026-09-30T07:49:26.356769+00:00",
+      "scope": "Level config/resource and Player skin entity source helpers; concrete preload services; original loading-page import/runtime/UIControl methods",
+      "checksPassed": 741,
+      "newIntegratedChecks": 12,
+      "nativePlayModeChecks": 23,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "OutgameLevelResourceBundles.Build",
+        "RecoveredHudImporter.ImportLoadingBatch",
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameLoadingPlayModeValidation.Run"
+      ],
+      "notClaimed": "Full Level/Player lifecycles, actual complete preload entity asset set, complete Main/account/lobby, original matched rendering or remote service/device verification"
+    },
+    "loadingPageNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Original loading Resources prefab, native UGUI/SpriteRenderer/Animator and ScriptableObject-independent source progress/timeout callbacks. Scaled scalar tweens stepped deterministically. Full Main/UIControl composition and original matched visual replay are not covered.",
+      "checks": [
+        "Original loading hierarchy and native font/image/renderer/controller references are populated",
+        "AutoCanvasLayer finds ancestor canvas and adds original OrderOffer25",
+        "Original six sprite frames at12fps loop through0.5 seconds (loop=True, fps=12, duration=0.5, keys=6)",
+        "Native Animator advances original first and second sprite frames",
+        "Source initial fill requests random range0.6..0.8",
+        "Early Close defers final fill until initial tween completes",
+        "Default OutQuad drives native Image and825-unit animation anchor",
+        "Initial completion queues final tween without consuming current step twice",
+        "Final completion clears singleton immediately and schedules deferred native destruction",
+        "SetSpine enables five-second timeout without resetting accumulated time",
+        "Exact timeout boundary does not open retry tip",
+        "Timeout strictly greater than threshold resets timer and opens source retry/cancel tip once",
+        "Disabled timeout cannot emit repeated tips",
+        "Retry destroys loading page before state10 callback; native destruction remains deferred",
+        "Successful preparation resets actual page timer",
+        "Cancel waits for transition completion before destroying page or changing state",
+        "Cancel completion clears singleton unconditionally even when a newer page exists, then emits state11",
+        "UIControl creates original-path loading resource for each open and parents with worldPositionStays=false under UIStory",
+        "UIControl resets held page field44",
+        "UIControl Close clears held reference immediately while native page completion is still pending",
+        "Destroyed native owner retains source CLR field reset semantics",
+        "Native frame destroys only scheduled pages and preserves newer loading object",
+        "No fabricated singleton reassignment on delayed destroy"
+      ]
+    },
+    "levelController": {
+      "atUtc": "2026-09-30T08:03:54.063836+00:00",
+      "scope": "Level4107 lifecycle, live active tower tick, CampInfo aggregation, source tower/obstacle initialization and prepared-start sequence",
+      "checksPassed": 756,
+      "newIntegratedChecks": 15,
+      "nativePlayModeChecks": 10,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameLevelStartPlayModeValidation.Run"
+      ],
+      "notClaimed": "Complete Tower/Soldier/WayLine/AI implementations in controller graph, full Level InitGameData/state hosts, Player4462/Main/account/full outgame Player"
+    },
+    "levelStartNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Native Unity coroutine scheduling for source4106 two scaled0.2second waits, native obstacle prefab acquisition/transform and actual LevelControl registry/lifecycle. WayLine/AI effects are explicitly recorded fixture services; full Level/Player/Main and tower resource graph remain unverified.",
+      "checks": [
+        "Concrete LevelControl factory initializes original global camp and561-row config maximum560",
+        "Actual source obstacle prefab gets native world position/rotation and local scale through level initialization",
+        "Native StartCoroutine executes Clear before first yield even while scaled time is paused",
+        "First WaitForSeconds does not advance during0.2 realtime seconds at timeScale0",
+        "First scaled0.2second wait precedes prefab and star-line initialization",
+        "Second WaitForSeconds remains paused before AI initialization",
+        "AI initialization follows the second native scaled0.2second wait",
+        "Level disposal clears shared state/registry while preserving source-owned native objects and config",
+        "Native pooled obstacle root destruction is deferred",
+        "Frame boundary destroys scheduled obstacle subtree and keeps main entity root/config"
+      ],
+      "scaledTimes": [
+        0.0,
+        0.20004619657993317,
+        0.20004619657993317,
+        0.40007320046424866
+      ]
+    },
+    "levelReuseQuery": {
+      "atUtc": "2026-09-30T08:22:03.026649+00:00",
+      "scope": "Level reset/pools/EffectCellection/native immediate reentry and deferred destruction; shared query buffers/range/random/entity lookup/speed/special scene routing",
+      "checksPassed": 778,
+      "newIntegratedChecks": 22,
+      "nativePlayModeChecks": 10,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameLevelReusePlayModeValidation.Run"
+      ],
+      "notClaimed": "Complete source Tower/Soldier/WayLine/AI/EffectModule, full Level/UI/Main composition, Player4462 lifecycle, account/platform/native full outgame build"
+    },
+    "levelReuseNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Original native obstacle instance/pool across reset and immediate reentry; native EffectCellection children/root deferred destruction. Tower/Soldier and EffectModule callbacks are explicit fixture services; full battle/Main or real effect-module behavior is not claimed.",
+      "checks": [
+        "Source level initialization creates one pooled original Entity81 instance",
+        "Reset hides native obstacle and clears level list while preserving pool/template",
+        "All-soldier reset closes registered effects and clears native root reference, retaining entity",
+        "Effect children and collection root survive until native frame boundary",
+        "Reset retains source object pools/playstate and clears only source check flags plus line field168",
+        "Immediate reentry reuses the same native obstacle without instantiating a second entity",
+        "Frame boundary removes only scheduled effect subtree; reused obstacle and level asset survive",
+        "Second reset still clears inactive soldier, with no fabricated close for empty native effect root",
+        "After deferred destruction source SetEntity recreates a correctly parented collection root",
+        "Final effect cleanup does not destroy retained pooled entity or configuration"
+      ]
+    },
+    "playerController": {
+      "atUtc": "2026-09-30T08:37:07.428785+00:00",
+      "scope": "Player4462 lifecycle/model owners/home animation timers/native source category drag/touch scene raycast, shared registry/LogicModule",
+      "checksPassed": 792,
+      "newIntegratedChecks": 14,
+      "nativePlayModeChecks": 10,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgamePlayerControlPlayModeValidation.Run"
+      ],
+      "notClaimed": "Shared source InputManager production host, all skin resource imports, full actual Main/account/platform/UI integration or complete outgame Player build"
+    },
+    "playerControllerNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Actual restored Player controller registered in LogicModule, original model roots/meshes/baked animations, native physics and Animator trigger. Mouse/touch input is an explicit fixture; touch collider/AnimatorController are synthetic probes. Full Main/platform/account and matched original UI replay remain open.",
+      "checks": [
+        "LogicModule registration and LoadGameScreen initialize actual source scene and player roots",
+        "Three original baked model animations initialized through actual pooled loader and source Player callbacks",
+        "LogicModule mouse drag interpolates the original native category transforms",
+        "Drag release snaps native roots and dispatches ChooseSoldier with source wrapped category",
+        "Registered touch callback raycasts through actual home camera using original Scenes11 layer31",
+        "Source OnTouchBegin activates native Animator Trigger after physics hit",
+        "Original baked relax animations complete on native frames and source callbacks select looping idle",
+        "Home timer refresh runs through LogicModule and restarts only the matching equipped native animation",
+        "LogicModule shutdown unregisters source listener/cache while retaining native model objects",
+        "Retained baked completion after controller disposal uses source captured animator fallback without repopulating cache"
+      ]
+    },
+    "inputManager": {
+      "atUtc": "2026-09-30T08:49:52.757436+00:00",
+      "scope": "Shared source InputManager native singleton/Update/OnGUI, mouse/touch/multi/key event boundaries and default PlayerInput subscription",
+      "checksPassed": 811,
+      "newIntegratedChecks": 19,
+      "nativePlayModeChecks": 10,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameInputManagerPlayModeValidation.Run"
+      ],
+      "notClaimed": "OS/device input injection, original CLog policy, full actual Main/account/platform/UI composition or complete outgame Player build"
+    },
+    "inputManagerNative": {
+      "passed": true,
+      "error": "",
+      "scope": "Native MonoBehaviour Update, singleton/GameObject/scene persistence and default PlayerInput subscriptions. Device reads use an explicit scripted provider; no claim of OS/device touch injection, SDK, full Main entry or original matched replay.",
+      "checks": [
+        "Source singleton finds existing named native component and reuses one owner",
+        "Production singleton defaults to actual Unity input provider",
+        "Native Unity Update dispatches scripted WebGL touch frames with exact source order",
+        "Static listener wrappers preserve duplicates and remove one subscription",
+        "Actual Player OnInit/default PlayerInput receives shared manager touch and runs native home-camera raycast",
+        "Player disposal removes production touch callback while independent manager listeners keep receiving frames",
+        "Shutdown retains touch/key/scroll state and native singleton owner",
+        "Native Update continues after Shutdown with all prior subscriptions cleared",
+        "Singleton resides in Unity persistent scene across active-scene switch",
+        "Destroyed native singleton recreates named owner with fresh source defaults"
+      ]
+    },
+    "audioController": {
+      "atUtc": "2026-09-30T08:56:53.974887+00:00",
+      "scope": "AudioControl3904 lifecycle/state switch, source volume preferences/messages, UIAudioManager routing and isolated disk restart",
+      "checksPassed": 827,
+      "newIntegratedChecks": 16,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Native AudioManager/node/action/clip playback, audible audio, actual Main/account/platform composition or complete outgame Player build"
+    },
+    "audioNodesActionBase": {
+      "atUtc": "2026-09-30T09:08:30.000860+00:00",
+      "scope": "Source Parallel/Sequence/Single node state, AudioActionBase async/lifecycle/volume, native Unity object boundaries in integrated checks",
+      "checksPassed": 860,
+      "newIntegratedChecks": 33,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Concrete Once/Loop/Fade/LoopFade playback, original resource/update/AudioManager host, fresh PlayMode/audio output or complete outgame Player"
+    },
+    "audioOnceLoopNative": {
+      "atUtc": "2026-09-30T09:21:42.043220+00:00",
+      "scope": "Source Once/Loop concrete playback actions and native source helper; original main-music1002 asset import",
+      "checksPassed": 875,
+      "newIntegratedChecks": 15,
+      "nativePlayModeChecks": 13,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameAudioPlaybackPlayModeValidation.Run"
+      ],
+      "notClaimed": "Full original audio resource/update/AudioManager composition, Fade/LoopFade, SDK playback, device recording or full outgame Player"
+    },
+    "audioFadeFactoryNative": {
+      "atUtc": "2026-09-30T09:32:27.035772+00:00",
+      "scope": "Concrete Fade/LoopFade and all-four-type action factory; native controller/UI/Parallel/factory/action playback with explicit countdown driver",
+      "checksPassed": 893,
+      "newIntegratedChecks": 18,
+      "nativePlayModeChecks": 13,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameAudioFadePlayModeValidation.Run"
+      ],
+      "notClaimed": "Original TimeModule/resource/update/AudioManager ownership, complete Main/controller graph, device recording or full outgame Player"
+    },
+    "timeCountdownNativeAudio": {
+      "atUtc": "2026-09-30T09:42:52.418763+00:00",
+      "scope": "Source TimeModule clock/countdown component bound to production audio fade; real local DateTime in native PlayMode",
+      "checksPassed": 913,
+      "newIntegratedChecks": 20,
+      "nativePlayModeChecks": 15,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameTimeCountdownPlayModeValidation.Run"
+      ],
+      "notClaimed": "Complete TimeModule loop/Unity timers or event lifecycle; full UpdateManager/resource/AudioManager host and full outgame Player"
+    },
+    "timeModuleNativeAudio": {
+      "atUtc": "2026-09-30T09:55:40.893280+00:00",
+      "scope": "Source TimeModule full lifecycle/loop/Unity timers composed with existing countdown and native audio",
+      "checksPassed": 938,
+      "newIntegratedChecks": 25,
+      "nativePlayModeChecks": 19,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameTimeModulePlayModeValidation.Run"
+      ],
+      "notClaimed": "Full Main/account/menu composition, shared UpdateManager/AudioManager/resource ownership, full outgame Player"
+    },
+    "updateManagerNativeAudio": {
+      "atUtc": "2026-09-30T10:03:41.730607+00:00",
+      "scope": "Source UpdateManager traced public APIs and real MonoBehaviour Update/FixedUpdate bound to source audio actions",
+      "checksPassed": 959,
+      "newIntegratedChecks": 21,
+      "nativePlayModeChecks": 23,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameUpdateManagerPlayModeValidation.Run"
+      ],
+      "notClaimed": "Alternate obfuscated entrypoints, AudioManager/resource/config ownership, full Main/account/menu or complete outgame Player"
+    },
+    "audioManagerNativeOwnership": {
+      "atUtc": "2026-09-30T10:14:36.645521+00:00",
+      "scope": "Source AudioManager original55+53configuration/root/listener/node/UI/action ownership with native UpdateManager and source TimeModule",
+      "checksPassed": 978,
+      "newIntegratedChecks": 19,
+      "nativePlayModeChecks": 18,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameAudioManagerPlayModeValidation.Run"
+      ],
+      "notClaimed": "Actual clip/config resource transport, alternate parser/entrypoint branches, complete Main/account/menu or full outgame Player"
+    },
+    "audioResourceNativeLegacy": {
+      "atUtc": "2026-09-30T10:30:34.403430+00:00",
+      "scope": "Audio helper path branches and legacy native asset operation/transport/config/audio/reference/unload/reentry; sealed IEnumerator error specialization",
+      "checksPassed": 994,
+      "newIntegratedChecks": 16,
+      "nativePlayModeChecks": 18,
+      "freshPlayModeRun": true,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly",
+        "OutgameAudioResourcePlayModeValidation.Run"
+      ],
+      "notClaimed": "Modern module acquisition, full generic coroutine wrapper, actual remote server, complete Main/account/menu or full outgame Player"
+    },
+    "buffToolControllers": {
+      "atUtc": "2026-09-30T10:40:45.409612+00:00",
+      "scope": "Buff4025 registration/lifecycle and Tool4256 source reward/query façade composed with actual dispatcher, source inventory and LogicModule",
+      "checksPassed": 1008,
+      "newIntegratedChecks": 14,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Full Main, platform/account, ItemModuleControl/global item acquisition and full outgame Player; no new native run"
+    },
+    "sharedItemConfig": {
+      "atUtc": "2026-09-30T10:51:17.911756+00:00",
+      "scope": "Shared item config4534 metadata schemas, source-default legacy Unity JSON, groups/cache/queries/owner slot",
+      "checksPassed": 1020,
+      "newIntegratedChecks": 12,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Full ItemManager/factory/ItemModule controller; full Main and outgame Player"
+    },
+    "itemModule": {
+      "atUtc": "2026-09-30T10:59:22.050233+00:00",
+      "scope": "ItemModule3875 lifecycle and change ordering; ItemManager4500 real global/storage bridge; original factory routing with explicit entity constructor boundary",
+      "checksPassed": 1034,
+      "newIntegratedChecks": 14,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Concrete entity effects/global reward engine/full Main/outgame Player"
+    },
+    "globalItemRewards": {
+      "atUtc": "2026-09-30T11:08:39.829736+00:00",
+      "scope": "Global reward engine, overrides/report conversion, ItemBase and concrete Gold/Diamond; real module->factory->entity->global->manager->tool->storage chain",
+      "checksPassed": 1050,
+      "newIntegratedChecks": 16,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Seven other concrete entities, live report platform delivery, full Main and outgame Player"
+    },
+    "virtualItems": {
+      "atUtc": "2026-09-30T11:15:44.816717+00:00",
+      "scope": "All seven virtual item entities, real CommanderManager unlock, source head-box unlock/list events and Dice point notification methods",
+      "checksPassed": 1063,
+      "newIntegratedChecks": 13,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Package entities/randomness, full UserInfo/Dice/UI owners, live SDK/report delivery, full outgame Player"
+    },
+    "packageItems": {
+      "atUtc": "2026-09-30T11:24:27.663128+00:00",
+      "scope": "Both package entities, weighted selection/nested effects, all nine factory constructors and real package->module/tool/storage flow",
+      "checksPassed": 1077,
+      "newIntegratedChecks": 14,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Full owner/Main composition, original time-seeded RNG replay, SDK delivery or full outgame Player"
+    },
+    "globalItemSlot": {
+      "atUtc": "2026-09-30T11:36:58.438897+00:00",
+      "scope": "GlobalItemManager singleton ownership, lazy legacy configuration, source constructor snapshots and actual ItemManager record restart chain",
+      "checksPassed": 1087,
+      "newIntegratedChecks": 10,
+      "nativePlayModeChecks": 0,
+      "freshPlayModeRun": false,
+      "freshPlayerBuild": false,
+      "freshPlayerSmoke": false,
+      "commands": [
+        "BattleBuild.ValidateMechanicsOnly"
+      ],
+      "notClaimed": "Full production Main/product-service composition, native update loop, login/SDK or complete outgame Player"
+    }
+  },
+  "milestones": [
+    {
+      "id": "commander-core",
+      "atUtc": "2026-09-29T07:00:30.531613+00:00",
+      "checks": 7,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "local-inventory-core",
+      "atUtc": "2026-09-29T07:05:36.974776+00:00",
+      "checks": 6,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "tool-dispatch-core",
+      "atUtc": "2026-09-29T07:09:58.472472+00:00",
+      "checks": 8,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "commander-records-and-disk-store",
+      "atUtc": "2026-09-29T07:15:20.998057+00:00",
+      "checks": 5,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "runtime-menu-navigation",
+      "atUtc": "2026-09-29T07:19:35.490865+00:00",
+      "checks": 4,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "commander-page-actions",
+      "atUtc": "2026-09-29T07:23:58.483879+00:00",
+      "checks": 5,
+      "status": "partial-subsystem"
+    },
+    {
+      "id": "original-ui-root-static-import",
+      "atUtc": "2026-09-30T02:15:16.562216+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 603
+    },
+    {
+      "id": "original-ui-root-completion",
+      "atUtc": "2026-09-30T02:19:55.868889+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 604
+    },
+    {
+      "id": "canvas-adaptive-source-lifecycle",
+      "atUtc": "2026-09-30T02:25:20.982156+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 605
+    },
+    {
+      "id": "source-ui-bootstrap-prefabs",
+      "atUtc": "2026-09-30T02:33:04.274183+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 605
+    },
+    {
+      "id": "source-webgl-bangs-start",
+      "atUtc": "2026-09-30T02:36:47.422211+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 606
+    },
+    {
+      "id": "native-ui-bootstrap-page-lifecycle",
+      "atUtc": "2026-09-30T02:39:39.230664+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 606,
+      "playModeChecks": 12
+    },
+    {
+      "id": "source-atlas-loader-request-completion",
+      "atUtc": "2026-09-30T02:42:24.503950+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 607
+    },
+    {
+      "id": "source-atlas-cache-lookup",
+      "atUtc": "2026-09-30T02:44:34.445391+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 608
+    },
+    {
+      "id": "source-ui-module-initialize",
+      "atUtc": "2026-09-30T02:48:22.887514+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 609,
+      "playModeChecks": 13
+    },
+    {
+      "id": "source-resource-mode-default-audit",
+      "atUtc": "2026-09-30T02:51:00.872454+00:00",
+      "status": "evidence-changes-production-route",
+      "bodiesScanned": 90641
+    },
+    {
+      "id": "original-core-module-startup-sequence",
+      "atUtc": "2026-09-30T02:53:51.523226+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 610
+    },
+    {
+      "id": "legacy-ui-concrete-resource-and-native-frame-completion",
+      "atUtc": "2026-09-30T03:03:12.035070+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 612,
+      "playModeChecks": 8
+    },
+    {
+      "id": "legacy-resource-scheduling-and-base-callbacks",
+      "atUtc": "2026-09-30T03:07:30.372469+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 614
+    },
+    {
+      "id": "legacy-asset-loader-lifetime-and-resource-registry",
+      "atUtc": "2026-09-30T03:10:35.915130+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 616
+    },
+    {
+      "id": "legacy-package-coroutine-failure-control-flow",
+      "atUtc": "2026-09-30T03:13:11.547413+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 618
+    },
+    {
+      "id": "legacy-bundle-operation-and-async-registration",
+      "atUtc": "2026-09-30T03:15:40.792025+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 620
+    },
+    {
+      "id": "legacy-bundle-registry-and-operation-pump",
+      "atUtc": "2026-09-30T03:18:26.762020+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 622
+    },
+    {
+      "id": "legacy-download-registration-and-update-phases",
+      "atUtc": "2026-09-30T03:21:05.191997+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 624
+    },
+    {
+      "id": "native-bundle-to-original-page-positive-playmode",
+      "atUtc": "2026-09-30T03:24:13.028074+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 624,
+      "playModeChecks": 6
+    },
+    {
+      "id": "legacy-bundle-unload-native-lifetime",
+      "atUtc": "2026-09-30T03:27:46.401797+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 626,
+      "playModeChecks": 8
+    },
+    {
+      "id": "legacy-bundle-retain-cancels-delayed-unload",
+      "atUtc": "2026-09-30T03:29:50.216943+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 627
+    },
+    {
+      "id": "legacy-bundle-acquisition-native-pipeline",
+      "atUtc": "2026-09-30T03:32:36.963223+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 628,
+      "playModeChecks": 8
+    },
+    {
+      "id": "legacy-dependencies-variants-native-manifest",
+      "atUtc": "2026-09-30T03:35:45.919921+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 630,
+      "playModeChecks": 9
+    },
+    {
+      "id": "legacy-bundle-local-path-resolver",
+      "atUtc": "2026-09-30T03:43:01.253038+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 632
+    },
+    {
+      "id": "legacy-patch-manifest-services-native-route",
+      "atUtc": "2026-09-30T03:48:04.056561+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 635,
+      "playModeChecks": 10
+    },
+    {
+      "id": "legacy-firstpack-coroutine-alias-registration",
+      "atUtc": "2026-09-30T03:51:29.707584+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 638
+    },
+    {
+      "id": "legacy-resource-initialization-early-flag",
+      "atUtc": "2026-09-30T03:54:08.656449+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 640
+    },
+    {
+      "id": "original-resource-pack-lists-import",
+      "atUtc": "2026-09-30T03:57:48.510069+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 641
+    },
+    {
+      "id": "unified-legacy-bundle-runtime-native-pipeline",
+      "atUtc": "2026-09-30T04:01:19.766858+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 642,
+      "playModeChecks": 10
+    },
+    {
+      "id": "legacy-manifest-operation-shared-queue",
+      "atUtc": "2026-09-30T04:04:58.560269+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 644
+    },
+    {
+      "id": "native-asynchronous-manifest-startup",
+      "atUtc": "2026-09-30T04:09:12.302578+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 644,
+      "playModeChecks": 13
+    },
+    {
+      "id": "native-manager-update-resourcesmono-initialization",
+      "atUtc": "2026-09-30T04:12:10.028884+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 644,
+      "playModeChecks": 16
+    },
+    {
+      "id": "firstpack-original-config-font-assets",
+      "atUtc": "2026-09-30T04:15:25.083614+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 645
+    },
+    {
+      "id": "firstpack-native-public-atlases",
+      "atUtc": "2026-09-30T04:20:47.812566+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 645,
+      "atlasSprites": 63
+    },
+    {
+      "id": "firstpack-tipui-static-prefab",
+      "atUtc": "2026-09-30T04:25:36.904687+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 646
+    },
+    {
+      "id": "tipui-native-animation-clips",
+      "atUtc": "2026-09-30T04:29:38.060608+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 647,
+      "animationKeys": 27
+    },
+    {
+      "id": "native-firstpack-startup",
+      "atUtc": "2026-09-30T04:39:17.291936+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 647,
+      "nativeStartupChecks": 15
+    },
+    {
+      "id": "config-initialization-source-roster",
+      "atUtc": "2026-09-30T04:44:04.288091+00:00",
+      "status": "evidence-extracted",
+      "tables": 58,
+      "valueConfigs": 6,
+      "tableRows": 2724
+    },
+    {
+      "id": "typed-native-config-reader",
+      "atUtc": "2026-09-30T04:48:38.644250+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 650,
+      "types": 66
+    },
+    {
+      "id": "config-online-and-derived-processing",
+      "atUtc": "2026-09-30T04:53:22.375298+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 655
+    },
+    {
+      "id": "config-global-camp-initialization",
+      "atUtc": "2026-09-30T04:56:37.716507+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 657
+    },
+    {
+      "id": "legacy-config-manager-composition",
+      "atUtc": "2026-09-30T05:01:08.072511+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 659
+    },
+    {
+      "id": "main-config-async-firstpack-connected",
+      "atUtc": "2026-09-30T05:04:15.066782+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 660,
+      "nativeStartupChecks": 18
+    },
+    {
+      "id": "pre-game-settings-and-registration-roster",
+      "atUtc": "2026-09-30T05:07:49.155879+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 662,
+      "controllerRegistrations": 38
+    },
+    {
+      "id": "logic-module-lifecycle",
+      "atUtc": "2026-09-30T05:14:14.500910+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 665
+    },
+    {
+      "id": "procedure-fsm-lifecycle",
+      "atUtc": "2026-09-30T05:21:08.798182+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 669
+    },
+    {
+      "id": "concrete-preload-procedure",
+      "atUtc": "2026-09-30T05:26:59.922701+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 672
+    },
+    {
+      "id": "commander103-data-repair",
+      "atUtc": "2026-09-30T05:30:26.329599+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 675
+    },
+    {
+      "id": "star-game-procedure-entry",
+      "atUtc": "2026-09-30T05:34:18.471951+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 677
+    },
+    {
+      "id": "exit-game-procedure",
+      "atUtc": "2026-09-30T05:37:26.133541+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 680
+    },
+    {
+      "id": "main-exit-cleanup",
+      "atUtc": "2026-09-30T05:40:14.012984+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 682
+    },
+    {
+      "id": "main-update-and-quit",
+      "atUtc": "2026-09-30T05:42:57.656416+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 685
+    },
+    {
+      "id": "main-focus-lifecycle",
+      "atUtc": "2026-09-30T05:45:43.044758+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 688
+    },
+    {
+      "id": "main-pregame-composition",
+      "atUtc": "2026-09-30T05:48:47.332208+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 690
+    },
+    {
+      "id": "five-controller-lifecycle-and-native-binding",
+      "atUtc": "2026-09-30T06:20:45.764375+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 699,
+      "nativeChecks": 10,
+      "remainingControllers": 33
+    },
+    {
+      "id": "ui-controller-native-topinfo-menutab",
+      "atUtc": "2026-09-30T06:41:52.412368+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 705,
+      "nativeChecks": 6,
+      "remainingControllers": 32
+    },
+    {
+      "id": "game-controller-native-scene-binding",
+      "atUtc": "2026-09-30T06:54:09.703281+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 711,
+      "nativeChecks": 7,
+      "remainingControllers": 31
+    },
+    {
+      "id": "prefab-loader-native-resource-binding",
+      "atUtc": "2026-09-30T07:06:29.704060+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 718,
+      "nativeChecks": 8,
+      "remainingControllers": 30
+    },
+    {
+      "id": "entity-preload-source-and-native-pool",
+      "atUtc": "2026-09-30T07:21:11.890389+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 729,
+      "nativeChecks": 13,
+      "remainingControllers": 30
+    },
+    {
+      "id": "level-config-player-skins-loading-page",
+      "atUtc": "2026-09-30T07:49:26.356769+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 741,
+      "nativeChecks": 23,
+      "remainingControllers": 30
+    },
+    {
+      "id": "level-lifecycle-camps-prepared-start",
+      "atUtc": "2026-09-30T08:03:54.063836+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 756,
+      "nativeChecks": 10,
+      "remainingLifecycleControllers": 29
+    },
+    {
+      "id": "level-reset-pools-effects-queries",
+      "atUtc": "2026-09-30T08:22:03.026649+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 778,
+      "nativeChecks": 10,
+      "remainingLifecycleControllers": 29
+    },
+    {
+      "id": "player-controller-native-input-models",
+      "atUtc": "2026-09-30T08:37:07.428785+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 792,
+      "nativeChecks": 10,
+      "remainingLifecycleControllers": 28
+    },
+    {
+      "id": "shared-input-manager-native",
+      "atUtc": "2026-09-30T08:49:52.757436+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 811,
+      "nativeChecks": 10,
+      "remainingLifecycleControllers": 28
+    },
+    {
+      "id": "audio-controller-settings-ui-routing",
+      "atUtc": "2026-09-30T08:56:53.974887+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 827,
+      "nativeChecks": 0,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "audio-nodes-action-base",
+      "atUtc": "2026-09-30T09:08:30.000860+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 860,
+      "nativeChecks": 0,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "audio-once-loop-native",
+      "atUtc": "2026-09-30T09:21:42.043220+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 875,
+      "nativeChecks": 13,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "audio-fade-actions-factory-native",
+      "atUtc": "2026-09-30T09:32:27.035772+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 893,
+      "nativeChecks": 13,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "time-countdowns-native-audio",
+      "atUtc": "2026-09-30T09:42:52.418763+00:00",
+      "status": "partial-subsystem",
+      "integratedChecks": 913,
+      "nativeChecks": 15,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "time-module-native-audio",
+      "atUtc": "2026-09-30T09:55:40.893280+00:00",
+      "status": "source-module-restored-composition-pending",
+      "integratedChecks": 938,
+      "nativeChecks": 19,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "update-manager-native-audio",
+      "atUtc": "2026-09-30T10:03:41.730607+00:00",
+      "status": "source-update-owner-restored-composition-pending",
+      "integratedChecks": 959,
+      "nativeChecks": 23,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "audio-manager-native-ownership",
+      "atUtc": "2026-09-30T10:14:36.645521+00:00",
+      "status": "source-audio-manager-restored-resource-composition-pending",
+      "integratedChecks": 978,
+      "nativeChecks": 18,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "audio-resource-native-legacy",
+      "atUtc": "2026-09-30T10:30:34.403430+00:00",
+      "status": "source-audio-resource-helper-and-native-legacy-verified-modern-module-pending",
+      "integratedChecks": 994,
+      "nativeChecks": 18,
+      "remainingLifecycleControllers": 27
+    },
+    {
+      "id": "buff-tool-controller-registration",
+      "atUtc": "2026-09-30T10:40:45.409612+00:00",
+      "status": "buff-and-tool-controls-bound-full-main-incomplete",
+      "integratedChecks": 1008,
+      "remainingLifecycleControllers": 25
+    },
+    {
+      "id": "shared-item-config",
+      "atUtc": "2026-09-30T10:51:17.911756+00:00",
+      "status": "shared-item-config-implemented-owner-composition-incomplete",
+      "integratedChecks": 1020,
+      "remainingLifecycleControllers": 25
+    },
+    {
+      "id": "item-module-manager-factory-routing",
+      "atUtc": "2026-09-30T10:59:22.050233+00:00",
+      "status": "item-module-manager-and-factory-routing-bound-entity-effects-incomplete",
+      "integratedChecks": 1034,
+      "remainingLifecycleControllers": 24
+    },
+    {
+      "id": "global-item-rewards-gold-diamond",
+      "atUtc": "2026-09-30T11:08:39.829736+00:00",
+      "status": "global-rewards-and-gold-diamond-real-chain-seven-entities-pending",
+      "integratedChecks": 1050,
+      "remainingLifecycleControllers": 24
+    },
+    {
+      "id": "virtual-item-entities",
+      "atUtc": "2026-09-30T11:15:44.816717+00:00",
+      "status": "seven-virtual-entities-implemented-packages-and-full-owners-pending",
+      "integratedChecks": 1063,
+      "remainingLifecycleControllers": 24
+    },
+    {
+      "id": "package-item-entities",
+      "atUtc": "2026-09-30T11:24:27.663128+00:00",
+      "status": "all-nine-item-entities-package-random-and-real-chain-owner-composition-pending",
+      "integratedChecks": 1077,
+      "remainingLifecycleControllers": 24
+    },
+    {
+      "id": "global-item-slot-owner",
+      "atUtc": "2026-09-30T11:36:58.438897+00:00",
+      "status": "singleton-owner-and-record-startup-verified-full-production-composition-pending",
+      "integratedChecks": 1087,
+      "remainingLifecycleControllers": 24
+    }
+  ],
+  "accountStartupAudit": "generated/outgame/ACCOUNT_STARTUP_AUDIT.json",
+  "productionEntryAudit": "generated/outgame/PRODUCTION_ENTRY_AUDIT.json",
+  "nextPriority": "Compose actual GlobalItemManager product update/reset/price providers with shared config and original legacy resource reader; bind the restored lazy global slot, ItemManager, entity services and data-pool registration into production startup. Then full UserInfo/CommanderUI/Dice/report owners,24 controllers, Main/account/menu/business and full outgame Player. Do not redo getter34590 or eager-allocate snapshots.",
+  "logicModuleLifecycleAudit": "generated/outgame/LOGIC_MODULE_LIFECYCLE_AUDIT.json",
+  "procedureFsmLifecycleAudit": "generated/outgame/PROCEDURE_FSM_LIFECYCLE_AUDIT.json",
+  "preloadProcedureAudit": "generated/outgame/PRELOAD_PROCEDURE_AUDIT.json",
+  "commander103RepairAudit": "generated/outgame/COMMANDER_103_REPAIR_AUDIT.json",
+  "starGameProcedureAudit": "generated/outgame/STAR_GAME_PROCEDURE_AUDIT.json",
+  "exitGameProcedureAudit": "generated/outgame/EXIT_GAME_PROCEDURE_AUDIT.json",
+  "mainExitCleanupAudit": "generated/outgame/MAIN_EXIT_CLEANUP_AUDIT.json",
+  "mainLifecycleAudit": "generated/outgame/MAIN_LIFECYCLE_AUDIT.json",
+  "mainFocusAudit": "generated/outgame/MAIN_FOCUS_AUDIT.json",
+  "mainPreGameCompositionAudit": "generated/outgame/MAIN_PREGAME_COMPOSITION_AUDIT.json",
+  "controllerLifecycleAudit": "generated/outgame/CONTROLLER_LIFECYCLE_AUDIT.json",
+  "controllerLifecycleMatrix": "generated/outgame/CONTROLLER_LIFECYCLE_MATRIX.json",
+  "uiControllerNativeAudit": "generated/outgame/UI_CONTROLLER_NATIVE_AUDIT.json",
+  "gameControllerNativeAudit": "generated/outgame/GAME_CONTROLLER_NATIVE_AUDIT.json",
+  "prefabLoaderNativeAudit": "generated/outgame/PREFAB_LOADER_NATIVE_AUDIT.json",
+  "entityPreloadAudit": "generated/outgame/ENTITY_PRELOAD_AUDIT.json",
+  "levelLoadingAudit": "generated/outgame/LEVEL_LOADING_AUDIT.json",
+  "levelControllerAudit": "generated/outgame/LEVEL_CONTROL_AUDIT.json",
+  "levelReuseQueryAudit": "generated/outgame/LEVEL_REUSE_QUERY_AUDIT.json",
+  "playerControllerAudit": "generated/outgame/PLAYER_CONTROL_NATIVE_AUDIT.json",
+  "inputManagerAudit": "generated/outgame/INPUT_MANAGER_NATIVE_AUDIT.json",
+  "audioControllerAudit": "generated/outgame/AUDIO_CONTROL_AUDIT.json",
+  "audioNodeActionAudit": "generated/outgame/AUDIO_NODE_ACTION_AUDIT.json",
+  "audioPlaybackAudit": "generated/outgame/AUDIO_PLAYBACK_AUDIT.json",
+  "audioFadeAudit": "generated/outgame/AUDIO_FADE_AUDIT.json",
+  "timeCountdownAudit": "generated/outgame/TIME_COUNTDOWN_AUDIT.json",
+  "timeModuleAudit": "generated/outgame/TIME_MODULE_AUDIT.json",
+  "updateManagerAudit": "generated/outgame/UPDATE_MANAGER_AUDIT.json",
+  "audioManagerAudit": "generated/outgame/AUDIO_MANAGER_AUDIT.json",
+  "audioResourceAudit": "generated/outgame/AUDIO_RESOURCE_AUDIT.json",
+  "buffToolControllerAudit": "generated/outgame/BUFF_TOOL_CONTROLLER_AUDIT.json",
+  "sharedItemConfigAudit": "generated/outgame/SHARED_ITEM_CONFIG_AUDIT.json",
+  "itemModuleAudit": "generated/outgame/ITEM_MODULE_AUDIT.json",
+  "globalItemRewardsAudit": "generated/outgame/GLOBAL_ITEM_REWARDS_AUDIT.json",
+  "virtualItemsAudit": "generated/outgame/VIRTUAL_ITEMS_AUDIT.json",
+  "packageItemsAudit": "generated/outgame/PACKAGE_ITEMS_AUDIT.json",
+  "globalItemSlotAudit": "generated/outgame/GLOBAL_ITEM_SLOT_AUDIT.json"
+}

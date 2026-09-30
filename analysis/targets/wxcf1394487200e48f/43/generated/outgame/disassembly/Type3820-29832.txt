@@ -1,0 +1,25 @@
+; Original class: xEv·
+; Type3820.ReadStreamingPatchManifest; wasmcode function 8379; offset=4019830 size=61
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+003d5677  i32.const [4988204]
+003d567c  i32.load8_u [0, 0]
+003d567f  i32.eqz []
+003d5680  if [-64]
+003d5682    i32.const [3936920]
+003d5687    call [900] ; 
+003d568a    i32.const [4988204]
+003d568f    i32.const [1]
+003d5691    i32.store8 [0, 0]
+003d5694  end []
+003d5695  i32.const [3936920]
+003d569a  i32.load [2, 0]
+003d569d  call [903] ; 
+003d56a0  local.set [2]
+003d56a2  local.get [2]
+003d56a4  local.get [1]
+003d56a6  local.get [0]
+003d56a8  call [7451] ; PatchManifest..ctor
+003d56ab  local.get [0]
+003d56ad  local.get [2]
+003d56af  i32.store [2, 8]
+003d56b2  end []

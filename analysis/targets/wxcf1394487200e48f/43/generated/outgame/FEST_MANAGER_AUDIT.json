@@ -1,0 +1,25 @@
+{
+  "status": "source_reward_manager_storage_verified_production_registration_pending",
+  "source": [
+    "disassembly/Type4505-34412.txt",
+    "disassembly/Type4505-34414.txt",
+    "disassembly/Type4505-34415.txt",
+    "disassembly/Type4505-34419.txt",
+    "fest-rewards-generics.json"
+  ],
+  "tableSha256": "24866ca74ae3af3b7aee4a2da177288e41f33a203075b4d7500754c47b747505",
+  "verified": [
+    "Original SummerRewardConfig row1 length3 and row2 length2",
+    "Manager local/server routing, original SummerData load/save and special flags",
+    "Eligibility reward index bounds and strictly now>nextGetAwardTime",
+    "Grant original flags first, next midnight second, report third, reward index increment last; grant return ignored",
+    "Source grant-triggered save before reward progress and subsequent explicit save/reload verified with storage backend"
+  ],
+  "remaining": [
+    "Production manager pool registration and account lifecycle",
+    "Real ToolControl/reward UI and report service binding",
+    "Controller OnLateInit and full Player E2E"
+  ],
+  "checks": 581,
+  "freshPlayMode": false
+}

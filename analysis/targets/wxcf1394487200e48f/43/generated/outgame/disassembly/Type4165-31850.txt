@@ -1,0 +1,95 @@
+; Original class: SkillControl
+; Type4165.OnDispose; wasmcode1 function 48052; offset=16859936 size=289
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01014321  i32.const [5010309]
+01014326  i32.load8_u [0, 0]
+01014329  i32.eqz []
+0101432a  if [-64]
+0101432c    i32.const [3916960]
+01014331    i32.const [1605]
+01014334    call_indirect [0, 0]
+01014337    i32.const [3934348]
+0101433c    i32.const [1605]
+0101433f    call_indirect [0, 0]
+01014342    i32.const [3946476]
+01014347    i32.const [1605]
+0101434a    call_indirect [0, 0]
+0101434d    i32.const [4014352] ; METHOD SkillControl.M{`rR
+01014352    i32.const [1605]
+01014355    call_indirect [0, 0]
+01014358    i32.const [4014356] ; METHOD SkillControl.O|PYkS
+0101435d    i32.const [1605]
+01014360    call_indirect [0, 0]
+01014363    i32.const [4014364] ; METHOD SkillControl.uZlyh
+01014368    i32.const [1605]
+0101436b    call_indirect [0, 0]
+0101436e    i32.const [5010309]
+01014373    i32.const [1]
+01014375    i32.store8 [0, 0]
+01014378  end []
+01014379  local.get [0]
+0101437b  i32.load [2, 8]
+0101437e  i32.const [0]
+01014380  call [12428] ; NormalPool.DestroyObjectPool
+01014383  i32.const [3946476]
+01014388  i32.load [2, 0]
+0101438b  i32.const [109007]
+0101438f  call_indirect [2, 0]
+01014392  local.set [1]
+01014394  local.get [1]
+01014396  local.get [0]
+01014398  i32.const [4014352] ; METHOD SkillControl.M{`rR
+0101439d  i32.load [2, 0]
+010143a0  i32.const [0]
+010143a2  i32.const [25563] ; TABLE OnTouchHandle..ctor
+010143a6  call_indirect [6, 0]
+010143a9  i32.const [3934348]
+010143ae  i32.load [2, 0]
+010143b1  i32.const [1149]
+010143b4  call_indirect [0, 0]
+010143b7  local.get [1]
+010143b9  i32.const [0]
+010143bb  i32.const [25466] ; TABLE InputManager.RemoveTouchBeginListener
+010143bf  call_indirect [4, 0]
+010143c2  i32.const [3946476]
+010143c7  i32.load [2, 0]
+010143ca  i32.const [109007]
+010143ce  call_indirect [2, 0]
+010143d1  local.set [1]
+010143d3  local.get [1]
+010143d5  local.get [0]
+010143d7  i32.const [4014364] ; METHOD SkillControl.uZlyh
+010143dc  i32.load [2, 0]
+010143df  i32.const [0]
+010143e1  i32.const [25563] ; TABLE OnTouchHandle..ctor
+010143e5  call_indirect [6, 0]
+010143e8  local.get [1]
+010143ea  i32.const [0]
+010143ec  i32.const [25446] ; TABLE InputManager.RemoveTouchMoveListener
+010143f0  call_indirect [4, 0]
+010143f3  i32.const [3946476]
+010143f8  i32.load [2, 0]
+010143fb  i32.const [109007]
+010143ff  call_indirect [2, 0]
+01014402  local.set [1]
+01014404  local.get [1]
+01014406  local.get [0]
+01014408  i32.const [4014356] ; METHOD SkillControl.O|PYkS
+0101440d  i32.load [2, 0]
+01014410  i32.const [0]
+01014412  i32.const [25563] ; TABLE OnTouchHandle..ctor
+01014416  call_indirect [6, 0]
+01014419  local.get [1]
+0101441b  i32.const [0]
+0101441d  i32.const [25540] ; TABLE InputManager.RemoveTouchEndListener
+01014421  call_indirect [4, 0]
+01014424  i32.const [3916960]
+01014429  i32.load [2, 0]
+0101442c  i32.load [2, 92]
+0101442f  i32.const [0]
+01014431  i32.store [2, 0]
+01014434  i32.const [3916960]
+01014439  i32.load [2, 0]
+0101443c  i32.load [2, 92]
+0101443f  drop []
+01014440  end []

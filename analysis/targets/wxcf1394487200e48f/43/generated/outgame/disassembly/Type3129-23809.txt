@@ -1,0 +1,30 @@
+; Original class: AssetBundleManager
+; Type3129..ctor; wasmcode function 20665; offset=9257309 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008d415e  i32.const [4988523]
+008d4163  i32.load8_u [0, 0]
+008d4166  i32.eqz []
+008d4167  if [-64]
+008d4169    i32.const [3974940]
+008d416e    call [900] ; 
+008d4171    i32.const [3923472]
+008d4176    call [900] ; 
+008d4179    i32.const [4988523]
+008d417e    i32.const [1]
+008d4180    i32.store8 [0, 0]
+008d4183  end []
+008d4184  i32.const [3923472]
+008d4189  i32.load [2, 0]
+008d418c  call [903] ; 
+008d418f  local.set [1]
+008d4191  local.get [1]
+008d4193  i32.const [3974940]
+008d4198  i32.load [2, 0]
+008d419b  call [944] ; 
+008d419e  local.get [0]
+008d41a0  local.get [1]
+008d41a2  i32.store [2, 12]
+008d41a5  local.get [0]
+008d41a7  i32.const [0]
+008d41a9  call [1226] ; RectTransform..ctor
+008d41ac  end []

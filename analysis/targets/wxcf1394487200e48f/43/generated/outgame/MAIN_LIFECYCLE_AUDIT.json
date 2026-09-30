@@ -1,0 +1,46 @@
+{
+  "atUtc": "2026-09-30T05:42:57.656416+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameMainLifecycle.cs",
+  "sourceMethods": [
+    30624,
+    30620
+  ],
+  "fields": {
+    "24": "ModulesReady",
+    "37": "ExitRequested",
+    "38": "ResourcesOnly",
+    "static0": "EnterGame"
+  },
+  "update": [
+    "ExitRequested returns before clocks",
+    "ResourcesOnly uses Time.deltaTime then Time.unscaledDeltaTime to ResourcesModuleUpdate outside catch",
+    "Read live ModulesReady after resources update",
+    "Inside try resample both clocks then GameFrameEntry.Update",
+    "Catch Exception forwards exception object to warning, not just message"
+  ],
+  "quit": [
+    "UserDataPrefs.OnSave",
+    "DataManagerPool.SaveData",
+    "Main log 游戏退出，数据存储完成",
+    "No ExitRequested/EnterGame guard and no catch added"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:42:57.656416+00:00",
+    "scope": "MineGameMain Update gates/catch boundary and OnApplicationQuit save order",
+    "checksPassed": 685,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Live MonoBehaviour lifecycle, focus handling or complete production module graph",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "Shared state needs actual Main30617/exit/startup host composition",
+    "OnApplicationFocus30604 (source inspected, not implemented)",
+    "Native frame and app quit behavior",
+    "Full module/controller/service graph and playable outgame"
+  ]
+}

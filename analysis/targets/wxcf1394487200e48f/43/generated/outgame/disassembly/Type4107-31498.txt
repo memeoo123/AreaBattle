@@ -1,0 +1,10 @@
+; Original class: LevelControl
+; Type4107.SetLevelSpeed; wasmcode function 4974; offset=1717213 size=16
+; signature={'args': [127, 125, 127], 'returns': []}; localGroups=[]
+001a33de  local.get [0]
+001a33e0  local.get [1]
+001a33e2  f32.store [2, 104]
+001a33e5  local.get [1]
+001a33e7  i32.const [0]
+001a33e9  call [2762] ; Time.set_timeScale
+001a33ec  end []

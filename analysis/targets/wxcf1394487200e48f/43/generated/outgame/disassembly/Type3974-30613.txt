@@ -1,0 +1,60 @@
+; Original class: MineGameMain
+; Type3974.NnO`t; wasmcode function 18541; offset=8353132 size=174
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f756f  i32.const [5010131]
+007f7574  i32.load8_u [0, 0]
+007f7577  i32.eqz []
+007f7578  if [-64]
+007f757a    i32.const [3927888]
+007f757f    call [900] ; 
+007f7582    i32.const [3989352]
+007f7587    call [900] ; 
+007f758a    i32.const [4000632]
+007f758f    call [900] ; 
+007f7592    i32.const [3932308]
+007f7597    call [900] ; 
+007f759a    i32.const [4008036] ; METHOD MineGameMain.silT
+007f759f    call [900] ; 
+007f75a2    i32.const [5010131]
+007f75a7    i32.const [1]
+007f75a9    i32.store8 [0, 0]
+007f75ac  end []
+007f75ad  i32.const [3932308]
+007f75b2  i32.load [2, 0]
+007f75b5  call [901] ; 
+007f75b8  i32.const [4000632]
+007f75bd  i32.load [2, 0]
+007f75c0  call [1051] ; 
+007f75c3  local.set [1]
+007f75c5  i32.const [3927888]
+007f75ca  i32.load [2, 0]
+007f75cd  call [903] ; 
+007f75d0  local.set [2]
+007f75d2  local.get [2]
+007f75d4  local.get [0]
+007f75d6  i32.const [4008036] ; METHOD MineGameMain.silT
+007f75db  i32.load [2, 0]
+007f75de  i32.const [0]
+007f75e0  call [1002] ; Action..ctor
+007f75e3  i32.const [3989352]
+007f75e8  i32.load [2, 0]
+007f75eb  call [1032] ; 
+007f75ee  local.set [0]
+007f75f0  local.get [1]
+007f75f2  local.get [2]
+007f75f4  i32.store [2, 12]
+007f75f7  local.get [0]
+007f75f9  local.set [2]
+007f75fb  local.get [1]
+007f75fd  i32.load [2, 0]
+007f7600  local.set [0]
+007f7602  local.get [1]
+007f7604  local.get [2]
+007f7606  local.get [0]
+007f7608  i32.load [2, 232]
+007f760c  local.get [0]
+007f760e  i32.load [2, 228]
+007f7612  global.set [3]
+007f7614  global.get [3]
+007f7616  call_indirect [2, 0]
+007f7619  end []

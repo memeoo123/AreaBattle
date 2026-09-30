@@ -1,0 +1,23 @@
+; Original class: GamePackageConfigFormatter
+; Type4528.Deserialize; wasmcode1 function 61852; offset=19926337 size=59
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+01300d42  i32.const [5001100]
+01300d47  i32.load8_u [0, 0]
+01300d4a  i32.eqz []
+01300d4b  if [-64]
+01300d4d    i32.const [3932348]
+01300d52    i32.const [1605]
+01300d55    call_indirect [0, 0]
+01300d58    i32.const [5001100]
+01300d5d    i32.const [1]
+01300d5f    i32.store8 [0, 0]
+01300d62  end []
+01300d63  i32.const [3932348]
+01300d68  i32.load [2, 0]
+01300d6b  i32.const [1149]
+01300d6e  call_indirect [0, 0]
+01300d71  local.get [1]
+01300d73  local.get [2]
+01300d75  local.get [1]
+01300d77  call [27792] ; GamePackageConfig.Deserialize
+01300d7b  end []

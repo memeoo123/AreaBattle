@@ -1,0 +1,10 @@
+; Original class: ToolControl
+; Type4256.GetItemCountById; wasmcode function 4746; offset=1642778 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0019111b  i32.const [0]
+0019111d  call [1438] ; GameModule.get_LocalData
+00191120  local.get [1]
+00191122  i32.const [0]
+00191124  call [5913] ; LocalDataManager.GetToolNum
+00191127  return []
+00191128  end []

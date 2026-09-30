@@ -1,0 +1,93 @@
+; Original class: LoginServer
+; Type4609.ShgQTX; wasmcode function 7599; offset=3632770 size=277
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00376e83  i32.const [5001568]
+00376e88  i32.load8_u [0, 0]
+00376e8b  i32.eqz []
+00376e8c  if [-64]
+00376e8e    i32.const [3989352]
+00376e93    call [900] ; 
+00376e96    i32.const [3968556]
+00376e9b    call [900] ; 
+00376e9e    i32.const [3968560]
+00376ea3    call [900] ; 
+00376ea6    i32.const [3932476]
+00376eab    call [900] ; 
+00376eae    i32.const [3922404]
+00376eb3    call [900] ; 
+00376eb6    i32.const [3933596]
+00376ebb    call [900] ; 
+00376ebe    i32.const [3935500]
+00376ec3    call [900] ; 
+00376ec6    i32.const [5001568]
+00376ecb    i32.const [1]
+00376ecd    i32.store8 [0, 0]
+00376ed0  end []
+00376ed1  i32.const [3933596]
+00376ed6  i32.load [2, 0]
+00376ed9  call [901] ; 
+00376edc  i32.const [5011002]
+00376ee1  i32.load8_u [0, 0]
+00376ee4  i32.eqz []
+00376ee5  if [-64]
+00376ee7    i32.const [3933596]
+00376eec    call [900] ; 
+00376eef    i32.const [5011002]
+00376ef4    i32.const [1]
+00376ef6    i32.store8 [0, 0]
+00376ef9  end []
+00376efa  i32.const [3933596]
+00376eff  i32.load [2, 0]
+00376f02  call [901] ; 
+00376f05  local.get [0]
+00376f07  i32.load [2, 12]
+00376f0a  local.set [1]
+00376f0c  i32.const [3933596]
+00376f11  i32.load [2, 0]
+00376f14  i32.load [2, 92]
+00376f17  i32.load [2, 0]
+00376f1a  i32.const [2]
+00376f1c  i32.eq []
+00376f1d  if [-64]
+00376f1f    i32.const [1]
+00376f21    i32.const [3922404]
+00376f26    i32.load [2, 0]
+00376f29    local.get [1]
+00376f2b    call [918] ; 
+00376f2e    i32.load [2, 32]
+00376f31    i32.const [8]
+00376f33    i32.add []
+00376f34    i32.const [0]
+00376f36    call [1452] ; Int64.ToString
+00376f39    local.set [1]
+00376f3b    i32.const [3932476]
+00376f40    i32.load [2, 0]
+00376f43    call [901] ; 
+00376f46    local.get [1]
+00376f48    i32.const [0]
+00376f4a    call [4409] ; GlobalData.set_LoginUserID
+00376f4d    i32.const [3935500]
+00376f52    i32.load [2, 0]
+00376f55    i32.load [2, 92]
+00376f58    i32.const [1]
+00376f5a    i32.store8 [0, 0]
+00376f5d    local.get [0]
+00376f5f    local.get [0]
+00376f61    i32.load [2, 12]
+00376f64    i32.const [3989352]
+00376f69    i32.load [2, 0]
+00376f6c    call [1032] ; 
+00376f6f    i32.const [3968556]
+00376f74    i32.load [2, 0]
+00376f77    call [1569] ; 
+00376f7a    return []
+00376f7b  end []
+00376f7c  local.get [0]
+00376f7e  local.get [1]
+00376f80  i32.const [3989352]
+00376f85  i32.load [2, 0]
+00376f88  call [1032] ; 
+00376f8b  i32.const [3968560]
+00376f90  i32.load [2, 0]
+00376f93  call [1569] ; 
+00376f96  end []

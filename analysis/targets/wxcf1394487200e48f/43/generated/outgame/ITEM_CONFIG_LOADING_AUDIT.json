@@ -1,0 +1,114 @@
+{
+  "status": "namespace_collision_confirmed_active_loader_path_pending",
+  "sourceTypes": [
+    {
+      "typeIndex": 3943,
+      "namespace": "Proj_hdzd",
+      "name": "GameProductConfig",
+      "declaredFields": [
+        "id",
+        "isActive",
+        "storeType",
+        "NoAds",
+        "icon",
+        "itemConfig",
+        "getType",
+        "price",
+        "priceText"
+      ]
+    },
+    {
+      "typeIndex": 4531,
+      "namespace": "ItemModule",
+      "name": "GameProductConfig",
+      "declaredFields": [
+        "id",
+        "itemId",
+        "name",
+        "detail",
+        "icon",
+        "itemCount",
+        "buyTypeOrder",
+        "iapPrice",
+        "IapGameKey",
+        "price",
+        "videoBtnId",
+        "iapBuyTimes",
+        "adsBuyTimes",
+        "freeBuyTimes",
+        "costItemPriceTypes",
+        "costItemPriceParams",
+        "costItemBuyTimesArray",
+        "buyLimit",
+        "storeID",
+        "groupID",
+        "order",
+        "fixedTag",
+        "forceRefreshTag",
+        "refreshType",
+        "refreshConditionParam",
+        "randomWeight",
+        "unEnoughShow",
+        "tag",
+        "refreshPeriod",
+        "Expired",
+        "param",
+        "getType",
+        "buyLimitParam",
+        "priceType",
+        "priceCalParam"
+      ]
+    }
+  ],
+  "availableTable": {
+    "path": "E:\\Projects\\AreaBattle\\UnityProject\\Assets\\AreaBattle\\Resources\\Data\\Outgame\\GameProductConfig.json",
+    "sha256": "51a958db979276b0df4a494927a39e5b9657b89c2315ea29a0ef987568820a9a",
+    "rowCount": 16,
+    "keys": [
+      "NoAds",
+      "PackTag",
+      "buyLimit",
+      "buyLimitParam",
+      "detail",
+      "getType",
+      "icon",
+      "id",
+      "isActive",
+      "itemConfig",
+      "name",
+      "orderId",
+      "price",
+      "priceText",
+      "storeType",
+      "videoBtnId"
+    ],
+    "missingCommonPricingFields": [
+      "costItemPriceTypes",
+      "costItemPriceParams",
+      "buyTypeOrder",
+      "priceType",
+      "priceCalParam",
+      "refreshPeriod"
+    ]
+  },
+  "genericLoaderEvidence": "item-config-loader-generics.json",
+  "confirmed": [
+    "ItemConfigMgr uses ItemModule.GameProductConfig type4531 in MemoryPack, UnityJson and generic readConfig branches.",
+    "UnityJson wrapper1333 calls12774. Function12774 obtains Type.Name virtualslot8, not FullName slot26, then resolves TextAsset through ConfigRead26623.",
+    "ConfigRead static ctor defaults UnityJson flagfalse atoffset0. Active branch selection and flag mutations must still be traced; do not treat UnityJson evidence as active-path proof.",
+    "ItemModule.GameProductConfig ctor34537 is no-op; missing refresh/price fields must not be invented from Proj_hdzd price string."
+  ],
+  "source": [
+    "disassembly/Type4534-34550.txt",
+    "disassembly/GenericItemConfig-1333.txt",
+    "disassembly/GenericItemConfig-12774.txt",
+    "disassembly/Type3456-26623.txt",
+    "disassembly/Type3456-26630.txt",
+    "disassembly/Type4531-34537.txt"
+  ],
+  "nextActions": [
+    "Trace actual ConfigRead flag setup and generic readConfig/MemoryPack name resolution before loading common-module config.",
+    "Trace active project store consumers of Proj_hdzd.GameProductConfig independently; do not let common-module coverage substitute for target shop flows.",
+    "Only bind common price/refresh providers after source loader semantics and missing-field behavior are confirmed."
+  ]
+}

@@ -1,0 +1,159 @@
+; Original class: DAUAdsAdapter
+; Type7488.canShow; wasmcode function 20059; offset=9011380 size=416
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+008980b7  global.get [0]
+008980b9  i32.const [16]
+008980bb  i32.sub []
+008980bc  local.set [3]
+008980be  local.get [3]
+008980c0  global.set [0]
+008980c2  i32.const [5004968]
+008980c7  i32.load8_u [0, 0]
+008980ca  i32.eqz []
+008980cb  if [-64]
+008980cd    i32.const [3930108]
+008980d2    call [900] ; 
+008980d5    i32.const [3927212]
+008980da    call [900] ; 
+008980dd    i32.const [4035916] ; STRING " interval:"
+008980e2    call [900] ; 
+008980e5    i32.const [4045420] ; STRING "BANNER"
+008980ea    call [900] ; 
+008980ed    i32.const [4036056] ; STRING " lastShowTime:"
+008980f2    call [900] ; 
+008980f5    i32.const [4035568] ; STRING " canShow now:"
+008980fa    call [900] ; 
+008980fd    i32.const [5004968]
+00898102    i32.const [1]
+00898104    i32.store8 [0, 0]
+00898107  end []
+00898108  i32.const [1]
+0089810a  local.set [1]
+0089810c  block [-64]
+0089810e    local.get [0]
+00898110    i32.load [2, 0]
+00898113    local.set [2]
+00898115    local.get [0]
+00898117    local.get [2]
+00898119    i32.load [2, 272]
+0089811d    local.get [2]
+0089811f    i32.load [2, 268]
+00898123    global.set [3]
+00898125    global.get [3]
+00898127    call_indirect [1, 0]
+0089812a    i32.eqz []
+0089812b    br_if [0]
+0089812d    i32.const [4045420] ; STRING "BANNER"
+00898132    i32.load [2, 0]
+00898135    local.get [0]
+00898137    i32.load [2, 20]
+0089813a    i32.load [2, 16]
+0089813d    i32.const [0]
+0089813f    call [1019] ; String.Equals
+00898142    br_if [0]
+00898144    local.get [3]
+00898146    i32.const [0]
+00898148    call [1342] ; Time.get_realtimeSinceStartup
+0089814b    f32.store [2, 12]
+0089814e    i32.const [3927212]
+00898153    i32.load [2, 0]
+00898156    i32.const [7]
+00898158    call [909] ; 
+0089815b    local.set [1]
+0089815d    local.get [0]
+0089815f    i32.load [2, 8]
+00898162    local.set [2]
+00898164    local.get [1]
+00898166    local.get [2]
+00898168    call [905] ; 
+0089816b    local.get [1]
+0089816d    local.get [2]
+0089816f    i32.store [2, 16]
+00898172    local.get [1]
+00898174    i32.const [4035568] ; STRING " canShow now:"
+00898179    i32.load [2, 0]
+0089817c    call [905] ; 
+0089817f    local.get [1]
+00898181    i32.const [4035568] ; STRING " canShow now:"
+00898186    i32.load [2, 0]
+00898189    i32.store [2, 20]
+0089818c    local.get [3]
+0089818e    i32.const [12]
+00898190    i32.add []
+00898191    i32.const [0]
+00898193    call [1247] ; Single.ToString
+00898196    local.set [2]
+00898198    local.get [1]
+0089819a    local.get [2]
+0089819c    call [905] ; 
+0089819f    local.get [1]
+008981a1    local.get [2]
+008981a3    i32.store [2, 24]
+008981a6    local.get [1]
+008981a8    i32.const [4036056] ; STRING " lastShowTime:"
+008981ad    i32.load [2, 0]
+008981b0    call [905] ; 
+008981b3    local.get [1]
+008981b5    i32.const [4036056] ; STRING " lastShowTime:"
+008981ba    i32.load [2, 0]
+008981bd    i32.store [2, 28]
+008981c0    i32.const [3930108]
+008981c5    i32.load [2, 0]
+008981c8    call [901] ; 
+008981cb    i32.const [3930108]
+008981d0    i32.load [2, 0]
+008981d3    i32.load [2, 92]
+008981d6    i32.const [0]
+008981d8    call [1247] ; Single.ToString
+008981db    local.set [2]
+008981dd    local.get [1]
+008981df    local.get [2]
+008981e1    call [905] ; 
+008981e4    local.get [1]
+008981e6    local.get [2]
+008981e8    i32.store [2, 32]
+008981eb    local.get [1]
+008981ed    i32.const [4035916] ; STRING " interval:"
+008981f2    i32.load [2, 0]
+008981f5    call [905] ; 
+008981f8    local.get [1]
+008981fa    i32.const [4035916] ; STRING " interval:"
+008981ff    i32.load [2, 0]
+00898202    i32.store [2, 36]
+00898205    local.get [0]
+00898207    i32.const [56]
+00898209    i32.add []
+0089820a    i32.const [0]
+0089820c    call [1247] ; Single.ToString
+0089820f    local.set [2]
+00898211    local.get [1]
+00898213    local.get [2]
+00898215    call [905] ; 
+00898218    local.get [1]
+0089821a    local.get [2]
+0089821c    i32.store [2, 40]
+0089821f    local.get [1]
+00898221    i32.const [0]
+00898223    call [1024] ; String.Concat
+00898226    i32.const [0]
+00898228    call [999] ; XYXLOG.Log
+0089822b    local.get [0]
+0089822d    f32.load [2, 56]
+00898230    local.get [3]
+00898232    f32.load [2, 12]
+00898235    i32.const [3930108]
+0089823a    i32.load [2, 0]
+0089823d    i32.load [2, 92]
+00898240    f32.load [2, 0]
+00898243    f32.sub []
+00898244    f32.gt []
+00898245    i32.eqz []
+00898246    local.set [1]
+00898248  end []
+00898249  local.get [3]
+0089824b  i32.const [16]
+0089824d  i32.add []
+0089824e  global.set [0]
+00898250  local.get [1]
+00898252  return []
+00898253  end []

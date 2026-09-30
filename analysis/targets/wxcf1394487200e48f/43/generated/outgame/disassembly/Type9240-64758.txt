@@ -1,0 +1,243 @@
+; Original class: WXFunctionManger
+; Type9240.get_Instance; wasmcode function 2747; offset=858719 size=721
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+000d1a62  i32.const [5006578]
+000d1a67  i32.load8_u [0, 0]
+000d1a6a  i32.eqz []
+000d1a6b  if [-64]
+000d1a6d    i32.const [3927760]
+000d1a72    call [900] ; 
+000d1a75    i32.const [3911624]
+000d1a7a    call [900] ; 
+000d1a7d    i32.const [3928528]
+000d1a82    call [900] ; 
+000d1a85    i32.const [3930676]
+000d1a8a    call [900] ; 
+000d1a8d    i32.const [3931704]
+000d1a92    call [900] ; 
+000d1a95    i32.const [4000896]
+000d1a9a    call [900] ; 
+000d1a9d    i32.const [3932344]
+000d1aa2    call [900] ; 
+000d1aa5    i32.const [3936516]
+000d1aaa    call [900] ; 
+000d1aad    i32.const [3940520]
+000d1ab2    call [900] ; 
+000d1ab5    i32.const [3941488]
+000d1aba    call [900] ; 
+000d1abd    i32.const [3914536]
+000d1ac2    call [900] ; 
+000d1ac5    i32.const [3941756]
+000d1aca    call [900] ; 
+000d1acd    i32.const [3941800]
+000d1ad2    call [900] ; 
+000d1ad5    i32.const [4102756] ; STRING "不支持在非播放模式下调用WX接口"
+000d1ada    call [900] ; 
+000d1add    i32.const [5006578]
+000d1ae2    i32.const [1]
+000d1ae4    i32.store8 [0, 0]
+000d1ae7  end []
+000d1ae8  i32.const [3941756]
+000d1aed  i32.load [2, 0]
+000d1af0  i32.load [2, 92]
+000d1af3  i32.load [2, 0]
+000d1af6  local.set [0]
+000d1af8  i32.const [3936516]
+000d1afd  i32.load [2, 0]
+000d1b00  call [901] ; 
+000d1b03  local.get [0]
+000d1b05  i32.const [0]
+000d1b07  i32.const [0]
+000d1b09  call [940] ; Object.op_Equality
+000d1b0c  if [-64]
+000d1b0e    i32.const [0]
+000d1b10    call [1950] ; Application.get_isPlaying
+000d1b13    i32.eqz []
+000d1b14    if [-64]
+000d1b16      i32.const [3930676]
+000d1b1b      i32.load [2, 0]
+000d1b1e      call [901] ; 
+000d1b21      i32.const [4102756] ; STRING "不支持在非播放模式下调用WX接口"
+000d1b26      i32.load [2, 0]
+000d1b29      i32.const [0]
+000d1b2b      i32.const [2369] ; TABLE Debug.LogError
+000d1b2e      global.set [3]
+000d1b30      i32.const [2369] ; TABLE Debug.LogError
+000d1b33      call_indirect [0, 0]
+000d1b36      i32.const [0]
+000d1b38      return []
+000d1b39    end []
+000d1b3a    i32.const [3914536]
+000d1b3f    i32.load [2, 0]
+000d1b42    local.set [0]
+000d1b44    i32.const [3940520]
+000d1b49    i32.load [2, 0]
+000d1b4c    call [901] ; 
+000d1b4f    local.get [0]
+000d1b51    i32.const [0]
+000d1b53    call [912] ; Type.GetTypeFromHandle
+000d1b56    local.set [0]
+000d1b58    local.get [0]
+000d1b5a    local.set [1]
+000d1b5c    local.get [0]
+000d1b5e    i32.load [2, 0]
+000d1b61    i32.const [-64]
+000d1b63    i32.sub []
+000d1b64    local.set [0]
+000d1b66    local.get [1]
+000d1b68    local.get [0]
+000d1b6a    i32.load [2, 192]
+000d1b6e    local.get [0]
+000d1b70    i32.load [2, 188]
+000d1b74    global.set [3]
+000d1b76    global.get [3]
+000d1b78    call_indirect [1, 0]
+000d1b7b    local.set [0]
+000d1b7d    i32.const [3932344]
+000d1b82    i32.load [2, 0]
+000d1b85    call [903] ; 
+000d1b88    local.set [1]
+000d1b8a    local.get [1]
+000d1b8c    local.get [0]
+000d1b8e    i32.const [0]
+000d1b90    call [1292] ; GameObject..ctor
+000d1b93    local.get [1]
+000d1b95    i32.const [4000896]
+000d1b9a    i32.load [2, 0]
+000d1b9d    call [1094] ; 
+000d1ba0    local.set [0]
+000d1ba2    i32.const [3941756]
+000d1ba7    i32.load [2, 0]
+000d1baa    i32.load [2, 92]
+000d1bad    local.get [0]
+000d1baf    i32.store [2, 0]
+000d1bb2    i32.const [3941756]
+000d1bb7    i32.load [2, 0]
+000d1bba    i32.load [2, 92]
+000d1bbd    drop []
+000d1bbe    i32.const [3941756]
+000d1bc3    i32.load [2, 0]
+000d1bc6    i32.load [2, 92]
+000d1bc9    i32.load [2, 0]
+000d1bcc    i32.const [0]
+000d1bce    call [943] ; Component.get_gameObject
+000d1bd1    local.set [0]
+000d1bd3    i32.const [3936516]
+000d1bd8    i32.load [2, 0]
+000d1bdb    call [901] ; 
+000d1bde    local.get [0]
+000d1be0    i32.const [0]
+000d1be2    call [1111] ; Object.DontDestroyOnLoad
+000d1be5    i32.const [3941800]
+000d1bea    i32.load [2, 0]
+000d1bed    call [903] ; 
+000d1bf0    local.set [0]
+000d1bf2    local.get [0]
+000d1bf4    local.get [0]
+000d1bf6    call [9525] ; WXModuleManager..ctor
+000d1bf9    i32.const [3941756]
+000d1bfe    i32.load [2, 0]
+000d1c01    i32.load [2, 92]
+000d1c04    local.get [0]
+000d1c06    i32.store [2, 4]
+000d1c09    i32.const [3941756]
+000d1c0e    i32.load [2, 0]
+000d1c11    i32.load [2, 92]
+000d1c14    drop []
+000d1c15    i32.const [3941756]
+000d1c1a    i32.load [2, 0]
+000d1c1d    i32.load [2, 92]
+000d1c20    i32.load [2, 4]
+000d1c23    local.set [0]
+000d1c25    local.get [0]
+000d1c27    i32.const [3941488]
+000d1c2c    i32.load [2, 0]
+000d1c2f    call [903] ; 
+000d1c32    local.get [0]
+000d1c34    call [4672] ; WXModuleManager.ModuleRegister
+000d1c37    i32.const [3941756]
+000d1c3c    i32.load [2, 0]
+000d1c3f    i32.load [2, 92]
+000d1c42    i32.load [2, 4]
+000d1c45    local.set [0]
+000d1c47    i32.const [3928528]
+000d1c4c    i32.load [2, 0]
+000d1c4f    call [903] ; 
+000d1c52    local.set [1]
+000d1c54    local.get [1]
+000d1c56    i32.const [0]
+000d1c58    call [13120] ; AudioModule..ctor
+000d1c5b    local.get [0]
+000d1c5d    local.get [1]
+000d1c5f    local.get [0]
+000d1c61    call [4672] ; WXModuleManager.ModuleRegister
+000d1c64    i32.const [3941756]
+000d1c69    i32.load [2, 0]
+000d1c6c    i32.load [2, 92]
+000d1c6f    i32.load [2, 4]
+000d1c72    local.set [0]
+000d1c74    i32.const [3927760]
+000d1c79    i32.load [2, 0]
+000d1c7c    call [903] ; 
+000d1c7f    local.set [1]
+000d1c81    local.get [1]
+000d1c83    i32.const [-1082130432]
+000d1c89    i32.store [2, 28]
+000d1c8c    local.get [1]
+000d1c8e    i32.const [257]
+000d1c91    i32.store16 [1, 10]
+000d1c94    local.get [0]
+000d1c96    local.get [1]
+000d1c98    local.get [0]
+000d1c9a    call [4672] ; WXModuleManager.ModuleRegister
+000d1c9d    i32.const [3941756]
+000d1ca2    i32.load [2, 0]
+000d1ca5    i32.load [2, 92]
+000d1ca8    i32.load [2, 4]
+000d1cab    local.set [0]
+000d1cad    local.get [0]
+000d1caf    i32.const [3931704]
+000d1cb4    i32.load [2, 0]
+000d1cb7    call [903] ; 
+000d1cba    local.get [0]
+000d1cbc    call [4672] ; WXModuleManager.ModuleRegister
+000d1cbf    i32.const [3941756]
+000d1cc4    i32.load [2, 0]
+000d1cc7    i32.load [2, 92]
+000d1cca    i32.load [2, 4]
+000d1ccd    local.get [0]
+000d1ccf    call [9526] ; WXModuleManager.InitModules
+000d1cd2    local.get [0]
+000d1cd4    call [2747] ; WXFunctionManger.get_Instance
+000d1cd7    local.set [0]
+000d1cd9    local.get [0]
+000d1cdb    local.set [1]
+000d1cdd    i32.const [3941756]
+000d1ce2    i32.load [2, 0]
+000d1ce5    i32.load [2, 92]
+000d1ce8    i32.load [2, 4]
+000d1ceb    i32.const [3911624]
+000d1cf0    i32.load [2, 0]
+000d1cf3    i32.const [0]
+000d1cf5    call [912] ; Type.GetTypeFromHandle
+000d1cf8    local.get [0]
+000d1cfa    call [2540] ; WXModuleManager.GetModuleBase
+000d1cfd    local.set [0]
+000d1cff    local.get [1]
+000d1d01    local.get [0]
+000d1d03    i32.const [3928528]
+000d1d08    i32.load [2, 0]
+000d1d0b    call [924] ; 
+000d1d0e    i32.store [2, 16]
+000d1d11    local.get [0]
+000d1d13    i32.const [3928528]
+000d1d18    i32.load [2, 0]
+000d1d1b    call [924] ; 
+000d1d1e    drop []
+000d1d1f  end []
+000d1d20  i32.const [3941756]
+000d1d25  i32.load [2, 0]
+000d1d28  i32.load [2, 92]
+000d1d2b  i32.load [2, 0]
+000d1d2e  return []
+000d1d2f  end []

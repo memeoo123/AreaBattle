@@ -1,0 +1,22 @@
+; Original class: SevendayActivityControl
+; Type4502.IsHaveAnyRed; wasmcode function 10445; offset=5098102 size=37
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+004dca77  local.get [0]
+004dca79  local.get [0]
+004dca7b  call [4809] ; SevendayActivityControl.IsUnlock
+004dca7e  if [-64]
+004dca80    local.get [0]
+004dca82    local.get [0]
+004dca84    call [10447] ; SevendayActivityControl.IsAnyDayHaveRed
+004dca87    local.get [0]
+004dca89    local.get [0]
+004dca8b    call [10448] ; SevendayActivityControl.IsAccHaveRed
+004dca8e    i32.or []
+004dca8f    local.set [0]
+004dca91  else []
+004dca92    i32.const [0]
+004dca94    local.set [0]
+004dca96  end []
+004dca97  local.get [0]
+004dca99  return []
+004dca9a  end []

@@ -1,0 +1,43 @@
+; Original class: ArenaControl
+; Type4018.xthjp`q; wasmcode function 8270; offset=3926529 size=103
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+003bea02  i32.const [5008618]
+003bea07  i32.load8_u [0, 0]
+003bea0a  i32.eqz []
+003bea0b  if [-64]
+003bea0d    i32.const [3928216]
+003bea12    call [900] ; 
+003bea15    i32.const [3972064]
+003bea1a    call [900] ; 
+003bea1d    i32.const [5008618]
+003bea22    i32.const [1]
+003bea24    i32.store8 [0, 0]
+003bea27  end []
+003bea28  local.get [0]
+003bea2a  i32.load [2, 44]
+003bea2d  local.get [1]
+003bea2f  i32.const [1]
+003bea31  i32.sub []
+003bea32  i32.const [3972064]
+003bea37  i32.load [2, 0]
+003bea3a  call [930] ; 
+003bea3d  local.set [0]
+003bea3f  local.get [0]
+003bea41  i32.eqz []
+003bea42  if [-64]
+003bea44    local.get [0]
+003bea46    call [5567] ; ^]Vhit.GetID
+003bea49    local.set [1]
+003bea4b    i32.const [3928216]
+003bea50    i32.load [2, 0]
+003bea53    call [903] ; 
+003bea56    local.set [0]
+003bea58    local.get [0]
+003bea5a    local.get [1]
+003bea5c    i32.const [0]
+003bea5e    local.get [0]
+003bea60    call [8269] ; ArenaPlayerData..ctor
+003bea63  end []
+003bea64  local.get [0]
+003bea66  return []
+003bea67  end []

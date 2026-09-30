@@ -1,0 +1,148 @@
+; Original class: SkinItem
+; Type4364.etM|; wasmcode function 10340; offset=4962167 size=363
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+004bb77a  i32.const [5008969]
+004bb77f  i32.load8_u [0, 0]
+004bb782  i32.eqz []
+004bb783  if [-64]
+004bb785    i32.const [3993288]
+004bb78a    call [900] ; 
+004bb78d    i32.const [4069480] ; STRING "ShopUI.ActivityGetWay"
+004bb792    call [900] ; 
+004bb795    i32.const [5008969]
+004bb79a    i32.const [1]
+004bb79c    i32.store8 [0, 0]
+004bb79f  end []
+004bb7a0  local.get [0]
+004bb7a2  i32.load [2, 124]
+004bb7a5  i32.const [0]
+004bb7a7  call [943] ; Component.get_gameObject
+004bb7aa  i32.const [0]
+004bb7ac  i32.const [0]
+004bb7ae  call [949] ; GameObject.SetActive
+004bb7b1  local.get [0]
+004bb7b3  i32.load [2, 92]
+004bb7b6  i32.const [0]
+004bb7b8  call [943] ; Component.get_gameObject
+004bb7bb  i32.const [0]
+004bb7bd  i32.const [0]
+004bb7bf  call [949] ; GameObject.SetActive
+004bb7c2  local.get [0]
+004bb7c4  i32.load [2, 84]
+004bb7c7  i32.const [0]
+004bb7c9  call [943] ; Component.get_gameObject
+004bb7cc  i32.const [0]
+004bb7ce  i32.const [0]
+004bb7d0  call [949] ; GameObject.SetActive
+004bb7d3  local.get [0]
+004bb7d5  i32.load [2, 88]
+004bb7d8  i32.const [0]
+004bb7da  call [943] ; Component.get_gameObject
+004bb7dd  i32.const [0]
+004bb7df  i32.const [0]
+004bb7e1  call [949] ; GameObject.SetActive
+004bb7e4  local.get [0]
+004bb7e6  i32.load [2, 128]
+004bb7ea  i32.const [0]
+004bb7ec  call [943] ; Component.get_gameObject
+004bb7ef  i32.const [0]
+004bb7f1  i32.const [0]
+004bb7f3  call [949] ; GameObject.SetActive
+004bb7f6  block [-64]
+004bb7f8    block [-64]
+004bb7fa      block [-64]
+004bb7fc        block [-64]
+004bb7fe          block [-64]
+004bb800            block [-64]
+004bb802              local.get [0]
+004bb804              i32.load [2, 44]
+004bb807              br_table [0, 1, 5, 2, 3, 4, 5]
+004bb810            end []
+004bb811            local.get [0]
+004bb813            i32.load [2, 128]
+004bb817            i32.const [0]
+004bb819            call [943] ; Component.get_gameObject
+004bb81c            i32.const [0]
+004bb81e            i32.const [0]
+004bb820            call [949] ; GameObject.SetActive
+004bb823            return []
+004bb824          end []
+004bb825          local.get [0]
+004bb827          i32.load [2, 92]
+004bb82a          i32.const [0]
+004bb82c          call [943] ; Component.get_gameObject
+004bb82f          i32.const [1]
+004bb831          i32.const [0]
+004bb833          call [949] ; GameObject.SetActive
+004bb836          return []
+004bb837        end []
+004bb838        local.get [0]
+004bb83a        i32.load [2, 88]
+004bb83d        i32.const [0]
+004bb83f        call [943] ; Component.get_gameObject
+004bb842        i32.const [1]
+004bb844        i32.const [0]
+004bb846        call [949] ; GameObject.SetActive
+004bb849        return []
+004bb84a      end []
+004bb84b      local.get [0]
+004bb84d      i32.load [2, 124]
+004bb850      i32.const [0]
+004bb852      call [943] ; Component.get_gameObject
+004bb855      i32.const [1]
+004bb857      i32.const [0]
+004bb859      call [949] ; GameObject.SetActive
+004bb85c      return []
+004bb85d    end []
+004bb85e    local.get [0]
+004bb860    i32.load [2, 128]
+004bb864    i32.const [0]
+004bb866    call [943] ; Component.get_gameObject
+004bb869    i32.const [1]
+004bb86b    i32.const [0]
+004bb86d    call [949] ; GameObject.SetActive
+004bb870    local.get [0]
+004bb872    i32.load [2, 128]
+004bb876    i32.const [3993288]
+004bb87b    i32.load [2, 0]
+004bb87e    call [1812] ; 
+004bb881    local.set [0]
+004bb883    local.get [0]
+004bb885    local.set [1]
+004bb887    i32.const [0]
+004bb889    call [1220] ; GameModule.get_Lang
+004bb88c    i32.const [4069480] ; STRING "ShopUI.ActivityGetWay"
+004bb891    i32.load [2, 0]
+004bb894    i32.const [0]
+004bb896    call [1243] ; LangModule.Get
+004bb899    local.set [2]
+004bb89b    local.get [0]
+004bb89d    i32.load [2, 0]
+004bb8a0    local.set [0]
+004bb8a2    local.get [1]
+004bb8a4    local.get [2]
+004bb8a6    local.get [0]
+004bb8a8    i32.const [568]
+004bb8ab    i32.add []
+004bb8ac    i32.load [2, 192]
+004bb8b0    local.get [0]
+004bb8b2    i32.load [2, 756]
+004bb8b6    global.set [3]
+004bb8b8    global.get [3]
+004bb8ba    call_indirect [2, 0]
+004bb8bd    return []
+004bb8be  end []
+004bb8bf  local.get [0]
+004bb8c1  local.get [0]
+004bb8c3  i32.const [16647] ; TABLE SkinItem.WMehRx
+004bb8c7  global.set [3]
+004bb8c9  i32.const [16647] ; TABLE SkinItem.WMehRx
+004bb8cd  call_indirect [0, 0]
+004bb8d0  local.get [0]
+004bb8d2  i32.load [2, 84]
+004bb8d5  i32.const [0]
+004bb8d7  call [943] ; Component.get_gameObject
+004bb8da  i32.const [1]
+004bb8dc  i32.const [0]
+004bb8de  call [949] ; GameObject.SetActive
+004bb8e1  end []

@@ -1,0 +1,444 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.Awake; wasmcode function 18045; offset=7997541 size=1309
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127), (1, 126)]
+007a086a  global.get [0]
+007a086c  i32.const [96]
+007a086f  i32.sub []
+007a0870  local.set [1]
+007a0872  local.get [1]
+007a0874  global.set [0]
+007a0876  i32.const [5007510]
+007a087b  i32.load8_u [0, 0]
+007a087e  i32.eqz []
+007a087f  if [-64]
+007a0881    i32.const [3926444]
+007a0886    call [900] ; 
+007a0889    i32.const [3927888]
+007a088e    call [900] ; 
+007a0891    i32.const [3993060]
+007a0896    call [900] ; 
+007a0899    i32.const [3953504]
+007a089e    call [900] ; 
+007a08a1    i32.const [3953576]
+007a08a6    call [900] ; 
+007a08a9    i32.const [3953440]
+007a08ae    call [900] ; 
+007a08b1    i32.const [3995120]
+007a08b6    call [900] ; 
+007a08b9    i32.const [3930256]
+007a08be    call [900] ; 
+007a08c1    i32.const [3947148]
+007a08c6    call [900] ; 
+007a08c9    i32.const [3944712]
+007a08ce    call [900] ; 
+007a08d1    i32.const [4001088]
+007a08d6    call [900] ; 
+007a08d9    i32.const [3932748]
+007a08de    call [900] ; 
+007a08e1    i32.const [4010092] ; METHOD Proj_xqzdStartUI.kRNse
+007a08e6    call [900] ; 
+007a08e9    i32.const [4010060] ; METHOD Proj_xqzdStartUI.`xxRRcS
+007a08ee    call [900] ; 
+007a08f1    i32.const [4012464]
+007a08f6    call [900] ; 
+007a08f9    i32.const [4029828] ; METHOD <>c.Mif~}
+007a08fe    call [900] ; 
+007a0901    i32.const [3947796]
+007a0906    call [900] ; 
+007a0909    i32.const [4091932] ; STRING "logo_cn"
+007a090e    call [900] ; 
+007a0911    i32.const [4068052] ; STRING "RigthBar/btn_sevenDay"
+007a0916    call [900] ; 
+007a0919    i32.const [4076500] ; STRING "UnderAgeLimitLevel"
+007a091e    call [900] ; 
+007a0921    i32.const [4090072] ; STRING "imgReddot"
+007a0926    call [900] ; 
+007a0929    i32.const [4057560] ; STRING "Image"
+007a092e    call [900] ; 
+007a0931    i32.const [4068048] ; STRING "RigthBar/btn_mxtz"
+007a0936    call [900] ; 
+007a0939    i32.const [4084036] ; STRING "btnBanHao"
+007a093e    call [900] ; 
+007a0941    i32.const [5007510]
+007a0946    i32.const [1]
+007a0948    i32.store8 [0, 0]
+007a094b  end []
+007a094c  i32.const [3944712]
+007a0951  i32.load [2, 0]
+007a0954  call [901] ; 
+007a0957  i32.const [3944712]
+007a095c  i32.load [2, 0]
+007a095f  i32.load [2, 92]
+007a0962  i32.load [2, 12]
+007a0965  local.set [2]
+007a0967  i32.const [3947148]
+007a096c  i32.load [2, 0]
+007a096f  call [903] ; 
+007a0972  local.set [3]
+007a0974  local.get [3]
+007a0976  local.get [0]
+007a0978  i32.const [4010060] ; METHOD Proj_xqzdStartUI.`xxRRcS
+007a097d  i32.load [2, 0]
+007a0980  i32.const [0]
+007a0982  call [1067] ; EventHandler..ctor
+007a0985  local.get [2]
+007a0987  local.get [3]
+007a0989  i32.const [0]
+007a098b  call [1146] ; MsgDispatcher.AddEventListener
+007a098e  i32.const [3932748]
+007a0993  i32.load [2, 0]
+007a0996  call [901] ; 
+007a0999  i32.const [3932748]
+007a099e  i32.load [2, 0]
+007a09a1  i32.load [2, 92]
+007a09a4  i32.load [2, 12]
+007a09a7  local.set [2]
+007a09a9  i32.const [3947148]
+007a09ae  i32.load [2, 0]
+007a09b1  call [903] ; 
+007a09b4  local.set [3]
+007a09b6  local.get [3]
+007a09b8  local.get [0]
+007a09ba  i32.const [4010092] ; METHOD Proj_xqzdStartUI.kRNse
+007a09bf  i32.load [2, 0]
+007a09c2  i32.const [0]
+007a09c4  call [1067] ; EventHandler..ctor
+007a09c7  local.get [2]
+007a09c9  local.get [3]
+007a09cb  i32.const [0]
+007a09cd  call [1146] ; MsgDispatcher.AddEventListener
+007a09d0  local.get [0]
+007a09d2  i32.load [2, 16]
+007a09d5  i32.const [4076500] ; STRING "UnderAgeLimitLevel"
+007a09da  i32.load [2, 0]
+007a09dd  i32.const [0]
+007a09df  call [1102] ; Transform.Find
+007a09e2  i32.const [0]
+007a09e4  call [943] ; Component.get_gameObject
+007a09e7  i32.const [0]
+007a09e9  i32.const [0]
+007a09eb  call [949] ; GameObject.SetActive
+007a09ee  i32.const [3930256]
+007a09f3  i32.load [2, 0]
+007a09f6  call [901] ; 
+007a09f9  local.get [0]
+007a09fb  i32.const [0]
+007a09fd  call [1309] ; DataManagerPool.get_Instance
+007a0a00  i32.const [3995120]
+007a0a05  i32.load [2, 0]
+007a0a08  call [1609] ; 
+007a0a0b  i32.store [2, 116]
+007a0a0e  i32.const [3953576]
+007a0a13  i32.load [2, 0]
+007a0a16  call [935] ; 
+007a0a19  local.get [0]
+007a0a1b  i32.store [2, 32]
+007a0a1e  local.get [0]
+007a0a20  local.get [0]
+007a0a22  i32.load [2, 16]
+007a0a25  i32.const [4068052] ; STRING "RigthBar/btn_sevenDay"
+007a0a2a  i32.load [2, 0]
+007a0a2d  i32.const [0]
+007a0a2f  call [1102] ; Transform.Find
+007a0a32  i32.const [3993060]
+007a0a37  i32.load [2, 0]
+007a0a3a  call [1010] ; 
+007a0a3d  i32.store [2, 132]
+007a0a41  local.get [0]
+007a0a43  local.get [0]
+007a0a45  i32.load [2, 132]
+007a0a49  i32.const [0]
+007a0a4b  call [977] ; Component.get_transform
+007a0a4e  i32.const [4090072] ; STRING "imgReddot"
+007a0a53  i32.load [2, 0]
+007a0a56  i32.const [0]
+007a0a58  call [1102] ; Transform.Find
+007a0a5b  i32.const [0]
+007a0a5d  call [943] ; Component.get_gameObject
+007a0a60  i32.store [2, 136]
+007a0a64  i32.const [3953576]
+007a0a69  i32.load [2, 0]
+007a0a6c  call [935] ; 
+007a0a6f  local.get [0]
+007a0a71  i32.store [2, 32]
+007a0a74  local.get [0]
+007a0a76  local.get [0]
+007a0a78  i32.load [2, 16]
+007a0a7b  i32.const [4068048] ; STRING "RigthBar/btn_mxtz"
+007a0a80  i32.load [2, 0]
+007a0a83  i32.const [0]
+007a0a85  call [1102] ; Transform.Find
+007a0a88  i32.const [3993060]
+007a0a8d  i32.load [2, 0]
+007a0a90  call [1010] ; 
+007a0a93  i32.store [2, 140]
+007a0a97  local.get [0]
+007a0a99  local.get [0]
+007a0a9b  i32.load [2, 140]
+007a0a9f  i32.const [0]
+007a0aa1  call [977] ; Component.get_transform
+007a0aa4  i32.const [4090072] ; STRING "imgReddot"
+007a0aa9  i32.load [2, 0]
+007a0aac  i32.const [0]
+007a0aae  call [1102] ; Transform.Find
+007a0ab1  i32.const [0]
+007a0ab3  call [943] ; Component.get_gameObject
+007a0ab6  i32.store [2, 144]
+007a0aba  local.get [0]
+007a0abc  i32.load [2, 16]
+007a0abf  i32.const [4084036] ; STRING "btnBanHao"
+007a0ac4  i32.load [2, 0]
+007a0ac7  i32.const [0]
+007a0ac9  call [1102] ; Transform.Find
+007a0acc  i32.const [3993060]
+007a0ad1  i32.load [2, 0]
+007a0ad4  call [1010] ; 
+007a0ad7  i32.const [0]
+007a0ad9  call [943] ; Component.get_gameObject
+007a0adc  i32.const [0]
+007a0ade  i32.const [0]
+007a0ae0  call [949] ; GameObject.SetActive
+007a0ae3  local.get [0]
+007a0ae5  local.get [0]
+007a0ae7  i32.load [2, 284]
+007a0aeb  i32.const [0]
+007a0aed  call [977] ; Component.get_transform
+007a0af0  i32.const [4057560] ; STRING "Image"
+007a0af5  i32.load [2, 0]
+007a0af8  i32.const [0]
+007a0afa  call [1102] ; Transform.Find
+007a0afd  i32.const [0]
+007a0aff  call [943] ; Component.get_gameObject
+007a0b02  i32.store [2, 124]
+007a0b05  local.get [0]
+007a0b07  local.get [0]
+007a0b09  i32.load [2, 292]
+007a0b0d  i32.const [0]
+007a0b0f  call [977] ; Component.get_transform
+007a0b12  i32.const [4090072] ; STRING "imgReddot"
+007a0b17  i32.load [2, 0]
+007a0b1a  i32.const [0]
+007a0b1c  call [1102] ; Transform.Find
+007a0b1f  i32.const [0]
+007a0b21  call [943] ; Component.get_gameObject
+007a0b24  i32.store [2, 128]
+007a0b28  i32.const [3953504]
+007a0b2d  i32.load [2, 0]
+007a0b30  call [935] ; 
+007a0b33  local.set [2]
+007a0b35  i32.const [3926444]
+007a0b3a  i32.load [2, 0]
+007a0b3d  i32.const [1]
+007a0b3f  call [909] ; 
+007a0b42  local.set [3]
+007a0b44  local.get [3]
+007a0b46  i32.const [2]
+007a0b48  i32.store [2, 16]
+007a0b4b  local.get [2]
+007a0b4d  local.get [3]
+007a0b4f  i32.const [0]
+007a0b51  call [7410] ; ProcessControl.JudgeChannel
+007a0b54  i32.eqz []
+007a0b55  if [-64]
+007a0b57    local.get [0]
+007a0b59    i32.load [2, 260]
+007a0b5d    i32.const [0]
+007a0b5f    call [943] ; Component.get_gameObject
+007a0b62    i32.const [0]
+007a0b64    i32.const [0]
+007a0b66    call [949] ; GameObject.SetActive
+007a0b69  end []
+007a0b6a  i32.const [3953504]
+007a0b6f  i32.load [2, 0]
+007a0b72  call [935] ; 
+007a0b75  local.set [3]
+007a0b77  i32.const [3926444]
+007a0b7c  i32.load [2, 0]
+007a0b7f  i32.const [2]
+007a0b81  call [909] ; 
+007a0b84  local.set [2]
+007a0b86  local.get [2]
+007a0b88  i32.const [1]
+007a0b8a  i32.store [2, 16]
+007a0b8d  local.get [2]
+007a0b8f  i32.const [2]
+007a0b91  i32.store [2, 20]
+007a0b94  local.get [3]
+007a0b96  local.get [2]
+007a0b98  i32.const [0]
+007a0b9a  call [7410] ; ProcessControl.JudgeChannel
+007a0b9d  i32.eqz []
+007a0b9e  if [-64]
+007a0ba0    local.get [0]
+007a0ba2    i32.load [2, 276]
+007a0ba6    i32.const [0]
+007a0ba8    i32.const [0]
+007a0baa    call [949] ; GameObject.SetActive
+007a0bad    local.get [0]
+007a0baf    i32.load [2, 280]
+007a0bb3    i32.const [0]
+007a0bb5    i32.const [0]
+007a0bb7    call [949] ; GameObject.SetActive
+007a0bba    local.get [0]
+007a0bbc    i32.load [2, 268]
+007a0bc0    i32.const [4001088]
+007a0bc5    i32.load [2, 0]
+007a0bc8    call [1091] ; 
+007a0bcb    local.set [2]
+007a0bcd    local.get [1]
+007a0bcf    i32.const [0]
+007a0bd1    i32.store [2, 88]
+007a0bd4    local.get [1]
+007a0bd6    i32.const [0]
+007a0bd8    i32.store [2, 24]
+007a0bdb    local.get [1]
+007a0bdd    i64.const [-4446178732121522176]
+007a0be7    i64.store [3, 80]
+007a0bea    local.get [1]
+007a0bec    i64.const [-4446178732121522176]
+007a0bf6    i64.store [3, 16]
+007a0bf9    local.get [2]
+007a0bfb    local.get [1]
+007a0bfd    i32.const [16]
+007a0bff    i32.add []
+007a0c00    i32.const [0]
+007a0c02    call [5790] ; RectTransform.set_anchoredPosition3D
+007a0c05    local.get [0]
+007a0c07    i32.load [2, 272]
+007a0c0b    i32.const [4001088]
+007a0c10    i32.load [2, 0]
+007a0c13    call [1091] ; 
+007a0c16    local.set [2]
+007a0c18    local.get [1]
+007a0c1a    i32.const [0]
+007a0c1c    i32.store [2, 72]
+007a0c1f    local.get [1]
+007a0c21    i32.const [0]
+007a0c23    i32.store [2, 8]
+007a0c26    local.get [1]
+007a0c28    i64.const [-4429853183472304128]
+007a0c32    i64.store [3, 64]
+007a0c35    local.get [1]
+007a0c37    i64.const [-4429853183472304128]
+007a0c41    i64.store [3, 0]
+007a0c44    local.get [2]
+007a0c46    local.get [1]
+007a0c48    i32.const [0]
+007a0c4a    call [5790] ; RectTransform.set_anchoredPosition3D
+007a0c4d  end []
+007a0c4e  local.get [0]
+007a0c50  i32.load [2, 176]
+007a0c54  i32.const [4091932] ; STRING "logo_cn"
+007a0c59  i32.load [2, 0]
+007a0c5c  i32.const [4012464]
+007a0c61  i32.load [2, 0]
+007a0c64  call [1490] ; 
+007a0c67  i32.const [0]
+007a0c69  call [2187] ; Image.set_sprite
+007a0c6c  local.get [1]
+007a0c6e  i32.const [32]
+007a0c70  i32.add []
+007a0c71  local.get [0]
+007a0c73  i32.load [2, 176]
+007a0c77  i32.const [0]
+007a0c79  call [977] ; Component.get_transform
+007a0c7c  i32.const [0]
+007a0c7e  call [1379] ; Transform.get_localPosition
+007a0c81  local.get [1]
+007a0c83  i32.load [2, 40]
+007a0c86  local.set [2]
+007a0c88  local.get [1]
+007a0c8a  local.get [2]
+007a0c8c  i32.store [2, 56]
+007a0c8f  local.get [1]
+007a0c91  i64.load [3, 32]
+007a0c94  local.set [5]
+007a0c96  local.get [1]
+007a0c98  local.get [5]
+007a0c9a  i64.store [3, 48]
+007a0c9d  local.get [0]
+007a0c9f  local.get [2]
+007a0ca1  i32.store [2, 160]
+007a0ca5  local.get [0]
+007a0ca7  local.get [5]
+007a0ca9  i32.wrap_i64 []
+007a0caa  i32.store [2, 152]
+007a0cae  local.get [0]
+007a0cb0  local.get [5]
+007a0cb2  i64.const [32]
+007a0cb4  i64.shr_u []
+007a0cb5  i32.wrap_i64 []
+007a0cb6  i32.store [2, 156]
+007a0cba  local.get [0]
+007a0cbc  i32.load [2, 256]
+007a0cc0  i32.const [0]
+007a0cc2  call [943] ; Component.get_gameObject
+007a0cc5  i32.const [3953440]
+007a0cca  i32.load [2, 0]
+007a0ccd  call [935] ; 
+007a0cd0  i32.const [0]
+007a0cd2  call [1254] ; LevelControl.get_CurLevel
+007a0cd5  i32.const [22]
+007a0cd7  i32.gt_s []
+007a0cd8  i32.const [0]
+007a0cda  call [949] ; GameObject.SetActive
+007a0cdd  local.get [0]
+007a0cdf  i32.load [2, 256]
+007a0ce3  local.set [3]
+007a0ce5  i32.const [3947796]
+007a0cea  i32.load [2, 0]
+007a0ced  call [901] ; 
+007a0cf0  i32.const [3947796]
+007a0cf5  i32.load [2, 0]
+007a0cf8  i32.load [2, 92]
+007a0cfb  i32.load [2, 4]
+007a0cfe  local.set [2]
+007a0d00  local.get [2]
+007a0d02  i32.eqz []
+007a0d03  if [-64]
+007a0d05    i32.const [3947796]
+007a0d0a    i32.load [2, 0]
+007a0d0d    call [901] ; 
+007a0d10    i32.const [3947796]
+007a0d15    i32.load [2, 0]
+007a0d18    i32.load [2, 92]
+007a0d1b    i32.load [2, 0]
+007a0d1e    local.set [4]
+007a0d20    i32.const [3927888]
+007a0d25    i32.load [2, 0]
+007a0d28    call [903] ; 
+007a0d2b    local.set [2]
+007a0d2d    local.get [2]
+007a0d2f    local.get [4]
+007a0d31    i32.const [4029828] ; METHOD <>c.Mif~}
+007a0d36    i32.load [2, 0]
+007a0d39    i32.const [0]
+007a0d3b    call [1002] ; Action..ctor
+007a0d3e    i32.const [3947796]
+007a0d43    i32.load [2, 0]
+007a0d46    i32.load [2, 92]
+007a0d49    local.get [2]
+007a0d4b    i32.store [2, 4]
+007a0d4e    i32.const [3947796]
+007a0d53    i32.load [2, 0]
+007a0d56    i32.load [2, 92]
+007a0d59    drop []
+007a0d5a  end []
+007a0d5b  local.get [3]
+007a0d5d  local.get [2]
+007a0d5f  i32.const [0]
+007a0d61  call [1121] ; UIExtension.AddClick
+007a0d64  local.get [0]
+007a0d66  local.get [0]
+007a0d68  call [7397] ; Proj_xqzdStartUI.y}dcq
+007a0d6b  local.get [0]
+007a0d6d  local.get [0]
+007a0d6f  call [7400] ; Proj_xqzdStartUI.UokYyr
+007a0d72  local.get [0]
+007a0d74  local.get [0]
+007a0d76  call [5806] ; Proj_xqzdStartUI.RefreshUIInfo
+007a0d79  local.get [1]
+007a0d7b  i32.const [96]
+007a0d7e  i32.add []
+007a0d7f  global.set [0]
+007a0d81  end []

@@ -1,0 +1,53 @@
+; Original class: FsmManager
+; Type3766..ctor; wasmcode function 19674; offset=8819758 size=155
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0086942f  i32.const [4987975]
+00869434  i32.load8_u [0, 0]
+00869437  i32.eqz []
+00869438  if [-64]
+0086943a    i32.const [3959000]
+0086943f    call [900] ; 
+00869442    i32.const [3918348]
+00869447    call [900] ; 
+0086944a    i32.const [3973648]
+0086944f    call [900] ; 
+00869452    i32.const [3923208]
+00869457    call [900] ; 
+0086945a    i32.const [4987975]
+0086945f    i32.const [1]
+00869461    i32.store8 [0, 0]
+00869464  end []
+00869465  i32.const [3923208]
+0086946a  i32.load [2, 0]
+0086946d  call [903] ; 
+00869470  local.set [1]
+00869472  local.get [1]
+00869474  i32.const [3973648]
+00869479  i32.load [2, 0]
+0086947c  call [944] ; 
+0086947f  local.get [0]
+00869481  local.get [1]
+00869483  i32.store [2, 24]
+00869486  i32.const [3918348]
+0086948b  i32.load [2, 0]
+0086948e  call [903] ; 
+00869491  local.set [1]
+00869493  local.get [1]
+00869495  i32.const [3959000]
+0086949a  i32.load [2, 0]
+0086949d  call [951] ; 
+008694a0  local.get [0]
+008694a2  local.get [1]
+008694a4  i32.store [2, 16]
+008694a7  i32.const [3923208]
+008694ac  i32.load [2, 0]
+008694af  call [903] ; 
+008694b2  local.set [1]
+008694b4  local.get [1]
+008694b6  i32.const [3973648]
+008694bb  i32.load [2, 0]
+008694be  call [944] ; 
+008694c1  local.get [0]
+008694c3  local.get [1]
+008694c5  i32.store [2, 20]
+008694c8  end []

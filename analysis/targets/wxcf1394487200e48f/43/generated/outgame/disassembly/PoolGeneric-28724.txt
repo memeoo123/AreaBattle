@@ -1,0 +1,53 @@
+; Original shared generic: Object`1..ctor
+; PoolGeneric..ctor; wasmcode function 18391; offset=8277523 size=126
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+007e4e14  local.get [1]
+007e4e16  if [-64]
+007e4e18    local.get [0]
+007e4e1a    local.get [1]
+007e4e1c    i32.store [2, 8]
+007e4e1f    local.get [0]
+007e4e21    local.get [2]
+007e4e23    i32.store [2, 12]
+007e4e26    local.get [2]
+007e4e28    if [-64]
+007e4e2a      local.get [0]
+007e4e2c      i32.load [2, 8]
+007e4e2f      local.set [0]
+007e4e31      local.get [0]
+007e4e33      local.set [1]
+007e4e35      local.get [0]
+007e4e37      i32.load [2, 0]
+007e4e3a      local.set [0]
+007e4e3c      local.get [1]
+007e4e3e      local.get [0]
+007e4e40      i32.load [2, 224]
+007e4e44      local.get [0]
+007e4e46      i32.load [2, 220]
+007e4e4a      global.set [3]
+007e4e4c      global.get [3]
+007e4e4e      call_indirect [0, 0]
+007e4e51    end []
+007e4e52    return []
+007e4e53  end []
+007e4e54  i32.const [3932324]
+007e4e59  call [902] ; 
+007e4e5c  call [903] ; 
+007e4e5f  local.set [0]
+007e4e61  local.get [0]
+007e4e63  i32.const [4064116] ; STRING "Object is invalid."
+007e4e68  call [902] ; 
+007e4e6b  i32.const [0]
+007e4e6d  i32.const [10659] ; TABLE GameFrameworkException..ctor
+007e4e71  global.set [3]
+007e4e73  i32.const [10659] ; TABLE GameFrameworkException..ctor
+007e4e77  call_indirect [2, 0]
+007e4e7a  local.get [0]
+007e4e7c  i32.const [3982416]
+007e4e81  call [902] ; 
+007e4e84  i32.const [1106]
+007e4e87  global.set [3]
+007e4e89  i32.const [1106]
+007e4e8c  call_indirect [0, 0]
+007e4e8f  unreachable []
+007e4e90  end []

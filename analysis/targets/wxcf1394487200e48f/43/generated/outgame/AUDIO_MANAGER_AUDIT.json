@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T10:14:36.645521+00:00",
+  "status": "source-audio-manager-restored-resource-composition-pending",
+  "sourceEvidence": "AUDIO_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T10:14:36.645521+00:00",
+    "scope": "Source AudioManager original55+53configuration/root/listener/node/UI/action ownership with native UpdateManager and source TimeModule",
+    "checksPassed": 978,
+    "newIntegratedChecks": 19,
+    "nativePlayModeChecks": 18,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameAudioManagerPlayModeValidation.Run"
+    ],
+    "notClaimed": "Actual clip/config resource transport, alternate parser/entrypoint branches, complete Main/account/menu or full outgame Player"
+  },
+  "findings": [
+    "OutgameAudioManagerServices/Manager/Slot and AudioConfigReader now use actual55 AudioConfig rows and53 OnceAudio rows, manage root/listener/nodes and bind action config lookups/UI node factory. Source singleton cache lifetime and partial-failure ordering preserved.",
+    "978 integrated checks pass,19 new. 18 native checks pass using real original1001 loop-fade,1002 loop and2001 Ptype1 one-shot through AudioManager/UI/controller/factory/TimeModule/native UpdateManager. Source roots/listener/persistence/parenting, clear/destruction/reentry verified.",
+    "Earlier native fixture used synthetic2001 Ptype3 for fade testing; new manager native test uses actual original2001 Ptype1. Historical fade fixture tests remain scoped to action behavior, not changed source table.",
+    "Configuration and clips acquired through explicit local adapters in native test; actual clip/config resource transport and full Main app not claimed. Controller coverage11/38,27 remaining; method map5058."
+  ],
+  "remaining": [
+    "Restore audio resource helper3424 legacy/new clip async load and unload, source FirstPack/package routing, modern NewResLoadHelper26176 path; bind real config/resource ownership into AudioManager and full Main graph.",
+    "Continue remaining27 business controller lifecycles and full Main/account/module/menu graph, all original flows, persistence/restart/failure/return and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-manager-integrated.log",
+    "nativeLog": "analysis/audio-manager-native.log",
+    "nativeReport": "analysis/audio-manager-native-validation.json"
+  },
+  "disassembledMethodMapCount": 5058
+}

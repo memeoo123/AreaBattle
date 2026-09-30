@@ -1,0 +1,163 @@
+; Original class: EchelonController
+; Type7518.onCloseAd; wasmcode function 12451; offset=6026999 size=443
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005bf6f8  i32.const [5005079]
+005bf6fd  i32.load8_u [0, 0]
+005bf700  i32.eqz []
+005bf701  if [-64]
+005bf703    i32.const [3927996]
+005bf708    call [900] ; 
+005bf70b    i32.const [3934504]
+005bf710    call [900] ; 
+005bf713    i32.const [3936304]
+005bf718    call [900] ; 
+005bf71b    i32.const [3984752]
+005bf720    call [900] ; 
+005bf723    i32.const [3941516]
+005bf728    call [900] ; 
+005bf72b    i32.const [4057236] ; STRING "INTERSTITAL"
+005bf730    call [900] ; 
+005bf733    i32.const [4045420] ; STRING "BANNER"
+005bf738    call [900] ; 
+005bf73b    i32.const [4077760] ; STRING "VIDEO"
+005bf740    call [900] ; 
+005bf743    i32.const [4093888] ; STRING "onCloseAd"
+005bf748    call [900] ; 
+005bf74b    i32.const [5005079]
+005bf750    i32.const [1]
+005bf752    i32.store8 [0, 0]
+005bf755  end []
+005bf756  local.get [0]
+005bf758  i32.load [2, 8]
+005bf75b  i32.const [4093888] ; STRING "onCloseAd"
+005bf760  i32.load [2, 0]
+005bf763  i32.const [0]
+005bf765  call [921] ; String.Concat
+005bf768  i32.const [0]
+005bf76a  call [999] ; XYXLOG.Log
+005bf76d  local.get [0]
+005bf76f  i32.load [2, 36]
+005bf772  local.set [1]
+005bf774  local.get [1]
+005bf776  if [-64]
+005bf778    local.get [1]
+005bf77a    i32.const [0]
+005bf77c    i32.const [0]
+005bf77e    call [1336] ; 
+005bf781  end []
+005bf782  i32.const [0]
+005bf784  call [2464] ; TimerReportManager.get_Instance
+005bf787  i32.const [0]
+005bf789  i32.const [0]
+005bf78b  i32.const [0]
+005bf78d  call [2465] ; TimerReportManager.changeReportType
+005bf790  local.get [0]
+005bf792  i32.load [2, 12]
+005bf795  i32.load [2, 16]
+005bf798  i32.const [4057236] ; STRING "INTERSTITAL"
+005bf79d  i32.load [2, 0]
+005bf7a0  i32.const [0]
+005bf7a2  call [1237] ; String.Contains
+005bf7a5  if [-64]
+005bf7a7    i32.const [3936304]
+005bf7ac    i32.load [2, 0]
+005bf7af    call [901] ; 
+005bf7b2    local.get [0]
+005bf7b4    call [1381] ; NewAdsManager.get_Instance
+005bf7b7    i32.const [0]
+005bf7b9    local.get [0]
+005bf7bb    call [3315] ; NewAdsManager.setIsInterVideoShow
+005bf7be    local.get [0]
+005bf7c0    i32.load [2, 12]
+005bf7c3    i32.load [2, 16]
+005bf7c6    local.set [1]
+005bf7c8    i32.const [3927996]
+005bf7cd    i32.load [2, 0]
+005bf7d0    call [901] ; 
+005bf7d3    local.get [1]
+005bf7d5    i32.const [0]
+005bf7d7    call [3010] ; AdsUtil.setIntersClose
+005bf7da    local.get [0]
+005bf7dc    i32.load8_u [0, 20]
+005bf7df    i32.eqz []
+005bf7e0    if [-64]
+005bf7e2      local.get [0]
+005bf7e4      i32.load [2, 12]
+005bf7e7      local.set [1]
+005bf7e9      i32.const [3934504]
+005bf7ee      i32.load [2, 0]
+005bf7f1      call [901] ; 
+005bf7f4      local.get [1]
+005bf7f6      i32.const [0]
+005bf7f8      call [7688] ; IntersCloseIntersUtil.show
+005bf7fb    end []
+005bf7fc    i32.const [3984752]
+005bf801    i32.load [2, 0]
+005bf804    call [1203] ; 
+005bf807    i32.const [0]
+005bf809    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+005bf80c    i32.const [0]
+005bf80e    call [7287] ; ReporterSDK.NewReportInsertClose
+005bf811  end []
+005bf812  block [-64]
+005bf814    local.get [0]
+005bf816    i32.load [2, 12]
+005bf819    i32.load [2, 16]
+005bf81c    i32.const [4077760] ; STRING "VIDEO"
+005bf821    i32.load [2, 0]
+005bf824    i32.const [0]
+005bf826    call [1237] ; String.Contains
+005bf829    i32.eqz []
+005bf82a    br_if [0]
+005bf82c    i32.const [3936304]
+005bf831    i32.load [2, 0]
+005bf834    call [901] ; 
+005bf837    local.get [0]
+005bf839    call [1381] ; NewAdsManager.get_Instance
+005bf83c    i32.const [0]
+005bf83e    local.get [0]
+005bf840    call [3315] ; NewAdsManager.setIsInterVideoShow
+005bf843    local.get [0]
+005bf845    i32.load8_u [0, 20]
+005bf848    br_if [0]
+005bf84a    local.get [0]
+005bf84c    i32.load [2, 12]
+005bf84f    local.set [1]
+005bf851    i32.const [3941516]
+005bf856    i32.load [2, 0]
+005bf859    call [901] ; 
+005bf85c    local.get [1]
+005bf85e    i32.const [0]
+005bf860    call [6819] ; VideoCloseIntersUtil.show
+005bf863  end []
+005bf864  i32.const [4045420] ; STRING "BANNER"
+005bf869  i32.load [2, 0]
+005bf86c  local.get [0]
+005bf86e  i32.load [2, 12]
+005bf871  i32.load [2, 16]
+005bf874  i32.const [0]
+005bf876  call [1019] ; String.Equals
+005bf879  i32.eqz []
+005bf87a  if [-64]
+005bf87c    local.get [0]
+005bf87e    i32.load [2, 0]
+005bf881    local.set [1]
+005bf883    local.get [0]
+005bf885    local.get [1]
+005bf887    i32.const [40]
+005bf889    i32.add []
+005bf88a    i32.load [2, 192]
+005bf88e    local.get [1]
+005bf890    i32.load [2, 228]
+005bf894    global.set [3]
+005bf896    global.get [3]
+005bf898    call_indirect [0, 0]
+005bf89b    i32.const [3936304]
+005bf8a0    i32.load [2, 0]
+005bf8a3    call [901] ; 
+005bf8a6    local.get [0]
+005bf8a8    call [1381] ; NewAdsManager.get_Instance
+005bf8ab    local.get [0]
+005bf8ad    call [7515] ; NewAdsManager.restoreBanner
+005bf8b0  end []
+005bf8b1  end []

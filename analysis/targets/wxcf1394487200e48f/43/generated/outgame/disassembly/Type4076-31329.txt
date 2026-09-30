@@ -1,0 +1,26 @@
+; Original class: GuideBookControl
+; Type4076.OnInit; wasmcode function 19299; offset=8651123 size=72
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00840174  i32.const [5008406]
+00840179  i32.load8_u [0, 0]
+0084017c  i32.eqz []
+0084017d  if [-64]
+0084017f    i32.const [3995100]
+00840184    call [900] ; 
+00840187    i32.const [3930256]
+0084018c    call [900] ; 
+0084018f    i32.const [5008406]
+00840194    i32.const [1]
+00840196    i32.store8 [0, 0]
+00840199  end []
+0084019a  i32.const [3930256]
+0084019f  i32.load [2, 0]
+008401a2  call [901] ; 
+008401a5  local.get [0]
+008401a7  i32.const [0]
+008401a9  call [1309] ; DataManagerPool.get_Instance
+008401ac  i32.const [3995100]
+008401b1  i32.load [2, 0]
+008401b4  call [1609] ; 
+008401b7  i32.store [2, 8]
+008401ba  end []

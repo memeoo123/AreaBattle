@@ -1,0 +1,47 @@
+{
+  "worldPoint": "savedBaseWorld + Vector3.up*(.1+(DispatchConfig.maxLine-1)*.05)",
+  "gradeHeights": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "screenPoint": "battleCamera.WorldToScreenPoint(worldPoint)",
+  "localPoint": "RectTransformUtility.ScreenPointToLocalPointInRectangle(towerRootRect.parent.GetComponent<RectTransform>(),screenPoint,UIControl.root.parent.GetComponent<Canvas>().worldCamera,out localPoint)",
+  "assignment": "towerRootRect.anchoredPosition=localPoint",
+  "scoreChildAnchoredPosition": [
+    0,
+    85.5999984741211
+  ],
+  "scoreChildSize": [
+    100,
+    42.85266876220703
+  ],
+  "scoreFontSize": 40,
+  "scoreBestFit": [
+    10,
+    40
+  ],
+  "scoreAlignment": "MiddleCenter",
+  "dispatchSource": "generated/dispatch-model.json",
+  "hudSource": "generated/hud-evidence.json",
+  "correction20260928": {
+    "id": "tower-label-initial-versus-grade-refresh",
+    "status": "confirmed",
+    "value": {
+      "baseWorldOffset": [
+        0,
+        0.3,
+        0
+      ],
+      "initial": "battle.WorldToScreenPoint(base) -> UI.ScreenToWorldPoint -> UI-world up*(.1+grade*.15)",
+      "subsequentGradeChange": "battle-world up*(.1+(maxLines-1)*.05) before projection"
+    },
+    "evidence": [
+      "original871-disassembly/wasmcode-5595.txt",
+      "original871-disassembly/wasmcode-15515.txt",
+      "original871-disassembly/wasmcode-10061.txt",
+      "original871-disassembly/wasmcode-9712.txt",
+      "original871-disassembly/wasmcode-10060.txt"
+    ]
+  }
+}

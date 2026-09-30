@@ -1,0 +1,5011 @@
+{
+  "target": {
+    "appid": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "generatedAt": "2026-09-28T04:47:52.309051+00:00",
+  "analysisMode": "static-only; target code was never executed by this subtask",
+  "implementationGate": "static handoff: ordinary combat and all18 skill kernels plus Boss scheduling supported; listed timing/reachability unknowns and runtime verification remain",
+  "commands": [
+    {
+      "command": "python analysis/combat_disassemble.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python analysis/combat_extra_map.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python analysis/combat_evidence.py",
+      "exitCode": 0
+    }
+  ],
+  "pythonVersion": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "sourceHashes": {
+    "work\\webdata\\Il2CppData\\Metadata\\global-metadata.dat": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+    "generated\\wasm\\wasmcode.wasm": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+    "generated\\wasm\\wasmcode1.wasm": "2c7769c7b98b69036e9e453bd3688a17c27fdd60ed606ebd729952a7156673d3"
+  },
+  "corrections": [
+    {
+      "id": "projectile-vector-and-disable",
+      "previousClaim": "Vector3 static field24 was treated as forward; Skill2 autoDisable was reported true.",
+      "correctedClaim": "Static field24 is upVector; Skill2 passes autoDisable=false but its hit callback pools the object. Bullet curve and duration now use exact source geometry.",
+      "evidence": [
+        {
+          "method": "Bullet.Init",
+          "token": 100664289,
+          "disassembly": "generated/combat-disassembly/Bullet-100664289.txt",
+          "lines": [
+            3,
+            533
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 4506,
+          "bodyOffset": 1517770,
+          "bodySize": 1134,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4167.Ohpb~x",
+          "token": 100665113,
+          "disassembly": "generated/combat-disassembly/Type4167-100665113.txt",
+          "lines": [
+            3,
+            578
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14588,
+          "bodyOffset": 7031370,
+          "bodySize": 1484,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4168.smQRO",
+          "token": 100665115,
+          "disassembly": "generated/combat-disassembly/Type4168-100665115.txt",
+          "lines": [
+            3,
+            311
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15161,
+          "bodyOffset": 7366003,
+          "bodySize": 752,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "outgoing-only-capture-cleanup",
+      "previousClaim": "ChangeCamp removes all touching lines",
+      "correctedClaim": "ChangeCamp removes outgoing directions only; incoming directions survive and bidirectional lines become incoming-only.",
+      "evidence": [
+        {
+          "method": "WayLineControl.RemoveStarAllLine",
+          "token": 100665555,
+          "disassembly": "generated/combat-disassembly/WayLineControl-100665555.txt",
+          "lines": [
+            3,
+            232
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6780,
+          "bodyOffset": 2558452,
+          "bodySize": 563,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.IsFromThisTower",
+          "token": 100665529,
+          "disassembly": "generated/combat-disassembly/WayLine-100665529.txt",
+          "lines": [
+            3,
+            46
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 3766,
+          "bodyOffset": 1190997,
+          "bodySize": 81,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.RemoveLine",
+          "token": 100665524,
+          "disassembly": "generated/combat-disassembly/WayLine-100665524.txt",
+          "lines": [
+            3,
+            81
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6776,
+          "bodyOffset": 2557510,
+          "bodySize": 195,
+          "instructionOffsetsHex": null
+        }
+      ]
+    }
+  ],
+  "enumValues": {
+    "SoldierType": [
+      {
+        "name": "None",
+        "value": 0,
+        "fieldToken": 67109164,
+        "metadataOffset": 5189706,
+        "bytes": "00"
+      },
+      {
+        "name": "Normal",
+        "value": 1,
+        "fieldToken": 67109165,
+        "metadataOffset": 5189707,
+        "bytes": "02"
+      },
+      {
+        "name": "Defense",
+        "value": 2,
+        "fieldToken": 67109166,
+        "metadataOffset": 5189708,
+        "bytes": "04"
+      },
+      {
+        "name": "Attack",
+        "value": 3,
+        "fieldToken": 67109167,
+        "metadataOffset": 5189709,
+        "bytes": "06"
+      },
+      {
+        "name": "Arrow",
+        "value": 4,
+        "fieldToken": 67109168,
+        "metadataOffset": 5189710,
+        "bytes": "08"
+      }
+    ],
+    "TowerState": [
+      {
+        "name": "Normal",
+        "value": 0,
+        "fieldToken": 67110568,
+        "metadataOffset": 5189834,
+        "bytes": "00"
+      },
+      {
+        "name": "Tree",
+        "value": 1,
+        "fieldToken": 67110569,
+        "metadataOffset": 5189835,
+        "bytes": "02"
+      },
+      {
+        "name": "Rain",
+        "value": 3,
+        "fieldToken": 67110570,
+        "metadataOffset": 5189836,
+        "bytes": "06"
+      },
+      {
+        "name": "Unlinkable",
+        "value": 4,
+        "fieldToken": 67110571,
+        "metadataOffset": 5189837,
+        "bytes": "08"
+      },
+      {
+        "name": "Undead",
+        "value": 5,
+        "fieldToken": 67110572,
+        "metadataOffset": 5189838,
+        "bytes": "0a"
+      },
+      {
+        "name": "Comm04_2",
+        "value": 6,
+        "fieldToken": 67110573,
+        "metadataOffset": 5189839,
+        "bytes": "0c"
+      }
+    ],
+    "LineState": [
+      {
+        "name": "None",
+        "value": 0,
+        "fieldToken": 67110633,
+        "metadataOffset": 5189932,
+        "bytes": "00"
+      },
+      {
+        "name": "SmallToLarge",
+        "value": 1,
+        "fieldToken": 67110634,
+        "metadataOffset": 5189933,
+        "bytes": "02"
+      },
+      {
+        "name": "LargeToSmall",
+        "value": 2,
+        "fieldToken": 67110635,
+        "metadataOffset": 5189934,
+        "bytes": "04"
+      },
+      {
+        "name": "Both",
+        "value": 3,
+        "fieldToken": 67110636,
+        "metadataOffset": 5189935,
+        "bytes": "06"
+      }
+    ],
+    "PlayStateEnum": [
+      {
+        "name": "None",
+        "value": 0,
+        "fieldToken": 67110828,
+        "metadataOffset": 5190007,
+        "bytes": "00"
+      },
+      {
+        "name": "First",
+        "value": 1,
+        "fieldToken": 67110829,
+        "metadataOffset": 5190008,
+        "bytes": "02"
+      },
+      {
+        "name": "StartUI",
+        "value": 2,
+        "fieldToken": 67110830,
+        "metadataOffset": 5190009,
+        "bytes": "04"
+      },
+      {
+        "name": "Enter",
+        "value": 3,
+        "fieldToken": 67110831,
+        "metadataOffset": 5190010,
+        "bytes": "06"
+      },
+      {
+        "name": "BeforePlay",
+        "value": 4,
+        "fieldToken": 67110832,
+        "metadataOffset": 5190011,
+        "bytes": "08"
+      },
+      {
+        "name": "StartPlay",
+        "value": 5,
+        "fieldToken": 67110833,
+        "metadataOffset": 5190012,
+        "bytes": "0a"
+      },
+      {
+        "name": "Running",
+        "value": 6,
+        "fieldToken": 67110834,
+        "metadataOffset": 5190013,
+        "bytes": "0c"
+      },
+      {
+        "name": "Pause",
+        "value": 7,
+        "fieldToken": 67110835,
+        "metadataOffset": 5190014,
+        "bytes": "0e"
+      },
+      {
+        "name": "Victory",
+        "value": 8,
+        "fieldToken": 67110836,
+        "metadataOffset": 5190015,
+        "bytes": "10"
+      },
+      {
+        "name": "Defeat",
+        "value": 9,
+        "fieldToken": 67110837,
+        "metadataOffset": 5190016,
+        "bytes": "12"
+      },
+      {
+        "name": "Again",
+        "value": 10,
+        "fieldToken": 67110838,
+        "metadataOffset": 5190017,
+        "bytes": "14"
+      },
+      {
+        "name": "Exit",
+        "value": 11,
+        "fieldToken": 67110839,
+        "metadataOffset": 5190018,
+        "bytes": "16"
+      },
+      {
+        "name": "Jump",
+        "value": 12,
+        "fieldToken": 67110840,
+        "metadataOffset": 5190019,
+        "bytes": "18"
+      },
+      {
+        "name": "EnterSmallLevel1",
+        "value": 13,
+        "fieldToken": 67110841,
+        "metadataOffset": 5190020,
+        "bytes": "1a"
+      },
+      {
+        "name": "EnterSmallLevel2",
+        "value": 14,
+        "fieldToken": 67110842,
+        "metadataOffset": 5190021,
+        "bytes": "1c"
+      },
+      {
+        "name": "Relive",
+        "value": 15,
+        "fieldToken": 67110843,
+        "metadataOffset": 5190022,
+        "bytes": "1e"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "soldier-stats",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Soldier.Init(configID,campID,originTowerID): HP=config.hp, Attack=config.attack, Occupy=config.occupy, Reinforce=config.reinforce, Voyage=config.voyage; Speed=1.0f; soldier type=config.shipType. Runtime offsets are Camp24, HP28, Attack32, Occupy36, Reinforce40, Voyage44, Speed48, origin12.",
+      "evidence": [
+        {
+          "method": "Soldier.Init",
+          "token": 100665360,
+          "disassembly": "generated/combat-disassembly/Soldier-100665360.txt",
+          "lines": [
+            22,
+            72
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7126,
+          "bodyOffset": 2709186,
+          "bodySize": 298,
+          "instructionOffsetsHex": [
+            "00295700",
+            "0029577c"
+          ]
+        },
+        "generated/tables/SoldierConfig.json"
+      ]
+    },
+    {
+      "id": "tower-basic-fields",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Tower: camp20, grade24, index28, spawnTime32, regenInterval36, IsAutoAddScore40(byte), maxScore44, score48(float), outgoingLineCount52, maxLines56, soldierType60, position68/72/76, collisionRadius80, forwarding-history list84, state88.",
+      "evidence": [
+        {
+          "method": "Tower.Init",
+          "token": 100665408,
+          "disassembly": "generated/combat-disassembly/Tower-100665408.txt",
+          "lines": [
+            3,
+            269
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15520,
+          "bodyOffset": 7494516,
+          "bodySize": 675,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.[LeOdMi",
+          "token": 100665432,
+          "disassembly": "generated/combat-disassembly/Tower-100665432.txt",
+          "lines": [
+            3,
+            68
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15513,
+          "bodyOffset": 7492353,
+          "bodySize": 162,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.get_CurLineNum",
+          "token": 100665416,
+          "disassembly": "generated/combat-disassembly/Tower-100665416.txt",
+          "lines": [
+            3,
+            7
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1454,
+          "bodyOffset": 473333,
+          "bodySize": 8,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "tower-capacity-grade",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Ordinary Tower.Init reads maximum score from DispatchConfig ID3 (65), grade thresholds from ID1/ID2 (9/29). Grade=0 when trunc(score)<=9, 1 when 9<trunc(score)<=29, 2 when trunc(score)>29. This also demotes on loss. Max outgoing lines=1/2/3 by grade. Initialization sets collisionRadius=0.1f even though layout CollisionRadius is 0.",
+      "evidence": [
+        {
+          "method": "Tower.Init",
+          "token": 100665408,
+          "disassembly": "generated/combat-disassembly/Tower-100665408.txt",
+          "lines": [
+            95,
+            148
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15520,
+          "bodyOffset": 7494516,
+          "bodySize": 675,
+          "instructionOffsetsHex": [
+            "00725c71",
+            "00725d05"
+          ]
+        },
+        {
+          "method": "Tower.CheckGradeChange",
+          "token": 100665420,
+          "disassembly": "generated/combat-disassembly/Tower-100665420.txt",
+          "lines": [
+            26,
+            73
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15522,
+          "bodyOffset": 7495272,
+          "bodySize": 492,
+          "instructionOffsetsHex": [
+            "00725eaa",
+            "00725f08"
+          ]
+        },
+        {
+          "method": "Tower.[LeOdMi",
+          "token": 100665432,
+          "disassembly": "generated/combat-disassembly/Tower-100665432.txt",
+          "lines": [
+            3,
+            68
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15513,
+          "bodyOffset": 7492353,
+          "bodySize": 162,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/DispatchConfig.json"
+      ]
+    },
+    {
+      "id": "tower-damage",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "On soldier arrival to an enemy camp, call ChangeScore(soldier.CampID, -float(soldier.Occupy), false), then Soldier.Clear(true). Attack is used against soldiers, NOT for tower score damage.",
+      "evidence": [
+        {
+          "method": "Tower.SoldierCollision",
+          "token": 100665389,
+          "disassembly": "generated/combat-disassembly/Tower-100665389.txt",
+          "lines": [
+            372,
+            408
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15514,
+          "bodyOffset": 7492517,
+          "bodySize": 1013,
+          "instructionOffsetsHex": [
+            "00725743",
+            "0072578e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tower-reinforce",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "On arrival to a same-camp non-full tower, ChangeScore(soldier.CampID,+float(soldier.Reinforce),false), then Clear(true). Full test uses trunc(score)>=maxScore. Positive results are clamped to maxScore.",
+      "evidence": [
+        {
+          "method": "Tower.SoldierCollision",
+          "token": 100665389,
+          "disassembly": "generated/combat-disassembly/Tower-100665389.txt",
+          "lines": [
+            46,
+            87
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15514,
+          "bodyOffset": 7492517,
+          "bodySize": 1013,
+          "instructionOffsetsHex": [
+            "0072542b",
+            "00725483"
+          ]
+        },
+        {
+          "method": "Tower.SoldierCollision",
+          "token": 100665389,
+          "disassembly": "generated/combat-disassembly/Tower-100665389.txt",
+          "lines": [
+            372,
+            408
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15514,
+          "bodyOffset": 7492517,
+          "bodySize": 1013,
+          "instructionOffsetsHex": [
+            "00725743",
+            "0072578e"
+          ]
+        },
+        {
+          "method": "Tower.ChangeScore",
+          "token": 100665425,
+          "disassembly": "generated/combat-disassembly/Tower-100665425.txt",
+          "lines": [
+            189,
+            205
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10056,
+          "bodyOffset": 4824314,
+          "bodySize": 676,
+          "instructionOffsetsHex": [
+            "00499ed2",
+            "00499ef4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tower-capture",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "If delta!=0, score=f32(score+delta). If score<=0 and preventCapture==false and tower is not Boss: score=-score; ChangeCamp(sourceCamp), including exact-zero capture. Otherwise score<=0 is clamped to0 without capture. Positive branch clamps to[0,maxScore]. Capture branch retains overflow magnitude without a second cap.",
+      "evidence": [
+        {
+          "method": "Tower.ChangeScore",
+          "token": 100665425,
+          "disassembly": "generated/combat-disassembly/Tower-100665425.txt",
+          "lines": [
+            31,
+            34
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10056,
+          "bodyOffset": 4824314,
+          "bodySize": 676,
+          "instructionOffsetsHex": [
+            "00499d58",
+            "00499d60"
+          ]
+        },
+        {
+          "method": "Tower.ChangeScore",
+          "token": 100665425,
+          "disassembly": "generated/combat-disassembly/Tower-100665425.txt",
+          "lines": [
+            139,
+            205
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10056,
+          "bodyOffset": 4824314,
+          "bodySize": 676,
+          "instructionOffsetsHex": [
+            "00499e63",
+            "00499ef4"
+          ]
+        },
+        {
+          "staticMemoryAddress": 3928972,
+          "encodedMetadataUsage": "0x20006bc7",
+          "decodedByvalTypeIndex": 13795,
+          "metadataTypeIndex": 4216,
+          "typeName": "Boss",
+          "metadataTypeOffset": 7795096
+        }
+      ]
+    },
+    {
+      "id": "camp-change",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "ChangeCamp first removes outgoing directions from this tower (incoming directions remain; bidirectional lines lose only this side), sets new camp, refreshes camp-specific visuals; after a real camp change clears state to Normal and refreshes global camp info. Capture/loss voice IDs2005/2006 are player-related and time-gated; Tree clear voice2018.",
+      "evidence": [
+        {
+          "method": "Tower.ChangeCamp",
+          "token": 100665375,
+          "disassembly": "generated/combat-disassembly/Tower-100665375.txt",
+          "lines": [
+            3,
+            185
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10057,
+          "bodyOffset": 4824992,
+          "bodySize": 467,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLineControl.RemoveStarAllLine",
+          "token": 100665555,
+          "disassembly": "generated/combat-disassembly/WayLineControl-100665555.txt",
+          "lines": [
+            3,
+            232
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6780,
+          "bodyOffset": 2558452,
+          "bodySize": 563,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.IsFromThisTower",
+          "token": 100665529,
+          "disassembly": "generated/combat-disassembly/WayLine-100665529.txt",
+          "lines": [
+            3,
+            46
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 3766,
+          "bodyOffset": 1190997,
+          "bodySize": 81,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.RemoveLine",
+          "token": 100665524,
+          "disassembly": "generated/combat-disassembly/WayLine-100665524.txt",
+          "lines": [
+            3,
+            81
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6776,
+          "bodyOffset": 2557510,
+          "bodySize": 195,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "full-friendly-forward",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "A full same-camp tower leaves score unchanged, decrements Voyage by1. If originTowerID==tower.IndexID OR Voyage<=0, clear soldier. Else obtain all outgoing lines, choose first line not in tower forwarding-history, add it to history and call line.AddSoldier(tower,soldier). If every outgoing line is visited, clear history and repeat enumeration. If no outgoing line, clear history and soldier. Thus round-robin follows list order; history is tower-owned, not soldier-owned.",
+      "evidence": [
+        {
+          "method": "Tower.SoldierCollision",
+          "token": 100665389,
+          "disassembly": "generated/combat-disassembly/Tower-100665389.txt",
+          "lines": [
+            88,
+            370
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15514,
+          "bodyOffset": 7492517,
+          "bodySize": 1013,
+          "instructionOffsetsHex": [
+            "00725485",
+            "00725740"
+          ]
+        },
+        {
+          "method": "WayLineControl.GetTowerAllLine",
+          "token": 100665577,
+          "disassembly": "generated/combat-disassembly/WayLineControl-100665577.txt",
+          "lines": [
+            119,
+            136
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6782,
+          "bodyOffset": 2560255,
+          "bodySize": 610,
+          "instructionOffsetsHex": [
+            "0027123c",
+            "0027126a"
+          ]
+        },
+        {
+          "tableIndex": 9521,
+          "resolvedMethod": "WayLine.AddSoldier",
+          "resolvedModule": "wasmcode",
+          "resolvedFunction": 14739
+        }
+      ]
+    },
+    {
+      "id": "regeneration",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "When camp!=0, outgoingLineCount==0, IsAutoAddScore and state!=Tree: accumulator+=dt; if accumulator>=regenInterval, delta=1*product(buff.regenMultiplier), accumulator-=regenInterval once. Calls ChangeScore(ownCamp,delta,true). No loop to catch up multiple intervals in one update. Baseline regenInterval=2 seconds. Neutral towers do not regen. Accumulator pauses rather than resets when condition is false.",
+      "evidence": [
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            112,
+            175
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": [
+            "00289fb6",
+            "0028a043"
+          ]
+        },
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            207,
+            376
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": [
+            "0028a092",
+            "0028a24f"
+          ]
+        },
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            433,
+            452
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": [
+            "0028a2d3",
+            "0028a2fe"
+          ]
+        },
+        "generated/dispatch-model.json"
+      ]
+    },
+    {
+      "id": "rain-state",
+      "status": "confirmed",
+      "scope": "Rain state; config binding confirmed by boss-skill-parameters",
+      "rule": "Rain state value3: a separate accumulator adds dt and at >=1s subtracts trunc(GameSceneControl field40) from delta, retaining 1s remainder. This shares ChangeScore(...,preventCapture=true); rain cannot transfer ownership.",
+      "evidence": [
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            378,
+            452
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": [
+            "0028a254",
+            "0028a2fe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spawn-clock",
+      "status": "confirmed",
+      "scope": "ordinary Tower virtual slot7 GetSoldierEntity and unmodified base dispatch",
+      "rule": "For each enabled direction (state1 small->large; state2 large->small; state3 both), if source.state!=Tree, compute multiplier, add dt to direction timer; spawn only when timer>source.SpawnTime/multiplier; set timer=0 (discard overshoot). Timer does not run while its direction is disabled or source is Tree. At most one batch per direction per update. Source score is not consumed in base GetSoldierEntity/AddSoldier/spawn state machine.",
+      "evidence": [
+        {
+          "method": "WayLine.y}}Rm",
+          "token": 100665496,
+          "disassembly": "generated/combat-disassembly/WayLine-100665496.txt",
+          "lines": [
+            3,
+            102
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9363,
+          "bodyOffset": 4546345,
+          "bodySize": 214,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.GetSoldierEntity",
+          "token": 100665382,
+          "disassembly": "generated/combat-disassembly/Tower-100665382.txt",
+          "lines": [
+            3,
+            32
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15521,
+          "bodyOffset": 7495192,
+          "bodySize": 78,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.AddSoldier",
+          "token": 100665513,
+          "disassembly": "generated/combat-disassembly/WayLine-100665513.txt",
+          "lines": [
+            3,
+            158
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14739,
+          "bodyOffset": 7217314,
+          "bodySize": 335,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4233.MoveNext",
+          "token": 100665536,
+          "disassembly": "generated/combat-disassembly/Type4233-100665536.txt",
+          "lines": [
+            3,
+            509
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9885,
+          "bodyOffset": 4742422,
+          "bodySize": 1237,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "spawn-multiplier",
+      "status": "confirmed",
+      "scope": "formula structure confirmed; buff and camp modifier values unresolved",
+      "rule": "Base spawn-speed multiplier1. Rain replaces base with GameSceneControl float field36. Applies camp-specific virtual modifier, then multiplies all buff f64 field8 values converted to f32. The camp modifier is CommanderBase.GetSpawnRate (vtable slot8; base identity), with Commander2Skill and Commander4Skill overrides; buff fields are TowerBuff.spawnRate.",
+      "evidence": [
+        {
+          "method": "WayLine.RvgtaV[",
+          "token": 100665532,
+          "disassembly": "generated/combat-disassembly/WayLine-100665532.txt",
+          "lines": [
+            3,
+            318
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6775,
+          "bodyOffset": 2556704,
+          "bodySize": 804,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "spawn-batches",
+      "status": "confirmed",
+      "scope": "batch mechanics; randomness source and modified soldier effect details not fully mapped",
+      "rule": "Scan source buffs for max(trunc(buff field24)) and max(trunc(buff field28)), initially0. Test Random.Next(0,100)<maxField28: if true batch3; else test Random.Next(0,100)<maxField24: if true batch2; else batch1. Async spawn loops batch times: obtain source.GetSoldierEntity via virtual slot7, AddSoldier, await configured0.2s wait. Undead5 gives generated soldier HP100000 and effect418; Comm04_2=6 attaches another EffectID. Base spawn has no score debit.",
+      "evidence": [
+        {
+          "method": "WayLine.TS^w",
+          "token": 100665500,
+          "disassembly": "generated/combat-disassembly/WayLine-100665500.txt",
+          "lines": [
+            3,
+            398
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6772,
+          "bodyOffset": 2555250,
+          "bodySize": 993,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.4876",
+          "token": 4876,
+          "disassembly": "generated/combat-disassembly/Raw-4876.txt",
+          "lines": [
+            3,
+            42
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 4876,
+          "bodyOffset": 1677106,
+          "bodySize": 105,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.QwtUp",
+          "token": 100665515,
+          "disassembly": "generated/combat-disassembly/WayLine-100665515.txt",
+          "lines": [
+            3,
+            85
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9368,
+          "bodyOffset": 4550259,
+          "bodySize": 179,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4233.MoveNext",
+          "token": 100665536,
+          "disassembly": "generated/combat-disassembly/Type4233-100665536.txt",
+          "lines": [
+            112,
+            264
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9885,
+          "bodyOffset": 4742422,
+          "bodySize": 1237,
+          "instructionOffsetsHex": [
+            "00485e23",
+            "00485fb0"
+          ]
+        },
+        {
+          "method": "WayLine..ctor",
+          "token": 100665497,
+          "disassembly": "generated/combat-disassembly/WayLine-100665497.txt",
+          "lines": [
+            39,
+            48
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9367,
+          "bodyOffset": 4550113,
+          "bodySize": 144,
+          "instructionOffsetsHex": [
+            "00456e52",
+            "00456e6d"
+          ]
+        },
+        {
+          "method": "Raw.1545",
+          "token": 1545,
+          "disassembly": "generated/combat-disassembly/Raw-1545.txt",
+          "lines": [
+            3,
+            20
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1545,
+          "bodyOffset": 483120,
+          "bodySize": 37,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "line-init-and-directions",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "WayLine holds sorted small/large tower endpoints and separate opposing soldier lists. Init computes normalized straight-line direction with magnitude epsilon1e-5 and stores distance. AddSoldier checks soldier active and source is a currently enabled line direction; otherwise clears soldier. It resets soldier start/end positions and records the destination directional list.",
+      "evidence": [
+        {
+          "method": "WayLine.Init",
+          "token": 100665495,
+          "disassembly": "generated/combat-disassembly/WayLine-100665495.txt",
+          "lines": [
+            3,
+            212
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9373,
+          "bodyOffset": 4551925,
+          "bodySize": 489,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.AddSoldier",
+          "token": 100665513,
+          "disassembly": "generated/combat-disassembly/WayLine-100665513.txt",
+          "lines": [
+            3,
+            158
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14739,
+          "bodyOffset": 7217314,
+          "bodySize": 335,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "update-order",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Active WayLine.Updata performs spawn timers, then moves all listed soldiers, then tower arrivals, then pair collisions between opposite lists. Arrival processing precedes opposite-unit combat in the same update.",
+      "evidence": [
+        {
+          "method": "WayLine.Updata",
+          "token": 100665534,
+          "disassembly": "generated/combat-disassembly/WayLine-100665534.txt",
+          "lines": [
+            3,
+            19
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14734,
+          "bodyOffset": 7214758,
+          "bodySize": 35,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.crTs",
+          "token": 100665501,
+          "disassembly": "generated/combat-disassembly/WayLine-100665501.txt",
+          "lines": [
+            3,
+            937
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9365,
+          "bodyOffset": 4547561,
+          "bodySize": 2332,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "movement-frame",
+      "status": "confirmed",
+      "scope": "base speed0.8 units/second; commander-dependent overrides",
+      "rule": "Only PlayState Running(value6) updates lines. WayLineControl computes scaledDelta=dt*ConfigMgr.gameTimeScale, movementLength=scaledDelta*ConfigMgr.shipTimeScale, movement vector=(0,0,1)*movementLength. Soldier movement along line uses magnitude of this vector times normalized direction and a camp-specific virtual modifier of Soldier.Speed (base1). ConfigMgr defaults resolve to gameTimeScale=1 and shipTimeScale=0.8 from GlobalValueConfig Content1 IDs101/102. Base CommanderBase.GetSoldierSpeed returns input unchanged. Skill overrides may change it.",
+      "evidence": [
+        {
+          "method": "WayLineControl.Updata",
+          "token": 100665573,
+          "disassembly": "generated/combat-disassembly/WayLineControl-100665573.txt",
+          "lines": [
+            33,
+            144
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14742,
+          "bodyOffset": 7218396,
+          "bodySize": 851,
+          "instructionOffsetsHex": [
+            "006e2534",
+            "006e2654"
+          ]
+        },
+        {
+          "method": "ConfigMgr.get_gameTimeScale",
+          "token": 100663651,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663651.txt",
+          "lines": [
+            3,
+            20
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 66825,
+          "bodyOffset": 21181606,
+          "bodySize": 50,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "ConfigMgr.get_shipTimeScale",
+          "token": 100663652,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663652.txt",
+          "lines": [
+            3,
+            20
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 66824,
+          "bodyOffset": 21181555,
+          "bodySize": 50,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.]xtzp",
+          "token": 100665526,
+          "disassembly": "generated/combat-disassembly/WayLine-100665526.txt",
+          "lines": [
+            3,
+            541
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9369,
+          "bodyOffset": 4550440,
+          "bodySize": 1319,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.MoveTo",
+          "token": 100665351,
+          "disassembly": "generated/combat-disassembly/Soldier-100665351.txt",
+          "lines": [
+            3,
+            103
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15868,
+          "bodyOffset": 7631734,
+          "bodySize": 246,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "arrival-boundary",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Soldier arrives if distance(current,target)<=target.CollisionRadius OR distance(current,legStart)>=distance(legStart,legEnd). Ordinary tower radius0.1f. The latter prevents missing arrival after overshoot. Forwarding resets leg start/end and distance.",
+      "evidence": [
+        {
+          "method": "Soldier.get_IsArriveStar",
+          "token": 100665348,
+          "disassembly": "generated/combat-disassembly/Soldier-100665348.txt",
+          "lines": [
+            3,
+            81
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7122,
+          "bodyOffset": 2708514,
+          "bodySize": 167,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.InitPosInfo",
+          "token": 100665337,
+          "disassembly": "generated/combat-disassembly/Soldier-100665337.txt",
+          "lines": [
+            198,
+            256
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7127,
+          "bodyOffset": 2709486,
+          "bodySize": 579,
+          "instructionOffsetsHex": [
+            "002959a6",
+            "00295a25"
+          ]
+        },
+        {
+          "method": "WayLine.crTs",
+          "token": 100665501,
+          "disassembly": "generated/combat-disassembly/WayLine-100665501.txt",
+          "lines": [
+            100,
+            172
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9365,
+          "bodyOffset": 4547561,
+          "bodySize": 2332,
+          "instructionOffsetsHex": [
+            "00456506",
+            "004565a4"
+          ]
+        },
+        {
+          "method": "Tower.Init",
+          "token": 100665408,
+          "disassembly": "generated/combat-disassembly/Tower-100665408.txt",
+          "lines": [
+            126,
+            129
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15520,
+          "bodyOffset": 7494516,
+          "bodySize": 675,
+          "instructionOffsetsHex": [
+            "00725cc1",
+            "00725ccc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movement-no-position-jitter",
+      "status": "confirmed",
+      "scope": "normal WayLine.AddSoldier positioning",
+      "rule": "WayLine movement gate function6771 is only whether either directional soldier list is nonempty. Soldier.InitPosInfo directly copies passed start/end vectors into fields60..68/72..80, calls position setter10313 with the start vector, and computes leg distance. AddSoldier passes tower positions; this path adds no random lateral offset. InitPosInfo subsequent transform changes are model scale/orientation, not logical position jitter.",
+      "evidence": [
+        {
+          "method": "WayLine.zhkzQ",
+          "token": 100665516,
+          "disassembly": "generated/combat-disassembly/WayLine-100665516.txt",
+          "lines": [
+            3,
+            38
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6771,
+          "bodyOffset": 2555163,
+          "bodySize": 85,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.InitPosInfo",
+          "token": 100665337,
+          "disassembly": "generated/combat-disassembly/Soldier-100665337.txt",
+          "lines": [
+            3,
+            262
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7127,
+          "bodyOffset": 2709486,
+          "bodySize": 579,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.g}sRim",
+          "token": 100665342,
+          "disassembly": "generated/combat-disassembly/Soldier-100665342.txt",
+          "lines": [
+            3,
+            60
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10313,
+          "bodyOffset": 4936961,
+          "bodySize": 133,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.AddSoldier",
+          "token": 100665513,
+          "disassembly": "generated/combat-disassembly/WayLine-100665513.txt",
+          "lines": [
+            3,
+            158
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14739,
+          "bodyOffset": 7217314,
+          "bodySize": 335,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "soldier-combat",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Compare opposite-direction soldiers on same WayLine with distinct camps. If distance<=ShipCollideDis, simultaneously subtract enemy Attack from each HP. Each HP<=0 is cleared; surviving HP persists. ShipCollideDis=max(movementLength,0.1f), so collision threshold adapts to frame movement. No separate attack cooldown appears in this path. One opposing pair is handled per first-list soldier per update (inner loop breaks after a hit). Same-camp soldiers pass through.",
+      "evidence": [
+        {
+          "method": "WayLine.crTs",
+          "token": 100665501,
+          "disassembly": "generated/combat-disassembly/WayLine-100665501.txt",
+          "lines": [
+            578,
+            823
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9365,
+          "bodyOffset": 4547561,
+          "bodySize": 2332,
+          "instructionOffsetsHex": [
+            "0045697a",
+            "00456bd1"
+          ]
+        },
+        {
+          "method": "WayLineControl.Updata",
+          "token": 100665573,
+          "disassembly": "generated/combat-disassembly/WayLineControl-100665573.txt",
+          "lines": [
+            129,
+            144
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14742,
+          "bodyOffset": 7218396,
+          "bodySize": 851,
+          "instructionOffsetsHex": [
+            "006e263a",
+            "006e2654"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "effects",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "Grade increases play effectID105 and voice2014; decreases still switch grade model but do not play upgrade effect. Grade representation enables only the matching model list index. Enemy score-change hit effectID104 is rate limited to elapsed>0.5 seconds. Player-related tower arrival sound2012; lethal soldier contact sound2013.",
+      "evidence": [
+        {
+          "method": "Tower.CheckGradeChange",
+          "token": 100665420,
+          "disassembly": "generated/combat-disassembly/Tower-100665420.txt",
+          "lines": [
+            3,
+            209
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15522,
+          "bodyOffset": 7495272,
+          "bodySize": 492,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.RefreshTowerGrade",
+          "token": 100665391,
+          "disassembly": "generated/combat-disassembly/Tower-100665391.txt",
+          "lines": [
+            3,
+            72
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10053,
+          "bodyOffset": 4823956,
+          "bodySize": 174,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.ChangeScore",
+          "token": 100665425,
+          "disassembly": "generated/combat-disassembly/Tower-100665425.txt",
+          "lines": [
+            35,
+            138
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10056,
+          "bodyOffset": 4824314,
+          "bodySize": 676,
+          "instructionOffsetsHex": [
+            "00499d62",
+            "00499e62"
+          ]
+        },
+        {
+          "method": "WayLine.crTs",
+          "token": 100665501,
+          "disassembly": "generated/combat-disassembly/WayLine-100665501.txt",
+          "lines": [
+            3,
+            937
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9365,
+          "bodyOffset": 4547561,
+          "bodySize": 2332,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "absolute-base-speed",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "ConfigMgr initializer token100663684 reads dictionary field116 (dicGlobalValue), ID101.Content1 parsed float to static fields8(gameTimeScale) and4(base scale); ID102.Content1 parsed float to static12(shipTimeScale). Cached values are1 and0.8, respectively. CommanderBase virtual slots8(GetSpawnRate) and9(GetSoldierSpeed) return input unchanged. Hence unmodified baseline unit speed0.8 world units/s; collision threshold=max(dt*1*0.8,0.1).",
+      "evidence": [
+        {
+          "method": "ConfigMgr.gbStei",
+          "token": 100663684,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663684.txt",
+          "lines": [
+            23,
+            122
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 12780,
+          "bodyOffset": 6155508,
+          "bodySize": 1062,
+          "instructionOffsetsHex": [
+            "005ded32",
+            "005dee53"
+          ]
+        },
+        {
+          "method": "ConfigMgr.get_gameTimeScale",
+          "token": 100663651,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663651.txt",
+          "lines": [
+            3,
+            20
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 66825,
+          "bodyOffset": 21181606,
+          "bodySize": 50,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "ConfigMgr.get_shipTimeScale",
+          "token": 100663652,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663652.txt",
+          "lines": [
+            3,
+            20
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 66824,
+          "bodyOffset": 21181555,
+          "bodySize": 50,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.GetSpawnRate",
+          "token": 100665065,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665065.txt",
+          "lines": [
+            3,
+            6
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7866,
+          "bodyOffset": 3765195,
+          "bodySize": 5,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.GetSoldierSpeed",
+          "token": 100665066,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665066.txt",
+          "lines": [
+            3,
+            6
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7866,
+          "bodyOffset": 3765195,
+          "bodySize": 5,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/GlobalValueConfig.json"
+      ]
+    },
+    {
+      "id": "tower-buff-fields",
+      "status": "confirmed",
+      "scope": "ordinary towers and unmodified soldiers",
+      "rule": "TowerBuff constructor assigns spawnRate=f64 offset8, riseRate=f64 offset16, spawnX2=f32 offset24 from integer argument, spawnX3=f32 offset28 from integer argument. Spawn-rate and rise-rate stack multiplicatively; X2/X3 chance thresholds take maximum across buffs, and X3 is tested before X2.",
+      "evidence": [
+        {
+          "method": "TowerBuff..ctor",
+          "token": 100664234,
+          "disassembly": "generated/combat-disassembly/TowerBuff-100664234.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 44849,
+          "bodyOffset": 16014353,
+          "bodySize": 62,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.TS^w",
+          "token": 100665500,
+          "disassembly": "generated/combat-disassembly/WayLine-100665500.txt",
+          "lines": [
+            3,
+            398
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6772,
+          "bodyOffset": 2555250,
+          "bodySize": 993,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.RvgtaV[",
+          "token": 100665532,
+          "disassembly": "generated/combat-disassembly/WayLine-100665532.txt",
+          "lines": [
+            3,
+            318
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6775,
+          "bodyOffset": 2556704,
+          "bodySize": 804,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            3,
+            499
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "arrow-basic",
+      "status": "confirmed",
+      "scope": "ArrowTower behavior; ShipID4 routing must be cross-checked in LevelControl factory",
+      "rule": "ArrowTower denies outgoing lines (get_IsCanAddLine always false). Update runs Tower.Update and then arrow targeting timer. Timer resets0 when elapsed>attackRate[grade], even if no target. SettingConfig defines attackRate=[1.8,1.3,0.8], attackRegion=[0.7,1,1.4], visual regionBaseScale0.44. Target search first requests one enemy soldier, then one enemy tower only when no soldier found, using grade range and minimum distance0.2.",
+      "evidence": [
+        {
+          "method": "Type4211.get_IsCanAddLine",
+          "token": 100665255,
+          "disassembly": "generated/combat-disassembly/Type4211-100665255.txt",
+          "lines": [
+            3,
+            6
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 972,
+          "bodyOffset": 375421,
+          "bodySize": 5,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4211.Update",
+          "token": 100665260,
+          "disassembly": "generated/combat-disassembly/Type4211-100665260.txt",
+          "lines": [
+            3,
+            13
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20698,
+          "bodyOffset": 9284611,
+          "bodySize": 22,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4211.}Milvo[",
+          "token": 100665259,
+          "disassembly": "generated/combat-disassembly/Type4211-100665259.txt",
+          "lines": [
+            3,
+            261
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13201,
+          "bodyOffset": 6332927,
+          "bodySize": 696,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4211..cctor",
+          "token": 100665252,
+          "disassembly": "generated/combat-disassembly/Type4211-100665252.txt",
+          "lines": [
+            3,
+            175
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20697,
+          "bodyOffset": 9284073,
+          "bodySize": 537,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/SettingConfig.json"
+      ]
+    },
+    {
+      "id": "arrow-hit",
+      "status": "confirmed",
+      "scope": "callbacks and duration arguments confirmed; helper3531/1459 exact engine method names not resolved",
+      "rule": "Projectile helper receives duration0.2f and an on-completion callback. Soldier hit callback directly calls ClearInSkill (kills regardless of HP), then hides and returns projectile to pool. Tower callback calls target.ChangeScore(source.currentCamp,-1,true): cannot capture a normal tower, only reduce to0. Source camp is read at callback time.",
+      "evidence": [
+        {
+          "method": "Type4207.MMS",
+          "token": 100665263,
+          "disassembly": "generated/combat-disassembly/Type4207-100665263.txt",
+          "lines": [
+            138,
+            159
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14057,
+          "bodyOffset": 6945513,
+          "bodySize": 420,
+          "instructionOffsetsHex": [
+            "0069fc44",
+            "0069fc80"
+          ]
+        },
+        {
+          "method": "Type4208.o^YxTW",
+          "token": 100665265,
+          "disassembly": "generated/combat-disassembly/Type4208-100665265.txt",
+          "lines": [
+            3,
+            35
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15163,
+          "bodyOffset": 7367163,
+          "bodySize": 92,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4209.gsfZuT",
+          "token": 100665267,
+          "disassembly": "generated/combat-disassembly/Type4209-100665267.txt",
+          "lines": [
+            116,
+            137
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15588,
+          "bodyOffset": 7515837,
+          "bodySize": 371,
+          "instructionOffsetsHex": [
+            "0072afe8",
+            "0072b024"
+          ]
+        },
+        {
+          "method": "Type4210.QggYyv",
+          "token": 100665269,
+          "disassembly": "generated/combat-disassembly/Type4210-100665269.txt",
+          "lines": [
+            3,
+            60
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15172,
+          "bodyOffset": 7370015,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "skill-config-binding",
+      "status": "confirmed",
+      "scope": "all commander skills",
+      "rule": "CommanderBase.Upgrade reads CommanderConfig.skills in order; per-skill level from CommanderData.skills[i].level. SkillConfig key=skillID*100+level. Sets skill.cdTime32=float(duration), skillCamp12=commander.camp16, no8=i, args36=float[3]{data1,data2,data3}, targetType24=AllSkillConfig.targetType. SkillBase.Execute starts timer0 and inSkill16=true only if not already active. Updata calls SkillInUpdate1 always; active skills increment timer, invoke SkillInUpdate2(dt), then when timer>=duration reset timer/inSkill, invoke completion callback, and SkillEnd. Duration is active lifetime, not an inferred separate cooldown.",
+      "evidence": [
+        {
+          "method": "CommanderBase.Upgrade",
+          "token": 100665055,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665055.txt",
+          "lines": [
+            3,
+            191
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8119,
+          "bodyOffset": 3848361,
+          "bodySize": 486,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "SkillBase.Init",
+          "token": 100665074,
+          "disassembly": "generated/combat-disassembly/SkillBase-100665074.txt",
+          "lines": [
+            3,
+            19
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 48053,
+          "bodyOffset": 16860226,
+          "bodySize": 37,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "SkillBase.Execute",
+          "token": 100665075,
+          "disassembly": "generated/combat-disassembly/SkillBase-100665075.txt",
+          "lines": [
+            3,
+            15
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 11537,
+          "bodyOffset": 4140421,
+          "bodySize": 25,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "SkillBase.Updata",
+          "token": 100665078,
+          "disassembly": "generated/combat-disassembly/SkillBase-100665078.txt",
+          "lines": [
+            3,
+            123
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10353,
+          "bodyOffset": 4965941,
+          "bodySize": 287,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/CommanderConfig.json",
+        "generated/tables/SkillConfig.json",
+        "generated/tables/AllSkillConfig.json"
+      ]
+    },
+    {
+      "id": "commander2-speed",
+      "status": "confirmed",
+      "scope": "Commander2 skills4/5",
+      "rule": "Commander2.GetSpawnRate: for queried camp==commander.camp use skills[0] (skill4), otherwise skills[1] (skill5). If selected skill.inSkill, multiply input by args[0]; otherwise identity. Thus skill4 modifies own camp dispatch, skill5 modifies every other camp. Both Execute methods use base active timer semantics.",
+      "evidence": [
+        {
+          "method": "Type4176.GetSpawnRate",
+          "token": 100665126,
+          "disassembly": "generated/combat-disassembly/Type4176-100665126.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20208,
+          "bodyOffset": 9072715,
+          "bodySize": 153,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4176.jbOiMS",
+          "token": 100665127,
+          "disassembly": "generated/combat-disassembly/Type4176-100665127.txt",
+          "lines": [
+            3,
+            76
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20207,
+          "bodyOffset": 9072504,
+          "bodySize": 209,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4173.Execute",
+          "token": 100665128,
+          "disassembly": "generated/combat-disassembly/Type4173-100665128.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15168,
+          "bodyOffset": 7368850,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4174.Execute",
+          "token": 100665132,
+          "disassembly": "generated/combat-disassembly/Type4174-100665132.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15156,
+          "bodyOffset": 7364246,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander2-reinforce",
+      "status": "confirmed",
+      "scope": "Commander2 skill6",
+      "rule": "Skill6 Execute reads selected target from SkillControl.TargetTower for player skillCamp1; when target exists calls its virtual ChangeScore(LevelControl.PlayerCampID,+trunc(args[0]),true), clears target reference, plays voice4501. This adds score and respects target maxScore; it cannot capture. Target eligibility is delegated to SkillControl.",
+      "evidence": [
+        {
+          "method": "Type4175.Execute",
+          "token": 100665134,
+          "disassembly": "generated/combat-disassembly/Type4175-100665134.txt",
+          "lines": [
+            3,
+            116
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14258,
+          "bodyOffset": 7020334,
+          "bodySize": 293,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4175.IsEffective",
+          "token": 100665135,
+          "disassembly": "generated/combat-disassembly/Type4175-100665135.txt",
+          "lines": [
+            3,
+            22
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14257,
+          "bodyOffset": 7020279,
+          "bodySize": 53,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander4-speed",
+      "status": "confirmed",
+      "scope": "Commander4 skill11",
+      "rule": "Commander4.GetSpawnRate and GetSoldierSpeed apply only for queried camp==commander.camp and skills[1] (skill11) active. Spawn rate multiplies args[1]; soldier speed multiplies args[0]. When inactive/othercamp both are identity. Skill11.Execute sets all current player-camp towers to state6 (Comm04_2); SkillEnd resets all current player-camp tower states to0 unconditionally. Execute attaches effect420 to selected existing soldier effect holders using helper9548; -9999 is an effect duration/argument, NOT damage. Helper resolves wasmcode7935 and invokes GameModule.get_Effect, never ChangeScore/HP mutation.",
+      "evidence": [
+        {
+          "method": "Type4192.jbOiMS",
+          "token": 100665158,
+          "disassembly": "generated/combat-disassembly/Type4192-100665158.txt",
+          "lines": [
+            3,
+            74
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20203,
+          "bodyOffset": 9071879,
+          "bodySize": 204,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.GetSpawnRate",
+          "token": 100665159,
+          "disassembly": "generated/combat-disassembly/Type4192-100665159.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20204,
+          "bodyOffset": 9072084,
+          "bodySize": 110,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.GetSoldierSpeed",
+          "token": 100665161,
+          "disassembly": "generated/combat-disassembly/Type4192-100665161.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20205,
+          "bodyOffset": 9072195,
+          "bodySize": 110,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4189.Execute",
+          "token": 100665184,
+          "disassembly": "generated/combat-disassembly/Type4189-100665184.txt",
+          "lines": [
+            3,
+            460
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15189,
+          "bodyOffset": 7374916,
+          "bodySize": 1164,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4189.SkillEnd",
+          "token": 100665185,
+          "disassembly": "generated/combat-disassembly/Type4189-100665185.txt",
+          "lines": [
+            3,
+            207
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15188,
+          "bodyOffset": 7374398,
+          "bodySize": 516,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.7935",
+          "token": 7935,
+          "disassembly": "generated/combat-disassembly/Raw-7935.txt",
+          "lines": [
+            3,
+            113
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7935,
+          "bodyOffset": 3786846,
+          "bodySize": 275,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "EffectID..cctor",
+          "token": 100664494,
+          "disassembly": "generated/combat-disassembly/EffectID-100664494.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 64169,
+          "bodyOffset": 20475147,
+          "bodySize": 86,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander4-dot",
+      "status": "confirmed",
+      "scope": "Commander4 skill12 damage kernel",
+      "rule": "Skill12 active SkillInUpdate2 adds dt to its own damage timer; at >=1 second subtracts1 once and invokes selectedTarget.ChangeScore(skillCamp,-trunc(args[0]),true). No catch-up loop. SkillEnd nulls target and zeroes damage timer. Execute coroutine binds selected target and starts the base skill timer; targeting/visual travel details remain partial.",
+      "evidence": [
+        {
+          "method": "Type4191.SkillInUpdate2",
+          "token": 100665189,
+          "disassembly": "generated/combat-disassembly/Type4191-100665189.txt",
+          "lines": [
+            3,
+            68
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17913,
+          "bodyOffset": 7964461,
+          "bodySize": 151,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4191.SkillEnd",
+          "token": 100665191,
+          "disassembly": "generated/combat-disassembly/Type4191-100665191.txt",
+          "lines": [
+            3,
+            16
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17914,
+          "bodyOffset": 7964613,
+          "bodySize": 27,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4190.MoveNext",
+          "token": 100665194,
+          "disassembly": "generated/combat-disassembly/Type4190-100665194.txt",
+          "lines": [
+            3,
+            1148
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10983,
+          "bodyOffset": 5318292,
+          "bodySize": 2914,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander1-freeze",
+      "status": "confirmed",
+      "scope": "Commander1 skill1",
+      "rule": "Skill1 Execute iterates active non-neutral towers of a different camp, invokes tower virtual effect slot26 with6/cdTime and sets state1(Tree); removes all enemy soldiers via WayLineControl.RemoveAllEnemySoldier. Tree pauses generation and regen. SkillEnd clears state toNormal only on currently active different-camp towers whose current state isTree. Current ownership/state are checked at end, not a stored affected list.",
+      "evidence": [
+        {
+          "method": "Type4166.Execute",
+          "token": 100665106,
+          "disassembly": "generated/combat-disassembly/Type4166-100665106.txt",
+          "lines": [
+            3,
+            287
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13678,
+          "bodyOffset": 6597437,
+          "bodySize": 725,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4166.SkillEnd",
+          "token": 100665107,
+          "disassembly": "generated/combat-disassembly/Type4166-100665107.txt",
+          "lines": [
+            3,
+            259
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13677,
+          "bodyOffset": 6596808,
+          "bodySize": 627,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            3,
+            499
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.y}}Rm",
+          "token": 100665496,
+          "disassembly": "generated/combat-disassembly/WayLine-100665496.txt",
+          "lines": [
+            3,
+            102
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9363,
+          "bodyOffset": 4546345,
+          "bodySize": 214,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander1-direct-damage",
+      "status": "confirmed",
+      "scope": "Commander1 skill3 damage kernel; target selection elsewhere",
+      "rule": "Skill3 selected-target strike calls ChangeScore(LevelControl.PlayerCampID,-trunc(args[0]),true), plays effect413 and voice4401. Damage cannot capture. The selected target field is44.",
+      "evidence": [
+        {
+          "method": "Type4171.Execute",
+          "token": 100665124,
+          "disassembly": "generated/combat-disassembly/Type4171-100665124.txt",
+          "lines": [
+            268,
+            372
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14822,
+          "bodyOffset": 7238296,
+          "bodySize": 1058,
+          "instructionOffsetsHex": [
+            "006e756d",
+            "006e765d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boss-init-and-soldier",
+      "status": "confirmed",
+      "scope": "Boss runtime; layout factory selection not inferred from isBoss alone",
+      "rule": "Boss.Init reads CampConfig[camp].bossModelId to field256 and bossSoldierId to field184. Camp5..9 map model801..805 and soldier11..15. Boss maxScore44=trunc(initial StarInfo.Score), radius80=0.15f, autoRegen40=false; it retains ordinary grade thresholds and resets timers/state. Boss.GetSoldierEntity initializes a pooled Soldier using field184,camp,index. ChangeScore calls base with preventCapture=false but base explicitly recognizes Boss and clamps score<=0 to0 without ownership change; then publishes score notification.",
+      "evidence": [
+        {
+          "method": "Boss.Init",
+          "token": 100665274,
+          "disassembly": "generated/combat-disassembly/Boss-100665274.txt",
+          "lines": [
+            111,
+            329
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 68533,
+          "bodyOffset": 21681766,
+          "bodySize": 2045,
+          "instructionOffsetsHex": [
+            "014ad7c0",
+            "014ad9fc"
+          ]
+        },
+        {
+          "method": "Boss.GetSoldierEntity",
+          "token": 100665278,
+          "disassembly": "generated/combat-disassembly/Boss-100665278.txt",
+          "lines": [
+            3,
+            35
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 68534,
+          "bodyOffset": 21683812,
+          "bodySize": 91,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Boss.ChangeScore",
+          "token": 100665286,
+          "disassembly": "generated/combat-disassembly/Boss-100665286.txt",
+          "lines": [
+            3,
+            14
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 68536,
+          "bodyOffset": 21684293,
+          "bodySize": 27,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Boss.k[nm|}c",
+          "token": 100665277,
+          "disassembly": "generated/combat-disassembly/Boss-100665277.txt",
+          "lines": [
+            3,
+            81
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31304,
+          "bodyOffset": 12095224,
+          "bodySize": 205,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.ChangeScore",
+          "token": 100665425,
+          "disassembly": "generated/combat-disassembly/Tower-100665425.txt",
+          "lines": [
+            3,
+            272
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10056,
+          "bodyOffset": 4824314,
+          "bodySize": 676,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/CampConfig.json"
+      ]
+    },
+    {
+      "id": "boss-skill-parameters",
+      "status": "confirmed",
+      "scope": "Boss config binding",
+      "rule": "Boss.InitSkillData(actionID) reads BossConfig[actionID]: fields260/264/268/272=skill1_Hit/duration/first/second; fields276/280/284/288=skill2_Hit/duration/first/second. For initial camp6 only, writes GameSceneControl.rainSpawnMultiplier36=skill1_first and rainDamage40=skill1_Hit. Rain values therefore come from the active boss action config, not global guessed constants.",
+      "evidence": [
+        {
+          "method": "Boss.InitSkillData",
+          "token": 100665280,
+          "disassembly": "generated/combat-disassembly/Boss-100665280.txt",
+          "lines": [
+            3,
+            122
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31311,
+          "bodyOffset": 12096032,
+          "bodySize": 313,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/BossConfig.json"
+      ]
+    },
+    {
+      "id": "boss-rain-area",
+      "status": "confirmed",
+      "scope": "Boss rain update kernel; center and scheduling documented separately",
+      "rule": "While Boss field224 rainActive, Boss.Update adds dt to scanTimer248; when scanTimer>0.5 subtracts0.5 once and enumerates active towers. Only current player-camp or neutral towers qualify. If distance(tower transform position, rainCenter fields228..236)<skill1_second(field272), sets state3 Rain. Separately durationTimer220+=dt; when durationTimer>skill1_duration264, ends visual/audio rain, resets timers/active flag and sets EVERY current player-camp or neutral tower stateNormal. Out-of-radius towers are not cleared on each scan; cleanup occurs at the rain end.",
+      "evidence": [
+        {
+          "method": "Boss.Update",
+          "token": 100665287,
+          "disassembly": "generated/combat-disassembly/Boss-100665287.txt",
+          "lines": [
+            54,
+            562
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 68529,
+          "bodyOffset": 21679577,
+          "bodySize": 1682,
+          "instructionOffsetsHex": [
+            "014ace6c",
+            "014ad36e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boss-action-dispatch",
+      "status": "confirmed",
+      "scope": "BossUseSkill API; higher-level schedule is separate",
+      "rule": "BossUseSkill(action): first stops any stored running coroutine. action1 starts Type4212 strike, action2 starts Type4214 projectile volley, action5 calls Boss3UseSkill1 (rain), action6 starts Type4215 strike. Values3/4 and values outside1..6 have no branch after stopping the prior coroutine.",
+      "evidence": [
+        {
+          "method": "Boss.BossUseSkill",
+          "token": 100665284,
+          "disassembly": "generated/combat-disassembly/Boss-100665284.txt",
+          "lines": [
+            3,
+            73
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31312,
+          "bodyOffset": 12096347,
+          "bodySize": 178,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Boss.TzwiWf",
+          "token": 100665279,
+          "disassembly": "generated/combat-disassembly/Boss-100665279.txt",
+          "lines": [
+            3,
+            28
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31309,
+          "bodyOffset": 12095926,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Boss.cY~yM",
+          "token": 100665273,
+          "disassembly": "generated/combat-disassembly/Boss-100665273.txt",
+          "lines": [
+            3,
+            28
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31305,
+          "bodyOffset": 12095430,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Boss.VfYvc",
+          "token": 100665285,
+          "disassembly": "generated/combat-disassembly/Boss-100665285.txt",
+          "lines": [
+            3,
+            28
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31307,
+          "bodyOffset": 12095600,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "boss-single-strikes",
+      "status": "confirmed",
+      "scope": "Boss actions1/6",
+      "rule": "Action1 and6 play cast animation then yield UnityEngine.WaitForSeconds(1). On resume rebuild a list of active current player-camp towers, select one via RandomHelper-backed generic helper2673/10954, and apply ChangeScore(target.currentCamp,-hit,true). Action1 uses skill1_Hit260 and effect311 (position+up*0.3); action6 uses skill2_Hit276 and effect303. Both damage without capture. Selection has no explicit empty-list guard in these functions.",
+      "evidence": [
+        {
+          "method": "Type4212.MoveNext",
+          "token": 100665291,
+          "disassembly": "generated/combat-disassembly/Type4212-100665291.txt",
+          "lines": [
+            3,
+            527
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 46042,
+          "bodyOffset": 16368270,
+          "bodySize": 1386,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4215.MoveNext",
+          "token": 100665305,
+          "disassembly": "generated/combat-disassembly/Type4215-100665305.txt",
+          "lines": [
+            3,
+            485
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42687,
+          "bodyOffset": 15365148,
+          "bodySize": 1276,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.2673",
+          "token": 2673,
+          "disassembly": "generated/combat-disassembly/Raw-2673.txt",
+          "lines": [
+            3,
+            25
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 2673,
+          "bodyOffset": 835777,
+          "bodySize": 44,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.10954",
+          "token": 10954,
+          "disassembly": "generated/combat-disassembly/Raw-10954.txt",
+          "lines": [
+            3,
+            99
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10954,
+          "bodyOffset": 5306491,
+          "bodySize": 225,
+          "instructionOffsetsHex": null
+        },
+        {
+          "staticMemoryAddress": 3941920,
+          "encodedMetadataUsage": "0x2000bbb7",
+          "metadataTypeIndex": 6854,
+          "typeName": "UnityEngine.WaitForSeconds"
+        },
+        {
+          "staticMemoryAddress": 3937580,
+          "encodedMetadataUsage": "0x20009fb1",
+          "metadataTypeIndex": 3391,
+          "typeName": "GameFramework.RandomHelper"
+        }
+      ]
+    },
+    {
+      "id": "boss-rain-center",
+      "status": "confirmed",
+      "scope": "Boss action5",
+      "rule": "Action5 Boss3UseSkill1 resets scan/duration timers to0, chooses one tower from LevelControl.GetCampAllTower(PlayerCampID) through helper2673/10954, copies its transform position into rainCenter228..236, sets rainActive224=true and enables rain visual. Plays voice3310. The affected region is later evaluated by boss-rain-area.",
+      "evidence": [
+        {
+          "method": "Boss.Boss3UseSkill1",
+          "token": 100665275,
+          "disassembly": "generated/combat-disassembly/Boss-100665275.txt",
+          "lines": [
+            3,
+            212
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31313,
+          "bodyOffset": 12096527,
+          "bodySize": 558,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.2673",
+          "token": 2673,
+          "disassembly": "generated/combat-disassembly/Raw-2673.txt",
+          "lines": [
+            3,
+            25
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 2673,
+          "bodyOffset": 835777,
+          "bodySize": 44,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.10954",
+          "token": 10954,
+          "disassembly": "generated/combat-disassembly/Raw-10954.txt",
+          "lines": [
+            3,
+            99
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10954,
+          "bodyOffset": 5306491,
+          "bodySize": 225,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "boss-projectile-volley",
+      "status": "confirmed",
+      "scope": "Boss action2; motion helper exact engine name unresolved",
+      "rule": "Action2: cast animation, WaitForSeconds(1), then for integer i=0 while float(i)<skill2_first284: rebuild candidate list of all active non-Boss towers (all camps); select random target; launch pooled projectile from boss fields208..216 to target. Movement helper receives arc-height0.5 and duration=distance/2. Yield WaitForSeconds(skill2_duration280/skill2_first284) between launches. Callback rechecks target current camp: if camp==5, ChangeScore(5,+skill2_Hit276,true), effect404; otherwise ChangeScore(target.currentCamp,-skill2_Hit276,true), effect408. This can heal camp5 towers and harm any other camp, always without capture.",
+      "evidence": [
+        {
+          "method": "Type4214.MoveNext",
+          "token": 100665299,
+          "disassembly": "generated/combat-disassembly/Type4214-100665299.txt",
+          "lines": [
+            3,
+            736
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 40243,
+          "bodyOffset": 14772544,
+          "bodySize": 1901,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4213.Wc]Q^",
+          "token": 100665296,
+          "disassembly": "generated/combat-disassembly/Type4213-100665296.txt",
+          "lines": [
+            3,
+            264
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42662,
+          "bodyOffset": 15359025,
+          "bodySize": 669,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.2673",
+          "token": 2673,
+          "disassembly": "generated/combat-disassembly/Raw-2673.txt",
+          "lines": [
+            3,
+            25
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 2673,
+          "bodyOffset": 835777,
+          "bodySize": 44,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.10954",
+          "token": 10954,
+          "disassembly": "generated/combat-disassembly/Raw-10954.txt",
+          "lines": [
+            3,
+            99
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10954,
+          "bodyOffset": 5306491,
+          "bodySize": 225,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "buff-lifecycle-stubs",
+      "status": "confirmed",
+      "scope": "negative static evidence only; does not assert buffs absent at runtime",
+      "rule": "Tower.InitBuff and BuffControl.Updata bodies are nop; they do not initialize or tick a buff in this build. Existing nonempty buff containers still affect the confirmed generation/regen formulas. No caller for the non-default TowerBuff constructor was identified by direct-call/table-index scan; this alone does not prove all buff containers remain empty, because inlined or generic creation may exist.",
+      "evidence": [
+        {
+          "method": "Tower.InitBuff",
+          "token": 100665388,
+          "disassembly": "generated/combat-disassembly/Tower-100665388.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 913,
+          "bodyOffset": 362854,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "BuffControl.Updata",
+          "token": 100664232,
+          "disassembly": "generated/combat-disassembly/BuffControl-100664232.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1636,
+          "bodyOffset": 536980,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "TowerBuff..ctor",
+          "token": 100664234,
+          "disassembly": "generated/combat-disassembly/TowerBuff-100664234.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 44849,
+          "bodyOffset": 16014353,
+          "bodySize": 62,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "boss-schedule-creation",
+      "status": "confirmed",
+      "scope": "serialized layout initialization; pre-init layout mutation must be considered separately",
+      "rule": "AICampController.InitInfo first creates ordinary AICamp entries from non-neutral non-player CampInfoCfgs; then separately iterates StarInfoCfgs. Only Star.isBoss(byte56) creates/activates BossActionEntity using Star.CampID44 and Star.bossSkillId60, and calls current Boss.InitSkillData(bossSkillId). CampInfoCfgs.BossActionId is not read by this path. AICampController.Updata ticks the stored BossActionEntity only when ActiveUpdate and PlayState.Running6.",
+      "evidence": [
+        {
+          "method": "AICampController.InitInfo",
+          "token": 100664055,
+          "disassembly": "generated/combat-disassembly/AICampController-100664055.txt",
+          "lines": [
+            3,
+            150
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13412,
+          "bodyOffset": 6493403,
+          "bodySize": 342,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "AICampController.Updata",
+          "token": 100664046,
+          "disassembly": "generated/combat-disassembly/AICampController-100664046.txt",
+          "lines": [
+            3,
+            254
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 21040,
+          "bodyOffset": 9492414,
+          "bodySize": 612,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "boss-schedule-clock",
+      "status": "confirmed",
+      "scope": "BossActionEntity exact timer semantics",
+      "rule": "BossActionEntity.Init stores camp16,configID12,active8=true, delay20=BossConfig.DelayTime/1000, countdown24=0. Each Update: if delay>0 subtract dt and RETURN (overshoot is discarded); otherwise countdown-=dt. Only when countdown<0 (strict) add one GetBossActionTime interval and invoke AICampController.BossUseSkill(camp,configID). Thus first action occurs the frame after delay reaches/crosses0; each update emits at most one action and interval overshoot is retained. GetBossActionTime selects ActionTime[index]/1000; missing config/list returns float.MaxValue. Existing config rows have one-element ActionTime arrays.",
+      "evidence": [
+        {
+          "method": "BossActionEntity.Update",
+          "token": 100664061,
+          "disassembly": "generated/combat-disassembly/BossActionEntity-100664061.txt",
+          "lines": [
+            3,
+            69
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31314,
+          "bodyOffset": 12097087,
+          "bodySize": 162,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "BossActionEntity.Init",
+          "token": 100664063,
+          "disassembly": "generated/combat-disassembly/BossActionEntity-100664063.txt",
+          "lines": [
+            3,
+            26
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 31315,
+          "bodyOffset": 12097250,
+          "bodySize": 58,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "ConfigMgr.GetBossDelayTime",
+          "token": 100663653,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663653.txt",
+          "lines": [
+            3,
+            25
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 30617,
+          "bodyOffset": 11711061,
+          "bodySize": 50,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "ConfigMgr.GetBossActionTime",
+          "token": 100663680,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663680.txt",
+          "lines": [
+            3,
+            65
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 30619,
+          "bodyOffset": 11711522,
+          "bodySize": 149,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/BossConfig.json"
+      ]
+    },
+    {
+      "id": "boss-weighted-action",
+      "status": "confirmed",
+      "scope": "Boss weighted action decision",
+      "rule": "ConfigMgr.GetBossAction(configID,trunc(boss.score),boss.maxScore) evaluates each pair Skill1/Skill2=[minimumHpPercent,weight]. Include pair if currentHp>=minimumHpPercent*(maxHp/100f), add weight to cumulative list, then sample RandomHelper.Random(0,totalWeight) and choose first cumulative>sample. Return skill slot1/2, or0 if none. Weight0 contributes no selectable interval. AICampController maps slots to actions: camp5→1/2, camp7→3/4, camp6→5/6, camp8→7/8,camp9→9/10. It acts on the current active Boss reference LevelControl+60; absent/inactive boss returns.",
+      "evidence": [
+        {
+          "method": "ConfigMgr.GetBossAction",
+          "token": 100663641,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663641.txt",
+          "lines": [
+            3,
+            153
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 30618,
+          "bodyOffset": 11711113,
+          "bodySize": 407,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "ConfigMgr.kjSg{|",
+          "token": 100663648,
+          "disassembly": "generated/combat-disassembly/ConfigMgr-100663648.txt",
+          "lines": [
+            3,
+            156
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 14399,
+          "bodyOffset": 5038546,
+          "bodySize": 404,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "AICampController.BossUseSkill",
+          "token": 100664056,
+          "disassembly": "generated/combat-disassembly/AICampController-100664056.txt",
+          "lines": [
+            3,
+            151
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 32361,
+          "bodyOffset": 12455269,
+          "bodySize": 343,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander1-fireball",
+      "status": "confirmed",
+      "scope": "Commander1 skill2",
+      "rule": "Skill2 coroutine launches ceil(args[0]) balls (integer i while i<args0) at cdTime/args0 intervals while active. Every ball rebuilds a list of all active towers (all camps), picks one via RandomHelper, then Bullet.Init with arc1.5, end=target position+up*0.2, and duration=distance(origin,UNOFFSET target position)/10+0.3. On hit, compare target CURRENT camp to skillCamp: friendly adds trunc(args[2]), otherwise subtracts trunc(args[1]); ChangeScore uses target.currentCamp and preventCapture=true. It cannot capture. First-level config201 duration5,args[10,2,2].",
+      "evidence": [
+        {
+          "method": "Type4169.MoveNext",
+          "token": 100665118,
+          "disassembly": "generated/combat-disassembly/Type4169-100665118.txt",
+          "lines": [
+            3,
+            305
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15173,
+          "bodyOffset": 7370171,
+          "bodySize": 762,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4167.Ohpb~x",
+          "token": 100665113,
+          "disassembly": "generated/combat-disassembly/Type4167-100665113.txt",
+          "lines": [
+            3,
+            578
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14588,
+          "bodyOffset": 7031370,
+          "bodySize": 1484,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4168.smQRO",
+          "token": 100665115,
+          "disassembly": "generated/combat-disassembly/Type4168-100665115.txt",
+          "lines": [
+            3,
+            311
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15161,
+          "bodyOffset": 7366003,
+          "bodySize": 752,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/SkillConfig.json"
+      ]
+    },
+    {
+      "id": "commander3-undead",
+      "status": "confirmed",
+      "scope": "Commander3 skill8",
+      "rule": "Skill8 Execute sets existing same-camp soldiers HP=10000 and effect418; sets current player-camp towers state5 Undead, causing newly generated soldiers HP=100000 via spawn state machine. These are large finite HP values, not an invulnerability flag. SkillEnd sets affected same-camp soldiers HP back to SoldierConfig.hp (full baseline HP), removes effect418, and resets current player-camp tower states toNormal.",
+      "evidence": [
+        {
+          "method": "Type4180.Execute",
+          "token": 100665149,
+          "disassembly": "generated/combat-disassembly/Type4180-100665149.txt",
+          "lines": [
+            3,
+            448
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14241,
+          "bodyOffset": 7012531,
+          "bodySize": 1137,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4180.SkillEnd",
+          "token": 100665150,
+          "disassembly": "generated/combat-disassembly/Type4180-100665150.txt",
+          "lines": [
+            3,
+            473
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14240,
+          "bodyOffset": 7011341,
+          "bodySize": 1188,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4233.MoveNext",
+          "token": 100665536,
+          "disassembly": "generated/combat-disassembly/Type4233-100665536.txt",
+          "lines": [
+            3,
+            509
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9885,
+          "bodyOffset": 4742422,
+          "bodySize": 1237,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander5-inspiration",
+      "status": "confirmed",
+      "scope": "Commander5 skill13",
+      "rule": "Skill13 Execute subscribes Event.SoldierInit (Event static offset60) and activates duration; SkillEnd unsubscribes. Callback only modifies newly initialized same-camp soldiers: effect511; Occupy*=trunc(1+args[0]/100f); Attack+=99. It does not iterate pre-existing soldiers in Execute. Thus localized description claiming all friendly soldiers is broader than this path.",
+      "evidence": [
+        {
+          "method": "Type4193.Execute",
+          "token": 100665199,
+          "disassembly": "generated/combat-disassembly/Type4193-100665199.txt",
+          "lines": [
+            3,
+            57
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14252,
+          "bodyOffset": 7019497,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4193.SkillEnd",
+          "token": 100665200,
+          "disassembly": "generated/combat-disassembly/Type4193-100665200.txt",
+          "lines": [
+            3,
+            40
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14251,
+          "bodyOffset": 7019379,
+          "bodySize": 116,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4193.MZij~s",
+          "token": 100665201,
+          "disassembly": "generated/combat-disassembly/Type4193-100665201.txt",
+          "lines": [
+            3,
+            70
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14250,
+          "bodyOffset": 7019208,
+          "bodySize": 170,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander6-fatigue",
+      "status": "confirmed",
+      "scope": "Commander6 skill16",
+      "rule": "Skill16 Execute subscribes Event.SoldierInit and activates duration; SkillEnd unsubscribes. Callback only modifies newly initialized DIFFERENT-camp soldiers: effect611,Attack=0,Reinforce=0. Occupy and HP remain unchanged. It does not retroactively iterate all existing soldiers in Execute.",
+      "evidence": [
+        {
+          "method": "Type4200.Execute",
+          "token": 100665224,
+          "disassembly": "generated/combat-disassembly/Type4200-100665224.txt",
+          "lines": [
+            3,
+            57
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15178,
+          "bodyOffset": 7371303,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4200.MZij~s",
+          "token": 100665225,
+          "disassembly": "generated/combat-disassembly/Type4200-100665225.txt",
+          "lines": [
+            3,
+            39
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15176,
+          "bodyOffset": 7371089,
+          "bodySize": 95,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4200.SkillEnd",
+          "token": 100665227,
+          "disassembly": "generated/combat-disassembly/Type4200-100665227.txt",
+          "lines": [
+            3,
+            40
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15177,
+          "bodyOffset": 7371185,
+          "bodySize": 116,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander3-unlinkable",
+      "status": "confirmed",
+      "scope": "Commander3 skill7; incoming lines survive",
+      "rule": "Skill7 Execute targets all active non-neutral different-camp towers. Each bat arrives through callback100665147: while Running, if target.state is not4 set Unlinkable4 and remove outgoing directions only. If already4 and now same skill camp, return bat to pool and setNormal; if already4 and still enemy, leave unchanged. SkillEnd returns tracked bat objects and clears ALL active towers currently state4, irrespective of camp.",
+      "evidence": [
+        {
+          "method": "Type4179.Execute",
+          "token": 100665140,
+          "disassembly": "generated/combat-disassembly/Type4179-100665140.txt",
+          "lines": [
+            3,
+            387
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13627,
+          "bodyOffset": 6574946,
+          "bodySize": 1011,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4179.OQnj",
+          "token": 100665142,
+          "disassembly": "generated/combat-disassembly/Type4179-100665142.txt",
+          "lines": [
+            3,
+            282
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8512,
+          "bodyOffset": 4158843,
+          "bodySize": 742,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4178.miPL",
+          "token": 100665147,
+          "disassembly": "generated/combat-disassembly/Type4178-100665147.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15207,
+          "bodyOffset": 7381337,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4179.SkillEnd",
+          "token": 100665141,
+          "disassembly": "generated/combat-disassembly/Type4179-100665141.txt",
+          "lines": [
+            3,
+            265
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13625,
+          "bodyOffset": 6574268,
+          "bodySize": 652,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander3-drain",
+      "status": "confirmed",
+      "scope": "Commander3 skill9",
+      "rule": "Skill9 picks the player selected friendly target (field48), or random active same-camp tower for AI. For every active non-neutral different-camp source tower, source visual helper subtracts trunc(args0) with preventCapture=true before launching the absorption bullet. Travel duration argument is0.7. On arrival only while Running and selected target still belongs to skill camp, add trunc(args0) to that target (preventCapture=false); otherwise no heal. SkillEnd nulls selected target. The amount healed does not depend on source actual score loss after clamp.",
+      "evidence": [
+        {
+          "method": "Type4182.Execute",
+          "token": 100665152,
+          "disassembly": "generated/combat-disassembly/Type4182-100665152.txt",
+          "lines": [
+            3,
+            677
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42680,
+          "bodyOffset": 15361843,
+          "bodySize": 1794,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.WyyM",
+          "token": 100665151,
+          "disassembly": "generated/combat-disassembly/Type4182-100665151.txt",
+          "lines": [
+            3,
+            366
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 20212,
+          "bodyOffset": 8029473,
+          "bodySize": 929,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.NxPSj",
+          "token": 100665153,
+          "disassembly": "generated/combat-disassembly/Type4182-100665153.txt",
+          "lines": [
+            3,
+            83
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42679,
+          "bodyOffset": 15361642,
+          "bodySize": 199,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.SkillEnd",
+          "token": 100665155,
+          "disassembly": "generated/combat-disassembly/Type4182-100665155.txt",
+          "lines": [
+            3,
+            10
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15184,
+          "bodyOffset": 7374063,
+          "bodySize": 17,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander4-arrow-rain",
+      "status": "confirmed",
+      "scope": "Commander4 skill10; inclusive integer endpoints confirmed by random-point-distribution",
+      "rule": "Skill10 runs independent arrow visuals/collision and tower damage coroutines. Tower coroutine waits0.3s, then for integer i starting0 while i<=cdTime and active, applies -trunc(args1) with preventCapture=true to GetOtherTower(skillCamp), then waits1s. Visual coroutine emits two arrows per inner iteration, i<args0*0.5, waiting2/args0 between iterations. Each landed arrow queries different-camp soldiers in radius0.15 (minimum0), and clears only the FIRST returned soldier with ClearInSkill; it does not subtract HP. Visual random landing x=Random(-20,20)/20 and z=Random(-40,40)/15+3; launch height10, fall duration1.",
+      "evidence": [
+        {
+          "method": "Type4188.Execute",
+          "token": 100665163,
+          "disassembly": "generated/combat-disassembly/Type4188-100665163.txt",
+          "lines": [
+            3,
+            74
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15181,
+          "bodyOffset": 7372479,
+          "bodySize": 182,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4187.MoveNext",
+          "token": 100665180,
+          "disassembly": "generated/combat-disassembly/Type4187-100665180.txt",
+          "lines": [
+            3,
+            375
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15160,
+          "bodyOffset": 7365088,
+          "bodySize": 913,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4186.MoveNext",
+          "token": 100665174,
+          "disassembly": "generated/combat-disassembly/Type4186-100665174.txt",
+          "lines": [
+            3,
+            253
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14253,
+          "bodyOffset": 7019653,
+          "bodySize": 584,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4184.}b{Szk",
+          "token": 100665169,
+          "disassembly": "generated/combat-disassembly/Type4184-100665169.txt",
+          "lines": [
+            3,
+            189
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 18798,
+          "bodyOffset": 8481926,
+          "bodySize": 518,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4185.Zu~{cnZ",
+          "token": 100665171,
+          "disassembly": "generated/combat-disassembly/Type4185-100665171.txt",
+          "lines": [
+            3,
+            108
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14148,
+          "bodyOffset": 6979912,
+          "bodySize": 270,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.ClearInSkill",
+          "token": 100665335,
+          "disassembly": "generated/combat-disassembly/Soldier-100665335.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7128,
+          "bodyOffset": 2710066,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander5-recruit",
+      "status": "confirmed",
+      "scope": "Commander5 skill14; discrete ring sampling confirmed by random-point-distribution",
+      "rule": "Skill14 coroutine emits trunc(args0) special DeadSoldier objects at cdTime/trunc(args0) intervals, first emission immediate. Each chooses a random GetEnemyTower(skillCamp); if none, random neutral tower; no candidates skips that emission. Starts at UnityMathfTool.randomPoint(target.x,target.z,0.3,0.5). Init receives damage1,skillCamp,callbacknull. Each active unit moves normalized fixed direction by WayLineControl.movementLength*0.5 per update; hit when distanceSquared<0.01. On hit applies +1 if current target camp equals skillCamp, otherwise -1, with preventCapture=false, so it CAN capture ordinary towers. These are separate from ordinary WayLine soldier lists.",
+      "evidence": [
+        {
+          "method": "Type4194.MoveNext",
+          "token": 100665209,
+          "disassembly": "generated/combat-disassembly/Type4194-100665209.txt",
+          "lines": [
+            3,
+            447
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15182,
+          "bodyOffset": 7372663,
+          "bodySize": 1144,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.Init",
+          "token": 100665220,
+          "disassembly": "generated/combat-disassembly/Type4198-100665220.txt",
+          "lines": [
+            3,
+            263
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 12623,
+          "bodyOffset": 6092172,
+          "bodySize": 615,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.Move",
+          "token": 100665219,
+          "disassembly": "generated/combat-disassembly/Type4198-100665219.txt",
+          "lines": [
+            3,
+            199
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20019,
+          "bodyOffset": 9001256,
+          "bodySize": 426,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.WcqoxP",
+          "token": 100665221,
+          "disassembly": "generated/combat-disassembly/Type4198-100665221.txt",
+          "lines": [
+            3,
+            19
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 12622,
+          "bodyOffset": 6092122,
+          "bodySize": 48,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4195.SkillInUpdate1",
+          "token": 100665205,
+          "disassembly": "generated/combat-disassembly/Type4195-100665205.txt",
+          "lines": [
+            3,
+            212
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15204,
+          "bodyOffset": 7379997,
+          "bodySize": 523,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander5-serial-score",
+      "status": "confirmed",
+      "scope": "Commander5 skill15 scoring; selected target validation remains in controls",
+      "rule": "Skill15 selects one tower; if target camp equals skill camp, calls ChangeScoreInSerial(skillCamp,+trunc(args0),cdTime/args0,null); otherwise negative amount. Tower serial coroutine stores initial target camp, applies one +1/-1 immediately and then after each WaitForSeconds(gap), integer counter while counter<abs(amount). Every unit change uses preventCapture=true. If target becomes inactive it stops; if target camp changes and callback is null it stops. Skill15 has null callback, clears selected reference after starting sequence, and can never capture by its own damage. Friendly/enemy effect IDs532/531.",
+      "evidence": [
+        {
+          "method": "Type4196.MoveNext",
+          "token": 100665216,
+          "disassembly": "generated/combat-disassembly/Type4196-100665216.txt",
+          "lines": [
+            3,
+            1169
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11177,
+          "bodyOffset": 5506345,
+          "bodySize": 2953,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.ChangeScoreInSerial",
+          "token": 100665413,
+          "disassembly": "generated/combat-disassembly/Tower-100665413.txt",
+          "lines": [
+            3,
+            89
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15523,
+          "bodyOffset": 7495766,
+          "bodySize": 192,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4224.MoveNext",
+          "token": 100665434,
+          "disassembly": "generated/combat-disassembly/Type4224-100665434.txt",
+          "lines": [
+            3,
+            520
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11298,
+          "bodyOffset": 5558687,
+          "bodySize": 1249,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander6-recovery",
+      "status": "confirmed",
+      "scope": "Commander6 skill17",
+      "rule": "Skill17 coroutine snapshots active same-camp towers once and attaches effect612. Starting immediately, each integer second i with i<cdTime iterates that stored list: if still same camp, ChangeScore(ownCamp,+args0,false), preserving float amount; if camp changed, remove corresponding effect. WaitForSeconds1 follows each pass. Newly captured friendly towers are not added to the snapshot. SkillEnd cleans remaining effects.",
+      "evidence": [
+        {
+          "method": "Type4202.Execute",
+          "token": 100665228,
+          "disassembly": "generated/combat-disassembly/Type4202-100665228.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13877,
+          "bodyOffset": 6936498,
+          "bodySize": 62,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4201.MoveNext",
+          "token": 100665234,
+          "disassembly": "generated/combat-disassembly/Type4201-100665234.txt",
+          "lines": [
+            3,
+            497
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14638,
+          "bodyOffset": 7191844,
+          "bodySize": 1239,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4202.SkillEnd",
+          "token": 100665231,
+          "disassembly": "generated/combat-disassembly/Type4202-100665231.txt",
+          "lines": [
+            3,
+            62
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13876,
+          "bodyOffset": 6936343,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander6-poison",
+      "status": "confirmed",
+      "scope": "Commander6 skill18; precise projectile-to-duration start relation still needs runtime verification",
+      "rule": "Skill18 constructor radius56 is f32 bits1060320051 =0.7. While active, damageTimer44,killTimer48,elapsed52 each add dt. damageTimer>=1 subtracts1 once and applies -trunc(args0),preventCapture=true to GetTowerInRange(skillCamp,false,center88..96,radius0.7,min0). Separately only elapsed>1 and killTimer>0.2 resets killTimer0 and clears ALL different-camp soldiers in radius0.7 through ClearInSkill, regardless of HP. No catch-up loops. Drag-end accepts only |x|<2.5 and0.5<z<5 before launching bottle; center is selected ground position. SkillEnd resets timers and stops poison effect/audio.",
+      "evidence": [
+        {
+          "method": "Type4205..ctor",
+          "token": 100665238,
+          "disassembly": "generated/combat-disassembly/Type4205-100665238.txt",
+          "lines": [
+            3,
+            113
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9298,
+          "bodyOffset": 4527407,
+          "bodySize": 284,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.SkillInUpdate2",
+          "token": 100665244,
+          "disassembly": "generated/combat-disassembly/Type4205-100665244.txt",
+          "lines": [
+            3,
+            558
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14641,
+          "bodyOffset": 7193493,
+          "bodySize": 1362,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.OnDragEndHandle",
+          "token": 100665239,
+          "disassembly": "generated/combat-disassembly/Type4205-100665239.txt",
+          "lines": [
+            3,
+            234
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14645,
+          "bodyOffset": 7196434,
+          "bodySize": 527,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.SkillEnd",
+          "token": 100665240,
+          "disassembly": "generated/combat-disassembly/Type4205-100665240.txt",
+          "lines": [
+            3,
+            297
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14642,
+          "bodyOffset": 7194857,
+          "bodySize": 717,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.ClearInSkill",
+          "token": 100665335,
+          "disassembly": "generated/combat-disassembly/Soldier-100665335.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7128,
+          "bodyOffset": 2710066,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "tower-buff-read-only",
+      "status": "confirmed",
+      "scope": "generic GetBuff specialization; negative source evidence",
+      "rule": "Tower.GetBuff generic table9527 resolves through wasmcode1 f44848 to f20732. That specialization loads tower dictionary offset136, retrieves the requested key via generic dictionary helper, then performs generic cast/type handling. There is no allocation or insertion in this function. Combined with InitBuff nop, this removes GetBuff itself as a buff creation source, while leaving external/inlined creation unresolved.",
+      "evidence": [
+        {
+          "method": "Raw.21405",
+          "token": 21405,
+          "disassembly": "generated/combat-disassembly/Raw-21405.txt",
+          "lines": [
+            3,
+            10
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 21405,
+          "bodyOffset": 9504828,
+          "bodySize": 16,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.wasmcode1_44848",
+          "token": 1044848,
+          "disassembly": "generated/combat-disassembly/Raw-1044848.txt",
+          "lines": [
+            3,
+            9
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 44848,
+          "bodyOffset": 16014339,
+          "bodySize": 13,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.wasmcode1_20732",
+          "token": 1020732,
+          "disassembly": "generated/combat-disassembly/Raw-1020732.txt",
+          "lines": [
+            3,
+            37
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 20732,
+          "bodyOffset": 8345011,
+          "bodySize": 93,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.InitBuff",
+          "token": 100665388,
+          "disassembly": "generated/combat-disassembly/Tower-100665388.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 913,
+          "bodyOffset": 362854,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "skill-update-clock",
+      "status": "confirmed",
+      "scope": "SkillBase duration and damage timers",
+      "rule": "SkillControl.Updata only dispatches its current Commander when LevelControl.PlayState==Running6. CommanderControl.Updata is nop. CommanderBase.Updata loops its skills and passes the first dt argument twice to SkillBase.Updata; it does not apply ConfigMgr.gameTimeScale.",
+      "evidence": [
+        {
+          "method": "SkillControl.Updata",
+          "token": 100665084,
+          "disassembly": "generated/combat-disassembly/SkillControl-100665084.txt",
+          "lines": [
+            3,
+            46
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15934,
+          "bodyOffset": 7656198,
+          "bodySize": 105,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderControl.Updata",
+          "token": 100664247,
+          "disassembly": "generated/combat-disassembly/CommanderControl-100664247.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1636,
+          "bodyOffset": 536980,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.Updata",
+          "token": 100665057,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665057.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20198,
+          "bodyOffset": 9071092,
+          "bodySize": 106,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "bullet-scaled-update",
+      "status": "confirmed",
+      "scope": "skills2/7/9 and other Bullet-based effects; scaled Unity time",
+      "rule": "Bullet.Update f20382 increments elapsed12 by f1246, whose resolved internal-call name at static-memory1911954 is UnityEngine.Time::get_deltaTime(). Bullet is a MonoBehaviour-driven quadratic Bezier projectile, not a DOTween timer. Bullet.Init duration argument4 goes to60; bool argument8 is stored at84 and controls whether its component is disabled after arrival callbacks. Skill7 passes false so its landed bat callback repeats each Update until pooled/disabled. Skill2 also passes false, but its hit callback returns the object to its pool; skill9 passes true. Arrival tests squared-distance to end<1e-10 after evaluating the curve.",
+      "evidence": [
+        {
+          "method": "Bullet.Update",
+          "token": 100664285,
+          "disassembly": "generated/combat-disassembly/Bullet-100664285.txt",
+          "lines": [
+            3,
+            281
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20382,
+          "bodyOffset": 9188739,
+          "bodySize": 595,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Bullet.Init",
+          "token": 100664289,
+          "disassembly": "generated/combat-disassembly/Bullet-100664289.txt",
+          "lines": [
+            3,
+            533
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 4506,
+          "bodyOffset": 1517770,
+          "bodySize": 1134,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.1246",
+          "token": 1246,
+          "disassembly": "generated/combat-disassembly/Raw-1246.txt",
+          "lines": [
+            3,
+            22
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1246,
+          "bodyOffset": 423506,
+          "bodySize": 48,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4179.OQnj",
+          "token": 100665142,
+          "disassembly": "generated/combat-disassembly/Type4179-100665142.txt",
+          "lines": [
+            3,
+            282
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8512,
+          "bodyOffset": 4158843,
+          "bodySize": 742,
+          "instructionOffsetsHex": null
+        },
+        {
+          "staticMemoryAddress": 1911954,
+          "decodedString": "UnityEngine.Time::get_deltaTime()"
+        }
+      ]
+    },
+    {
+      "id": "bullet-control-point",
+      "status": "confirmed",
+      "scope": "original Bullet geometry for skills2/7/9 and Boss volleys",
+      "rule": "Bullet.Init stores start at20..28, control at32..40, end at44..52, duration60 and arc76. Nonzero arc sets control=(start+end)/2+Vector3.up*arc. Zero arc computes normalized Cross(start-end,ProjectOnPlane(start-end,Vector3.up))*0.5 and adds/subtracts it from midpoint by inclusive RandomHelper.Random(1,100) parity. Static Vector3 usage3941368 resolves to metadata type6789; static field24 is upVector, not forwardVector. GetBezierPoint f4700 clamps t to[0,1] and evaluates the quadratic Bezier. Skill9 arc calls f5798 UnityEngine.Random::get_value, distinct from RandomHelper. Skill2 end is tower.position+up*0.2, but duration is Distance(origin,tower.position)/10+0.3 before applying that offset.",
+      "evidence": [
+        {
+          "method": "Bullet.Init",
+          "token": 100664289,
+          "disassembly": "generated/combat-disassembly/Bullet-100664289.txt",
+          "lines": [
+            191,
+            500
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 4506,
+          "bodyOffset": 1517770,
+          "bodySize": 1134,
+          "instructionOffsetsHex": [
+            "00172a5c",
+            "00172cf6"
+          ]
+        },
+        {
+          "method": "Raw.4700",
+          "token": 4700,
+          "disassembly": "generated/combat-disassembly/Raw-4700.txt",
+          "lines": [
+            3,
+            87
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 4700,
+          "bodyOffset": 1624634,
+          "bodySize": 171,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.5798",
+          "token": 5798,
+          "disassembly": "generated/combat-disassembly/Raw-5798.txt",
+          "lines": [
+            3,
+            22
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 5798,
+          "bodyOffset": 2040999,
+          "bodySize": 48,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.WyyM",
+          "token": 100665151,
+          "disassembly": "generated/combat-disassembly/Type4182-100665151.txt",
+          "lines": [
+            3,
+            366
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 20212,
+          "bodyOffset": 8029473,
+          "bodySize": 929,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4167.Ohpb~x",
+          "token": 100665113,
+          "disassembly": "generated/combat-disassembly/Type4167-100665113.txt",
+          "lines": [
+            3,
+            578
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14588,
+          "bodyOffset": 7031370,
+          "bodySize": 1484,
+          "instructionOffsetsHex": null
+        },
+        {
+          "staticMemoryAddress": 3941368,
+          "metadataTypeIndex": 6789,
+          "staticFieldOffset": 24,
+          "field": "UnityEngine.Vector3.upVector"
+        },
+        {
+          "staticMemoryAddress": 1902483,
+          "decodedString": "UnityEngine.Random::get_value()"
+        }
+      ]
+    },
+    {
+      "id": "random-point-distribution",
+      "status": "confirmed",
+      "scope": "skill14 recruitment ring and helper-driven integer sampling",
+      "rule": "UnityMathfTool.randomPoint(x,z,minimumRadius,maximumRadius) samples angle=RandomHelper.Random(0,100)*0.01*pi*2 and radius=RandomHelper.Random(0,100)*0.01*(maximum-minimum)+minimum; returns x+radius*cos(angle),z+radius*sin(angle). Raw1621 implements RandomHelper.Random(min,max) by calling underlying Random.Next(min,max+1), so integer upper endpoint is inclusive. The two samples are discrete and radial distance is uniform, not uniform area.",
+      "evidence": [
+        {
+          "method": "Raw.9709",
+          "token": 9709,
+          "disassembly": "generated/combat-disassembly/Raw-9709.txt",
+          "lines": [
+            3,
+            65
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9709,
+          "bodyOffset": 4651349,
+          "bodySize": 145,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.1621",
+          "token": 1621,
+          "disassembly": "generated/combat-disassembly/Raw-1621.txt",
+          "lines": [
+            3,
+            42
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1621,
+          "bodyOffset": 535094,
+          "bodySize": 104,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.1108",
+          "token": 1108,
+          "disassembly": "generated/combat-disassembly/Raw-1108.txt",
+          "lines": [
+            3,
+            173
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1108,
+          "bodyOffset": 400915,
+          "bodySize": 409,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.1114",
+          "token": 1114,
+          "disassembly": "generated/combat-disassembly/Raw-1114.txt",
+          "lines": [
+            3,
+            173
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1114,
+          "bodyOffset": 401699,
+          "bodySize": 403,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander-passive-stat-boundary",
+      "status": "confirmed",
+      "scope": "bounded absence of a passive stat multiplier in confirmed battle paths",
+      "rule": "CommanderBase.Init stores CommanderData at12 and camp16, allocates a3-skill list, invokes subclass skill construction and Upgrade. Upgrade binds each skill config from saved skill levels; no separate hero-level HP/Attack/Occupy/regen passive multiplier is applied in these paths. Base GetSpawnRate/GetSoldierSpeed return the input unchanged. Confirmed active multipliers are Commander2 skills4/5 and Commander4 skill11; SoldierInit callbacks13/16 are separate stat mutations.",
+      "evidence": [
+        {
+          "method": "CommanderBase.Init",
+          "token": 100665054,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665054.txt",
+          "lines": [
+            3,
+            48
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6202,
+          "bodyOffset": 2217138,
+          "bodySize": 124,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.Upgrade",
+          "token": 100665055,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665055.txt",
+          "lines": [
+            3,
+            191
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8119,
+          "bodyOffset": 3848361,
+          "bodySize": 486,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.GetSpawnRate",
+          "token": 100665065,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665065.txt",
+          "lines": [
+            3,
+            6
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7866,
+          "bodyOffset": 3765195,
+          "bodySize": 5,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.GetSoldierSpeed",
+          "token": 100665066,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665066.txt",
+          "lines": [
+            3,
+            6
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7866,
+          "bodyOffset": 3765195,
+          "bodySize": 5,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4176.GetSpawnRate",
+          "token": 100665126,
+          "disassembly": "generated/combat-disassembly/Type4176-100665126.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20208,
+          "bodyOffset": 9072715,
+          "bodySize": 153,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.jbOiMS",
+          "token": 100665158,
+          "disassembly": "generated/combat-disassembly/Type4192-100665158.txt",
+          "lines": [
+            3,
+            74
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20203,
+          "bodyOffset": 9071879,
+          "bodySize": 204,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.GetSpawnRate",
+          "token": 100665159,
+          "disassembly": "generated/combat-disassembly/Type4192-100665159.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20204,
+          "bodyOffset": 9072084,
+          "bodySize": 110,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "skills12-18-start-before-visual",
+      "status": "confirmed",
+      "scope": "mechanical startup timing confirmed; visual asset load/callback frame timing still unverified",
+      "rule": "Skill12 async MoveNext initial state sets inSkill=true and base timer0 before selecting target44; it spawns effect417 at target.position+up*0.7, then awaits0.8 before effect419/audio2032/2033. SkillInUpdate2 reads target44 and accumulates damage from the active start with no visual-ready gate. Skill18.Execute likewise sets active/timer immediately at006dd280..296, copies selected point76..84 to damage center88..96 at006dd297..2c3 (AI then replaces center with player tower position plus discrete jitter), before launching the bottle. Skill18.SkillInUpdate2 accumulates all three damage/kill timers unconditionally and queries that center; it has no bottle-landed gate. Therefore duration and damage start on Execute, not at visual completion.",
+      "evidence": [
+        {
+          "method": "Type4190.MoveNext",
+          "token": 100665194,
+          "disassembly": "generated/combat-disassembly/Type4190-100665194.txt",
+          "lines": [
+            93,
+            105
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10983,
+          "bodyOffset": 5318292,
+          "bodySize": 2914,
+          "instructionOffsetsHex": [
+            "00512795",
+            "005127af"
+          ]
+        },
+        {
+          "method": "Type4190.MoveNext",
+          "token": 100665194,
+          "disassembly": "generated/combat-disassembly/Type4190-100665194.txt",
+          "lines": [
+            588,
+            760
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10983,
+          "bodyOffset": 5318292,
+          "bodySize": 2914,
+          "instructionOffsetsHex": [
+            "00512c80",
+            "00512e43"
+          ]
+        },
+        {
+          "method": "Type4191.SkillInUpdate2",
+          "token": 100665189,
+          "disassembly": "generated/combat-disassembly/Type4191-100665189.txt",
+          "lines": [
+            3,
+            68
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17913,
+          "bodyOffset": 7964461,
+          "bodySize": 151,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.Execute",
+          "token": 100665242,
+          "disassembly": "generated/combat-disassembly/Type4205-100665242.txt",
+          "lines": [
+            50,
+            157
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14647,
+          "bodyOffset": 7197147,
+          "bodySize": 946,
+          "instructionOffsetsHex": [
+            "006dd280",
+            "006dd372"
+          ]
+        },
+        {
+          "method": "Type4205.SkillInUpdate2",
+          "token": 100665244,
+          "disassembly": "generated/combat-disassembly/Type4205-100665244.txt",
+          "lines": [
+            49,
+            125
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14641,
+          "bodyOffset": 7193493,
+          "bodySize": 1362,
+          "instructionOffsetsHex": [
+            "006dc428",
+            "006dc4d2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "commander-active-guard",
+      "status": "confirmed",
+      "scope": "CommanderBase API consumed by SkillControl",
+      "rule": "CommanderBase function3652 finds a skill by SkillBase.type20 and returns its inSkill16 flag, orfalse if absent. This is active-duration status, not a separate cooldown countdown. Execute8120 finds the same type, stores completion callback40 and invokes virtual Execute. GetSkill6203 indexes list[type-1]. Effective5153 returns true fornull target; otherwise dispatches matching skill virtual target predicate.",
+      "evidence": [
+        {
+          "method": "CommanderBase.WTPZ",
+          "token": 100665061,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665061.txt",
+          "lines": [
+            3,
+            58
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 3652,
+          "bodyOffset": 1148051,
+          "bodySize": 134,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.Execute",
+          "token": 100665060,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665060.txt",
+          "lines": [
+            3,
+            70
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8120,
+          "bodyOffset": 3848849,
+          "bodySize": 166,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.GetSkill",
+          "token": 100665062,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665062.txt",
+          "lines": [
+            3,
+            23
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6203,
+          "bodyOffset": 2217263,
+          "bodySize": 54,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.Effective",
+          "token": 100665064,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665064.txt",
+          "lines": [
+            3,
+            78
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 5153,
+          "bodyOffset": 1766812,
+          "bodySize": 176,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "commander-multiplier-consumer",
+      "status": "confirmed",
+      "scope": "player Commander consumers including PVP; enemy passive multiplier absence bounded to audited paths",
+      "rule": "WayLine spawn multiplier f6775 loads SkillControl singleton usage3953560.currentCommander116 and invokes only that Commander virtual GetSpawnRate with tower camp. Soldier.MoveTo f15868 likewise invokes only the same Commander.GetSoldierSpeed. Neither consumer enumerates enemy Commanders. PVPController independently owns enemyCommander16 and does not assign SkillControl116 (special_pvp_all audit). Therefore AI skills4/5/11 may activate but their Commander multiplier overrides are not consumed by these movement/dispatch paths; direct Skill11 player-tower state6 side effects remain.",
+      "evidence": [
+        {
+          "method": "WayLine.RvgtaV[",
+          "token": 100665532,
+          "disassembly": "generated/combat-disassembly/WayLine-100665532.txt",
+          "lines": [
+            60,
+            83
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6775,
+          "bodyOffset": 2556704,
+          "bodySize": 804,
+          "instructionOffsetsHex": [
+            "002703ca",
+            "00270404"
+          ]
+        },
+        {
+          "method": "Soldier.MoveTo",
+          "token": 100665351,
+          "disassembly": "generated/combat-disassembly/Soldier-100665351.txt",
+          "lines": [
+            21,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15868,
+          "bodyOffset": 7631734,
+          "bodySize": 246,
+          "instructionOffsetsHex": [
+            "007473ac",
+            "007473ea"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "controller-update-registration-order",
+      "status": "confirmed",
+      "scope": "controller order from flow-agent static registration audit; Unity async/projectile relative ordering remains unverified",
+      "rule": "MineGameLogicModule registration occurs PVPController at005516d1, AIControl at005516ee, LevelControl at0055179c, SkillControl at005517f3 and WayLineControl at0055184a. PVP agents use scaled game dt followed by enemyCommander raw dt; player SkillControl raw-dt skill expiration occurs after the tower pass and before line spawn/movement. A player freeze expiring this frame therefore still blocks that frame tower regeneration, then allows line movement/spawn after cleanup.",
+      "evidence": [
+        "generated/pvp-evidence.json",
+        "generated/flow-evidence.json",
+        {
+          "method": "SkillControl.Updata",
+          "token": 100665084,
+          "disassembly": "generated/combat-disassembly/SkillControl-100665084.txt",
+          "lines": [
+            3,
+            46
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15934,
+          "bodyOffset": 7656198,
+          "bodySize": 105,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "CommanderBase.Updata",
+          "token": 100665057,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665057.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20198,
+          "bodyOffset": 9071092,
+          "bodySize": 106,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "id": "towerbuff-no-active-producer-found",
+      "status": "confirmed",
+      "scope": "ordinary first-load buff emptiness; global dynamic reachability remains bounded",
+      "rule": "Tower constructor creates an empty buff dictionary136; Tower.Clear helper removes buffs and clears that dictionary. Tower.InitBuff is nop. BuffControl constructor creates another empty dictionary; its event handler and Updata are nop. A two-module opcode-validated xref scan finds no direct call to TowerBuff parameter constructor f44849, no constant table14444 call site, no constant table15528 BuffEntity getter call site, and no TowerBuff TypeInfo encoded usage in aligned static memory. This supports an unenabled residual feature in the audited ordinary path, not a proof against every possible reflection/inlined producer. Do not invent buff values or block a fresh ordinary no-skill baseline on the mere existence of these fields.",
+      "evidence": [
+        {
+          "method": "Tower..ctor",
+          "token": 100665380,
+          "disassembly": "generated/combat-disassembly/Tower-100665380.txt",
+          "lines": [
+            77,
+            87
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 5595,
+          "bodyOffset": 1958316,
+          "bodySize": 312,
+          "instructionOffsetsHex": [
+            "001de291",
+            "001de2af"
+          ]
+        },
+        {
+          "method": "Tower.nqQLP",
+          "token": 100665384,
+          "disassembly": "generated/combat-disassembly/Tower-100665384.txt",
+          "lines": [
+            34,
+            41
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6992,
+          "bodyOffset": 2661792,
+          "bodySize": 232,
+          "instructionOffsetsHex": [
+            "00289df9",
+            "00289e0e"
+          ]
+        },
+        {
+          "method": "Tower.InitBuff",
+          "token": 100665388,
+          "disassembly": "generated/combat-disassembly/Tower-100665388.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 913,
+          "bodyOffset": 362854,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "BuffControl.edsgn",
+          "token": 100664230,
+          "disassembly": "generated/combat-disassembly/BuffControl-100664230.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1028,
+          "bodyOffset": 384773,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "BuffControl.Updata",
+          "token": 100664232,
+          "disassembly": "generated/combat-disassembly/BuffControl-100664232.txt",
+          "lines": [
+            3,
+            5
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 1636,
+          "bodyOffset": 536980,
+          "bodySize": 3,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "BuffControl..ctor",
+          "token": 100664231,
+          "disassembly": "generated/combat-disassembly/BuffControl-100664231.txt",
+          "lines": [
+            3,
+            32
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20395,
+          "bodyOffset": 9193061,
+          "bodySize": 90,
+          "instructionOffsetsHex": null
+        },
+        "generated/combat-lifecycle-xrefs.json"
+      ]
+    },
+    {
+      "id": "serial-wait-runner-owner",
+      "status": "confirmed",
+      "scope": "skill15 and same GFRunning await helper; scaled wait owner/lifetime",
+      "rule": "Skill15 Tower.ChangeScoreInSerial awaits a UnityEngine.WaitForSeconds object through table2540->GetAwaiter5995->11853. This allocates SimpleCoroutineAwaiter, dispatches an Action to Unity synchronization context via5015, then closure14594 calls AsyncCoroutineRunner.Instance8244.StartCoroutine(ReturnVoid(...)). ReturnVoid state machine15141 yields the supplied wait, then completes the awaiter. Runner getter creates a GameObject named AsyncCoroutineRunner; Awake20638 sets hideFlags61 and calls Object.DontDestroyOnLoad1111. The wait is owned by that runner, not the Tower or Skill object. Opcode scan finds the only explicit StopAllCoroutines call in ResourcesModule.RemoveAll on its field20 ResourcesMono, a separate GameObject created in Initialize17743.",
+      "evidence": [
+        {
+          "method": "Type4224.MoveNext",
+          "token": 100665434,
+          "disassembly": "generated/combat-disassembly/Type4224-100665434.txt",
+          "lines": [
+            3,
+            520
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11298,
+          "bodyOffset": 5558687,
+          "bodySize": 1249,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.5995",
+          "token": 5995,
+          "disassembly": "generated/combat-disassembly/Raw-5995.txt",
+          "lines": [
+            3,
+            8
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 5995,
+          "bodyOffset": 2111055,
+          "bodySize": 10,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.11853",
+          "token": 11853,
+          "disassembly": "generated/combat-disassembly/Raw-11853.txt",
+          "lines": [
+            3,
+            48
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11853,
+          "bodyOffset": 5808345,
+          "bodySize": 135,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.5015",
+          "token": 5015,
+          "disassembly": "generated/combat-disassembly/Raw-5015.txt",
+          "lines": [
+            3,
+            99
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 5015,
+          "bodyOffset": 1724398,
+          "bodySize": 269,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.14594",
+          "token": 14594,
+          "disassembly": "generated/combat-disassembly/Raw-14594.txt",
+          "lines": [
+            3,
+            15
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14594,
+          "bodyOffset": 7033444,
+          "bodySize": 28,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.15141",
+          "token": 15141,
+          "disassembly": "generated/combat-disassembly/Raw-15141.txt",
+          "lines": [
+            3,
+            35
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15141,
+          "bodyOffset": 7359933,
+          "bodySize": 70,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.8244",
+          "token": 8244,
+          "disassembly": "generated/combat-disassembly/Raw-8244.txt",
+          "lines": [
+            3,
+            64
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8244,
+          "bodyOffset": 3915862,
+          "bodySize": 189,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.20638",
+          "token": 20638,
+          "disassembly": "generated/combat-disassembly/Raw-20638.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20638,
+          "bodyOffset": 9247419,
+          "bodySize": 73,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.wasmcode1_23540",
+          "token": 1023540,
+          "disassembly": "generated/combat-disassembly/Raw-1023540.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 23540,
+          "bodyOffset": 9158153,
+          "bodySize": 185,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.17743",
+          "token": 17743,
+          "disassembly": "generated/combat-disassembly/Raw-17743.txt",
+          "lines": [
+            3,
+            234
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17743,
+          "bodyOffset": 7862871,
+          "bodySize": 663,
+          "instructionOffsetsHex": null
+        },
+        "generated/combat-lifecycle-xrefs.json",
+        {
+          "staticMemoryAddress": 3941920,
+          "type": "UnityEngine.WaitForSeconds"
+        },
+        {
+          "staticMemoryAddress": 4045044,
+          "literal": "AsyncCoroutineRunner"
+        },
+        {
+          "staticMemoryAddress": 4067944,
+          "literal": "ResourcesMono"
+        }
+      ]
+    },
+    {
+      "id": "skill15-restart-conditional-survival",
+      "status": "confirmed",
+      "scope": "conditional source behavior; exact replay/reuse timing not measured",
+      "rule": "CommanderBase.Reset calls each Skill.Reset then SkillEnd; Skill15 has no Reset override. Tower.Clear calls helper6992 which sets Active8=false and clears visuals/buffs but has no cancellation-token or serial-task handle. Serial MoveNext holds the Tower object, initial camp and remaining loop count: after each wait it stops if inactive; if active and same initial camp it applies the next signed1; if camp differs and callbacknull (Skill15), it stops. Thus a restarted/reused Tower observed active with the same initial camp at continuation time can receive remaining old serial ticks. If the continuation observes the inactive interval or a different camp, it terminates. No explicit serial cancellation on Reset is evidenced. Reconstruction now preserves only the independently proven Skill15 waits, retaining delay/count and the original Tower reference across Restart. It checks Active/current camp at continuation time; actual original replay resource-loading timing still requires observation.",
+      "evidence": [
+        {
+          "method": "CommanderBase.Reset",
+          "token": 100665058,
+          "disassembly": "generated/combat-disassembly/CommanderBase-100665058.txt",
+          "lines": [
+            3,
+            79
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20199,
+          "bodyOffset": 9071200,
+          "bodySize": 192,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4196.MoveNext",
+          "token": 100665216,
+          "disassembly": "generated/combat-disassembly/Type4196-100665216.txt",
+          "lines": [
+            3,
+            1169
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11177,
+          "bodyOffset": 5506345,
+          "bodySize": 2953,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.Clear",
+          "token": 100665402,
+          "disassembly": "generated/combat-disassembly/Tower-100665402.txt",
+          "lines": [
+            3,
+            48
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10055,
+          "bodyOffset": 4824196,
+          "bodySize": 116,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.nqQLP",
+          "token": 100665384,
+          "disassembly": "generated/combat-disassembly/Tower-100665384.txt",
+          "lines": [
+            42,
+            53
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6992,
+          "bodyOffset": 2661792,
+          "bodySize": 232,
+          "instructionOffsetsHex": [
+            "00289e11",
+            "00289e2a"
+          ]
+        },
+        {
+          "method": "Type4224.MoveNext",
+          "token": 100665434,
+          "disassembly": "generated/combat-disassembly/Type4224-100665434.txt",
+          "lines": [
+            189,
+            274
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11298,
+          "bodyOffset": 5558687,
+          "bodySize": 1249,
+          "instructionOffsetsHex": [
+            "0054d373",
+            "0054d440"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soldier-skin-stat-separation",
+      "status": "confirmed",
+      "scope": "configured soldier variants and visual-only skin selection",
+      "rule": "Soldier.Init obtains combat fields only from SoldierConfig and then emits SoldierInit event. GetSoldierObj for shipType<=9 chooses player equipped or enemy random skin through PlayerControl, loads the prefab, invokes InitGameObject and recolors it. shipType>9 uses SoldierConfig.EntityID. InitGameObject/config helper sets scale, animation component, shadow and active state; it does not overwrite HP/Attack/Occupy/Reinforce/Voyage. SkinConfig IDs104/204/304 map to visual prefab1004/2004/3004; their04 labels do not establish an extra combat type. SoldierConfig has only IDs1,2,3,11..15, while EntityModelConfig soldier_400..427 have no matching SkinConfig type4 or SoldierConfig4.",
+      "evidence": [
+        {
+          "method": "Soldier.Init",
+          "token": 100665360,
+          "disassembly": "generated/combat-disassembly/Soldier-100665360.txt",
+          "lines": [
+            3,
+            113
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7126,
+          "bodyOffset": 2709186,
+          "bodySize": 298,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.GetSoldierObj",
+          "token": 100665336,
+          "disassembly": "generated/combat-disassembly/Soldier-100665336.txt",
+          "lines": [
+            3,
+            195
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10317,
+          "bodyOffset": 4937584,
+          "bodySize": 501,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.InitGameObject",
+          "token": 100665349,
+          "disassembly": "generated/combat-disassembly/Soldier-100665349.txt",
+          "lines": [
+            3,
+            127
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15869,
+          "bodyOffset": 7631982,
+          "bodySize": 311,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.p]qzo",
+          "token": 100665355,
+          "disassembly": "generated/combat-disassembly/Soldier-100665355.txt",
+          "lines": [
+            3,
+            149
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10312,
+          "bodyOffset": 4936576,
+          "bodySize": 383,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/SoldierConfig.json",
+        "generated/tables/SkinConfig.json",
+        "generated/tables/EntityModelConfig.json"
+      ]
+    }
+  ],
+  "derivedCases": [
+    {
+      "id": "L0-neutral-capture",
+      "status": "derived-not-runtime-verified",
+      "level": "generated/levels/level_0.json",
+      "pre": {
+        "tower": 0,
+        "camp": 0,
+        "score": 3,
+        "shipConfigID": 1,
+        "incomingCamp": 1,
+        "incomingCount": 3
+      },
+      "expected": {
+        "afterEachScore": [
+          2,
+          1,
+          0
+        ],
+        "afterEachCamp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "rules": [
+        "tower-damage",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "L0-source-grade",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "level": 0,
+        "tower": 3,
+        "score": 10
+      },
+      "expected": {
+        "grade": 1,
+        "maxOutgoingLines": 2,
+        "oneLineBaseSpawnTime": 1.032,
+        "twoLineBaseSpawnTime": 1.185
+      },
+      "rules": [
+        "tower-capacity-grade",
+        "spawn-clock"
+      ]
+    },
+    {
+      "id": "capture-overflow",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 0,
+        "score": 1,
+        "incomingCamp": 1,
+        "incomingShip": 3,
+        "occupy": 2
+      },
+      "expected": {
+        "camp": 1,
+        "score": 1
+      },
+      "rules": [
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "friendly-cap",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 1,
+        "score": 64,
+        "incomingCamp": 1,
+        "incomingShip": 2,
+        "reinforce": 2
+      },
+      "expected": {
+        "score": 65,
+        "soldierConsumed": true
+      },
+      "rules": [
+        "tower-reinforce"
+      ]
+    },
+    {
+      "id": "equal-hp-contact",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "A": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 1
+        },
+        "B": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 2
+        },
+        "withinThreshold": true
+      },
+      "expected": {
+        "hpA": 0,
+        "hpB": 0,
+        "bothClear": true
+      },
+      "rules": [
+        "soldier-combat"
+      ]
+    },
+    {
+      "id": "tank-contact",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "A": {
+          "hp": 2,
+          "attack": 2,
+          "camp": 1
+        },
+        "B": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 2
+        },
+        "withinThreshold": true
+      },
+      "expected": {
+        "hpA": 1,
+        "hpB": -1,
+        "clearB": true
+      },
+      "rules": [
+        "soldier-combat"
+      ]
+    },
+    {
+      "id": "grade-edges",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "scores": [
+          9,
+          9.9,
+          10,
+          29,
+          29.9,
+          30,
+          65
+        ]
+      },
+      "expected": {
+        "grades": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      "rules": [
+        "tower-capacity-grade"
+      ]
+    },
+    {
+      "id": "base-regen",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 1,
+        "score": 9,
+        "outgoing": 0,
+        "regenAccumulator": 0,
+        "deltaTime": 2,
+        "buffs": [],
+        "state": 0
+      },
+      "expected": {
+        "score": 10,
+        "grade": 1,
+        "regenAccumulator": 0
+      },
+      "rules": [
+        "regeneration",
+        "tower-capacity-grade"
+      ]
+    },
+    {
+      "id": "spawn-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "baseInterval": 1.032,
+        "timer": 1.02,
+        "deltaTime": 0.03,
+        "multiplier": 1
+      },
+      "expected": {
+        "batchCount": 1,
+        "timer": 0,
+        "sourceScoreDebit": 0
+      },
+      "rules": [
+        "spawn-clock"
+      ]
+    },
+    {
+      "id": "forward-budget",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "fullFriendly": true,
+        "voyage": 1,
+        "originIsCurrent": false
+      },
+      "expected": {
+        "voyage": 0,
+        "cleared": true,
+        "forwarded": false
+      },
+      "rules": [
+        "full-friendly-forward"
+      ]
+    },
+    {
+      "id": "boss-zero-no-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "isBossRuntime": true,
+        "initialScore": 150,
+        "score": 1,
+        "camp": 6,
+        "incomingCamp": 1,
+        "delta": -2
+      },
+      "expected": {
+        "score": 0,
+        "camp": 6,
+        "maxScore": 150,
+        "autoRegen": false,
+        "radius": 0.15
+      },
+      "rules": [
+        "boss-init-and-soldier",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "skill4-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 401,
+        "sameCamp": true,
+        "active": true,
+        "inputSpawnRate": 1
+      },
+      "expected": {
+        "spawnRate": 1.8,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander2-speed"
+      ]
+    },
+    {
+      "id": "skill5-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 501,
+        "sameCamp": false,
+        "active": true,
+        "inputSpawnRate": 1
+      },
+      "expected": {
+        "spawnRate": 0.7,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander2-speed"
+      ]
+    },
+    {
+      "id": "skill11-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1101,
+        "sameCamp": true,
+        "active": true,
+        "baseWorldSpeed": 0.8
+      },
+      "expected": {
+        "spawnRateMultiplier": 1.8,
+        "soldierSpeedMultiplier": 1.8,
+        "worldSpeedApprox": 1.44,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander4-speed"
+      ]
+    },
+    {
+      "id": "skill3-cannot-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 301,
+        "targetCamp": 2,
+        "score": 10,
+        "playerCamp": 1
+      },
+      "expected": {
+        "score": 0,
+        "camp": 2,
+        "damage": 20
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander1-direct-damage"
+      ]
+    },
+    {
+      "id": "skill12-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1201,
+        "damageTimer": 0,
+        "dt": 2.5,
+        "score": 20,
+        "camp": 2
+      },
+      "expected": {
+        "score": 15,
+        "damageTimer": 1.5,
+        "camp": 2
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander4-dot"
+      ]
+    },
+    {
+      "id": "skill9-clamp-not-conservation",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 901,
+        "enemySourceScore": 2,
+        "friendlyTargetScore": 10,
+        "targetStillFriendlyOnArrival": true
+      },
+      "expected": {
+        "enemySourceScore": 0,
+        "enemyCampUnchanged": true,
+        "friendlyTargetScore": 15
+      },
+      "rules": [
+        "commander3-drain"
+      ]
+    },
+    {
+      "id": "skill13-new-only",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1301,
+        "newSoldier": {
+          "occupy": 1,
+          "attack": 1
+        },
+        "existingSoldier": {
+          "occupy": 1,
+          "attack": 1
+        }
+      },
+      "expected": {
+        "newSoldier": {
+          "occupy": 2,
+          "attack": 100
+        },
+        "existingSoldier": {
+          "occupy": 1,
+          "attack": 1
+        }
+      },
+      "rules": [
+        "commander5-inspiration"
+      ]
+    },
+    {
+      "id": "skill14-recruit-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1401,
+        "emittedRecruitDamage": 1,
+        "targetCamp": 2,
+        "targetScore": 1,
+        "skillCamp": 1,
+        "hitDistanceSquared": 0.005
+      },
+      "expected": {
+        "targetScore": 0,
+        "targetCamp": 1,
+        "spawnCount": 25,
+        "spawnInterval": 0.2
+      },
+      "rules": [
+        "commander5-recruit",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "skill15-does-not-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1501,
+        "targetCamp": 2,
+        "targetScore": 2,
+        "skillCamp": 1,
+        "ticks": 3
+      },
+      "expected": {
+        "scores": [
+          1,
+          0,
+          0
+        ],
+        "camp": 2,
+        "totalUnitTicks": 30,
+        "gapApprox": 0.0566666667
+      },
+      "rules": [
+        "commander5-serial-score"
+      ]
+    },
+    {
+      "id": "skill16-occupy-not-attack",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1601,
+        "newEnemy": {
+          "attack": 2,
+          "reinforce": 2,
+          "occupy": 1,
+          "hp": 2
+        }
+      },
+      "expected": {
+        "attack": 0,
+        "reinforce": 0,
+        "occupy": 1,
+        "hp": 2
+      },
+      "rules": [
+        "commander6-fatigue"
+      ]
+    },
+    {
+      "id": "skill17-snapshot",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1701,
+        "initialFriendlyTowerIds": [
+          1
+        ],
+        "newlyCapturedTowerId": 2,
+        "score1": 10,
+        "score2": 10,
+        "healingPasses": 1
+      },
+      "expected": {
+        "score1": 13,
+        "score2": 10
+      },
+      "rules": [
+        "commander6-recovery"
+      ]
+    },
+    {
+      "id": "skill18-damage-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1801,
+        "damageTimer": 0,
+        "elapsed": 0,
+        "killTimer": 0,
+        "dt": 2.5,
+        "inRangeEnemyScore": 10,
+        "inRangeEnemySoldierHp": 100000
+      },
+      "expected": {
+        "enemyScore": 8,
+        "damageTimer": 1.5,
+        "killTimer": 0,
+        "soldierCleared": true
+      },
+      "rules": [
+        "commander6-poison"
+      ]
+    },
+    {
+      "id": "boss-delay-overshoot",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "delay": 0.1,
+        "countdown": 0,
+        "frameDeltas": [
+          0.2,
+          0.01
+        ],
+        "interval": 17
+      },
+      "expected": {
+        "actionsPerFrame": [
+          0,
+          1
+        ],
+        "finalCountdownApprox": 16.99
+      },
+      "rules": [
+        "boss-schedule-clock"
+      ]
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "runtime-oracle",
+      "status": "unknown",
+      "question": "原游戏运行时数值与时序验证",
+      "next": "在原游戏代表关卡记录连线、三次命中占领、升级/降级、对冲和满塔转发；与静态派生测试逐项比对。"
+    },
+    {
+      "id": "remaining-skills",
+      "status": "unknown",
+      "question": "技能12/18表现资源加载与异步回调实际帧时序",
+      "next": "数值核已确认在Execute立即起算，不能等待表现落地再计时；资源延迟与画面表现需原游戏代表配置对照。"
+    },
+    {
+      "id": "buffs",
+      "status": "unknown",
+      "question": "TowerBuff是否存在未发现的反射或内联创建来源",
+      "next": "普通初始化/控制器更新均无producer，2模块xref未找到构造调用或TypeInfousage；当前空buff普通基线可验收。仅在真实save/runtime出现buff时重开调查。"
+    },
+    {
+      "id": "special-tower",
+      "status": "unknown",
+      "question": "Boss空候选目标行为、特殊模式加载是否改写Star.isBoss/bossSkillId；Bastion是否独立机制",
+      "next": "BossActionEntity和调度已闭环；普通加载未发现字段patch。需审计特殊模式入口。仅2份布局有isBoss=true，不可把CampInfo.BossActionId配置均当已启用；CampConfig.BasitionMaterial仅证明材质字段。"
+    },
+    {
+      "id": "async-time",
+      "status": "unknown",
+      "question": "异步跨Restart复用原塔的实际恢复帧时序",
+      "next": "table2540/2542已闭合为Unity WaitForSeconds、常驻AsyncCoroutineRunner；skill15条件存活已证实，需观察旧continuation是否在inactive窗口触发。"
+    },
+    {
+      "id": "rendering",
+      "status": "unknown",
+      "question": "grade模型、动画时长、命中特效资产完整绑定及UI精确位置",
+      "next": "接合资源分析产物与运行截图；本子任务只交付机制与效果调用证据。"
+    }
+  ],
+  "meaningfulFailures": [
+    "Initial PowerShell inline string escaping failed before writing; replaced by Python heredoc.",
+    "Initial console output GBK could not represent obfuscated names; PYTHONIOENCODING=utf-8 fixed display.",
+    "Original gameplay-symbols excludes namespace-empty nested async types: independent parser recovered type4233 spawn state machine."
+  ]
+}

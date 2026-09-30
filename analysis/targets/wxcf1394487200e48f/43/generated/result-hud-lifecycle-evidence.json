@@ -1,0 +1,69 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "atUtc": "2026-09-28T08:30:20.601803+00:00",
+  "rules": [
+    {
+      "id": "result-closes-play-and-guide-ui",
+      "status": "confirmed",
+      "rule": "LevelControl.OnGamePlayState closes Proj_xqzdPlayUI before showing either result, and closes GuideUI on both branches. Metadata generic usage4018264 is UIModule.Close<Proj_xqzdPlayUI>,4018248 is Close<GuideUI>;4018476/4018472 are Show<Proj_xqzdOverUI>/Show<Proj_xqzdFailUI>. The local preloaded panel adapter now hides PlayTopBar, StarInfoRoot and GuideUI on result.",
+      "evidence": [
+        "ui-generic-call-resolution.json",
+        "original871-disassembly/wasmcode-7630.txt:0x37a407-0x37a50d"
+      ]
+    },
+    {
+      "id": "play-ui-closes-skill-ui",
+      "status": "confirmed",
+      "rule": "Proj_xqzdPlayUI.CloseBefore f18063 resets LevelSpeed to1 and closes SkillUI via generic usage4018272. Result therefore also hides the original skill buttons and commander. The local adapter stops manually advancing the hidden commander.",
+      "evidence": [
+        "ui-generic-call-resolution.json",
+        "dynamic-ui-disassembly/playui-closebefore.txt:0x7a2740-0x7a2762"
+      ]
+    },
+    {
+      "id": "result-retry-new-commander-state",
+      "status": "confirmed-with-local-preload-adapter",
+      "rule": "The source UIModule removes closed windows from its registry; subsequent Open constructs a fresh window. Reopened SkillUI has fresh Awake busy flag and new loaded skeleton. Local retry reuses preloaded UGUI wrappers but creates a fresh commander and clears prior Complete subscriptions/busy state. Pause-only retry retains existing commander state.",
+      "evidence": [
+        "ui-lifecycle-evidence.json",
+        "dynamic-ui-disassembly/skillui-awake.txt",
+        "original871-disassembly/wasmcode-15922.txt"
+      ]
+    },
+    {
+      "id": "victory-title-source-delay",
+      "status": "confirmed",
+      "rule": "Original result autoplay clip keeps go_victory/Image/Text inactive through .4333333373 and activates it at .6333333254 seconds. No immediate title visibility override is applied; tests verify the hidden and revealed segments.",
+      "evidence": [
+        "presentation-prepared/ui-result-animations.json:go_victory/Image/Text.m_IsActive"
+      ]
+    }
+  ],
+  "validation": {
+    "caseCount": 243,
+    "passed": true,
+    "build": {
+      "result": "Succeeded",
+      "size": "274051665",
+      "errors": 0,
+      "warnings": 0
+    },
+    "smokeFrames": 600
+  },
+  "captures": [
+    "analysis/captures/original871-reconstruction-victory-entry.png",
+    "analysis/captures/original871-reconstruction-victory.png",
+    "analysis/captures/original871-reconstruction-victory-retry.png",
+    "analysis/captures/original871-reconstruction-defeat.png",
+    "analysis/captures/original871-reconstruction-defeat-retry.png"
+  ],
+  "limitations": [
+    "Controlled score/capture inputs trigger production outcomes; these result captures are not original references.",
+    "Original asynchronous window-close/resource-load latency and matched result recordings remain unobserved.",
+    "Current ordinary victory continuation button is the previously authorized local no-reward adapter."
+  ],
+  "fullGoalComplete": false
+}

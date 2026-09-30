@@ -1,0 +1,66 @@
+; Original class: LoginSDK_XYX
+; Type4608.]LdYUu; wasmcode function 18750; offset=8467436 size=166
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+008133ed  i32.const [5001563]
+008133f2  i32.load8_u [0, 0]
+008133f5  i32.eqz []
+008133f6  if [-64]
+008133f8    i32.const [3938520]
+008133fd    call [900] ; 
+00813400    i32.const [4068300] ; STRING "SDK登录失败："
+00813405    call [900] ; 
+00813408    i32.const [4034536] ; STRING ""
+0081340d    call [900] ; 
+00813410    i32.const [5001563]
+00813415    i32.const [1]
+00813417    i32.store8 [0, 0]
+0081341a  end []
+0081341b  local.get [3]
+0081341d  i32.const [3938520]
+00813422  i32.load [2, 0]
+00813425  call [927] ; 
+00813428  local.set [1]
+0081342a  i32.const [4034536] ; STRING ""
+0081342f  i32.load [2, 0]
+00813432  local.set [2]
+00813434  local.get [1]
+00813436  i32.load [2, 8]
+00813439  i32.const [1]
+0081343b  i32.eq []
+0081343c  if [-64]
+0081343e    i32.const [1]
+00813440    local.get [2]
+00813442    local.get [1]
+00813444    call [4847] ; Report.ReportLoginSdk
+00813447    local.get [0]
+00813449    local.get [1]
+0081344b    i32.load [2, 12]
+0081344e    i32.const [0]
+00813450    call [6834] ; Util.ResolveUserInfo
+00813453    local.get [1]
+00813455    call [11462] ; LoginSDK_XYX.Zf`sekY
+00813458    return []
+00813459  end []
+0081345a  i32.const [0]
+0081345c  local.get [2]
+0081345e  local.get [1]
+00813460  call [4847] ; Report.ReportLoginSdk
+00813463  local.get [1]
+00813465  i32.const [8]
+00813467  i32.add []
+00813468  i32.const [0]
+0081346a  call [966] ; Int32.ToString
+0081346d  local.set [1]
+0081346f  local.get [0]
+00813471  i32.const [2]
+00813473  i32.const [4068300] ; STRING "SDK登录失败："
+00813478  i32.load [2, 0]
+0081347b  local.get [1]
+0081347d  i32.const [0]
+0081347f  call [921] ; String.Concat
+00813482  local.get [1]
+00813484  i32.const [18166] ; TABLE LoginStateBase.{xx{YV
+00813488  global.set [3]
+0081348a  i32.const [18166] ; TABLE LoginStateBase.{xx{YV
+0081348e  call_indirect [7, 0]
+00813491  end []

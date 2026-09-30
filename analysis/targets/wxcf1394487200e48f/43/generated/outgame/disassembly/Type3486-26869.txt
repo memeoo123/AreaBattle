@@ -1,0 +1,25 @@
+; Original class: GlobalData
+; Type3486.get_Vibration; wasmcode function 2400; offset=757588 size=67
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+000b8f55  i32.const [4989080]
+000b8f5a  i32.load8_u [0, 0]
+000b8f5d  i32.eqz []
+000b8f5e  if [-64]
+000b8f60    i32.const [3941104]
+000b8f65    call [900] ; 
+000b8f68    i32.const [4054972] ; STRING "GF_Vibration"
+000b8f6d    call [900] ; 
+000b8f70    i32.const [4989080]
+000b8f75    i32.const [1]
+000b8f77    i32.store8 [0, 0]
+000b8f7a  end []
+000b8f7b  i32.const [3941104]
+000b8f80  i32.load [2, 0]
+000b8f83  call [901] ; 
+000b8f86  i32.const [4054972] ; STRING "GF_Vibration"
+000b8f8b  i32.load [2, 0]
+000b8f8e  i32.const [0]
+000b8f90  i32.const [0]
+000b8f92  call [2888] ; UserDataPrefs.GetInt
+000b8f95  return []
+000b8f96  end []

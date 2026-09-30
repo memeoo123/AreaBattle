@@ -1,0 +1,21 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.UpdateGameClub; wasmcode1 function 68378; offset=21651191 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014a5ef8  i32.const [5006712]
+014a5efd  i32.load8_u [0, 0]
+014a5f00  i32.eqz []
+014a5f01  if [-64]
+014a5f03    i32.const [3932292]
+014a5f08    i32.const [1605]
+014a5f0b    call_indirect [0, 0]
+014a5f0e    i32.const [5006712]
+014a5f13    i32.const [1]
+014a5f15    i32.store8 [0, 0]
+014a5f18  end []
+014a5f19  i32.const [3932292]
+014a5f1e  i32.load [2, 0]
+014a5f21  i32.const [1149]
+014a5f24  call_indirect [0, 0]
+014a5f27  i32.const [0]
+014a5f29  call [27836] ; GameClubTools.UpdateGameClub
+014a5f2d  end []

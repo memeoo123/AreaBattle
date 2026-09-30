@@ -1,0 +1,68 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.{QrSV; wasmcode1 function 54173; offset=17937869 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0111b5d0  i32.const [5007399]
+0111b5d5  i32.load8_u [0, 0]
+0111b5d8  i32.eqz []
+0111b5d9  if [-64]
+0111b5db    i32.const [3953576]
+0111b5e0    i32.const [1605]
+0111b5e3    call_indirect [0, 0]
+0111b5e6    i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b5eb    i32.const [1605]
+0111b5ee    call_indirect [0, 0]
+0111b5f1    i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b5f6    i32.const [1605]
+0111b5f9    call_indirect [0, 0]
+0111b5fc    i32.const [3940924]
+0111b601    i32.const [1605]
+0111b604    call_indirect [0, 0]
+0111b607    i32.const [4100612] ; STRING "x"
+0111b60c    i32.const [1605]
+0111b60f    call_indirect [0, 0]
+0111b612    i32.const [4101028] ; STRING "x{0} ({1}/{2})"
+0111b617    i32.const [1605]
+0111b61a    call_indirect [0, 0]
+0111b61d    i32.const [5007399]
+0111b622    i32.const [1]
+0111b624    i32.store8 [0, 0]
+0111b627  end []
+0111b628  i32.const [3953576]
+0111b62d  i32.load [2, 0]
+0111b630  i32.const [10272]
+0111b634  call_indirect [2, 0]
+0111b637  local.set [1]
+0111b639  i32.const [3940924]
+0111b63e  i32.load [2, 0]
+0111b641  i32.const [109007]
+0111b645  call_indirect [2, 0]
+0111b648  local.set [2]
+0111b64a  local.get [2]
+0111b64c  local.get [0]
+0111b64e  i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b653  i32.load [2, 0]
+0111b656  i32.const [0]
+0111b658  i32.const [54239] ; TABLE UnityAction..ctor
+0111b65c  call_indirect [6, 0]
+0111b65f  i32.const [3940924]
+0111b664  i32.load [2, 0]
+0111b667  i32.const [109007]
+0111b66b  call_indirect [2, 0]
+0111b66e  local.set [3]
+0111b670  local.get [3]
+0111b672  local.get [0]
+0111b674  i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b679  i32.load [2, 0]
+0111b67c  i32.const [0]
+0111b67e  i32.const [54239] ; TABLE UnityAction..ctor
+0111b682  call_indirect [6, 0]
+0111b685  local.get [1]
+0111b687  i32.const [4101028] ; STRING "x{0} ({1}/{2})"
+0111b68c  i32.load [2, 0]
+0111b68f  local.get [2]
+0111b691  local.get [3]
+0111b693  i32.const [4100612] ; STRING "x"
+0111b698  i32.load [2, 0]
+0111b69b  i32.const [0]
+0111b69d  call [3228] ; UIControl.ShowCommonTip
+0111b6a0  end []

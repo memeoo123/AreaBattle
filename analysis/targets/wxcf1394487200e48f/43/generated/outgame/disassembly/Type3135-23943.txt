@@ -1,0 +1,85 @@
+; Original class: DBTSDKManager
+; Type3135..ctor; wasmcode function 20047; offset=9009242 size=253
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0089785b  i32.const [4988644]
+00897860  i32.load8_u [0, 0]
+00897863  i32.eqz []
+00897864  if [-64]
+00897866    i32.const [3958004]
+0089786b    call [900] ; 
+0089786e    i32.const [3958036]
+00897873    call [900] ; 
+00897876    i32.const [3958016]
+0089787b    call [900] ; 
+0089787e    i32.const [3918080]
+00897883    call [900] ; 
+00897886    i32.const [3918072]
+0089788b    call [900] ; 
+0089788e    i32.const [3918076]
+00897893    call [900] ; 
+00897896    i32.const [3983080]
+0089789b    call [900] ; 
+0089789e    i32.const [3925284]
+008978a3    call [900] ; 
+008978a6    i32.const [4988644]
+008978ab    i32.const [1]
+008978ad    i32.store8 [0, 0]
+008978b0  end []
+008978b1  i32.const [3918076]
+008978b6  i32.load [2, 0]
+008978b9  call [903] ; 
+008978bc  local.set [1]
+008978be  local.get [1]
+008978c0  i32.const [3958016]
+008978c5  i32.load [2, 0]
+008978c8  call [951] ; 
+008978cb  local.get [0]
+008978cd  local.get [1]
+008978cf  i32.store [2, 48]
+008978d2  i32.const [3918072]
+008978d7  i32.load [2, 0]
+008978da  call [903] ; 
+008978dd  local.set [1]
+008978df  local.get [1]
+008978e1  i32.const [3958004]
+008978e6  i32.load [2, 0]
+008978e9  call [951] ; 
+008978ec  local.get [0]
+008978ee  local.get [1]
+008978f0  i32.store [2, 52]
+008978f3  i32.const [3918080]
+008978f8  i32.load [2, 0]
+008978fb  call [903] ; 
+008978fe  local.set [1]
+00897900  local.get [1]
+00897902  i32.const [3958036]
+00897907  i32.load [2, 0]
+0089790a  call [951] ; 
+0089790d  local.get [0]
+0089790f  local.get [1]
+00897911  i32.store [2, 56]
+00897914  i32.const [3925284]
+00897919  i32.load [2, 0]
+0089791c  call [903] ; 
+0089791f  local.set [1]
+00897921  local.get [1]
+00897923  i32.const [3983080]
+00897928  i32.load [2, 0]
+0089792b  call [944] ; 
+0089792e  local.get [0]
+00897930  local.get [1]
+00897932  i32.store [2, 60]
+00897935  local.get [0]
+00897937  i32.const [1120403456]
+0089793d  i32.store [2, 68]
+00897940  local.get [0]
+00897942  i32.const [0]
+00897944  call [1173] ; Screen.get_height
+00897947  i32.const [100]
+0089794a  i32.sub []
+0089794b  f32.convert_i32_s []
+0089794c  f32.store [2, 72]
+0089794f  local.get [0]
+00897951  i32.const [0]
+00897953  call [1226] ; RectTransform..ctor
+00897956  end []

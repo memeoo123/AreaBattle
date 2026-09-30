@@ -1,0 +1,71 @@
+; Original class: AudioOnceAction
+; Type3415.OnStop; wasmcode function 20555; offset=9222750 size=181
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008cba5f  i32.const [5011661]
+008cba64  i32.load8_u [0, 0]
+008cba67  i32.eqz []
+008cba68  if [-64]
+008cba6a    i32.const [3936516]
+008cba6f    call [900] ; 
+008cba72    i32.const [3938304]
+008cba77    call [900] ; 
+008cba7a    i32.const [5011661]
+008cba7f    i32.const [1]
+008cba81    i32.store8 [0, 0]
+008cba84  end []
+008cba85  local.get [0]
+008cba87  i32.load [2, 36]
+008cba8a  local.set [1]
+008cba8c  i32.const [3936516]
+008cba91  i32.load [2, 0]
+008cba94  call [901] ; 
+008cba97  local.get [1]
+008cba99  i32.const [0]
+008cba9b  i32.const [0]
+008cba9d  call [946] ; Object.op_Inequality
+008cbaa0  if [-64]
+008cbaa2    local.get [0]
+008cbaa4    i32.load [2, 60]
+008cbaa7    if [-64]
+008cbaa9      i32.const [3938304]
+008cbaae      i32.load [2, 0]
+008cbab1      i32.load [2, 92]
+008cbab4      i32.load [2, 0]
+008cbab7      local.get [0]
+008cbab9      i32.load [2, 60]
+008cbabc      i32.const [0]
+008cbabe      i32.const [23008] ; TABLE SDKToolManager.StopEffect
+008cbac2      global.set [3]
+008cbac4      i32.const [23008] ; TABLE SDKToolManager.StopEffect
+008cbac8      call_indirect [2, 0]
+008cbacb    end []
+008cbacc    local.get [0]
+008cbace    i32.load [2, 36]
+008cbad1    i32.const [0]
+008cbad3    call [5200] ; AudioSource.Stop
+008cbad6  end []
+008cbad7  local.get [0]
+008cbad9  i32.const [-1082130432]
+008cbadf  i32.store [2, 68]
+008cbae2  local.get [0]
+008cbae4  i32.const [0]
+008cbae6  i32.store [2, 60]
+008cbae9  local.get [0]
+008cbaeb  local.get [0]
+008cbaed  call [5202] ; AudioActionBase.OnEndCall
+008cbaf0  local.get [0]
+008cbaf2  i32.load [2, 72]
+008cbaf5  local.set [1]
+008cbaf7  local.get [1]
+008cbaf9  if [-64]
+008cbafb    local.get [1]
+008cbafd    i32.const [0]
+008cbaff    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cbb02    global.set [3]
+008cbb04    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cbb07    call_indirect [0, 0]
+008cbb0a  end []
+008cbb0b  local.get [0]
+008cbb0d  local.get [0]
+008cbb0f  call [4019] ; AudioActionBase.Dispose
+008cbb12  end []

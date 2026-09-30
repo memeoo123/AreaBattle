@@ -1,0 +1,10 @@
+; Original class: CommanderManager
+; Type4028.UnlockCommander; wasmcode function 8112; offset=3844955 size=16
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+003aab5c  local.get [0]
+003aab5e  local.get [1]
+003aab60  local.get [0]
+003aab62  call [6199] ; CommanderManager.GetCommanderData
+003aab65  i32.const [1]
+003aab67  i32.store [2, 16]
+003aab6a  end []

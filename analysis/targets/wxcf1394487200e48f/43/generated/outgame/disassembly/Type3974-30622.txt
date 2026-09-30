@@ -1,0 +1,86 @@
+; Original class: MineGameMain
+; Type3974.uMlm; wasmcode function 11333; offset=5574908 size=267
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005510fd  i32.const [5010139]
+00551102  i32.load8_u [0, 0]
+00551105  i32.eqz []
+00551106  if [-64]
+00551108    i32.const [4000616]
+0055110d    call [900] ; 
+00551110    i32.const [3932308]
+00551115    call [900] ; 
+00551118    i32.const [3975752]
+0055111d    call [900] ; 
+00551120    i32.const [3975756]
+00551125    call [900] ; 
+00551128    i32.const [3975748]
+0055112d    call [900] ; 
+00551130    i32.const [3923632]
+00551135    call [900] ; 
+00551138    i32.const [3937256]
+0055113d    call [900] ; 
+00551140    i32.const [3937260]
+00551145    call [900] ; 
+00551148    i32.const [3937264]
+0055114d    call [900] ; 
+00551150    i32.const [5010139]
+00551155    i32.const [1]
+00551157    i32.store8 [0, 0]
+0055115a  end []
+0055115b  i32.const [3923632]
+00551160  i32.load [2, 0]
+00551163  call [903] ; 
+00551166  local.set [0]
+00551168  local.get [0]
+0055116a  i32.const [3975748]
+0055116f  i32.load [2, 0]
+00551172  call [944] ; 
+00551175  i32.const [3937260]
+0055117a  i32.load [2, 0]
+0055117d  call [903] ; 
+00551180  local.set [1]
+00551182  local.get [1]
+00551184  i32.const [0]
+00551186  call [4333] ; ProcedureStarGame..ctor
+00551189  local.get [0]
+0055118b  local.get [1]
+0055118d  i32.const [3975752]
+00551192  i32.load [2, 0]
+00551195  call [941] ; 
+00551198  i32.const [3937264]
+0055119d  i32.load [2, 0]
+005511a0  call [903] ; 
+005511a3  local.set [1]
+005511a5  local.get [1]
+005511a7  i32.const [0]
+005511a9  call [4333] ; ProcedureStarGame..ctor
+005511ac  local.get [0]
+005511ae  local.get [1]
+005511b0  i32.const [3975752]
+005511b5  i32.load [2, 0]
+005511b8  call [941] ; 
+005511bb  i32.const [3937256]
+005511c0  i32.load [2, 0]
+005511c3  call [903] ; 
+005511c6  local.set [1]
+005511c8  local.get [1]
+005511ca  i32.const [0]
+005511cc  call [4333] ; ProcedureStarGame..ctor
+005511cf  local.get [0]
+005511d1  local.get [1]
+005511d3  i32.const [3975752]
+005511d8  i32.load [2, 0]
+005511db  call [941] ; 
+005511de  i32.const [3932308]
+005511e3  i32.load [2, 0]
+005511e6  call [901] ; 
+005511e9  i32.const [4000616]
+005511ee  i32.load [2, 0]
+005511f1  call [1051] ; 
+005511f4  local.get [0]
+005511f6  i32.const [3975756]
+005511fb  i32.load [2, 0]
+005511fe  call [1302] ; 
+00551201  i32.const [0]
+00551203  call [11037] ; ProcedureManager.Register
+00551206  end []

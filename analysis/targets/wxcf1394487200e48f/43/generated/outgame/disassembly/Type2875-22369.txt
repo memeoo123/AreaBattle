@@ -1,0 +1,25 @@
+; Original class: SimpleCoroutineAwaiter
+; Type2875.GetResult; wasmcode function 15991; offset=7717183 size=54
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0075c140  local.get [0]
+0075c142  i32.load8_u [0, 8]
+0075c145  local.get [0]
+0075c147  call [3340] ; IEnumeratorAwaitExtensions.IP¨»
+0075c14a  local.get [0]
+0075c14c  i32.load [2, 12]
+0075c14f  local.set [0]
+0075c151  local.get [0]
+0075c153  if [-64]
+0075c155    local.get [0]
+0075c157    i32.const [0]
+0075c159    i32.const [11969] ; TABLE ExceptionDispatchInfo.Capture
+0075c15d    global.set [3]
+0075c15f    i32.const [11969] ; TABLE ExceptionDispatchInfo.Capture
+0075c163    call_indirect [1, 0]
+0075c166    i32.const [0]
+0075c168    i32.const [3178] ; TABLE ExceptionDispatchInfo.Throw
+0075c16b    global.set [3]
+0075c16d    i32.const [3178] ; TABLE ExceptionDispatchInfo.Throw
+0075c170    call_indirect [0, 0]
+0075c173  end []
+0075c174  end []

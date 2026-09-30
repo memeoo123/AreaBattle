@@ -1,0 +1,1687 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.0/staging' branch; Version is '6000.0.68f1 (e1e9baaf294b) revision 14805434'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 65325 MB
+[Licensing::IpcConnector] Channel LicenseClient-jiachengwei doesn't exist
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T04:18:12Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 66824)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Unity.exe
+-batchmode
+-accept-apiupdate
+-projectPath
+E:/Projects/AreaBattle/UnityProject
+-executeMethod
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport.Run
+-logFile
+E:/Projects/AreaBattle/analysis/firstpack-atlas-import.log
+Successfully changed project path to: E:/Projects/AreaBattle/UnityProject
+E:/Projects/AreaBattle/UnityProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [46600]  Target information:
+
+Player connection [46600]  * "[IP] 192.168.12.13 [Port] 55506 [Flags] 2 [Guid] 1175462149 [EditorId] 1175462149 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-H2NB5JD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [46600] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [46600] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jiachengwei" at "2026-09-30T04:18:12.6620733Z"
+[Package Manager] Connected to IPC stream "Upm-51600" after 0.2 seconds.
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 11 unused hashed content filesRefreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.68f1 (e1e9baaf294b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Projects/AreaBattle/UnityProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.15.8180
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Code 3 while verifying Licensing Client signature (process Id: 66824, path: "C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              cbc8b57f5a5d4be395b19445affb7bc2
+  Correlation Id:          91b0d1a4e02e5a9ee844660bfda4125d
+  External correlation Id: 5940875740169572823
+  Machine Id:              3p6oMs+43/WdnrC1KMiUwDuKzu8=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jiachengwei" (connect: 0.25s, validation: 0.08s, handshake: 0.60s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jiachengwei-notifications" at "2026-09-30T04:18:13.3428251Z"
+[Licensing::Module] Connected to LicensingClient (PId: 66824, launch time: 0.00, total connection time: 0.93s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 00-0000-0000-0000-0000-XXXX
+  Product: Unity Pro
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.94s
+[Licensing::Module] Licensing is initialized (took 0.27s).
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.278186 seconds.
+- Loaded All Assemblies, in  0.527 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 5161 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  5.381 seconds
+Domain Reload Profiling: 5907ms
+	BeginReloadAssembly (83ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (307ms)
+	LoadAllAssembliesAndSetupDomain (106ms)
+		LoadAssemblies (81ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (104ms)
+			TypeCache.Refresh (103ms)
+				TypeCache.ScanAssembly (95ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (5381ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (5357ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5217ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (68ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+Package Manager log level set to [2]
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 36 packages:
+  Built-in packages:
+    com.unity.ugui@2.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.ugui@cec3688a7c38)
+    com.unity.multiplayer.center@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546)
+    com.unity.modules.accessibility@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.ai@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: E:\Projects\AreaBattle\UnityProject\Library\PackageCache\com.unity.modules.hierarchycore)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/Projects/AreaBattle/UnityProject
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s490ms
+[210/213    1s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.dll (+2 others)
+[211/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[212/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.47 seconds), 3 items updated, 213 evaluated
+AssetDatabase: script compilation time: 1.826588s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.311 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.268 seconds
+Domain Reload Profiling: 578ms
+	BeginReloadAssembly (225ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (126ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (36ms)
+		LoadAssemblies (65ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (31ms)
+			TypeCache.Refresh (23ms)
+				TypeCache.ScanAssembly (18ms)
+			BuildScriptInfoCaches (5ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (269ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (181ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (73ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=5d4dad83e545c7f47a53089b6d6ea504): Total: 2.611 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=395 ms
+		Asset DB Callback time: managed=52 ms, native=10 ms
+		Scripting: domain reloads=1, domain reload time=311 ms, compile time=1828 ms, other=13 ms
+		Project Asset Count: scripts=343, non-scripts=2112
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 9.167ms
+	ApplyChangesToAssetFolders: 0.230ms
+	Scan: 57.517ms
+	OnSourceAssetsModified: 0.574ms
+	CategorizeAssetsWithTransientArtifact: 1.846ms
+	ProcessAssetsWithTransientArtifactChanges: 8.799ms
+	CategorizeAssets: 9.846ms
+	ImportOutOfDateAssets: 269.715ms (-1558.284ms without children)
+		CompileScripts: 1827.585ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 0.066ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.170ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.177ms
+	PostProcessAllAssets: 53.456ms
+	Hotreload: 0.512ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.002ms
+	UnloadStreamsBegin: 0.234ms
+	PersistCurrentRevisions: 0.055ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 0.842ms
+	Untracked: 2199.005ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 6.301ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-AreaBattle
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 850 unused Assets / (2.6 MB). Loaded Objects now: 1381.
+Memory consumption went from 105.4 MB to 102.8 MB.
+Total: 3.403800 ms (FindLiveObjects: 0.057900 ms CreateObjectMapping: 0.017900 ms MarkObjects: 2.446100 ms  DeleteObjects: 0.881300 ms)
+
+Asset Pipeline Refresh (id=b24e4b78b0bee214c86787f1d290c32b): Total: 0.016 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Com_Title_Xbq.png using Guid(be3cc13d12834df43b5ff6207fe8f574) (TextureImporter) -> (artifact id: '09f3d8ad29bda6e518fe4450a8e37e93') in 0.0056685 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=87d3c182d3c8a1c41b24f61590fc3ca6): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_title.png using Guid(f10dcbaef9fe8d549af9aaa1b360af6a) (TextureImporter) -> (artifact id: 'bb2d84c3ebfbb62300edabf4a1181889') in 0.0018186 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bc61f2b0b30893446b9051ecc3ef1674): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx02_on.png using Guid(55fe9d78e8106fa4db12b9ccfd2b430c) (TextureImporter) -> (artifact id: 'e7a3851ef6d8f6910156254c8ce44f87') in 0.0019723 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=524e4ddf96e1c864eac14ed6b8178da5): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_bg02.png using Guid(855da89a4c7c75f409aaa7404ebbe2e6) (TextureImporter) -> (artifact id: '3e9e079ad2804ac07881bc5d10016b33') in 0.0011912 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=81d07c99793765d43a4c3fd548756703): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/zhg_frame07.png using Guid(493da2ff8703de64797f5477a18e6f84) (TextureImporter) -> (artifact id: 'a35db00dd2e7fc89d3aa35911be6e218') in 0.0014911 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=38c87208e4e29174caf0fa07996e59e4): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/yx_tittle.png using Guid(f2aeae0f206bbbe4780501435b32a8e9) (TextureImporter) -> (artifact id: 'f7bc4e339413872a0915166455af9d9d') in 0.0013375 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=368c29f35b225c24c8e42b3123cd2ef5): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Pulbic_redpoint.png using Guid(e4bdd299ae763c54399f3f9ab1bc59df) (TextureImporter) -> (artifact id: '338e633387e7e102c14ff20c26d75e89') in 0.0014999 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ecb2ea2c42f322a4da4d9d28f2fb5eca): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Shop_frame_C.png using Guid(e778a1dbaa78a554aa3d5d56a84ca65c) (TextureImporter) -> (artifact id: '40df7decbd69796981b12a6380b01ef7') in 0.0015838 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a12ea2729d5936d448fe30e8568f7bb4): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/zhg_frame02.png using Guid(513ee1c254a18fb4abeb633febe2b73f) (TextureImporter) -> (artifact id: 'd527aeec9691a52ff3092d33593886e4') in 0.0012362 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e7c4d7368c626dc429eb2628e5822c15): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_frame02.png using Guid(a1b1559719c7c124ea0dff343aadd846) (TextureImporter) -> (artifact id: 'bcc3a50f8a6edb2a40b66bc9a7f7036b') in 0.0013155 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f569292f67a56384fa1c9fc77289fc6f): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Shop_frame_A.png using Guid(76ba857db11f22040a68318233d6b1bb) (TextureImporter) -> (artifact id: 'e16ef014274a40772d524d2b88aa5bc2') in 0.0015266 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=0c7df51726405864f9eb72ec49adb0f7): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Tx_name_bg.png using Guid(ad08c37974eabe542b08f01429add085) (TextureImporter) -> (artifact id: '745b52f68fc9ba93da34ebf0c580b535') in 0.002027 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=afe4f69e558d89f40a103bd87f7114ca): Total: 0.016 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx03_on.png using Guid(c4d699a888482c840aac63ab9817b600) (TextureImporter) -> (artifact id: '7c59562b74acec881aa9cb4bd3ad5b1d') in 0.0027434 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d3c99eae00f2d324bad5c6c71ec0040d): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Tx_bg.png using Guid(2aaa8604f90d4ee489570d4692bdae3d) (TextureImporter) -> (artifact id: '176d4e16b58951f1179b1794a9672541') in 0.0026443 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=fbca18cb436db9043acc18d648719859): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_bg00.png using Guid(b0ffc94eada6f8b48aa20302ad664f77) (TextureImporter) -> (artifact id: '43b610690fe71f1d8a0bfbda8ee8551f') in 0.0021054 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=175a929562a71b54e85277d6423a94d2): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_time_bg.png using Guid(4d636c1f64139054b96005420a1bfaec) (TextureImporter) -> (artifact id: '12ff29c9fff3ed0d213704c44baec9d8') in 0.0019585 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6acaabccc8d42b24699083fc90e0d5e7): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_bg01.png using Guid(a30a062051c62694ca02086771b1f1eb) (TextureImporter) -> (artifact id: '4a3fa0e1ed117875322a854b98a387bc') in 0.0034099 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=38b22bce48e0e8e4fb366dce4475b911): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/icon_hg.png using Guid(a3061970f1276c244a88f522c9ba8483) (TextureImporter) -> (artifact id: '32264a7e58b4ba0e40ea428f29fd4189') in 0.0022233 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=280c9664559154140a88c9c7188e37a0): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/JS_blueman.png using Guid(ef53a93549424e24883ba34e2fd4db58) (TextureImporter) -> (artifact id: '11b3106ec761feea413a02b86aa3c210') in 0.0021002 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=679a68dc8e1661344ba7335e2bb4d455): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx02_off.png using Guid(5bccc9e76947abe438ba9323ae4d890e) (TextureImporter) -> (artifact id: 'de4d395ff32fc32f13d035123b4bd41a') in 0.0029809 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1cff42489f554f64694690206433c473): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Sd_mask.png using Guid(fef06f907e795fb45859a1d8ea6f587f) (TextureImporter) -> (artifact id: 'e9f80a7a717ab0f9e982a2644ec9e92f') in 0.0021757 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=7a8916fafcef4e0488bac38e98d5400c): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/timer_clock.png using Guid(cb4688ebc1094b1448a0e46c46223b15) (TextureImporter) -> (artifact id: '6ed079be441d72b84bbb707dbabb60e5') in 0.0018644 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=54c096711d7b76a40981ee0f40940ff3): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_frame.png using Guid(c4d368ee06b0a734797156a3a9d840f2) (TextureImporter) -> (artifact id: '6fc3b3a753f1cf82c05f3fb373b5f10b') in 0.0041245 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f61ce02fa34033e449b02c2d9967af6a): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx01_on.png using Guid(d83282cf5df8cdf488c69694b5cad5c3) (TextureImporter) -> (artifact id: '21c6de1306c13ab4c6d5c83396d4dc79') in 0.0026785 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=53478cea451e0b94897540de66cb5eab): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_lock.png using Guid(57f4c54b36b1eba4cae2641a8c7dfd52) (TextureImporter) -> (artifact id: '2bfbbc099bbe4b7dfd8637bbd02c0d5c') in 0.0021835 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=073e5e478a74711499a3391471f0f330): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/zhg_xz.png using Guid(d61cd0eef8c76c547a8f7183b32082ab) (TextureImporter) -> (artifact id: '0a72c26ec3b503bafab8f6e540d4d7be') in 0.0021236 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=685a0f23ab4f6d14baaaec3c6d188f6e): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/zhg_title.png using Guid(3bf60edf0c4a09644b7553dbef5b844c) (TextureImporter) -> (artifact id: 'e77979e3625a657cda3d788492520534') in 0.0028046 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8d79f396e3928aa4787c6fec5f6941c9): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Sd_frame.png using Guid(611b8bf565614c5469c76587756174d8) (TextureImporter) -> (artifact id: '9fb533ba3d46876ed1abbc772895cd3b') in 0.0028518 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8920b2b88f09c5046851658bf816c9d9): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Pulbic_redpoint02.png using Guid(d0bd46a396404b04e82a6043a5898e36) (TextureImporter) -> (artifact id: '5c1dab42d7957a4e06519001708e1b0d') in 0.0019972 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e941c0f2844d50f4094606caa2de040d): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/JS_line.png using Guid(5b7da98308ec1374b833320cbe35c6c8) (TextureImporter) -> (artifact id: '33051ef81d06413d0e1765c6c8593ad3') in 0.0018211 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=305dfc94a71033a4489e68b97c67d440): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/reddot.png using Guid(edf8c8c0ade84e449b6876469f582cc2) (TextureImporter) -> (artifact id: '44373744c0ccf9f8710f61f932eed936') in 0.0021755 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1c7d7d650aa6e5a449d471aa665c225f): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/JS_redman.png using Guid(92d3e4fc6f006b94e8aa4de19eeb9e2c) (TextureImporter) -> (artifact id: '400f4826f5b8f72d79ca544d8e8d7df3') in 0.0021038 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e61f9c6550428024a889b2c601c683fb): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_frame.png using Guid(5ab2ef81d2b3752459a9f3b673f23d8b) (TextureImporter) -> (artifact id: 'f0e851c670cabfd537e83b20710c9cea') in 0.0024972 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4538c8069eb9d3a4eb0cc526b4c63f2a): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/yx_add_frame.png using Guid(599edef4ddb7c0348a03e6789c742d45) (TextureImporter) -> (artifact id: '2ee71f3dda1b3d1eee8847900e03bfbe') in 0.0027746 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ddb3227b5748f9146b7f4228a33c2286): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_bg.png using Guid(0e41c3a8e3e343b46883102ce597cb77) (TextureImporter) -> (artifact id: '620f3bd6446ae3568991d8e5523f3025') in 0.002265 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1cf25823d2f9ec24b9a6cc03a53c37b0): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/SKIN_frame02.png using Guid(39dd0aab476583347ba2664e798bd78d) (TextureImporter) -> (artifact id: '2fa69c2834b2c33856daa7fc6d2d0e03') in 0.0022421 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6b1c66f1b9afc1d4da634139d97e6a5d): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/set_btn.png using Guid(a3ac1e443ab4899448318c6f2d632252) (TextureImporter) -> (artifact id: '3eff3865223a652042f5e4e8e1dd5115') in 0.0024322 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=0dbda72212145ee45a33bd59502570ca): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx01_off.png using Guid(6c5f102e10586424ea03e6abaf2bb1d9) (TextureImporter) -> (artifact id: 'af2224e3838c0bc8671bd3fc24527580') in 0.0031611 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f4f7595356fee024ca859c8dfb377e79): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_bx03_off.png using Guid(44b21087a5793784cac2961801b29609) (TextureImporter) -> (artifact id: 'c51c75173618ff60c4130c02998fc1df') in 0.0024668 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=aab36d0825213234c91d621141fab826): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Public_jiangbei.png using Guid(d5c7778a846d805499b1fa2c7806c65e) (TextureImporter) -> (artifact id: 'd93c0dec57ed78cf0fa7e4cbd4fef0df') in 0.0021099 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4d87197e00ab0ab40a6bc47e66d3b511): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_progress01.png using Guid(0e038a9371fdab845b94085d3f240c24) (TextureImporter) -> (artifact id: 'a21a1fe736f45244384444d4f983df91') in 0.0024601 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=25dbc244315709a45923db55b56cc477): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_Tips01.png using Guid(72277c3e883445c4a9c929371b2b7a0f) (TextureImporter) -> (artifact id: '05701b5b13aee1a32171ecbd23bf3690') in 0.0027086 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=29bba7936e1b4f84687d0e080143c59d): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Shop_qgg.png using Guid(25ed590712b25a44eb4f907c77d82415) (TextureImporter) -> (artifact id: '779e4423eacdec984869074b156a7d73') in 0.0026504 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=568df88fc6a7732439f13e184fa3a6e4): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Task_progress02.png using Guid(ba4a5fc81b49bd44d9a1668fb1d0c76c) (TextureImporter) -> (artifact id: 'e0ebf1d4e26d7d70f7e99af615e5b38c') in 0.0019916 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f008ab2393c90d0418c3af0c64a28cb1): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/zhg_frame04.png using Guid(caaa6a20031a03445adf4f844c8422d0) (TextureImporter) -> (artifact id: '499f80a21fc058530cd92609223ea4e1') in 0.003192 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a382c023fcc0bc043b9c68f291d99017): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/guild_bg01.png using Guid(2a1f9075e10219d4798f34c7331eff00) (TextureImporter) -> (artifact id: 'a7bc9ebc6208dd44fbc7daa0abf8d316') in 0.0019463 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d2b92ac1e0ed1034a9aee4d49a843ddc): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Shop_frame_S.png using Guid(fa9b27708b72f684aa4f57005a814a22) (TextureImporter) -> (artifact id: '3f0e1517e08c548fe94ffc2ae6d10d8b') in 0.0025429 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=84d3bf7b70838024eb1ada8b84c7c7c1): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/Shop_frame_B.png using Guid(5f90cebcae47712468a2ace4a9812867) (TextureImporter) -> (artifact id: '4761364644677c2aed9fb4f4b6f8a853') in 0.0024951 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a3dc2f3688d1ebe47a325ea7c26aa49d): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/frame_orange.png using Guid(4a788b71fd9772049ad544385a635fb7) (TextureImporter) -> (artifact id: '125bcf229479cdfeca25fe2ae1389dc0') in 0.002088 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=fc9a06969ea600c469136d403ad1d925): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI/yx_AD.png using Guid(efbee59db2c52404eb24d22694269622) (TextureImporter) -> (artifact id: '560a599f1ea5a56cc48d80e35aba5a97') in 0.0023237 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=500a92a406f8dbe438104b7bc6ba5564): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI.spriteatlas using Guid(888dcf1673882b942b3017224aa8bd9e) (NativeFormatImporter) -> (artifact id: 'd2f6f14f064f34e7b186b8ea204665e3') in 0.0012903 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=5a7b30b53d4ba6e4dbc51dd90d0e052d): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_black.png using Guid(51728a8bf95be5949ab66c6764c8bf16) (TextureImporter) -> (artifact id: '93fb4fa5a2d6a55af3aaba17bb8d1814') in 0.0024207 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=3756943b25bc739429edf67fd340777c): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_add.png using Guid(a885b7e0d139c3147b36538802ce1592) (TextureImporter) -> (artifact id: '8555b18e286c530f5bd5fdc997390bbd') in 0.0020481 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=c2172c580ef53ec459fbd58d2f9f96eb): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_close.png using Guid(aa6601838b7eaf54cb950b91e7a484a1) (TextureImporter) -> (artifact id: '415490277b13b8487cf03066aada400b') in 0.0025331 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8bc53201f9f0c5745b8c0496fefb508c): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_yellow.png using Guid(c3594259082e1ff4cb7bcd97be1f51dc) (TextureImporter) -> (artifact id: 'daea316be9e1ad89d7de70254b5a6d34') in 0.0024421 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=5472736c5e22e3047b38cfaf783366d1): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Public_btn_bg.png using Guid(529389bc4b10fde4c98f1668a6cc2fa7) (TextureImporter) -> (artifact id: 'df955374aea6e9deb4c583765315a522') in 0.0021888 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=da348676fcd3d2d4dbaba0e98afd7db5): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_white.png using Guid(f1c4d909d00e6f84288cbeddb9314c53) (TextureImporter) -> (artifact id: '7e7ff9ed521db16ee18a557e3e09b6a3') in 0.0029055 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=b58f6ce90c28df441b8cee4b4d0cbf96): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Public_btn_bg02.png using Guid(d90cca603e88bb249a66090d1af99812) (TextureImporter) -> (artifact id: 'e05aed4e10e7a977bdc3fd3beea70fd9') in 0.0020695 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=5b84206b64304fa4db796211881416b8): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_return.png using Guid(79dc8275e6335494ca37510d1fad8e73) (TextureImporter) -> (artifact id: '61e57ac564704dca2403eab4f97c34e9') in 0.0023092 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=11c9256b1bc0b3f4b9b695ac52c98b0b): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_green1.png using Guid(db5fc62676acc3e41a9b6749de793947) (TextureImporter) -> (artifact id: '87878867d47400a1721da549481bc07d') in 0.0029506 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a6ee416d37d113443a19b522413e9abc): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_01.png using Guid(6ae1bf144f49c464e81c5e604e5d7a2a) (TextureImporter) -> (artifact id: '955631ef886334ca013b57f766dcf3ee') in 0.0024021 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ce9d450f614f29446bce665db16c32d1): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_02.png using Guid(836e5adefb40a6744870ebd1d99af864) (TextureImporter) -> (artifact id: 'e7a22c2f4e4144a8cf1824be00afd43d') in 0.002465 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=077de76e64eae5a4bbec9141497cecb5): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_green.png using Guid(ca57ec6a4e440884c9d5e7e0f1698905) (TextureImporter) -> (artifact id: '9608eaf9ce404af41e48abdbe6288a07') in 0.0027408 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bbc7c9bb06c6fd641af291a73719545d): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn/Pulbic_btn_frame.png using Guid(f68a3f35629e8b54eb552d948489fb2f) (TextureImporter) -> (artifact id: '7e1a3251602688e878029213501013df') in 0.0025316 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=57e104a9e29208c4db125523635f4399): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn.spriteatlas using Guid(521b8f57195f85c4a81fa05b93ea5489) (NativeFormatImporter) -> (artifact id: '0adb851b93fe3e61c6d39e3e46d001a1') in 0.0009831 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=34ab740cf0470cd408008b25519a9542): Total: 0.006 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicBtn.spriteatlas using Guid(521b8f57195f85c4a81fa05b93ea5489) (NativeFormatImporter) -> (artifact id: '275d76e5d2bff79512243aca13448a6d') in 0.0009694 seconds
+Start importing Assets/AreaBattle/Resources/Recovered/FirstPack/Atlases/PublicUI.spriteatlas using Guid(888dcf1673882b942b3017224aa8bd9e) (NativeFormatImporter) -> (artifact id: '876be5689d0a0972a9036a67f55b68c7') in 0.0012406 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=302a2a2585500104483bafdb46abbdeb): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2a58d1a32e78d354784e7796c79c959b): Total: 0.024 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+- PublicUI (0 / 8165) bytes
+- PublicBtn (0 / 8165) bytes
+Unloading 193 unused Assets / (373.2 KB). Loaded Objects now: 1388.
+Memory consumption went from 100.7 MB to 100.4 MB.
+Total: 2.947000 ms (FindLiveObjects: 0.049200 ms CreateObjectMapping: 0.012300 ms MarkObjects: 2.476500 ms  DeleteObjects: 0.408500 ms)
+
+- Batching 2 : Memory 100 MB
+- 	Placed sprite                                                Pulbic_btn_green1 in page (  0) at (   0,    0). Page is now ( 256,  107). ( 260/111) : 0
+- 	Placed sprite                                                Pulbic_btn_yellow in page (  0) at (   0,  111). Page is now ( 256,  218). ( 260/111) : 0
+- 	Placed sprite                                                     Public_frame in page (  0) at (   0,    0). Page is now ( 254,  346). ( 258/350) : 0
+- 	Placed sprite                                                 Pulbic_btn_white in page (  0) at (   0,  222). Page is now ( 256,  319). ( 260/101) : 0
+- 	Placed sprite                                                      Public_bg01 in page (  0) at ( 258,    0). Page is now ( 470,  346). ( 216/192) : 0
+- 	Placed sprite                                                 Pulbic_btn_green in page (  0) at (   0,  323). Page is now ( 256,  420). ( 260/101) : 0
+- 	Placed sprite                                                        zhg_title in page (  0) at (   0,  350). Page is now ( 470,  478). ( 236/132) : 0
+- 	Placed sprite                                                 Pulbic_btn_black in page (  0) at (   0,  424). Page is now ( 256,  521). ( 260/101) : 0
+- 	Placed sprite                                                      zhg_frame04 in page (  0) at ( 258,  192). Page is now ( 470,  478). ( 124/236) : 0
+- 	Placed sprite                                                    Pulbic_btn_01 in page (  0) at (   0,  525). Page is now ( 256,  679). ( 146/158) : 0
+- 	Placed sprite                                                    Pulbic_btn_02 in page (  0) at (   0,  683). Page is now ( 256,  837). ( 146/158) : 0
+- 	Placed sprite                                                            Tx_bg in page (  0) at (   0,  482). Page is now ( 470,  598). ( 180/120) : 0
+- 	Placed sprite                                                     Shop_frame_S in page (  0) at ( 236,  428). Page is now ( 470,  598). ( 132/132) : 0
+- 	Placed sprite                                                       Task_frame in page (  0) at (   0,  602). Page is now ( 470,  730). ( 132/132) : 0
+- 	Placed sprite                                                 Pulbic_btn_frame in page (  0) at (   0,  841). Page is now ( 256,  969). ( 132/132) : 0
+- 	Placed sprite                                                         Shop_qgg in page (  0) at (   0,  734). Page is now ( 470,  862). ( 132/132) : 0
+- 	Placed sprite                                                Pulbic_btn_return in page (  0) at ( 260,    0). Page is now ( 388,  969). ( 132/104) : 0
+- 	Placed sprite                                                  Public_btn_bg02 in page (  0) at ( 260,  104). Page is now ( 388,  969). ( 132/99) : 0
+- 	Placed sprite                                                     SKIN_frame02 in page (  0) at ( 180,  560). Page is now ( 470,  862). ( 132/132) : 0
+- 	Placed sprite                                                    Public_btn_bg in page (  0) at ( 260,  203). Page is now ( 388,  969). ( 132/99) : 0
+- 	Placed sprite                                                     Shop_frame_C in page (  0) at ( 132,  692). Page is now ( 470,  862). ( 132/132) : 0
+- 	Placed sprite                                                       Pulbic_add in page (  0) at ( 260,  302). Page is now ( 388,  969). ( 84/84) : 0
+- 	Placed sprite                                                 Pulbic_btn_close in page (  0) at ( 260,  386). Page is now ( 388,  969). ( 84/84) : 0
+- 	Placed sprite                                                     Shop_frame_B in page (  0) at ( 312,  560). Page is now ( 470,  862). ( 132/132) : 0
+- 	Placed sprite                                                     Shop_frame_A in page (  0) at ( 264,  692). Page is now ( 470,  862). ( 132/132) : 0
+- 	Placed sprite                                                     Public_title in page (  0) at (   0,  866). Page is now ( 470,  952). ( 188/90) : 0
+- 	Placed sprite                                                          set_btn in page (  0) at ( 188,  824). Page is now ( 470,  952). ( 136/122) : 0
+- 	Placed sprite                                                         Sd_frame in page (  0) at ( 382,  192). Page is now ( 502,  952). ( 124/124) : 0
+- 	Placed sprite                                                    Task_bx03_off in page (  0) at ( 324,  824). Page is now ( 502,  952). ( 124/124) : 0
+- 	Placed sprite                                                    Task_bx02_off in page (  0) at ( 382,  316). Page is now ( 502,  952). ( 124/124) : 0
+- 	Placed sprite                                                     Task_bx02_on in page (  0) at ( 474,    0). Page is now ( 594,  952). ( 124/124) : 0
+- 	Placed sprite                                                     Task_bx03_on in page (  0) at ( 506,  124). Page is now ( 626,  952). ( 124/124) : 0
+- 	Placed sprite                                                    Task_bx01_off in page (  0) at ( 506,  248). Page is now ( 626,  952). ( 124/124) : 0
+- 	Placed sprite                                                     Task_bx01_on in page (  0) at ( 444,  440). Page is now ( 626,  952). ( 124/124) : 0
+- 	Placed sprite                                                      Task_Tips01 in page (  0) at ( 568,  372). Page is now ( 682,  952). ( 118/70) : 0
+- 	Placed sprite                                                           zhg_xz in page (  0) at ( 568,  442). Page is now ( 682,  952). ( 104/72) : 0
+- 	Placed sprite                                                    Com_Title_Xbq in page (  0) at (   0,  956). Page is now ( 682, 1004). ( 133/52) : 0
+- 	Placed sprite                                                        yx_tittle in page (  0) at ( 444,  564). Page is now ( 682, 1004). ( 76/84) : 0
+- 	Placed sprite                                                      Public_bg00 in page (  0) at ( 598,    0). Page is now ( 682, 1004). ( 81/72) : 0
+- 	Placed sprite                                                            yx_AD in page (  0) at ( 630,   72). Page is now ( 710, 1004). ( 84/56) : 0
+- 	Placed sprite                                                          icon_hg in page (  0) at ( 679,    0). Page is now ( 743, 1004). ( 68/68) : 0
+- 	Placed sprite                                                      zhg_frame02 in page (  0) at ( 568,  514). Page is now ( 743, 1004). ( 68/68) : 0
+- 	Placed sprite                                                       JS_blueman in page (  0) at ( 630,  128). Page is now ( 743, 1004). ( 68/68) : 0
+- 	Placed sprite                                                      Public_lock in page (  0) at ( 520,  582). Page is now ( 743, 1004). ( 68/68) : 0
+- 	Placed sprite                                                        JS_redman in page (  0) at ( 747,    0). Page is now ( 811, 1004). ( 68/68) : 0
+- 	Placed sprite                                                     frame_orange in page (  0) at ( 714,   68). Page is now ( 811, 1004). ( 64/64) : 0
+- 	Placed sprite                                                      zhg_frame07 in page (  0) at ( 396,  692). Page is now ( 811, 1004). ( 68/59) : 0
+- 	Placed sprite                                                       guild_bg01 in page (  0) at ( 630,  196). Page is now ( 811, 1004). ( 90/44) : 0
+- 	Placed sprite                                                  Public_jiangbei in page (  0) at ( 464,  650). Page is now ( 811, 1004). ( 68/57) : 0
+- 	Placed sprite                                                        Public_bg in page (  0) at ( 448,  751). Page is now ( 811, 1004). ( 40/88) : 0
+- 	Placed sprite                                                       Tx_name_bg in page (  0) at ( 815,    0). Page is now ( 867, 1004). ( 56/56) : 0
+- 	Placed sprite                                                Pulbic_redpoint02 in page (  0) at ( 698,  132). Page is now ( 867, 1004). ( 54/54) : 0
+- 	Placed sprite                                                     yx_add_frame in page (  0) at ( 488,  707). Page is now ( 867, 1004). ( 48/48) : 0
+- 	Placed sprite                                                      Public_bg02 in page (  0) at ( 506,  372). Page is now ( 867, 1004). ( 44/44) : 0
+- 	Placed sprite                                                      timer_clock in page (  0) at ( 132,  602). Page is now ( 867, 1004). ( 42/42) : 0
+- 	Placed sprite                                                  Pulbic_redpoint in page (  0) at ( 630,  240). Page is now ( 867, 1004). ( 40/40) : 0
+- 	Placed sprite                                                           reddot in page (  0) at ( 630,  280). Page is now ( 867, 1004). ( 36/36) : 0
+- 	Placed sprite                                                  Task_progress01 in page (  0) at ( 871,    0). Page is now ( 903, 1004). ( 36/36) : 0
+- 	Placed sprite                                                   Public_time_bg in page (  0) at ( 720,  186). Page is now ( 903, 1004). ( 36/36) : 0
+- 	Placed sprite                                                  Task_progress02 in page (  0) at ( 132,  644). Page is now ( 903, 1004). ( 28/28) : 0
+- 	Placed sprite                                                   Public_frame02 in page (  0) at ( 636,  514). Page is now ( 903, 1004). ( 24/24) : 0
+- 	Placed sprite                                                          JS_line in page (  0) at ( 180,  482). Page is now ( 903, 1004). ( 16/16) : 0
+- 	Placed sprite                                                          Sd_mask in page (  0) at ( 778,   68). Page is now ( 903, 1004). ( 12/12) : 0
+Sprite Atlas Operation : " ## Generating Atlas Masks ## " took 0.055425 sec (current mem: 110 MB)
+Processing Atlas : PublicUI
+- 	Page (  0) downsized to : (1024 x 1024).
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 254, 346, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 212, 188, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 232, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 232, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 176, 116, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 128, 128, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 184, 86, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 132, 118, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 120, 120, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 114, 66, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 100, 68, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 129, 48, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 72, 80, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 77, 68, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 80, 52, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 64, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 64, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 64, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 64, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 64, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 60, 60, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 55, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 86, 40, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 64, 53, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 36, 84, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 52, 52, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 50, 50, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 44, 44, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 40, 40, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 38, 38, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 36, 36, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 32, 32, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 32, 32, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 32, 32, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 24, 24, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 20, 20, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 12, 12, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Image invalid format!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+filling image source format : 8, 8, 0, 0 boundary fill : 1
+Unsupported Format 0. Please report an issue.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () (at Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs:42)
+
+[Assets/AreaBattle/Editor/OutgameFirstPackAtlasImport.cs line 42]
+
+Crash!!!
+SymInit: Symbol-SearchPath: 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Data/Mono;.;E:\Projects\AreaBattle\UnityProject;E:\Projects\AreaBattle\UnityProject\Library\BurstCache\JIT;C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'jiachengwei'
+OS-Version: 10.0.0
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Unity.exe:Unity.exe (00007FF78C2B0000), size: 299008 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.0.68.59834
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF962B10000), size: 2064384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF962030000), size: 794624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5915
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF960730000), size: 3104768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6280
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF9610B0000), size: 1708032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF9605D0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF962A10000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6157
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF9604B0000), size: 1150976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6157
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF960220000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF960A30000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\IMM32.DLL:IMM32.DLL (00007FF962680000), size: 192512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6157
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Unity.dll:Unity.dll (00007FFFAD590000), size: 87216128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.0.68.59834
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF9602C0000), size: 1429504 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6157
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF961380000), size: 724992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6328
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF960B30000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.3636
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF962570000), size: 651264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6328
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF961260000), size: 1179648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6280
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF960650000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5369
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FFFACDE0000), size: 8019968 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.7.0
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\s3tcompress.dll:s3tcompress.dll (00007FFFACDB0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF960C90000), size: 1224704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5915
+C:\Windows\System32\combase.dll:combase.dll (00007FF961550000), size: 3489792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF962100000), size: 4653056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF960600000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3996
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF9618C0000), size: 7798784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF9614F0000), size: 372736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6392
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF962610000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF9626B0000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\WINTRUST.dll:WINTRUST.dll (00007FF9601A0000), size: 471040 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\etccompress.dll:etccompress.dll (00007FFFAC8D0000), size: 5070848 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\ispc_texcomp.dll:ispc_texcomp.dll (00007FFFAC710000), size: 1826816 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\FreeImage.dll:FreeImage.dll (0000000180000000), size: 5332992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.18.0.0
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\compress_bc7e.dll:compress_bc7e.dll (00007FFFAC5B0000), size: 1433600 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FFFD39D0000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2403.8001
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\umbraoptimizer64.dll:umbraoptimizer64.dll (00007FFFAC480000), size: 1187840 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF95BE10000), size: 2506752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\d3d12.dll:d3d12.dll (00007FF957740000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF95EB40000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF95DF20000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6157
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF9485F0000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF95E9E0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF948790000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF948800000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF95F5C0000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF93B330000), size: 1212416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF95A9D0000), size: 1089536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF93F2A0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF959380000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF95B3A0000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\NativeProxyHelper.dll:NativeProxyHelper.dll (00007FFFABA20000), size: 1789952 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\SketchUpAPI.dll:SketchUpAPI.dll (00007FFFABBE0000), size: 8990720 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+C:\Windows\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FF95A7C0000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF95DF50000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3758
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF947F30000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\SketchUpCommonPreferences.dll:SketchUpCommonPreferences.dll (00007FFFAB9A0000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF960050000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6328
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\OpenRL.dll:OpenRL.dll (0000024911EF0000), size: 12779520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.0.2907
+C:\Windows\SYSTEM32\MSVCR100.dll:MSVCR100.dll (000000005D530000), size: 860160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Windows\SYSTEM32\MSVCP100.dll:MSVCP100.dll (000000005DB40000), size: 622592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\embree.dll:embree.dll (00007FFFAA9B0000), size: 16711680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.14.0.0
+C:\Windows\SYSTEM32\MSWSOCK.DLL:MSWSOCK.DLL (00007FF95F930000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5915
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\tbb.dll:tbb.dll (00007FFFAA960000), size: 303104 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.2022.1111
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\OpenRL_pthread.dll:OpenRL_pthread.dll (0000024912B40000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.9.0.0
+C:\Windows\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FF95FD60000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\bcryptprimitives.dll:bcryptprimitives.dll (00007FF960420000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5007
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF95DAA0000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF95E230000), size: 8015872 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF95FBD0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\SHCORE.dll:SHCORE.dll (00007FF961440000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF9600D0000), size: 147456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6033
+C:\Windows\system32\IconCodecService.dll:IconCodecService.dll (00007FF924C50000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FF95D850000), size: 1794048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF962960000), size: 692224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\netprofm.dll:netprofm.dll (00007FF95D730000), size: 258048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF960EE0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF95B8A0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF95B880000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF95F610000), size: 827392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5369
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF946210000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF946000000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF945ED0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5848
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF95B530000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\npmproxy.dll:npmproxy.dll (00007FF948EE0000), size: 65536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4239
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF945EB0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\fwpuclnt.dll:fwpuclnt.dll (00007FF949070000), size: 524288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6328
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FF948D00000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6328
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\AMDUnityPlugin.DLL:AMDUnityPlugin.DLL (00007FFFA8E70000), size: 8843264 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\NVUnityPlugin.DLL:NVUnityPlugin.DLL (00007FFFA8CE0000), size: 1605632 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\Tools\astcenc-avx2.dll:astcenc-avx2.dll (00007FFFA8910000), size: 364544 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF95FB30000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5856
+C:\Windows\system32\rsaenh.dll:rsaenh.dll (00007FF95F1E0000), size: 229376 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6093
+C:\Windows\SYSTEM32\CRYPTBASE.dll:CRYPTBASE.dll (00007FF95FB20000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF962780000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\gpapi.dll:gpapi.dll (00007FF95E9F0000), size: 143360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\System32\cryptnet.dll:cryptnet.dll (00007FF95B340000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\WINNSI.DLL:WINNSI.DLL (00007FF95B8C0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\mfplat.dll:mfplat.dll (00007FF91D3B0000), size: 1818624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6280
+C:\Windows\SYSTEM32\RTWorkQ.DLL:RTWorkQ.DLL (00007FF941D90000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4842
+C:\Windows\SYSTEM32\mfreadwrite.dll:mfreadwrite.dll (00007FF893830000), size: 1085440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6033
+C:\Windows\SYSTEM32\Mf.dll:Mf.dll (00007FF9000D0000), size: 544768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6033
+C:\Windows\SYSTEM32\MFCORE.DLL:MFCORE.DLL (00007FF8931E0000), size: 4775936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\SYSTEM32\powrprof.dll:powrprof.dll (00007FF95F6E0000), size: 307200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\ksuser.dll:ksuser.dll (00007FF893170000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF95F5A0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\CompPkgSup.DLL:CompPkgSup.DLL (00007FF949930000), size: 225280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\System32\Windows.Media.dll:Windows.Media.dll (00007FF892700000), size: 7495680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\Windows.ApplicationModel.dll:Windows.ApplicationModel.dll (00007FF93A4C0000), size: 954368 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6216
+C:\Windows\System32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF959BD0000), size: 2109440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5848
+C:\Windows\System32\AppXDeploymentClient.dll:AppXDeploymentClient.dll (00007FF959780000), size: 1073152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\Windows.StateRepositoryPS.dll:Windows.StateRepositoryPS.dll (00007FF93AD60000), size: 1335296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\WinTypes.dll:WinTypes.dll (00007FF95C640000), size: 1404928 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.6456
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF95A0E0000), size: 544768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5915
+C:\Windows\System32\DEVOBJ.dll:DEVOBJ.dll (00007FF95FF30000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF941390000), size: 1576960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF95DC20000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\nvldumdx.dll:nvldumdx.dll (00007FF955920000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8180
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF95B000000), size: 1339392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\nvgpucomp64.dll:nvgpucomp64.dll (00007FF950320000), size: 64569344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8180
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\Display.NvContainer\NvMessageBus.dll:NvMessageBus.dll (00007FF954200000), size: 3551232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.15.3538.9611
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF94FC20000), size: 909312 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\nvwgf2umx.dll:nvwgf2umx.dll (00007FF949A30000), size: 92491776 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8180
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF921B00000), size: 1339392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF95F430000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF9563A0000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_20ae8f14a487d5db\nvppex.dll:nvppex.dll (00007FF921670000), size: 1798144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8180
+C:\Windows\SYSTEM32\opencl.dll:opencl.dll (00007FF8C0E60000), size: 483328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.6.0
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\radeonrays.dll:radeonrays.dll (00007FFFA6830000), size: 344064 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\6000.0.68f1\Editor\Data\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFFA53E0000), size: 10760192 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF95ABC0000), size: 999424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.5794
+C:\Windows\System32\Windows.FileExplorer.Common.dll:Windows.FileExplorer.Common.dll (00007FF93A450000), size: 409600 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5848
+C:\Windows\System32\iertutil.dll:iertutil.dll (00007FF9545A0000), size: 2879488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.6456
+C:\Windows\System32\srvcli.dll:srvcli.dll (00007FF954570000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\netutils.dll:netutils.dll (00007FF95F600000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\edputil.dll:edputil.dll (00007FF9377B0000), size: 147456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\SYSTEM32\urlmon.dll:urlmon.dll (00007FF950120000), size: 2039808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.6456
+C:\Windows\SYSTEM32\virtdisk.dll:virtdisk.dll (00007FF9364D0000), size: 77824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\SYSTEM32\FLTLIB.DLL:FLTLIB.DLL (00007FF93F270000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\cldapi.dll:cldapi.dll (00007FF9377E0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF92C2D0000), size: 606208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF95ECA0000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF956520000), size: 372736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF960090000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF95EC70000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3636
+C:\Windows\System32\OneCoreCommonProxyStub.dll:OneCoreCommonProxyStub.dll (00007FF939B30000), size: 520192 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4597
+C:\Windows\System32\OneCoreUAPCommonProxyStub.dll:OneCoreUAPCommonProxyStub.dll (00007FF958660000), size: 8208384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5915
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF9478C0000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4474
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF9480D0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF9458E0000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4474
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF945DA0000), size: 1097728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5794
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF937860000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.4355
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF956C80000), size: 2101248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.5848
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFFADF97E77 (Unity) GetRowSize
+0x00007FFFADFA94AE (Unity) CalculateImageSize
+0x00007FFFAF1DF1AF (Unity) GenerateAtlasTextures
+0x00007FFFAF1E0CB6 (Unity) GenerateTextureAndSpriteRectDataFromAtlasMask
+0x00007FFFAF1CC3E3 (Unity) PackAtlases
+0x00007FFFAF1CB4AE (Unity) PackAtlasOnJob
+0x00007FFFAF1CEE55 (Unity) PackSpriteAtlases
+0x00007FFFAD9F12E8 (Unity) SpriteAtlasUtility_CUSTOM_PackAtlasesInternal
+0x0000024B47C780AE (Mono JIT Code) (wrapper managed-to-native) UnityEditor.U2D.SpriteAtlasUtility:PackAtlasesInternal (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool,bool,bool)
+0x0000024B47C77EF3 (Mono JIT Code) UnityEditor.U2D.SpriteAtlasUtility:PackAtlases (UnityEngine.U2D.SpriteAtlas[],UnityEditor.BuildTarget,bool)
+0x0000024B47C4396B (Mono JIT Code) [E:\Projects\AreaBattle\UnityProject\Assets\AreaBattle\Editor\OutgameFirstPackAtlasImport.cs:42] AreaBattle.EditorTools.OutgameFirstPackAtlasImport:Run () 
+0x0000024B478B53B5 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007FFFA5666EAE (mono-2.0-bdwgc) [C:\build\output\Unity-Technologies\mono\mono\mini\mini-runtime.c:3445] mono_jit_runtime_invoke 
+0x00007FFFA55A8784 (mono-2.0-bdwgc) [C:\build\output\Unity-Technologies\mono\mono\metadata\object.c:3068] do_runtime_invoke 
+0x00007FFFA55A8870 (mono-2.0-bdwgc) [C:\build\output\Unity-Technologies\mono\mono\metadata\object.c:3115] mono_runtime_invoke 
+0x00007FFFAE4E2494 (Unity) scripting_method_invoke
+0x00007FFFAE4BA273 (Unity) ScriptingInvocation::Invoke
+0x00007FFFAF2424C2 (Unity) Application::ParseARGVCommands
+0x00007FFFAF2392A7 (Unity) Application::FinishLoadingProject
+0x00007FFFAF82CFBC (Unity) UnityMain
+0x00007FF78C2B2FBA (Unity) __scrt_common_main_seh
+0x00007FF962047374 (KERNEL32) BaseThreadInitThunk
+0x00007FF962B5CC91 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/JIACHE~1/AppData/Local/Temp/Unity/Editor/Crashes

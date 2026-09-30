@@ -1,0 +1,95 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyClickAd; wasmcode1 function 8791; offset=2925917 size=275
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002ca55e  i32.const [5004952]
+002ca563  i32.load8_u [0, 0]
+002ca566  i32.eqz []
+002ca567  if [-64]
+002ca569    i32.const [3928200]
+002ca56e    i32.const [1605]
+002ca571    call_indirect [0, 0]
+002ca574    i32.const [3984752]
+002ca579    i32.const [1605]
+002ca57c    call_indirect [0, 0]
+002ca57f    i32.const [4057236] ; STRING "INTERSTITAL"
+002ca584    i32.const [1605]
+002ca587    call_indirect [0, 0]
+002ca58a    i32.const [4090640] ; STRING "inters_click_level"
+002ca58f    i32.const [1605]
+002ca592    call_indirect [0, 0]
+002ca595    i32.const [4093368] ; STRING "notifyClickAd"
+002ca59a    i32.const [1605]
+002ca59d    call_indirect [0, 0]
+002ca5a0    i32.const [5004952]
+002ca5a5    i32.const [1]
+002ca5a7    i32.store8 [0, 0]
+002ca5aa  end []
+002ca5ab  local.get [0]
+002ca5ad  i32.load [2, 8]
+002ca5b0  i32.const [4093368] ; STRING "notifyClickAd"
+002ca5b5  i32.load [2, 0]
+002ca5b8  i32.const [0]
+002ca5ba  i32.const [1476] ; TABLE String.Concat
+002ca5bd  call_indirect [3, 0]
+002ca5c0  i32.const [0]
+002ca5c2  i32.const [8833] ; TABLE XYXLOG.Log
+002ca5c6  call_indirect [4, 0]
+002ca5c9  local.get [0]
+002ca5cb  i32.load8_u [0, 44]
+002ca5ce  if [-64]
+002ca5d0    i32.const [3984752]
+002ca5d5    i32.load [2, 0]
+002ca5d8    i32.const [8962]
+002ca5dc    call_indirect [2, 0]
+002ca5df    i32.const [0]
+002ca5e1    i32.const [9129] ; TABLE XYXSDKModuleMgr.get_reporterSDK
+002ca5e5    call_indirect [1, 0]
+002ca5e8    local.get [0]
+002ca5ea    local.get [0]
+002ca5ec    i32.const [65516] ; TABLE DAUAdsAdapter.getNewReportParam
+002ca5f0    call_indirect [1, 0]
+002ca5f3    i32.const [1]
+002ca5f5    i32.const [0]
+002ca5f7    call [11993] ; ReporterSDK.NewReportAdClick
+002ca5fa    return []
+002ca5fb  end []
+002ca5fc  local.get [0]
+002ca5fe  i32.const [1]
+002ca600  i32.store8 [0, 44]
+002ca603  local.get [0]
+002ca605  local.get [0]
+002ca607  call [30266] ; DAUAdsAdapter.reportClick
+002ca60b  i32.const [3984752]
+002ca610  i32.load [2, 0]
+002ca613  i32.const [8962]
+002ca617  call_indirect [2, 0]
+002ca61a  i32.const [0]
+002ca61c  i32.const [9129] ; TABLE XYXSDKModuleMgr.get_reporterSDK
+002ca620  call_indirect [1, 0]
+002ca623  local.get [0]
+002ca625  local.get [0]
+002ca627  i32.const [65516] ; TABLE DAUAdsAdapter.getNewReportParam
+002ca62b  call_indirect [1, 0]
+002ca62e  i32.const [0]
+002ca630  i32.const [0]
+002ca632  call [11993] ; ReporterSDK.NewReportAdClick
+002ca635  local.get [0]
+002ca637  i32.load [2, 20]
+002ca63a  i32.load [2, 16]
+002ca63d  i32.const [4057236] ; STRING "INTERSTITAL"
+002ca642  i32.load [2, 0]
+002ca645  i32.const [0]
+002ca647  i32.const [2051] ; TABLE String.Contains
+002ca64a  call_indirect [3, 0]
+002ca64d  if [-64]
+002ca64f    i32.const [3928200]
+002ca654    i32.load [2, 0]
+002ca657    i32.const [1149]
+002ca65a    call_indirect [0, 0]
+002ca65d    i32.const [4090640] ; STRING "inters_click_level"
+002ca662    i32.load [2, 0]
+002ca665    i32.const [0]
+002ca667    i32.const [65985] ; TABLE AppsflyerUtil.handleAdsLevel
+002ca66b    call_indirect [4, 0]
+002ca66e  end []
+002ca66f  end []

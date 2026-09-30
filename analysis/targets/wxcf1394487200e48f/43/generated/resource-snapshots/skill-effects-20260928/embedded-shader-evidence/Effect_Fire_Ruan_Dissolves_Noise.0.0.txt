@@ -1,0 +1,143 @@
+#ifdef VERTEX
+#version 100
+
+uniform 	vec4 _Time;
+uniform 	vec4 hlslcc_mtx4x4unity_ObjectToWorld[4];
+uniform 	vec4 hlslcc_mtx4x4unity_MatrixVP[4];
+uniform 	mediump vec4 _NoiseTexTiling_xyOffset_zw;
+uniform 	mediump float _NoiseSpendX;
+uniform 	mediump float _NoiseSpendY;
+uniform 	mediump float _DissolvesMode;
+uniform 	mediump float _Dissolves;
+uniform 	mediump float _Edge;
+uniform 	mediump float _Hardness;
+attribute highp vec4 in_POSITION0;
+attribute highp vec4 in_COLOR0;
+attribute highp vec4 in_TEXCOORD0;
+attribute highp vec4 in_TEXCOORD1;
+varying highp vec4 vs_TEXCOORD1;
+varying highp vec4 vs_TEXCOORD2;
+varying highp vec4 vs_COLOR0;
+varying highp vec4 vs_TEXCOORD3;
+vec4 u_xlat0;
+vec4 u_xlat1;
+mediump vec3 u_xlat16_2;
+mediump float u_xlat16_3;
+mediump float u_xlat16_6;
+mediump float u_xlat16_14;
+void main()
+{
+    u_xlat0 = in_POSITION0.yyyy * hlslcc_mtx4x4unity_ObjectToWorld[1];
+    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[0] * in_POSITION0.xxxx + u_xlat0;
+    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[2] * in_POSITION0.zzzz + u_xlat0;
+    u_xlat0 = u_xlat0 + hlslcc_mtx4x4unity_ObjectToWorld[3];
+    u_xlat1 = u_xlat0.yyyy * hlslcc_mtx4x4unity_MatrixVP[1];
+    u_xlat1 = hlslcc_mtx4x4unity_MatrixVP[0] * u_xlat0.xxxx + u_xlat1;
+    u_xlat1 = hlslcc_mtx4x4unity_MatrixVP[2] * u_xlat0.zzzz + u_xlat1;
+    gl_Position = hlslcc_mtx4x4unity_MatrixVP[3] * u_xlat0.wwww + u_xlat1;
+    u_xlat0.xy = in_TEXCOORD0.xy * _NoiseTexTiling_xyOffset_zw.xy + _NoiseTexTiling_xyOffset_zw.zw;
+    vs_TEXCOORD1.zw = _Time.yy * (-vec2(_NoiseSpendX, _NoiseSpendY)) + u_xlat0.xy;
+    vs_TEXCOORD1.xy = in_TEXCOORD0.xy;
+    vs_TEXCOORD2 = in_TEXCOORD1;
+    vs_COLOR0 = in_COLOR0;
+    u_xlat16_2.xyz = in_TEXCOORD1.xyz + (-vec3(_Dissolves, _Edge, _Hardness));
+    u_xlat16_2.xyz = vec3(vec3(_DissolvesMode, _DissolvesMode, _DissolvesMode)) * u_xlat16_2.xyz + vec3(_Dissolves, _Edge, _Hardness);
+    u_xlat16_14 = u_xlat16_2.y + 1.0;
+    u_xlat16_3 = u_xlat16_14 * u_xlat16_2.x;
+    u_xlat16_2.x = u_xlat16_2.x * u_xlat16_14 + (-u_xlat16_2.y);
+    u_xlat16_6 = (-u_xlat16_2.z) + 2.0;
+    u_xlat16_2.x = u_xlat16_6 * u_xlat16_2.x;
+    u_xlat16_2.y = u_xlat16_6 * u_xlat16_3;
+    vs_TEXCOORD3.xy = u_xlat16_2.yx;
+    vs_TEXCOORD3.zw = vec2(0.0, 0.0);
+    return;
+}
+
+#endif
+#ifdef FRAGMENT
+#version 100
+
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+    precision highp float;
+#else
+    precision mediump float;
+#endif
+precision highp int;
+uniform 	vec4 _Time;
+uniform 	mediump vec4 _EdgeColor;
+uniform 	mediump vec4 _MainColor;
+uniform 	mediump vec4 _MainTexTiling_xyOffset_zw;
+uniform 	mediump float _UVOffset;
+uniform 	mediump float _MainSpeed_X;
+uniform 	mediump float _MainSpeed_Y;
+uniform 	mediump float _Noise;
+uniform 	mediump float _DissolvesMode;
+uniform 	mediump vec4 _DissolvesTexture1;
+uniform 	mediump float _Hardness;
+uniform 	mediump vec4 _MaskTexTiling_xyOffset_zw;
+uniform 	mediump float _MaskX;
+uniform 	mediump float _MaskY;
+uniform 	mediump vec4 _HuoDissolutionTexture_ST;
+uniform 	mediump float _HuoDissolutionTexturespeedx;
+uniform 	mediump float _HuoDissolutionTexturespeedy;
+uniform lowp sampler2D _NoiseTexture;
+uniform lowp sampler2D _MainTex;
+uniform lowp sampler2D _DissolvesTexture;
+uniform lowp sampler2D _MaskTexture;
+uniform lowp sampler2D _HuoDissolutionTexture;
+varying highp vec4 vs_TEXCOORD1;
+varying highp vec4 vs_TEXCOORD2;
+varying highp vec4 vs_COLOR0;
+varying highp vec4 vs_TEXCOORD3;
+#define SV_Target0 gl_FragData[0]
+vec4 u_xlat0;
+mediump vec4 u_xlat16_0;
+mediump vec2 u_xlat16_1;
+float u_xlat2;
+vec2 u_xlat3;
+vec3 u_xlat6;
+bool u_xlatb6;
+float u_xlat8;
+mediump float u_xlat16_9;
+void main()
+{
+    u_xlat0.xy = vs_TEXCOORD1.xy * _MainTexTiling_xyOffset_zw.xy + _MainTexTiling_xyOffset_zw.zw;
+    u_xlat8 = _Time.y * _UVOffset;
+    u_xlat0.xy = vec2(u_xlat8) * (-vec2(_MainSpeed_X, _MainSpeed_Y)) + u_xlat0.xy;
+    u_xlat16_1.x = vs_TEXCOORD2.w + (-_Noise);
+    u_xlat16_1.x = _DissolvesMode * u_xlat16_1.x + _Noise;
+    u_xlat8 = texture2D(_NoiseTexture, vs_TEXCOORD1.zw).x;
+    u_xlat8 = u_xlat8 + -0.5;
+    u_xlat0.xy = vec2(u_xlat8) * u_xlat16_1.xx + u_xlat0.xy;
+    u_xlat0 = texture2D(_MainTex, u_xlat0.xy);
+    u_xlat16_0 = u_xlat0 * _MainColor;
+    u_xlat2 = u_xlat16_0.w * vs_COLOR0.w;
+    u_xlat6.xyz = u_xlat16_0.xyz * vs_COLOR0.xyz + (-_EdgeColor.xyz);
+    u_xlat3.xy = vs_TEXCOORD1.xy * _DissolvesTexture1.xy + _DissolvesTexture1.zw;
+    u_xlat3.x = texture2D(_DissolvesTexture, u_xlat3.xy).x;
+    u_xlat3.x = u_xlat3.x + 1.0;
+    u_xlat16_1.xy = u_xlat3.xx + (-vs_TEXCOORD3.xy);
+    u_xlat16_9 = vs_TEXCOORD2.z + (-_Hardness);
+    u_xlat16_9 = _DissolvesMode * u_xlat16_9 + _Hardness;
+    u_xlat16_1.xy = (-vec2(u_xlat16_9)) + u_xlat16_1.xy;
+    u_xlat16_9 = (-u_xlat16_9) + 1.0;
+    u_xlat16_1.xy = u_xlat16_1.xy / vec2(u_xlat16_9);
+    u_xlat16_1.xy = clamp(u_xlat16_1.xy, 0.0, 1.0);
+    u_xlat2 = u_xlat16_1.y * u_xlat2;
+    u_xlat0.xyz = u_xlat16_1.xxx * u_xlat6.xyz + _EdgeColor.xyz;
+    u_xlat6.xy = vs_TEXCOORD1.xy * _MaskTexTiling_xyOffset_zw.xy + _MaskTexTiling_xyOffset_zw.zw;
+    u_xlat6.xy = _Time.yy * (-vec2(_MaskX, _MaskY)) + u_xlat6.xy;
+    u_xlat6.x = texture2D(_MaskTexture, u_xlat6.xy).x;
+    u_xlat2 = u_xlat6.x * u_xlat2;
+    u_xlat2 = clamp(u_xlat2, 0.0, 1.0);
+    u_xlat6.xy = vs_TEXCOORD1.xy * _HuoDissolutionTexture_ST.xy + _HuoDissolutionTexture_ST.zw;
+    u_xlat6.xy = _Time.yy * vec2(_HuoDissolutionTexturespeedx, _HuoDissolutionTexturespeedy) + u_xlat6.xy;
+    u_xlat6.x = texture2D(_HuoDissolutionTexture, u_xlat6.xy).x;
+    u_xlatb6 = u_xlat6.x>=vs_TEXCOORD1.y;
+    u_xlat6.x = u_xlatb6 ? 1.0 : float(0.0);
+    u_xlat0.w = u_xlat6.x * u_xlat2;
+    SV_Target0 = u_xlat0;
+    return;
+}
+
+#endif

@@ -1,0 +1,56 @@
+; Original class: PVPController
+; Type4009..ctor; wasmcode function 18342; offset=8259729 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007e0892  i32.const [5008603]
+007e0897  i32.load8_u [0, 0]
+007e089a  i32.eqz []
+007e089b  if [-64]
+007e089d    i32.const [3953476]
+007e08a2    call [900] ; 
+007e08a5    i32.const [3971924]
+007e08aa    call [900] ; 
+007e08ad    i32.const [3976044]
+007e08b2    call [900] ; 
+007e08b5    i32.const [3923704]
+007e08ba    call [900] ; 
+007e08bd    i32.const [3922836]
+007e08c2    call [900] ; 
+007e08c5    i32.const [5008603]
+007e08ca    i32.const [1]
+007e08cc    i32.store8 [0, 0]
+007e08cf  end []
+007e08d0  local.get [0]
+007e08d2  i32.const [2]
+007e08d4  i32.store [2, 12]
+007e08d7  i32.const [3922836]
+007e08dc  i32.load [2, 0]
+007e08df  call [903] ; 
+007e08e2  local.set [1]
+007e08e4  local.get [1]
+007e08e6  i32.const [3971924]
+007e08eb  i32.load [2, 0]
+007e08ee  call [944] ; 
+007e08f1  local.get [0]
+007e08f3  local.get [1]
+007e08f5  i32.store [2, 20]
+007e08f8  i32.const [3923704]
+007e08fd  i32.load [2, 0]
+007e0900  call [903] ; 
+007e0903  local.set [1]
+007e0905  local.get [1]
+007e0907  i32.const [3976044]
+007e090c  i32.load [2, 0]
+007e090f  call [944] ; 
+007e0912  local.get [0]
+007e0914  local.get [1]
+007e0916  i32.store [2, 24]
+007e0919  local.get [0]
+007e091b  i32.const [1065353216]
+007e0921  i32.store [2, 48]
+007e0924  local.get [0]
+007e0926  i32.const [1077936128]
+007e092c  i32.store [2, 28]
+007e092f  i32.const [3953476]
+007e0934  i32.load [2, 0]
+007e0937  drop []
+007e0938  end []

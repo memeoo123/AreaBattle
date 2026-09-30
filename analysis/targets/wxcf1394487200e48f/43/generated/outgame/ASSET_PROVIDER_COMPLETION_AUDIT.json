@@ -1,0 +1,31 @@
+{
+  "status": "provider_completion_chain_verified_loader_pending",
+  "source": [
+    "disassembly/Type2954-23019.txt",
+    "disassembly/Type2954-23029.txt",
+    "disassembly/Type2954-23031.txt",
+    "disassembly/Type2954-23034.txt",
+    "disassembly/Type2954-23035.txt",
+    "disassembly/ProviderGeneric-23030.txt",
+    "provider-completion-generics.json",
+    "provider-create-handle-generic.json"
+  ],
+  "verified": [
+    "Asset handle creation increments reference count then adds handle",
+    "Release warns when count<=0; failed List.Remove throws before decrement",
+    "IsDone requires suppression flag false and (status&~1)==4",
+    "Completion sets Progress1 then copies handle list, skips handles whose providers are released/destroyed",
+    "Callback failure interrupts later callbacks and Task completion",
+    "Task lazily allocated; terminal status on first access completes it; dispatch uses TrySetResult after callbacks",
+    "Play Mode now follows provider->handle event->NormalPool->fly animation"
+  ],
+  "remaining": [
+    "Actual resource loader completion scheduling and startup flags",
+    "Provider bundle ownership, dependency release and destruction",
+    "Other handle types and failed loading state transitions",
+    "Production account/pages and full build/E2E"
+  ],
+  "checks": 532,
+  "playmodeChecks": 8,
+  "dynamicScope": "Recovered-resource adapter uses explicit normal-provider mode and sets status4; no original platform loader claim"
+}

@@ -1,0 +1,53 @@
+; Original class: XYXADControl
+; Type7567.InitADModuleStatic; wasmcode function 9329; offset=4536658 size=144
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 127)]
+00453955  i32.const [5005736]
+0045395a  i32.load8_u [0, 0]
+0045395d  i32.eqz []
+0045395e  if [-64]
+00453960    i32.const [3941148]
+00453965    call [900] ; 
+00453968    i32.const [4079224] ; STRING "XYXADControl_PlayRewardADCount"
+0045396d    call [900] ; 
+00453970    i32.const [4079228] ; STRING "XYXADControl_PlayRewardADSuccessCount"
+00453975    call [900] ; 
+00453978    i32.const [5005736]
+0045397d    i32.const [1]
+0045397f    i32.store8 [0, 0]
+00453982  end []
+00453983  i32.const [0]
+00453985  call [1083] ; BridgeManager.get_xyxFunc
+00453988  local.set [0]
+0045398a  local.get [0]
+0045398c  local.set [1]
+0045398e  local.get [0]
+00453990  i32.load [2, 0]
+00453993  local.set [0]
+00453995  local.get [1]
+00453997  local.get [0]
+00453999  i32.const [232]
+0045399c  i32.add []
+0045399d  i32.load [2, 192]
+004539a1  local.get [0]
+004539a3  i32.load [2, 420]
+004539a7  global.set [3]
+004539a9  global.get [3]
+004539ab  call_indirect [0, 0]
+004539ae  i32.const [3941148]
+004539b3  i32.load [2, 0]
+004539b6  call [901] ; 
+004539b9  i32.const [4079224] ; STRING "XYXADControl_PlayRewardADCount"
+004539be  i32.load [2, 0]
+004539c1  i32.const [0]
+004539c3  i32.const [0]
+004539c5  call [1434] ; Utils_PlayerPrefs.GetInt
+004539c8  i32.const [0]
+004539ca  call [5487] ; XYXADControl.set_PlayRewardADCount
+004539cd  i32.const [4079228] ; STRING "XYXADControl_PlayRewardADSuccessCount"
+004539d2  i32.load [2, 0]
+004539d5  i32.const [0]
+004539d7  i32.const [0]
+004539d9  call [1434] ; Utils_PlayerPrefs.GetInt
+004539dc  i32.const [0]
+004539de  call [6761] ; XYXADControl.set_PlayRewardADSuccessCount
+004539e1  end []

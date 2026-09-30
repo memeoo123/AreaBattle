@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.DrawVideo; wasmcode1 function 66255; offset=21042665 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014115ea  i32.const [4988632]
+014115ef  i32.load8_u [0, 0]
+014115f2  i32.eqz []
+014115f3  if [-64]
+014115f5    i32.const [3927988]
+014115fa    i32.const [1605]
+014115fd    call_indirect [0, 0]
+01411600    i32.const [4988632]
+01411605    i32.const [1]
+01411607    i32.store8 [0, 0]
+0141160a  end []
+0141160b  i32.const [3927988]
+01411610  i32.load [2, 0]
+01411613  i32.load [2, 92]
+01411616  i32.load [2, 0]
+01411619  i32.const [0]
+0141161b  call [32248] ; AdsManager.ShowDrawVideoStatic
+0141161f  end []

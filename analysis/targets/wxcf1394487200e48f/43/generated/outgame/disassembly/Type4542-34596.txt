@@ -1,0 +1,88 @@
+; Original class: GlobalItemManager
+; Type4542.zkR; wasmcode function 12037; offset=5859409 size=248
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00596852  i32.const [5001153]
+00596857  i32.load8_u [0, 0]
+0059685a  i32.eqz []
+0059685b  if [-64]
+0059685d    i32.const [3955832]
+00596862    call [900] ; 
+00596865    i32.const [3955840]
+0059686a    call [900] ; 
+0059686d    i32.const [3955848]
+00596872    call [900] ; 
+00596875    i32.const [3934612]
+0059687a    call [900] ; 
+0059687d    i32.const [5001153]
+00596882    i32.const [1]
+00596884    i32.store8 [0, 0]
+00596887  end []
+00596888  block [-64]
+0059688a    local.get [0]
+0059688c    i32.load [2, 36]
+0059688f    local.get [1]
+00596891    i32.const [3955840]
+00596896    i32.load [2, 0]
+00596899    call [1129] ; 
+0059689c    i32.eqz []
+0059689d    br_if [0]
+0059689f    local.get [0]
+005968a1    i32.load [2, 44]
+005968a4    local.get [1]
+005968a6    i32.const [3955840]
+005968ab    i32.load [2, 0]
+005968ae    call [1129] ; 
+005968b1    if [-64]
+005968b3      local.get [0]
+005968b5      i32.load [2, 44]
+005968b8      local.get [1]
+005968ba      i32.const [3955848]
+005968bf      i32.load [2, 0]
+005968c2      call [1128] ; 
+005968c5      local.get [0]
+005968c7      i32.load [2, 36]
+005968ca      local.get [1]
+005968cc      i32.const [3955848]
+005968d1      i32.load [2, 0]
+005968d4      call [1128] ; 
+005968d7      i32.load [2, 24]
+005968da      i32.store [2, 24]
+005968dd      local.get [0]
+005968df      i32.load [2, 44]
+005968e2      local.get [1]
+005968e4      i32.const [3955848]
+005968e9      i32.load [2, 0]
+005968ec      call [1128] ; 
+005968ef      local.get [0]
+005968f1      i32.load [2, 36]
+005968f4      local.get [1]
+005968f6      i32.const [3955848]
+005968fb      i32.load [2, 0]
+005968fe      call [1128] ; 
+00596901      i64.load [3, 16]
+00596904      i64.store [3, 16]
+00596907      br [1]
+00596909    end []
+0059690a    local.get [0]
+0059690c    i32.load [2, 36]
+0059690f    local.get [1]
+00596911    i32.const [3955848]
+00596916    i32.load [2, 0]
+00596919    call [1128] ; 
+0059691c    call [1190] ; 
+0059691f    i32.const [3934612]
+00596924    i32.load [2, 0]
+00596927    call [924] ; 
+0059692a    local.set [2]
+0059692c    local.get [0]
+0059692e    i32.load [2, 44]
+00596931    local.get [1]
+00596933    local.get [2]
+00596935    i32.const [3955832]
+0059693a    i32.load [2, 0]
+0059693d    call [1049] ; 
+00596940  end []
+00596941  local.get [0]
+00596943  i32.const [1]
+00596945  i32.store8 [0, 72]
+00596948  end []

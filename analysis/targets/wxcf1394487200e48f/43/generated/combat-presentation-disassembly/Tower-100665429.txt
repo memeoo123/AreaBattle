@@ -1,0 +1,25 @@
+; Tower.PlayIceEffect; wasmcode function 10054; offset=4824131 size=64
+; signature={'args': [127, 125, 127], 'returns': []}; localGroups=[]
+00499c44  i32.const [5007209]
+00499c49  i32.load8_u [0, 0]
+00499c4c  i32.eqz []
+00499c4d  if [-64]
+00499c4f    i32.const [4096732] ; STRING "skill"
+00499c54    call [900] ; 
+00499c57    i32.const [5007209]
+00499c5c    i32.const [1]
+00499c5e    i32.store8 [0, 0]
+00499c61  end []
+00499c62  local.get [0]
+00499c64  i32.load [2, 92]
+00499c67  i32.const [1]
+00499c69  i32.const [0]
+00499c6b  call [949] ; GameObject.SetActive
+00499c6e  local.get [0]
+00499c70  i32.load [2, 96]
+00499c73  i32.const [4096732] ; STRING "skill"
+00499c78  i32.load [2, 0]
+00499c7b  i32.const [0]
+00499c7d  i32.const [0]
+00499c7f  call [8302] ; Animator.SetInteger
+00499c82  end []

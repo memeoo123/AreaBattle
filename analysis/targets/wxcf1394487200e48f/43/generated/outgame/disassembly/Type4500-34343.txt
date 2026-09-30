@@ -1,0 +1,20 @@
+; Original class: ItemManager
+; Type4500.GetNowDateTime; wasmcode function 18995; offset=8538837 size=49
+; signature={'args': [127, 127], 'returns': [126]}; localGroups=[]
+00824ad6  i32.const [5009882]
+00824adb  i32.load8_u [0, 0]
+00824ade  i32.eqz []
+00824adf  if [-64]
+00824ae1    i32.const [3930616]
+00824ae6    call [900] ; 
+00824ae9    i32.const [5009882]
+00824aee    i32.const [1]
+00824af0    i32.store8 [0, 0]
+00824af3  end []
+00824af4  i32.const [3930616]
+00824af9  i32.load [2, 0]
+00824afc  call [901] ; 
+00824aff  i32.const [0]
+00824b01  call [1287] ; DateTime.get_Now
+00824b04  return []
+00824b05  end []

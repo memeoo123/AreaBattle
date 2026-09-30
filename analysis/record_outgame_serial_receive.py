@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-login-sync-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==457
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='serial-receive-callbacks';s['validation'].update(integratedChecksPassed=457,loginSyncChecksPassed=len(v['checks']));s['nextActions']=['Implement source registered manager providers and original data key/save semantics, then connect UserLogin data reload/upload/download.','Trace first LevelID assignment and connect account initialization to menu.','Complete remaining outgame systems and runnable end-to-end build.'];write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['serial-receive-callbacks']={'implementationReady':True,'productionConnected':False,'source':['disassembly/Type7527-54988.txt','disassembly/Type7527-54989.txt'],'implementation':['OutgameSerialControllerLifecycle.cs'],'scope':'Received success/failure connects existing cache and show flow, request callbacks/check, noncache priority, INTERSTITAL4 auto flag and VIDEO load event/three-second platform883/142 autoshows. Native adapters and production event host pending.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='Original serial receive callbacks and video auto-show boundary') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original serial receive callbacks and video auto-show boundary','checksPassed':457,'outgameChecksPassed':190,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Full scene, aspect adaptation, all skin assets or playable lobby'};write(p,s)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';audit=read(p);audit['sourceMethodsIndexed']=len(read(o/'method-map.json'));audit['confirmed'].append({'fact':'Serial onReceiveAdSuccess cache branch deduplicates cache then reqCallback(true) then checkRequest. Noncache INTERSTITAL updates last priority only with idsInfo. INTERSTITAL4 auto flag rechecked then cleared before onlyShowInter4(true). VIDEO load event always sent, logs realtime then rereads; only timestamp != -1 and delta<=3 and platform883/142 autoshows. Fail reqCallback(false) precedes cache decision, noncache showAd(true,false), cache checkRequest.457 checks pass.','source':['disassembly/Type7527-54988.txt','disassembly/Type7527-54989.txt'],'implementation':'OutgameSerialControllerLifecycle.cs','validation':'analysis/outgame-login-sync-validation.json'});write(p,audit)
+note='\n\n## 串行加载成功/失败事件（457项）\n补齐OnReceiveAdSuccess/Failed，连到现有缓存和展示流程。缓存先去重添加再reqCallback(true)/CheckRequest，非缓存插屏只更新有配置的优先级；INTERSTITAL4先消耗自动展示标志再调用展示。VIDEO发送加载事件后重读时间，只有883/142且差值<=3秒、时间不为-1才自动show。457项（战斗267+关外190）通过，Unity退出0。实际适配器事件绑定与生产Host仍未完成，目标继续有效。\n'
+
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+subprocess.run(b+['set-check']+a+['--name','outgameSerialReceiveCallbacks','--result','pass','--evidence','457 integrated checks; serial receive callbacks, cache dedup, inter4 flag and platform/time auto-show verified; production wiring incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded457; full goal remains active.')

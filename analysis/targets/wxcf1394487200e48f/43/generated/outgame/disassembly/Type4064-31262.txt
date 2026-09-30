@@ -1,0 +1,79 @@
+; Original class: GameControl
+; Type4064.LoadGameScene; wasmcode function 6058; offset=2143450 size=221
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0020b4db  i32.const [5008364]
+0020b4e0  i32.load8_u [0, 0]
+0020b4e3  i32.eqz []
+0020b4e4  if [-64]
+0020b4e6    i32.const [3915920]
+0020b4eb    call [900] ; 
+0020b4ee    i32.const [3989352]
+0020b4f3    call [900] ; 
+0020b4f6    i32.const [3953456]
+0020b4fb    call [900] ; 
+0020b4fe    i32.const [3936516]
+0020b503    call [900] ; 
+0020b506    i32.const [4028424] ; METHOD Zu[^w}.hzUWOa
+0020b50b    call [900] ; 
+0020b50e    i32.const [3945908]
+0020b513    call [900] ; 
+0020b516    i32.const [5008364]
+0020b51b    i32.const [1]
+0020b51d    i32.store8 [0, 0]
+0020b520  end []
+0020b521  i32.const [3945908]
+0020b526  i32.load [2, 0]
+0020b529  call [903] ; 
+0020b52c  local.set [2]
+0020b52e  local.get [2]
+0020b530  local.get [0]
+0020b532  i32.store [2, 8]
+0020b535  local.get [2]
+0020b537  local.get [1]
+0020b539  i32.store [2, 12]
+0020b53c  local.get [0]
+0020b53e  local.get [1]
+0020b540  i32.store [2, 60]
+0020b543  local.get [0]
+0020b545  i32.load [2, 48]
+0020b548  local.set [1]
+0020b54a  i32.const [3936516]
+0020b54f  i32.load [2, 0]
+0020b552  call [901] ; 
+0020b555  local.get [1]
+0020b557  i32.const [0]
+0020b559  i32.const [0]
+0020b55b  call [940] ; Object.op_Equality
+0020b55e  if [-64]
+0020b560    i32.const [3953456]
+0020b565    i32.load [2, 0]
+0020b568    call [935] ; 
+0020b56b    local.set [0]
+0020b56d    i32.const [3915920]
+0020b572    i32.load [2, 0]
+0020b575    call [903] ; 
+0020b578    local.set [1]
+0020b57a    local.get [1]
+0020b57c    local.get [2]
+0020b57e    i32.const [4028424] ; METHOD Zu[^w}.hzUWOa
+0020b583    i32.load [2, 0]
+0020b586    i32.const [0]
+0020b588    call [1113] ; 
+0020b58b    local.get [0]
+0020b58d    i32.const [11001]
+0020b591    local.get [1]
+0020b593    i32.const [3989352]
+0020b598    i32.load [2, 0]
+0020b59b    call [1032] ; 
+0020b59e    local.get [0]
+0020b5a0    call [3136] ; LoadPrefabControl.LoadAsset
+0020b5a3    return []
+0020b5a4  end []
+0020b5a5  local.get [0]
+0020b5a7  local.get [0]
+0020b5a9  i32.load [2, 48]
+0020b5ac  local.get [2]
+0020b5ae  i32.load [2, 12]
+0020b5b1  local.get [0]
+0020b5b3  call [7818] ; GameControl.{iO`[
+0020b5b6  end []

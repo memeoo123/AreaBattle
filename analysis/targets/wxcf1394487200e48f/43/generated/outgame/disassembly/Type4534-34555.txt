@@ -1,0 +1,45 @@
+; Original class: ItemConfigMgr
+; Type4534.GetRewardItems; wasmcode function 11724; offset=5739753 size=125
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005794ea  i32.const [5001121]
+005794ef  i32.load8_u [0, 0]
+005794f2  i32.eqz []
+005794f3  if [-64]
+005794f5    i32.const [3954560]
+005794fa    call [900] ; 
+005794fd    i32.const [3955680]
+00579502    call [900] ; 
+00579505    i32.const [3954564]
+0057950a    call [900] ; 
+0057950d    i32.const [3917492]
+00579512    call [900] ; 
+00579515    i32.const [5001121]
+0057951a    i32.const [1]
+0057951c    i32.store8 [0, 0]
+0057951f  end []
+00579520  local.get [0]
+00579522  i32.load [2, 28]
+00579525  local.get [1]
+00579527  i32.const [3954560]
+0057952c  i32.load [2, 0]
+0057952f  call [1129] ; 
+00579532  if [-64]
+00579534    local.get [0]
+00579536    i32.load [2, 28]
+00579539    local.get [1]
+0057953b    i32.const [3954564]
+00579540    i32.load [2, 0]
+00579543    call [1128] ; 
+00579546    return []
+00579547  end []
+00579548  i32.const [3917492]
+0057954d  i32.load [2, 0]
+00579550  call [903] ; 
+00579553  local.set [0]
+00579555  local.get [0]
+00579557  i32.const [3955680]
+0057955c  i32.load [2, 0]
+0057955f  call [951] ; 
+00579562  local.get [0]
+00579564  return []
+00579565  end []

@@ -1,0 +1,35 @@
+{
+  "atUtc": "2026-09-30T03:54:08.656449+00:00",
+  "sourceMethods": [
+    29875,
+    29955
+  ],
+  "implemented": [
+    "OutgameLegacyResourceInitialization:IOutgameStartupModule",
+    "OutgameLegacyResourcesMono.Awake"
+  ],
+  "semantics": [
+    "Already initialized invokes current Initialized callback immediately and does not repeat setup.",
+    "Initial order: route check, manager accessor, ResourcesMono GameObject creation/GetComponent, initialized flag true, service firstpack.unity3d LocalPath query.",
+    "Nonempty path loads Resources.Load<TextAsset>(firstpack).text, deserializes List<string>, starts FirstPack iterator and returns without immediate callback.",
+    "Null/empty path logs ResourcesModule初始化完成 then current callback; whitespace is nonempty.",
+    "Exceptions after early flag leave it true; repeat initialize invokes callback even after failure or while firstpack waits.",
+    "Default ResourcesMono Awake invokes DontDestroyOnLoad(this)."
+  ],
+  "validation": {
+    "passed": true,
+    "integratedChecks": 640,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "boundaries": [
+    "Manager accessor and JSON deserializer explicit until original configuration/main composition is implemented.",
+    "Tests isolate GameObject creation; default native Mono Awake is compiled but not yet exercised in new PlayMode.",
+    "Original Resources firstpack TextAsset not located by bounded generated-assets filename search. Native file fixture remains historical635/10-check evidence."
+  ],
+  "pending": [
+    "Original firstpack text list in webdata Resources",
+    "Actual manager/service/config composition",
+    "Full account/config/menu startup"
+  ]
+}

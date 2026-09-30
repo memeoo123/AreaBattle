@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "numericOracle": {
+    "schemaVersion": "1.0",
+    "target": {
+      "appId": "wxcf1394487200e48f",
+      "version": "43"
+    },
+    "generatedAt": "2026-09-28T03:34:45.514Z",
+    "mode": "isolated original arithmetic; not full-game runtime validation",
+    "runtime": "v24.14.0",
+    "sources": [
+      {
+        "method": "GetSpawnTime",
+        "module": "wasmcode",
+        "function": 13071,
+        "offset": 6269135,
+        "size": 197,
+        "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+        "bodySha256": "fd73fb47d02341f8e4f6359b867426073a104a7bdfd3b85ab23e95ee23ceac8b",
+        "harnessSha256": "6814d93941959a9c70bdddccce529b329c42e0c6720fde3b08613f4e651d359b",
+        "imports": [],
+        "memoryPages": 1
+      },
+      {
+        "method": "GetDispatchLineNum",
+        "module": "wasmcode1",
+        "function": 68963,
+        "offset": 21853751,
+        "size": 55,
+        "sourceSha256": "2c7769c7b98b69036e9e453bd3688a17c27fdd60ed606ebd729952a7156673d3",
+        "bodySha256": "ea40112bfb2a23f0b238cd4a614bf44adc0cd8da4d3b8a3cf0cb36b8b188adda",
+        "harnessSha256": "6555d6d8bd8ac9786625944f626b3c6337137504119379d47edcacb18387c931",
+        "imports": [],
+        "memoryPages": 1
+      },
+      {
+        "method": "GetDispatchAddScoreTime",
+        "module": "wasmcode",
+        "function": 13072,
+        "offset": 6269333,
+        "size": 62,
+        "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+        "bodySha256": "5a27e68bd4cab30dd29ba09a523e296bfe048cb636704273ce382a04d07b4874",
+        "harnessSha256": "480ecb1b0b3278a574ab49ccbf80f5a5cb0f5b93d80d0950a1d66a8d0278d647",
+        "imports": [],
+        "memoryPages": 1
+      },
+      {
+        "method": "GetDispatchScoreNum",
+        "module": "wasmcode1",
+        "function": 68962,
+        "offset": 21853695,
+        "size": 55,
+        "sourceSha256": "2c7769c7b98b69036e9e453bd3688a17c27fdd60ed606ebd729952a7156673d3",
+        "bodySha256": "3f3f753eb1f999e14acd49c3a0ddb416eb40a2616d504dcbb32ef74deca55a38",
+        "harnessSha256": "a453574e7f746da6230c05a7171ef59f82cad1ca0d762dc0bec351a8f3995c75",
+        "imports": [],
+        "memoryPages": 1
+      }
+    ],
+    "cases": [
+      {
+        "id": "original-GetSpawnTime-0-1",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 0,
+          "lines": 1
+        },
+        "expected": 1.1109999418258667,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-0-2",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 0,
+          "lines": 2
+        },
+        "expected": 1.281999945640564,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-0-3",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 0,
+          "lines": 3
+        },
+        "expected": 1.5149999856948853,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-1-1",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 1,
+          "lines": 1
+        },
+        "expected": 1.031999945640564,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-1-2",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 1,
+          "lines": 2
+        },
+        "expected": 1.184999942779541,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-1-3",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 1,
+          "lines": 3
+        },
+        "expected": 1.3910000324249268,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-2-1",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 2,
+          "lines": 1
+        },
+        "expected": 0.9610000252723694,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-2-2",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 2,
+          "lines": 2
+        },
+        "expected": 1.0980000495910645,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetSpawnTime-2-3",
+        "method": "GetSpawnTime",
+        "input": {
+          "grade": 2,
+          "lines": 3
+        },
+        "expected": 1.281999945640564,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetSpawnTime"
+      },
+      {
+        "id": "original-GetDispatchLineNum-0",
+        "method": "GetDispatchLineNum",
+        "input": {
+          "grade": 0
+        },
+        "expected": 1,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchLineNum"
+      },
+      {
+        "id": "original-GetDispatchLineNum-1",
+        "method": "GetDispatchLineNum",
+        "input": {
+          "grade": 1
+        },
+        "expected": 2,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchLineNum"
+      },
+      {
+        "id": "original-GetDispatchLineNum-2",
+        "method": "GetDispatchLineNum",
+        "input": {
+          "grade": 2
+        },
+        "expected": 3,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchLineNum"
+      },
+      {
+        "id": "original-GetDispatchAddScoreTime-0",
+        "method": "GetDispatchAddScoreTime",
+        "input": {
+          "grade": 0
+        },
+        "expected": 2,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchAddScoreTime"
+      },
+      {
+        "id": "original-GetDispatchAddScoreTime-1",
+        "method": "GetDispatchAddScoreTime",
+        "input": {
+          "grade": 1
+        },
+        "expected": 2,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchAddScoreTime"
+      },
+      {
+        "id": "original-GetDispatchAddScoreTime-2",
+        "method": "GetDispatchAddScoreTime",
+        "input": {
+          "grade": 2
+        },
+        "expected": 2,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchAddScoreTime"
+      },
+      {
+        "id": "original-GetDispatchScoreNum-0",
+        "method": "GetDispatchScoreNum",
+        "input": {
+          "grade": 0
+        },
+        "expected": 9,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchScoreNum"
+      },
+      {
+        "id": "original-GetDispatchScoreNum-1",
+        "method": "GetDispatchScoreNum",
+        "input": {
+          "grade": 1
+        },
+        "expected": 29,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchScoreNum"
+      },
+      {
+        "id": "original-GetDispatchScoreNum-2",
+        "method": "GetDispatchScoreNum",
+        "input": {
+          "grade": 2
+        },
+        "expected": 65,
+        "provenance": "unaltered-original-wasm-body",
+        "sourceMethod": "GetDispatchScoreNum"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "original-GetSpawnTime-0-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 1
+      },
+      "expected": 1.1109999418258667,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-0-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 2
+      },
+      "expected": 1.281999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-0-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 0,
+        "lines": 3
+      },
+      "expected": 1.5149999856948853,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 1
+      },
+      "expected": 1.031999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 2
+      },
+      "expected": 1.184999942779541,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-1-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 1,
+        "lines": 3
+      },
+      "expected": 1.3910000324249268,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-1",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 1
+      },
+      "expected": 0.9610000252723694,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-2",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 2
+      },
+      "expected": 1.0980000495910645,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetSpawnTime-2-3",
+      "method": "GetSpawnTime",
+      "input": {
+        "grade": 2,
+        "lines": 3
+      },
+      "expected": 1.281999945640564,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetSpawnTime"
+    },
+    {
+      "id": "original-GetDispatchLineNum-0",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 0
+      },
+      "expected": 1,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchLineNum-1",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 1
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchLineNum-2",
+      "method": "GetDispatchLineNum",
+      "input": {
+        "grade": 2
+      },
+      "expected": 3,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchLineNum"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-0",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 0
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-1",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 1
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchAddScoreTime-2",
+      "method": "GetDispatchAddScoreTime",
+      "input": {
+        "grade": 2
+      },
+      "expected": 2,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchAddScoreTime"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-0",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 0
+      },
+      "expected": 9,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-1",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 1
+      },
+      "expected": 29,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    },
+    {
+      "id": "original-GetDispatchScoreNum-2",
+      "method": "GetDispatchScoreNum",
+      "input": {
+        "grade": 2
+      },
+      "expected": 65,
+      "provenance": "unaltered-original-wasm-body",
+      "sourceMethod": "GetDispatchScoreNum"
+    },
+    {
+      "id": "L0-neutral-capture",
+      "status": "derived-not-runtime-verified",
+      "level": "generated/levels/level_0.json",
+      "pre": {
+        "tower": 0,
+        "camp": 0,
+        "score": 3,
+        "shipConfigID": 1,
+        "incomingCamp": 1,
+        "incomingCount": 3
+      },
+      "expected": {
+        "afterEachScore": [
+          2,
+          1,
+          0
+        ],
+        "afterEachCamp": [
+          0,
+          0,
+          1
+        ]
+      },
+      "rules": [
+        "tower-damage",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "L0-source-grade",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "level": 0,
+        "tower": 3,
+        "score": 10
+      },
+      "expected": {
+        "grade": 1,
+        "maxOutgoingLines": 2,
+        "oneLineBaseSpawnTime": 1.032,
+        "twoLineBaseSpawnTime": 1.185
+      },
+      "rules": [
+        "tower-capacity-grade",
+        "spawn-clock"
+      ]
+    },
+    {
+      "id": "capture-overflow",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 0,
+        "score": 1,
+        "incomingCamp": 1,
+        "incomingShip": 3,
+        "occupy": 2
+      },
+      "expected": {
+        "camp": 1,
+        "score": 1
+      },
+      "rules": [
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "friendly-cap",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 1,
+        "score": 64,
+        "incomingCamp": 1,
+        "incomingShip": 2,
+        "reinforce": 2
+      },
+      "expected": {
+        "score": 65,
+        "soldierConsumed": true
+      },
+      "rules": [
+        "tower-reinforce"
+      ]
+    },
+    {
+      "id": "equal-hp-contact",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "A": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 1
+        },
+        "B": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 2
+        },
+        "withinThreshold": true
+      },
+      "expected": {
+        "hpA": 0,
+        "hpB": 0,
+        "bothClear": true
+      },
+      "rules": [
+        "soldier-combat"
+      ]
+    },
+    {
+      "id": "tank-contact",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "A": {
+          "hp": 2,
+          "attack": 2,
+          "camp": 1
+        },
+        "B": {
+          "hp": 1,
+          "attack": 1,
+          "camp": 2
+        },
+        "withinThreshold": true
+      },
+      "expected": {
+        "hpA": 1,
+        "hpB": -1,
+        "clearB": true
+      },
+      "rules": [
+        "soldier-combat"
+      ]
+    },
+    {
+      "id": "grade-edges",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "scores": [
+          9,
+          9.9,
+          10,
+          29,
+          29.9,
+          30,
+          65
+        ]
+      },
+      "expected": {
+        "grades": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      "rules": [
+        "tower-capacity-grade"
+      ]
+    },
+    {
+      "id": "base-regen",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "camp": 1,
+        "score": 9,
+        "outgoing": 0,
+        "regenAccumulator": 0,
+        "deltaTime": 2,
+        "buffs": [],
+        "state": 0
+      },
+      "expected": {
+        "score": 10,
+        "grade": 1,
+        "regenAccumulator": 0
+      },
+      "rules": [
+        "regeneration",
+        "tower-capacity-grade"
+      ]
+    },
+    {
+      "id": "spawn-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "baseInterval": 1.032,
+        "timer": 1.02,
+        "deltaTime": 0.03,
+        "multiplier": 1
+      },
+      "expected": {
+        "batchCount": 1,
+        "timer": 0,
+        "sourceScoreDebit": 0
+      },
+      "rules": [
+        "spawn-clock"
+      ]
+    },
+    {
+      "id": "forward-budget",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "fullFriendly": true,
+        "voyage": 1,
+        "originIsCurrent": false
+      },
+      "expected": {
+        "voyage": 0,
+        "cleared": true,
+        "forwarded": false
+      },
+      "rules": [
+        "full-friendly-forward"
+      ]
+    },
+    {
+      "id": "boss-zero-no-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "isBossRuntime": true,
+        "initialScore": 150,
+        "score": 1,
+        "camp": 6,
+        "incomingCamp": 1,
+        "delta": -2
+      },
+      "expected": {
+        "score": 0,
+        "camp": 6,
+        "maxScore": 150,
+        "autoRegen": false,
+        "radius": 0.15
+      },
+      "rules": [
+        "boss-init-and-soldier",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "skill4-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 401,
+        "sameCamp": true,
+        "active": true,
+        "inputSpawnRate": 1
+      },
+      "expected": {
+        "spawnRate": 1.8,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander2-speed"
+      ]
+    },
+    {
+      "id": "skill5-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 501,
+        "sameCamp": false,
+        "active": true,
+        "inputSpawnRate": 1
+      },
+      "expected": {
+        "spawnRate": 0.7,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander2-speed"
+      ]
+    },
+    {
+      "id": "skill11-level1",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1101,
+        "sameCamp": true,
+        "active": true,
+        "baseWorldSpeed": 0.8
+      },
+      "expected": {
+        "spawnRateMultiplier": 1.8,
+        "soldierSpeedMultiplier": 1.8,
+        "worldSpeedApprox": 1.44,
+        "duration": 10
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander4-speed"
+      ]
+    },
+    {
+      "id": "skill3-cannot-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 301,
+        "targetCamp": 2,
+        "score": 10,
+        "playerCamp": 1
+      },
+      "expected": {
+        "score": 0,
+        "camp": 2,
+        "damage": 20
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander1-direct-damage"
+      ]
+    },
+    {
+      "id": "skill12-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1201,
+        "damageTimer": 0,
+        "dt": 2.5,
+        "score": 20,
+        "camp": 2
+      },
+      "expected": {
+        "score": 15,
+        "damageTimer": 1.5,
+        "camp": 2
+      },
+      "rules": [
+        "skill-config-binding",
+        "commander4-dot"
+      ]
+    },
+    {
+      "id": "skill9-clamp-not-conservation",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 901,
+        "enemySourceScore": 2,
+        "friendlyTargetScore": 10,
+        "targetStillFriendlyOnArrival": true
+      },
+      "expected": {
+        "enemySourceScore": 0,
+        "enemyCampUnchanged": true,
+        "friendlyTargetScore": 15
+      },
+      "rules": [
+        "commander3-drain"
+      ]
+    },
+    {
+      "id": "skill13-new-only",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1301,
+        "newSoldier": {
+          "occupy": 1,
+          "attack": 1
+        },
+        "existingSoldier": {
+          "occupy": 1,
+          "attack": 1
+        }
+      },
+      "expected": {
+        "newSoldier": {
+          "occupy": 2,
+          "attack": 100
+        },
+        "existingSoldier": {
+          "occupy": 1,
+          "attack": 1
+        }
+      },
+      "rules": [
+        "commander5-inspiration"
+      ]
+    },
+    {
+      "id": "skill14-recruit-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1401,
+        "emittedRecruitDamage": 1,
+        "targetCamp": 2,
+        "targetScore": 1,
+        "skillCamp": 1,
+        "hitDistanceSquared": 0.005
+      },
+      "expected": {
+        "targetScore": 0,
+        "targetCamp": 1,
+        "spawnCount": 25,
+        "spawnInterval": 0.2
+      },
+      "rules": [
+        "commander5-recruit",
+        "tower-capture"
+      ]
+    },
+    {
+      "id": "skill15-does-not-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1501,
+        "targetCamp": 2,
+        "targetScore": 2,
+        "skillCamp": 1,
+        "ticks": 3
+      },
+      "expected": {
+        "scores": [
+          1,
+          0,
+          0
+        ],
+        "camp": 2,
+        "totalUnitTicks": 30,
+        "gapApprox": 0.0566666667
+      },
+      "rules": [
+        "commander5-serial-score"
+      ]
+    },
+    {
+      "id": "skill16-occupy-not-attack",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1601,
+        "newEnemy": {
+          "attack": 2,
+          "reinforce": 2,
+          "occupy": 1,
+          "hp": 2
+        }
+      },
+      "expected": {
+        "attack": 0,
+        "reinforce": 0,
+        "occupy": 1,
+        "hp": 2
+      },
+      "rules": [
+        "commander6-fatigue"
+      ]
+    },
+    {
+      "id": "skill17-snapshot",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1701,
+        "initialFriendlyTowerIds": [
+          1
+        ],
+        "newlyCapturedTowerId": 2,
+        "score1": 10,
+        "score2": 10,
+        "healingPasses": 1
+      },
+      "expected": {
+        "score1": 13,
+        "score2": 10
+      },
+      "rules": [
+        "commander6-recovery"
+      ]
+    },
+    {
+      "id": "skill18-damage-no-catchup",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "skillConfigID": 1801,
+        "damageTimer": 0,
+        "elapsed": 0,
+        "killTimer": 0,
+        "dt": 2.5,
+        "inRangeEnemyScore": 10,
+        "inRangeEnemySoldierHp": 100000
+      },
+      "expected": {
+        "enemyScore": 8,
+        "damageTimer": 1.5,
+        "killTimer": 0,
+        "soldierCleared": true
+      },
+      "rules": [
+        "commander6-poison"
+      ]
+    },
+    {
+      "id": "boss-delay-overshoot",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "delay": 0.1,
+        "countdown": 0,
+        "frameDeltas": [
+          0.2,
+          0.01
+        ],
+        "interval": 17
+      },
+      "expected": {
+        "actionsPerFrame": [
+          0,
+          1
+        ],
+        "finalCountdownApprox": 16.99
+      },
+      "rules": [
+        "boss-schedule-clock"
+      ]
+    },
+    {
+      "id": "arrow-range-0.2",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "distance": 0.2,
+        "grade": 0,
+        "minimum": 0.2
+      },
+      "expected": {
+        "soldierAccepted": true,
+        "towerAccepted": false
+      },
+      "rules": [
+        "soldier-range",
+        "tower-range-source-bug"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-range-0.5",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "distance": 0.5,
+        "grade": 0,
+        "minimum": 0.2
+      },
+      "expected": {
+        "soldierAccepted": true,
+        "towerAccepted": false
+      },
+      "rules": [
+        "soldier-range",
+        "tower-range-source-bug"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-range-0.69",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "distance": 0.69,
+        "grade": 0,
+        "minimum": 0.2
+      },
+      "expected": {
+        "soldierAccepted": true,
+        "towerAccepted": true
+      },
+      "rules": [
+        "soldier-range",
+        "tower-range-source-bug"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-range-0.7",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "distance": 0.7,
+        "grade": 0,
+        "minimum": 0.2
+      },
+      "expected": {
+        "soldierAccepted": true,
+        "towerAccepted": true
+      },
+      "rules": [
+        "soldier-range",
+        "tower-range-source-bug"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-range-0.71",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "distance": 0.71,
+        "grade": 0,
+        "minimum": 0.2
+      },
+      "expected": {
+        "soldierAccepted": false,
+        "towerAccepted": false
+      },
+      "rules": [
+        "soldier-range",
+        "tower-range-source-bug"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-strict-timer",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "timer": 0,
+        "dt": [
+          1.8,
+          0.001
+        ],
+        "grade": 0
+      },
+      "expected": {
+        "attemptsAfterEachTick": [
+          0,
+          1
+        ],
+        "finalTimer": 0
+      },
+      "rules": [
+        "arrow-clock"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-fixed-flight-end",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "soldierPosition": [
+          1,
+          0,
+          2
+        ],
+        "soldierForward": [
+          1,
+          0,
+          0
+        ],
+        "sourceGrade": 2
+      },
+      "expected": {
+        "end": [
+          1.2,
+          0,
+          2
+        ],
+        "duration": 0.2,
+        "sourceHeight": 0.28
+      },
+      "rules": [
+        "projectile-path"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-damage-no-capture",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "targetScore": 0.5,
+        "targetCamp": 2,
+        "sourceCampAtLaunch": 1,
+        "sourceCampAtHit": 3
+      },
+      "expected": {
+        "targetScore": 0,
+        "targetCamp": 2,
+        "delta": -1,
+        "sourceCampPassed": 3
+      },
+      "rules": [
+        "tower-hit"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-first-not-nearest",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "orderedCandidateDistances": [
+          0.69,
+          0.3,
+          0.4
+        ],
+        "range": 0.7
+      },
+      "expected": {
+        "selectedIndex": 0
+      },
+      "rules": [
+        "soldier-selection-order"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "arrow-soldier-direct-kill",
+      "status": "derived-not-runtime-verified",
+      "pre": {
+        "targetHP": 100000,
+        "targetInLine": true,
+        "deathInProgress": false
+      },
+      "expected": {
+        "targetInLine": false,
+        "deathAnimationStarted": true,
+        "hpTestPerformed": false
+      },
+      "rules": [
+        "soldier-hit"
+      ],
+      "provenance": "source-derived arithmetic and branch interpretation; target WASM not executed"
+    },
+    {
+      "id": "pvp-budget-off-by-one",
+      "pre": {
+        "total": 0,
+        "used": 0,
+        "timer": 0,
+        "dt": 0.1,
+        "space": 1,
+        "chanceSample": 0,
+        "rate": 100
+      },
+      "expected": {
+        "used": 1,
+        "timer": 0.9,
+        "nextAttemptAtBudgetExhausted": false
+      },
+      "rules": [
+        "pvp-agent-clock"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-delay-crossing",
+      "pre": {
+        "delay": 0.05,
+        "dt": 0.1,
+        "timer": 0
+      },
+      "expected": {
+        "delay": -0.05,
+        "timer": 0,
+        "attempts": 0
+      },
+      "rules": [
+        "pvp-agent-clock"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-chance-strict",
+      "pre": {
+        "rate": 15,
+        "samples": [
+          14,
+          15
+        ]
+      },
+      "expected": {
+        "success": [
+          true,
+          false
+        ]
+      },
+      "rules": [
+        "pvp-agent-clock"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-active-budget",
+      "pre": {
+        "skillActive": true,
+        "used": 0,
+        "total": 6,
+        "chanceSuccess": true
+      },
+      "expected": {
+        "used": 1,
+        "newExecution": false
+      },
+      "rules": [
+        "pvp-agent-clock",
+        "pvp-null-callback"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-both-zero",
+      "pre": {
+        "enemyTowerScores": [
+          0.5,
+          0.5
+        ],
+        "playerTowerScores": [
+          0
+        ]
+      },
+      "expected": {
+        "enemySum": 0,
+        "result": "Victory"
+      },
+      "rules": [
+        "pvp-result"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-enemy-skill6",
+      "pre": {
+        "skill": 6,
+        "camp": 2,
+        "friendlyScore": 10,
+        "freshRuntime": true
+      },
+      "expected": {
+        "active": true,
+        "friendlyScore": 10,
+        "target": null
+      },
+      "rules": [
+        "pvp-targets"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "pvp-poison-discrete-offset",
+      "pre": {
+        "playerTowerPosition": [
+          2.4,
+          0,
+          4.9
+        ],
+        "samples": [
+          20,
+          20
+        ]
+      },
+      "expected": {
+        "point": [
+          2.6,
+          0,
+          5.1
+        ],
+        "passesPlayerDragBounds": false,
+        "AIExecuteAllowed": true
+      },
+      "rules": [
+        "pvp-targets"
+      ],
+      "status": "derived-not-runtime-verified"
+    },
+    {
+      "id": "daily-pop-last",
+      "pre": {
+        "pools": {
+          "1": [
+            10,
+            20,
+            30
+          ]
+        },
+        "today": {
+          "1": 5
+        }
+      },
+      "expected": {
+        "pools": {
+          "1": [
+            10,
+            20
+          ]
+        },
+        "today": {
+          "1": 30
+        }
+      },
+      "rules": [
+        "daily-map-consumption"
+      ],
+      "status": "derived-not-runtime-verified"
+    }
+  ],
+  "limitations": [
+    "Original arithmetic functions are executed; whole-game capture/replay has not yet succeeded.",
+    "Source-derived combat cases are independent expected values, not claimed original runtime observations."
+  ],
+  "originalVideoCheckpoints": {
+    "evidence": "generated/video-20260928/original-video-evidence.json",
+    "validator": "UnityProject/Assets/AreaBattle/Editor/OriginalVideoValidation.cs",
+    "checks": [
+      "video871-ice-four-enemies-fourteen-second-candidate",
+      "video871-lightning-f3731-f3732-zero-without-capture",
+      "video871-three-tool-costs-independent-of-unknown-fire-level",
+      "video871-result-commander-hides-before-skill-panel-fade",
+      "video871-fire25-recorded-frame-step-candidate",
+      "video871-seven-committed-line-inputs-capacity-sequence",
+      "video871-soldier102-cosmetic-binding-preserves-mechanics"
+    ],
+    "scope": "Independent observed checkpoint fixtures; inferred levels and excluded original session state remain explicit."
+  },
+  "originalAITimingOracle": {
+    "atUtc": "2026-09-28T10:36:22.108433+00:00",
+    "status": "source-scheduler-boundaries-verified",
+    "oracle": "generated/original-ai-timer-cases.json",
+    "checks": [
+      "original-ai-timer-delay-positive",
+      "original-ai-timer-delay-crosses-zero",
+      "original-ai-timer-delay-exact-zero",
+      "original-ai-timer-timer-exact-zero",
+      "original-ai-timer-first-running-frame",
+      "original-ai-timer-negative-delay-next-frame",
+      "original-ai-timer-timer-residual",
+      "original-ai-timer-large-delta-one-action",
+      "original-ai-timer-negative-timer-zero-delta"
+    ],
+    "sourceFunction": {
+      "function": 21038,
+      "offset": 9492148,
+      "size": 149,
+      "bodySha256": "e18b6603c95ab93bf22f8d3fac70d80e31100837808658640c372e3940722043",
+      "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+      "harnessSha256": "4e06207b00b91d596eb20dd375795d6591eed3feb7e479849da1f456fa75459e"
+    },
+    "AI99": {
+      "delayMs": 400,
+      "actionTimeCandidatesMs": [
+        200,
+        400
+      ]
+    },
+    "conclusion": "Production scheduler agrees with all9 isolated original-WASM boundary cases; no evidence-backed timer correction needed. Do not force a0.15s offset from two visible AI responses.",
+    "limitations": [
+      "Scheduler arithmetic/control flow only; not original random stream, AI policy or complete initialization.",
+      "Does not establish original pre-recording clock/RNG state or random calls consumed by initialization/skin selection."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+; Original class: SevendayActivityControl
+; Type4502.IsDayHaveRed; wasmcode function 10446; offset=5098140 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+004dca9d  local.get [0]
+004dca9f  i32.load [2, 8]
+004dcaa2  local.get [1]
+004dcaa4  i32.const [0]
+004dcaa6  call [8138] ; ChildLimitTimeTaskActivity.ExitRewardWaitGet
+004dcaa9  return []
+004dcaaa  end []

@@ -1,0 +1,52 @@
+; Original class: ItemBagControl
+; Type4097.InitLimitedBag; wasmcode function 7680; offset=3658152 size=124
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0037d1a9  i32.const [5008462]
+0037d1ae  i32.load8_u [0, 0]
+0037d1b1  i32.eqz []
+0037d1b2  if [-64]
+0037d1b4    i32.const [4003164] ; METHOD ItemBagControl.RefreshLimitedLeftTime
+0037d1b9    call [900] ; 
+0037d1bc    i32.const [3949340]
+0037d1c1    call [900] ; 
+0037d1c4    i32.const [5008462]
+0037d1c9    i32.const [1]
+0037d1cb    i32.store8 [0, 0]
+0037d1ce  end []
+0037d1cf  block [-64]
+0037d1d1    local.get [0]
+0037d1d3    local.get [0]
+0037d1d5    call [5971] ; ItemBagControl.IsLimitedBagExited
+0037d1d8    i32.eqz []
+0037d1d9    br_if [0]
+0037d1db    local.get [0]
+0037d1dd    i32.load [2, 16]
+0037d1e0    local.set [1]
+0037d1e2    local.get [1]
+0037d1e4    if [-64]
+0037d1e6      local.get [1]
+0037d1e8      i32.const [0]
+0037d1ea      call [7402] ; Proj_xqzdStartUI.RefreshLimitedBagInfo
+0037d1ed    end []
+0037d1ee    local.get [0]
+0037d1f0    i32.load [2, 24]
+0037d1f3    i32.const [-1]
+0037d1f5    i32.ne []
+0037d1f6    br_if [0]
+0037d1f8    i32.const [3949340]
+0037d1fd    i32.load [2, 0]
+0037d200    call [903] ; 
+0037d203    local.set [1]
+0037d205    local.get [1]
+0037d207    local.get [0]
+0037d209    i32.const [4003164] ; METHOD ItemBagControl.RefreshLimitedLeftTime
+0037d20e    i32.load [2, 0]
+0037d211    i32.const [0]
+0037d213    call [2351] ; UpdateHandle..ctor
+0037d216    local.get [0]
+0037d218    local.get [1]
+0037d21a    i32.const [0]
+0037d21c    call [2890] ; UpdateManager.AddHandle
+0037d21f    i32.store [2, 24]
+0037d222  end []
+0037d223  end []

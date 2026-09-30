@@ -1,0 +1,47 @@
+{
+  "atUtc": "2026-09-30T03:32:36.963223+00:00",
+  "status": "partial-subsystem-native-verified",
+  "methods": [
+    23824,
+    23836
+  ],
+  "genericEvidence": "legacy-bundle-acquisition-generics.json",
+  "behavior": [
+    "Manifest gate only for non-manifest loads; missing manifest logs exact source message and stops",
+    "Loaded wrapper takes priority over downloading entry; retain helper updates references/cancels unload; return true",
+    "Downloading key returns true, optional internal accounting increments int dictionary only when third source bool false",
+    "Resolve URL; nonempty creates UnityWebRequestAssetBundle, Add downloading dictionary then SendWebRequest; returns false even if URL absent",
+    "Public Load invokes internal(name,true), only false return and non-manifest triggers dependencies"
+  ],
+  "implementation": "Source unused second internal parameter omitted. URL resolver remains explicit instead of inventing original bundle service metadata. Native test now uses this acquisition class, not direct inline request creation/send wiring.",
+  "validation": {
+    "integratedChecks": 628,
+    "nativeBundleUi": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 1,
+      "assetFrame": 3,
+      "pageFrame": 5,
+      "downloadedBytes": 2377959,
+      "checks": [
+        "Source canonical bundle key reaches native acquisition",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native AssetBundle.Unload(true) runs through recovered cleanup with zero-delay fixture"
+      ]
+    }
+  },
+  "nextEvidence": {
+    "resolver23813": "ResourcesModule.bundleServices interface lookup returns record; reads byte28 then shifts left4 into manager static ulong40; field16 URL empty logs [{0}]本地资源未找到 offset={1} and returnsnull. Need resolve interface/type and config implementation."
+  },
+  "limitations": [
+    "Production URL service/dependencies/variants/manifest setup not yet connected. Test supplies local fixture URL, hasManifest=true, empty dependencies, zero-second unload delay.",
+    "No full production account/menu entry or fresh Player build."
+  ]
+}

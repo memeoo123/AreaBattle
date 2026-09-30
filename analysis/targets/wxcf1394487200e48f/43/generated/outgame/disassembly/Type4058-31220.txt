@@ -1,0 +1,33 @@
+; Original class: EffectControl
+; Type4058.UO^; wasmcode function 12443; offset=6026077 size=75
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005bf35e  i32.const [5008795]
+005bf363  i32.load8_u [0, 0]
+005bf366  i32.eqz []
+005bf367  if [-64]
+005bf369    i32.const [3945308]
+005bf36e    call [900] ; 
+005bf371    i32.const [5008795]
+005bf376    i32.const [1]
+005bf378    i32.store8 [0, 0]
+005bf37b  end []
+005bf37c  i32.const [3945308]
+005bf381  i32.load [2, 0]
+005bf384  call [903] ; 
+005bf387  local.set [2]
+005bf389  local.get [2]
+005bf38b  i32.const [0]
+005bf38d  i32.store [2, 8]
+005bf390  local.get [2]
+005bf392  local.get [0]
+005bf394  i32.store [2, 60]
+005bf397  local.get [2]
+005bf399  i32.const [16]
+005bf39b  i32.add []
+005bf39c  local.get [1]
+005bf39e  i32.const [44]
+005bf3a0  call [911] ; 
+005bf3a3  drop []
+005bf3a4  local.get [2]
+005bf3a6  return []
+005bf3a7  end []

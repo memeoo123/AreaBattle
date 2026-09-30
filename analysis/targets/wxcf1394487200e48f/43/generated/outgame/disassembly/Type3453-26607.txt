@@ -1,0 +1,23 @@
+; Original class: ListArrayStringFormatter
+; Type3453.Serialize; wasmcode1 function 58103; offset=18946746 size=59
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+01211abb  i32.const [5011807]
+01211ac0  i32.load8_u [0, 0]
+01211ac3  i32.eqz []
+01211ac4  if [-64]
+01211ac6    i32.const [3944332]
+01211acb    i32.const [1605]
+01211ace    call_indirect [0, 0]
+01211ad1    i32.const [5011807]
+01211ad6    i32.const [1]
+01211ad8    i32.store8 [0, 0]
+01211adb  end []
+01211adc  i32.const [3944332]
+01211ae1  i32.load [2, 0]
+01211ae4  i32.const [1149]
+01211ae7  call_indirect [0, 0]
+01211aea  local.get [1]
+01211aec  local.get [2]
+01211aee  local.get [1]
+01211af0  call [25945] ; ListArrayString.Serialize
+01211af4  end []

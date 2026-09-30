@@ -1,0 +1,243 @@
+; Original class: ADModule
+; Type9202.createAdAdapter; wasmcode function 13420; offset=6502408 size=652
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00633809  i32.const [0]
+0063380b  local.set [0]
+0063380d  i32.const [5006932]
+00633812  i32.load8_u [0, 0]
+00633815  i32.eqz []
+00633816  if [-64]
+00633818    i32.const [3927760]
+0063381d    call [900] ; 
+00633820    i32.const [3928144]
+00633825    call [900] ; 
+00633828    i32.const [3929952]
+0063382d    call [900] ; 
+00633830    i32.const [3942164]
+00633835    call [900] ; 
+00633838    i32.const [3942168]
+0063383d    call [900] ; 
+00633840    i32.const [3942172]
+00633845    call [900] ; 
+00633848    i32.const [3942176]
+0063384d    call [900] ; 
+00633850    i32.const [3942180]
+00633855    call [900] ; 
+00633858    i32.const [3942184]
+0063385d    call [900] ; 
+00633860    i32.const [4062904] ; STRING "NATIVE_SPLASH"
+00633865    call [900] ; 
+00633868    i32.const [4057236] ; STRING "INTERSTITAL"
+0063386d    call [900] ; 
+00633870    i32.const [4062896] ; STRING "NATIVE_BIG"
+00633875    call [900] ; 
+00633878    i32.const [4062908] ; STRING "NATIVE_START"
+0063387d    call [900] ; 
+00633880    i32.const [4045420] ; STRING "BANNER"
+00633885    call [900] ; 
+00633888    i32.const [4077760] ; STRING "VIDEO"
+0063388d    call [900] ; 
+00633890    i32.const [4062892] ; STRING "NATIVE"
+00633895    call [900] ; 
+00633898    i32.const [4062900] ; STRING "NATIVE_OVER"
+0063389d    call [900] ; 
+006338a0    i32.const [5006932]
+006338a5    i32.const [1]
+006338a7    i32.store8 [0, 0]
+006338aa  end []
+006338ab  i32.const [3927760]
+006338b0  i32.load [2, 0]
+006338b3  call [901] ; 
+006338b6  block [-64]
+006338b8    i32.const [3927760]
+006338bd    i32.load [2, 0]
+006338c0    i32.load [2, 92]
+006338c3    i32.load8_u [0, 4]
+006338c6    br_if [0]
+006338c8    local.get [2]
+006338ca    local.get [2]
+006338cc    i32.const [100]
+006338cf    i32.div_s []
+006338d0    local.get [2]
+006338d2    i32.const [10001] ; TABLE EffectControl.`dhfq]
+006338d6    i32.lt_s []
+006338d7    select []
+006338d8    local.set [2]
+006338da    block [-64]
+006338dc      i32.const [4045420] ; STRING "BANNER"
+006338e1      i32.load [2, 0]
+006338e4      local.get [1]
+006338e6      i32.const [0]
+006338e8      call [1019] ; String.Equals
+006338eb      i32.eqz []
+006338ec      br_if [0]
+006338ee      local.get [2]
+006338f0      i32.const [424]
+006338f3      i32.ne []
+006338f4      if [-64]
+006338f6        local.get [2]
+006338f8        i32.const [484]
+006338fb        i32.ne []
+006338fc        if [-64]
+006338fe          local.get [2]
+00633900          i32.const [883]
+00633903          i32.ne []
+00633904          br_if [2]
+00633906          i32.const [3942164]
+0063390b          i32.load [2, 0]
+0063390e          call [903] ; 
+00633911          local.set [0]
+00633913          local.get [0]
+00633915          local.get [0]
+00633917          call [9336] ; WxBannerAdapter..ctor
+0063391a          br [2]
+0063391c        end []
+0063391d        i32.const [3942172]
+00633922        i32.load [2, 0]
+00633925        call [903] ; 
+00633928        local.set [0]
+0063392a        local.get [0]
+0063392c        local.get [0]
+0063392e        i32.const [64322] ; TABLE WxGridBannerAdapter..ctor
+00633932        global.set [3]
+00633934        i32.const [64322] ; TABLE WxGridBannerAdapter..ctor
+00633938        call_indirect [0, 0]
+0063393b        br [1]
+0063393d      end []
+0063393e      i32.const [3942168]
+00633943      i32.load [2, 0]
+00633946      call [903] ; 
+00633949      local.set [0]
+0063394b      local.get [0]
+0063394d      local.get [0]
+0063394f      i32.const [64300] ; TABLE WxCpsBannerAdapter..ctor
+00633953      global.set [3]
+00633955      i32.const [64300] ; TABLE WxCpsBannerAdapter..ctor
+00633959      call_indirect [0, 0]
+0063395c    end []
+0063395d    block [-64]
+0063395f      local.get [1]
+00633961      i32.const [4057236] ; STRING "INTERSTITAL"
+00633966      i32.load [2, 0]
+00633969      i32.const [0]
+0063396b      call [1237] ; String.Contains
+0063396e      i32.eqz []
+0063396f      br_if [0]
+00633971      block [-64]
+00633973        block [-64]
+00633975          block [-64]
+00633977            local.get [2]
+00633979            i32.const [424]
+0063397c            i32.sub []
+0063397d            br_table [1, 2, 0]
+00633982          end []
+00633983          local.get [2]
+00633985          i32.const [883]
+00633988          i32.ne []
+00633989          br_if [2]
+0063398b          i32.const [3942176]
+00633990          i32.load [2, 0]
+00633993          call [903] ; 
+00633996          local.set [0]
+00633998          local.get [0]
+0063399a          local.get [0]
+0063399c          call [9335] ; WxIntersAdapter..ctor
+0063399f          br [2]
+006339a1        end []
+006339a2        i32.const [3929952]
+006339a7        i32.load [2, 0]
+006339aa        call [903] ; 
+006339ad        local.set [0]
+006339af        local.get [0]
+006339b1        local.get [0]
+006339b3        call [12741] ; CpsIntersAdapter..ctor
+006339b6        br [1]
+006339b8      end []
+006339b9      i32.const [3928144]
+006339be      i32.load [2, 0]
+006339c1      call [903] ; 
+006339c4      local.set [0]
+006339c6      local.get [0]
+006339c8      local.get [0]
+006339ca      i32.const [64216] ; TABLE ApiIntersAdapter..ctor
+006339ce      global.set [3]
+006339d0      i32.const [64216] ; TABLE ApiIntersAdapter..ctor
+006339d4      call_indirect [0, 0]
+006339d7    end []
+006339d8    i32.const [4077760] ; STRING "VIDEO"
+006339dd    i32.load [2, 0]
+006339e0    local.get [1]
+006339e2    i32.const [0]
+006339e4    call [1019] ; String.Equals
+006339e7    local.set [3]
+006339e9    block [-64]
+006339eb      local.get [2]
+006339ed      i32.const [883]
+006339f0      i32.ne []
+006339f1      br_if [0]
+006339f3      local.get [3]
+006339f5      i32.eqz []
+006339f6      br_if [0]
+006339f8      i32.const [3942184]
+006339fd      i32.load [2, 0]
+00633a00      call [903] ; 
+00633a03      local.set [0]
+00633a05      local.get [0]
+00633a07      local.get [0]
+00633a09      call [9332] ; WxVideoAdapter..ctor
+00633a0c    end []
+00633a0d    block [-64]
+00633a0f      block [-64]
+00633a11        i32.const [4062892] ; STRING "NATIVE"
+00633a16        i32.load [2, 0]
+00633a19        local.get [1]
+00633a1b        i32.const [0]
+00633a1d        call [1019] ; String.Equals
+00633a20        br_if [0]
+00633a22        i32.const [4062896] ; STRING "NATIVE_BIG"
+00633a27        i32.load [2, 0]
+00633a2a        local.get [1]
+00633a2c        i32.const [0]
+00633a2e        call [1019] ; String.Equals
+00633a31        br_if [0]
+00633a33        i32.const [4062908] ; STRING "NATIVE_START"
+00633a38        i32.load [2, 0]
+00633a3b        local.get [1]
+00633a3d        i32.const [0]
+00633a3f        call [1019] ; String.Equals
+00633a42        br_if [0]
+00633a44        i32.const [4062900] ; STRING "NATIVE_OVER"
+00633a49        i32.load [2, 0]
+00633a4c        local.get [1]
+00633a4e        i32.const [0]
+00633a50        call [1019] ; String.Equals
+00633a53        br_if [0]
+00633a55        i32.const [4062904] ; STRING "NATIVE_SPLASH"
+00633a5a        i32.load [2, 0]
+00633a5d        local.get [1]
+00633a5f        i32.const [0]
+00633a61        call [1019] ; String.Equals
+00633a64        i32.eqz []
+00633a65        br_if [2]
+00633a67        local.get [2]
+00633a69        i32.const [883]
+00633a6c        i32.eq []
+00633a6d        br_if [1]
+00633a6f        br [2]
+00633a71      end []
+00633a72      local.get [2]
+00633a74      i32.const [883]
+00633a77      i32.ne []
+00633a78      br_if [1]
+00633a7a    end []
+00633a7b    i32.const [3942180]
+00633a80    i32.load [2, 0]
+00633a83    call [903] ; 
+00633a86    local.set [0]
+00633a88    local.get [0]
+00633a8a    local.get [0]
+00633a8c    call [9333] ; WxNativeAdapter..ctor
+00633a8f  end []
+00633a90  local.get [0]
+00633a92  return []
+00633a93  end []

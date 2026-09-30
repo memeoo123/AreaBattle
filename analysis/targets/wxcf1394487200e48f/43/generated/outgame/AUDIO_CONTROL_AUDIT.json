@@ -1,0 +1,35 @@
+{
+  "atUtc": "2026-09-30T08:56:53.974887+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "AUDIO_CONTROL_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T08:56:53.974887+00:00",
+    "scope": "AudioControl3904 lifecycle/state switch, source volume preferences/messages, UIAudioManager routing and isolated disk restart",
+    "checksPassed": 827,
+    "newIntegratedChecks": 16,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Native AudioManager/node/action/clip playback, audible audio, actual Main/account/platform composition or complete outgame Player build"
+  },
+  "findings": [
+    "Actual AudioControl3904 factory now binds registry lifecycle and complete nine-method public surface. OnInit/Updata are verified empty; OnDispose clears current registry slot unconditionally. State switch follows exact source states2/3/5/6/7/8/9/10; other states are no-op. Existing BattleAudio is preserved and not substituted as the source audio manager.",
+    "OutgameAudioSettings reads/writes original SoundGameVolume and MusicGameVolume through live OutgameUserPreferences with default1 and strict>.99 enable threshold. Sound boolean setter only writes. Music boolean setter writes via source AudioManager.SetMusicGameVolume contract and dispatches GlobalVolumeChange typed VoiceType/float after write. Invalid voice still sends event; raw floats remain unclamped. Callback failures retain committed preference.",
+    "OutgameUiAudioManager initializes routes lazily, caches independent Parallel/Sequence/Single nodes, passes original ID array and returns node handles unchanged. Required factory can fail or return null following source behavior, and retry does not erase already assigned node. StopAll clears each slot only after successful Stop(0), later slots read live. Parallel Pause/StopByGUID do not create missing nodes. StopParallel logs before optional stop. Destroy only resets host-owned singleton slot, including from an old instance.",
+    "827 integrated checks pass (16 new), including real isolated UserData.txt disk save/reopen with both audio settings and unrelated key retained. Node commands use explicit validator probes. No fresh native audio/PlayMode/build claimed. Lifecycle matrix now11/38 method-level implementations, remaining27, not eleven fully integrated business controllers.",
+    "Disassembled UIAudioManager/AudioManager/GlobalData and node/action classes for next production dependency: AudioCompositeBase, AudioParallel, AudioSequence, AudioSingle, AudioActionBase, Once/Loop/Fade/LoopFade. Method map4969. Full AudioManager resource/update/action backend remains next; method extraction is not implementation."
+  ],
+  "remaining": [
+    "Restore AudioManager native root/listener/resource/config/node ownership, AudioCompositeBase/Parallel/Sequence/Single and source Once/Loop/Fade/LoopFade actions; connect required UI audio node factory and native playback validation.",
+    "Restore remaining27 controllers and complete real Main/module/config/account/menu entry, Level/Tower/Soldier/WayLine/AI/effects and remaining native assets. Complete every objective outgame subsystem, persistence/restart/failure/return and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-control-integrated.log",
+    "isolatedPreferenceRoundtrip": "analysis/audio-settings-restart/UserData.txt"
+  },
+  "disassembledMethodMapCount": 4969
+}

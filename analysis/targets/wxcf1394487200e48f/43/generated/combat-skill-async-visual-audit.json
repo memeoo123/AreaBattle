@@ -1,0 +1,77 @@
+{
+  "target": {
+    "appid": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "scope": "Static async audit with current retry follow-up; see combat-skill-retry-followup.json for subsequently authorized source-backed fixes.",
+  "findings": [
+    {
+      "skillId": 2,
+      "confirmed": "Reset clears active/time and stops launch coroutine44 if present. This39-byte Reset has no pool/hide of already launched fireballs.",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4170-100665108.txt",
+        "offset": "006425e0..00642605"
+      },
+      "implementation": "Same-level Again10 now retains emitted skill2 Bullet identities and elapsed times while cancelling launch waits. ClearModelEntityCache was found in Victory8, not Again10, and its integer entity-root references exclude Skill2 NormalPool/UI-parent clones. See combat-skill-retry-followup.json and combat-async-owner-audit.json.",
+      "classification": "ordinary Again10 retained; specific Victory model-cache path excludes Skill2; application disposal separate"
+    },
+    {
+      "skillId": 12,
+      "confirmed": "Execute is AsyncVoidMethodBuilder; delay is WaitForSeconds0.8 through IEnumeratorAwaitExtensions.GetAwaiter. Reset clears active/time,target44,timer48 and closes current effect handles52/56. Reset does not cancel the await. After delay, coroutine reads the skill object current target44 to obtain position for419, rather than a preserved local tower reference.",
+      "sources": [
+        {
+          "path": "generated/combat-presentation-disassembly/Type4191-100665187.txt",
+          "offset": "00798884..007988e2"
+        },
+        {
+          "path": "generated/combat-presentation-disassembly/Type4191-100665193.txt",
+          "offset": "007987e4..00798824"
+        },
+        {
+          "path": "generated/combat-presentation-disassembly/Type4190-100665194.txt",
+          "offset": "00512d8b..00512dc1 / 00512ee2..00512f25"
+        }
+      ],
+      "implementation": "Cached player skill object reuse is now confirmed through SkillControl dictionary and Commander.Reset. Implementation preserves the old await remaining time and reads current target after retry/recast; Reset closes only current handles52/56. Null target produces an explicit unresolved diagnostic without invented effect/audio/fault. See combat-skill-retry-followup.json.",
+      "classification": "non-null retry/recast source path implemented; null dereference runtime result unknown"
+    },
+    {
+      "skillId": 14,
+      "confirmed": "Reset explicitly StopCoroutine48 and iterates tracked recruits to set objects inactive; movement uses separate normalized direction while rendering Euler uses camera tilt plus left/right flip.",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4195-100665204.txt",
+        "offset": "00709ead / 0070a009"
+      },
+      "classification": "explicit local coroutine and object cleanup"
+    },
+    {
+      "skillId": 18,
+      "confirmed": "Reset destroys currently held ground68 and indicator100, pools currently held bottle72 and stops stored audio GUID. Ground asset loading is asynchronous and callback creates/replaces field68 without a proven cancellation token linked to Reset.",
+      "sources": [
+        {
+          "path": "generated/combat-presentation-disassembly/Type4205-100665243.txt",
+          "offset": "006dcc37..006dccff"
+        },
+        {
+          "path": "generated/combat-presentation-disassembly/Type4203-100665249.txt",
+          "offset": "whole callback"
+        }
+      ],
+      "implementation": "Normal ground prepare/show/hide events preserve normal timing. Source enqueue links callback into ResourcesModule loader and discards its handle; traced Reset has no cancellation. Delivered late ground callback recreates an inactive ground; indicator callback only creates if current handle is Unity-null. Global shutdown/failure and exact delivery order remain unknown. See combat-async-owner-audit.json.",
+      "classification": "normal branch confirmed; late-load/reset race unknown"
+    },
+    {
+      "scope": "managed world effects",
+      "confirmed": "SkillBase.Reset only clears active/time. Explicit close paths exist in skill12, explicit manual object destruction in18. Opcode reference audit found EffectModule.ClearChildObj callers only in two asset-unload helpers and EffectModule.Shutdown; these callers are not proven ordinary retry paths.",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/SkillBase-100665077.txt",
+        "offset": "0074df1c..0074df2a"
+      },
+      "references": "generated/combat-visual-lifecycle-references.json",
+      "implementation": "Host battle-reset clearall is a known unvalidated presentation cleanup policy; configured timed effects may otherwise outlive a retry.",
+      "classification": "unknown whole-scene scope"
+    }
+  ],
+  "impact": "These findings do not change the no-active-skill ordinary representative layout5/default loadout0 mechanics gate. They prevent claiming exact active-skill reset/late-load visual parity.",
+  "nextValidation": "Validate original null-target skill12 continuation and actual skill18 delayed resource delivery after retry; Victory8 model-cache exclusion for skill2 is now source-closed. Non-null skill12 retry/recast and ordinary skill2 Again10 now have source-derived production golden cases; see retry follow-up."
+}

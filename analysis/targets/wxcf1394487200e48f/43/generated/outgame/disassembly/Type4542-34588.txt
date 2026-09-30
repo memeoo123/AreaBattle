@@ -1,0 +1,172 @@
+; Original class: GlobalItemManager
+; Type4542.Init; wasmcode function 12044; offset=5864921 size=473
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 126)]
+00597ddc  global.get [0]
+00597dde  i32.const [16]
+00597de0  i32.sub []
+00597de1  local.set [3]
+00597de3  local.get [3]
+00597de5  global.set [0]
+00597de7  i32.const [5001145]
+00597dec  i32.load8_u [0, 0]
+00597def  i32.eqz []
+00597df0  if [-64]
+00597df2    i32.const [3920892]
+00597df7    call [900] ; 
+00597dfa    i32.const [4001492] ; METHOD GlobalItemManager.xyLwOeQ
+00597dff    call [900] ; 
+00597e02    i32.const [3934404]
+00597e07    call [900] ; 
+00597e0a    i32.const [3934608]
+00597e0f    call [900] ; 
+00597e12    i32.const [4004816]
+00597e17    call [900] ; 
+00597e1a    i32.const [3975788]
+00597e1f    call [900] ; 
+00597e22    i32.const [3974552]
+00597e27    call [900] ; 
+00597e2a    i32.const [3923648]
+00597e2f    call [900] ; 
+00597e32    i32.const [3923396]
+00597e37    call [900] ; 
+00597e3a    i32.const [3926996]
+00597e3f    call [900] ; 
+00597e42    i32.const [3940172]
+00597e47    call [900] ; 
+00597e4a    i32.const [4048984] ; STRING "CommonGameModule_StatisticsEventResiger"
+00597e4f    call [900] ; 
+00597e52    i32.const [5001145]
+00597e57    i32.const [1]
+00597e59    i32.store8 [0, 0]
+00597e5c  end []
+00597e5d  local.get [0]
+00597e5f  local.get [2]
+00597e61  i32.store [2, 24]
+00597e64  local.get [0]
+00597e66  local.get [1]
+00597e68  i32.const [4004816]
+00597e6d  i32.load [2, 0]
+00597e70  call [1352] ; 
+00597e73  i32.store [2, 28]
+00597e76  local.get [0]
+00597e78  i32.load [2, 28]
+00597e7b  i32.eqz []
+00597e7c  if [-64]
+00597e7e    i32.const [3934608]
+00597e83    i32.load [2, 0]
+00597e86    call [903] ; 
+00597e89    local.set [1]
+00597e8b    local.get [1]
+00597e8d    local.get [0]
+00597e8f    call [11719] ; ItemManagerData..ctor
+00597e92    local.get [0]
+00597e94    local.get [1]
+00597e96    i32.store [2, 28]
+00597e99    local.get [0]
+00597e9b    i32.load [2, 28]
+00597e9e    local.set [1]
+00597ea0    i32.const [3923648]
+00597ea5    i32.load [2, 0]
+00597ea8    call [903] ; 
+00597eab    local.set [2]
+00597ead    local.get [2]
+00597eaf    i32.const [3975788]
+00597eb4    i32.load [2, 0]
+00597eb7    call [944] ; 
+00597eba    local.get [1]
+00597ebc    local.get [2]
+00597ebe    i32.store [2, 24]
+00597ec1    local.get [0]
+00597ec3    i32.load [2, 28]
+00597ec6    local.set [1]
+00597ec8    i32.const [3923396]
+00597ecd    i32.load [2, 0]
+00597ed0    call [903] ; 
+00597ed3    local.set [2]
+00597ed5    local.get [2]
+00597ed7    i32.const [3974552]
+00597edc    i32.load [2, 0]
+00597edf    call [944] ; 
+00597ee2    local.get [1]
+00597ee4    local.get [2]
+00597ee6    i32.store [2, 20]
+00597ee9    local.get [0]
+00597eeb    i32.load [2, 28]
+00597eee    local.set [1]
+00597ef0    local.get [1]
+00597ef2    i64.const [-1]
+00597ef4    i64.store [3, 8]
+00597ef7    local.get [1]
+00597ef9    i32.const [-1]
+00597efb    i32.store [2, 16]
+00597efe  end []
+00597eff  local.get [0]
+00597f01  local.get [0]
+00597f03  call [2956] ; GlobalItemManager.GetNowDateTime
+00597f06  local.set [4]
+00597f08  i32.const [3940172]
+00597f0d  i32.load [2, 0]
+00597f10  call [901] ; 
+00597f13  local.get [0]
+00597f15  local.get [4]
+00597f17  i32.const [0]
+00597f19  call [1474] ; TimeHelper.ToTimestampLong
+00597f1c  local.get [0]
+00597f1e  call [12042] ; GlobalItemManager.SynServerTime
+00597f21  local.get [0]
+00597f23  local.get [0]
+00597f25  call [12039] ; GlobalItemManager.l`V[
+00597f28  local.get [0]
+00597f2a  local.get [0]
+00597f2c  call [12041] ; GlobalItemManager.o~}]vw
+00597f2f  local.get [0]
+00597f31  i32.const [1]
+00597f33  i32.store8 [0, 72]
+00597f36  i32.const [3926996]
+00597f3b  i32.load [2, 0]
+00597f3e  i32.const [2]
+00597f40  call [909] ; 
+00597f43  local.set [1]
+00597f45  local.get [3]
+00597f47  local.get [0]
+00597f49  i32.load [2, 20]
+00597f4c  i32.store [2, 12]
+00597f4f  i32.const [3934404]
+00597f54  i32.load [2, 0]
+00597f57  local.get [3]
+00597f59  i32.const [12]
+00597f5b  i32.add []
+00597f5c  call [910] ; 
+00597f5f  local.set [2]
+00597f61  local.get [1]
+00597f63  local.get [2]
+00597f65  call [905] ; 
+00597f68  local.get [1]
+00597f6a  local.get [2]
+00597f6c  i32.store [2, 16]
+00597f6f  i32.const [3920892]
+00597f74  i32.load [2, 0]
+00597f77  call [903] ; 
+00597f7a  local.set [2]
+00597f7c  local.get [2]
+00597f7e  local.get [0]
+00597f80  i32.const [4001492] ; METHOD GlobalItemManager.xyLwOeQ
+00597f85  i32.load [2, 0]
+00597f88  i32.const [0]
+00597f8a  call [1057] ; 
+00597f8d  local.get [1]
+00597f8f  local.get [2]
+00597f91  call [905] ; 
+00597f94  local.get [1]
+00597f96  local.get [2]
+00597f98  i32.store [2, 20]
+00597f9b  i32.const [4048984] ; STRING "CommonGameModule_StatisticsEventResiger"
+00597fa0  i32.load [2, 0]
+00597fa3  local.get [1]
+00597fa5  i32.const [0]
+00597fa7  call [1230] ; MsgDispatcher.SendMessage
+00597faa  local.get [3]
+00597fac  i32.const [16]
+00597fae  i32.add []
+00597faf  global.set [0]
+00597fb1  end []

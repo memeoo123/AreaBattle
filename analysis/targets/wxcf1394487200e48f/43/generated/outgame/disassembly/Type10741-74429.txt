@@ -1,0 +1,22 @@
+; Original class: UIVideoBtn
+; Type10741.RemoveVideoBtnListeners; wasmcode function 3247; offset=994832 size=42
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+000f2e11  local.get [0]
+000f2e13  i32.load [2, 184]
+000f2e17  local.set [1]
+000f2e19  local.get [1]
+000f2e1b  if [-64]
+000f2e1d    local.get [1]
+000f2e1f    i32.const [0]
+000f2e21    call [2021] ; UnityEventBase.RemoveAllListeners
+000f2e24  end []
+000f2e25  local.get [0]
+000f2e27  i32.load [2, 180]
+000f2e2b  local.set [0]
+000f2e2d  local.get [0]
+000f2e2f  if [-64]
+000f2e31    local.get [0]
+000f2e33    i32.const [0]
+000f2e35    call [2021] ; UnityEventBase.RemoveAllListeners
+000f2e38  end []
+000f2e39  end []

@@ -1,0 +1,52 @@
+; Original shared generic: ObjectPool`1.set_Capacity
+; PoolGeneric.set_Capacity; wasmcode function 18400; offset=8278256 size=121
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007e50f1  local.get [1]
+007e50f3  i32.const [-1]
+007e50f5  i32.gt_s []
+007e50f6  if [-64]
+007e50f8    local.get [1]
+007e50fa    local.get [0]
+007e50fc    i32.load [2, 24]
+007e50ff    i32.ne []
+007e5100    if [-64]
+007e5102      local.get [0]
+007e5104      local.get [1]
+007e5106      i32.store [2, 24]
+007e5109      local.get [0]
+007e510b      local.set [1]
+007e510d      local.get [0]
+007e510f      i32.load [2, 0]
+007e5112      local.set [0]
+007e5114      local.get [1]
+007e5116      local.get [0]
+007e5118      i32.load [2, 272]
+007e511c      local.get [0]
+007e511e      i32.load [2, 268]
+007e5122      global.set [3]
+007e5124      global.get [3]
+007e5126      call_indirect [0, 0]
+007e5129    end []
+007e512a    return []
+007e512b  end []
+007e512c  i32.const [3932324]
+007e5131  call [902] ; 
+007e5134  call [903] ; 
+007e5137  local.set [0]
+007e5139  local.get [0]
+007e513b  i32.const [4048084] ; STRING "Capacity is invalid."
+007e5140  call [902] ; 
+007e5143  i32.const [0]
+007e5145  i32.const [10659] ; TABLE GameFrameworkException..ctor
+007e5149  global.set [3]
+007e514b  i32.const [10659] ; TABLE GameFrameworkException..ctor
+007e514f  call_indirect [2, 0]
+007e5152  local.get [0]
+007e5154  i32.const [3982308]
+007e5159  call [902] ; 
+007e515c  i32.const [1106]
+007e515f  global.set [3]
+007e5161  i32.const [1106]
+007e5164  call_indirect [0, 0]
+007e5167  unreachable []
+007e5168  end []

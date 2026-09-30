@@ -1,0 +1,23 @@
+; Original class: XYXADControl
+; Type7567.IsInterstitialReadyStatic; wasmcode function 9328; offset=4536610 size=46
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00453923  i32.const [0]
+00453925  call [1083] ; BridgeManager.get_xyxFunc
+00453928  local.set [0]
+0045392a  local.get [0]
+0045392c  local.set [1]
+0045392e  local.get [0]
+00453930  i32.load [2, 0]
+00453933  local.set [0]
+00453935  local.get [1]
+00453937  local.get [0]
+00453939  i32.const [256]
+0045393c  i32.add []
+0045393d  i32.load [2, 192]
+00453941  local.get [0]
+00453943  i32.load [2, 444]
+00453947  global.set [3]
+00453949  global.get [3]
+0045394b  call_indirect [1, 0]
+0045394e  return []
+0045394f  end []

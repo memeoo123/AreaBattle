@@ -1,0 +1,33 @@
+{
+  "roi": [
+    110,
+    420,
+    60,
+    44
+  ],
+  "method": "Native-frame grayscale nearest templates for manually read blue1 scores19/20/21; accepted MSE<100, three-frame persistence.",
+  "changes": [
+    {
+      "previousPts": 1.2506,
+      "pts": 1.26736,
+      "before": 19,
+      "after": 20,
+      "mse": 1.4125
+    },
+    {
+      "previousPts": 3.2518,
+      "pts": 3.26884,
+      "before": 20,
+      "after": 21,
+      "mse": 1.4859848484848486
+    }
+  ],
+  "inferredPreRecordingSeconds": [
+    9.538640000000001,
+    9.5554
+  ],
+  "caveats": [
+    "Conditional on initial15, two-second regeneration, no earlier blue1 input, and pause resume near0.806.",
+    "Rendered score transition is not internal simulation timestamp. Prior AI/RNG/soldier states remain unknown."
+  ]
+}

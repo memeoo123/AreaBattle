@@ -1,0 +1,38 @@
+; Original class: MainTabItemUI
+; Type4376.InitializeComponent; wasmcode1 function 57542; offset=18809236 size=111
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011f0195  i32.const [5009013]
+011f019a  i32.load8_u [0, 0]
+011f019d  i32.eqz []
+011f019e  if [-64]
+011f01a0    i32.const [4018604]
+011f01a5    i32.const [1605]
+011f01a8    call_indirect [0, 0]
+011f01ab    i32.const [4093496] ; STRING "objContent"
+011f01b0    i32.const [1605]
+011f01b3    call_indirect [0, 0]
+011f01b6    i32.const [4069472] ; STRING "ShopItem"
+011f01bb    i32.const [1605]
+011f01be    call_indirect [0, 0]
+011f01c1    i32.const [5009013]
+011f01c6    i32.const [1]
+011f01c8    i32.store8 [0, 0]
+011f01cb  end []
+011f01cc  local.get [0]
+011f01ce  local.get [0]
+011f01d0  i32.const [4093496] ; STRING "objContent"
+011f01d5  i32.load [2, 0]
+011f01d8  i32.const [4018604]
+011f01dd  i32.load [2, 0]
+011f01e0  i32.const [109035]
+011f01e4  call_indirect [3, 0]
+011f01e7  i32.store [2, 104]
+011f01ea  local.get [0]
+011f01ec  local.get [0]
+011f01ee  i32.const [4069472] ; STRING "ShopItem"
+011f01f3  i32.load [2, 0]
+011f01f6  i32.const [0]
+011f01f8  i32.const [25216] ; TABLE UIObject.Get
+011f01fc  call_indirect [3, 0]
+011f01ff  i32.store [2, 108]
+011f0202  end []

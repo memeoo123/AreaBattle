@@ -1,0 +1,21 @@
+{
+  "status": "original_handle_release_lists_restored",
+  "source": [
+    "disassembly/Type3559-27441.txt",
+    "disassembly/Type3559-27442.txt",
+    "ui-release-generics.json"
+  ],
+  "verified": [
+    "Metadata confirms Dictionary<UnityEngine.Object,AssetOperationHandle> and value enumeration",
+    "Null dictionaries skip entirely; null values skip release",
+    "Actual recovered handles decrement shared provider refcount independently",
+    "UnloadUnusedAssets before field set null; external dictionary retained without Clear",
+    "Empty nonnull dictionary still unloads; unload failure occurs before field reset"
+  ],
+  "remaining": [
+    "NewResLoadHelper actual unload scheduling",
+    "Concrete asynchronous close host and production resource ownership",
+    "PlayMode/Player E2E"
+  ],
+  "integratedChecks": 589
+}

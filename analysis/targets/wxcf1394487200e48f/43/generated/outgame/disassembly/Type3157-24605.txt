@@ -1,0 +1,102 @@
+; Original class: AdsManager
+; Type3157.IsInterstitialReadyStatic; wasmcode function 6332; offset=2280549 size=265
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+0022cc68  global.get [0]
+0022cc6a  i32.const [16]
+0022cc6c  i32.sub []
+0022cc6d  local.set [0]
+0022cc6f  local.get [0]
+0022cc71  global.set [0]
+0022cc73  i32.const [0]
+0022cc75  local.set [3]
+0022cc77  i32.const [5010595]
+0022cc7c  i32.load8_u [0, 0]
+0022cc7f  i32.eqz []
+0022cc80  if [-64]
+0022cc82    i32.const [3928952]
+0022cc87    call [900] ; 
+0022cc8a    i32.const [3929208]
+0022cc8f    call [900] ; 
+0022cc92    i32.const [3930128]
+0022cc97    call [900] ; 
+0022cc9a    i32.const [3926996]
+0022cc9f    call [900] ; 
+0022cca2    i32.const [4106120] ; STRING "调用代理层isInterstitialReadyStatic:game[{0}]mtype[{1}] 结果为:[{2}]"
+0022cca7    call [900] ; 
+0022ccaa    i32.const [5010595]
+0022ccaf    i32.const [1]
+0022ccb1    i32.store8 [0, 0]
+0022ccb4  end []
+0022ccb5  i32.const [3930128]
+0022ccba  i32.load [2, 0]
+0022ccbd  call [901] ; 
+0022ccc0  i32.const [0]
+0022ccc2  call [974] ; DBTSDKManager.get_Instance
+0022ccc5  i32.load [2, 16]
+0022ccc8  if [-64]
+0022ccca    i32.const [3930128]
+0022cccf    i32.load [2, 0]
+0022ccd2    call [901] ; 
+0022ccd5    i32.const [0]
+0022ccd7    call [974] ; DBTSDKManager.get_Instance
+0022ccda    i32.load [2, 16]
+0022ccdd    local.set [3]
+0022ccdf    local.get [3]
+0022cce1    local.set [4]
+0022cce3    local.get [3]
+0022cce5    i32.load [2, 0]
+0022cce8    local.set [3]
+0022ccea    local.get [4]
+0022ccec    local.get [1]
+0022ccee    local.get [2]
+0022ccf0    local.get [3]
+0022ccf2    i32.load [2, 832]
+0022ccf6    local.get [3]
+0022ccf8    i32.load [2, 828]
+0022ccfc    global.set [3]
+0022ccfe    global.get [3]
+0022cd00    call_indirect [10, 0]
+0022cd03    local.set [3]
+0022cd05  end []
+0022cd06  i32.const [3926996]
+0022cd0b  i32.load [2, 0]
+0022cd0e  i32.const [1]
+0022cd10  call [909] ; 
+0022cd13  local.set [4]
+0022cd15  local.get [0]
+0022cd17  local.get [3]
+0022cd19  i32.store8 [0, 15]
+0022cd1c  i32.const [3928952]
+0022cd21  i32.load [2, 0]
+0022cd24  local.get [0]
+0022cd26  i32.const [15]
+0022cd28  i32.add []
+0022cd29  call [910] ; 
+0022cd2c  local.set [5]
+0022cd2e  i32.const [4106120] ; STRING "调用代理层isInterstitialReadyStatic:game[{0}]mtype[{1}] 结果为:[{2}]"
+0022cd33  i32.load [2, 0]
+0022cd36  local.get [1]
+0022cd38  local.get [2]
+0022cd3a  local.get [5]
+0022cd3c  i32.const [0]
+0022cd3e  call [1301] ; String.Format
+0022cd41  local.set [1]
+0022cd43  local.get [4]
+0022cd45  local.get [1]
+0022cd47  call [905] ; 
+0022cd4a  local.get [4]
+0022cd4c  local.get [1]
+0022cd4e  i32.store [2, 16]
+0022cd51  i32.const [3929208]
+0022cd56  i32.load [2, 0]
+0022cd59  call [901] ; 
+0022cd5c  local.get [4]
+0022cd5e  i32.const [0]
+0022cd60  call [2096] ; CLog.KtK
+0022cd63  local.get [0]
+0022cd65  i32.const [16]
+0022cd67  i32.add []
+0022cd68  global.set [0]
+0022cd6a  local.get [3]
+0022cd6c  return []
+0022cd6d  end []

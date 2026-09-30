@@ -1,0 +1,65 @@
+{
+  "status": "source-backed-production-loop-fade-restored",
+  "config": {
+    "id": 1001,
+    "Ptype": 4,
+    "Vol": 0.4,
+    "StartTime": 0,
+    "EndTime": 0,
+    "clipLengthSeconds": 40.00798185941043
+  },
+  "before": "Music AudioSource looped at full volume after initial fade-in; no fade at subsequent clip boundaries.",
+  "after": "When playing clip reaches length-1s, start wall-clock1000ms fade-out from saved base volume; completion starts1000ms fade-in. Native AudioSource.loop remains true, without seek/restart.",
+  "sourceEvidence": [
+    {
+      "path": "audio-loop-fade-disassembly/f20576.txt",
+      "offset": "008ccf39..008ccfac",
+      "claim": "EndTime<=0: require isPlaying and time>=clipLength-fadeMs/1000 and not field60 before starting natural loop fade."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f13128.txt",
+      "offset": "00600e94..00600ea8",
+      "claim": "Set field60 and begin fade-out using saved volume48, without recapturing current source volume."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f20574.txt",
+      "offset": "008cce5c..008cce70",
+      "claim": "Natural fade-out completion clears field60 and calls fade helper with true, starting fade-in on same source."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f14635.txt",
+      "offset": "006dba1e..006dba54",
+      "claim": "Volume48 multiplied by remainingMs/fadeMs for fade-out, or1-remainingMs/fadeMs for fade-in."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f20577.txt",
+      "offset": "008ccfe1..008cd077",
+      "claim": "Stop during existing fade-out goes directly to completion/dispose. Otherwise capture source volume times setting and fade out."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f13404.txt",
+      "offset": "0063064f..00630688",
+      "claim": "AudioSource.loop=true then Play; natural fade completion neither seeks nor restarts source."
+    },
+    {
+      "path": "audio-loop-fade-disassembly/f6273.txt",
+      "offset": "0022505f..00225064",
+      "claim": "Fade interval1000ms."
+    }
+  ],
+  "tests": [
+    "music-source-natural-loop-tail-and-head-fades",
+    "music-source-loop-fades-use-wall-time-through-pause",
+    "music-source-stop-during-loop-fade-and-initial-fade"
+  ],
+  "numericReplayUnchanged": true,
+  "limitations": [
+    "Source-derived behavior verified with controlled clocks; original mixed audio/DSP timing has not passed a complete auditory comparison.",
+    "Resource callback delivery timing remains unknown; the lightning183.78ms observation is not inserted as a fixed delay."
+  ],
+  "otherAudits": {
+    "lightning": "video-20260928/lightning-onset-audit.json",
+    "iceReuse": "video-20260928/effect-lifecycle-audit.json",
+    "iceReuseFinding": "State hash, normalized time and all child local scales match between reused and fresh effect at0.3s; no reset correction justified. This does not validate particle randomness or all intermediate states."
+  }
+}

@@ -1,0 +1,39 @@
+; Original class: MenuTabUI
+; Type4379.|OP}; wasmcode1 function 57021; offset=18672703 size=105
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011cec40  i32.const [5009019]
+011cec45  i32.load8_u [0, 0]
+011cec48  i32.eqz []
+011cec49  if [-64]
+011cec4b    i32.const [3953384]
+011cec50    i32.const [1605]
+011cec53    call_indirect [0, 0]
+011cec56    i32.const [5009019]
+011cec5b    i32.const [1]
+011cec5d    i32.store8 [0, 0]
+011cec60  end []
+011cec61  i32.const [0]
+011cec63  i32.const [9964] ; TABLE GameModule.get_Audio
+011cec67  call_indirect [2, 0]
+011cec6a  i32.const [1]
+011cec6c  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+011cec6f  i32.const [0]
+011cec71  i32.const [9965] ; TABLE Extension.PlayerVoice
+011cec75  call_indirect [6, 0]
+011cec78  local.get [0]
+011cec7a  i32.const [5]
+011cec7c  local.get [0]
+011cec7e  i32.const [16767] ; TABLE MenuTabUI.CheckUI
+011cec82  call_indirect [3, 0]
+011cec85  if [-64]
+011cec87    i32.const [3953384]
+011cec8c    i32.load [2, 0]
+011cec8f    i32.const [10272]
+011cec93    call_indirect [2, 0]
+011cec96    i32.const [1]
+011cec98    f32.const [0.5]
+011cec9d    i32.const [0]
+011cec9f    i32.const [14692] ; TABLE GameControl.MoveCamera
+011ceca3    call_indirect [30, 0]
+011ceca6  end []
+011ceca7  end []

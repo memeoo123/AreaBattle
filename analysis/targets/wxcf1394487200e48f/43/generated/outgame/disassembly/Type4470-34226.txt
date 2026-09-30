@@ -1,0 +1,83 @@
+; Original class: LevelRankControl
+; Type4470.SendRank; wasmcode function 11586; offset=5676283 size=213
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+00569cfe  i32.const [5009836]
+00569d03  i32.load8_u [0, 0]
+00569d06  i32.eqz []
+00569d07  if [-64]
+00569d09    i32.const [3927888]
+00569d0e    call [900] ; 
+00569d11    i32.const [3953584]
+00569d16    call [900] ; 
+00569d19    i32.const [4005376] ; METHOD LevelRankControl.`Y}Ui
+00569d1e    call [900] ; 
+00569d21    i32.const [5009836]
+00569d26    i32.const [1]
+00569d28    i32.store8 [0, 0]
+00569d2b  end []
+00569d2c  local.get [0]
+00569d2e  i32.load [2, 16]
+00569d31  i32.load [2, 20]
+00569d34  local.set [2]
+00569d36  i32.const [3953584]
+00569d3b  i32.load [2, 0]
+00569d3e  call [935] ; 
+00569d41  i32.load [2, 8]
+00569d44  i32.load [2, 20]
+00569d47  i32.load [2, 8]
+00569d4a  local.set [3]
+00569d4c  local.get [0]
+00569d4e  local.get [0]
+00569d50  call [3591] ; LevelRankControl.GetPlayerUid
+00569d53  local.set [4]
+00569d55  local.get [0]
+00569d57  i32.load [2, 24]
+00569d5a  local.get [4]
+00569d5c  local.get [3]
+00569d5e  local.get [2]
+00569d60  i32.load [2, 12]
+00569d63  i32.const [2]
+00569d65  i32.const [1]
+00569d67  local.get [0]
+00569d69  call [4326] ; RanklistTransmitter.SendLevelRankDataRequset
+00569d6c  local.get [0]
+00569d6e  i32.load [2, 24]
+00569d71  local.get [4]
+00569d73  local.get [3]
+00569d75  local.get [2]
+00569d77  i32.load [2, 12]
+00569d7a  i32.const [3]
+00569d7c  i32.const [1]
+00569d7e  local.get [0]
+00569d80  call [4326] ; RanklistTransmitter.SendLevelRankDataRequset
+00569d83  local.get [0]
+00569d85  i32.load [2, 24]
+00569d88  local.get [4]
+00569d8a  local.get [3]
+00569d8c  local.get [2]
+00569d8e  i32.load [2, 12]
+00569d91  i32.const [1]
+00569d93  local.get [1]
+00569d95  local.get [0]
+00569d97  call [4326] ; RanklistTransmitter.SendLevelRankDataRequset
+00569d9a  local.get [0]
+00569d9c  i32.load [2, 24]
+00569d9f  local.set [2]
+00569da1  i32.const [3927888]
+00569da6  i32.load [2, 0]
+00569da9  call [903] ; 
+00569dac  local.set [3]
+00569dae  local.get [3]
+00569db0  local.get [0]
+00569db2  i32.const [4005376] ; METHOD LevelRankControl.`Y}Ui
+00569db7  i32.load [2, 0]
+00569dba  i32.const [0]
+00569dbc  call [1002] ; Action..ctor
+00569dbf  local.get [2]
+00569dc1  local.get [3]
+00569dc3  i32.store [2, 52]
+00569dc6  local.get [0]
+00569dc8  local.get [1]
+00569dca  local.get [0]
+00569dcc  call [5931] ; LevelRankControl.lngv~U
+00569dcf  end []

@@ -1,0 +1,20 @@
+; Original class: SkinManager
+; Type4150.GetSceneMapKeyOrder; wasmcode function 15905; offset=7650444 size=49
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0074bc8d  i32.const [5010244]
+0074bc92  i32.load8_u [0, 0]
+0074bc95  i32.eqz []
+0074bc96  if [-64]
+0074bc98    i32.const [3956700]
+0074bc9d    call [900] ; 
+0074bca0    i32.const [5010244]
+0074bca5    i32.const [1]
+0074bca7    i32.store8 [0, 0]
+0074bcaa  end []
+0074bcab  local.get [0]
+0074bcad  i32.load [2, 28]
+0074bcb0  i32.const [3956700]
+0074bcb5  i32.load [2, 0]
+0074bcb8  call [1554] ; 
+0074bcbb  return []
+0074bcbc  end []

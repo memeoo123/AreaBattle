@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.RemoveKeyHoldListener; wasmcode1 function 59946; offset=19451835 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128cfbc  i32.const [4989931]
+0128cfc1  i32.load8_u [0, 0]
+0128cfc4  i32.eqz []
+0128cfc5  if [-64]
+0128cfc7    i32.const [3934348]
+0128cfcc    i32.const [1605]
+0128cfcf    call_indirect [0, 0]
+0128cfd2    i32.const [4989931]
+0128cfd7    i32.const [1]
+0128cfd9    i32.store8 [0, 0]
+0128cfdc  end []
+0128cfdd  i32.const [3934348]
+0128cfe2  i32.load [2, 0]
+0128cfe5  i32.const [1149]
+0128cfe8  call_indirect [0, 0]
+0128cfeb  local.get [0]
+0128cfed  i32.const [25515] ; TABLE InputManager.get_Instance
+0128cff1  call_indirect [2, 0]
+0128cff4  local.get [0]
+0128cff6  local.get [0]
+0128cff8  call [26983] ; InputManager.Àn^
+0128cffc  end []

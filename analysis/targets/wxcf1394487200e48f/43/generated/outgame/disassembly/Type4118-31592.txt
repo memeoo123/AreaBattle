@@ -1,0 +1,73 @@
+; Original class: LocalDataControl
+; Type4118.OnInit; wasmcode function 18784; offset=8473467 size=225
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00814b7e  i32.const [5008543]
+00814b83  i32.load8_u [0, 0]
+00814b86  i32.eqz []
+00814b87  if [-64]
+00814b89    i32.const [3995120]
+00814b8e    call [900] ; 
+00814b91    i32.const [3930256]
+00814b96    call [900] ; 
+00814b99    i32.const [3947148]
+00814b9e    call [900] ; 
+00814ba1    i32.const [3944712]
+00814ba6    call [900] ; 
+00814ba9    i32.const [4005768] ; METHOD LocalDataControl.aeadTl
+00814bae    call [900] ; 
+00814bb1    i32.const [4005772] ; METHOD LocalDataControl.edsgn
+00814bb6    call [900] ; 
+00814bb9    i32.const [4057408] ; STRING "IapSuccess"
+00814bbe    call [900] ; 
+00814bc1    i32.const [5008543]
+00814bc6    i32.const [1]
+00814bc8    i32.store8 [0, 0]
+00814bcb  end []
+00814bcc  i32.const [3930256]
+00814bd1  i32.load [2, 0]
+00814bd4  call [901] ; 
+00814bd7  local.get [0]
+00814bd9  i32.const [0]
+00814bdb  call [1309] ; DataManagerPool.get_Instance
+00814bde  i32.const [3995120]
+00814be3  i32.load [2, 0]
+00814be6  call [1609] ; 
+00814be9  i32.store [2, 8]
+00814bec  i32.const [3947148]
+00814bf1  i32.load [2, 0]
+00814bf4  call [903] ; 
+00814bf7  local.set [1]
+00814bf9  local.get [1]
+00814bfb  local.get [0]
+00814bfd  i32.const [4005768] ; METHOD LocalDataControl.aeadTl
+00814c02  i32.load [2, 0]
+00814c05  i32.const [0]
+00814c07  call [1067] ; EventHandler..ctor
+00814c0a  i32.const [4057408] ; STRING "IapSuccess"
+00814c0f  i32.load [2, 0]
+00814c12  local.get [1]
+00814c14  i32.const [0]
+00814c16  call [1146] ; MsgDispatcher.AddEventListener
+00814c19  i32.const [3944712]
+00814c1e  i32.load [2, 0]
+00814c21  call [901] ; 
+00814c24  i32.const [3944712]
+00814c29  i32.load [2, 0]
+00814c2c  i32.load [2, 92]
+00814c2f  i32.load [2, 4]
+00814c32  local.set [1]
+00814c34  i32.const [3947148]
+00814c39  i32.load [2, 0]
+00814c3c  call [903] ; 
+00814c3f  local.set [2]
+00814c41  local.get [2]
+00814c43  local.get [0]
+00814c45  i32.const [4005772] ; METHOD LocalDataControl.edsgn
+00814c4a  i32.load [2, 0]
+00814c4d  i32.const [0]
+00814c4f  call [1067] ; EventHandler..ctor
+00814c52  local.get [1]
+00814c54  local.get [2]
+00814c56  i32.const [0]
+00814c58  call [1146] ; MsgDispatcher.AddEventListener
+00814c5b  end []

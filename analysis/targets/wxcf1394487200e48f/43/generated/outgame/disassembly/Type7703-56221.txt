@@ -1,0 +1,22 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetFailedOrdersByPlatStatic; wasmcode1 function 38450; offset=14432134 size=58
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc3787  i32.const [5005417]
+00dc378c  i32.load8_u [0, 0]
+00dc378f  i32.eqz []
+00dc3790  if [-64]
+00dc3792    i32.const [4057276] ; STRING "ISDK GetFailedOrdersByPlatStatic"
+00dc3797    i32.const [1605]
+00dc379a    call_indirect [0, 0]
+00dc379d    i32.const [5005417]
+00dc37a2    i32.const [1]
+00dc37a4    i32.store8 [0, 0]
+00dc37a7  end []
+00dc37a8  i32.const [4057276] ; STRING "ISDK GetFailedOrdersByPlatStatic"
+00dc37ad  i32.load [2, 0]
+00dc37b0  i32.const [0]
+00dc37b2  i32.const [9037] ; TABLE XYXLOG.IAPLog
+00dc37b6  call_indirect [4, 0]
+00dc37b9  i32.const [0]
+00dc37bb  call [27256] ; IAPMgr.GetFailedOrdersByPlatStatic
+00dc37bf  end []

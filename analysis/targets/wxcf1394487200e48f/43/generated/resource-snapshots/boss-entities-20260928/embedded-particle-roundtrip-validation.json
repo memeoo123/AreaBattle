@@ -1,0 +1,317 @@
+{
+  "passed": false,
+  "particleSystems": 14,
+  "numericScalars": 25486,
+  "otherScalars": 0,
+  "comparison": "All original fields recursively; PPtr structures excluded because IDs/GUIDs remapped and importer validates actual references. Numeric tolerance max(1e-7,abs(source)*1e-6) only for Editor JSON decimal float32 formatting.",
+  "failures": [
+    {
+      "prefab": "Hdzd_Effect_Wy_speedDown",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-7060647989035007473",
+      "differenceCount": 2
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedDown",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-4920355895129505850",
+      "differenceCount": 2
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:7761036801378585691",
+      "differenceCount": 2
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-6441020150599215417",
+      "differenceCount": 2
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-159158577839100410",
+      "differenceCount": 2
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:4752681560148345973",
+      "differenceCount": 2
+    }
+  ],
+  "components": [
+    {
+      "prefab": "Hdzd_Effect_Wy_speedDown",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-7060647989035007473",
+      "path": "All/lizhi",
+      "passed": false,
+      "sourceSha256": "2fb94b76ac4f9cda9e74929fb5b13d79dfbf63b9cfa0ab15bf875ee80fe405b1",
+      "readbackSha256": "43d006351069341ae161225012cc1296ad190ad32f40c776df50237d36bc3f1e",
+      "stats": {
+        "numericScalars": 1831,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedDown",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-4920355895129505850",
+      "path": "All/lizhi/Glow",
+      "passed": false,
+      "sourceSha256": "daf8ef5c62c37a134947e263412006f156de08668637a6f0f4c4d8d0dd4936db",
+      "readbackSha256": "5907e79b84ef03e000be1625a328d9016328348ccd6511861c0e8c851f625232",
+      "stats": {
+        "numericScalars": 1817,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:7761036801378585691",
+      "path": "All/FireShader",
+      "passed": false,
+      "sourceSha256": "f99ad2aefe7009179c80752c895589e383fbb25a124716228fece60b251adb2a",
+      "readbackSha256": "a5520610a3221f457a9cf5c08cb46ef5049c0654b100392b1e4aa9203a4c2c67",
+      "stats": {
+        "numericScalars": 1830,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-6441020150599215417",
+      "path": "All/FireShader/FireShader01",
+      "passed": false,
+      "sourceSha256": "51f795ed9e32c2f7791a92e26fd55665476bc5caf064fa95d1d0575e66c2aa8a",
+      "readbackSha256": "f9fdcde0194532347b5734e04a0aec466a9db9cc39a74ceca8a9e7a039ee80c3",
+      "stats": {
+        "numericScalars": 1830,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-159158577839100410",
+      "path": "All/FireShader/FireGlow",
+      "passed": false,
+      "sourceSha256": "07a066a700b15c654dac153390645b98b208578b148ed20079974cc330bdb24a",
+      "readbackSha256": "6fc7a03457849463c9139006c23b937b4f568802748dd226abe950e3aa4f9261",
+      "stats": {
+        "numericScalars": 1830,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_Wy_speedUp",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:4752681560148345973",
+      "path": "All/FireShader/lizi",
+      "passed": false,
+      "sourceSha256": "6384b1f751d928b59202be9ca14bb5d76123b39144dc45f6e533e67d1be13265",
+      "readbackSha256": "bf3bc5ed5245f95289c41b21c5e6c9c2d836a8d3ede13517a432ffe6f8c46e62",
+      "stats": {
+        "numericScalars": 1844,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 23,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": [
+        {
+          "path": ".startDelay.maxCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        },
+        {
+          "path": ".startDelay.minCurve.m_Curve",
+          "sourceLength": 0,
+          "actualLength": 2
+        }
+      ]
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:4218403835490407502",
+      "path": "root",
+      "passed": true,
+      "sourceSha256": "35b211092db33e3068aa452d619b78b33b1ae4ee744c284427570ce635f2e000",
+      "readbackSha256": "cf88fcc99a953e8d4ea58b5b92f9b8a483cfa27966a3411161a8f81c8e61459a",
+      "stats": {
+        "numericScalars": 1796,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-6379408255412198537",
+      "path": "root/bing",
+      "passed": true,
+      "sourceSha256": "9efdf0db5b3688a908ac3a040802f9c36746d2376eff519c86b2816b4cb5b173",
+      "readbackSha256": "8688281bc140c0924b918c1558466915b69fc148dbcbace360ae1b2690943a8b",
+      "stats": {
+        "numericScalars": 1809,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-7297160018016558252",
+      "path": "root/yanwu",
+      "passed": true,
+      "sourceSha256": "2d2859996fe10537d6de6c58c48df7e01cb1e35e163330a8dbcbf3ef4296e344",
+      "readbackSha256": "cf41e18bd06c37eb3b0274bab736f52bba81b3b02c2b17d11902533add4bce58",
+      "stats": {
+        "numericScalars": 1796,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:1161783182224118272",
+      "path": "root/dimian",
+      "passed": true,
+      "sourceSha256": "debe72025605a0f8b829dc1c0e669e06567a32029b79a79c6f8133db8789250e",
+      "readbackSha256": "090116b29c6d9e2874cb05303d820d74b4b2071fce98a56355cbe79a0194355c",
+      "stats": {
+        "numericScalars": 1809,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:6123597571540270901",
+      "path": "root/dimian/dimian_add",
+      "passed": true,
+      "sourceSha256": "616041ef6ce6ccfbc2dd834a1e883ec3adc54aedf990911ea4199e47f5272dca",
+      "readbackSha256": "bfc4822bbaa8b6b143c9eaefd2957f36d09785b08d4a78c2ceaee5bed9d04f7f",
+      "stats": {
+        "numericScalars": 1809,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-558423623071125257",
+      "path": "root/dimian/glow",
+      "passed": true,
+      "sourceSha256": "8a7b1c8fd3460bec8c2dddb1a2803db6ab90750bd5d6c1056c7b13eada6f295d",
+      "readbackSha256": "738b7ebbe6067bfcd7e3ea7653c28219fd23b988170c25fec13f3613e46cf627",
+      "stats": {
+        "numericScalars": 1809,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-8333369208943268760",
+      "path": "root/xuehua",
+      "passed": true,
+      "sourceSha256": "0315091c7034f1034ff54c75dc25b24912ebd43b180e286590179de8103d5125",
+      "readbackSha256": "729dc5b4f3d7586d56ca6747a28006d2562079ef1e22e7a82f5cdc445ee60cab",
+      "stats": {
+        "numericScalars": 1803,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    },
+    {
+      "prefab": "Hdzd_Effect_icicle",
+      "component": "CAB-68a3634b9a99c5a2a10a36b772e4e945:-3629369797549564286",
+      "path": "root/xx",
+      "passed": true,
+      "sourceSha256": "54232af57ef72d99188720d8f7d62589dd632475f95148bb8bab54aac04b59b6",
+      "readbackSha256": "44c165ab5c1b7cce56598b67ab7c17ba91713798bd27ee7f2dcf9eaaa0ca3539",
+      "stats": {
+        "numericScalars": 1873,
+        "otherScalars": 0,
+        "pointerFieldsExcluded": 11,
+        "maxDecimalRoundoff": 0
+      },
+      "differences": []
+    }
+  ]
+}

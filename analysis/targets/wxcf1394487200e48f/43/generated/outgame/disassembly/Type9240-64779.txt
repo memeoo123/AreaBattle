@@ -1,0 +1,67 @@
+; Original class: WXFunctionManger
+; Type9240.trackVideo; wasmcode function 9541; offset=4586667 size=179
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0045fcae  i32.const [5006593]
+0045fcb3  i32.load8_u [0, 0]
+0045fcb6  i32.eqz []
+0045fcb7  if [-64]
+0045fcb9    i32.const [3911392]
+0045fcbe    call [900] ; 
+0045fcc1    i32.const [3927760]
+0045fcc6    call [900] ; 
+0045fcc9    i32.const [3940520]
+0045fcce    call [900] ; 
+0045fcd1    i32.const [3941756]
+0045fcd6    call [900] ; 
+0045fcd9    i32.const [5006593]
+0045fcde    i32.const [1]
+0045fce0    i32.store8 [0, 0]
+0045fce3  end []
+0045fce4  local.get [0]
+0045fce6  i32.load [2, 20]
+0045fce9  local.set [2]
+0045fceb  local.get [2]
+0045fced  i32.eqz []
+0045fcee  if [-64]
+0045fcf0    i32.const [3941756]
+0045fcf5    i32.load [2, 0]
+0045fcf8    i32.load [2, 92]
+0045fcfb    i32.load [2, 4]
+0045fcfe    local.set [2]
+0045fd00    i32.const [3911392]
+0045fd05    i32.load [2, 0]
+0045fd08    local.set [3]
+0045fd0a    i32.const [3940520]
+0045fd0f    i32.load [2, 0]
+0045fd12    call [901] ; 
+0045fd15    local.get [0]
+0045fd17    i32.const [20]
+0045fd19    i32.add []
+0045fd1a    local.set [0]
+0045fd1c    local.get [2]
+0045fd1e    local.get [3]
+0045fd20    i32.const [0]
+0045fd22    call [912] ; Type.GetTypeFromHandle
+0045fd25    local.get [0]
+0045fd27    call [2540] ; WXModuleManager.GetModuleBase
+0045fd2a    local.set [2]
+0045fd2c    local.get [0]
+0045fd2e    local.get [2]
+0045fd30    i32.const [3927760]
+0045fd35    i32.load [2, 0]
+0045fd38    call [924] ; 
+0045fd3b    i32.store [2, 0]
+0045fd3e    local.get [2]
+0045fd40    i32.const [3927760]
+0045fd45    i32.load [2, 0]
+0045fd48    call [924] ; 
+0045fd4b    drop []
+0045fd4c    local.get [0]
+0045fd4e    i32.load [2, 0]
+0045fd51    local.set [2]
+0045fd53  end []
+0045fd54  local.get [2]
+0045fd56  local.get [1]
+0045fd58  i32.const [0]
+0045fd5a  call [13415] ; ADModule.trackVideo
+0045fd5d  end []

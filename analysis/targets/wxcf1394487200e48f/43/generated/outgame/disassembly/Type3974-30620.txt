@@ -1,0 +1,44 @@
+; Original class: MineGameMain
+; Type3974.OnApplicationQuit; wasmcode1 function 56568; offset=18531932 size=130
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011ac65d  i32.const [5010137]
+011ac662  i32.load8_u [0, 0]
+011ac665  i32.eqz []
+011ac666  if [-64]
+011ac668    i32.const [3930256]
+011ac66d    i32.const [1605]
+011ac670    call_indirect [0, 0]
+011ac673    i32.const [3941104]
+011ac678    i32.const [1605]
+011ac67b    call_indirect [0, 0]
+011ac67e    i32.const [4105312] ; STRING "游戏退出，数据存储完成"
+011ac683    i32.const [1605]
+011ac686    call_indirect [0, 0]
+011ac689    i32.const [5010137]
+011ac68e    i32.const [1]
+011ac690    i32.store8 [0, 0]
+011ac693  end []
+011ac694  i32.const [3941104]
+011ac699  i32.load [2, 0]
+011ac69c  i32.const [1149]
+011ac69f  call_indirect [0, 0]
+011ac6a2  i32.const [0]
+011ac6a4  i32.const [25239] ; TABLE UserDataPrefs.OnSave
+011ac6a8  call_indirect [0, 0]
+011ac6ab  i32.const [3930256]
+011ac6b0  i32.load [2, 0]
+011ac6b3  i32.const [1149]
+011ac6b6  call_indirect [0, 0]
+011ac6b9  i32.const [0]
+011ac6bb  i32.const [2246] ; TABLE DataManagerPool.get_Instance
+011ac6be  call_indirect [2, 0]
+011ac6c1  i32.const [0]
+011ac6c3  i32.const [24598] ; TABLE DataManagerPool.SaveData
+011ac6c7  call_indirect [4, 0]
+011ac6ca  local.get [0]
+011ac6cc  i32.const [4105312] ; STRING "游戏退出，数据存储完成"
+011ac6d1  i32.load [2, 0]
+011ac6d4  local.get [0]
+011ac6d6  i32.const [14093] ; TABLE MineGameMain.O{P^xr
+011ac6da  call_indirect [5, 0]
+011ac6dd  end []

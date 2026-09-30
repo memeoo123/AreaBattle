@@ -1,0 +1,21 @@
+; Original class: ObjectPoolManager
+; Type3672.InternalHasObjectPool; wasmcode function 11227; offset=5521896 size=51
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005441e9  i32.const [4987671]
+005441ee  i32.load8_u [0, 0]
+005441f1  i32.eqz []
+005441f2  if [-64]
+005441f4    i32.const [3959784]
+005441f9    call [900] ; 
+005441fc    i32.const [4987671]
+00544201    i32.const [1]
+00544203    i32.store8 [0, 0]
+00544206  end []
+00544207  local.get [0]
+00544209  i32.load [2, 16]
+0054420c  local.get [1]
+0054420e  i32.const [3959784]
+00544213  i32.load [2, 0]
+00544216  call [987] ; 
+00544219  return []
+0054421a  end []

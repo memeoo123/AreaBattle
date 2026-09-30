@@ -1,0 +1,26 @@
+; Original class: SerialController
+; Type7527.videoShowDelayLoad; wasmcode function 10496; offset=5145829 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+004e84e6  i32.const [5005108]
+004e84eb  i32.load8_u [0, 0]
+004e84ee  i32.eqz []
+004e84ef  if [-64]
+004e84f1    i32.const [3948268]
+004e84f6    call [900] ; 
+004e84f9    i32.const [5005108]
+004e84fe    i32.const [1]
+004e8500    i32.store8 [0, 0]
+004e8503  end []
+004e8504  i32.const [3948268]
+004e8509  i32.load [2, 0]
+004e850c  call [903] ; 
+004e850f  local.set [1]
+004e8511  local.get [1]
+004e8513  i32.const [0]
+004e8515  i32.store [2, 8]
+004e8518  local.get [1]
+004e851a  local.get [0]
+004e851c  i32.store [2, 16]
+004e851f  local.get [1]
+004e8521  return []
+004e8522  end []

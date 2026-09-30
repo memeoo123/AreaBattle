@@ -1,0 +1,45 @@
+; Original class: HczzqLocalDataManager
+; Type4085.OnInit; wasmcode1 function 60867; offset=19628181 size=120
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+012b8096  i32.const [5008426]
+012b809b  i32.load8_u [0, 0]
+012b809e  i32.eqz []
+012b809f  if [-64]
+012b80a1    i32.const [4101868] ; STRING "{0}{1}"
+012b80a6    i32.const [1605]
+012b80a9    call_indirect [0, 0]
+012b80ac    i32.const [4066388] ; STRING "Proj_hczzq"
+012b80b1    i32.const [1605]
+012b80b4    call_indirect [0, 0]
+012b80b7    i32.const [5008426]
+012b80bc    i32.const [1]
+012b80be    i32.store8 [0, 0]
+012b80c1  end []
+012b80c2  local.get [0]
+012b80c4  i32.load [2, 0]
+012b80c7  local.set [1]
+012b80c9  local.get [0]
+012b80cb  i32.const [1]
+012b80cd  local.get [1]
+012b80cf  i32.const [80]
+012b80d2  i32.add []
+012b80d3  i32.load [2, 192]
+012b80d7  local.get [1]
+012b80d9  i32.load [2, 268]
+012b80dd  call_indirect [5, 0]
+012b80e0  i32.const [0]
+012b80e2  i32.const [2292] ; TABLE GamePath.get_Instance
+012b80e5  call_indirect [2, 0]
+012b80e8  local.set [1]
+012b80ea  local.get [0]
+012b80ec  i32.const [4101868] ; STRING "{0}{1}"
+012b80f1  i32.load [2, 0]
+012b80f4  local.get [1]
+012b80f6  i32.load [2, 12]
+012b80f9  i32.const [4066388] ; STRING "Proj_hczzq"
+012b80fe  i32.load [2, 0]
+012b8101  i32.const [0]
+012b8103  i32.const [2054] ; TABLE String.Format
+012b8106  call_indirect [8, 0]
+012b8109  i32.store [2, 24]
+012b810c  end []

@@ -1,0 +1,20 @@
+; Original class: TweenManager
+; Type9962.AddActiveTweenToSequence; wasmcode function 9993; offset=4800486 size=50
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00493fe7  i32.const [4985487]
+00493fec  i32.load8_u [0, 0]
+00493fef  i32.eqz []
+00493ff0  if [-64]
+00493ff2    i32.const [3940500]
+00493ff7    call [900] ; 
+00493ffa    i32.const [4985487]
+00493fff    i32.const [1]
+00494001    i32.store8 [0, 0]
+00494004  end []
+00494005  i32.const [3940500]
+0049400a  i32.load [2, 0]
+0049400d  call [901] ; 
+00494010  local.get [0]
+00494012  local.get [0]
+00494014  call [4732] ; TweenManager.RemoveActiveTween
+00494017  end []

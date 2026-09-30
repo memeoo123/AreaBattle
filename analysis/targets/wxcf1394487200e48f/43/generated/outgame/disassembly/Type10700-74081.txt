@@ -1,0 +1,23 @@
+; Original class: Utility
+; Type10700.CreateStencilState; wasmcode1 function 19600; offset=7808448 size=58
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+007725c1  i32.const [4981352]
+007725c6  i32.load8_u [0, 0]
+007725c9  i32.eqz []
+007725ca  if [-64]
+007725cc    i32.const [3941132]
+007725d1    i32.const [1605]
+007725d4    call_indirect [0, 0]
+007725d7    i32.const [4981352]
+007725dc    i32.const [1]
+007725de    i32.store8 [0, 0]
+007725e1  end []
+007725e2  i32.const [3941132]
+007725e7  i32.load [2, 0]
+007725ea  i32.const [1149]
+007725ed  call_indirect [0, 0]
+007725f0  local.get [0]
+007725f2  local.get [0]
+007725f4  call [19601] ; Utility.CreateStencilState_Injected
+007725f8  return []
+007725f9  end []

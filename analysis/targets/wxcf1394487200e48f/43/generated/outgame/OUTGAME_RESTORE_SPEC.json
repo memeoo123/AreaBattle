@@ -1,0 +1,3011 @@
+{
+  "schemaVersion": "1.0",
+  "target": "wxcf1394487200e48f/43",
+  "implementationReady": false,
+  "scope": "out-of-battle; per-subsystem gates below",
+  "subsystemGates": {
+    "commander-core": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Explicit held state + supplied configuration; cost checks and level/skill transitions. Fresh-state initialization, UI, A/B table selection, stats/save integration remain outside this gate.",
+      "rules": [
+        {
+          "id": "unlock-level",
+          "value": "Unlockable compares current LevelControl.CurLevel >= config.unlockLevel; independent of resource affordability.",
+          "source": "disassembly/Type4030-31026.txt",
+          "offset": "0021d49f..0021d4ae"
+        },
+        {
+          "id": "unlocked-max",
+          "value": "unlocked iff level>0; max iff level>=config.maxLevel",
+          "source": [
+            "disassembly/Type4030-31023.txt",
+            "disassembly/Type4030-31027.txt"
+          ]
+        },
+        {
+          "id": "next-cost",
+          "value": "0<level<maxLevel => CommanderUpgradeConfig[level+1].upgradeCost; otherwise return first unlockPrice amount (including at max).",
+          "source": "disassembly/Type4030-31025.txt",
+          "offset": "00101f69..00102038"
+        },
+        {
+          "id": "affordability",
+          "value": "IsCanUnlock checks every configured unlockPrice; IsCanUpgrate compares first price currency balance against NextCost, without its own level/max guard.",
+          "source": [
+            "disassembly/Type4028-31017.txt",
+            "disassembly/Type4027-30997.txt"
+          ]
+        },
+        {
+          "id": "upgrade",
+          "value": "If unlocked reject max or insufficient first-price currency, deduct NextCost, increment level, then increment skill slot (newLevel-2)%skillCount. Locked branch checks all unlock prices, deducts each, sets level1 and returns slot=-1.",
+          "source": "disassembly/Type4028-31016.txt",
+          "offset": "005e6214..005e6439"
+        }
+      ],
+      "unknowns": [
+        "Fresh-profile commander ownership initialization",
+        "Which A/B config is selected by each channel",
+        "Outer UI unlockType/level/ad restrictions and event/save integration"
+      ]
+    },
+    "local-inventory-core": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "LocalDataManager inventory initialization and integer delta setter, outer rewards/events/account creation excluded.",
+      "rules": [
+        {
+          "rule": "Initialize dictionary from held ToolCount rows, append missing AllSkillConfig.gameItem rows with count2; preserve existing0.",
+          "source": "disassembly/Type4119-31625.txt",
+          "offsets": [
+            "0055f1f8..0055f20d",
+            "0055f38e..0055f3aa",
+            "0055f4a2..0055f4f0",
+            "0055f537..0055f542",
+            "0055f5a4..0055f5fa"
+          ]
+        },
+        {
+          "rule": "1001 gold,1002 diamonds,1004 strength,1005 generic tools; other IDs use held dictionary, absent read0/writefalse.",
+          "source": [
+            "disassembly/Type4119-31620.txt",
+            "disassembly/Type4119-31621.txt"
+          ]
+        },
+        {
+          "rule": "i32 addition then negative-result rejection before storing; exact-zero succeeds.",
+          "source": "disassembly/Type4119-31621.txt",
+          "offsets": [
+            "001a220b..001a2226",
+            "001a22a9..001a22d7"
+          ]
+        }
+      ],
+      "unknowns": [
+        "Full profile initialization and original save encoding",
+        "ToolControl reward dispatch and statistics/event side effects",
+        "Legacy profile conversion ordering"
+      ]
+    },
+    "tool-dispatch-core": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Dispatch and side-effect ordering with required typed consumer; no invented platform calls.",
+      "rules": [
+        {
+          "source": "disassembly/Type4286-32643.txt",
+          "rule": "IDs1001/1002/1005 map1/2/7;2001..2999=>3;100..399=>4;1..99=>5;others registered GameItem=>6 else0."
+        },
+        {
+          "source": "disassembly/Type4256-32533.txt",
+          "rule": "Default resulttrue; local branches overwrite with setter result. Gold/diamond refresh optional even on failed mutation. Accepted negative gold updates spent statistics. Skill branch always sends ToolChange."
+        },
+        {
+          "source": "disassembly/Type4256-32533.txt",
+          "rule": "Recognized types with notify flag send ToolChange again then report positive gain irrespective of setter result, negative cost only if accepted. Source categories gold/diamond1 other3. All normal returns SaveData, including unknown type0."
+        },
+        {
+          "source": "disassembly/Type4256-32533.txt",
+          "rule": "Scene missing row lookup throws; soldier missing row skips unlock. Skin unlock ignores delta. Generic item entity called with signed delta; absent entity warns, default result remains true."
+        }
+      ],
+      "unknowns": [
+        "Skin entity implementation and virtual/package item side effects",
+        "Actual analytics transports and account serialization",
+        "Call-site flags and integration in complete UI"
+      ]
+    },
+    "commander-record-initialization": {
+      "implementationReady": true,
+      "scope": "Missing commander records only; complete account login/guide and migration not covered. Reconstruction envelope is not the original platform wire format.",
+      "rules": [
+        {
+          "value": "UsedCommanderId constructor default1; missing commander curLevel0, isNew false; each configured skill seed1. Held valid records retained.",
+          "source": [
+            "disassembly/Type4029-31022.txt",
+            "disassembly/Type4028-31010.txt"
+          ],
+          "offsets": [
+            "005e6881..005e6885",
+            "003ab1f7..003ab210",
+            "003ab368..003ab373"
+          ]
+        }
+      ]
+    },
+    "runtime-menu-navigation": {
+      "implementationReady": true,
+      "scope": "Runtime route identities, supported 2/3/4 navigation state and commander overlay; no complete page view or animation claim. MenuTabConfig alone does not establish runtime reachability.",
+      "rules": [
+        {
+          "id": "runtime-pages",
+          "value": {
+            "2": "ShopUI",
+            "3": "Proj_xqzdStartUI",
+            "4": "CommanderUI"
+          },
+          "source": [
+            "disassembly/Type4296-32705.txt",
+            "disassembly/Type4296-32729.txt",
+            "disassembly/Type4296-32714.txt",
+            "disassembly/Type4296-32708.txt",
+            "disassembly/Type4296-32698.txt"
+          ],
+          "offsets": [
+            "00477334..00477365",
+            "00280811..0028083e"
+          ],
+          "correction": "Legacy MenuTabConfig id4 inactive HerosDetailUI must not suppress actual CommanderUI runtime route. IDs1/5 runtime calls exist but have no mapped page transform in this method; investigate visibility before including as valid navigation."
+        },
+        {
+          "id": "switch-lock",
+          "value": "No current page => immediate display and CanCheckTab=true. Otherwise reject same page and while CanCheckTab=false. Transition sets false; callback reparents incoming and sets true, hides outgoing.",
+          "source": [
+            "disassembly/Type4379-33486.txt",
+            "disassembly/Type4296-32705.txt",
+            "disassembly/Type4295-32744.txt"
+          ]
+        },
+        {
+          "id": "slide",
+          "value": "target<current: incomingX=-width,outgoingTargetX=+width; otherwise opposite; duration0.3 seconds. Easing not established here.",
+          "source": "disassembly/Type4296-32705.txt",
+          "offsets": [
+            "00477435..0047747b",
+            "004774b0..004774f0"
+          ]
+        },
+        {
+          "id": "main",
+          "value": "Return helper uses CheckUI(3), then MoveCamera on accepted return.",
+          "source": "disassembly/Type4379-33464.txt"
+        },
+        {
+          "id": "commander-lock-overlay",
+          "value": "Level data < CommanderConfig[1].unlockLevel shows lock overlay; observed configuration value6. This is an overlay gate, not an extra check inside CheckUI.",
+          "source": "disassembly/Type4379-33472.txt",
+          "offsets": [
+            "005557bc..00555800"
+          ]
+        }
+      ]
+    },
+    "commander-page-actions": {
+      "implementationReady": true,
+      "scope": "Selection and upgrade action flow; required effects injected. Real page rendering, stats manager, platform delivery and lifecycle saving remain pending.",
+      "rules": [
+        {
+          "value": "Changed selected item: if level>0 immediately set UsedCommanderId and ReportUse; locked item only previews. Selecting identical item is no-op. No save in this method.",
+          "source": "disassembly/Type4307-32832.txt"
+        },
+        {
+          "value": "Locked ClickUpgrade first tests Unlockable(currentLevel>=unlockLevel); then all unlock prices. Owned path checks first-currency nextCost without repeating level gate.",
+          "source": [
+            "disassembly/Type4307-32834.txt",
+            "disassembly/Type4307-32841.txt",
+            "disassembly/Type4307-32852.txt"
+          ]
+        },
+        {
+          "value": "Successful manager transition: Add DailyCommUpgrade1; Set CommanderUpgrade(commanderId,level); Add CommanderUpgradeTotal1; UserDataPrefs.OnSave then DataManagerPool.SaveData. IDs read from original StatisticEventConfig.",
+          "source": "disassembly/Type4028-31016.txt",
+          "offset": "005e643d..005e64af"
+        },
+        {
+          "value": "Control wrapper reports upgraded ID with CURRENTLY USED commander level, before unlock UI auto-equip. Unlock UI when newlevel1 shows popup then sets usedID, reports unlock/use. No extra save in these methods.",
+          "source": [
+            "disassembly/Type4027-30995.txt",
+            "disassembly/Type4027-30991.txt",
+            "disassembly/Type4307-32841.txt"
+          ],
+          "offset": "005e58b9..005e592f"
+        }
+      ]
+    },
+    "commander-skill-detail": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Original page skill text/comparison rendering from explicit held profile and RealCurLevel, Chinese locale. Full commander/guide/model/startup remains outside this gate.",
+      "rules": [
+        {
+          "rule": "Click any skill, including locked skills, opens details and stores slot. CommanderItem.OnClick calls RefreshSelectedSkillInfo(-1): retain selected slot and panel visibility while replacing text/rows for new commander. Close hides panel without resetting slot.",
+          "source": [
+            "disassembly/Type4335-33134.txt",
+            "disassembly/Type4334-33119.txt",
+            "disassembly/Type4307-32844.txt",
+            "disassembly/Type4307-32845.txt"
+          ]
+        },
+        {
+          "rule": "Name uses Commander.SkillName.id, target Commander.Target.targetType, operating Commander.Operating.useType. Current row SkillConfig[id*100+level], next row key+1 only when level<=9. Description uses describeData indexes over duration/data1/data2/data3, transforms dataType 4/5 to abs(value-1)*100, rounds one decimal ToEven and pads with spaces before original localized format.",
+          "source": [
+            "disassembly/Type4307-32844.txt",
+            "disassembly/Type4307-32847.txt"
+          ]
+        },
+        {
+          "rule": "Grid iterates dataType over duration/data1/data2/data3, skips zero. Type1 duration,2 skill quantity,3 fire quantity,4 slow percent,5 effect percent. Start with all five parents hidden; show configured rows. Next-current absolute delta; types4/5 transform current to abs(value-1)*100 and delta*100. Nonzero delta rounded2 ToEven in original yellow + format; zero/no next shows current only (percent rounded2).",
+          "source": [
+            "disassembly/Type4307-32829.txt",
+            "disassembly/Type4307-32827.txt",
+            "disassembly/Type4307-32851.txt"
+          ]
+        },
+        {
+          "rule": "Unlock tip visibility uses RealCurLevel < skill.unLockLevel, localized CommanderUI.UnlockLevel; selected card and background correspond to slot.",
+          "source": "disassembly/Type4307-32844.txt"
+        }
+      ],
+      "limitations": [
+        "Invariant number formatting validated for recovered Chinese presentation; other runtime cultures unverified.",
+        "Original click audio and full UI/platform lifecycle still incomplete."
+      ]
+    },
+    "level-progress-provider": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Held normal LevelID and runtime eSpecialState/SpecialLevel providers; login, guide initialization and full level entry excluded.",
+      "rules": [
+        {
+          "rule": "RealCurrentLevel=profile.levelID. CurrentLevel=eSpecialState==0?levelID:SpecialLevel. Runtime special level is not persisted as normal progression.",
+          "source": [
+            "disassembly/Type4107-31480.txt",
+            "disassembly/Type4107-31495.txt",
+            "disassembly/Type4107-31496.txt"
+          ]
+        },
+        {
+          "rule": "Normal CurrentLevel setter writes raw value, calls stat10015 with signed int32(value-1) extended to int64, then local data save. Nonzero eSpecialState returns without effects. No implicit clamping.",
+          "source": "disassembly/Type4107-31470.txt"
+        }
+      ],
+      "implementation": [
+        "OutgameLevelProgression.cs",
+        "OutgameProfileStore.cs"
+      ],
+      "limitations": [
+        "Concrete statistics consumer and full lifecycle integration pending",
+        "Source raw default0 is not a claim about all first-account post-login grants"
+      ]
+    },
+    "original-local-data-import": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Provided original local JSON to recovered scalar/tool state. Remaining subsystem fields retained verbatim; not a full original save/login replacement.",
+      "rules": [
+        {
+          "rule": "Null/empty original payload initializes scalar0 and missing skill tools2. Nonempty payload replaces bank with collect before parsing local fields. Raw source payload preserved separately for future consumers.",
+          "source": [
+            "disassembly/Type4119-31618.txt",
+            "disassembly/Type4119-31627.txt",
+            "disassembly/Type4119-31633.txt"
+          ]
+        },
+        {
+          "rule": "Only empty original toolCounts enables legacy tool parsing. Initialize missing AllSkill rows then migrate old six fields when !=-1; absent fields default2. Other negative values are not clamped. Modern nonempty rows, including count0, win.",
+          "source": [
+            "disassembly/Type4119-31626.txt",
+            "disassembly/Type4125-31641.txt",
+            "disassembly/Type4125-31642.txt"
+          ]
+        }
+      ],
+      "implementation": [
+        "OutgameOriginalLocalData.cs",
+        "OutgameProfileStore.cs",
+        "OutgameLocalInventory.cs"
+      ],
+      "limitations": [
+        "Limited bag initialization, remaining LocalData fields, skin/commander old migration and full account startup pending",
+        "Importer commits only after parsing succeeds to preserve held reconstruction profile; no malformed source payload compatibility claim"
+      ]
+    },
+    "original-commander-migration": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Supplied legacy CommanderManagerData JSON and source InitData; complete login/platform workflow excluded.",
+      "rules": [
+        {
+          "rule": "DealOldData ignores null/decoded-null/empty commanderDatas. A nonempty list replaces held CommanderManagerData wholesale, then InitData indexes configured IDs and appends missing defaults. No max-level merging, ownership normalization, auto-equip or save occurs in this method.",
+          "source": [
+            "disassembly/Type4028-31018.txt",
+            "disassembly/Type4028-31010.txt"
+          ]
+        },
+        {
+          "rule": "DTO fields CommanderManagerData.commanderDatas/UsedCommanderId, CommanderData.isNew/Id/curLevel/skillsData and CommanderSkillData.skillId/skillLevel preserved. UsedCommanderId constructor default1. Held skill IDs and order must survive; configuration skills only initialize missing records.",
+          "source": [
+            "disassembly/Type4029-31022.txt",
+            "disassembly/Type4028-31010.txt",
+            "../gameplay-symbols.json"
+          ]
+        }
+      ],
+      "implementation": [
+        "OutgameOriginalCommanders.cs",
+        "OutgameCommanderProgression.cs",
+        "OutgameCommanderSkillCards.cs",
+        "OutgameCommanderView.cs"
+      ],
+      "limitations": [
+        "Malformed payload handling uses precommit reconstruction validation, not a claim of exact original exceptions",
+        "Full skin and account startup migration still pending",
+        "Old reconstruction envelopes without skillIds retain configuration fallback; original imported records preserve explicit IDs"
+      ]
+    },
+    "skin-record-initialization-and-legacy": {
+      "implementationReady": true,
+      "status": "confirmed",
+      "scope": "Source skin record loading/default metadata and legacy ownership flags; ordering/acquisition/equip/save projection and page/startup excluded.",
+      "rules": [
+        {
+          "rule": "Missing/empty/decoded-null manager data creates four used records types1..4 selecting first matching lockState2 (type4 scene table, others soldier table by skinType). Existing {} does not auto-repair empty used list.",
+          "source": [
+            "disassembly/Type4150-31729.txt",
+            "disassembly/Type4150-31734.txt",
+            "disassembly/Type4145-31755.txt"
+          ]
+        },
+        {
+          "rule": "Index held valid skin records; preserve u and set isNew from newSkins membership. Missing configured skins append with u=(lockState==2). Refresh skinType/sortNo/special/castType from ISkin config. Keep invalid saved records outside lookup.",
+          "source": [
+            "disassembly/Type4150-31737.txt",
+            "disassembly/Type4150-31738.txt",
+            "disassembly/Type4150-31740.txt",
+            "disassembly/Type4150-31741.txt",
+            "skin-record-fields.json"
+          ]
+        },
+        {
+          "rule": "OldData.list_playerskin(skinId,isUnlock) overwrites matching soldier u; sceneMapDatas(sceneId,isUnlock) overwrites matching scene u. Unknown IDs ignored. False values relock; no equip normalization/new-flag/save effect.",
+          "source": "disassembly/Type4150-31730.txt"
+        }
+      ],
+      "implementation": [
+        "OutgameSkinCatalog.cs",
+        "OutgameProfileStore.cs"
+      ],
+      "limitations": [
+        "Original ordered lookup and save projection pending",
+        "No acquisition/equip/ShopUI or live login claim"
+      ]
+    },
+    "skin-mutations-and-save-projection": {
+      "implementationReady": true,
+      "scope": "SkinManager core methods only; excludes shop payment/UI/startup and original platform wire serialization",
+      "rules": [
+        "UnlockSoldierSkin ignores missing/already-owned ids; first unlock sets u/isNew then sets HaveSkinNum (StatisticEventConfig runtime offset56 =210001) to count of owned indexed soldier records with skinType<=3, including free skins.",
+        "UnlockSceneSkin ignores missing/already-owned ids and only sets u/isNew; no statistic, equip or save.",
+        "SetUserSkinId writes dictionary without ownership/id/category validation. CheckSkinNew2Modify resolves soldier then scene, throws when absent, clears isNew and always returns false.",
+        "OnSave clears/rebuilds newSkins from every held record isNew, including unknown records, and usedSkin from runtime equipment dictionary before serialization."
+      ],
+      "source": [
+        "disassembly/Type4150-31732.txt",
+        "disassembly/Type4150-31735.txt",
+        "disassembly/Type4150-31743.txt",
+        "disassembly/Type4150-31745.txt",
+        "disassembly/Type4150-31746.txt",
+        "disassembly/Type4150-31747.txt",
+        "disassembly/Type4150-31748.txt"
+      ],
+      "implementation": [
+        "OutgameSkinCatalog.cs",
+        "OutgameSkinActions.cs"
+      ]
+    },
+    "skin-item-callbacks": {
+      "implementationReady": true,
+      "scope": "Source SkinItem callback actions; UI gates, live provider and ChooseSkin listener visuals excluded",
+      "rules": [
+        "InitData uses castType1001 price, castType1002 DiamondPrice; other fresh item prices remain0. ISkin slots3/4/10 match these fields.",
+        "Buy calls ToolChange currency negative price; failure shows missing-currency toast after dispatcher effects/save. Success voice2017, BuySkin statistic+1, ReportToolUse(id,3), ToolChange skin+1, ChooseSkin event, clear-new/red-dot. No extra final save.",
+        "Select only when curItemState==0: voice2001, ChooseSkin, ReportToolUse(id,3), optional onClick, clear-new/red-dot.",
+        "Video failure callback is inert; success reports use, grants skin through ToolChange with original reward reason, ChooseSkin, clear-new/red-dot. Reward reason supplied explicitly; original static reason resolution pending."
+      ],
+      "source": [
+        "disassembly/Type4364-33356.txt",
+        "disassembly/Type4364-33357.txt",
+        "disassembly/Type4364-33366.txt",
+        "disassembly/Type4364-33367.txt"
+      ],
+      "implementation": [
+        "OutgameSkinItemActions.cs",
+        "OutgameToolDispatcher.cs"
+      ],
+      "validation": "Real inventory, manager and isolated disk integration validates save-before-equip/new-clear boundary; UI/provider effects observed by explicit sink."
+    },
+    "native-soldier-skin-card": {
+      "implementationReady": true,
+      "scope": "Original soldier SkinItem template; excludes SceneSkinItem and full ShopUI assembly/providers",
+      "rules": [
+        "Owned card state1 if equipped else0. Locked special0/1 ->3 purchase; special2 ->4 activity when actNo1301 seven-day is active or other activity status !=5, otherwise3; special3 ->5 special acquisition; other special retains prior state.",
+        "Refresh clears activity/using/ad/buy/special UI then state1 using,3 buy,4 activity,5 special with localized ShopUI.ActivityGetWay; state0 none, default ad. btn_choose visibility preserved.",
+        "Native buttons call source action layer and refresh. Ad request uses skinType+1001 and explicit provider callback. Red dot follows isNew. Gold/diamond group visibility follows castType, labels source price; tag only nonempty."
+      ],
+      "source": [
+        "disassembly/Type4364-33355.txt",
+        "disassembly/Type4364-33358.txt",
+        "disassembly/Type4364-33359.txt",
+        "disassembly/Type4364-33361.txt",
+        "disassembly/Type4364-33366.txt",
+        "disassembly/Type4364-33370.txt",
+        "disassembly/Type4364-33371.txt"
+      ],
+      "implementation": [
+        "OutgameSkinItemView.cs"
+      ],
+      "validation": "Original ShopUI soldier template instantiated; native buy event updates real skin/inventory and used badge; activity transitions and unknown-special retention verified. Sprite/activity/video providers injected; full production binding pending."
+    },
+    "scene-skin-actions": {
+      "implementationReady": true,
+      "scope": "SceneSkinItem purchase/select overrides, not full native scene view or GameControl visual implementation",
+      "rules": [
+        "Buy debit first; failure retains equipment and shows missing-currency toast after dispatcher save. Success voice2017, BuyScene config runtime offset12 +1, equipment type4 assignment, ChangeSceneStyle(id,false), ToolChange skin+1, clear-new/red-dot, virtual Refresh(slot13 verified metadata). No explicit ReportToolUse or ChooseSkin event in purchase.",
+        "Select compares only current used type4 id. If different: voice2001, equip4, ChangeSceneStyle(id,false), clear-new/red-dot, ReportToolUse(id,3). No ownership/item-state gate, onClick callback, ChooseSkin event or save.",
+        "Refresh shares base SkinItem state rendering with used type4. Awake/Dispose/ctor delegate to base."
+      ],
+      "source": [
+        "disassembly/Type4359-33311.txt",
+        "disassembly/Type4359-33312.txt",
+        "disassembly/Type4359-33316.txt"
+      ],
+      "implementation": [
+        "OutgameSceneSkinActions.cs"
+      ],
+      "validation": "Real dispatch/skin/isolated disk proves equipped state saved before clear-new; exact action effects sequence and no-op same selection verified.",
+      "limitations": [
+        "Scene visual provider and full page binding pending"
+      ]
+    },
+    "scene-native-template": {
+      "implementationReady": true,
+      "scope": "Native source scene card template and button routing",
+      "rules": [
+        "UIObject.Get uses binding dictionary and logs missing keys; no implicit alias discovered.",
+        "ShopUI.InitializeComponent stores SkinItem at runtime field172 and Content_scene at196. Creation coroutine Type4407.MoveNext allocates SceneSkinItem then BaseItem.Instantiate using field172 and Content_scene transform; stale sceneSkinItem template is not used in this creation branch.",
+        "OutgameSkinItemView accepts explicit scene action controller to route choose/buy overrides; inherited render/video behavior shared."
+      ],
+      "source": [
+        "disassembly/Type3559-27439.txt",
+        "disassembly/Type4408-33770.txt",
+        "disassembly/Type4407-33808.txt:006743d4-00674489"
+      ],
+      "implementation": [
+        "OutgameSkinItemView.cs"
+      ],
+      "validation": "Cloned source SkinItem into Content_scene; actual buy and choose Button events invoke scene override, BuyScene statistic and scene-style effects, update live equipment and badge."
+    },
+    "skin-source-order": {
+      "implementationReady": true,
+      "scope": "Manager initialization ordered lookup used by shop lists",
+      "rules": [
+        "GetOrder derives id%100 plus1 for non-map, unchanged for type4; derived1 returns -99 even when sortNo is nonzero. Other rows use nonzero sortNo else derived.",
+        "Generic metadata resolution confirms Enumerable.OrderBy followed by ToDictionary with key/value selectors. Stable ties preserve held/config dictionary insertion order; saved skin list remains untouched."
+      ],
+      "source": [
+        "disassembly/Type4150-31737.txt",
+        "disassembly/Type4150-31738.txt",
+        "disassembly/Type4150-31739.txt",
+        "skin-order-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgameSkinCatalog.cs"
+      ],
+      "validation": "Original tables, reordered held defaults, explicit/sentinel/fallback keys and saved-list preservation verified."
+    },
+    "native-shop-skin-lists": {
+      "implementationReady": true,
+      "scope": "Skin card collection construction/grouping/refresh; not full ShopUI lifecycle or creation pacing",
+      "rules": [
+        "ShopUI coroutine partitions ordered soldier records by current selected soldier type, builds selected category first, and uses skinType to obtain content parent. Generic resolution confirms List<SkinData>.Add and Dictionary<int,GameObject>.get_Item.",
+        "Build creates original SkinItem clones in normal/defense/attack/scene content roots with required provider binding; scene cards use explicit scene controller. Ordered manager indices supply card order.",
+        "Collection refresh updates all cards; reconstruction rebuild releases previous card instances."
+      ],
+      "source": [
+        "disassembly/Type4407-33808.txt",
+        "disassembly/Type4408-33770.txt",
+        "shop-list-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgameShopSkinLists.cs"
+      ],
+      "validation": "All original configured soldier/scene cards instantiate and bind; category parent, current category first, scene shared template, equipment refresh and duplicate-free rebuild verified.",
+      "limitations": [
+        "Source coroutine yield/pacing not yet implemented",
+        "Icon and platform/activity providers remain injected; full page/account wiring pending"
+      ]
+    },
+    "shop-tab-source-callbacks": {
+      "implementationReady": true,
+      "scope": "ShopUI toggle callback title/rotation/red-dot effects; separate content/group wiring pending",
+      "rules": [
+        "False toggle callback is inert. True plays2001, normal/defense/attack update retained soldier type1/2/3; scene/shop retain prior soldier type. Refresh red dots with active category hidden, dispatch RotateSoldier using retained type, localize title.",
+        "Red dots use indexed soldier isNew matching category or any scene isNew, without ownership test. Shop dot always false. Hiding active dot does not clear skin flags.",
+        "Import native Toggle selectable scalar state and targetGraphic; source persistent event/group/graphic references still pending."
+      ],
+      "source": [
+        "disassembly/Type4408-33785.txt",
+        "disassembly/Type4408-33774.txt",
+        "disassembly/Type4150-31751.txt",
+        "disassembly/Type4150-31752.txt",
+        "ui-import.json"
+      ],
+      "implementation": [
+        "OutgameShopTabs.cs",
+        "RecoveredHudImporter.cs"
+      ],
+      "validation": "Original Toggle events invoke source effect order, retained soldier rotation, localized scene title, non-consuming current red dot suppression and false no-op."
+    },
+    "toggle-original-bindings": {
+      "implementationReady": true,
+      "scope": "Recovered native ToggleGroup/graphic and dynamic bool SetActive persistent events",
+      "rules": [
+        "Import source ToggleGroup.allowSwitchOff, local graphic/group references and persistent dynamic-bool SetActive targets in serialized order with original call state. Unsupported calls or external references fail explicitly.",
+        "Original shop tabs activate the category content and Label_on through serialized onValueChanged events; group ensures mutual exclusion."
+      ],
+      "source": [
+        "ui-import.json"
+      ],
+      "implementation": [
+        "RecoveredHudImporter.cs"
+      ],
+      "validation": "Persistent scene target and group/graphic references verified. Isolated editor instance temporarily enables RuntimeOnly callbacks in editor, then true native isOn switches category content and selected labels; saved prefab keeps original call states."
+    },
+    "shop-initial-selection": {
+      "implementationReady": true,
+      "scope": "ShopUI.Awake initial content/selected-toggle branch only",
+      "rules": [
+        "Hide normal/defense/attack/scene content and shop content first. Held selected type2/3 selects corresponding Toggle and refreshes red dots. Other values normalize1, select normal, explicitly enable normal group, explicitly invoke normal change callback and refresh red dots.",
+        "Source default branch may invoke callback both through Toggle change and explicit call; reconstruction preserves this instead of suppressing notification."
+      ],
+      "source": [
+        "disassembly/Type4408-33784.txt:0075d3cb-0075d4f9"
+      ],
+      "implementation": [
+        "OutgameShopTabs.cs"
+      ],
+      "validation": "Fresh original prefabs verify held type2/3 and invalid99 fallback1, correct initial group, scene/shop hidden. Editor fixture enables original RuntimeOnly persistent events for execution."
+    },
+    "skin-original-posters": {
+      "implementationReady": true,
+      "scope": "96 configured original SkinConfig/SceneSkinConfig posters with atlas-qualified resource binding",
+      "rules": [
+        "Resolve each soldier iconName only from skinandtoolicon.spriteatlas and each scene iconName only from sceneskin.spriteatlas. Exactly one matching source Sprite required.",
+        "Carry original source id, atlas, bundle path, PNG hash/pivot/PPU/border through import manifest. Runtime resolves by skinId and source id, not first matching name; unrelated guide tubiao01..04 cannot shadow scene icons."
+      ],
+      "source": [
+        "ui-import.json",
+        "../tables/SkinConfig.json",
+        "../tables/SceneSkinConfig.json",
+        "disassembly/Type4364-33366.txt"
+      ],
+      "implementation": [
+        "outgame_ui_prepare.py",
+        "OutgameSkinSprites.cs"
+      ],
+      "validation": "All configured card img_poster references equal their atlas-qualified loaded Sprite, including scene and soldier families. Full visual composition capture pending."
+    },
+    "shop-rendered-fixture": {
+      "implementationReady": false,
+      "scope": "Isolated editor render of original soldier/scene shop lists at540x960; no live account or original screenshot match",
+      "evidence": [
+        "analysis/captures/outgame-shop-soldier-fixture.png",
+        "analysis/captures/outgame-shop-scene-fixture.png"
+      ],
+      "observed": [
+        "Original cards/posters/prices/tags and category switching render",
+        "Source LangModule.Get missing-key fallback returns key, fixing empty tag localization crash"
+      ],
+      "limitations": [
+        "3D showcase remains absent; upper area contains original static placeholder",
+        "Providers and profile are explicit isolated fixtures",
+        "No new player build or full visual acceptance"
+      ]
+    },
+    "shop-equipment-listener": {
+      "implementationReady": true,
+      "scope": "ShopUI ChooseSkin source event listener and category-card refresh; PlayerControl model consumer pending",
+      "rules": [
+        "Try soldier SkinConfig lookup; missing IDs return including scene IDs. Equip by config.skinType, reset first ad for that category, refresh same-category cards, then PlayerControl.ChangeSkinUse(type,id). No extra save, ownership gate or report."
+      ],
+      "source": [
+        "disassembly/Type4408-33772.txt"
+      ],
+      "implementation": [
+        "OutgameShopEquipment.cs",
+        "OutgameShopSkinLists.cs"
+      ],
+      "validation": "Real native card collection verifies previously-used and newly-used states before model callback and exact reset/refresh/model order."
+    },
+    "player-model-load-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "scope": "Required-provider two-stage model loader and category cache/display; animation callback deliberately required, actual source adapter pending.",
+      "source": [
+        "disassembly/Type4462-34205.txt",
+        "disassembly/Type4462-34197.txt",
+        "disassembly/Type4462-34194.txt",
+        "disassembly/Type4458-34213.txt",
+        "disassembly/Type4459-34215.txt",
+        "disassembly/Type4462-34210.txt",
+        "player-cache-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgamePlayerModels.cs"
+      ],
+      "validation": "Three isolated Unity cases: transform/layer/cache timing; asynchronous late callback and attack resource mapping; duplicate pending requests and replacement."
+    },
+    "player-model-animation-dispatch": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4462-34211.txt",
+        "disassembly/Type4461-34219.txt",
+        "disassembly/Type4523-34506.txt",
+        "disassembly/Type4523-34490.txt",
+        "player-animation-virtual-resolution.json"
+      ],
+      "implementation": [
+        "OutgamePlayerAnimation.cs"
+      ],
+      "rules": [
+        "Current equipped ID lookup; color before activeSelf gate. Animator dictionary caches missing values too.",
+        "Reset then relax(false), then assign completion callback. Completion rereads equip and uses its cached animator or captured fallback, plays idle(true).",
+        "Source is baked mesh animation. A standard Spine SkeletonAnimation substitution is not equivalent."
+      ],
+      "pending": "Concrete animator, color, model resources and original roots."
+    },
+    "baked-model-animation": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4523-34490.txt",
+        "disassembly/Type4523-34492.txt",
+        "disassembly/Type4523-34493.txt",
+        "disassembly/Type4523-34498.txt",
+        "disassembly/Type4523-34502.txt",
+        "disassembly/Type4523-34503.txt",
+        "disassembly/Type4523-34504.txt",
+        "disassembly/Type4523-34506.txt",
+        "disassembly/Type4523-34507.txt",
+        "disassembly/Type4523-34509.txt",
+        "disassembly/NativePauseRemainder-1272.txt",
+        "baked-model-clips.json"
+      ],
+      "implementation": [
+        "OutgameBakedAnimator.cs",
+        "OutgameBakedModelImporter.cs"
+      ],
+      "assetCoverage": [
+        "soldier_100",
+        "soldier_102",
+        "soldier_200",
+        "soldier_300"
+      ],
+      "rules": [
+        "Source clip mesh choice and property block timing, preserved color; explicit shader clock matches selected source clock.",
+        "Nonloop strict f32 end comparison, reset before callback, clear callback after invocation, default autoplay only if callback leaves no current clip.",
+        "Pause uses fmod phase; paused Play queues only name; Resume restarts queued name looping. Reset retains completion callback."
+      ],
+      "pending": "Remaining models including attack display prefabId+1000, scene roots, original coloring and production wiring."
+    },
+    "original-model-roots": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "model-roots.json",
+        "player-scene-singletons.json",
+        "player-scene-components.json",
+        "disassembly/Type4462-34192.txt",
+        "disassembly/Type4462-34201.txt"
+      ],
+      "implementation": [
+        "OutgameModelRoots.cs",
+        "OutgameModelRootsImporter.cs"
+      ],
+      "scope": "Ten original group/camera ancestor nodes, HomeCamera scalar projection/mask, group references, constructor scale1/localPosition0 model factory. Full GameSceneMono and InitScene adaptation not included."
+    },
+    "soldier-model-color": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "implementation": [
+        "OutgameSoldierColor.cs"
+      ],
+      "sourceFunctions": [
+        5663,
+        10316,
+        7123,
+        15702,
+        12875,
+        11448,
+        18723
+      ],
+      "rules": [
+        "Camp1..6 =>Tag5..Tag10; all other camps Tag9. Same tag skips every change.",
+        "First GetComponentInChildren<MeshRenderer> color updates through existing property block; root Renderer Default/-5. Null renderer overload no-op; colors use max(camp,1)-1 without upper clamp."
+      ],
+      "validation": "Real soldier prefab tag/tint/sorting plus preserved animation block and same-tag early return."
+    },
+    "default-models-connected": {
+      "implementationReady": true,
+      "productionConnected": "model factory only; full account scene pending",
+      "implementation": [
+        "OutgameModelAssets.cs",
+        "OutgameModelRoots.cs",
+        "OutgameBakedModelImporter.cs"
+      ],
+      "source": [
+        "model-roots.json",
+        "baked-model-clips.json",
+        "shadow-prepared/native-import.json",
+        "../tables/EntityModelConfig.json"
+      ],
+      "scope": "Source default category1/2/3 plus alternate102 uses real entity1000/2000/4000/1002 and shadow9033/9034, correct local placement/color/relax animation. Missing remaining skins explicitly fail; no invented fallback.",
+      "validation": "Native scene group instantiation, actual source renderers and baked clips, original shadow animator, real alternate skin visibility change."
+    },
+    "model-rotation-visible-preview": {
+      "implementationReady": true,
+      "productionConnected": "native rotation called by preview tab events; account scene pending",
+      "implementation": [
+        "OutgameModelRotation.cs",
+        "OutgamePreviewCapture.cs"
+      ],
+      "source": [
+        "disassembly/Type4462-34198.txt",
+        "disassembly/Type4462-34201.txt",
+        "disassembly/Type4379-33473.txt",
+        "disassembly/Type4064-31261.txt"
+      ],
+      "scope": "Original direct slot positions/scales, selected3 initial, wrap next/previous, same/invalid requests no-op. Preview applies source entering-shop soldierRoot localPosition up*.5; remaining MoveCamera visibility side effects pending.",
+      "captures": [
+        "analysis/captures/outgame-shop-soldier-fixture.png",
+        "analysis/captures/outgame-shop-attack-fixture.png",
+        "analysis/captures/outgame-models-camera-only.png"
+      ]
+    },
+    "scene-presentation-switch-aspect": {
+      "implementationReady": true,
+      "productionConnected": "preview enter-shop only; production menu lifecycle pending",
+      "implementation": [
+        "OutgameScenePresentation.cs",
+        "OutgameModelRoots.cs"
+      ],
+      "source": [
+        "disassembly/Type4064-31261.txt",
+        "disassembly/Type4064-31270.txt",
+        "model-roots.json"
+      ],
+      "rules": [
+        "Shop exact component comparison against Scene_home world position; if different show original secondary backdrop, move soldierRoot up*offset, hide main backdrop. Home always reverses toggles and zeroes root.",
+        "Width/(height+AppSetting staticfield4) branches at.5625. Wide independently multiplies both background scales; narrow sets camera .89*.5625/ratio, scales main then copies that scale to secondary. Exact ratio no-op."
+      ],
+      "scope": "13 source transform nodes including background references; their mesh/material rendering import and AppSetting field value are pending."
+    },
+    "native-home-background": {
+      "implementationReady": true,
+      "productionConnected": "native model roots prefab and shop preview",
+      "source": [
+        "background-prepared/native-import.json",
+        "viewport-height-evidence.json"
+      ],
+      "implementation": [
+        "OutgameModelRootsImporter.cs",
+        "RecoveredBossEmbeddedImporter.cs"
+      ],
+      "scope": "Both original background GameObjects4/18 retain source MeshRenderer/MeshFilter, builtin Quad10210, builtin shader10752, shared source ScenehomeSkin material and scene_skin_idle1 texture. Exact asset-reference validation and viewed shop capture. Runtime texture changes from scene skin selections remain pending."
+    },
+    "scene-skin-texture-cache": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4064-31271.txt",
+        "disassembly/Type4064-31267.txt",
+        "disassembly/Type4063-31277.txt",
+        "disassembly/Type4064-31255.txt",
+        "disassembly/Type4064-31264.txt"
+      ],
+      "implementation": [
+        "OutgameSceneStyle.cs"
+      ],
+      "rules": [
+        "Current=-1 initially. Changed ID hides previous effect, writes current, indexes cache[id-1]; miss loads SceneSkinConfig.idleIconName. Cache array length config count.",
+        "Callback caches captured slot, updates background.sharedMaterial.mainTexture and invokes effect helper using CURRENT selection. No race suppression.",
+        "Same ID skips core work, but notifyShop still runs unless suppressShopRefresh=true. Missing shop is represented by optional behavior in required notification adapter."
+      ],
+      "scope": "15 scene configs; only default idle1 currently in exported Texture2D inventory. Concrete extra-effect/texture providers still pending."
+    },
+    "all-scene-textures-imported": {
+      "implementationReady": true,
+      "productionConnected": "concrete Resources texture provider; scene effect and account adapter pending",
+      "source": [
+        "scene-texture-import.json",
+        "../resource-snapshots/outgame-scenes-20260929/acquisition-manifest.json"
+      ],
+      "implementation": [
+        "OutgameSceneTextures.cs",
+        "OutgameSceneTextureImporter.cs"
+      ],
+      "scope": "All15 source SceneSkinConfig idle textures and26 minimal closure bundles obtained from original catalog URL; exact catalog size/MD5 and output source hash verified. PNG imports retain dimensions/sRGB/filter/wrap/mip flag, uncompressed Unity import.",
+      "validation": "All15 actual texture resources passed through SceneStyle to native background material, including IDs10..15 mapping idle11..16."
+    },
+    "scene-effect-cache-logic": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4064-31260.txt",
+        "disassembly/Type4064-31258.txt",
+        "disassembly/Type4064-31255.txt",
+        "scene-effect-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgameSceneEffects.cs"
+      ],
+      "scope": "Original source config, offset+scene cache, root Spine animation initialization, delayed callback activation and duplicate Add semantics. Actual effect prefabs and production wiring pending."
+    },
+    "native-scene-effects": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4064-31260.txt",
+        "disassembly/Type4064-31258.txt",
+        "disassembly/Type4064-31255.txt",
+        "scene-effect-generic-resolution.json",
+        "scene-effect-initialize-resolution.json"
+      ],
+      "implementation": [
+        "OutgameSceneEffects.cs",
+        "OutgameSceneEffectAssets.cs",
+        "RecoveredBossImporter.cs"
+      ],
+      "scope": "Original source config, offset+scene cache, root Spine animation initialization, delayed callback activation and duplicate Add semantics. Three original prefabs and 34 resources imported and rendered; production wiring and original matched-frame comparison pending."
+    },
+    "menu-scene-request-binding": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4379-33464.txt",
+        "disassembly/Type4379-33473.txt",
+        "disassembly/Type4064-31261.txt"
+      ],
+      "implementation": [
+        "OutgameMenuView.cs",
+        "OutgameMenuSceneBinding.cs"
+      ],
+      "scope": "Source accepted request timing connects native menu to shop/home scene presentation before tween completes; rejected requests and commander route do not invoke MoveCamera. Full account/menu initialization still pending."
+    },
+    "login-sync-state": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs"
+      ],
+      "scope": "Original LoginSynData entry/leave subscriptions, old-player completion, new-player upload wait, 30-second timeout and prior-user rollback. Inherited FSM and SDK/data services are required host dependencies; production integration pending."
+    },
+    "login-failure-state": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs"
+      ],
+      "scope": "Original terminal failure ordering, mode0 switch branch and nonzero login branch. Actual inherited HTTP handling and concrete SDK/data services remain pending; no production completion claim."
+    },
+    "login-success-state": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs"
+      ],
+      "scope": "Source success-state event registration, conditional completion, SDK/idle event routing and asymmetric explicit unsubscription. Owner FSM event lifetime and actual platform/data providers are not yet connected."
+    },
+    "login-data-routing": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs"
+      ],
+      "scope": "Source new-player force-upload priority and same-user/new-device manager-reload routing, with boundary matrix checks. Actual manager reload, version negotiation, HTTP and production entry remain pending."
+    },
+    "data-version-state": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs"
+      ],
+      "scope": "Original per-key version increment, dual pending-list completion, forced-upload flag update, persistence-before-event and close cleanup. Full version-file IO, manager reload and transport remain pending."
+    },
+    "sdk-string-storage": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs"
+      ],
+      "scope": "Original mini-game SDK string cache, missing sentinel, asynchronous FIFO writes/deletes, failure cache retention and restart persistence distinction. Concrete platform backend and version JSON codec still pending."
+    },
+    "version-storage-connected": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs"
+      ],
+      "scope": "Original version array records, integer/default fidelity, duplicate-key Add behavior and SDK queue connected to isolated desktop persistence; real file restart verified. Live SDK and full LitJson malformed-input parity remain unverified."
+    },
+    "manager-version-reconciliation": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs"
+      ],
+      "scope": "Source f12180 enumerates participating manager keys, adds missing version -1, preserves existing rows, prunes stale or disabled keys through a snapshot of Local.Keys and saves once even unchanged. LoadManagers connects this to source version loading. Concrete registry and live SDK remain incomplete."
+    },
+    "manager-pool-registration": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs"
+      ],
+      "scope": "Metadata v31 source roster of 25 derived manager classes: 16 Proj_hdzd, 5 CommonGameModule and 4 unmarked. Registration filters exact namespace, applies sync/compress flags, initializes before dictionary assignment. SaveData respects disable flag, skips null and logs individual failures before continuing. Concrete manager factories and live SDK remain pending."
+    },
+    "manager-storage-pipeline": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs"
+      ],
+      "scope": "Original DataManagerBase save/read path: key validation warning does not abort, UTF8 lowercase MD5 dedup unless login procedure field8, compression before write/queue, local SDK writes gated at login progress10, version updates and upload conditions preserved independently. Required account/compression/upload host, real string SDK and version state connected; concrete manager factories and live SDK remain pending."
+    },
+    "commander-storage-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt",
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs",
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs"
+      ],
+      "scope": "Concrete commander manager uses source original record names and registered flags, requests real server callback when enabled, loads local otherwise, initializes missing configs and rebuilds save list from valid live manager records. Six original configs and isolated actual file restart verified through pool and SDK queue. Full manager roster, real login and production startup still incomplete."
+    },
+    "skin-storage-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4150-31728.txt",
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31732.txt",
+        "skin-serialization-fields.json",
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt",
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs",
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs",
+        "OutgameSkinManager.cs",
+        "OutgameSkinCatalog.cs"
+      ],
+      "scope": "Concrete skin manager assigns instance before update, requests server callback or loads local, preserves source defaults/legacy behavior and saves through SDK. Metadata proves private s/u SerializeField and all other skin fields NonSerialized; source wire serializer emits only those fields, newSkins and equipment. Original configs/registry and isolated actual file restart verified. Full manager roster and production startup incomplete."
+    },
+    "local-storage-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4119-31618.txt",
+        "disassembly/Type4119-31628.txt",
+        "disassembly/Type4119-31630.txt",
+        "disassembly/Type4119-31632.txt",
+        "disassembly/Type3534-27293.txt",
+        "local-data-serialization-schema.json",
+        "local-limited-bag-resolution.json",
+        "disassembly/Type4150-31728.txt",
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31732.txt",
+        "skin-serialization-fields.json",
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt",
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs",
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs",
+        "OutgameSkinManager.cs",
+        "OutgameSkinCatalog.cs",
+        "OutgameLocalRecord.cs",
+        "OutgameLocalDataManager.cs"
+      ],
+      "scope": "Concrete local data manager preserves all18 serialized LocalData fields plus nested records, source season_pass1, bag initialization before tools/legacy/save registration and original OnSave projection. Limited bags require active GameProductConfig row and strictly future expiry using original 1970-01-01 08:00 millisecond epoch. Actual isolated file restart and int64 precision verified. DataManagerSave host, full roster and startup remain incomplete."
+    },
+    "save-registry-legacy-flow": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4246-32419.txt",
+        "disassembly/Type4246-32417.txt",
+        "disassembly/Type102-567.txt",
+        "disassembly/Type4452-34135.txt",
+        "data-save-registry-resolution.json",
+        "disassembly/Type4119-31618.txt",
+        "disassembly/Type4119-31628.txt",
+        "disassembly/Type4119-31630.txt",
+        "disassembly/Type4119-31632.txt",
+        "disassembly/Type3534-27293.txt",
+        "local-data-serialization-schema.json",
+        "local-limited-bag-resolution.json",
+        "disassembly/Type4150-31728.txt",
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31732.txt",
+        "skin-serialization-fields.json",
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt",
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs",
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs",
+        "OutgameSkinManager.cs",
+        "OutgameSkinCatalog.cs",
+        "OutgameLocalRecord.cs",
+        "OutgameLocalDataManager.cs",
+        "OutgameDataSaveRegistry.cs"
+      ],
+      "scope": "Original lazy DataManagerSave string/hash dictionaries implemented with original UTF16 zero-terminated legacy hash, overwrite and partial null-registration behavior. Local manager registration feeds coordinated source skin-then-commander migration, including commander live-index refresh before save. Three concrete managers tested together through original registry selection and shared SDK storage; full startup and remaining roster incomplete."
+    },
+    "startup-entry-scene-order": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4452-34135.txt",
+        "disassembly/Type4452-34142.txt",
+        "disassembly/Type4452-34141.txt",
+        "startup-page-resolution.json",
+        "startup-scene-fields.json",
+        "disassembly/Type4246-32419.txt",
+        "disassembly/Type4246-32417.txt",
+        "disassembly/Type102-567.txt",
+        "disassembly/Type4452-34135.txt",
+        "data-save-registry-resolution.json",
+        "disassembly/Type4119-31618.txt",
+        "disassembly/Type4119-31628.txt",
+        "disassembly/Type4119-31630.txt",
+        "disassembly/Type4119-31632.txt",
+        "disassembly/Type3534-27293.txt",
+        "local-data-serialization-schema.json",
+        "local-limited-bag-resolution.json",
+        "disassembly/Type4150-31728.txt",
+        "disassembly/Type4150-31729.txt",
+        "disassembly/Type4150-31732.txt",
+        "skin-serialization-fields.json",
+        "disassembly/Type4028-31008.txt",
+        "disassembly/Type4028-31009.txt",
+        "disassembly/Type4028-31010.txt",
+        "disassembly/Type4028-31012.txt",
+        "disassembly/Type3465-26715.txt",
+        "disassembly/Type3465-26712.txt",
+        "disassembly/Type3465-26713.txt",
+        "disassembly/Type3465-26714.txt",
+        "disassembly/Type3466-26721.txt",
+        "disassembly/Type3606-27869.txt",
+        "disassembly/Type3467-26738.txt",
+        "disassembly/Type3467-26744.txt",
+        "disassembly/Type3467-26730.txt",
+        "disassembly/Type3467-26751.txt",
+        "data-manager-registration-roster.json",
+        "data-manager-registration-resolution.json",
+        "disassembly/Type3795-29619.txt",
+        "data-version-manager-resolution.json",
+        "data-manager-base-fields.json",
+        "disassembly/Type4612-34985.txt",
+        "disassembly/Type4612-34990.txt",
+        "disassembly/Type4612-34993.txt",
+        "disassembly/Type4612-34994.txt",
+        "login-sync-generic-resolution.json",
+        "login-sync-fields.json",
+        "disassembly/Type4610-34974.txt",
+        "login-failure-fields.json",
+        "login-failure-generic-resolution.json",
+        "login-success-generic-resolution.json",
+        "disassembly/Type4611-34978.txt",
+        "disassembly/Type4611-34983.txt",
+        "disassembly/Type3795-29617.txt",
+        "disassembly/Type3795-29613.txt",
+        "disassembly/Type3795-29614.txt",
+        "disassembly/Type3795-29615.txt",
+        "disassembly/Type3795-29616.txt",
+        "data-version-fields.json",
+        "data-version-generic-resolution.json",
+        "original-sdk-storage.js",
+        "sdk-storage-source.json",
+        "storage-sdk-slot-candidates.json"
+      ],
+      "implementation": [
+        "OutgameLoginSync.cs",
+        "OutgameLoginFailure.cs",
+        "OutgameLoginSuccess.cs",
+        "OutgameLoginDataPlan.cs",
+        "OutgameDataVersionState.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameDataVersionStorage.cs",
+        "OutgameFileStorageBackend.cs",
+        "OutgameDataManagerPool.cs",
+        "OutgameManagerRegistrationCatalog.cs",
+        "OutgameDataManagerStorage.cs",
+        "OutgameCommanderManager.cs",
+        "OutgameOriginalCommanders.cs",
+        "OutgameSkinManager.cs",
+        "OutgameSkinCatalog.cs",
+        "OutgameLocalRecord.cs",
+        "OutgameLocalDataManager.cs",
+        "OutgameDataSaveRegistry.cs",
+        "OutgameStartupEntry.cs"
+      ],
+      "scope": "Post-data startup phase creates menu then SetVisible(false), creates common reward UI, migrates source records, initializes prefabs then requests GamePlay. Scene completion ordering and immediate post-request flags preserved, including synchronous callback/repeated callback/failure behavior. Required UI/resource/activity providers still need production connection; full startup incomplete."
+    },
+    "prefab-cache-initialization": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4117-31554.txt",
+        "disassembly/Type4117-31563.txt",
+        "disassembly/Type4117-31557.txt",
+        "startup-prefab-resolution.json",
+        "prefab-cache-resolution.json",
+        "prefab-cache-fields.json"
+      ],
+      "implementation": [
+        "OutgamePrefabCache.cs",
+        "OutgameLevelEditorConfig.cs"
+      ],
+      "scope": "Original dictionary cache initialization and selective actual Unity object destruction implemented. Source destroys roots 1000..6999 and 9033..9034, clears/removes corresponding pool lists, then removes root keys. InitData subsequently clears all three dictionaries and loads LevelEditor before disabling IsEditor. Required original resource loader and shared production cache wiring remain incomplete."
+    },
+    "user-preferences-new-day": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3486-26871.txt",
+        "disassembly/Type3486-26863.txt",
+        "disassembly/Type3486-26851.txt",
+        "disassembly/Type3486-26882.txt",
+        "disassembly/Type3566-27472.txt",
+        "disassembly/Type3566-27474.txt",
+        "disassembly/Type3566-27464.txt",
+        "disassembly/Type3566-27467.txt",
+        "disassembly/Type3566-27473.txt",
+        "user-prefs-resolution.json",
+        "user-prefs-fields.json"
+      ],
+      "implementation": [
+        "OutgameUserPreferences.cs"
+      ],
+      "scope": "Managed UserDataPrefs original three typed columns, initialization/overwrite/save digest and reports plus GlobalData.CheckNewDay order implemented. Actual isolated UserData.txt save/restart validated. Required platform preference ownership, source file routing and SDK days/event providers remain explicit. DataContract JSON handles verified source record schema; full original Json parser and MD5 failure parity not proven. Complete startup and daily consumers remain incomplete."
+    },
+    "preferences-webgl-storage": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3622-28205.txt",
+        "disassembly/Type3622-28219.txt",
+        "disassembly/Type7703-56243.txt",
+        "disassembly/Type7703-56244.txt",
+        "disassembly/Type9254-64935.txt",
+        "disassembly/Type9254-64936.txt",
+        "storage-sdk-slot-candidates.json",
+        "sdk-storage-source.json"
+      ],
+      "implementation": [
+        "OutgameWebGlFileStorage.cs",
+        "OutgameUserPreferences.cs",
+        "OutgameSdkStringStorage.cs",
+        "OutgameFileStorageBackend.cs"
+      ],
+      "scope": "Original FileManager fixed-key read/write routes preferences into recovered SDK string cache/queue and actual isolated desktop backend. Read logging after retrieval and write logging before storage retained. Async failure leaves cache/digest/report state; changed records continue. Full application startup/platform ownership and real WeChat backend still incomplete."
+    },
+    "wx-preferences-platform-branch": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "platform-prefs-hierarchy.json",
+        "sdk-day-initialization-slots.json",
+        "disassembly/Type3146-24165.txt",
+        "disassembly/Type7581-55502.txt",
+        "disassembly/Type7703-56242.txt"
+      ],
+      "implementation": [
+        "OutgameWxPreferenceSession.cs"
+      ],
+      "scope": "Exact XYXCommon_DBT_ISDK + Bridge_WX_XYXFunction preference composition: inherited GetDaysByFirstLaunch=0 and CanReadLocalData=true. Original managed preferences, recovered file/SDK queue and day event integrated. Full application selected-platform initialization, account login and remaining daily systems not completed."
+    },
+    "video-placement-mapping": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4452-34154.txt",
+        "disassembly/Type7574-55421.txt",
+        "disassembly/Type9254-64899.txt",
+        "disassembly/Type9254-64900.txt",
+        "startup-prefab-resolution.json",
+        "user-prefs-fields.json"
+      ],
+      "implementation": [
+        "OutgameVideoMapping.cs",
+        "Resources/Data/Outgame/WXAMSConfig.json"
+      ],
+      "scope": "Original startup label->placement dictionary from 59 source configuration records, Dictionary.Add duplicate behavior, bridge dictionary reference retention and video placement resolution errors/fallback68 implemented. Only placement resolution from OnNewEvent is covered; full analytics event filter/JSON conversion and ad callbacks/rewards not yet connected."
+    },
+    "reward-video-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9202-64456.txt",
+        "disassembly/Type9202-64478.txt",
+        "disassembly/Type9202-64480.txt",
+        "disassembly/Type9202-64481.txt",
+        "disassembly/Type9202-64482.txt",
+        "disassembly/Type9202-64484.txt",
+        "disassembly/Type9202-64487.txt",
+        "disassembly/Type9202-64491.txt",
+        "disassembly/Type9202-64492.txt"
+      ],
+      "implementation": [
+        "OutgameRewardVideo.cs"
+      ],
+      "scope": "ADModule ShowVideo filters, constructor Ready=true/LastClick=-1, callback replacement, first-day/no-ready failure, scaled10-second timeout, native show/close and string result callbacks restored. Host provides native delivery, coroutine scheduling and reports; complete adapter initialization/module activation and actual business reward integration pending."
+    },
+    "ad-request-controller-routing": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7544-55102.txt",
+        "disassembly/Type7544-55103.txt",
+        "disassembly/Type7544-55075.txt",
+        "ad-controller-slots.json"
+      ],
+      "implementation": [
+        "OutgameAdRequestRouter.cs"
+      ],
+      "scope": "NewAdsManager controller request routing and platform close-repair restored. Remaining interstitial blocks via closed(false); absent controller fails via shown(false); option stored before controller show, no extra readiness guard. Concrete controllers, module activation and business reward linkage remain incomplete."
+    },
+    "ad-entry-controller-chain": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9240-64771.txt",
+        "disassembly/Type9240-64773.txt",
+        "disassembly/Type9240-64776.txt",
+        "disassembly/Type9202-64478.txt",
+        "disassembly/Type7544-55102.txt",
+        "disassembly/Type9202-64492.txt"
+      ],
+      "implementation": [
+        "OutgameAdModuleEntry.cs",
+        "OutgameRewardVideoControllerHost.cs",
+        "OutgameRewardVideo.cs",
+        "OutgameAdRequestRouter.cs"
+      ],
+      "scope": "Original WXFunctionManager cached module lookup/activation gate now wired via controller host to recovered ADModule and NewAdsManager routing. Integrated entry->module->router->controller callbacks verified. Environment/controller provider still required; native WeChat controller creation and concrete business reward handlers not completed."
+    },
+    "ad-readiness-adapter-policy": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54847.txt",
+        "disassembly/Type7488-54711.txt",
+        "disassembly/Type7488-54715.txt",
+        "disassembly/Type7488-54719.txt",
+        "disassembly/Type7488-54720.txt",
+        "ad-adapter-slots.json",
+        "ad-readiness-vcall-helper.txt"
+      ],
+      "implementation": [
+        "OutgameAdReadiness.cs"
+      ],
+      "scope": "Original adapter readiness alternative, guarantee interval policy, cache defaults and finish ordering restored. Complete showAd selection/retry, concrete adapter and live ad/reward wiring incomplete."
+    },
+    "ad-cache-selection": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7507-54877.txt",
+        "disassembly/Type7508-54879.txt",
+        "ad-selection-list-resolution.json",
+        "ad-selection-comparer-types.json"
+      ],
+      "implementation": [
+        "OutgameAdCacheSelection.cs"
+      ],
+      "scope": "Source cache branch and comparers restored, including in-place sort, priority rotation, guarantee exclusion, bidding gates and platform fallback. Full request queue, allPlatHasPrice policy, native adapter and controller wiring remain incomplete."
+    },
+    "ad-price-policy": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54852.txt",
+        "disassembly/Type7488-54701.txt",
+        "ad-price-fields-and-request-slot.json"
+      ],
+      "implementation": [
+        "OutgameAdCacheSelection.cs",
+        "OutgameAdPriceCache.cs"
+      ],
+      "scope": "Default cache selector now uses original zero-only price validity and logging order. Adapter price cache restores original key/date/zero retry semantics. Concrete Utils_PlayerPrefs storage and native adapter wiring remain incomplete."
+    },
+    "ad-request-queue": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7488-54716.txt",
+        "ad-price-fields-and-request-slot.json"
+      ],
+      "implementation": [
+        "OutgameAdRequestQueue.cs",
+        "OutgameAdReadiness.cs"
+      ],
+      "scope": "Two-pass real request queue: non-cache high priority then non-high priority, dedup, fresh list each pass, interstitial report, handle before removal with queue reread. Base high-priority default false. Full controller/native lifecycle still pending."
+    },
+    "ad-show-flow": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54851.txt",
+        "disassembly/Type7511-54849.txt",
+        "disassembly/Type7511-54863.txt"
+      ],
+      "implementation": [
+        "OutgameAdShowFlow.cs",
+        "OutgameAdRequestQueue.cs",
+        "OutgameAdCacheSelection.cs"
+      ],
+      "scope": "Composed source showAd control flow: initial report, busy gates, requests, weixin guarantee fallback, continuation failure reporting, cache selection, source state check, video clock and post-display removal. Native adapter lifecycle/events and video controller wiring remain incomplete."
+    },
+    "video-controller": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "video-controller-callback-audit.json",
+        "disassembly/Type7533-55035.txt",
+        "disassembly/Type7533-55036.txt",
+        "disassembly/Type7532-55039.txt",
+        "disassembly/Type7532-55040.txt"
+      ],
+      "implementation": [
+        "OutgameVideoController.cs"
+      ],
+      "scope": "Shared serial/echelon show/close wrappers now implement router controller interface and call restored show flow. Source completion flag, clock, readiness and finish/reset/close ordering connected. Native adapter events, controller initialization variant and SDK configuration still incomplete."
+    },
+    "wx-video-loading": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9186-64360.txt",
+        "disassembly/Type9186-64364.txt",
+        "disassembly/Type9186-64365.txt",
+        "disassembly/Type9185-64371.txt",
+        "wx-video-config-resolution.json",
+        "wx-build-setting-fields.json"
+      ],
+      "implementation": [
+        "OutgameWxVideoLoading.cs"
+      ],
+      "scope": "WxVideoAdapter request/load/cache-clear lifecycle restored with native handle interface. State5 autoload reuse and scaled0.1 delay; one-id multiton rule, request error, destroy ordering. Concrete native bridge and base notify listeners pending."
+    },
+    "ad-notifications": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "ad-notify-listener-slots.json",
+        "disassembly/Type7488-54683.txt",
+        "disassembly/Type7488-54684.txt",
+        "disassembly/Type7488-54686.txt",
+        "disassembly/Type7488-54688.txt",
+        "disassembly/Type7488-54690.txt"
+      ],
+      "implementation": [
+        "OutgameAdNotifications.cs"
+      ],
+      "scope": "Stateful request success/fail, shown, close and rewarded notifications restored with original listener/timer/report ordering and reentrancy. Click/show-error notification and concrete native/listener wiring pending."
+    },
+    "ad-error-click-notifications": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7488-54687.txt",
+        "disassembly/Type7488-54689.txt",
+        "ad-notify-listener-slots.json"
+      ],
+      "implementation": [
+        "OutgameAdNotifications.cs"
+      ],
+      "scope": "Source show-error state5 gate, special close routes, listener retry result, banner reporting switch and click-repeat reports restored. Concrete listener/controller retry and native bridge remain incomplete."
+    },
+    "serial-controller-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "controller-request-slots.json",
+        "disassembly/Type7527-54996.txt",
+        "disassembly/Type7527-54997.txt",
+        "disassembly/Type7527-54998.txt"
+      ],
+      "implementation": [
+        "OutgameSerialControllerLifecycle.cs"
+      ],
+      "scope": "Serial close/reward/show-fail lifecycle restored using existing video controller and show flow. Host boundaries preserve timer report, interstitial chaining, preload load and banner restoration. Actual request/preload implementations and native wiring pending."
+    },
+    "serial-ad-preload": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7527-54987.txt",
+        "disassembly/Type7527-54992.txt",
+        "disassembly/Type7527-54994.txt",
+        "disassembly/Type7527-54999.txt",
+        "disassembly/Type7526-55004.txt"
+      ],
+      "implementation": [
+        "OutgameSerialAdPreload.cs"
+      ],
+      "scope": "Serial request scan binds absent listeners and removes state0/3/5 candidate before Handle. Video preload counts twice, caps cache at count-1, waits2 scaled seconds then load; stop ordering and completed handle retention preserved. Full load setup/native candidate connection pending."
+    },
+    "serial-load-entry": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54843.txt",
+        "disassembly/Type7511-54854.txt",
+        "disassembly/Type7511-54859.txt",
+        "disassembly/Type7511-54860.txt",
+        "disassembly/Type7527-54986.txt"
+      ],
+      "implementation": [
+        "OutgameSerialAdPreload.cs"
+      ],
+      "scope": "Load/requestAdapters now binds non-cache listeners, rebuilds retryable cache request list, applies only source cacheAmount1 non-banner break, reports then serial loads. Null/end and state2 count restored. Full controller/native lifecycle connection pending."
+    },
+    "serial-receive-callbacks": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7527-54988.txt",
+        "disassembly/Type7527-54989.txt"
+      ],
+      "implementation": [
+        "OutgameSerialControllerLifecycle.cs"
+      ],
+      "scope": "Received success/failure connects existing cache and show flow, request callbacks/check, noncache priority, INTERSTITAL4 auto flag and VIDEO load event/three-second platform883/142 autoshows. Native adapters and production event host pending."
+    },
+    "serial-show-listener": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7527-54990.txt",
+        "disassembly/Type7527-54991.txt"
+      ],
+      "implementation": [
+        "OutgameSerialControllerLifecycle.cs",
+        "OutgameAdShowFlow.cs"
+      ],
+      "scope": "Serial OnShowAd/OnRealShowAd and concrete listener delegate binding restored; adapter state notifications now reach cache, business shown callback, banner/timer/shared state and preload host. Native adapter and production host still pending."
+    },
+    "ad-request-timeouts": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7488-54673.txt",
+        "disassembly/Type7488-54674.txt",
+        "disassembly/Type7488-54678.txt",
+        "disassembly/Type7488-54679.txt",
+        "disassembly/Type7486-54729.txt",
+        "disassembly/Type7487-54735.txt",
+        "ad-timeout-config-resolution.json",
+        "ad-timeout-types.json"
+      ],
+      "implementation": [
+        "OutgameAdTimeouts.cs"
+      ],
+      "scope": "Adapter Handle/show timer sequencing, realtime load/show expiration, audio interrupt VIDEO recovery, timeout defaults/parse rules restored. Native bridge, reporting and concrete host composition pending."
+    },
+    "wx-video-presentation": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9186-64361.txt",
+        "disassembly/Type9186-64362.txt",
+        "disassembly/Type9186-64366.txt",
+        "disassembly/Type9186-64367.txt",
+        "wx-build-setting-fields.json"
+      ],
+      "implementation": [
+        "OutgameWxVideoPresentation.cs"
+      ],
+      "scope": "Native display/close callback flow connects loading handle and state notifications, preserves null/partial/completed outcomes, count/reward/report order and late shown behavior. Prediction response implementation and actual SDK handle pending."
+    },
+    "wx-video-adapter-composition": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9186-64358.txt",
+        "disassembly/Type9186-64360.txt",
+        "disassembly/Type9186-64361.txt",
+        "disassembly/Type9186-64362.txt",
+        "disassembly/Type7488-54721.txt"
+      ],
+      "implementation": [
+        "OutgameWxVideoAdapter.cs"
+      ],
+      "scope": "One adapter identity composes loading, presentation, notifications, timeouts and price cache; implements controller cache and preload candidates. Injected native handle exercises actual serial listener reward chain. Live runtime and original controller initialization remain pending."
+    },
+    "video-controller-initialization": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "VIDEO_CONTROLLER_INITIALIZATION_AUDIT.json",
+        "disassembly/Type7544-55066.txt",
+        "disassembly/Type7511-54876.txt",
+        "disassembly/Type7511-54865.txt"
+      ],
+      "implementation": [
+        "OutgameAdPlatformList.cs",
+        "OutgameVideoController.cs",
+        "OutgameAdShowFlow.cs"
+      ],
+      "scope": "Source VIDEO branch is confirmed serial/cache1. Runtime implements post-publication bind/bidding/delay-load order, source constructor defaults and lazy adapter list creation. Original production config, factory, adapter init/canRequest and setAdz binding pending."
+    },
+    "adapter-source-initialization": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7488-54668.txt",
+        "disassembly/Type7488-54724.txt",
+        "disassembly/Type7488-54725.txt",
+        "disassembly/Type7488-54712.txt",
+        "disassembly/Type7488-54679.txt"
+      ],
+      "implementation": [
+        "OutgameAdConfiguration.cs",
+        "OutgameWxVideoAdapter.cs"
+      ],
+      "scope": "Retains source IdsInfo/Adz consumed fields, source init report-option gates, parse ordering, canRequest=true, ctor defaults and configured platform identity. Reads current config for price, priority, native id and show timeout. Original complete remote config and platform factory remain pending."
+    },
+    "platform-adapter-factory": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9202-64479.txt",
+        "disassembly/Type9240-64778.txt",
+        "disassembly/Type9254-64922.txt"
+      ],
+      "implementation": [
+        "OutgameAdAdapterFactory.cs",
+        "OutgameAdModuleEntry.cs"
+      ],
+      "scope": "Source platform normalization, first-day suppression and all adapter-kind mappings. Cached module factory entry bypasses function-active gate. Actual WxVideo constructor integrated with lazy list/init/preload in validation. Other adapter constructors and production runtime remain pending."
+    },
+    "serial-controller-configuration": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54833.txt",
+        "disassembly/Type7527-54985.txt",
+        "disassembly/Type7511-54865.txt"
+      ],
+      "implementation": [
+        "OutgameSerialAdConfiguration.cs",
+        "OutgameAdPlatformList.cs",
+        "OutgameAdShowFlow.cs",
+        "OutgameAdConfiguration.cs"
+      ],
+      "scope": "Source setAdz binding, retained configuration, shared platform list, cache clamp and tag order; repeated empty-list reads and reentrant list replacement preserved. Concrete production service composition and full configuration acquisition pending."
+    },
+    "ad-request-completion-reload": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7511-54864.txt",
+        "disassembly/Type7511-54855.txt",
+        "disassembly/Type7511-54856.txt",
+        "disassembly/Type7510-54883.txt"
+      ],
+      "implementation": [
+        "OutgameAdRequestCompletion.cs",
+        "OutgameSerialAdPreload.cs"
+      ],
+      "scope": "Source full/partial/empty cache request completion reports and realtime reload, minimum15 delay, banner-specific refresh value, retained coroutine handles and serial check integration. Controlled native failure reaches scheduled serial retry; live runtime composition pending."
+    },
+    "serial-video-session": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7544-55066.txt",
+        "disassembly/Type7527-54985.txt",
+        "disassembly/Type7527-54996.txt",
+        "disassembly/Type7527-54999.txt",
+        "disassembly/Type7511-54864.txt"
+      ],
+      "implementation": [
+        "OutgameSerialVideoSession.cs"
+      ],
+      "scope": "Composes source factory/config/controller/listener/preload/completion. Owns internal load/check/show-preload/cancellation/actual platform count. Controlled native handles verify reward-to-reload, failure-to-retry and multi-adapter display/refill without manual continuation. Live SDK/reporting and game startup binding remain external."
+    },
+    "store-data-manager": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "STORE_MANAGER_AUDIT.json",
+        "store-serialization-fields.json",
+        "store-default-array.json",
+        "disassembly/Type4092-31398.txt",
+        "disassembly/Type4092-31401.txt",
+        "data-manager-registration-roster.json"
+      ],
+      "implementation": [
+        "OutgameStoreDataManager.cs"
+      ],
+      "scope": "Source store record/constructor/reset/wire and manager lifecycle, download deferral, empty create-decode-create and file restart. Source manager4092 has NO automatic registration attribute; not injected into production roster. Manual registration/reachability and UI consumers pending."
+    },
+    "global-item-records": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "global-item-fields.json",
+        "disassembly/Type4542-34588.txt",
+        "disassembly/Type4544-34604.txt",
+        "disassembly/Type4547-34613.txt"
+      ],
+      "implementation": [
+        "OutgameItemRecords.cs"
+      ],
+      "scope": "Original ItemManagerData/ItemUserData/ProductUserData wire and constructor/missing-record defaults; preserves Int64 item quantities, prices and timestamps, keyed-list duplicates/order. Global item dictionaries, timer/statistics registration and production ItemManager provider pending."
+    },
+    "global-item-indexes": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "global-item-init-generics.json",
+        "global-item-fields.json",
+        "disassembly/Type4542-34586.txt",
+        "disassembly/Type4542-34587.txt",
+        "disassembly/Type4542-34583.txt",
+        "disassembly/Type4542-34596.txt",
+        "disassembly/Type4547-34608.txt",
+        "disassembly/Type4547-34611.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemIndexes.cs",
+        "OutgameItemRecords.cs"
+      ],
+      "scope": "Source config filtering, clear-and-rebuild live indexes, shallow snapshots, duplicate Add exceptions, lazy hash UID and selective snapshot update fields. Global init/save/time/reward consumers and production provider still pending."
+    },
+    "global-item-persistence": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "global-item-save-generics.json",
+        "disassembly/Type4542-34576.txt",
+        "disassembly/Type4542-34579.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemPersistence.cs"
+      ],
+      "scope": "Rebuild live product list then item list; timestamp after lists; original double host time call and reentrant data assignment. Full init/update/reward lifecycle and provider pending."
+    },
+    "global-item-timestamp": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "item-timestamp-evidence.json",
+        "disassembly/Type3531-27247.txt",
+        "disassembly/Type3531-27248.txt",
+        "disassembly/Type3534-27293.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemPersistence.cs"
+      ],
+      "scope": "Original fixed 1970-01-01 08:00:00 unspecified epoch; direct DateTime subtraction, millisecond Int64 truncation and reverse conversion. Default item persistence now uses this converter."
+    },
+    "global-item-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "global-item-lifecycle-generics.json",
+        "disassembly/Type4542-34588.txt",
+        "disassembly/Type4542-34580.txt",
+        "disassembly/Type4542-34577.txt",
+        "disassembly/Type4542-34593.txt",
+        "disassembly/Type4542-34570.txt",
+        "disassembly/Type4542-34591.txt"
+      ],
+      "implementation": [
+        "OutgameGlobalItemLifecycle.cs"
+      ],
+      "scope": "Compose original decode, time sync, update handle, products/items and statistics registration order; repeated init and release exception semantics. Source Update body/reward engine and production host remain required dependencies."
+    },
+    "global-product-updates": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "global-item-update-generics.json",
+        "product-config-fields.json",
+        "disassembly/Type4542-34584.txt",
+        "disassembly/Type4542-34582.txt",
+        "disassembly/Type4542-34585.txt",
+        "disassembly/Type4542-34569.txt"
+      ],
+      "implementation": [
+        "OutgameProductUpdates.cs",
+        "OutgameGlobalItemLifecycle.cs"
+      ],
+      "scope": "Source per-frame host Update, strict >1 second product pass, DayOfYear comparison, interval/hour/weekday schedule math with original overflow/invalid calendar behavior. Concrete reset-price-notification engine remains an injected required dependency."
+    },
+    "global-product-resets": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "product-reset-generics.json",
+        "product-buy-count-evidence.json",
+        "disassembly/Type4542-34595.txt",
+        "disassembly/Type4542-34574.txt"
+      ],
+      "implementation": [
+        "OutgameProductResets.cs",
+        "OutgameItemRecords.cs"
+      ],
+      "scope": "Original reset mode branches, price callback order, dirty and snapshot behavior, UI messages; corrected nested ProductBuyCount wire shape. Concrete price formulas and production host pending."
+    },
+    "global-product-prices": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "product-price-generics.json",
+        "product-price-control-flow.json",
+        "PRODUCT_PRICE_AUDIT.json",
+        "disassembly/Type4547-34610.txt"
+      ],
+      "implementation": [
+        "OutgameProductPrices.cs"
+      ],
+      "scope": "Original six array/scalar modes, count lookup, compact indexing, integer arithmetic, error continuation, allocation and scalar gates; reset composition validated. Random/power providers remain explicit dependencies pending source sequence and precision equivalence."
+    },
+    "global-product-random": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/GenericPriceRandom-7643.txt",
+        "../combat-disassembly/Raw-10954.txt",
+        "disassembly/Type3391-26192.txt",
+        "disassembly/Type3391-26197.txt"
+      ],
+      "implementation": [
+        "GameRandomSource.cs",
+        "OutgameProductPrices.cs",
+        "BattleView.cs"
+      ],
+      "scope": "Original shared parameterless System.Random, inclusive integer range with unchecked upper increment, Next(count) list indexing. Battle default source and price constructor share the instance; explicit battle override retained. Original seed/timing not claimed identical."
+    },
+    "project-shop-item": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4362-33336.txt",
+        "disassembly/Type4362-33333.txt",
+        "disassembly/Type4362-33337.txt",
+        "disassembly/Type4362-33334.txt"
+      ],
+      "implementation": [
+        "OutgameProjectShopItem.cs"
+      ],
+      "scope": "Original Proj_hdzd ShopItem SetData and click: first itemConfig, integer price, diamond debit, reward, voice, extra report and refresh, using actual ToolDispatcher/LocalInventory and original table. Full page card selection/instantiation and account binding pending."
+    },
+    "shop-native-products": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4407-33808.txt",
+        "disassembly/Type4408-33770.txt",
+        "disassembly/Type4362-33338.txt"
+      ],
+      "implementation": [
+        "OutgameShopProductList.cs",
+        "OutgameProjectShopItemView.cs"
+      ],
+      "scope": "ShopUI goods section filters storeType11 only, clones original ShopItem under original Content_Shop, binds native price/quantity/button to real inventory purchase. Full page lifecycle and account/asset/audio/report providers pending."
+    },
+    "shop-feedback-fly-grant": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4408-33778.txt",
+        "disassembly/Type4408-33788.txt",
+        "disassembly/Type4408-33779.txt",
+        "disassembly/Type4408-33801.txt",
+        "disassembly/Type4058-31217.txt",
+        "disassembly/Type4053-31227.txt",
+        "disassembly/Type4256-32536.txt"
+      ],
+      "implementation": [
+        "OutgameShopFeedback.cs",
+        "OutgameFlyToolStart.cs"
+      ],
+      "scope": "Native tool-value label, video success-to-effect callbacks, source NewFlyTool inventory/scheduling entry; actual video event registration, audio wrappers and animation coroutine host still pending."
+    },
+    "fly-tool-collection": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4057-31241.txt",
+        "disassembly/Type4058-31212.txt",
+        "disassembly/Type4056-31238.txt",
+        "disassembly/Type4053-31227.txt"
+      ],
+      "implementation": [
+        "OutgameFlyToolCollection.cs",
+        "OutgameFlyToolStart.cs"
+      ],
+      "scope": "Original fly-icon count, label baseline, per-arrival text and completion ordering; corrected callback type. Actual pool/tween/coroutine host pending."
+    },
+    "fly-currency-assets": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "fly-ui-evidence.json",
+        "fly-ui-import.json",
+        "../resource-snapshots/fly-currency-20260929/acquisition-manifest.json"
+      ],
+      "implementation": [
+        "OutgameFlyCurrencyAssets.cs",
+        "Recovered/FlyCurrency"
+      ],
+      "scope": "Three original fly currency prefabs, original geometry and pixel bindings imported; animation host and visual comparison still pending."
+    },
+    "fly-tool-cleanup": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4058-31221.txt",
+        "disassembly/Type4058-31223.txt",
+        "disassembly/Type4058-31219.txt",
+        "disassembly/Type4058-31209.txt",
+        "fly-tween-cleanup-generics.json"
+      ],
+      "implementation": [
+        "OutgameFlyToolCleanup.cs"
+      ],
+      "scope": "Source deferred cleanup, strict time thresholds, complete=true child tween kill and removal order; production animation host pending."
+    },
+    "fly-tool-animation-coroutine": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4057-31241.txt",
+        "disassembly/Type4055-31235.txt",
+        "disassembly/Type4056-31237.txt",
+        "disassembly/Type4058-31218.txt",
+        "fly-tween-cleanup-generics.json"
+      ],
+      "implementation": [
+        "OutgameFlyToolAnimation.cs"
+      ],
+      "scope": "Source IEnumerator with shared WaitForSecondsRealtime, real prefab spawn callback wiring, two movement stages and cleanup commands; actual tween/pool host remains pending."
+    },
+    "fly-effect-ids-easing": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4054-31228.txt",
+        "disassembly/Type4054-31229.txt",
+        "disassembly/Type4054-31230.txt",
+        "disassembly/Type4054-31231.txt",
+        "disassembly/Type4054-31232.txt",
+        "disassembly/Type9974-68862.txt"
+      ],
+      "implementation": [
+        "OutgameFlyEffectIds.cs",
+        "OutgameFlyEasing.cs"
+      ],
+      "scope": "Source shared effect/sub-id registry and exact circular easing float expression order. Runtime tween host pending."
+    },
+    "fly-native-tween-runner": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9962-68833.txt",
+        "disassembly/Type9962-68831.txt",
+        "disassembly/Type9962-68826.txt",
+        "disassembly/Type9962-68824.txt",
+        "disassembly/Type9871-68377.txt",
+        "disassembly/Type9974-68862.txt"
+      ],
+      "implementation": [
+        "OutgameFlyTweenRunner.cs",
+        "OutgameFlyEasing.cs"
+      ],
+      "scope": "Native forward one-loop move/scale subset for fly currency, independent advance, target pulse retained completion and id kill. Full DOTween equivalence and production host not claimed."
+    },
+    "fly-runtime-composition": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4058-31210.txt",
+        "disassembly/Type4058-31214.txt",
+        "disassembly/Type4058-31216.txt",
+        "disassembly/FlyNativeMath-1108.txt",
+        "disassembly/FlyNativeMath-1114.txt"
+      ],
+      "implementation": [
+        "OutgameFlyRuntime.cs",
+        "OutgameFlyScatter.cs"
+      ],
+      "scope": "MonoBehaviour composition of source economic entry, coroutine, tween, ids, cleanup with mandatory audio/pool dependencies. Shop/account production binding and full animation verification pending."
+    },
+    "fly-runtime-playmode": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "FLY_RUNTIME_AUDIT.json"
+      ],
+      "implementation": [
+        "OutgameFlyRuntime.cs",
+        "OutgameFlyTweenRunner.cs",
+        "OutgameFlyToolAnimation.cs"
+      ],
+      "validation": "analysis/outgame-fly-playmode-validation.json",
+      "scope": "Actual Play Mode with native prefab pool fixture and isolated inventory: simultaneous gold/diamond grants, unscaled movement/collection/cleanup at timeScale0. Original pool and page/account integration still pending."
+    },
+    "pooled-prefab-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3665-28675.txt",
+        "disassembly/Type3665-28676.txt",
+        "disassembly/Type3665-28677.txt",
+        "disassembly/Type3665-28678.txt"
+      ],
+      "implementation": [
+        "OutgamePooledPrefab.cs"
+      ],
+      "validation": "analysis/outgame-fly-playmode-validation.json",
+      "scope": "Original NormalPool object lifecycle; restored parent/active state used in actual Play Mode fixture. Base object-pool selection, capacity and resource load/release providers pending."
+    },
+    "pooled-prefab-base-initialization": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3668-28691.txt",
+        "disassembly/Type3668-28692.txt",
+        "normal-pool-construction-generics.json"
+      ],
+      "implementation": [
+        "OutgamePooledPrefab.cs"
+      ],
+      "validation": "analysis/outgame-fly-playmode-validation.json",
+      "scope": "ObjectBase initialization validated: managed null rejected, destroyed Unity wrapper accepted, name/default flags/local timestamp restored. Exception type differs: InvalidOperationException replaces GameFrameworkException. Generic pool reuse/expiry pending."
+    },
+    "pooled-object-use-count": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "normal-pool-generic-bodies.json",
+        "disassembly/PoolGeneric-28724.txt",
+        "disassembly/PoolGeneric-28725.txt",
+        "disassembly/PoolGeneric-28726.txt",
+        "disassembly/PoolGeneric-28727.txt",
+        "disassembly/PoolGeneric-28728.txt",
+        "disassembly/PoolGeneric-28729.txt",
+        "disassembly/PoolGeneric-28730.txt",
+        "disassembly/PoolGeneric-28731.txt"
+      ],
+      "implementation": [
+        "OutgamePoolEntry.cs"
+      ],
+      "scope": "Source Object<T> wrapper, including negative counts and timestamp/lifecycle ordering. Integrated into actual fly Play Mode fixture. Pool-level reuse, expiry and original loading provider pending. Exception class differs from GameFrameworkException."
+    },
+    "object-pool-selection-release": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "normal-pool-generic-bodies.json",
+        "normal-pool-rgctx.json",
+        "disassembly/PoolGeneric-28732.txt",
+        "disassembly/PoolGeneric-28733.txt",
+        "disassembly/PoolGeneric-28734.txt",
+        "disassembly/PoolGeneric-28735.txt",
+        "disassembly/PoolGeneric-28736.txt",
+        "disassembly/PoolGeneric-28737.txt",
+        "disassembly/PoolGeneric-28738.txt",
+        "disassembly/PoolGeneric-28739.txt",
+        "disassembly/PoolGeneric-28740.txt",
+        "disassembly/PoolGeneric-28741.txt",
+        "disassembly/PoolGeneric-28742.txt",
+        "disassembly/PoolGeneric-28743.txt",
+        "disassembly/PoolGeneric-28744.txt",
+        "disassembly/PoolGeneric-28745.txt",
+        "disassembly/PoolGeneric-28746.txt"
+      ],
+      "implementation": [
+        "OutgameObjectPool.cs"
+      ],
+      "scope": "Original linked-list pool, first-free spawn, registration/return release, expiry and capacity selection, unscaled update and shutdown. Actual fly Play Mode uses pool; original resource providers remain pending. Exception class and diagnostic logging differ from original."
+    },
+    "normal-pool-load-callbacks": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3667-28681.txt",
+        "disassembly/Type3667-28683.txt",
+        "disassembly/Type3667-28684.txt",
+        "disassembly/Type3667-28685.txt",
+        "disassembly/Type3666-28687.txt",
+        "disassembly/Type3666-28688.txt",
+        "disassembly/Type3666-28689.txt",
+        "disassembly/Type3666-28690.txt"
+      ],
+      "implementation": [
+        "OutgameNormalPool.cs"
+      ],
+      "scope": "NormalPool spawn, new/legacy loading route dispatch, cache callback ordering, instance registration and returned-object hits. New-resource branch connected to recovered-prefab Play Mode adapter. Original resource provider internals, manager lifecycle and DestroyObjectPool pending; legacy branches statically restored but not dynamically covered."
+    },
+    "normal-pool-destruction": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3667-28679.txt",
+        "normal-pool-destroy-generics.json",
+        "disassembly/Type3664-28674.txt",
+        "disassembly/Type3595-27679.txt"
+      ],
+      "implementation": [
+        "OutgameNormalPool.cs"
+      ],
+      "scope": "NormalPool destruction ordering implemented with explicit manager/resource lifetime provider. New-resource order, repeated calls and failure propagation verified. Native provider and old-resource branch still require integration validation."
+    },
+    "asset-handle-lifetime": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type2929-22893.txt",
+        "disassembly/Type2929-22901.txt",
+        "disassembly/Type2929-22902.txt",
+        "disassembly/Type2929-22905.txt",
+        "disassembly/Type2929-22906.txt",
+        "disassembly/Type2930-22916.txt",
+        "disassembly/Type2930-22917.txt",
+        "disassembly/Type2945-22982.txt"
+      ],
+      "implementation": [
+        "OutgameAssetHandle.cs"
+      ],
+      "scope": "Asset handle validity, release, main-object access and parameterless prefab instantiation restored. Uses explicit runtime mode/provider dependencies. Recovered-resource Play Mode adapter uses explicit compatibility branch; original provider loader and completion events pending."
+    },
+    "asset-handle-completion": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type2929-22899.txt",
+        "disassembly/Type2929-22900.txt",
+        "disassembly/Type2929-22907.txt",
+        "disassembly/Type2930-22916.txt"
+      ],
+      "implementation": [
+        "OutgameAssetHandle.cs"
+      ],
+      "scope": "Asset handle Completed add/remove/dispatch restored with validity checks, immediate completed subscription and multicast failure semantics. Provider-triggered dispatch and production loading still pending."
+    },
+    "asset-provider-completion": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type2954-23019.txt",
+        "disassembly/Type2954-23029.txt",
+        "disassembly/Type2954-23031.txt",
+        "disassembly/Type2954-23034.txt",
+        "disassembly/Type2954-23035.txt",
+        "disassembly/ProviderGeneric-23030.txt",
+        "provider-completion-generics.json",
+        "provider-create-handle-generic.json"
+      ],
+      "implementation": [
+        "OutgameAssetProvider.cs",
+        "OutgameAssetHandle.cs"
+      ],
+      "scope": "Provider asset-handle creation/refcount/release, completion snapshots and Task restored; native fly fixture runs provider-driven callbacks. Original loader startup flags, bundle ownership and production loading remain pending."
+    },
+    "provider-bundle-release": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type2954-23028.txt",
+        "disassembly/Type2939-22969.txt",
+        "disassembly/Type2939-22973.txt",
+        "bundle-dependency-generics.json"
+      ],
+      "implementation": [
+        "OutgameAssetProvider.cs",
+        "OutgameBundleReferences.cs"
+      ],
+      "scope": "Provider destruction and dependency reference/release restored. Verified duplicate entries, unchecked counts and partial failure. Bundle acquisition/loading and production composition pending."
+    },
+    "shop-page-lifecycle": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type4408-33786.txt",
+        "disassembly/Type4408-33773.txt",
+        "shop-dispose-generics.json"
+      ],
+      "implementation": [
+        "OutgameShopLifecycle.cs"
+      ],
+      "scope": "ShopUI OpenLater/Dispose event integration, actual native ToolChange label refresh, video callback registration, initialization coroutine stop and SelectCardControl access restored. Full account/menu invocation and original message/video hosts pending."
+    },
+    "shop-message-dispatcher": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3485-26817.txt",
+        "disassembly/Type3485-26820.txt",
+        "disassembly/Type3485-26822.txt",
+        "disassembly/Type3485-26824.txt",
+        "disassembly/Type3485-26825.txt",
+        "disassembly/Type3485-26828.txt",
+        "disassembly/Type3485-26830.txt",
+        "disassembly/Type3485-26831.txt",
+        "disassembly/Type3485-26835.txt",
+        "disassembly/Type3485-26836.txt",
+        "message-dispatcher-generics.json"
+      ],
+      "implementation": [
+        "OutgameMessageDispatcher.cs",
+        "OutgameShopLifecycle.cs"
+      ],
+      "scope": "String MsgDispatcher semantics and concrete ShopEventHost connected to original ShopUI lifecycle. Duplicate listener/remove/null/error semantics and native page refresh/disposal verified. Indexed event APIs, original video button and account/menu composition pending."
+    },
+    "shop-video-completion": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "video-button-generics.json"
+      ],
+      "implementation": [
+        "OutgameVideoButtonCompletion.cs",
+        "OutgameShopLifecycle.cs",
+        "OutgameShopFeedback.cs"
+      ],
+      "scope": "UIVideoBtn completion and native UnityEvent<bool> registrations wired through ShopEventHost to ShopFeedback and inventory. Click/cooldown, report coroutine and ad platform host remain pending."
+    },
+    "shop-video-click": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json"
+      ],
+      "implementation": [
+        "OutgameVideoClick.cs",
+        "OutgameVideoButtonCompletion.cs"
+      ],
+      "scope": "UIVideoBtn click ordering and shared five-second/per-button one-second cooldown recovered. Completion uses integer delay with scaled WaitForSeconds. Native Button adapter, button configuration/readiness/reports and actual ad host remain pending."
+    },
+    "native-video-button": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type10741-74403.txt",
+        "disassembly/Type10741-74404.txt",
+        "disassembly/Type10741-74405.txt",
+        "disassembly/Type10741-74406.txt",
+        "disassembly/Type10741-74407.txt",
+        "disassembly/Type10741-74408.txt",
+        "disassembly/Type10741-74409.txt",
+        "disassembly/Type10741-74410.txt",
+        "disassembly/Type10741-74411.txt",
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74418.txt",
+        "disassembly/Type10741-74419.txt",
+        "disassembly/Type10741-74420.txt",
+        "disassembly/Type10741-74421.txt",
+        "disassembly/Type10741-74422.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10741-74424.txt",
+        "disassembly/Type10741-74425.txt",
+        "disassembly/Type10741-74426.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "disassembly/Type10741-74430.txt",
+        "disassembly/Type10741-74431.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json",
+        "ui-import.json"
+      ],
+      "implementation": [
+        "OutgameVideoButton.cs",
+        "OutgameVideoClick.cs",
+        "OutgameVideoButtonCompletion.cs"
+      ],
+      "scope": "Native Unity Button subclass restores source data lookup/lock, state, readiness, audio, reports, click and completion. Requires binding while inactive before activation. Original shop prefab IDs verified but page import/composition and real SDK/report host remain pending."
+    },
+    "shop-prefab-video": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type10741-74403.txt",
+        "disassembly/Type10741-74404.txt",
+        "disassembly/Type10741-74405.txt",
+        "disassembly/Type10741-74406.txt",
+        "disassembly/Type10741-74407.txt",
+        "disassembly/Type10741-74408.txt",
+        "disassembly/Type10741-74409.txt",
+        "disassembly/Type10741-74410.txt",
+        "disassembly/Type10741-74411.txt",
+        "disassembly/Type10741-74412.txt",
+        "disassembly/Type10741-74413.txt",
+        "disassembly/Type10741-74414.txt",
+        "disassembly/Type10741-74415.txt",
+        "disassembly/Type10741-74416.txt",
+        "disassembly/Type10741-74417.txt",
+        "disassembly/Type10741-74418.txt",
+        "disassembly/Type10741-74419.txt",
+        "disassembly/Type10741-74420.txt",
+        "disassembly/Type10741-74421.txt",
+        "disassembly/Type10741-74422.txt",
+        "disassembly/Type10741-74423.txt",
+        "disassembly/Type10741-74424.txt",
+        "disassembly/Type10741-74425.txt",
+        "disassembly/Type10741-74426.txt",
+        "disassembly/Type10741-74427.txt",
+        "disassembly/Type10741-74428.txt",
+        "disassembly/Type10741-74429.txt",
+        "disassembly/Type10741-74430.txt",
+        "disassembly/Type10741-74431.txt",
+        "disassembly/Type10740-74434.txt",
+        "video-button-generics.json",
+        "video-button-virtual-slots.json",
+        "ui-import.json",
+        "video-manager-generics.json"
+      ],
+      "implementation": [
+        "OutgameShopVideoBindings.cs",
+        "OutgameVideoButton.cs",
+        "RecoveredHudImporter.cs",
+        "Recovered/Outgame/ShopUI.prefab"
+      ],
+      "scope": "All five original ShopUI UIVideoBtn components imported with original IDs/graphic/selection fields. Shop binding joins source pointer event to video host, completion, inventory and saving through recovered lifecycle. Actual SDK/config/account composition remains pending."
+    },
+    "video-config-manager": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3843-29987.txt",
+        "disassembly/Type3843-29988.txt",
+        "disassembly/Type3843-29989.txt",
+        "disassembly/Type3843-29990.txt",
+        "disassembly/VideoConfigGeneric-26612.txt",
+        "disassembly/VideoConfigGeneric-26619.txt",
+        "video-manager-generics.json",
+        "video-config-generic.json",
+        "video-config-rgctx.json",
+        "VIDEO_CONFIG_ASSET_EVIDENCE.json"
+      ],
+      "implementation": [
+        "OutgameVideoButtonManager.cs",
+        "OutgameShopVideoBindings.cs",
+        "Recovered/OutgameConfig/VideoBtnConfig.bytes"
+      ],
+      "scope": "Original VideoBtnManager cache/duplicate/reset/resource-unavailable semantics restored. Original65row JSON asset copied byte-identically and parsed through source JsonUtility branch; actual ShopUI integration test uses it. Global mode selection, binary loader and real SDK/account composition pending."
+    },
+    "ads-video-flow": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3157-24562.txt",
+        "disassembly/Type3157-24567.txt",
+        "disassembly/Type3157-24568.txt",
+        "disassembly/Type3157-24569.txt",
+        "disassembly/Type3157-24589.txt",
+        "disassembly/Type3157-24619.txt",
+        "disassembly/Type3155-24626.txt",
+        "ads-callback-generics.json"
+      ],
+      "implementation": [
+        "OutgameAdsVideoFlow.cs",
+        "OutgameShopVideoBindings.cs"
+      ],
+      "scope": "AdsManager video request/async wait/result-dispatch core restored and joined to original ShopUI test. Callback replacement occurs before four-second gate; platform result broadcasts precede callback. Actual SDK adapter, raw callback parser and Unity await runner remain pending."
+    },
+    "callback-json": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3196-25122.txt",
+        "disassembly/Type3133-23875.txt",
+        "disassembly/Type3132-23876.txt",
+        "disassembly/Type3132-23877.txt",
+        "disassembly/Type3132-23878.txt",
+        "disassembly/Type3132-23879.txt",
+        "disassembly/Type3132-23880.txt",
+        "disassembly/Type3132-23881.txt",
+        "disassembly/Type3132-23882.txt",
+        "disassembly/Type3132-23883.txt",
+        "disassembly/Type3132-23884.txt",
+        "disassembly/Type3132-23885.txt",
+        "disassembly/Type3132-23886.txt",
+        "disassembly/Type3132-23887.txt",
+        "disassembly/Type3132-23888.txt",
+        "disassembly/Type3132-23889.txt",
+        "disassembly/Type3132-23890.txt",
+        "callback-json-generics.json"
+      ],
+      "implementation": [
+        "OutgameCallbackJson.cs",
+        "OutgameAdsVideoFlow.cs",
+        "OutgameShopVideoBindings.cs"
+      ],
+      "scope": "Original GFRunning.Json/Util.DataParse parser restored, including duplicate keys, partial strings, numeric failure values and non-object root cast. Shop chain accepts raw JSON callback. Actual SDK and Unity await runner remain pending."
+    },
+    "ads-unity-await": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type2883-22358.txt",
+        "disassembly/Type2883-22359.txt",
+        "disassembly/Type2883-22360.txt",
+        "disassembly/Type2875-22366.txt",
+        "disassembly/Type2875-22367.txt",
+        "disassembly/Type2875-22368.txt",
+        "disassembly/Type2875-22369.txt",
+        "disassembly/Type2875-22370.txt",
+        "disassembly/Type2878-22384.txt",
+        "disassembly/Type2881-22391.txt",
+        "disassembly/Type3373-26053.txt",
+        "disassembly/Type3373-26072.txt",
+        "disassembly/Type3374-26078.txt"
+      ],
+      "implementation": [
+        "OutgameUnityAwait.cs",
+        "OutgameUnityAwaitRunner.cs",
+        "OutgameAdsVideoFlow.cs"
+      ],
+      "scope": "Single-yield Unity await runner and completion/context dispatch restored. Actual original ShopUI/config/native Button verified in PlayMode with real0.2second wait while paused and scaled1second report after resume. SDK and report transport remain explicit fixtures."
+    },
+    "sdk-button-registry": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23907.txt",
+        "disassembly/Type3135-23908.txt",
+        "disassembly/Type3135-23910.txt",
+        "disassembly/Type3135-23912.txt",
+        "sdk-button-registry-generics.json"
+      ],
+      "implementation": [
+        "OutgameSdkButtonRegistry.cs",
+        "OutgameVideoButton.cs"
+      ],
+      "scope": "Original SDK button registration, destroyed-button cleanup and readiness fan-out restored; native PlayMode startup now uses recovered registry. Function state owner and concrete platform transport remain explicit dependencies."
+    },
+    "sdk-function-state": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23913.txt",
+        "disassembly/Type3135-23914.txt",
+        "disassembly/Type3394-26224.txt"
+      ],
+      "implementation": [
+        "OutgameSdkFunctionStates.cs",
+        "OutgameSdkButtonRegistry.cs",
+        "OutgameVideoButton.cs"
+      ],
+      "scope": "SDK function-state cache and refresh semantics restored and connected to native PlayMode registry. IsOpen second argument corrected to refresh, not fallback. Platform capability resolver and complete state refresh APIs remain pending."
+    },
+    "sdk-capability-dispatch": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23915.txt",
+        "disassembly/Type3135-23904.txt",
+        "sdk-initialization-generics.json"
+      ],
+      "implementation": [
+        "OutgameSdkCapabilityResolver.cs",
+        "OutgameSdkFunctionStates.cs",
+        "OutgameSdkButtonRegistry.cs"
+      ],
+      "scope": "Source GetState switch restored for functions0-22 and default, including zero inversion, exact draw-video status1, shared policy query and fixed feature5. Native PlayMode cache uses this resolver with explicit readiness fixture. Concrete manager implementations, full refresh and production initialization remain pending."
+    },
+    "sdk-button-refresh": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23911.txt",
+        "disassembly/Type3134-23947.txt",
+        "sdk-function-initialization-generics.json",
+        "disassembly/Type2886-22400.txt"
+      ],
+      "implementation": [
+        "OutgameSdkCapabilityResolver.cs",
+        "OutgameSdkFunctionStates.cs",
+        "OutgameSdkButtonRegistry.cs"
+      ],
+      "scope": "Source ReshsdkFunctionBtnState restored: absent list no-op, skip destroyed buttons, apply cached IsOpen(false) for each live entry including duplicates. No cleanup or forced capability query. Initialization coroutine evidence recovered but not yet implemented; concrete platform managers and production owner pending."
+    },
+    "sdk-function-initialization": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23911.txt",
+        "disassembly/Type3134-23947.txt",
+        "sdk-function-initialization-generics.json",
+        "disassembly/Type2886-22400.txt"
+      ],
+      "implementation": [
+        "OutgameSdkFunctionInitialization.cs",
+        "OutgameSdkButtonRegistry.cs"
+      ],
+      "scope": "Initialization coroutine restored: WaitForEndOfFrame, twelve Dictionary.Add registrations in source order, then WaitForUpdate with keepWaiting=false. Native button bindings consume same action dictionary. Action owner remains explicit interface pending concrete source platform implementations and production startup integration."
+    },
+    "sdk-function-actions": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type3135-23916.txt",
+        "disassembly/Type3135-23917.txt",
+        "disassembly/Type3135-23918.txt",
+        "disassembly/Type3135-23919.txt",
+        "disassembly/Type3135-23920.txt",
+        "disassembly/Type3135-23921.txt",
+        "disassembly/Type3135-23922.txt",
+        "disassembly/Type3135-23923.txt",
+        "disassembly/Type3135-23924.txt",
+        "disassembly/Type3135-23925.txt",
+        "disassembly/Type3135-23926.txt",
+        "disassembly/Type3135-23927.txt"
+      ],
+      "implementation": [
+        "OutgameSdkFunctionActions.cs",
+        "OutgameSdkFunctionInitialization.cs",
+        "OutgameSdkButtonRegistry.cs"
+      ],
+      "scope": "Twelve original action bodies restored against typed manager boundary. CloseAdsTips short-circuits cached feature15 check and localized toast; login true; share empty; remaining source manager routes preserved. Concrete managers and production startup scheduling pending."
+    },
+    "xyx-video-bridge": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type7703-56233.txt",
+        "disassembly/Type7703-56234.txt",
+        "disassembly/Type7567-55276.txt",
+        "disassembly/Type7567-55278.txt",
+        "disassembly/Type7566-55287.txt"
+      ],
+      "implementation": [
+        "OutgameXyxVideoBridge.cs",
+        "OutgameAdsVideoFlow.cs"
+      ],
+      "scope": "XYXADControl readiness forwarding and video callback conversion restored. Per-call captured flag, bool to numeric string JSON, warning-before-platform and repeated callback behavior retained. Native PlayMode now uses this conversion instead of handwritten JSON; external platform remains fixture."
+    },
+    "xyx-wx-module-chain": {
+      "implementationReady": true,
+      "productionConnected": false,
+      "source": [
+        "disassembly/Type9254-64920.txt",
+        "disassembly/Type9254-64921.txt",
+        "disassembly/Type7571-55311.txt",
+        "disassembly/Type7566-55287.txt"
+      ],
+      "implementation": [
+        "OutgameXyxVideoBridge.cs",
+        "OutgameAdsVideoFlow.cs",
+        "OutgameAdModuleEntry.cs",
+        "OutgameRewardVideoControllerHost.cs"
+      ],
+      "scope": "Recovered Bridge_WX_XYXFunction forwarding connected directly to existing WX module entry through an explicit constructor. Verified SDK flow -> XYX -> WX module -> request router -> native controller callback -> JSON -> SDK completion for cancellation and success. Production owner still pending; external controller is test fixture."
+    }
+  },
+  "unknowns": [
+    "Original fresh-profile defaults and migration formats",
+    "Source active A/B tables and remote flags",
+    "Payment/ad completion vs cancellation and persistence ordering",
+    "Time source, reset boundaries and activity enablement",
+    "Reachability of packaged shared modules"
+  ],
+  "source": "outgame/method-map.json"
+}

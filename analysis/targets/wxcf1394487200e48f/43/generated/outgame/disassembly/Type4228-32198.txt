@@ -1,0 +1,18 @@
+; Original class: UserInfoControl
+; Type4228.UnlockHeadBox; wasmcode1 function 19616; offset=7810783 size=35
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00772ee0  local.get [0]
+00772ee2  i32.load [2, 8]
+00772ee5  local.get [1]
+00772ee7  local.get [1]
+00772ee9  i32.const [15576] ; TABLE UserInfoManager.HaveHeadBox
+00772eed  call_indirect [3, 0]
+00772ef0  i32.eqz []
+00772ef1  if [-64]
+00772ef3    local.get [0]
+00772ef5    i32.load [2, 8]
+00772ef8    local.get [1]
+00772efa    local.get [1]
+00772efc    call [19613] ; UserInfoManager.AddHeadBox
+00772f00  end []
+00772f01  end []

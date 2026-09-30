@@ -1,0 +1,22 @@
+{
+  "status": "state3_branch_verified_full_dispatch_pending",
+  "source": [
+    "disassembly/Type4107-31525.txt",
+    "disassembly/Type4107-31474.txt",
+    "disassembly/Type4107-31479.txt"
+  ],
+  "verified": [
+    "OpenLoading then field48=true and field40=5f",
+    "InitializeEnemySkin then LevelControl field53=false",
+    "Close existing menu then append0.5second callback",
+    "Delayed callback queries current level at invocation, loads it, then initializes special scene",
+    "SetPlaySate ignores second bool and returns true after OnGamePlayState"
+  ],
+  "remaining": [
+    "Shared state notifications, special-mode bypass and complete state dispatch",
+    "Production DOTween scheduling and loading view owner",
+    "Concrete level loader/scene lifecycle plus account/menu/persistence/build/E2E"
+  ],
+  "checks": 563,
+  "freshPlayMode": false
+}

@@ -1,0 +1,69 @@
+; Original class: TimeModule
+; Type3534.Shutdown; wasmcode1 function 45163; offset=16082209 size=208
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00f56522  i32.const [4989631]
+00f56527  i32.load8_u [0, 0]
+00f5652a  i32.eqz []
+00f5652b  if [-64]
+00f5652d    i32.const [3947148]
+00f56532    i32.const [1605]
+00f56535    call_indirect [0, 0]
+00f56538    i32.const [4017148] ; METHOD TimeModule.GameFocus
+00f5653d    i32.const [1605]
+00f56540    call_indirect [0, 0]
+00f56543    i32.const [4017152] ; METHOD TimeModule.GamePause
+00f56548    i32.const [1605]
+00f5654b    call_indirect [0, 0]
+00f5654e    i32.const [4054900] ; STRING "GF_NewGamePause"
+00f56553    i32.const [1605]
+00f56556    call_indirect [0, 0]
+00f56559    i32.const [4054844] ; STRING "GF_GameFocus"
+00f5655e    i32.const [1605]
+00f56561    call_indirect [0, 0]
+00f56564    i32.const [4989631]
+00f56569    i32.const [1]
+00f5656b    i32.store8 [0, 0]
+00f5656e  end []
+00f5656f  i32.const [3947148]
+00f56574  i32.load [2, 0]
+00f56577  i32.const [109007]
+00f5657b  call_indirect [2, 0]
+00f5657e  local.set [1]
+00f56580  local.get [1]
+00f56582  local.get [0]
+00f56584  i32.const [4017152] ; METHOD TimeModule.GamePause
+00f56589  i32.load [2, 0]
+00f5658c  i32.const [0]
+00f5658e  i32.const [24682] ; TABLE EventHandler..ctor
+00f56592  call_indirect [6, 0]
+00f56595  i32.const [4054900] ; STRING "GF_NewGamePause"
+00f5659a  i32.load [2, 0]
+00f5659d  local.get [1]
+00f5659f  i32.const [0]
+00f565a1  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00f565a5  call_indirect [5, 0]
+00f565a8  i32.const [3947148]
+00f565ad  i32.load [2, 0]
+00f565b0  i32.const [109007]
+00f565b4  call_indirect [2, 0]
+00f565b7  local.set [1]
+00f565b9  local.get [1]
+00f565bb  local.get [0]
+00f565bd  i32.const [4017148] ; METHOD TimeModule.GameFocus
+00f565c2  i32.load [2, 0]
+00f565c5  i32.const [0]
+00f565c7  i32.const [24682] ; TABLE EventHandler..ctor
+00f565cb  call_indirect [6, 0]
+00f565ce  i32.const [4054844] ; STRING "GF_GameFocus"
+00f565d3  i32.load [2, 0]
+00f565d6  local.get [1]
+00f565d8  i32.const [0]
+00f565da  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+00f565de  call_indirect [5, 0]
+00f565e1  local.get [0]
+00f565e3  local.get [0]
+00f565e5  call [20870] ; TimeModule.ClearTimer
+00f565e9  local.get [0]
+00f565eb  i32.const [0]
+00f565ed  i32.store8 [0, 8]
+00f565f0  end []

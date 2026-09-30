@@ -1,0 +1,64 @@
+; Original class: BaseUI
+; Type3544.SetVisible; wasmcode function 20478; offset=9205827 size=160
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+008c7846  global.get [0]
+008c7848  i32.const [16]
+008c784a  i32.sub []
+008c784b  local.set [3]
+008c784d  local.get [3]
+008c784f  global.set [0]
+008c7851  i32.const [4989644]
+008c7856  i32.load8_u [0, 0]
+008c7859  i32.eqz []
+008c785a  if [-64]
+008c785c    i32.const [3928952]
+008c7861    call [900] ; 
+008c7864    i32.const [3926996]
+008c7869    call [900] ; 
+008c786c    i32.const [4054976] ; STRING "GF_VisibleUI"
+008c7871    call [900] ; 
+008c7874    i32.const [4989644]
+008c7879    i32.const [1]
+008c787b    i32.store8 [0, 0]
+008c787e  end []
+008c787f  local.get [0]
+008c7881  local.get [1]
+008c7883  i32.const [0]
+008c7885  call [9778] ; UIObject.SetVisible
+008c7888  i32.const [3926996]
+008c788d  i32.load [2, 0]
+008c7890  i32.const [2]
+008c7892  call [909] ; 
+008c7895  local.set [2]
+008c7897  local.get [2]
+008c7899  local.get [0]
+008c789b  call [905] ; 
+008c789e  local.get [2]
+008c78a0  local.get [0]
+008c78a2  i32.store [2, 16]
+008c78a5  local.get [3]
+008c78a7  local.get [1]
+008c78a9  i32.store8 [0, 15]
+008c78ac  i32.const [3928952]
+008c78b1  i32.load [2, 0]
+008c78b4  local.get [3]
+008c78b6  i32.const [15]
+008c78b8  i32.add []
+008c78b9  call [910] ; 
+008c78bc  local.set [0]
+008c78be  local.get [2]
+008c78c0  local.get [0]
+008c78c2  call [905] ; 
+008c78c5  local.get [2]
+008c78c7  local.get [0]
+008c78c9  i32.store [2, 20]
+008c78cc  i32.const [4054976] ; STRING "GF_VisibleUI"
+008c78d1  i32.load [2, 0]
+008c78d4  local.get [2]
+008c78d6  i32.const [0]
+008c78d8  call [1230] ; MsgDispatcher.SendMessage
+008c78db  local.get [3]
+008c78dd  i32.const [16]
+008c78df  i32.add []
+008c78e0  global.set [0]
+008c78e2  end []

@@ -1,0 +1,25 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.WriteFile; wasmcode1 function 68370; offset=21650717 size=64
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+014a5d1e  i32.const [5006733]
+014a5d23  i32.load8_u [0, 0]
+014a5d26  i32.eqz []
+014a5d27  if [-64]
+014a5d29    i32.const [4099912] ; STRING "utf8"
+014a5d2e    i32.const [1605]
+014a5d31    call_indirect [0, 0]
+014a5d34    i32.const [5006733]
+014a5d39    i32.const [1]
+014a5d3b    i32.store8 [0, 0]
+014a5d3e  end []
+014a5d3f  local.get [1]
+014a5d41  i32.const [64797] ; TABLE WX_Handler.get_Instance
+014a5d45  call_indirect [2, 0]
+014a5d48  local.get [1]
+014a5d4a  local.get [2]
+014a5d4c  local.get [3]
+014a5d4e  i32.const [4099912] ; STRING "utf8"
+014a5d53  i32.load [2, 0]
+014a5d56  local.get [1]
+014a5d58  call [18462] ; WX_Handler.WriteFile
+014a5d5c  end []

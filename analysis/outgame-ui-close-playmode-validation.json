@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "scope": "Real Play Mode animation and end-of-frame close on original activity prefab; isolated resource provider, no production account or native bundle loading",
+    "checks": [
+        "Scaled animation wait retains page and resources while game time is paused",
+        "Hide occurs with disposed flag while native object still exists",
+        "Dispose clears references before deferred native destruction and resource releases",
+        "Close notification follows actual native destruction and all handle releases",
+        "Second end-of-frame occurs after hide/dispose frame",
+        "Real close releases main, dynamic and custom handles in order"
+    ],
+    "error": "",
+    "hideFrame": 125,
+    "disposeFrame": 125,
+    "closeFrame": 126,
+    "batchMode": false
+}

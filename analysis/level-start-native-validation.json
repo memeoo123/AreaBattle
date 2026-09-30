@@ -1,0 +1,23 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native Unity coroutine scheduling for source4106 two scaled0.2second waits, native obstacle prefab acquisition/transform and actual LevelControl registry/lifecycle. WayLine/AI effects are explicitly recorded fixture services; full Level/Player/Main and tower resource graph remain unverified.",
+    "checks": [
+        "Concrete LevelControl factory initializes original global camp and561-row config maximum560",
+        "Actual source obstacle prefab gets native world position/rotation and local scale through level initialization",
+        "Native StartCoroutine executes Clear before first yield even while scaled time is paused",
+        "First WaitForSeconds does not advance during0.2 realtime seconds at timeScale0",
+        "First scaled0.2second wait precedes prefab and star-line initialization",
+        "Second WaitForSeconds remains paused before AI initialization",
+        "AI initialization follows the second native scaled0.2second wait",
+        "Level disposal clears shared state/registry while preserving source-owned native objects and config",
+        "Native pooled obstacle root destruction is deferred",
+        "Frame boundary destroys scheduled obstacle subtree and keeps main entity root/config"
+    ],
+    "scaledTimes": [
+        0.0,
+        0.20004619657993318,
+        0.20004619657993318,
+        0.40007320046424868
+    ]
+}

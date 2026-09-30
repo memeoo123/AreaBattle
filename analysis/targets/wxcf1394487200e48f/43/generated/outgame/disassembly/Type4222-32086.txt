@@ -1,0 +1,30 @@
+; Original class: Soldier
+; Type4222.ClearInSkill; wasmcode function 7128; offset=2710066 size=69
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00295a33  i32.const [5007162]
+00295a38  i32.load8_u [0, 0]
+00295a3b  i32.eqz []
+00295a3c  if [-64]
+00295a3e    i32.const [3977092]
+00295a43    call [900] ; 
+00295a46    i32.const [5007162]
+00295a4b    i32.const [1]
+00295a4d    i32.store8 [0, 0]
+00295a50  end []
+00295a51  local.get [0]
+00295a53  i32.load8_u [0, 92]
+00295a56  i32.eqz []
+00295a57  if [-64]
+00295a59    local.get [0]
+00295a5b    i32.load [2, 100]
+00295a5e    local.get [0]
+00295a60    i32.const [3977092]
+00295a65    i32.load [2, 0]
+00295a68    call [1351] ; 
+00295a6b    drop []
+00295a6c    local.get [0]
+00295a6e    i32.const [0]
+00295a70    local.get [0]
+00295a72    call [2658] ; Soldier.Clear
+00295a75  end []
+00295a76  end []

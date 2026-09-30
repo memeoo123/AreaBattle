@@ -1,0 +1,122 @@
+; Original class: UIModule
+; Type3558._GetUINode; wasmcode function 3070; offset=955156 size=309
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+000e9317  global.get [0]
+000e9319  i32.const [16]
+000e931b  i32.sub []
+000e931c  local.set [2]
+000e931e  local.get [2]
+000e9320  global.set [0]
+000e9322  i32.const [4989680]
+000e9327  i32.load8_u [0, 0]
+000e932a  i32.eqz []
+000e932b  if [-64]
+000e932d    i32.const [3929208]
+000e9332    call [900] ; 
+000e9335    i32.const [3960572]
+000e933a    call [900] ; 
+000e933d    i32.const [3960576]
+000e9342    call [900] ; 
+000e9345    i32.const [3926996]
+000e934a    call [900] ; 
+000e934d    i32.const [3936516]
+000e9352    call [900] ; 
+000e9355    i32.const [4104948] ; STRING "未找到UI节点:"
+000e935a    call [900] ; 
+000e935d    i32.const [4989680]
+000e9362    i32.const [1]
+000e9364    i32.store8 [0, 0]
+000e9367  end []
+000e9368  local.get [2]
+000e936a  i32.const [0]
+000e936c  i32.store [2, 12]
+000e936f  local.get [0]
+000e9371  i32.load [2, 32]
+000e9374  local.get [1]
+000e9376  local.get [2]
+000e9378  i32.const [12]
+000e937a  i32.add []
+000e937b  i32.const [3960576]
+000e9380  i32.load [2, 0]
+000e9383  call [1017] ; 
+000e9386  i32.eqz []
+000e9387  if [-64]
+000e9389    local.get [0]
+000e938b    i32.load [2, 20]
+000e938e    i32.const [0]
+000e9390    call [977] ; Component.get_transform
+000e9393    local.get [1]
+000e9395    i32.const [0]
+000e9397    call [1102] ; Transform.Find
+000e939a    local.set [3]
+000e939c    local.get [2]
+000e939e    local.get [3]
+000e93a0    i32.store [2, 12]
+000e93a3    i32.const [3936516]
+000e93a8    i32.load [2, 0]
+000e93ab    call [901] ; 
+000e93ae    block [-64]
+000e93b0      local.get [3]
+000e93b2      i32.const [0]
+000e93b4      i32.const [0]
+000e93b6      call [940] ; Object.op_Equality
+000e93b9      i32.eqz []
+000e93ba      if [-64]
+000e93bc        local.get [2]
+000e93be        i32.load [2, 12]
+000e93c1        local.set [3]
+000e93c3        br [1]
+000e93c5      end []
+000e93c6      i32.const [3926996]
+000e93cb      i32.load [2, 0]
+000e93ce      i32.const [1]
+000e93d0      call [909] ; 
+000e93d3      local.set [3]
+000e93d5      i32.const [4104948] ; STRING "未找到UI节点:"
+000e93da      i32.load [2, 0]
+000e93dd      local.get [1]
+000e93df      i32.const [0]
+000e93e1      call [921] ; String.Concat
+000e93e4      local.set [4]
+000e93e6      local.get [3]
+000e93e8      local.get [4]
+000e93ea      call [905] ; 
+000e93ed      local.get [3]
+000e93ef      local.get [4]
+000e93f1      i32.store [2, 16]
+000e93f4      i32.const [3929208]
+000e93f9      i32.load [2, 0]
+000e93fc      call [901] ; 
+000e93ff      local.get [3]
+000e9401      i32.const [0]
+000e9403      i32.const [2087] ; TABLE CLog.Error
+000e9406      global.set [3]
+000e9408      i32.const [2087] ; TABLE CLog.Error
+000e940b      call_indirect [0, 0]
+000e940e      local.get [0]
+000e9410      i32.load [2, 16]
+000e9413      i32.const [0]
+000e9415      call [1008] ; GameObject.get_transform
+000e9418      local.set [3]
+000e941a      local.get [2]
+000e941c      local.get [3]
+000e941e      i32.store [2, 12]
+000e9421    end []
+000e9422    local.get [0]
+000e9424    i32.load [2, 32]
+000e9427    local.get [1]
+000e9429    local.get [3]
+000e942b    i32.const [3960572]
+000e9430    i32.load [2, 0]
+000e9433    call [932] ; 
+000e9436  end []
+000e9437  local.get [2]
+000e9439  i32.load [2, 12]
+000e943c  local.set [0]
+000e943e  local.get [2]
+000e9440  i32.const [16]
+000e9442  i32.add []
+000e9443  global.set [0]
+000e9445  local.get [0]
+000e9447  return []
+000e9448  end []

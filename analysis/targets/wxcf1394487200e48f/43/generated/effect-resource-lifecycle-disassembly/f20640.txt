@@ -1,0 +1,31 @@
+008d1b0d i32.const [5011620]
+008d1b12 i32.load8_u [0, 0]
+008d1b15 i32.eqz []
+008d1b16 if [-64]
+008d1b18   i32.const [3959748]
+008d1b1d   call [900] ; 
+008d1b20   i32.const [3918664]
+008d1b25   call [900] ; 
+008d1b28   i32.const [3941916] ; type: WaitForEndOfFrame
+008d1b2d   call [900] ; 
+008d1b30   i32.const [5011620]
+008d1b35   i32.const [1]
+008d1b37   i32.store8 [0, 0]
+008d1b3a end []
+008d1b3b i32.const [3918664]
+008d1b40 i32.load [2, 0]
+008d1b43 call [903] ; 
+008d1b46 local.set [1]
+008d1b48 local.get [1]
+008d1b4a i32.const [3959748]
+008d1b4f i32.load [2, 0]
+008d1b52 call [951] ; 
+008d1b55 local.get [0]
+008d1b57 local.get [1]
+008d1b59 i32.store [2, 24]
+008d1b5c local.get [0]
+008d1b5e i32.const [3941916] ; type: WaitForEndOfFrame
+008d1b63 i32.load [2, 0]
+008d1b66 call [903] ; 
+008d1b69 i32.store [2, 28]
+008d1b6c end []

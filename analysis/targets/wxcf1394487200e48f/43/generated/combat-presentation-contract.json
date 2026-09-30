@@ -1,0 +1,512 @@
+{
+  "target": {
+    "appid": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "status": "static-confirmed-contract-with-explicit-unknowns",
+  "death": {
+    "trigger": "Soldier.Clear(false); ClearInSkill removes from direction list and calls Clear(false) only when Dying92=false.",
+    "entryPoints": [
+      {
+        "event": "contact death",
+        "animated": true,
+        "condition": "Either HP<=0 after simultaneous damage; independently clear each dead soldier and remove it from directional list.",
+        "source": {
+          "path": "generated/combat-disassembly/WayLine-100665501.txt",
+          "offset": "00456b1e / 00456bba"
+        }
+      },
+      {
+        "event": "arrow soldier hit",
+        "animated": true,
+        "condition": "Projectile callback invokes ClearInSkill; already dying is ignored.",
+        "source": {
+          "path": "generated/combat-disassembly/Type4208-100665265.txt",
+          "offset": "00706a1a..00706a24"
+        }
+      },
+      {
+        "event": "skill arrow rain / poison",
+        "animated": true,
+        "condition": "ClearInSkill on selected soldier, regardless of remaining HP."
+      },
+      {
+        "event": "skill1 enemy removal",
+        "animated": false,
+        "condition": "WayLine.RemoveAllEnemySoldier passes immediate=true to table9536 Soldier.Clear.",
+        "source": {
+          "path": "generated/combat-disassembly/WayLine-100665531.txt",
+          "offset": "006e1886..006e1890 / 006e1acf"
+        }
+      },
+      {
+        "event": "tower arrival / invalid voyage",
+        "animated": false,
+        "condition": "Clear(true) after damage, reinforcement, return to origin, exhausted voyage or no outgoing forwarding line.",
+        "source": {
+          "path": "generated/combat-disassembly/Tower-100665389.txt",
+          "offset": "0072578e / 007254b2 / 0072573d"
+        }
+      }
+    ],
+    "combatEligibility": "Dying model is retained but removed from the directional list immediately. ClearInSkill checks Dying92 to reject repeat hits. Simulation Active=false and Detach represent combat eligibility; do not restore Active for animation.",
+    "begin": {
+      "clearAttachedEffects": true,
+      "setDying": true,
+      "animation": "dead",
+      "loop": false,
+      "deltaLocalPosition": {
+        "x": "UnityEngine.Random.Range(-0.1f,0.1f)",
+        "y": 0,
+        "z": "independent UnityEngine.Random.Range(-0.1f,0.1f)"
+      },
+      "tween": "DOBlendableLocalMoveBy",
+      "duration": "currentClip.lengthSeconds - 0.05f",
+      "clock": "Unity scaled default DOTween; no SetUpdate override in this path",
+      "ease": "OutQuad q=1-(1-t)^2; serialized DOTweenSettings.defaultEaseType6, cross-reference generated/arrow-evidence.json; no per-call SetEase",
+      "source": {
+        "path": "generated/combat-disassembly/Soldier-100665356.txt",
+        "offset": "004b55e4..004b56b3"
+      }
+    },
+    "completion": "OnComplete Soldier.f15867 calls Clear(true): hide/null model, dispose animation player, reset Active/Dying and emit SoldierClearEvent. If model is missing at Clear(false), immediately fall back to Clear(true).",
+    "clips": [
+      {
+        "model": "soldier_100",
+        "clip": {
+          "name": "dead",
+          "startFrame": 0.0,
+          "lengthFrames": 42.0,
+          "lengthSeconds": 0.699999988079071,
+          "looping": 1,
+          "isNeedFix": 0,
+          "mesh": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          }
+        },
+        "runtimeLoop": false,
+        "removalDuration": 0.6499999761581421
+      },
+      {
+        "model": "soldier_200",
+        "clip": {
+          "name": "dead",
+          "startFrame": 0.0,
+          "lengthFrames": 41.0,
+          "lengthSeconds": 0.666700005531311,
+          "looping": 1,
+          "isNeedFix": 0,
+          "mesh": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          }
+        },
+        "runtimeLoop": false,
+        "removalDuration": 0.6166999936103821
+      },
+      {
+        "model": "soldier_300",
+        "clip": {
+          "name": "dead",
+          "startFrame": 0.0,
+          "lengthFrames": 48.0,
+          "lengthSeconds": 0.800000011920929,
+          "looping": 1,
+          "isNeedFix": 0,
+          "mesh": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          }
+        },
+        "runtimeLoop": false,
+        "removalDuration": 0.75
+      }
+    ],
+    "integration": "SoldierState.PlayDeathAnimation records the request. View retains only an already existing model until death duration completes; no dead model should be instantiated retrospectively."
+  },
+  "audio": {
+    "assets": [
+      {
+        "id": 1001,
+        "VoiceType": 1,
+        "Atype": 1,
+        "Ptype": 4,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 0.4,
+        "ResPath": "Audio/Loop/hcrzd_GameBGM.wav",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/hcrzd_GameBGM__CAB-4b85b44b955b598dfebb98a74c0d441e__-3678367947503024500__hcrzd_GameBGM.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2005,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/tower_occupy01.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/tower_occupy01__CAB-141a4f76fefed2051ce34726a090038c__-3739134193662596486__tower_occupy01.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2006,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/tower_occupy02.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/tower_occupy02__CAB-550d29b0e85e5c4e11ef12150b3824be__1963571458792908425__tower_occupy02.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2007,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/connectSuccess.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/connectSuccess__CAB-52cc25d618ca69b5a5f8fb22354d9698__2312191713216500226__connectSuccess.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2008,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/connectCut.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/connectCut__CAB-a052a1c9da21b435738f8d853a9bc15b__-4737527796967031235__connectCut.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2009,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/ui/overui_victory.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/overui_victory__CAB-4f007e0a98c76948c3a78a1dc76499f5__-6405993100484186150__overui_victory.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2010,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/ui/failUI_fail.mp3",
+        "recovered": [],
+        "assetStatus": "not-found-in-current-AudioClip-export"
+      },
+      {
+        "id": 2012,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/tower_soldier_collider.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/tower_soldier_collider__CAB-3e84066c9e69d386cf3fc3129f605985__-4508928443390033739__tower_soldier_collider.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2013,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/soldier_soldier_collider.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/soldier_soldier_collider__CAB-aef819a9bb42d0eebc4d3981cede88c5__-1808135266719325636__soldier_soldier_collider.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2014,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/tower_upgrade.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/tower_upgrade__CAB-8fa699e2b8ab2ad2e1cbed4892370b95__9137110666422217603__tower_upgrade.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      },
+      {
+        "id": 2015,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/startConnectLine.mp3",
+        "recovered": [
+          {
+            "path": "generated/unity-assets/AudioClip/startConnectLine__CAB-b167ccd05e5e7b4ad0bf660ca10a5e23__5901511715604038831__startConnectLine.m4a",
+            "extension": ".m4a",
+            "headerHex": "00000018667479706d70343200000000"
+          }
+        ],
+        "assetStatus": "recovered"
+      }
+    ],
+    "globalGate": {
+      "soundEnabled": "AudioControl.IsSoundEffect must be true",
+      "collisionThrottle": "2012 and 2013 each own a separate static int64 deadline. Skip if deadline > nowSeconds; otherwise set deadline=nowSeconds+1, then play. Equality permits playback.",
+      "source": {
+        "path": "generated/combat-disassembly/Raw-1201.txt",
+        "offset": "0006631b..000663df"
+      }
+    },
+    "wallClock": {
+      "formula": "(long)((DateTime.Now - new DateTime(1970,1,1,8,0,0)).Ticks * 1e-7)",
+      "clock": "local DateTime.Now, independent of Unity timeScale",
+      "baseConstruction": {
+        "path": "generated/combat-disassembly/Raw-15567.txt",
+        "offset": "0072991f..00729941"
+      },
+      "baseInitialization": {
+        "path": "generated/combat-disassembly/Raw-15572.txt",
+        "offset": "00729cbf..00729cc2"
+      },
+      "calculation": {
+        "path": "generated/combat-disassembly/Raw-3798.txt",
+        "offset": "00123e6d..00123ee5"
+      }
+    },
+    "events": [
+      {
+        "ids": [
+          2005,
+          2006
+        ],
+        "trigger": "Tower.ChangeCamp with actual oldCamp!=newCamp. Only changes involving PlayerCampID are audible: new player=>2005, lost player=>2006.",
+        "towerThrottle": "Require lastAudio168 < nowSeconds (strict); set lastAudio168=nowSeconds+1 within elapsed gate, including nonplayer changes.",
+        "callArgument": 1,
+        "source": {
+          "path": "generated/combat-disassembly/Tower-100665375.txt",
+          "offset": "00499fd5..0049a094"
+        }
+      },
+      {
+        "ids": [
+          2012
+        ],
+        "trigger": "WayLine arrival processing, if soldier camp or destination tower camp equals PlayerCampID.",
+        "callArgument": 3,
+        "source": {
+          "path": "generated/combat-disassembly/WayLine-100665501.txt",
+          "offset": "004566af / 004568f2"
+        }
+      },
+      {
+        "ids": [
+          2013
+        ],
+        "trigger": "Soldier contact only if at least one HP<=0 and either soldier camp equals PlayerCampID. One request per pair, not one per death.",
+        "callArgument": 3,
+        "source": {
+          "path": "generated/combat-disassembly/WayLine-100665501.txt",
+          "offset": "00456a91"
+        }
+      },
+      {
+        "ids": [
+          2014
+        ],
+        "trigger": "Tower grade increases (any camp); not grade reduction.",
+        "callArgument": 1,
+        "source": {
+          "path": "generated/combat-disassembly/Tower-100665420.txt",
+          "offset": "00725fe5"
+        }
+      },
+      {
+        "ids": [
+          2015,
+          2007,
+          2008
+        ],
+        "trigger": "Press tower / valid pair on release / cut hit, respectively.",
+        "source": "generated/controls-evidence.json: audio-feedback"
+      },
+      {
+        "ids": [
+          1001,
+          2009,
+          2010
+        ],
+        "triggerStatus": "asset mapping provided; exact BGM/result callback placement belongs to flow/HUD evidence, not re-audited here."
+      }
+    ],
+    "playMode": {
+      "1": "AudioParallel: requests may overlap; UIAudioManager.parallelNode8 caches this node.",
+      "2": "AudioSequence (not used by the listed ordinary effect callsites).",
+      "3": "AudioSingle: IDs2012/2013 share singleNode16. If a current action exists, queue the new one in pending20 and call the current action OnStop; completion callback clears current16 and immediately starts pending20. Otherwise start immediately.",
+      "binding": {
+        "path": "generated/combat-disassembly/Raw-9809.txt",
+        "offset": "00477af9 / 00477b2f / 00477b65"
+      },
+      "nodeCreation": {
+        "path": "generated/combat-disassembly/Raw-6271.txt",
+        "offset": "00224e3f..00224f12"
+      },
+      "singlePlay": {
+        "path": "generated/combat-disassembly/Raw-20547.txt",
+        "offset": "008cafca..008cb01c"
+      },
+      "singleCompletion": {
+        "path": "generated/combat-disassembly/Raw-20544.txt",
+        "offset": "008cadce..008cae3a"
+      },
+      "onceStop": {
+        "path": "generated/combat-disassembly/Raw-20555.txt",
+        "offset": "008cbacc..008cbb0f"
+      },
+      "parallelPlay": {
+        "path": "generated/combat-disassembly/Raw-20552.txt",
+        "offset": "008cb601..008cb627"
+      }
+    },
+    "unknown": "Exact asynchronous clip-load ordering is not original-runtime validated; active audio mode and channel exclusivity are static-confirmed."
+  },
+  "effects": [
+    {
+      "id": 104,
+      "res": "hit",
+      "configuredDuration": 1,
+      "trigger": "ChangeScore delta!=0 AND sourceCamp!=target camp before change AND Time.time-lastHit160>0.5f (strict). This tests source camp rather than sign of delta.",
+      "timeWrite": "Set lastHit160=Time.time after showing effect.",
+      "position": "target transform world position + Vector3.up * 0.257999986410141f",
+      "rotation": "Show overload supplies Vector3.zero Euler rotation",
+      "parent": null,
+      "effectSortingLayer": -1,
+      "effectOrder": -1,
+      "source": {
+        "path": "generated/combat-disassembly/Tower-100665425.txt",
+        "offset": "00499d58..00499e5e"
+      }
+    },
+    {
+      "id": 105,
+      "res": "LevelUp",
+      "configuredDuration": 1.5,
+      "trigger": "new grade > old grade in CheckGradeChange, any camp.",
+      "position": "target transform world position + Vector3.up * 0.257999986410141f",
+      "rotation": "Show overload supplies Vector3.zero Euler rotation",
+      "parent": null,
+      "effectSortingLayer": -1,
+      "effectOrder": 1,
+      "source": {
+        "path": "generated/combat-disassembly/Tower-100665420.txt",
+        "offset": "00725f03..00725fda"
+      }
+    },
+    {
+      "id": 106,
+      "res": "LevelUp_B",
+      "configuredDuration": 2,
+      "triggerStatus": "no active effect caller found; not a proven grade-down effect",
+      "audit": "Opcode-validated i32.const106 scan of all mapped Assembly-CSharp.dll/GFRunning.dll functions found only ADHelper.ReportGuideState and three TextVerticalGradientThreeColor methods. Dynamic/computed IDs remain possible."
+    }
+  ],
+  "effectScale": {
+    "rule": "Preserve instantiated prefab localScale. Type3 BaseEffect initialization writes parent(false), localPosition and localEulerAngles but does not write localScale. Root prefab Euler angles are overwritten with zero; child transforms remain serialized.",
+    "defaultParent": "EffectModule.WorldEffectRoot from Show12437 @005bef91; caller parent null is replaced here.",
+    "initialize": {
+      "path": "generated/combat-disassembly/Type3472-100667718.txt",
+      "offset": "00488e9c..00488fb9"
+    },
+    "show": {
+      "path": "generated/combat-disassembly/Raw-12437.txt",
+      "offset": "005bef77..005bf028"
+    }
+  },
+  "effectLifetime": {
+    "rule": "BaseEffect.Play after object readiness sets active then, for cfg.duration>0, awaits WaitForSeconds((float)duration) and calls Stop. Thus104 lasts1 scaled second and105 lasts1.5 scaled seconds after model readiness. The sprite clip duration does not replace EffectConfig.duration.",
+    "source": {
+      "path": "generated/combat-disassembly/Type3471-100667716.txt",
+      "offset": "00487ef4..00487fa9 / 004880fb"
+    }
+  },
+  "restartTimers": {
+    "lastHit160": "Tower.Init100665408 writes zero @00725cbd, but Unity Time.time continues across Restart: first post-restart hit is permitted immediately when application scaled time>.5.",
+    "lastAudio168": "No reset found in audited Tower Init/Clear bodies; object-pool reuse can retain this field. New allocation initializes zero."
+  },
+  "corePayload": "score event: SourceCamp, PreviousCamp (before mutation), Amount (original delta), Value (result score), Camp (after mutation). grade event EffectId105 only on upward transition.",
+  "limitations": [
+    "Async initialization/render frame order still requires original runtime validation.",
+    "106 absence is a bounded static finding, not a proof against computed/dynamic callers.",
+    "2010 configured audio has no matching current AudioClip export; do not substitute an invented clip."
+  ]
+}

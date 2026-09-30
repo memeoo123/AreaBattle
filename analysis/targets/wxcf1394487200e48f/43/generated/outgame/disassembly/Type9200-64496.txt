@@ -1,0 +1,21 @@
+; Original class: <>c
+; Type9200.<ShowBanner>b__10_0; wasmcode function 15341; offset=7400130 size=50
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0070eac3  i32.const [5006943]
+0070eac8  i32.load8_u [0, 0]
+0070eacb  i32.eqz []
+0070eacc  if [-64]
+0070eace    i32.const [4045520] ; STRING "BannerOnShowSuccess"
+0070ead3    call [900] ; 
+0070ead6    i32.const [5006943]
+0070eadb    i32.const [1]
+0070eadd    i32.store8 [0, 0]
+0070eae0  end []
+0070eae1  local.get [1]
+0070eae3  if [-64]
+0070eae5    i32.const [4045520] ; STRING "BannerOnShowSuccess"
+0070eaea    i32.load [2, 0]
+0070eaed    i32.const [0]
+0070eaef    call [1317] ; MsgDispatcher.SendMessage
+0070eaf2  end []
+0070eaf3  end []

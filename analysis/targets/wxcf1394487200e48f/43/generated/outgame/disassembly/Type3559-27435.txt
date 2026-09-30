@@ -1,0 +1,31 @@
+; Original class: UIObject
+; Type3559.VisibleImp; wasmcode function 6908; offset=2620903 size=74
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0027fde8  i32.const [4989694]
+0027fded  i32.load8_u [0, 0]
+0027fdf0  i32.eqz []
+0027fdf1  if [-64]
+0027fdf3    i32.const [3936516]
+0027fdf8    call [900] ; 
+0027fdfb    i32.const [4989694]
+0027fe00    i32.const [1]
+0027fe02    i32.store8 [0, 0]
+0027fe05  end []
+0027fe06  local.get [0]
+0027fe08  i32.load [2, 12]
+0027fe0b  local.set [2]
+0027fe0d  i32.const [3936516]
+0027fe12  i32.load [2, 0]
+0027fe15  call [901] ; 
+0027fe18  local.get [2]
+0027fe1a  i32.const [0]
+0027fe1c  i32.const [0]
+0027fe1e  call [946] ; Object.op_Inequality
+0027fe21  if [-64]
+0027fe23    local.get [0]
+0027fe25    i32.load [2, 12]
+0027fe28    local.get [1]
+0027fe2a    i32.const [0]
+0027fe2c    call [3955] ; ExtensionMethods.SetVisible
+0027fe2f  end []
+0027fe30  end []

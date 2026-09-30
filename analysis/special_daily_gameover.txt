@@ -1,0 +1,112 @@
+; DailyChallengeActivity.aobX]Xk; wasmcode1 function 66168; offset=21022837 size=296
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0140c878  i32.const [5010151]
+0140c87d  i32.load8_u [0, 0]
+0140c880  i32.eqz []
+0140c881  if [-64]
+0140c883    i32.const [3953440]
+0140c888    i32.const [1605]
+0140c88b    call_indirect [0, 0]
+0140c88e    i32.const [3931796] ; type: ExtesionMethod
+0140c893    i32.const [1605]
+0140c896    call_indirect [0, 0]
+0140c899    i32.const [4039296] ; literal: ', Victory'
+0140c89e    i32.const [1605]
+0140c8a1    call_indirect [0, 0]
+0140c8a4    i32.const [5010151]
+0140c8a9    i32.const [1]
+0140c8ab    i32.store8 [0, 0]
+0140c8ae  end []
+0140c8af  block [-64]
+0140c8b1    local.get [0]
+0140c8b3    i32.load [2, 20]
+0140c8b6    i32.load [2, 12]
+0140c8b9    i32.const [3]
+0140c8bb    i32.ne []
+0140c8bc    br_if [0]
+0140c8be    local.get [0]
+0140c8c0    i32.load8_u [0, 69]
+0140c8c3    i32.eqz []
+0140c8c4    br_if [0]
+0140c8c6    i32.const [0]
+0140c8c8    i32.const [15910] ; table candidate: ADHelper.get_Instance
+0140c8cc    call_indirect [2, 0]
+0140c8cf    local.set [1]
+0140c8d1    local.get [0]
+0140c8d3    i32.load [2, 20]
+0140c8d6    i32.const [0]
+0140c8d8    i32.const [18409] ; table candidate: ActivityItemData.get_Config
+0140c8dc    call_indirect [1, 0]
+0140c8df    i32.load [2, 24]
+0140c8e2    i32.load [2, 8]
+0140c8e5    local.set [2]
+0140c8e7    i32.const [3953440]
+0140c8ec    i32.load [2, 0]
+0140c8ef    i32.const [10272]
+0140c8f3    call_indirect [2, 0]
+0140c8f6    i32.const [0]
+0140c8f8    i32.const [9608] ; table candidate: LevelControl.get_CurLevel
+0140c8fc    call_indirect [1, 0]
+0140c8ff    local.set [3]
+0140c901    i32.const [3931796] ; type: ExtesionMethod
+0140c906    i32.load [2, 0]
+0140c909    i32.const [1149]
+0140c90c    call_indirect [0, 0]
+0140c90f    local.get [1]
+0140c911    local.get [2]
+0140c913    local.get [3]
+0140c915    i32.const [0]
+0140c917    i32.const [0]
+0140c919    i32.const [15929] ; table candidate: ExtesionMethod.IntToString
+0140c91d    call_indirect [3, 0]
+0140c920    local.get [0]
+0140c922    local.get [0]
+0140c924    call [1901] ; DailyChallengeActivity.iv^Y
+0140c927    i32.load [2, 16]
+0140c92a    i32.const [0]
+0140c92c    i32.const [0]
+0140c92e    i32.const [15929] ; table candidate: ExtesionMethod.IntToString
+0140c932    call_indirect [3, 0]
+0140c935    local.get [0]
+0140c937    local.get [0]
+0140c939    call [1901] ; DailyChallengeActivity.iv^Y
+0140c93c    local.get [0]
+0140c93e    local.get [0]
+0140c940    call [1901] ; DailyChallengeActivity.iv^Y
+0140c943    i32.load [2, 16]
+0140c946    local.get [0]
+0140c948    call [14264] ; DailyChallengeData.GetLevel
+0140c94b    i32.const [0]
+0140c94d    i32.const [0]
+0140c94f    i32.const [15929] ; table candidate: ExtesionMethod.IntToString
+0140c953    call_indirect [3, 0]
+0140c956    i32.const [4039296] ; literal: ', Victory'
+0140c95b    i32.load [2, 0]
+0140c95e    i32.const [0]
+0140c960    i32.const [1476]
+0140c963    call_indirect [3, 0]
+0140c966    i32.const [0]
+0140c968    i32.const [15896] ; table candidate: ADHelper.Report_activity_complete
+0140c96c    call_indirect [10, 0]
+0140c96f    local.get [0]
+0140c971    local.get [0]
+0140c973    local.get [0]
+0140c975    call [4969] ; DailyChallengeActivity.get_CurChallengeId
+0140c978    local.get [0]
+0140c97a    call [30229] ; DailyChallengeActivity.GetAward
+0140c97e    local.get [0]
+0140c980    local.get [0]
+0140c982    call [1901] ; DailyChallengeActivity.iv^Y
+0140c985    local.set [1]
+0140c987    local.get [1]
+0140c989    local.get [1]
+0140c98b    i32.load [2, 16]
+0140c98e    i32.const [1]
+0140c990    i32.add []
+0140c991    i32.store [2, 16]
+0140c994    local.get [0]
+0140c996    i32.const [0]
+0140c998    i32.store8 [0, 69]
+0140c99b  end []
+0140c99c  end []
+

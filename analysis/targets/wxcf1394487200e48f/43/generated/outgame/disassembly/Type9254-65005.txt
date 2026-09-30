@@ -1,0 +1,27 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.GetGameExptParam; wasmcode1 function 68414; offset=21659030 size=69
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+014a7d97  i32.const [5006742]
+014a7d9c  i32.load8_u [0, 0]
+014a7d9f  i32.eqz []
+014a7da0  if [-64]
+014a7da2    i32.const [3938284]
+014a7da7    i32.const [1605]
+014a7daa    call_indirect [0, 0]
+014a7dad    i32.const [5006742]
+014a7db2    i32.const [1]
+014a7db4    i32.store8 [0, 0]
+014a7db7  end []
+014a7db8  i32.const [3938284]
+014a7dbd  i32.load [2, 0]
+014a7dc0  i32.const [1149]
+014a7dc3  call_indirect [0, 0]
+014a7dc6  local.get [1]
+014a7dc8  i32.const [64606] ; TABLE SDKHandle.get_Instance
+014a7dcc  call_indirect [2, 0]
+014a7dcf  local.get [1]
+014a7dd1  local.get [2]
+014a7dd3  local.get [1]
+014a7dd5  call [22993] ; SDKHandle.GetGameExptParam
+014a7dd9  return []
+014a7dda  end []

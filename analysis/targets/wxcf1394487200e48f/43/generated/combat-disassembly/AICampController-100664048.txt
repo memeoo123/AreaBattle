@@ -1,0 +1,17 @@
+; AICampController.OnGamePlayState; wasmcode function 13410; offset=6492809 size=31
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0063128a  local.get [0]
+0063128c  local.get [1]
+0063128e  i32.store [2, 12]
+00631291  local.get [1]
+00631293  i32.const [3]
+00631295  i32.eq []
+00631296  if [-64]
+00631298    local.get [0]
+0063129a    local.get [0]
+0063129c    call [8371] ; AICampController.Clear
+0063129f    local.get [0]
+006312a1    i32.const [1]
+006312a3    i32.store8 [0, 8]
+006312a6  end []
+006312a7  end []

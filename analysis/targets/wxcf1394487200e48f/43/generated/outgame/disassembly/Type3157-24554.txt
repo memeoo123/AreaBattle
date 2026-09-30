@@ -1,0 +1,21 @@
+; Original class: AdsManager
+; Type3157.IsCanShowTimerInters; wasmcode1 function 70618; offset=22349059 size=51
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+01550504  i32.const [5010551]
+01550509  i32.load8_u [0, 0]
+0155050c  i32.eqz []
+0155050d  if [-64]
+0155050f    i32.const [4040676] ; STRING "1"
+01550514    i32.const [1605]
+01550517    call_indirect [0, 0]
+0155051a    i32.const [5010551]
+0155051f    i32.const [1]
+01550521    i32.store8 [0, 0]
+01550524  end []
+01550525  local.get [0]
+01550527  i32.const [4040676] ; STRING "1"
+0155052c  i32.load [2, 0]
+0155052f  local.get [0]
+01550531  call [14992] ; AdsManager.IsCanShowInters
+01550534  return []
+01550535  end []

@@ -1,0 +1,20 @@
+; Original class: ProcessControl
+; Type3903..ctor; wasmcode function 18159; offset=8065821 size=48
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007b131e  i32.const [5009996]
+007b1323  i32.load8_u [0, 0]
+007b1326  i32.eqz []
+007b1327  if [-64]
+007b1329    i32.const [3953500]
+007b132e    call [900] ; 
+007b1331    i32.const [5009996]
+007b1336    i32.const [1]
+007b1338    i32.store8 [0, 0]
+007b133b  end []
+007b133c  local.get [0]
+007b133e  i32.const [1]
+007b1340  i32.store8 [0, 24]
+007b1343  i32.const [3953500]
+007b1348  i32.load [2, 0]
+007b134b  drop []
+007b134c  end []

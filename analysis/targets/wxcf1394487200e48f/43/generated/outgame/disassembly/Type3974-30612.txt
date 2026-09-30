@@ -1,0 +1,47 @@
+; Original class: MineGameMain
+; Type3974.~ejn}; wasmcode function 18538; offset=8352151 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007f7198  i32.const [5010130]
+007f719d  i32.load8_u [0, 0]
+007f71a0  i32.eqz []
+007f71a1  if [-64]
+007f71a3    i32.const [4000604]
+007f71a8    call [900] ; 
+007f71ab    i32.const [3932308]
+007f71b0    call [900] ; 
+007f71b3    i32.const [4105060] ; STRING "核心模块初始化完成"
+007f71b8    call [900] ; 
+007f71bb    i32.const [5010130]
+007f71c0    i32.const [1]
+007f71c2    i32.store8 [0, 0]
+007f71c5  end []
+007f71c6  i32.const [3932308]
+007f71cb  i32.load [2, 0]
+007f71ce  call [901] ; 
+007f71d1  i32.const [0]
+007f71d3  call [4419] ; GameFrameEntry.Start
+007f71d6  local.get [0]
+007f71d8  i32.const [4105060] ; STRING "核心模块初始化完成"
+007f71dd  i32.load [2, 0]
+007f71e0  local.get [0]
+007f71e2  call [2125] ; MineGameMain.O{P^xr
+007f71e5  i32.const [0]
+007f71e7  call [1910] ; GamePath.get_Instance
+007f71ea  i32.const [0]
+007f71ec  call [5052] ; GamePath.FindMineGamePath
+007f71ef  local.get [0]
+007f71f1  i32.const [1]
+007f71f3  i32.store8 [0, 38]
+007f71f6  i32.const [4000604]
+007f71fb  i32.load [2, 0]
+007f71fe  call [1051] ; 
+007f7201  local.get [0]
+007f7203  i32.load [2, 28]
+007f7206  local.get [0]
+007f7208  i32.load [2, 32]
+007f720b  i32.const [0]
+007f720d  call [4979] ; LangModule.SetLocalLangLibrary
+007f7210  local.get [0]
+007f7212  local.get [0]
+007f7214  call [5880] ; MineGameMain.OcsUh
+007f7217  end []

@@ -1,0 +1,40 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.kRNse; wasmcode function 11004; offset=5326070 size=96
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005144f7  i32.const [5007515]
+005144fc  i32.load8_u [0, 0]
+005144ff  i32.eqz []
+00514500  if [-64]
+00514502    i32.const [3953392]
+00514507    call [900] ; 
+0051450a    i32.const [5007515]
+0051450f    i32.const [1]
+00514511    i32.store8 [0, 0]
+00514514  end []
+00514515  local.get [0]
+00514517  i32.load [2, 128]
+0051451b  local.set [1]
+0051451d  local.get [1]
+0051451f  if [-64]
+00514521    i32.const [3953392]
+00514526    i32.load [2, 0]
+00514529    call [935] ; 
+0051452c    i32.const [0]
+0051452e    call [6010] ; GuideBookControl.HaveAnyUnGetGuideReward
+00514531    if [-64]
+00514533      i32.const [1]
+00514535      local.set [0]
+00514537    else []
+00514538      i32.const [3953392]
+0051453d      i32.load [2, 0]
+00514540      call [935] ; 
+00514543      i32.const [0]
+00514545      call [6009] ; GuideBookControl.HaveAnyUnGetTipReward
+00514548      local.set [0]
+0051454a    end []
+0051454b    local.get [1]
+0051454d    local.get [0]
+0051454f    i32.const [0]
+00514551    call [949] ; GameObject.SetActive
+00514554  end []
+00514555  end []

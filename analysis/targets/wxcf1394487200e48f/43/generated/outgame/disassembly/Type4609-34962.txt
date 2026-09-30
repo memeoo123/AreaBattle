@@ -1,0 +1,68 @@
+; Original class: LoginServer
+; Type4609.itk; wasmcode function 18746; offset=8465878 size=194
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00812dd7  i32.const [5001574]
+00812ddc  i32.load8_u [0, 0]
+00812ddf  i32.eqz []
+00812de0  if [-64]
+00812de2    i32.const [3929208]
+00812de7    call [900] ; 
+00812dea    i32.const [3948076]
+00812def    call [900] ; 
+00812df2    i32.const [3926996]
+00812df7    call [900] ; 
+00812dfa    i32.const [4067120] ; STRING "ReceiveLogin参数错误"
+00812dff    call [900] ; 
+00812e02    i32.const [4061260] ; STRING "Login:ReceiveLogin参数错误"
+00812e07    call [900] ; 
+00812e0a    i32.const [5001574]
+00812e0f    i32.const [1]
+00812e11    i32.store8 [0, 0]
+00812e14  end []
+00812e15  block [-64]
+00812e17    local.get [1]
+00812e19    if [-64]
+00812e1b      local.get [1]
+00812e1d      i32.load [2, 12]
+00812e20      br_if [1]
+00812e22    end []
+00812e23    i32.const [3926996]
+00812e28    i32.load [2, 0]
+00812e2b    i32.const [1]
+00812e2d    call [909] ; 
+00812e30    local.set [2]
+00812e32    local.get [2]
+00812e34    i32.const [4061260] ; STRING "Login:ReceiveLogin参数错误"
+00812e39    i32.load [2, 0]
+00812e3c    call [905] ; 
+00812e3f    local.get [2]
+00812e41    i32.const [4061260] ; STRING "Login:ReceiveLogin参数错误"
+00812e46    i32.load [2, 0]
+00812e49    i32.store [2, 16]
+00812e4c    i32.const [3929208]
+00812e51    i32.load [2, 0]
+00812e54    call [901] ; 
+00812e57    local.get [2]
+00812e59    i32.const [0]
+00812e5b    i32.const [2087] ; TABLE CLog.Error
+00812e5e    global.set [3]
+00812e60    i32.const [2087] ; TABLE CLog.Error
+00812e63    call_indirect [0, 0]
+00812e66    local.get [0]
+00812e68    i32.const [4067120] ; STRING "ReceiveLogin参数错误"
+00812e6d    i32.load [2, 0]
+00812e70    local.get [1]
+00812e72    i32.const [18155] ; TABLE LoginServer.Nohli}
+00812e76    global.set [3]
+00812e78    i32.const [18155] ; TABLE LoginServer.Nohli}
+00812e7c    call_indirect [2, 0]
+00812e7f  end []
+00812e80  local.get [0]
+00812e82  local.get [1]
+00812e84  i32.load [2, 16]
+00812e87  i32.const [3948076]
+00812e8c  i32.load [2, 0]
+00812e8f  call [927] ; 
+00812e92  local.get [1]
+00812e94  call [11461] ; LoginServer.vVXUu
+00812e97  end []

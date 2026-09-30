@@ -1,0 +1,66 @@
+; Original class: Path
+; Type1122.GetTempPath; wasmcode function 18281; offset=8149855 size=172
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+007c5b62  i32.const [5023485]
+007c5b67  i32.load8_u [0, 0]
+007c5b6a  i32.eqz []
+007c5b6b  if [-64]
+007c5b6d    i32.const [3929396]
+007c5b72    call [900] ; 
+007c5b75    i32.const [3936928]
+007c5b7a    call [900] ; 
+007c5b7d    i32.const [5023485]
+007c5b82    i32.const [1]
+007c5b84    i32.store8 [0, 0]
+007c5b87  end []
+007c5b88  i32.const [3936928]
+007c5b8d  i32.load [2, 0]
+007c5b90  call [901] ; 
+007c5b93  block [-64]
+007c5b95    call [9046] ; 
+007c5b98    local.set [0]
+007c5b9a    local.get [0]
+007c5b9c    i32.load [2, 8]
+007c5b9f    local.set [1]
+007c5ba1    local.get [1]
+007c5ba3    i32.const [1]
+007c5ba5    i32.lt_s []
+007c5ba6    br_if [0]
+007c5ba8    local.get [0]
+007c5baa    local.get [1]
+007c5bac    i32.const [1]
+007c5bae    i32.sub []
+007c5baf    i32.const [0]
+007c5bb1    call [936] ; String.get_Chars
+007c5bb4    local.set [1]
+007c5bb6    i32.const [3936928]
+007c5bbb    i32.load [2, 0]
+007c5bbe    call [901] ; 
+007c5bc1    local.get [1]
+007c5bc3    i32.const [3936928]
+007c5bc8    i32.load [2, 0]
+007c5bcb    i32.load [2, 92]
+007c5bce    i32.load16_u [1, 6]
+007c5bd1    i32.eq []
+007c5bd2    br_if [0]
+007c5bd4    i32.const [3936928]
+007c5bd9    i32.load [2, 0]
+007c5bdc    call [901] ; 
+007c5bdf    i32.const [3929396]
+007c5be4    i32.load [2, 0]
+007c5be7    call [901] ; 
+007c5bea    local.get [0]
+007c5bec    i32.const [3936928]
+007c5bf1    i32.load [2, 0]
+007c5bf4    i32.load [2, 92]
+007c5bf7    i32.const [6]
+007c5bf9    i32.add []
+007c5bfa    i32.const [0]
+007c5bfc    call [1520] ; Char.ToString
+007c5bff    i32.const [0]
+007c5c01    call [921] ; String.Concat
+007c5c04    local.set [0]
+007c5c06  end []
+007c5c07  local.get [0]
+007c5c09  return []
+007c5c0a  end []

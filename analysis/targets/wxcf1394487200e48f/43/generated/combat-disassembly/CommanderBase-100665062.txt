@@ -1,0 +1,22 @@
+; CommanderBase.GetSkill; wasmcode function 6203; offset=2217263 size=54
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0021d530  i32.const [5010293]
+0021d535  i32.load8_u [0, 0]
+0021d538  i32.eqz []
+0021d539  if [-64]
+0021d53b    i32.const [3977004]
+0021d540    call [900] ; 
+0021d543    i32.const [5010293]
+0021d548    i32.const [1]
+0021d54a    i32.store8 [0, 0]
+0021d54d  end []
+0021d54e  local.get [0]
+0021d550  i32.load [2, 8]
+0021d553  local.get [1]
+0021d555  i32.const [1]
+0021d557  i32.sub []
+0021d558  i32.const [3977004]
+0021d55d  i32.load [2, 0]
+0021d560  call [930] ; 
+0021d563  return []
+0021d564  end []

@@ -1,0 +1,41 @@
+; Original class: UIVideoBtn
+; Type10741.AddVideoPlayCallBack; wasmcode function 1961; offset=607851 size=105
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0009466c  i32.const [5001947]
+00094671  i32.load8_u [0, 0]
+00094674  i32.eqz []
+00094675  if [-64]
+00094677    i32.const [3986880]
+0009467c    call [900] ; 
+0009467f    i32.const [3941508]
+00094684    call [900] ; 
+00094687    i32.const [5001947]
+0009468c    i32.const [1]
+0009468e    i32.store8 [0, 0]
+00094691  end []
+00094692  local.get [0]
+00094694  i32.load [2, 184]
+00094698  local.set [2]
+0009469a  local.get [2]
+0009469c  i32.eqz []
+0009469d  if [-64]
+0009469f    i32.const [3941508]
+000946a4    i32.load [2, 0]
+000946a7    call [903] ; 
+000946aa    local.set [2]
+000946ac    local.get [2]
+000946ae    i32.const [0]
+000946b0    call [4192] ; VideoBtnEvent..ctor
+000946b3    local.get [0]
+000946b5    local.get [2]
+000946b7    i32.store [2, 184]
+000946bb    local.get [0]
+000946bd    i32.load [2, 184]
+000946c1    local.set [2]
+000946c3  end []
+000946c4  local.get [2]
+000946c6  local.get [1]
+000946c8  i32.const [3986880]
+000946cd  i32.load [2, 0]
+000946d0  call [1546] ; 
+000946d3  end []

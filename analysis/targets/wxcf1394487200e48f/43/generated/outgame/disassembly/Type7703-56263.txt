@@ -1,0 +1,82 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.SetGameLoginAccountId; wasmcode function 14671; offset=7200466 size=233
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+006dded3  i32.const [5005437]
+006dded8  i32.load8_u [0, 0]
+006ddedb  i32.eqz []
+006ddedc  if [-64]
+006ddede    i32.const [3937972]
+006ddee3    call [900] ; 
+006ddee6    i32.const [3927212]
+006ddeeb    call [900] ; 
+006ddeee    i32.const [4106164] ; STRING "调用小游戏:SetGameLoginAccountId,accountId:"
+006ddef3    call [900] ; 
+006ddef6    i32.const [4039468] ; STRING ",serverGroupId:"
+006ddefb    call [900] ; 
+006ddefe    i32.const [4039472] ; STRING ",serverId:"
+006ddf03    call [900] ; 
+006ddf06    i32.const [5005437]
+006ddf0b    i32.const [1]
+006ddf0d    i32.store8 [0, 0]
+006ddf10  end []
+006ddf11  i32.const [3927212]
+006ddf16  i32.load [2, 0]
+006ddf19  i32.const [6]
+006ddf1b  call [909] ; 
+006ddf1e  local.set [0]
+006ddf20  local.get [0]
+006ddf22  i32.const [4106164] ; STRING "调用小游戏:SetGameLoginAccountId,accountId:"
+006ddf27  i32.load [2, 0]
+006ddf2a  call [905] ; 
+006ddf2d  local.get [0]
+006ddf2f  i32.const [4106164] ; STRING "调用小游戏:SetGameLoginAccountId,accountId:"
+006ddf34  i32.load [2, 0]
+006ddf37  i32.store [2, 16]
+006ddf3a  local.get [0]
+006ddf3c  local.get [1]
+006ddf3e  call [905] ; 
+006ddf41  local.get [0]
+006ddf43  local.get [1]
+006ddf45  i32.store [2, 20]
+006ddf48  local.get [0]
+006ddf4a  i32.const [4039468] ; STRING ",serverGroupId:"
+006ddf4f  i32.load [2, 0]
+006ddf52  call [905] ; 
+006ddf55  local.get [0]
+006ddf57  i32.const [4039468] ; STRING ",serverGroupId:"
+006ddf5c  i32.load [2, 0]
+006ddf5f  i32.store [2, 24]
+006ddf62  local.get [0]
+006ddf64  local.get [2]
+006ddf66  call [905] ; 
+006ddf69  local.get [0]
+006ddf6b  local.get [2]
+006ddf6d  i32.store [2, 28]
+006ddf70  local.get [0]
+006ddf72  i32.const [4039472] ; STRING ",serverId:"
+006ddf77  i32.load [2, 0]
+006ddf7a  call [905] ; 
+006ddf7d  local.get [0]
+006ddf7f  i32.const [4039472] ; STRING ",serverId:"
+006ddf84  i32.load [2, 0]
+006ddf87  i32.store [2, 32]
+006ddf8a  local.get [0]
+006ddf8c  local.get [3]
+006ddf8e  call [905] ; 
+006ddf91  local.get [0]
+006ddf93  local.get [3]
+006ddf95  i32.store [2, 36]
+006ddf98  local.get [0]
+006ddf9a  i32.const [0]
+006ddf9c  call [1024] ; String.Concat
+006ddf9f  local.get [0]
+006ddfa1  call [999] ; XYXLOG.Log
+006ddfa4  i32.const [3937972]
+006ddfa9  i32.load [2, 0]
+006ddfac  call [901] ; 
+006ddfaf  local.get [1]
+006ddfb1  local.get [2]
+006ddfb3  local.get [3]
+006ddfb5  local.get [0]
+006ddfb7  call [10733] ; ReporterField.SetAccount_id
+006ddfba  end []

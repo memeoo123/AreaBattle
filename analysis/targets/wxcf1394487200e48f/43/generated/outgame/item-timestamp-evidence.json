@@ -1,0 +1,166 @@
+{
+  "source": [
+    "disassembly/Type3531-27247.txt",
+    "disassembly/Type3531-27248.txt",
+    "disassembly/Type3534-27293.txt"
+  ],
+  "timeModuleFields": [
+    {
+      "name": "now",
+      "metadataType": 15023,
+      "offset": 0
+    },
+    {
+      "name": "startTime",
+      "metadataType": 15023,
+      "offset": 8
+    },
+    {
+      "name": "isInit",
+      "metadataType": 13767,
+      "offset": 16
+    },
+    {
+      "name": "timeDifference",
+      "metadataType": 15391,
+      "offset": 24
+    },
+    {
+      "name": "defaultTime",
+      "metadataType": 15024,
+      "offset": 32
+    },
+    {
+      "name": "lastTime",
+      "metadataType": 15388,
+      "offset": 16
+    },
+    {
+      "name": "lastMillisecond",
+      "metadataType": 15388,
+      "offset": 24
+    },
+    {
+      "name": "lastMinute",
+      "metadataType": 15388,
+      "offset": 32
+    },
+    {
+      "name": "timeId",
+      "metadataType": 17865,
+      "offset": 40
+    },
+    {
+      "name": "unityRealTime",
+      "metadataType": 15388,
+      "offset": 48
+    },
+    {
+      "name": "completeHandles",
+      "metadataType": 4564,
+      "offset": 56
+    },
+    {
+      "name": "completeTimes",
+      "metadataType": 4483,
+      "offset": 60
+    },
+    {
+      "name": "everySecondHandles",
+      "metadataType": 4557,
+      "offset": 64
+    },
+    {
+      "name": "everyMillisecondHandles",
+      "metadataType": 4557,
+      "offset": 68
+    },
+    {
+      "name": "everyMinuteHandles",
+      "metadataType": 4557,
+      "offset": 72
+    },
+    {
+      "name": "loopTimers",
+      "metadataType": 4553,
+      "offset": 76
+    },
+    {
+      "name": "IsFocus",
+      "metadataType": 13768,
+      "offset": 40
+    },
+    {
+      "name": "AddLoopTimerData",
+      "metadataType": 8947,
+      "offset": 80
+    },
+    {
+      "name": "loopTimerRemoveID",
+      "metadataType": 8647,
+      "offset": 84
+    },
+    {
+      "name": "removeList",
+      "metadataType": 8647,
+      "offset": 88
+    },
+    {
+      "name": "dicUnityTimer",
+      "metadataType": 4555,
+      "offset": 92
+    },
+    {
+      "name": "dicEverySecondTimer",
+      "metadataType": 4555,
+      "offset": 96
+    },
+    {
+      "name": "dicEveryMinuteTimer",
+      "metadataType": 4555,
+      "offset": 100
+    },
+    {
+      "name": "NewAddUnityTimer",
+      "metadataType": 8993,
+      "offset": 104
+    },
+    {
+      "name": "NewAddEverySecond",
+      "metadataType": 8993,
+      "offset": 108
+    },
+    {
+      "name": "NewAddEveryMinute",
+      "metadataType": 8993,
+      "offset": 112
+    },
+    {
+      "name": "CompleteUnityTimer",
+      "metadataType": 8647,
+      "offset": 116
+    },
+    {
+      "name": "CashCompleteUnityTimer",
+      "metadataType": 8647,
+      "offset": 120
+    }
+  ],
+  "epoch": {
+    "year": 1970,
+    "month": 1,
+    "day": 1,
+    "hour": 8,
+    "minute": 0,
+    "second": 0,
+    "kind": "Unspecified",
+    "staticOffset": 32
+  },
+  "encoding": "Subtract DateTime directly; TotalMilliseconds; truncate signed Int64 toward zero. No UTC conversion.",
+  "decoding": "Epoch.AddMilliseconds((double)value)",
+  "usageResolution": {
+    "3940180": "TimeModule Type3534",
+    "3930616": "DateTime Type162",
+    "3940184": "TimeSpan Type273"
+  }
+}

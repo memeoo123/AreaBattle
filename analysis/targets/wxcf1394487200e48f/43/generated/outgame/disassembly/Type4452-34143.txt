@@ -1,0 +1,29 @@
+; Original class: ProcedureStarGame
+; Type4452.Z^np; wasmcode1 function 54290; offset=17956374 size=74
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0111fe17  i32.const [5009782]
+0111fe1c  i32.load8_u [0, 0]
+0111fe1f  i32.eqz []
+0111fe20  if [-64]
+0111fe22    i32.const [3953432]
+0111fe27    i32.const [1605]
+0111fe2a    call_indirect [0, 0]
+0111fe2d    i32.const [5009782]
+0111fe32    i32.const [1]
+0111fe34    i32.store8 [0, 0]
+0111fe37  end []
+0111fe38  local.get [1]
+0111fe3a  i32.const [0]
+0111fe3c  i32.const [2502] ; TABLE Int32.Parse
+0111fe3f  call_indirect [1, 0]
+0111fe42  local.set [0]
+0111fe44  i32.const [3953432]
+0111fe49  i32.load [2, 0]
+0111fe4c  i32.const [10272]
+0111fe50  call_indirect [2, 0]
+0111fe53  i32.const [11001]
+0111fe57  local.get [0]
+0111fe59  i32.const [0]
+0111fe5b  call [2973] ; ItemModuleControl.ChangeItemNum
+0111fe5e  drop []
+0111fe5f  end []

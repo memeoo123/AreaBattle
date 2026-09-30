@@ -1,0 +1,67 @@
+; Original class: ProcedureBase
+; Type3660.OnEnter; wasmcode function 5810; offset=2043168 size=186
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+001f2d21  i32.const [4987646]
+001f2d26  i32.load8_u [0, 0]
+001f2d29  i32.eqz []
+001f2d2a  if [-64]
+001f2d2c    i32.const [3929208]
+001f2d31    call [900] ; 
+001f2d34    i32.const [3968516]
+001f2d39    call [900] ; 
+001f2d3c    i32.const [3926996]
+001f2d41    call [900] ; 
+001f2d44    i32.const [4052596] ; STRING "Enter '"
+001f2d49    call [900] ; 
+001f2d4c    i32.const [4038328] ; STRING "' procedure."
+001f2d51    call [900] ; 
+001f2d54    i32.const [4987646]
+001f2d59    i32.const [1]
+001f2d5b    i32.store8 [0, 0]
+001f2d5e  end []
+001f2d5f  i32.const [3968516]
+001f2d64  i32.load [2, 0]
+001f2d67  drop []
+001f2d68  i32.const [3926996]
+001f2d6d  i32.load [2, 0]
+001f2d70  i32.const [1]
+001f2d72  call [909] ; 
+001f2d75  local.set [1]
+001f2d77  local.get [0]
+001f2d79  call [962] ; 
+001f2d7c  local.set [0]
+001f2d7e  local.get [0]
+001f2d80  local.set [2]
+001f2d82  local.get [0]
+001f2d84  i32.load [2, 0]
+001f2d87  local.set [0]
+001f2d89  local.get [2]
+001f2d8b  local.get [0]
+001f2d8d  i32.load [2, 400]
+001f2d91  local.get [0]
+001f2d93  i32.load [2, 396]
+001f2d97  global.set [3]
+001f2d99  global.get [3]
+001f2d9b  call_indirect [1, 0]
+001f2d9e  local.set [0]
+001f2da0  i32.const [4052596] ; STRING "Enter '"
+001f2da5  i32.load [2, 0]
+001f2da8  local.get [0]
+001f2daa  i32.const [4038328] ; STRING "' procedure."
+001f2daf  i32.load [2, 0]
+001f2db2  i32.const [0]
+001f2db4  call [955] ; String.Concat
+001f2db7  local.set [0]
+001f2db9  local.get [1]
+001f2dbb  local.get [0]
+001f2dbd  call [905] ; 
+001f2dc0  local.get [1]
+001f2dc2  local.get [0]
+001f2dc4  i32.store [2, 16]
+001f2dc7  i32.const [3929208]
+001f2dcc  i32.load [2, 0]
+001f2dcf  call [901] ; 
+001f2dd2  local.get [1]
+001f2dd4  i32.const [0]
+001f2dd6  call [5181] ; CLog.LogProcedure
+001f2dd9  end []

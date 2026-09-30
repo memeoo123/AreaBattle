@@ -1,0 +1,30 @@
+; Original class: RedDotControl
+; Type4453.OnInit; wasmcode function 17871; offset=7954312 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00795f89  i32.const [5009802]
+00795f8e  i32.load8_u [0, 0]
+00795f91  i32.eqz []
+00795f92  if [-64]
+00795f94    i32.const [3976332]
+00795f99    call [900] ; 
+00795f9c    i32.const [3923756]
+00795fa1    call [900] ; 
+00795fa4    i32.const [5009802]
+00795fa9    i32.const [1]
+00795fab    i32.store8 [0, 0]
+00795fae  end []
+00795faf  local.get [0]
+00795fb1  i32.const [0]
+00795fb3  i32.store8 [0, 8]
+00795fb6  i32.const [3923756]
+00795fbb  i32.load [2, 0]
+00795fbe  call [903] ; 
+00795fc1  local.set [1]
+00795fc3  local.get [1]
+00795fc5  i32.const [3976332]
+00795fca  i32.load [2, 0]
+00795fcd  call [944] ; 
+00795fd0  local.get [0]
+00795fd2  local.get [1]
+00795fd4  i32.store [2, 12]
+00795fd7  end []

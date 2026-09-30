@@ -1,0 +1,41 @@
+; Original class: LangModule
+; Type3493.SetLocalLangLibrary; wasmcode function 4979; offset=1718175 size=114
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+001a37a0  i32.const [4989116]
+001a37a5  i32.load8_u [0, 0]
+001a37a8  i32.eqz []
+001a37a9  if [-64]
+001a37ab    i32.const [3932476]
+001a37b0    call [900] ; 
+001a37b3    i32.const [3935004]
+001a37b8    call [900] ; 
+001a37bb    i32.const [4989116]
+001a37c0    i32.const [1]
+001a37c2    i32.store8 [0, 0]
+001a37c5  end []
+001a37c6  i32.const [3932476]
+001a37cb  i32.load [2, 0]
+001a37ce  call [901] ; 
+001a37d1  i32.const [3932476]
+001a37d6  i32.load [2, 0]
+001a37d9  i32.load [2, 92]
+001a37dc  local.get [2]
+001a37de  i32.store [2, 8]
+001a37e1  i32.const [3932476]
+001a37e6  i32.load [2, 0]
+001a37e9  i32.load [2, 92]
+001a37ec  local.get [1]
+001a37ee  i32.store [2, 12]
+001a37f1  i32.const [3935004]
+001a37f6  i32.load [2, 0]
+001a37f9  call [901] ; 
+001a37fc  local.get [0]
+001a37fe  local.get [1]
+001a3800  local.get [2]
+001a3802  local.get [1]
+001a3804  call [11656] ; LangModule.GetAPPLangType
+001a3807  i32.store [2, 16]
+001a380a  local.get [1]
+001a380c  call [7648] ; LangModule.CheckIsChinaPhone
+001a380f  drop []
+001a3810  end []

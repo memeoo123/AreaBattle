@@ -1,0 +1,32 @@
+{
+  "atUtc": "2026-09-29T03:06:57.683088+00:00",
+  "status": "visual-difference-open",
+  "reviewPage": "generated/video-20260928/visual-review.html",
+  "captureCount": 12,
+  "viewport": [
+    0,
+    54,
+    720,
+    1280
+  ],
+  "numericBaselineUnchanged": true,
+  "iceObservation": {
+    "pts": 36.385040283203125,
+    "original": "half-second/073.png",
+    "replay": "full-replay-checkpoint-03.png",
+    "difference": "Reconstructed ice has large white highlights; original ice shows more translucent blue crystal and underlying tower.",
+    "rootCause": "unresolved",
+    "checked": [
+      "Original GLSL Effect/bingzhui Fresnel/color/alpha formula matches translated HLSL structure.",
+      "Material hdzd_effect_06 source alpha/HDR colors and blend SrcAlpha OneMinusSrcAlpha retained.",
+      "Original grow curve animates material._Alpha to1 at0.5s; preserved in imported clip."
+    ],
+    "nextAction": "Inspect actual per-renderer property blocks and particle vertex data before changing shader or material values.",
+    "resolvedBy": "camera-hdr-fix-audit.json",
+    "currentStatus": "Large white highlight mismatch reduced by restoring source camera HDR=false and MSAA=false; residual visual differences remain."
+  },
+  "resultScope": "Recovered basic result animation and next-level navigation; original account ranking/currency/advertising panel excluded, so full original result screenshot is not an exact-match claim.",
+  "validation": "Unity full replay exit0; numeric report identical to saved baseline;12 images720x1280; review script syntax checked with Node. No production gameplay or shader edits.",
+  "captureRegistrationAudit": "capture-registration-audit.json",
+  "currentCaptureNote": "Static Text mesh refreshed at target resolution. Alternate723x1282 source-viewport candidate explicitly marked as inferred; canonical720x1280 images retained."
+}

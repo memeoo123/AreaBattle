@@ -1,0 +1,78 @@
+; Original class: XYXLogin
+; Type7609.SetFirstInstallVersion; wasmcode function 9315; offset=4535050 size=215
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 127)]
+0045330d  i32.const [5005967]
+00453312  i32.load8_u [0, 0]
+00453315  i32.eqz []
+00453316  if [-64]
+00453318    i32.const [3934144]
+0045331d    call [900] ; 
+00453320    i32.const [3937976]
+00453325    call [900] ; 
+00453328    i32.const [3941148]
+0045332d    call [900] ; 
+00453330    i32.const [4034536] ; STRING ""
+00453335    call [900] ; 
+00453338    i32.const [5005967]
+0045333d    i32.const [1]
+0045333f    i32.store8 [0, 0]
+00453342  end []
+00453343  i32.const [3937976]
+00453348  i32.load [2, 0]
+0045334b  call [901] ; 
+0045334e  i32.const [3937976]
+00453353  i32.load [2, 0]
+00453356  i32.load [2, 92]
+00453359  i32.load [2, 52]
+0045335c  local.set [0]
+0045335e  i32.const [3941148]
+00453363  i32.load [2, 0]
+00453366  call [901] ; 
+00453369  block [-64]
+0045336b    block [-64]
+0045336d      local.get [0]
+0045336f      i32.const [4034536] ; STRING ""
+00453374      i32.load [2, 0]
+00453377      local.get [0]
+00453379      call [1615] ; Utils_PlayerPrefs.GetString
+0045337c      local.set [0]
+0045337e      local.get [0]
+00453380      if [-64]
+00453382        i32.const [0]
+00453384        local.set [1]
+00453386        local.get [0]
+00453388        i32.load [2, 8]
+0045338b        br_if [2]
+0045338d      end []
+0045338e    end []
+0045338f    i32.const [1]
+00453391    local.set [1]
+00453393  end []
+00453394  local.get [1]
+00453396  if [-64]
+00453398    i32.const [3937976]
+0045339d    i32.load [2, 0]
+004533a0    call [901] ; 
+004533a3    i32.const [3937976]
+004533a8    i32.load [2, 0]
+004533ab    i32.load [2, 92]
+004533ae    i32.load [2, 52]
+004533b1    local.set [0]
+004533b3    local.get [0]
+004533b5    call [1639] ; IXYXGlobalConfig.get_Instance
+004533b8    local.set [1]
+004533ba    i32.const [5]
+004533bc    i32.const [3934144]
+004533c1    i32.load [2, 0]
+004533c4    local.get [1]
+004533c6    call [918] ; 
+004533c9    local.set [1]
+004533cb    i32.const [3941148]
+004533d0    i32.load [2, 0]
+004533d3    call [901] ; 
+004533d6    local.get [0]
+004533d8    local.get [1]
+004533da    local.get [0]
+004533dc    call [1840] ; Utils_PlayerPrefs.SetString
+004533df  end []
+004533e0  end []

@@ -1,0 +1,25 @@
+; Original class: GameDataVersionMgr
+; Type3795.mÂQoY; wasmcode1 function 13392; offset=4741868 size=65
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00485aed  i32.const [4988119]
+00485af2  i32.load8_u [0, 0]
+00485af5  i32.eqz []
+00485af6  if [-64]
+00485af8    i32.const [3932944]
+00485afd    i32.const [1605]
+00485b00    call_indirect [0, 0]
+00485b03    i32.const [4988119]
+00485b08    i32.const [1]
+00485b0a    i32.store8 [0, 0]
+00485b0d  end []
+00485b0e  i32.const [3932944]
+00485b13  i32.load [2, 0]
+00485b16  i32.const [1149]
+00485b19  call_indirect [0, 0]
+00485b1c  i32.const [0]
+00485b1e  i32.const [2272] ; TABLE HttpManager.get_Instance
+00485b21  call_indirect [2, 0]
+00485b24  local.get [1]
+00485b26  i32.const [0]
+00485b28  call [27316] ; HttpManager.mÂQoY
+00485b2c  end []

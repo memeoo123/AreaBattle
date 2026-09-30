@@ -1,0 +1,11 @@
+; Original class: DiceShopControl
+; Type4047.GetItemCount; wasmcode function 6141; offset=2198713 size=16
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00218cba  i32.const [0]
+00218cbc  call [2040] ; GlobalItemManager.get_Instance
+00218cbf  local.get [1]
+00218cc1  i32.const [0]
+00218cc3  call [5042] ; GlobalItemManager.GetItemCount
+00218cc6  i32.wrap_i64 []
+00218cc7  return []
+00218cc8  end []

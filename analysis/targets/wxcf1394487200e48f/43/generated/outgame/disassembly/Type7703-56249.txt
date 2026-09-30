@@ -1,0 +1,17 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.IsShowShare; wasmcode function 14677; offset=7201207 size=28
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+006de1b8  i32.const [0]
+006de1ba  call [1120] ; XYXGlobalConfig.get_I
+006de1bd  i32.load [2, 68]
+006de1c0  if [-64]
+006de1c2    i32.const [0]
+006de1c4    call [1120] ; XYXGlobalConfig.get_I
+006de1c7    i32.load [2, 68]
+006de1ca    i32.const [1]
+006de1cc    i32.eq []
+006de1cd    return []
+006de1ce  end []
+006de1cf  i32.const [1]
+006de1d1  return []
+006de1d2  end []

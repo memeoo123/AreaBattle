@@ -1,0 +1,49 @@
+; Original class: DiceShopControl
+; Type4047.Lilao; wasmcode function 19937; offset=8961953 size=120
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0088bfa2  i32.const [5008771]
+0088bfa7  i32.load8_u [0, 0]
+0088bfaa  i32.eqz []
+0088bfab  if [-64]
+0088bfad    i32.const [3995088]
+0088bfb2    call [900] ; 
+0088bfb5    i32.const [3930256]
+0088bfba    call [900] ; 
+0088bfbd    i32.const [5008771]
+0088bfc2    i32.const [1]
+0088bfc4    i32.store8 [0, 0]
+0088bfc7  end []
+0088bfc8  local.get [0]
+0088bfca  i32.load [2, 8]
+0088bfcd  local.set [1]
+0088bfcf  local.get [1]
+0088bfd1  i32.eqz []
+0088bfd2  if [-64]
+0088bfd4    i32.const [3930256]
+0088bfd9    i32.load [2, 0]
+0088bfdc    call [901] ; 
+0088bfdf    local.get [0]
+0088bfe1    i32.const [8]
+0088bfe3    i32.add []
+0088bfe4    local.set [1]
+0088bfe6    local.get [1]
+0088bfe8    i32.const [0]
+0088bfea    call [1309] ; DataManagerPool.get_Instance
+0088bfed    i32.const [3995088]
+0088bff2    i32.load [2, 0]
+0088bff5    call [1609] ; 
+0088bff8    i32.store [2, 0]
+0088bffb    local.get [1]
+0088bffd    i32.load [2, 0]
+0088c000    local.set [1]
+0088c002  end []
+0088c003  local.get [1]
+0088c005  local.get [0]
+0088c007  call [12532] ; DiceShopDataManager.InitDailyData
+0088c00a  local.get [0]
+0088c00c  local.get [0]
+0088c00e  call [12534] ; DiceShopControl.fbhawZ
+0088c011  local.get [0]
+0088c013  local.get [0]
+0088c015  call [7970] ; DiceShopControl.RefreshPointShop
+0088c018  end []

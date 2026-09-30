@@ -1,0 +1,87 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.InitRank; wasmcode function 20426; offset=9198167 size=228
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008c5a58  i32.const [5006703]
+008c5a5d  i32.load8_u [0, 0]
+008c5a60  i32.eqz []
+008c5a61  if [-64]
+008c5a63    i32.const [4000756]
+008c5a68    call [900] ; 
+008c5a6b    i32.const [4001004]
+008c5a70    call [900] ; 
+008c5a73    i32.const [3936516]
+008c5a78    call [900] ; 
+008c5a7b    i32.const [4057900] ; STRING "InitRankOptions is null or initRankOptions.rawImage is null"
+008c5a80    call [900] ; 
+008c5a83    i32.const [5006703]
+008c5a88    i32.const [1]
+008c5a8a    i32.store8 [0, 0]
+008c5a8d  end []
+008c5a8e  block [-64]
+008c5a90    local.get [1]
+008c5a92    i32.eqz []
+008c5a93    br_if [0]
+008c5a95    local.get [1]
+008c5a97    i32.load [2, 8]
+008c5a9a    local.set [0]
+008c5a9c    i32.const [3936516]
+008c5aa1    i32.load [2, 0]
+008c5aa4    call [901] ; 
+008c5aa7    local.get [0]
+008c5aa9    i32.const [0]
+008c5aab    i32.const [0]
+008c5aad    call [946] ; Object.op_Inequality
+008c5ab0    i32.eqz []
+008c5ab1    br_if [0]
+008c5ab3    local.get [1]
+008c5ab5    i32.load [2, 8]
+008c5ab8    i32.const [0]
+008c5aba    call [943] ; Component.get_gameObject
+008c5abd    i32.const [4001004]
+008c5ac2    i32.load [2, 0]
+008c5ac5    call [1091] ; 
+008c5ac8    local.set [0]
+008c5aca    i32.const [3936516]
+008c5acf    i32.load [2, 0]
+008c5ad2    call [901] ; 
+008c5ad5    local.get [0]
+008c5ad7    i32.const [0]
+008c5ad9    i32.const [0]
+008c5adb    call [940] ; Object.op_Equality
+008c5ade    if [-64]
+008c5ae0      local.get [1]
+008c5ae2      i32.load [2, 8]
+008c5ae5      i32.const [0]
+008c5ae7      call [943] ; Component.get_gameObject
+008c5aea      i32.const [4000756]
+008c5aef      i32.load [2, 0]
+008c5af2      call [1094] ; 
+008c5af5      local.set [0]
+008c5af7    end []
+008c5af8    local.get [0]
+008c5afa    local.get [1]
+008c5afc    i32.load [2, 8]
+008c5aff    i32.store [2, 12]
+008c5b02    local.get [0]
+008c5b04    local.get [1]
+008c5b06    i32.load [2, 12]
+008c5b09    i32.store [2, 16]
+008c5b0c    local.get [0]
+008c5b0e    i32.const [0]
+008c5b10    call [7854] ; FriendsRank.Init
+008c5b13    local.get [0]
+008c5b15    i32.const [0]
+008c5b17    call [943] ; Component.get_gameObject
+008c5b1a    i32.const [0]
+008c5b1c    i32.const [0]
+008c5b1e    call [949] ; GameObject.SetActive
+008c5b21    return []
+008c5b22  end []
+008c5b23  i32.const [4057900] ; STRING "InitRankOptions is null or initRankOptions.rawImage is null"
+008c5b28  i32.load [2, 0]
+008c5b2b  i32.const [0]
+008c5b2d  i32.const [8839] ; TABLE XYXLOG.Error
+008c5b31  global.set [3]
+008c5b33  i32.const [8839] ; TABLE XYXLOG.Error
+008c5b37  call_indirect [0, 0]
+008c5b3a  end []

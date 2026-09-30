@@ -1,0 +1,63 @@
+; Original class: AdsManager
+; Type3157.ShowTimerInterst; wasmcode1 function 70599; offset=22342262 size=162
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0154ea77  i32.const [5010552]
+0154ea7c  i32.load8_u [0, 0]
+0154ea7f  i32.eqz []
+0154ea80  if [-64]
+0154ea82    i32.const [4040676] ; STRING "1"
+0154ea87    i32.const [1605]
+0154ea8a    call_indirect [0, 0]
+0154ea8d    i32.const [4054964] ; STRING "GF_ShowInterst"
+0154ea92    i32.const [1605]
+0154ea95    call_indirect [0, 0]
+0154ea98    i32.const [5010552]
+0154ea9d    i32.const [1]
+0154ea9f    i32.store8 [0, 0]
+0154eaa2  end []
+0154eaa3  block [-64]
+0154eaa5    local.get [0]
+0154eaa7    local.get [0]
+0154eaa9    i32.const [22588] ; TABLE AdsManager.CheckCanShowInterst
+0154eaad    call_indirect [1, 0]
+0154eab0    i32.eqz []
+0154eab1    br_if [0]
+0154eab3    i32.const [4054964] ; STRING "GF_ShowInterst"
+0154eab8    i32.load [2, 0]
+0154eabb    i32.const [0]
+0154eabd    i32.const [9222] ; TABLE MsgDispatcher.SendMessage
+0154eac1    call_indirect [4, 0]
+0154eac4    local.get [0]
+0154eac6    local.get [0]
+0154eac8    i32.load [2, 12]
+0154eacb    local.get [1]
+0154eacd    i32.const [4040676] ; STRING "1"
+0154ead2    i32.load [2, 0]
+0154ead5    local.get [0]
+0154ead7    i32.const [22638] ; TABLE AdsManager.ShowInterstitialResult
+0154eadb    call_indirect [9, 0]
+0154eade    drop []
+0154eadf    local.get [2]
+0154eae1    i32.eqz []
+0154eae2    br_if [0]
+0154eae4    local.get [0]
+0154eae6    local.get [0]
+0154eae8    i32.load [2, 12]
+0154eaeb    i32.const [4040676] ; STRING "1"
+0154eaf0    i32.load [2, 0]
+0154eaf3    local.get [0]
+0154eaf5    i32.const [22639] ; TABLE AdsManager.IsInterstitialReadyStatic
+0154eaf9    call_indirect [8, 0]
+0154eafc    i32.eqz []
+0154eafd    br_if [0]
+0154eaff    local.get [0]
+0154eb01    local.get [0]
+0154eb03    local.get [0]
+0154eb05    i32.const [22587] ; TABLE AdsManager.Wait05
+0154eb09    call_indirect [1, 0]
+0154eb0c    i32.const [0]
+0154eb0e    i32.const [9791] ; TABLE MonoBehaviour.StartCoroutine
+0154eb12    call_indirect [3, 0]
+0154eb15    drop []
+0154eb16  end []
+0154eb17  end []

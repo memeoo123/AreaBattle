@@ -1,0 +1,203 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3959456,
+      "encodedUsage": "0xc00082db",
+      "methodSpecIndex": 16749,
+      "methodSpecAddress": 683996,
+      "methodSpec": [
+        10512,
+        332,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959464,
+      "encodedUsage": "0xc00082df",
+      "methodSpecIndex": 16751,
+      "methodSpecAddress": 684020,
+      "methodSpec": [
+        10517,
+        332,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959488,
+      "encodedUsage": "0xc00082eb",
+      "methodSpecIndex": 16757,
+      "methodSpecAddress": 684092,
+      "methodSpec": [
+        10510,
+        332,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959500,
+      "encodedUsage": "0xc00082f1",
+      "methodSpecIndex": 16760,
+      "methodSpecAddress": 684128,
+      "methodSpec": [
+        10511,
+        332,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "set_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3960604,
+      "encodedUsage": "0xc0008509",
+      "methodSpecIndex": 17028,
+      "methodSpecAddress": 687344,
+      "methodSpec": [
+        10512,
+        1145,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10709,
+            "name": "UnityWebRequest"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3960612,
+      "encodedUsage": "0xc000850d",
+      "methodSpecIndex": 17030,
+      "methodSpecAddress": 687368,
+      "methodSpec": [
+        10517,
+        1145,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10709,
+            "name": "UnityWebRequest"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

@@ -1,0 +1,98 @@
+; Original class: CommanderUI
+; Type4307.OpenLater; wasmcode function 20180; offset=9067093 size=288
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a5a58  i32.const [5008200]
+008a5a5d  i32.load8_u [0, 0]
+008a5a60  i32.eqz []
+008a5a61  if [-64]
+008a5a63    i32.const [3927888]
+008a5a68    call [900] ; 
+008a5a6b    i32.const [3992840] ; METHOD CommanderUI.ClickUpgrade
+008a5a70    call [900] ; 
+008a5a73    i32.const [3992856] ; METHOD CommanderUI.ce^Lk
+008a5a78    call [900] ; 
+008a5a7b    i32.const [3992844] ; METHOD CommanderUI.gn~Lk
+008a5a80    call [900] ; 
+008a5a83    i32.const [3992848] ; METHOD CommanderUI.h^ZMRew
+008a5a88    call [900] ; 
+008a5a8b    i32.const [3947148]
+008a5a90    call [900] ; 
+008a5a93    i32.const [4018228]
+008a5a98    call [900] ; 
+008a5a9b    i32.const [4075200] ; STRING "ToolChange"
+008a5aa0    call [900] ; 
+008a5aa3    i32.const [5008200]
+008a5aa8    i32.const [1]
+008a5aaa    i32.store8 [0, 0]
+008a5aad  end []
+008a5aae  local.get [0]
+008a5ab0  i32.load [2, 200]
+008a5ab4  local.set [1]
+008a5ab6  i32.const [3927888]
+008a5abb  i32.load [2, 0]
+008a5abe  call [903] ; 
+008a5ac1  local.set [2]
+008a5ac3  local.get [2]
+008a5ac5  local.get [0]
+008a5ac7  i32.const [3992840] ; METHOD CommanderUI.ClickUpgrade
+008a5acc  i32.load [2, 0]
+008a5acf  i32.const [0]
+008a5ad1  call [1002] ; Action..ctor
+008a5ad4  local.get [1]
+008a5ad6  local.get [2]
+008a5ad8  i32.const [0]
+008a5ada  call [1121] ; UIExtension.AddClick
+008a5add  local.get [0]
+008a5adf  i32.load [2, 204]
+008a5ae3  local.set [1]
+008a5ae5  i32.const [3927888]
+008a5aea  i32.load [2, 0]
+008a5aed  call [903] ; 
+008a5af0  local.set [2]
+008a5af2  local.get [2]
+008a5af4  local.get [0]
+008a5af6  i32.const [3992856] ; METHOD CommanderUI.ce^Lk
+008a5afb  i32.load [2, 0]
+008a5afe  i32.const [0]
+008a5b00  call [1002] ; Action..ctor
+008a5b03  local.get [1]
+008a5b05  local.get [2]
+008a5b07  i32.const [0]
+008a5b09  call [1121] ; UIExtension.AddClick
+008a5b0c  local.get [0]
+008a5b0e  i32.load [2, 16]
+008a5b11  i32.const [0]
+008a5b13  i32.const [0]
+008a5b15  call [1145] ; Transform.GetChild
+008a5b18  local.set [1]
+008a5b1a  i32.const [3927888]
+008a5b1f  i32.load [2, 0]
+008a5b22  call [903] ; 
+008a5b25  local.set [2]
+008a5b27  local.get [2]
+008a5b29  local.get [0]
+008a5b2b  i32.const [3992848] ; METHOD CommanderUI.h^ZMRew
+008a5b30  i32.load [2, 0]
+008a5b33  i32.const [0]
+008a5b35  call [1002] ; Action..ctor
+008a5b38  local.get [1]
+008a5b3a  local.get [2]
+008a5b3c  i32.const [4018228]
+008a5b41  i32.load [2, 0]
+008a5b44  call [1962] ; 
+008a5b47  i32.const [3947148]
+008a5b4c  i32.load [2, 0]
+008a5b4f  call [903] ; 
+008a5b52  local.set [1]
+008a5b54  local.get [1]
+008a5b56  local.get [0]
+008a5b58  i32.const [3992844] ; METHOD CommanderUI.gn~Lk
+008a5b5d  i32.load [2, 0]
+008a5b60  i32.const [0]
+008a5b62  call [1067] ; EventHandler..ctor
+008a5b65  i32.const [4075200] ; STRING "ToolChange"
+008a5b6a  i32.load [2, 0]
+008a5b6d  local.get [1]
+008a5b6f  i32.const [0]
+008a5b71  call [1146] ; MsgDispatcher.AddEventListener
+008a5b74  end []

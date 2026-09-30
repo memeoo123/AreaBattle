@@ -1,0 +1,45 @@
+{
+  "atUtc": "2026-09-30T03:35:45.919921+00:00",
+  "status": "partial-subsystem-native-manifest-verified",
+  "methods": [
+    23828,
+    23871
+  ],
+  "behavior": [
+    "Dependency loader checks manifest before cache; cached arrays reload without remap or manifest query",
+    "Fresh GetAllDependencies array empty returns without cache; nonempty array is remapped in place then added before starting dependency requests",
+    "Every dependency calls internal load with duplicate-accounting enabled; no deduplication",
+    "Variant mapping uses first dot segment as base and second as variant, active-array index determines priority; first equal-rank candidate wins",
+    "Unknown variants use rank int.MaxValue-1 and source warning spelling Ambigious; no matching base returns unchanged",
+    "Malformed same-base variant without second segment throws"
+  ],
+  "validation": {
+    "integratedChecks": 630,
+    "nativeBundleUi": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 1,
+      "assetFrame": 3,
+      "pageFrame": 5,
+      "downloadedBytes": 2377959,
+      "checks": [
+        "Native built manifest supplies dependency and variant queries",
+        "Source canonical bundle key reaches native acquisition",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native AssetBundle.Unload(true) runs through recovered cleanup with zero-delay fixture"
+      ]
+    }
+  },
+  "nativeScope": "Actual rebuilt Windows AssetBundleManifest loaded; real variant/dependency queries through recovered classes. Fixture source key maps to native bundle valentine and has no external dependencies/variants. Positive nonempty branches verified in integrated source cases only.",
+  "limitations": [
+    "Original bundleServices path/config/platform resolver and full startup/firstpack/account/menu still pending",
+    "No new Player build"
+  ]
+}

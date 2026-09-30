@@ -1,0 +1,66 @@
+; Original class: RaceActivityControl
+; Type3982.OnInit; wasmcode function 17986; offset=7981268 size=186
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0079c8d7  i32.const [5010162]
+0079c8dc  i32.load8_u [0, 0]
+0079c8df  i32.eqz []
+0079c8e0  if [-64]
+0079c8e2    i32.const [3995132]
+0079c8e7    call [900] ; 
+0079c8ea    i32.const [3930256]
+0079c8ef    call [900] ; 
+0079c8f2    i32.const [3977228]
+0079c8f7    call [900] ; 
+0079c8fa    i32.const [4079552] ; STRING "You"
+0079c8ff    call [900] ; 
+0079c902    i32.const [4034536] ; STRING ""
+0079c907    call [900] ; 
+0079c90a    i32.const [5010162]
+0079c90f    i32.const [1]
+0079c911    i32.store8 [0, 0]
+0079c914  end []
+0079c915  local.get [0]
+0079c917  i32.const [1]
+0079c919  i32.store8 [0, 8]
+0079c91c  i32.const [3930256]
+0079c921  i32.load [2, 0]
+0079c924  call [901] ; 
+0079c927  local.get [0]
+0079c929  i32.const [0]
+0079c92b  call [1309] ; DataManagerPool.get_Instance
+0079c92e  i32.const [3995132]
+0079c933  i32.load [2, 0]
+0079c936  call [1609] ; 
+0079c939  i32.store [2, 16]
+0079c93c  local.get [0]
+0079c93e  i32.load [2, 16]
+0079c941  local.get [0]
+0079c943  call [7386] ; RaceDataManager.InitRaceActivityData
+0079c946  local.get [0]
+0079c948  i32.load [2, 12]
+0079c94b  local.set [2]
+0079c94d  i32.const [0]
+0079c94f  call [1220] ; GameModule.get_Lang
+0079c952  i32.const [4079552] ; STRING "You"
+0079c957  i32.load [2, 0]
+0079c95a  i32.const [0]
+0079c95c  call [1243] ; LangModule.Get
+0079c95f  local.set [1]
+0079c961  local.get [2]
+0079c963  local.get [1]
+0079c965  i32.const [4034536] ; STRING ""
+0079c96a  i32.load [2, 0]
+0079c96d  local.get [1]
+0079c96f  select []
+0079c970  i32.const [3977228]
+0079c975  i32.load [2, 0]
+0079c978  call [941] ; 
+0079c97b  local.get [0]
+0079c97d  i32.const [0]
+0079c97f  local.get [0]
+0079c981  call [5801] ; RaceActivityControl.U]~Yy
+0079c984  local.get [0]
+0079c986  i32.const [1]
+0079c988  local.get [0]
+0079c98a  call [5801] ; RaceActivityControl.U]~Yy
+0079c98d  end []

@@ -1,0 +1,92 @@
+; Original class: DiceGameControl
+; Type4038.GetPosRewards; wasmcode function 6144; offset=2199096 size=233
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+00218e3b  global.get [0]
+00218e3d  i32.const [16]
+00218e3f  i32.sub []
+00218e40  local.set [2]
+00218e42  local.get [2]
+00218e44  global.set [0]
+00218e46  i32.const [5008740]
+00218e4b  i32.load8_u [0, 0]
+00218e4e  i32.eqz []
+00218e4f  if [-64]
+00218e51    i32.const [3929208]
+00218e56    call [900] ; 
+00218e59    i32.const [3954948]
+00218e5e    call [900] ; 
+00218e61    i32.const [3934404]
+00218e66    call [900] ; 
+00218e69    i32.const [3926996]
+00218e6e    call [900] ; 
+00218e71    i32.const [4101896] ; STRING "{0}处未获得过奖励，没有缓存"
+00218e76    call [900] ; 
+00218e79    i32.const [5008740]
+00218e7e    i32.const [1]
+00218e80    i32.store8 [0, 0]
+00218e83  end []
+00218e84  local.get [2]
+00218e86  i32.const [0]
+00218e88  i32.store [2, 12]
+00218e8b  block [-64]
+00218e8d    local.get [0]
+00218e8f    i32.load [2, 32]
+00218e92    local.get [1]
+00218e94    local.get [2]
+00218e96    i32.const [12]
+00218e98    i32.add []
+00218e99    i32.const [3954948]
+00218e9e    i32.load [2, 0]
+00218ea1    call [1134] ; 
+00218ea4    if [-64]
+00218ea6      local.get [2]
+00218ea8      i32.load [2, 12]
+00218eab      local.set [0]
+00218ead      br [1]
+00218eaf    end []
+00218eb0    i32.const [0]
+00218eb2    local.set [0]
+00218eb4    i32.const [3926996]
+00218eb9    i32.load [2, 0]
+00218ebc    i32.const [1]
+00218ebe    call [909] ; 
+00218ec1    local.set [3]
+00218ec3    local.get [2]
+00218ec5    local.get [1]
+00218ec7    i32.store [2, 8]
+00218eca    i32.const [3934404]
+00218ecf    i32.load [2, 0]
+00218ed2    local.get [2]
+00218ed4    i32.const [8]
+00218ed6    i32.add []
+00218ed7    call [910] ; 
+00218eda    local.set [1]
+00218edc    i32.const [4101896] ; STRING "{0}处未获得过奖励，没有缓存"
+00218ee1    i32.load [2, 0]
+00218ee4    local.get [1]
+00218ee6    i32.const [0]
+00218ee8    call [1015] ; String.Format
+00218eeb    local.set [1]
+00218eed    local.get [3]
+00218eef    local.get [1]
+00218ef1    call [905] ; 
+00218ef4    local.get [3]
+00218ef6    local.get [1]
+00218ef8    i32.store [2, 16]
+00218efb    i32.const [3929208]
+00218f00    i32.load [2, 0]
+00218f03    call [901] ; 
+00218f06    local.get [3]
+00218f08    i32.const [0]
+00218f0a    i32.const [2087] ; TABLE CLog.Error
+00218f0d    global.set [3]
+00218f0f    i32.const [2087] ; TABLE CLog.Error
+00218f12    call_indirect [0, 0]
+00218f15  end []
+00218f16  local.get [2]
+00218f18  i32.const [16]
+00218f1a  i32.add []
+00218f1b  global.set [0]
+00218f1d  local.get [0]
+00218f1f  return []
+00218f20  end []

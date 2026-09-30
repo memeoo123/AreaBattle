@@ -1,0 +1,37 @@
+; Original shared generic: Fsm`1.Start
+; ProcedureFsmGeneric.Start; wasmcode function 19666; offset=8818740 size=90
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00869037  local.get [2]
+00869039  i32.load [2, 28]
+0086903c  i32.eqz []
+0086903d  if [-64]
+0086903f    i32.const [3940520]
+00869044    call [900] ; 
+00869047    local.get [2]
+00869049    call [954] ; 
+0086904c  end []
+0086904d  local.get [2]
+0086904f  i32.load [2, 28]
+00869052  i32.load [2, 0]
+00869055  local.set [3]
+00869057  i32.const [3940520]
+0086905c  i32.load [2, 0]
+0086905f  call [901] ; 
+00869062  local.get [3]
+00869064  i32.const [0]
+00869066  call [912] ; Type.GetTypeFromHandle
+00869069  local.set [3]
+0086906b  local.get [2]
+0086906d  i32.load [2, 16]
+00869070  i32.load [2, 96]
+00869073  i32.load [2, 96]
+00869076  i32.load [2, 0]
+00869079  local.get [2]
+0086907b  i32.load [2, 16]
+0086907e  i32.load [2, 96]
+00869081  i32.load [2, 96]
+00869084  local.get [0]
+00869086  local.get [3]
+00869088  local.get [1]
+0086908a  call [1035] ; 
+0086908d  end []

@@ -1,0 +1,203 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3957296,
+      "encodedUsage": "0xc0007eab",
+      "methodSpecIndex": 16213,
+      "methodSpecAddress": 677564,
+      "methodSpec": [
+        10530,
+        849,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "TryGetValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 4531,
+            "name": "GameProductConfig"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956020,
+      "encodedUsage": "0xc0007c2d",
+      "methodSpecIndex": 15894,
+      "methodSpecAddress": 673736,
+      "methodSpec": [
+        10507,
+        759,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Values",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3965896,
+      "encodedUsage": "0xc0008f15",
+      "methodSpecIndex": 18314,
+      "methodSpecAddress": 702776,
+      "methodSpec": [
+        10593,
+        759,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "Dispose",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3965900,
+      "encodedUsage": "0xc0008f17",
+      "methodSpecIndex": 18315,
+      "methodSpecAddress": 702788,
+      "methodSpec": [
+        10594,
+        759,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "MoveNext",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3965904,
+      "encodedUsage": "0xc0008f19",
+      "methodSpecIndex": 18316,
+      "methodSpecAddress": 702800,
+      "methodSpec": [
+        10595,
+        759,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "get_Current",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3987624,
+      "encodedUsage": "0xc000b6b1",
+      "methodSpecIndex": 23384,
+      "methodSpecAddress": 763616,
+      "methodSpec": [
+        10579,
+        759,
+        -1
+      ],
+      "declaringType": "ValueCollection",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

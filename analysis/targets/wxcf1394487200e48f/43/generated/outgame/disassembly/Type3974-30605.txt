@@ -1,0 +1,37 @@
+; Original class: MineGameMain
+; Type3974.O{P^xr; wasmcode function 2125; offset=661139 size=95
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000a1694  i32.const [5010123]
+000a1699  i32.load8_u [0, 0]
+000a169c  i32.eqz []
+000a169d  if [-64]
+000a169f    i32.const [3929208]
+000a16a4    call [900] ; 
+000a16a7    i32.const [3926996]
+000a16ac    call [900] ; 
+000a16af    i32.const [5010123]
+000a16b4    i32.const [1]
+000a16b6    i32.store8 [0, 0]
+000a16b9  end []
+000a16ba  local.get [0]
+000a16bc  i32.load8_u [0, 12]
+000a16bf  if [-64]
+000a16c1    i32.const [3926996]
+000a16c6    i32.load [2, 0]
+000a16c9    i32.const [1]
+000a16cb    call [909] ; 
+000a16ce    local.set [0]
+000a16d0    local.get [0]
+000a16d2    local.get [1]
+000a16d4    call [905] ; 
+000a16d7    local.get [0]
+000a16d9    local.get [1]
+000a16db    i32.store [2, 16]
+000a16de    i32.const [3929208]
+000a16e3    i32.load [2, 0]
+000a16e6    call [901] ; 
+000a16e9    local.get [0]
+000a16eb    i32.const [0]
+000a16ed    call [1069] ; CLog.Log
+000a16f0  end []
+000a16f1  end []

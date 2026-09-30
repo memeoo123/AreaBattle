@@ -1,0 +1,327 @@
+; Original class: AudioManager
+; Type3421.eSp; wasmcode function 13124; offset=6290382 size=948
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(4, 127)]
+005ffbd1  global.get [0]
+005ffbd3  i32.const [16]
+005ffbd5  i32.sub []
+005ffbd6  local.set [3]
+005ffbd8  local.get [3]
+005ffbda  global.set [0]
+005ffbdc  i32.const [5011688]
+005ffbe1  i32.load8_u [0, 0]
+005ffbe4  i32.eqz []
+005ffbe5  if [-64]
+005ffbe7    i32.const [3928176]
+005ffbec    call [900] ; 
+005ffbef    i32.const [3929208]
+005ffbf4    call [900] ; 
+005ffbf7    i32.const [3993488]
+005ffbfc    call [900] ; 
+005ffbff    i32.const [3929800]
+005ffc04    call [900] ; 
+005ffc07    i32.const [3955256]
+005ffc0c    call [900] ; 
+005ffc0f    i32.const [3955264]
+005ffc14    call [900] ; 
+005ffc17    i32.const [3960264]
+005ffc1c    call [900] ; 
+005ffc1f    i32.const [3955252]
+005ffc24    call [900] ; 
+005ffc27    i32.const [3917404]
+005ffc2c    call [900] ; 
+005ffc2f    i32.const [3918948]
+005ffc34    call [900] ; 
+005ffc37    i32.const [3934404]
+005ffc3c    call [900] ; 
+005ffc3f    i32.const [3972264]
+005ffc44    call [900] ; 
+005ffc47    i32.const [3972268]
+005ffc4c    call [900] ; 
+005ffc4f    i32.const [3926996]
+005ffc54    call [900] ; 
+005ffc57    i32.const [4045252] ; STRING "Audio:配置文件AB资源为null"
+005ffc5c    call [900] ; 
+005ffc5f    i32.const [4105120] ; STRING "检测到音频表中使用了OnceAudio音频开启OnceAudio配置加载"
+005ffc64    call [900] ; 
+005ffc67    i32.const [4105808] ; STRING "表[音效表]中有相同键({0})"
+005ffc6c    call [900] ; 
+005ffc6f    i32.const [4045248] ; STRING "Audio:设置音频数据"
+005ffc74    call [900] ; 
+005ffc77    i32.const [4045272] ; STRING "AudioConfig"
+005ffc7c    call [900] ; 
+005ffc7f    i32.const [4083272] ; STRING "audio/once"
+005ffc84    call [900] ; 
+005ffc87    i32.const [5011688]
+005ffc8c    i32.const [1]
+005ffc8e    i32.store8 [0, 0]
+005ffc91  end []
+005ffc92  block [-64]
+005ffc94    local.get [0]
+005ffc96    i32.load8_u [0, 33]
+005ffc99    br_if [0]
+005ffc9b    i32.const [3929800]
+005ffca0    i32.load [2, 0]
+005ffca3    call [901] ; 
+005ffca6    block [-64]
+005ffca8      i32.const [3929800]
+005ffcad      i32.load [2, 0]
+005ffcb0      i32.load [2, 92]
+005ffcb3      i32.load [2, 4]
+005ffcb6      br_if [0]
+005ffcb8      i32.const [3928176]
+005ffcbd      i32.load [2, 0]
+005ffcc0      call [901] ; 
+005ffcc3      i32.const [5011829]
+005ffcc8      i32.load8_u [0, 0]
+005ffccb      i32.eqz []
+005ffccc      if [-64]
+005ffcce        i32.const [3928176]
+005ffcd3        call [900] ; 
+005ffcd6        i32.const [5011829]
+005ffcdb        i32.const [1]
+005ffcdd        i32.store8 [0, 0]
+005ffce0      end []
+005ffce1      i32.const [3928176]
+005ffce6      i32.load [2, 0]
+005ffce9      call [901] ; 
+005ffcec      i32.const [3928176]
+005ffcf1      i32.load [2, 0]
+005ffcf4      i32.load [2, 92]
+005ffcf7      i32.load8_u [0, 36]
+005ffcfa      br_if [0]
+005ffcfc      i32.const [3926996]
+005ffd01      i32.load [2, 0]
+005ffd04      i32.const [1]
+005ffd06      call [909] ; 
+005ffd09      local.set [0]
+005ffd0b      local.get [0]
+005ffd0d      i32.const [4045252] ; STRING "Audio:配置文件AB资源为null"
+005ffd12      i32.load [2, 0]
+005ffd15      call [905] ; 
+005ffd18      local.get [0]
+005ffd1a      i32.const [4045252] ; STRING "Audio:配置文件AB资源为null"
+005ffd1f      i32.load [2, 0]
+005ffd22      i32.store [2, 16]
+005ffd25      i32.const [3929208]
+005ffd2a      i32.load [2, 0]
+005ffd2d      call [901] ; 
+005ffd30      local.get [0]
+005ffd32      i32.const [0]
+005ffd34      i32.const [2087] ; TABLE CLog.Error
+005ffd37      global.set [3]
+005ffd39      i32.const [2087] ; TABLE CLog.Error
+005ffd3c      call_indirect [0, 0]
+005ffd3f      br [1]
+005ffd41    end []
+005ffd42    i32.const [3926996]
+005ffd47    i32.load [2, 0]
+005ffd4a    i32.const [1]
+005ffd4c    call [909] ; 
+005ffd4f    local.set [1]
+005ffd51    local.get [1]
+005ffd53    i32.const [4045248] ; STRING "Audio:设置音频数据"
+005ffd58    i32.load [2, 0]
+005ffd5b    call [905] ; 
+005ffd5e    local.get [1]
+005ffd60    i32.const [4045248] ; STRING "Audio:设置音频数据"
+005ffd65    i32.load [2, 0]
+005ffd68    i32.store [2, 16]
+005ffd6b    i32.const [3929208]
+005ffd70    i32.load [2, 0]
+005ffd73    call [901] ; 
+005ffd76    local.get [1]
+005ffd78    i32.const [0]
+005ffd7a    call [8169] ; CLog.ª´µDk
+005ffd7d    i32.const [3917404]
+005ffd82    i32.load [2, 0]
+005ffd85    call [903] ; 
+005ffd88    local.set [1]
+005ffd8a    local.get [1]
+005ffd8c    i32.const [3955252]
+005ffd91    i32.load [2, 0]
+005ffd94    call [951] ; 
+005ffd97    local.get [0]
+005ffd99    local.get [1]
+005ffd9b    i32.store [2, 20]
+005ffd9e    i32.const [3929800]
+005ffda3    i32.load [2, 0]
+005ffda6    call [901] ; 
+005ffda9    block [-64]
+005ffdab      i32.const [4045272] ; STRING "AudioConfig"
+005ffdb0      i32.load [2, 0]
+005ffdb3      i32.const [3993488]
+005ffdb8      i32.load [2, 0]
+005ffdbb      call [4480] ; 
+005ffdbe      local.set [2]
+005ffdc0      local.get [2]
+005ffdc2      i32.eqz []
+005ffdc3      br_if [0]
+005ffdc5      i32.const [0]
+005ffdc7      local.set [1]
+005ffdc9      loop [-64]
+005ffdcb        i32.const [3972264]
+005ffdd0        i32.load [2, 0]
+005ffdd3        drop []
+005ffdd4        local.get [1]
+005ffdd6        local.get [2]
+005ffdd8        i32.load [2, 12]
+005ffddb        i32.ge_s []
+005ffddc        br_if [1]
+005ffdde        block [-64]
+005ffde0          local.get [0]
+005ffde2          i32.load [2, 20]
+005ffde5          local.get [2]
+005ffde7          local.get [1]
+005ffde9          i32.const [3972268]
+005ffdee          i32.load [2, 0]
+005ffdf1          call [930] ; 
+005ffdf4          i32.load [2, 8]
+005ffdf7          i32.const [3955264]
+005ffdfc          i32.load [2, 0]
+005ffdff          call [1129] ; 
+005ffe02          if [-64]
+005ffe04            i32.const [3926996]
+005ffe09            i32.load [2, 0]
+005ffe0c            i32.const [1]
+005ffe0e            call [909] ; 
+005ffe11            local.set [5]
+005ffe13            local.get [3]
+005ffe15            local.get [2]
+005ffe17            local.get [1]
+005ffe19            i32.const [3972268]
+005ffe1e            i32.load [2, 0]
+005ffe21            call [930] ; 
+005ffe24            i32.load [2, 8]
+005ffe27            i32.store [2, 12]
+005ffe2a            i32.const [3934404]
+005ffe2f            i32.load [2, 0]
+005ffe32            local.get [3]
+005ffe34            i32.const [12]
+005ffe36            i32.add []
+005ffe37            call [910] ; 
+005ffe3a            local.set [4]
+005ffe3c            i32.const [4105808] ; STRING "表[音效表]中有相同键({0})"
+005ffe41            i32.load [2, 0]
+005ffe44            local.get [4]
+005ffe46            i32.const [0]
+005ffe48            call [1015] ; String.Format
+005ffe4b            local.set [4]
+005ffe4d            local.get [5]
+005ffe4f            local.get [4]
+005ffe51            call [905] ; 
+005ffe54            local.get [5]
+005ffe56            local.get [4]
+005ffe58            i32.store [2, 16]
+005ffe5b            i32.const [3929208]
+005ffe60            i32.load [2, 0]
+005ffe63            call [901] ; 
+005ffe66            local.get [5]
+005ffe68            i32.const [0]
+005ffe6a            i32.const [2087] ; TABLE CLog.Error
+005ffe6d            global.set [3]
+005ffe6f            i32.const [2087] ; TABLE CLog.Error
+005ffe72            call_indirect [0, 0]
+005ffe75            br [1]
+005ffe77          end []
+005ffe78          local.get [0]
+005ffe7a          i32.load [2, 20]
+005ffe7d          local.get [2]
+005ffe7f          local.get [1]
+005ffe81          i32.const [3972268]
+005ffe86          i32.load [2, 0]
+005ffe89          call [930] ; 
+005ffe8c          i32.load [2, 8]
+005ffe8f          local.get [2]
+005ffe91          local.get [1]
+005ffe93          i32.const [3972268]
+005ffe98          i32.load [2, 0]
+005ffe9b          call [930] ; 
+005ffe9e          i32.const [3955256]
+005ffea3          i32.load [2, 0]
+005ffea6          call [1049] ; 
+005ffea9        end []
+005ffeaa        block [-64]
+005ffeac          local.get [2]
+005ffeae          local.get [1]
+005ffeb0          i32.const [3972268]
+005ffeb5          i32.load [2, 0]
+005ffeb8          call [930] ; 
+005ffebb          i32.load [2, 36]
+005ffebe          i32.const [0]
+005ffec0          call [1374] ; String.ToLower
+005ffec3          i32.const [4083272] ; STRING "audio/once"
+005ffec8          i32.load [2, 0]
+005ffecb          i32.const [0]
+005ffecd          call [1237] ; String.Contains
+005ffed0          i32.eqz []
+005ffed1          br_if [0]
+005ffed3          local.get [0]
+005ffed5          i32.load8_u [0, 32]
+005ffed8          br_if [0]
+005ffeda          local.get [0]
+005ffedc          i32.const [1]
+005ffede          i32.store8 [0, 32]
+005ffee1        end []
+005ffee2        local.get [1]
+005ffee4        i32.const [1]
+005ffee6        i32.add []
+005ffee7        local.set [1]
+005ffee9        br [0]
+005ffeeb      end []
+005ffeec      unreachable []
+005ffeed    end []
+005ffeee    i32.const [3918948]
+005ffef3    i32.load [2, 0]
+005ffef6    call [903] ; 
+005ffef9    local.set [1]
+005ffefb    local.get [1]
+005ffefd    i32.const [3960264]
+005fff02    i32.load [2, 0]
+005fff05    call [951] ; 
+005fff08    local.get [0]
+005fff0a    local.get [1]
+005fff0c    i32.store [2, 24]
+005fff0f    local.get [0]
+005fff11    i32.load8_u [0, 32]
+005fff14    if [-64]
+005fff16      i32.const [3926996]
+005fff1b      i32.load [2, 0]
+005fff1e      i32.const [1]
+005fff20      call [909] ; 
+005fff23      local.set [1]
+005fff25      local.get [1]
+005fff27      i32.const [4105120] ; STRING "检测到音频表中使用了OnceAudio音频开启OnceAudio配置加载"
+005fff2c      i32.load [2, 0]
+005fff2f      call [905] ; 
+005fff32      local.get [1]
+005fff34      i32.const [4105120] ; STRING "检测到音频表中使用了OnceAudio音频开启OnceAudio配置加载"
+005fff39      i32.load [2, 0]
+005fff3c      i32.store [2, 16]
+005fff3f      i32.const [3929208]
+005fff44      i32.load [2, 0]
+005fff47      call [901] ; 
+005fff4a      local.get [1]
+005fff4c      i32.const [0]
+005fff4e      call [1069] ; CLog.Log
+005fff51      local.get [0]
+005fff53      i32.load [2, 24]
+005fff56      local.set [1]
+005fff58      i32.const [3929800]
+005fff5d      i32.load [2, 0]
+005fff60      call [901] ; 
+005fff63      local.get [1]
+005fff65      local.get [1]
+005fff67      call [12772] ; ConfigRead.readOnceAudioConfig
+005fff6a    end []
+005fff6b    local.get [0]
+005fff6d    i32.const [1]
+005fff6f    i32.store8 [0, 33]
+005fff72    local.get [0]
+005fff74    local.get [1]
+005fff76    call [8220] ; AudioManager.¦V«C©
+005fff79  end []
+005fff7a  local.get [3]
+005fff7c  i32.const [16]
+005fff7e  i32.add []
+005fff7f  global.set [0]
+005fff81  end []

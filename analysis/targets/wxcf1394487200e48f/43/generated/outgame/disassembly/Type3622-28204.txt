@@ -1,0 +1,19 @@
+; Original class: FileManager
+; Type3622.ReadFileBytes; wasmcode1 function 62783; offset=20207062 size=32
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+013455d7  local.get [1]
+013455d9  i32.const [0]
+013455db  i32.const [1830] ; TABLE File.Exists
+013455de  call_indirect [1, 0]
+013455e1  if [-64]
+013455e3    local.get [1]
+013455e5    i32.const [0]
+013455e7    call [4856] ; File.ReadAllBytes
+013455ea    local.set [0]
+013455ec  else []
+013455ed    i32.const [0]
+013455ef    local.set [0]
+013455f1  end []
+013455f2  local.get [0]
+013455f4  return []
+013455f5  end []

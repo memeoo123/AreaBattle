@@ -1,0 +1,21 @@
+; ConfigMgr.GetAIAIType; wasmcode function 12798; offset=6164133 size=40
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005e0ea6  local.get [0]
+005e0ea8  local.get [0]
+005e0eaa  local.get [1]
+005e0eac  local.get [0]
+005e0eae  call [4481] ; ConfigMgr.Ml`R
+005e0eb1  i32.store [2, 288]
+005e0eb5  local.get [0]
+005e0eb7  i32.load [2, 288]
+005e0ebb  local.set [0]
+005e0ebd  local.get [0]
+005e0ebf  i32.eqz []
+005e0ec0  if [-64]
+005e0ec2    i32.const [3]
+005e0ec4    return []
+005e0ec5  end []
+005e0ec6  local.get [0]
+005e0ec8  i32.load [2, 12]
+005e0ecb  return []
+005e0ecc  end []

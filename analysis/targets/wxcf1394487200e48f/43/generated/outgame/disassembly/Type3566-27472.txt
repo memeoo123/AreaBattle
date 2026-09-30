@@ -1,0 +1,137 @@
+; Original class: UserDataPrefs
+; Type3566.OnInit; wasmcode function 6842; offset=2575893 size=408
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 127)]
+00274e18  i32.const [4989714]
+00274e1d  i32.load8_u [0, 0]
+00274e20  i32.eqz []
+00274e21  if [-64]
+00274e23    i32.const [3929208]
+00274e28    call [900] ; 
+00274e2b    i32.const [3930128]
+00274e30    call [900] ; 
+00274e33    i32.const [3960700]
+00274e38    call [900] ; 
+00274e3b    i32.const [3919084]
+00274e40    call [900] ; 
+00274e43    i32.const [3926996]
+00274e48    call [900] ; 
+00274e4b    i32.const [3941104]
+00274e50    call [900] ; 
+00274e53    i32.const [4077656] ; STRING "UserDataPrefs已经初始化"
+00274e58    call [900] ; 
+00274e5b    i32.const [4076188] ; STRING "UNITY_WEBGL下 UserDataPrefs 初始化由 otherPlatformSdk 控制"
+00274e60    call [900] ; 
+00274e63    i32.const [4989714]
+00274e68    i32.const [1]
+00274e6a    i32.store8 [0, 0]
+00274e6d  end []
+00274e6e  i32.const [3930128]
+00274e73  i32.load [2, 0]
+00274e76  call [901] ; 
+00274e79  block [-64]
+00274e7b    i32.const [0]
+00274e7d    call [974] ; DBTSDKManager.get_Instance
+00274e80    i32.load [2, 16]
+00274e83    i32.eqz []
+00274e84    br_if [0]
+00274e86    i32.const [3930128]
+00274e8b    i32.load [2, 0]
+00274e8e    call [901] ; 
+00274e91    i32.const [0]
+00274e93    call [974] ; DBTSDKManager.get_Instance
+00274e96    i32.load [2, 16]
+00274e99    local.set [0]
+00274e9b    local.get [0]
+00274e9d    local.set [1]
+00274e9f    local.get [0]
+00274ea1    i32.load [2, 0]
+00274ea4    i32.const [2416] ; TABLE GameObject.SetActive
+00274ea7    i32.add []
+00274ea8    local.set [0]
+00274eaa    local.get [1]
+00274eac    local.get [0]
+00274eae    i32.load [2, 192]
+00274eb2    local.get [0]
+00274eb4    i32.load [2, 188]
+00274eb8    global.set [3]
+00274eba    global.get [3]
+00274ebc    call_indirect [1, 0]
+00274ebf    br_if [0]
+00274ec1    i32.const [3926996]
+00274ec6    i32.load [2, 0]
+00274ec9    i32.const [1]
+00274ecb    call [909] ; 
+00274ece    local.set [0]
+00274ed0    local.get [0]
+00274ed2    i32.const [4076188] ; STRING "UNITY_WEBGL下 UserDataPrefs 初始化由 otherPlatformSdk 控制"
+00274ed7    i32.load [2, 0]
+00274eda    call [905] ; 
+00274edd    local.get [0]
+00274edf    i32.const [4076188] ; STRING "UNITY_WEBGL下 UserDataPrefs 初始化由 otherPlatformSdk 控制"
+00274ee4    i32.load [2, 0]
+00274ee7    i32.store [2, 16]
+00274eea    i32.const [3929208]
+00274eef    i32.load [2, 0]
+00274ef2    call [901] ; 
+00274ef5    local.get [0]
+00274ef7    i32.const [0]
+00274ef9    call [1069] ; CLog.Log
+00274efc    return []
+00274efd  end []
+00274efe  i32.const [3941104]
+00274f03  i32.load [2, 0]
+00274f06  call [901] ; 
+00274f09  i32.const [3941104]
+00274f0e  i32.load [2, 0]
+00274f11  i32.load [2, 92]
+00274f14  i32.load8_u [0, 16]
+00274f17  if [-64]
+00274f19    i32.const [3926996]
+00274f1e    i32.load [2, 0]
+00274f21    i32.const [1]
+00274f23    call [909] ; 
+00274f26    local.set [0]
+00274f28    local.get [0]
+00274f2a    i32.const [4077656] ; STRING "UserDataPrefs已经初始化"
+00274f2f    i32.load [2, 0]
+00274f32    call [905] ; 
+00274f35    local.get [0]
+00274f37    i32.const [4077656] ; STRING "UserDataPrefs已经初始化"
+00274f3c    i32.load [2, 0]
+00274f3f    i32.store [2, 16]
+00274f42    i32.const [3929208]
+00274f47    i32.load [2, 0]
+00274f4a    call [901] ; 
+00274f4d    local.get [0]
+00274f4f    i32.const [0]
+00274f51    call [1541] ; CLog.dZz£
+00274f54    return []
+00274f55  end []
+00274f56  i32.const [3941104]
+00274f5b  i32.load [2, 0]
+00274f5e  call [901] ; 
+00274f61  i32.const [3941104]
+00274f66  i32.load [2, 0]
+00274f69  i32.load [2, 92]
+00274f6c  i32.const [1]
+00274f6e  i32.store8 [0, 16]
+00274f71  i32.const [3919084]
+00274f76  i32.load [2, 0]
+00274f79  call [903] ; 
+00274f7c  local.set [0]
+00274f7e  local.get [0]
+00274f80  i32.const [3960700]
+00274f85  i32.load [2, 0]
+00274f88  call [951] ; 
+00274f8b  i32.const [3941104]
+00274f90  i32.load [2, 0]
+00274f93  i32.load [2, 92]
+00274f96  local.get [0]
+00274f98  i32.store [2, 12]
+00274f9b  i32.const [3941104]
+00274fa0  i32.load [2, 0]
+00274fa3  i32.load [2, 92]
+00274fa6  drop []
+00274fa7  local.get [0]
+00274fa9  call [6841] ; UserDataPrefs.eSp
+00274fac  end []

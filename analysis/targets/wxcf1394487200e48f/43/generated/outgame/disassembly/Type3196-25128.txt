@@ -1,0 +1,31 @@
+; Original class: Util
+; Type3196.DeleteLoginInfo; wasmcode1 function 10626; offset=3867695 size=79
+; signature={'args': [127], 'returns': []}; localGroups=[]
+003b0430  i32.const [5011027]
+003b0435  i32.load8_u [0, 0]
+003b0438  i32.eqz []
+003b0439  if [-64]
+003b043b    i32.const [4061420] ; STRING "LoginUserInfo.txt"
+003b0440    i32.const [1605]
+003b0443    call_indirect [0, 0]
+003b0446    i32.const [5011027]
+003b044b    i32.const [1]
+003b044d    i32.store8 [0, 0]
+003b0450  end []
+003b0451  i32.const [0]
+003b0453  i32.const [2292] ; TABLE GamePath.get_Instance
+003b0456  call_indirect [2, 0]
+003b0459  i32.load [2, 24]
+003b045c  i32.const [4061420] ; STRING "LoginUserInfo.txt"
+003b0461  i32.load [2, 0]
+003b0464  i32.const [0]
+003b0466  i32.const [1476] ; TABLE String.Concat
+003b0469  call_indirect [3, 0]
+003b046c  local.set [0]
+003b046e  i32.const [0]
+003b0470  i32.const [2293] ; TABLE FileManager.get_Instance
+003b0473  call_indirect [2, 0]
+003b0476  local.get [0]
+003b0478  i32.const [0]
+003b047a  call [8541] ; FileManager.DelFile
+003b047d  end []

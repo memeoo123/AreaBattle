@@ -1,0 +1,107 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyShowAd; wasmcode function 2710; offset=844532 size=259
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+000ce2f7  global.get [0]
+000ce2f9  i32.const [16]
+000ce2fb  i32.sub []
+000ce2fc  local.set [3]
+000ce2fe  local.get [3]
+000ce300  global.set [0]
+000ce302  i32.const [5004951]
+000ce307  i32.load8_u [0, 0]
+000ce30a  i32.eqz []
+000ce30b  if [-64]
+000ce30d    i32.const [3930104]
+000ce312    call [900] ; 
+000ce315    i32.const [3984752]
+000ce31a    call [900] ; 
+000ce31d    i32.const [4045420] ; STRING "BANNER"
+000ce322    call [900] ; 
+000ce325    i32.const [4093388] ; STRING "notifyShowAd price:"
+000ce32a    call [900] ; 
+000ce32d    i32.const [5004951]
+000ce332    i32.const [1]
+000ce334    i32.store8 [0, 0]
+000ce337  end []
+000ce338  block [-64]
+000ce33a    local.get [0]
+000ce33c    i32.load [2, 12]
+000ce33f    i32.const [2]
+000ce341    i32.ne []
+000ce342    br_if [0]
+000ce344    local.get [0]
+000ce346    i32.const [0]
+000ce348    i32.store8 [0, 44]
+000ce34b    local.get [0]
+000ce34d    i32.load [2, 8]
+000ce350    local.set [4]
+000ce352    local.get [3]
+000ce354    local.get [0]
+000ce356    local.get [0]
+000ce358    call [12701] ; DAUAdsAdapter.getPrice
+000ce35b    f64.store [3, 8]
+000ce35e    local.get [3]
+000ce360    i32.const [8]
+000ce362    i32.add []
+000ce363    i32.const [0]
+000ce365    call [1737] ; Double.ToString
+000ce368    local.set [5]
+000ce36a    local.get [4]
+000ce36c    i32.const [4093388] ; STRING "notifyShowAd price:"
+000ce371    i32.load [2, 0]
+000ce374    local.get [5]
+000ce376    i32.const [0]
+000ce378    call [955] ; String.Concat
+000ce37b    i32.const [0]
+000ce37d    call [999] ; XYXLOG.Log
+000ce380    local.get [0]
+000ce382    i32.const [4]
+000ce384    i32.store [2, 12]
+000ce387    local.get [0]
+000ce389    local.get [0]
+000ce38b    call [4474] ; DAUAdsAdapter.stopShowTimeout
+000ce38e    local.get [1]
+000ce390    if [-64]
+000ce392      local.get [0]
+000ce394      local.get [2]
+000ce396      local.get [0]
+000ce398      call [12694] ; DAUAdsAdapter.reportShow
+000ce39b    end []
+000ce39c    i32.const [4045420] ; STRING "BANNER"
+000ce3a1    i32.load [2, 0]
+000ce3a4    local.get [0]
+000ce3a6    i32.load [2, 20]
+000ce3a9    i32.load [2, 16]
+000ce3ac    i32.const [0]
+000ce3ae    call [1019] ; String.Equals
+000ce3b1    i32.eqz []
+000ce3b2    if [-64]
+000ce3b4      i32.const [3984752]
+000ce3b9      i32.load [2, 0]
+000ce3bc      call [1203] ; 
+000ce3bf      i32.const [0]
+000ce3c1      call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+000ce3c4      local.get [0]
+000ce3c6      local.get [0]
+000ce3c8      call [3386] ; DAUAdsAdapter.getNewReportParam
+000ce3cb      i32.const [0]
+000ce3cd      call [10719] ; ReporterSDK.NewReportDBTAdShow
+000ce3d0    end []
+000ce3d1    local.get [0]
+000ce3d3    i32.load [2, 32]
+000ce3d6    local.set [1]
+000ce3d8    local.get [1]
+000ce3da    i32.eqz []
+000ce3db    br_if [0]
+000ce3dd    i32.const [2]
+000ce3df    i32.const [3930104]
+000ce3e4    i32.load [2, 0]
+000ce3e7    local.get [1]
+000ce3e9    local.get [0]
+000ce3eb    call [1027] ; 
+000ce3ee  end []
+000ce3ef  local.get [3]
+000ce3f1  i32.const [16]
+000ce3f3  i32.add []
+000ce3f4  global.set [0]
+000ce3f6  end []

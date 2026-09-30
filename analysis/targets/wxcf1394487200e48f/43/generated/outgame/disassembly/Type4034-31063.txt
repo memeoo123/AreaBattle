@@ -1,0 +1,32 @@
+; Original class: ServerTimeModule
+; Type4034.GetNowTimestampLong; wasmcode function 1848; offset=593296 size=74
+; signature={'args': [127, 127], 'returns': [126]}; localGroups=[(1, 126)]
+00090d93  i32.const [5008712]
+00090d98  i32.load8_u [0, 0]
+00090d9b  i32.eqz []
+00090d9c  if [-64]
+00090d9e    i32.const [3932476]
+00090da3    call [900] ; 
+00090da6    i32.const [5008712]
+00090dab    i32.const [1]
+00090dad    i32.store8 [0, 0]
+00090db0  end []
+00090db1  local.get [0]
+00090db3  i64.load [3, 16]
+00090db6  local.set [2]
+00090db8  i32.const [3932476]
+00090dbd  i32.load [2, 0]
+00090dc0  call [901] ; 
+00090dc3  i32.const [0]
+00090dc5  call [1585] ; GlobalData.get_IsReleaseVersion
+00090dc8  i32.eqz []
+00090dc9  if [-64]
+00090dcb    local.get [0]
+00090dcd    i64.load [3, 40]
+00090dd0    local.get [2]
+00090dd2    i64.add []
+00090dd3    local.set [2]
+00090dd5  end []
+00090dd6  local.get [2]
+00090dd8  return []
+00090dd9  end []

@@ -1,0 +1,94 @@
+; Original class: ProcedureStarGame
+; Type4452.`ozo[W; wasmcode function 11032; offset=5338428 size=272
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0051753f  i32.const [5009776]
+00517544  i32.load8_u [0, 0]
+00517547  i32.eqz []
+00517548  if [-64]
+0051754a    i32.const [3989352]
+0051754f    call [900] ; 
+00517552    i32.const [3953456]
+00517557    call [900] ; 
+0051755a    i32.const [3953344]
+0051755f    call [900] ; 
+00517562    i32.const [4018380]
+00517567    call [900] ; 
+0051756a    i32.const [4018452]
+0051756f    call [900] ; 
+00517572    i32.const [5009776]
+00517577    i32.const [1]
+00517579    i32.store8 [0, 0]
+0051757c  end []
+0051757d  i32.const [0]
+0051757f  call [1143] ; GameModule.get_UI
+00517582  i32.const [3989352]
+00517587  i32.load [2, 0]
+0051758a  call [1032] ; 
+0051758d  i32.const [4018452]
+00517592  i32.load [2, 0]
+00517595  call [1367] ; 
+00517598  local.set [1]
+0051759a  local.get [1]
+0051759c  local.set [2]
+0051759e  local.get [1]
+005175a0  i32.load [2, 0]
+005175a3  local.set [1]
+005175a5  local.get [2]
+005175a7  i32.const [0]
+005175a9  local.get [1]
+005175ab  i32.const [72]
+005175ae  i32.add []
+005175af  i32.load [2, 192]
+005175b3  local.get [1]
+005175b5  i32.load [2, 260]
+005175b9  global.set [3]
+005175bb  global.get [3]
+005175bd  call_indirect [2, 0]
+005175c0  i32.const [0]
+005175c2  call [1143] ; GameModule.get_UI
+005175c5  i32.const [3989352]
+005175ca  i32.load [2, 0]
+005175cd  call [1032] ; 
+005175d0  i32.const [4018380]
+005175d5  i32.load [2, 0]
+005175d8  call [1367] ; 
+005175db  drop []
+005175dc  i32.const [5009954]
+005175e1  i32.load8_u [0, 0]
+005175e4  i32.eqz []
+005175e5  if [-64]
+005175e7    i32.const [3939048]
+005175ec    call [900] ; 
+005175ef    i32.const [5009954]
+005175f4    i32.const [1]
+005175f6    i32.store8 [0, 0]
+005175f9  end []
+005175fa  i32.const [3939048]
+005175ff  i32.load [2, 0]
+00517602  i32.load [2, 92]
+00517605  i32.load [2, 0]
+00517608  i32.const [0]
+0051760a  call [1438] ; GameModule.get_LocalData
+0051760d  i32.const [0]
+0051760f  call [8026] ; DataManagerSave.GetRegStringValue
+00517612  i32.const [0]
+00517614  call [10339] ; SkinManager.DealOldData
+00517617  i32.const [3953344]
+0051761c  i32.load [2, 0]
+0051761f  call [935] ; 
+00517622  i32.load [2, 8]
+00517625  i32.const [0]
+00517627  call [1438] ; GameModule.get_LocalData
+0051762a  i32.const [0]
+0051762c  call [8026] ; DataManagerSave.GetRegStringValue
+0051762f  i32.const [0]
+00517631  call [12859] ; CommanderManager.DealOldData
+00517634  i32.const [3953456]
+00517639  i32.load [2, 0]
+0051763c  call [935] ; 
+0051763f  i32.const [0]
+00517641  call [11495] ; LoadPrefabControl.InitData
+00517644  local.get [0]
+00517646  local.get [0]
+00517648  call [11033] ; ProcedureStarGame.GotoGameScene
+0051764b  end []

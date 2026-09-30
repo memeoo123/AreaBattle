@@ -1,0 +1,14 @@
+; Original class: LocalDataControl
+; Type4118.SetJewelPackFirstPurchaseStatus; wasmcode1 function 25895; offset=9903971 size=24
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00971f64  local.get [0]
+00971f66  i32.load [2, 8]
+00971f69  local.set [0]
+00971f6b  local.get [0]
+00971f6d  if [-64]
+00971f6f    local.get [0]
+00971f71    local.get [1]
+00971f73    local.get [0]
+00971f75    call [25892] ; LocalDataManager.SetPurchasedJewelKey
+00971f79  end []
+00971f7a  end []

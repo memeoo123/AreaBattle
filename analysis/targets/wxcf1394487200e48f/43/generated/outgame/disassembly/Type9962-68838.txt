@@ -1,0 +1,51 @@
+; Original class: TweenManager
+; Type9962.MarkForKilling; wasmcode function 9988; offset=4798667 size=142
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004938cc  i32.const [4985506]
+004938d1  i32.load8_u [0, 0]
+004938d4  i32.eqz []
+004938d5  if [-64]
+004938d7    i32.const [3977956]
+004938dc    call [900] ; 
+004938df    i32.const [3940500]
+004938e4    call [900] ; 
+004938e7    i32.const [4985506]
+004938ec    i32.const [1]
+004938ee    i32.store8 [0, 0]
+004938f1  end []
+004938f2  block [-64]
+004938f4    local.get [1]
+004938f6    i32.eqz []
+004938f7    br_if [0]
+004938f9    i32.const [3940500]
+004938fe    i32.load [2, 0]
+00493901    call [901] ; 
+00493904    i32.const [3940500]
+00493909    i32.load [2, 0]
+0049390c    i32.load [2, 92]
+0049390f    i32.load8_u [0, 68]
+00493912    br_if [0]
+00493914    i32.const [3940500]
+00493919    i32.load [2, 0]
+0049391c    call [901] ; 
+0049391f    local.get [0]
+00493921    i32.const [1]
+00493923    local.get [0]
+00493925    call [2759] ; TweenManager.Despawn
+00493928    return []
+00493929  end []
+0049392a  local.get [0]
+0049392c  i32.const [0]
+0049392e  i32.store8 [0, 148]
+00493932  i32.const [3940500]
+00493937  i32.load [2, 0]
+0049393a  call [901] ; 
+0049393d  i32.const [3940500]
+00493942  i32.load [2, 0]
+00493945  i32.load [2, 92]
+00493948  i32.load [2, 84]
+0049394b  local.get [0]
+0049394d  i32.const [3977956]
+00493952  i32.load [2, 0]
+00493955  call [941] ; 
+00493958  end []

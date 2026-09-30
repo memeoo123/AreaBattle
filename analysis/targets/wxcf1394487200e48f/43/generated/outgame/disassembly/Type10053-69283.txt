@@ -1,0 +1,23 @@
+; Original class: Event
+; Type10053.set_displayIndex; wasmcode function 7894; offset=3774168 size=51
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+003996d9  i32.const [4981520]
+003996de  i32.load [2, 0]
+003996e1  local.set [2]
+003996e3  local.get [2]
+003996e5  i32.eqz []
+003996e6  if [-64]
+003996e8    i32.const [1196636]
+003996ed    call [923] ; 
+003996f0    local.set [2]
+003996f2    i32.const [4981520]
+003996f7    local.get [2]
+003996f9    i32.store [2, 0]
+003996fc  end []
+003996fd  local.get [0]
+003996ff  local.get [1]
+00399701  local.get [2]
+00399703  global.set [3]
+00399705  global.get [3]
+00399707  call_indirect [0, 0]
+0039970a  end []

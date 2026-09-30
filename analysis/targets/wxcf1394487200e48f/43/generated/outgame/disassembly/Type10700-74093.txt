@@ -1,0 +1,32 @@
+; Original class: Utility
+; Type10700..cctor; wasmcode1 function 41280; offset=14972796 size=87
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00e4777d  i32.const [4981397]
+00e47782  i32.load8_u [0, 0]
+00e47785  i32.eqz []
+00e47786  if [-64]
+00e47788    i32.const [3941132]
+00e4778d    i32.const [1605]
+00e47790    call_indirect [0, 0]
+00e47793    i32.const [4076016] ; STRING "UIR.RaiseEngineUpdate"
+00e47798    i32.const [1605]
+00e4779b    call_indirect [0, 0]
+00e4779e    i32.const [4981397]
+00e477a3    i32.const [1]
+00e477a5    i32.store8 [0, 0]
+00e477a8  end []
+00e477a9  i32.const [4076016] ; STRING "UIR.RaiseEngineUpdate"
+00e477ae  i32.load [2, 0]
+00e477b1  i32.const [1]
+00e477b3  i32.const [0]
+00e477b5  i32.const [0]
+00e477b7  i32.const [0]
+00e477b9  i32.const [51723] ; TABLE ProfilerUnsafeUtility.CreateMarker
+00e477bd  call_indirect [9, 0]
+00e477c0  local.set [0]
+00e477c2  i32.const [3941132]
+00e477c7  i32.load [2, 0]
+00e477ca  i32.load [2, 92]
+00e477cd  local.get [0]
+00e477cf  i32.store [2, 28]
+00e477d2  end []

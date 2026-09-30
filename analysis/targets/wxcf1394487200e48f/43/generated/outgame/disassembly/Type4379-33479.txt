@@ -1,0 +1,42 @@
+; Original class: MenuTabUI
+; Type4379.Dispose; wasmcode1 function 57023; offset=18672849 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011cecd2  i32.const [5009034]
+011cecd7  i32.load8_u [0, 0]
+011cecda  i32.eqz []
+011cecdb  if [-64]
+011cecdd    i32.const [3953576]
+011cece2    i32.const [1605]
+011cece5    call_indirect [0, 0]
+011cece8    i32.const [4062080] ; STRING "MenuTabDispose"
+011ceced    i32.const [1605]
+011cecf0    call_indirect [0, 0]
+011cecf3    i32.const [5009034]
+011cecf8    i32.const [1]
+011cecfa    i32.store8 [0, 0]
+011cecfd  end []
+011cecfe  local.get [0]
+011ced00  i32.load8_u [0, 124]
+011ced03  i32.eqz []
+011ced04  if [-64]
+011ced06    i32.const [4062080] ; STRING "MenuTabDispose"
+011ced0b    i32.load [2, 0]
+011ced0e    i32.const [0]
+011ced10    i32.const [9222] ; TABLE MsgDispatcher.SendMessage
+011ced14    call_indirect [4, 0]
+011ced17  end []
+011ced18  i32.const [3953576]
+011ced1d  i32.load [2, 0]
+011ced20  i32.const [10272]
+011ced24  call_indirect [2, 0]
+011ced27  i32.const [0]
+011ced29  i32.store [2, 44]
+011ced2c  i32.const [0]
+011ced2e  i32.const [9428] ; TABLE GameModule.get_Effect
+011ced32  call_indirect [2, 0]
+011ced35  local.get [0]
+011ced37  i32.load [2, 140]
+011ced3b  i32.const [0]
+011ced3d  i32.const [9515] ; TABLE EffectModule.Close
+011ced41  call_indirect [5, 0]
+011ced44  end []

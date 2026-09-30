@@ -1,0 +1,4173 @@
+{
+  "target": {
+    "appid": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "classificationDefinitions": {
+    "activebranch": "Concrete implementation and binding are present; does not claim runtime observed.",
+    "confirmed": "Static evidence establishes the described kernel or config binding.",
+    "unknown": "Evidence insufficient to claim reachability/timing, never silently normalized.",
+    "unusedconfig": "No reference in explicitly scanned serialized scope; not a universal dead-code proof."
+  },
+  "skillCount": 18,
+  "skills": [
+    {
+      "skillId": 1,
+      "name": "冰冻",
+      "commanderId": 1,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander1-freeze",
+      "mechanics": "Skill1 Execute iterates active non-neutral towers of a different camp, invokes tower virtual effect slot26 with6/cdTime and sets state1(Tree); removes all enemy soldiers via WayLineControl.RemoveAllEnemySoldier. Tree pauses generation and regen. SkillEnd clears state toNormal only on currently active different-camp towers whose current state isTree. Current ownership/state are checked at end, not a stored affected list.",
+      "allSkillConfig": {
+        "id": 1,
+        "gameItem": 2001,
+        "unLockLevel": 6,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 101,
+          "duration": 5.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 102,
+          "duration": 6.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 103,
+          "duration": 7.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 104,
+          "duration": 8.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 105,
+          "duration": 9.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 106,
+          "duration": 10.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 107,
+          "duration": 11.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 108,
+          "duration": 12.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 109,
+          "duration": 13.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 110,
+          "duration": 14.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 101,
+        "duration": 5.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 35,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4166.Execute",
+          "token": 100665106,
+          "disassembly": "generated/combat-disassembly/Type4166-100665106.txt",
+          "lines": [
+            3,
+            287
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13678,
+          "bodyOffset": 6597437,
+          "bodySize": 725,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4166.SkillEnd",
+          "token": 100665107,
+          "disassembly": "generated/combat-disassembly/Type4166-100665107.txt",
+          "lines": [
+            3,
+            259
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13677,
+          "bodyOffset": 6596808,
+          "bodySize": 627,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.Update",
+          "token": 100665404,
+          "disassembly": "generated/combat-disassembly/Tower-100665404.txt",
+          "lines": [
+            3,
+            499
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 6993,
+          "bodyOffset": 2662026,
+          "bodySize": 1239,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "WayLine.y}}Rm",
+          "token": 100665496,
+          "disassembly": "generated/combat-disassembly/WayLine-100665496.txt",
+          "lines": [
+            3,
+            102
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9363,
+          "bodyOffset": 4546345,
+          "bodySize": 214,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 2,
+      "name": "火焰",
+      "commanderId": 1,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander1-fireball",
+      "mechanics": "Skill2 coroutine launches ceil(args[0]) balls (integer i while i<args0) at cdTime/args0 intervals while active. Every ball rebuilds a list of all active towers (all camps), picks one via RandomHelper, then Bullet.Init with arc1.5, end=target position+up*0.2, and duration=distance(origin,UNOFFSET target position)/10+0.3. On hit, compare target CURRENT camp to skillCamp: friendly adds trunc(args[2]), otherwise subtracts trunc(args[1]); ChangeScore uses target.currentCamp and preventCapture=true. It cannot capture. First-level config201 duration5,args[10,2,2].",
+      "allSkillConfig": {
+        "id": 2,
+        "gameItem": 2002,
+        "unLockLevel": 14,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 4,
+        "dataType": [
+          0,
+          3,
+          2
+        ],
+        "describeData": [
+          1,
+          2
+        ]
+      },
+      "levels": [
+        {
+          "id": 201,
+          "duration": 5.0,
+          "data1": 10.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 202,
+          "duration": 5.0,
+          "data1": 13.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 203,
+          "duration": 5.0,
+          "data1": 16.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 204,
+          "duration": 5.0,
+          "data1": 19.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 205,
+          "duration": 5.0,
+          "data1": 20.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 206,
+          "duration": 5.0,
+          "data1": 21.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 207,
+          "duration": 5.0,
+          "data1": 22.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 208,
+          "duration": 5.0,
+          "data1": 23.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 209,
+          "duration": 5.0,
+          "data1": 24.0,
+          "data2": 2.0,
+          "data3": 2.0
+        },
+        {
+          "id": 210,
+          "duration": 5.0,
+          "data1": 25.0,
+          "data2": 2.0,
+          "data3": 2.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 201,
+        "duration": 5.0,
+        "data1": 10.0,
+        "data2": 2.0,
+        "data3": 2.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 35,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "RandomHelper upper-bound convention and interruption timing not runtime-tested"
+      ],
+      "evidence": [
+        {
+          "method": "Type4169.MoveNext",
+          "token": 100665118,
+          "disassembly": "generated/combat-disassembly/Type4169-100665118.txt",
+          "lines": [
+            3,
+            305
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15173,
+          "bodyOffset": 7370171,
+          "bodySize": 762,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4167.Ohpb~x",
+          "token": 100665113,
+          "disassembly": "generated/combat-disassembly/Type4167-100665113.txt",
+          "lines": [
+            3,
+            578
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14588,
+          "bodyOffset": 7031370,
+          "bodySize": 1484,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4168.smQRO",
+          "token": 100665115,
+          "disassembly": "generated/combat-disassembly/Type4168-100665115.txt",
+          "lines": [
+            3,
+            311
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15161,
+          "bodyOffset": 7366003,
+          "bodySize": 752,
+          "instructionOffsetsHex": null
+        },
+        "generated/tables/SkillConfig.json"
+      ]
+    },
+    {
+      "skillId": 3,
+      "name": "闪电",
+      "commanderId": 1,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander1-direct-damage",
+      "mechanics": "Skill3 selected-target strike calls ChangeScore(LevelControl.PlayerCampID,-trunc(args[0]),true), plays effect413 and voice4401. Damage cannot capture. The selected target field is44.",
+      "allSkillConfig": {
+        "id": 3,
+        "gameItem": 2003,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 2,
+        "dataType": [
+          0,
+          2
+        ],
+        "describeData": [
+          1
+        ]
+      },
+      "levels": [
+        {
+          "id": 301,
+          "duration": 0.7,
+          "data1": 20.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 302,
+          "duration": 0.7,
+          "data1": 24.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 303,
+          "duration": 0.7,
+          "data1": 28.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 304,
+          "duration": 0.7,
+          "data1": 32.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 305,
+          "duration": 0.7,
+          "data1": 35.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 306,
+          "duration": 0.7,
+          "data1": 37.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 307,
+          "duration": 0.7,
+          "data1": 39.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 308,
+          "duration": 0.7,
+          "data1": 41.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 309,
+          "duration": 0.7,
+          "data1": 43.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 310,
+          "duration": 0.7,
+          "data1": 45.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 301,
+        "duration": 0.7,
+        "data1": 20.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 35,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4171.Execute",
+          "token": 100665124,
+          "disassembly": "generated/combat-disassembly/Type4171-100665124.txt",
+          "lines": [
+            268,
+            372
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14822,
+          "bodyOffset": 7238296,
+          "bodySize": 1058,
+          "instructionOffsetsHex": [
+            "006e756d",
+            "006e765d"
+          ]
+        }
+      ]
+    },
+    {
+      "skillId": 4,
+      "name": "加速",
+      "commanderId": 2,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander2-speed",
+      "mechanics": "Commander2.GetSpawnRate: for queried camp==commander.camp use skills[0] (skill4), otherwise skills[1] (skill5). If selected skill.inSkill, multiply input by args[0]; otherwise identity. Thus skill4 modifies own camp dispatch, skill5 modifies every other camp. Both Execute methods use base active timer semantics.",
+      "allSkillConfig": {
+        "id": 4,
+        "gameItem": 2004,
+        "unLockLevel": 6,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 1,
+        "dataType": [
+          1,
+          5
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 401,
+          "duration": 10.0,
+          "data1": 1.8,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 402,
+          "duration": 10.0,
+          "data1": 1.9,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 403,
+          "duration": 10.0,
+          "data1": 2.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 404,
+          "duration": 10.0,
+          "data1": 2.1,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 405,
+          "duration": 11.0,
+          "data1": 2.1,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 406,
+          "duration": 11.0,
+          "data1": 2.2,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 407,
+          "duration": 11.0,
+          "data1": 2.3,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 408,
+          "duration": 12.0,
+          "data1": 2.3,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 409,
+          "duration": 12.0,
+          "data1": 2.4,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 410,
+          "duration": 12.0,
+          "data1": 2.5,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 401,
+        "duration": 10.0,
+        "data1": 1.8,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 25,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4176.GetSpawnRate",
+          "token": 100665126,
+          "disassembly": "generated/combat-disassembly/Type4176-100665126.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20208,
+          "bodyOffset": 9072715,
+          "bodySize": 153,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4176.jbOiMS",
+          "token": 100665127,
+          "disassembly": "generated/combat-disassembly/Type4176-100665127.txt",
+          "lines": [
+            3,
+            76
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20207,
+          "bodyOffset": 9072504,
+          "bodySize": 209,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4173.Execute",
+          "token": 100665128,
+          "disassembly": "generated/combat-disassembly/Type4173-100665128.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15168,
+          "bodyOffset": 7368850,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4174.Execute",
+          "token": 100665132,
+          "disassembly": "generated/combat-disassembly/Type4174-100665132.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15156,
+          "bodyOffset": 7364246,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 5,
+      "name": "减速",
+      "commanderId": 2,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander2-speed",
+      "mechanics": "Commander2.GetSpawnRate: for queried camp==commander.camp use skills[0] (skill4), otherwise skills[1] (skill5). If selected skill.inSkill, multiply input by args[0]; otherwise identity. Thus skill4 modifies own camp dispatch, skill5 modifies every other camp. Both Execute methods use base active timer semantics.",
+      "allSkillConfig": {
+        "id": 5,
+        "gameItem": 2005,
+        "unLockLevel": 14,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          1,
+          4
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 501,
+          "duration": 10.0,
+          "data1": 0.7,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 502,
+          "duration": 10.0,
+          "data1": 0.6,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 503,
+          "duration": 10.0,
+          "data1": 0.55,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 504,
+          "duration": 10.0,
+          "data1": 0.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 505,
+          "duration": 11.0,
+          "data1": 0.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 506,
+          "duration": 11.0,
+          "data1": 0.45,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 507,
+          "duration": 11.0,
+          "data1": 0.4,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 508,
+          "duration": 12.0,
+          "data1": 0.4,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 509,
+          "duration": 12.0,
+          "data1": 0.35,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 510,
+          "duration": 12.0,
+          "data1": 0.3,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 501,
+        "duration": 10.0,
+        "data1": 0.7,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 25,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4176.GetSpawnRate",
+          "token": 100665126,
+          "disassembly": "generated/combat-disassembly/Type4176-100665126.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20208,
+          "bodyOffset": 9072715,
+          "bodySize": 153,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4176.jbOiMS",
+          "token": 100665127,
+          "disassembly": "generated/combat-disassembly/Type4176-100665127.txt",
+          "lines": [
+            3,
+            76
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20207,
+          "bodyOffset": 9072504,
+          "bodySize": 209,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4173.Execute",
+          "token": 100665128,
+          "disassembly": "generated/combat-disassembly/Type4173-100665128.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15168,
+          "bodyOffset": 7368850,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4174.Execute",
+          "token": 100665132,
+          "disassembly": "generated/combat-disassembly/Type4174-100665132.txt",
+          "lines": [
+            3,
+            61
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15156,
+          "bodyOffset": 7364246,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 6,
+      "name": "发展",
+      "commanderId": 2,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander2-reinforce",
+      "mechanics": "Skill6 Execute reads selected target from SkillControl.TargetTower for player skillCamp1; when target exists calls its virtual ChangeScore(LevelControl.PlayerCampID,+trunc(args[0]),true), clears target reference, plays voice4501. This adds score and respects target maxScore; it cannot capture. Target eligibility is delegated to SkillControl.",
+      "allSkillConfig": {
+        "id": 6,
+        "gameItem": 2006,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 0,
+        "dataType": [
+          0,
+          2
+        ],
+        "describeData": [
+          1
+        ]
+      },
+      "levels": [
+        {
+          "id": 601,
+          "duration": 0.7,
+          "data1": 20.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 602,
+          "duration": 0.7,
+          "data1": 24.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 603,
+          "duration": 0.7,
+          "data1": 28.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 604,
+          "duration": 0.7,
+          "data1": 32.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 605,
+          "duration": 0.7,
+          "data1": 36.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 606,
+          "duration": 0.7,
+          "data1": 38.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 607,
+          "duration": 0.7,
+          "data1": 40.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 608,
+          "duration": 0.7,
+          "data1": 42.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 609,
+          "duration": 0.7,
+          "data1": 44.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 610,
+          "duration": 0.7,
+          "data1": 46.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 601,
+        "duration": 0.7,
+        "data1": 20.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 25,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4175.Execute",
+          "token": 100665134,
+          "disassembly": "generated/combat-disassembly/Type4175-100665134.txt",
+          "lines": [
+            3,
+            116
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14258,
+          "bodyOffset": 7020334,
+          "bodySize": 293,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4175.IsEffective",
+          "token": 100665135,
+          "disassembly": "generated/combat-disassembly/Type4175-100665135.txt",
+          "lines": [
+            3,
+            22
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14257,
+          "bodyOffset": 7020279,
+          "bodySize": 53,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 7,
+      "name": "夜魔侵袭",
+      "commanderId": 3,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander3-unlinkable",
+      "mechanics": "Skill7 Execute targets all active non-neutral different-camp towers. Each bat arrives through callback100665147: while Running, if target.state is not4 set Unlinkable4 and remove outgoing directions only. If already4 and now same skill camp, return bat to pool and setNormal; if already4 and still enemy, leave unchanged. SkillEnd returns tracked bat objects and clears ALL active towers currently state4, irrespective of camp.",
+      "allSkillConfig": {
+        "id": 7,
+        "gameItem": 2007,
+        "unLockLevel": 6,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 701,
+          "duration": 6.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 702,
+          "duration": 7.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 703,
+          "duration": 8.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 704,
+          "duration": 9.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 705,
+          "duration": 10.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 706,
+          "duration": 10.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 707,
+          "duration": 11.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 708,
+          "duration": 11.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 709,
+          "duration": 12.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 710,
+          "duration": 12.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 701,
+        "duration": 6.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "Exact bat initial travel timing"
+      ],
+      "evidence": [
+        {
+          "method": "Type4179.Execute",
+          "token": 100665140,
+          "disassembly": "generated/combat-disassembly/Type4179-100665140.txt",
+          "lines": [
+            3,
+            387
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13627,
+          "bodyOffset": 6574946,
+          "bodySize": 1011,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4179.OQnj",
+          "token": 100665142,
+          "disassembly": "generated/combat-disassembly/Type4179-100665142.txt",
+          "lines": [
+            3,
+            282
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 8512,
+          "bodyOffset": 4158843,
+          "bodySize": 742,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4178.miPL",
+          "token": 100665147,
+          "disassembly": "generated/combat-disassembly/Type4178-100665147.txt",
+          "lines": [
+            3,
+            66
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15207,
+          "bodyOffset": 7381337,
+          "bodySize": 160,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4179.SkillEnd",
+          "token": 100665141,
+          "disassembly": "generated/combat-disassembly/Type4179-100665141.txt",
+          "lines": [
+            3,
+            265
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13625,
+          "bodyOffset": 6574268,
+          "bodySize": 652,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 8,
+      "name": "血族契约",
+      "commanderId": 3,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander3-undead",
+      "mechanics": "Skill8 Execute sets existing same-camp soldiers HP=10000 and effect418; sets current player-camp towers state5 Undead, causing newly generated soldiers HP=100000 via spawn state machine. These are large finite HP values, not an invulnerability flag. SkillEnd sets affected same-camp soldiers HP back to SoldierConfig.hp (full baseline HP), removes effect418, and resets current player-camp tower states toNormal.",
+      "allSkillConfig": {
+        "id": 8,
+        "gameItem": 2008,
+        "unLockLevel": 14,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 6,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 801,
+          "duration": 6.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 802,
+          "duration": 7.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 803,
+          "duration": 8.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 804,
+          "duration": 9.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 805,
+          "duration": 10.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 806,
+          "duration": 10.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 807,
+          "duration": 11.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 808,
+          "duration": 11.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 809,
+          "duration": 12.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 810,
+          "duration": 12.5,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 801,
+        "duration": 6.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4180.Execute",
+          "token": 100665149,
+          "disassembly": "generated/combat-disassembly/Type4180-100665149.txt",
+          "lines": [
+            3,
+            448
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14241,
+          "bodyOffset": 7012531,
+          "bodySize": 1137,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4180.SkillEnd",
+          "token": 100665150,
+          "disassembly": "generated/combat-disassembly/Type4180-100665150.txt",
+          "lines": [
+            3,
+            473
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14240,
+          "bodyOffset": 7011341,
+          "bodySize": 1188,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4233.MoveNext",
+          "token": 100665536,
+          "disassembly": "generated/combat-disassembly/Type4233-100665536.txt",
+          "lines": [
+            3,
+            509
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9885,
+          "bodyOffset": 4742422,
+          "bodySize": 1237,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 9,
+      "name": "吸血",
+      "commanderId": 3,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander3-drain",
+      "mechanics": "Skill9 picks the player selected friendly target (field48), or random active same-camp tower for AI. For every active non-neutral different-camp source tower, source visual helper subtracts trunc(args0) with preventCapture=true before launching the absorption bullet. Travel duration argument is0.7. On arrival only while Running and selected target still belongs to skill camp, add trunc(args0) to that target (preventCapture=false); otherwise no heal. SkillEnd nulls selected target. The amount healed does not depend on source actual score loss after clamp.",
+      "allSkillConfig": {
+        "id": 9,
+        "gameItem": 2009,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 0,
+        "dataType": [
+          0,
+          2
+        ],
+        "describeData": [
+          1
+        ]
+      },
+      "levels": [
+        {
+          "id": 901,
+          "duration": 1.0,
+          "data1": 5.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 902,
+          "duration": 1.0,
+          "data1": 5.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 903,
+          "duration": 1.0,
+          "data1": 6.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 904,
+          "duration": 1.0,
+          "data1": 6.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 905,
+          "duration": 1.0,
+          "data1": 7.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 906,
+          "duration": 1.0,
+          "data1": 7.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 907,
+          "duration": 1.0,
+          "data1": 8.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 908,
+          "duration": 1.0,
+          "data1": 8.5,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 909,
+          "duration": 1.0,
+          "data1": 9.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 910,
+          "duration": 1.0,
+          "data1": 10.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 901,
+        "duration": 1.0,
+        "data1": 5.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4182.Execute",
+          "token": 100665152,
+          "disassembly": "generated/combat-disassembly/Type4182-100665152.txt",
+          "lines": [
+            3,
+            677
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42680,
+          "bodyOffset": 15361843,
+          "bodySize": 1794,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.WyyM",
+          "token": 100665151,
+          "disassembly": "generated/combat-disassembly/Type4182-100665151.txt",
+          "lines": [
+            3,
+            366
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 20212,
+          "bodyOffset": 8029473,
+          "bodySize": 929,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.NxPSj",
+          "token": 100665153,
+          "disassembly": "generated/combat-disassembly/Type4182-100665153.txt",
+          "lines": [
+            3,
+            83
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 42679,
+          "bodyOffset": 15361642,
+          "bodySize": 199,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4182.SkillEnd",
+          "token": 100665155,
+          "disassembly": "generated/combat-disassembly/Type4182-100665155.txt",
+          "lines": [
+            3,
+            10
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15184,
+          "bodyOffset": 7374063,
+          "bodySize": 17,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 10,
+      "name": "箭雨",
+      "commanderId": 4,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander4-arrow-rain",
+      "mechanics": "Skill10 runs independent arrow visuals/collision and tower damage coroutines. Tower coroutine waits0.3s, then for integer i starting0 while i<=cdTime and active, applies -trunc(args1) with preventCapture=true to GetOtherTower(skillCamp), then waits1s. Visual coroutine emits two arrows per inner iteration, i<args0*0.5, waiting2/args0 between iterations. Each landed arrow queries different-camp soldiers in radius0.15 (minimum0), and clears only the FIRST returned soldier with ClearInSkill; it does not subtract HP. Visual random landing x=Random(-20,20)/20 and z=Random(-40,40)/15+3; launch height10, fall duration1.",
+      "allSkillConfig": {
+        "id": 10,
+        "gameItem": 2010,
+        "unLockLevel": 6,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 5,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          2,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1001,
+          "duration": 3.0,
+          "data1": 60.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1002,
+          "duration": 4.0,
+          "data1": 70.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1003,
+          "duration": 5.0,
+          "data1": 80.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1004,
+          "duration": 6.0,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1005,
+          "duration": 7.0,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1006,
+          "duration": 8.0,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1007,
+          "duration": 8.5,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1008,
+          "duration": 9.0,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1009,
+          "duration": 9.5,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1010,
+          "duration": 10.0,
+          "data1": 90.0,
+          "data2": 2.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1001,
+        "duration": 3.0,
+        "data1": 60.0,
+        "data2": 2.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "Visual coroutine end-boundary versus active timer ordering"
+      ],
+      "evidence": [
+        {
+          "method": "Type4188.Execute",
+          "token": 100665163,
+          "disassembly": "generated/combat-disassembly/Type4188-100665163.txt",
+          "lines": [
+            3,
+            74
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15181,
+          "bodyOffset": 7372479,
+          "bodySize": 182,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4187.MoveNext",
+          "token": 100665180,
+          "disassembly": "generated/combat-disassembly/Type4187-100665180.txt",
+          "lines": [
+            3,
+            375
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15160,
+          "bodyOffset": 7365088,
+          "bodySize": 913,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4186.MoveNext",
+          "token": 100665174,
+          "disassembly": "generated/combat-disassembly/Type4186-100665174.txt",
+          "lines": [
+            3,
+            253
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14253,
+          "bodyOffset": 7019653,
+          "bodySize": 584,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4184.}b{Szk",
+          "token": 100665169,
+          "disassembly": "generated/combat-disassembly/Type4184-100665169.txt",
+          "lines": [
+            3,
+            189
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 18798,
+          "bodyOffset": 8481926,
+          "bodySize": 518,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4185.Zu~{cnZ",
+          "token": 100665171,
+          "disassembly": "generated/combat-disassembly/Type4185-100665171.txt",
+          "lines": [
+            3,
+            108
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14148,
+          "bodyOffset": 6979912,
+          "bodySize": 270,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.ClearInSkill",
+          "token": 100665335,
+          "disassembly": "generated/combat-disassembly/Soldier-100665335.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7128,
+          "bodyOffset": 2710066,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 11,
+      "name": "迅捷",
+      "commanderId": 4,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander4-speed",
+      "mechanics": "Commander4.GetSpawnRate and GetSoldierSpeed apply only for queried camp==commander.camp and skills[1] (skill11) active. Spawn rate multiplies args[1]; soldier speed multiplies args[0]. When inactive/othercamp both are identity. Skill11.Execute sets all current player-camp towers to state6 (Comm04_2); SkillEnd resets all current player-camp tower states to0 unconditionally. Execute attaches effect420 to selected existing soldier effect holders using helper9548; -9999 is an effect duration/argument, NOT damage. Helper resolves wasmcode7935 and invokes GameModule.get_Effect, never ChangeScore/HP mutation.",
+      "allSkillConfig": {
+        "id": 11,
+        "gameItem": 2011,
+        "unLockLevel": 14,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 6,
+        "dataType": [
+          1,
+          5
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1101,
+          "duration": 10.0,
+          "data1": 1.8,
+          "data2": 1.8,
+          "data3": 0.0
+        },
+        {
+          "id": 1102,
+          "duration": 10.0,
+          "data1": 1.9,
+          "data2": 1.9,
+          "data3": 0.0
+        },
+        {
+          "id": 1103,
+          "duration": 10.0,
+          "data1": 2.0,
+          "data2": 2.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1104,
+          "duration": 10.0,
+          "data1": 2.1,
+          "data2": 2.1,
+          "data3": 0.0
+        },
+        {
+          "id": 1105,
+          "duration": 11.0,
+          "data1": 2.1,
+          "data2": 2.1,
+          "data3": 0.0
+        },
+        {
+          "id": 1106,
+          "duration": 11.0,
+          "data1": 2.2,
+          "data2": 2.2,
+          "data3": 0.0
+        },
+        {
+          "id": 1107,
+          "duration": 11.0,
+          "data1": 2.3,
+          "data2": 2.3,
+          "data3": 0.0
+        },
+        {
+          "id": 1108,
+          "duration": 12.0,
+          "data1": 2.3,
+          "data2": 2.3,
+          "data3": 0.0
+        },
+        {
+          "id": 1109,
+          "duration": 12.0,
+          "data1": 2.4,
+          "data2": 2.4,
+          "data3": 0.0
+        },
+        {
+          "id": 1110,
+          "duration": 12.0,
+          "data1": 2.5,
+          "data2": 2.5,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1101,
+        "duration": 10.0,
+        "data1": 1.8,
+        "data2": 1.8,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4192.jbOiMS",
+          "token": 100665158,
+          "disassembly": "generated/combat-disassembly/Type4192-100665158.txt",
+          "lines": [
+            3,
+            74
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20203,
+          "bodyOffset": 9071879,
+          "bodySize": 204,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.GetSpawnRate",
+          "token": 100665159,
+          "disassembly": "generated/combat-disassembly/Type4192-100665159.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20204,
+          "bodyOffset": 9072084,
+          "bodySize": 110,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4192.GetSoldierSpeed",
+          "token": 100665161,
+          "disassembly": "generated/combat-disassembly/Type4192-100665161.txt",
+          "lines": [
+            3,
+            45
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20205,
+          "bodyOffset": 9072195,
+          "bodySize": 110,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4189.Execute",
+          "token": 100665184,
+          "disassembly": "generated/combat-disassembly/Type4189-100665184.txt",
+          "lines": [
+            3,
+            460
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15189,
+          "bodyOffset": 7374916,
+          "bodySize": 1164,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4189.SkillEnd",
+          "token": 100665185,
+          "disassembly": "generated/combat-disassembly/Type4189-100665185.txt",
+          "lines": [
+            3,
+            207
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15188,
+          "bodyOffset": 7374398,
+          "bodySize": 516,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Raw.7935",
+          "token": 7935,
+          "disassembly": "generated/combat-disassembly/Raw-7935.txt",
+          "lines": [
+            3,
+            113
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7935,
+          "bodyOffset": 3786846,
+          "bodySize": 275,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "EffectID..cctor",
+          "token": 100664494,
+          "disassembly": "generated/combat-disassembly/EffectID-100664494.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode1.wasm",
+          "function": 64169,
+          "bodyOffset": 20475147,
+          "bodySize": 86,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 12,
+      "name": "瞄准",
+      "commanderId": 4,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander4-dot",
+      "mechanics": "Skill12 active SkillInUpdate2 adds dt to its own damage timer; at >=1 second subtracts1 once and invokes selectedTarget.ChangeScore(skillCamp,-trunc(args[0]),true). No catch-up loop. SkillEnd nulls target and zeroes damage timer. Execute coroutine binds selected target and starts the base skill timer; targeting/visual travel details remain partial.",
+      "allSkillConfig": {
+        "id": 12,
+        "gameItem": 2012,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 2,
+        "dataType": [
+          1,
+          2
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1201,
+          "duration": 3.0,
+          "data1": 5.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1202,
+          "duration": 3.0,
+          "data1": 6.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1203,
+          "duration": 4.0,
+          "data1": 6.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1204,
+          "duration": 4.0,
+          "data1": 7.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1205,
+          "duration": 5.0,
+          "data1": 7.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1206,
+          "duration": 5.0,
+          "data1": 8.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1207,
+          "duration": 5.5,
+          "data1": 8.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1208,
+          "duration": 5.5,
+          "data1": 9.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1209,
+          "duration": 5.0,
+          "data1": 9.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1210,
+          "duration": 6.0,
+          "data1": 9.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1201,
+        "duration": 3.0,
+        "data1": 5.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 1,
+      "commanderUsePercent": 20,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "Async selected-target visual travel and exact duration start"
+      ],
+      "evidence": [
+        {
+          "method": "Type4191.SkillInUpdate2",
+          "token": 100665189,
+          "disassembly": "generated/combat-disassembly/Type4191-100665189.txt",
+          "lines": [
+            3,
+            68
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17913,
+          "bodyOffset": 7964461,
+          "bodySize": 151,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4191.SkillEnd",
+          "token": 100665191,
+          "disassembly": "generated/combat-disassembly/Type4191-100665191.txt",
+          "lines": [
+            3,
+            16
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 17914,
+          "bodyOffset": 7964613,
+          "bodySize": 27,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4190.MoveNext",
+          "token": 100665194,
+          "disassembly": "generated/combat-disassembly/Type4190-100665194.txt",
+          "lines": [
+            3,
+            1148
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 10983,
+          "bodyOffset": 5318292,
+          "bodySize": 2914,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 13,
+      "name": "鼓舞",
+      "commanderId": 5,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander5-inspiration",
+      "mechanics": "Skill13 Execute subscribes Event.SoldierInit (Event static offset60) and activates duration; SkillEnd unsubscribes. Callback only modifies newly initialized same-camp soldiers: effect511; Occupy*=trunc(1+args[0]/100f); Attack+=99. It does not iterate pre-existing soldiers in Execute. Thus localized description claiming all friendly soldiers is broader than this path.",
+      "allSkillConfig": {
+        "id": 13,
+        "gameItem": 2013,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 6,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1301,
+          "duration": 6.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1302,
+          "duration": 7.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1303,
+          "duration": 8.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1304,
+          "duration": 9.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1305,
+          "duration": 10.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1306,
+          "duration": 10.5,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1307,
+          "duration": 11.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1308,
+          "duration": 11.5,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1309,
+          "duration": 12.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1310,
+          "duration": 13.0,
+          "data1": 100.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1301,
+        "duration": 6.0,
+        "data1": 100.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4193.Execute",
+          "token": 100665199,
+          "disassembly": "generated/combat-disassembly/Type4193-100665199.txt",
+          "lines": [
+            3,
+            57
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14252,
+          "bodyOffset": 7019497,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4193.SkillEnd",
+          "token": 100665200,
+          "disassembly": "generated/combat-disassembly/Type4193-100665200.txt",
+          "lines": [
+            3,
+            40
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14251,
+          "bodyOffset": 7019379,
+          "bodySize": 116,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4193.MZij~s",
+          "token": 100665201,
+          "disassembly": "generated/combat-disassembly/Type4193-100665201.txt",
+          "lines": [
+            3,
+            70
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14250,
+          "bodyOffset": 7019208,
+          "bodySize": 170,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 14,
+      "name": "募兵",
+      "commanderId": 5,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander5-recruit",
+      "mechanics": "Skill14 coroutine emits trunc(args0) special DeadSoldier objects at cdTime/trunc(args0) intervals, first emission immediate. Each chooses a random GetEnemyTower(skillCamp); if none, random neutral tower; no candidates skips that emission. Starts at UnityMathfTool.randomPoint(target.x,target.z,0.3,0.5). Init receives damage1,skillCamp,callbacknull. Each active unit moves normalized fixed direction by WayLineControl.movementLength*0.5 per update; hit when distanceSquared<0.01. On hit applies +1 if current target camp equals skillCamp, otherwise -1, with preventCapture=false, so it CAN capture ordinary towers. These are separate from ordinary WayLine soldier lists.",
+      "allSkillConfig": {
+        "id": 14,
+        "gameItem": 2014,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 3,
+        "dataType": [
+          0,
+          2
+        ],
+        "describeData": [
+          1
+        ]
+      },
+      "levels": [
+        {
+          "id": 1401,
+          "duration": 5.0,
+          "data1": 25.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1402,
+          "duration": 5.0,
+          "data1": 29.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1403,
+          "duration": 5.0,
+          "data1": 33.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1404,
+          "duration": 5.0,
+          "data1": 37.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1405,
+          "duration": 5.0,
+          "data1": 40.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1406,
+          "duration": 5.0,
+          "data1": 42.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1407,
+          "duration": 5.0,
+          "data1": 44.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1408,
+          "duration": 5.0,
+          "data1": 46.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1409,
+          "duration": 5.0,
+          "data1": 48.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1410,
+          "duration": 5.0,
+          "data1": 50.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1401,
+        "duration": 5.0,
+        "data1": 25.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "randomPoint distribution, scene-unit step on pause"
+      ],
+      "evidence": [
+        {
+          "method": "Type4194.MoveNext",
+          "token": 100665209,
+          "disassembly": "generated/combat-disassembly/Type4194-100665209.txt",
+          "lines": [
+            3,
+            447
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15182,
+          "bodyOffset": 7372663,
+          "bodySize": 1144,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.Init",
+          "token": 100665220,
+          "disassembly": "generated/combat-disassembly/Type4198-100665220.txt",
+          "lines": [
+            3,
+            263
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 12623,
+          "bodyOffset": 6092172,
+          "bodySize": 615,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.Move",
+          "token": 100665219,
+          "disassembly": "generated/combat-disassembly/Type4198-100665219.txt",
+          "lines": [
+            3,
+            199
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 20019,
+          "bodyOffset": 9001256,
+          "bodySize": 426,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4198.WcqoxP",
+          "token": 100665221,
+          "disassembly": "generated/combat-disassembly/Type4198-100665221.txt",
+          "lines": [
+            3,
+            19
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 12622,
+          "bodyOffset": 6092122,
+          "bodySize": 48,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4195.SkillInUpdate1",
+          "token": 100665205,
+          "disassembly": "generated/combat-disassembly/Type4195-100665205.txt",
+          "lines": [
+            3,
+            212
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15204,
+          "bodyOffset": 7379997,
+          "bodySize": 523,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 15,
+      "name": "降临",
+      "commanderId": 5,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander5-serial-score",
+      "mechanics": "Skill15 selects one tower; if target camp equals skill camp, calls ChangeScoreInSerial(skillCamp,+trunc(args0),cdTime/args0,null); otherwise negative amount. Tower serial coroutine stores initial target camp, applies one +1/-1 immediately and then after each WaitForSeconds(gap), integer counter while counter<abs(amount). Every unit change uses preventCapture=true. If target becomes inactive it stops; if target camp changes and callback is null it stops. Skill15 has null callback, clears selected reference after starting sequence, and can never capture by its own damage. Friendly/enemy effect IDs532/531.",
+      "allSkillConfig": {
+        "id": 15,
+        "gameItem": 2015,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 8,
+        "dataType": [
+          0,
+          2
+        ],
+        "describeData": [
+          1,
+          1
+        ]
+      },
+      "levels": [
+        {
+          "id": 1501,
+          "duration": 1.7,
+          "data1": 30.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1502,
+          "duration": 1.7,
+          "data1": 32.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1503,
+          "duration": 1.7,
+          "data1": 31.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1504,
+          "duration": 1.7,
+          "data1": 33.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1505,
+          "duration": 1.7,
+          "data1": 34.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1506,
+          "duration": 1.7,
+          "data1": 36.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1507,
+          "duration": 1.7,
+          "data1": 38.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1508,
+          "duration": 1.7,
+          "data1": 40.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1509,
+          "duration": 1.7,
+          "data1": 42.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1510,
+          "duration": 1.7,
+          "data1": 45.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1501,
+        "duration": 1.7,
+        "data1": 30.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "AI selection strategy and invalid selection flow"
+      ],
+      "evidence": [
+        {
+          "method": "Type4196.MoveNext",
+          "token": 100665216,
+          "disassembly": "generated/combat-disassembly/Type4196-100665216.txt",
+          "lines": [
+            3,
+            1169
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11177,
+          "bodyOffset": 5506345,
+          "bodySize": 2953,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Tower.ChangeScoreInSerial",
+          "token": 100665413,
+          "disassembly": "generated/combat-disassembly/Tower-100665413.txt",
+          "lines": [
+            3,
+            89
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15523,
+          "bodyOffset": 7495766,
+          "bodySize": 192,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4224.MoveNext",
+          "token": 100665434,
+          "disassembly": "generated/combat-disassembly/Type4224-100665434.txt",
+          "lines": [
+            3,
+            520
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 11298,
+          "bodyOffset": 5558687,
+          "bodySize": 1249,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 16,
+      "name": "虚弱",
+      "commanderId": 6,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander6-fatigue",
+      "mechanics": "Skill16 Execute subscribes Event.SoldierInit and activates duration; SkillEnd unsubscribes. Callback only modifies newly initialized DIFFERENT-camp soldiers: effect611,Attack=0,Reinforce=0. Occupy and HP remain unchanged. It does not retroactively iterate all existing soldiers in Execute.",
+      "allSkillConfig": {
+        "id": 16,
+        "gameItem": 2016,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 7,
+        "dataType": [
+          1
+        ],
+        "describeData": [
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1601,
+          "duration": 5.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1602,
+          "duration": 6.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1603,
+          "duration": 7.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1604,
+          "duration": 8.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1605,
+          "duration": 9.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1606,
+          "duration": 10.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1607,
+          "duration": 11.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1608,
+          "duration": 12.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1609,
+          "duration": 13.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1610,
+          "duration": 14.0,
+          "data1": 0.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1601,
+        "duration": 5.0,
+        "data1": 0.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4200.Execute",
+          "token": 100665224,
+          "disassembly": "generated/combat-disassembly/Type4200-100665224.txt",
+          "lines": [
+            3,
+            57
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15178,
+          "bodyOffset": 7371303,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4200.MZij~s",
+          "token": 100665225,
+          "disassembly": "generated/combat-disassembly/Type4200-100665225.txt",
+          "lines": [
+            3,
+            39
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15176,
+          "bodyOffset": 7371089,
+          "bodySize": 95,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4200.SkillEnd",
+          "token": 100665227,
+          "disassembly": "generated/combat-disassembly/Type4200-100665227.txt",
+          "lines": [
+            3,
+            40
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 15177,
+          "bodyOffset": 7371185,
+          "bodySize": 116,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 17,
+      "name": "恢复",
+      "commanderId": 6,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander6-recovery",
+      "mechanics": "Skill17 coroutine snapshots active same-camp towers once and attaches effect612. Starting immediately, each integer second i with i<cdTime iterates that stored list: if still same camp, ChangeScore(ownCamp,+args0,false), preserving float amount; if camp changed, remove corresponding effect. WaitForSeconds1 follows each pass. Newly captured friendly towers are not added to the snapshot. SkillEnd cleans remaining effects.",
+      "allSkillConfig": {
+        "id": 17,
+        "gameItem": 2017,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 0,
+        "targetType": 1,
+        "dataType": [
+          1,
+          2
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1701,
+          "duration": 8.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1702,
+          "duration": 8.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1703,
+          "duration": 8.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1704,
+          "duration": 8.5,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1705,
+          "duration": 8.5,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1706,
+          "duration": 9.0,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1707,
+          "duration": 9.0,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1708,
+          "duration": 9.5,
+          "data1": 5.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1709,
+          "duration": 9.5,
+          "data1": 5.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1710,
+          "duration": 10.0,
+          "data1": 5.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1701,
+        "duration": 8.0,
+        "data1": 3.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [],
+      "evidence": [
+        {
+          "method": "Type4202.Execute",
+          "token": 100665228,
+          "disassembly": "generated/combat-disassembly/Type4202-100665228.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13877,
+          "bodyOffset": 6936498,
+          "bodySize": 62,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4201.MoveNext",
+          "token": 100665234,
+          "disassembly": "generated/combat-disassembly/Type4201-100665234.txt",
+          "lines": [
+            3,
+            497
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14638,
+          "bodyOffset": 7191844,
+          "bodySize": 1239,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4202.SkillEnd",
+          "token": 100665231,
+          "disassembly": "generated/combat-disassembly/Type4202-100665231.txt",
+          "lines": [
+            3,
+            62
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 13876,
+          "bodyOffset": 6936343,
+          "bodySize": 154,
+          "instructionOffsetsHex": null
+        }
+      ]
+    },
+    {
+      "skillId": 18,
+      "name": "毒药",
+      "commanderId": 6,
+      "branchStatus": "activebranch",
+      "branchMeaning": "Concrete Commander skill implementation and CommanderConfig binding exist; player unlock/save availability is separate.",
+      "configStatus": "confirmed",
+      "mechanicsStatus": "confirmed",
+      "ruleId": "commander6-poison",
+      "mechanics": "Skill18 constructor radius56 is f32 bits1060320051 =0.7. While active, damageTimer44,killTimer48,elapsed52 each add dt. damageTimer>=1 subtracts1 once and applies -trunc(args0),preventCapture=true to GetTowerInRange(skillCamp,false,center88..96,radius0.7,min0). Separately only elapsed>1 and killTimer>0.2 resets killTimer0 and clears ALL different-camp soldiers in radius0.7 through ClearInSkill, regardless of HP. No catch-up loops. Drag-end accepts only |x|<2.5 and0.5<z<5 before launching bottle; center is selected ground position. SkillEnd resets timers and stops poison effect/audio.",
+      "allSkillConfig": {
+        "id": 18,
+        "gameItem": 2018,
+        "unLockLevel": 21,
+        "castType": 1002,
+        "price": 250,
+        "diamondPrice": 40,
+        "useType": 1,
+        "targetType": 9,
+        "dataType": [
+          1,
+          2
+        ],
+        "describeData": [
+          1,
+          0
+        ]
+      },
+      "levels": [
+        {
+          "id": 1801,
+          "duration": 7.0,
+          "data1": 2.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1802,
+          "duration": 8.0,
+          "data1": 2.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1803,
+          "duration": 9.0,
+          "data1": 2.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1804,
+          "duration": 10.0,
+          "data1": 2.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1805,
+          "duration": 10.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1806,
+          "duration": 11.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1807,
+          "duration": 12.0,
+          "data1": 3.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1808,
+          "duration": 12.0,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1809,
+          "duration": 13.0,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        },
+        {
+          "id": 1810,
+          "duration": 14.0,
+          "data1": 4.0,
+          "data2": 0.0,
+          "data3": 0.0
+        }
+      ],
+      "representativeConfig": {
+        "id": 1801,
+        "duration": 7.0,
+        "data1": 2.0,
+        "data2": 0.0,
+        "data3": 0.0
+      },
+      "commanderUnlockType": 3,
+      "commanderUsePercent": 0,
+      "requiredForFullCommanderCoverage": true,
+      "runtimeObserved": false,
+      "remainingUnknowns": [
+        "Bottle arrival versus duration start and pause timing"
+      ],
+      "evidence": [
+        {
+          "method": "Type4205..ctor",
+          "token": 100665238,
+          "disassembly": "generated/combat-disassembly/Type4205-100665238.txt",
+          "lines": [
+            3,
+            113
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 9298,
+          "bodyOffset": 4527407,
+          "bodySize": 284,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.SkillInUpdate2",
+          "token": 100665244,
+          "disassembly": "generated/combat-disassembly/Type4205-100665244.txt",
+          "lines": [
+            3,
+            558
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14641,
+          "bodyOffset": 7193493,
+          "bodySize": 1362,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.OnDragEndHandle",
+          "token": 100665239,
+          "disassembly": "generated/combat-disassembly/Type4205-100665239.txt",
+          "lines": [
+            3,
+            234
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14645,
+          "bodyOffset": 7196434,
+          "bodySize": 527,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Type4205.SkillEnd",
+          "token": 100665240,
+          "disassembly": "generated/combat-disassembly/Type4205-100665240.txt",
+          "lines": [
+            3,
+            297
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 14642,
+          "bodyOffset": 7194857,
+          "bodySize": 717,
+          "instructionOffsetsHex": null
+        },
+        {
+          "method": "Soldier.ClearInSkill",
+          "token": 100665335,
+          "disassembly": "generated/combat-disassembly/Soldier-100665335.txt",
+          "lines": [
+            3,
+            30
+          ],
+          "wasm": "generated/wasm/wasmcode.wasm",
+          "function": 7128,
+          "bodyOffset": 2710066,
+          "bodySize": 69,
+          "instructionOffsetsHex": null
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "scannedLayoutCount": 639,
+    "serializedActiveStarCount": 2,
+    "creationGateRule": "boss-schedule-creation",
+    "configs": [
+      {
+        "configId": 1,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1001.json",
+            "campId": 7
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 1,
+          "DelayTime": 12000,
+          "ActionTime": [
+            17000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            0
+          ],
+          "skill1_Hit": 3,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.5,
+          "skill1_second": 1.5,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 2,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1011.json",
+            "campId": 5
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 2,
+          "DelayTime": 15000,
+          "ActionTime": [
+            16000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            0
+          ],
+          "skill1_Hit": 2,
+          "skill1_duration": 2.0,
+          "skill1_first": 3.0,
+          "skill1_second": 3.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 3.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.5
+        }
+      },
+      {
+        "configId": 3,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1021.json",
+            "campId": 6
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 3,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            0
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 2.0,
+          "skill1_first": 2.0,
+          "skill1_second": 12.0,
+          "skill2_Hit": 0,
+          "skill2_duration": 5.0,
+          "skill2_first": 0.1,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 4,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1031.json",
+            "campId": 8
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 4,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            0
+          ],
+          "skill1_Hit": 10,
+          "skill1_duration": 2.0,
+          "skill1_first": 0.0,
+          "skill1_second": 5.0,
+          "skill2_Hit": 3,
+          "skill2_duration": 4.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 5,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1002.json",
+            "campId": 7
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 5,
+          "DelayTime": 10000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            0
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 3,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.5,
+          "skill1_second": 1.5,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 6,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1012.json",
+            "campId": 5
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 6,
+          "DelayTime": 10000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            0
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 2,
+          "skill1_duration": 2.0,
+          "skill1_first": 3.0,
+          "skill1_second": 3.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 3.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.5
+        }
+      },
+      {
+        "configId": 7,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1022.json",
+            "campId": 6
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 7,
+          "DelayTime": 11000,
+          "ActionTime": [
+            15000
+          ],
+          "Skill1": [
+            1,
+            0
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 2.0,
+          "skill1_first": 2.0,
+          "skill1_second": 12.0,
+          "skill2_Hit": 0,
+          "skill2_duration": 5.0,
+          "skill2_first": 0.1,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 8,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1032.json",
+            "campId": 8
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 8,
+          "DelayTime": 11000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            0
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 10,
+          "skill1_duration": 2.0,
+          "skill1_first": 0.0,
+          "skill1_second": 5.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 4.0,
+          "skill2_first": 20.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 9,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1003.json",
+            "campId": 7
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 9,
+          "DelayTime": 10000,
+          "ActionTime": [
+            9000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 3,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.5,
+          "skill1_second": 1.5,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 10,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1013.json",
+            "campId": 5
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 10,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 2,
+          "skill1_duration": 2.0,
+          "skill1_first": 3.0,
+          "skill1_second": 3.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 3.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.5
+        }
+      },
+      {
+        "configId": 11,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1023.json",
+            "campId": 7
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 11,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 2.0,
+          "skill1_first": 2.0,
+          "skill1_second": 12.0,
+          "skill2_Hit": 0,
+          "skill2_duration": 5.0,
+          "skill2_first": 0.1,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 12,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1033.json",
+            "campId": 8
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 12,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 10,
+          "skill1_duration": 2.0,
+          "skill1_first": 0.0,
+          "skill1_second": 5.0,
+          "skill2_Hit": 3,
+          "skill2_duration": 4.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 13,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1004.json",
+            "campId": 6
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 13,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.2,
+          "skill1_second": 1.5,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 14,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1014.json",
+            "campId": 5
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 14,
+          "DelayTime": 10000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            5
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 2,
+          "skill1_duration": 2.0,
+          "skill1_first": 3.0,
+          "skill1_second": 3.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 3.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.5
+        }
+      },
+      {
+        "configId": 15,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1024.json",
+            "campId": 7
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 15,
+          "DelayTime": 10000,
+          "ActionTime": [
+            14000
+          ],
+          "Skill1": [
+            1,
+            5
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 2.0,
+          "skill1_first": 2.0,
+          "skill1_second": 12.0,
+          "skill2_Hit": 0,
+          "skill2_duration": 5.0,
+          "skill2_first": 0.1,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 16,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1034.json",
+            "campId": 8
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 16,
+          "DelayTime": 10000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            5
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 10,
+          "skill1_duration": 2.0,
+          "skill1_first": 0.0,
+          "skill1_second": 5.0,
+          "skill2_Hit": 3,
+          "skill2_duration": 4.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 17,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1005.json",
+            "campId": 6
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 17,
+          "DelayTime": 15000,
+          "ActionTime": [
+            12000
+          ],
+          "Skill1": [
+            10,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 3,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.5,
+          "skill1_second": 1.5,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 18,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1015.json",
+            "campId": 5
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 18,
+          "DelayTime": 15000,
+          "ActionTime": [
+            10000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 2,
+          "skill1_duration": 2.0,
+          "skill1_first": 3.0,
+          "skill1_second": 3.0,
+          "skill2_Hit": 5,
+          "skill2_duration": 3.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.5
+        }
+      },
+      {
+        "configId": 19,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1025.json",
+            "campId": 6
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 19,
+          "DelayTime": 15000,
+          "ActionTime": [
+            22000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 5,
+          "skill1_duration": 2.0,
+          "skill1_first": 2.0,
+          "skill1_second": 12.0,
+          "skill2_Hit": 0,
+          "skill2_duration": 5.0,
+          "skill2_first": 0.1,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 20,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1035.json",
+            "campId": 8
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 20,
+          "DelayTime": 15000,
+          "ActionTime": [
+            22000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 10,
+          "skill1_duration": 2.0,
+          "skill1_first": 0.0,
+          "skill1_second": 5.0,
+          "skill2_Hit": 3,
+          "skill2_duration": 4.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 21,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1041.json",
+            "campId": 9
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 21,
+          "DelayTime": 10000,
+          "ActionTime": [
+            20000
+          ],
+          "Skill1": [
+            1,
+            0
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 0,
+          "skill1_duration": 6.0,
+          "skill1_first": 2.0,
+          "skill1_second": 0.0,
+          "skill2_Hit": 2,
+          "skill2_duration": 5.0,
+          "skill2_first": 6.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 22,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1042.json",
+            "campId": 9
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 22,
+          "DelayTime": 15000,
+          "ActionTime": [
+            22000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            0
+          ],
+          "skill1_Hit": 0,
+          "skill1_duration": 6.0,
+          "skill1_first": 2.0,
+          "skill1_second": 0.0,
+          "skill2_Hit": 2,
+          "skill2_duration": 5.0,
+          "skill2_first": 6.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 23,
+        "status": "unknown",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [
+          {
+            "level": "generated/all-levels/level_1043.json",
+            "campId": 9
+          },
+          {
+            "level": "generated/all-levels/level_1044.json",
+            "campId": 9
+          },
+          {
+            "level": "generated/all-levels/level_1045.json",
+            "campId": 9
+          }
+        ],
+        "requiredByObservedInitGate": false,
+        "reason": "Only CampInfo.BossActionId references it; confirmed initializer does not consume that field. Special-mode mutation not excluded.",
+        "config": {
+          "id": 23,
+          "DelayTime": 15000,
+          "ActionTime": [
+            16000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 0,
+          "skill1_duration": 6.0,
+          "skill1_first": 2.0,
+          "skill1_second": 0.0,
+          "skill2_Hit": 2,
+          "skill2_duration": 5.0,
+          "skill2_first": 6.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 24,
+        "status": "unusedconfig",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [],
+        "declarativeCampReferences": [],
+        "requiredByObservedInitGate": false,
+        "reason": "No isBoss Star or CampInfo references in cached layouts. Do not require solely because table row exists.",
+        "config": {
+          "id": 24,
+          "DelayTime": 15000,
+          "ActionTime": [
+            22000
+          ],
+          "Skill1": [
+            1,
+            10
+          ],
+          "Skill2": [
+            1,
+            10
+          ],
+          "skill1_Hit": 0,
+          "skill1_duration": 6.0,
+          "skill1_first": 2.0,
+          "skill1_second": 0.0,
+          "skill2_Hit": 2,
+          "skill2_duration": 5.0,
+          "skill2_first": 6.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 999,
+        "status": "activebranch",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [
+          {
+            "level": "generated/all-levels/level_99999.json",
+            "towerIndex": 8,
+            "campId": 5,
+            "startScore": 65,
+            "shipId": 1
+          }
+        ],
+        "declarativeCampReferences": [],
+        "requiredByObservedInitGate": true,
+        "reason": "isBoss=true Star references this bossSkillId",
+        "config": {
+          "id": 999,
+          "DelayTime": 8000,
+          "ActionTime": [
+            16000
+          ],
+          "Skill1": [
+            1,
+            2
+          ],
+          "Skill2": [
+            1,
+            5
+          ],
+          "skill1_Hit": 20,
+          "skill1_duration": 0.0,
+          "skill1_first": 0.0,
+          "skill1_second": 0.0,
+          "skill2_Hit": 2,
+          "skill2_duration": 5.0,
+          "skill2_first": 10.0,
+          "skill2_second": 0.0
+        }
+      },
+      {
+        "configId": 998,
+        "status": "activebranch",
+        "statusScope": "639 cached layouts through confirmed AICampController.InitInfo creation gate",
+        "serializedActiveStarReferences": [
+          {
+            "level": "generated/all-levels/level_99998.json",
+            "towerIndex": 7,
+            "campId": 6,
+            "startScore": 65,
+            "shipId": 12
+          }
+        ],
+        "declarativeCampReferences": [],
+        "requiredByObservedInitGate": true,
+        "reason": "isBoss=true Star references this bossSkillId",
+        "config": {
+          "id": 998,
+          "DelayTime": 9000,
+          "ActionTime": [
+            17000
+          ],
+          "Skill1": [
+            1,
+            5
+          ],
+          "Skill2": [
+            1,
+            2
+          ],
+          "skill1_Hit": 3,
+          "skill1_duration": 5.0,
+          "skill1_first": 0.5,
+          "skill1_second": 0.6,
+          "skill2_Hit": 20,
+          "skill2_duration": 0.0,
+          "skill2_first": 0.0,
+          "skill2_second": 0.0
+        }
+      }
+    ],
+    "actions": [
+      {
+        "actionId": 1,
+        "campId": 5,
+        "slot": 1,
+        "implementation": "confirmed",
+        "reachability": "activebranch",
+        "activeConfigIds": [
+          999
+        ],
+        "ruleIds": [
+          "boss-action-dispatch",
+          "boss-single-strikes"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 2,
+        "campId": 5,
+        "slot": 2,
+        "implementation": "confirmed",
+        "reachability": "activebranch",
+        "activeConfigIds": [
+          999
+        ],
+        "ruleIds": [
+          "boss-action-dispatch",
+          "boss-projectile-volley"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 3,
+        "campId": 7,
+        "slot": 1,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 4,
+        "campId": 7,
+        "slot": 2,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 5,
+        "campId": 6,
+        "slot": 1,
+        "implementation": "confirmed",
+        "reachability": "activebranch",
+        "activeConfigIds": [
+          998
+        ],
+        "ruleIds": [
+          "boss-action-dispatch",
+          "boss-rain-center",
+          "boss-rain-area"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 6,
+        "campId": 6,
+        "slot": 2,
+        "implementation": "confirmed",
+        "reachability": "activebranch",
+        "activeConfigIds": [
+          998
+        ],
+        "ruleIds": [
+          "boss-action-dispatch",
+          "boss-single-strikes"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 7,
+        "campId": 8,
+        "slot": 1,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 8,
+        "campId": 8,
+        "slot": 2,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 9,
+        "campId": 9,
+        "slot": 1,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      },
+      {
+        "actionId": 10,
+        "campId": 9,
+        "slot": 2,
+        "implementation": "confirmed-noop",
+        "reachability": "unknown",
+        "activeConfigIds": [],
+        "ruleIds": [
+          "boss-action-dispatch"
+        ],
+        "note": "BossUseSkill first stops prior coroutine even for unimplemented values."
+      }
+    ],
+    "specialModePatchStatus": "unknown",
+    "ordinaryLoadPatchObservation": "Sibling level_flow_evidence inspected ordinary LevelControl creation f11599 and observed no isBoss/bossSkillId rewrite; not a proof for special modes."
+  },
+  "towerBuff": {
+    "status": "unknown",
+    "requiredByConfirmedCreationSource": false,
+    "fieldsAndStacking": "confirmed",
+    "constructorDirectCaller": "none identified in current static scan",
+    "initialization": "Tower.InitBuff and BuffControl.Updata are nop. Tower.GetBuff generic specialization reads dictionary136; no creation in that method.",
+    "policy": "Keep confirmed empty-container default; do not invent active buff rates, X2/X3 chances, or new buff sources. If a runtime source is discovered, use confirmed stacking rules.",
+    "ruleIds": [
+      "tower-buff-fields",
+      "buff-lifecycle-stubs",
+      "tower-buff-read-only"
+    ]
+  },
+  "bastion": {
+    "status": "unknown",
+    "standaloneMechanicsClassFound": false,
+    "note": "CampConfig.BasitionMaterial is a material field; it is insufficient evidence of an extra mechanic. ArrowTower and Boss kernels are separately confirmed."
+  },
+  "tableHashes": {
+    "CommanderConfig": "0e42c3f607b0bc84621f872af745e398d479767364c649759fa4b84685c4b561",
+    "AllSkillConfig": "f52abed236befdd14ab6eb1bcc4786516223d4fa3bbd0b2fef3186e1f2089874",
+    "SkillConfig": "8303823bf4ac53992e6cd6da3c107571371565ad470e1dc07e1adcfd1da516e8",
+    "BossConfig": "e12867c84df12eb38eb9dc678286aa65fd4a8a58a86447903b6f5a05253fa47a"
+  },
+  "validation": {
+    "all18SkillsHaveConfig": true,
+    "all18SkillsHaveRule": true,
+    "allLevelFilesParsed": 639,
+    "runtimeObserved": false
+  }
+}

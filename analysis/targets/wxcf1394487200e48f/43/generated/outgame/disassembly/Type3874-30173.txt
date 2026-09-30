@@ -1,0 +1,58 @@
+; Original class: PiggyBankControl
+; Type3874.OnGamePlayState; wasmcode function 18236; offset=8102131 size=143
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007ba0f4  i32.const [5025276]
+007ba0f9  i32.load8_u [0, 0]
+007ba0fc  i32.eqz []
+007ba0fd  if [-64]
+007ba0ff    i32.const [3953440]
+007ba104    call [900] ; 
+007ba107    i32.const [3944728]
+007ba10c    call [900] ; 
+007ba10f    i32.const [5025276]
+007ba114    i32.const [1]
+007ba116    i32.store8 [0, 0]
+007ba119  end []
+007ba11a  block [-64]
+007ba11c    i32.const [3953440]
+007ba121    i32.load [2, 0]
+007ba124    call [935] ; 
+007ba127    i32.const [0]
+007ba129    call [1254] ; LevelControl.get_CurLevel
+007ba12c    i32.const [30]
+007ba12e    i32.lt_s []
+007ba12f    br_if [0]
+007ba131    local.get [1]
+007ba133    i32.load [2, 16]
+007ba136    i32.const [3944728]
+007ba13b    i32.load [2, 0]
+007ba13e    call [920] ; 
+007ba141    i32.load [2, 0]
+007ba144    i32.const [8]
+007ba146    i32.ne []
+007ba147    br_if [0]
+007ba149    i32.const [0]
+007ba14b    call [1438] ; GameModule.get_LocalData
+007ba14e    local.set [0]
+007ba150    local.get [0]
+007ba152    local.get [0]
+007ba154    i32.load [2, 20]
+007ba157    i32.load [2, 36]
+007ba15a    i32.const [20]
+007ba15c    i32.add []
+007ba15d    i32.const [0]
+007ba15f    call [3899] ; LocalDataManager.set_CollectNum
+007ba162    i32.const [0]
+007ba164    call [1438] ; GameModule.get_LocalData
+007ba167    i32.load [2, 20]
+007ba16a    i32.load [2, 36]
+007ba16d    i32.const [1001]
+007ba170    i32.lt_s []
+007ba171    br_if [0]
+007ba173    i32.const [0]
+007ba175    call [1438] ; GameModule.get_LocalData
+007ba178    i32.const [1000]
+007ba17b    i32.const [0]
+007ba17d    call [3899] ; LocalDataManager.set_CollectNum
+007ba180  end []
+007ba181  end []

@@ -1,0 +1,36 @@
+{
+  "status": "source-atlas-request-subscription-and-completion-restored",
+  "atUtc": "2026-09-30T02:42:24.503950+00:00",
+  "source": [
+    "disassembly/Type2923-22819.txt",
+    "disassembly/Type2923-22842.txt",
+    "disassembly/Type2923-22811.txt",
+    "disassembly/Type2922-22847.txt",
+    "disassembly/Type2923-22833.txt",
+    "atlas-loader-generics.json"
+  ],
+  "verified": [
+    "Modern mode skips subscribe/unsubscribe; each lifecycle method reads current flag",
+    "Disabled requests complete with null, lookup skipped",
+    "Lookup path uses current-culture ToLower, reload path preserves original tag",
+    "Cache hit and auto-load-disabled miss complete synchronously",
+    "Auto-load miss stores callback in shared slot; both concurrent completions call latest callback",
+    "Null async ResourcesInfo warns and continues to failing LoadAsset access; no invented early return",
+    "Generic calls confirm firstpack dictionary<string,AssetBundle>, AssetBundle.LoadAsset<SpriteAtlas>, ResourcesInfo.LoadAsset<SpriteAtlas>"
+  ],
+  "cacheHelperEvidence": [
+    "Firstpack ContainsKey/get precedes bundle manager; firstpack missing atlas returns directly without fallback",
+    "Otherwise GetLoadedAssetBundle returns wrapper; wrapper null logs bundle not loaded; nonnull wrapper with null asset or missing sprite logs asset load failure"
+  ],
+  "integratedChecks": 607,
+  "remaining": [
+    "Implement concrete firstpack/bundle cache lookup22833 and original acquisition",
+    "Bind SpriteAtlasManager and module mode/owner on native startup component",
+    "Production account/menu and Player acceptance"
+  ],
+  "freshPlayModeRun": false,
+  "priorBootstrapPlayModeChecks": 12,
+  "priorBootstrapPlayModeCheckpoint": 606,
+  "freshPlayerBuild": false,
+  "cacheFollowup": "ATLAS_CACHE_AUDIT.json"
+}

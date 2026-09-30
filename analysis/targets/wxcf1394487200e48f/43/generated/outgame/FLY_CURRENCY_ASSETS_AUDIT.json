@@ -1,0 +1,19 @@
+{
+  "status": "original_prefabs_imported_animation_pending",
+  "checks": 517,
+  "acquisition": "../resource-snapshots/fly-currency-20260929/acquisition-manifest.json",
+  "evidence": "fly-ui-evidence.json",
+  "import": "fly-ui-import.json",
+  "unityReport": "analysis/unity-fly-currency-import-report.json",
+  "verified": [
+    "Three bundle sizes and MD5 match original catalog",
+    "Original single-node goldItem70x70,diamondItem64x64,strengthItem70x70, pivot0.5 and unit scale",
+    "Actual Unity Image sprite and texture bindings",
+    "Diamond/strength sprite reuse requires exact renderDataKey,rect,pivot,ppu,border and all matching pixel hashes identical"
+  ],
+  "pending": [
+    "Actual fly animation pool/Tween host",
+    "Source cleanup scheduler and global Target_Tween semantics",
+    "Matched runtime visual capture"
+  ]
+}

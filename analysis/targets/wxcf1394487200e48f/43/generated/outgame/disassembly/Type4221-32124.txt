@@ -1,0 +1,74 @@
+; Original class: EffectCellection
+; Type4221.SetEntity; wasmcode function 12447; offset=6026435 size=190
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005bf4c4  i32.const [5007187]
+005bf4c9  i32.load8_u [0, 0]
+005bf4cc  i32.eqz []
+005bf4cd  if [-64]
+005bf4cf    i32.const [3932344]
+005bf4d4    call [900] ; 
+005bf4d7    i32.const [3936516]
+005bf4dc    call [900] ; 
+005bf4df    i32.const [4052156] ; STRING "EffectCellection"
+005bf4e4    call [900] ; 
+005bf4e7    i32.const [5007187]
+005bf4ec    i32.const [1]
+005bf4ee    i32.store8 [0, 0]
+005bf4f1  end []
+005bf4f2  local.get [0]
+005bf4f4  local.get [1]
+005bf4f6  i32.store [2, 12]
+005bf4f9  local.get [0]
+005bf4fb  i32.const [0]
+005bf4fd  i32.store [2, 8]
+005bf500  local.get [0]
+005bf502  i32.load [2, 12]
+005bf505  i32.const [0]
+005bf507  call [1505] ; Transform.get_childCount
+005bf50a  i32.const [2]
+005bf50c  i32.ge_s []
+005bf50d  if [-64]
+005bf50f    local.get [0]
+005bf511    local.get [0]
+005bf513    i32.load [2, 12]
+005bf516    i32.const [4052156] ; STRING "EffectCellection"
+005bf51b    i32.load [2, 0]
+005bf51e    i32.const [0]
+005bf520    call [1102] ; Transform.Find
+005bf523    i32.store [2, 8]
+005bf526  end []
+005bf527  local.get [0]
+005bf529  i32.load [2, 8]
+005bf52c  local.set [1]
+005bf52e  i32.const [3936516]
+005bf533  i32.load [2, 0]
+005bf536  call [901] ; 
+005bf539  local.get [1]
+005bf53b  i32.const [0]
+005bf53d  i32.const [0]
+005bf53f  call [940] ; Object.op_Equality
+005bf542  if [-64]
+005bf544    i32.const [3932344]
+005bf549    i32.load [2, 0]
+005bf54c    call [903] ; 
+005bf54f    local.set [1]
+005bf551    local.get [1]
+005bf553    i32.const [4052156] ; STRING "EffectCellection"
+005bf558    i32.load [2, 0]
+005bf55b    i32.const [0]
+005bf55d    call [1292] ; GameObject..ctor
+005bf560    local.get [1]
+005bf562    i32.const [0]
+005bf564    call [1008] ; GameObject.get_transform
+005bf567    local.get [0]
+005bf569    i32.load [2, 12]
+005bf56c    i32.const [0]
+005bf56e    i32.const [0]
+005bf570    call [1686] ; Transform.SetParent
+005bf573    local.get [0]
+005bf575    local.get [1]
+005bf577    i32.const [0]
+005bf579    call [1008] ; GameObject.get_transform
+005bf57c    i32.store [2, 8]
+005bf57f  end []
+005bf580  end []

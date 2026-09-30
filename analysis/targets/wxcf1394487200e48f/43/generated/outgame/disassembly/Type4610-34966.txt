@@ -1,0 +1,31 @@
+; Original class: LoginStateBase
+; Type4610.OnInit; wasmcode function 7598; offset=3632686 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00376e2f  i32.const [5001578]
+00376e34  i32.load8_u [0, 0]
+00376e37  i32.eqz []
+00376e38  if [-64]
+00376e3a    i32.const [3968580]
+00376e3f    call [900] ; 
+00376e42    i32.const [3922404]
+00376e47    call [900] ; 
+00376e4a    i32.const [5001578]
+00376e4f    i32.const [1]
+00376e51    i32.store8 [0, 0]
+00376e54  end []
+00376e55  i32.const [3968580]
+00376e5a  i32.load [2, 0]
+00376e5d  drop []
+00376e5e  local.get [0]
+00376e60  local.get [1]
+00376e62  i32.store [2, 12]
+00376e65  local.get [0]
+00376e67  i32.const [1]
+00376e69  i32.const [3922404]
+00376e6e  i32.load [2, 0]
+00376e71  local.get [0]
+00376e73  i32.load [2, 12]
+00376e76  call [918] ; 
+00376e79  i32.load [2, 56]
+00376e7c  i32.store [2, 16]
+00376e7f  end []

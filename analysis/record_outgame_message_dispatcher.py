@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-login-sync-validation.json');play=read(w/'analysis/outgame-fly-playmode-validation.json')
+assert r['passed'] and len(r['checks'])==536 and v['passed'] and play['passed'] and len(play['checks'])==8
+sources=['disassembly/Type3485-'+str(i)+'.txt' for i in [26817,26820,26822,26824,26825,26828,26830,26831,26835,26836]]+['message-dispatcher-generics.json']
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='shop-message-dispatcher';s['validation'].update(integratedChecksPassed=536,loginSyncChecksPassed=len(v['checks']));write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['shop-message-dispatcher']={'implementationReady':True,'productionConnected':False,'source':sources,'implementation':['OutgameMessageDispatcher.cs','OutgameShopLifecycle.cs'],'scope':'String MsgDispatcher semantics and concrete ShopEventHost connected to original ShopUI lifecycle. Duplicate listener/remove/null/error semantics and native page refresh/disposal verified. Indexed event APIs, original video button and account/menu composition pending.'};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='Object<T> shared source wrapper') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Original pooled object count/lifecycle wrapper','checksPassed':536,'outgameChecksPassed':269,'freshPlayerBuild':False,'freshPlayerSmoke':False,'playModeReport':'analysis/outgame-fly-playmode-validation.json','playModeChecksPassed':8,'freshPlayModeRun':False,'notClaimed':'Complete pooling, production account or full lobby'};write(p,s)
+audit={'status':'string_dispatch_and_shop_host_verified_video_pending','source':sources,'verified':['Dictionary<string,EventHandler> add/combine, remove-last delegate and remove empty key','Null delegate can be stored and throws on send; missing key does nothing','Multicast in-flight snapshot and exception interruption','Shared dispatcher lazily created; ClearEvent replaces singleton','Concrete shop host routes lifecycle registrations to recovered dispatcher','Original ShopUI receives ToolChange through actual dispatcher and stops receiving after Dispose'],'remaining':['Indexed event API family in MsgDispatcher','UIVideoBtn native callback host and source button lifecycle','Production account/menu owner and page initialization','Full persistence/build/E2E'],'checks':536,'priorPlaymodeChecks':8,'dynamicScope':'Native ShopUI exercised in integrated editor tests; prior fly Play Mode report not rerun'}
+write(o/'SHOP_MESSAGE_DISPATCHER_AUDIT.json',audit)
+p=o/'ACCOUNT_STARTUP_AUDIT.json';s=read(p);s['confirmed'].append({'fact':'String MsgDispatcher and concrete shop lifecycle message host restored; native ShopUI refresh/disposal verified. Video host and account/menu owner integration remain pending.','source':sources,'validation':['analysis/outgame-login-sync-validation.json','analysis/outgame-fly-playmode-validation.json']});write(p,s)
+note='\n\n## 商店消息分发器接入（536项）\n提取MsgDispatcher共28方法，索引2150，并解析Dictionary<string,EventHandler>操作绑定。恢复字符串事件Add/Remove/Send的多播规则、null委托异常、重复监听和回调报错中断；Shared惰性创建，ClearEvent替换实例。新增具体OutgameShopEventHost，原ShopUI经真实消息分发器驱动ToolValue刷新并在Dispose后停止接收。536项集成通过，Unity退出0；此前8项飞币Play Mode未重跑，不用于证明完整商店流程。索引型事件、原UIVideoBtn宿主、账号菜单入口及全流程构建验收仍待完成。\n' 
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+subprocess.run(b+['set-check']+a+['--name','outgameShopMessageDispatcher','--result','pass','--evidence','536 integrated checks and8 independent actual Play Mode checks; complete pool and production flows pending.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded536; full goal active.')

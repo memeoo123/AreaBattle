@@ -1,0 +1,38 @@
+{
+  "atUtc": "2026-09-30T09:32:27.035772+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "AUDIO_FADE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T09:32:27.035772+00:00",
+    "scope": "Concrete Fade/LoopFade and all-four-type action factory; native controller/UI/Parallel/factory/action playback with explicit countdown driver",
+    "checksPassed": 893,
+    "newIntegratedChecks": 18,
+    "nativePlayModeChecks": 13,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameAudioFadePlayModeValidation.Run"
+    ],
+    "notClaimed": "Original TimeModule/resource/update/AudioManager ownership, complete Main/controller graph, device recording or full outgame Player"
+  },
+  "findings": [
+    "OutgameAudioFadeActions.cs implements source Fade and LoopFade via evidence-shared bodies: native playback from volume0, live target volume, millisecond countdown interpolation and callback/disposal ordering. Both required new/legacy resource operations use source handles.",
+    "Preserves stop-volume setting multiplication, repeat-stop disposal without end, null-source first-stop retention, retained timer ids and duplicate removal, countdown continuation during native pause, errors before later cleanup, and live volume events during pending load.",
+    "LoopFade source loop transition only fades out then in without native seek/restart or end. Explicit EndTime lacks stopping gate: repeated updates replace loop countdown, whereas Fade re-enters OnStop and direct-disposes. Source quirks are covered as source behavior, not silently fixed.",
+    "OutgameAudioActionFactory now supplies real constructors for types1..4; optional static typed override runs first even for invalid action types, null override falls back, invalid default returns null. Missing config GetAudioType returns1. Nodes can use actual GetAudioType/Create delegates.",
+    "893 integrated pass,18 new.13 native PlayMode checks prove controller state2/7/6/8 -> UI parallel -> original Ptype4 LoopFade1001, actual cursor/pause/resume/volume/fade-out/end/release/destruction, plus original2001 Ptype3 automatic one-shot fade through same node. Countdown pulses and update/resource host in test remain explicit driver boundaries.",
+    "Method map4979; real controller lifecycle methods11/38 with27 remaining. Goal still incomplete. No fresh Player build or full Main entry."
+  ],
+  "remaining": [
+    "Restore source TimeModule millisecond countdown and clock/paused behavior plus original shared UpdateManager; wire actual audio resources and AudioManager config/root/listener/node registry to the concrete action factory.",
+    "Continue remaining27 control lifecycles and full Main/account/module/menu graph, all objective subsystems, restart/failure/return flows and runnable Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-fade-integrated.log",
+    "nativeLog": "analysis/audio-fade-native.log",
+    "nativeReport": "analysis/audio-fade-native-validation.json"
+  },
+  "disassembledMethodMapCount": 4979
+}

@@ -1,0 +1,22 @@
+; Original class: LevelRankControl
+; Type4470.InitFriendRank; wasmcode function 11588; offset=5676644 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00569e65  i32.const [5009845]
+00569e6a  i32.load8_u [0, 0]
+00569e6d  i32.eqz []
+00569e6e  if [-64]
+00569e70    i32.const [3953440]
+00569e75    call [900] ; 
+00569e78    i32.const [5009845]
+00569e7d    i32.const [1]
+00569e7f    i32.store8 [0, 0]
+00569e82  end []
+00569e83  i32.const [0]
+00569e85  i32.const [3953440]
+00569e8a  i32.load [2, 0]
+00569e8d  call [935] ; 
+00569e90  i32.const [0]
+00569e92  call [1254] ; LevelControl.get_CurLevel
+00569e95  i32.const [0]
+00569e97  call [5931] ; LevelRankControl.lngv~U
+00569e9a  end []

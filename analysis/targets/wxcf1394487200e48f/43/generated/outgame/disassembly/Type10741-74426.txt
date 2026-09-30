@@ -1,0 +1,26 @@
+; Original class: UIVideoBtn
+; Type10741.ReportEvent; wasmcode function 6901; offset=2620486 size=68
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+0027fc47  i32.const [5001945]
+0027fc4c  i32.load8_u [0, 0]
+0027fc4f  i32.eqz []
+0027fc50  if [-64]
+0027fc52    i32.const [3937964]
+0027fc57    call [900] ; 
+0027fc5a    i32.const [5001945]
+0027fc5f    i32.const [1]
+0027fc61    i32.store8 [0, 0]
+0027fc64  end []
+0027fc65  i32.const [3937964]
+0027fc6a  i32.load [2, 0]
+0027fc6d  call [901] ; 
+0027fc70  i32.const [3937964]
+0027fc75  i32.load [2, 0]
+0027fc78  i32.load [2, 92]
+0027fc7b  i32.load [2, 8]
+0027fc7e  local.get [1]
+0027fc80  local.get [2]
+0027fc82  local.get [3]
+0027fc84  i32.const [0]
+0027fc86  call [1802] ; ReportManager.OnEvenToOnlyOnce
+0027fc89  end []

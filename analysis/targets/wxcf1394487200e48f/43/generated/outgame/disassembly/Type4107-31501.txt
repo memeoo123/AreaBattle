@@ -1,0 +1,63 @@
+; Original class: LevelControl
+; Type4107.InitSpecialScene; wasmcode function 11600; offset=5680370 size=165
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0056acf3  i32.const [5008489]
+0056acf8  i32.load8_u [0, 0]
+0056acfb  i32.eqz []
+0056acfc  if [-64]
+0056acfe    i32.const [3953384]
+0056ad03    call [900] ; 
+0056ad06    i32.const [3953616]
+0056ad0b    call [900] ; 
+0056ad0e    i32.const [5008489]
+0056ad13    i32.const [1]
+0056ad15    i32.store8 [0, 0]
+0056ad18  end []
+0056ad19  local.get [0]
+0056ad1b  i32.load [2, 24]
+0056ad1e  local.set [0]
+0056ad20  i32.const [3953384]
+0056ad25  i32.load [2, 0]
+0056ad28  call [935] ; 
+0056ad2b  local.set [1]
+0056ad2d  block [-64]
+0056ad2f    local.get [0]
+0056ad31    i32.const [1]
+0056ad33    i32.eq []
+0056ad34    if [-64]
+0056ad36      i32.const [3953616]
+0056ad3b      i32.load [2, 0]
+0056ad3e      call [935] ; 
+0056ad41      i32.const [5]
+0056ad43      i32.const [0]
+0056ad45      i32.const [17668] ; TABLE x~bjQc.GetAwardId
+0056ad49      global.set [3]
+0056ad4b      i32.const [17668] ; TABLE x~bjQc.GetAwardId
+0056ad4f      call_indirect [5, 0]
+0056ad52      local.set [0]
+0056ad54      br [1]
+0056ad56    end []
+0056ad57    i32.const [5009954]
+0056ad5c    i32.load8_u [0, 0]
+0056ad5f    i32.eqz []
+0056ad60    if [-64]
+0056ad62      i32.const [3939048]
+0056ad67      call [900] ; 
+0056ad6a      i32.const [5009954]
+0056ad6f      i32.const [1]
+0056ad71      i32.store8 [0, 0]
+0056ad74    end []
+0056ad75    i32.const [3939048]
+0056ad7a    i32.load [2, 0]
+0056ad7d    i32.load [2, 92]
+0056ad80    i32.load [2, 0]
+0056ad83    i32.const [4]
+0056ad85    i32.const [0]
+0056ad87    call [2660] ; SkinManager.GetUserSkinId
+0056ad8a    local.set [0]
+0056ad8c  end []
+0056ad8d  local.get [1]
+0056ad8f  local.get [0]
+0056ad91  local.get [0]
+0056ad93  call [6058] ; GameControl.LoadGameScene
+0056ad96  end []

@@ -1,0 +1,19 @@
+; Original class: SkillControl
+; Type4165.SetItemMaskProgress; wasmcode function 5672; offset=1992496 size=32
+; signature={'args': [127, 127, 125, 127], 'returns': []}; localGroups=[]
+001e6731  local.get [0]
+001e6733  i32.load [2, 92]
+001e6736  local.get [1]
+001e6738  i32.const [2]
+001e673a  i32.shl []
+001e673b  i32.add []
+001e673c  i32.load [2, 16]
+001e673f  local.set [0]
+001e6741  local.get [0]
+001e6743  if [-64]
+001e6745    local.get [0]
+001e6747    local.get [2]
+001e6749    i32.const [0]
+001e674b    call [10348] ; SkillItem.SetProgress
+001e674e  end []
+001e674f  end []

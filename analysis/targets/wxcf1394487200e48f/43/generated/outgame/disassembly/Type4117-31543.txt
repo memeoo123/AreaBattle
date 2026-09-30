@@ -1,0 +1,34 @@
+; Original class: LoadPrefabControl
+; Type4117.PrepareStart; wasmcode function 11492; offset=5643366 size=91
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00561c67  i32.const [5008514]
+00561c6c  i32.load8_u [0, 0]
+00561c6f  i32.eqz []
+00561c70  if [-64]
+00561c72    i32.const [3935336]
+00561c77    call [900] ; 
+00561c7a    i32.const [5008514]
+00561c7f    i32.const [1]
+00561c81    i32.store8 [0, 0]
+00561c84  end []
+00561c85  i32.const [3935336]
+00561c8a  i32.load [2, 0]
+00561c8d  call [901] ; 
+00561c90  i32.const [3935336]
+00561c95  i32.load [2, 0]
+00561c98  i32.load [2, 92]
+00561c9b  i32.const [0]
+00561c9d  i32.store8 [0, 0]
+00561ca0  i32.const [3935336]
+00561ca5  i32.load [2, 0]
+00561ca8  i32.load [2, 92]
+00561cab  i32.const [0]
+00561cad  i32.store [2, 4]
+00561cb0  local.get [0]
+00561cb2  local.get [0]
+00561cb4  call [7605] ; LoadPrefabControl.l}lMc
+00561cb7  local.get [0]
+00561cb9  local.get [1]
+00561cbb  local.get [0]
+00561cbd  call [7608] ; LoadPrefabControl.MuQwlrc
+00561cc0  end []

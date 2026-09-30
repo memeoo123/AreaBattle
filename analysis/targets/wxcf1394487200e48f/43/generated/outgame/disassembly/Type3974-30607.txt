@@ -1,0 +1,61 @@
+; Original class: MineGameMain
+; Type3974.fS{|; wasmcode function 18532; offset=8350260 size=186
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007f6a35  i32.const [5010125]
+007f6a3a  i32.load8_u [0, 0]
+007f6a3d  i32.eqz []
+007f6a3e  if [-64]
+007f6a40    i32.const [3989352]
+007f6a45    call [900] ; 
+007f6a48    i32.const [3948068]
+007f6a4d    call [900] ; 
+007f6a50    i32.const [4008040] ; METHOD MineGameMain.YuLR{
+007f6a55    call [900] ; 
+007f6a58    i32.const [3938016]
+007f6a5d    call [900] ; 
+007f6a60    i32.const [3938304]
+007f6a65    call [900] ; 
+007f6a68    i32.const [4061112] ; STRING "LoadingUIShow"
+007f6a6d    call [900] ; 
+007f6a70    i32.const [4086212] ; STRING "data/config"
+007f6a75    call [900] ; 
+007f6a78    i32.const [5010125]
+007f6a7d    i32.const [1]
+007f6a7f    i32.store8 [0, 0]
+007f6a82  end []
+007f6a83  local.get [0]
+007f6a85  i32.const [4061112] ; STRING "LoadingUIShow"
+007f6a8a  i32.load [2, 0]
+007f6a8d  local.get [0]
+007f6a8f  call [2125] ; MineGameMain.O{P^xr
+007f6a92  i32.const [3938304]
+007f6a97  i32.load [2, 0]
+007f6a9a  i32.load [2, 92]
+007f6a9d  i32.load [2, 0]
+007f6aa0  i32.const [0]
+007f6aa2  call [4827] ; SDKToolManager.U3DGameStart_Override
+007f6aa5  i32.const [3948068]
+007f6aaa  i32.load [2, 0]
+007f6aad  call [903] ; 
+007f6ab0  local.set [1]
+007f6ab2  local.get [1]
+007f6ab4  local.get [0]
+007f6ab6  i32.const [4008040] ; METHOD MineGameMain.YuLR{
+007f6abb  i32.load [2, 0]
+007f6abe  i32.const [0]
+007f6ac0  call [1853] ; LoadAssetCompleteHandler..ctor
+007f6ac3  i32.const [3989352]
+007f6ac8  i32.load [2, 0]
+007f6acb  call [1032] ; 
+007f6ace  local.set [0]
+007f6ad0  i32.const [3938016]
+007f6ad5  i32.load [2, 0]
+007f6ad8  call [901] ; 
+007f6adb  i32.const [4086212] ; STRING "data/config"
+007f6ae0  i32.load [2, 0]
+007f6ae3  local.get [1]
+007f6ae5  local.get [0]
+007f6ae7  i32.const [0]
+007f6ae9  call [2240] ; ResLoadHelper.LoadAsset
+007f6aec  drop []
+007f6aed  end []

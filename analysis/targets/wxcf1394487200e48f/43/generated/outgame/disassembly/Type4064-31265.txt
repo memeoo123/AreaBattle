@@ -1,0 +1,36 @@
+; Original class: GameControl
+; Type4064..ctor; wasmcode function 19606; offset=8802988 size=99
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008652ad  i32.const [5008366]
+008652b2  i32.load8_u [0, 0]
+008652b5  i32.eqz []
+008652b6  if [-64]
+008652b8    i32.const [3953380]
+008652bd    call [900] ; 
+008652c0    i32.const [3956204]
+008652c5    call [900] ; 
+008652c8    i32.const [3917596]
+008652cd    call [900] ; 
+008652d0    i32.const [5008366]
+008652d5    i32.const [1]
+008652d7    i32.store8 [0, 0]
+008652da  end []
+008652db  i32.const [3917596]
+008652e0  i32.load [2, 0]
+008652e3  call [903] ; 
+008652e6  local.set [1]
+008652e8  local.get [1]
+008652ea  i32.const [10]
+008652ec  i32.const [3956204]
+008652f1  i32.load [2, 0]
+008652f4  call [1519] ; 
+008652f7  local.get [0]
+008652f9  local.get [1]
+008652fb  i32.store [2, 44]
+008652fe  local.get [0]
+00865300  i32.const [-1]
+00865302  i32.store [2, 60]
+00865305  i32.const [3953380]
+0086530a  i32.load [2, 0]
+0086530d  drop []
+0086530e  end []

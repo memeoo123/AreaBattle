@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.Â~º¯; wasmcode1 function 59929; offset=19450591 size=65
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128cae0  i32.const [4989913]
+0128cae5  i32.load8_u [0, 0]
+0128cae8  i32.eqz []
+0128cae9  if [-64]
+0128caeb    i32.const [3934348]
+0128caf0    i32.const [1605]
+0128caf3    call_indirect [0, 0]
+0128caf6    i32.const [4989913]
+0128cafb    i32.const [1]
+0128cafd    i32.store8 [0, 0]
+0128cb00  end []
+0128cb01  i32.const [3934348]
+0128cb06  i32.load [2, 0]
+0128cb09  i32.const [1149]
+0128cb0c  call_indirect [0, 0]
+0128cb0f  local.get [0]
+0128cb11  i32.const [25515] ; TABLE InputManager.get_Instance
+0128cb15  call_indirect [2, 0]
+0128cb18  local.get [0]
+0128cb1a  local.get [0]
+0128cb1c  call [13098] ; InputManager.{CIx±O
+0128cb1f  end []

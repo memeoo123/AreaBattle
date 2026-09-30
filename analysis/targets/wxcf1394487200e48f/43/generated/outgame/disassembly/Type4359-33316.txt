@@ -1,0 +1,220 @@
+; Original class: SceneSkinItem
+; Type4359.PwR; wasmcode function 17476; offset=7817301 size=616
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127)]
+00774858  global.get [0]
+0077485a  i32.const [16]
+0077485c  i32.sub []
+0077485d  local.set [1]
+0077485f  local.get [1]
+00774861  global.set [0]
+00774863  i32.const [5008934]
+00774868  i32.load8_u [0, 0]
+0077486b  i32.eqz []
+0077486c  if [-64]
+0077486e    i32.const [3953568]
+00774873    call [900] ; 
+00774876    i32.const [3953384]
+0077487b    call [900] ; 
+0077487e    i32.const [3953576]
+00774883    call [900] ; 
+00774886    i32.const [3957276]
+0077488b    call [900] ; 
+0077488e    i32.const [3932388]
+00774893    call [900] ; 
+00774896    i32.const [3933916]
+0077489b    call [900] ; 
+0077489e    i32.const [3934404]
+007748a3    call [900] ; 
+007748a6    i32.const [3926996]
+007748ab    call [900] ; 
+007748ae    i32.const [4075040] ; STRING "Tips.NoItem"
+007748b3    call [900] ; 
+007748b6    i32.const [4034536] ; STRING ""
+007748bb    call [900] ; 
+007748be    i32.const [5008934]
+007748c3    i32.const [1]
+007748c5    i32.store8 [0, 0]
+007748c8  end []
+007748c9  block [-64]
+007748cb    i32.const [3953568]
+007748d0    i32.load [2, 0]
+007748d3    call [935] ; 
+007748d6    local.get [0]
+007748d8    i32.load [2, 68]
+007748db    i32.const [0]
+007748dd    local.get [0]
+007748df    i32.load [2, 64]
+007748e2    i32.sub []
+007748e3    i32.const [1]
+007748e5    i32.const [4034536] ; STRING ""
+007748ea    i32.load [2, 0]
+007748ed    i32.const [0]
+007748ef    call [2291] ; ToolControl.ToolChange
+007748f2    if [-64]
+007748f4      i32.const [0]
+007748f6      call [1193] ; GameModule.get_Audio
+007748f9      i32.const [1]
+007748fb      i32.const [2017]
+007748fe      i32.const [0]
+00774900      call [1201] ; Extension.PlayerVoice
+00774903      i32.const [0]
+00774905      call [1060] ; ConfigMgr.get_Instance
+00774908      i32.load [2, 260]
+0077490c      i32.load [2, 12]
+0077490f      local.set [2]
+00774911      i32.const [3932388]
+00774916      i32.load [2, 0]
+00774919      call [901] ; 
+0077491c      local.get [2]
+0077491e      i64.const [1]
+00774920      i32.const [0]
+00774922      call [2087] ; GameStatisticsExpansion.AddEventCount
+00774925      i32.const [5009954]
+0077492a      i32.load8_u [0, 0]
+0077492d      i32.eqz []
+0077492e      if [-64]
+00774930        i32.const [3939048]
+00774935        call [900] ; 
+00774938        i32.const [5009954]
+0077493d        i32.const [1]
+0077493f        i32.store8 [0, 0]
+00774942      end []
+00774943      i32.const [3939048]
+00774948      i32.load [2, 0]
+0077494b      i32.load [2, 92]
+0077494e      i32.load [2, 0]
+00774951      i32.const [4]
+00774953      i32.const [0]
+00774955      i32.const [3933916]
+0077495a      i32.load [2, 0]
+0077495d      local.get [0]
+0077495f      i32.load [2, 52]
+00774962      call [918] ; 
+00774965      i32.const [0]
+00774967      call [5668] ; SkinManager.SetUserSkinId
+0077496a      i32.const [3953384]
+0077496f      i32.load [2, 0]
+00774972      call [935] ; 
+00774975      i32.const [0]
+00774977      i32.const [3933916]
+0077497c      i32.load [2, 0]
+0077497f      local.get [0]
+00774981      i32.load [2, 52]
+00774984      call [918] ; 
+00774987      i32.const [0]
+00774989      i32.const [0]
+0077498b      call [6059] ; GameControl.ChangeSceneStyle
+0077498e      i32.const [3953568]
+00774993      i32.load [2, 0]
+00774996      call [935] ; 
+00774999      i32.const [0]
+0077499b      i32.const [3933916]
+007749a0      i32.load [2, 0]
+007749a3      local.get [0]
+007749a5      i32.load [2, 52]
+007749a8      call [918] ; 
+007749ab      i32.const [1]
+007749ad      i32.const [1]
+007749af      i32.const [4034536] ; STRING ""
+007749b4      i32.load [2, 0]
+007749b7      i32.const [1]
+007749b9      i32.const [0]
+007749bb      call [1799] ; ToolControl.ToolChange
+007749be      drop []
+007749bf      i32.const [5009954]
+007749c4      i32.load8_u [0, 0]
+007749c7      i32.eqz []
+007749c8      if [-64]
+007749ca        i32.const [3939048]
+007749cf        call [900] ; 
+007749d2        i32.const [5009954]
+007749d7        i32.const [1]
+007749d9        i32.store8 [0, 0]
+007749dc      end []
+007749dd      local.get [0]
+007749df      i32.const [3939048]
+007749e4      i32.load [2, 0]
+007749e7      i32.load [2, 92]
+007749ea      i32.load [2, 0]
+007749ed      i32.const [0]
+007749ef      i32.const [3933916]
+007749f4      i32.load [2, 0]
+007749f7      local.get [0]
+007749f9      i32.load [2, 52]
+007749fc      call [918] ; 
+007749ff      i32.const [0]
+00774a01      call [4266] ; SkinManager.CheckSkinNew2Modify
+00774a04      local.get [0]
+00774a06      call [7145] ; SkinItem.SetRedDot
+00774a09      local.get [0]
+00774a0b      local.set [2]
+00774a0d      local.get [0]
+00774a0f      i32.load [2, 0]
+00774a12      local.set [0]
+00774a14      local.get [2]
+00774a16      local.get [0]
+00774a18      i32.load [2, 296]
+00774a1c      local.get [0]
+00774a1e      i32.load [2, 292]
+00774a22      global.set [3]
+00774a24      global.get [3]
+00774a26      call_indirect [0, 0]
+00774a29      br [1]
+00774a2b    end []
+00774a2c    i32.const [0]
+00774a2e    call [1060] ; ConfigMgr.get_Instance
+00774a31    i32.load [2, 84]
+00774a34    local.set [2]
+00774a36    local.get [1]
+00774a38    local.get [0]
+00774a3a    i32.load [2, 68]
+00774a3d    i32.store [2, 12]
+00774a40    local.get [2]
+00774a42    i32.const [3934404]
+00774a47    i32.load [2, 0]
+00774a4a    local.get [1]
+00774a4c    i32.const [12]
+00774a4e    i32.add []
+00774a4f    call [910] ; 
+00774a52    i32.const [3957276]
+00774a57    i32.load [2, 0]
+00774a5a    call [982] ; 
+00774a5d    local.set [2]
+00774a5f    i32.const [3953576]
+00774a64    i32.load [2, 0]
+00774a67    call [935] ; 
+00774a6a    local.set [3]
+00774a6c    i32.const [0]
+00774a6e    call [1220] ; GameModule.get_Lang
+00774a71    local.set [4]
+00774a73    i32.const [3926996]
+00774a78    i32.load [2, 0]
+00774a7b    i32.const [1]
+00774a7d    call [909] ; 
+00774a80    local.set [0]
+00774a82    local.get [2]
+00774a84    i32.load [2, 32]
+00774a87    i32.const [0]
+00774a89    call [1551] ; Lang.get_Value
+00774a8c    local.set [2]
+00774a8e    local.get [0]
+00774a90    local.get [2]
+00774a92    call [905] ; 
+00774a95    local.get [0]
+00774a97    local.get [2]
+00774a99    i32.store [2, 16]
+00774a9c    local.get [3]
+00774a9e    local.get [4]
+00774aa0    i32.const [4075040] ; STRING "Tips.NoItem"
+00774aa5    i32.load [2, 0]
+00774aa8    local.get [0]
+00774aaa    i32.const [0]
+00774aac    call [1597] ; LangModule.GetFormat
+00774aaf    i32.const [0]
+00774ab1    call [2225] ; UIControl.ShowToast
+00774ab4  end []
+00774ab5  local.get [1]
+00774ab7  i32.const [16]
+00774ab9  i32.add []
+00774aba  global.set [0]
+00774abc  end []

@@ -1,0 +1,29 @@
+; Original class: ProcedureStarGame
+; Type4452.aP|kOVP; wasmcode function 18165; offset=8066448 size=67
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b1591  i32.const [5009786]
+007b1596  i32.load8_u [0, 0]
+007b1599  i32.eqz []
+007b159a  if [-64]
+007b159c    i32.const [3953440]
+007b15a1    call [900] ; 
+007b15a4    i32.const [5009786]
+007b15a9    i32.const [1]
+007b15ab    i32.store8 [0, 0]
+007b15ae  end []
+007b15af  local.get [1]
+007b15b1  i32.const [0]
+007b15b3  call [1453] ; Int32.Parse
+007b15b6  local.set [0]
+007b15b8  i32.const [3953440]
+007b15bd  i32.load [2, 0]
+007b15c0  call [935] ; 
+007b15c3  local.get [0]
+007b15c5  i32.const [0]
+007b15c7  local.get [0]
+007b15c9  i32.const [0]
+007b15cb  i32.gt_s []
+007b15cc  select []
+007b15cd  i32.const [0]
+007b15cf  call [5934] ; LevelControl.set_CurLevel
+007b15d2  end []

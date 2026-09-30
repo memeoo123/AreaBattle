@@ -1,0 +1,28 @@
+{
+  "status": "source_initialization_and_concrete_canvas_verified",
+  "source": [
+    "disassembly/Type3559-27428.txt",
+    "disassembly/Type3559-27429.txt",
+    "disassembly/Type3559-27443.txt",
+    "disassembly/Type3544-27325.txt",
+    "ui-initialization-generics.json"
+  ],
+  "verified": [
+    "Original Dictionary<string,GameObject>.Add and OutletInfo enumeration; component references cast to null",
+    "Bind object/transform, Normalize scale then RectTransform, enumerate outlets",
+    "Activate and mark initialized before component/initialize/visibility/skin/Awake hooks",
+    "Duplicate outlet Add throws without rollback or early activation",
+    "Shared lifetime disposes original dictionary and page object",
+    "Layer1 alone adds/reuses Canvas and GraphicRaycaster; UIWindow sorting layer",
+    "WindowIndex=count+1; sourceFlag28 false10+count*3 or true100+count*200",
+    "Existing disabled GraphicRaycaster remains disabled"
+  ],
+  "fixtureCorrection": "Standalone Canvas overrideSorting is not the source hierarchy; test now parents page under UI root Canvas before checking nested sorting.",
+  "remaining": [
+    "Serialized IUIoutlet component/manifest adapter",
+    "Concrete source window count and full UIModule owner",
+    "Compose open/close/init with actual page controllers and production entry",
+    "Full Player validation"
+  ],
+  "integratedChecks": 598
+}

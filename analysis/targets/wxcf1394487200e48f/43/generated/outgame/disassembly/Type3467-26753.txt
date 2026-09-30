@@ -1,0 +1,40 @@
+; Original class: DataManagerPool
+; Type3467.n¦faZ; wasmcode function 8027; offset=3823817 size=119
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003a58ca  i32.const [4988999]
+003a58cf  i32.load8_u [0, 0]
+003a58d2  i32.eqz []
+003a58d3  if [-64]
+003a58d5    i32.const [3930256]
+003a58da    call [900] ; 
+003a58dd    i32.const [3930676]
+003a58e2    call [900] ; 
+003a58e5    i32.const [4105484] ; STRING "禁用数据全局存储"
+003a58ea    call [900] ; 
+003a58ed    i32.const [4105324] ; STRING "激活数据全局存储"
+003a58f2    call [900] ; 
+003a58f5    i32.const [4988999]
+003a58fa    i32.const [1]
+003a58fc    i32.store8 [0, 0]
+003a58ff  end []
+003a5900  i32.const [4105484] ; STRING "禁用数据全局存储"
+003a5905  i32.const [4105324] ; STRING "激活数据全局存储"
+003a590a  local.get [0]
+003a590c  select []
+003a590d  i32.load [2, 0]
+003a5910  local.set [1]
+003a5912  i32.const [3930676]
+003a5917  i32.load [2, 0]
+003a591a  call [901] ; 
+003a591d  local.get [1]
+003a591f  i32.const [0]
+003a5921  call [1066] ; Debug.LogWarning
+003a5924  i32.const [3930256]
+003a5929  i32.load [2, 0]
+003a592c  call [901] ; 
+003a592f  i32.const [3930256]
+003a5934  i32.load [2, 0]
+003a5937  i32.load [2, 92]
+003a593a  local.get [0]
+003a593c  i32.store8 [0, 4]
+003a593f  end []

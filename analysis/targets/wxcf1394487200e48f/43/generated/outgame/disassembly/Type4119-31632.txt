@@ -1,0 +1,28 @@
+; Original class: LocalDataManager
+; Type4119.OnSave; wasmcode function 18781; offset=8473154 size=60
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00814a45  local.get [0]
+00814a47  local.get [0]
+00814a49  call [11481] ; LocalDataManager.SaveLimitedBagInfo
+00814a4c  local.get [0]
+00814a4e  local.set [1]
+00814a50  local.get [0]
+00814a52  i32.load [2, 20]
+00814a55  i32.const [0]
+00814a57  call [1584] ; JsonUtility.ToJson
+00814a5a  local.set [2]
+00814a5c  local.get [0]
+00814a5e  i32.load [2, 0]
+00814a61  i32.const [-64]
+00814a63  i32.sub []
+00814a64  local.set [0]
+00814a66  local.get [1]
+00814a68  local.get [2]
+00814a6a  local.get [0]
+00814a6c  i32.load [2, 192]
+00814a70  local.get [0]
+00814a72  i32.load [2, 188]
+00814a76  global.set [3]
+00814a78  global.get [3]
+00814a7a  call_indirect [2, 0]
+00814a7d  end []

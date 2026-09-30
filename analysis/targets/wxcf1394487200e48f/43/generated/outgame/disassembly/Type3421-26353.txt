@@ -1,0 +1,20 @@
+; Original class: AudioManager
+; Type3421.Destroy; wasmcode1 function 6512; offset=2143078 size=43
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0020b367  local.get [0]
+0020b369  local.get [0]
+0020b36b  call [31756] ; AudioManager.ClearNode
+0020b36f  local.get [0]
+0020b371  local.get [0]
+0020b373  call [31754] ; AudioManager.HT
+0020b377  local.get [0]
+0020b379  local.get [0]
+0020b37b  call [14840] ; AudioManager.B³us|
+0020b37e  local.get [0]
+0020b380  i32.const [24371] ; TABLE UIAudioManager.get_Instance
+0020b384  call_indirect [2, 0]
+0020b387  drop []
+0020b388  local.get [0]
+0020b38a  local.get [0]
+0020b38c  call [20118] ; UIAudioManager.Destroy
+0020b390  end []

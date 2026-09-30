@@ -1,0 +1,25 @@
+; Original class: SerialController
+; Type7527.onClickAd; wasmcode1 function 48910; offset=17070054 size=65
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+010477e7  i32.const [5005109]
+010477ec  i32.load8_u [0, 0]
+010477ef  i32.eqz []
+010477f0  if [-64]
+010477f2    i32.const [4093880] ; STRING "onClickAd"
+010477f7    i32.const [1605]
+010477fa    call_indirect [0, 0]
+010477fd    i32.const [5005109]
+01047802    i32.const [1]
+01047804    i32.store8 [0, 0]
+01047807  end []
+01047808  local.get [0]
+0104780a  i32.load [2, 8]
+0104780d  i32.const [4093880] ; STRING "onClickAd"
+01047812  i32.load [2, 0]
+01047815  i32.const [0]
+01047817  i32.const [1476] ; TABLE String.Concat
+0104781a  call_indirect [3, 0]
+0104781d  i32.const [0]
+0104781f  i32.const [8833] ; TABLE XYXLOG.Log
+01047823  call_indirect [4, 0]
+01047826  end []

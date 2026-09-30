@@ -1,0 +1,21 @@
+; AudioControl.get_IsSoundEffect; wasmcode function 2849; offset=879119 size=55
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000d6a10  i32.const [5010003]
+000d6a15  i32.load8_u [0, 0]
+000d6a18  i32.eqz []
+000d6a19  if [-64]
+000d6a1b    i32.const [3932476]
+000d6a20    call [900] ; 
+000d6a23    i32.const [5010003]
+000d6a28    i32.const [1]
+000d6a2a    i32.store8 [0, 0]
+000d6a2d  end []
+000d6a2e  i32.const [3932476]
+000d6a33  i32.load [2, 0]
+000d6a36  call [901] ; 
+000d6a39  i32.const [0]
+000d6a3b  call [7782] ; 
+000d6a3e  f32.const [0.9900000095367432]
+000d6a43  f32.gt []
+000d6a44  return []
+000d6a45  end []

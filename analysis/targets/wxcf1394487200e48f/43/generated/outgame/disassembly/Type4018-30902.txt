@@ -1,0 +1,26 @@
+; Original class: ArenaControl
+; Type4018.Mv~vd; wasmcode function 5212; offset=1805769 size=71
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001b8dca  i32.const [5008641]
+001b8dcf  i32.load8_u [0, 0]
+001b8dd2  i32.eqz []
+001b8dd3  if [-64]
+001b8dd5    i32.const [3956116]
+001b8dda    call [900] ; 
+001b8ddd    i32.const [3998368]
+001b8de2    call [900] ; 
+001b8de5    i32.const [5008641]
+001b8dea    i32.const [1]
+001b8dec    i32.store8 [0, 0]
+001b8def  end []
+001b8df0  local.get [0]
+001b8df2  i32.load [2, 20]
+001b8df5  i32.load [2, 36]
+001b8df8  i32.const [3956116]
+001b8dfd  i32.load [2, 0]
+001b8e00  call [1554] ; 
+001b8e03  i32.const [3998368]
+001b8e08  i32.load [2, 0]
+001b8e0b  call [1369] ; 
+001b8e0e  return []
+001b8e0f  end []

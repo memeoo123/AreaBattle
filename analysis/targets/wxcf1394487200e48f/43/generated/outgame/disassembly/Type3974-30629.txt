@@ -1,0 +1,67 @@
+; Original class: MineGameMain
+; Type3974.eScR; wasmcode function 18533; offset=8350448 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f6af3  i32.const [5010145]
+007f6af8  i32.load8_u [0, 0]
+007f6afb  i32.eqz []
+007f6afc  if [-64]
+007f6afe    i32.const [3927888]
+007f6b03    call [900] ; 
+007f6b06    i32.const [3989352]
+007f6b0b    call [900] ; 
+007f6b0e    i32.const [4000624]
+007f6b13    call [900] ; 
+007f6b16    i32.const [3932308]
+007f6b1b    call [900] ; 
+007f6b1e    i32.const [4008016] ; METHOD MineGameMain.NnO`t
+007f6b23    call [900] ; 
+007f6b26    i32.const [4106244] ; STRING "资源模块初始化完成，开始初始化其他次级模块"
+007f6b2b    call [900] ; 
+007f6b2e    i32.const [5010145]
+007f6b33    i32.const [1]
+007f6b35    i32.store8 [0, 0]
+007f6b38  end []
+007f6b39  local.get [0]
+007f6b3b  i32.const [4106244] ; STRING "资源模块初始化完成，开始初始化其他次级模块"
+007f6b40  i32.load [2, 0]
+007f6b43  local.get [0]
+007f6b45  call [2125] ; MineGameMain.O{P^xr
+007f6b48  i32.const [3932308]
+007f6b4d  i32.load [2, 0]
+007f6b50  call [901] ; 
+007f6b53  i32.const [4000624]
+007f6b58  i32.load [2, 0]
+007f6b5b  call [1051] ; 
+007f6b5e  local.set [1]
+007f6b60  i32.const [3927888]
+007f6b65  i32.load [2, 0]
+007f6b68  call [903] ; 
+007f6b6b  local.set [2]
+007f6b6d  local.get [2]
+007f6b6f  local.get [0]
+007f6b71  i32.const [4008016] ; METHOD MineGameMain.NnO`t
+007f6b76  i32.load [2, 0]
+007f6b79  i32.const [0]
+007f6b7b  call [1002] ; Action..ctor
+007f6b7e  i32.const [3989352]
+007f6b83  i32.load [2, 0]
+007f6b86  call [1032] ; 
+007f6b89  local.set [0]
+007f6b8b  local.get [1]
+007f6b8d  local.get [2]
+007f6b8f  i32.store [2, 12]
+007f6b92  local.get [0]
+007f6b94  local.set [2]
+007f6b96  local.get [1]
+007f6b98  i32.load [2, 0]
+007f6b9b  local.set [0]
+007f6b9d  local.get [1]
+007f6b9f  local.get [2]
+007f6ba1  local.get [0]
+007f6ba3  i32.load [2, 232]
+007f6ba7  local.get [0]
+007f6ba9  i32.load [2, 228]
+007f6bad  global.set [3]
+007f6baf  global.get [3]
+007f6bb1  call_indirect [2, 0]
+007f6bb4  end []

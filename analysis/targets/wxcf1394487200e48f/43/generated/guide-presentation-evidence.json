@@ -1,0 +1,179 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "source-confirmed; runtime checks separate",
+  "spine": {
+    "sourceComponent": "CAB-71a96badbcffab7b7451a783f271bc4b:-6083250585791921037",
+    "version": "4.1.16",
+    "animation": "YD",
+    "loop": true,
+    "duration": 1.5333,
+    "bones": 2,
+    "slots": 1,
+    "attachmentCount": 47,
+    "localPosition": [
+      -1.07000005,
+      -37.7199936,
+      0
+    ],
+    "localScale": [
+      100,
+      100,
+      1
+    ],
+    "layer": 5,
+    "sourceHashes": {
+      "YD.atlas": "b9f794d3cdd01bb839a3f70528f7f79a9aabbbf43c4edb1219781816f136bae9",
+      "YD": "23847e6b4063e381c4ecb2022c2b63ed47ef5a59868ab62ea841f6bd6c0eb073"
+    },
+    "resourceCount": 13,
+    "preparedManifest": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\resource-snapshots\\hud-soldier300-20260928\\guide-spine\\native\\native-import.json"
+  },
+  "lifecycle": {
+    "Awake": "f19289 disables YD_0 then calls ShowUI. ShowUI f7740 stage1 activates YD_0 and disables guideIcon Image. No general else/deactivate branch; preserve activation on subsequent popups of same UI instance.",
+    "popup": "ShowUI mainbg/imageBg true and guideHand false; OnOK f11888 sets these popup roots false. GuideUI root remains during gameplay guide, so hand must not be parented under mainbg.",
+    "clock": "SkeletonAnimation source updateTiming1/unscaledTimefalse/timeScale1; explicit scaled clock invokes official runtime Update/LateUpdate with automatic component disabled. Original animation/atlas/material data preserved.",
+    "dispose": "f19288 kills existing tween, removes listeners/timers and clears guide state."
+  },
+  "hand": {
+    "componentBinding": "GuideUI.InitializeComponent f19287 offset148 -> guideHand Image; offset160 -> YD_0 GameObject",
+    "connect": {
+      "start": "source TowerUI canvas world position - Vector3.up",
+      "end": "target TowerUI canvas world position - Vector3.up",
+      "duration": 2,
+      "loops": 2147483647
+    },
+    "cut": {
+      "points": "rotate connect endpoints -90 degrees about their midpoint around Vector3.forward",
+      "duration": 2,
+      "loops": 2147483647
+    },
+    "skillPulse": {
+      "stages": [
+        9,
+        10
+      ],
+      "start": "SkillItem slot0/1 world position",
+      "property": "Transform.localScale",
+      "target": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "duration": 1,
+      "loops": 15,
+      "completion": "deactivate hand"
+    },
+    "skillDrag": {
+      "stage": 11,
+      "start": "SkillItem slot2 world position",
+      "end": "GetEndPosInSkill -> TowerUI canvas world position - Vector3.up",
+      "duration": 2,
+      "loops": 15,
+      "completion": "deactivate hand",
+      "noTarget": "deactivate when original target point is zero"
+    },
+    "tweenDefaults": {
+      "ease": "OutQuad",
+      "loopType": "Restart",
+      "scaled": true,
+      "binary": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\unity-assets\\MonoBehaviour\\DOTweenSettings__resources.bin",
+      "sha256": "8afe2d68a8fea2bc8c26ad3a4e4ae268807153544f2142639b28ffdd3332c81d",
+      "offsets": {
+        "defaultUpdateType": "0x64 = 0 Normal",
+        "defaultTimeScaleIndependent": "0x68 = false",
+        "defaultEaseType": "0x6c = 6 OutQuad",
+        "defaultLoopType": "0x7c = 0 Restart"
+      },
+      "mapping": "IL2CPP DOTweenSettings type14796 field order43027..43055 matches original serialized field sequence; official public DOTweenSettings defines enum fields. f5573→f9972 SetLoops(int) only sets count, not loopType.",
+      "primaryReferences": [
+        "https://raw.githubusercontent.com/Demigiant/dotween/develop/_DOTween.Assembly/DOTween/Core/DOTweenSettings.cs",
+        "https://raw.githubusercontent.com/Demigiant/dotween/develop/_DOTween.Assembly/DOTween/DOTween.cs"
+      ]
+    },
+    "sourceHelpers": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\generated\\guide-presentation-tween-helpers.json"
+  },
+  "popupText": {
+    "correction": "The earlier name PersistentTip described the local adapter, not original visibility. Original textTipAdd belongs to mainbg and appears during the prompt only. No reparenting is performed.",
+    "source": "TextGuideLogic.Start f15651 subscribes GuideMessage+0 to show f15649 and +4 to clear/hide f15652. GuideUI.ShowUI f7740 fires +0 at0x38b369; OnOK f11888 fires +4 at0x58bd25.",
+    "alignment": "Text.set_alignment token0x06000474 resolves to wasmcode f3259. TextGuideLogic virtual default returns4=MiddleCenter; Guide_TowerAttack/Defense override returns3=MiddleLeft.",
+    "stages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "Pitch": "f7740@0x38b192-0x38b28c enables guideContent.child0 only stage7/8, splits GuideConfig.param on semicolon, assigns child[i].child2 Text, and clears guideContent Text. Stage7 param2;2;1;2, stage8 param2;2;2;1. OnOK hides the Pitch child."
+  },
+  "functions": [
+    {
+      "function": 6006,
+      "method": "Qqjki",
+      "module": "wasmcode",
+      "offset": "0x204251",
+      "size": 288
+    },
+    {
+      "function": 11888,
+      "method": "l~LU",
+      "module": "wasmcode",
+      "offset": "0x58bb92",
+      "size": 463
+    },
+    {
+      "function": 19274,
+      "method": "xUsvVw",
+      "module": "wasmcode",
+      "offset": "0x83f705",
+      "size": 117
+    },
+    {
+      "function": 19288,
+      "method": "Dispose",
+      "module": "wasmcode",
+      "offset": "0x83fcc2",
+      "size": 136
+    },
+    {
+      "function": 19289,
+      "method": "Awake",
+      "module": "wasmcode",
+      "offset": "0x83fd4b",
+      "size": 31
+    },
+    {
+      "function": 19276,
+      "method": "bLpupPP",
+      "module": "wasmcode",
+      "offset": "0x83f7c0",
+      "size": 71
+    },
+    {
+      "function": 7740,
+      "method": "ShowUI",
+      "module": "wasmcode",
+      "offset": "0x38ae71",
+      "size": 1288
+    },
+    {
+      "function": 19287,
+      "method": "InitializeComponent",
+      "module": "wasmcode",
+      "offset": "0x83fb3c",
+      "size": 388
+    }
+  ],
+  "implementation": {
+    "runtime": "UnityProject/Assets/AreaBattle/Scripts/RecoveredGuidePresentation.cs",
+    "importer": "UnityProject/Assets/AreaBattle/Editor/RecoveredGuideSpineImporter.cs",
+    "probe": "UnityProject/Assets/AreaBattle/Editor/GuidePresentationProbe.cs",
+    "probeResult": "analysis/guide-presentation-probe.json",
+    "scope": "Official Spine runtime only; original custom game executable behaviours excluded. Guide decisions remain production BattleGuide."
+  },
+  "unknowns": [
+    "Matched original-game screenshots and rendered-frame timing alignment remain unaccepted.",
+    "Precise relative ordering of original DOTween, guide events and rendering inside one frame remains unestablished."
+  ]
+}

@@ -1,0 +1,189 @@
+; Original class: SerialController
+; Type7527.onCloseAd; wasmcode function 10497; offset=5145893 size=517
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004e8526  i32.const [5005110]
+004e852b  i32.load8_u [0, 0]
+004e852e  i32.eqz []
+004e852f  if [-64]
+004e8531    i32.const [3927996]
+004e8536    call [900] ; 
+004e8539    i32.const [3934504]
+004e853e    call [900] ; 
+004e8541    i32.const [3973084]
+004e8546    call [900] ; 
+004e8549    i32.const [3936304]
+004e854e    call [900] ; 
+004e8551    i32.const [3984752]
+004e8556    call [900] ; 
+004e8559    i32.const [3941516]
+004e855e    call [900] ; 
+004e8561    i32.const [4062904] ; STRING "NATIVE_SPLASH"
+004e8566    call [900] ; 
+004e8569    i32.const [4057236] ; STRING "INTERSTITAL"
+004e856e    call [900] ; 
+004e8571    i32.const [4045420] ; STRING "BANNER"
+004e8576    call [900] ; 
+004e8579    i32.const [4077760] ; STRING "VIDEO"
+004e857e    call [900] ; 
+004e8581    i32.const [4093888] ; STRING "onCloseAd"
+004e8586    call [900] ; 
+004e8589    i32.const [5005110]
+004e858e    i32.const [1]
+004e8590    i32.store8 [0, 0]
+004e8593  end []
+004e8594  local.get [0]
+004e8596  i32.load [2, 8]
+004e8599  i32.const [4093888] ; STRING "onCloseAd"
+004e859e  i32.load [2, 0]
+004e85a1  i32.const [0]
+004e85a3  call [921] ; String.Concat
+004e85a6  i32.const [0]
+004e85a8  call [999] ; XYXLOG.Log
+004e85ab  local.get [0]
+004e85ad  i32.load [2, 36]
+004e85b0  local.set [1]
+004e85b2  local.get [1]
+004e85b4  if [-64]
+004e85b6    local.get [1]
+004e85b8    i32.const [0]
+004e85ba    i32.const [0]
+004e85bc    call [1336] ; 
+004e85bf  end []
+004e85c0  i32.const [0]
+004e85c2  call [2464] ; TimerReportManager.get_Instance
+004e85c5  i32.const [0]
+004e85c7  i32.const [0]
+004e85c9  i32.const [0]
+004e85cb  call [2465] ; TimerReportManager.changeReportType
+004e85ce  local.get [0]
+004e85d0  i32.load [2, 12]
+004e85d3  i32.load [2, 16]
+004e85d6  i32.const [4057236] ; STRING "INTERSTITAL"
+004e85db  i32.load [2, 0]
+004e85de  i32.const [0]
+004e85e0  call [1237] ; String.Contains
+004e85e3  if [-64]
+004e85e5    i32.const [3936304]
+004e85ea    i32.load [2, 0]
+004e85ed    call [901] ; 
+004e85f0    local.get [0]
+004e85f2    call [1381] ; NewAdsManager.get_Instance
+004e85f5    i32.const [0]
+004e85f7    local.get [0]
+004e85f9    call [3315] ; NewAdsManager.setIsInterVideoShow
+004e85fc    local.get [0]
+004e85fe    i32.load [2, 12]
+004e8601    i32.load [2, 16]
+004e8604    local.set [1]
+004e8606    i32.const [3927996]
+004e860b    i32.load [2, 0]
+004e860e    call [901] ; 
+004e8611    local.get [1]
+004e8613    i32.const [0]
+004e8615    call [3010] ; AdsUtil.setIntersClose
+004e8618    local.get [0]
+004e861a    i32.load8_u [0, 20]
+004e861d    i32.eqz []
+004e861e    if [-64]
+004e8620      local.get [0]
+004e8622      i32.load [2, 12]
+004e8625      local.set [1]
+004e8627      i32.const [3934504]
+004e862c      i32.load [2, 0]
+004e862f      call [901] ; 
+004e8632      local.get [1]
+004e8634      i32.const [0]
+004e8636      call [7688] ; IntersCloseIntersUtil.show
+004e8639    end []
+004e863a    i32.const [3984752]
+004e863f    i32.load [2, 0]
+004e8642    call [1203] ; 
+004e8645    i32.const [0]
+004e8647    call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+004e864a    i32.const [0]
+004e864c    call [7287] ; ReporterSDK.NewReportInsertClose
+004e864f  end []
+004e8650  local.get [0]
+004e8652  i32.load [2, 12]
+004e8655  i32.load [2, 16]
+004e8658  i32.const [4077760] ; STRING "VIDEO"
+004e865d  i32.load [2, 0]
+004e8660  i32.const [0]
+004e8662  call [1237] ; String.Contains
+004e8665  if [-64]
+004e8667    i32.const [3936304]
+004e866c    i32.load [2, 0]
+004e866f    call [901] ; 
+004e8672    local.get [0]
+004e8674    call [1381] ; NewAdsManager.get_Instance
+004e8677    i32.const [0]
+004e8679    local.get [0]
+004e867b    call [3315] ; NewAdsManager.setIsInterVideoShow
+004e867e    local.get [0]
+004e8680    i32.load8_u [0, 20]
+004e8683    i32.eqz []
+004e8684    if [-64]
+004e8686      local.get [0]
+004e8688      i32.load [2, 12]
+004e868b      local.set [1]
+004e868d      i32.const [3941516]
+004e8692      i32.load [2, 0]
+004e8695      call [901] ; 
+004e8698      local.get [1]
+004e869a      i32.const [0]
+004e869c      call [6819] ; VideoCloseIntersUtil.show
+004e869f    end []
+004e86a0    local.get [0]
+004e86a2    local.get [0]
+004e86a4    call [3370] ; SerialSplashController.stopLoadNext
+004e86a7    local.get [0]
+004e86a9    local.get [0]
+004e86ab    call [1762] ; BaseController.getPlatList
+004e86ae    local.set [1]
+004e86b0    i32.const [3973084]
+004e86b5    i32.load [2, 0]
+004e86b8    drop []
+004e86b9    local.get [0]
+004e86bb    local.get [1]
+004e86bd    i32.load [2, 12]
+004e86c0    i32.store [2, 44]
+004e86c3  end []
+004e86c4  block [-64]
+004e86c6    i32.const [4045420] ; STRING "BANNER"
+004e86cb    i32.load [2, 0]
+004e86ce    local.get [0]
+004e86d0    i32.load [2, 12]
+004e86d3    i32.load [2, 16]
+004e86d6    i32.const [0]
+004e86d8    call [1019] ; String.Equals
+004e86db    br_if [0]
+004e86dd    i32.const [4062904] ; STRING "NATIVE_SPLASH"
+004e86e2    i32.load [2, 0]
+004e86e5    local.get [0]
+004e86e7    i32.load [2, 12]
+004e86ea    i32.load [2, 16]
+004e86ed    i32.const [0]
+004e86ef    call [1019] ; String.Equals
+004e86f2    br_if [0]
+004e86f4    local.get [0]
+004e86f6    i32.load [2, 0]
+004e86f9    local.set [1]
+004e86fb    local.get [0]
+004e86fd    local.get [1]
+004e86ff    i32.const [40]
+004e8701    i32.add []
+004e8702    i32.load [2, 192]
+004e8706    local.get [1]
+004e8708    i32.load [2, 228]
+004e870c    global.set [3]
+004e870e    global.get [3]
+004e8710    call_indirect [0, 0]
+004e8713    i32.const [3936304]
+004e8718    i32.load [2, 0]
+004e871b    call [901] ; 
+004e871e    local.get [0]
+004e8720    call [1381] ; NewAdsManager.get_Instance
+004e8723    local.get [0]
+004e8725    call [7515] ; NewAdsManager.restoreBanner
+004e8728  end []
+004e8729  end []

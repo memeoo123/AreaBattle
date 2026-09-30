@@ -1,0 +1,51 @@
+; Original class: AudioLoopFadeAction
+; Type3413.mK¾yL; wasmcode function 20575; offset=9227893 size=120
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008cce76  i32.const [5011649]
+008cce7b  i32.load8_u [0, 0]
+008cce7e  i32.eqz []
+008cce7f  if [-64]
+008cce81    i32.const [3936516]
+008cce86    call [900] ; 
+008cce89    i32.const [5011649]
+008cce8e    i32.const [1]
+008cce90    i32.store8 [0, 0]
+008cce93  end []
+008cce94  local.get [0]
+008cce96  i32.load [2, 36]
+008cce99  local.set [1]
+008cce9b  i32.const [3936516]
+008ccea0  i32.load [2, 0]
+008ccea3  call [901] ; 
+008ccea6  local.get [1]
+008ccea8  i32.const [0]
+008cceaa  i32.const [0]
+008cceac  call [946] ; Object.op_Inequality
+008cceaf  if [-64]
+008cceb1    local.get [0]
+008cceb3    i32.load [2, 36]
+008cceb6    i32.const [0]
+008cceb8    call [5200] ; AudioSource.Stop
+008ccebb  end []
+008ccebc  local.get [0]
+008ccebe  local.get [0]
+008ccec0  call [5202] ; AudioActionBase.OnEndCall
+008ccec3  local.get [0]
+008ccec5  i32.load [2, 76]
+008ccec8  local.set [1]
+008cceca  local.get [1]
+008ccecc  if [-64]
+008ccece    local.get [1]
+008cced0    i32.const [0]
+008cced2    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cced5    global.set [3]
+008cced7    i32.const [2075] ; TABLE AssetOperationHandle.Release
+008cceda    call_indirect [0, 0]
+008ccedd  end []
+008ccede  local.get [0]
+008ccee0  local.get [0]
+008ccee2  call [4019] ; AudioActionBase.Dispose
+008ccee5  local.get [0]
+008ccee7  i32.const [0]
+008ccee9  i32.store8 [0, 60]
+008cceec  end []

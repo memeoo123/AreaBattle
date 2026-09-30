@@ -1,0 +1,111 @@
+{
+  "reference": "evidence/original-reference/level871-entry-user.png",
+  "capture": "analysis/captures/original871-reconstruction-1_5seconds.png",
+  "referenceSha256": "dcf5c3a16b0470bdb1c188efeda212d3c0838bb10fdda80cded603b6b394d03f",
+  "captureSha256": "b0f983d120392ba2ba12329ad1a88fecc0b96967ec7fbab80e16b4481afaedf5",
+  "registration": {
+    "viewport": [
+      0,
+      55,
+      723,
+      1282
+    ],
+    "visibleHeight": 1263,
+    "status": "inferred from supplied window dimensions, source aspect branch and static anchors; bottom19px occluded"
+  },
+  "fixture": {
+    "seconds": 1.5,
+    "input": "none",
+    "managedSeed": 4305,
+    "unitySeed": 4305,
+    "genericPoints": 27,
+    "specificStock": 0,
+    "sourceFrameTime": "unknown"
+  },
+  "regions": [
+    {
+      "region": "visible-battlefield",
+      "rect": [
+        1,
+        0,
+        722,
+        1263
+      ],
+      "meanAbsoluteRGBError": 6.0778,
+      "fractionPixelsWithin16": 0.9013
+    },
+    {
+      "region": "upper-empty-background",
+      "rect": [
+        110,
+        145,
+        615,
+        340
+      ],
+      "meanAbsoluteRGBError": 1.6856,
+      "fractionPixelsWithin16": 0.9795
+    },
+    {
+      "region": "left-background-decoration",
+      "rect": [
+        1,
+        125,
+        103,
+        372
+      ],
+      "meanAbsoluteRGBError": 6.0686,
+      "fractionPixelsWithin16": 0.9058
+    },
+    {
+      "region": "topbar",
+      "rect": [
+        20,
+        40,
+        484,
+        126
+      ],
+      "meanAbsoluteRGBError": 9.4396,
+      "fractionPixelsWithin16": 0.8395
+    },
+    {
+      "region": "blue-score-and-capacity",
+      "rect": [
+        115,
+        367,
+        163,
+        430
+      ],
+      "meanAbsoluteRGBError": 21.1702,
+      "fractionPixelsWithin16": 0.7533
+    },
+    {
+      "region": "bottom-skill-icons",
+      "rect": [
+        255,
+        1122,
+        651,
+        1240
+      ],
+      "meanAbsoluteRGBError": 6.9131,
+      "fractionPixelsWithin16": 0.8451
+    },
+    {
+      "region": "commander-animation",
+      "rect": [
+        90,
+        1020,
+        243,
+        1256
+      ],
+      "meanAbsoluteRGBError": 18.3211,
+      "fractionPixelsWithin16": 0.7812
+    }
+  ],
+  "classification": "single-frame representative comparison; full synchronized replay pending",
+  "limits": [
+    "User confirms no player input, not exact elapsed time.",
+    "Matching entry topology occurs in this local seeded run; original seed remains unknown.",
+    "Metrics include antialiasing, border registration and animation phase differences; not a gameplay accuracy percentage.",
+    "No reference pixels were modified; pixels were read only for numeric comparison."
+  ]
+}

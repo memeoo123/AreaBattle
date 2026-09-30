@@ -1,0 +1,276 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43",
+    "engine": "unity",
+    "engineVersion": "2021.3.56f2"
+  },
+  "authorization": {
+    "status": "authorized-by-user-request",
+    "userRequest": "用这个skill ，执行一下当前运行的微信小游戏",
+    "scope": "User-approved autonomous full in-level restoration, target-resource acquisition and Unity implementation; original packages and user data preserved.",
+    "networkApproval": {
+      "userResponse": "允许",
+      "scope": "Download the three level_0/1/2 resource bundles in generated/next-download-plan.json",
+      "recordedAtUtc": "2026-09-28T03:14:16.617902+00:00"
+    }
+  },
+  "createdAtUtc": "2026-09-28T11:00:57.2997+08:00",
+  "updatedAtUtc": "2026-09-28T03:44:39.713641+00:00",
+  "sourceArtifacts": [
+    {
+      "sha256": "432AC6896AF4518C7F39C47DC4D11AFA12825C6A03B304A6BAB9FBC06E3B8B2F",
+      "copy": "work/input/__WITHOUT_MULTI_PLUGINCODE__.wxapkg",
+      "path": "C:\\Users\\jiachengwei\\AppData\\Roaming\\Tencent\\xwechat\\radium\\users\\d833ae57d25e1087edac741082077974\\applet\\packages\\wxcf1394487200e48f\\43\\__WITHOUT_MULTI_PLUGINCODE__.wxapkg",
+      "size": 1220735
+    },
+    {
+      "sha256": "6C2CA7E4604496BA343B7628794317D860E36529186E7CCA752FE96580537D17",
+      "copy": "work/input/_wasmcode_.wxapkg",
+      "path": "C:\\Users\\jiachengwei\\AppData\\Roaming\\Tencent\\xwechat\\radium\\users\\d833ae57d25e1087edac741082077974\\applet\\packages\\wxcf1394487200e48f\\43\\_wasmcode_.wxapkg",
+      "size": 3199741
+    },
+    {
+      "sha256": "4649314CEF01793C0BC168BDDB83515F1FE43B56C3309A03F369484E7F36B320",
+      "copy": "work/input/_wasmcode1_.wxapkg",
+      "path": "C:\\Users\\jiachengwei\\AppData\\Roaming\\Tencent\\xwechat\\radium\\users\\d833ae57d25e1087edac741082077974\\applet\\packages\\wxcf1394487200e48f\\43\\_wasmcode1_.wxapkg",
+      "size": 4640547
+    }
+  ],
+  "generatedArtifacts": [
+    "REVERSE_REPORT.md",
+    "generated/analysis-status.json",
+    "generated/table-schemas.json",
+    "generated/gameplay-symbols.json",
+    "generated/resource-catalog.json",
+    "generated/gameplay-help-evidence.json",
+    "generated/next-download-plan.json",
+    "evidence/validation.json",
+    "generated/level-summary.json",
+    "generated/dispatch-model.json",
+    "generated/dispatch-derived-cases.json",
+    "generated/gameplay-method-map.json",
+    "evidence/level-downloads.json",
+    "evidence/level-validation.json",
+    "evidence/level-extraction.json",
+    "generated/RESTORE_SPEC.json",
+    "generated/golden-cases.json",
+    "generated/original-numeric-cases.json",
+    "generated/combat-evidence.json",
+    "generated/flow-evidence.json",
+    "generated/asset-evidence.json",
+    "generated/unity-assets/reconstruction-index.json",
+    "generated/unity-assets/export-validation.json",
+    "evidence/full-level-downloads.json",
+    "evidence/full-level-extraction.json",
+    "BATTLEFIELD_RESTORE_STATE.json",
+    "generated/controls-evidence.json"
+  ],
+  "commands": [
+    {
+      "command": "Get-CimInstance Win32_Process; filtered WeChatAppEx AppID and window title",
+      "exitCode": 0,
+      "note": "Initial sandbox query denied; read-only escalated query succeeded"
+    },
+    {
+      "command": "python <skill>/scripts/init_target_workspace.py --analysis-root E:/Projects/AreaBattle/analysis --app-id wxcf1394487200e48f --version 43",
+      "exitCode": 0
+    },
+    {
+      "command": "node work/tools/unpack_wxapkg.js --input work/input/__WITHOUT_MULTI_PLUGINCODE__.wxapkg --output work/unpacked/__WITHOUT_MULTI_PLUGINCODE__ --wxid wxcf1394487200e48f --report evidence/unpack-__WITHOUT_MULTI_PLUGINCODE__.json",
+      "exitCode": 0
+    },
+    {
+      "command": "node work/tools/unpack_wxapkg.js --input work/input/_wasmcode_.wxapkg --output work/unpacked/_wasmcode_ --wxid wxcf1394487200e48f --report evidence/unpack-_wasmcode_.json",
+      "exitCode": 0
+    },
+    {
+      "command": "node work/tools/unpack_wxapkg.js --input work/input/_wasmcode1_.wxapkg --output work/unpacked/_wasmcode1_ --wxid wxcf1394487200e48f --report evidence/unpack-_wasmcode1_.json",
+      "exitCode": 0
+    },
+    {
+      "command": "node analysis/inspect_target.js",
+      "exitCode": 0
+    },
+    {
+      "command": "<bundled-python-3.12.14> -B analysis/inventory_assets.py",
+      "exitCode": 0
+    },
+    {
+      "command": "node analysis/inspect_temp.js",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B work/tools/unpack_tuanjie_webdata.py generated/webgl.data --output-root work/webdata --report evidence/webdata-unpack.json",
+      "exitCode": 0
+    },
+    {
+      "command": "<bundled-python-3.12.14> -B work/tools/inventory_unity_bundle.py work/webdata/data.unity3d --vendor-root <UnityPy-1.25.2> --output evidence/data-unity3d-inventory.json",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/recover_schema.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/finalize_analysis.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/download_levels.py",
+      "exitCode": 0
+    },
+    {
+      "command": "bundled-python-3.12.14 -B analysis/extract_levels.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/inspect_wasm.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/map_gameplay_methods.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/disassemble_methods.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/update_level_analysis.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python -B analysis/download_levels.py (initial sandbox attempt)",
+      "result": "WinError 10013; retried with approved network access successfully",
+      "exitCode": 0
+    },
+    {
+      "command": "python analysis/download_level_catalog.py",
+      "exitCode": 0
+    },
+    {
+      "command": "bundled-python -B analysis/extract_full_levels.py",
+      "exitCode": 0
+    },
+    {
+      "command": "node analysis/run_original_numeric_oracle.js",
+      "exitCode": 0
+    },
+    {
+      "command": "python analysis/build_restore_handoff.py",
+      "exitCode": 0
+    }
+  ],
+  "engineEvidence": [
+    "generated/modules/unity-namespace.js:16",
+    "work/unpacked/__WITHOUT_MULTI_PLUGINCODE__/app-config.json:1",
+    "evidence/webdata-unpack.json: data.unity3d UnityFS header"
+  ],
+  "currentStage": "connected-battlefield-evidence-and-handoff",
+  "handoff": {},
+  "implementationReady": true,
+  "additionalSourceInventories": [
+    "evidence/cache-inventory.json",
+    "evidence/temp-data-probe.json"
+  ],
+  "toolchain": {
+    "node": "24.14.0",
+    "python": "3.14.2",
+    "assetPython": "3.12.14",
+    "UnityPy": "1.25.2",
+    "js-beautify": "2.0.3",
+    "scripts": [
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\disassemble_methods.py",
+        "sha256": "99685ed17c7f535851f905781e35ecba78c9524a562f3c3860e509c50db6d6b1"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\download_levels.py",
+        "sha256": "34a6fcd98ca4d5918db268a735dde986bbde987aa8aba81005c28a355665d62a"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\extract_levels.py",
+        "sha256": "fad0e00c863f82c846ad81d119af237f1505b641bbecc9b6c4df4585d0d812fc"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\finalize_analysis.py",
+        "sha256": "7646f6a16093231f3b6913d1fdf5b31b6d230957bf1ca34a5ea5eb944d6f7e2c"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\inspect_target.js",
+        "sha256": "0c2ea1842d99d2ba9b1427b3d98968a5ce1f925c8d8957e5fc6439368daa5128"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\inspect_temp.js",
+        "sha256": "827a343a2ce172a0b520d7cc731b513db888da2cb4885088e247d45b9c7546c4"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\inspect_wasm.py",
+        "sha256": "2e75cad44d8469829adadaa2ee65498ac1e0514770249ad73894ee8bae5ab287"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\inventory_assets.py",
+        "sha256": "0d348a28c05ff4cfddf73265cd5d964c44098335ddecbf6f21df4a3c41df2144"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\map_gameplay_methods.py",
+        "sha256": "a50a4a6c0e0f3949cdd0d14072ca745b19dd5fadaa51b2aff9ae5f1c0e004b53"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\recover_schema.py",
+        "sha256": "38c104c86400b1d14bbf78f19bb597149f67a4701d140a2aa158320fe3d85a43"
+      },
+      {
+        "path": "E:\\Projects\\AreaBattle\\analysis\\update_level_analysis.py",
+        "sha256": "ba933cecd99901c2cb72efab24984e011306bde866bc40592e1552600c6565cd"
+      }
+    ],
+    "localCopiedTools": [
+      {
+        "path": "work/tools/inventory_unity_bundle.py",
+        "sha256": "e58c548e933f3676769b92b3dc7bf670b2dc54c49ca095dd6e5ad030eeaace04"
+      },
+      {
+        "path": "work/tools/unpack_tuanjie_webdata.py",
+        "sha256": "226d8f9313d107deb9327d5e696252e104b3f71b2115eab55d2f796b9dc6b73e"
+      },
+      {
+        "path": "work/tools/unpack_wxapkg.js",
+        "sha256": "0060d40062b28d63958326348d08007ff60396af0b96a6540777a8faf018bd32"
+      }
+    ]
+  },
+  "remoteArtifacts": [
+    {
+      "logicalName": "data/levelcfg/level_0.json.unity3d",
+      "finalUrl": "https://gameoss-hz.entermore.cn/app-3/Release/Proj_hdzd/XYX/weixin/hcrzd/1.36/StreamingAssets/WebGL/Proj_hdzd/data/levelcfg/level_0.json_0c4fa27d875ec2f35c9a8623bc421cd5.unity3d",
+      "destination": "work/remote/data/levelcfg/level_0.json_0c4fa27d875ec2f35c9a8623bc421cd5.unity3d",
+      "actualBytes": 1518,
+      "sha256": "9b091a72da84778d018c7449d087da491c1f22d68c1829c33e7d8cef385e155b",
+      "md5": "0c4fa27d875ec2f35c9a8623bc421cd5",
+      "httpStatus": 200
+    },
+    {
+      "logicalName": "data/levelcfg/level_1.json.unity3d",
+      "finalUrl": "https://gameoss-hz.entermore.cn/app-3/Release/Proj_hdzd/XYX/weixin/hcrzd/1.36/StreamingAssets/WebGL/Proj_hdzd/data/levelcfg/level_1.json_f0dde2f2838efb43a64f1ffac0f5dd6d.unity3d",
+      "destination": "work/remote/data/levelcfg/level_1.json_f0dde2f2838efb43a64f1ffac0f5dd6d.unity3d",
+      "actualBytes": 1475,
+      "sha256": "54ff6e9b609ca58a0c6e5ff78eb90085ff399f8b19e8e7b8c02f3895d7c74b76",
+      "md5": "f0dde2f2838efb43a64f1ffac0f5dd6d",
+      "httpStatus": 200
+    },
+    {
+      "logicalName": "data/levelcfg/level_2.json.unity3d",
+      "finalUrl": "https://gameoss-hz.entermore.cn/app-3/Release/Proj_hdzd/XYX/weixin/hcrzd/1.36/StreamingAssets/WebGL/Proj_hdzd/data/levelcfg/level_2.json_1d319e543ad91a8ba59b479486bf0ea8.unity3d",
+      "destination": "work/remote/data/levelcfg/level_2.json_1d319e543ad91a8ba59b479486bf0ea8.unity3d",
+      "actualBytes": 1517,
+      "sha256": "26ece444527e9e333b34981e5f5bf7fbf88f18cb0cccf1f54e2a9f9c54b19aa4",
+      "md5": "1d319e543ad91a8ba59b479486bf0ea8",
+      "httpStatus": 200
+    }
+  ],
+  "reverseAnalysisComplete": true,
+  "reverseAnalysisScope": "Connected ordinary battle slice in layout5; full-goal special content and matched replay remain incomplete in battlefield state."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "countdown_and_native_label_verified_activity_clock_ownership_pending",
+  "source": [
+    "disassembly/Type4504-34377.txt",
+    "disassembly/Type4504-34374.txt",
+    "disassembly/Type4504-34401.txt",
+    "easter-controller-generics.json"
+  ],
+  "verified": [
+    "Source state3 targets startTimeStamp32;4 targets endTimeStamp40",
+    "Server milliseconds subtract then signed divide1000 then wrap toint32; negative values retained",
+    "Time components preserve signed division/remainder and minute short conversion",
+    "Original main Text and LanguageConfig select day/hour, hour/minute, minute/second formats",
+    "UI status<2 leaves prior text; other non3/4 states render zero without clock read"
+  ],
+  "remaining": [
+    "Activity manager status/config/endpoints and authoritative ServerTimeModule implementation",
+    "Main refresh owner wiring and periodic update lifecycle",
+    "Complete production entry and Player E2E"
+  ],
+  "checks": 577,
+  "freshPlayMode": false
+}

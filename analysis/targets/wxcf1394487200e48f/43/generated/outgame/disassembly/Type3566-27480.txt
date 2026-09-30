@@ -1,0 +1,21 @@
+; Original class: UserDataPrefs
+; Type3566.SetString; wasmcode function 9651; offset=4622858 size=52
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00468a0b  i32.const [4989722]
+00468a10  i32.load8_u [0, 0]
+00468a13  i32.eqz []
+00468a14  if [-64]
+00468a16    i32.const [3941104]
+00468a1b    call [900] ; 
+00468a1e    i32.const [4989722]
+00468a23    i32.const [1]
+00468a25    i32.store8 [0, 0]
+00468a28  end []
+00468a29  i32.const [3941104]
+00468a2e  i32.load [2, 0]
+00468a31  call [901] ; 
+00468a34  local.get [0]
+00468a36  local.get [1]
+00468a38  local.get [0]
+00468a3a  call [5521] ; UserDataPrefs.²¶e§
+00468a3d  end []

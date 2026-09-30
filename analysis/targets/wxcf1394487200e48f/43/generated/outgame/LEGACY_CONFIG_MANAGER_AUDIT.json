@@ -1,0 +1,47 @@
+﻿{
+  "atUtc": "2026-09-30T05:01:08.072511+00:00",
+  "status": "legacy-config-manager-composed",
+  "sourceMethods": [
+    30413,
+    30427,
+    30401,
+    30407,
+    29862,
+    29869
+  ],
+  "implementation": [
+    "OutgameLegacyConfigManager.cs",
+    "OutgameLegacyConfigManager.Tables.cs",
+    "OutgameConfigMaterialCompletion.cs",
+    "OutgameLegacyPrefabResource.cs"
+  ],
+  "generator": "analysis/generate_legacy_config_manager.py",
+  "sequence": [
+    "Shared ConfigRead UseUnityJson=true/AppSetting UseMemoryPack=false before initialized guard",
+    "58 tables then6 value configs in original order",
+    "Online overrides",
+    "Camp colors and material requests",
+    "Global constants",
+    "Scene resource map",
+    "Singleton-provided guide index",
+    "Chinese names append",
+    "IsInitialized=true"
+  ],
+  "materialCallback": "GetArg<int>(0), ToFileName(GetArg<string>(1)), native LoadAsset<Material>, dictionary indexer including null; filename slash-last then dot-first.",
+  "verification": {
+    "integrated": 659,
+    "nativeFirstPackConfigurations": 64,
+    "materialRequests": 10,
+    "sceneResourceNames": 30,
+    "repeatReadCount": 58,
+    "lateCallbackNullMaterial": true
+  },
+  "limitations": [
+    "Explicit shared legacy state; no modern ConfigRead resource routing",
+    "Online callback injected as absent only in fixture; original online provider not composed",
+    "Material requests collected by fixture, not actual non-null native material requests",
+    "GetArg invalid negative index is not claimed native malformed-input parity",
+    "No new PlayMode or Player build",
+    "Main/account/menu production composition still incomplete"
+  ]
+}

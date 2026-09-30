@@ -1,0 +1,20 @@
+; Original class: LevelControl
+; Type4107.RemoveStarAllLine; wasmcode function 11597; offset=5679769 size=50
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0056aa9a  i32.const [5008500]
+0056aa9f  i32.load8_u [0, 0]
+0056aaa2  i32.eqz []
+0056aaa3  if [-64]
+0056aaa5    i32.const [3953592]
+0056aaaa    call [900] ; 
+0056aaad    i32.const [5008500]
+0056aab2    i32.const [1]
+0056aab4    i32.store8 [0, 0]
+0056aab7  end []
+0056aab8  i32.const [3953592]
+0056aabd  i32.load [2, 0]
+0056aac0  call [935] ; 
+0056aac3  local.get [1]
+0056aac5  i32.const [0]
+0056aac7  call [6780] ; WayLineControl.RemoveStarAllLine
+0056aaca  end []

@@ -1,0 +1,48 @@
+; Original class: BaseController
+; Type7511.reportPlatformClick; wasmcode function 13089; offset=6271059 size=139
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005fb054  i32.const [5005055]
+005fb059  i32.load8_u [0, 0]
+005fb05c  i32.eqz []
+005fb05d  if [-64]
+005fb05f    i32.const [3930112]
+005fb064    call [900] ; 
+005fb067    i32.const [4036736] ; STRING " 游戏位点击 uptype=12"
+005fb06c    call [900] ; 
+005fb06f    i32.const [3943536]
+005fb074    call [900] ; 
+005fb077    i32.const [5005055]
+005fb07c    i32.const [1]
+005fb07e    i32.store8 [0, 0]
+005fb081  end []
+005fb082  local.get [0]
+005fb084  i32.load [2, 8]
+005fb087  i32.const [4036736] ; STRING " 游戏位点击 uptype=12"
+005fb08c  i32.load [2, 0]
+005fb08f  i32.const [0]
+005fb091  call [921] ; String.Concat
+005fb094  i32.const [0]
+005fb096  call [999] ; XYXLOG.Log
+005fb099  i32.const [3943536]
+005fb09e  i32.load [2, 0]
+005fb0a1  call [903] ; 
+005fb0a4  local.set [1]
+005fb0a6  local.get [1]
+005fb0a8  i32.const [0]
+005fb0aa  call [2456] ; ads_up_event..ctor
+005fb0ad  local.get [0]
+005fb0af  local.get [1]
+005fb0b1  local.get [1]
+005fb0b3  call [4013] ; BaseController.setInfo
+005fb0b6  local.get [1]
+005fb0b8  i64.const [4622945017495814144]
+005fb0c3  i64.store [3, 80]
+005fb0c6  i32.const [3930112]
+005fb0cb  i32.load [2, 0]
+005fb0ce  call [901] ; 
+005fb0d1  local.get [1]
+005fb0d3  call [2513] ; DAUEventConstant.get_Instance
+005fb0d6  local.get [1]
+005fb0d8  local.get [1]
+005fb0da  call [2512] ; DAUEventConstant.reportSever
+005fb0dd  end []

@@ -1,0 +1,80 @@
+; Original class: CommanderManager
+; Type4028.DealOldData; wasmcode function 12859; offset=6186849 size=215
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+005e6764  i32.const [5008685]
+005e6769  i32.load8_u [0, 0]
+005e676c  i32.eqz []
+005e676d  if [-64]
+005e676f    i32.const [3929208]
+005e6774    call [900] ; 
+005e6777    i32.const [4004768]
+005e677c    call [900] ; 
+005e677f    i32.const [3972816]
+005e6784    call [900] ; 
+005e6787    i32.const [3926996]
+005e678c    call [900] ; 
+005e678f    i32.const [4104492] ; STRING "有数据:"
+005e6794    call [900] ; 
+005e6797    i32.const [5008685]
+005e679c    i32.const [1]
+005e679e    i32.store8 [0, 0]
+005e67a1  end []
+005e67a2  block [-64]
+005e67a4    local.get [1]
+005e67a6    i32.eqz []
+005e67a7    br_if [0]
+005e67a9    local.get [1]
+005e67ab    i32.const [4004768]
+005e67b0    i32.load [2, 0]
+005e67b3    call [1352] ; 
+005e67b6    local.set [3]
+005e67b8    local.get [3]
+005e67ba    i32.eqz []
+005e67bb    br_if [0]
+005e67bd    i32.const [3972816]
+005e67c2    i32.load [2, 0]
+005e67c5    drop []
+005e67c6    local.get [3]
+005e67c8    i32.load [2, 8]
+005e67cb    i32.load [2, 12]
+005e67ce    i32.eqz []
+005e67cf    br_if [0]
+005e67d1    i32.const [3926996]
+005e67d6    i32.load [2, 0]
+005e67d9    i32.const [3]
+005e67db    call [909] ; 
+005e67de    local.set [2]
+005e67e0    local.get [2]
+005e67e2    local.get [3]
+005e67e4    call [905] ; 
+005e67e7    local.get [2]
+005e67e9    local.get [3]
+005e67eb    i32.store [2, 16]
+005e67ee    local.get [2]
+005e67f0    i32.const [4104492] ; STRING "有数据:"
+005e67f5    i32.load [2, 0]
+005e67f8    call [905] ; 
+005e67fb    local.get [2]
+005e67fd    i32.const [4104492] ; STRING "有数据:"
+005e6802    i32.load [2, 0]
+005e6805    i32.store [2, 20]
+005e6808    local.get [2]
+005e680a    local.get [1]
+005e680c    call [905] ; 
+005e680f    local.get [2]
+005e6811    local.get [1]
+005e6813    i32.store [2, 24]
+005e6816    i32.const [3929208]
+005e681b    i32.load [2, 0]
+005e681e    call [901] ; 
+005e6821    local.get [2]
+005e6823    i32.const [0]
+005e6825    call [1156] ; CLog.Warning
+005e6828    local.get [0]
+005e682a    local.get [3]
+005e682c    i32.store [2, 20]
+005e682f    local.get [0]
+005e6831    local.get [1]
+005e6833    call [8114] ; CommanderManager.InitData
+005e6836  end []
+005e6837  end []

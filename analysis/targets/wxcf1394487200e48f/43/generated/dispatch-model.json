@@ -1,0 +1,57 @@
+{
+  "status": "static-code-supported; full runtime timing not verified",
+  "configSelection": "BattleControl.OnInit stores DispatchConfig IDs 1/2/3 at instance offsets 8/12/16",
+  "spawnRule": "GetSpawnTime(grade,lineCount): grade 0 -> ID1, grade 1 -> ID2, default -> ID3; lineCount 1 -> swanpSpaceOne, 2 -> swanpSpaceTwo, default -> swanpSpaceThree; signed integer to float32 then divide by float32(1000)",
+  "regenerationRule": "GetDispatchAddScoreTime selects same grade config; addSpace / float32(1000)",
+  "rows": [
+    {
+      "gradeIndex": 0,
+      "configId": 1,
+      "scoreLimit": 9,
+      "maxLines": 1,
+      "regenerationBaseReturn": 2.0,
+      "spawnBaseReturns": {
+        "1": 1.111,
+        "2": 1.282,
+        "3": 1.515
+      }
+    },
+    {
+      "gradeIndex": 1,
+      "configId": 2,
+      "scoreLimit": 29,
+      "maxLines": 2,
+      "regenerationBaseReturn": 2.0,
+      "spawnBaseReturns": {
+        "1": 1.032,
+        "2": 1.185,
+        "3": 1.391
+      }
+    },
+    {
+      "gradeIndex": 2,
+      "configId": 3,
+      "scoreLimit": 65,
+      "maxLines": 3,
+      "regenerationBaseReturn": 2.0,
+      "spawnBaseReturns": {
+        "1": 0.961,
+        "2": 1.098,
+        "3": 1.282
+      }
+    }
+  ],
+  "evidence": [
+    "generated/disassembly/BattleControl-OnInit.txt",
+    "generated/disassembly/BattleControl-GetSpawnTime.txt",
+    "generated/disassembly/BattleControl-GetDispatchAddScoreTime.txt",
+    "generated/disassembly/BattleControl-GetDispatchLineNum.txt",
+    "generated/tables/DispatchConfig.json",
+    "generated/gameplay-method-map.json"
+  ],
+  "limitations": [
+    "Values shown are decimal summaries; native execution uses float32 rounding.",
+    "Final timing can be modified by game speed, skills or buffs.",
+    "The meaning of default branch values outside valid grade/line ranges is not presented as a supported gameplay state."
+  ]
+}

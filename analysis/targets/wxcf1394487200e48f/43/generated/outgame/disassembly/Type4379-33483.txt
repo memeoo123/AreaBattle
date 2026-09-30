@@ -1,0 +1,100 @@
+; Original class: MenuTabUI
+; Type4379.Awake; wasmcode function 18612; offset=8392574 size=304
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00800f7f  i32.const [5009038]
+00800f84  i32.load8_u [0, 0]
+00800f87  i32.eqz []
+00800f88  if [-64]
+00800f8a    i32.const [3993120]
+00800f8f    call [900] ; 
+00800f92    i32.const [3995120]
+00800f97    call [900] ; 
+00800f9a    i32.const [3930256]
+00800f9f    call [900] ; 
+00800fa2    i32.const [4001208]
+00800fa7    call [900] ; 
+00800faa    i32.const [4062088] ; STRING "MenuTabUI.ShopUIName"
+00800faf    call [900] ; 
+00800fb2    i32.const [4066664] ; STRING "Pulbic_shop"
+00800fb7    call [900] ; 
+00800fba    i32.const [4062084] ; STRING "MenuTabUI"
+00800fbf    call [900] ; 
+00800fc2    i32.const [5009038]
+00800fc7    i32.const [1]
+00800fc9    i32.store8 [0, 0]
+00800fcc  end []
+00800fcd  i32.const [3930256]
+00800fd2  i32.load [2, 0]
+00800fd5  call [901] ; 
+00800fd8  local.get [0]
+00800fda  i32.const [0]
+00800fdc  call [1309] ; DataManagerPool.get_Instance
+00800fdf  i32.const [3995120]
+00800fe4  i32.load [2, 0]
+00800fe7  call [1609] ; 
+00800fea  i32.store [2, 120]
+00800fed  local.get [0]
+00800fef  i32.load [2, 156]
+00800ff3  i32.const [0]
+00800ff5  call [1008] ; GameObject.get_transform
+00800ff8  i32.const [1]
+00800ffa  i32.const [0]
+00800ffc  call [1145] ; Transform.GetChild
+00800fff  i32.const [3993120]
+00801004  i32.load [2, 0]
+00801007  call [1010] ; 
+0080100a  i32.const [4066664] ; STRING "Pulbic_shop"
+0080100f  i32.load [2, 0]
+00801012  i32.const [4062084] ; STRING "MenuTabUI"
+00801017  i32.load [2, 0]
+0080101a  i32.const [0]
+0080101c  i32.const [0]
+0080101e  call [1300] ; UIExtension.SetSprite
+00801021  drop []
+00801022  local.get [0]
+00801024  i32.load [2, 156]
+00801028  i32.const [4001208]
+0080102d  i32.load [2, 0]
+00801030  call [1322] ; 
+00801033  i32.const [4062088] ; STRING "MenuTabUI.ShopUIName"
+00801038  i32.load [2, 0]
+0080103b  i32.const [0]
+0080103d  call [6913] ; UILangText.set_Key
+00801040  local.get [0]
+00801042  i32.load [2, 160]
+00801046  i32.const [0]
+00801048  call [1008] ; GameObject.get_transform
+0080104b  i32.const [2]
+0080104d  i32.const [0]
+0080104f  call [1145] ; Transform.GetChild
+00801052  i32.const [3993120]
+00801057  i32.load [2, 0]
+0080105a  call [1010] ; 
+0080105d  i32.const [4066664] ; STRING "Pulbic_shop"
+00801062  i32.load [2, 0]
+00801065  i32.const [4062084] ; STRING "MenuTabUI"
+0080106a  i32.load [2, 0]
+0080106d  i32.const [0]
+0080106f  i32.const [0]
+00801071  call [1300] ; UIExtension.SetSprite
+00801074  drop []
+00801075  local.get [0]
+00801077  i32.load [2, 160]
+0080107b  i32.const [4001208]
+00801080  i32.load [2, 0]
+00801083  call [1322] ; 
+00801086  i32.const [4062088] ; STRING "MenuTabUI.ShopUIName"
+0080108b  i32.load [2, 0]
+0080108e  i32.const [0]
+00801090  call [6913] ; UILangText.set_Key
+00801093  local.get [0]
+00801095  i32.load [2, 148]
+00801099  i32.const [0]
+0080109b  i32.const [0]
+0080109d  call [949] ; GameObject.SetActive
+008010a0  local.get [0]
+008010a2  i32.load [2, 184]
+008010a6  i32.const [0]
+008010a8  i32.const [0]
+008010aa  call [949] ; GameObject.SetActive
+008010ad  end []

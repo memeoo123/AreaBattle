@@ -1,0 +1,23 @@
+; Original class: AdsManager
+; Type3157.IsCanShowInters; wasmcode1 function 14992; offset=5334560 size=44
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00516621  local.get [0]
+00516623  local.get [0]
+00516625  i32.const [22588] ; TABLE AdsManager.CheckCanShowInterst
+00516629  call_indirect [1, 0]
+0051662c  if [-64]
+0051662e    local.get [0]
+00516630    local.get [0]
+00516632    i32.load [2, 12]
+00516635    local.get [1]
+00516637    local.get [0]
+00516639    i32.const [22639] ; TABLE AdsManager.IsInterstitialReadyStatic
+0051663d    call_indirect [8, 0]
+00516640    local.set [0]
+00516642  else []
+00516643    i32.const [0]
+00516645    local.set [0]
+00516647  end []
+00516648  local.get [0]
+0051664a  return []
+0051664b  end []

@@ -1,0 +1,133 @@
+; Original class: CommanderUI
+; Type4307.Awake; wasmcode function 20183; offset=9068537 size=378
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008a5ffc  global.get [0]
+008a5ffe  i32.const [16]
+008a6000  i32.sub []
+008a6001  local.set [1]
+008a6003  local.get [1]
+008a6005  global.set [0]
+008a6007  i32.const [5008199]
+008a600c  i32.load8_u [0, 0]
+008a600f  i32.eqz []
+008a6010  if [-64]
+008a6012    i32.const [3993280]
+008a6017    call [900] ; 
+008a601a    i32.const [3953576]
+008a601f    call [900] ; 
+008a6022    i32.const [3995120]
+008a6027    call [900] ; 
+008a602a    i32.const [3930256]
+008a602f    call [900] ; 
+008a6032    i32.const [3956328]
+008a6037    call [900] ; 
+008a603a    i32.const [3956324]
+008a603f    call [900] ; 
+008a6042    i32.const [3917620]
+008a6047    call [900] ; 
+008a604a    i32.const [5008199]
+008a604f    i32.const [1]
+008a6051    i32.store8 [0, 0]
+008a6054  end []
+008a6055  i32.const [3930256]
+008a605a  i32.load [2, 0]
+008a605d  call [901] ; 
+008a6060  local.get [0]
+008a6062  i32.const [0]
+008a6064  call [1309] ; DataManagerPool.get_Instance
+008a6067  i32.const [3995120]
+008a606c  i32.load [2, 0]
+008a606f  call [1609] ; 
+008a6072  i32.store [2, 100]
+008a6075  local.get [0]
+008a6077  i32.const [0]
+008a6079  call [1388] ; UpdateManager.get_Instance
+008a607c  local.get [0]
+008a607e  local.get [0]
+008a6080  call [12852] ; CommanderUI.InitCommanderItem
+008a6083  i32.const [0]
+008a6085  call [1227] ; MonoBehaviour.StartCoroutine
+008a6088  i32.store [2, 120]
+008a608b  local.get [0]
+008a608d  i32.load [2, 20]
+008a6090  local.set [2]
+008a6092  i32.const [3953576]
+008a6097  i32.load [2, 0]
+008a609a  call [935] ; 
+008a609d  i32.load [2, 52]
+008a60a0  local.set [3]
+008a60a2  local.get [1]
+008a60a4  i32.const [0]
+008a60a6  i32.store [2, 12]
+008a60a9  local.get [1]
+008a60ab  local.get [3]
+008a60ad  i32.store [2, 8]
+008a60b0  local.get [1]
+008a60b2  local.get [1]
+008a60b4  i64.load [3, 8]
+008a60b7  i64.store [3, 0]
+008a60ba  local.get [2]
+008a60bc  local.get [1]
+008a60be  i32.const [0]
+008a60c0  call [1223] ; RectTransform.set_anchoredPosition
+008a60c3  local.get [0]
+008a60c5  local.get [0]
+008a60c7  call [6196] ; CommanderUI.h^ZMRew
+008a60ca  i32.const [3917620]
+008a60cf  i32.load [2, 0]
+008a60d2  call [903] ; 
+008a60d5  local.set [2]
+008a60d7  local.get [2]
+008a60d9  i32.const [3956324]
+008a60de  i32.load [2, 0]
+008a60e1  call [951] ; 
+008a60e4  local.get [2]
+008a60e6  i32.const [1]
+008a60e8  local.get [0]
+008a60ea  i32.load [2, 256]
+008a60ee  i32.const [3956328]
+008a60f3  i32.load [2, 0]
+008a60f6  call [1049] ; 
+008a60f9  local.get [2]
+008a60fb  i32.const [2]
+008a60fd  local.get [0]
+008a60ff  i32.load [2, 268]
+008a6103  i32.const [3956328]
+008a6108  i32.load [2, 0]
+008a610b  call [1049] ; 
+008a610e  local.get [2]
+008a6110  i32.const [3]
+008a6112  local.get [0]
+008a6114  i32.load [2, 260]
+008a6118  i32.const [3956328]
+008a611d  i32.load [2, 0]
+008a6120  call [1049] ; 
+008a6123  local.get [2]
+008a6125  i32.const [4]
+008a6127  local.get [0]
+008a6129  i32.load [2, 272]
+008a612d  i32.const [3956328]
+008a6132  i32.load [2, 0]
+008a6135  call [1049] ; 
+008a6138  local.get [2]
+008a613a  i32.const [5]
+008a613c  local.get [0]
+008a613e  i32.load [2, 264]
+008a6142  i32.const [3956328]
+008a6147  i32.load [2, 0]
+008a614a  call [1049] ; 
+008a614d  local.get [0]
+008a614f  local.get [2]
+008a6151  i32.store [2, 124]
+008a6154  local.get [0]
+008a6156  local.get [0]
+008a6158  i32.load [2, 192]
+008a615c  i32.const [3993280]
+008a6161  i32.load [2, 0]
+008a6164  call [1812] ; 
+008a6167  i32.store [2, 152]
+008a616b  local.get [1]
+008a616d  i32.const [16]
+008a616f  i32.add []
+008a6170  global.set [0]
+008a6172  end []

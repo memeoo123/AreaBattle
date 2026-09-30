@@ -1,0 +1,46 @@
+{
+  "atUtc": "2026-09-28T10:36:22.039919+00:00",
+  "status": "timing-differences-measured",
+  "originalAIResponses": [
+    {
+      "originalInterval": [
+        4.10254,
+        4.11854
+      ],
+      "replayPts": 4.269179821014404,
+      "lateSeconds": 0.15063982101440399,
+      "source": 5,
+      "target": 2
+    },
+    {
+      "originalInterval": [
+        6.10313,
+        6.11963
+      ],
+      "replayPts": 6.269810199737549,
+      "lateSeconds": 0.15018019973754893,
+      "source": 5,
+      "target": 1
+    }
+  ],
+  "tower6Capture": {
+    "originalInterval": [
+      73.62087,
+      73.63778
+    ],
+    "replayPts": 76.64022827148438,
+    "lateSeconds": 3.0024482714843685
+  },
+  "caveats": [
+    "Visible original changes include rendering latency. Replay callbacks are instrumented simulation events at recording frame intervals.",
+    "Two similar AI delays support investigating timer phase; they do not prove AI code incorrect. Original pre-recording AI/RNG/soldiers remain unknown.",
+    "Fire target choices and initial scores differ; no movement-speed or collision-formula defect has been established."
+  ],
+  "visualCorrection": "Original green camp3 has round-headed default soldiers in half-second/012.png. Restrict soldier102 option to camps1/2; preserve green100. Previous all-camp102 fixture was too broad.",
+  "evidence": [
+    "first-ai-response-pixels.json",
+    "tower6-capture-pixels.json",
+    "full-replay-events.json",
+    "half-second/012.png"
+  ]
+}

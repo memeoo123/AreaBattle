@@ -1,0 +1,37 @@
+; Original class: SDKExtension
+; Type3394.BindFunctionBtn; wasmcode function 4828; offset=1665390 size=96
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0019696f  i32.const [5011610]
+00196974  i32.load8_u [0, 0]
+00196977  i32.eqz []
+00196978  if [-64]
+0019697a    i32.const [3926496]
+0019697f    call [900] ; 
+00196982    i32.const [3930128]
+00196987    call [900] ; 
+0019698a    i32.const [5011610]
+0019698f    i32.const [1]
+00196991    i32.store8 [0, 0]
+00196994  end []
+00196995  i32.const [3926496]
+0019699a  i32.load [2, 0]
+0019699d  i32.const [1]
+0019699f  call [909] ; 
+001969a2  local.set [3]
+001969a4  local.get [3]
+001969a6  local.get [1]
+001969a8  call [905] ; 
+001969ab  local.get [3]
+001969ad  local.get [1]
+001969af  i32.store [2, 16]
+001969b2  i32.const [3930128]
+001969b7  i32.load [2, 0]
+001969ba  call [901] ; 
+001969bd  i32.const [0]
+001969bf  call [974] ; DBTSDKManager.get_Instance
+001969c2  local.get [0]
+001969c4  local.get [3]
+001969c6  local.get [2]
+001969c8  i32.const [0]
+001969ca  call [12684] ; DBTSDKManager.BindFunctionBtn
+001969cd  end []

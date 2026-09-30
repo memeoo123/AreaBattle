@@ -1,0 +1,14 @@
+; Original class: WXFunctionManger
+; Type9240.OnCustomADCallBack; wasmcode1 function 40001; offset=14744759 size=24
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00e0fcb8  local.get [0]
+00e0fcba  i32.load [2, 20]
+00e0fcbd  local.set [0]
+00e0fcbf  local.get [0]
+00e0fcc1  if [-64]
+00e0fcc3    local.get [0]
+00e0fcc5    local.get [1]
+00e0fcc7    i32.const [0]
+00e0fcc9    call [32370] ; ADModule.OnCustomADCallBack
+00e0fccd  end []
+00e0fcce  end []

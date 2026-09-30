@@ -1,0 +1,34 @@
+{
+  "atUtc": "2026-09-30T03:10:35.915130+00:00",
+  "status": "partial-subsystem-verified",
+  "methods": [
+    29849,
+    29850,
+    29851,
+    29853,
+    29854,
+    29864,
+    29894,
+    29895,
+    29898
+  ],
+  "behavior": [
+    "Start always advances base ID; state0 becomes1 and queues unless immediate, which calls Complete directly; state1/default do nothing; state2 errors; state3 completes; HasError takes error branch",
+    "Complete creates/registers ResourcesInfo only when absent, sets state3, readiness and unload callback, clears pending bundle, copies current arguments, then base callback/module completion",
+    "Error calls base then resets state0; thrown callback prevents later reset",
+    "Unload callback clears loader resource/state before AssetBundleManager unload request",
+    "ResourcesInfo unload clears arguments/sprite/mainObject/bundle before optional callback, clears callback after return, then sets unloaded flag; readiness retained",
+    "RemoveBundleInfo checks route, warns on already-unloaded, else unloads with notification then removes dictionary entry",
+    "GetBundleInfo enumerates stored resource bundleName using exact string comparison, no caller normalization"
+  ],
+  "qualification": "Package loading remains explicit Action boundary. This restores lifecycle and module registration, not AssetBundleManager transport or LoadFromPackage coroutine. Imported-asset adapter delegate cleared on resource unload to avoid retaining assets outside native bundle lifetime.",
+  "validation": {
+    "integratedChecks": 616,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "nextEvidence": {
+    "coroutine": "Type3825.MoveNext29858 (verify exact method index from method-map), wasmcode15150",
+    "observed": "Firstpack dictionary branch retrieves bundle, logs bundle.name and completes synchronously. Otherwise LoadAssetBundleAsync; null operation errors and stops. Yield native coroutine then extract returned LoadedAssetBundle field8 in try/catch, invoke Error on Unity-null bundle, send GF_ResLoadError and log exception on caught errors; Complete appears after try/catch, requiring exact control-flow validation before implementation."
+  }
+}

@@ -1,0 +1,21 @@
+; Original class: CommanderData
+; Type4030.IsCanUnlock; wasmcode function 8115; offset=3847582 size=51
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+003ab59f  i32.const [5008692]
+003ab5a4  i32.load8_u [0, 0]
+003ab5a7  i32.eqz []
+003ab5a8  if [-64]
+003ab5aa    i32.const [3953344]
+003ab5af    call [900] ; 
+003ab5b2    i32.const [5008692]
+003ab5b7    i32.const [1]
+003ab5b9    i32.store8 [0, 0]
+003ab5bc  end []
+003ab5bd  i32.const [3953344]
+003ab5c2  i32.load [2, 0]
+003ab5c5  call [935] ; 
+003ab5c8  local.get [0]
+003ab5ca  local.get [0]
+003ab5cc  call [12864] ; CommanderControl.IsCanUnlock
+003ab5cf  return []
+003ab5d0  end []

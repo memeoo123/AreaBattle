@@ -1,0 +1,96 @@
+; Original class: GlobalData
+; Type3486.CheckNewDay; wasmcode function 6029; offset=2135338 size=250
+; signature={'args': [127], 'returns': []}; localGroups=[(3, 127)]
+0020952d  global.get [0]
+0020952f  i32.const [16]
+00209531  i32.sub []
+00209532  local.set [0]
+00209534  local.get [0]
+00209536  global.set [0]
+00209538  i32.const [4989082]
+0020953d  i32.load8_u [0, 0]
+00209540  i32.eqz []
+00209541  if [-64]
+00209543    i32.const [3932476]
+00209548    call [900] ; 
+0020954b    i32.const [3934404]
+00209550    call [900] ; 
+00209553    i32.const [3926996]
+00209558    call [900] ; 
+0020955b    i32.const [4055152] ; STRING "GameEnterNewDay"
+00209560    call [900] ; 
+00209563    i32.const [4989082]
+00209568    i32.const [1]
+0020956a    i32.store8 [0, 0]
+0020956d  end []
+0020956e  i32.const [3932476]
+00209573  i32.load [2, 0]
+00209576  call [901] ; 
+00209579  local.get [0]
+0020957b  call [4410] ; GlobalData.get_Day
+0020957e  local.get [0]
+00209580  call [7785] ; GlobalData.get_InstallDay
+00209583  i32.ne []
+00209584  if [-64]
+00209586    i32.const [3932476]
+0020958b    i32.load [2, 0]
+0020958e    call [901] ; 
+00209591    local.get [0]
+00209593    call [4410] ; GlobalData.get_Day
+00209596    local.set [2]
+00209598    local.get [0]
+0020959a    call [7785] ; GlobalData.get_InstallDay
+0020959d    local.get [0]
+0020959f    i32.const [24690] ; TABLE GlobalData.set_Day
+002095a3    global.set [3]
+002095a5    i32.const [24690] ; TABLE GlobalData.set_Day
+002095a9    call_indirect [0, 0]
+002095ac    i32.const [3926996]
+002095b1    i32.load [2, 0]
+002095b4    i32.const [2]
+002095b6    call [909] ; 
+002095b9    local.set [1]
+002095bb    local.get [0]
+002095bd    local.get [0]
+002095bf    call [4410] ; GlobalData.get_Day
+002095c2    i32.store [2, 12]
+002095c5    i32.const [3934404]
+002095ca    i32.load [2, 0]
+002095cd    local.get [0]
+002095cf    i32.const [12]
+002095d1    i32.add []
+002095d2    call [910] ; 
+002095d5    local.set [3]
+002095d7    local.get [1]
+002095d9    local.get [3]
+002095db    call [905] ; 
+002095de    local.get [1]
+002095e0    local.get [3]
+002095e2    i32.store [2, 16]
+002095e5    local.get [0]
+002095e7    local.get [2]
+002095e9    i32.store [2, 8]
+002095ec    i32.const [3934404]
+002095f1    i32.load [2, 0]
+002095f4    local.get [0]
+002095f6    i32.const [8]
+002095f8    i32.add []
+002095f9    call [910] ; 
+002095fc    local.set [2]
+002095fe    local.get [1]
+00209600    local.get [2]
+00209602    call [905] ; 
+00209605    local.get [1]
+00209607    local.get [2]
+00209609    i32.store [2, 20]
+0020960c    i32.const [4055152] ; STRING "GameEnterNewDay"
+00209611    i32.load [2, 0]
+00209614    local.get [1]
+00209616    local.get [0]
+00209618    call [1230] ; MsgDispatcher.SendMessage
+0020961b  end []
+0020961c  local.get [0]
+0020961e  i32.const [16]
+00209620  i32.add []
+00209621  global.set [0]
+00209623  end []

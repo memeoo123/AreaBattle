@@ -1,0 +1,122 @@
+; Original class: }Okqvk
+; Type4561.Recycle; wasmcode function 9910; offset=4761550 size=315
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0048a7d1  global.get [0]
+0048a7d3  i32.const [16]
+0048a7d5  i32.sub []
+0048a7d6  local.set [2]
+0048a7d8  local.get [2]
+0048a7da  global.set [0]
+0048a7dc  i32.const [5001165]
+0048a7e1  i32.load8_u [0, 0]
+0048a7e4  i32.eqz []
+0048a7e5  if [-64]
+0048a7e7    i32.const [3929208]
+0048a7ec    call [900] ; 
+0048a7ef    i32.const [3916984]
+0048a7f4    call [900] ; 
+0048a7f7    i32.const [3954268]
+0048a7fc    call [900] ; 
+0048a7ff    i32.const [3926996]
+0048a804    call [900] ; 
+0048a807    i32.const [3936516]
+0048a80c    call [900] ; 
+0048a80f    i32.const [4105184] ; STRING "没回收物体，请检查代码"
+0048a814    call [900] ; 
+0048a817    i32.const [5001165]
+0048a81c    i32.const [1]
+0048a81e    i32.store8 [0, 0]
+0048a821  end []
+0048a822  local.get [2]
+0048a824  i32.const [0]
+0048a826  i32.store [2, 12]
+0048a829  block [-64]
+0048a82b    i32.const [3916984]
+0048a830    i32.load [2, 0]
+0048a833    i32.load [2, 92]
+0048a836    i32.load [2, 0]
+0048a839    i32.eqz []
+0048a83a    br_if [0]
+0048a83c    local.get [0]
+0048a83e    i32.load [2, 8]
+0048a841    local.set [3]
+0048a843    i32.const [3936516]
+0048a848    i32.load [2, 0]
+0048a84b    call [901] ; 
+0048a84e    local.get [3]
+0048a850    i32.const [0]
+0048a852    i32.const [0]
+0048a854    call [940] ; Object.op_Equality
+0048a857    br_if [0]
+0048a859    i32.const [3936516]
+0048a85e    i32.load [2, 0]
+0048a861    call [901] ; 
+0048a864    local.get [1]
+0048a866    i32.const [0]
+0048a868    i32.const [0]
+0048a86a    call [940] ; Object.op_Equality
+0048a86d    br_if [0]
+0048a86f    block [-64]
+0048a871      local.get [0]
+0048a873      i32.load [2, 16]
+0048a876      local.set [3]
+0048a878      local.get [3]
+0048a87a      i32.eqz []
+0048a87b      br_if [0]
+0048a87d      local.get [3]
+0048a87f      local.get [1]
+0048a881      local.get [2]
+0048a883      i32.const [12]
+0048a885      i32.add []
+0048a886      i32.const [3954268]
+0048a88b      i32.load [2, 0]
+0048a88e      call [1017] ; 
+0048a891      i32.eqz []
+0048a892      br_if [0]
+0048a894      local.get [0]
+0048a896      local.get [1]
+0048a898      local.get [2]
+0048a89a      i32.load [2, 12]
+0048a89d      local.get [2]
+0048a89f      call [9906] ; }Okqvk.hyUge
+0048a8a2      br [1]
+0048a8a4    end []
+0048a8a5    i32.const [3926996]
+0048a8aa    i32.load [2, 0]
+0048a8ad    i32.const [1]
+0048a8af    call [909] ; 
+0048a8b2    local.set [0]
+0048a8b4    local.get [1]
+0048a8b6    i32.const [0]
+0048a8b8    call [1115] ; Object.get_name
+0048a8bb    local.set [3]
+0048a8bd    i32.const [4105184] ; STRING "没回收物体，请检查代码"
+0048a8c2    i32.load [2, 0]
+0048a8c5    local.get [3]
+0048a8c7    i32.const [0]
+0048a8c9    call [921] ; String.Concat
+0048a8cc    local.set [3]
+0048a8ce    local.get [0]
+0048a8d0    local.get [3]
+0048a8d2    call [905] ; 
+0048a8d5    local.get [0]
+0048a8d7    local.get [3]
+0048a8d9    i32.store [2, 16]
+0048a8dc    i32.const [3929208]
+0048a8e1    i32.load [2, 0]
+0048a8e4    call [901] ; 
+0048a8e7    local.get [0]
+0048a8e9    i32.const [0]
+0048a8eb    call [1156] ; CLog.Warning
+0048a8ee    i32.const [3936516]
+0048a8f3    i32.load [2, 0]
+0048a8f6    call [901] ; 
+0048a8f9    local.get [1]
+0048a8fb    i32.const [0]
+0048a8fd    call [1165] ; Object.Destroy
+0048a900  end []
+0048a901  local.get [2]
+0048a903  i32.const [16]
+0048a905  i32.add []
+0048a906  global.set [0]
+0048a908  end []

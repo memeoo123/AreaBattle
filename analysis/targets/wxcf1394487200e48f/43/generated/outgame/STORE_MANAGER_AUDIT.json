@@ -1,0 +1,63 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "runtime_implemented_reachability_pending",
+  "source": [
+    "disassembly/Type4092-31397.txt",
+    "disassembly/Type4092-31398.txt",
+    "disassembly/Type4092-31399.txt",
+    "disassembly/Type4092-31400.txt",
+    "disassembly/Type4092-31401.txt",
+    "disassembly/Type4089-31403.txt",
+    "disassembly/Type4090-31404.txt",
+    "disassembly/Type4091-31410.txt",
+    "disassembly/Type4091-31411.txt",
+    "store-manager-fields.json",
+    "store-config-fields.json",
+    "../tables/SettingConfig.json",
+    "store-serialization-fields.json",
+    "store-default-array.json"
+  ],
+  "confirmed": [
+    {
+      "fact": "StoreDataManager.OnInit publishes I then calls virtual UpdateData(true). OnRelease unconditionally clears I. OnSave JsonUtility.ToJson(Data) then virtual SaveLocalData."
+    },
+    {
+      "fact": "UpdateDataCallBack null/empty first calls CreateNewData, then always calls JsonUtility.FromJson<StoreData>(input) and assigns result; null decoded result calls CreateNewData again. Exceptions are not caught."
+    },
+    {
+      "fact": "CreateNewData assigns new StoreData, then calls diamondData.Rest before coinData.Reset."
+    },
+    {
+      "fact": "StoreData owns coinData and diamondData. Coin ctor initializes count1; Reset overwrites count from GameModule.Config.settingConfig.storeAdGoldCount."
+    },
+    {
+      "fact": "FreeDiamondData ctor sets maxCount from storeAdDiamondCount; Rest assigns numArray directly from storeAdSendDiamond and count=maxCount. canFree is count>0; curNum is numArray[count-1], with no clamp. lastRewardTime is Int64."
+    },
+    {
+      "fact": "FreeDiamondData.maxCount backing field is private, has only CompilerGeneratedAttribute and no SerializeField. numArray has flags0x81 (private+NotSerialized). Serialized store wire includes coinData.count and diamondData.count/lastRewardTime only.",
+      "source": "store-serialization-fields.json"
+    },
+    {
+      "fact": "FreeDiamondData ctor initializes numArray from original field21124 default data80816 to int array[20,20,20]. Exact RuntimeHelpers.InitializeArray usage4032304 resolves fieldRefs index6 to private implementation field.",
+      "source": "store-default-array.json"
+    }
+  ],
+  "originalSettingConfig": {
+    "storeAdDiamondCount": 3,
+    "storeAdGoldCount": 5,
+    "storeAdSendDiamond": [
+      20,
+      20,
+      20
+    ]
+  },
+  "pending": [
+    "Trace manual registration and actual game/page reachability before activating manager4092",
+    "Trace free-reward/purchase consumers and daily reset triggers",
+    "Verify missing nested/null JSON behavior and cross-account lifecycle"
+  ],
+  "productionConnected": false,
+  "implementation": "OutgameStoreDataManager.cs",
+  "checks": 488,
+  "automaticRegistration": false
+}

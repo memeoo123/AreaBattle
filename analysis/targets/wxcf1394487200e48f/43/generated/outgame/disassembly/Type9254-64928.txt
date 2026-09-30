@@ -1,0 +1,18 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.SDK_InitAfterLogin; wasmcode function 20415; offset=9195069 size=45
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008c4e3e  i32.const [5006697]
+008c4e43  i32.load8_u [0, 0]
+008c4e46  i32.eqz []
+008c4e47  if [-64]
+008c4e49    i32.const [4068260] ; STRING "SDK_InitAfterLogin"
+008c4e4e    call [900] ; 
+008c4e51    i32.const [5006697]
+008c4e56    i32.const [1]
+008c4e58    i32.store8 [0, 0]
+008c4e5b  end []
+008c4e5c  i32.const [4068260] ; STRING "SDK_InitAfterLogin"
+008c4e61  i32.load [2, 0]
+008c4e64  i32.const [0]
+008c4e66  call [999] ; XYXLOG.Log
+008c4e69  end []

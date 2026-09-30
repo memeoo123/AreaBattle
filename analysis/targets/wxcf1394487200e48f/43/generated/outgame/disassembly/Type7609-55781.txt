@@ -1,0 +1,86 @@
+; Original class: XYXLogin
+; Type7609.BridgeLogin; wasmcode function 9319; offset=4535856 size=252
+; signature={'args': [127], 'returns': []}; localGroups=[(2, 127)]
+00453633  i32.const [5005971]
+00453638  i32.load8_u [0, 0]
+0045363b  i32.eqz []
+0045363c  if [-64]
+0045363e    i32.const [3915956]
+00453643    call [900] ; 
+00453646    i32.const [3984752]
+0045364b    call [900] ; 
+0045364e    i32.const [4023304] ; METHOD XYXLogin.<BridgeLogin>g__LoginDataCallBack|8_0
+00453653    call [900] ; 
+00453656    i32.const [3942528]
+0045365b    call [900] ; 
+0045365e    i32.const [4098736] ; STRING "try BridgeLogin"
+00453663    call [900] ; 
+00453666    i32.const [4045892] ; STRING "BridgeLogin isBridgeLogining"
+0045366b    call [900] ; 
+0045366e    i32.const [5005971]
+00453673    i32.const [1]
+00453675    i32.store8 [0, 0]
+00453678  end []
+00453679  i32.const [3942528]
+0045367e  i32.load [2, 0]
+00453681  call [901] ; 
+00453684  i32.const [4098736] ; STRING "try BridgeLogin"
+00453689  i32.load [2, 0]
+0045368c  i32.const [0]
+0045368e  call [4180] ; XYXLogin.LoginLog
+00453691  i32.const [3942528]
+00453696  i32.load [2, 0]
+00453699  i32.load [2, 92]
+0045369c  i32.load8_u [0, 4]
+0045369f  local.set [0]
+004536a1  i32.const [3942528]
+004536a6  i32.load [2, 0]
+004536a9  call [901] ; 
+004536ac  local.get [0]
+004536ae  if [-64]
+004536b0    i32.const [4045892] ; STRING "BridgeLogin isBridgeLogining"
+004536b5    i32.load [2, 0]
+004536b8    local.get [0]
+004536ba    call [4180] ; XYXLogin.LoginLog
+004536bd    return []
+004536be  end []
+004536bf  i32.const [3942528]
+004536c4  i32.load [2, 0]
+004536c7  i32.load [2, 92]
+004536ca  i32.const [1]
+004536cc  i32.store8 [0, 4]
+004536cf  local.get [0]
+004536d1  call [1083] ; BridgeManager.get_xyxFunc
+004536d4  local.set [0]
+004536d6  i32.const [3915956]
+004536db  i32.load [2, 0]
+004536de  call [903] ; 
+004536e1  local.set [1]
+004536e3  local.get [1]
+004536e5  i32.const [0]
+004536e7  i32.const [4023304] ; METHOD XYXLogin.<BridgeLogin>g__LoginDataCallBack|8_0
+004536ec  i32.load [2, 0]
+004536ef  i32.const [0]
+004536f1  call [1113] ; 
+004536f4  local.get [1]
+004536f6  local.set [2]
+004536f8  local.get [0]
+004536fa  i32.load [2, 0]
+004536fd  local.set [1]
+004536ff  local.get [0]
+00453701  local.get [2]
+00453703  local.get [1]
+00453705  i32.load [2, 600]
+00453709  local.get [1]
+0045370b  i32.load [2, 596]
+0045370f  global.set [3]
+00453711  global.get [3]
+00453713  call_indirect [2, 0]
+00453716  i32.const [3984752]
+0045371b  i32.load [2, 0]
+0045371e  call [1203] ; 
+00453721  local.get [0]
+00453723  call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+00453726  i32.const [0]
+00453728  call [10716] ; ReporterSDK.NewReportLoginStart
+0045372b  end []

@@ -1,0 +1,41 @@
+{
+  "atUtc": "2026-09-30T11:08:39.829736+00:00",
+  "status": "global-rewards-and-gold-diamond-real-chain-seven-entities-pending",
+  "sourceEvidence": "GLOBAL_ITEM_REWARDS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T11:08:39.829736+00:00",
+    "scope": "Global reward engine, overrides/report conversion, ItemBase and concrete Gold/Diamond; real module->factory->entity->global->manager->tool->storage chain",
+    "checksPassed": 1050,
+    "newIntegratedChecks": 16,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Seven other concrete entities, live report platform delivery, full Main and outgame Player"
+  },
+  "implementedLifecycleControllers": 14,
+  "remainingLifecycleControllers": 24,
+  "findings": [
+    "GlobalItemManager AddRewards34573/AddRewardsModel34592 snapshot override delegate before default work. Override receives original List<RewardData>, int0 (Action2 metadata plus raw wasm f3198 confirms). Default live indexed loop calls Change(id,longcount); regular path then current IItemManager.AddRewards(original list), model path has no host callback. ExpendReward34594 unchecked negates long count then calls host.ExpendReward(original list), no balance guard.",
+    "Change helper34589 existing entry: unchecked Int64 add then statistics(eventId,currentCount,id). New entry: construct row and statistics before holdTime0/Items.Add. Reentrant insertion can cause Add duplicate exception. Then helper34596/wasm12037 updates ITEM snapshot, ItemUI_RefreshUserItem(id), Report(id,delta,0), dirty=true. Preliminary product-snapshot identification was incorrect, fixed before final validated artifact. GLOBAL_ITEM_REWARD_FIELD_AUDIT.json verifies36/44 Dictionary<int,ItemUserData4548>, versus32/40 ProductUserData4547; no product snapshot mutation here.",
+    "Report34581 first Item_ItemChange(id,longdelta), then current ReportDel override(id,longdelta,reason). Otherwise current config.Items[id] indexer: absent key throws, existing null emits source Debug.LogError and returns. Resolve report factory before populating id/item_game/type1/type2. gain when delta>=1, otherwise cost including0. Magnitude conversion out of signed32 range becomes0; abs int.MinValue remains int.MinValue via unchecked bit arithmetic. Current balance after report creation becomes0 outside signed32 range. Resolve report service again to send. Typed report fields represent only source-owned fields; real ReportManager/platform delivery is explicit host boundary.",
+    "GetItem34597 null config returns null; nonnull GetCommonItem delegate result takes precedence, null result falls through current host.GetItem(config). AddRewardsByItemSelf34598 override replaces whole path, otherwise each current config/current GetItem invokes virtual AddItemOnlyModel for nonnull entities, then one current host.AddRewards(original list).",
+    "ItemBase4541 constructor current shared config.Items[id] direct lookup. ItemToReward34567 new list; nonnullconfig adds RewardData(config.id,longcount,order0), null returns empty. AddItem34565 and AddItemOnlyModel34566 capture current GlobalItemManager before virtual ItemToReward, then call respective reward engines. Use34568 emits Item_Use(id,longcount), builds use report id/game/type1/type2 and sends; does not decrement stock itself.",
+    "VirtualItemBase4492 delegates AddItem and Use to ItemBase, inherits AddItemOnlyModel/ItemToReward. Gold4496 and Diamond4494 only chain constructors, no additional effects. Concrete constructor service now creates those two actual entities; remaining seven source entity types require explicit AdditionalConstructors, no base-item fallback.",
+    "Global lifecycle Init34588 stores actual IItemManager host first before record decode; InitializeWithHost captures that host and local clock method, accepts null host/local clock fallback. ItemManager.UpdateDataCallBack now uses this actual host path. Added separate method name to preserve older clock-only helper tests that pass null."
+  ],
+  "remaining": [
+    "Restore remaining virtual entities Strength4499/Commander4493/HeroPiece4498/HeadBox4497/GamePoints4495 and PackageOpenAuto4490/Manual4491, bind AdditionalConstructors to actual effects and source randomness. Integrate report host into recovered reporting owner. Complete24 remaining controller lifecycles/full source-default legacy Main/account/menu/business flows and runnable outgame Player acceptance.",
+    "Seven concrete source item types remain unimplemented: Strength4499, Commander4493, HeroPiece4498, HeadBox4497, GamePoints4495, PackageOpenAuto4490 and PackageOpenManual4491.",
+    "Report creation/send is explicit host API with verified source field assignment/order; no live ReportManager/SDK delivery claimed.",
+    "Tests use isolated memory storage and explicit reporting/lifecycle hosts. Real production Gold/Diamond/engine/manager/tool/local/shared state compose, but no fresh native PlayMode or full outgame Player.",
+    "Controller lifecycle remains14/38; full Main/account/business graph incomplete."
+  ],
+  "disassembledMethodMapCount": 5152,
+  "artifacts": {
+    "integratedLog": "analysis/global-item-rewards-integrated-verified.log"
+  }
+}

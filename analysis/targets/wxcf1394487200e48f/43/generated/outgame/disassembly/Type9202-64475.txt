@@ -1,0 +1,132 @@
+; Original class: ADModule
+; Type9202.VideoLoadSuccessEvent; wasmcode function 21045; offset=9493947 size=355
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+0090ddbe  i32.const [5006929]
+0090ddc3  i32.load8_u [0, 0]
+0090ddc6  i32.eqz []
+0090ddc7  if [-64]
+0090ddc9    i32.const [3927760]
+0090ddce    call [900] ; 
+0090ddd1    i32.const [3928952]
+0090ddd6    call [900] ; 
+0090ddd9    i32.const [3930128]
+0090ddde    call [900] ; 
+0090dde1    i32.const [3926996]
+0090dde6    call [900] ; 
+0090dde9    i32.const [4035404] ; STRING " VideoLoadSuccess IsAdReady:"
+0090ddee    call [900] ; 
+0090ddf1    i32.const [4041236] ; STRING "2"
+0090ddf6    call [900] ; 
+0090ddf9    i32.const [4078176] ; STRING "VideoButtonStatus"
+0090ddfe    call [900] ; 
+0090de01    i32.const [4040676] ; STRING "1"
+0090de06    call [900] ; 
+0090de09    i32.const [5006929]
+0090de0e    i32.const [1]
+0090de10    i32.store8 [0, 0]
+0090de13  end []
+0090de14  block [-64]
+0090de16    local.get [1]
+0090de18    i32.load [2, 12]
+0090de1b    i32.eqz []
+0090de1c    br_if [0]
+0090de1e    block [-64]
+0090de20      i32.const [3928952]
+0090de25      i32.load [2, 0]
+0090de28      local.set [4]
+0090de2a      local.get [1]
+0090de2c      i32.load [2, 16]
+0090de2f      local.set [2]
+0090de31      i32.const [0]
+0090de33      local.set [3]
+0090de35      local.get [2]
+0090de37      i32.eqz []
+0090de38      br_if [0]
+0090de3a      local.get [2]
+0090de3c      i32.const [0]
+0090de3e      local.get [2]
+0090de40      i32.load [2, 0]
+0090de43      local.get [4]
+0090de45      i32.eq []
+0090de46      select []
+0090de47      local.set [3]
+0090de49    end []
+0090de4a    local.get [3]
+0090de4c    i32.eqz []
+0090de4d    br_if [0]
+0090de4f    local.get [0]
+0090de51    local.get [1]
+0090de53    i32.load [2, 16]
+0090de56    i32.const [3928952]
+0090de5b    i32.load [2, 0]
+0090de5e    call [920] ; 
+0090de61    i32.load8_u [0, 0]
+0090de64    i32.store8 [0, 16]
+0090de67    i32.const [3927760]
+0090de6c    i32.load [2, 0]
+0090de6f    call [901] ; 
+0090de72    i32.const [3927760]
+0090de77    i32.load [2, 0]
+0090de7a    i32.load [2, 92]
+0090de7d    i32.load [2, 0]
+0090de80    local.set [1]
+0090de82    i32.const [3928952]
+0090de87    i32.load [2, 0]
+0090de8a    call [901] ; 
+0090de8d    local.get [0]
+0090de8f    i32.const [16]
+0090de91    i32.add []
+0090de92    i32.const [0]
+0090de94    call [1148] ; Boolean.ToString
+0090de97    local.set [2]
+0090de99    local.get [1]
+0090de9b    i32.const [4035404] ; STRING " VideoLoadSuccess IsAdReady:"
+0090dea0    i32.load [2, 0]
+0090dea3    local.get [2]
+0090dea5    i32.const [0]
+0090dea7    call [955] ; String.Concat
+0090deaa    i32.const [0]
+0090deac    call [999] ; XYXLOG.Log
+0090deaf    local.get [0]
+0090deb1    i32.load8_u [0, 10]
+0090deb4    local.set [1]
+0090deb6    local.get [0]
+0090deb8    i32.load8_u [0, 16]
+0090debb    local.set [0]
+0090debd    i32.const [3930128]
+0090dec2    i32.load [2, 0]
+0090dec5    call [901] ; 
+0090dec8    local.get [0]
+0090deca    local.get [1]
+0090decc    i32.or []
+0090decd    local.set [1]
+0090decf    i32.const [0]
+0090ded1    call [974] ; DBTSDKManager.get_Instance
+0090ded4    local.get [1]
+0090ded6    i32.const [0]
+0090ded8    call [6173] ; DBTSDKManager.ChangeVideoBtnState
+0090dedb    i32.const [3926996]
+0090dee0    i32.load [2, 0]
+0090dee3    i32.const [1]
+0090dee5    call [909] ; 
+0090dee8    local.set [0]
+0090deea    i32.const [4041236] ; STRING "2"
+0090deef    i32.const [4040676] ; STRING "1"
+0090def4    local.get [1]
+0090def6    select []
+0090def7    local.set [1]
+0090def9    local.get [0]
+0090defb    local.get [1]
+0090defd    i32.load [2, 0]
+0090df00    call [905] ; 
+0090df03    local.get [0]
+0090df05    local.get [1]
+0090df07    i32.load [2, 0]
+0090df0a    i32.store [2, 16]
+0090df0d    i32.const [4078176] ; STRING "VideoButtonStatus"
+0090df12    i32.load [2, 0]
+0090df15    local.get [0]
+0090df17    i32.const [0]
+0090df19    call [2613] ; CallFrameworkAdapter.Call_MsgDispatcher_SendMessage
+0090df1c  end []
+0090df1d  end []

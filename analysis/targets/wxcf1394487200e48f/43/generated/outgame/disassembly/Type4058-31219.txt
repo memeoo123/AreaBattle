@@ -1,0 +1,49 @@
+; Original class: EffectControl
+; Type4058.`dhfq]; wasmcode function 19822; offset=8906176 size=130
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0087e5c1  i32.const [5008794]
+0087e5c6  i32.load8_u [0, 0]
+0087e5c9  i32.eqz []
+0087e5ca  if [-64]
+0087e5cc    i32.const [3956148]
+0087e5d1    call [900] ; 
+0087e5d4    i32.const [3955516]
+0087e5d9    call [900] ; 
+0087e5dc    i32.const [3955520]
+0087e5e1    call [900] ; 
+0087e5e4    i32.const [5008794]
+0087e5e9    i32.const [1]
+0087e5eb    i32.store8 [0, 0]
+0087e5ee  end []
+0087e5ef  local.get [1]
+0087e5f1  local.get [1]
+0087e5f3  local.get [1]
+0087e5f5  call [12442] ; EffectControl.WLxn
+0087e5f8  i32.const [0]
+0087e5fa  call [1388] ; UpdateManager.get_Instance
+0087e5fd  local.get [0]
+0087e5ff  i32.load [2, 12]
+0087e602  local.get [1]
+0087e604  i32.const [3955520]
+0087e609  i32.load [2, 0]
+0087e60c  call [1128] ; 
+0087e60f  i32.const [0]
+0087e611  call [2082] ; MonoBehaviour.StopCoroutine
+0087e614  local.get [0]
+0087e616  i32.load [2, 12]
+0087e619  local.get [1]
+0087e61b  i32.const [3955516]
+0087e620  i32.load [2, 0]
+0087e623  call [1570] ; 
+0087e626  drop []
+0087e627  local.get [0]
+0087e629  i32.load [2, 16]
+0087e62c  local.get [1]
+0087e62e  i32.const [3956148]
+0087e633  i32.load [2, 0]
+0087e636  call [1570] ; 
+0087e639  drop []
+0087e63a  local.get [1]
+0087e63c  local.get [1]
+0087e63e  call [8503] ; uXMss.RemoveSubId
+0087e641  end []

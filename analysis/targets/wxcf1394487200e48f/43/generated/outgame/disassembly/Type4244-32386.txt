@@ -1,0 +1,62 @@
+; Original class: LoginCtrl
+; Type4244.LoginSuccess; wasmcode function 18757; offset=8468520 size=177
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00813829  i32.const [5007331]
+0081382e  i32.load8_u [0, 0]
+00813831  i32.eqz []
+00813832  if [-64]
+00813834    i32.const [3929208]
+00813839    call [900] ; 
+0081383c    i32.const [3944712]
+00813841    call [900] ; 
+00813844    i32.const [3926996]
+00813849    call [900] ; 
+0081384c    i32.const [4061248] ; STRING "Login:LoginSuccess"
+00813851    call [900] ; 
+00813854    i32.const [5007331]
+00813859    i32.const [1]
+0081385b    i32.store8 [0, 0]
+0081385e  end []
+0081385f  i32.const [3926996]
+00813864  i32.load [2, 0]
+00813867  i32.const [1]
+00813869  call [909] ; 
+0081386c  local.set [1]
+0081386e  local.get [1]
+00813870  i32.const [4061248] ; STRING "Login:LoginSuccess"
+00813875  i32.load [2, 0]
+00813878  call [905] ; 
+0081387b  local.get [1]
+0081387d  i32.const [4061248] ; STRING "Login:LoginSuccess"
+00813882  i32.load [2, 0]
+00813885  i32.store [2, 16]
+00813888  i32.const [3929208]
+0081388d  i32.load [2, 0]
+00813890  call [901] ; 
+00813893  local.get [1]
+00813895  i32.const [0]
+00813897  call [1156] ; CLog.Warning
+0081389a  i32.const [0]
+0081389c  call [1388] ; UpdateManager.get_Instance
+0081389f  local.get [0]
+008138a1  local.get [0]
+008138a3  call [11475] ; LoginCtrl.ltSd
+008138a6  i32.const [0]
+008138a8  call [1227] ; MonoBehaviour.StartCoroutine
+008138ab  drop []
+008138ac  local.get [0]
+008138ae  i32.const [0]
+008138b0  i32.store [2, 68]
+008138b3  local.get [0]
+008138b5  i32.const [1]
+008138b7  i32.store8 [0, 64]
+008138ba  i32.const [3944712]
+008138bf  i32.load [2, 0]
+008138c2  call [901] ; 
+008138c5  i32.const [3944712]
+008138ca  i32.load [2, 0]
+008138cd  i32.load [2, 92]
+008138d0  i32.load [2, 12]
+008138d3  i32.const [0]
+008138d5  call [1317] ; MsgDispatcher.SendMessage
+008138d8  end []

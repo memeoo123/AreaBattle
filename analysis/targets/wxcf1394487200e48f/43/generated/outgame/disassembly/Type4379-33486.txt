@@ -1,0 +1,63 @@
+; Original class: MenuTabUI
+; Type4379.CheckUI; wasmcode function 3577; offset=1125025 size=157
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00112aa2  i32.const [5009040]
+00112aa7  i32.load8_u [0, 0]
+00112aaa  i32.eqz []
+00112aab  if [-64]
+00112aad    i32.const [3953576]
+00112ab2    call [900] ; 
+00112ab5    i32.const [5009040]
+00112aba    i32.const [1]
+00112abc    i32.store8 [0, 0]
+00112abf  end []
+00112ac0  block [-64]
+00112ac2    i32.const [3953576]
+00112ac7    i32.load [2, 0]
+00112aca    call [935] ; 
+00112acd    i32.load [2, 44]
+00112ad0    if [-64]
+00112ad2      i32.const [0]
+00112ad4      local.set [2]
+00112ad6      i32.const [3953576]
+00112adb      i32.load [2, 0]
+00112ade      call [935] ; 
+00112ae1      i32.load8_u [0, 48]
+00112ae4      i32.eqz []
+00112ae5      br_if [1]
+00112ae7      i32.const [3953576]
+00112aec      i32.load [2, 0]
+00112aef      call [935] ; 
+00112af2      i32.load [2, 44]
+00112af5      local.get [1]
+00112af7      i32.eq []
+00112af8      br_if [1]
+00112afa    end []
+00112afb    i32.const [1]
+00112afd    local.set [2]
+00112aff    i32.const [3953576]
+00112b04    i32.load [2, 0]
+00112b07    call [935] ; 
+00112b0a    local.get [1]
+00112b0c    i32.const [0]
+00112b0e    call [9801] ; UIControl.OpenMenuItemUI
+00112b11    i32.eqz []
+00112b12    br_if [0]
+00112b14    local.get [0]
+00112b16    i32.const [1]
+00112b18    call [11391] ; MenuTabUI.LOY|OO
+00112b1b    i32.const [3953576]
+00112b20    i32.load [2, 0]
+00112b23    call [935] ; 
+00112b26    local.get [1]
+00112b28    i32.store [2, 44]
+00112b2b    local.get [0]
+00112b2d    i32.const [1]
+00112b2f    call [11388] ; MenuTabUI.]g{r[w
+00112b32    local.get [0]
+00112b34    i32.const [1]
+00112b36    call [11384] ; MenuTabUI.yiWZRj
+00112b39  end []
+00112b3a  local.get [2]
+00112b3c  return []
+00112b3d  end []

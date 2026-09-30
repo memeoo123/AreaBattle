@@ -1,0 +1,86 @@
+; Original class: CommanderUI
+; Type4307.CloseCommanderTabGuild; wasmcode function 8109; offset=3844619 size=224
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+003aaa0e  i32.const [5008219]
+003aaa13  i32.load8_u [0, 0]
+003aaa16  i32.eqz []
+003aaa17  if [-64]
+003aaa19    i32.const [3936516]
+003aaa1e    call [900] ; 
+003aaa21    i32.const [4018244]
+003aaa26    call [900] ; 
+003aaa29    i32.const [5008219]
+003aaa2e    i32.const [1]
+003aaa30    i32.store8 [0, 0]
+003aaa33  end []
+003aaa34  local.get [0]
+003aaa36  i32.load [2, 172]
+003aaa3a  local.set [1]
+003aaa3c  i32.const [3936516]
+003aaa41  i32.load [2, 0]
+003aaa44  call [901] ; 
+003aaa47  local.get [1]
+003aaa49  i32.const [0]
+003aaa4b  i32.const [0]
+003aaa4d  call [946] ; Object.op_Inequality
+003aaa50  if [-64]
+003aaa52    local.get [0]
+003aaa54    i32.const [172]
+003aaa57    i32.add []
+003aaa58    local.set [1]
+003aaa5a    local.get [1]
+003aaa5c    i32.load [2, 0]
+003aaa5f    local.set [2]
+003aaa61    i32.const [3936516]
+003aaa66    i32.load [2, 0]
+003aaa69    call [901] ; 
+003aaa6c    local.get [2]
+003aaa6e    i32.const [0]
+003aaa70    call [1165] ; Object.Destroy
+003aaa73    local.get [1]
+003aaa75    i32.const [0]
+003aaa77    i32.store [2, 0]
+003aaa7a  end []
+003aaa7b  local.get [0]
+003aaa7d  i32.load [2, 168]
+003aaa81  local.set [1]
+003aaa83  i32.const [3936516]
+003aaa88  i32.load [2, 0]
+003aaa8b  call [901] ; 
+003aaa8e  local.get [1]
+003aaa90  i32.const [0]
+003aaa92  i32.const [0]
+003aaa94  call [946] ; Object.op_Inequality
+003aaa97  if [-64]
+003aaa99    local.get [0]
+003aaa9b    i32.const [168]
+003aaa9e    i32.add []
+003aaa9f    local.set [1]
+003aaaa1    local.get [1]
+003aaaa3    i32.load [2, 0]
+003aaaa6    local.set [2]
+003aaaa8    i32.const [3936516]
+003aaaad    i32.load [2, 0]
+003aaab0    call [901] ; 
+003aaab3    local.get [2]
+003aaab5    i32.const [0]
+003aaab7    call [1165] ; Object.Destroy
+003aaaba    local.get [1]
+003aaabc    i32.const [0]
+003aaabe    i32.store [2, 0]
+003aaac1  end []
+003aaac2  i32.const [0]
+003aaac4  call [1143] ; GameModule.get_UI
+003aaac7  i32.const [4018244]
+003aaacc  i32.load [2, 0]
+003aaacf  call [1877] ; 
+003aaad2  i32.const [0]
+003aaad4  call [1758] ; GameModule.get_Effect
+003aaad7  local.get [0]
+003aaad9  i32.load [2, 176]
+003aaadd  i32.const [0]
+003aaadf  call [2139] ; EffectModule.Close
+003aaae2  local.get [0]
+003aaae4  i32.const [-1]
+003aaae6  i32.store [2, 176]
+003aaaea  end []

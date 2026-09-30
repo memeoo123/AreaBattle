@@ -1,0 +1,22 @@
+; Original class: LevelRankControl
+; Type4470.SetPlayerRank; wasmcode function 11585; offset=5676242 size=39
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00569cd3  local.get [0]
+00569cd5  i32.load [2, 20]
+00569cd8  local.set [3]
+00569cda  local.get [3]
+00569cdc  i32.eqz []
+00569cdd  if [-64]
+00569cdf    local.get [0]
+00569ce1    local.get [1]
+00569ce3    local.get [0]
+00569ce5    call [5933] ; LevelRankControl.GetPlayerRankInfo
+00569ce8    drop []
+00569ce9    local.get [0]
+00569ceb    i32.load [2, 20]
+00569cee    local.set [3]
+00569cf0  end []
+00569cf1  local.get [3]
+00569cf3  local.get [2]
+00569cf5  i32.store [2, 8]
+00569cf8  end []

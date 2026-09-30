@@ -1,0 +1,22 @@
+; Original class: XYXADControl
+; Type7567.HideBannerStatic; wasmcode function 9330; offset=4536803 size=47
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 127)]
+004539e6  i32.const [0]
+004539e8  call [1083] ; BridgeManager.get_xyxFunc
+004539eb  local.set [0]
+004539ed  local.get [0]
+004539ef  local.set [1]
+004539f1  local.get [0]
+004539f3  i32.load [2, 0]
+004539f6  local.set [0]
+004539f8  local.get [1]
+004539fa  local.get [0]
+004539fc  i32.const [280]
+004539ff  i32.add []
+00453a00  i32.load [2, 192]
+00453a04  local.get [0]
+00453a06  i32.load [2, 468]
+00453a0a  global.set [3]
+00453a0c  global.get [3]
+00453a0e  call_indirect [0, 0]
+00453a11  end []

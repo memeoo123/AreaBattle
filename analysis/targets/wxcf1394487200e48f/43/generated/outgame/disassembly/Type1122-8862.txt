@@ -1,0 +1,21 @@
+; Original class: Path
+; Type1122.GetInvalidPathChars; wasmcode function 11116; offset=5404926 size=54
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+005278ff  i32.const [5023490]
+00527904  i32.load8_u [0, 0]
+00527907  i32.eqz []
+00527908  if [-64]
+0052790a    i32.const [3926524]
+0052790f    call [900] ; 
+00527912    i32.const [4033132]
+00527917    call [900] ; 
+0052791a    i32.const [5023490]
+0052791f    i32.const [1]
+00527921    i32.store8 [0, 0]
+00527924  end []
+00527925  i32.const [3926524]
+0052792a  i32.load [2, 0]
+0052792d  i32.const [1]
+0052792f  call [909] ; 
+00527932  return []
+00527933  end []

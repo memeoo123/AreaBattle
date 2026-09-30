@@ -1,0 +1,37 @@
+; Original class: CommanderUI
+; Type4307.gn~Lk; wasmcode function 20174; offset=9065087 size=83
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008a5280  i32.const [5008210]
+008a5285  i32.load8_u [0, 0]
+008a5288  i32.eqz []
+008a5289  if [-64]
+008a528b    i32.const [3940324]
+008a5290    call [900] ; 
+008a5293    i32.const [5008210]
+008a5298    i32.const [1]
+008a529a    i32.store8 [0, 0]
+008a529d  end []
+008a529e  block [-64]
+008a52a0    local.get [1]
+008a52a2    i32.eqz []
+008a52a3    br_if [0]
+008a52a5    local.get [1]
+008a52a7    i32.load [2, 12]
+008a52aa    i32.eqz []
+008a52ab    br_if [0]
+008a52ad    local.get [1]
+008a52af    i32.load [2, 16]
+008a52b2    i32.const [3940324]
+008a52b7    i32.load [2, 0]
+008a52ba    call [920] ; 
+008a52bd    i32.load [2, 0]
+008a52c0    i32.const [1001]
+008a52c3    i32.sub []
+008a52c4    i32.const [1]
+008a52c6    i32.gt_u []
+008a52c7    br_if [0]
+008a52c9    local.get [0]
+008a52cb    local.get [1]
+008a52cd    call [5147] ; CommanderUI.RefreshUpgrade
+008a52d0  end []
+008a52d1  end []

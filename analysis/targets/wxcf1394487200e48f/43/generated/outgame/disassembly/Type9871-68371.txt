@@ -1,0 +1,32 @@
+; Original class: DOTween
+; Type9871.Sequence; wasmcode function 3987; offset=1298702 size=84
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0013d10f  i32.const [4985534]
+0013d114  i32.load8_u [0, 0]
+0013d117  i32.eqz []
+0013d118  if [-64]
+0013d11a    i32.const [3930144]
+0013d11f    call [900] ; 
+0013d122    i32.const [3940500]
+0013d127    call [900] ; 
+0013d12a    i32.const [4985534]
+0013d12f    i32.const [1]
+0013d131    i32.store8 [0, 0]
+0013d134  end []
+0013d135  i32.const [3930144]
+0013d13a  i32.load [2, 0]
+0013d13d  call [901] ; 
+0013d140  i32.const [0]
+0013d142  call [8035] ; DOTween.InitCheck
+0013d145  i32.const [3940500]
+0013d14a  i32.load [2, 0]
+0013d14d  call [901] ; 
+0013d150  i32.const [0]
+0013d152  call [9989] ; TweenManager.GetSequence
+0013d155  local.set [0]
+0013d157  local.get [0]
+0013d159  local.get [0]
+0013d15b  call [10502] ; Sequence.Setup
+0013d15e  local.get [0]
+0013d160  return []
+0013d161  end []

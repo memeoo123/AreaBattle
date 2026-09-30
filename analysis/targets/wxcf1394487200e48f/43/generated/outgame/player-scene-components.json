@@ -1,0 +1,104 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 4001012,
+      "encodedUsage": "0xc000c05b",
+      "methodSpecIndex": 24621,
+      "methodSpecAddress": 778460,
+      "methodSpec": [
+        50751,
+        -1,
+        5546
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponent",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4219,
+            "name": "GameSceneMono"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4001180,
+      "encodedUsage": "0xc000c0af",
+      "methodSpecIndex": 24663,
+      "methodSpecAddress": 778964,
+      "methodSpec": [
+        50758,
+        -1,
+        5312
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponentInChildren",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 6757,
+            "name": "MeshRenderer"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4001096,
+      "encodedUsage": "0xc000c085",
+      "methodSpecIndex": 24642,
+      "methodSpecAddress": 778712,
+      "methodSpec": [
+        50751,
+        -1,
+        5316
+      ],
+      "declaringType": "GameObject",
+      "method": "GetComponent",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 6714,
+            "name": "Renderer"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

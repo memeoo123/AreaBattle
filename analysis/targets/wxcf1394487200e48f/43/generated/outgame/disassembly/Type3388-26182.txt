@@ -1,0 +1,134 @@
+; Original class: NewResLoadHelper
+; Type3388.GetGFVersion; wasmcode function 18445; offset=8300836 size=410
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+007ea925  i32.const [5011582]
+007ea92a  i32.load8_u [0, 0]
+007ea92d  i32.eqz []
+007ea92e  if [-64]
+007ea930    i32.const [3928176]
+007ea935    call [900] ; 
+007ea938    i32.const [3929208]
+007ea93d    call [900] ; 
+007ea940    i32.const [4000624]
+007ea945    call [900] ; 
+007ea948    i32.const [4000640]
+007ea94d    call [900] ; 
+007ea950    i32.const [3932308]
+007ea955    call [900] ; 
+007ea958    i32.const [3926996]
+007ea95d    call [900] ; 
+007ea960    i32.const [4091248] ; STRING "kewan is not support"
+007ea965    call [900] ; 
+007ea968    i32.const [4039208] ; STRING ","
+007ea96d    call [900] ; 
+007ea970    i32.const [4087240] ; STRING "empty"
+007ea975    call [900] ; 
+007ea978    i32.const [5011582]
+007ea97d    i32.const [1]
+007ea97f    i32.store8 [0, 0]
+007ea982  end []
+007ea983  i32.const [3928176]
+007ea988  i32.load [2, 0]
+007ea98b  call [901] ; 
+007ea98e  i32.const [5011829]
+007ea993  i32.load8_u [0, 0]
+007ea996  i32.eqz []
+007ea997  if [-64]
+007ea999    i32.const [3928176]
+007ea99e    call [900] ; 
+007ea9a1    i32.const [5011829]
+007ea9a6    i32.const [1]
+007ea9a8    i32.store8 [0, 0]
+007ea9ab  end []
+007ea9ac  i32.const [3928176]
+007ea9b1  i32.load [2, 0]
+007ea9b4  call [901] ; 
+007ea9b7  i32.const [3928176]
+007ea9bc  i32.load [2, 0]
+007ea9bf  i32.load [2, 92]
+007ea9c2  i32.load8_u [0, 36]
+007ea9c5  if [-64]
+007ea9c7    i32.const [3928176]
+007ea9cc    i32.load [2, 0]
+007ea9cf    call [901] ; 
+007ea9d2    i32.const [5011828]
+007ea9d7    i32.load8_u [0, 0]
+007ea9da    i32.eqz []
+007ea9db    if [-64]
+007ea9dd      i32.const [3928176]
+007ea9e2      call [900] ; 
+007ea9e5      i32.const [5011828]
+007ea9ea      i32.const [1]
+007ea9ec      i32.store8 [0, 0]
+007ea9ef    end []
+007ea9f0    i32.const [3928176]
+007ea9f5    i32.load [2, 0]
+007ea9f8    call [901] ; 
+007ea9fb    i32.const [3928176]
+007eaa00    i32.load [2, 0]
+007eaa03    i32.load [2, 92]
+007eaa06    i32.load8_u [0, 40]
+007eaa09    if [-64]
+007eaa0b      i32.const [3926996]
+007eaa10      i32.load [2, 0]
+007eaa13      i32.const [1]
+007eaa15      call [909] ; 
+007eaa18      local.set [0]
+007eaa1a      local.get [0]
+007eaa1c      i32.const [4091248] ; STRING "kewan is not support"
+007eaa21      i32.load [2, 0]
+007eaa24      call [905] ; 
+007eaa27      local.get [0]
+007eaa29      i32.const [4091248] ; STRING "kewan is not support"
+007eaa2e      i32.load [2, 0]
+007eaa31      i32.store [2, 16]
+007eaa34      i32.const [3929208]
+007eaa39      i32.load [2, 0]
+007eaa3c      call [901] ; 
+007eaa3f      local.get [0]
+007eaa41      i32.const [0]
+007eaa43      call [1156] ; CLog.Warning
+007eaa46      i32.const [4087240] ; STRING "empty"
+007eaa4b      i32.load [2, 0]
+007eaa4e      return []
+007eaa4f    end []
+007eaa50    i32.const [3932308]
+007eaa55    i32.load [2, 0]
+007eaa58    call [901] ; 
+007eaa5b    i32.const [4000640]
+007eaa60    i32.load [2, 0]
+007eaa63    call [1051] ; 
+007eaa66    i32.const [0]
+007eaa68    i32.const [25006] ; TABLE YOResourcesModule.GetLoacalVerDesc
+007eaa6c    global.set [3]
+007eaa6e    i32.const [25006] ; TABLE YOResourcesModule.GetLoacalVerDesc
+007eaa72    call_indirect [1, 0]
+007eaa75    i32.const [4039208] ; STRING ","
+007eaa7a    i32.load [2, 0]
+007eaa7d    i32.const [0]
+007eaa7f    i32.const [0]
+007eaa81    call [1905] ; String.Split
+007eaa84    local.set [0]
+007eaa86    local.get [0]
+007eaa88    i32.load [2, 12]
+007eaa8b    i32.const [1]
+007eaa8d    i32.ge_s []
+007eaa8e    if [-64]
+007eaa90      local.get [0]
+007eaa92      i32.load [2, 16]
+007eaa95      return []
+007eaa96    end []
+007eaa97    i32.const [4087240] ; STRING "empty"
+007eaa9c    i32.load [2, 0]
+007eaa9f    return []
+007eaaa0  end []
+007eaaa1  i32.const [3932308]
+007eaaa6  i32.load [2, 0]
+007eaaa9  call [901] ; 
+007eaaac  i32.const [4000624]
+007eaab1  i32.load [2, 0]
+007eaab4  call [1051] ; 
+007eaab7  i32.const [0]
+007eaab9  call [10677] ; ResourcesModule.GetGFVersion
+007eaabc  return []
+007eaabd  end []

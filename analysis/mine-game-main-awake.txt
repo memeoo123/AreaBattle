@@ -1,0 +1,122 @@
+; Original class: MineGameMain
+; Type3974.Awake; wasmcode function 18542; offset=8353308 size=373
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f761f i32.const [5010128]
+007f7624 i32.load8_u [0, 0]
+007f7627 i32.eqz []
+007f7628 if [-64]
+007f762a i32.const [3927888]
+007f762f call [900] ; 
+007f7632 i32.const [3928176]
+007f7637 call [900] ; 
+007f763a i32.const [3989352]
+007f763f call [900] ; 
+007f7642 i32.const [3930128]
+007f7647 call [900] ; 
+007f764a i32.const [4000636]
+007f764f call [900] ; 
+007f7652 i32.const [3932308]
+007f7657 call [900] ; 
+007f765a i32.const [4008020] ; METHOD MineGameMain.]RciRW
+007f765f call [900] ; 
+007f7662 i32.const [3936516]
+007f7667 call [900] ; 
+007f766a i32.const [3941104]
+007f766f call [900] ; 
+007f7672 i32.const [4052604] ; STRING "Enter MineGameMain"
+007f7677 call [900] ; 
+007f767a i32.const [5010128]
+007f767f i32.const [1]
+007f7681 i32.store8 [0, 0]
+007f7684 end []
+007f7685 local.get [0]
+007f7687 i32.const [4052604] ; STRING "Enter MineGameMain"
+007f768c i32.load [2, 0]
+007f768f local.get [0]
+007f7691 call [2125] ; MineGameMain.O{P^xr
+007f7694 local.get [0]
+007f7696 i32.const [0]
+007f7698 i32.store8 [0, 36]
+007f769b i32.const [3930128]
+007f76a0 i32.load [2, 0]
+007f76a3 call [901] ; 
+007f76a6 i32.const [0]
+007f76a8 call [6172] ; DBTSDKManager.InitSDK
+007f76ab local.get [0]
+007f76ad i32.load [2, 16]
+007f76b0 local.set [1]
+007f76b2 i32.const [3928176]
+007f76b7 i32.load [2, 0]
+007f76ba call [901] ; 
+007f76bd i32.const [4988220]
+007f76c2 i32.load8_u [0, 0]
+007f76c5 i32.eqz []
+007f76c6 if [-64]
+007f76c8 i32.const [3928176]
+007f76cd call [900] ; 
+007f76d0 i32.const [4988220]
+007f76d5 i32.const [1]
+007f76d7 i32.store8 [0, 0]
+007f76da end []
+007f76db i32.const [3928176]
+007f76e0 i32.load [2, 0]
+007f76e3 call [901] ; 
+007f76e6 i32.const [3928176]
+007f76eb i32.load [2, 0]
+007f76ee i32.load [2, 92]
+007f76f1 local.get [1]
+007f76f3 i32.store [2, 28]
+007f76f6 i32.const [3928176]
+007f76fb i32.load [2, 0]
+007f76fe i32.load [2, 92]
+007f7701 drop []
+007f7702 i32.const [3936516]
+007f7707 i32.load [2, 0]
+007f770a call [901] ; 
+007f770d local.get [0]
+007f770f i32.const [0]
+007f7711 call [1111] ; Object.DontDestroyOnLoad
+007f7714 i32.const [3941104]
+007f7719 i32.load [2, 0]
+007f771c call [901] ; 
+007f771f i32.const [0]
+007f7721 call [6842] ; UserDataPrefs.OnInit
+007f7724 i32.const [3932308]
+007f7729 i32.load [2, 0]
+007f772c call [901] ; 
+007f772f i32.const [4000636]
+007f7734 i32.load [2, 0]
+007f7737 call [1051] ; 
+007f773a local.set [1]
+007f773c i32.const [3927888]
+007f7741 i32.load [2, 0]
+007f7744 call [903] ; 
+007f7747 local.set [2]
+007f7749 local.get [2]
+007f774b local.get [0]
+007f774d i32.const [4008020] ; METHOD MineGameMain.]RciRW
+007f7752 i32.load [2, 0]
+007f7755 i32.const [0]
+007f7757 call [1002] ; Action..ctor
+007f775a i32.const [3989352]
+007f775f i32.load [2, 0]
+007f7762 call [1032] ; 
+007f7765 local.set [0]
+007f7767 local.get [1]
+007f7769 local.get [2]
+007f776b i32.store [2, 12]
+007f776e local.get [0]
+007f7770 local.set [2]
+007f7772 local.get [1]
+007f7774 i32.load [2, 0]
+007f7777 local.set [0]
+007f7779 local.get [1]
+007f777b local.get [2]
+007f777d local.get [0]
+007f777f i32.load [2, 232]
+007f7783 local.get [0]
+007f7785 i32.load [2, 228]
+007f7789 global.set [3]
+007f778b global.get [3]
+007f778d call_indirect [2, 0]
+007f7790 end []

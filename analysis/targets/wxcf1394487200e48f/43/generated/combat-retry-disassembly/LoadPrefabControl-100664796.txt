@@ -1,0 +1,67 @@
+; LoadPrefabControl.bwycO; wasmcode function 5914; offset=2093578 size=173
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+001ff20b  i32.const [5008518]
+001ff210  i32.load8_u [0, 0]
+001ff213  i32.eqz []
+001ff214  if [-64]
+001ff216    i32.const [3931796]
+001ff21b    call [900] ; 
+001ff21e    i32.const [4008864]
+001ff223    call [900] ; 
+001ff226    i32.const [3936516]
+001ff22b    call [900] ; 
+001ff22e    i32.const [5008518]
+001ff233    i32.const [1]
+001ff235    i32.store8 [0, 0]
+001ff238  end []
+001ff239  i32.const [3936516]
+001ff23e  i32.load [2, 0]
+001ff241  call [901] ; 
+001ff244  local.get [2]
+001ff246  i32.const [4008864]
+001ff24b  i32.load [2, 0]
+001ff24e  call [1465] ; 
+001ff251  local.set [2]
+001ff253  local.get [0]
+001ff255  local.get [1]
+001ff257  local.get [2]
+001ff259  local.get [1]
+001ff25b  call [11491] ; LoadPrefabControl.]^ggtik
+001ff25e  local.get [0]
+001ff260  local.get [1]
+001ff262  local.get [1]
+001ff264  call [11497] ; LoadPrefabControl.GetEntityRoot
+001ff267  local.set [0]
+001ff269  local.get [2]
+001ff26b  i32.const [0]
+001ff26d  call [1008] ; 
+001ff270  local.get [0]
+001ff272  i32.const [0]
+001ff274  call [1424] ; 
+001ff277  i32.const [0]
+001ff279  call [1286] ; GameModule.get_Config
+001ff27c  local.get [1]
+001ff27e  i32.const [0]
+001ff280  call [8086] ; ConfigMgr.GetEntityAssetName
+001ff283  local.set [1]
+001ff285  i32.const [3931796]
+001ff28a  i32.load [2, 0]
+001ff28d  call [901] ; 
+001ff290  local.get [2]
+001ff292  local.get [1]
+001ff294  i32.const [1]
+001ff296  i32.const [0]
+001ff298  call [3626] ; ExtesionMethod.signEnumToStr
+001ff29b  local.get [0]
+001ff29d  i32.const [0]
+001ff29f  call [1505] ; 
+001ff2a2  i32.const [0]
+001ff2a4  i32.const [0]
+001ff2a6  call [1470] ; ExtesionMethod.IntToString
+001ff2a9  i32.const [0]
+001ff2ab  call [2556] ; StringBuilderTool.Append
+001ff2ae  i32.const [0]
+001ff2b0  call [1375] ; 
+001ff2b3  local.get [2]
+001ff2b5  return []
+001ff2b6  end []

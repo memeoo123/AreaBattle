@@ -1,0 +1,122 @@
+; Original class: LevelControl
+; Type4107.PymUmwd; wasmcode function 11598; offset=5679821 size=314
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127)]
+0056aad0  i32.const [5008484]
+0056aad5  i32.load8_u [0, 0]
+0056aad8  i32.eqz []
+0056aad9  if [-64]
+0056aadb    i32.const [3929208]
+0056aae0    call [900] ; 
+0056aae3    i32.const [3953456]
+0056aae8    call [900] ; 
+0056aaeb    i32.const [3973760]
+0056aaf0    call [900] ; 
+0056aaf3    i32.const [3926996]
+0056aaf8    call [900] ; 
+0056aafb    i32.const [3936516]
+0056ab00    call [900] ; 
+0056ab03    i32.const [4066076] ; STRING "Play: 障碍物初始完毕"
+0056ab08    call [900] ; 
+0056ab0b    i32.const [5008484]
+0056ab10    i32.const [1]
+0056ab12    i32.store8 [0, 0]
+0056ab15  end []
+0056ab16  local.get [0]
+0056ab18  i32.const [0]
+0056ab1a  i32.store8 [0, 108]
+0056ab1d  block [-64]
+0056ab1f    local.get [0]
+0056ab21    i32.const [0]
+0056ab23    call [2392] ; LevelControl.get_CurLevelCfg
+0056ab26    i32.load [2, 20]
+0056ab29    if [-64]
+0056ab2b      local.get [0]
+0056ab2d      i32.const [0]
+0056ab2f      call [2392] ; LevelControl.get_CurLevelCfg
+0056ab32      i32.load [2, 20]
+0056ab35      i32.load [2, 12]
+0056ab38      br_if [1]
+0056ab3a    end []
+0056ab3b    local.get [0]
+0056ab3d    i32.const [1]
+0056ab3f    i32.store8 [0, 108]
+0056ab42    return []
+0056ab43  end []
+0056ab44  local.get [0]
+0056ab46  i32.const [0]
+0056ab48  call [2392] ; LevelControl.get_CurLevelCfg
+0056ab4b  i32.load [2, 20]
+0056ab4e  local.set [3]
+0056ab50  i32.const [0]
+0056ab52  local.set [1]
+0056ab54  loop [-64]
+0056ab56    local.get [3]
+0056ab58    i32.load [2, 12]
+0056ab5b    local.get [1]
+0056ab5d    i32.gt_s []
+0056ab5e    if [-64]
+0056ab60      local.get [3]
+0056ab62      local.get [1]
+0056ab64      i32.const [2]
+0056ab66      i32.shl []
+0056ab67      i32.add []
+0056ab68      i32.load [2, 16]
+0056ab6b      local.set [4]
+0056ab6d      i32.const [3953456]
+0056ab72      i32.load [2, 0]
+0056ab75      call [935] ; 
+0056ab78      local.get [4]
+0056ab7a      i32.load [2, 8]
+0056ab7d      local.get [1]
+0056ab7f      call [2391] ; LoadPrefabControl.GetEntityNow
+0056ab82      local.set [2]
+0056ab84      i32.const [3936516]
+0056ab89      i32.load [2, 0]
+0056ab8c      call [901] ; 
+0056ab8f      local.get [2]
+0056ab91      i32.const [0]
+0056ab93      call [1177] ; Object.op_Implicit
+0056ab96      if [-64]
+0056ab98        local.get [4]
+0056ab9a        local.get [2]
+0056ab9c        i32.const [0]
+0056ab9e        call [1008] ; GameObject.get_transform
+0056aba1        local.get [1]
+0056aba3        call [11209] ; ObstacleInfoCfg.SetTransform
+0056aba6        local.get [0]
+0056aba8        i32.load [2, 72]
+0056abab        local.get [2]
+0056abad        i32.const [3973760]
+0056abb2        i32.load [2, 0]
+0056abb5        call [941] ; 
+0056abb8      end []
+0056abb9      local.get [1]
+0056abbb      i32.const [1]
+0056abbd      i32.add []
+0056abbe      local.set [1]
+0056abc0      br [1]
+0056abc2    end []
+0056abc3  end []
+0056abc4  local.get [0]
+0056abc6  i32.const [1]
+0056abc8  i32.store8 [0, 108]
+0056abcb  i32.const [3926996]
+0056abd0  i32.load [2, 0]
+0056abd3  i32.const [1]
+0056abd5  call [909] ; 
+0056abd8  local.set [0]
+0056abda  local.get [0]
+0056abdc  i32.const [4066076] ; STRING "Play: 障碍物初始完毕"
+0056abe1  i32.load [2, 0]
+0056abe4  call [905] ; 
+0056abe7  local.get [0]
+0056abe9  i32.const [4066076] ; STRING "Play: 障碍物初始完毕"
+0056abee  i32.load [2, 0]
+0056abf1  i32.store [2, 16]
+0056abf4  i32.const [3929208]
+0056abf9  i32.load [2, 0]
+0056abfc  call [901] ; 
+0056abff  local.get [0]
+0056ac01  i32.const [0]
+0056ac03  call [1069] ; CLog.Log
+0056ac06  end []

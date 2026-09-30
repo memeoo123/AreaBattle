@@ -1,0 +1,36 @@
+; Original class: AudioActionBase
+; Type3405.|F[¬´c; wasmcode function 13137; offset=6296987 size=100
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0060159c  i32.const [5011627]
+006015a1  i32.load8_u [0, 0]
+006015a4  i32.eqz []
+006015a5  if [-64]
+006015a7    i32.const [3990800] ; METHOD AudioActionBase.BEm
+006015ac    call [900] ; 
+006015af    i32.const [3947148]
+006015b4    call [900] ; 
+006015b7    i32.const [4056004] ; STRING "GlobalVolumeChange"
+006015bc    call [900] ; 
+006015bf    i32.const [5011627]
+006015c4    i32.const [1]
+006015c6    i32.store8 [0, 0]
+006015c9  end []
+006015ca  local.get [0]
+006015cc  local.get [0]
+006015ce  call [8228] ; AudioActionBase.T«`h
+006015d1  i32.const [3947148]
+006015d6  i32.load [2, 0]
+006015d9  call [903] ; 
+006015dc  local.set [1]
+006015de  local.get [1]
+006015e0  local.get [0]
+006015e2  i32.const [3990800] ; METHOD AudioActionBase.BEm
+006015e7  i32.load [2, 0]
+006015ea  i32.const [0]
+006015ec  call [1067] ; EventHandler..ctor
+006015ef  i32.const [4056004] ; STRING "GlobalVolumeChange"
+006015f4  i32.load [2, 0]
+006015f7  local.get [1]
+006015f9  i32.const [0]
+006015fb  call [1146] ; MsgDispatcher.AddEventListener
+006015fe  end []

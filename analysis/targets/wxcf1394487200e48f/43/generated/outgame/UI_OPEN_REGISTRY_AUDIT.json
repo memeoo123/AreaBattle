@@ -1,0 +1,32 @@
+{
+  "status": "source_registry_and_window_index_verified",
+  "source": [
+    "disassembly/Type3558-27398.txt",
+    "disassembly/Type3558-27404.txt",
+    "ui-open-registry-generics.json",
+    "ui-window-index-generics.json"
+  ],
+  "verified": [
+    "Namespace+dot+name resolution occurs before registry lookup and outside creation catch",
+    "Registered nonnull page returned unchanged; no refresh/reopen or argument replacement",
+    "Create -> Dictionary.Add -> _openUI original arguments; registered before reentry",
+    "Catch Exception logs Message+StackTrace; returns created page and retains registration after open failure",
+    "Null existing value triggers duplicate Add catch without replacing entry",
+    "Shared close/open dictionaries permit reopening while old page closes",
+    "GetWindowNum is max field92 among layer1 pages with live Unity GameObject, not count; visibility not checked"
+  ],
+  "metadataProof": {
+    "catchTypeUsage": 3931644,
+    "catchTypeDefinition": 349,
+    "catchType": "Exception",
+    "messageMethod": 3571,
+    "stackTraceMethod": 3577
+  },
+  "integratedChecks": 601,
+  "remaining": [
+    "Source type catalog and actual page factories",
+    "Original BaseUI._openUI resource route/handle ownership",
+    "Production UIModule and full startup/account/menu composition",
+    "Complete Player acceptance"
+  ]
+}

@@ -1,0 +1,96 @@
+; Original class: ConfigMgr
+; Type3907.Ml`R; wasmcode function 4481; offset=1484545 size=245
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0016a704  global.get [0]
+0016a706  i32.const [16]
+0016a708  i32.sub []
+0016a709  local.set [2]
+0016a70b  local.get [2]
+0016a70d  global.set [0]
+0016a70f  i32.const [5010051]
+0016a714  i32.load8_u [0, 0]
+0016a717  i32.eqz []
+0016a718  if [-64]
+0016a71a    i32.const [3929208]
+0016a71f    call [900] ; 
+0016a722    i32.const [3956964]
+0016a727    call [900] ; 
+0016a72a    i32.const [3934404]
+0016a72f    call [900] ; 
+0016a732    i32.const [3926996]
+0016a737    call [900] ; 
+0016a73a    i32.const [4071644] ; STRING "TampAIConfig 不存在 Id={0} 的数据"
+0016a73f    call [900] ; 
+0016a742    i32.const [5010051]
+0016a747    i32.const [1]
+0016a749    i32.store8 [0, 0]
+0016a74c  end []
+0016a74d  local.get [0]
+0016a74f  i32.load [2, 24]
+0016a752  local.set [3]
+0016a754  local.get [2]
+0016a756  local.get [1]
+0016a758  i32.store [2, 12]
+0016a75b  block [-64]
+0016a75d    local.get [3]
+0016a75f    i32.const [3934404]
+0016a764    i32.load [2, 0]
+0016a767    local.get [2]
+0016a769    i32.const [12]
+0016a76b    i32.add []
+0016a76c    call [910] ; 
+0016a76f    local.get [0]
+0016a771    i32.const [288]
+0016a774    i32.add []
+0016a775    i32.const [3956964]
+0016a77a    i32.load [2, 0]
+0016a77d    call [1017] ; 
+0016a780    if [-64]
+0016a782      local.get [0]
+0016a784      i32.load [2, 288]
+0016a788      local.set [0]
+0016a78a      br [1]
+0016a78c    end []
+0016a78d    i32.const [0]
+0016a78f    local.set [0]
+0016a791    i32.const [3926996]
+0016a796    i32.load [2, 0]
+0016a799    i32.const [1]
+0016a79b    call [909] ; 
+0016a79e    local.set [3]
+0016a7a0    local.get [2]
+0016a7a2    local.get [1]
+0016a7a4    i32.store [2, 8]
+0016a7a7    i32.const [3934404]
+0016a7ac    i32.load [2, 0]
+0016a7af    local.get [2]
+0016a7b1    i32.const [8]
+0016a7b3    i32.add []
+0016a7b4    call [910] ; 
+0016a7b7    local.set [1]
+0016a7b9    i32.const [4071644] ; STRING "TampAIConfig 不存在 Id={0} 的数据"
+0016a7be    i32.load [2, 0]
+0016a7c1    local.get [1]
+0016a7c3    i32.const [0]
+0016a7c5    call [3523] ; StringBuilderTool.Format
+0016a7c8    local.set [1]
+0016a7ca    local.get [3]
+0016a7cc    local.get [1]
+0016a7ce    call [905] ; 
+0016a7d1    local.get [3]
+0016a7d3    local.get [1]
+0016a7d5    i32.store [2, 16]
+0016a7d8    i32.const [3929208]
+0016a7dd    i32.load [2, 0]
+0016a7e0    call [901] ; 
+0016a7e3    local.get [3]
+0016a7e5    i32.const [0]
+0016a7e7    call [1069] ; CLog.Log
+0016a7ea  end []
+0016a7eb  local.get [2]
+0016a7ed  i32.const [16]
+0016a7ef  i32.add []
+0016a7f0  global.set [0]
+0016a7f2  local.get [0]
+0016a7f4  return []
+0016a7f5  end []

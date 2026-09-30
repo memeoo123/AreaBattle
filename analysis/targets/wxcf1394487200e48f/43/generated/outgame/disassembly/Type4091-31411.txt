@@ -1,0 +1,15 @@
+; Original class: FreeDiamondData
+; Type4091.Rest; wasmcode1 function 13450; offset=4753180 size=33
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0048871d  local.get [0]
+0048871f  i32.const [0]
+00488721  i32.const [9375] ; TABLE GameModule.get_Config
+00488725  call_indirect [2, 0]
+00488728  i32.load [2, 256]
+0048872c  i32.load [2, 52]
+0048872f  i32.store [2, 12]
+00488732  local.get [0]
+00488734  local.get [0]
+00488736  i32.load [2, 8]
+00488739  i32.store [2, 16]
+0048873c  end []

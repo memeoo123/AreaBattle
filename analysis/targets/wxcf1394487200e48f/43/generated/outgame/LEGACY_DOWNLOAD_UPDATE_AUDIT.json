@@ -1,0 +1,30 @@
+{
+  "atUtc": "2026-09-30T03:21:05.191997+00:00",
+  "status": "partial-subsystem-verified",
+  "sourceMethod": 23843,
+  "genericEvidence": "legacy-download-update-generics.json",
+  "behavior": [
+    "Skip unfinished requests",
+    "Network or HTTP error: log WebGl加载资源错误 + request.error; add fixed <name> is not a valid asset bundle. if no previous error; queue removal",
+    "Success: DownloadHandlerAssetBundle.GetContent before checking existing loaded entry; new wrapper bundle/name/refcount1/realtime; no Unity-null content guard",
+    "Preserve existing loaded/error entries; no request disposal in this method",
+    "Remove finished request keys only after enumeration, then operation updates, then original manager cleanup call8246",
+    "Exceptions propagate, so previous registrations remain but removal list and later phases are not processed"
+  ],
+  "implementation": [
+    "OutgameLegacyDownloadUpdate manager phase composition",
+    "OutgameLegacyWebDownload directly wraps UnityWebRequest and DownloadHandlerAssetBundle.GetContent",
+    "Loaded wrapper now includes original refcount/name/time fields"
+  ],
+  "validation": {
+    "integratedChecks": 624,
+    "freshPlayMode": false,
+    "freshPlayer": false,
+    "qualification": "Tests use explicit download probes; native download adapter compiled but not yet exercised with completed request."
+  },
+  "pending": [
+    "Native request creation/variant/dependencies, cleanup8246, firstpack initialization",
+    "Positive native AssetBundle->UI run",
+    "Full production account/menu entry"
+  ]
+}

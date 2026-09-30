@@ -1,0 +1,23 @@
+; Original class: FestActUI
+; Type4438..ctor; wasmcode1 function 28376; offset=10919495 size=45
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+00a69e4a  local.get [0]
+00a69e4c  i32.const [0]
+00a69e4e  i32.const [25128] ; TABLE BaseUI..ctor
+00a69e52  call_indirect [4, 0]
+00a69e55  i64.const [1]
+00a69e57  local.set [2]
+00a69e59  local.get [0]
+00a69e5b  local.get [2]
+00a69e5d  i32.wrap_i64 []
+00a69e5e  i32.store [2, 48]
+00a69e61  local.get [0]
+00a69e63  local.get [2]
+00a69e65  i64.const [32]
+00a69e67  i64.shr_u []
+00a69e68  i32.wrap_i64 []
+00a69e69  i32.store [2, 52]
+00a69e6c  local.get [0]
+00a69e6e  i32.const [4]
+00a69e70  i32.store [2, 40]
+00a69e73  end []

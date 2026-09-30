@@ -1,0 +1,124 @@
+; Original class: BaseUI
+; Type3544.addCanvas; wasmcode function 8201; offset=3888072 size=338
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+003b53cb  i32.const [4989647]
+003b53d0  i32.load8_u [0, 0]
+003b53d3  i32.eqz []
+003b53d4  if [-64]
+003b53d6    i32.const [3993068]
+003b53db    call [900] ; 
+003b53de    i32.const [3993092]
+003b53e3    call [900] ; 
+003b53e6    i32.const [4000632]
+003b53eb    call [900] ; 
+003b53ee    i32.const [3932308]
+003b53f3    call [900] ; 
+003b53f6    i32.const [4000708]
+003b53fb    call [900] ; 
+003b53fe    i32.const [4000764]
+003b5403    call [900] ; 
+003b5406    i32.const [3936516]
+003b540b    call [900] ; 
+003b540e    i32.const [4076076] ; STRING "UIWindow"
+003b5413    call [900] ; 
+003b5416    i32.const [4989647]
+003b541b    i32.const [1]
+003b541d    i32.store8 [0, 0]
+003b5420  end []
+003b5421  block [-64]
+003b5423    local.get [0]
+003b5425    i32.load [2, 40]
+003b5428    i32.const [1]
+003b542a    i32.ne []
+003b542b    br_if [0]
+003b542d    local.get [0]
+003b542f    i32.load [2, 16]
+003b5432    i32.const [3993068]
+003b5437    i32.load [2, 0]
+003b543a    call [1010] ; 
+003b543d    local.set [1]
+003b543f    i32.const [3936516]
+003b5444    i32.load [2, 0]
+003b5447    call [901] ; 
+003b544a    local.get [1]
+003b544c    i32.const [0]
+003b544e    i32.const [0]
+003b5450    call [940] ; Object.op_Equality
+003b5453    if [-64]
+003b5455      local.get [0]
+003b5457      i32.load [2, 16]
+003b545a      i32.const [0]
+003b545c      call [943] ; Component.get_gameObject
+003b545f      i32.const [4000708]
+003b5464      i32.load [2, 0]
+003b5467      call [1094] ; 
+003b546a      local.set [1]
+003b546c    end []
+003b546d    local.get [1]
+003b546f    i32.const [1]
+003b5471    i32.const [0]
+003b5473    call [2009] ; Canvas.set_overrideSorting
+003b5476    i32.const [3932308]
+003b547b    i32.load [2, 0]
+003b547e    call [901] ; 
+003b5481    local.get [0]
+003b5483    i32.const [4000632]
+003b5488    i32.load [2, 0]
+003b548b    call [1051] ; 
+003b548e    local.get [0]
+003b5490    call [9785] ; UIModule.GetWindowNum
+003b5493    i32.const [1]
+003b5495    i32.add []
+003b5496    i32.store [2, 92]
+003b5499    i32.const [4000632]
+003b549e    i32.load [2, 0]
+003b54a1    call [1051] ; 
+003b54a4    i32.load8_u [0, 28]
+003b54a7    local.set [2]
+003b54a9    local.get [1]
+003b54ab    i32.const [100]
+003b54ae    i32.const [10]
+003b54b0    local.get [2]
+003b54b2    select []
+003b54b3    local.get [0]
+003b54b5    i32.load [2, 92]
+003b54b8    i32.const [1]
+003b54ba    i32.sub []
+003b54bb    i32.const [200]
+003b54be    i32.const [3]
+003b54c0    local.get [2]
+003b54c2    select []
+003b54c3    i32.mul []
+003b54c4    i32.add []
+003b54c5    i32.const [0]
+003b54c7    call [1697] ; Canvas.set_sortingOrder
+003b54ca    local.get [1]
+003b54cc    i32.const [4076076] ; STRING "UIWindow"
+003b54d1    i32.load [2, 0]
+003b54d4    i32.const [0]
+003b54d6    call [7116] ; SortingLayer.NameToID
+003b54d9    i32.const [0]
+003b54db    call [2270] ; Canvas.set_sortingLayerID
+003b54de    local.get [0]
+003b54e0    i32.load [2, 16]
+003b54e3    i32.const [3993092]
+003b54e8    i32.load [2, 0]
+003b54eb    call [1010] ; 
+003b54ee    local.set [1]
+003b54f0    i32.const [3936516]
+003b54f5    i32.load [2, 0]
+003b54f8    call [901] ; 
+003b54fb    local.get [1]
+003b54fd    i32.const [0]
+003b54ff    i32.const [0]
+003b5501    call [940] ; Object.op_Equality
+003b5504    i32.eqz []
+003b5505    br_if [0]
+003b5507    local.get [0]
+003b5509    i32.load [2, 12]
+003b550c    i32.const [4000764]
+003b5511    i32.load [2, 0]
+003b5514    call [1094] ; 
+003b5517    drop []
+003b5518  end []
+003b5519  end []

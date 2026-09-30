@@ -1,0 +1,125 @@
+; Original class: x~bjQc
+; Type4504.OnLateInit; wasmcode function 8378; offset=4019501 size=328
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127), (2, 126)]
+003d5532  global.get [0]
+003d5534  i32.const [32]
+003d5536  i32.sub []
+003d5537  local.set [1]
+003d5539  local.get [1]
+003d553b  global.set [0]
+003d553d  i32.const [5009905]
+003d5542  i32.load8_u [0, 0]
+003d5545  i32.eqz []
+003d5546  if [-64]
+003d5548    i32.const [3929792]
+003d554d    call [900] ; 
+003d5550    i32.const [3953576]
+003d5555    call [900] ; 
+003d5558    i32.const [3944680]
+003d555d    call [900] ; 
+003d5560    i32.const [3932388]
+003d5565    call [900] ; 
+003d5568    i32.const [4026128] ; METHOD x~bjQc.VePx^hP
+003d556d    call [900] ; 
+003d5570    i32.const [5009905]
+003d5575    i32.const [1]
+003d5577    i32.store8 [0, 0]
+003d557a  end []
+003d557b  block [-64]
+003d557d    i32.const [0]
+003d557f    call [1060] ; ConfigMgr.get_Instance
+003d5582    i32.load [2, 252]
+003d5586    i32.load [2, 28]
+003d5589    i32.eqz []
+003d558a    br_if [0]
+003d558c    local.get [0]
+003d558e    i32.const [0]
+003d5590    call [1189] ; ActivityConfigMgr.get_I
+003d5593    i32.const [103002]
+003d5597    i32.const [0]
+003d5599    call [4030] ; ActivityConfigMgr.GetActivityConfig
+003d559c    i32.load [2, 24]
+003d559f    i32.load [2, 8]
+003d55a2    i32.store [2, 12]
+003d55a5    i32.const [3929792]
+003d55aa    i32.load [2, 0]
+003d55ad    call [901] ; 
+003d55b0    local.get [1]
+003d55b2    i32.const [103002]
+003d55b6    i32.const [0]
+003d55b8    call [12799] ; ConfigHelper.ReadActivityConfig
+003d55bb    local.get [1]
+003d55bd    i32.load [2, 8]
+003d55c0    local.set [2]
+003d55c2    local.get [1]
+003d55c4    i64.load [3, 24]
+003d55c7    local.set [4]
+003d55c9    local.get [1]
+003d55cb    i64.load [3, 0]
+003d55ce    local.set [5]
+003d55d0    local.get [0]
+003d55d2    local.get [1]
+003d55d4    i64.load [3, 16]
+003d55d7    i64.store [3, 40]
+003d55da    local.get [0]
+003d55dc    local.get [5]
+003d55de    i64.store [3, 32]
+003d55e1    local.get [0]
+003d55e3    local.get [4]
+003d55e5    i64.store [3, 48]
+003d55e8    local.get [0]
+003d55ea    local.get [2]
+003d55ec    i32.store [2, 24]
+003d55ef    local.get [0]
+003d55f1    local.get [0]
+003d55f3    call [3200] ; x~bjQc.get_Manager
+003d55f6    local.get [0]
+003d55f8    i64.load [3, 48]
+003d55fb    local.get [0]
+003d55fd    i64.load [3, 40]
+003d5600    local.get [0]
+003d5602    call [12295] ; FestActManager.CheckInit
+003d5605    local.get [0]
+003d5607    local.get [0]
+003d5609    call [6348] ; x~bjQc.VePx^hP
+003d560c    i32.const [3953576]
+003d5611    i32.load [2, 0]
+003d5614    call [935] ; 
+003d5617    i32.const [0]
+003d5619    call [4715] ; UIControl.RefreshActivityIcon
+003d561c    local.get [0]
+003d561e    local.get [0]
+003d5620    call [2052] ; x~bjQc.get_Status
+003d5623    i32.const [5]
+003d5625    i32.eq []
+003d5626    br_if [0]
+003d5628    local.get [0]
+003d562a    i32.const [1]
+003d562c    i32.store8 [0, 8]
+003d562f    i32.const [3932388]
+003d5634    i32.load [2, 0]
+003d5637    call [901] ; 
+003d563a    i32.const [10000]
+003d563e    i32.const [0]
+003d5640    call [1480] ; GameStatisticsExpansion.MessageKey
+003d5643    local.set [2]
+003d5645    i32.const [3944680]
+003d564a    i32.load [2, 0]
+003d564d    call [903] ; 
+003d5650    local.set [3]
+003d5652    local.get [3]
+003d5654    local.get [0]
+003d5656    i32.const [4026128] ; METHOD x~bjQc.VePx^hP
+003d565b    i32.load [2, 0]
+003d565e    i32.const [0]
+003d5660    call [1345] ; EventHandler..ctor
+003d5663    local.get [2]
+003d5665    local.get [3]
+003d5667    i32.const [0]
+003d5669    call [1710] ; CommonMsgDispatcher.AddEventListener
+003d566c  end []
+003d566d  local.get [1]
+003d566f  i32.const [32]
+003d5671  i32.add []
+003d5672  global.set [0]
+003d5674  end []

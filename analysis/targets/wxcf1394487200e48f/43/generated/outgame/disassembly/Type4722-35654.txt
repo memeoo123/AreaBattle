@@ -1,0 +1,45 @@
+; Original class: AchievementMgr
+; Type4722..ctor; wasmcode function 21002; offset=9469531 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00907e5c  i32.const [5001310]
+00907e61  i32.load8_u [0, 0]
+00907e64  i32.eqz []
+00907e65  if [-64]
+00907e67    i32.const [3954712]
+00907e6c    call [900] ; 
+00907e6f    i32.const [3917300]
+00907e74    call [900] ; 
+00907e77    i32.const [3971780]
+00907e7c    call [900] ; 
+00907e7f    i32.const [3922812]
+00907e84    call [900] ; 
+00907e87    i32.const [5001310]
+00907e8c    i32.const [1]
+00907e8e    i32.store8 [0, 0]
+00907e91  end []
+00907e92  i32.const [3922812]
+00907e97  i32.load [2, 0]
+00907e9a  call [903] ; 
+00907e9d  local.set [1]
+00907e9f  local.get [1]
+00907ea1  i32.const [3971780]
+00907ea6  i32.load [2, 0]
+00907ea9  call [944] ; 
+00907eac  local.get [0]
+00907eae  local.get [1]
+00907eb0  i32.store [2, 32]
+00907eb3  i32.const [3917300]
+00907eb8  i32.load [2, 0]
+00907ebb  call [903] ; 
+00907ebe  local.set [1]
+00907ec0  local.get [1]
+00907ec2  i32.const [3954712]
+00907ec7  i32.load [2, 0]
+00907eca  call [951] ; 
+00907ecd  local.get [0]
+00907ecf  local.get [1]
+00907ed1  i32.store [2, 36]
+00907ed4  local.get [0]
+00907ed6  i32.const [0]
+00907ed8  call [2269] ; CommonModuleManagerBase..ctor
+00907edb  end []

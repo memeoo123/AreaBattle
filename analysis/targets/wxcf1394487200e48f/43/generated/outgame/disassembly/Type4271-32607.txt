@@ -1,0 +1,299 @@
+; Original class: Event
+; Type4271..cctor; wasmcode function 19754; offset=8847847 size=1001
+; signature={'args': [127], 'returns': []}; localGroups=[]
+008701e8  i32.const [5009159]
+008701ed  i32.load8_u [0, 0]
+008701f0  i32.eqz []
+008701f1  if [-64]
+008701f3    i32.const [3944712]
+008701f8    call [900] ; 
+008701fb    i32.const [4069944] ; STRING "SoldierInit"
+00870200    call [900] ; 
+00870203    i32.const [4046688] ; STRING "CampChange"
+00870208    call [900] ; 
+0087020b    i32.const [4077544] ; STRING "UseFireOrDown"
+00870210    call [900] ; 
+00870213    i32.const [4055248] ; STRING "GamePlayState"
+00870218    call [900] ; 
+0087021b    i32.const [4061040] ; STRING "LoadGameScreen"
+00870220    call [900] ; 
+00870223    i32.const [4069948] ; STRING "Soldier_ClearFinished"
+00870228    call [900] ; 
+0087022b    i32.const [4077548] ; STRING "UseIceOrUp"
+00870230    call [900] ; 
+00870233    i32.const [4066092] ; STRING "PlayerDataSyncComplete"
+00870238    call [900] ; 
+0087023b    i32.const [4060800] ; STRING "LineCut"
+00870240    call [900] ; 
+00870243    i32.const [4067932] ; STRING "ResourceLoading"
+00870248    call [900] ; 
+0087024b    i32.const [4066112] ; STRING "PlayerOccupyTower"
+00870250    call [900] ; 
+00870253    i32.const [4060788] ; STRING "LineAdd"
+00870258    call [900] ; 
+0087025b    i32.const [4059948] ; STRING "Item_Change"
+00870260    call [900] ; 
+00870263    i32.const [4077552] ; STRING "UseLightOrRevert"
+00870268    call [900] ; 
+0087026b    i32.const [4070320] ; STRING "StarOccupy"
+00870270    call [900] ; 
+00870273    i32.const [4078668] ; STRING "WayLine_SoldierCollideTower"
+00870278    call [900] ; 
+0087027b    i32.const [4068368] ; STRING "SP_CHANGE"
+00870280    call [900] ; 
+00870283    i32.const [4077564] ; STRING "UseSkill"
+00870288    call [900] ; 
+0087028b    i32.const [4078664] ; STRING "WayLine_ClearOneSoldier"
+00870290    call [900] ; 
+00870293    i32.const [5009159]
+00870298    i32.const [1]
+0087029a    i32.store8 [0, 0]
+0087029d  end []
+0087029e  i32.const [3944712]
+008702a3  i32.load [2, 0]
+008702a6  i32.load [2, 92]
+008702a9  i32.const [4061040] ; STRING "LoadGameScreen"
+008702ae  i32.load [2, 0]
+008702b1  i32.store [2, 0]
+008702b4  i32.const [3944712]
+008702b9  i32.load [2, 0]
+008702bc  i32.load [2, 92]
+008702bf  drop []
+008702c0  i32.const [4061040] ; STRING "LoadGameScreen"
+008702c5  i32.load [2, 0]
+008702c8  drop []
+008702c9  i32.const [3944712]
+008702ce  i32.load [2, 0]
+008702d1  i32.load [2, 92]
+008702d4  i32.const [4055248] ; STRING "GamePlayState"
+008702d9  i32.load [2, 0]
+008702dc  i32.store [2, 4]
+008702df  i32.const [3944712]
+008702e4  i32.load [2, 0]
+008702e7  i32.load [2, 92]
+008702ea  drop []
+008702eb  i32.const [4055248] ; STRING "GamePlayState"
+008702f0  i32.load [2, 0]
+008702f3  drop []
+008702f4  i32.const [3944712]
+008702f9  i32.load [2, 0]
+008702fc  i32.load [2, 92]
+008702ff  i32.const [4067932] ; STRING "ResourceLoading"
+00870304  i32.load [2, 0]
+00870307  i32.store [2, 8]
+0087030a  i32.const [3944712]
+0087030f  i32.load [2, 0]
+00870312  i32.load [2, 92]
+00870315  drop []
+00870316  i32.const [4067932] ; STRING "ResourceLoading"
+0087031b  i32.load [2, 0]
+0087031e  drop []
+0087031f  i32.const [3944712]
+00870324  i32.load [2, 0]
+00870327  i32.load [2, 92]
+0087032a  i32.const [4066092] ; STRING "PlayerDataSyncComplete"
+0087032f  i32.load [2, 0]
+00870332  i32.store [2, 12]
+00870335  i32.const [3944712]
+0087033a  i32.load [2, 0]
+0087033d  i32.load [2, 92]
+00870340  drop []
+00870341  i32.const [4066092] ; STRING "PlayerDataSyncComplete"
+00870346  i32.load [2, 0]
+00870349  drop []
+0087034a  i32.const [3944712]
+0087034f  i32.load [2, 0]
+00870352  i32.load [2, 92]
+00870355  i32.const [4046688] ; STRING "CampChange"
+0087035a  i32.load [2, 0]
+0087035d  i32.store [2, 16]
+00870360  i32.const [3944712]
+00870365  i32.load [2, 0]
+00870368  i32.load [2, 92]
+0087036b  drop []
+0087036c  i32.const [4046688] ; STRING "CampChange"
+00870371  i32.load [2, 0]
+00870374  drop []
+00870375  i32.const [3944712]
+0087037a  i32.load [2, 0]
+0087037d  i32.load [2, 92]
+00870380  i32.const [4060788] ; STRING "LineAdd"
+00870385  i32.load [2, 0]
+00870388  i32.store [2, 20]
+0087038b  i32.const [3944712]
+00870390  i32.load [2, 0]
+00870393  i32.load [2, 92]
+00870396  drop []
+00870397  i32.const [4060788] ; STRING "LineAdd"
+0087039c  i32.load [2, 0]
+0087039f  drop []
+008703a0  i32.const [3944712]
+008703a5  i32.load [2, 0]
+008703a8  i32.load [2, 92]
+008703ab  i32.const [4060800] ; STRING "LineCut"
+008703b0  i32.load [2, 0]
+008703b3  i32.store [2, 24]
+008703b6  i32.const [3944712]
+008703bb  i32.load [2, 0]
+008703be  i32.load [2, 92]
+008703c1  drop []
+008703c2  i32.const [4060800] ; STRING "LineCut"
+008703c7  i32.load [2, 0]
+008703ca  drop []
+008703cb  i32.const [3944712]
+008703d0  i32.load [2, 0]
+008703d3  i32.load [2, 92]
+008703d6  i32.const [4070320] ; STRING "StarOccupy"
+008703db  i32.load [2, 0]
+008703de  i32.store [2, 28]
+008703e1  i32.const [3944712]
+008703e6  i32.load [2, 0]
+008703e9  i32.load [2, 92]
+008703ec  drop []
+008703ed  i32.const [4070320] ; STRING "StarOccupy"
+008703f2  i32.load [2, 0]
+008703f5  drop []
+008703f6  i32.const [3944712]
+008703fb  i32.load [2, 0]
+008703fe  i32.load [2, 92]
+00870401  i32.const [4066112] ; STRING "PlayerOccupyTower"
+00870406  i32.load [2, 0]
+00870409  i32.store [2, 32]
+0087040c  i32.const [3944712]
+00870411  i32.load [2, 0]
+00870414  i32.load [2, 92]
+00870417  drop []
+00870418  i32.const [4066112] ; STRING "PlayerOccupyTower"
+0087041d  i32.load [2, 0]
+00870420  drop []
+00870421  i32.const [3944712]
+00870426  i32.load [2, 0]
+00870429  i32.load [2, 92]
+0087042c  i32.const [4077548] ; STRING "UseIceOrUp"
+00870431  i32.load [2, 0]
+00870434  i32.store [2, 36]
+00870437  i32.const [3944712]
+0087043c  i32.load [2, 0]
+0087043f  i32.load [2, 92]
+00870442  drop []
+00870443  i32.const [4077548] ; STRING "UseIceOrUp"
+00870448  i32.load [2, 0]
+0087044b  drop []
+0087044c  i32.const [3944712]
+00870451  i32.load [2, 0]
+00870454  i32.load [2, 92]
+00870457  i32.const [4077544] ; STRING "UseFireOrDown"
+0087045c  i32.load [2, 0]
+0087045f  i32.store [2, 40]
+00870462  i32.const [3944712]
+00870467  i32.load [2, 0]
+0087046a  i32.load [2, 92]
+0087046d  drop []
+0087046e  i32.const [4077544] ; STRING "UseFireOrDown"
+00870473  i32.load [2, 0]
+00870476  drop []
+00870477  i32.const [3944712]
+0087047c  i32.load [2, 0]
+0087047f  i32.load [2, 92]
+00870482  i32.const [4077552] ; STRING "UseLightOrRevert"
+00870487  i32.load [2, 0]
+0087048a  i32.store [2, 44]
+0087048d  i32.const [3944712]
+00870492  i32.load [2, 0]
+00870495  i32.load [2, 92]
+00870498  drop []
+00870499  i32.const [4077552] ; STRING "UseLightOrRevert"
+0087049e  i32.load [2, 0]
+008704a1  drop []
+008704a2  i32.const [3944712]
+008704a7  i32.load [2, 0]
+008704aa  i32.load [2, 92]
+008704ad  i32.const [4077564] ; STRING "UseSkill"
+008704b2  i32.load [2, 0]
+008704b5  i32.store [2, 48]
+008704b8  i32.const [3944712]
+008704bd  i32.load [2, 0]
+008704c0  i32.load [2, 92]
+008704c3  drop []
+008704c4  i32.const [4077564] ; STRING "UseSkill"
+008704c9  i32.load [2, 0]
+008704cc  drop []
+008704cd  i32.const [3944712]
+008704d2  i32.load [2, 0]
+008704d5  i32.load [2, 92]
+008704d8  i32.const [4059948] ; STRING "Item_Change"
+008704dd  i32.load [2, 0]
+008704e0  i32.store [2, 52]
+008704e3  i32.const [3944712]
+008704e8  i32.load [2, 0]
+008704eb  i32.load [2, 92]
+008704ee  drop []
+008704ef  i32.const [4059948] ; STRING "Item_Change"
+008704f4  i32.load [2, 0]
+008704f7  drop []
+008704f8  i32.const [3944712]
+008704fd  i32.load [2, 0]
+00870500  i32.load [2, 92]
+00870503  i32.const [4068368] ; STRING "SP_CHANGE"
+00870508  i32.load [2, 0]
+0087050b  i32.store [2, 56]
+0087050e  i32.const [3944712]
+00870513  i32.load [2, 0]
+00870516  i32.load [2, 92]
+00870519  drop []
+0087051a  i32.const [4068368] ; STRING "SP_CHANGE"
+0087051f  i32.load [2, 0]
+00870522  drop []
+00870523  i32.const [3944712]
+00870528  i32.load [2, 0]
+0087052b  i32.load [2, 92]
+0087052e  i32.const [4069944] ; STRING "SoldierInit"
+00870533  i32.load [2, 0]
+00870536  i32.store [2, 60]
+00870539  i32.const [3944712]
+0087053e  i32.load [2, 0]
+00870541  i32.load [2, 92]
+00870544  drop []
+00870545  i32.const [4069944] ; STRING "SoldierInit"
+0087054a  i32.load [2, 0]
+0087054d  drop []
+0087054e  i32.const [3944712]
+00870553  i32.load [2, 0]
+00870556  i32.load [2, 92]
+00870559  i32.const [4069948] ; STRING "Soldier_ClearFinished"
+0087055e  i32.load [2, 0]
+00870561  i32.store [2, 64]
+00870564  i32.const [3944712]
+00870569  i32.load [2, 0]
+0087056c  i32.load [2, 92]
+0087056f  drop []
+00870570  i32.const [4069948] ; STRING "Soldier_ClearFinished"
+00870575  i32.load [2, 0]
+00870578  drop []
+00870579  i32.const [3944712]
+0087057e  i32.load [2, 0]
+00870581  i32.load [2, 92]
+00870584  i32.const [4078664] ; STRING "WayLine_ClearOneSoldier"
+00870589  i32.load [2, 0]
+0087058c  i32.store [2, 68]
+0087058f  i32.const [3944712]
+00870594  i32.load [2, 0]
+00870597  i32.load [2, 92]
+0087059a  drop []
+0087059b  i32.const [4078664] ; STRING "WayLine_ClearOneSoldier"
+008705a0  i32.load [2, 0]
+008705a3  drop []
+008705a4  i32.const [3944712]
+008705a9  i32.load [2, 0]
+008705ac  i32.load [2, 92]
+008705af  i32.const [4078668] ; STRING "WayLine_SoldierCollideTower"
+008705b4  i32.load [2, 0]
+008705b7  i32.store [2, 72]
+008705ba  i32.const [3944712]
+008705bf  i32.load [2, 0]
+008705c2  i32.load [2, 92]
+008705c5  drop []
+008705c6  i32.const [4078668] ; STRING "WayLine_SoldierCollideTower"
+008705cb  i32.load [2, 0]
+008705ce  drop []
+008705cf  end []

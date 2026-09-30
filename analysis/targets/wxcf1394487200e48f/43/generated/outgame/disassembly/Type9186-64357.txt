@@ -1,0 +1,26 @@
+; Original class: WxVideoAdapter
+; Type9186..ctor; wasmcode function 9332; offset=4537853 size=71
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00453dfe  i32.const [5006862]
+00453e03  i32.load8_u [0, 0]
+00453e06  i32.eqz []
+00453e07  if [-64]
+00453e09    i32.const [3930108]
+00453e0e    call [900] ; 
+00453e11    i32.const [4050284] ; STRING "DAU-WxVideo "
+00453e16    call [900] ; 
+00453e19    i32.const [5006862]
+00453e1e    i32.const [1]
+00453e20    i32.store8 [0, 0]
+00453e23  end []
+00453e24  i32.const [3930108]
+00453e29  i32.load [2, 0]
+00453e2c  call [901] ; 
+00453e2f  local.get [0]
+00453e31  i32.const [0]
+00453e33  call [2712] ; DAUAdsAdapter..ctor
+00453e36  local.get [0]
+00453e38  i32.const [4050284] ; STRING "DAU-WxVideo "
+00453e3d  i32.load [2, 0]
+00453e40  i32.store [2, 8]
+00453e43  end []

@@ -1,0 +1,80 @@
+; Original class: MineGameLogicModule
+; Type3499.RegisterLogicCtr; wasmcode function 1622; offset=535200 size=219
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00082aa1  i32.const [4989130]
+00082aa6  i32.load8_u [0, 0]
+00082aa9  i32.eqz []
+00082aaa  if [-64]
+00082aac    i32.const [3930676]
+00082ab1    call [900] ; 
+00082ab4    i32.const [3933184]
+00082ab9    call [900] ; 
+00082abc    i32.const [3974056]
+00082ac1    call [900] ; 
+00082ac4    i32.const [3974064]
+00082ac9    call [900] ; 
+00082acc    i32.const [4106312] ; STRING "逻辑控制类["
+00082ad1    call [900] ; 
+00082ad4    i32.const [4081148] ; STRING "]已经被注册"
+00082ad9    call [900] ; 
+00082adc    i32.const [4989130]
+00082ae1    i32.const [1]
+00082ae3    i32.store8 [0, 0]
+00082ae6  end []
+00082ae7  local.get [0]
+00082ae9  i32.load [2, 16]
+00082aec  local.get [1]
+00082aee  i32.const [3974064]
+00082af3  i32.load [2, 0]
+00082af6  call [1209] ; 
+00082af9  if [-64]
+00082afb    local.get [1]
+00082afd    call [962] ; 
+00082b00    local.set [0]
+00082b02    local.get [0]
+00082b04    local.set [1]
+00082b06    local.get [0]
+00082b08    i32.load [2, 0]
+00082b0b    i32.const [-64]
+00082b0d    i32.sub []
+00082b0e    local.set [0]
+00082b10    local.get [1]
+00082b12    local.get [0]
+00082b14    i32.load [2, 192]
+00082b18    local.get [0]
+00082b1a    i32.load [2, 188]
+00082b1e    global.set [3]
+00082b20    global.get [3]
+00082b22    call_indirect [1, 0]
+00082b25    local.set [0]
+00082b27    i32.const [4106312] ; STRING "逻辑控制类["
+00082b2c    i32.load [2, 0]
+00082b2f    local.get [0]
+00082b31    i32.const [4081148] ; STRING "]已经被注册"
+00082b36    i32.load [2, 0]
+00082b39    i32.const [0]
+00082b3b    call [955] ; String.Concat
+00082b3e    local.set [0]
+00082b40    i32.const [3930676]
+00082b45    i32.load [2, 0]
+00082b48    call [901] ; 
+00082b4b    local.get [0]
+00082b4d    i32.const [0]
+00082b4f    call [1066] ; Debug.LogWarning
+00082b52    return []
+00082b53  end []
+00082b54  local.get [0]
+00082b56  i32.load [2, 16]
+00082b59  local.get [1]
+00082b5b  i32.const [3974056]
+00082b60  i32.load [2, 0]
+00082b63  call [941] ; 
+00082b66  local.get [2]
+00082b68  if [-64]
+00082b6a    i32.const [0]
+00082b6c    i32.const [3933184]
+00082b71    i32.load [2, 0]
+00082b74    local.get [1]
+00082b76    call [1044] ; 
+00082b79  end []
+00082b7a  end []

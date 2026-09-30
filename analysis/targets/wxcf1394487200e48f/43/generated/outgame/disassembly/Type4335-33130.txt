@@ -1,0 +1,75 @@
+; Original class: CommanderSkillItem
+; Type4335.InitializeComponent; wasmcode function 20185; offset=9068991 size=238
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a61c0  i32.const [5008836]
+008a61c5  i32.load8_u [0, 0]
+008a61c8  i32.eqz []
+008a61c9  if [-64]
+008a61cb    i32.const [4018588]
+008a61d0    call [900] ; 
+008a61d3    i32.const [4018624]
+008a61d8    call [900] ; 
+008a61db    i32.const [4098168] ; STRING "textSkillLv"
+008a61e0    call [900] ; 
+008a61e3    i32.const [4090124] ; STRING "imgSkillIcon"
+008a61e8    call [900] ; 
+008a61eb    i32.const [4098096] ; STRING "textLockLv"
+008a61f0    call [900] ; 
+008a61f3    i32.const [4090096] ; STRING "imgSelected"
+008a61f8    call [900] ; 
+008a61fb    i32.const [4089980] ; STRING "imgLock"
+008a6200    call [900] ; 
+008a6203    i32.const [4090180] ; STRING "imgUpgradeTip"
+008a6208    call [900] ; 
+008a620b    i32.const [5008836]
+008a6210    i32.const [1]
+008a6212    i32.store8 [0, 0]
+008a6215  end []
+008a6216  local.get [0]
+008a6218  local.get [0]
+008a621a  i32.const [4090124] ; STRING "imgSkillIcon"
+008a621f  i32.load [2, 0]
+008a6222  i32.const [4018588]
+008a6227  i32.load [2, 0]
+008a622a  call [970] ; 
+008a622d  i32.store [2, 56]
+008a6230  local.get [0]
+008a6232  local.get [0]
+008a6234  i32.const [4089980] ; STRING "imgLock"
+008a6239  i32.load [2, 0]
+008a623c  i32.const [0]
+008a623e  call [1116] ; UIObject.Get
+008a6241  i32.store [2, 60]
+008a6244  local.get [0]
+008a6246  local.get [0]
+008a6248  i32.const [4098168] ; STRING "textSkillLv"
+008a624d  i32.load [2, 0]
+008a6250  i32.const [4018624]
+008a6255  i32.load [2, 0]
+008a6258  call [970] ; 
+008a625b  i32.store [2, 64]
+008a625e  local.get [0]
+008a6260  local.get [0]
+008a6262  i32.const [4090180] ; STRING "imgUpgradeTip"
+008a6267  i32.load [2, 0]
+008a626a  i32.const [4018588]
+008a626f  i32.load [2, 0]
+008a6272  call [970] ; 
+008a6275  i32.store [2, 68]
+008a6278  local.get [0]
+008a627a  local.get [0]
+008a627c  i32.const [4090096] ; STRING "imgSelected"
+008a6281  i32.load [2, 0]
+008a6284  i32.const [4018588]
+008a6289  i32.load [2, 0]
+008a628c  call [970] ; 
+008a628f  i32.store [2, 72]
+008a6292  local.get [0]
+008a6294  local.get [0]
+008a6296  i32.const [4098096] ; STRING "textLockLv"
+008a629b  i32.load [2, 0]
+008a629e  i32.const [4018624]
+008a62a3  i32.load [2, 0]
+008a62a6  call [970] ; 
+008a62a9  i32.store [2, 76]
+008a62ac  end []

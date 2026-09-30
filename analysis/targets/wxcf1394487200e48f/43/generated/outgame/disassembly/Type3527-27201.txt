@@ -1,0 +1,16 @@
+; Original class: YOResourcesModule
+; Type3527.LoadAllAssets; wasmcode1 function 36880; offset=14065398 size=30
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00d69ef7  local.get [0]
+00d69ef9  i32.load [2, 20]
+00d69efc  local.get [1]
+00d69efe  i32.const [0]
+00d69f00  call [23559] ; ResourcePackage.LoadAllAssetsAsync
+00d69f04  local.set [0]
+00d69f06  local.get [0]
+00d69f08  local.get [2]
+00d69f0a  i32.const [0]
+00d69f0c  call [32222] ; AllAssetsOperationHandle.add_Completed
+00d69f10  local.get [0]
+00d69f12  return []
+00d69f13  end []

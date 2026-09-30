@@ -1,0 +1,197 @@
+; Original class: <LoadFirstPack>d__24
+; Type3831.MoveNext; wasmcode function 15389; offset=7422095 size=535
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(3, 127)]
+00714092  i32.const [4988251]
+00714097  i32.load8_u [0, 0]
+0071409a  i32.eqz []
+0071409b  if [-64]
+0071409d    i32.const [3928344]
+007140a2    call [900] ; 
+007140a5    i32.const [3929208]
+007140aa    call [900] ; 
+007140ad    i32.const [3930676]
+007140b2    call [900] ; 
+007140b5    i32.const [3977284]
+007140ba    call [900] ; 
+007140bd    i32.const [3977288]
+007140c2    call [900] ; 
+007140c5    i32.const [3926996]
+007140ca    call [900] ; 
+007140cd    i32.const [3938048]
+007140d2    call [900] ; 
+007140d5    i32.const [4088004] ; STRING "firstpack.unity3d"
+007140da    call [900] ; 
+007140dd    i32.const [4054352] ; STRING "FirstPackError，请检测首包资源是否存在"
+007140e2    call [900] ; 
+007140e5    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+007140ea    call [900] ; 
+007140ed    i32.const [4103232] ; STRING "加载firstpack"
+007140f2    call [900] ; 
+007140f5    i32.const [4988251]
+007140fa    i32.const [1]
+007140fc    i32.store8 [0, 0]
+007140ff  end []
+00714100  block [-64]
+00714102    block [-64]
+00714104      block [-64]
+00714106        local.get [0]
+00714108        i32.load [2, 8]
+0071410b        br_table [0, 1, 2]
+00714110      end []
+00714111      local.get [0]
+00714113      i32.const [-1]
+00714115      i32.store [2, 8]
+00714118      i32.const [3926996]
+0071411d      i32.load [2, 0]
+00714120      i32.const [1]
+00714122      call [909] ; 
+00714125      local.set [1]
+00714127      local.get [1]
+00714129      i32.const [4103232] ; STRING "加载firstpack"
+0071412e      i32.load [2, 0]
+00714131      call [905] ; 
+00714134      local.get [1]
+00714136      i32.const [4103232] ; STRING "加载firstpack"
+0071413b      i32.load [2, 0]
+0071413e      i32.store [2, 16]
+00714141      i32.const [3929208]
+00714146      i32.load [2, 0]
+00714149      call [901] ; 
+0071414c      local.get [1]
+0071414e      i32.const [0]
+00714150      call [2095] ; CLog.wKÂL
+00714153      i32.const [3928344]
+00714158      i32.load [2, 0]
+0071415b      call [901] ; 
+0071415e      local.get [0]
+00714160      i32.const [4088004] ; STRING "firstpack.unity3d"
+00714165      i32.load [2, 0]
+00714168      i32.const [0]
+0071416a      call [8250] ; AssetBundleManager.LoadAssetBundleAsync
+0071416d      i32.store [2, 24]
+00714170      local.get [0]
+00714172      i32.load [2, 24]
+00714175      i32.eqz []
+00714176      if [-64]
+00714178        i32.const [3930676]
+0071417d        i32.load [2, 0]
+00714180        call [901] ; 
+00714183        i32.const [4054352] ; STRING "FirstPackError，请检测首包资源是否存在"
+00714188        i32.load [2, 0]
+0071418b        i32.const [0]
+0071418d        i32.const [2369] ; TABLE Debug.LogError
+00714190        global.set [3]
+00714192        i32.const [2369] ; TABLE Debug.LogError
+00714195        call_indirect [0, 0]
+00714198        i32.const [0]
+0071419a        return []
+0071419b      end []
+0071419c      local.get [0]
+0071419e      i32.const [0]
+007141a0      call [1388] ; UpdateManager.get_Instance
+007141a3      local.get [0]
+007141a5      i32.load [2, 24]
+007141a8      i32.const [0]
+007141aa      call [1227] ; MonoBehaviour.StartCoroutine
+007141ad      i32.store [2, 12]
+007141b0      local.get [0]
+007141b2      i32.const [1]
+007141b4      i32.store [2, 8]
+007141b7      i32.const [1]
+007141b9      return []
+007141ba    end []
+007141bb    local.get [0]
+007141bd    i32.load [2, 20]
+007141c0    local.set [3]
+007141c2    local.get [0]
+007141c4    i32.const [-1]
+007141c6    i32.store [2, 8]
+007141c9    local.get [0]
+007141cb    i32.load [2, 24]
+007141ce    local.set [1]
+007141d0    local.get [1]
+007141d2    local.set [2]
+007141d4    local.get [1]
+007141d6    i32.load [2, 0]
+007141d9    local.set [1]
+007141db    local.get [2]
+007141dd    local.get [1]
+007141df    i32.load [2, 272]
+007141e3    local.get [1]
+007141e5    i32.load [2, 268]
+007141e9    global.set [3]
+007141eb    global.get [3]
+007141ed    call_indirect [1, 0]
+007141f0    i32.load [2, 8]
+007141f3    local.set [2]
+007141f5    i32.const [0]
+007141f7    local.set [1]
+007141f9    loop [-64]
+007141fb      i32.const [3977284]
+00714200      i32.load [2, 0]
+00714203      drop []
+00714204      local.get [1]
+00714206      local.get [0]
+00714208      i32.load [2, 16]
+0071420b      i32.load [2, 12]
+0071420e      i32.lt_s []
+0071420f      if [-64]
+00714211        local.get [0]
+00714213        i32.load [2, 16]
+00714216        local.get [1]
+00714218        i32.const [3977288]
+0071421d        i32.load [2, 0]
+00714220        call [930] ; 
+00714223        local.set [4]
+00714225        i32.const [3938048]
+0071422a        i32.load [2, 0]
+0071422d        call [901] ; 
+00714230        local.get [4]
+00714232        local.get [2]
+00714234        local.get [1]
+00714236        call [7270] ; ResourcesModule.AddAssetBundlePackList
+00714239        local.get [1]
+0071423b        i32.const [1]
+0071423d        i32.add []
+0071423e        local.set [1]
+00714240        br [1]
+00714242      end []
+00714243    end []
+00714244    i32.const [3926996]
+00714249    i32.load [2, 0]
+0071424c    i32.const [1]
+0071424e    call [909] ; 
+00714251    local.set [0]
+00714253    local.get [0]
+00714255    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+0071425a    i32.load [2, 0]
+0071425d    call [905] ; 
+00714260    local.get [0]
+00714262    i32.const [4067940] ; STRING "ResourcesModule初始化完成"
+00714267    i32.load [2, 0]
+0071426a    i32.store [2, 16]
+0071426d    i32.const [3929208]
+00714272    i32.load [2, 0]
+00714275    call [901] ; 
+00714278    local.get [0]
+0071427a    i32.const [0]
+0071427c    call [2095] ; CLog.wKÂL
+0071427f    local.get [3]
+00714281    i32.load [2, 12]
+00714284    local.set [0]
+00714286    local.get [0]
+00714288    i32.eqz []
+00714289    br_if [0]
+0071428b    local.get [0]
+0071428d    i32.load [2, 32]
+00714290    local.get [0]
+00714292    i32.load [2, 20]
+00714295    local.get [0]
+00714297    i32.load [2, 12]
+0071429a    global.set [3]
+0071429c    global.get [3]
+0071429e    call_indirect [0, 0]
+007142a1  end []
+007142a2  i32.const [0]
+007142a4  return []
+007142a5  end []

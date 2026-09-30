@@ -1,0 +1,117 @@
+; Original class: H ±S´s
+; Type2922.¬­¸Gn¾; wasmcode function 19271; offset=8647994 size=327
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0083f53d  i32.const [4989495]
+0083f542  i32.load8_u [0, 0]
+0083f545  i32.eqz []
+0083f546  if [-64]
+0083f548    i32.const [3929208]
+0083f54d    call [900] ; 
+0083f550    i32.const [3930676]
+0083f555    call [900] ; 
+0083f558    i32.const [3926996]
+0083f55d    call [900] ; 
+0083f560    i32.const [4012516]
+0083f565    call [900] ; 
+0083f568    i32.const [4103536] ; STRING "图集名称"
+0083f56d    call [900] ; 
+0083f570    i32.const [4103532] ; STRING "图集加载失败"
+0083f575    call [900] ; 
+0083f578    i32.const [4103552] ; STRING "图集重新加载成功："
+0083f57d    call [900] ; 
+0083f580    i32.const [4989495]
+0083f585    i32.const [1]
+0083f587    i32.store8 [0, 0]
+0083f58a  end []
+0083f58b  local.get [1]
+0083f58d  i32.eqz []
+0083f58e  if [-64]
+0083f590    i32.const [3926996]
+0083f595    i32.load [2, 0]
+0083f598    i32.const [1]
+0083f59a    call [909] ; 
+0083f59d    local.set [2]
+0083f59f    local.get [2]
+0083f5a1    i32.const [4103532] ; STRING "图集加载失败"
+0083f5a6    i32.load [2, 0]
+0083f5a9    call [905] ; 
+0083f5ac    local.get [2]
+0083f5ae    i32.const [4103532] ; STRING "图集加载失败"
+0083f5b3    i32.load [2, 0]
+0083f5b6    i32.store [2, 16]
+0083f5b9    i32.const [3929208]
+0083f5be    i32.load [2, 0]
+0083f5c1    call [901] ; 
+0083f5c4    local.get [2]
+0083f5c6    i32.const [0]
+0083f5c8    call [1156] ; CLog.Warning
+0083f5cb  end []
+0083f5cc  local.get [0]
+0083f5ce  i32.load [2, 8]
+0083f5d1  local.set [2]
+0083f5d3  i32.const [4103536] ; STRING "图集名称"
+0083f5d8  i32.load [2, 0]
+0083f5db  local.get [2]
+0083f5dd  i32.const [0]
+0083f5df  call [921] ; String.Concat
+0083f5e2  local.set [3]
+0083f5e4  i32.const [3930676]
+0083f5e9  i32.load [2, 0]
+0083f5ec  call [901] ; 
+0083f5ef  local.get [3]
+0083f5f1  i32.const [0]
+0083f5f3  call [1062] ; Debug.Log
+0083f5f6  local.get [0]
+0083f5f8  local.get [1]
+0083f5fa  local.get [2]
+0083f5fc  i32.const [4012516]
+0083f601  i32.load [2, 0]
+0083f604  call [2074] ; 
+0083f607  i32.store [2, 12]
+0083f60a  i32.const [3926996]
+0083f60f  i32.load [2, 0]
+0083f612  i32.const [1]
+0083f614  call [909] ; 
+0083f617  local.set [1]
+0083f619  local.get [0]
+0083f61b  i32.load [2, 12]
+0083f61e  i32.const [0]
+0083f620  call [1115] ; Object.get_name
+0083f623  local.set [2]
+0083f625  i32.const [4103552] ; STRING "图集重新加载成功："
+0083f62a  i32.load [2, 0]
+0083f62d  local.get [2]
+0083f62f  i32.const [0]
+0083f631  call [921] ; String.Concat
+0083f634  local.set [2]
+0083f636  local.get [1]
+0083f638  local.get [2]
+0083f63a  call [905] ; 
+0083f63d  local.get [1]
+0083f63f  local.get [2]
+0083f641  i32.store [2, 16]
+0083f644  i32.const [3929208]
+0083f649  i32.load [2, 0]
+0083f64c  call [901] ; 
+0083f64f  local.get [1]
+0083f651  i32.const [0]
+0083f653  call [1069] ; CLog.Log
+0083f656  local.get [0]
+0083f658  i32.load [2, 16]
+0083f65b  i32.load [2, 16]
+0083f65e  local.set [1]
+0083f660  local.get [1]
+0083f662  if [-64]
+0083f664    local.get [1]
+0083f666    i32.load [2, 32]
+0083f669    local.get [0]
+0083f66b    i32.load [2, 12]
+0083f66e    local.get [1]
+0083f670    i32.load [2, 20]
+0083f673    local.get [1]
+0083f675    i32.load [2, 12]
+0083f678    global.set [3]
+0083f67a    global.get [3]
+0083f67c    call_indirect [2, 0]
+0083f67f  end []
+0083f680  end []

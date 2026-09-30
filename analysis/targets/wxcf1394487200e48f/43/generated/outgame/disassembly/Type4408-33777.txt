@@ -1,0 +1,41 @@
+; Original class: ShopUI
+; Type4408.VisibleBefore; wasmcode function 15999; offset=7719170 size=99
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0075c903  i32.const [5007554]
+0075c908  i32.load8_u [0, 0]
+0075c90b  i32.eqz []
+0075c90c  if [-64]
+0075c90e    i32.const [3989352]
+0075c913    call [900] ; 
+0075c916    i32.const [3936516]
+0075c91b    call [900] ; 
+0075c91e    i32.const [5007554]
+0075c923    i32.const [1]
+0075c925    i32.store8 [0, 0]
+0075c928  end []
+0075c929  local.get [0]
+0075c92b  i32.load [2, 12]
+0075c92e  local.set [2]
+0075c930  i32.const [3936516]
+0075c935  i32.load [2, 0]
+0075c938  call [901] ; 
+0075c93b  block [-64]
+0075c93d    local.get [2]
+0075c93f    i32.const [0]
+0075c941    i32.const [0]
+0075c943    call [946] ; Object.op_Inequality
+0075c946    i32.eqz []
+0075c947    br_if [0]
+0075c949    local.get [1]
+0075c94b    i32.eqz []
+0075c94c    br_if [0]
+0075c94e    i32.const [3989352]
+0075c953    i32.load [2, 0]
+0075c956    call [1032] ; 
+0075c959    drop []
+0075c95a    local.get [0]
+0075c95c    local.get [0]
+0075c95e    local.get [0]
+0075c960    call [7171] ; ShopUI.RefreshSkinState
+0075c963  end []
+0075c964  end []

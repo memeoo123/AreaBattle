@@ -1,0 +1,48 @@
+﻿{
+  "atUtc": "2026-09-30T04:53:22.375298+00:00",
+  "status": "four-postprocessors-restored",
+  "sourceMethods": [
+    30439,
+    30398,
+    30426,
+    30428
+  ],
+  "implementation": [
+    "OutgameConfigOnlineOverrides.cs",
+    "OutgameConfigDerivedIndexes.cs"
+  ],
+  "online": {
+    "readOrder": [
+      "Proj_hdzd_HeroSetting",
+      "Proj_hdzd_BossLevel",
+      "Proj_hdzd_HeroPreUnlockLevel",
+      "Proj_hdzd_ValentineSetting",
+      "DontShowInsertAfterSeeToolVideo",
+      "DontShowInsertIfSeeOverVideo",
+      "ShowInsertADPerXLevel",
+      "NoRemoveAds"
+    ],
+    "semantics": "All8 reads before mutations; last result discarded; null/empty skip; parse boss before hero; Parse errors preserve earlier writes; no catch."
+  },
+  "indexes": {
+    "scene": "Clear dic_res then Add each idleIconName and gameIconName with raw PathEnum value12; Dictionary<string,PathEnum> original generic1189 is represented by int values at this boundary. Null/duplicate failures propagate with partial state.",
+    "guide": "Clear this316 then obtain ConfigMgr.Instance156; foreach Values, skip only guildLv==-1, set level->id last wins.",
+    "names": "Append dictionary20 values.zh_cn into list320; no clear or dedup."
+  },
+  "genericMethods": {
+    "3961204": "Dictionary<string,PathEnum>.Add",
+    "3961208": "Dictionary<string,PathEnum>.Clear",
+    "3955824": "Dictionary<int,int>.set_Item",
+    "3977228": "List<string>.Add"
+  },
+  "remaining": [
+    "30406 calls30410 camp-color handling and30435 global constants; neither composed here",
+    "Original online provider access/production owner still must be composed",
+    "Full ConfigMgr initialization/Main30603/30617/account/menu unfinished"
+  ],
+  "verification": {
+    "integrated": 655,
+    "freshPlayMode": false,
+    "freshPlayerBuild": false
+  }
+}

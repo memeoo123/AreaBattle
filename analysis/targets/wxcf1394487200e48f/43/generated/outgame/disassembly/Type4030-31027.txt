@@ -1,0 +1,12 @@
+; Original class: CommanderData
+; Type4030.get_Max; wasmcode function 3651; offset=1148030 size=19
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0011847f  local.get [0]
+00118481  i32.load [2, 16]
+00118484  local.get [0]
+00118486  local.get [0]
+00118488  call [1711] ; CommanderData.get_config
+0011848b  i32.load [2, 16]
+0011848e  i32.ge_s []
+0011848f  return []
+00118490  end []

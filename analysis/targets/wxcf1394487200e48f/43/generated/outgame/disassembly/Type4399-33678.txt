@@ -1,0 +1,51 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.VisibleImp; wasmcode function 18037; offset=7994200 size=121
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0079fb59  i32.const [5007481]
+0079fb5e  i32.load8_u [0, 0]
+0079fb61  i32.eqz []
+0079fb62  if [-64]
+0079fb64    i32.const [3936516]
+0079fb69    call [900] ; 
+0079fb6c    i32.const [5007481]
+0079fb71    i32.const [1]
+0079fb73    i32.store8 [0, 0]
+0079fb76  end []
+0079fb77  local.get [0]
+0079fb79  i32.load [2, 12]
+0079fb7c  local.set [2]
+0079fb7e  i32.const [3936516]
+0079fb83  i32.load [2, 0]
+0079fb86  call [901] ; 
+0079fb89  block [-64]
+0079fb8b    local.get [2]
+0079fb8d    i32.const [0]
+0079fb8f    i32.const [0]
+0079fb91    call [940] ; Object.op_Equality
+0079fb94    br_if [0]
+0079fb96    local.get [0]
+0079fb98    local.get [1]
+0079fb9a    i32.const [0]
+0079fb9c    call [6908] ; UIObject.VisibleImp
+0079fb9f    local.get [1]
+0079fba1    i32.eqz []
+0079fba2    br_if [0]
+0079fba4    local.get [0]
+0079fba6    i32.load [2, 260]
+0079fbaa    i32.const [0]
+0079fbac    call [943] ; Component.get_gameObject
+0079fbaf    i32.const [0]
+0079fbb1    i32.const [0]
+0079fbb3    call [949] ; GameObject.SetActive
+0079fbb6    local.get [0]
+0079fbb8    i32.load [2, 168]
+0079fbbc    i32.const [0]
+0079fbbe    call [943] ; Component.get_gameObject
+0079fbc1    i32.const [0]
+0079fbc3    i32.const [0]
+0079fbc5    call [949] ; GameObject.SetActive
+0079fbc8    local.get [0]
+0079fbca    local.get [0]
+0079fbcc    call [5806] ; Proj_xqzdStartUI.RefreshUIInfo
+0079fbcf  end []
+0079fbd0  end []

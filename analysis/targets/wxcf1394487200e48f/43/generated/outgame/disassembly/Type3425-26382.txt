@@ -1,0 +1,19 @@
+; Original class: AudioCompositeBase
+; Type3425.getAudioType; wasmcode function 6274; offset=2248824 size=31
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00225079  local.get [1]
+0022507b  call [2848] ; AudioManager.get_Instance
+0022507e  local.get [1]
+00225080  local.get [1]
+00225082  call [8223] ; AudioManager.GetAudioData
+00225085  local.set [0]
+00225087  local.get [0]
+00225089  i32.eqz []
+0022508a  if [-64]
+0022508c    i32.const [1]
+0022508e    return []
+0022508f  end []
+00225090  local.get [0]
+00225092  i32.load [2, 20]
+00225095  return []
+00225096  end []

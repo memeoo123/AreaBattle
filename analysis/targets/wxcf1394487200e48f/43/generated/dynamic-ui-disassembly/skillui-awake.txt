@@ -1,0 +1,91 @@
+; SkillUI.Awake; wasmcode function 15927; offset=7655020 size=275
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0074ce6f  i32.const [5007009]
+0074ce74  i32.load8_u [0, 0]
+0074ce77  i32.eqz []
+0074ce78  if [-64]
+0074ce7a    i32.const [3953560]
+0074ce7f    call [900] ; 
+0074ce82    i32.const [3995120]
+0074ce87    call [900] ; 
+0074ce8a    i32.const [3930256] ; type: DataManagerPool
+0074ce8f    call [900] ; 
+0074ce92    i32.const [3947148] ; type: EventHandler
+0074ce97    call [900] ; 
+0074ce9a    i32.const [3944712] ; type: Event
+0074ce9f    call [900] ; 
+0074cea2    i32.const [4014384] ; method: SkillUI.^gp^lO
+0074cea7    call [900] ; 
+0074ceaa    i32.const [4014392] ; method: SkillUI.ybfmp
+0074ceaf    call [900] ; 
+0074ceb2    i32.const [4075200] ; literal: 'ToolChange'
+0074ceb7    call [900] ; 
+0074ceba    i32.const [5007009]
+0074cebf    i32.const [1]
+0074cec1    i32.store8 [0, 0]
+0074cec4  end []
+0074cec5  local.get [0]
+0074cec7  local.get [0]
+0074cec9  call [10345] ; SkillUI.PgWz^
+0074cecc  i32.const [3930256] ; type: DataManagerPool
+0074ced1  i32.load [2, 0]
+0074ced4  call [901] ; 
+0074ced7  local.get [0]
+0074ced9  i32.const [0]
+0074cedb  call [1309] ; 
+0074cede  i32.const [3995120]
+0074cee3  i32.load [2, 0]
+0074cee6  call [1609] ; 
+0074cee9  i32.store [2, 104]
+0074ceec  i32.const [3947148] ; type: EventHandler
+0074cef1  i32.load [2, 0]
+0074cef4  call [903] ; 
+0074cef7  local.set [1]
+0074cef9  local.get [1]
+0074cefb  local.get [0]
+0074cefd  i32.const [4014384] ; method: SkillUI.^gp^lO
+0074cf02  i32.load [2, 0]
+0074cf05  i32.const [0]
+0074cf07  call [1067] ; 
+0074cf0a  i32.const [4075200] ; literal: 'ToolChange'
+0074cf0f  i32.load [2, 0]
+0074cf12  local.get [1]
+0074cf14  i32.const [0]
+0074cf16  call [1146] ; 
+0074cf19  i32.const [3944712] ; type: Event
+0074cf1e  i32.load [2, 0]
+0074cf21  call [901] ; 
+0074cf24  i32.const [3944712] ; type: Event
+0074cf29  i32.load [2, 0]
+0074cf2c  i32.load [2, 92]
+0074cf2f  i32.load [2, 48]
+0074cf32  local.set [1]
+0074cf34  i32.const [3947148] ; type: EventHandler
+0074cf39  i32.load [2, 0]
+0074cf3c  call [903] ; 
+0074cf3f  local.set [2]
+0074cf41  local.get [2]
+0074cf43  local.get [0]
+0074cf45  i32.const [4014392] ; method: SkillUI.ybfmp
+0074cf4a  i32.load [2, 0]
+0074cf4d  i32.const [0]
+0074cf4f  call [1067] ; 
+0074cf52  local.get [1]
+0074cf54  local.get [2]
+0074cf56  i32.const [0]
+0074cf58  call [1146] ; 
+0074cf5b  local.get [0]
+0074cf5d  i32.const [0]
+0074cf5f  i32.store8 [0, 116]
+0074cf62  local.get [0]
+0074cf64  i32.const [3953560]
+0074cf69  i32.load [2, 0]
+0074cf6c  call [935] ; 
+0074cf6f  i32.load [2, 108]
+0074cf72  local.get [0]
+0074cf74  call [10344] ; SkillUI.xiNtg}
+0074cf77  local.get [0]
+0074cf79  local.get [0]
+0074cf7b  call [5670] ; SkillUI.RefreshItemPoint
+0074cf7e  end []
+

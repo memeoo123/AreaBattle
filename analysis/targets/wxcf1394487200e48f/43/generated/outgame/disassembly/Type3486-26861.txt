@@ -1,0 +1,28 @@
+; Original class: GlobalData
+; Type3486.set_ShowEvaluateUICount; wasmcode1 function 27705; offset=10536886 size=79
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00a0c7b7  i32.const [4989072]
+00a0c7bc  i32.load8_u [0, 0]
+00a0c7bf  i32.eqz []
+00a0c7c0  if [-64]
+00a0c7c2    i32.const [3941104]
+00a0c7c7    i32.const [1605]
+00a0c7ca    call_indirect [0, 0]
+00a0c7cd    i32.const [4054960] ; STRING "GF_ShowEvaluateUICount"
+00a0c7d2    i32.const [1605]
+00a0c7d5    call_indirect [0, 0]
+00a0c7d8    i32.const [4989072]
+00a0c7dd    i32.const [1]
+00a0c7df    i32.store8 [0, 0]
+00a0c7e2  end []
+00a0c7e3  i32.const [3941104]
+00a0c7e8  i32.load [2, 0]
+00a0c7eb  i32.const [1149]
+00a0c7ee  call_indirect [0, 0]
+00a0c7f1  i32.const [4054960] ; STRING "GF_ShowEvaluateUICount"
+00a0c7f6  i32.load [2, 0]
+00a0c7f9  local.get [0]
+00a0c7fb  i32.const [0]
+00a0c7fd  i32.const [25241] ; TABLE UserDataPrefs.SetInt
+00a0c801  call_indirect [5, 0]
+00a0c804  end []

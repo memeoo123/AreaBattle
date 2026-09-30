@@ -1,0 +1,32 @@
+; Original class: CommanderItem
+; Type4334.b}jR; wasmcode function 5150; offset=1766551 size=79
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001af498  i32.const [5008832]
+001af49d  i32.load8_u [0, 0]
+001af4a0  i32.eqz []
+001af4a1  if [-64]
+001af4a3    i32.const [4018288]
+001af4a8    call [900] ; 
+001af4ab    i32.const [5008832]
+001af4b0    i32.const [1]
+001af4b2    i32.store8 [0, 0]
+001af4b5  end []
+001af4b6  local.get [0]
+001af4b8  i32.load [2, 48]
+001af4bb  i32.const [0]
+001af4bd  call [943] ; Component.get_gameObject
+001af4c0  i32.const [1]
+001af4c2  i32.const [0]
+001af4c4  call [949] ; GameObject.SetActive
+001af4c7  i32.const [0]
+001af4c9  call [1143] ; GameModule.get_UI
+001af4cc  i32.const [4018288]
+001af4d1  i32.load [2, 0]
+001af4d4  call [1503] ; 
+001af4d7  local.get [0]
+001af4d9  i32.const [0]
+001af4db  call [12851] ; CommanderUI.SelectedCommanderItem
+001af4de  local.get [0]
+001af4e0  local.get [0]
+001af4e2  call [6200] ; CommanderItem.RefreshRedDot
+001af4e5  end []

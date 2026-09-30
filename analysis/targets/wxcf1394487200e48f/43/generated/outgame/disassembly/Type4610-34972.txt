@@ -1,0 +1,121 @@
+; Original class: LoginStateBase
+; Type4610.OnLeave; wasmcode function 3133; offset=972272 size=344
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+000ed5f1  i32.const [5001584]
+000ed5f6  i32.load8_u [0, 0]
+000ed5f9  i32.eqz []
+000ed5fa  if [-64]
+000ed5fc    i32.const [3929208]
+000ed601    call [900] ; 
+000ed604    i32.const [3947148]
+000ed609    call [900] ; 
+000ed60c    i32.const [3968584]
+000ed611    call [900] ; 
+000ed614    i32.const [4005860] ; METHOD LoginStateBase.NiwWX|
+000ed619    call [900] ; 
+000ed61c    i32.const [4005864] ; METHOD LoginStateBase.cMku
+000ed621    call [900] ; 
+000ed624    i32.const [3926996]
+000ed629    call [900] ; 
+000ed62c    i32.const [4060560] ; STRING "Leave '{0}' procedure."
+000ed631    call [900] ; 
+000ed634    i32.const [4054856] ; STRING "GF_HttpWebRequestError"
+000ed639    call [900] ; 
+000ed63c    i32.const [4054848] ; STRING "GF_HttpServerErrorCode"
+000ed641    call [900] ; 
+000ed644    i32.const [5001584]
+000ed649    i32.const [1]
+000ed64b    i32.store8 [0, 0]
+000ed64e  end []
+000ed64f  i32.const [3968584]
+000ed654  i32.load [2, 0]
+000ed657  drop []
+000ed658  i32.const [3947148]
+000ed65d  i32.load [2, 0]
+000ed660  call [903] ; 
+000ed663  local.set [1]
+000ed665  local.get [1]
+000ed667  local.get [0]
+000ed669  i32.const [4005864] ; METHOD LoginStateBase.cMku
+000ed66e  i32.load [2, 0]
+000ed671  i32.const [0]
+000ed673  call [1067] ; EventHandler..ctor
+000ed676  i32.const [4054856] ; STRING "GF_HttpWebRequestError"
+000ed67b  i32.load [2, 0]
+000ed67e  local.get [1]
+000ed680  i32.const [0]
+000ed682  call [1185] ; MsgDispatcher.RemoveEventListener
+000ed685  i32.const [3947148]
+000ed68a  i32.load [2, 0]
+000ed68d  call [903] ; 
+000ed690  local.set [1]
+000ed692  local.get [1]
+000ed694  local.get [0]
+000ed696  i32.const [4005860] ; METHOD LoginStateBase.NiwWX|
+000ed69b  i32.load [2, 0]
+000ed69e  i32.const [0]
+000ed6a0  call [1067] ; EventHandler..ctor
+000ed6a3  i32.const [4054848] ; STRING "GF_HttpServerErrorCode"
+000ed6a8  i32.load [2, 0]
+000ed6ab  local.get [1]
+000ed6ad  i32.const [0]
+000ed6af  call [1185] ; MsgDispatcher.RemoveEventListener
+000ed6b2  local.get [0]
+000ed6b4  call [962] ; 
+000ed6b7  local.set [1]
+000ed6b9  local.get [1]
+000ed6bb  local.set [2]
+000ed6bd  local.get [1]
+000ed6bf  i32.load [2, 0]
+000ed6c2  local.set [1]
+000ed6c4  local.get [2]
+000ed6c6  local.get [1]
+000ed6c8  i32.load [2, 400]
+000ed6cc  local.get [1]
+000ed6ce  i32.load [2, 396]
+000ed6d2  global.set [3]
+000ed6d4  global.get [3]
+000ed6d6  call_indirect [1, 0]
+000ed6d9  local.get [0]
+000ed6db  call [10748] ; Report.ReportLoginLeaveFsm
+000ed6de  i32.const [3926996]
+000ed6e3  i32.load [2, 0]
+000ed6e6  i32.const [1]
+000ed6e8  call [909] ; 
+000ed6eb  local.set [1]
+000ed6ed  local.get [0]
+000ed6ef  call [962] ; 
+000ed6f2  local.set [0]
+000ed6f4  local.get [0]
+000ed6f6  local.set [2]
+000ed6f8  local.get [0]
+000ed6fa  i32.load [2, 0]
+000ed6fd  local.set [0]
+000ed6ff  local.get [2]
+000ed701  local.get [0]
+000ed703  i32.load [2, 400]
+000ed707  local.get [0]
+000ed709  i32.load [2, 396]
+000ed70d  global.set [3]
+000ed70f  global.get [3]
+000ed711  call_indirect [1, 0]
+000ed714  local.set [0]
+000ed716  i32.const [4060560] ; STRING "Leave '{0}' procedure."
+000ed71b  i32.load [2, 0]
+000ed71e  local.get [0]
+000ed720  i32.const [0]
+000ed722  call [1015] ; String.Format
+000ed725  local.set [0]
+000ed727  local.get [1]
+000ed729  local.get [0]
+000ed72b  call [905] ; 
+000ed72e  local.get [1]
+000ed730  local.get [0]
+000ed732  i32.store [2, 16]
+000ed735  i32.const [3929208]
+000ed73a  i32.load [2, 0]
+000ed73d  call [901] ; 
+000ed740  local.get [1]
+000ed742  i32.const [0]
+000ed744  call [5181] ; CLog.LogProcedure
+000ed747  end []

@@ -1,0 +1,62 @@
+; Original class: x~bjQc
+; Type4504.]kdPV}; wasmcode function 8377; offset=4019354 size=145
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+003d549b  i32.const [0]
+003d549d  local.set [1]
+003d549f  i32.const [5009895]
+003d54a4  i32.load8_u [0, 0]
+003d54a7  i32.eqz []
+003d54a8  if [-64]
+003d54aa    i32.const [3989352]
+003d54af    call [900] ; 
+003d54b2    i32.const [4018416]
+003d54b7    call [900] ; 
+003d54ba    i32.const [5009895]
+003d54bf    i32.const [1]
+003d54c1    i32.store8 [0, 0]
+003d54c4  end []
+003d54c5  block [-64]
+003d54c7    local.get [0]
+003d54c9    local.get [0]
+003d54cb    call [2052] ; x~bjQc.get_Status
+003d54ce    i32.const [3]
+003d54d0    i32.lt_s []
+003d54d1    br_if [0]
+003d54d3    local.get [0]
+003d54d5    local.get [0]
+003d54d7    call [2052] ; x~bjQc.get_Status
+003d54da    i32.const [4]
+003d54dc    i32.gt_s []
+003d54dd    br_if [0]
+003d54df    local.get [0]
+003d54e1    i32.load8_u [0, 8]
+003d54e4    i32.eqz []
+003d54e5    br_if [0]
+003d54e7    local.get [0]
+003d54e9    local.get [0]
+003d54eb    call [3200] ; x~bjQc.get_Manager
+003d54ee    i32.load [2, 20]
+003d54f1    i32.load8_u [0, 8]
+003d54f4    i32.eqz []
+003d54f5    br_if [0]
+003d54f7    i32.const [0]
+003d54f9    call [1143] ; GameModule.get_UI
+003d54fc    i32.const [3989352]
+003d5501    i32.load [2, 0]
+003d5504    call [1032] ; 
+003d5507    i32.const [4018416]
+003d550c    i32.load [2, 0]
+003d550f    call [1367] ; 
+003d5512    drop []
+003d5513    local.get [0]
+003d5515    local.get [0]
+003d5517    call [3200] ; x~bjQc.get_Manager
+003d551a    i32.load [2, 20]
+003d551d    i32.const [0]
+003d551f    i32.store8 [0, 8]
+003d5522    i32.const [1]
+003d5524    local.set [1]
+003d5526  end []
+003d5527  local.get [1]
+003d5529  return []
+003d552a  end []

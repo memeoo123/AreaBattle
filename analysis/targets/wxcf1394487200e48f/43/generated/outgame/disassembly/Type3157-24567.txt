@@ -1,0 +1,41 @@
+; Original class: AdsManager
+; Type3157.afterVideo; wasmcode function 13322; offset=6447264 size=114
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006260a1  i32.const [5010559]
+006260a6  i32.load8_u [0, 0]
+006260a9  i32.eqz []
+006260aa  if [-64]
+006260ac    i32.const [3932476]
+006260b1    call [900] ; 
+006260b4    i32.const [5010559]
+006260b9    i32.const [1]
+006260bb    i32.store8 [0, 0]
+006260be  end []
+006260bf  i32.const [3932476]
+006260c4  i32.load [2, 0]
+006260c7  call [901] ; 
+006260ca  i32.const [5011000]
+006260cf  i32.load8_u [0, 0]
+006260d2  i32.eqz []
+006260d3  if [-64]
+006260d5    i32.const [3932476]
+006260da    call [900] ; 
+006260dd    i32.const [5011000]
+006260e2    i32.const [1]
+006260e4    i32.store8 [0, 0]
+006260e7  end []
+006260e8  i32.const [3932476]
+006260ed  i32.load [2, 0]
+006260f0  call [901] ; 
+006260f3  i32.const [3932476]
+006260f8  i32.load [2, 0]
+006260fb  i32.load [2, 92]
+006260fe  i32.const [0]
+00626100  i32.store8 [0, 28]
+00626103  local.get [0]
+00626105  local.get [1]
+00626107  i32.const [0]
+00626109  call [1682] ; Util.DataParse
+0062610c  local.get [0]
+0062610e  call [13328] ; AdsManager.DataParesAfterVide
+00626111  end []

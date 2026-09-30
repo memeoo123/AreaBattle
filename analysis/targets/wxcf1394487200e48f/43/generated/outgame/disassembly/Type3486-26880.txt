@@ -1,0 +1,46 @@
+; Original class: GlobalData
+; Type3486.set_LoginUserID; wasmcode function 4409; offset=1462280 size=139
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00165009  i32.const [4989091]
+0016500e  i32.load8_u [0, 0]
+00165011  i32.eqz []
+00165012  if [-64]
+00165014    i32.const [3937964]
+00165019    call [900] ; 
+0016501c    i32.const [3941104]
+00165021    call [900] ; 
+00165024    i32.const [4054892] ; STRING "GF_LoginUserID"
+00165029    call [900] ; 
+0016502c    i32.const [4034536] ; STRING ""
+00165031    call [900] ; 
+00165034    i32.const [4989091]
+00165039    i32.const [1]
+0016503b    i32.store8 [0, 0]
+0016503e  end []
+0016503f  i32.const [3937964]
+00165044  i32.load [2, 0]
+00165047  call [901] ; 
+0016504a  i32.const [3937964]
+0016504f  i32.load [2, 0]
+00165052  i32.load [2, 92]
+00165055  i32.load [2, 8]
+00165058  local.set [1]
+0016505a  i32.const [3941104]
+0016505f  i32.load [2, 0]
+00165062  call [901] ; 
+00165065  local.get [1]
+00165067  i32.const [4054892] ; STRING "GF_LoginUserID"
+0016506c  i32.load [2, 0]
+0016506f  i32.const [4034536] ; STRING ""
+00165074  i32.load [2, 0]
+00165077  i32.const [0]
+00165079  call [5522] ; UserDataPrefs.GetString
+0016507c  local.get [0]
+0016507e  i32.const [0]
+00165080  call [10753] ; ReportManager.ReportLoginUserIDChange
+00165083  i32.const [4054892] ; STRING "GF_LoginUserID"
+00165088  i32.load [2, 0]
+0016508b  local.get [0]
+0016508d  i32.const [0]
+0016508f  call [9651] ; UserDataPrefs.SetString
+00165092  end []

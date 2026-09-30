@@ -1,0 +1,147 @@
+; Original class: AppSetting
+; Type3375.get_ABStreamingAssetsPath; wasmcode function 13263; offset=6361930 size=423
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+0061134d  i32.const [5011374]
+00611352  i32.load8_u [0, 0]
+00611355  i32.eqz []
+00611356  if [-64]
+00611358    i32.const [3928176]
+0061135d    call [900] ; 
+00611360    i32.const [3934956]
+00611365    call [900] ; 
+00611368    i32.const [3927212]
+0061136d    call [900] ; 
+00611370    i32.const [4040180] ; STRING "/"
+00611375    call [900] ; 
+00611378    i32.const [5011374]
+0061137d    i32.const [1]
+0061137f    i32.store8 [0, 0]
+00611382  end []
+00611383  i32.const [3928176]
+00611388  i32.load [2, 0]
+0061138b  call [901] ; 
+0061138e  i32.const [5011425]
+00611393  i32.load8_u [0, 0]
+00611396  i32.eqz []
+00611397  if [-64]
+00611399    i32.const [3928176]
+0061139e    call [900] ; 
+006113a1    i32.const [5011425]
+006113a6    i32.const [1]
+006113a8    i32.store8 [0, 0]
+006113ab  end []
+006113ac  i32.const [3928176]
+006113b1  i32.load [2, 0]
+006113b4  call [901] ; 
+006113b7  block [-64]
+006113b9    i32.const [3928176]
+006113be    i32.load [2, 0]
+006113c1    i32.load [2, 92]
+006113c4    i32.load [2, 56]
+006113c7    i32.const [6]
+006113c9    i32.eq []
+006113ca    if [-64]
+006113cc      i32.const [3928176]
+006113d1      i32.load [2, 0]
+006113d4      call [901] ; 
+006113d7      i32.const [3927212]
+006113dc      i32.load [2, 0]
+006113df      i32.const [6]
+006113e1      call [909] ; 
+006113e4      local.set [0]
+006113e6      i32.const [3928176]
+006113eb      i32.load [2, 0]
+006113ee      call [901] ; 
+006113f1      i32.const [3928176]
+006113f6      i32.load [2, 0]
+006113f9      i32.load [2, 92]
+006113fc      i32.load [2, 16]
+006113ff      local.set [1]
+00611401      local.get [0]
+00611403      local.get [1]
+00611405      call [905] ; 
+00611408      local.get [0]
+0061140a      local.get [1]
+0061140c      i32.store [2, 16]
+0061140f      local.get [0]
+00611411      i32.const [4040180] ; STRING "/"
+00611416      i32.load [2, 0]
+00611419      call [905] ; 
+0061141c      local.get [0]
+0061141e      i32.const [4040180] ; STRING "/"
+00611423      i32.load [2, 0]
+00611426      i32.store [2, 20]
+00611429      br [1]
+0061142b    end []
+0061142c    i32.const [3927212]
+00611431    i32.load [2, 0]
+00611434    i32.const [6]
+00611436    call [909] ; 
+00611439    local.set [0]
+0061143b    i32.const [0]
+0061143d    call [2425] ; Application.get_streamingAssetsPath
+00611440    local.set [1]
+00611442    local.get [0]
+00611444    local.get [1]
+00611446    call [905] ; 
+00611449    local.get [0]
+0061144b    local.get [1]
+0061144d    i32.store [2, 16]
+00611450    local.get [0]
+00611452    i32.const [4040180] ; STRING "/"
+00611457    i32.load [2, 0]
+0061145a    call [905] ; 
+0061145d    local.get [0]
+0061145f    i32.const [4040180] ; STRING "/"
+00611464    i32.load [2, 0]
+00611467    i32.store [2, 20]
+0061146a    i32.const [3928176]
+0061146f    i32.load [2, 0]
+00611472    call [901] ; 
+00611475  end []
+00611476  local.get [0]
+00611478  call [2620] ; AppSetting.get_PlatformName
+0061147b  local.set [1]
+0061147d  local.get [0]
+0061147f  local.get [1]
+00611481  call [905] ; 
+00611484  local.get [0]
+00611486  local.get [1]
+00611488  i32.store [2, 24]
+0061148b  local.get [0]
+0061148d  i32.const [4040180] ; STRING "/"
+00611492  i32.load [2, 0]
+00611495  call [905] ; 
+00611498  local.get [0]
+0061149a  i32.const [4040180] ; STRING "/"
+0061149f  i32.load [2, 0]
+006114a2  i32.store [2, 28]
+006114a5  local.get [0]
+006114a7  call [1318] ; AppSetting.get_MineGameName
+006114aa  local.set [1]
+006114ac  i32.const [3934956]
+006114b1  i32.load [2, 0]
+006114b4  call [901] ; 
+006114b7  local.get [1]
+006114b9  i32.const [0]
+006114bb  call [5952] ; KeywordBuild.GetValue
+006114be  local.set [1]
+006114c0  local.get [0]
+006114c2  local.get [1]
+006114c4  call [905] ; 
+006114c7  local.get [0]
+006114c9  local.get [1]
+006114cb  i32.store [2, 32]
+006114ce  local.get [0]
+006114d0  i32.const [4040180] ; STRING "/"
+006114d5  i32.load [2, 0]
+006114d8  call [905] ; 
+006114db  local.get [0]
+006114dd  i32.const [4040180] ; STRING "/"
+006114e2  i32.load [2, 0]
+006114e5  i32.store [2, 36]
+006114e8  local.get [0]
+006114ea  i32.const [0]
+006114ec  call [1024] ; String.Concat
+006114ef  return []
+006114f0  end []

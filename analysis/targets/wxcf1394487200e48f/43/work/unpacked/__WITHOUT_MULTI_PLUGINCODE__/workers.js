@@ -1,0 +1,5 @@
+
+	define("workers/response/index.js", function(require, module, exports, window,document,frames,self,location,navigator,localStorage,history,Caches,screen,alert,confirm,prompt,XMLHttpRequest,WebSocket,Reporter,webkit,WeixinJSCore){ 			
+"use strict";var e=0,r=1,a=worker,t=a.createSharedArrayBuffer,o=a.getFileSystemManager,s=o?o():null;worker.onMessage((function(a){var o,i=a.type,f=a.payload;if(i===r){var n=f.filePath,p=f.data,l=p;if(f.isSharedBuffer&&(l=p.buffer),!s)return void console.error("getFileSystemManager不存在");s.writeFile({filePath:n,data:l,success:function(){worker.postMessage({type:r,payload:{isok:!0,filePath:n}})},fail:function(e){worker.postMessage({type:r,payload:{isok:!1,filePath:n,err:e}})}})}if(i===e){var u=f.systemInfo,d=u.platform,y=u.version,c="android"===d.toLocaleLowerCase(),g=(o="8.0.18",y.split(".").map((function(e){return e.padStart(2,"0")})).join("")>=o.split(".").map((function(e){return e.padStart(2,"0")})).join(""));worker.postMessage({type:e,payload:{supportWorkerFs:c&&!!s&&g,supportSharedBuffer:c&&!!t}})}})); 
+ 			});
+ 	

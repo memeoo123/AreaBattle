@@ -1,0 +1,23 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.IsSupportFeedPlay; wasmcode1 function 68410; offset=21658342 size=59
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+014a7ae7  i32.const [5006740]
+014a7aec  i32.load8_u [0, 0]
+014a7aef  i32.eqz []
+014a7af0  if [-64]
+014a7af2    i32.const [3938284]
+014a7af7    i32.const [1605]
+014a7afa    call_indirect [0, 0]
+014a7afd    i32.const [5006740]
+014a7b02    i32.const [1]
+014a7b04    i32.store8 [0, 0]
+014a7b07  end []
+014a7b08  i32.const [3938284]
+014a7b0d  i32.load [2, 0]
+014a7b10  i32.const [1149]
+014a7b13  call_indirect [0, 0]
+014a7b16  i32.const [0]
+014a7b18  i32.const [64691] ; TABLE SDKHandle.IsSupportFeedPlay
+014a7b1c  call_indirect [2, 0]
+014a7b1f  return []
+014a7b20  end []

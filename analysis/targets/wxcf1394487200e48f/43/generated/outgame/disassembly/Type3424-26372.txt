@@ -1,0 +1,28 @@
+; Original class: G~
+; Type3424.DestroyAudioSource; wasmcode function 5563; offset=1945147 size=67
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001dae3c  i32.const [5011692]
+001dae41  i32.load8_u [0, 0]
+001dae44  i32.eqz []
+001dae45  if [-64]
+001dae47    i32.const [3936516]
+001dae4c    call [900] ; 
+001dae4f    i32.const [5011692]
+001dae54    i32.const [1]
+001dae56    i32.store8 [0, 0]
+001dae59  end []
+001dae5a  i32.const [3936516]
+001dae5f  i32.load [2, 0]
+001dae62  call [901] ; 
+001dae65  local.get [0]
+001dae67  i32.const [0]
+001dae69  i32.const [0]
+001dae6b  call [946] ; Object.op_Inequality
+001dae6e  if [-64]
+001dae70    local.get [0]
+001dae72    i32.const [0]
+001dae74    call [943] ; Component.get_gameObject
+001dae77    i32.const [0]
+001dae79    call [3346] ; GlobalUnityEngineAPI.Destroy
+001dae7c  end []
+001dae7d  end []

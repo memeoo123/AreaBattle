@@ -1,0 +1,14 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.Authorize; wasmcode1 function 68434; offset=21661628 size=26
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+014a87bd  local.get [1]
+014a87bf  i32.const [64797] ; TABLE WX_Handler.get_Instance
+014a87c3  call_indirect [2, 0]
+014a87c6  drop []
+014a87c7  local.get [1]
+014a87c9  local.get [1]
+014a87cb  local.get [2]
+014a87cd  local.get [3]
+014a87cf  local.get [1]
+014a87d1  call [18484] ; WX_Handler.Authorize
+014a87d5  end []

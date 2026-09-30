@@ -1,0 +1,37 @@
+; Original class: Soldier
+; Type4222.get_transform; wasmcode function 3272; offset=1000418 size=85
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000f43e3  i32.const [5007178]
+000f43e8  i32.load8_u [0, 0]
+000f43eb  i32.eqz []
+000f43ec  if [-64]
+000f43ee    i32.const [3936516]
+000f43f3    call [900] ; 
+000f43f6    i32.const [5007178]
+000f43fb    i32.const [1]
+000f43fd    i32.store8 [0, 0]
+000f4400  end []
+000f4401  local.get [0]
+000f4403  i32.load [2, 56]
+000f4406  local.set [1]
+000f4408  i32.const [3936516]
+000f440d  i32.load [2, 0]
+000f4410  call [901] ; 
+000f4413  local.get [1]
+000f4415  i32.const [0]
+000f4417  i32.const [0]
+000f4419  call [946] ; Object.op_Inequality
+000f441c  if [-64]
+000f441e    local.get [0]
+000f4420    i32.load [2, 56]
+000f4423    i32.const [0]
+000f4425    call [1008] ; GameObject.get_transform
+000f4428    return []
+000f4429  end []
+000f442a  local.get [0]
+000f442c  i32.const [1]
+000f442e  local.get [0]
+000f4430  call [2658] ; Soldier.Clear
+000f4433  i32.const [0]
+000f4435  return []
+000f4436  end []

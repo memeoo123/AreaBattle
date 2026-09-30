@@ -1,0 +1,68 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.pNYa; wasmcode1 function 24286; offset=9422361 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008fc61c  i32.const [5007402]
+008fc621  i32.load8_u [0, 0]
+008fc624  i32.eqz []
+008fc625  if [-64]
+008fc627    i32.const [3953576]
+008fc62c    i32.const [1605]
+008fc62f    call_indirect [0, 0]
+008fc632    i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+008fc637    i32.const [1605]
+008fc63a    call_indirect [0, 0]
+008fc63d    i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+008fc642    i32.const [1605]
+008fc645    call_indirect [0, 0]
+008fc648    i32.const [3940924]
+008fc64d    i32.const [1605]
+008fc650    call_indirect [0, 0]
+008fc653    i32.const [4106228] ; STRING "资源下载失败，是否重新下载？"
+008fc658    i32.const [1605]
+008fc65b    call_indirect [0, 0]
+008fc65e    i32.const [4034536] ; STRING ""
+008fc663    i32.const [1605]
+008fc666    call_indirect [0, 0]
+008fc669    i32.const [5007402]
+008fc66e    i32.const [1]
+008fc670    i32.store8 [0, 0]
+008fc673  end []
+008fc674  i32.const [3953576]
+008fc679  i32.load [2, 0]
+008fc67c  i32.const [10272]
+008fc680  call_indirect [2, 0]
+008fc683  local.set [1]
+008fc685  i32.const [3940924]
+008fc68a  i32.load [2, 0]
+008fc68d  i32.const [109007]
+008fc691  call_indirect [2, 0]
+008fc694  local.set [2]
+008fc696  local.get [2]
+008fc698  local.get [0]
+008fc69a  i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+008fc69f  i32.load [2, 0]
+008fc6a2  i32.const [0]
+008fc6a4  i32.const [54239] ; TABLE UnityAction..ctor
+008fc6a8  call_indirect [6, 0]
+008fc6ab  i32.const [3940924]
+008fc6b0  i32.load [2, 0]
+008fc6b3  i32.const [109007]
+008fc6b7  call_indirect [2, 0]
+008fc6ba  local.set [3]
+008fc6bc  local.get [3]
+008fc6be  local.get [0]
+008fc6c0  i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+008fc6c5  i32.load [2, 0]
+008fc6c8  i32.const [0]
+008fc6ca  i32.const [54239] ; TABLE UnityAction..ctor
+008fc6ce  call_indirect [6, 0]
+008fc6d1  local.get [1]
+008fc6d3  i32.const [4106228] ; STRING "资源下载失败，是否重新下载？"
+008fc6d8  i32.load [2, 0]
+008fc6db  local.get [2]
+008fc6dd  local.get [3]
+008fc6df  i32.const [4034536] ; STRING ""
+008fc6e4  i32.load [2, 0]
+008fc6e7  i32.const [0]
+008fc6e9  call [3228] ; UIControl.ShowCommonTip
+008fc6ec  end []

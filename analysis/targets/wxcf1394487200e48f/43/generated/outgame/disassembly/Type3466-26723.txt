@@ -1,0 +1,27 @@
+; Original class: rvd
+; Type3466.nQx¿; wasmcode1 function 15559; offset=5925187 size=67
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005a6944  i32.const [4988976]
+005a6949  i32.load8_u [0, 0]
+005a694c  i32.eqz []
+005a694d  if [-64]
+005a694f    i32.const [4078676] ; STRING "WeDoBest"
+005a6954    i32.const [1605]
+005a6957    call_indirect [0, 0]
+005a695a    i32.const [4988976]
+005a695f    i32.const [1]
+005a6961    i32.store8 [0, 0]
+005a6964  end []
+005a6965  i32.const [0]
+005a6967  i32.const [2293] ; TABLE FileManager.get_Instance
+005a696a  call_indirect [2, 0]
+005a696d  local.get [0]
+005a696f  local.get [1]
+005a6971  i32.const [0]
+005a6973  call [28314] ; FileManager.ReadFilePartWithFileStream
+005a6977  i32.const [4078676] ; STRING "WeDoBest"
+005a697c  i32.load [2, 0]
+005a697f  i32.const [0]
+005a6981  call [10846] ; G Rc.¼¸yj½
+005a6984  return []
+005a6985  end []

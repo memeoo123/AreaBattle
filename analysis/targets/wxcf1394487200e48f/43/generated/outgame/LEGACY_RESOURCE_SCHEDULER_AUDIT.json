@@ -1,0 +1,57 @@
+{
+  "atUtc": "2026-09-30T03:07:30.372469+00:00",
+  "status": "partial-subsystem-verified",
+  "sourceMethods": [
+    29880,
+    29881,
+    29882,
+    29883,
+    29884,
+    29885,
+    29886,
+    29887,
+    29889,
+    29890,
+    29891,
+    29892,
+    29893,
+    29905,
+    29842,
+    29843,
+    29844,
+    29845,
+    29846,
+    29848
+  ],
+  "metadataEvidence": "legacy-resource-generics.json",
+  "recoveredBehavior": [
+    "Initial request capacity100; modern flag or idle gate skips pump",
+    "LoadPrefab appends .prefab; LoadAsset calls route check then current-culture lower + .unity3d; Load calls route check again",
+    "Loader cache keyed by bundle path; complete delegate combines; object[] arguments replaced; newLoader HashSet coalesces starts",
+    "Snapshot new-loader set, clear it, register ALL snapshot loaders as current before calling Start(false)",
+    "FIFO bundle queue while capacity positive; skip IsComplete loaders; decrement capacity AFTER LoadBundle returns",
+    "Complete increments capacity even for cached completion and removes current loader; clears loading flag only if both sets empty",
+    "Error warning then identical module completion; ResLoader invokes and clears delegates before module accounting",
+    "Exceptions propagate; no invented finally/slot release or deduplication"
+  ],
+  "baseLoaderEvidence": {
+    "isComplete": "(State & -2) == 2",
+    "id": "shared static counter advanced in constructor and base Start",
+    "callback": "LoadAssetCompleteHandler(ResourcesInfo)",
+    "progress": "LoadProgressHandler(float)",
+    "arguments": "object[]"
+  },
+  "implementationDifference": "Snapshot uses a fresh managed List instead of original generic list-pool Get/Release; enumeration and mutation order preserved. No claim of identical allocation behavior.",
+  "validation": {
+    "integratedChecks": 614,
+    "newTests": [
+      "outgame-legacy-resource-scheduler-coalescing-and-reentrant-completion",
+      "outgame-legacy-resource-capacity-errors-and-callback-failure"
+    ],
+    "nativePlayModeRun": false
+  },
+  "limitations": [
+    "Tests use explicit LegacyLoaderProbe for bundle acquisition; AssetResLoader and ResourcesModule initialization/firstpack not yet composed.",
+    "No native bundle transport or production account/menu bootstrap claim."
+  ]
+}

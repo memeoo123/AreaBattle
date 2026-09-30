@@ -1,0 +1,21 @@
+; Original class: InputManager
+; Type3603..ctor; wasmcode function 19052; offset=8546875 size=52
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00826a3c  i32.const [4989978]
+00826a41  i32.load8_u [0, 0]
+00826a44  i32.eqz []
+00826a45  if [-64]
+00826a47    i32.const [4034536] ; STRING ""
+00826a4c    call [900] ; 
+00826a4f    i32.const [4989978]
+00826a54    i32.const [1]
+00826a56    i32.store8 [0, 0]
+00826a59  end []
+00826a5a  local.get [0]
+00826a5c  i32.const [4034536] ; STRING ""
+00826a61  i32.load [2, 0]
+00826a64  i32.store [2, 48]
+00826a67  local.get [0]
+00826a69  i32.const [0]
+00826a6b  call [1226] ; RectTransform..ctor
+00826a6e  end []

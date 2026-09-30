@@ -1,0 +1,60 @@
+; Original class: DAUAdsAdapter
+; Type7488.reportVideoComplete; wasmcode function 12693; offset=6112062 size=175
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d433f  i32.const [5004963]
+005d4344  i32.load8_u [0, 0]
+005d4347  i32.eqz []
+005d4348  if [-64]
+005d434a    i32.const [3930112]
+005d434f    call [900] ; 
+005d4352    i32.const [3984752]
+005d4357    call [900] ; 
+005d435a    i32.const [4036684] ; STRING " 广告播放完成 uptype=16 "
+005d435f    call [900] ; 
+005d4362    i32.const [3943536]
+005d4367    call [900] ; 
+005d436a    i32.const [5004963]
+005d436f    i32.const [1]
+005d4371    i32.store8 [0, 0]
+005d4374  end []
+005d4375  local.get [0]
+005d4377  i32.load [2, 8]
+005d437a  i32.const [4036684] ; STRING " 广告播放完成 uptype=16 "
+005d437f  i32.load [2, 0]
+005d4382  i32.const [0]
+005d4384  call [921] ; String.Concat
+005d4387  i32.const [0]
+005d4389  call [999] ; XYXLOG.Log
+005d438c  i32.const [3943536]
+005d4391  i32.load [2, 0]
+005d4394  call [903] ; 
+005d4397  local.set [1]
+005d4399  local.get [1]
+005d439b  i32.const [0]
+005d439d  call [2456] ; ads_up_event..ctor
+005d43a0  local.get [0]
+005d43a2  local.get [1]
+005d43a4  local.get [0]
+005d43a6  call [3642] ; DAUAdsAdapter.setInfo
+005d43a9  local.get [1]
+005d43ab  i64.const [4625196817309499392]
+005d43b6  i64.store [3, 80]
+005d43b9  i32.const [3930112]
+005d43be  i32.load [2, 0]
+005d43c1  call [901] ; 
+005d43c4  local.get [0]
+005d43c6  call [2513] ; DAUEventConstant.get_Instance
+005d43c9  local.get [1]
+005d43cb  local.get [0]
+005d43cd  call [2512] ; DAUEventConstant.reportSever
+005d43d0  i32.const [3984752]
+005d43d5  i32.load [2, 0]
+005d43d8  call [1203] ; 
+005d43db  i32.const [0]
+005d43dd  call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+005d43e0  local.get [0]
+005d43e2  local.get [0]
+005d43e4  call [3386] ; DAUAdsAdapter.getNewReportParam
+005d43e7  i32.const [0]
+005d43e9  call [10718] ; ReporterSDK.NewReportDBTAdVideoComplete
+005d43ec  end []

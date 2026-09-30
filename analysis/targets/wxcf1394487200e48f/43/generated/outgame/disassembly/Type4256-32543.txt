@@ -1,0 +1,36 @@
+; Original class: ToolControl
+; Type4256.GetItemNum; wasmcode function 3512; offset=1096261 size=84
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0010ba46  i32.const [5009112]
+0010ba4b  i32.load8_u [0, 0]
+0010ba4e  i32.eqz []
+0010ba4f  if [-64]
+0010ba51    i32.const [3953432]
+0010ba56    call [900] ; 
+0010ba59    i32.const [5009112]
+0010ba5e    i32.const [1]
+0010ba60    i32.store8 [0, 0]
+0010ba63  end []
+0010ba64  local.get [1]
+0010ba66  i32.const [8001]
+0010ba69  i32.ge_s []
+0010ba6a  if [-64]
+0010ba6c    i32.const [3953432]
+0010ba71    i32.load [2, 0]
+0010ba74    call [935] ; 
+0010ba77    local.get [1]
+0010ba79    i32.const [0]
+0010ba7b    i32.const [13676] ; TABLE ItemModuleControl.GetItemNum
+0010ba7f    global.set [3]
+0010ba81    i32.const [13676] ; TABLE ItemModuleControl.GetItemNum
+0010ba85    call_indirect [32, 0]
+0010ba88    i32.wrap_i64 []
+0010ba89    return []
+0010ba8a  end []
+0010ba8b  i32.const [0]
+0010ba8d  call [1438] ; GameModule.get_LocalData
+0010ba90  local.get [1]
+0010ba92  i32.const [0]
+0010ba94  call [11484] ; LocalDataManager.GetToolNum
+0010ba97  return []
+0010ba98  end []

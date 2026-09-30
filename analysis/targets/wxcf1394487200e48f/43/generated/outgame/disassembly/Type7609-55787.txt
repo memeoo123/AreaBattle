@@ -1,0 +1,34 @@
+; Original class: XYXLogin
+; Type7609..cctor; wasmcode function 14658; offset=7199086 size=99
+; signature={'args': [127], 'returns': []}; localGroups=[]
+006dd96f  i32.const [5005977]
+006dd974  i32.load8_u [0, 0]
+006dd977  i32.eqz []
+006dd978  if [-64]
+006dd97a    i32.const [3942528]
+006dd97f    call [900] ; 
+006dd982    i32.const [4068264] ; STRING "SDK_LOGIN"
+006dd987    call [900] ; 
+006dd98a    i32.const [5005977]
+006dd98f    i32.const [1]
+006dd991    i32.store8 [0, 0]
+006dd994  end []
+006dd995  i32.const [3942528]
+006dd99a  i32.load [2, 0]
+006dd99d  i32.load [2, 92]
+006dd9a0  i32.const [0]
+006dd9a2  i32.store8 [0, 4]
+006dd9a5  i32.const [3942528]
+006dd9aa  i32.load [2, 0]
+006dd9ad  i32.load [2, 92]
+006dd9b0  i32.const [4068264] ; STRING "SDK_LOGIN"
+006dd9b5  i32.load [2, 0]
+006dd9b8  i32.store [2, 8]
+006dd9bb  i32.const [3942528]
+006dd9c0  i32.load [2, 0]
+006dd9c3  i32.load [2, 92]
+006dd9c6  drop []
+006dd9c7  i32.const [4068264] ; STRING "SDK_LOGIN"
+006dd9cc  i32.load [2, 0]
+006dd9cf  drop []
+006dd9d0  end []

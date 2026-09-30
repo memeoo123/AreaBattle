@@ -1,0 +1,91 @@
+{
+  "atUtc": "2026-09-30T11:36:58.438897+00:00",
+  "status": "singleton-owner-and-record-startup-verified-full-production-composition-pending",
+  "sourceEvidence": "GLOBAL_ITEM_SLOT_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T11:36:58.438897+00:00",
+    "scope": "GlobalItemManager singleton ownership, lazy legacy configuration, source constructor snapshots and actual ItemManager record restart chain",
+    "checksPassed": 1087,
+    "newIntegratedChecks": 10,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full production Main/product-service composition, native update loop, login/SDK or complete outgame Player"
+  },
+  "checks": [
+    {
+      "id": "source-global-slot-config-getter-empty-global-getter-initializes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-published-before-config-reentrant-access",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-config-failure-retains-partial-owner-without-retry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-constructor-failure-never-publishes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-rereads-null-after-release-during-config",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-rereads-replacement-after-reentrant-release",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-release-failure-prefix-and-current-config",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-preinit-reward-retains-mutation-before-null-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-manager-startup-statistics-persistence-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "source-global-slot-manager-download-waits-for-real-callback",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "implementedLifecycleControllers": 14,
+  "remainingLifecycleControllers": 24,
+  "findings": [
+    "GlobalItemManager.get_Instance34590/f2040 constructs original4542, publishes static singleton, then resolves current ItemConfigMgr and invokes InitMgr. The final return rereads the current static slot, so callbacks may release or replace it. Configuration failure retains published owner and partial tables; a later getter does not retry while the slot is nonnull. Constructor failure never publishes.",
+    "Constructor34570/f12040 sets statistics id10020 at offset20 and constructs only Products32 and Items36. Snapshot40/44, Data28, rewardHost24, update handle8 and dirty72 are otherwise default. Removed eager ItemSnapshot/ProductSnapshot allocation from OutgameGlobalItemIndexes. InitializeProducts34586 and InitializeItems34587 remain responsible for creating snapshots. Existing snapshot-only fixtures now explicitly initialize them. Pre-init AddRewardsModel now retains live insertion/statistics then throws at null snapshot, matching source failure prefix.",
+    "OutgameGlobalItemSlot retains the lifecycle/reward pair representing one original owner; constructs through an explicit lifecycle factory, publishes, initializes actual legacy config, and returns current slot. No hidden record initialization or fake update loop. BindEntities and CreateFactory resolve current config/global/message/report dependencies, while full virtual/package/clock/product providers remain owned by their corresponding composition.",
+    "LifecycleHost composes actual current config.Dispose and owner-slot clear with externally supplied update registration/removal and current MsgDispatcher. Statistics registration sends object[]{int eventId,Func<object[],long> query}; original34588 array length2/slots16,20 verified. Release34577 failure order is remove->clear nullable handle->current config.Dispose->clear global; stale owner release clears replacement slots too.",
+    "Actual ItemManager.OnInit local callback now verified via lazy owner getter: four original tables load before record filtering; InitializeWithHost sets real manager host; time/update/index initialization precedes registration. Gold factory/model reward->original Int64 persistence->same manager release/re-init and independent manager restart verified. The test storage host explicitly supplies login10 only as a test precondition, not production login. Server download branch leaves config/global slots empty until explicit callback.",
+    "Ten new checks cover constructor defaults, source getter initialization, recursive access, partial config failure/no retry, constructor failure, null/replacement current return, stale release, release failure prefix, pre-init reward null snapshot, actual manager save/restart and server callback wait. Existing package/local Tool chain suite remains passing. This batch uses controlled update registration callbacks, not a new native UpdateManager/Player run."
+  ],
+  "remaining": [
+    "Compose actual GlobalItemManager product update/reset/price providers with shared config and original legacy resource reader; bind the restored lazy global slot, ItemManager, entity services and data-pool registration into production startup. Then full UserInfo/CommanderUI/Dice/report owners,24 controllers, Main/account/menu/business and full outgame Player. Do not redo getter34590 or eager-allocate snapshots.",
+    "Full production Main/account/data-pool registration and product update/reset/price/config provider composition are still pending. The slot accepts an explicit lifecycle constructor; its focused tests do not substitute a production product-update implementation.",
+    "Full UserInfo/CommanderUI/Dice/report owners, 24 remaining lifecycle controllers and full outgame business/return flows remain incomplete.",
+    "No new native PlayMode, Player build or device validation. Previous native audio/resource18 remains historical. SDK delivery and original time-seeded RNG replay are not claimed."
+  ],
+  "disassembledMethodMapCount": 5170,
+  "artifacts": {
+    "integratedLog": "analysis/global-item-slot-integrated.log"
+  }
+}

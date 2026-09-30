@@ -1,0 +1,33 @@
+; Original class: XYXLogin
+; Type7609.<LoginStatic>g__LoginDataCallBack|5_0; wasmcode function 14659; offset=7199186 size=84
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006dd9d3  i32.const [5005978]
+006dd9d8  i32.load8_u [0, 0]
+006dd9db  i32.eqz []
+006dd9dc  if [-64]
+006dd9de    i32.const [3942528]
+006dd9e3    call [900] ; 
+006dd9e6    i32.const [4046648] ; STRING "Callback Call_loginCallback"
+006dd9eb    call [900] ; 
+006dd9ee    i32.const [5005978]
+006dd9f3    i32.const [1]
+006dd9f5    i32.store8 [0, 0]
+006dd9f8  end []
+006dd9f9  i32.const [3942528]
+006dd9fe  i32.load [2, 0]
+006dda01  call [901] ; 
+006dda04  i32.const [4046648] ; STRING "Callback Call_loginCallback"
+006dda09  i32.load [2, 0]
+006dda0c  local.get [0]
+006dda0e  call [4180] ; XYXLogin.LoginLog
+006dda11  local.get [0]
+006dda13  local.get [0]
+006dda15  call [13000] ; CallFrameworkAdapter.Call_loginCallback
+006dda18  local.get [0]
+006dda1a  i32.const [1]
+006dda1c  i32.eq []
+006dda1d  if [-64]
+006dda1f    local.get [0]
+006dda21    call [7738] ; GuiyinTools.PostFirstLogin
+006dda24  end []
+006dda25  end []

@@ -1,0 +1,18 @@
+; Original class: UIControl
+; Type4296.CloseLoadingUI; wasmcode function 6924; offset=2623567 size=32
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00280850  local.get [0]
+00280852  i32.load [2, 72]
+00280855  local.set [1]
+00280857  local.get [1]
+00280859  if [-64]
+0028085b    local.get [1]
+0028085d    i32.const [0]
+0028085f    call [11024] ; Proj_xqzdLoadingUI.Close
+00280862  end []
+00280863  local.get [0]
+00280865  i32.const [72]
+00280868  i32.add []
+00280869  i32.const [0]
+0028086b  i32.store [2, 0]
+0028086e  end []

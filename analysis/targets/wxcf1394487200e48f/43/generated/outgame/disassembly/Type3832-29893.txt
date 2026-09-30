@@ -1,0 +1,39 @@
+; Original class: ResourcesModule
+; Type3832.LoadError; wasmcode1 function 23542; offset=9158350 size=106
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008bbecf  i32.const [4988238]
+008bbed4  i32.load8_u [0, 0]
+008bbed7  i32.eqz []
+008bbed8  if [-64]
+008bbeda    i32.const [3930676]
+008bbedf    i32.const [1605]
+008bbee2    call_indirect [0, 0]
+008bbee5    i32.const [4048044] ; STRING "Cant load AB : "
+008bbeea    i32.const [1605]
+008bbeed    call_indirect [0, 0]
+008bbef0    i32.const [4988238]
+008bbef5    i32.const [1]
+008bbef7    i32.store8 [0, 0]
+008bbefa  end []
+008bbefb  i32.const [4048044] ; STRING "Cant load AB : "
+008bbf00  i32.load [2, 0]
+008bbf03  local.get [1]
+008bbf05  i32.load [2, 28]
+008bbf08  i32.const [0]
+008bbf0a  i32.const [1476] ; TABLE String.Concat
+008bbf0d  call_indirect [3, 0]
+008bbf10  local.set [2]
+008bbf12  i32.const [3930676]
+008bbf17  i32.load [2, 0]
+008bbf1a  i32.const [1149]
+008bbf1d  call_indirect [0, 0]
+008bbf20  local.get [2]
+008bbf22  i32.const [0]
+008bbf24  i32.const [1260] ; TABLE Debug.LogWarning
+008bbf27  call_indirect [4, 0]
+008bbf2a  local.get [0]
+008bbf2c  local.get [1]
+008bbf2e  local.get [1]
+008bbf30  i32.const [27359] ; TABLE ResourcesModule.LoadComplete
+008bbf34  call_indirect [5, 0]
+008bbf37  end []

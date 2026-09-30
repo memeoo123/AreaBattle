@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.RemoveMulTouchEndListener; wasmcode1 function 59943; offset=19451635 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128cef4  i32.const [4989961]
+0128cef9  i32.load8_u [0, 0]
+0128cefc  i32.eqz []
+0128cefd  if [-64]
+0128ceff    i32.const [3934348]
+0128cf04    i32.const [1605]
+0128cf07    call_indirect [0, 0]
+0128cf0a    i32.const [4989961]
+0128cf0f    i32.const [1]
+0128cf11    i32.store8 [0, 0]
+0128cf14  end []
+0128cf15  i32.const [3934348]
+0128cf1a  i32.load [2, 0]
+0128cf1d  i32.const [1149]
+0128cf20  call_indirect [0, 0]
+0128cf23  local.get [0]
+0128cf25  i32.const [25515] ; TABLE InputManager.get_Instance
+0128cf29  call_indirect [2, 0]
+0128cf2c  local.get [0]
+0128cf2e  local.get [0]
+0128cf30  call [26984] ; InputManager.½^®Rd
+0128cf34  end []

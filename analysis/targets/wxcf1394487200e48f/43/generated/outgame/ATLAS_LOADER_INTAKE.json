@@ -1,0 +1,21 @@
+{
+  "status": "source-entry-traced-not-implemented",
+  "source": [
+    "disassembly/Type2923-22810.txt",
+    "disassembly/Type2923-22811.txt",
+    "disassembly/Type2923-22842.txt",
+    "disassembly/Type2923-22819.txt"
+  ],
+  "findings": [
+    "Constructor autoLoadAtlas=true",
+    "OnEnable/OnDisable each read current AppSetting static36; only legacy false subscribes/unsubscribes SpriteAtlasManager.atlasRequested",
+    "Request source static IsDisabled controls lookup branch; disabled invokes supplied callback with null atlas",
+    "Legacy cache key lowercases UIAtlas/tag.spriteatlas.unity3d, lookup helper22833",
+    "Missing atlas with autoLoad stores callback in shared instance field16, then ResLoadHelper.LoadAsset(UIAtlas/tag.spriteatlas) with closure; callback/cache helper still to inspect"
+  ],
+  "remaining": [
+    "Helper22833 and closure pointed by4026764",
+    "Source mode/runtime owner binding",
+    "Actual atlas transport and cache registration"
+  ]
+}

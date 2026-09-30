@@ -1,0 +1,26 @@
+; Original class: MineGameMain
+; Type3974.lZkOT; wasmcode function 11335; offset=5575288 size=62
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00551279  i32.const [5010132]
+0055127e  i32.load8_u [0, 0]
+00551281  i32.eqz []
+00551282  if [-64]
+00551284    i32.const [3947096]
+00551289    call [900] ; 
+0055128c    i32.const [5010132]
+00551291    i32.const [1]
+00551293    i32.store8 [0, 0]
+00551296  end []
+00551297  i32.const [3947096]
+0055129c  i32.load [2, 0]
+0055129f  call [903] ; 
+005512a2  local.set [0]
+005512a4  local.get [0]
+005512a6  i32.const [0]
+005512a8  i32.store [2, 8]
+005512ab  local.get [0]
+005512ad  local.get [1]
+005512af  i32.store [2, 16]
+005512b2  local.get [0]
+005512b4  return []
+005512b5  end []

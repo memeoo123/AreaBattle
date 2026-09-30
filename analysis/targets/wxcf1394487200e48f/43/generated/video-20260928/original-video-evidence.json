@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43",
+    "normalLevel": 871,
+    "layout": 120
+  },
+  "atUtc": "2026-09-28T10:36:21.598227+00:00",
+  "source": {
+    "path": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\evidence\\original-reference\\video-20260928\\original.mp4",
+    "sha256": "439e6d33828fb2b98be78f2085ce28dbbbcc06f4706be8e9f0ac5ba2a5493bd0",
+    "bytes": 114604266,
+    "durationSeconds": 90.52,
+    "dimensions": [
+      720,
+      1334
+    ],
+    "decodedFrames": 5421,
+    "gameViewport": {
+      "x": 0,
+      "y": 54,
+      "width": 720,
+      "height": 1280,
+      "status": "inferred from video titlebar and portrait viewport"
+    },
+    "suppliedPath": "C:/Users/jiachengwei/Desktop/AreaBattle/QQ20260928-163219-HD.mp4",
+    "initialState": "Already paused, with blue tower scores19/19; not a fresh entry recording.",
+    "userSkillLevelAnswer": "Unknown; no original account profile was accessed."
+  },
+  "timeline": [
+    {
+      "id": "resume",
+      "ptsApprox": 0.806,
+      "status": "visual-and-audio-supported",
+      "detail": "Initial paused UI closes; source button sound2001 has correlation0.50613. Not exact engine input time."
+    },
+    {
+      "id": "ice",
+      "frame": 2160,
+      "pts": 36.08522,
+      "stockBefore": 27,
+      "stockAfter": 26,
+      "detail": "Enemy towers3/4/6/7 frozen; blue towers1/2/5 unaffected."
+    },
+    {
+      "id": "ice-end",
+      "ptsInterval": [
+        50.05872,
+        50.09187
+      ],
+      "status": "visual-interval-and-audio-supported",
+      "detail": "Ice skill active blue button outline disappears across these frames; ice geometry continues melting. Sound2018 candidate at50.086, correlation0.0497."
+    },
+    {
+      "id": "fire",
+      "frame": 3137,
+      "pts": 52.37694,
+      "stockBefore": 26,
+      "stockAfter": 25,
+      "detail": "Fireballs launch from the fire button; both friendly healing and enemy hits are visible. Level unresolved."
+    },
+    {
+      "id": "lightning",
+      "beforeFrame": 3731,
+      "frame": 3732,
+      "pts": 62.29858,
+      "stockBefore": 25,
+      "stockAfter": 24,
+      "tower": 7,
+      "scoreBefore": 45,
+      "scoreAfter": 0,
+      "campBefore": "green",
+      "campAfter": "green",
+      "detail": "Tower model downgrades; no immediate capture. Strong level10 candidate for an isolated cast; coincident other damage is not independently excluded."
+    },
+    {
+      "id": "result-transition",
+      "frame": 5156,
+      "pts": 86.0442,
+      "detail": "Commander hidden while skill icons remain. Play HUD closes and skill graphics fade afterward; this is transition onset, not exact win simulation time."
+    },
+    {
+      "id": "result-fading",
+      "frame": 5162,
+      "pts": 86.1444,
+      "detail": "Tower labels gone; skill panel partially transparent; result UI entering."
+    },
+    {
+      "id": "result-banner",
+      "frame": 5200,
+      "pts": 86.77794,
+      "detail": "Victory artwork/ranking/reward UI visible; banner text still blank during source clip entry. Commercial rewards remain excluded from reconstruction scope."
+    }
+  ],
+  "skillLevelInferences": [
+    {
+      "skill": 1,
+      "level": 10,
+      "status": "strong-inference",
+      "basis": "Visible active-state end interval implies13.97350..14.00665 seconds from cast. Config110=14s; all lower levels<=13s. Audio2016/2018 candidates are14.000s apart; low melt correlation alone would be insufficient."
+    },
+    {
+      "skill": 2,
+      "level": 10,
+      "status": "strong-visual-inference",
+      "basis": "24 red-head crossing runs in screen band y1035..1080, visually reviewed. The first run contains two distinct ascending heads (both visible at52.74325); subsequent23 runs each show one distinct head, total25. Recovered config210 is the only level with25 projectiles. Native recording frame deltas drive25 production launches. This is not an original account profile read.",
+      "caveat": "Threshold pulses alone are not projectile identities; manual image review disambiguates the first merged run and rejects trailing embers. Cross-band times are not launch times."
+    },
+    {
+      "skill": 3,
+      "level": 10,
+      "status": "strong-conditional-inference",
+      "basis": "Adjacent original frames45to0 without capture agree with config310 damage45. Lower levels max43; simultaneous other hits cannot be excluded solely by the score transition."
+    }
+  ],
+  "productionCorrection": {
+    "id": "skill-ui-close-fade",
+    "status": "source-confirmed-and-regression-tested",
+    "observed": "Original commander disappears before its skill panel.",
+    "before": "Local adapter instantly hid commander, skill graphics and other battle HUD together.",
+    "after": "Hide commander immediately; fade skill graphics over0.3s with OutQuad; disable input while closing; restore alpha/input and fresh commander on retry.",
+    "source": [
+      "ui-close-source/15926.txt:SkillUI.CloseBefore hides command object",
+      "ui-close-source/15920.txt:SkillUI constructor writes OpenAnim1/CloseAnim2",
+      "ui-close-source/15244.txt:UIModule.UIAnim type2 selects default static offset4",
+      "ui-close-source/15045.txt:static offset4 stores1050253722=float0.3",
+      "ui-close-source/13447.txt:ObjectAnim type2 fades CanvasGroup/Graphics to0 using default tween ease",
+      "../arrow-evidence.json:serialized DOTween defaultEaseType6=OutQuad"
+    ],
+    "remaining": "PlayUI CloseAnim0 coroutine/end-of-frame scheduling and asynchronous result resource-load onset are not fully synchronized to this recording."
+  },
+  "measurements": [
+    "runtime-measurements.json",
+    "audio-matches.json",
+    "frame-pts.json",
+    "frame-index.json"
+  ],
+  "validation": {
+    "caseCount": 259,
+    "videoChecks": [
+      {
+        "id": "video871-ice-four-enemies-fourteen-second-candidate",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-lightning-f3731-f3732-zero-without-capture",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-three-tool-costs-independent-of-unknown-fire-level",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-result-commander-hides-before-skill-panel-fade",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-fire25-recorded-frame-step-candidate",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-seven-committed-line-inputs-capacity-sequence",
+        "result": "pass",
+        "detail": ""
+      },
+      {
+        "id": "video871-soldier102-cosmetic-binding-preserves-mechanics",
+        "result": "pass",
+        "detail": ""
+      }
+    ],
+    "build": {
+      "result": "Succeeded",
+      "size": "274522697",
+      "errors": 0,
+      "warnings": 0
+    },
+    "smokeFrames": 600
+  },
+  "limitations": [
+    "This is checkpoint validation, not a frame-synchronized90-second replay.",
+    "Original pre-recording elapsed time, existing soldiers, per-line clocks, RNG state and prior input are unknown.",
+    "Recording covers initial pause/resume, line operations, three skills and one victory; it does not establish fresh entry, retry or defeat behavior.",
+    "Audio correlations identify candidates in a compressed mix, not complete audio fidelity.",
+    "Original ranking/account/reward/ad UI is outside the user-authorized in-level scope.",
+    "Visual acceptance remains pending; previous initial screenshot metric is not a whole-video metric.",
+    "All three equipped skill levels have inferred candidates; original account levels are not directly read."
+  ],
+  "fullGoalComplete": false,
+  "refinementEvidence": "fire-and-input-evidence.json"
+}

@@ -1,0 +1,27 @@
+; Original class: UIAudioManager
+; Type3431..ctor; wasmcode function 6928; offset=2628173 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00281a4e  i32.const [5011729]
+00281a53  i32.load8_u [0, 0]
+00281a56  i32.eqz []
+00281a57  if [-64]
+00281a59    i32.const [3953940]
+00281a5e    call [900] ; 
+00281a61    i32.const [3917104]
+00281a66    call [900] ; 
+00281a69    i32.const [5011729]
+00281a6e    i32.const [1]
+00281a70    i32.store8 [0, 0]
+00281a73  end []
+00281a74  i32.const [3917104]
+00281a79  i32.load [2, 0]
+00281a7c  call [903] ; 
+00281a7f  local.set [1]
+00281a81  local.get [1]
+00281a83  i32.const [3953940]
+00281a88  i32.load [2, 0]
+00281a8b  call [951] ; 
+00281a8e  local.get [0]
+00281a90  local.get [1]
+00281a92  i32.store [2, 24]
+00281a95  end []

@@ -1,0 +1,90 @@
+; Original class: ADModule
+; Type9202.setNativeSplashXy; wasmcode function 13417; offset=6501987 size=262
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00633666  i32.const [5006936]
+0063366b  i32.load8_u [0, 0]
+0063366e  i32.eqz []
+0063366f  if [-64]
+00633671    i32.const [3927760]
+00633676    call [900] ; 
+00633679    i32.const [3936304]
+0063367e    call [900] ; 
+00633681    i32.const [4036336] ; STRING " setNativeSplashXy firstDayNoAd"
+00633686    call [900] ; 
+00633689    i32.const [4050200] ; STRING "DAU-ADModule  setNativeSplash left:"
+0063368e    call [900] ; 
+00633691    i32.const [4036472] ; STRING " top:"
+00633696    call [900] ; 
+00633699    i32.const [5006936]
+0063369e    i32.const [1]
+006336a0    i32.store8 [0, 0]
+006336a3  end []
+006336a4  i32.const [3927760]
+006336a9  i32.load [2, 0]
+006336ac  call [901] ; 
+006336af  i32.const [3927760]
+006336b4  i32.load [2, 0]
+006336b7  i32.load [2, 92]
+006336ba  i32.load8_u [0, 4]
+006336bd  local.set [3]
+006336bf  i32.const [3927760]
+006336c4  i32.load [2, 0]
+006336c7  call [901] ; 
+006336ca  i32.const [3927760]
+006336cf  i32.load [2, 0]
+006336d2  i32.load [2, 92]
+006336d5  local.set [2]
+006336d7  local.get [3]
+006336d9  if [-64]
+006336db    local.get [2]
+006336dd    i32.load [2, 0]
+006336e0    i32.const [4036336] ; STRING " setNativeSplashXy firstDayNoAd"
+006336e5    i32.load [2, 0]
+006336e8    i32.const [0]
+006336ea    call [921] ; String.Concat
+006336ed    i32.const [0]
+006336ef    call [999] ; XYXLOG.Log
+006336f2    return []
+006336f3  end []
+006336f4  local.get [2]
+006336f6  local.get [0]
+006336f8  i32.store [2, 28]
+006336fb  i32.const [3927760]
+00633700  i32.load [2, 0]
+00633703  i32.load [2, 92]
+00633706  local.get [1]
+00633708  i32.store [2, 32]
+0063370b  i32.const [3927760]
+00633710  i32.load [2, 0]
+00633713  i32.load [2, 92]
+00633716  i32.const [28]
+00633718  i32.add []
+00633719  i32.const [0]
+0063371b  call [966] ; Int32.ToString
+0063371e  local.set [0]
+00633720  i32.const [3927760]
+00633725  i32.load [2, 0]
+00633728  i32.load [2, 92]
+0063372b  i32.const [32]
+0063372d  i32.add []
+0063372e  i32.const [0]
+00633730  call [966] ; Int32.ToString
+00633733  local.set [1]
+00633735  i32.const [4050200] ; STRING "DAU-ADModule  setNativeSplash left:"
+0063373a  i32.load [2, 0]
+0063373d  local.get [0]
+0063373f  i32.const [4036472] ; STRING " top:"
+00633744  i32.load [2, 0]
+00633747  local.get [1]
+00633749  i32.const [0]
+0063374b  call [1098] ; String.Concat
+0063374e  i32.const [0]
+00633750  call [999] ; XYXLOG.Log
+00633753  i32.const [3936304]
+00633758  i32.load [2, 0]
+0063375b  call [901] ; 
+0063375e  i32.const [0]
+00633760  call [1381] ; NewAdsManager.get_Instance
+00633763  i32.const [0]
+00633765  call [11268] ; NewAdsManager.loadNativeSplash
+00633768  end []

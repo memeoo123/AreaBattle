@@ -1,0 +1,15 @@
+; Original class: CommanderItem
+; Type4334.SetUsedItemStatus; wasmcode function 20190; offset=9070380 size=28
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008a672d  local.get [0]
+008a672f  i32.load [2, 64]
+008a6732  i32.const [0]
+008a6734  call [943] ; Component.get_gameObject
+008a6737  local.get [0]
+008a6739  i32.load [2, 40]
+008a673c  i32.load [2, 12]
+008a673f  local.get [1]
+008a6741  i32.eq []
+008a6742  i32.const [0]
+008a6744  call [949] ; GameObject.SetActive
+008a6747  end []

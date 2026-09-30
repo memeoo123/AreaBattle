@@ -1,0 +1,25 @@
+; Original class: SerialController
+; Type7527.loadNext; wasmcode function 10498; offset=5146411 size=62
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004e872c  i32.const [5005113]
+004e8731  i32.load8_u [0, 0]
+004e8734  i32.eqz []
+004e8735  if [-64]
+004e8737    i32.const [4091852] ; STRING "loadNext "
+004e873c    call [900] ; 
+004e873f    i32.const [5005113]
+004e8744    i32.const [1]
+004e8746    i32.store8 [0, 0]
+004e8749  end []
+004e874a  local.get [0]
+004e874c  i32.load [2, 8]
+004e874f  i32.const [4091852] ; STRING "loadNext "
+004e8754  i32.load [2, 0]
+004e8757  i32.const [0]
+004e8759  call [921] ; String.Concat
+004e875c  i32.const [0]
+004e875e  call [999] ; XYXLOG.Log
+004e8761  local.get [0]
+004e8763  local.get [0]
+004e8765  call [7192] ; SerialController.serialLoad
+004e8768  end []

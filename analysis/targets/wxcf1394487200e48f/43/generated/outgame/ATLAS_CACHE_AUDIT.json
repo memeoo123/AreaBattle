@@ -1,0 +1,28 @@
+{
+  "status": "source-native-atlas-cache-lookup-implemented",
+  "atUtc": "2026-09-30T02:44:34.445391+00:00",
+  "source": [
+    "disassembly/Type2923-22833.txt",
+    "atlas-loader-generics.json"
+  ],
+  "implementation": "OutgameAtlasCache.cs",
+  "verified": [
+    "Exact firstpack ContainsKey/get with typed AssetBundle dictionary",
+    "Firstpack null entry attempts direct LoadAsset; exception is preserved without manager fallback",
+    "Debug flag read only in firstpack branch; source constructs/discards diagnostic string",
+    "Missing manager wrapper logs bundle missing; wrapper with null native bundle logs atlas missing",
+    "Actual cache miss composes with OutgameAtlasLoader reload route without fabricated completion"
+  ],
+  "nativeLoadBranch": "Calls AssetBundle.LoadAsset<SpriteAtlas>; successful native bundle hit not executed in these tests. Bundle acquisition remains external.",
+  "integratedChecks": 608,
+  "freshPlayModeRun": false,
+  "priorBootstrapPlayModeChecks": 12,
+  "priorBootstrapPlayModeCheckpoint": 606,
+  "freshPlayerBuild": false,
+  "remaining": [
+    "Original bundle manager and firstpack dictionary acquisition/ownership",
+    "Native atlasRequested subscription and source mode injection",
+    "Successful native atlas bundle loading verification",
+    "Production startup/account/menu and Player acceptance"
+  ]
+}

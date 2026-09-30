@@ -1,0 +1,12 @@
+; Original class: Event
+; Type10053.get_command; wasmcode1 function 28822; offset=11014687 size=16
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00a81220  local.get [0]
+00a81222  local.get [0]
+00a81224  call [1076] ; Event.get_modifiers
+00a81227  i32.const [8]
+00a81229  i32.and []
+00a8122a  i32.const [3]
+00a8122c  i32.shr_u []
+00a8122d  return []
+00a8122e  end []

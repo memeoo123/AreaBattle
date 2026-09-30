@@ -1,0 +1,23 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.IsShowEvaluate; wasmcode1 function 38439; offset=14430586 size=59
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00dc317b  i32.const [5005438]
+00dc3180  i32.load8_u [0, 0]
+00dc3183  i32.eqz []
+00dc3184  if [-64]
+00dc3186    i32.const [4079256] ; STRING "XYX_ISDK_IsShowEvaluate"
+00dc318b    i32.const [1605]
+00dc318e    call_indirect [0, 0]
+00dc3191    i32.const [5005438]
+00dc3196    i32.const [1]
+00dc3198    i32.store8 [0, 0]
+00dc319b  end []
+00dc319c  i32.const [4079256] ; STRING "XYX_ISDK_IsShowEvaluate"
+00dc31a1  i32.load [2, 0]
+00dc31a4  i32.const [0]
+00dc31a6  i32.const [8833] ; TABLE XYXLOG.Log
+00dc31aa  call_indirect [4, 0]
+00dc31ad  i32.const [0]
+00dc31af  call [18056] ; XYX.IsSupportRecommend
+00dc31b3  return []
+00dc31b4  end []

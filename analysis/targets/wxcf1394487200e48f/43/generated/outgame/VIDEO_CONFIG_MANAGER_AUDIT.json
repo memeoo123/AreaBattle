@@ -1,0 +1,33 @@
+{
+  "status": "video_config_json_and_cache_verified_actual_sdk_pending",
+  "source": [
+    "disassembly/Type3843-29987.txt",
+    "disassembly/Type3843-29988.txt",
+    "disassembly/Type3843-29989.txt",
+    "disassembly/Type3843-29990.txt",
+    "disassembly/VideoConfigGeneric-26612.txt",
+    "disassembly/VideoConfigGeneric-26619.txt",
+    "video-manager-generics.json",
+    "video-config-generic.json",
+    "video-config-rgctx.json",
+    "VIDEO_CONFIG_ASSET_EVIDENCE.json"
+  ],
+  "verified": [
+    "Original65row VideoBtnConfig asset copied byte-for-byte with SHA256 evidence",
+    "ConfigRead shared generic and RGCTX resolve JSON Datas branch to JsonUtility.FromJson",
+    "JSON source names preserved without invented videoParam1/2 to Video_param1/2 aliases",
+    "Lazy cache initialized once; duplicate ID logs and keeps first; missing ID logs and returns null",
+    "Reset only clears initialized flag; missing bundle leaves previous dictionary readable",
+    "Available reload replaces dictionary before parsing; null list marks initialized; invalid row failure leaves flag false for retry",
+    "Original ShopUI pointer/reward integration now loads original table rather than hand-written configuration"
+  ],
+  "remaining": [
+    "Startup config mode selection and binary/alternate parser paths",
+    "Actual SDK/report host and production account/menu owner",
+    "Fresh PlayMode evidence for native Button lifecycle",
+    "Full persistence/build/E2E"
+  ],
+  "checks": 549,
+  "priorPlaymodeChecks": 8,
+  "dynamicScope": "Real prefab/native Button with original JSON config; platform results remain explicit fixture; prior fly PlayMode not rerun"
+}

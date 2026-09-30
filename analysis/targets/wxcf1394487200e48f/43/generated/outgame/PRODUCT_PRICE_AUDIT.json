@@ -1,0 +1,81 @@
+{
+  "status": "formulas_and_shared_random_implemented_power_precision_pending",
+  "source": "disassembly/Type4547-34610.txt",
+  "genericEvidence": "product-price-generics.json",
+  "array": {
+    "buyMode": "Gather indexes where buyTypeOrder equals1; default missing buyTypeOrder to [getType]",
+    "allocation": "Allocate consumeItemPriceArray only if null, length equal to gathered index count; do not resize existing array",
+    "indexing": "The original list of gathered indexes is read and discarded; formulas use compact loop index for costItemPriceTypes and costItemPriceParams",
+    "count": "GetHaveBuyCounts(1).GetItemBuyCount(parameters[0])",
+    "branches": {
+      "0": "parameters[1]",
+      "1": "RandomHelper.Random(parameters[1],parameters[2])",
+      "2": "parameters[1 + count % (parameters.Length-1)]",
+      "3": "RandomHelper.Random(parameters.ToList() with first entry removed)",
+      "4": "unchecked(parameters[1] + parameters[2]*count)",
+      "5": "unchecked(parameters[1] * original_f32_to_i32(powf((float)parameters[2],(float)count)))"
+    },
+    "offsets": [
+      "008fce1f",
+      "008fcea6",
+      "008fcf87",
+      "008fd0f5",
+      "008fd2e7",
+      "008fd449",
+      "008fd632",
+      "008fd855"
+    ]
+  },
+  "scalar": {
+    "parameters": "priceCalParam",
+    "empty": "null/empty sets consumeItemPrice=0 before getType gate",
+    "gate": "nonempty parameters and getType !=1 leave held scalar unchanged",
+    "count": "haveBuyTimes",
+    "branches": {
+      "0": "parameters[1]",
+      "1": "RandomHelper.Random(parameters[1],parameters[2])",
+      "2": "parameters[1 + haveBuyTimes % (parameters.Length-1)]",
+      "3": "RandomHelper.Random(parameters.ToList() with first entry removed)",
+      "4": "unchecked(parameters[1] + haveBuyTimes*parameters[2])",
+      "5": "unchecked(parameters[1] * original_f32_to_i32(powf((float)parameters[2],(float)haveBuyTimes)))"
+    },
+    "offsets": [
+      "008fda8e",
+      "008fda9d",
+      "008fdab3",
+      "008fdb38",
+      "008fdb68",
+      "008fdc4d",
+      "008fdc9b",
+      "008fdcef",
+      "008fdf13"
+    ]
+  },
+  "integerRules": "All parameter arithmetic is signed Int32 before sign-extension to Int64. Float result abs<2147483648 truncates toward zero; otherwise int.MinValue including NaN.",
+  "power": {
+    "tableIndex": 109076,
+    "module": "wasmcode",
+    "function": 1055,
+    "signature": "f32,f32 -> f32",
+    "disassembly": "disassembly/NativePricePower-109076.txt",
+    "qualification": "Native implementation extracted; Unity equivalence and boundary rounding require verification."
+  },
+  "countLookup": "Existing first matching product/mode row returned. Missing lookup creates detached default; does not append to HaveBuyCounts. Nested missing key returns0 without appending.",
+  "pending": [
+    "Verify native wasm power versus Unity rounding boundaries",
+    "Bind source config and real ItemManager provider"
+  ],
+  "implementation": "OutgameProductPrices.cs",
+  "controlFlowEvidence": "product-price-control-flow.json",
+  "exceptionScopes": "System.Exception: array item catches log and continue; scalar catch logs and exits with prior scalar retained; outer setup exceptions remain uncaught.",
+  "randomInteger": "RandomHelper.Random(min,max) -> System.Random.Next(min,unchecked(max+1))",
+  "randomList": {
+    "table": 7643,
+    "module": "wasmcode",
+    "wrapper": 2673,
+    "body": 10954,
+    "operation": "shared Random.Next(list.Count) then list[index]",
+    "source": "disassembly/GenericPriceRandom-7643.txt"
+  },
+  "randomRuntime": "GameRandomSource.Shared reused by BattleView default and OutgameProductPrices overload; original seed/timing parity unclaimed"
+}

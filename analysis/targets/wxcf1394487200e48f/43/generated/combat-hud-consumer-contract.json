@@ -1,0 +1,6216 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "status": "source-consumer confirmed",
+  "towerCapacity": {
+    "creation": "PlayUI.f11012 enumerates active towers, excludes objects castable to Boss, then SetTowerCanvas. Boss has no ordinary TowerCanvas.",
+    "source": [
+      "generated/combat-hud-disassembly/Proj_xqzdPlayUI-100666905.txt @0051516b..00515223",
+      "generated/combat-presentation-disassembly/Tower-100665419.txt @007257c8..0072583a",
+      "generated/combat-hud-disassembly/TowerCanvas-100665446.txt @0049a676..0049a89a"
+    ],
+    "kindField": "Tower+60 soldierType, not camp and not grade",
+    "kindRoots": {
+      "1": "normal",
+      "2": "defense",
+      "3": "attack",
+      "other": "all three roots inactive; no capacity images registered"
+    },
+    "initialization": "Hide normal/defense/attack, register first3 child Images of selected root, additionally first child Image of each defense/attack icon, then show selected root. SetScore(0,false,-1) and SetLineNum(0,0).",
+    "position": {
+      "base": "Tower.position(+68/+72/+76) + Tower.canvasOffset(+140/+144/+148)",
+      "refresh": "base + Vector3.up * (0.1 + (DispatchConfigForGrade.maxLine - 1)*0.05)",
+      "gradeLookup": "grade0/1/else uses dispatch singleton +8/+12/+16, corresponding ordinary DispatchConfig ids1/2/3",
+      "projection": "battle camera WorldToScreenPoint, then RectTransformUtility.ScreenPointToLocalPointInRectangle with UI camera, assign canvas RectTransform anchoredPosition",
+      "source": "TowerCanvas.RefreshPos f10060 @0049a2c4..0049a3cf"
+    },
+    "lineFields": {
+      "used": "Tower+52 outgoingLineCount",
+      "capacity": "Tower+56 maxLines"
+    },
+    "perSlot": {
+      "range": "i=0..2 in original selected list order",
+      "active": "used > i || capacity > i",
+      "mainColor": "used > i ? cachedCampColor : Color.white",
+      "childColor": "if mainColor approximately white (squared RGBA distance < 9.99999944e-11), use static shadowRGBA; otherwise Color.white",
+      "shadowRGBA": [
+        0.41999998688697815,
+        0.46000000834465027,
+        0.47999998927116394,
+        1.0
+      ],
+      "source": "TowerCanvas.SetLineNum f6995 @0028a59c..0028a71c"
+    },
+    "campColor": "LevelControl.GetCampColor(Tower.Camp). Tower.RefreshStarCanvas(refreshColor=true) calls SetScoreNum then SetLineNum then replaces cachedCampColor; preserve this call-order detail if reproducing frame-level capture transitions.",
+    "geometry": "Reuse the original selected root and child rectangles; keep native HorizontalLayoutGroup centered as serialized. All3 roots anchored(0,40). normal/defense root size129.5x27.5; attack141x27.5. normal+defense main images32x32, attack40x40; inset child images22x22.",
+    "linePress": "TowerCanvas.Init finds LinePress transform into+20 but no additional active consumer found in the10 TowerCanvas methods. The supplied StarCanvas prefab has no LinePress node; do not invent one.",
+    "goldens": [
+      {
+        "used": 0,
+        "capacity": 1,
+        "active": [
+          true,
+          false,
+          false
+        ],
+        "colors": [
+          "white",
+          "white",
+          "white"
+        ]
+      },
+      {
+        "used": 1,
+        "capacity": 2,
+        "active": [
+          true,
+          true,
+          false
+        ],
+        "colors": [
+          "camp",
+          "white",
+          "white"
+        ]
+      },
+      {
+        "used": 3,
+        "capacity": 1,
+        "active": [
+          true,
+          true,
+          true
+        ],
+        "colors": [
+          "camp",
+          "camp",
+          "camp"
+        ]
+      },
+      {
+        "soldierType": 4,
+        "expected": "no ordinary capacity root visible"
+      }
+    ]
+  },
+  "normalTopBar": {
+    "path": "TopRoot/ProgressSlider/go_normal",
+    "visibility": "false in ordinary Refresh path, including Boss levels",
+    "source": "PlayUI.kcWa{ia f11010 @00514eba..00514ec2 unconditionally SetActive(false)",
+    "consumerAudit": "All24 PlayUI methods inspected. go_normal+188 is bound in InitializeComponent and read only by this false assignment. No original active width/proportion consumer for Progress0..4 found in this class.",
+    "serializedContent": "Five original Slider nodes remain in prefab; their existence does not authorize enabling them or inventing camp-width formulas. Preserve hidden status."
+  },
+  "bossSlider": {
+    "path": "TopRoot/ProgressSlider/slider_boss",
+    "field": "PlayUI+184",
+    "visibility": "LevelControl.isBossLevel byte+53; go_normal stays hidden",
+    "visibilitySource": "PlayUI.f11010 @00514eab..00514eea",
+    "initialization": "PlayUI.Refresh f18058 if isBossLevel: maxValue=(float)LevelControl.curBoss(+60).maxScore(+44), then value=same maxScore. Does not read current score here.",
+    "initializationSource": "generated/combat-hud-disassembly/Proj_xqzdPlayUI-100666895.txt @007a171e..007a178a",
+    "updates": "Awake subscribes BossHealthChange. Handler unboxes args[0] as int and assigns Slider.value. No ratio tween, no sender/BossId check, no smoothing shown.",
+    "updateSources": [
+      "PlayUI.Awake f18064 @007a2844..007a2861",
+      "PlayUI handler f54154 @0111aa6e..0111aaae",
+      "Boss.ChangeScore f68536 @014ae050..014ae05b => Boss.f31304 @00b88f55..00b88fba"
+    ],
+    "eventPayload": "(int)Boss.Score(+48), truncation towardzero. Each Boss.ChangeScore sends after base.ChangeScore; shared event has no Boss identity, so any Boss can update the one slider.",
+    "serializedSlider": {
+      "min": 0,
+      "max": 100,
+      "value": 100,
+      "wholeNumbers": true,
+      "direction": 0,
+      "anchoredPosition": [
+        3,
+        -33
+      ],
+      "anchorMin": [
+        0,
+        1
+      ],
+      "anchorMax": [
+        1,
+        1
+      ],
+      "sizeDelta": [
+        0,
+        90.7242431640625
+      ]
+    },
+    "goldens": [
+      {
+        "maxScore": 1000,
+        "scoreAtRefresh": 500,
+        "initialSliderValue": 1000
+      },
+      {
+        "scoreEvent": 123.9,
+        "eventInt": 123
+      },
+      {
+        "scoreEvent": 0.5,
+        "eventInt": 0
+      }
+    ]
+  },
+  "towerVisualPoll": {
+    "field": 108,
+    "clock": "Tower.Update receives scaled game dt; only camp!=0 accumulates",
+    "trigger": "timer >0.2, then timer-=0.2 once; no catchup while loop",
+    "reset": "Tower.Init @00725ca8 and Clear helper f6992 @00289e41 both zero timer",
+    "boss": "Boss.Update f68529 @014ace57 calls base Tower.Update; virtualslot4 dispatches Boss.f68530 instead of Tower.f15512. Boss only polls playerCommander skill5 to set speedDown+156 active; no skill4 speedUp consumer."
+  },
+  "prefabNodes": [
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 100.0,
+          "y": 100.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": []
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/ProgressBg",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0199999809265137,
+          "y": 1.2000000476837158,
+          "z": 0.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.9999847412109375,
+          "y": -0.4502601623535156
+        },
+        "m_SizeDelta": {
+          "x": 604.0,
+          "y": 84.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8624934954137769692",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5182455110889091216
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 5182455110889091216,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:5182455110889091216"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:3698817619807746350",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5182455110889091216
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 1,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 5182455110889091216,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:5182455110889091216"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress0",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 1.2999992370605469,
+          "y": -0.279998779296875
+        },
+        "m_SizeDelta": {
+          "x": 625.7311401367188,
+          "y": 117.12427520751953
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3750374055212121131",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2301833485655470405
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 0,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 0,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 0,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": -5254761548203603804
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 1.0,
+            "m_WholeNumbers": 0,
+            "m_Value": 1.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2301833485655470405,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2301833485655470405"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": -5254761548203603804,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5254761548203603804"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress0/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8809900914588156297",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8221572890084120834
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8221572890084120834,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8221572890084120834"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:684929728038604204",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8221572890084120834
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.9490196108818054,
+              "g": 0.1488562375307083,
+              "b": 0.29019609093666077,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 0,
+            "m_FillMethod": 0,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8221572890084120834,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8221572890084120834"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress1",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 1.2999992370605469,
+          "y": -0.279998779296875
+        },
+        "m_SizeDelta": {
+          "x": 625.7311401367188,
+          "y": 117.12427520751953
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:8040432971043320569",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -1732715344746537356
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 0,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 0,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 0,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": 9152716219544099474
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 1.0,
+            "m_WholeNumbers": 0,
+            "m_Value": 1.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -1732715344746537356,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1732715344746537356"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": 9152716219544099474,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:9152716219544099474"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress1/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3682797575415168954",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -85339196877017202
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -85339196877017202,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-85339196877017202"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-845121651835888514",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -85339196877017202
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.7169811725616455,
+              "g": 0.18600928783416748,
+              "b": 0.18600928783416748,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 0,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -85339196877017202,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-85339196877017202"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress2",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 1.2999992370605469,
+          "y": -0.279998779296875
+        },
+        "m_SizeDelta": {
+          "x": 625.7311401367188,
+          "y": 117.12427520751953
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:314515094389475950",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8804214436572762951
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 0,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 0,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 0,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": -5613098532356339429
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 1.0,
+            "m_WholeNumbers": 0,
+            "m_Value": 1.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8804214436572762951,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8804214436572762951"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": -5613098532356339429,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5613098532356339429"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress2/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6025639364573331927",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8720633662946732433
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8720633662946732433,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8720633662946732433"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7771214432491780861",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8720633662946732433
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 0,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8720633662946732433,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8720633662946732433"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress3",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 1.2999992370605469,
+          "y": -0.279998779296875
+        },
+        "m_SizeDelta": {
+          "x": 625.7311401367188,
+          "y": 117.12427520751953
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:845077268020681586",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -75243864051953523
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 0,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 0,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 0,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": -1333329072913399164
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 1.0,
+            "m_WholeNumbers": 0,
+            "m_Value": 1.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -75243864051953523,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-75243864051953523"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": -1333329072913399164,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1333329072913399164"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress3/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8617874378007673804",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6364250628287455066
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6364250628287455066,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6364250628287455066"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:48218884586614644",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6364250628287455066
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 0,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6364250628287455066,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6364250628287455066"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress4",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 1.2999992370605469,
+          "y": -0.279998779296875
+        },
+        "m_SizeDelta": {
+          "x": 625.7311401367188,
+          "y": 117.12427520751953
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:8749839193878918749",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2058931871552705472
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 0,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 0,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 0,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": 4318061646855319096
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 1.0,
+            "m_WholeNumbers": 0,
+            "m_Value": 1.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2058931871552705472,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2058931871552705472"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": 4318061646855319096,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:4318061646855319096"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/Progress4/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2871328798183127495",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3294460530240178361
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3294460530240178361,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3294460530240178361"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:4939839525611615162",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3294460530240178361
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 0,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3294460530240178361,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3294460530240178361"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/TipMe",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchoredPosition": {
+          "x": -198.0,
+          "y": -18.869064331054688
+        },
+        "m_SizeDelta": {
+          "x": 129.43572998046875,
+          "y": 36.197021484375
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": []
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/TipMe/TipMeBg",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 16.560997009277344,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 32.5577278137207,
+          "y": 21.838520050048828
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:2145072521863176901",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -107628926187638029
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -107628926187638029,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-107628926187638029"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8532970816776224337",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -107628926187638029
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.2924528121948242,
+              "g": 0.2883143424987793,
+              "b": 0.2883143424987793,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 3,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -107628926187638029,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-107628926187638029"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/go_normal/TipMe/tipMeText",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": -22.100000381469727,
+          "y": 2.2887999875820242e-05
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 36.1970100402832
+        },
+        "m_Pivot": {
+          "x": 0.0,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:3287504292865258093",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4454591944779862697
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4454591944779862697,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4454591944779862697"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4252533787919279178",
+          "class": "Text",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4454591944779862697
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7978266203517415465
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_FontData": {
+              "m_Font": {
+                "m_FileID": 2,
+                "m_PathID": 6544835752251692798
+              },
+              "m_FontSize": 25,
+              "m_FontStyle": 0,
+              "m_BestFit": 1,
+              "m_MinSize": 10,
+              "m_MaxSize": 25,
+              "m_Alignment": 3,
+              "m_AlignByGeometry": 0,
+              "m_RichText": 0,
+              "m_HorizontalOverflow": 1,
+              "m_VerticalOverflow": 0,
+              "m_LineSpacing": 1.0
+            },
+            "m_Text": "我的城堡"
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4454591944779862697,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4454591944779862697"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7978266203517415465,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7978266203517415465"
+            },
+            {
+              "property": ".m_FontData.m_Font",
+              "fileId": 2,
+              "pathId": 6544835752251692798,
+              "serializedFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+              "externalGuid": "00000000000000000000000000000000",
+              "resolved": true,
+              "target": "CAB-a14f3eb3adf948afc8e578331928efaf:6544835752251692798"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-71083313747445347",
+          "class": "Outline",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4454591944779862697
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -614715771785648112
+            },
+            "m_Name": "",
+            "m_EffectColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.5
+            },
+            "m_EffectDistance": {
+              "x": 1.0,
+              "y": -1.0
+            },
+            "m_UseGraphicAlpha": 1
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4454591944779862697,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4454591944779862697"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -614715771785648112,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-614715771785648112"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5340907427476583843",
+          "class": "UILangText",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4454591944779862697
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 3440418044082340432
+            },
+            "m_Name": "",
+            "key": "ui/21"
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4454591944779862697,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4454591944779862697"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 3440418044082340432,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:3440418044082340432"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/slider_boss",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 3.0,
+          "y": -33.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 90.7242431640625
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8448282913032753091",
+          "class": "Slider",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 8519978084508263056
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 2366043669590847779
+            },
+            "m_Name": "",
+            "m_Navigation": {
+              "m_Mode": 3,
+              "m_WrapAround": 0,
+              "m_SelectOnUp": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnDown": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnLeft": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectOnRight": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_Transition": 1,
+            "m_Colors": {
+              "m_NormalColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "m_HighlightedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_PressedColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 1.0
+              },
+              "m_SelectedColor": {
+                "r": 0.9607843160629272,
+                "g": 0.9607843160629272,
+                "b": 0.9607843160629272,
+                "a": 1.0
+              },
+              "m_DisabledColor": {
+                "r": 0.7843137383460999,
+                "g": 0.7843137383460999,
+                "b": 0.7843137383460999,
+                "a": 0.501960813999176
+              },
+              "m_ColorMultiplier": 1.0,
+              "m_FadeDuration": 0.10000000149011612
+            },
+            "m_SpriteState": {
+              "m_HighlightedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_PressedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_SelectedSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "m_DisabledSprite": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              }
+            },
+            "m_AnimationTriggers": {
+              "m_NormalTrigger": "Normal",
+              "m_HighlightedTrigger": "Highlighted",
+              "m_PressedTrigger": "Pressed",
+              "m_SelectedTrigger": "Highlighted",
+              "m_DisabledTrigger": "Disabled"
+            },
+            "m_Interactable": 1,
+            "m_TargetGraphic": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_FillRect": {
+              "m_FileID": 0,
+              "m_PathID": 768757475281903356
+            },
+            "m_HandleRect": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Direction": 0,
+            "m_MinValue": 0.0,
+            "m_MaxValue": 100.0,
+            "m_WholeNumbers": 1,
+            "m_Value": 100.0,
+            "m_OnValueChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            }
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 8519978084508263056,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:8519978084508263056"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 2366043669590847779,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2366043669590847779"
+            },
+            {
+              "property": ".m_FillRect",
+              "fileId": 0,
+              "pathId": 768757475281903356,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:768757475281903356"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/slider_boss/Background",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 6.0,
+          "y": 26.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:1941331281176323362",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8877474786330719467
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8877474786330719467,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8877474786330719467"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6042511793983886544",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8877474786330719467
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 6477770383602244038
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8877474786330719467,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8877474786330719467"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 6477770383602244038,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6477770383602244038"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/slider_boss/Fill Area",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": -0.052978515625,
+          "y": -9.163002014160156
+        },
+        "m_SizeDelta": {
+          "x": -65.51077270507812,
+          "y": -39.77206802368164
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7405517515128359786",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5375359494322259734
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 5375359494322259734,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:5375359494322259734"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/slider_boss/Fill Area/Fill",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:1575150416580407617",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2147256379636477389
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2147256379636477389,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2147256379636477389"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8942058855437290982",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2147256379636477389
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": -2948363456808622042
+            },
+            "m_Type": 1,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2147256379636477389,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2147256379636477389"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": -2948363456808622042,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2948363456808622042"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/slider_boss/Text",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": -0.6000000238418579,
+          "y": -9.062600135803223
+        },
+        "m_SizeDelta": {
+          "x": 367.8399963378906,
+          "y": 57.900001525878906
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:408896115616237174",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6088913522778021281
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6088913522778021281,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6088913522778021281"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7892577490201730902",
+          "class": "Text",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6088913522778021281
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7978266203517415465
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_FontData": {
+              "m_Font": {
+                "m_FileID": 2,
+                "m_PathID": 6544835752251692798
+              },
+              "m_FontSize": 42,
+              "m_FontStyle": 0,
+              "m_BestFit": 1,
+              "m_MinSize": 10,
+              "m_MaxSize": 42,
+              "m_Alignment": 4,
+              "m_AlignByGeometry": 0,
+              "m_RichText": 1,
+              "m_HorizontalOverflow": 0,
+              "m_VerticalOverflow": 0,
+              "m_LineSpacing": 1.0
+            },
+            "m_Text": "挑战关"
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6088913522778021281,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6088913522778021281"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7978266203517415465,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7978266203517415465"
+            },
+            {
+              "property": ".m_FontData.m_Font",
+              "fileId": 2,
+              "pathId": 6544835752251692798,
+              "serializedFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+              "externalGuid": "00000000000000000000000000000000",
+              "resolved": true,
+              "target": "CAB-a14f3eb3adf948afc8e578331928efaf:6544835752251692798"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:9184361227001962550",
+          "class": "Outline",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6088913522778021281
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -614715771785648112
+            },
+            "m_Name": "",
+            "m_EffectColor": {
+              "r": 0.14509804546833038,
+              "g": 0.14509804546833038,
+              "b": 0.14509804546833038,
+              "a": 1.0
+            },
+            "m_EffectDistance": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "m_UseGraphicAlpha": 1
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6088913522778021281,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6088913522778021281"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -614715771785648112,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-614715771785648112"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:5301997932941718191",
+          "class": "Shadow",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6088913522778021281
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -6921926284742991722
+            },
+            "m_Name": "",
+            "m_EffectColor": {
+              "r": 0.14509804546833038,
+              "g": 0.14509804546833038,
+              "b": 0.14509804546833038,
+              "a": 1.0
+            },
+            "m_EffectDistance": {
+              "x": 0.0,
+              "y": -3.0
+            },
+            "m_UseGraphicAlpha": 1
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6088913522778021281,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6088913522778021281"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -6921926284742991722,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6921926284742991722"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-9067039179504565617",
+          "class": "UILangText",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6088913522778021281
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": 3440418044082340432
+            },
+            "m_Name": "",
+            "key": "UI.ChallengeLevel"
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6088913522778021281,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6088913522778021281"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": 3440418044082340432,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:3440418044082340432"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/LevelBg",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 275.0,
+          "y": 51.748172760009766
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-349955097359275814",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6073386536215868696
+            },
+            "m_CullTransparentMesh": true
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 6073386536215868696,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:6073386536215868696"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/LevelBg/Background",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 14.350852966308594,
+          "y": -17.224266052246094
+        },
+        "m_SizeDelta": {
+          "x": 82.29736328125,
+          "y": 79.03369140625
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:841568819875358296",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3546840310626473063
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3546840310626473063,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3546840310626473063"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:7172464139335329355",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3546840310626473063
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": -2862215400734914101
+            },
+            "m_Type": 1,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3546840310626473063,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3546840310626473063"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": -2862215400734914101,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2862215400734914101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/TopRoot/ProgressSlider/LevelBg/LevelText",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 15.599998474121094,
+          "y": 4.389499664306641
+        },
+        "m_SizeDelta": {
+          "x": -46.02491760253906,
+          "y": 8.77899169921875
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:7011985664017193598",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2963897504693954974
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -2963897504693954974,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2963897504693954974"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:5239777866534437058",
+          "class": "Text",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2963897504693954974
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7978266203517415465
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.12156862765550613,
+              "g": 0.12156862765550613,
+              "b": 0.12156862765550613,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_FontData": {
+              "m_Font": {
+                "m_FileID": 2,
+                "m_PathID": 6544835752251692798
+              },
+              "m_FontSize": 48,
+              "m_FontStyle": 0,
+              "m_BestFit": 1,
+              "m_MinSize": 10,
+              "m_MaxSize": 48,
+              "m_Alignment": 4,
+              "m_AlignByGeometry": 0,
+              "m_RichText": 0,
+              "m_HorizontalOverflow": 0,
+              "m_VerticalOverflow": 0,
+              "m_LineSpacing": 1.0
+            },
+            "m_Text": "关卡 400"
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -2963897504693954974,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2963897504693954974"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7978266203517415465,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7978266203517415465"
+            },
+            {
+              "property": ".m_FontData.m_Font",
+              "fileId": 2,
+              "pathId": 6544835752251692798,
+              "serializedFile": "CAB-a14f3eb3adf948afc8e578331928efaf",
+              "externalGuid": "00000000000000000000000000000000",
+              "resolved": true,
+              "target": "CAB-a14f3eb3adf948afc8e578331928efaf:6544835752251692798"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1541083094901355143",
+          "class": "Outline",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2963897504693954974
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -614715771785648112
+            },
+            "m_Name": "",
+            "m_EffectColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            },
+            "m_EffectDistance": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_UseGraphicAlpha": 0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -2963897504693954974,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2963897504693954974"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -614715771785648112,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-614715771785648112"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/normal",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 40.0
+        },
+        "m_SizeDelta": {
+          "x": 129.5,
+          "y": 27.5
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-9165812969931763184",
+          "class": "HorizontalLayoutGroup",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -9093222407662694604
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -8091456346061954500
+            },
+            "m_Name": "",
+            "m_Padding": {
+              "m_Left": 0,
+              "m_Right": 0,
+              "m_Top": 0,
+              "m_Bottom": 0
+            },
+            "m_ChildAlignment": 4,
+            "m_Spacing": 0.0,
+            "m_ChildForceExpandWidth": 0,
+            "m_ChildForceExpandHeight": 0,
+            "m_ChildControlWidth": 0,
+            "m_ChildControlHeight": 0,
+            "m_ChildScaleWidth": 0,
+            "m_ChildScaleHeight": 0,
+            "m_ReverseArrangement": 0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -9093222407662694604,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-9093222407662694604"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -8091456346061954500,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8091456346061954500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/normal/Line1",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5615003010339889184",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4662641203813327530
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4662641203813327530,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4662641203813327530"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1669258259615358487",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4662641203813327530
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 76322948748235894
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4662641203813327530,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4662641203813327530"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 76322948748235894,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:76322948748235894"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/normal/Line2",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6617940300273445516",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8775439502148750454
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8775439502148750454,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8775439502148750454"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:7093844148336325020",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -8775439502148750454
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 76322948748235894
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -8775439502148750454,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8775439502148750454"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 76322948748235894,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:76322948748235894"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/normal/Line3",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:8884507061850310961",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3623146202192212040
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 3623146202192212040,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:3623146202192212040"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:1938648933290264190",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3623146202192212040
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 76322948748235894
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 3623146202192212040,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:3623146202192212040"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 76322948748235894,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:76322948748235894"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 40.0
+        },
+        "m_SizeDelta": {
+          "x": 129.5,
+          "y": 27.5
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-710851939610016082",
+          "class": "HorizontalLayoutGroup",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -4078952588623443580
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -8091456346061954500
+            },
+            "m_Name": "",
+            "m_Padding": {
+              "m_Left": 0,
+              "m_Right": 0,
+              "m_Top": 0,
+              "m_Bottom": 0
+            },
+            "m_ChildAlignment": 4,
+            "m_Spacing": 0.0,
+            "m_ChildForceExpandWidth": 0,
+            "m_ChildForceExpandHeight": 0,
+            "m_ChildControlWidth": 0,
+            "m_ChildControlHeight": 0,
+            "m_ChildScaleWidth": 0,
+            "m_ChildScaleHeight": 0,
+            "m_ReverseArrangement": 0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -4078952588623443580,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4078952588623443580"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -8091456346061954500,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8091456346061954500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line1",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 24.75,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2967405741924674884",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -921903113788523754
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -921903113788523754,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-921903113788523754"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:3760944079167665196",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -921903113788523754
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 1206991066746702850
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -921903113788523754,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-921903113788523754"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 1206991066746702850,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:1206991066746702850"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line1/Image",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-158484481323656656",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2928040493265009199
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -2928040493265009199,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2928040493265009199"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2378891346534973559",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2928040493265009199
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -2928040493265009199,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2928040493265009199"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line2",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 64.75,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:3909403837732488786",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3833249686252685651
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3833249686252685651,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3833249686252685651"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2289067997524997313",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -3833249686252685651
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 1206991066746702850
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -3833249686252685651,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3833249686252685651"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 1206991066746702850,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:1206991066746702850"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line2/Image",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6062808553558362534",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2438270711235370544
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2438270711235370544,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2438270711235370544"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1903754193918675283",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2438270711235370544
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 2438270711235370544,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:2438270711235370544"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line3",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 104.75,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 32.0,
+          "y": 32.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:4762287376161120672",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5323166307225825012
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -5323166307225825012,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5323166307225825012"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:813528018200750548",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5323166307225825012
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 1206991066746702850
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -5323166307225825012,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-5323166307225825012"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": 1206991066746702850,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:1206991066746702850"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/defense/Line3/Image (1)",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:9086322133394424558",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -837449653464208385
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -837449653464208385,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-837449653464208385"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:2774593574663752349",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -837449653464208385
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -837449653464208385,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-837449653464208385"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack",
+      "active": false,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 40.0
+        },
+        "m_SizeDelta": {
+          "x": 141.0,
+          "y": 27.5
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-2455780901095537421",
+          "class": "HorizontalLayoutGroup",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 9134017663860689533
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -8091456346061954500
+            },
+            "m_Name": "",
+            "m_Padding": {
+              "m_Left": 0,
+              "m_Right": 0,
+              "m_Top": 0,
+              "m_Bottom": 0
+            },
+            "m_ChildAlignment": 4,
+            "m_Spacing": -10.0,
+            "m_ChildForceExpandWidth": 0,
+            "m_ChildForceExpandHeight": 0,
+            "m_ChildControlWidth": 0,
+            "m_ChildControlHeight": 0,
+            "m_ChildScaleWidth": 0,
+            "m_ChildScaleHeight": 0,
+            "m_ReverseArrangement": 0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 9134017663860689533,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:9134017663860689533"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -8091456346061954500,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8091456346061954500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line1",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 30.5,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 40.0,
+          "y": 40.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1653460607389388367",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6002031078063339043
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6002031078063339043,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6002031078063339043"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:3640215210921831881",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6002031078063339043
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": -6776108050246181870
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6002031078063339043,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6002031078063339043"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": -6776108050246181870,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6776108050246181870"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line1/Image (1)",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6456253350883058712",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4252982599246903065
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 4252982599246903065,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:4252982599246903065"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:6243216469231093290",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4252982599246903065
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.4235294461250305,
+              "g": 0.46666669845581055,
+              "b": 0.48235297203063965,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 4252982599246903065,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:4252982599246903065"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line2",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 70.5,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 40.0,
+          "y": 40.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8449129026680814432",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 8143601614754412711
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 8143601614754412711,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:8143601614754412711"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8594325498654960325",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 8143601614754412711
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": -6776108050246181870
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 8143601614754412711,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:8143601614754412711"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": -6776108050246181870,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6776108050246181870"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line2/Image (2)",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-8574771385127641471",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6835183086641030475
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6835183086641030475,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6835183086641030475"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:1855625509053887026",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -6835183086641030475
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.4235294461250305,
+              "g": 0.46666669845581055,
+              "b": 0.48235297203063965,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -6835183086641030475,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6835183086641030475"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line3",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 110.5,
+          "y": -13.75
+        },
+        "m_SizeDelta": {
+          "x": 40.0,
+          "y": 40.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:5837517449958223198",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5510266404716673922
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 5510266404716673922,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:5510266404716673922"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-1246101044359786783",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5510266404716673922
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 0,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": -6776108050246181870
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": 5510266404716673922,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:5510266404716673922"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            },
+            {
+              "property": ".m_Sprite",
+              "fileId": 0,
+              "pathId": -6776108050246181870,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-6776108050246181870"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Proj_xqzdPlayUI/StarInfoRoot/StarCanvas/attack/Line3/Image (3)",
+      "active": true,
+      "layer": 5,
+      "transform": {
+        "m_LocalRotation": {
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_AnchorMin": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchorMax": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 22.0,
+          "y": 22.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "components": [
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-4769233785097159716",
+          "class": "CanvasRenderer",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -7998025435817591226
+            },
+            "m_CullTransparentMesh": false
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -7998025435817591226,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7998025435817591226"
+            }
+          ]
+        },
+        {
+          "id": "CAB-7e22b53f63a968a56641c9a7354ced7f:-3218847682362844314",
+          "class": "Image",
+          "partial": false,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -7998025435817591226
+            },
+            "m_Enabled": 0,
+            "m_Script": {
+              "m_FileID": 0,
+              "m_PathID": -7030229213176759517
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 0.4235294461250305,
+              "g": 0.46666669845581055,
+              "b": 0.48235297203063965,
+              "a": 0.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "references": [
+            {
+              "property": ".m_GameObject",
+              "fileId": 0,
+              "pathId": -7998025435817591226,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7998025435817591226"
+            },
+            {
+              "property": ".m_Script",
+              "fileId": 0,
+              "pathId": -7030229213176759517,
+              "serializedFile": "CAB-7e22b53f63a968a56641c9a7354ced7f",
+              "externalGuid": null,
+              "resolved": true,
+              "target": "CAB-7e22b53f63a968a56641c9a7354ced7f:-7030229213176759517"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "No active faction-width formula should be synthesized from disabled ordinary go_normal sliders.",
+    "Full native image comparison remains root validation; these rules are static source evidence."
+  ]
+}

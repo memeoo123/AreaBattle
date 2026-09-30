@@ -1,0 +1,51 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.OpenRank; wasmcode function 20417; offset=9195134 size=134
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008c4e7f  i32.const [5006705]
+008c4e84  i32.load8_u [0, 0]
+008c4e87  i32.eqz []
+008c4e88  if [-64]
+008c4e8a    i32.const [3937624]
+008c4e8f    call [900] ; 
+008c4e92    i32.const [4096584] ; STRING "showFriendsRank"
+008c4e97    call [900] ; 
+008c4e9a    i32.const [4096080] ; STRING "score"
+008c4e9f    call [900] ; 
+008c4ea2    i32.const [5006705]
+008c4ea7    i32.const [1]
+008c4ea9    i32.store8 [0, 0]
+008c4eac  end []
+008c4ead  local.get [1]
+008c4eaf  i32.eqz []
+008c4eb0  if [-64]
+008c4eb2    i32.const [3937624]
+008c4eb7    i32.load [2, 0]
+008c4eba    call [903] ; 
+008c4ebd    local.set [1]
+008c4ebf    local.get [1]
+008c4ec1    i32.const [1]
+008c4ec3    i32.store8 [0, 28]
+008c4ec6    local.get [1]
+008c4ec8    i32.const [1]
+008c4eca    i32.store8 [0, 28]
+008c4ecd  end []
+008c4ece  local.get [0]
+008c4ed0  local.set [2]
+008c4ed2  local.get [0]
+008c4ed4  i32.load [2, 0]
+008c4ed7  local.set [0]
+008c4ed9  local.get [2]
+008c4edb  i32.const [4096584] ; STRING "showFriendsRank"
+008c4ee0  i32.load [2, 0]
+008c4ee3  i32.const [4096080] ; STRING "score"
+008c4ee8  i32.load [2, 0]
+008c4eeb  local.get [1]
+008c4eed  i32.load8_u [0, 28]
+008c4ef0  local.get [0]
+008c4ef2  i32.load [2, 352]
+008c4ef6  local.get [0]
+008c4ef8  i32.load [2, 348]
+008c4efc  global.set [3]
+008c4efe  global.get [3]
+008c4f00  call_indirect [8, 0]
+008c4f03  end []

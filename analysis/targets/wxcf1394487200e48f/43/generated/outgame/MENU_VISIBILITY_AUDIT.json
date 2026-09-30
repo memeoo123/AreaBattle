@@ -1,0 +1,20 @@
+{
+  "status": "visibility_lifecycle_verified_concrete_host_pending",
+  "source": [
+    "disassembly/Type4379-33469.txt",
+    "disassembly/Type4379-33482.txt"
+  ],
+  "verified": [
+    "Close invisible menu no-op",
+    "Close requests main then closes pages then resets page0 then virtual visibility(false)",
+    "VisibleImp calls base first; hide sends MenuTabDispose",
+    "Show calls OpenAllMenuItemUI, main, start-panel check, commander lock/red dots, level gate, new skin refresh in source order"
+  ],
+  "remaining": [
+    "Source async OpenAllMenuItemUI implementation",
+    "Concrete menu visibility host and actual production entry",
+    "Account/data integration, persistence and Player E2E"
+  ],
+  "checks": 569,
+  "freshPlayMode": false
+}

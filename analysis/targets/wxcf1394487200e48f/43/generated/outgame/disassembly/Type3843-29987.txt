@@ -1,0 +1,282 @@
+; Original class: VideoBtnManager
+; Type3843.eSp; wasmcode function 9610; offset=4602800 size=848
+; signature={'args': [127], 'returns': []}; localGroups=[(4, 127)]
+00463bb3  global.get [0]
+00463bb5  i32.const [16]
+00463bb7  i32.sub []
+00463bb8  local.set [2]
+00463bba  local.get [2]
+00463bbc  global.set [0]
+00463bbe  i32.const [4988309]
+00463bc3  i32.load8_u [0, 0]
+00463bc6  i32.eqz []
+00463bc7  if [-64]
+00463bc9    i32.const [3928176]
+00463bce    call [900] ; 
+00463bd1    i32.const [3929208]
+00463bd6    call [900] ; 
+00463bd9    i32.const [3993520]
+00463bde    call [900] ; 
+00463be1    i32.const [3929800]
+00463be6    call [900] ; 
+00463be9    i32.const [3956532]
+00463bee    call [900] ; 
+00463bf1    i32.const [3956536]
+00463bf6    call [900] ; 
+00463bf9    i32.const [3956528]
+00463bfe    call [900] ; 
+00463c01    i32.const [3917656]
+00463c06    call [900] ; 
+00463c09    i32.const [3934404]
+00463c0e    call [900] ; 
+00463c11    i32.const [3978368]
+00463c16    call [900] ; 
+00463c19    i32.const [3978372]
+00463c1e    call [900] ; 
+00463c21    i32.const [3926996]
+00463c26    call [900] ; 
+00463c29    i32.const [3941512]
+00463c2e    call [900] ; 
+00463c31    i32.const [4100172] ; STRING "videoBtn:配置文件AB资源为null"
+00463c36    call [900] ; 
+00463c39    i32.const [4078172] ; STRING "VideoBtnConfig"
+00463c3e    call [900] ; 
+00463c41    i32.const [4100168] ; STRING "videoBtn:读取视频按钮数据"
+00463c46    call [900] ; 
+00463c49    i32.const [4105800] ; STRING "表[视频表]中有相同键({0})"
+00463c4e    call [900] ; 
+00463c51    i32.const [4988309]
+00463c56    i32.const [1]
+00463c58    i32.store8 [0, 0]
+00463c5b  end []
+00463c5c  i32.const [3941512]
+00463c61  i32.load [2, 0]
+00463c64  call [901] ; 
+00463c67  block [-64]
+00463c69    i32.const [3941512]
+00463c6e    i32.load [2, 0]
+00463c71    i32.load [2, 92]
+00463c74    i32.load8_u [0, 0]
+00463c77    br_if [0]
+00463c79    i32.const [3929800]
+00463c7e    i32.load [2, 0]
+00463c81    call [901] ; 
+00463c84    block [-64]
+00463c86      i32.const [3929800]
+00463c8b      i32.load [2, 0]
+00463c8e      i32.load [2, 92]
+00463c91      i32.load [2, 4]
+00463c94      br_if [0]
+00463c96      i32.const [3928176]
+00463c9b      i32.load [2, 0]
+00463c9e      call [901] ; 
+00463ca1      i32.const [5011829]
+00463ca6      i32.load8_u [0, 0]
+00463ca9      i32.eqz []
+00463caa      if [-64]
+00463cac        i32.const [3928176]
+00463cb1        call [900] ; 
+00463cb4        i32.const [5011829]
+00463cb9        i32.const [1]
+00463cbb        i32.store8 [0, 0]
+00463cbe      end []
+00463cbf      i32.const [3928176]
+00463cc4      i32.load [2, 0]
+00463cc7      call [901] ; 
+00463cca      i32.const [3928176]
+00463ccf      i32.load [2, 0]
+00463cd2      i32.load [2, 92]
+00463cd5      i32.load8_u [0, 36]
+00463cd8      br_if [0]
+00463cda      i32.const [3926996]
+00463cdf      i32.load [2, 0]
+00463ce2      i32.const [1]
+00463ce4      call [909] ; 
+00463ce7      local.set [0]
+00463ce9      local.get [0]
+00463ceb      i32.const [4100172] ; STRING "videoBtn:配置文件AB资源为null"
+00463cf0      i32.load [2, 0]
+00463cf3      call [905] ; 
+00463cf6      local.get [0]
+00463cf8      i32.const [4100172] ; STRING "videoBtn:配置文件AB资源为null"
+00463cfd      i32.load [2, 0]
+00463d00      i32.store [2, 16]
+00463d03      i32.const [3929208]
+00463d08      i32.load [2, 0]
+00463d0b      call [901] ; 
+00463d0e      local.get [0]
+00463d10      i32.const [0]
+00463d12      i32.const [2087] ; TABLE CLog.Error
+00463d15      global.set [3]
+00463d17      i32.const [2087] ; TABLE CLog.Error
+00463d1a      call_indirect [0, 0]
+00463d1d      br [1]
+00463d1f    end []
+00463d20    i32.const [3926996]
+00463d25    i32.load [2, 0]
+00463d28    i32.const [1]
+00463d2a    call [909] ; 
+00463d2d    local.set [0]
+00463d2f    local.get [0]
+00463d31    i32.const [4100168] ; STRING "videoBtn:读取视频按钮数据"
+00463d36    i32.load [2, 0]
+00463d39    call [905] ; 
+00463d3c    local.get [0]
+00463d3e    i32.const [4100168] ; STRING "videoBtn:读取视频按钮数据"
+00463d43    i32.load [2, 0]
+00463d46    i32.store [2, 16]
+00463d49    i32.const [3929208]
+00463d4e    i32.load [2, 0]
+00463d51    call [901] ; 
+00463d54    local.get [0]
+00463d56    i32.const [0]
+00463d58    call [1069] ; CLog.Log
+00463d5b    i32.const [3917656]
+00463d60    i32.load [2, 0]
+00463d63    call [903] ; 
+00463d66    local.set [0]
+00463d68    local.get [0]
+00463d6a    i32.const [3956528]
+00463d6f    i32.load [2, 0]
+00463d72    call [951] ; 
+00463d75    i32.const [3941512]
+00463d7a    i32.load [2, 0]
+00463d7d    call [901] ; 
+00463d80    i32.const [3941512]
+00463d85    i32.load [2, 0]
+00463d88    i32.load [2, 92]
+00463d8b    local.get [0]
+00463d8d    i32.store [2, 4]
+00463d90    i32.const [3941512]
+00463d95    i32.load [2, 0]
+00463d98    i32.load [2, 92]
+00463d9b    drop []
+00463d9c    i32.const [3929800]
+00463da1    i32.load [2, 0]
+00463da4    call [901] ; 
+00463da7    block [-64]
+00463da9      i32.const [4078172] ; STRING "VideoBtnConfig"
+00463dae      i32.load [2, 0]
+00463db1      i32.const [3993520]
+00463db6      i32.load [2, 0]
+00463db9      call [4480] ; 
+00463dbc      local.set [1]
+00463dbe      local.get [1]
+00463dc0      i32.eqz []
+00463dc1      br_if [0]
+00463dc3      i32.const [0]
+00463dc5      local.set [0]
+00463dc7      loop [-64]
+00463dc9        i32.const [3978368]
+00463dce        i32.load [2, 0]
+00463dd1        drop []
+00463dd2        local.get [0]
+00463dd4        local.get [1]
+00463dd6        i32.load [2, 12]
+00463dd9        i32.ge_s []
+00463dda        br_if [1]
+00463ddc        i32.const [3941512]
+00463de1        i32.load [2, 0]
+00463de4        call [901] ; 
+00463de7        block [-64]
+00463de9          i32.const [3941512]
+00463dee          i32.load [2, 0]
+00463df1          i32.load [2, 92]
+00463df4          i32.load [2, 4]
+00463df7          local.get [1]
+00463df9          local.get [0]
+00463dfb          i32.const [3978372]
+00463e00          i32.load [2, 0]
+00463e03          call [930] ; 
+00463e06          i32.load [2, 8]
+00463e09          i32.const [3956536]
+00463e0e          i32.load [2, 0]
+00463e11          call [1129] ; 
+00463e14          if [-64]
+00463e16            i32.const [3926996]
+00463e1b            i32.load [2, 0]
+00463e1e            i32.const [1]
+00463e20            call [909] ; 
+00463e23            local.set [4]
+00463e25            local.get [2]
+00463e27            local.get [1]
+00463e29            local.get [0]
+00463e2b            i32.const [3978372]
+00463e30            i32.load [2, 0]
+00463e33            call [930] ; 
+00463e36            i32.load [2, 8]
+00463e39            i32.store [2, 12]
+00463e3c            i32.const [3934404]
+00463e41            i32.load [2, 0]
+00463e44            local.get [2]
+00463e46            i32.const [12]
+00463e48            i32.add []
+00463e49            call [910] ; 
+00463e4c            local.set [3]
+00463e4e            i32.const [4105800] ; STRING "表[视频表]中有相同键({0})"
+00463e53            i32.load [2, 0]
+00463e56            local.get [3]
+00463e58            i32.const [0]
+00463e5a            call [1015] ; String.Format
+00463e5d            local.set [3]
+00463e5f            local.get [4]
+00463e61            local.get [3]
+00463e63            call [905] ; 
+00463e66            local.get [4]
+00463e68            local.get [3]
+00463e6a            i32.store [2, 16]
+00463e6d            i32.const [3929208]
+00463e72            i32.load [2, 0]
+00463e75            call [901] ; 
+00463e78            local.get [4]
+00463e7a            i32.const [0]
+00463e7c            i32.const [2087] ; TABLE CLog.Error
+00463e7f            global.set [3]
+00463e81            i32.const [2087] ; TABLE CLog.Error
+00463e84            call_indirect [0, 0]
+00463e87            br [1]
+00463e89          end []
+00463e8a          i32.const [3941512]
+00463e8f          i32.load [2, 0]
+00463e92          call [901] ; 
+00463e95          i32.const [3941512]
+00463e9a          i32.load [2, 0]
+00463e9d          i32.load [2, 92]
+00463ea0          i32.load [2, 4]
+00463ea3          local.get [1]
+00463ea5          local.get [0]
+00463ea7          i32.const [3978372]
+00463eac          i32.load [2, 0]
+00463eaf          call [930] ; 
+00463eb2          i32.load [2, 8]
+00463eb5          local.get [1]
+00463eb7          local.get [0]
+00463eb9          i32.const [3978372]
+00463ebe          i32.load [2, 0]
+00463ec1          call [930] ; 
+00463ec4          i32.const [3956532]
+00463ec9          i32.load [2, 0]
+00463ecc          call [1049] ; 
+00463ecf        end []
+00463ed0        local.get [0]
+00463ed2        i32.const [1]
+00463ed4        i32.add []
+00463ed5        local.set [0]
+00463ed7        br [0]
+00463ed9      end []
+00463eda      unreachable []
+00463edb    end []
+00463edc    i32.const [3941512]
+00463ee1    i32.load [2, 0]
+00463ee4    call [901] ; 
+00463ee7    i32.const [3941512]
+00463eec    i32.load [2, 0]
+00463eef    i32.load [2, 92]
+00463ef2    i32.const [1]
+00463ef4    i32.store8 [0, 0]
+00463ef7  end []
+00463ef8  local.get [2]
+00463efa  i32.const [16]
+00463efc  i32.add []
+00463efd  global.set [0]
+00463eff  end []

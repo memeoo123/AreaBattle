@@ -1,0 +1,27 @@
+; Original class: LocalDataManager
+; Type4119..ctor; wasmcode function 18779; offset=8472803 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008148e4  i32.const [5008559]
+008148e9  i32.load8_u [0, 0]
+008148ec  i32.eqz []
+008148ed  if [-64]
+008148ef    i32.const [4085252] ; STRING "collect"
+008148f4    call [900] ; 
+008148f7    i32.const [4083492] ; STRING "bank"
+008148fc    call [900] ; 
+008148ff    i32.const [5008559]
+00814904    i32.const [1]
+00814906    i32.store8 [0, 0]
+00814909  end []
+0081490a  local.get [0]
+0081490c  i32.const [4083492] ; STRING "bank"
+00814911  i32.load [2, 0]
+00814914  i32.store [2, 32]
+00814917  local.get [0]
+00814919  i32.const [4085252] ; STRING "collect"
+0081491e  i32.load [2, 0]
+00814921  i32.store [2, 36]
+00814924  local.get [0]
+00814926  i32.const [0]
+00814928  call [3381] ; DataManagerBase..ctor
+0081492b  end []

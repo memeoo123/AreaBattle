@@ -1,0 +1,131 @@
+; Original shared generic: DataManagerPool.GetModel
+; ControllerGeneric.GetModel; wasmcode function 12657; offset=6101489 size=335
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(3, 127)]
+005d19f4  global.get [0]
+005d19f6  i32.const [16]
+005d19f8  i32.sub []
+005d19f9  local.set [3]
+005d19fb  local.get [3]
+005d19fd  global.set [0]
+005d19ff  local.get [1]
+005d1a01  i32.load [2, 28]
+005d1a04  i32.eqz []
+005d1a05  if [-64]
+005d1a07    i32.const [3929208]
+005d1a0c    call [900] ; 
+005d1a0f    i32.const [3961744]
+005d1a14    call [900] ; 
+005d1a17    i32.const [3961752]
+005d1a1c    call [900] ; 
+005d1a1f    i32.const [3926996]
+005d1a24    call [900] ; 
+005d1a27    i32.const [3940520]
+005d1a2c    call [900] ; 
+005d1a2f    i32.const [4081164] ; STRING "]数据管理器"
+005d1a34    call [900] ; 
+005d1a37    i32.const [4104952] ; STRING "未找到["
+005d1a3c    call [900] ; 
+005d1a3f    local.get [1]
+005d1a41    call [954] ; 
+005d1a44  end []
+005d1a45  local.get [3]
+005d1a47  i32.const [0]
+005d1a49  i32.store [2, 12]
+005d1a4c  local.get [3]
+005d1a4e  i32.const [12]
+005d1a50  i32.add []
+005d1a51  i32.const [4]
+005d1a53  call [919] ; 
+005d1a56  local.get [1]
+005d1a58  i32.load [2, 28]
+005d1a5b  i32.load [2, 4]
+005d1a5e  local.set [2]
+005d1a60  i32.const [3940520]
+005d1a65  i32.load [2, 0]
+005d1a68  call [901] ; 
+005d1a6b  local.get [2]
+005d1a6d  i32.const [0]
+005d1a6f  call [912] ; Type.GetTypeFromHandle
+005d1a72  local.set [2]
+005d1a74  block [-64]
+005d1a76    block [-64]
+005d1a78      local.get [0]
+005d1a7a      i32.load [2, 8]
+005d1a7d      local.set [4]
+005d1a7f      local.get [4]
+005d1a81      i32.eqz []
+005d1a82      br_if [0]
+005d1a84      local.get [4]
+005d1a86      local.get [2]
+005d1a88      i32.const [3961744]
+005d1a8d      i32.load [2, 0]
+005d1a90      call [987] ; 
+005d1a93      i32.eqz []
+005d1a94      br_if [0]
+005d1a96      local.get [0]
+005d1a98      i32.load [2, 8]
+005d1a9b      local.get [2]
+005d1a9d      i32.const [3961752]
+005d1aa2      i32.load [2, 0]
+005d1aa5      call [982] ; 
+005d1aa8      local.get [1]
+005d1aaa      i32.load [2, 28]
+005d1aad      i32.const [0]
+005d1aaf      call [904] ; 
+005d1ab2      call [983] ; 
+005d1ab5      local.get [1]
+005d1ab7      i32.load [2, 28]
+005d1aba      i32.const [0]
+005d1abc      call [904] ; 
+005d1abf      call [938] ; 
+005d1ac2      local.set [0]
+005d1ac4      br [1]
+005d1ac6    end []
+005d1ac7    i32.const [3926996]
+005d1acc    i32.load [2, 0]
+005d1acf    i32.const [1]
+005d1ad1    call [909] ; 
+005d1ad4    local.set [0]
+005d1ad6    local.get [2]
+005d1ad8    i32.load [2, 0]
+005d1adb    local.set [1]
+005d1add    local.get [2]
+005d1adf    local.get [1]
+005d1ae1    i32.load [2, 400]
+005d1ae5    local.get [1]
+005d1ae7    i32.load [2, 396]
+005d1aeb    global.set [3]
+005d1aed    global.get [3]
+005d1aef    call_indirect [1, 0]
+005d1af2    local.set [1]
+005d1af4    i32.const [4104952] ; STRING "未找到["
+005d1af9    i32.load [2, 0]
+005d1afc    local.get [1]
+005d1afe    i32.const [4081164] ; STRING "]数据管理器"
+005d1b03    i32.load [2, 0]
+005d1b06    i32.const [0]
+005d1b08    call [955] ; String.Concat
+005d1b0b    local.set [1]
+005d1b0d    local.get [0]
+005d1b0f    local.get [1]
+005d1b11    call [905] ; 
+005d1b14    local.get [0]
+005d1b16    local.get [1]
+005d1b18    i32.store [2, 16]
+005d1b1b    i32.const [3929208]
+005d1b20    i32.load [2, 0]
+005d1b23    call [901] ; 
+005d1b26    local.get [0]
+005d1b28    i32.const [0]
+005d1b2a    call [1156] ; CLog.Warning
+005d1b2d    local.get [3]
+005d1b2f    i32.load [2, 12]
+005d1b32    local.set [0]
+005d1b34  end []
+005d1b35  local.get [3]
+005d1b37  i32.const [16]
+005d1b39  i32.add []
+005d1b3a  global.set [0]
+005d1b3c  local.get [0]
+005d1b3e  return []
+005d1b3f  end []

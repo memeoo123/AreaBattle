@@ -1,0 +1,10 @@
+; Original class: ServerTimeModule
+; Type4034.GetNowTimes; wasmcode1 function 48725; offset=16993131 size=13
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+01034b6c  local.get [0]
+01034b6e  i64.load [3, 16]
+01034b71  i64.const [1000]
+01034b74  i64.div_s []
+01034b75  i32.wrap_i64 []
+01034b76  return []
+01034b77  end []

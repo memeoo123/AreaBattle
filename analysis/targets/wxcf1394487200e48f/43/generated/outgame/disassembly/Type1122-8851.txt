@@ -1,0 +1,21 @@
+; Original class: Path
+; Type1122.GetFullPath; wasmcode function 2245; offset=696953 size=51
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000aa27a  i32.const [5023480]
+000aa27f  i32.load8_u [0, 0]
+000aa282  i32.eqz []
+000aa283  if [-64]
+000aa285    i32.const [3936928]
+000aa28a    call [900] ; 
+000aa28d    i32.const [5023480]
+000aa292    i32.const [1]
+000aa294    i32.store8 [0, 0]
+000aa297  end []
+000aa298  i32.const [3936928]
+000aa29d  i32.load [2, 0]
+000aa2a0  call [901] ; 
+000aa2a3  local.get [0]
+000aa2a5  local.get [0]
+000aa2a7  call [5840] ; Path.InsecureGetFullPath
+000aa2aa  return []
+000aa2ab  end []

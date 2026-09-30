@@ -1,0 +1,22 @@
+{
+  "atUtc": "2026-09-30T10:03:41.730607+00:00",
+  "metadataEvidence": "UPDATE_MANAGER_METADATA.json",
+  "callGraph": "UPDATE_MANAGER_CALL_GRAPH.json",
+  "tracedMethodCount": 28,
+  "alternateMethodCount": 35,
+  "criticalEvidence": [
+    "get_Instance22794 Unity fake-null checks cached static, GameObject.Find(\"UpdateManager\"), creates/names if absent, GetComponent before AddComponent, writes static then DontDestroyOnLoad(root). No synthetic Awake/OnDestroy cleanup is added. Native Update/FixedUpdate are named source messages.",
+    "Constructor22759 allocates pending ids/delegates and debug data dictionary; timePerFrame52=16. Other lists/IndexDict lazily allocate through getters. ID22795 starts at field20 and unchecked increments until IndexDict lacks key, stores0 if returnedid>2147483645 otherwise returnedid. Adds insert live list before IndexDict.Add.",
+    "Public AddHandle22777 ->22788 normal, AddFixed22748->22768 fixed, AddForce22793->22782 force. RemoveHandle22791->22763 and RemoveById22798->22786 only queue with IndexOf<=-1 deduplication. AddUpdateData22796->22797 creates name/handle strings record; duplicate logs CLog.Error \"重复添加：\"+id and preserves old record.",
+    "Update22802 returns when isPause; calls ProcessRemovals22770 first, then force and normal lists. Each pass captures Count once and re-fetches live property/list element every iteration; direct delegate invocation has no null guard/catch. Adds during force can reach later normal pass same frame, adds to current pass defer. Pause changed during callback is only read next Update.",
+    "FixedUpdate22785 returns when paused, captures count once and accesses live fixed list each iteration, skips null delegates. Does not process pending removals. Force update is still pause-gated.",
+    "ProcessRemovals22770 iterates live indexed pending IDs, then replaces ID list with new empty List if nonempty; processes pending delegates similarly and replaces list. Does not Clear old queue object. ID removals precede delegate removals regardless of call chronology.",
+    "RemoveNowById22783: absent IndexDict id returns before debug-data cleanup; otherwise delegates to22806 with IndexDict[id], then removes debug data for originally requested id. Delegate removal22806 removes first normal occurrence OR first force if not normal; independently removes first fixed occurrence. If IndexDict.ContainsValue(callback), enumerates dictionary with delegate equality until first matching key, then removes only if key>=0. Duplicate delegates can make requested-id removal delete an earlier equal entry; negative ids retain dictionary entry. Delegate-only removal does not remove debug data.",
+    "22806 loop branch0018bb0d br_if0 repeats loop at0018ba09 when delegate inequality; it is not an unconditional first-key removal. Source slice helper annotates loop end rather than backward branch target; raw WASM loop semantics used.",
+    "35 alternate obfuscated methods remain extracted and mapped. Some genuinely differ (removal thresholds/index starts/rotation RemoveRange/infinite-loop variants). They are not substituted for public/Unity paths; future callers must select exact referenced method. No claim all alternates are callable production APIs."
+  ],
+  "limits": [
+    "Complete traced public API and native message paths restored, not unverified alternate entrypoints.",
+    "TimeModule still editor-pumped in native integration; UpdateManager itself is an actual Unity MonoBehaviour. Audio resource/config/node manager owner and full Main graph still pending."
+  ]
+}

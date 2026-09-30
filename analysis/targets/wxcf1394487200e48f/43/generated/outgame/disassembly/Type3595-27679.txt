@@ -1,0 +1,29 @@
+; Original class: GlobalUnityEngineAPI
+; Type3595.Destroy; wasmcode function 3346; offset=1038667 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+000fd94c  i32.const [4989891]
+000fd951  i32.load8_u [0, 0]
+000fd954  i32.eqz []
+000fd955  if [-64]
+000fd957    i32.const [3936516]
+000fd95c    call [900] ; 
+000fd95f    i32.const [4989891]
+000fd964    i32.const [1]
+000fd966    i32.store8 [0, 0]
+000fd969  end []
+000fd96a  i32.const [3936516]
+000fd96f  i32.load [2, 0]
+000fd972  call [901] ; 
+000fd975  local.get [0]
+000fd977  i32.const [0]
+000fd979  i32.const [0]
+000fd97b  call [946] ; Object.op_Inequality
+000fd97e  if [-64]
+000fd980    i32.const [3936516]
+000fd985    i32.load [2, 0]
+000fd988    call [901] ; 
+000fd98b    local.get [0]
+000fd98d    i32.const [0]
+000fd98f    call [1165] ; Object.Destroy
+000fd992  end []
+000fd993  end []

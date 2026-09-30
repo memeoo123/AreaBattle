@@ -1,0 +1,28 @@
+; AssetResLoader.p¬ÂhY½; wasmcode function 20648; offset=9248555 size=71
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008d1f2c  i32.const [4988212]
+008d1f31  i32.load8_u [0, 0]
+008d1f34  i32.eqz []
+008d1f35  if [-64]
+008d1f37    i32.const [3928344]
+008d1f3c    call [900] ; 
+008d1f3f    i32.const [4988212]
+008d1f44    i32.const [1]
+008d1f46    i32.store8 [0, 0]
+008d1f49  end []
+008d1f4a  local.get [0]
+008d1f4c  i32.const [0]
+008d1f4e  i32.store [2, 20]
+008d1f51  local.get [0]
+008d1f53  i32.const [0]
+008d1f55  i32.store [2, 32]
+008d1f58  local.get [0]
+008d1f5a  i32.load [2, 28]
+008d1f5d  local.set [0]
+008d1f5f  i32.const [3928344]
+008d1f64  i32.load [2, 0]
+008d1f67  call [901] ; 
+008d1f6a  local.get [0]
+008d1f6c  i32.const [0]
+008d1f6e  call [8247] ; AssetBundleManager.UnloadAssetBundle
+008d1f71  end []

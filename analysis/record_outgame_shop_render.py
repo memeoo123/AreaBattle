@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-item-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==348
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='shop-rendered-fixture';s['nextActions']=['Bind source ShopUI equipment/rotation/lifecycle and 3D display consumers.','Complete account startup and concrete activity/video/platform providers.','Complete remaining outgame systems and playable build/end-to-end validation.'];write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['shop-rendered-fixture']={'implementationReady':False,'scope':'Isolated editor render of original soldier/scene shop lists at540x960; no live account or original screenshot match','evidence':['analysis/captures/outgame-shop-soldier-fixture.png','analysis/captures/outgame-shop-scene-fixture.png'],'observed':['Original cards/posters/prices/tags and category switching render','Source LangModule.Get missing-key fallback returns key, fixing empty tag localization crash'],'limitations':['3D showcase remains absent; upper area contains original static placeholder','Providers and profile are explicit isolated fixtures','No new player build or full visual acceptance']};write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Rendered shop fixtures and original missing-language-key fallback','checksPassed':348,'outgameChecksPassed':81,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 商店实际渲染预览（348项复验）\nOutgamePreviewCapture增加兵种/场景商店隔离渲染：outgame-shop-soldier-fixture.png与outgame-shop-scene-fixture.png，已逐张查看，原卡片图标/价格/标签/页签显示正常。上方3D展示仍缺失，保留静态占位，未声称完整视觉复原。渲染发现空标签key导致原重建本地化字典抛错，核对LangModule.Get f5950确认缺失键回传键名；已修复OutgameLocalization并覆盖空/缺失键验证。Unity预览与集成复验退出0，348项通过。真实账户/提供者和完整构建仍待完成。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions','outgameSkinItemActions','outgameSkinItemView','outgameSceneSkinActions','outgameSceneSkinView','outgameSkinOrder','outgameShopSkinLists','outgameShopTabs','outgameToggleBindings','outgameShopInitialSelection','outgameSkinPosters']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','348 integrated checks passed including skin item callbacks and isolated restart; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 348 checks; full goal remains incomplete.')

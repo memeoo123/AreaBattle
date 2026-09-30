@@ -1,0 +1,33 @@
+; Original class: GameStatisticsManager
+; Type4617..ctor; wasmcode function 12098; offset=5889653 size=87
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0059de76  i32.const [5001621]
+0059de7b  i32.load8_u [0, 0]
+0059de7e  i32.eqz []
+0059de7f  if [-64]
+0059de81    i32.const [3955692]
+0059de86    call [900] ; 
+0059de89    i32.const [3917496]
+0059de8e    call [900] ; 
+0059de91    i32.const [5001621]
+0059de96    i32.const [1]
+0059de98    i32.store8 [0, 0]
+0059de9b  end []
+0059de9c  local.get [0]
+0059de9e  i32.const [1]
+0059dea0  i32.store8 [0, 17]
+0059dea3  i32.const [3917496]
+0059dea8  i32.load [2, 0]
+0059deab  call [903] ; 
+0059deae  local.set [1]
+0059deb0  local.get [1]
+0059deb2  i32.const [3955692]
+0059deb7  i32.load [2, 0]
+0059deba  call [951] ; 
+0059debd  local.get [0]
+0059debf  local.get [1]
+0059dec1  i32.store [2, 20]
+0059dec4  local.get [0]
+0059dec6  i32.const [0]
+0059dec8  call [3381] ; DataManagerBase..ctor
+0059decb  end []

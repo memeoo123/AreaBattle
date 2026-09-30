@@ -1,0 +1,159 @@
+[
+  {
+    "query": "effect-shutdown-table",
+    "module": "wasmcode",
+    "opcode": 65,
+    "value": 24648,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "effect-clearchild-table",
+    "module": "wasmcode",
+    "opcode": 65,
+    "value": 24649,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "tag-unload-table",
+    "module": "wasmcode",
+    "opcode": 65,
+    "value": 20595,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "force-unload-table",
+    "module": "wasmcode",
+    "opcode": 65,
+    "value": 20649,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "effect-shutdown-direct",
+    "module": "wasmcode1",
+    "opcode": 16,
+    "value": 64168,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "effect-shutdown-table",
+    "module": "wasmcode1",
+    "opcode": 65,
+    "value": 24648,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "effect-clearchild-direct",
+    "module": "wasmcode1",
+    "opcode": 16,
+    "value": 8643,
+    "verifiedInstructionHits": [
+      {
+        "function": 45985,
+        "instructionOffset": "0xf9a799",
+        "body": {
+          "offset": 16361278,
+          "size": 107,
+          "typeIndex": 4
+        },
+        "names": [
+          {
+            "image": "GFRunning.dll",
+            "cls": "TagDownLoadManager",
+            "method": "C±¡ª",
+            "function": 45985,
+            "module": "wasmcode1",
+            "table": 20595,
+            "metadata": 22439
+          }
+        ]
+      },
+      {
+        "function": 46006,
+        "instructionOffset": "0xf9af79",
+        "body": {
+          "offset": 16363294,
+          "size": 107,
+          "typeIndex": 4
+        },
+        "names": [
+          {
+            "image": "GFRunning.dll",
+            "cls": "TagDownLoadManager",
+            "method": "ForceUnloadAllAssets",
+            "function": 46006,
+            "module": "wasmcode1",
+            "table": 20649,
+            "metadata": 22493
+          }
+        ]
+      },
+      {
+        "function": 64168,
+        "instructionOffset": "0x1386bfb",
+        "body": {
+          "offset": 20474835,
+          "size": 311,
+          "typeIndex": 4
+        },
+        "names": [
+          {
+            "image": "GFRunning.dll",
+            "cls": "EffectModule",
+            "method": "Shutdown",
+            "function": 64168,
+            "module": "wasmcode1",
+            "table": 24648,
+            "metadata": 26802
+          }
+        ]
+      }
+    ],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "effect-clearchild-table",
+    "module": "wasmcode1",
+    "opcode": 65,
+    "value": 24649,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "tag-unload-direct",
+    "module": "wasmcode1",
+    "opcode": 16,
+    "value": 45985,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "tag-unload-table",
+    "module": "wasmcode1",
+    "opcode": 65,
+    "value": 20595,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "force-unload-direct",
+    "module": "wasmcode1",
+    "opcode": 16,
+    "value": 46006,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  },
+  {
+    "query": "force-unload-table",
+    "module": "wasmcode1",
+    "opcode": 65,
+    "value": 20649,
+    "verifiedInstructionHits": [],
+    "unparsedCandidates": []
+  }
+]

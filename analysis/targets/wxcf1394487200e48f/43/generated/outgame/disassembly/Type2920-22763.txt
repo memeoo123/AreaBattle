@@ -1,0 +1,32 @@
+; Original class: UpdateManager
+; Type2920.ª­]f; wasmcode function 9674; offset=4642165 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0046d576  i32.const [4989442]
+0046d57b  i32.load8_u [0, 0]
+0046d57e  i32.eqz []
+0046d57f  if [-64]
+0046d581    i32.const [3980164]
+0046d586    call [900] ; 
+0046d589    i32.const [3980168]
+0046d58e    call [900] ; 
+0046d591    i32.const [4989442]
+0046d596    i32.const [1]
+0046d598    i32.store8 [0, 0]
+0046d59b  end []
+0046d59c  local.get [0]
+0046d59e  i32.load [2, 44]
+0046d5a1  local.get [1]
+0046d5a3  i32.const [3980168]
+0046d5a8  i32.load [2, 0]
+0046d5ab  call [1807] ; 
+0046d5ae  i32.const [-1]
+0046d5b0  i32.le_s []
+0046d5b1  if [-64]
+0046d5b3    local.get [0]
+0046d5b5    i32.load [2, 44]
+0046d5b8    local.get [1]
+0046d5ba    i32.const [3980164]
+0046d5bf    i32.load [2, 0]
+0046d5c2    call [941] ; 
+0046d5c5  end []
+0046d5c6  end []

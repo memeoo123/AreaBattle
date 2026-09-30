@@ -1,0 +1,10 @@
+; Original class: GuideBookControl
+; Type4076.IsGetTipReward; wasmcode function 7743; offset=3716217 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0038b47a  local.get [0]
+0038b47c  i32.load [2, 8]
+0038b47f  local.get [1]
+0038b481  local.get [1]
+0038b483  call [11900] ; GuideBookDataManager.ContainsTip
+0038b486  return []
+0038b487  end []

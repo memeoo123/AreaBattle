@@ -1,0 +1,23 @@
+; Original class: <Await>d__36
+; Type3543.SetStateMachine; wasmcode function 9954; offset=4790192 size=55
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004917b1  i32.const [4989661]
+004917b6  i32.load8_u [0, 0]
+004917b9  i32.eqz []
+004917ba  if [-64]
+004917bc    i32.const [3928420]
+004917c1    call [900] ; 
+004917c4    i32.const [4989661]
+004917c9    i32.const [1]
+004917cb    i32.store8 [0, 0]
+004917ce  end []
+004917cf  i32.const [3928420]
+004917d4  i32.load [2, 0]
+004917d7  call [901] ; 
+004917da  local.get [0]
+004917dc  i32.const [4]
+004917de  i32.add []
+004917df  local.get [1]
+004917e1  i32.const [0]
+004917e3  call [1815] ; AsyncTaskMethodBuilder.SetStateMachine
+004917e6  end []

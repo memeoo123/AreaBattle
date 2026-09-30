@@ -1,0 +1,22 @@
+; Original class: LevelControl
+; Type4107.SetPlaySate; wasmcode function 1444; offset=471813 size=53
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00073306  i32.const [5008482]
+0007330b  i32.load8_u [0, 0]
+0007330e  i32.eqz []
+0007330f  if [-64]
+00073311    i32.const [3953440]
+00073316    call [900] ; 
+00073319    i32.const [5008482]
+0007331e    i32.const [1]
+00073320    i32.store8 [0, 0]
+00073323  end []
+00073324  i32.const [3953440]
+00073329  i32.load [2, 0]
+0007332c  call [935] ; 
+0007332f  local.get [1]
+00073331  local.get [1]
+00073333  call [7630] ; LevelControl.OnGamePlayState
+00073336  i32.const [1]
+00073338  return []
+00073339  end []

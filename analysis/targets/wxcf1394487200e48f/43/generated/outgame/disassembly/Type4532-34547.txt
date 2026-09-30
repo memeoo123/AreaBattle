@@ -1,0 +1,23 @@
+; Original class: GameRewardConfigFormatter
+; Type4532.Serialize; wasmcode1 function 61797; offset=19916924 size=59
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+012fe87d  i32.const [5001113]
+012fe882  i32.load8_u [0, 0]
+012fe885  i32.eqz []
+012fe886  if [-64]
+012fe888    i32.const [3932372]
+012fe88d    i32.const [1605]
+012fe890    call_indirect [0, 0]
+012fe893    i32.const [5001113]
+012fe898    i32.const [1]
+012fe89a    i32.store8 [0, 0]
+012fe89d  end []
+012fe89e  i32.const [3932372]
+012fe8a3  i32.load [2, 0]
+012fe8a6  i32.const [1149]
+012fe8a9  call_indirect [0, 0]
+012fe8ac  local.get [1]
+012fe8ae  local.get [2]
+012fe8b0  local.get [1]
+012fe8b2  call [27784] ; GameRewardConfig.Serialize
+012fe8b6  end []

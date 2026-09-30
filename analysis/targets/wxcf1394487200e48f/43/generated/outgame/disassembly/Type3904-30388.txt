@@ -1,0 +1,22 @@
+; Original class: AudioControl
+; Type3904.get_IsMusicEffect; wasmcode function 3003; offset=925906 size=55
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000e20d3  i32.const [5010005]
+000e20d8  i32.load8_u [0, 0]
+000e20db  i32.eqz []
+000e20dc  if [-64]
+000e20de    i32.const [3932476]
+000e20e3    call [900] ; 
+000e20e6    i32.const [5010005]
+000e20eb    i32.const [1]
+000e20ed    i32.store8 [0, 0]
+000e20f0  end []
+000e20f1  i32.const [3932476]
+000e20f6  i32.load [2, 0]
+000e20f9  call [901] ; 
+000e20fc  i32.const [0]
+000e20fe  call [7783] ; GlobalData.get_MusicGameVolume
+000e2101  f32.const [0.9900000095367432]
+000e2106  f32.gt []
+000e2107  return []
+000e2108  end []

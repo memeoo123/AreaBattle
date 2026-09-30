@@ -1,0 +1,14 @@
+; Original class: ADModule
+; Type9202.autoCloseVideo; wasmcode function 13421; offset=6503061 size=26
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00633a96  local.get [0]
+00633a98  local.get [0]
+00633a9a  call [6343] ; ADModule.cancelAutoCloseVideo
+00633a9d  local.get [0]
+00633a9f  local.get [0]
+00633aa1  local.get [0]
+00633aa3  call [13419] ; ADModule.delayCloseVideo
+00633aa6  i32.const [0]
+00633aa8  call [1712] ; CallFrameworkAdapter.Call_StartCoroutineResult
+00633aab  i32.store [2, 32]
+00633aae  end []

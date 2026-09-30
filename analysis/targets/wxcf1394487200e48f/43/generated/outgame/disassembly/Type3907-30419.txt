@@ -1,0 +1,75 @@
+; Original class: ConfigMgr
+; Type3907.InitChanelData; wasmcode function 12787; offset=6160637 size=201
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+005e0100  i32.const [5010031]
+005e0105  i32.load8_u [0, 0]
+005e0108  i32.eqz []
+005e0109  if [-64]
+005e010b    i32.const [3928172]
+005e0110    call [900] ; 
+005e0113    i32.const [3929208]
+005e0118    call [900] ; 
+005e011b    i32.const [3926996]
+005e0120    call [900] ; 
+005e0123    i32.const [4089068] ; STRING "hcrzd_ABtest"
+005e0128    call [900] ; 
+005e012b    i32.const [4055080] ; STRING "Game: onlineParams = "
+005e0130    call [900] ; 
+005e0133    i32.const [5010031]
+005e0138    i32.const [1]
+005e013a    i32.store8 [0, 0]
+005e013d  end []
+005e013e  i32.const [3928172]
+005e0143  i32.load [2, 0]
+005e0146  i32.load [2, 92]
+005e0149  i32.load [2, 0]
+005e014c  i32.const [4089068] ; STRING "hcrzd_ABtest"
+005e0151  i32.load [2, 0]
+005e0154  i32.const [0]
+005e0156  call [1951] ; AppInfoManager.GetOnlineConfigParams
+005e0159  local.set [1]
+005e015b  i32.const [3926996]
+005e0160  i32.load [2, 0]
+005e0163  i32.const [1]
+005e0165  call [909] ; 
+005e0168  local.set [2]
+005e016a  i32.const [4055080] ; STRING "Game: onlineParams = "
+005e016f  i32.load [2, 0]
+005e0172  local.get [1]
+005e0174  i32.const [0]
+005e0176  call [921] ; String.Concat
+005e0179  local.set [3]
+005e017b  local.get [2]
+005e017d  local.get [3]
+005e017f  call [905] ; 
+005e0182  local.get [2]
+005e0184  local.get [3]
+005e0186  i32.store [2, 16]
+005e0189  i32.const [3929208]
+005e018e  i32.load [2, 0]
+005e0191  call [901] ; 
+005e0194  local.get [2]
+005e0196  i32.const [0]
+005e0198  call [1156] ; CLog.Warning
+005e019b  block [-64]
+005e019d    local.get [1]
+005e019f    if [-64]
+005e01a1      i32.const [0]
+005e01a3      local.set [2]
+005e01a5      local.get [1]
+005e01a7      i32.load [2, 8]
+005e01aa      br_if [1]
+005e01ac    end []
+005e01ad    i32.const [1]
+005e01af    local.set [2]
+005e01b1  end []
+005e01b2  local.get [2]
+005e01b4  i32.eqz []
+005e01b5  if [-64]
+005e01b7    local.get [0]
+005e01b9    local.get [1]
+005e01bb    i32.const [0]
+005e01bd    call [1453] ; Int32.Parse
+005e01c0    i32.store [2, 268]
+005e01c4  end []
+005e01c5  end []

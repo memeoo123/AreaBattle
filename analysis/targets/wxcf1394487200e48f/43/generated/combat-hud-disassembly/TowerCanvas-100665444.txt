@@ -1,0 +1,29 @@
+; TowerCanvas.SetPos wasmcode function10059
+0049a1e0 i32.const [5007218]
+0049a1e5 i32.load8_u [0, 0]
+0049a1e8 i32.eqz []
+0049a1e9 if [-64]
+0049a1eb   i32.const [3936516] ; type: Object
+0049a1f0   call [900] ; 
+0049a1f3   i32.const [5007218]
+0049a1f8   i32.const [1]
+0049a1fa   i32.store8 [0, 0]
+0049a1fd end []
+0049a1fe local.get [0]
+0049a200 i32.load [2, 12]
+0049a203 local.set [2]
+0049a205 i32.const [3936516] ; type: Object
+0049a20a i32.load [2, 0]
+0049a20d call [901] ; 
+0049a210 local.get [2]
+0049a212 i32.const [0]
+0049a214 i32.const [0]
+0049a216 call [940] ; Object.op_Equality
+0049a219 i32.eqz []
+0049a21a if [-64]
+0049a21c   local.get [0]
+0049a21e   local.get [1]
+0049a220   local.get [0]
+0049a222   call [10060] ; TowerCanvas.RefreshPos
+0049a225 end []
+0049a226 end []

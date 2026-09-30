@@ -1,0 +1,42 @@
+; Original class: x~bjQc
+; Type4504.get_Manager; wasmcode function 3200; offset=986636 size=102
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000f0e0d  i32.const [5009898]
+000f0e12  i32.load8_u [0, 0]
+000f0e15  i32.eqz []
+000f0e16  if [-64]
+000f0e18    i32.const [3995092]
+000f0e1d    call [900] ; 
+000f0e20    i32.const [3930256]
+000f0e25    call [900] ; 
+000f0e28    i32.const [5009898]
+000f0e2d    i32.const [1]
+000f0e2f    i32.store8 [0, 0]
+000f0e32  end []
+000f0e33  local.get [0]
+000f0e35  i32.load [2, 16]
+000f0e38  local.set [1]
+000f0e3a  local.get [1]
+000f0e3c  i32.eqz []
+000f0e3d  if [-64]
+000f0e3f    i32.const [3930256]
+000f0e44    i32.load [2, 0]
+000f0e47    call [901] ; 
+000f0e4a    local.get [0]
+000f0e4c    i32.const [16]
+000f0e4e    i32.add []
+000f0e4f    local.set [0]
+000f0e51    local.get [0]
+000f0e53    i32.const [0]
+000f0e55    call [1309] ; DataManagerPool.get_Instance
+000f0e58    i32.const [3995092]
+000f0e5d    i32.load [2, 0]
+000f0e60    call [1609] ; 
+000f0e63    i32.store [2, 0]
+000f0e66    local.get [0]
+000f0e68    i32.load [2, 0]
+000f0e6b    local.set [1]
+000f0e6d  end []
+000f0e6e  local.get [1]
+000f0e70  return []
+000f0e71  end []

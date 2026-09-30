@@ -1,0 +1,21 @@
+; Original class: AdsManager
+; Type3157.IsCanShowInters; wasmcode1 function 70619; offset=22349111 size=51
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+01550538  i32.const [5010550]
+0155053d  i32.load8_u [0, 0]
+01550540  i32.eqz []
+01550541  if [-64]
+01550543    i32.const [4040520] ; STRING "0"
+01550548    i32.const [1605]
+0155054b    call_indirect [0, 0]
+0155054e    i32.const [5010550]
+01550553    i32.const [1]
+01550555    i32.store8 [0, 0]
+01550558  end []
+01550559  local.get [0]
+0155055b  i32.const [4040520] ; STRING "0"
+01550560  i32.load [2, 0]
+01550563  local.get [0]
+01550565  call [14992] ; AdsManager.IsCanShowInters
+01550568  return []
+01550569  end []

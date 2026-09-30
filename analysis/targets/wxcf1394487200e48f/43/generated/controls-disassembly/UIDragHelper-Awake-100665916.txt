@@ -1,0 +1,41 @@
+; UIDragHelper.Awake; wasmcode function 15056; offset=7322463 size=118
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006fbb60  i32.const [5009202]
+006fbb65  i32.load8_u [0, 0]
+006fbb68  i32.eqz []
+006fbb69  if [-64]
+006fbb6b    i32.const [3993172]
+006fbb70    call [900] ; 
+006fbb73    i32.const [4000632]
+006fbb78    call [900] ; 
+006fbb7b    i32.const [3932308] ; type: GameFrameEntry
+006fbb80    call [900] ; 
+006fbb83    i32.const [5009202]
+006fbb88    i32.const [1]
+006fbb8a    i32.store8 [0, 0]
+006fbb8d  end []
+006fbb8e  local.get [0]
+006fbb90  local.get [0]
+006fbb92  i32.const [0]
+006fbb94  call [977] ; 
+006fbb97  i32.const [3993172]
+006fbb9c  i32.load [2, 0]
+006fbb9f  call [1010] ; 
+006fbba2  i32.store [2, 12]
+006fbba5  i32.const [3932308] ; type: GameFrameEntry
+006fbbaa  i32.load [2, 0]
+006fbbad  call [901] ; 
+006fbbb0  local.get [0]
+006fbbb2  i32.const [4000632]
+006fbbb7  i32.load [2, 0]
+006fbbba  call [1051] ; 
+006fbbbd  i32.const [0]
+006fbbbf  call [5550] ; 
+006fbbc2  i32.store [2, 16]
+006fbbc5  local.get [0]
+006fbbc7  local.get [0]
+006fbbc9  i32.load [2, 16]
+006fbbcc  i32.const [0]
+006fbbce  call [2516] ; 
+006fbbd1  i32.store [2, 20]
+006fbbd4  end []

@@ -1,0 +1,118 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "facts": [
+    {
+      "id": "dynamic-soldier-model",
+      "status": "confirmed",
+      "rule": "For ordinary soldier type<=9, Soldier.GetSoldierObj calls PlayerControl.GetSkinEntityByType for the player camp and GetSkinEntityByRandomType for other camps; SoldierConfig.EntityID is not the ordinary skin binding.",
+      "evidence": [
+        "generated/model-binding/Soldier-GetSoldierObj.txt:36"
+      ]
+    },
+    {
+      "id": "player-selected-skin",
+      "status": "confirmed",
+      "rule": "SkinManager.GetUserSkinId(type) -> SkinConfig.prefabId; missing config fallback type*1000. A game-mode bool at controller offset64 adds3000. Actual saved skin/account state has not been read.",
+      "evidence": [
+        "generated/model-binding/PlayerControl-GetSkinEntityByType.txt:44"
+      ]
+    },
+    {
+      "id": "enemy-skin",
+      "status": "confirmed",
+      "rule": "Types1/2/3 use LevelControl enemy skin arrays at84/88/92, indexed clamp(camp,2,4)-2; skinId=100/200/300 + selected offset. Missing config falls back to type*1000; same game-mode flag may add3000.",
+      "evidence": [
+        "generated/model-binding/PlayerControl-GetSkinEntityByRandomType.txt:31"
+      ]
+    },
+    {
+      "id": "baseline-skins",
+      "status": "confirmed",
+      "rule": "Explicit controlled loadout may choose free, unlocked skin100/200/300; this is a fixture choice, not evidence of original current account selection.",
+      "bindings": [
+        {
+          "skin": {
+            "id": 100,
+            "skinType": 1,
+            "iconName": "bubing00",
+            "prefabId": 1000,
+            "castType": 1001,
+            "price": 0,
+            "DiamondPrice": 0,
+            "lockState": 2,
+            "sortNo": 0,
+            "actNo": 0,
+            "special": 0,
+            "tag": "",
+            "describe": "typename_00"
+          },
+          "model": {
+            "id": 1000,
+            "AssetName": "soldier_100",
+            "PathEnum": 10,
+            "runtimeLoad": 1
+          }
+        },
+        {
+          "skin": {
+            "id": 200,
+            "skinType": 2,
+            "iconName": "dupaibing00",
+            "prefabId": 2000,
+            "castType": 1001,
+            "price": 0,
+            "DiamondPrice": 0,
+            "lockState": 2,
+            "sortNo": 0,
+            "actNo": 0,
+            "special": 0,
+            "tag": "",
+            "describe": "typename_00"
+          },
+          "model": {
+            "id": 2000,
+            "AssetName": "soldier_200",
+            "PathEnum": 10,
+            "runtimeLoad": 1
+          }
+        },
+        {
+          "skin": {
+            "id": 300,
+            "skinType": 3,
+            "iconName": "qibing00",
+            "prefabId": 3000,
+            "castType": 1001,
+            "price": 0,
+            "DiamondPrice": 0,
+            "lockState": 2,
+            "sortNo": 0,
+            "actNo": 0,
+            "special": 0,
+            "tag": "",
+            "describe": "typename_00"
+          },
+          "model": {
+            "id": 3000,
+            "AssetName": "soldier_300",
+            "PathEnum": 10,
+            "runtimeLoad": 1
+          }
+        }
+      ],
+      "evidence": [
+        "generated/tables/SkinConfig.json",
+        "generated/tables/EntityModelConfig.json"
+      ]
+    }
+  ],
+  "unknowns": [
+    {
+      "item": "Original selected skins/random seed and +3000 mode flag",
+      "verification": "Observe original running loadout and resolve GameControl flag; do not infer from cache membership."
+    }
+  ]
+}

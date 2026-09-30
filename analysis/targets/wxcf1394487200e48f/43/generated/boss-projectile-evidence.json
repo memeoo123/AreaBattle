@@ -1,0 +1,151 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": 43
+  },
+  "rules": [
+    {
+      "id": "action2-template",
+      "status": "confirmed",
+      "source": "Boss.Init f68533 @0x14ada66..0x14adae3; Boss.f31308 @0xb890ba..0xb891b4",
+      "fact": "Camp5 caches root world position and Hdzd_Effect_Wy_Fire template. Existing pool dequeues; else clone template and set local Euler(0,90,0). No entity102 resource lookup."
+    },
+    {
+      "id": "action2-flight",
+      "status": "confirmed",
+      "source": "f40243 @0xe16eb5..0xe17015; Bullet.Init f4506 @0x172cf9..0x172d2c",
+      "fact": "Activate, set cached root world position, parent bulletRoot; audio3121; arc.5, duration distance/2, callback, rotation50, LookAt=false, autoDisable=false. Rotation is retained on pooled reuse."
+    },
+    {
+      "id": "action2-hit",
+      "status": "confirmed",
+      "source": "callback f42662 @0xea5c7b..0xea5ec2",
+      "fact": "Hide projectile, audio3122, enqueue. Target current camp5 gets +skill2_Hit, Effect404 at current target position, audio2021. Other current camps get -skill2_Hit, Effect408 at current target position+up*.2, second audio3122. No Running guard."
+    },
+    {
+      "id": "retry-clear",
+      "status": "confirmed",
+      "source": "Boss.Clear f68535 @0x14adf26..0x14adf6c",
+      "fact": "Destroy bulletRoot children and clear pool; original template survives outside bulletRoot."
+    },
+    {
+      "id": "boss-ice-source",
+      "status": "confirmed",
+      "source": "Boss.Init @0x14add34..0x14add7c; Boss.PlayIceEffect @0x14ad4eb; Tower.PlayIceEffect @0x499c62..0x499c7f",
+      "fact": "Boss field92/96 = skill_TM GameObject/Animator, used by inherited ice begin/melt behavior. Ordinary towers use Hdzd_Effect_icicle. Boss skill_TM has64Transform/56mesh bones, 620scalar bindings per start/end clip:168streamed+452constant."
+    },
+    {
+      "id": "boss-target-markers",
+      "status": "confirmed",
+      "source": "Boss.Init @0x14addb4..0x14ade13; Boss.Update @0x14ace57 calls Tower.Update; Tower.Update @0x289f16..0x289fb1",
+      "fact": "Init resolves entity821 red/blue and hides both. Base Update mode0 hides both; mode2 othercamp activates red; mode1 playercamp activates blue. No mode3 activation, other branches retain active flags."
+    },
+    {
+      "id": "unused-821",
+      "status": "bounded-unknown",
+      "source": "Boss complete methods + Tower complete methods scans",
+      "fact": "No confirmed Boss consumer for hdzd_eff_Regions or hdzd_eff_SphereTrails in these complete class methods; left inactive. Complete program-level absence is not asserted."
+    },
+    {
+      "id": "ice-shader",
+      "status": "confirmed-translation-awaits-unity",
+      "source": "ice-shader-evidence/tex.json and tex.0.0.txt",
+      "fact": "Original tex four passes: front-culled expanded-normal opaque constant outline, back-culled opaque texture RGB alpha1, additive zero-light pass, depth-writing ShadowCaster. Material outlineWidth .01. Implemented source-backed HLSL with original saved texture/ST and state."
+    },
+    {
+      "id": "fire-disabled-root-renderer",
+      "status": "confirmed-and-gpu-validated",
+      "source": "boss01.flat.json node /boss01/Hdzd_Effect_Wy_Fire ParticleSystemRenderer CAB-a5cbcddbf71a9f47f7352c65479f1e75:-7556168621690325670",
+      "fact": "Root renderer disabled, material array one null; four child renderers enabled with original Hdzd_Effect_Wy_024/017/016/015 Alpha Blended materials. Test now requires exactly that source topology, supported shaders for four actual child draws. No invented material assigned to source null."
+    },
+    {
+      "id": "native-skin-json-dto",
+      "status": "fixed-and-validated",
+      "source": "Source skill_TM mesh TM 56 bindposes/1254weights; source skill7 HD_ZHG_bianfu 10bindposes/244weights; original descriptor floats preserved",
+      "fact": "JsonUtility direct Matrix4x4[]/BoneWeight[] produced invalid native memory layout (saved e30 NaN). Both BossEmbeddedImporter and SkillEffectImporter now parse explicit scalar DTOs and construct Matrix4x4/BoneWeight values. Fresh-process tests compare source entries and require every baked vertex finite."
+    },
+    {
+      "id": "boss-skin-real-frame",
+      "status": "gpu-validated",
+      "source": "BossSkinPlayModeProbe.Run; analysis/boss-ice-playmode-probe.log",
+      "fact": "Immediate Editor Camera.Render does not upload animated native skin despite valid CPU BakeMesh. In real PlayMode player loop, source renderer/material shows original wood-spike cage at30/60/120frames, then source end animation shrinks it by360frames. No production culling/renderer or skinning workaround applied. Unity shortcut preference access warning did not interrupt captures."
+    }
+  ],
+  "sources": [
+    {
+      "path": "analysis/flow_boss_methods.txt",
+      "sha256": "936df5935c2dfdbd2bf961339257602157d9075bfc4973066e87fa94a2d240f6"
+    },
+    {
+      "path": "analysis/flow_boss_coroutines.txt",
+      "sha256": "fb8ae440922ee546e30ced800c11754c1d8772a17240a2e20b00c2e8871c2501"
+    },
+    {
+      "path": "analysis/flow_boss_action2_callback.txt",
+      "sha256": "bbe2d3b86ecde56c48003ee5e120f293d7b0a7a71f94e4902e36b636a9326911"
+    },
+    {
+      "path": "analysis/flow_boss_base_tower.txt",
+      "sha256": "c38a33540cb498fb211330577035919133840cff4a57039189a4c9165b198fdf"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/boss-entities-20260928/ice-shader-evidence/tex.json",
+      "sha256": "01ed094c463f7894bd6e8da3b5883c879a82df317824032d67352f6fb7e22f1e"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/boss-entities-20260928/ice-shader-evidence/tex.0.0.txt",
+      "sha256": "eaa6052a33f37489e882a4d47d985ee53eced54820a3606a6d0259604153a4c8"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/boss-entities-20260928/prepared-embedded/native-import.json",
+      "sha256": "ee90ca0a85c85136ea279fa812ac86fe5656959ef605ad8745299dad4f906f83"
+    }
+  ],
+  "assetAcquisition": "No downloads: fire is inside already verified boss01; hit404/408 already imported; all821 subtree dependencies in immutable baseline.",
+  "implementation": {
+    "helper": "RecoveredBossProjectilePool.cs",
+    "presentation": "BattleSkillPresentation.cs action102 branch and Boss-only ice binding",
+    "preparedSubtrees": [
+      "skill_TM",
+      "hero_sanjiao_red",
+      "hero_sanjiao_blue"
+    ],
+    "tests": "BossProjectileValidation.Run() four checks passed fresh process: fire clone/pool, production flight/hit/retry, Boss skill_TM source matrices/weights/finite GPU-ready skin, bat skin source matrix/weights/finite skin.",
+    "coreEvents": "Combat agent added SourceTowerId and source event order; no new mechanics invented."
+  },
+  "remaining": [
+    "Parent unified build re-run pending final DTO and regression changes",
+    "Original matched-frame comparison remains pending",
+    "Immediate Editor Camera.Render native skin requires a real player-loop frame; use supplied PlayMode probe for skin visual acceptance",
+    "Full goal not declared complete"
+  ],
+  "validation": {
+    "report": "analysis/boss-projectile-validation.json",
+    "passed": true,
+    "checks": 4,
+    "GPU": {
+      "path": "analysis/captures/boss-action2-fire-gpu.png",
+      "sha256": "cec7ab1db00423be2c06c01a280c8b12d8ef8bca820fa63605a16399e7dee8c1",
+      "inspection": "Visible orange-white fire ball and gray smoke trail below original red Boss; four original child materials supported."
+    },
+    "realFrameCaptures": [
+      {
+        "path": "analysis/captures/boss-ice-playmode-30frames.png",
+        "sha256": "8f9a4140c9b1dcf40c8dbd360549131123af69960df01552f7c5fd36ead684b2"
+      },
+      {
+        "path": "analysis/captures/boss-ice-playmode-60frames.png",
+        "sha256": "4fe40027a9106524f0a0c8e8efb0e1329fa29f63068e0b781e49e63b7d0c8d04"
+      },
+      {
+        "path": "analysis/captures/boss-ice-playmode-120frames.png",
+        "sha256": "e1157c69c71e4c8b6f8f155079bc950c58de4f73a76485e7f33cc544c77b6bc4"
+      },
+      {
+        "path": "analysis/captures/boss-ice-playmode-360frames.png",
+        "sha256": "e145f7d03af0ba25aa425f7a5752d4749a10723659955b8675684bd46cfc558e"
+      }
+    ],
+    "reportSha256": "9994a92cca756da04f03a4fbff0b9d625e9425d6e8da3184a6113722e0435794"
+  }
+}

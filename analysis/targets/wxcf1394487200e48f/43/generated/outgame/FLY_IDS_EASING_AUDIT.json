@@ -1,0 +1,23 @@
+{
+  "status": "id_registry_and_easing_verified_execution_pending",
+  "checks": 520,
+  "source": [
+    "disassembly/Type4054-31228.txt",
+    "disassembly/Type4054-31229.txt",
+    "disassembly/Type4054-31230.txt",
+    "disassembly/Type4054-31231.txt",
+    "disassembly/Type4054-31232.txt",
+    "disassembly/Type9974-68862.txt"
+  ],
+  "verified": [
+    "IDs start1, monitor-protected postincrement/add; unchecked increment",
+    "Per-effect subids consume old count and format fly_{id}_{sub}; missing count-1, unknown allocation throws",
+    "Removal does not recycle global ids",
+    "Ease20 InCirc = -(sqrt(1-t*t)-1); ease21 OutCirc = sqrt(1-(t-1)^2), float expression order, no evaluator clamp"
+  ],
+  "pending": [
+    "Concrete Unity tween advancement/target pulse semantics",
+    "Original random scatter and sin/cos binding",
+    "Production animation/pool host and visual test"
+  ]
+}

@@ -1,0 +1,41 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Custom/PlanarShadow" {
+Properties {
+
+_Tint ("_Tint", Color) = (1,1,1,1)
+
+_MainTex ("_MainTex (albedo)", 2D) = "white" { }
+
+[Header(Alpha)] [Toggle(_CLIPPING)] _Clipping ("Alpha Clipping", Float) = 1.0
+
+_Cutoff ("_Cutoff (Alpha Cutoff)", Range(0, 1)) = 0.5
+
+[Header(Shadow)] _GroundHeight ("_GroundHeight", Float) = 0.0
+
+_ShadowColor ("_ShadowColor", Color) = (0,0,0,1)
+
+_ShadowFalloff ("_ShadowFalloff", Range(0, 1)) = 0.05000000074505806
+
+_SrcBlend ("__src", Float) = 1.0
+
+_DstBlend ("__dst", Float) = 0.0
+
+_ZWrite ("__zw", Float) = 1.0
+
+_Cull ("__cull", Float) = 2.0
+
+}
+SubShader {
+ Pass {
+ Name "PlanarShadow"
+ ZWrite Off
+ Cull Off
+ Offset -1.0, 0.0
+  GpuProgramID 6031
+}
+}
+}

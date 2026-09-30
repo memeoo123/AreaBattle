@@ -1,0 +1,92 @@
+; Original class: ActivityConfigMgr
+; Type4626.GetNTAccRewardsDicByActivityId; wasmcode function 13372; offset=6479269 size=233
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0062dda8  global.get [0]
+0062ddaa  i32.const [16]
+0062ddac  i32.sub []
+0062ddad  local.set [2]
+0062ddaf  local.get [2]
+0062ddb1  global.set [0]
+0062ddb3  i32.const [5001688]
+0062ddb8  i32.load8_u [0, 0]
+0062ddbb  i32.eqz []
+0062ddbc  if [-64]
+0062ddbe    i32.const [3929208]
+0062ddc3    call [900] ; 
+0062ddc6    i32.const [3954616]
+0062ddcb    call [900] ; 
+0062ddce    i32.const [3934404]
+0062ddd3    call [900] ; 
+0062ddd6    i32.const [3926996]
+0062dddb    call [900] ; 
+0062ddde    i32.const [4102736] ; STRING "不存在子活动id:{0}"
+0062dde3    call [900] ; 
+0062dde6    i32.const [5001688]
+0062ddeb    i32.const [1]
+0062dded    i32.store8 [0, 0]
+0062ddf0  end []
+0062ddf1  local.get [2]
+0062ddf3  i32.const [0]
+0062ddf5  i32.store [2, 12]
+0062ddf8  block [-64]
+0062ddfa    local.get [0]
+0062ddfc    i32.load [2, 72]
+0062ddff    local.get [1]
+0062de01    local.get [2]
+0062de03    i32.const [12]
+0062de05    i32.add []
+0062de06    i32.const [3954616]
+0062de0b    i32.load [2, 0]
+0062de0e    call [1134] ; 
+0062de11    if [-64]
+0062de13      local.get [2]
+0062de15      i32.load [2, 12]
+0062de18      local.set [0]
+0062de1a      br [1]
+0062de1c    end []
+0062de1d    i32.const [0]
+0062de1f    local.set [0]
+0062de21    i32.const [3926996]
+0062de26    i32.load [2, 0]
+0062de29    i32.const [1]
+0062de2b    call [909] ; 
+0062de2e    local.set [3]
+0062de30    local.get [2]
+0062de32    local.get [1]
+0062de34    i32.store [2, 8]
+0062de37    i32.const [3934404]
+0062de3c    i32.load [2, 0]
+0062de3f    local.get [2]
+0062de41    i32.const [8]
+0062de43    i32.add []
+0062de44    call [910] ; 
+0062de47    local.set [1]
+0062de49    i32.const [4102736] ; STRING "不存在子活动id:{0}"
+0062de4e    i32.load [2, 0]
+0062de51    local.get [1]
+0062de53    i32.const [0]
+0062de55    call [1015] ; String.Format
+0062de58    local.set [1]
+0062de5a    local.get [3]
+0062de5c    local.get [1]
+0062de5e    call [905] ; 
+0062de61    local.get [3]
+0062de63    local.get [1]
+0062de65    i32.store [2, 16]
+0062de68    i32.const [3929208]
+0062de6d    i32.load [2, 0]
+0062de70    call [901] ; 
+0062de73    local.get [3]
+0062de75    i32.const [0]
+0062de77    i32.const [2087] ; TABLE CLog.Error
+0062de7a    global.set [3]
+0062de7c    i32.const [2087] ; TABLE CLog.Error
+0062de7f    call_indirect [0, 0]
+0062de82  end []
+0062de83  local.get [2]
+0062de85  i32.const [16]
+0062de87  i32.add []
+0062de88  global.set [0]
+0062de8a  local.get [0]
+0062de8c  return []
+0062de8d  end []

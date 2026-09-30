@@ -1,0 +1,48 @@
+; Original class: xEv·
+; Type3820.GetUACBuildID; wasmcode1 function 32398; offset=12465167 size=119
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00be3410  i32.const [4988202]
+00be3415  i32.load8_u [0, 0]
+00be3418  i32.eqz []
+00be3419  if [-64]
+00be341b    i32.const [4039208] ; STRING ","
+00be3420    i32.const [1605]
+00be3423    call_indirect [0, 0]
+00be3426    i32.const [4087240] ; STRING "empty"
+00be342b    i32.const [1605]
+00be342e    call_indirect [0, 0]
+00be3431    i32.const [4988202]
+00be3436    i32.const [1]
+00be3438    i32.store8 [0, 0]
+00be343b  end []
+00be343c  local.get [0]
+00be343e  i32.load [2, 8]
+00be3441  local.set [0]
+00be3443  local.get [0]
+00be3445  if [-64]
+00be3447    local.get [0]
+00be3449    i32.load [2, 28]
+00be344c    i32.const [4039208] ; STRING ","
+00be3451    i32.load [2, 0]
+00be3454    i32.const [0]
+00be3456    i32.const [0]
+00be3458    i32.const [8971] ; TABLE String.Split
+00be345c    call_indirect [8, 0]
+00be345f    local.set [0]
+00be3461    local.get [0]
+00be3463    i32.load [2, 12]
+00be3466    i32.const [2]
+00be3468    i32.ge_s []
+00be3469    if [-64]
+00be346b      local.get [0]
+00be346d      i32.load [2, 20]
+00be3470      return []
+00be3471    end []
+00be3472    i32.const [4087240] ; STRING "empty"
+00be3477    i32.load [2, 0]
+00be347a    return []
+00be347b  end []
+00be347c  i32.const [4087240] ; STRING "empty"
+00be3481  i32.load [2, 0]
+00be3484  return []
+00be3485  end []

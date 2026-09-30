@@ -1,0 +1,45 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.ShowToast; wasmcode function 14667; offset=7200276 size=105
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006dde15  i32.const [5005428]
+006dde1a  i32.load8_u [0, 0]
+006dde1d  i32.eqz []
+006dde1e  if [-64]
+006dde20    i32.const [4098352] ; STRING "tiktok渠道不支持toast，使用自定义toast"
+006dde25    call [900] ; 
+006dde28    i32.const [5005428]
+006dde2d    i32.const [1]
+006dde2f    i32.store8 [0, 0]
+006dde32  end []
+006dde33  i32.const [0]
+006dde35  call [1120] ; XYXGlobalConfig.get_I
+006dde38  i32.load [2, 68]
+006dde3b  i32.const [13]
+006dde3d  i32.ne []
+006dde3e  if [-64]
+006dde40    i32.const [0]
+006dde42    call [1083] ; BridgeManager.get_xyxFunc
+006dde45    local.set [0]
+006dde47    local.get [0]
+006dde49    local.set [2]
+006dde4b    local.get [0]
+006dde4d    i32.load [2, 0]
+006dde50    local.set [0]
+006dde52    local.get [2]
+006dde54    local.get [1]
+006dde56    local.get [0]
+006dde58    i32.const [320]
+006dde5b    i32.add []
+006dde5c    i32.load [2, 192]
+006dde60    local.get [0]
+006dde62    i32.load [2, 508]
+006dde66    global.set [3]
+006dde68    global.get [3]
+006dde6a    call_indirect [2, 0]
+006dde6d    return []
+006dde6e  end []
+006dde6f  i32.const [4098352] ; STRING "tiktok渠道不支持toast，使用自定义toast"
+006dde74  i32.load [2, 0]
+006dde77  local.get [1]
+006dde79  call [999] ; XYXLOG.Log
+006dde7c  end []

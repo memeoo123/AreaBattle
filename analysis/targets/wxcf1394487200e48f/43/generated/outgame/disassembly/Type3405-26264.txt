@@ -1,0 +1,33 @@
+; Original class: AudioActionBase
+; Type3405.T«`h; wasmcode function 8228; offset=3909311 size=93
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003ba6c0  i32.const [5011628]
+003ba6c5  i32.load8_u [0, 0]
+003ba6c8  i32.eqz []
+003ba6c9  if [-64]
+003ba6cb    i32.const [3990800] ; METHOD AudioActionBase.BEm
+003ba6d0    call [900] ; 
+003ba6d3    i32.const [3947148]
+003ba6d8    call [900] ; 
+003ba6db    i32.const [4056004] ; STRING "GlobalVolumeChange"
+003ba6e0    call [900] ; 
+003ba6e3    i32.const [5011628]
+003ba6e8    i32.const [1]
+003ba6ea    i32.store8 [0, 0]
+003ba6ed  end []
+003ba6ee  i32.const [3947148]
+003ba6f3  i32.load [2, 0]
+003ba6f6  call [903] ; 
+003ba6f9  local.set [1]
+003ba6fb  local.get [1]
+003ba6fd  local.get [0]
+003ba6ff  i32.const [3990800] ; METHOD AudioActionBase.BEm
+003ba704  i32.load [2, 0]
+003ba707  i32.const [0]
+003ba709  call [1067] ; EventHandler..ctor
+003ba70c  i32.const [4056004] ; STRING "GlobalVolumeChange"
+003ba711  i32.load [2, 0]
+003ba714  local.get [1]
+003ba716  i32.const [0]
+003ba718  call [1185] ; MsgDispatcher.RemoveEventListener
+003ba71b  end []

@@ -1,0 +1,51 @@
+{
+  "status": "concrete_host_and_real_playmode_close_verified",
+  "source": [
+    "disassembly/Type3540-27347.txt",
+    "disassembly/Type4438-34025.txt",
+    "UI_ANIMATION_AUDIT.json",
+    "UI_RESOURCE_LISTS_AUDIT.json"
+  ],
+  "implementation": [
+    "OutgameUiCloseHost",
+    "OutgameUiPage lifetime getter",
+    "OutgameUiLifetime shared CloseBefore/MarkDisposed/DestroyObject"
+  ],
+  "verified": [
+    "Shared page identity in visibility and final CloseUI",
+    "Dispose clears shared page GameObject and opaque fields before activity sorting event",
+    "Modern and legacy resource routes release actual handles in original order",
+    "Real non-batch PlayMode pause/animation and two frame-end waits",
+    "Hide/Dispose125 and CloseUI126; native object destroyed before final notification",
+    "No unrelated tracked C# source changes from API updater"
+  ],
+  "integratedChecks": 595,
+  "playMode": {
+    "passed": true,
+    "scope": "Real Play Mode animation and end-of-frame close on original activity prefab; isolated resource provider, no production account or native bundle loading",
+    "checks": [
+      "Scaled animation wait retains page and resources while game time is paused",
+      "Hide occurs with disposed flag while native object still exists",
+      "Dispose clears references before deferred native destruction and resource releases",
+      "Close notification follows actual native destruction and all handle releases",
+      "Second end-of-frame occurs after hide/dispose frame",
+      "Real close releases main, dynamic and custom handles in order"
+    ],
+    "error": "",
+    "hideFrame": 125,
+    "disposeFrame": 125,
+    "closeFrame": 126,
+    "batchMode": false
+  },
+  "launchRecovery": [
+    "Initial sandbox preferences write denied; test entry not reached",
+    "Approved outside-sandbox launch reached Script Updating Consent",
+    "Window inspection authorization timed out; no UI input performed",
+    "Terminated only owned test processes; -accept-apiupdate launch completed with exit0"
+  ],
+  "remaining": [
+    "Production page loading/registration and entry/account owner",
+    "Native resource package loading/unloading",
+    "Complete Player flow and visual parity"
+  ]
+}

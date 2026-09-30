@@ -1,0 +1,36 @@
+; Original class: ResourcesModule
+; Type3832._LoadAsset; wasmcode function 7265; offset=2876044 size=91
+; signature={'args': [127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+002be28d  i32.const [4988232]
+002be292  i32.load8_u [0, 0]
+002be295  i32.eqz []
+002be296  if [-64]
+002be298    i32.const [3938016]
+002be29d    call [900] ; 
+002be2a0    i32.const [4040164] ; STRING ".unity3d"
+002be2a5    call [900] ; 
+002be2a8    i32.const [4988232]
+002be2ad    i32.const [1]
+002be2af    i32.store8 [0, 0]
+002be2b2  end []
+002be2b3  i32.const [3938016]
+002be2b8  i32.load [2, 0]
+002be2bb  call [901] ; 
+002be2be  i32.const [0]
+002be2c0  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+002be2c3  drop []
+002be2c4  local.get [0]
+002be2c6  local.get [1]
+002be2c8  i32.const [0]
+002be2ca  call [1374] ; String.ToLower
+002be2cd  i32.const [4040164] ; STRING ".unity3d"
+002be2d2  i32.load [2, 0]
+002be2d5  i32.const [0]
+002be2d7  call [921] ; String.Concat
+002be2da  local.get [0]
+002be2dc  local.get [2]
+002be2de  local.get [3]
+002be2e0  local.get [0]
+002be2e2  call [10674] ; ResourcesModule.Load
+002be2e5  return []
+002be2e6  end []

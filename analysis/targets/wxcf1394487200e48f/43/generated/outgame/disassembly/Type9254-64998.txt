@@ -1,0 +1,41 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.EndChallenge; wasmcode1 function 68420; offset=21659329 size=111
+; signature={'args': [127, 127, 126, 127, 127], 'returns': []}; localGroups=[]
+014a7ec2  i32.const [5006738]
+014a7ec7  i32.load8_u [0, 0]
+014a7eca  i32.eqz []
+014a7ecb  if [-64]
+014a7ecd    i32.const [3984752]
+014a7ed2    i32.const [1605]
+014a7ed5    call_indirect [0, 0]
+014a7ed8    i32.const [4087388] ; STRING "end"
+014a7edd    i32.const [1605]
+014a7ee0    call_indirect [0, 0]
+014a7ee3    i32.const [5006738]
+014a7ee8    i32.const [1]
+014a7eea    i32.store8 [0, 0]
+014a7eed  end []
+014a7eee  local.get [1]
+014a7ef0  i32.const [64797] ; TABLE WX_Handler.get_Instance
+014a7ef4  call_indirect [2, 0]
+014a7ef7  drop []
+014a7ef8  local.get [1]
+014a7efa  local.get [1]
+014a7efc  local.get [2]
+014a7efe  local.get [3]
+014a7f00  local.get [1]
+014a7f02  call [18479] ; WX_Handler.EndChallenge
+014a7f06  i32.const [3984752]
+014a7f0b  i32.load [2, 0]
+014a7f0e  i32.const [8962]
+014a7f12  call_indirect [2, 0]
+014a7f15  i32.const [0]
+014a7f17  i32.const [9129] ; TABLE XYXSDKModuleMgr.get_reporterSDK
+014a7f1b  call_indirect [1, 0]
+014a7f1e  local.get [1]
+014a7f20  local.get [2]
+014a7f22  i32.const [4087388] ; STRING "end"
+014a7f27  i32.load [2, 0]
+014a7f2a  i32.const [0]
+014a7f2c  call [3813] ; ReporterSDK.ReportWXLeiTaiEvent
+014a7f2f  end []

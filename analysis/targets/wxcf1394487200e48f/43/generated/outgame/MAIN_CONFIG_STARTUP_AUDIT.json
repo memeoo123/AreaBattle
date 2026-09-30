@@ -1,0 +1,33 @@
+﻿{
+  "atUtc": "2026-09-30T05:04:15.066782+00:00",
+  "status": "legacy-main-config-callback-connected",
+  "sourceMethods": [
+    30607,
+    30603
+  ],
+  "implementation": "OutgameMainConfigStartup.cs",
+  "sequence": [
+    "LoadingUIShow log",
+    "SDK U3DGameStart boundary",
+    "LoadAsset data/config with Array.Empty<object> (usage3989352 resolves method3356)",
+    "ConfigLoadOver log",
+    "Current manager SetConfigABRes",
+    "Current manager Initialize",
+    "Main config flag=true",
+    "Advance to30617 boundary"
+  ],
+  "verification": {
+    "integrated": 660,
+    "nativeStartup": 18,
+    "firstpackInitializedFrame": 4,
+    "tipFrame": 7,
+    "nativeRequests": 2,
+    "sourceConfigsRead": 64
+  },
+  "remaining": [
+    "SDK call is fixture callback, not platform execution",
+    "Camp material requests collected, not downloaded; online absent in fixture",
+    "30617 remains explicit action boundary: settings30628,procedures30622,controllers30608,audio,logic,font,report,ExitGame and procedure transition",
+    "Scene entry/account/menu/build not complete"
+  ]
+}

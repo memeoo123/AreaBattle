@@ -1,0 +1,41 @@
+; Original class: AudioActionBase
+; Type3405.GetSettingVolume; wasmcode function 8229; offset=3909405 size=101
+; signature={'args': [127, 127], 'returns': [125]}; localGroups=[(1, 125)]
+003ba720  i32.const [5011630]
+003ba725  i32.load8_u [0, 0]
+003ba728  i32.eqz []
+003ba729  if [-64]
+003ba72b    i32.const [3932476]
+003ba730    call [900] ; 
+003ba733    i32.const [5011630]
+003ba738    i32.const [1]
+003ba73a    i32.store8 [0, 0]
+003ba73d  end []
+003ba73e  f32.const [1.0]
+003ba743  local.set [2]
+003ba745  block [-64]
+003ba747    block [-64]
+003ba749      block [-64]
+003ba74b        local.get [0]
+003ba74d        i32.load [2, 24]
+003ba750        i32.const [1]
+003ba752        i32.sub []
+003ba753        br_table [0, 1, 2]
+003ba758      end []
+003ba759      i32.const [3932476]
+003ba75e      i32.load [2, 0]
+003ba761      call [901] ; 
+003ba764      i32.const [0]
+003ba766      call [7783] ; GlobalData.get_MusicGameVolume
+003ba769      return []
+003ba76a    end []
+003ba76b    i32.const [3932476]
+003ba770    i32.load [2, 0]
+003ba773    call [901] ; 
+003ba776    i32.const [0]
+003ba778    call [7782] ; GlobalData.get_SoundGameVolume
+003ba77b    local.set [2]
+003ba77d  end []
+003ba77e  local.get [2]
+003ba780  return []
+003ba781  end []

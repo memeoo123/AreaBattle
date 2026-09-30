@@ -1,0 +1,20 @@
+; Original class: hC¥
+; Type3664.ReleaseUIForm; wasmcode function 9062; offset=4454637 size=50
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0043f8ee  i32.const [4987653]
+0043f8f3  i32.load8_u [0, 0]
+0043f8f6  i32.eqz []
+0043f8f7  if [-64]
+0043f8f9    i32.const [3936516]
+0043f8fe    call [900] ; 
+0043f901    i32.const [4987653]
+0043f906    i32.const [1]
+0043f908    i32.store8 [0, 0]
+0043f90b  end []
+0043f90c  local.get [1]
+0043f90e  i32.const [3936516]
+0043f913  i32.load [2, 0]
+0043f916  call [927] ; 
+0043f919  i32.const [0]
+0043f91b  call [3346] ; GlobalUnityEngineAPI.Destroy
+0043f91e  end []

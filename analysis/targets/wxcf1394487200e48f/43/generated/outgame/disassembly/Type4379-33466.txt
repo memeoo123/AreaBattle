@@ -1,0 +1,19 @@
+; Original class: MenuTabUI
+; Type4379.kyr{O}{; wasmcode function 11386; offset=5592909 size=42
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0055574e  local.get [0]
+00555750  i32.load [2, 188]
+00555754  i32.const [0]
+00555756  call [943] ; Component.get_gameObject
+00555759  local.get [0]
+0055575b  i32.load [2, 120]
+0055575e  i32.load [2, 20]
+00555761  i32.load [2, 12]
+00555764  i32.const [0]
+00555766  call [1286] ; GameModule.get_Config
+00555769  i32.load [2, 256]
+0055576d  i32.load [2, 60]
+00555770  i32.le_s []
+00555771  i32.const [0]
+00555773  call [949] ; GameObject.SetActive
+00555776  end []

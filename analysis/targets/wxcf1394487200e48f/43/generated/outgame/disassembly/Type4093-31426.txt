@@ -1,0 +1,20 @@
+; Original class: DiamondLimitedControl
+; Type4093..ctor; wasmcode function 19961; offset=8968494 size=48
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0088d92f  i32.const [5008453]
+0088d934  i32.load8_u [0, 0]
+0088d937  i32.eqz []
+0088d938  if [-64]
+0088d93a    i32.const [3953348]
+0088d93f    call [900] ; 
+0088d942    i32.const [5008453]
+0088d947    i32.const [1]
+0088d949    i32.store8 [0, 0]
+0088d94c  end []
+0088d94d  local.get [0]
+0088d94f  i32.const [-1]
+0088d951  i32.store [2, 64]
+0088d954  i32.const [3953348]
+0088d959  i32.load [2, 0]
+0088d95c  drop []
+0088d95d  end []

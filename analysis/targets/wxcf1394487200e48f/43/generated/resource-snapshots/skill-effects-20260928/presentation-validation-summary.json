@@ -1,0 +1,99 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "prefabs": 24,
+  "mainParticleRoundtrip": {
+    "count": 102,
+    "numericValues": 185979,
+    "differences": 0
+  },
+  "embeddedParticleRoundtrip": {
+    "count": 14,
+    "numericValues": 25486,
+    "strictEqual": false,
+    "inactiveCurveNormalizations": 12,
+    "evidence": "embedded-particle-migration-evidence.json"
+  },
+  "editablePackedAnimation": {
+    "controllers": 3,
+    "clips": 4,
+    "curves": 29,
+    "nativeSamplesCompared": 5874
+  },
+  "renderProbe": {
+    "skills": [
+      2,
+      9,
+      10,
+      18
+    ],
+    "times": [
+      0.2,
+      1.2
+    ],
+    "materialSamples": 277,
+    "unsupportedOrShaderError": 0,
+    "screenshots": [
+      "analysis/captures/probe-skill2-0.png",
+      "analysis/captures/probe-skill2-1.png",
+      "analysis/captures/probe-skill9-0.png",
+      "analysis/captures/probe-skill9-1.png",
+      "analysis/captures/probe-skill10-0.png",
+      "analysis/captures/probe-skill10-1.png",
+      "analysis/captures/probe-skill18-0.png",
+      "analysis/captures/probe-skill18-1.png"
+    ]
+  },
+  "sourceBindingCorrection": {
+    "claim": "SkillBase.GetSkillParent returns a SkillItem UIObject Transform. UIObject.initGameObject writes GameObject.get_transform to offset16. SkillItem ancestor local scales are1 and source Canvas height1920/UICamera ortho6.4 produces lossyScale~0.006666667. The runtime now parents exact source skills2/9/10/18 to this UI Transform, retains world positions and original layer0. Original scales are unchanged.",
+    "source": [
+      "generated/combat-disassembly/SkillBase-100665079.txt",
+      "generated/ui-lifecycle-evidence.json",
+      "generated/presentation-prepared/hud-import.json"
+    ],
+    "correctionEffect": "Native poison bottle scale150 becomes worldScale1; root-parent omission previously inflated it150x. Replayed skill18 giant triangles and skill10 black fan geometry disappeared after parent fix."
+  },
+  "limitations": [
+    "No original-game dynamic capture for pixel comparison; internal render replay does not prove source visual equivalence.",
+    "Unity6 generates requested texture mipmaps from retained source base-level PNG; original GPU compressed mip bytes remain in source bundles.",
+    "Six original constant-mode startDelay fields have dormant empty min/max curves initialized by Unity6 to two keys; strict structural report retains these12 differences.",
+    "The original ice disappearance clip clears six PS.looping values and the original reactivation only SetActive/SetInteger(0) does not reset them; production preserves this native behavior."
+  ],
+  "artifacts": [
+    {
+      "path": "analysis/unity-skill-effect-import-report.json",
+      "sha256": "e01cf6b09874ff774dda2944fba00e252ed4b0cf0deb224670b186e5dff5caeb"
+    },
+    {
+      "path": "analysis/unity-embedded-effect-import-report.json",
+      "sha256": "c9e8edd8ecfd81714e7d64e4eb8405d6f5eb4e8c0693bae2df34fe6f49853a01"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/skill-effects-20260928/particle-roundtrip-validation.json",
+      "sha256": "f82e25f7aa0c6e02d53f04fe1c755731943a10c4a57d25114c64437a478617be"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/skill-effects-20260928/embedded-particle-roundtrip-validation.json",
+      "sha256": "588a4588e98da34b65d47423b2b90048adf9b4d9150b42c1910f200f16ddae10"
+    },
+    {
+      "path": "analysis/targets/wxcf1394487200e48f/43/generated/resource-snapshots/skill-effects-20260928/embedded-particle-migration-evidence.json",
+      "sha256": "6f878aaf69de654b01c5699d45ead8c6d89b7858695fd31a18de78ebd3f02d18"
+    },
+    {
+      "path": "analysis/skill-effect-render-probe.json",
+      "sha256": "b0676941a6c4484cfc7df119aa70e1da0c399b054009c4b81f2cd8c53f9137e1"
+    },
+    {
+      "path": "analysis/embedded-effect-clock-probe.json",
+      "sha256": "762b545ca65ec2dceb6a2b72e65cbb0f9f45ebf0f9ef0530e8c048ab5daf5274"
+    }
+  ],
+  "embeddedProductionClock": {
+    "passed": true,
+    "evidence": "analysis/embedded-effect-clock-probe.json",
+    "cases": "inactive attach, activate/grow .5s, melt2s, pause0, deactivate/reactivate; automatic Animator disabled and explicit Update drives all three controllers"
+  }
+}

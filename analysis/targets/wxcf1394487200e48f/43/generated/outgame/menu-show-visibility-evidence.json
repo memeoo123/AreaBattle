@@ -1,0 +1,138 @@
+{
+  "source": "disassembly/MenuPageGeneric-32617.txt",
+  "fields": [
+    {
+      "type": "BaseUI",
+      "field": "UINode",
+      "offset": 40
+    },
+    {
+      "type": "BaseUI",
+      "field": "_args",
+      "offset": 44
+    },
+    {
+      "type": "BaseUI",
+      "field": "OpenAnim",
+      "offset": 48
+    },
+    {
+      "type": "BaseUI",
+      "field": "CloseAnim",
+      "offset": 52
+    },
+    {
+      "type": "BaseUI",
+      "field": "EnableLoading",
+      "offset": 56
+    },
+    {
+      "type": "BaseUI",
+      "field": "openAniTime",
+      "offset": 60
+    },
+    {
+      "type": "BaseUI",
+      "field": "closeAniTime",
+      "offset": 64
+    },
+    {
+      "type": "BaseUI",
+      "field": "ShowTop",
+      "offset": 68
+    },
+    {
+      "type": "BaseUI",
+      "field": "CloseAction",
+      "offset": 72
+    },
+    {
+      "type": "BaseUI",
+      "field": "UIModel",
+      "offset": 76
+    },
+    {
+      "type": "BaseUI",
+      "field": "myInfo_newRes",
+      "offset": 80
+    },
+    {
+      "type": "BaseUI",
+      "field": "myInfo",
+      "offset": 84
+    },
+    {
+      "type": "BaseUI",
+      "field": "isPreCache",
+      "offset": 88
+    },
+    {
+      "type": "BaseUI",
+      "field": "m_UIWindowIndex",
+      "offset": 92
+    },
+    {
+      "type": "BaseUI",
+      "field": "canReportOpen",
+      "offset": 96
+    },
+    {
+      "type": "UIObject",
+      "field": "objectList",
+      "offset": 8
+    },
+    {
+      "type": "UIObject",
+      "field": "gameObject",
+      "offset": 12
+    },
+    {
+      "type": "UIObject",
+      "field": "transform",
+      "offset": 16
+    },
+    {
+      "type": "UIObject",
+      "field": "rectTransform",
+      "offset": 20
+    },
+    {
+      "type": "UIObject",
+      "field": "m_isVisible",
+      "offset": 24
+    },
+    {
+      "type": "UIObject",
+      "field": "isInstance",
+      "offset": 25
+    },
+    {
+      "type": "UIObject",
+      "field": "m_isDispose",
+      "offset": 26
+    },
+    {
+      "type": "UIObject",
+      "field": "useSkinId",
+      "offset": 28
+    },
+    {
+      "type": "UIObject",
+      "field": "dynamicLoadResList",
+      "offset": 32
+    },
+    {
+      "type": "UIObject",
+      "field": "customLoadResList",
+      "offset": 36
+    }
+  ],
+  "virtualCall": {
+    "slot": 9,
+    "method": 27322,
+    "name": "BaseUI.SetVisible",
+    "evidence": "vtable base192 plus slot offset72; method metadata slot9"
+  },
+  "observed": "New UI from Show is immediately SetVisible(false) when requested false; existing UI compares offset24 before invoking SetVisible(requested).",
+  "scope": "Recovered shared generic; full UIModule.Show lifecycle still pending."
+}

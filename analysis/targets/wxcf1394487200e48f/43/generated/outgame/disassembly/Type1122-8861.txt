@@ -1,0 +1,26 @@
+; Original class: Path
+; Type1122.GetInvalidFileNameChars; wasmcode function 11117; offset=5404981 size=65
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00527936  i32.const [5023489]
+0052793b  i32.load8_u [0, 0]
+0052793e  i32.eqz []
+0052793f  if [-64]
+00527941    i32.const [3926524]
+00527946    call [900] ; 
+00527949    i32.const [4033192]
+0052794e    call [900] ; 
+00527951    i32.const [5023489]
+00527956    i32.const [1]
+00527958    i32.store8 [0, 0]
+0052795b  end []
+0052795c  i32.const [3926524]
+00527961  i32.load [2, 0]
+00527964  i32.const [2]
+00527966  call [909] ; 
+00527969  local.set [0]
+0052796b  local.get [0]
+0052796d  i32.const [47]
+0052796f  i32.store16 [1, 18]
+00527972  local.get [0]
+00527974  return []
+00527975  end []

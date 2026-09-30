@@ -1,0 +1,35 @@
+; Original class: ProcedureStarGame
+; Type4452.nsVx; wasmcode1 function 54289; offset=17956276 size=97
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0111fdb5  i32.const [5009788]
+0111fdba  i32.load8_u [0, 0]
+0111fdbd  i32.eqz []
+0111fdbe  if [-64]
+0111fdc0    i32.const [4018372]
+0111fdc5    i32.const [1605]
+0111fdc8    call_indirect [0, 0]
+0111fdcb    i32.const [5009788]
+0111fdd0    i32.const [1]
+0111fdd2    i32.store8 [0, 0]
+0111fdd5  end []
+0111fdd6  i32.const [0]
+0111fdd8  i32.const [15943] ; TABLE GameModule.get_LocalData
+0111fddc  call_indirect [2, 0]
+0111fddf  i32.const [1000]
+0111fde2  i32.const [0]
+0111fde4  i32.const [15013] ; TABLE LocalDataManager.set_CollectNum
+0111fde8  call_indirect [5, 0]
+0111fdeb  i32.const [0]
+0111fded  i32.const [15943] ; TABLE GameModule.get_LocalData
+0111fdf1  call_indirect [2, 0]
+0111fdf4  i32.load [2, 20]
+0111fdf7  i32.const [3]
+0111fdf9  i32.store [2, 40]
+0111fdfc  i32.const [0]
+0111fdfe  i32.const [9436] ; TABLE GameModule.get_UI
+0111fe02  call_indirect [2, 0]
+0111fe05  i32.const [4018372]
+0111fe0a  i32.load [2, 0]
+0111fe0d  i32.const [116846]
+0111fe11  call_indirect [4, 0]
+0111fe14  end []

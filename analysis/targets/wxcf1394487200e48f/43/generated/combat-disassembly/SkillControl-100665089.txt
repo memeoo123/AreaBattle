@@ -1,0 +1,56 @@
+; SkillControl.OnInit; wasmcode function 15936; offset=7657636 size=160
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0074d8a7  i32.const [5010304]
+0074d8ac  i32.load8_u [0, 0]
+0074d8af  i32.eqz []
+0074d8b0  if [-64]
+0074d8b2    i32.const [3931632]
+0074d8b7    call [900] ; 
+0074d8ba    i32.const [3936388]
+0074d8bf    call [900] ; 
+0074d8c2    i32.const [3937136]
+0074d8c7    call [900] ; 
+0074d8ca    i32.const [4084520]
+0074d8cf    call [900] ; 
+0074d8d2    i32.const [5010304]
+0074d8d7    i32.const [1]
+0074d8d9    i32.store8 [0, 0]
+0074d8dc  end []
+0074d8dd  i32.const [3931632]
+0074d8e2  i32.load [2, 0]
+0074d8e5  call [901] ; 
+0074d8e8  i32.const [0]
+0074d8ea  call [1530] ; 
+0074d8ed  local.set [1]
+0074d8ef  i32.const [3937136]
+0074d8f4  i32.load [2, 0]
+0074d8f7  call [903] ; 
+0074d8fa  local.set [2]
+0074d8fc  local.get [2]
+0074d8fe  local.get [1]
+0074d900  i32.const [0]
+0074d902  call [3864] ; 
+0074d905  local.get [0]
+0074d907  local.get [2]
+0074d909  i32.store [2, 96]
+0074d90c  local.get [0]
+0074d90e  i32.load [2, 8]
+0074d911  i32.eqz []
+0074d912  if [-64]
+0074d914    local.get [0]
+0074d916    i32.const [3936388]
+0074d91b    i32.load [2, 0]
+0074d91e    call [903] ; 
+0074d921    i32.store [2, 8]
+0074d924    local.get [0]
+0074d926    i32.load [2, 8]
+0074d929    i32.const [4084520]
+0074d92e    i32.load [2, 0]
+0074d931    i32.const [300]
+0074d934    f32.const [10.0]
+0074d939    i32.const [0]
+0074d93b    i32.const [0]
+0074d93d    i32.const [0]
+0074d93f    call [5863] ; 
+0074d942  end []
+0074d943  end []

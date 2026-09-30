@@ -1,0 +1,2142 @@
+{
+  "types": {
+    "3968": {
+      "name": "SpecialLevelConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "SceneId",
+          "type": "int",
+          "offset": 12
+        }
+      ],
+      "key": "id"
+    },
+    "3969": {
+      "name": "StatisticEventConfig",
+      "fields": [
+        {
+          "name": "BuySkin",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "BuyScene",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "DailyCommUpgrade",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "DailyRaceGetLv",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "DailyCompleteLv",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "DailyWatchAds",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "DailyUseProp",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "DailyArenaWin",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "ArenaCombatCount",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "SelectCard",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "RaceGetLv",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "UseProp",
+          "type": "int",
+          "offset": 52
+        },
+        {
+          "name": "HaveSkinNum",
+          "type": "int",
+          "offset": 56
+        },
+        {
+          "name": "HaveSceneNum",
+          "type": "int",
+          "offset": 60
+        },
+        {
+          "name": "HczzqUnlocakSoldier1",
+          "type": "int",
+          "offset": 64
+        },
+        {
+          "name": "HczzqUnlocakSoldier2",
+          "type": "int",
+          "offset": 68
+        },
+        {
+          "name": "CommanderUpgrade",
+          "type": "int",
+          "offset": 72
+        },
+        {
+          "name": "ArenaWin",
+          "type": "int",
+          "offset": 76
+        },
+        {
+          "name": "ArenaRank",
+          "type": "int",
+          "offset": 80
+        },
+        {
+          "name": "CommanderUpgradeTotal",
+          "type": "int",
+          "offset": 84
+        },
+        {
+          "name": "UseCoinTotal",
+          "type": "int",
+          "offset": 88
+        }
+      ],
+      "key": null
+    },
+    "3970": {
+      "name": "SummerRewardConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "itemId",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "itemCount",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "giftWay",
+          "type": "int[]",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3971": {
+      "name": "UIMonitorConfigConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3972": {
+      "name": "WXAMSConfig",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "PlacementId",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "ReportLable",
+          "type": "string",
+          "offset": 16
+        }
+      ],
+      "key": "Id"
+    },
+    "3909": {
+      "name": "AgentGradeConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "AgentPath",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "AgentName",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "SkillUseId",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "ActionRate",
+          "type": "double",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3910": {
+      "name": "AgentSkillUseConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "total",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "DelayTime",
+          "type": "double",
+          "offset": 16
+        },
+        {
+          "name": "rate_skill1",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "space_skill1",
+          "type": "double",
+          "offset": 32
+        },
+        {
+          "name": "rate_skill2",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "space_skill2",
+          "type": "double",
+          "offset": 48
+        },
+        {
+          "name": "rate_skill3",
+          "type": "int",
+          "offset": 56
+        },
+        {
+          "name": "space_skill3",
+          "type": "double",
+          "offset": 64
+        }
+      ],
+      "key": "id"
+    },
+    "3911": {
+      "name": "AIConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "AIType",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "DelayTime",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "ActionTime",
+          "type": "int[]",
+          "offset": 20
+        },
+        {
+          "name": "ActionNum",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "Protect",
+          "type": "int[]",
+          "offset": 28
+        },
+        {
+          "name": "Defend",
+          "type": "int[]",
+          "offset": 32
+        },
+        {
+          "name": "Reinforce",
+          "type": "int[]",
+          "offset": 36
+        },
+        {
+          "name": "Occupy",
+          "type": "int[]",
+          "offset": 40
+        }
+      ],
+      "key": "id"
+    },
+    "3912": {
+      "name": "AILevelFactorConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3913": {
+      "name": "AINameConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "zh_cn",
+          "type": "string",
+          "offset": 12
+        }
+      ],
+      "key": "id"
+    },
+    "3914": {
+      "name": "AIReplayFactorConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3915": {
+      "name": "AllSkillBConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3916": {
+      "name": "AllSkillConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "gameItem",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "unLockLevel",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "castType",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "price",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "diamondPrice",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "useType",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "targetType",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "dataType",
+          "type": "int[]",
+          "offset": 40
+        },
+        {
+          "name": "describeData",
+          "type": "int[]",
+          "offset": 44
+        }
+      ],
+      "key": "id"
+    },
+    "3917": {
+      "name": "ArenaConfig",
+      "fields": [
+        {
+          "name": "unlockLevel",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "seasonDurationDay",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "refreshTime",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "aiCupRange",
+          "type": "int[]",
+          "offset": 20
+        },
+        {
+          "name": "combatReward",
+          "type": "List<ListArrayInt>",
+          "offset": 24
+        },
+        {
+          "name": "playinitCup",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "aiBaseNum",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "initialCupLowerLimit",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "motivatVideoReward",
+          "type": "int[]",
+          "offset": 40
+        },
+        {
+          "name": "freeChallengeCount",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "challengeCD",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "skipChallengerCD",
+          "type": "int[]",
+          "offset": 52
+        },
+        {
+          "name": "AdAddChallengeCount",
+          "type": "int",
+          "offset": 56
+        },
+        {
+          "name": "buyChallengeCast",
+          "type": "List<ListArrayInt>",
+          "offset": 60
+        }
+      ],
+      "key": null
+    },
+    "3918": {
+      "name": "ArenaCupRangeConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "rankRange",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "growCup",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "reduceCup",
+          "type": "int[]",
+          "offset": 20
+        },
+        {
+          "name": "mapId",
+          "type": "int[]",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3919": {
+      "name": "ArenaDailyRewardConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "rankRange",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "itemId",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "itemCount",
+          "type": "int[]",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3920": {
+      "name": "ArenaInheritanceConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "basecup",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "inheritancup",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "sym",
+          "type": "string",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3921": {
+      "name": "ArenaInitAiSocreConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "rankRnage",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "maxCup",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "minCup",
+          "type": "int",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3922": {
+      "name": "ArenaSeasonRewardConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "rankRange",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "itemId",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "itemCount",
+          "type": "int[]",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3923": {
+      "name": "BossConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "DelayTime",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "ActionTime",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "Skill1",
+          "type": "int[]",
+          "offset": 20
+        },
+        {
+          "name": "Skill2",
+          "type": "int[]",
+          "offset": 24
+        },
+        {
+          "name": "skill1_Hit",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "skill1_duration",
+          "type": "double",
+          "offset": 32
+        },
+        {
+          "name": "skill1_first",
+          "type": "double",
+          "offset": 40
+        },
+        {
+          "name": "skill1_second",
+          "type": "double",
+          "offset": 48
+        },
+        {
+          "name": "skill2_Hit",
+          "type": "int",
+          "offset": 56
+        },
+        {
+          "name": "skill2_duration",
+          "type": "double",
+          "offset": 64
+        },
+        {
+          "name": "skill2_first",
+          "type": "double",
+          "offset": 72
+        },
+        {
+          "name": "skill2_second",
+          "type": "double",
+          "offset": 80
+        }
+      ],
+      "key": "id"
+    },
+    "3924": {
+      "name": "CampConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "bossModelId",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "bossSoldierId",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "LineColor",
+          "type": "string",
+          "offset": 20
+        },
+        {
+          "name": "BasitionMaterial",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "soldierColor0",
+          "type": "string",
+          "offset": 28
+        },
+        {
+          "name": "soldierColor1",
+          "type": "string",
+          "offset": 32
+        },
+        {
+          "name": "soldierColor2",
+          "type": "string",
+          "offset": 36
+        }
+      ],
+      "key": "id"
+    },
+    "3925": {
+      "name": "ChannelConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "noAB",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "channelA",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "channelB",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "channelC",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "channelD",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "channelE",
+          "type": "int",
+          "offset": 32
+        }
+      ],
+      "key": "id"
+    },
+    "3926": {
+      "name": "ChannelProcedureConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3927": {
+      "name": "CommanderBConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "maxLevel",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "unlockPrice",
+          "type": "List<ListArrayInt>",
+          "offset": 16
+        }
+      ],
+      "key": "id"
+    },
+    "3928": {
+      "name": "CommanderConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "maxLevel",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "unlockType",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "describe",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "unlockLevel",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "unlockPrice",
+          "type": "List<ListArrayInt>",
+          "offset": 32
+        },
+        {
+          "name": "skills",
+          "type": "int[]",
+          "offset": 36
+        },
+        {
+          "name": "EntityId",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "IconName",
+          "type": "string",
+          "offset": 44
+        },
+        {
+          "name": "usePercent",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "headport",
+          "type": "string",
+          "offset": 52
+        }
+      ],
+      "key": "id"
+    },
+    "3929": {
+      "name": "CommanderUpgradeBConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3930": {
+      "name": "CommanderUpgradeConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "upgradeCost",
+          "type": "int",
+          "offset": 12
+        }
+      ],
+      "key": "id"
+    },
+    "3931": {
+      "name": "CountryConfigConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "LangKey",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "countryFlagName",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "countryCode",
+          "type": "string[]",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3932": {
+      "name": "DailyChallengeConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "awardId",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "awardCount",
+          "type": "int[]",
+          "offset": 16
+        }
+      ],
+      "key": "id"
+    },
+    "3933": {
+      "name": "DiceGameConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "pos",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "siblingIndex",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "type",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "rewards",
+          "type": "List<ListArrayInt>",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3934": {
+      "name": "DicePointConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "weight",
+          "type": "int",
+          "offset": 12
+        }
+      ],
+      "key": "id"
+    },
+    "3935": {
+      "name": "DiceShopConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "storeType",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "buyLimit",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "buyLimitParam",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "weight",
+          "type": "int",
+          "offset": 28
+        }
+      ],
+      "key": "id"
+    },
+    "3936": {
+      "name": "DiceShopTypeConfig",
+      "fields": [
+        {
+          "name": "shopId",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "refreshPeriod",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "refreshParams",
+          "type": "int[]",
+          "offset": 16
+        },
+        {
+          "name": "capacity",
+          "type": "int",
+          "offset": 20
+        }
+      ],
+      "key": "shopId"
+    },
+    "3937": {
+      "name": "DispatchConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "scoreLimit",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "maxLine",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "addSpace",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "swanpSpaceOne",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "swanpSpaceTwo",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "swanpSpaceThree",
+          "type": "int",
+          "offset": 32
+        }
+      ],
+      "key": "id"
+    },
+    "3938": {
+      "name": "DrawConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "item",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "num",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "weight",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "prob",
+          "type": "string",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3939": {
+      "name": "EntityModelConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "AssetName",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "PathEnum",
+          "type": "int",
+          "offset": 16
+        }
+      ],
+      "key": "id"
+    },
+    "3940": {
+      "name": "FirstChargeConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3941": {
+      "name": "FuncSettingConfig",
+      "fields": [
+        {
+          "name": "BossLevel",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "HeroSetting",
+          "type": "bool",
+          "offset": 12
+        },
+        {
+          "name": "HeroPreUnlockLevel",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "useNewUIMask",
+          "type": "bool",
+          "offset": 20
+        },
+        {
+          "name": "ValentineSetting",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "SummerSetting",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "dontShowInsertAfterSeeToolVideo",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "dontShowInsertIfSeeOverVideo",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "ShowInsertADPerXLevel",
+          "type": "int",
+          "offset": 40
+        }
+      ],
+      "key": null
+    },
+    "3942": {
+      "name": "GameItemConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "type1",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "type2",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "offset": 20
+        },
+        {
+          "name": "atlasName",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "ItemIcon",
+          "type": "string",
+          "offset": 28
+        },
+        {
+          "name": "name",
+          "type": "Lang",
+          "offset": 32
+        },
+        {
+          "name": "detail",
+          "type": "Lang",
+          "offset": 36
+        },
+        {
+          "name": "paramInt",
+          "type": "int",
+          "offset": 40
+        }
+      ],
+      "key": "id"
+    },
+    "3943": {
+      "name": "GameProductConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "isActive",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "storeType",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "NoAds",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "itemConfig",
+          "type": "List<ListArrayInt>",
+          "offset": 28
+        },
+        {
+          "name": "getType",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "offset": 36
+        },
+        {
+          "name": "priceText",
+          "type": "Lang",
+          "offset": 40
+        }
+      ],
+      "key": "id"
+    },
+    "3944": {
+      "name": "GlobalValueConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "Content1",
+          "type": "string",
+          "offset": 12
+        }
+      ],
+      "key": "id"
+    },
+    "3945": {
+      "name": "GuideBConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3946": {
+      "name": "GuidebookConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "name",
+          "type": "Lang",
+          "offset": 12
+        },
+        {
+          "name": "guideId",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "reward",
+          "type": "int[]",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3947": {
+      "name": "GuideConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "guildLv",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "guildsmallLv",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "nextGuildStage",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "explain",
+          "type": "string",
+          "offset": 28
+        },
+        {
+          "name": "button",
+          "type": "string",
+          "offset": 32
+        },
+        {
+          "name": "picture",
+          "type": "string",
+          "offset": 36
+        },
+        {
+          "name": "param",
+          "type": "string",
+          "offset": 40
+        }
+      ],
+      "key": "id"
+    },
+    "3948": {
+      "name": "GuideDConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3949": {
+      "name": "GuideTipsConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "name",
+          "type": "Lang",
+          "offset": 12
+        },
+        {
+          "name": "des",
+          "type": "Lang",
+          "offset": 16
+        },
+        {
+          "name": "unlockLevel",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "reward",
+          "type": "int[]",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3950": {
+      "name": "HeadBoxConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "lockIcon",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "atlas",
+          "type": "string",
+          "offset": 20
+        },
+        {
+          "name": "des",
+          "type": "Lang",
+          "offset": 24
+        },
+        {
+          "name": "weight",
+          "type": "int",
+          "offset": 28
+        }
+      ],
+      "key": "id"
+    },
+    "3951": {
+      "name": "HeadportConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "atlas",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "des",
+          "type": "Lang",
+          "offset": 20
+        }
+      ],
+      "key": "id"
+    },
+    "3952": {
+      "name": "LargeNumConfig",
+      "fields": [
+        {
+          "name": "mag",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "magName",
+          "type": "string",
+          "offset": 12
+        }
+      ],
+      "key": "mag"
+    },
+    "3953": {
+      "name": "LevelBConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3954": {
+      "name": "LevelConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "LevelType",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "SceneId",
+          "type": "int",
+          "offset": 16
+        }
+      ],
+      "key": "id"
+    },
+    "3955": {
+      "name": "LimitedProductConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "productId",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "offset": 16
+        },
+        {
+          "name": "limitedTime",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "levelId",
+          "type": "int",
+          "offset": 24
+        }
+      ],
+      "key": "id"
+    },
+    "3956": {
+      "name": "MatchLevelConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3957": {
+      "name": "MenuTabConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        }
+      ],
+      "key": "id"
+    },
+    "3958": {
+      "name": "NewRankSettingConfig",
+      "fields": [
+        {
+          "name": "intPlayerRank",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "HM_RankShowNum",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "HM_UpPlayerNum",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "HM_LowPlayerNum",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "HM_RankGapRag",
+          "type": "int[]",
+          "offset": 24
+        },
+        {
+          "name": "GM_RankGapRe",
+          "type": "int[]",
+          "offset": 28
+        },
+        {
+          "name": "playerItemScaleT",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "playerItemscaleV",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "playerItemLargeScaleT",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "playerItemSmallScaleT",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "playerItemLargeScaleN",
+          "type": "int",
+          "offset": 48
+        }
+      ],
+      "key": null
+    },
+    "3959": {
+      "name": "RaceConfig",
+      "fields": [
+        {
+          "name": "raceActReward",
+          "type": "int[]",
+          "offset": 8
+        },
+        {
+          "name": "raceActAiSpeed",
+          "type": "int[]",
+          "offset": 12
+        },
+        {
+          "name": "raceActTargetLVRange",
+          "type": "int[]",
+          "offset": 16
+        }
+      ],
+      "key": null
+    },
+    "3960": {
+      "name": "RankRewardConfig",
+      "fields": [
+        {
+          "name": "ID",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "type",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "rank",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "reward",
+          "type": "List<ListArrayInt>",
+          "offset": 20
+        }
+      ],
+      "key": "ID"
+    },
+    "3961": {
+      "name": "RankSubConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "areaValue",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "randValue",
+          "type": "int[]",
+          "offset": 16
+        }
+      ],
+      "key": "id"
+    },
+    "3962": {
+      "name": "SceneEffectConfig",
+      "fields": [
+        {
+          "name": "sceneId",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "idleEffect",
+          "type": "string",
+          "offset": 12
+        },
+        {
+          "name": "gameEffect",
+          "type": "string",
+          "offset": 16
+        }
+      ],
+      "key": "sceneId"
+    },
+    "3963": {
+      "name": "SceneSkinConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "skinType",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "iconName",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "idleIconName",
+          "type": "string",
+          "offset": 20
+        },
+        {
+          "name": "gameIconName",
+          "type": "string",
+          "offset": 24
+        },
+        {
+          "name": "castType",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "price",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "DiamondPrice",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "lockState",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "sortNo",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "actNo",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "special",
+          "type": "int",
+          "offset": 52
+        },
+        {
+          "name": "tag",
+          "type": "string",
+          "offset": 56
+        },
+        {
+          "name": "describe",
+          "type": "string",
+          "offset": 60
+        }
+      ],
+      "key": "id"
+    },
+    "3964": {
+      "name": "SettingConfig",
+      "fields": [
+        {
+          "name": "showInterst_finishLevel",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "showInterst_nofinishLevel",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "levelNo_showEvaluate",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "levelNo_showInterst",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "levelNo_showReplayInterst",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "levelNo_showBanner",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "arrowTowerAttackRate",
+          "type": "float[]",
+          "offset": 32
+        },
+        {
+          "name": "arrowTowerAttackRegion",
+          "type": "float[]",
+          "offset": 36
+        },
+        {
+          "name": "arrowTowerRegionBaseScale",
+          "type": "float",
+          "offset": 40
+        },
+        {
+          "name": "storeAdDiamondCount",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "storeAdGoldCount",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "storeAdSendDiamond",
+          "type": "int[]",
+          "offset": 52
+        },
+        {
+          "name": "accelerationDiamondCount",
+          "type": "int",
+          "offset": 56
+        },
+        {
+          "name": "towerUnlock",
+          "type": "int",
+          "offset": 60
+        },
+        {
+          "name": "diceunlock",
+          "type": "int",
+          "offset": 64
+        },
+        {
+          "name": "buyDiceTimes_mainlevel",
+          "type": "int",
+          "offset": 68
+        },
+        {
+          "name": "buyDiceTimes_AD",
+          "type": "int",
+          "offset": 72
+        },
+        {
+          "name": "buyDiceTimes_gole",
+          "type": "int",
+          "offset": 76
+        },
+        {
+          "name": "buyDiceCost",
+          "type": "List<ListArrayInt>",
+          "offset": 80
+        }
+      ],
+      "key": null
+    },
+    "3965": {
+      "name": "SkillConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "duration",
+          "type": "double",
+          "offset": 16
+        },
+        {
+          "name": "data1",
+          "type": "double",
+          "offset": 24
+        },
+        {
+          "name": "data2",
+          "type": "double",
+          "offset": 32
+        },
+        {
+          "name": "data3",
+          "type": "double",
+          "offset": 40
+        }
+      ],
+      "key": "id"
+    },
+    "3966": {
+      "name": "SkinConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "skinType",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "iconName",
+          "type": "string",
+          "offset": 16
+        },
+        {
+          "name": "prefabId",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "castType",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "price",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "DiamondPrice",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "lockState",
+          "type": "int",
+          "offset": 36
+        },
+        {
+          "name": "sortNo",
+          "type": "int",
+          "offset": 40
+        },
+        {
+          "name": "actNo",
+          "type": "int",
+          "offset": 44
+        },
+        {
+          "name": "special",
+          "type": "int",
+          "offset": 48
+        },
+        {
+          "name": "tag",
+          "type": "string",
+          "offset": 52
+        },
+        {
+          "name": "describe",
+          "type": "string",
+          "offset": 56
+        }
+      ],
+      "key": "id"
+    },
+    "3967": {
+      "name": "SoldierConfig",
+      "fields": [
+        {
+          "name": "id",
+          "type": "int",
+          "offset": 8
+        },
+        {
+          "name": "EntityID",
+          "type": "int",
+          "offset": 12
+        },
+        {
+          "name": "shipType",
+          "type": "int",
+          "offset": 16
+        },
+        {
+          "name": "hp",
+          "type": "int",
+          "offset": 20
+        },
+        {
+          "name": "attack",
+          "type": "int",
+          "offset": 24
+        },
+        {
+          "name": "occupy",
+          "type": "int",
+          "offset": 28
+        },
+        {
+          "name": "reinforce",
+          "type": "int",
+          "offset": 32
+        },
+        {
+          "name": "voyage",
+          "type": "int",
+          "offset": 36
+        }
+      ],
+      "key": "id"
+    },
+    "3490": {
+      "name": "Lang",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "offset": 8
+        }
+      ],
+      "key": null
+    },
+    "3452": {
+      "name": "ListArrayInt",
+      "fields": [
+        {
+          "name": "datas",
+          "type": "int[]",
+          "offset": 8
+        }
+      ],
+      "key": null
+    }
+  },
+  "source": "original metadata v31 and 58 UniqueID getter bodies",
+  "qualification": "Public declared fields preserved; unrelated JSON fields are not invented as runtime fields"
+}

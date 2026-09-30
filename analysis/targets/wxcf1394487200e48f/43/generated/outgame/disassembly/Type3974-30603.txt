@@ -1,0 +1,36 @@
+; Original class: MineGameMain
+; Type3974.YuLR{; wasmcode function 18537; offset=8352063 size=86
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007f7140  i32.const [5010121]
+007f7145  i32.load8_u [0, 0]
+007f7148  i32.eqz []
+007f7149  if [-64]
+007f714b    i32.const [4049220] ; STRING "ConfigLoadOver"
+007f7150    call [900] ; 
+007f7153    i32.const [5010121]
+007f7158    i32.const [1]
+007f715a    i32.store8 [0, 0]
+007f715d  end []
+007f715e  local.get [0]
+007f7160  i32.const [4049220] ; STRING "ConfigLoadOver"
+007f7165  i32.load [2, 0]
+007f7168  local.get [0]
+007f716a  call [2125] ; MineGameMain.O{P^xr
+007f716d  local.get [0]
+007f716f  call [1060] ; ConfigMgr.get_Instance
+007f7172  drop []
+007f7173  local.get [0]
+007f7175  local.get [1]
+007f7177  local.get [0]
+007f7179  call [12784] ; ConfigMgr.SetConfigABRes
+007f717c  local.get [0]
+007f717e  call [1060] ; ConfigMgr.get_Instance
+007f7181  local.get [0]
+007f7183  call [12786] ; ConfigMgr.Initialize
+007f7186  local.get [0]
+007f7188  i32.const [1]
+007f718a  i32.store8 [0, 36]
+007f718d  local.get [0]
+007f718f  local.get [0]
+007f7191  call [11336] ; MineGameMain.~SW
+007f7194  end []

@@ -1,0 +1,30 @@
+; Original class: Text
+; Type8277.UpdateGeometry; wasmcode function 15621; offset=7523405 size=72
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0072cc4e  i32.const [4985220]
+0072cc53  i32.load8_u [0, 0]
+0072cc56  i32.eqz []
+0072cc57  if [-64]
+0072cc59    i32.const [3936516]
+0072cc5e    call [900] ; 
+0072cc61    i32.const [4985220]
+0072cc66    i32.const [1]
+0072cc68    i32.store8 [0, 0]
+0072cc6b  end []
+0072cc6c  local.get [0]
+0072cc6e  i32.load [2, 124]
+0072cc71  i32.load [2, 8]
+0072cc74  local.set [1]
+0072cc76  i32.const [3936516]
+0072cc7b  i32.load [2, 0]
+0072cc7e  call [901] ; 
+0072cc81  local.get [1]
+0072cc83  i32.const [0]
+0072cc85  i32.const [0]
+0072cc87  call [946] ; Object.op_Inequality
+0072cc8a  if [-64]
+0072cc8c    local.get [0]
+0072cc8e    i32.const [0]
+0072cc90    call [12016] ; Graphic.UpdateGeometry
+0072cc93  end []
+0072cc94  end []

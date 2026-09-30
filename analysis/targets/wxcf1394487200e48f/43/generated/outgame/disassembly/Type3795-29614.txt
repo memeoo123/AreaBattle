@@ -1,0 +1,70 @@
+; Original class: GameDataVersionMgr
+; Type3795.JJL; wasmcode function 6056; offset=2143140 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0020b3a5  i32.const [4988115]
+0020b3aa  i32.load8_u [0, 0]
+0020b3ad  i32.eqz []
+0020b3ae  if [-64]
+0020b3b0    i32.const [3929208]
+0020b3b5    call [900] ; 
+0020b3b8    i32.const [3932476]
+0020b3bd    call [900] ; 
+0020b3c0    i32.const [3973816]
+0020b3c5    call [900] ; 
+0020b3c8    i32.const [3926996]
+0020b3cd    call [900] ; 
+0020b3d0    i32.const [4061360] ; STRING "Login:账号数据同步 强制上传数据完成，把本地数据标识成无法再次绑定"
+0020b3d5    call [900] ; 
+0020b3d8    i32.const [4988115]
+0020b3dd    i32.const [1]
+0020b3df    i32.store8 [0, 0]
+0020b3e2  end []
+0020b3e3  i32.const [3973816]
+0020b3e8  i32.load [2, 0]
+0020b3eb  drop []
+0020b3ec  block [-64]
+0020b3ee    local.get [0]
+0020b3f0    i32.load [2, 20]
+0020b3f3    i32.load [2, 12]
+0020b3f6    br_if [0]
+0020b3f8    i32.const [3973816]
+0020b3fd    i32.load [2, 0]
+0020b400    drop []
+0020b401    local.get [0]
+0020b403    i32.load [2, 24]
+0020b406    i32.load [2, 12]
+0020b409    br_if [0]
+0020b40b    local.get [0]
+0020b40d    i32.load8_u [0, 28]
+0020b410    if [-64]
+0020b412      i32.const [3926996]
+0020b417      i32.load [2, 0]
+0020b41a      i32.const [1]
+0020b41c      call [909] ; 
+0020b41f      local.set [1]
+0020b421      local.get [1]
+0020b423      i32.const [4061360] ; STRING "Login:账号数据同步 强制上传数据完成，把本地数据标识成无法再次绑定"
+0020b428      i32.load [2, 0]
+0020b42b      call [905] ; 
+0020b42e      local.get [1]
+0020b430      i32.const [4061360] ; STRING "Login:账号数据同步 强制上传数据完成，把本地数据标识成无法再次绑定"
+0020b435      i32.load [2, 0]
+0020b438      i32.store [2, 16]
+0020b43b      i32.const [3929208]
+0020b440      i32.load [2, 0]
+0020b443      call [901] ; 
+0020b446      local.get [1]
+0020b448      i32.const [0]
+0020b44a      call [1495] ; CLog.ReleaseLog
+0020b44d      i32.const [3932476]
+0020b452      i32.load [2, 0]
+0020b455      call [901] ; 
+0020b458      i32.const [1]
+0020b45a      i32.const [0]
+0020b45c      call [12047] ; GlobalData.set_IsSynLocalData
+0020b45f    end []
+0020b460    local.get [0]
+0020b462    local.get [0]
+0020b464    call [12175] ; GameDataVersionMgr.dP®H
+0020b467  end []
+0020b468  end []

@@ -1,0 +1,45 @@
+{
+  "status": "source-core-module-startup-sequence-restored",
+  "atUtc": "2026-09-30T02:53:51.523226+00:00",
+  "source": [
+    "disassembly/Type3974-30610.txt",
+    "disassembly/Type3974-30609.txt",
+    "disassembly/Type3974-30629.txt",
+    "disassembly/Type3974-30613.txt",
+    "disassembly/Type3974-30625.txt",
+    "main-startup-generics.json"
+  ],
+  "implementation": "OutgameCoreModuleStartup.cs",
+  "callbackGates": [
+    "VersionMondule",
+    "AssetbundleModule",
+    "ResourcesModule",
+    "UIModule"
+  ],
+  "subsequentInitializeOrder": [
+    "LangModule",
+    "FsmManager",
+    "MineGameLogicModule",
+    "TimeModule",
+    "EffectModule",
+    "ObjectPoolManager",
+    "ProcedureManager"
+  ],
+  "semantics": [
+    "For every module, assign Initialized before calling Initialize",
+    "First six secondary modules receive null callback; no waits introduced",
+    "ProcedureManager callback advances to core-ready30612",
+    "No duplicate-completion guards added",
+    "Concrete OutgameUiModuleInitialization implements startup module contract"
+  ],
+  "integratedChecks": 610,
+  "validationScope": "Module boundary probes validate source ordering and callback ownership; full providers not constructed by this test",
+  "remaining": [
+    "Awake SDK/settings/UserDataPrefs composition before Begin",
+    "Concrete version/bundle/resources and other modules",
+    "CoreReady30612 starts GameFrameEntry and language/loading/config paths",
+    "Account/menu and full Player acceptance"
+  ],
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false
+}

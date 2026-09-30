@@ -1,0 +1,41 @@
+; Original class: GlobalItemManager
+; Type4542.GetNowDateTime; wasmcode function 2956; offset=912845 size=104
+; signature={'args': [127, 127], 'returns': [126]}; localGroups=[]
+000dedce  i32.const [5001136]
+000dedd3  i32.load8_u [0, 0]
+000dedd6  i32.eqz []
+000dedd7  if [-64]
+000dedd9    i32.const [3930616]
+000dedde    call [900] ; 
+000dede1    i32.const [3933536]
+000dede6    call [900] ; 
+000dede9    i32.const [5001136]
+000dedee    i32.const [1]
+000dedf0    i32.store8 [0, 0]
+000dedf3  end []
+000dedf4  local.get [0]
+000dedf6  i32.load [2, 24]
+000dedf9  local.set [1]
+000dedfb  local.get [1]
+000dedfd  if [-64]
+000dedff    i32.const [4]
+000dee01    i32.const [3933536]
+000dee06    i32.load [2, 0]
+000dee09    local.get [1]
+000dee0b    call [5001] ; 
+000dee0e    drop []
+000dee0f    i32.const [4]
+000dee11    i32.const [3933536]
+000dee16    i32.load [2, 0]
+000dee19    local.get [0]
+000dee1b    i32.load [2, 24]
+000dee1e    call [5001] ; 
+000dee21    return []
+000dee22  end []
+000dee23  i32.const [3930616]
+000dee28  i32.load [2, 0]
+000dee2b  call [901] ; 
+000dee2e  i32.const [0]
+000dee30  call [1287] ; DateTime.get_Now
+000dee33  return []
+000dee34  end []

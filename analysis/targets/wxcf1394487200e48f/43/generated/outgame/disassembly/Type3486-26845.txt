@@ -1,0 +1,21 @@
+; Original class: GlobalData
+; Type3486.PauseGame; wasmcode function 5043; offset=1733921 size=52
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001a7522  i32.const [4989056]
+001a7527  i32.load8_u [0, 0]
+001a752a  i32.eqz []
+001a752b  if [-64]
+001a752d    i32.const [3932308]
+001a7532    call [900] ; 
+001a7535    i32.const [4989056]
+001a753a    i32.const [1]
+001a753c    i32.store8 [0, 0]
+001a753f  end []
+001a7540  i32.const [3932308]
+001a7545  i32.load [2, 0]
+001a7548  call [901] ; 
+001a754b  local.get [0]
+001a754d  i32.const [1]
+001a754f  i32.const [0]
+001a7551  call [12170] ; GameFrameEntry.PauseGame
+001a7554  end []

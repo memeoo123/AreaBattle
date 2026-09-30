@@ -1,0 +1,19 @@
+; Original class: x~bjQc
+; Type4504.get_Status; wasmcode function 2052; offset=624522 size=35
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0009878b  i32.const [0]
+0009878d  call [1060] ; ConfigMgr.get_Instance
+00098790  i32.load [2, 252]
+00098794  i32.load [2, 28]
+00098797  i32.eqz []
+00098798  if [-64]
+0009879a    i32.const [5]
+0009879c    return []
+0009879d  end []
+0009879e  local.get [0]
+000987a0  local.get [0]
+000987a2  call [3200] ; x~bjQc.get_Manager
+000987a5  i32.load [2, 20]
+000987a8  i32.load [2, 32]
+000987ab  return []
+000987ac  end []

@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.ShowOppoGameCenter; wasmcode1 function 66248; offset=21041259 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0141106c  i32.const [4988631]
+01411071  i32.load8_u [0, 0]
+01411074  i32.eqz []
+01411075  if [-64]
+01411077    i32.const [3938304]
+0141107c    i32.const [1605]
+0141107f    call_indirect [0, 0]
+01411082    i32.const [4988631]
+01411087    i32.const [1]
+01411089    i32.store8 [0, 0]
+0141108c  end []
+0141108d  i32.const [3938304]
+01411092  i32.load [2, 0]
+01411095  i32.load [2, 92]
+01411098  i32.load [2, 0]
+0141109b  i32.const [0]
+0141109d  call [22942] ; SDKToolManager.OpenOppoGameCenterStatic
+014110a1  end []

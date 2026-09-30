@@ -1,0 +1,22 @@
+; Original class: YOResourcesModule
+; Type3527.GetPackageStr; wasmcode1 function 7003; offset=2367896 size=55
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00242199  i32.const [4989568]
+0024219e  i32.load8_u [0, 0]
+002421a1  i32.eqz []
+002421a2  if [-64]
+002421a4    i32.const [3928172]
+002421a9    i32.const [1605]
+002421ac    call_indirect [0, 0]
+002421af    i32.const [4989568]
+002421b4    i32.const [1]
+002421b6    i32.store8 [0, 0]
+002421b9  end []
+002421ba  i32.const [3928172]
+002421bf  i32.load [2, 0]
+002421c2  i32.load [2, 92]
+002421c5  i32.load [2, 0]
+002421c8  i32.const [0]
+002421ca  call [3514] ; AppInfoManager.GetPackageName
+002421cd  return []
+002421ce  end []

@@ -1,0 +1,11 @@
+; Original class: SkinItem
+; Type4364.SetRedDot; wasmcode function 7145; offset=2718096 size=19
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00297991  local.get [0]
+00297993  i32.load [2, 120]
+00297996  i32.const [0]
+00297998  call [943] ; Component.get_gameObject
+0029799b  local.get [1]
+0029799d  i32.const [0]
+0029799f  call [949] ; GameObject.SetActive
+002979a2  end []

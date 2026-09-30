@@ -1,0 +1,25 @@
+; Type3409.SetStateMachine; wasmcode function 8817; offset=4398766 size=69
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00431eaf  i32.const [5011648]
+00431eb4  i32.load8_u [0, 0]
+00431eb7  i32.eqz []
+00431eb8  if [-64]
+00431eba    i32.const [3951344]
+00431ebf    call [900] ; 
+00431ec2    i32.const [3916360]
+00431ec7    call [900] ; 
+00431eca    i32.const [5011648]
+00431ecf    i32.const [1]
+00431ed1    i32.store8 [0, 0]
+00431ed4  end []
+00431ed5  i32.const [3916360]
+00431eda  i32.load [2, 0]
+00431edd  call [901] ; 
+00431ee0  local.get [0]
+00431ee2  i32.const [4]
+00431ee4  i32.add []
+00431ee5  local.get [1]
+00431ee7  i32.const [3951344]
+00431eec  i32.load [2, 0]
+00431eef  call [1542] ; 
+00431ef2  end []

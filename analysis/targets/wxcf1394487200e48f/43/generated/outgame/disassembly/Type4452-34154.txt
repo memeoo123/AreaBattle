@@ -1,0 +1,678 @@
+; Original class: ProcedureStarGame
+; Type4452.OnEnter; wasmcode function 18169; offset=8066700 size=2014
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+007b168f  global.get [0]
+007b1691  i32.const [48]
+007b1693  i32.sub []
+007b1694  local.set [2]
+007b1696  local.get [2]
+007b1698  global.set [0]
+007b169a  i32.const [5009789]
+007b169f  i32.load8_u [0, 0]
+007b16a2  i32.eqz []
+007b16a3  if [-64]
+007b16a5    i32.const [3915772]
+007b16aa    call [900] ; 
+007b16ad    i32.const [3928344]
+007b16b2    call [900] ; 
+007b16b5    i32.const [3953488]
+007b16ba    call [900] ; 
+007b16bd    i32.const [3959456]
+007b16c2    call [900] ; 
+007b16c5    i32.const [3959444]
+007b16ca    call [900] ; 
+007b16cd    i32.const [3957888]
+007b16d2    call [900] ; 
+007b16d5    i32.const [3918584]
+007b16da    call [900] ; 
+007b16dd    i32.const [3966728]
+007b16e2    call [900] ; 
+007b16e5    i32.const [3966732]
+007b16ea    call [900] ; 
+007b16ed    i32.const [3966736]
+007b16f2    call [900] ; 
+007b16f5    i32.const [3947148]
+007b16fa    call [900] ; 
+007b16fd    i32.const [3932476]
+007b1702    call [900] ; 
+007b1705    i32.const [4009528] ; METHOD PiggyBankControl.OnGM_SetPiggyNum
+007b170a    call [900] ; 
+007b170d    i32.const [4009792] ; METHOD ProcedureStarGame.Lsd}Ud
+007b1712    call [900] ; 
+007b1715    i32.const [4009796] ; METHOD ProcedureStarGame.OSVeuqr
+007b171a    call [900] ; 
+007b171d    i32.const [4009800] ; METHOD ProcedureStarGame.TakLz
+007b1722    call [900] ; 
+007b1725    i32.const [4009808] ; METHOD ProcedureStarGame.[dR
+007b172a    call [900] ; 
+007b172d    i32.const [4009844] ; METHOD ProcedureStarGame.|N]vf
+007b1732    call [900] ; 
+007b1735    i32.const [4009848] ; METHOD ProcedureStarGame.|ccabr
+007b173a    call [900] ; 
+007b173d    i32.const [4009852] ; METHOD ProcedureStarGame.}`w`eO
+007b1742    call [900] ; 
+007b1745    i32.const [4009856] ; METHOD ProcedureStarGame.M~ShLx
+007b174a    call [900] ; 
+007b174d    i32.const [4009860] ; METHOD ProcedureStarGame.iTMt
+007b1752    call [900] ; 
+007b1755    i32.const [4009864] ; METHOD ProcedureStarGame.}u^ae
+007b175a    call [900] ; 
+007b175d    i32.const [4009868] ; METHOD ProcedureStarGame.yno}jz
+007b1762    call [900] ; 
+007b1765    i32.const [4009804] ; METHOD ProcedureStarGame.Z^np
+007b176a    call [900] ; 
+007b176d    i32.const [4009812] ; METHOD ProcedureStarGame.aP|kOVP
+007b1772    call [900] ; 
+007b1775    i32.const [4009816] ; METHOD ProcedureStarGame.cRzj|
+007b177a    call [900] ; 
+007b177d    i32.const [4009820] ; METHOD ProcedureStarGame.j|u^~nO
+007b1782    call [900] ; 
+007b1785    i32.const [4009824] ; METHOD ProcedureStarGame.kQzmqWm
+007b178a    call [900] ; 
+007b178d    i32.const [4009828] ; METHOD ProcedureStarGame.nsVx
+007b1792    call [900] ; 
+007b1795    i32.const [4009832] ; METHOD ProcedureStarGame.oyXpgN
+007b179a    call [900] ; 
+007b179d    i32.const [4009836] ; METHOD ProcedureStarGame.qsbp^
+007b17a2    call [900] ; 
+007b17a5    i32.const [3937964]
+007b17aa    call [900] ; 
+007b17ad    i32.const [3987748]
+007b17b2    call [900] ; 
+007b17b5    i32.const [4069236] ; STRING "SetPigBankFull - 设置存钱罐为可领取"
+007b17ba    call [900] ; 
+007b17bd    i32.const [4105968] ; STRING "设置移动步数(1-6设置, 0关闭)"
+007b17c2    call [900] ; 
+007b17c5    i32.const [4067088] ; STRING "ReadyExitGame"
+007b17ca    call [900] ; 
+007b17cd    i32.const [4053728] ; STRING "Fail - 一键失败"
+007b17d2    call [900] ; 
+007b17d5    i32.const [4043796] ; STRING "AddDice - 添加骰子"
+007b17da    call [900] ; 
+007b17dd    i32.const [4043760] ; STRING "Add Dimon - 增加n钻石"
+007b17e2    call [900] ; 
+007b17e5    i32.const [4043772] ; STRING "Add LevelRank - 打榜"
+007b17ea    call [900] ; 
+007b17ed    i32.const [4105940] ; STRING "设置TimeScale"
+007b17f2    call [900] ; 
+007b17f5    i32.const [4060164] ; STRING "JumpLevel - 跳到对应关卡"
+007b17fa    call [900] ; 
+007b17fd    i32.const [4069232] ; STRING "SetPigBankDemon - 设置存钱罐钻石数量"
+007b1802    call [900] ; 
+007b1805    i32.const [4077252] ; STRING "Unlock All Soldier Skin - 解锁小兵全皮肤"
+007b180a    call [900] ; 
+007b180d    i32.const [4043768] ; STRING "Add Item - 添加道具id count"
+007b1812    call [900] ; 
+007b1815    i32.const [4043776] ; STRING "Add LevelRank Bot - 添加排行榜机器人"
+007b181a    call [900] ; 
+007b181d    i32.const [4077248] ; STRING "Unlock All Scene Skin - 解锁场景全皮肤"
+007b1822    call [900] ; 
+007b1825    i32.const [4078856] ; STRING "Win - 一键胜利"
+007b182a    call [900] ; 
+007b182d    i32.const [4069048] ; STRING "Set Arena Cup调整玩家奖杯"
+007b1832    call [900] ; 
+007b1835    i32.const [4043764] ; STRING "Add Gold - 增加n金币"
+007b183a    call [900] ; 
+007b183d    i32.const [4055232] ; STRING "GamePause"
+007b1842    call [900] ; 
+007b1845    i32.const [4043800] ; STRING "AddDicePoint - 添加冒险骰子积分"
+007b184a    call [900] ; 
+007b184d    i32.const [4077244] ; STRING "Unlock All Headbox - 解锁全部头像框"
+007b1852    call [900] ; 
+007b1855    i32.const [5009789]
+007b185a    i32.const [1]
+007b185c    i32.store8 [0, 0]
+007b185f  end []
+007b1860  local.get [2]
+007b1862  i64.const [0]
+007b1864  i64.store [3, 40]
+007b1867  local.get [2]
+007b1869  i64.const [0]
+007b186b  i64.store [3, 32]
+007b186e  local.get [0]
+007b1870  local.get [1]
+007b1872  i32.const [0]
+007b1874  call [5810] ; ProcedureBase.OnEnter
+007b1877  i32.const [3918584]
+007b187c  i32.load [2, 0]
+007b187f  call [903] ; 
+007b1882  local.set [3]
+007b1884  local.get [3]
+007b1886  i32.const [3959444]
+007b188b  i32.load [2, 0]
+007b188e  call [951] ; 
+007b1891  local.get [2]
+007b1893  i32.const [16]
+007b1895  i32.add []
+007b1896  i32.const [0]
+007b1898  call [1060] ; ConfigMgr.get_Instance
+007b189b  i32.load [2, 108]
+007b189e  i32.const [3957888]
+007b18a3  i32.load [2, 0]
+007b18a6  call [1138] ; 
+007b18a9  i32.const [3987748]
+007b18ae  i32.load [2, 0]
+007b18b1  call [1163] ; 
+007b18b4  local.get [2]
+007b18b6  local.get [2]
+007b18b8  i64.load [3, 24]
+007b18bb  i64.store [3, 40]
+007b18be  local.get [2]
+007b18c0  local.get [2]
+007b18c2  i64.load [3, 16]
+007b18c5  i64.store [3, 32]
+007b18c8  local.get [2]
+007b18ca  local.get [2]
+007b18cc  i32.const [32]
+007b18ce  i32.add []
+007b18cf  i32.store [2, 8]
+007b18d2  local.get [2]
+007b18d4  i32.const [0]
+007b18d6  i32.store [2, 16]
+007b18d9  local.get [2]
+007b18db  local.get [2]
+007b18dd  i32.load [2, 8]
+007b18e0  i32.store [2, 20]
+007b18e3  block [-64]
+007b18e5    block [-64]
+007b18e7      block [-64]
+007b18e9        block [-64]
+007b18eb          block [-64]
+007b18ed            loop [-64]
+007b18ef              block [-64]
+007b18f1                i32.const [4477188]
+007b18f6                i32.const [0]
+007b18f8                i32.store [2, 0]
+007b18fb                i32.const [10165]
+007b18ff                local.get [2]
+007b1901                i32.const [32]
+007b1903                i32.add []
+007b1904                i32.const [3966732]
+007b1909                i32.load [2, 0]
+007b190c                call [2] ; 
+007b190e                local.set [1]
+007b1910                i32.const [4477188]
+007b1915                i32.load [2, 0]
+007b1918                local.set [4]
+007b191a                i32.const [4477188]
+007b191f                i32.const [0]
+007b1921                i32.store [2, 0]
+007b1924                local.get [4]
+007b1926                i32.const [1]
+007b1928                i32.eq []
+007b1929                br_if [0]
+007b192b                local.get [1]
+007b192d                i32.eqz []
+007b192e                br_if [5]
+007b1930                i32.const [4477188]
+007b1935                i32.const [0]
+007b1937                i32.store [2, 0]
+007b193a                i32.const [10166]
+007b193e                local.get [2]
+007b1940                i32.const [32]
+007b1942                i32.add []
+007b1943                i32.const [3966736]
+007b1948                i32.load [2, 0]
+007b194b                call [2] ; 
+007b194d                local.set [1]
+007b194f                i32.const [4477188]
+007b1954                i32.load [2, 0]
+007b1957                local.set [4]
+007b1959                i32.const [4477188]
+007b195e                i32.const [0]
+007b1960                i32.store [2, 0]
+007b1963                local.get [4]
+007b1965                i32.const [1]
+007b1967                i32.eq []
+007b1968                br_if [2]
+007b196a                local.get [1]
+007b196c                i32.load [2, 12]
+007b196f                local.set [4]
+007b1971                local.get [1]
+007b1973                i32.load [2, 16]
+007b1976                local.set [1]
+007b1978                i32.const [4477188]
+007b197d                i32.const [0]
+007b197f                i32.store [2, 0]
+007b1982                i32.const [2048]
+007b1985                local.get [3]
+007b1987                local.get [1]
+007b1989                local.get [4]
+007b198b                i32.const [3959456]
+007b1990                i32.load [2, 0]
+007b1993                call [13] ; 
+007b1995                i32.const [4477188]
+007b199a                i32.load [2, 0]
+007b199d                local.set [1]
+007b199f                i32.const [4477188]
+007b19a4                i32.const [0]
+007b19a6                i32.store [2, 0]
+007b19a9                local.get [1]
+007b19ab                i32.const [1]
+007b19ad                i32.ne []
+007b19ae                br_if [1]
+007b19b0                br [3]
+007b19b2              end []
+007b19b3            end []
+007b19b4            i32.const [2694968]
+007b19b9            call [0] ; 
+007b19bb            local.set [1]
+007b19bd            br [2]
+007b19bf          end []
+007b19c0          i32.const [2694968]
+007b19c5          call [0] ; 
+007b19c7          local.set [1]
+007b19c9          br [1]
+007b19cb        end []
+007b19cc        i32.const [2694968]
+007b19d1        call [0] ; 
+007b19d3        local.set [1]
+007b19d5      end []
+007b19d6      call [1] ; 
+007b19d8      i32.const [2694968]
+007b19dd      call [9] ; 
+007b19df      i32.eq []
+007b19e0      if [-64]
+007b19e2        local.get [2]
+007b19e4        local.get [1]
+007b19e6        call [8] ; 
+007b19e8        i32.load [2, 0]
+007b19eb        i32.store [2, 16]
+007b19ee        i32.const [4477188]
+007b19f3        i32.const [0]
+007b19f5        i32.store [2, 0]
+007b19f8        i32.const [214]
+007b19fb        call [7] ; 
+007b19fd        i32.const [4477188]
+007b1a02        i32.load [2, 0]
+007b1a05        local.set [1]
+007b1a07        i32.const [4477188]
+007b1a0c        i32.const [0]
+007b1a0e        i32.store [2, 0]
+007b1a11        local.get [1]
+007b1a13        i32.const [1]
+007b1a15        i32.ne []
+007b1a16        br_if [1]
+007b1a18        call [6] ; 
+007b1a1a        local.set [1]
+007b1a1c        call [1] ; 
+007b1a1e        drop []
+007b1a1f      end []
+007b1a20      i32.const [4477188]
+007b1a25      i32.const [0]
+007b1a27      i32.store [2, 0]
+007b1a2a      i32.const [10167]
+007b1a2e      local.get [2]
+007b1a30      i32.const [16]
+007b1a32      i32.add []
+007b1a33      call [3] ; 
+007b1a35      drop []
+007b1a36      i32.const [4477188]
+007b1a3b      i32.load [2, 0]
+007b1a3e      local.set [0]
+007b1a40      i32.const [4477188]
+007b1a45      i32.const [0]
+007b1a47      i32.store [2, 0]
+007b1a4a      local.get [0]
+007b1a4c      i32.const [1]
+007b1a4e      i32.ne []
+007b1a4f      br_if [1]
+007b1a51      i32.const [0]
+007b1a53      call [0] ; 
+007b1a55      drop []
+007b1a56      call [1] ; 
+007b1a58      drop []
+007b1a59      i32.const [109010]
+007b1a5d      global.set [3]
+007b1a5f      i32.const [109010]
+007b1a63      call_indirect [6, 0]
+007b1a66      unreachable []
+007b1a67    end []
+007b1a68    local.get [2]
+007b1a6a    i32.const [16]
+007b1a6c    i32.add []
+007b1a6d    call [8945] ; 
+007b1a70    drop []
+007b1a71    local.get [3]
+007b1a73    i32.const [0]
+007b1a75    call [9591] ; WXAMS.SetVideoMapping
+007b1a78    i32.const [3928344]
+007b1a7d    i32.load [2, 0]
+007b1a80    call [901] ; 
+007b1a83    i32.const [3928344]
+007b1a88    i32.load [2, 0]
+007b1a8b    i32.load [2, 92]
+007b1a8e    i32.const [1]
+007b1a90    i32.store8 [0, 52]
+007b1a93    i32.const [3947148]
+007b1a98    i32.load [2, 0]
+007b1a9b    call [903] ; 
+007b1a9e    local.set [1]
+007b1aa0    local.get [1]
+007b1aa2    local.get [0]
+007b1aa4    i32.const [4009848] ; METHOD ProcedureStarGame.|ccabr
+007b1aa9    i32.load [2, 0]
+007b1aac    i32.const [0]
+007b1aae    call [1067] ; EventHandler..ctor
+007b1ab1    i32.const [4067088] ; STRING "ReadyExitGame"
+007b1ab6    i32.load [2, 0]
+007b1ab9    local.get [1]
+007b1abb    i32.const [0]
+007b1abd    call [1146] ; MsgDispatcher.AddEventListener
+007b1ac0    i32.const [3915772]
+007b1ac5    i32.load [2, 0]
+007b1ac8    call [903] ; 
+007b1acb    local.set [1]
+007b1acd    local.get [1]
+007b1acf    local.get [0]
+007b1ad1    i32.const [4009860] ; METHOD ProcedureStarGame.iTMt
+007b1ad6    i32.load [2, 0]
+007b1ad9    i32.const [0]
+007b1adb    call [1004] ; 
+007b1ade    i32.const [4043768] ; STRING "Add Item - 添加道具id count"
+007b1ae3    i32.load [2, 0]
+007b1ae6    local.get [1]
+007b1ae8    i32.const [0]
+007b1aea    call [2194] ; DebugCostomControl.AddFunction
+007b1aed    i32.const [3915772]
+007b1af2    i32.load [2, 0]
+007b1af5    call [903] ; 
+007b1af8    local.set [1]
+007b1afa    local.get [1]
+007b1afc    local.get [0]
+007b1afe    i32.const [4009812] ; METHOD ProcedureStarGame.aP|kOVP
+007b1b03    i32.load [2, 0]
+007b1b06    i32.const [0]
+007b1b08    call [1004] ; 
+007b1b0b    i32.const [4060164] ; STRING "JumpLevel - 跳到对应关卡"
+007b1b10    i32.load [2, 0]
+007b1b13    local.get [1]
+007b1b15    i32.const [0]
+007b1b17    call [2194] ; DebugCostomControl.AddFunction
+007b1b1a    i32.const [3915772]
+007b1b1f    i32.load [2, 0]
+007b1b22    call [903] ; 
+007b1b25    local.set [1]
+007b1b27    local.get [1]
+007b1b29    local.get [0]
+007b1b2b    i32.const [4009868] ; METHOD ProcedureStarGame.yno}jz
+007b1b30    i32.load [2, 0]
+007b1b33    i32.const [0]
+007b1b35    call [1004] ; 
+007b1b38    i32.const [4043764] ; STRING "Add Gold - 增加n金币"
+007b1b3d    i32.load [2, 0]
+007b1b40    local.get [1]
+007b1b42    i32.const [0]
+007b1b44    call [2194] ; DebugCostomControl.AddFunction
+007b1b47    i32.const [3915772]
+007b1b4c    i32.load [2, 0]
+007b1b4f    call [903] ; 
+007b1b52    local.set [1]
+007b1b54    local.get [1]
+007b1b56    local.get [0]
+007b1b58    i32.const [4009820] ; METHOD ProcedureStarGame.j|u^~nO
+007b1b5d    i32.load [2, 0]
+007b1b60    i32.const [0]
+007b1b62    call [1004] ; 
+007b1b65    i32.const [4043760] ; STRING "Add Dimon - 增加n钻石"
+007b1b6a    i32.load [2, 0]
+007b1b6d    local.get [1]
+007b1b6f    i32.const [0]
+007b1b71    call [2194] ; DebugCostomControl.AddFunction
+007b1b74    i32.const [3915772]
+007b1b79    i32.load [2, 0]
+007b1b7c    call [903] ; 
+007b1b7f    local.set [1]
+007b1b81    local.get [1]
+007b1b83    local.get [0]
+007b1b85    i32.const [4009824] ; METHOD ProcedureStarGame.kQzmqWm
+007b1b8a    i32.load [2, 0]
+007b1b8d    i32.const [0]
+007b1b8f    call [1004] ; 
+007b1b92    i32.const [4078856] ; STRING "Win - 一键胜利"
+007b1b97    i32.load [2, 0]
+007b1b9a    local.get [1]
+007b1b9c    i32.const [0]
+007b1b9e    call [2194] ; DebugCostomControl.AddFunction
+007b1ba1    i32.const [3915772]
+007b1ba6    i32.load [2, 0]
+007b1ba9    call [903] ; 
+007b1bac    local.set [1]
+007b1bae    local.get [1]
+007b1bb0    local.get [0]
+007b1bb2    i32.const [4009856] ; METHOD ProcedureStarGame.M~ShLx
+007b1bb7    i32.load [2, 0]
+007b1bba    i32.const [0]
+007b1bbc    call [1004] ; 
+007b1bbf    i32.const [4053728] ; STRING "Fail - 一键失败"
+007b1bc4    i32.load [2, 0]
+007b1bc7    local.get [1]
+007b1bc9    i32.const [0]
+007b1bcb    call [2194] ; DebugCostomControl.AddFunction
+007b1bce    i32.const [3915772]
+007b1bd3    i32.load [2, 0]
+007b1bd6    call [903] ; 
+007b1bd9    local.set [1]
+007b1bdb    local.get [1]
+007b1bdd    local.get [0]
+007b1bdf    i32.const [4009852] ; METHOD ProcedureStarGame.}`w`eO
+007b1be4    i32.load [2, 0]
+007b1be7    i32.const [0]
+007b1be9    call [1004] ; 
+007b1bec    i32.const [4077252] ; STRING "Unlock All Soldier Skin - 解锁小兵全皮肤"
+007b1bf1    i32.load [2, 0]
+007b1bf4    local.get [1]
+007b1bf6    i32.const [0]
+007b1bf8    call [2194] ; DebugCostomControl.AddFunction
+007b1bfb    i32.const [3915772]
+007b1c00    i32.load [2, 0]
+007b1c03    call [903] ; 
+007b1c06    local.set [1]
+007b1c08    local.get [1]
+007b1c0a    local.get [0]
+007b1c0c    i32.const [4009864] ; METHOD ProcedureStarGame.}u^ae
+007b1c11    i32.load [2, 0]
+007b1c14    i32.const [0]
+007b1c16    call [1004] ; 
+007b1c19    i32.const [4077248] ; STRING "Unlock All Scene Skin - 解锁场景全皮肤"
+007b1c1e    i32.load [2, 0]
+007b1c21    local.get [1]
+007b1c23    i32.const [0]
+007b1c25    call [2194] ; DebugCostomControl.AddFunction
+007b1c28    i32.const [3953488]
+007b1c2d    i32.load [2, 0]
+007b1c30    call [935] ; 
+007b1c33    local.set [1]
+007b1c35    i32.const [3915772]
+007b1c3a    i32.load [2, 0]
+007b1c3d    call [903] ; 
+007b1c40    local.set [3]
+007b1c42    local.get [3]
+007b1c44    local.get [1]
+007b1c46    i32.const [4009528] ; METHOD PiggyBankControl.OnGM_SetPiggyNum
+007b1c4b    i32.load [2, 0]
+007b1c4e    i32.const [0]
+007b1c50    call [1004] ; 
+007b1c53    i32.const [4069232] ; STRING "SetPigBankDemon - 设置存钱罐钻石数量"
+007b1c58    i32.load [2, 0]
+007b1c5b    local.get [3]
+007b1c5d    i32.const [0]
+007b1c5f    call [2194] ; DebugCostomControl.AddFunction
+007b1c62    i32.const [3915772]
+007b1c67    i32.load [2, 0]
+007b1c6a    call [903] ; 
+007b1c6d    local.set [1]
+007b1c6f    local.get [1]
+007b1c71    local.get [0]
+007b1c73    i32.const [4009828] ; METHOD ProcedureStarGame.nsVx
+007b1c78    i32.load [2, 0]
+007b1c7b    i32.const [0]
+007b1c7d    call [1004] ; 
+007b1c80    i32.const [4069236] ; STRING "SetPigBankFull - 设置存钱罐为可领取"
+007b1c85    i32.load [2, 0]
+007b1c88    local.get [1]
+007b1c8a    i32.const [0]
+007b1c8c    call [2194] ; DebugCostomControl.AddFunction
+007b1c8f    i32.const [3915772]
+007b1c94    i32.load [2, 0]
+007b1c97    call [903] ; 
+007b1c9a    local.set [1]
+007b1c9c    local.get [1]
+007b1c9e    i32.const [0]
+007b1ca0    i32.const [4009808] ; METHOD ProcedureStarGame.[dR
+007b1ca5    i32.load [2, 0]
+007b1ca8    i32.const [0]
+007b1caa    call [1004] ; 
+007b1cad    i32.const [4069048] ; STRING "Set Arena Cup调整玩家奖杯"
+007b1cb2    i32.load [2, 0]
+007b1cb5    local.get [1]
+007b1cb7    i32.const [0]
+007b1cb9    call [2194] ; DebugCostomControl.AddFunction
+007b1cbc    i32.const [3915772]
+007b1cc1    i32.load [2, 0]
+007b1cc4    call [903] ; 
+007b1cc7    local.set [1]
+007b1cc9    local.get [1]
+007b1ccb    local.get [0]
+007b1ccd    i32.const [4009800] ; METHOD ProcedureStarGame.TakLz
+007b1cd2    i32.load [2, 0]
+007b1cd5    i32.const [0]
+007b1cd7    call [1004] ; 
+007b1cda    i32.const [4043796] ; STRING "AddDice - 添加骰子"
+007b1cdf    i32.load [2, 0]
+007b1ce2    local.get [1]
+007b1ce4    i32.const [0]
+007b1ce6    call [2194] ; DebugCostomControl.AddFunction
+007b1ce9    i32.const [3915772]
+007b1cee    i32.load [2, 0]
+007b1cf1    call [903] ; 
+007b1cf4    local.set [1]
+007b1cf6    local.get [1]
+007b1cf8    local.get [0]
+007b1cfa    i32.const [4009804] ; METHOD ProcedureStarGame.Z^np
+007b1cff    i32.load [2, 0]
+007b1d02    i32.const [0]
+007b1d04    call [1004] ; 
+007b1d07    i32.const [4043800] ; STRING "AddDicePoint - 添加冒险骰子积分"
+007b1d0c    i32.load [2, 0]
+007b1d0f    local.get [1]
+007b1d11    i32.const [0]
+007b1d13    call [2194] ; DebugCostomControl.AddFunction
+007b1d16    i32.const [3915772]
+007b1d1b    i32.load [2, 0]
+007b1d1e    call [903] ; 
+007b1d21    local.set [1]
+007b1d23    local.get [1]
+007b1d25    local.get [0]
+007b1d27    i32.const [4009832] ; METHOD ProcedureStarGame.oyXpgN
+007b1d2c    i32.load [2, 0]
+007b1d2f    i32.const [0]
+007b1d31    call [1004] ; 
+007b1d34    i32.const [4105968] ; STRING "设置移动步数(1-6设置, 0关闭)"
+007b1d39    i32.load [2, 0]
+007b1d3c    local.get [1]
+007b1d3e    i32.const [0]
+007b1d40    call [2194] ; DebugCostomControl.AddFunction
+007b1d43    i32.const [3915772]
+007b1d48    i32.load [2, 0]
+007b1d4b    call [903] ; 
+007b1d4e    local.set [1]
+007b1d50    local.get [1]
+007b1d52    local.get [0]
+007b1d54    i32.const [4009836] ; METHOD ProcedureStarGame.qsbp^
+007b1d59    i32.load [2, 0]
+007b1d5c    i32.const [0]
+007b1d5e    call [1004] ; 
+007b1d61    i32.const [4105940] ; STRING "设置TimeScale"
+007b1d66    i32.load [2, 0]
+007b1d69    local.get [1]
+007b1d6b    i32.const [0]
+007b1d6d    call [2194] ; DebugCostomControl.AddFunction
+007b1d70    i32.const [3915772]
+007b1d75    i32.load [2, 0]
+007b1d78    call [903] ; 
+007b1d7b    local.set [1]
+007b1d7d    local.get [1]
+007b1d7f    local.get [0]
+007b1d81    i32.const [4009792] ; METHOD ProcedureStarGame.Lsd}Ud
+007b1d86    i32.load [2, 0]
+007b1d89    i32.const [0]
+007b1d8b    call [1004] ; 
+007b1d8e    i32.const [4077244] ; STRING "Unlock All Headbox - 解锁全部头像框"
+007b1d93    i32.load [2, 0]
+007b1d96    local.get [1]
+007b1d98    i32.const [0]
+007b1d9a    call [2194] ; DebugCostomControl.AddFunction
+007b1d9d    i32.const [3915772]
+007b1da2    i32.load [2, 0]
+007b1da5    call [903] ; 
+007b1da8    local.set [1]
+007b1daa    local.get [1]
+007b1dac    local.get [0]
+007b1dae    i32.const [4009844] ; METHOD ProcedureStarGame.|N]vf
+007b1db3    i32.load [2, 0]
+007b1db6    i32.const [0]
+007b1db8    call [1004] ; 
+007b1dbb    i32.const [4043772] ; STRING "Add LevelRank - 打榜"
+007b1dc0    i32.load [2, 0]
+007b1dc3    local.get [1]
+007b1dc5    i32.const [0]
+007b1dc7    call [2194] ; DebugCostomControl.AddFunction
+007b1dca    i32.const [3915772]
+007b1dcf    i32.load [2, 0]
+007b1dd2    call [903] ; 
+007b1dd5    local.set [1]
+007b1dd7    local.get [1]
+007b1dd9    local.get [0]
+007b1ddb    i32.const [4009796] ; METHOD ProcedureStarGame.OSVeuqr
+007b1de0    i32.load [2, 0]
+007b1de3    i32.const [0]
+007b1de5    call [1004] ; 
+007b1de8    i32.const [4043776] ; STRING "Add LevelRank Bot - 添加排行榜机器人"
+007b1ded    i32.load [2, 0]
+007b1df0    local.get [1]
+007b1df2    i32.const [0]
+007b1df4    call [2194] ; DebugCostomControl.AddFunction
+007b1df7    i32.const [3947148]
+007b1dfc    i32.load [2, 0]
+007b1dff    call [903] ; 
+007b1e02    local.set [1]
+007b1e04    local.get [1]
+007b1e06    local.get [0]
+007b1e08    i32.const [4009816] ; METHOD ProcedureStarGame.cRzj|
+007b1e0d    i32.load [2, 0]
+007b1e10    i32.const [0]
+007b1e12    call [1067] ; EventHandler..ctor
+007b1e15    i32.const [4055232] ; STRING "GamePause"
+007b1e1a    i32.load [2, 0]
+007b1e1d    local.get [1]
+007b1e1f    i32.const [0]
+007b1e21    call [1146] ; MsgDispatcher.AddEventListener
+007b1e24    i32.const [3937964]
+007b1e29    i32.load [2, 0]
+007b1e2c    call [901] ; 
+007b1e2f    i32.const [3937964]
+007b1e34    i32.load [2, 0]
+007b1e37    i32.load [2, 92]
+007b1e3a    i32.load [2, 8]
+007b1e3d    i32.const [0]
+007b1e3f    i32.const [0]
+007b1e41    call [4848] ; ReportManager.StartGameModel
+007b1e44    i32.const [3932476]
+007b1e49    i32.load [2, 0]
+007b1e4c    call [901] ; 
+007b1e4f    i32.const [0]
+007b1e51    call [6029] ; GlobalData.CheckNewDay
+007b1e54    local.get [0]
+007b1e56    local.get [2]
+007b1e58    call [11032] ; ProcedureStarGame.`ozo[W
+007b1e5b    local.get [2]
+007b1e5d    i32.const [48]
+007b1e5f    i32.add []
+007b1e60    global.set [0]
+007b1e62    return []
+007b1e63  end []
+007b1e64  local.get [1]
+007b1e66  call [10] ; 
+007b1e68  unreachable []
+007b1e69  end []

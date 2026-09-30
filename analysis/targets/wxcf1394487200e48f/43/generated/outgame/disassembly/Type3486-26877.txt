@@ -1,0 +1,36 @@
+; Original class: GlobalData
+; Type3486.get_JumpVideo; wasmcode function 12048; offset=5865791 size=89
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00598140  i32.const [4989088]
+00598145  i32.load8_u [0, 0]
+00598148  i32.eqz []
+00598149  if [-64]
+0059814b    i32.const [3932476]
+00598150    call [900] ; 
+00598153    i32.const [4989088]
+00598158    i32.const [1]
+0059815a    i32.store8 [0, 0]
+0059815d  end []
+0059815e  i32.const [3932476]
+00598163  i32.load [2, 0]
+00598166  call [901] ; 
+00598169  i32.const [0]
+0059816b  call [1585] ; GlobalData.get_IsReleaseVersion
+0059816e  if [-64]
+00598170    i32.const [0]
+00598172    local.set [0]
+00598174  else []
+00598175    i32.const [3932476]
+0059817a    i32.load [2, 0]
+0059817d    call [901] ; 
+00598180    i32.const [3932476]
+00598185    i32.load [2, 0]
+00598188    i32.load [2, 92]
+0059818b    i32.load8_u [0, 29]
+0059818e    i32.const [0]
+00598190    i32.ne []
+00598191    local.set [0]
+00598193  end []
+00598194  local.get [0]
+00598196  return []
+00598197  end []

@@ -1,0 +1,23 @@
+; Original class: CommanderData
+; Type4030.IsCanUpgrate; wasmcode function 12862; offset=6187166 size=54
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005e689f  i32.const [5008693]
+005e68a4  i32.load8_u [0, 0]
+005e68a7  i32.eqz []
+005e68a8  if [-64]
+005e68aa    i32.const [3953344]
+005e68af    call [900] ; 
+005e68b2    i32.const [5008693]
+005e68b7    i32.const [1]
+005e68b9    i32.store8 [0, 0]
+005e68bc  end []
+005e68bd  i32.const [3953344]
+005e68c2  i32.load [2, 0]
+005e68c5  call [935] ; 
+005e68c8  drop []
+005e68c9  local.get [0]
+005e68cb  local.get [0]
+005e68cd  local.get [0]
+005e68cf  call [12863] ; CommanderControl.IsCanUpgrate
+005e68d2  return []
+005e68d3  end []

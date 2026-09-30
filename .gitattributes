@@ -1,0 +1,5 @@
+# Preserve exact bytes: validation manifests hash source and recovered evidence.
+* -text
+
+# Large original-reference recordings use Git LFS.
+*.mp4 filter=lfs diff=lfs merge=lfs -text

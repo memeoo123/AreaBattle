@@ -1,0 +1,34 @@
+{
+  "status": "asset_handle_core_verified_loading_events_pending",
+  "source": [
+    "disassembly/Type2929-22893.txt",
+    "disassembly/Type2929-22901.txt",
+    "disassembly/Type2929-22902.txt",
+    "disassembly/Type2929-22905.txt",
+    "disassembly/Type2929-22906.txt",
+    "disassembly/Type2930-22916.txt",
+    "disassembly/Type2930-22917.txt",
+    "disassembly/Type2945-22982.txt"
+  ],
+  "verified": [
+    "Normal release validates provider, releases it and only then clears provider reference",
+    "Failed release preserves provider; repeated release warns without provider call",
+    "Destroyed provider suppresses main-object and instance access",
+    "Compatibility branch directly reads mainObject and skips release",
+    "Default instantiate activates clone and assigns original prefab name",
+    "Actual fly Play Mode uses restored handle in explicitly selected compatibility fixture"
+  ],
+  "remaining": [
+    "Determine actual loader mode initialization from original startup",
+    "Provider creation, reference counts and load completion subscriptions",
+    "Native pool manager/resource lifetime composition",
+    "Legacy backend validation and full outgame build/E2E"
+  ],
+  "knownDifferences": [
+    "Non-default instantiate overloads not implemented",
+    "Original instantiate diagnostic log not emitted",
+    "No claim full AssetOperationHandle API restored"
+  ],
+  "checks": 530,
+  "playmodeChecks": 8
+}

@@ -1,0 +1,26 @@
+; Original class: uXMss
+; Type4054.RemoveSubId; wasmcode function 8503; offset=4152298 size=71
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003f5beb  i32.const [5008806]
+003f5bf0  i32.load8_u [0, 0]
+003f5bf3  i32.eqz []
+003f5bf4  if [-64]
+003f5bf6    i32.const [3955800]
+003f5bfb    call [900] ; 
+003f5bfe    i32.const [3945312]
+003f5c03    call [900] ; 
+003f5c06    i32.const [5008806]
+003f5c0b    i32.const [1]
+003f5c0d    i32.store8 [0, 0]
+003f5c10  end []
+003f5c11  i32.const [3945312]
+003f5c16  i32.load [2, 0]
+003f5c19  i32.load [2, 92]
+003f5c1c  i32.load [2, 0]
+003f5c1f  i32.load [2, 12]
+003f5c22  local.get [0]
+003f5c24  i32.const [3955800]
+003f5c29  i32.load [2, 0]
+003f5c2c  call [1570] ; 
+003f5c2f  drop []
+003f5c30  end []

@@ -1,0 +1,66 @@
+; Original class: EffectControl
+; Type4058.OnInit; wasmcode function 19825; offset=8907909 size=193
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0087ec86  i32.const [5008788]
+0087ec8b  i32.load8_u [0, 0]
+0087ec8e  i32.eqz []
+0087ec8f  if [-64]
+0087ec91    i32.const [3956132]
+0087ec96    call [900] ; 
+0087ec99    i32.const [3955504]
+0087ec9e    call [900] ; 
+0087eca1    i32.const [3917456]
+0087eca6    call [900] ; 
+0087eca9    i32.const [3917584]
+0087ecae    call [900] ; 
+0087ecb1    i32.const [3936388]
+0087ecb6    call [900] ; 
+0087ecb9    i32.const [4092760] ; STRING "moneyPool"
+0087ecbe    call [900] ; 
+0087ecc1    i32.const [5008788]
+0087ecc6    i32.const [1]
+0087ecc8    i32.store8 [0, 0]
+0087eccb  end []
+0087eccc  i32.const [3917456]
+0087ecd1  i32.load [2, 0]
+0087ecd4  call [903] ; 
+0087ecd7  local.set [1]
+0087ecd9  local.get [1]
+0087ecdb  i32.const [3955504]
+0087ece0  i32.load [2, 0]
+0087ece3  call [951] ; 
+0087ece6  local.get [0]
+0087ece8  local.get [1]
+0087ecea  i32.store [2, 12]
+0087eced  i32.const [3917584]
+0087ecf2  i32.load [2, 0]
+0087ecf5  call [903] ; 
+0087ecf8  local.set [1]
+0087ecfa  local.get [1]
+0087ecfc  i32.const [3956132]
+0087ed01  i32.load [2, 0]
+0087ed04  call [951] ; 
+0087ed07  local.get [0]
+0087ed09  local.get [1]
+0087ed0b  i32.store [2, 16]
+0087ed0e  local.get [0]
+0087ed10  i32.load [2, 8]
+0087ed13  i32.eqz []
+0087ed14  if [-64]
+0087ed16    local.get [0]
+0087ed18    i32.const [3936388]
+0087ed1d    i32.load [2, 0]
+0087ed20    call [903] ; 
+0087ed23    i32.store [2, 8]
+0087ed26    local.get [0]
+0087ed28    i32.load [2, 8]
+0087ed2b    i32.const [4092760] ; STRING "moneyPool"
+0087ed30    i32.load [2, 0]
+0087ed33    i32.const [300]
+0087ed36    f32.const [5.0]
+0087ed3b    i32.const [0]
+0087ed3d    i32.const [0]
+0087ed3f    i32.const [0]
+0087ed41    call [5863] ; NormalPool.CreateObjectPool
+0087ed44  end []
+0087ed45  end []

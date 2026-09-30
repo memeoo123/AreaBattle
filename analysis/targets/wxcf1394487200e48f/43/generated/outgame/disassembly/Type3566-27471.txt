@@ -1,0 +1,37 @@
+; Original class: UserDataPrefs
+; Type3566.GetString; wasmcode function 5522; offset=1935987 size=97
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+001d8a74  i32.const [4989713]
+001d8a79  i32.load8_u [0, 0]
+001d8a7c  i32.eqz []
+001d8a7d  if [-64]
+001d8a7f    i32.const [3939452]
+001d8a84    call [900] ; 
+001d8a87    i32.const [3941104]
+001d8a8c    call [900] ; 
+001d8a8f    i32.const [4989713]
+001d8a94    i32.const [1]
+001d8a96    i32.store8 [0, 0]
+001d8a99  end []
+001d8a9a  i32.const [3941104]
+001d8a9f  i32.load [2, 0]
+001d8aa2  call [901] ; 
+001d8aa5  local.get [0]
+001d8aa7  i32.const [3941104]
+001d8aac  i32.load [2, 0]
+001d8aaf  i32.load [2, 92]
+001d8ab2  i32.load [2, 8]
+001d8ab5  local.get [1]
+001d8ab7  call [5520] ; UserDataPrefs.uHC´ZT
+001d8aba  local.set [0]
+001d8abc  local.get [0]
+001d8abe  if [-64]
+001d8ac0    local.get [0]
+001d8ac2    i32.const [3939452]
+001d8ac7    i32.load [2, 0]
+001d8aca    call [937] ; 
+001d8acd    local.set [1]
+001d8acf  end []
+001d8ad0  local.get [1]
+001d8ad2  return []
+001d8ad3  end []

@@ -1,0 +1,33 @@
+; Original class: EffectControl
+; Type4058.PlaySequenceEffect; wasmcode function 5103; offset=1753399 size=80
+; signature={'args': [127, 127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+001ac138  i32.const [5008787]
+001ac13d  i32.load8_u [0, 0]
+001ac140  i32.eqz []
+001ac141  if [-64]
+001ac143    i32.const [3945316]
+001ac148    call [900] ; 
+001ac14b    i32.const [5008787]
+001ac150    i32.const [1]
+001ac152    i32.store8 [0, 0]
+001ac155  end []
+001ac156  i32.const [3945316]
+001ac15b  i32.load [2, 0]
+001ac15e  call [903] ; 
+001ac161  local.set [0]
+001ac163  local.get [0]
+001ac165  local.get [1]
+001ac167  i32.store [2, 12]
+001ac16a  local.get [0]
+001ac16c  local.get [2]
+001ac16e  i32.store [2, 16]
+001ac171  local.get [0]
+001ac173  local.get [3]
+001ac175  i32.store [2, 32]
+001ac178  local.get [0]
+001ac17a  local.get [4]
+001ac17c  i32.store [2, 36]
+001ac17f  local.get [0]
+001ac181  local.get [0]
+001ac183  call [9883] ; yzXTR.Play
+001ac186  end []

@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.AddKeyDownListener; wasmcode1 function 59960; offset=19452817 size=65
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128d392  i32.const [4989932]
+0128d397  i32.load8_u [0, 0]
+0128d39a  i32.eqz []
+0128d39b  if [-64]
+0128d39d    i32.const [3934348]
+0128d3a2    i32.const [1605]
+0128d3a5    call_indirect [0, 0]
+0128d3a8    i32.const [4989932]
+0128d3ad    i32.const [1]
+0128d3af    i32.store8 [0, 0]
+0128d3b2  end []
+0128d3b3  i32.const [3934348]
+0128d3b8  i32.load [2, 0]
+0128d3bb  i32.const [1149]
+0128d3be  call_indirect [0, 0]
+0128d3c1  local.get [0]
+0128d3c3  i32.const [25515] ; TABLE InputManager.get_Instance
+0128d3c7  call_indirect [2, 0]
+0128d3ca  local.get [0]
+0128d3cc  local.get [0]
+0128d3ce  call [13093] ; InputManager.³ScE`
+0128d3d1  end []

@@ -1,0 +1,3191 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "snapshot": "hud-soldier300-20260928",
+  "sourceManifest": "generated/resource-snapshots/hud-soldier300-20260928/acquisition-manifest.json",
+  "prefabs": [
+    {
+      "name": "guideui",
+      "assetPath": "assets/gameres/bundleres/ui/mainmenu/guideui.prefab",
+      "root": "CAB-71a96badbcffab7b7451a783f271bc4b:-6886998919977106183",
+      "flatData": "generated/resource-snapshots/hud-soldier300-20260928/prefabs/guideui.flat.json",
+      "nodeCount": 36,
+      "bindingCount": 10,
+      "dependencyCount": 293,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    },
+    {
+      "name": "proj_xqzdpauseui",
+      "assetPath": "assets/gameres/bundleres/ui/mainmenu/proj_xqzdpauseui.prefab",
+      "root": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-6147892994773597558",
+      "flatData": "generated/resource-snapshots/hud-soldier300-20260928/prefabs/proj_xqzdpauseui.flat.json",
+      "nodeCount": 29,
+      "bindingCount": 14,
+      "dependencyCount": 266,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    },
+    {
+      "name": "soldier_300",
+      "assetPath": "assets/gameres/bundleres/model/soldiercommon/soldier_300.prefab",
+      "root": "CAB-c948fefe576ab41035e211f791d31207:-7927858140584861736",
+      "flatData": "generated/resource-snapshots/hud-soldier300-20260928/prefabs/soldier_300.flat.json",
+      "nodeCount": 1,
+      "bindingCount": 0,
+      "dependencyCount": 11,
+      "unresolvedReferences": [],
+      "partialComponents": []
+    }
+  ],
+  "newObjectCounts": {
+    "MeshRenderer": 2,
+    "GameObject": 66,
+    "MonoScript": 22,
+    "AssetBundle": 7,
+    "Transform": 2,
+    "MonoBehaviour": 107,
+    "MeshFilter": 2,
+    "Material": 3,
+    "Texture2D": 15,
+    "Shader": 2,
+    "Mesh": 2,
+    "Sprite": 55,
+    "RectTransform": 64,
+    "CanvasRenderer": 60,
+    "TextAsset": 2,
+    "SpriteAtlas": 1
+  },
+  "resources": [
+    {
+      "id": "CAB-c6d78b8c3f3965936d7990ba4dba1d03:-5450076920315076184",
+      "type": "Material",
+      "name": "soldier_300Material",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/model/soldiercommonres/soldier_300/soldier_300material.mat_900d1df93515f3e556051b8bcdbaeb56.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/soldier_300Material__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-5450076920315076184.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/soldier_300Material__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-5450076920315076184.json",
+          "sha256": "b9a80d6e6bc297706a906eb8d8f4d65dc79f8e2eca3388a8a1be0f552e360505",
+          "bytes": 2178
+        }
+      ]
+    },
+    {
+      "id": "CAB-c6d78b8c3f3965936d7990ba4dba1d03:-2854892883043522224",
+      "type": "Texture2D",
+      "name": "npc03",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/model/soldiercommonres/soldier_300/soldier_300material.mat_900d1df93515f3e556051b8bcdbaeb56.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/npc03__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-2854892883043522224.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/npc03__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-2854892883043522224.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/npc03__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-2854892883043522224.texture.json",
+          "sha256": "f99b303678cc2cc8f28f53a6faffa68b04333daad900e15c72a054e45e28880b",
+          "bytes": 315842
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/npc03__CAB-c6d78b8c3f3965936d7990ba4dba1d03__-2854892883043522224.png",
+          "sha256": "9306146e25a391802a2b0cabf8fba4732d0fdef1f720414d7c23b8e7bc4c2ae5",
+          "bytes": 106766
+        }
+      ]
+    },
+    {
+      "id": "CAB-733c64175e19f19b176d165b33373022:-4074433395770316805",
+      "type": "Mesh",
+      "name": "soldier_300Mesh",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/model/soldiercommonres/soldier_300/soldier_300mesh.asset_ffbf7a7bc94a73eb0f3a4b654114e9be.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/soldier_300Mesh__CAB-733c64175e19f19b176d165b33373022__-4074433395770316805.mesh.json",
+        "obj": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/soldier_300Mesh__CAB-733c64175e19f19b176d165b33373022__-4074433395770316805.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/soldier_300Mesh__CAB-733c64175e19f19b176d165b33373022__-4074433395770316805.mesh.json",
+          "sha256": "dc0188429d1e12afbcb2a2f4d55abee834833d73426d6360337f7fdbf7f90a03",
+          "bytes": 67904
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/soldier_300Mesh__CAB-733c64175e19f19b176d165b33373022__-4074433395770316805.obj",
+          "sha256": "c11ef7d039f8d7e701734c5072c28aa2875adbc99e1ee991c02f96aca8bff085",
+          "bytes": 25032
+        }
+      ]
+    },
+    {
+      "id": "CAB-9998244ab1bed19d9199df4cbe29aaa6:-3597491268373745242",
+      "type": "Texture2D",
+      "name": "soldier_300Texture",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/model/soldiercommonres/soldier_300/soldier_300texture.asset_58175fd332e1edd83875fccf45182970.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/soldier_300Texture__CAB-9998244ab1bed19d9199df4cbe29aaa6__-3597491268373745242.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/soldier_300Texture__CAB-9998244ab1bed19d9199df4cbe29aaa6__-3597491268373745242.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/soldier_300Texture__CAB-9998244ab1bed19d9199df4cbe29aaa6__-3597491268373745242.texture.json",
+          "sha256": "2cb515e023321a6ce99aaf3c1651ce5cb926107eef3c676e7896db4e30b81d63",
+          "bytes": 184971
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/soldier_300Texture__CAB-9998244ab1bed19d9199df4cbe29aaa6__-3597491268373745242.png",
+          "sha256": "684540e63cf91d3b4194928a5ffd6752c15531f8702341ddd70ed1b85a559cee",
+          "bytes": 36377
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-9084782370220930699",
+      "type": "Sprite",
+      "name": "tubiao04",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 8.076120376586914,
+        "y": 6.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.json",
+          "sha256": "bb37a7d360477ac40bbfcea9e6dae1e9d225489cb639fe775041faf965b10d6b",
+          "bytes": 6098
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.png",
+          "sha256": "2567484fd24c5df0d222f1bb099e4c6953bc2dd7d26e2d2335cded884a04f13d",
+          "bytes": 3247
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-71a96badbcffab7b7451a783f271bc4b__-9084782370220930699.canvas.png",
+          "sha256": "9419136f6950708069739502ce738ce220d652c973afdbf945c2589d39eef12f",
+          "bytes": 3343
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-8268854209399839647",
+      "type": "Sprite",
+      "name": "Pulbic_btn_white",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 97.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 62.17948913574219,
+      "border": {
+        "x": 128.0,
+        "y": 48.5,
+        "z": 128.0,
+        "w": 48.5
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.json",
+          "sha256": "e42dbf4b7ab6a5c7b459affcd2b9e0efbe1074318b813adbe2ca15830ca34e9e",
+          "bytes": 4340
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.png",
+          "sha256": "57e528172bf37383a2067f05576df3055103a52e8daab73c7e71ee6af27b2670",
+          "bytes": 2346
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Pulbic_btn_white__CAB-71a96badbcffab7b7451a783f271bc4b__-8268854209399839647.canvas.png",
+          "sha256": "57e528172bf37383a2067f05576df3055103a52e8daab73c7e71ee6af27b2670",
+          "bytes": 2346
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-8052658351011610304",
+      "type": "Sprite",
+      "name": "tubiao03",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 9.076120376586914,
+        "y": 6.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.json",
+          "sha256": "4f6d4793e9f1eab5f40a2dfa0faa07b8c08a30893bc13c49da88ba6679172d0c",
+          "bytes": 5995
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.png",
+          "sha256": "820b906888de08256e136e59b28836a488ddef62b0797f79a3e7da68be176b54",
+          "bytes": 2917
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-71a96badbcffab7b7451a783f271bc4b__-8052658351011610304.canvas.png",
+          "sha256": "78cb855e40ee904fb55f4c2acb796b8be07a3d26b71627a9d8b51a08919af771",
+          "bytes": 2997
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-7791903411662756124",
+      "type": "Texture2D",
+      "name": "YD_2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7791903411662756124.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7791903411662756124.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7791903411662756124.texture.json",
+          "sha256": "b8d8def24f42b74d36bea0338f0d21a99ede7c5255d9901ae21b6ba6a4a6808e",
+          "bytes": 837922
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7791903411662756124.png",
+          "sha256": "8b7ecddc09a9c9e1707613cb160540dd85c7ab19e262261fbbb5de2617d61c86",
+          "bytes": 263686
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-7672899569522605211",
+      "type": "Material",
+      "name": "YD_YD",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/YD_YD__CAB-71a96badbcffab7b7451a783f271bc4b__-7672899569522605211.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/YD_YD__CAB-71a96badbcffab7b7451a783f271bc4b__-7672899569522605211.json",
+          "sha256": "b8667390621cebf2dc176e4fbcda24bee2296789cf84f4d4e1aebfb1cdaf365f",
+          "bytes": 1786
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-7572599234430709561",
+      "type": "Material",
+      "name": "YD_YD_2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/YD_YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7572599234430709561.json"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Material/YD_YD_2__CAB-71a96badbcffab7b7451a783f271bc4b__-7572599234430709561.json",
+          "sha256": "43ca02ab1dd50183ad6082c399d1ff2ecc3e65c1d20bf2aed93db2eb88bd0d04",
+          "bytes": 1789
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-4336156069923694425",
+      "type": "Sprite",
+      "name": "tubiao01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 3.076120376586914,
+        "y": 4.04290771484375
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.json",
+          "sha256": "14bb1ffd1abe303e78d390283f4fdfca7116ae0df84cb47b45bb33c8bfba5940",
+          "bytes": 5453
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.png",
+          "sha256": "c4a5c7c3ba442309bcb796ab2f4ec20e37ba57e89f0e7a22e2c356ecad9d9fca",
+          "bytes": 2116
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-71a96badbcffab7b7451a783f271bc4b__-4336156069923694425.canvas.png",
+          "sha256": "ffac810c944bc95810d3634cc25aad13545877bef6bed28f112d04fcc11da01c",
+          "bytes": 2146
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-2780960743001050164",
+      "type": "Mesh",
+      "name": "Skeleton Prefab Mesh \"YD_0\"",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "meshNative": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__YD_0___CAB-71a96badbcffab7b7451a783f271bc4b__-2780960743001050164.mesh.json",
+        "obj": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__YD_0___CAB-71a96badbcffab7b7451a783f271bc4b__-2780960743001050164.obj"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__YD_0___CAB-71a96badbcffab7b7451a783f271bc4b__-2780960743001050164.mesh.json",
+          "sha256": "0349913793852313c69c0c06ea817286a09e7503cb13c620eb61584fa71343b0",
+          "bytes": 1263
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Mesh/Skeleton_Prefab_Mesh__YD_0___CAB-71a96badbcffab7b7451a783f271bc4b__-2780960743001050164.obj",
+          "sha256": "d471d8b82c905b469532f54595e857ac85e55a57a817b1ca469ce4931570ffd2",
+          "bytes": 336
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:-1797332260960300854",
+      "type": "Sprite",
+      "name": "Public_bg01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 212.0,
+        "height": 188.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 101.0,
+        "y": 144.0,
+        "z": 77.0,
+        "w": 25.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.json",
+          "sha256": "f975f2eb390347b60134edc5168e20c212a678cdac76b1da0d474ab22be1df50",
+          "bytes": 4478
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.png",
+          "sha256": "e051832fb49f5a3b5be700a832f8abe2c7cd07b3cb3dd04f0a8b80a58b6901fd",
+          "bytes": 4255
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__-1797332260960300854.canvas.png",
+          "sha256": "e051832fb49f5a3b5be700a832f8abe2c7cd07b3cb3dd04f0a8b80a58b6901fd",
+          "bytes": 4255
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:237018883051795133",
+      "type": "Sprite",
+      "name": "tubiao02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 9.01291275024414,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.json",
+          "sha256": "27baa64415db741e8f353a2bfeeba2f3c8d380b60828c48fb8a80cb3e63b1764",
+          "bytes": 5671
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.png",
+          "sha256": "8cdefa2e9fa141b571cce0f15e5b591d9e6258f29087c4a05776101f55708ad2",
+          "bytes": 3582
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-71a96badbcffab7b7451a783f271bc4b__237018883051795133.canvas.png",
+          "sha256": "226de994f3c64bab76be77bfc8e7c3c4f16e890a3464095f4dd740b754dc0a65",
+          "bytes": 3676
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:2026805924299331817",
+      "type": "Texture2D",
+      "name": "YD",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD__CAB-71a96badbcffab7b7451a783f271bc4b__2026805924299331817.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD__CAB-71a96badbcffab7b7451a783f271bc4b__2026805924299331817.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD__CAB-71a96badbcffab7b7451a783f271bc4b__2026805924299331817.texture.json",
+          "sha256": "bc61d1a4073a3266bf070b113700a8a301165e13567ff39592aee5b20698767d",
+          "bytes": 1083937
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/YD__CAB-71a96badbcffab7b7451a783f271bc4b__2026805924299331817.png",
+          "sha256": "ce9a4b371040bc793abea7d386d4ed656bb6ef65bdd5c987a07ee492a8922cff",
+          "bytes": 959661
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:3193828452827462213",
+      "type": "Sprite",
+      "name": "guild_line",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 4.0,
+        "height": 64.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 10.0,
+        "z": 0.0,
+        "w": 9.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.json",
+          "sha256": "83397507d0dcd25c79ea8951afb964ddda14f6f0c1e54e16c55c57336720cb5b",
+          "bytes": 3932
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.png",
+          "sha256": "f075c4ab42191b89cec1ee272f1506acc6d72a011a1c6f656bba5c79c25413e4",
+          "bytes": 210
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-71a96badbcffab7b7451a783f271bc4b__3193828452827462213.canvas.png",
+          "sha256": "f075c4ab42191b89cec1ee272f1506acc6d72a011a1c6f656bba5c79c25413e4",
+          "bytes": 210
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:4111178101966353224",
+      "type": "Sprite",
+      "name": "Public_bg02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 40.0,
+        "height": 40.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 10.0,
+        "y": 8.0,
+        "z": 6.0,
+        "w": 6.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.json",
+          "sha256": "3c8028cecc41a95d4cceaaad955347438763e2f7d95e48508c18cd81a5c9c0a2",
+          "bytes": 3931
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.png",
+          "sha256": "c7994d9647ddb0e4e3fe06350192e31c2e494b78825f9db64e92413927843275",
+          "bytes": 156
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4111178101966353224.canvas.png",
+          "sha256": "c7994d9647ddb0e4e3fe06350192e31c2e494b78825f9db64e92413927843275",
+          "bytes": 156
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:4168258849634748725",
+      "type": "Sprite",
+      "name": "guild_bg02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 32.0,
+        "height": 32.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 11.0,
+        "y": 14.0,
+        "z": 12.0,
+        "w": 12.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.json",
+          "sha256": "6915152ce6254b8506fb5760b388dab68de1c9801037e24c5520681636a8e662",
+          "bytes": 4663
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.png",
+          "sha256": "49a35e859999854bf0e00904174de53a554e8f83e95e55df81bf09a9828107f5",
+          "bytes": 587
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-71a96badbcffab7b7451a783f271bc4b__4168258849634748725.canvas.png",
+          "sha256": "49a35e859999854bf0e00904174de53a554e8f83e95e55df81bf09a9828107f5",
+          "bytes": 587
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:4399269785087572618",
+      "type": "Sprite",
+      "name": "guild_bg01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 86.0,
+        "height": 40.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 44.0,
+        "y": 19.0,
+        "z": 42.0,
+        "w": 18.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.json",
+          "sha256": "d111a4ececb527b2d2a1d3125f9d9ad154085e7aff08641b8425610c8066f31c",
+          "bytes": 5635
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.png",
+          "sha256": "f00975070321e37221e3606bd7dce14503b61aa9b09f2bb1c5f3c21c28300283",
+          "bytes": 893
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg01__CAB-71a96badbcffab7b7451a783f271bc4b__4399269785087572618.canvas.png",
+          "sha256": "f00975070321e37221e3606bd7dce14503b61aa9b09f2bb1c5f3c21c28300283",
+          "bytes": 893
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:4415441428988527685",
+      "type": "Sprite",
+      "name": "Public_title",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 184.0,
+        "height": 86.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 81.0,
+        "y": 14.0,
+        "z": 77.0,
+        "w": 8.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.json",
+          "sha256": "c6d9336bc090318602ab246db76e3cb153f4314ccc608ff63e2f002d82adf2ef",
+          "bytes": 5651
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.png",
+          "sha256": "10be97b2665fd3cde86bc4b6d381a6b3f84e88e5c9586ad513f974ed3971d03c",
+          "bytes": 4860
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-71a96badbcffab7b7451a783f271bc4b__4415441428988527685.canvas.png",
+          "sha256": "10be97b2665fd3cde86bc4b6d381a6b3f84e88e5c9586ad513f974ed3971d03c",
+          "bytes": 4860
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:7256562606858225219",
+      "type": "Sprite",
+      "name": "shouzhi",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 108.0,
+        "height": 108.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 3.042907953262329,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.json",
+          "sha256": "cd1ddfea3cd01f5cc766f1e4c2aab6e009833606ee4e5c5c869330ef03df4c9e",
+          "bytes": 6786
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.png",
+          "sha256": "ed44c0d53f0e9bb521587da40e1e083347c9063038a5f2211b0a671b66f6e800",
+          "bytes": 8249
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-71a96badbcffab7b7451a783f271bc4b__7256562606858225219.canvas.png",
+          "sha256": "10b6afba428185d13aef13f564a476b0b0cfef2aa065c947d95347aff143063a",
+          "bytes": 8270
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:7894834730182805884",
+      "type": "Sprite",
+      "name": "guideUI_icon3",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.json",
+          "sha256": "81485810314d9a315ef928e6f880e62e334003e52a99a65dfa9e01e2f4e0d10d",
+          "bytes": 3941
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.png",
+          "sha256": "a720e1136505d4142dee3a4c9836c816b9d574acd4b64f01f9afaa9fae01acda",
+          "bytes": 82988
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-71a96badbcffab7b7451a783f271bc4b__7894834730182805884.canvas.png",
+          "sha256": "a720e1136505d4142dee3a4c9836c816b9d574acd4b64f01f9afaa9fae01acda",
+          "bytes": 82988
+        }
+      ]
+    },
+    {
+      "id": "CAB-71a96badbcffab7b7451a783f271bc4b:8113261151973258035",
+      "type": "Sprite",
+      "name": "Public_bg00",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/guideui.prefab_83650db9b95bae01133e161a9ca179eb.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 77.0,
+        "height": 68.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 7.0,
+        "y": 9.0,
+        "z": 11.0,
+        "w": 11.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.json",
+          "sha256": "dad1005fd54c033c24fd87123c9eed9a99f9c5b62282cb1a27e8858430c776d8",
+          "bytes": 4303
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.png",
+          "sha256": "0e36d76cf340c9d6dd00fdc60af8eccdb497e247c5a6c13f5a2736d6dde22c1f",
+          "bytes": 264
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg00__CAB-71a96badbcffab7b7451a783f271bc4b__8113261151973258035.canvas.png",
+          "sha256": "0e36d76cf340c9d6dd00fdc60af8eccdb497e247c5a6c13f5a2736d6dde22c1f",
+          "bytes": 264
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-8724689723651136689",
+      "type": "Texture2D",
+      "name": "set_icon03",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__-8724689723651136689.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__-8724689723651136689.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__-8724689723651136689.texture.json",
+          "sha256": "e57689a53e0a7c6e6ef6d2b323b23960f53dde3360c2ace1257d699db2fc236e",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__-8724689723651136689.png",
+          "sha256": "fa5f330e9d618f89bd69e5185b4e606e1b98bbfe72b7bea4d214c0963a9c05d9",
+          "bytes": 2597
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-7436377686090502100",
+      "type": "Texture2D",
+      "name": "set_icon02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7436377686090502100.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7436377686090502100.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7436377686090502100.texture.json",
+          "sha256": "5e9f07104ef33cf087422a26416f87d3dc918d6c2e9fa451ee05575e1297724a",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7436377686090502100.png",
+          "sha256": "395dac918031fc2e752840b02e642a1fdb0371993caf4d5c136e36203cbd70fd",
+          "bytes": 4821
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-7319134455688625534",
+      "type": "Texture2D",
+      "name": "set_icon01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7319134455688625534.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7319134455688625534.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7319134455688625534.texture.json",
+          "sha256": "7c34abab341144eca175b230f267464a46b0a320ed3dec54408806977f09ac4f",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-7319134455688625534.png",
+          "sha256": "dfc9cb6cfc99b931bd8db39d60a1f8611656a6cc32f017a3a00a0798daf0e36f",
+          "bytes": 3227
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-6015212216321503668",
+      "type": "Texture2D",
+      "name": "set_icon08",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__-6015212216321503668.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__-6015212216321503668.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__-6015212216321503668.texture.json",
+          "sha256": "eab9c59ace501d740f7b2c60a721de489ab32f885c6e677d327067d8df8c4ce2",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__-6015212216321503668.png",
+          "sha256": "c132e6863c89c4a2aeb241ab7f35eb20be7f738f58ea99afaf7f5580b7d4941f",
+          "bytes": 4427
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-4964995076320756520",
+      "type": "Texture2D",
+      "name": "UISprite",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4964995076320756520.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4964995076320756520.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4964995076320756520.texture.json",
+          "sha256": "56511e219596c8677879bd8e111646820b1a0e722ac54b412a02118e0930ee6c",
+          "bytes": 11753
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4964995076320756520.png",
+          "sha256": "ed8f09a99f1b67860351020af1d6eed114e3528039306006d730e29cc2343eaf",
+          "bytes": 710
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-4835049279283168623",
+      "type": "Sprite",
+      "name": "set_icon6",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 2.0267510414123535,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.json",
+          "sha256": "dbdf0e20441461d803713327c426e1a6d2de1eb2c12b963b5e14e412564c0c90",
+          "bytes": 6423
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.png",
+          "sha256": "41dfea6f6abc6f8d4e3302dd1937220e4a333acacc64ccadbd3e866a523a9b0f",
+          "bytes": 4720
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4835049279283168623.canvas.png",
+          "sha256": "7aaf2b2eedeb4c3ed73f4ac29e86f47b2809d9b8bbb4f5d13111fc550f360977",
+          "bytes": 4732
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-4092723431266383694",
+      "type": "Texture2D",
+      "name": "set_icon6",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4092723431266383694.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4092723431266383694.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4092723431266383694.texture.json",
+          "sha256": "bcc2c4a9ed4df1fdd438f38067881697d0b96df664197c64616fabda5193ad32",
+          "bytes": 7106
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon6__CAB-21b998515a7d906d8c7aaa34aa6056f9__-4092723431266383694.png",
+          "sha256": "5f19365ac71a62b06727b7209328b933681e7e503e3ec87b7c3e0e7cbd3c62d1",
+          "bytes": 4638
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-3325702752916778097",
+      "type": "Texture2D",
+      "name": "set_icon05",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-3325702752916778097.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-3325702752916778097.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-3325702752916778097.texture.json",
+          "sha256": "ba7c6885ca152d6eccf3a58d9d14e602ec9e3d0abd966ce9943a1a25c14f4f01",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-3325702752916778097.png",
+          "sha256": "a485366a5662889e6700860b6308815c6c510f9b6b22344275f13773567c5c86",
+          "bytes": 3224
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-2732843858898147377",
+      "type": "Texture2D",
+      "name": "set_icon09",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__-2732843858898147377.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__-2732843858898147377.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__-2732843858898147377.texture.json",
+          "sha256": "1404d8e16834dedeb725052e12639a473f82cc1ee19f4c0cea91f948c6b520d8",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__-2732843858898147377.png",
+          "sha256": "c1c1408e0ffdb89bdfdc3d7823fffc027130c20713d01a1b0e271a445cc5de40",
+          "bytes": 2396
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-1797332260960300854",
+      "type": "Sprite",
+      "name": "Public_bg01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 212.0,
+        "height": 188.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 101.0,
+        "y": 144.0,
+        "z": 77.0,
+        "w": 25.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.json",
+          "sha256": "f975f2eb390347b60134edc5168e20c212a678cdac76b1da0d474ab22be1df50",
+          "bytes": 4478
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.png",
+          "sha256": "e051832fb49f5a3b5be700a832f8abe2c7cd07b3cb3dd04f0a8b80a58b6901fd",
+          "bytes": 4255
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg01__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1797332260960300854.canvas.png",
+          "sha256": "e051832fb49f5a3b5be700a832f8abe2c7cd07b3cb3dd04f0a8b80a58b6901fd",
+          "bytes": 4255
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-1244627255184935643",
+      "type": "Sprite",
+      "name": "set_icon02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.json",
+          "sha256": "c272813fb7d32029b972bc009fead55484313bbff564b36c0c0934b89bdc93cb",
+          "bytes": 8974
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.png",
+          "sha256": "8e32b2fd37388657fdc36c0aa36d81ea4c2de413131829c10811dfbc9e781f7c",
+          "bytes": 4806
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon02__CAB-21b998515a7d906d8c7aaa34aa6056f9__-1244627255184935643.canvas.png",
+          "sha256": "8e32b2fd37388657fdc36c0aa36d81ea4c2de413131829c10811dfbc9e781f7c",
+          "bytes": 4806
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:-738392486754467388",
+      "type": "Sprite",
+      "name": "set_icon05",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 2.0267510414123535,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.json",
+          "sha256": "2f038182b099cf5714198262cc869b20ed9329b7b235862787ff17a957ea70ba",
+          "bytes": 7063
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.png",
+          "sha256": "e1fab16bf74936858b94a992060e2602207a156251d05dcf0165c83c53331364",
+          "bytes": 3404
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon05__CAB-21b998515a7d906d8c7aaa34aa6056f9__-738392486754467388.canvas.png",
+          "sha256": "a87cda0eea56fda7c86a1eb833ac89e4740ae85ba77d231b93da5f399678ef61",
+          "bytes": 3416
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:38861690050489314",
+      "type": "Sprite",
+      "name": "UISprite",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 32.0,
+        "height": 32.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 200.0,
+      "border": {
+        "x": 10.0,
+        "y": 10.0,
+        "z": 10.0,
+        "w": 10.0
+      },
+      "trimOffset": {
+        "x": 0.02675098180770874,
+        "y": 0.051316678524017334
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.json",
+          "sha256": "db3ca1313a170b8cebf69f132ee8b053cb3a79a50c8ae50be080ac5b7e379f8a",
+          "bytes": 4862
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.png",
+          "sha256": "9e2b539b7c88fe4464525abc282c724b964852950a0b8aa1df13414014b5f33c",
+          "bytes": 713
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/UISprite__CAB-21b998515a7d906d8c7aaa34aa6056f9__38861690050489314.canvas.png",
+          "sha256": "9e2b539b7c88fe4464525abc282c724b964852950a0b8aa1df13414014b5f33c",
+          "bytes": 713
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:170580479059167837",
+      "type": "Sprite",
+      "name": "gm_btn_blue",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 90.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 76.19047546386719,
+      "border": {
+        "x": 89.14286041259766,
+        "y": 35.084747314453125,
+        "z": 100.5714340209961,
+        "w": 29.745763778686523
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.json",
+          "sha256": "e5f960381ee979246cd114d2913d91a1a004edda324841508fd9f7fc40a321f6",
+          "bytes": 4565
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.png",
+          "sha256": "401bec56f43b07e21ab3de991081ff21892525b4d6cdc8107a395026e7b38531",
+          "bytes": 4431
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_blue__CAB-21b998515a7d906d8c7aaa34aa6056f9__170580479059167837.canvas.png",
+          "sha256": "401bec56f43b07e21ab3de991081ff21892525b4d6cdc8107a395026e7b38531",
+          "bytes": 4431
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:739307710601645172",
+      "type": "Sprite",
+      "name": "set_btn",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 132.0,
+        "height": 118.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 47.0,
+        "y": 42.0,
+        "z": 40.0,
+        "w": 53.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.json",
+          "sha256": "cd123d58a07e5d38acc94904e4dff7e85b0f315eb0865555b7893b3df805092b",
+          "bytes": 4757
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.png",
+          "sha256": "c50f8d62b0ff660ab9d160b70a562d1e00d2d03d352dc3e9e9124b00bc99a939",
+          "bytes": 2315
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_btn__CAB-21b998515a7d906d8c7aaa34aa6056f9__739307710601645172.canvas.png",
+          "sha256": "c50f8d62b0ff660ab9d160b70a562d1e00d2d03d352dc3e9e9124b00bc99a939",
+          "bytes": 2315
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:1799120435725251049",
+      "type": "Sprite",
+      "name": "set_icon09",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 19.076120376586914,
+        "y": 4.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.json",
+          "sha256": "634b2ba7d7dd0eac8593a74d4780ad49bf352187433f1dba31f1004f4c84f2f6",
+          "bytes": 5228
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.png",
+          "sha256": "a00c90fe84ecd8e6a8ea2a9e4ae57c4cec61654ae600f777f66dd82dddc97dc6",
+          "bytes": 1871
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon09__CAB-21b998515a7d906d8c7aaa34aa6056f9__1799120435725251049.canvas.png",
+          "sha256": "467bbf7be171effdffbea9f8f9520ef6e8e8a0c0081b8411231e9cafe3bfddb9",
+          "bytes": 1946
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:1800880425395115513",
+      "type": "Sprite",
+      "name": "set_icon03",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.02675098180770874,
+        "y": 4.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.json",
+          "sha256": "e360c7cae0cac9a03e88c1aa8492804f5ed0635552f0c4fbe53f24a287d48898",
+          "bytes": 5402
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.png",
+          "sha256": "3498aad74b90fe70cb5665c33a2b094cf4da2354aa250b5f6e51b2ba078a8be2",
+          "bytes": 2425
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon03__CAB-21b998515a7d906d8c7aaa34aa6056f9__1800880425395115513.canvas.png",
+          "sha256": "9805fee172831cfdd99330be02936baee7c932abf447e79336394784b6ec9ec9",
+          "bytes": 2473
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:2857163320526759094",
+      "type": "Sprite",
+      "name": "set_icon04",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.02675098180770874,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.json",
+          "sha256": "38d3a17493fc024245af26e75ffabdc51f7c87eeba4b240d44cfef609c6da7e0",
+          "bytes": 5815
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.png",
+          "sha256": "b6aef2ea2f1c2493757be85ccb1108438335f2f569b1f849a870b88d17daa4b4",
+          "bytes": 4106
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__2857163320526759094.canvas.png",
+          "sha256": "8ff28229271c7b1dde64ee525342a18c9a9e8bf3e22a14d31a45e2ea2b14d42c",
+          "bytes": 4120
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:2893717166746476671",
+      "type": "Sprite",
+      "name": "set_icon01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.json",
+          "sha256": "699639e64c6817febcfb41ae848a2211749dd85a00afe83ed50256ea88a9354b",
+          "bytes": 7911
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.png",
+          "sha256": "6d24b5dfab9f5ff55ed008b38e3d00ca3d5cb17cb24eafa14615a17402a660a5",
+          "bytes": 3225
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon01__CAB-21b998515a7d906d8c7aaa34aa6056f9__2893717166746476671.canvas.png",
+          "sha256": "dfc9cb6cfc99b931bd8db39d60a1f8611656a6cc32f017a3a00a0798daf0e36f",
+          "bytes": 3227
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:4111178101966353224",
+      "type": "Sprite",
+      "name": "Public_bg02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 40.0,
+        "height": 40.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 10.0,
+        "y": 8.0,
+        "z": 6.0,
+        "w": 6.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.json",
+          "sha256": "3c8028cecc41a95d4cceaaad955347438763e2f7d95e48508c18cd81a5c9c0a2",
+          "bytes": 3931
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.png",
+          "sha256": "c7994d9647ddb0e4e3fe06350192e31c2e494b78825f9db64e92413927843275",
+          "bytes": 156
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_bg02__CAB-21b998515a7d906d8c7aaa34aa6056f9__4111178101966353224.canvas.png",
+          "sha256": "c7994d9647ddb0e4e3fe06350192e31c2e494b78825f9db64e92413927843275",
+          "bytes": 156
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:4415441428988527685",
+      "type": "Sprite",
+      "name": "Public_title",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 184.0,
+        "height": 86.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 81.0,
+        "y": 14.0,
+        "z": 77.0,
+        "w": 8.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.json",
+          "sha256": "c6d9336bc090318602ab246db76e3cb153f4314ccc608ff63e2f002d82adf2ef",
+          "bytes": 5651
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.png",
+          "sha256": "10be97b2665fd3cde86bc4b6d381a6b3f84e88e5c9586ad513f974ed3971d03c",
+          "bytes": 4860
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Public_title__CAB-21b998515a7d906d8c7aaa34aa6056f9__4415441428988527685.canvas.png",
+          "sha256": "10be97b2665fd3cde86bc4b6d381a6b3f84e88e5c9586ad513f974ed3971d03c",
+          "bytes": 4860
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:4453322655722489741",
+      "type": "Texture2D",
+      "name": "set_icon04",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__4453322655722489741.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__4453322655722489741.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__4453322655722489741.texture.json",
+          "sha256": "03fd403d1b526363f6d6046fc8bc26303601434c1e26ea3b61f0c3d383126f54",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon04__CAB-21b998515a7d906d8c7aaa34aa6056f9__4453322655722489741.png",
+          "sha256": "36d78c64302a6a91f75675c29b9b24a78e6b68786556abf59acde11dfd974219",
+          "bytes": 4112
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:4893661786414990676",
+      "type": "Sprite",
+      "name": "set_icon07",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 8.076120376586914,
+        "y": 8.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.json",
+          "sha256": "949b95ae8f69c9e04359a108299a5e7d48ebee2abf17074f1841ce2cd2ee0a6f",
+          "bytes": 5299
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.png",
+          "sha256": "7a07db63dc6aff0b16f10743642ec6117e47e206781f90e01bf858df13c08965",
+          "bytes": 2563
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__4893661786414990676.canvas.png",
+          "sha256": "d3ff7a626768389f0722d8486ecb263c149a3e4ea4456f467f5a7d091ffdf126",
+          "bytes": 2641
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:5446772143763083339",
+      "type": "Sprite",
+      "name": "set_icon08",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 80.0,
+        "height": 80.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 8.076120376586914,
+        "y": 5.0267510414123535
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.json",
+          "sha256": "77207516011650765e38fcc09a5ab05d15be332023cb26f302f4c37b4e9c32d7",
+          "bytes": 6340
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.png",
+          "sha256": "f096af863e7e2c1e9133454f318ad17faddc7973745064296a6c9d3a66b26605",
+          "bytes": 3920
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/set_icon08__CAB-21b998515a7d906d8c7aaa34aa6056f9__5446772143763083339.canvas.png",
+          "sha256": "d7800084fcd39cdf25e6e7d297a59547785f9c3ffb226b86670f9b5cba8e24aa",
+          "bytes": 4039
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:6348553310283624952",
+      "type": "Sprite",
+      "name": "gm_btn_yellow",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 90.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 76.19047546386719,
+      "border": {
+        "x": 108.95238494873047,
+        "y": 27.45762825012207,
+        "z": 102.85714721679688,
+        "w": 21.355932235717773
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.json",
+          "sha256": "c062885036e5a85726644976a22bcfcbf088f4516aa3f4a0f5a407843e595194",
+          "bytes": 4567
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.png",
+          "sha256": "8d33ecafcd0ff05304488eb93f08495ed3f383acc4f067507be2f12e5159191e",
+          "bytes": 4460
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/gm_btn_yellow__CAB-21b998515a7d906d8c7aaa34aa6056f9__6348553310283624952.canvas.png",
+          "sha256": "8d33ecafcd0ff05304488eb93f08495ed3f383acc4f067507be2f12e5159191e",
+          "bytes": 4460
+        }
+      ]
+    },
+    {
+      "id": "CAB-21b998515a7d906d8c7aaa34aa6056f9:7810792212366179141",
+      "type": "Texture2D",
+      "name": "set_icon07",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/ui/mainmenu/proj_xqzdpauseui.prefab_fa023a8dc1042695c4885d29941e2b5e.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__7810792212366179141.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__7810792212366179141.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__7810792212366179141.texture.json",
+          "sha256": "415d420a909cfb4d99e6d98b41e6cd4e097ecce50758958a820505368f7b1982",
+          "bytes": 7107
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/set_icon07__CAB-21b998515a7d906d8c7aaa34aa6056f9__7810792212366179141.png",
+          "sha256": "35ca3e45f4e8878dc9a86278296d959c23fd317ffdb477694ce23423d981f151",
+          "bytes": 4334
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-9084782370220930699",
+      "type": "Sprite",
+      "name": "tubiao04",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 8.076120376586914,
+        "y": 6.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.json",
+          "sha256": "bb37a7d360477ac40bbfcea9e6dae1e9d225489cb639fe775041faf965b10d6b",
+          "bytes": 6098
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.png",
+          "sha256": "2567484fd24c5df0d222f1bb099e4c6953bc2dd7d26e2d2335cded884a04f13d",
+          "bytes": 3247
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao04__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-9084782370220930699.canvas.png",
+          "sha256": "9419136f6950708069739502ce738ce220d652c973afdbf945c2589d39eef12f",
+          "bytes": 3343
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-8052658351011610304",
+      "type": "Sprite",
+      "name": "tubiao03",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 9.076120376586914,
+        "y": 6.076120376586914
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.json",
+          "sha256": "4f6d4793e9f1eab5f40a2dfa0faa07b8c08a30893bc13c49da88ba6679172d0c",
+          "bytes": 5995
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.png",
+          "sha256": "820b906888de08256e136e59b28836a488ddef62b0797f79a3e7da68be176b54",
+          "bytes": 2917
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao03__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-8052658351011610304.canvas.png",
+          "sha256": "78cb855e40ee904fb55f4c2acb796b8be07a3d26b71627a9d8b51a08919af771",
+          "bytes": 2997
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-7621369788087571064",
+      "type": "Sprite",
+      "name": "guideUI_icon8",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.json",
+          "sha256": "ffa142874bd7d8cdc3ca517d8a3e8e2a87998d6e38eadbdda04dfff44c36f8f6",
+          "bytes": 3943
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.png",
+          "sha256": "0364ae99392871d71edc889713774086eac05255bd2bb8a5554ab83006518906",
+          "bytes": 80832
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon8__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-7621369788087571064.canvas.png",
+          "sha256": "0364ae99392871d71edc889713774086eac05255bd2bb8a5554ab83006518906",
+          "bytes": 80832
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-6550166576714287219",
+      "type": "Sprite",
+      "name": "guideUI_icon5",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.json",
+          "sha256": "69b0a5dc80931bdf2d3c33940b4807da272b6285f8f861e028ac69fe65a1c384",
+          "bytes": 3943
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.png",
+          "sha256": "40ea076521373f04098b9f2d611f2b07a1e0ccee9d83e45d5b199701cc1d0bec",
+          "bytes": 89114
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon5__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6550166576714287219.canvas.png",
+          "sha256": "40ea076521373f04098b9f2d611f2b07a1e0ccee9d83e45d5b199701cc1d0bec",
+          "bytes": 89114
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-6018792709966713457",
+      "type": "Sprite",
+      "name": "Com_Bg_Ydts",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 183.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 184.0,
+        "y": 29.0,
+        "z": 64.0,
+        "w": 147.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.json",
+          "sha256": "b12eeba5a79ce3a76bf455224f541a58f103fdd034b9a750423fb2b6316b509a",
+          "bytes": 7282
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.png",
+          "sha256": "f8bf70540aea847f260f05736e69909119abf50414119b0bc55efd356c3a907c",
+          "bytes": 8340
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Ydts__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-6018792709966713457.canvas.png",
+          "sha256": "f8bf70540aea847f260f05736e69909119abf50414119b0bc55efd356c3a907c",
+          "bytes": 8340
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-5420344054179641587",
+      "type": "Sprite",
+      "name": "guideUI_hand",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 97.0,
+        "height": 103.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.json",
+          "sha256": "1e3c9dd55165d35d67076962a02d4a9a5b9549685bb67fefdf4b287011fb9f1e",
+          "bytes": 6206
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.png",
+          "sha256": "ca8a91619e6de1b46af0853f7ca8a42bfc315c1b5d2ca1da3131fa0aa2ac6d5e",
+          "bytes": 7469
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_hand__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-5420344054179641587.canvas.png",
+          "sha256": "ca8a91619e6de1b46af0853f7ca8a42bfc315c1b5d2ca1da3131fa0aa2ac6d5e",
+          "bytes": 7469
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-4336156069923694425",
+      "type": "Sprite",
+      "name": "tubiao01",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 3.076120376586914,
+        "y": 4.04290771484375
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.json",
+          "sha256": "14bb1ffd1abe303e78d390283f4fdfca7116ae0df84cb47b45bb33c8bfba5940",
+          "bytes": 5453
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.png",
+          "sha256": "c4a5c7c3ba442309bcb796ab2f4ec20e37ba57e89f0e7a22e2c356ecad9d9fca",
+          "bytes": 2116
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao01__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-4336156069923694425.canvas.png",
+          "sha256": "ffac810c944bc95810d3634cc25aad13545877bef6bed28f112d04fcc11da01c",
+          "bytes": 2146
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-3184699777142474524",
+      "type": "Sprite",
+      "name": "guideUI_icon6",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.json",
+          "sha256": "7880d089e3c654b3d87d2442c983455b28b30da99beb542c2ef99123e7ca8fee",
+          "bytes": 3941
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.png",
+          "sha256": "65ef0862e77acd5cecd5d6307e7b4ed5dd0de08960e603027481f8e4d1747879",
+          "bytes": 93730
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon6__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-3184699777142474524.canvas.png",
+          "sha256": "65ef0862e77acd5cecd5d6307e7b4ed5dd0de08960e603027481f8e4d1747879",
+          "bytes": 93730
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-2755069258243870418",
+      "type": "Texture2D",
+      "name": "sactx-0-2048x2048-ASTC 12x12-GuideSprite-d58244d2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "textureRaw": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/sactx-0-2048x2048-ASTC_12x12-GuideSprite-d58244d2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-2755069258243870418.texture.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/sactx-0-2048x2048-ASTC_12x12-GuideSprite-d58244d2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-2755069258243870418.png"
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/sactx-0-2048x2048-ASTC_12x12-GuideSprite-d58244d2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-2755069258243870418.texture.json",
+          "sha256": "af2ddb2a00cbb079778e01ec5fec4d47c020ea743d0305941b93e97c0a9e9cec",
+          "bytes": 936592
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Texture2D/sactx-0-2048x2048-ASTC_12x12-GuideSprite-d58244d2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-2755069258243870418.png",
+          "sha256": "ca3ce28a3abfe074d1bd45b8853f0ac9bd0f3963d27d8b4a891509c5595ea753",
+          "bytes": 1169905
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-1387626125379428600",
+      "type": "Sprite",
+      "name": "Com_Bg_Jt1",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 130.0,
+        "height": 102.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 60.0,
+        "y": 0.0,
+        "z": 17.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.json",
+          "sha256": "4c8d4cb7e2b6156e7484997e152bcd42e7a0704601bb47775dae5d5356fb5ccf",
+          "bytes": 5810
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.png",
+          "sha256": "d422bad1de28efc57619864faa1b835a386ca4090ddeead973f5d13403bb0903",
+          "bytes": 5023
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/Com_Bg_Jt1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-1387626125379428600.canvas.png",
+          "sha256": "d422bad1de28efc57619864faa1b835a386ca4090ddeead973f5d13403bb0903",
+          "bytes": 5023
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-784550110174399228",
+      "type": "Sprite",
+      "name": "guideUI_icon25",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.json",
+          "sha256": "751c8fcca3d0243df8a889732400cca90e897c9e8c8aac35b04974457f512e19",
+          "bytes": 3943
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.png",
+          "sha256": "842f50fa1ccfc8e9e94190c4d036d156a940f9355b0192cd1b5508fbb57ca5a0",
+          "bytes": 83141
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon25__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-784550110174399228.canvas.png",
+          "sha256": "842f50fa1ccfc8e9e94190c4d036d156a940f9355b0192cd1b5508fbb57ca5a0",
+          "bytes": 83141
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-716580808912396138",
+      "type": "Sprite",
+      "name": "guideUI_icon10_2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.json",
+          "sha256": "05a38536fdb8a4e7239cdb4f3a7d906d970b11cf3520eacd406468ca4c922d5f",
+          "bytes": 3946
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.png",
+          "sha256": "a117133cd09676734ae62dbbd48225037f6a382f1de09cee609b2ee7bc701a12",
+          "bytes": 65911
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-716580808912396138.canvas.png",
+          "sha256": "a117133cd09676734ae62dbbd48225037f6a382f1de09cee609b2ee7bc701a12",
+          "bytes": 65911
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:-635011650491847738",
+      "type": "Sprite",
+      "name": "guideUI_icon10_1",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.json",
+          "sha256": "32578601ee1ca1c3bc9ea80685f4f52b222c97e7d31c21003bdb85dd5320ad49",
+          "bytes": 3945
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.png",
+          "sha256": "5905cdb9ecc2b9e2fea6accaf7215882be3a9c2cf89fbc6ae2d59ca0b0b7cb90",
+          "bytes": 82697
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon10_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__-635011650491847738.canvas.png",
+          "sha256": "5905cdb9ecc2b9e2fea6accaf7215882be3a9c2cf89fbc6ae2d59ca0b0b7cb90",
+          "bytes": 82697
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:237018883051795133",
+      "type": "Sprite",
+      "name": "tubiao02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 72.0,
+        "height": 72.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 9.01291275024414,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.json",
+          "sha256": "27baa64415db741e8f353a2bfeeba2f3c8d380b60828c48fb8a80cb3e63b1764",
+          "bytes": 5671
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.png",
+          "sha256": "8cdefa2e9fa141b571cce0f15e5b591d9e6258f29087c4a05776101f55708ad2",
+          "bytes": 3582
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/tubiao02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__237018883051795133.canvas.png",
+          "sha256": "226de994f3c64bab76be77bfc8e7c3c4f16e890a3464095f4dd740b754dc0a65",
+          "bytes": 3676
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:253567536062507482",
+      "type": "Sprite",
+      "name": "guild2（GIF）",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 600.0,
+        "height": 308.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.json",
+          "sha256": "2a5bc4e788465788d41aaf1020f1ac2e6ab754bd70386d4bfee1e2289d3c493e",
+          "bytes": 3945
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.png",
+          "sha256": "b8bacaf0361c0d7a83b87efa6dc9aba366d2f665df192b8765e445e5b80b9b4a",
+          "bytes": 54278
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild2_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__253567536062507482.canvas.png",
+          "sha256": "b8bacaf0361c0d7a83b87efa6dc9aba366d2f665df192b8765e445e5b80b9b4a",
+          "bytes": 54278
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:933868517517261012",
+      "type": "Sprite",
+      "name": "guideUI_icon9_2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.json",
+          "sha256": "14aaa5005d20fd2c4f5f238b94e5bcddde78e322df44e4622095544a17726672",
+          "bytes": 3945
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.png",
+          "sha256": "3c8840c968c3882ce4c5e2de8bc0ba443e62c0515c1712da722502c76e86b332",
+          "bytes": 68149
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__933868517517261012.canvas.png",
+          "sha256": "3c8840c968c3882ce4c5e2de8bc0ba443e62c0515c1712da722502c76e86b332",
+          "bytes": 68149
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:1176822906231693815",
+      "type": "Sprite",
+      "name": "guild1（GIF）",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 600.0,
+        "height": 308.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.json",
+          "sha256": "41a037ff7e041ae0de0e70c26d90d714879c99086d666d66ff71014c1a0708f2",
+          "bytes": 3943
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.png",
+          "sha256": "ffa06bf870332b8d9f6e18c69d9875edd3ac56c2e34558ffa2ae8647c46a952a",
+          "bytes": 55652
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild1_GIF___CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1176822906231693815.canvas.png",
+          "sha256": "ffa06bf870332b8d9f6e18c69d9875edd3ac56c2e34558ffa2ae8647c46a952a",
+          "bytes": 55652
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:1422334420567120519",
+      "type": "Sprite",
+      "name": "guideUI_icon7",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.json",
+          "sha256": "d94b0de1a980d4a16899cc247081066f4b718877fca749f039ca1e4d7a5a64fc",
+          "bytes": 3941
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.png",
+          "sha256": "b8b6a9a3ced9481c83ab7ba30c08474e68884423153ff904e7acf899a66f1a99",
+          "bytes": 71402
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon7__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1422334420567120519.canvas.png",
+          "sha256": "b8b6a9a3ced9481c83ab7ba30c08474e68884423153ff904e7acf899a66f1a99",
+          "bytes": 71402
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:1945635868593664133",
+      "type": "Sprite",
+      "name": "guideUI_icon11_2",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.json",
+          "sha256": "a22ec114a90ba2130a6b34a720dde73cfc2f0b98c51f3afc68f4f5c488a38ceb",
+          "bytes": 3946
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.png",
+          "sha256": "0590375a6b136e12933597179b3dc6d18d63d85cf452cf6e50bd2a827e7d5174",
+          "bytes": 54239
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_2__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__1945635868593664133.canvas.png",
+          "sha256": "0590375a6b136e12933597179b3dc6d18d63d85cf452cf6e50bd2a827e7d5174",
+          "bytes": 54239
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:3193828452827462213",
+      "type": "Sprite",
+      "name": "guild_line",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 4.0,
+        "height": 64.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 10.0,
+        "z": 0.0,
+        "w": 9.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.json",
+          "sha256": "83397507d0dcd25c79ea8951afb964ddda14f6f0c1e54e16c55c57336720cb5b",
+          "bytes": 3932
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.png",
+          "sha256": "f075c4ab42191b89cec1ee272f1506acc6d72a011a1c6f656bba5c79c25413e4",
+          "bytes": 210
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_line__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__3193828452827462213.canvas.png",
+          "sha256": "f075c4ab42191b89cec1ee272f1506acc6d72a011a1c6f656bba5c79c25413e4",
+          "bytes": 210
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:4168258849634748725",
+      "type": "Sprite",
+      "name": "guild_bg02",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 32.0,
+        "height": 32.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 11.0,
+        "y": 14.0,
+        "z": 12.0,
+        "w": 12.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.json",
+          "sha256": "6915152ce6254b8506fb5760b388dab68de1c9801037e24c5520681636a8e662",
+          "bytes": 4663
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.png",
+          "sha256": "49a35e859999854bf0e00904174de53a554e8f83e95e55df81bf09a9828107f5",
+          "bytes": 587
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guild_bg02__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__4168258849634748725.canvas.png",
+          "sha256": "49a35e859999854bf0e00904174de53a554e8f83e95e55df81bf09a9828107f5",
+          "bytes": 587
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:5861279921708750966",
+      "type": "Sprite",
+      "name": "guideUI_icon11_1",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.json",
+          "sha256": "a5c31cc8dd79e11d5850157fba8048f0db42dda1546cf0e683afaa6c6762e2e9",
+          "bytes": 3944
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.png",
+          "sha256": "33282b7f8cc362a68f836b5e8e7e56b22b6f762a728c22ea8c2f249dc3a7ab82",
+          "bytes": 53661
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon11_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__5861279921708750966.canvas.png",
+          "sha256": "33282b7f8cc362a68f836b5e8e7e56b22b6f762a728c22ea8c2f249dc3a7ab82",
+          "bytes": 53661
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:7256562606858225219",
+      "type": "Sprite",
+      "name": "shouzhi",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 108.0,
+        "height": 108.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 3.042907953262329,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.json",
+          "sha256": "cd1ddfea3cd01f5cc766f1e4c2aab6e009833606ee4e5c5c869330ef03df4c9e",
+          "bytes": 6786
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.png",
+          "sha256": "ed44c0d53f0e9bb521587da40e1e083347c9063038a5f2211b0a671b66f6e800",
+          "bytes": 8249
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/shouzhi__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7256562606858225219.canvas.png",
+          "sha256": "10b6afba428185d13aef13f564a476b0b0cfef2aa065c947d95347aff143063a",
+          "bytes": 8270
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:7620168123564399499",
+      "type": "Sprite",
+      "name": "guideUI_icon4",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.json",
+          "sha256": "62b427c70635d9f2ca83630f05d98d6efce4246f99b679b7384baef8b1f34841",
+          "bytes": 3941
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.png",
+          "sha256": "87038b0ef892cb4807c0ceffac6cdf365fc64ca62bc5d08e3f619490f5ab71e7",
+          "bytes": 89277
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon4__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7620168123564399499.canvas.png",
+          "sha256": "87038b0ef892cb4807c0ceffac6cdf365fc64ca62bc5d08e3f619490f5ab71e7",
+          "bytes": 89277
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:7894834730182805884",
+      "type": "Sprite",
+      "name": "guideUI_icon3",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.json",
+          "sha256": "81485810314d9a315ef928e6f880e62e334003e52a99a65dfa9e01e2f4e0d10d",
+          "bytes": 3941
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.png",
+          "sha256": "a720e1136505d4142dee3a4c9836c816b9d574acd4b64f01f9afaa9fae01acda",
+          "bytes": 82988
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon3__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__7894834730182805884.canvas.png",
+          "sha256": "a720e1136505d4142dee3a4c9836c816b9d574acd4b64f01f9afaa9fae01acda",
+          "bytes": 82988
+        }
+      ]
+    },
+    {
+      "id": "CAB-0cb2185f5d2ecff9155478bc0aa1ecc7:8366789415841007947",
+      "type": "Sprite",
+      "name": "guideUI_icon9_1",
+      "source": "generated/resource-snapshots/hud-soldier300-20260928/source-bundles/uiatlas/guidesprite.spriteatlas_26a714d38e234c563176430fbc3d73ae.unity3d",
+      "outputs": {
+        "typetree": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.json",
+        "png": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.png",
+        "pngCanvas": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.canvas.png"
+      },
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 608.0,
+        "height": 316.0
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsToUnits": 100.0,
+      "border": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "trimOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "files": [
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.json",
+          "sha256": "9f2edf7582e64a4dc7a0e5152974b9f95843b836c56c93900a652edb34ecd243",
+          "bytes": 3944
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.png",
+          "sha256": "2cc848feac01cab9e0fec7a6881cc9689c3a435917009fcde2515fff519f00af",
+          "bytes": 87887
+        },
+        {
+          "path": "generated/resource-snapshots/hud-soldier300-20260928/unity-assets/Sprite/guideUI_icon9_1__CAB-0cb2185f5d2ecff9155478bc0aa1ecc7__8366789415841007947.canvas.png",
+          "sha256": "2cc848feac01cab9e0fec7a6881cc9689c3a435917009fcde2515fff519f00af",
+          "bytes": 87887
+        }
+      ]
+    }
+  ],
+  "baselinePreserved": true,
+  "newObjectCount": 412,
+  "reusedObjectCount": 10436,
+  "validation": {
+    "sourceBundlesVerified": 10,
+    "newSourceBundles": 7,
+    "exportErrors": [],
+    "runtimeImported": false,
+    "targetCodeExecuted": false
+  }
+}

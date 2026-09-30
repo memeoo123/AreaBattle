@@ -1,0 +1,33 @@
+; Original class: CommanderSkillItem
+; Type4335.Awake; wasmcode function 20186; offset=9069230 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a62b1  i32.const [5008834]
+008a62b6  i32.load8_u [0, 0]
+008a62b9  i32.eqz []
+008a62ba  if [-64]
+008a62bc    i32.const [3927888]
+008a62c1    call [900] ; 
+008a62c4    i32.const [3992836] ; METHOD CommanderSkillItem.WONeQ|V
+008a62c9    call [900] ; 
+008a62cc    i32.const [5008834]
+008a62d1    i32.const [1]
+008a62d3    i32.store8 [0, 0]
+008a62d6  end []
+008a62d7  local.get [0]
+008a62d9  i32.load [2, 12]
+008a62dc  local.set [1]
+008a62de  i32.const [3927888]
+008a62e3  i32.load [2, 0]
+008a62e6  call [903] ; 
+008a62e9  local.set [2]
+008a62eb  local.get [2]
+008a62ed  local.get [0]
+008a62ef  i32.const [3992836] ; METHOD CommanderSkillItem.WONeQ|V
+008a62f4  i32.load [2, 0]
+008a62f7  i32.const [0]
+008a62f9  call [1002] ; Action..ctor
+008a62fc  local.get [1]
+008a62fe  local.get [2]
+008a6300  i32.const [0]
+008a6302  call [1723] ; UIExtension.AddClick
+008a6305  end []

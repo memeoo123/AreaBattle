@@ -1,0 +1,26 @@
+; Original class: AssetbundleModule
+; Type3400.LoadManifest; wasmcode function 13162; offset=6300812 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0060248d  i32.const [5011612]
+00602492  i32.load8_u [0, 0]
+00602495  i32.eqz []
+00602496  if [-64]
+00602498    i32.const [3944248]
+0060249d    call [900] ; 
+006024a0    i32.const [5011612]
+006024a5    i32.const [1]
+006024a7    i32.store8 [0, 0]
+006024aa  end []
+006024ab  i32.const [3944248]
+006024b0  i32.load [2, 0]
+006024b3  call [903] ; 
+006024b6  local.set [1]
+006024b8  local.get [1]
+006024ba  i32.const [0]
+006024bc  i32.store [2, 8]
+006024bf  local.get [1]
+006024c1  local.get [0]
+006024c3  i32.store [2, 16]
+006024c6  local.get [1]
+006024c8  return []
+006024c9  end []

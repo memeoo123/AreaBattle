@@ -1,0 +1,28 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.sxuU~r; wasmcode function 18038; offset=7994322 size=68
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0079fbd3  i32.const [5007487]
+0079fbd8  i32.load8_u [0, 0]
+0079fbdb  i32.eqz []
+0079fbdc  if [-64]
+0079fbde    i32.const [3953440]
+0079fbe3    call [900] ; 
+0079fbe6    i32.const [5007487]
+0079fbeb    i32.const [1]
+0079fbed    i32.store8 [0, 0]
+0079fbf0  end []
+0079fbf1  i32.const [3953440]
+0079fbf6  i32.load [2, 0]
+0079fbf9  call [935] ; 
+0079fbfc  i32.const [3]
+0079fbfe  i32.const [0]
+0079fc00  i32.const [0]
+0079fc02  call [1444] ; LevelControl.SetPlaySate
+0079fc05  drop []
+0079fc06  i32.const [0]
+0079fc08  call [1193] ; GameModule.get_Audio
+0079fc0b  i32.const [1]
+0079fc0d  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+0079fc10  i32.const [0]
+0079fc12  call [1201] ; Extension.PlayerVoice
+0079fc15  end []

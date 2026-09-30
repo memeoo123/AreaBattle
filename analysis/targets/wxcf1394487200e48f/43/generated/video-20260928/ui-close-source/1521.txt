@@ -1,0 +1,30 @@
+; Unknown.1521; wasmcode function 1521; offset=481128 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00075769 i32.const [4989656] ; TABLE 
+0007576e i32.load8_u [0, 0]
+00075771 i32.eqz []
+00075772 if [-64]
+00075774 i32.const [4063656] ; TABLE ; literal: 'None'
+00075779 call [900] ; 
+0007577c i32.const [4989656] ; TABLE 
+00075781 i32.const [1] ; TABLE 
+00075783 i32.store8 [0, 0]
+00075786 end []
+00075787 local.get [0]
+00075789 i32.const [1] ; TABLE 
+0007578b i32.store8 [0, 68]
+0007578e local.get [0]
+00075790 i32.const [1] ; TABLE 
+00075792 i32.store [2, 40]
+00075795 local.get [0]
+00075797 i32.const [4063656] ; TABLE ; literal: 'None'
+0007579c i32.load [2, 0]
+0007579f i32.store [2, 76]
+000757a2 local.get [0]
+000757a4 i32.const [1] ; TABLE 
+000757a6 i32.store8 [0, 96]
+000757a9 local.get [0]
+000757ab local.get [0]
+000757ad call [6907] ; UIObject..ctor
+000757b0 end []
+

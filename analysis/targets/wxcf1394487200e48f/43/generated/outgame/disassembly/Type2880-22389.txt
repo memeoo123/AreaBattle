@@ -1,0 +1,45 @@
+; Original class: pi] M
+; Type2880.¯´`; wasmcode function 13686; offset=6600207 size=122
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0064b612  i32.const [4989312]
+0064b617  i32.load8_u [0, 0]
+0064b61a  i32.eqz []
+0064b61b  if [-64]
+0064b61d    i32.const [3988488]
+0064b622    call [900] ; 
+0064b625    i32.const [3988484]
+0064b62a    call [900] ; 
+0064b62d    i32.const [3926360]
+0064b632    call [900] ; 
+0064b635    i32.const [4989312]
+0064b63a    i32.const [1]
+0064b63c    i32.store8 [0, 0]
+0064b63f  end []
+0064b640  i32.const [0]
+0064b642  call [8244] ; AsyncCoroutineRunner.get_Instance
+0064b645  local.set [1]
+0064b647  local.get [0]
+0064b649  i32.load [2, 12]
+0064b64c  local.set [3]
+0064b64e  local.get [0]
+0064b650  i32.load [2, 8]
+0064b653  local.set [0]
+0064b655  i32.const [3926360]
+0064b65a  i32.load [2, 0]
+0064b65d  call [903] ; 
+0064b660  local.set [2]
+0064b662  local.get [2]
+0064b664  local.get [0]
+0064b666  local.get [3]
+0064b668  i32.const [3988484]
+0064b66d  i32.load [2, 0]
+0064b670  call [9867] ; 
+0064b673  local.get [1]
+0064b675  local.get [2]
+0064b677  i32.const [3988488]
+0064b67c  i32.load [2, 0]
+0064b67f  call [9868] ; 
+0064b682  i32.const [0]
+0064b684  call [1227] ; MonoBehaviour.StartCoroutine
+0064b687  drop []
+0064b688  end []

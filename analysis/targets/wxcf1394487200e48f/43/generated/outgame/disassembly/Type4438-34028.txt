@@ -1,0 +1,20 @@
+; Original class: FestActUI
+; Type4438.d]~Spm; wasmcode1 function 62942; offset=20247120 size=34
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0134f251  block [-64]
+0134f253    local.get [1]
+0134f255    i32.eqz []
+0134f256    br_if [0]
+0134f258    local.get [1]
+0134f25a    local.get [1]
+0134f25c    call [1807] ; FestActUI.Noj[erg
+0134f25f    i32.const [0]
+0134f261    call [4881] ; FestActManager.CanGetTodayReward
+0134f264    i32.eqz []
+0134f265    br_if [0]
+0134f267    local.get [0]
+0134f269    i32.const [2]
+0134f26b    local.get [1]
+0134f26d    call [13575] ; FestActUI.{em]rs
+0134f270  end []
+0134f271  end []

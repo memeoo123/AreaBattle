@@ -1,0 +1,34 @@
+﻿{
+  "atUtc": "2026-09-30T04:48:38.644250+00:00",
+  "status": "legacy-reader-and-typed-schemas-validated",
+  "source": [
+    "CONFIG_INITIALIZATION_ROSTER.json",
+    "config-read-generics.json",
+    "config-read-rgctx.json",
+    "CONFIG_SCHEMA_GENERATION.json"
+  ],
+  "implementation": [
+    "OutgameLegacyConfigRead.cs",
+    "OutgameOriginalConfigSchemas.cs"
+  ],
+  "tables": 58,
+  "valueConfigs": 6,
+  "rows": 2724,
+  "generatedTypes": 66,
+  "semantics": [
+    "Type name drives native TextAsset basename lookup",
+    "UnityJson table envelope Datas, substring from first opening brace",
+    "Dictionary<object,T> boxed Int32 keys from all58 original UniqueID getters",
+    "Duplicate logs original message, retains previous value, does not clear destination",
+    "Missing table logs and increments read counter, parse/logger exceptions prevent increment",
+    "Value reads return null when missing and never increment table read counter"
+  ],
+  "verification": "Native AssetBundle.LoadFromFile of original-address rebuilt firstpack; all64 types parsed,58 keyed table sizes and total2724 verified; duplicate/missing/malformed/counter edge cases",
+  "limitations": [
+    "Legacy load function is injected; original ConfigRead modern-route state and SetConfigABRes owner not composed yet",
+    "Field schemas reflect original metadata, not every JSON property",
+    "Five ConfigMgr postprocessors and Main30603/30617 not implemented in this step",
+    "No full gameplay interpretation or visual acceptance from schema parsing",
+    "No new PlayMode or Player build; prior firstpack PlayMode15 remains historical"
+  ]
+}

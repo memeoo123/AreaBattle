@@ -1,0 +1,75 @@
+; Original class: ConfigHelper
+; Type4265.GetPlayerCountry; wasmcode function 8088; offset=3839864 size=227
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+003a977b  i32.const [5009151]
+003a9780  i32.load8_u [0, 0]
+003a9783  i32.eqz []
+003a9784  if [-64]
+003a9786    i32.const [3915772]
+003a978b    call [900] ; 
+003a978e    i32.const [3928172]
+003a9793    call [900] ; 
+003a9796    i32.const [3993480] ; METHOD ConfigHelper.spp}`g
+003a979b    call [900] ; 
+003a979e    i32.const [3929792]
+003a97a3    call [900] ; 
+003a97a6    i32.const [5009151]
+003a97ab    i32.const [1]
+003a97ad    i32.store8 [0, 0]
+003a97b0  end []
+003a97b1  i32.const [3929792]
+003a97b6  i32.load [2, 0]
+003a97b9  call [901] ; 
+003a97bc  i32.const [3929792]
+003a97c1  i32.load [2, 0]
+003a97c4  i32.load [2, 92]
+003a97c7  i32.const [-1]
+003a97c9  i32.store [2, 0]
+003a97cc  i32.const [3929792]
+003a97d1  i32.load [2, 0]
+003a97d4  i32.load [2, 92]
+003a97d7  i32.const [0]
+003a97d9  i32.store8 [0, 4]
+003a97dc  i32.const [3929792]
+003a97e1  i32.load [2, 0]
+003a97e4  i32.load [2, 92]
+003a97e7  i32.load8_u [0, 4]
+003a97ea  i32.eqz []
+003a97eb  if [-64]
+003a97ed    i32.const [3929792]
+003a97f2    i32.load [2, 0]
+003a97f5    call [901] ; 
+003a97f8    i32.const [3929792]
+003a97fd    i32.load [2, 0]
+003a9800    i32.load [2, 92]
+003a9803    i32.const [1]
+003a9805    i32.store8 [0, 4]
+003a9808    i32.const [3928172]
+003a980d    i32.load [2, 0]
+003a9810    i32.load [2, 92]
+003a9813    i32.load [2, 0]
+003a9816    local.set [0]
+003a9818    i32.const [3915772]
+003a981d    i32.load [2, 0]
+003a9820    call [903] ; 
+003a9823    local.set [1]
+003a9825    local.get [1]
+003a9827    i32.const [0]
+003a9829    i32.const [3993480] ; METHOD ConfigHelper.spp}`g
+003a982e    i32.load [2, 0]
+003a9831    i32.const [0]
+003a9833    call [1004] ; 
+003a9836    local.get [0]
+003a9838    local.get [1]
+003a983a    i32.const [0]
+003a983c    call [13266] ; AppInfoManager.GetOnlineOsCountryCode_Override
+003a983f  end []
+003a9840  i32.const [3929792]
+003a9845  i32.load [2, 0]
+003a9848  call [901] ; 
+003a984b  i32.const [3929792]
+003a9850  i32.load [2, 0]
+003a9853  i32.load [2, 92]
+003a9856  i32.load [2, 0]
+003a9859  return []
+003a985a  end []

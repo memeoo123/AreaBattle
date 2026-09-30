@@ -1,0 +1,39 @@
+; Original class: GameStatisticsManager
+; Type4617.get_DataKey; wasmcode function 19540; offset=8784169 size=92
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0086092a  i32.const [5001604]
+0086092f  i32.load8_u [0, 0]
+00860932  i32.eqz []
+00860933  if [-64]
+00860935    i32.const [4048956] ; STRING "CommonGameModule"
+0086093a    call [900] ; 
+0086093d    i32.const [5001604]
+00860942    i32.const [1]
+00860944    i32.store8 [0, 0]
+00860947  end []
+00860948  local.get [0]
+0086094a  call [962] ; 
+0086094d  local.set [0]
+0086094f  local.get [0]
+00860951  local.set [1]
+00860953  local.get [0]
+00860955  i32.load [2, 0]
+00860958  i32.const [-64]
+0086095a  i32.sub []
+0086095b  local.set [0]
+0086095d  local.get [1]
+0086095f  local.get [0]
+00860961  i32.load [2, 192]
+00860965  local.get [0]
+00860967  i32.load [2, 188]
+0086096b  global.set [3]
+0086096d  global.get [3]
+0086096f  call_indirect [1, 0]
+00860972  local.set [0]
+00860974  i32.const [4048956] ; STRING "CommonGameModule"
+00860979  i32.load [2, 0]
+0086097c  local.get [0]
+0086097e  i32.const [0]
+00860980  call [921] ; String.Concat
+00860983  return []
+00860984  end []

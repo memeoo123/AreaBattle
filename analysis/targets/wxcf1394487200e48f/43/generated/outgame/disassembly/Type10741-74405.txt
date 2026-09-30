@@ -1,0 +1,27 @@
+; Original class: UIVideoBtn
+; Type10741.Awake; wasmcode function 15036; offset=7314595 size=53
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006f9ca4  local.get [0]
+006f9ca6  i32.const [0]
+006f9ca8  call [7196] ; Selectable.Awake
+006f9cab  local.get [0]
+006f9cad  local.get [0]
+006f9caf  call [5549] ; UIVideoBtn.GetVideoBtnData
+006f9cb2  block [-64]
+006f9cb4    local.get [0]
+006f9cb6    i32.load [2, 196]
+006f9cba    local.set [1]
+006f9cbc    local.get [1]
+006f9cbe    i32.eqz []
+006f9cbf    br_if [0]
+006f9cc1    local.get [1]
+006f9cc3    i32.load [2, 16]
+006f9cc6    br_if [0]
+006f9cc8    local.get [0]
+006f9cca    i32.const [0]
+006f9ccc    call [943] ; Component.get_gameObject
+006f9ccf    i32.const [0]
+006f9cd1    i32.const [0]
+006f9cd3    call [949] ; GameObject.SetActive
+006f9cd6  end []
+006f9cd7  end []

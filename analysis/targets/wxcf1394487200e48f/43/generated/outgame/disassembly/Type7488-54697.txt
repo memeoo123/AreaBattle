@@ -1,0 +1,209 @@
+; Original class: DAUAdsAdapter
+; Type7488.reportShow; wasmcode function 12694; offset=6112239 size=554
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+005d43f2  i32.const [5004961]
+005d43f7  i32.load8_u [0, 0]
+005d43fa  i32.eqz []
+005d43fb  if [-64]
+005d43fd    i32.const [3928200]
+005d4402    call [900] ; 
+005d4405    i32.const [3930104]
+005d440a    call [900] ; 
+005d440d    i32.const [3930112]
+005d4412    call [900] ; 
+005d4415    i32.const [4090644] ; STRING "inters_show_level"
+005d441a    call [900] ; 
+005d441d    i32.const [4057236] ; STRING "INTERSTITAL"
+005d4422    call [900] ; 
+005d4425    i32.const [4036676] ; STRING " 广告展示 uptype=3 "
+005d442a    call [900] ; 
+005d442d    i32.const [4045420] ; STRING "BANNER"
+005d4432    call [900] ; 
+005d4435    i32.const [4077760] ; STRING "VIDEO"
+005d443a    call [900] ; 
+005d443d    i32.const [4039208] ; STRING ","
+005d4442    call [900] ; 
+005d4445    i32.const [4034536] ; STRING ""
+005d444a    call [900] ; 
+005d444d    i32.const [3943536]
+005d4452    call [900] ; 
+005d4455    i32.const [5004961]
+005d445a    i32.const [1]
+005d445c    i32.store8 [0, 0]
+005d445f  end []
+005d4460  local.get [0]
+005d4462  i32.load [2, 8]
+005d4465  i32.const [4036676] ; STRING " 广告展示 uptype=3 "
+005d446a  i32.load [2, 0]
+005d446d  i32.const [0]
+005d446f  call [921] ; String.Concat
+005d4472  i32.const [0]
+005d4474  call [999] ; XYXLOG.Log
+005d4477  i32.const [3943536]
+005d447c  i32.load [2, 0]
+005d447f  call [903] ; 
+005d4482  local.set [2]
+005d4484  local.get [2]
+005d4486  i32.const [0]
+005d4488  call [2456] ; ads_up_event..ctor
+005d448b  local.get [0]
+005d448d  local.get [2]
+005d448f  local.get [0]
+005d4491  call [3642] ; DAUAdsAdapter.setInfo
+005d4494  local.get [2]
+005d4496  i64.const [4613937818241073152]
+005d44a1  i64.store [3, 80]
+005d44a4  i32.const [3930112]
+005d44a9  i32.load [2, 0]
+005d44ac  call [901] ; 
+005d44af  local.get [0]
+005d44b1  call [2513] ; DAUEventConstant.get_Instance
+005d44b4  local.get [2]
+005d44b6  local.get [0]
+005d44b8  call [2512] ; DAUEventConstant.reportSever
+005d44bb  block [-64]
+005d44bd    block [-64]
+005d44bf      block [-64]
+005d44c1        local.get [0]
+005d44c3        i32.load [2, 16]
+005d44c6        i32.load [2, 36]
+005d44c9        i32.const [4039208] ; STRING ","
+005d44ce        i32.load [2, 0]
+005d44d1        i32.const [0]
+005d44d3        i32.const [0]
+005d44d5        call [1905] ; String.Split
+005d44d8        i32.load [2, 12]
+005d44db        i32.const [2]
+005d44dd        i32.ne []
+005d44de        br_if [0]
+005d44e0        i32.const [1]
+005d44e2        local.set [4]
+005d44e4        block [-64]
+005d44e6          block [-64]
+005d44e8            local.get [0]
+005d44ea            i32.load [2, 16]
+005d44ed            i32.load [2, 36]
+005d44f0            i32.const [4039208] ; STRING ","
+005d44f5            i32.load [2, 0]
+005d44f8            i32.const [0]
+005d44fa            i32.const [0]
+005d44fc            call [1905] ; String.Split
+005d44ff            i32.load [2, 20]
+005d4502            local.set [2]
+005d4504            local.get [2]
+005d4506            if [-64]
+005d4508              i32.const [0]
+005d450a              local.set [3]
+005d450c              local.get [2]
+005d450e              i32.load [2, 8]
+005d4511              br_if [2]
+005d4513            end []
+005d4514          end []
+005d4515          i32.const [1]
+005d4517          local.set [3]
+005d4519        end []
+005d451a        local.get [3]
+005d451c        br_if [0]
+005d451e        local.get [0]
+005d4520        i32.load [2, 16]
+005d4523        i32.load [2, 36]
+005d4526        local.set [2]
+005d4528        br [1]
+005d452a      end []
+005d452b      i32.const [0]
+005d452d      local.set [4]
+005d452f      local.get [0]
+005d4531      i32.load [2, 16]
+005d4534      i32.load [2, 36]
+005d4537      i32.const [4039208] ; STRING ","
+005d453c      i32.load [2, 0]
+005d453f      i32.const [0]
+005d4541      i32.const [0]
+005d4543      call [1905] ; String.Split
+005d4546      local.set [3]
+005d4548      local.get [0]
+005d454a      i32.load [2, 16]
+005d454d      i32.load [2, 36]
+005d4550      local.set [2]
+005d4552      local.get [3]
+005d4554      i32.load [2, 12]
+005d4557      i32.const [2]
+005d4559      i32.ne []
+005d455a      br_if [1]
+005d455c    end []
+005d455d    local.get [2]
+005d455f    i32.const [4039208] ; STRING ","
+005d4564    i32.load [2, 0]
+005d4567    i32.const [0]
+005d4569    i32.const [0]
+005d456b    call [1905] ; String.Split
+005d456e    local.get [4]
+005d4570    i32.const [2]
+005d4572    i32.shl []
+005d4573    i32.add []
+005d4574    i32.load [2, 16]
+005d4577    local.set [2]
+005d4579  end []
+005d457a  block [-64]
+005d457c    i32.const [4045420] ; STRING "BANNER"
+005d4581    i32.load [2, 0]
+005d4584    local.get [0]
+005d4586    i32.load [2, 20]
+005d4589    i32.load [2, 16]
+005d458c    i32.const [0]
+005d458e    call [1019] ; String.Equals
+005d4591    if [-64]
+005d4593      local.get [2]
+005d4595      i32.const [0]
+005d4597      call [12007] ; GravityControl.ReportBannerAdShowEvent
+005d459a      br [1]
+005d459c    end []
+005d459d    local.get [0]
+005d459f    i32.load [2, 20]
+005d45a2    i32.load [2, 16]
+005d45a5    i32.const [4057236] ; STRING "INTERSTITAL"
+005d45aa    i32.load [2, 0]
+005d45ad    i32.const [0]
+005d45af    call [1237] ; String.Contains
+005d45b2    if [-64]
+005d45b4      local.get [2]
+005d45b6      i32.const [0]
+005d45b8      call [12006] ; GravityControl.ReportInterstitialAdShowEvent
+005d45bb      i32.const [3928200]
+005d45c0      i32.load [2, 0]
+005d45c3      call [901] ; 
+005d45c6      i32.const [4090644] ; STRING "inters_show_level"
+005d45cb      i32.load [2, 0]
+005d45ce      i32.const [0]
+005d45d0      call [6310] ; AppsflyerUtil.handleAdsLevel
+005d45d3      br [1]
+005d45d5    end []
+005d45d6    i32.const [4077760] ; STRING "VIDEO"
+005d45db    i32.load [2, 0]
+005d45de    local.get [0]
+005d45e0    i32.load [2, 20]
+005d45e3    i32.load [2, 16]
+005d45e6    i32.const [0]
+005d45e8    call [1019] ; String.Equals
+005d45eb    i32.eqz []
+005d45ec    br_if [0]
+005d45ee    local.get [1]
+005d45f0    i32.eqz []
+005d45f1    br_if [0]
+005d45f3    local.get [2]
+005d45f5    i32.const [0]
+005d45f7    call [7771] ; GravityControl.ReportRewardShowEvent
+005d45fa  end []
+005d45fb  local.get [0]
+005d45fd  i32.load [2, 32]
+005d4600  local.set [1]
+005d4602  local.get [1]
+005d4604  if [-64]
+005d4606    i32.const [3]
+005d4608    i32.const [3930104]
+005d460d    i32.load [2, 0]
+005d4610    local.get [1]
+005d4612    local.get [0]
+005d4614    call [1027] ; 
+005d4617  end []
+005d4618  end []

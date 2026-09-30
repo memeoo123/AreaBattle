@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.GDPRUserFunction; wasmcode1 function 66253; offset=21042554 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0141157b  i32.const [4988626]
+01411580  i32.load8_u [0, 0]
+01411583  i32.eqz []
+01411584  if [-64]
+01411586    i32.const [3928180]
+0141158b    i32.const [1605]
+0141158e    call_indirect [0, 0]
+01411591    i32.const [4988626]
+01411596    i32.const [1]
+01411598    i32.store8 [0, 0]
+0141159b  end []
+0141159c  i32.const [3928180]
+014115a1  i32.load [2, 0]
+014115a4  i32.load [2, 92]
+014115a7  i32.load [2, 0]
+014115aa  i32.const [0]
+014115ac  call [32039] ; AppUserManager.ShowGDPRDialogStatic
+014115b0  end []

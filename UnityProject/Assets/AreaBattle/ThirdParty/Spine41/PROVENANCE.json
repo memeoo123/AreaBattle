@@ -1,0 +1,1601 @@
+{
+  "repository": "https://github.com/EsotericSoftware/spine-runtimes",
+  "branch": "4.1",
+  "commit": "77a5db0ec6d16331f5efbaa7662bba9355bd3424",
+  "sourceSkeletonVersion": "4.1.16",
+  "scope": "Unmodified spine-csharp and spine-unity runtime only; no Editor, samples or original executable game code.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "1d47a0ec204d1d2c9f25ff69d6a93a1ee36cd553f5fbbb6c1fab177df5e1161c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5ce6a74d4077c2508cead528f0143aab3dbd01469750ddfa105aeed24cd71364"
+    },
+    {
+      "path": "spine-csharp/Animation.cs",
+      "sha256": "89c72dfb7af69094f063339fc5baf8ae1eaed1d74f2c20e050c2c5675dd87bcc"
+    },
+    {
+      "path": "spine-csharp/Animation.cs.meta",
+      "sha256": "199331e3ba192049a1a065c025cb41e13957249392b17a420aca7b40c1dbc115"
+    },
+    {
+      "path": "spine-csharp/AnimationState.cs",
+      "sha256": "ccdd705b168bf33056b80dee3b9be792a64a23cb983b85dd45c8ac2ec7d3d0da"
+    },
+    {
+      "path": "spine-csharp/AnimationState.cs.meta",
+      "sha256": "d04a34db9032edcbee8842537ba4b7b3ccc47676dcd009facb5a3b775c03a067"
+    },
+    {
+      "path": "spine-csharp/AnimationStateData.cs",
+      "sha256": "c8491586d7e675ce28d585b63939e5ced75e7d4fdd0e89553c72470b0e483a3e"
+    },
+    {
+      "path": "spine-csharp/AnimationStateData.cs.meta",
+      "sha256": "80d8666b3f824f1b41605019d9808f170264959d022a057a91274b61e0b0e377"
+    },
+    {
+      "path": "spine-csharp/Atlas.cs",
+      "sha256": "62028a4192b40a045aaead7bc71d6740b6efef35b1fc083ccca0977fbec8b8cf"
+    },
+    {
+      "path": "spine-csharp/Atlas.cs.meta",
+      "sha256": "c5cca80984270c15b3860e9e33eff87cb72b8784309cf4fe72ddd04991715df4"
+    },
+    {
+      "path": "spine-csharp/Attachments/AtlasAttachmentLoader.cs",
+      "sha256": "398412272d73a5841393aec8397940fa711fb9fdc0646302b9eacd77acbf69b7"
+    },
+    {
+      "path": "spine-csharp/Attachments/AtlasAttachmentLoader.cs.meta",
+      "sha256": "1ef5e5a98547e79cb3fa8d3a174f383b1fe653b175d2a5d5b0979f2b71944649"
+    },
+    {
+      "path": "spine-csharp/Attachments/Attachment.cs",
+      "sha256": "539b7def13e97d0395bf26ff2264ed7ebd9491c660c28d4bf9eb11dfd3945520"
+    },
+    {
+      "path": "spine-csharp/Attachments/Attachment.cs.meta",
+      "sha256": "be29b7188158e75347b573295749c3d8b8390606f0eab820a86411a757356064"
+    },
+    {
+      "path": "spine-csharp/Attachments/AttachmentLoader.cs",
+      "sha256": "aab813dc3498751a44e65d410ea9ce2b4ebf8103842e4dcf10de420497f7628c"
+    },
+    {
+      "path": "spine-csharp/Attachments/AttachmentLoader.cs.meta",
+      "sha256": "d2d6493a6da53935b5b13e10f632dc832e7d537527c10b2bff5c837856a45a6b"
+    },
+    {
+      "path": "spine-csharp/Attachments/AttachmentType.cs",
+      "sha256": "04ea5f4d817d98a336c8f9e4793b759c4a4a22d0155a4a19a6ebc31287012811"
+    },
+    {
+      "path": "spine-csharp/Attachments/AttachmentType.cs.meta",
+      "sha256": "36b40a66c0a093b9b2ca40430e7c0f816b8c7d697ae15b3f889c465c01f82ae4"
+    },
+    {
+      "path": "spine-csharp/Attachments/BoundingBoxAttachment.cs",
+      "sha256": "401e0333a58252fdf545bcbf97439b3c6656d9a390735fa7499b092dd6a8423f"
+    },
+    {
+      "path": "spine-csharp/Attachments/BoundingBoxAttachment.cs.meta",
+      "sha256": "7eafc7c651eddd543d46514b87d97b3ad1b31cb447688a6d292d4e777a6e60ab"
+    },
+    {
+      "path": "spine-csharp/Attachments/ClippingAttachment.cs",
+      "sha256": "e38ec5a61bdf8330afa65ebe662a2170b1138bbbc62a676d3013efbc60ac1a6f"
+    },
+    {
+      "path": "spine-csharp/Attachments/ClippingAttachment.cs.meta",
+      "sha256": "622d943eb3ec3ed20f5a248f4121196b572128a667f8b7905e6ea681ce421bd5"
+    },
+    {
+      "path": "spine-csharp/Attachments/IHasTextureRegion.cs",
+      "sha256": "41f316831b6418cef9bca144bd9c2573f26b9ae424054fc795dea4874a45e6d7"
+    },
+    {
+      "path": "spine-csharp/Attachments/IHasTextureRegion.cs.meta",
+      "sha256": "5b38fb722cee8f71e89b9ac0f423dbb1dcc0c8aafd155350deb766dea61b89e4"
+    },
+    {
+      "path": "spine-csharp/Attachments/MeshAttachment.cs",
+      "sha256": "3b45fbb11b2a666b06cd026808b61df9a688aed10ddd4c96c1b528539bc128c5"
+    },
+    {
+      "path": "spine-csharp/Attachments/MeshAttachment.cs.meta",
+      "sha256": "3fc28e4a17ad9d10a31bd5f11aaeb80e80bb1a626f228e0c47843613df546a76"
+    },
+    {
+      "path": "spine-csharp/Attachments/PathAttachment.cs",
+      "sha256": "998178abac2076c4e7bb96ec88fa83997520c798f654531bd0d809971d7a9506"
+    },
+    {
+      "path": "spine-csharp/Attachments/PathAttachment.cs.meta",
+      "sha256": "92e554ca03499f90647778b75ab8971e18505debae02735e472cef72b96fceb6"
+    },
+    {
+      "path": "spine-csharp/Attachments/PointAttachment.cs",
+      "sha256": "dbc61962470bec83f7b8bfdda9b155daa8aca5c11f4adf811e9477a20b9d6671"
+    },
+    {
+      "path": "spine-csharp/Attachments/PointAttachment.cs.meta",
+      "sha256": "5ac98950e351475aca81068856f748a27aed97a3b9016e7d82488109d33f2737"
+    },
+    {
+      "path": "spine-csharp/Attachments/RegionAttachment.cs",
+      "sha256": "b840c849b75da81e29a73104c1c0798062578bd3db9ec0ebb035059d8523cfb5"
+    },
+    {
+      "path": "spine-csharp/Attachments/RegionAttachment.cs.meta",
+      "sha256": "3cc718611e3ea5f05534c1f1a5b386c1ad20ad41a4fec89a03c0272a71f7344e"
+    },
+    {
+      "path": "spine-csharp/Attachments/Sequence.cs",
+      "sha256": "32c41a91c07e6c4dfd462444097396f0ceba46434de56836bac2c09aa0a5669b"
+    },
+    {
+      "path": "spine-csharp/Attachments/Sequence.cs.meta",
+      "sha256": "3b4eeed6b61f1629ef69acda37e35979917c5828b2c449ff0272e7a3aeaeedfc"
+    },
+    {
+      "path": "spine-csharp/Attachments/VertexAttachment.cs",
+      "sha256": "757df2e2ba144921ab3588c673ec5a76c51a7b17d64cfb799cb7bb1382fe3203"
+    },
+    {
+      "path": "spine-csharp/Attachments/VertexAttachment.cs.meta",
+      "sha256": "a10948681adeb1ead9336424d73e5ec3e5add3f08b5f5267f84debbdae956a36"
+    },
+    {
+      "path": "spine-csharp/Attachments.meta",
+      "sha256": "bacbecafc20f8f76eed86252c13d457b3a2b9e34c7f9626f644976dad96cb0d7"
+    },
+    {
+      "path": "spine-csharp/BlendMode.cs",
+      "sha256": "5755c1b1646f2d931592b6fdf8dc69d1b0eab0863ca85930a6e7a1f8babfe59b"
+    },
+    {
+      "path": "spine-csharp/BlendMode.cs.meta",
+      "sha256": "19de6074b5fb3f8f31313e11baa926f5d2df4dd1a663a3b5861cf95e6c2af526"
+    },
+    {
+      "path": "spine-csharp/Bone.cs",
+      "sha256": "4516e9080600c03fa7794a96bf203654a6c443c96b7a82d4cf5d4b58ac59d257"
+    },
+    {
+      "path": "spine-csharp/Bone.cs.meta",
+      "sha256": "fef09bd522952009fac7b10f8d5d02af7c72433505c170dd83bca4a59ad65fa0"
+    },
+    {
+      "path": "spine-csharp/BoneData.cs",
+      "sha256": "67b613e5bed0baf591b9518d4388ac95f0a9ff3e850cfdcf623091bab034eb1a"
+    },
+    {
+      "path": "spine-csharp/BoneData.cs.meta",
+      "sha256": "0c156132aaafe310721ad081937b29778f5fcab4e721ca1ecbb7ed5745f2598a"
+    },
+    {
+      "path": "spine-csharp/ConstraintData.cs",
+      "sha256": "c8baa11cebb3c7630679e5b7c7f0fb404f16943afc32cedfc597060211f7a586"
+    },
+    {
+      "path": "spine-csharp/ConstraintData.cs.meta",
+      "sha256": "88fe96d3c5654dd1d7bd937742940298680270470736157740a4f1c23eaeacbe"
+    },
+    {
+      "path": "spine-csharp/Event.cs",
+      "sha256": "4167bc8560d3cf670927f882cfafb2770be68aa387c27f6f864f5473647b7545"
+    },
+    {
+      "path": "spine-csharp/Event.cs.meta",
+      "sha256": "c8b298fea84e8d71fdd77b8a64b5d0f26baa3e71762a1cc4b6e8af4851c5160c"
+    },
+    {
+      "path": "spine-csharp/EventData.cs",
+      "sha256": "78e86b62c5e40e99fddaba4e0d5dd255d65f5b643ea24d839f6f8d1b97d8bf2e"
+    },
+    {
+      "path": "spine-csharp/EventData.cs.meta",
+      "sha256": "d946da5d6b59e37247e4b209cbe1f170abc877c59e359bf7c3209aaa6bce5e07"
+    },
+    {
+      "path": "spine-csharp/ExposedList.cs",
+      "sha256": "002e031e82bb01a97d27ca7f13670483cd54cf92f7d6de9bd8c66204aa561e77"
+    },
+    {
+      "path": "spine-csharp/ExposedList.cs.meta",
+      "sha256": "f3fe74e288ce1514b2335f1d3b0d91a6106a070c7e0e1e7651b20423f067b4d1"
+    },
+    {
+      "path": "spine-csharp/IkConstraint.cs",
+      "sha256": "2e117c699b1f5b73489fe2f14c443a2ce21e088bcd204411d7e5dc0b8de0c208"
+    },
+    {
+      "path": "spine-csharp/IkConstraint.cs.meta",
+      "sha256": "5481202db709a5d31c6d4fc1fdb35f1c9c2e7281373994f05d8e4d9d65b7fddd"
+    },
+    {
+      "path": "spine-csharp/IkConstraintData.cs",
+      "sha256": "f0bd1db74a6777c5456fd35590beaf775e8c4836724d7cb84859a678d8687f82"
+    },
+    {
+      "path": "spine-csharp/IkConstraintData.cs.meta",
+      "sha256": "aaa6dae85f7cb9323efc1e1a500adee1e8ab9c1a30f80f9eb8ac2031b6000b1b"
+    },
+    {
+      "path": "spine-csharp/IUpdatable.cs",
+      "sha256": "e81d9011cf1b02618bc00fa87bce5ad3e7c51b445f0efe20be5eaf5612878692"
+    },
+    {
+      "path": "spine-csharp/IUpdatable.cs.meta",
+      "sha256": "5e4eb6e4a6dc96bffb263cf22b9427c6298c05fcfbd53f6a237a58580820a174"
+    },
+    {
+      "path": "spine-csharp/Json.cs",
+      "sha256": "384d6dac3e3d4c6a410fb3b8e46a7d2411a4d4189af8acfeea0cb33a78316d98"
+    },
+    {
+      "path": "spine-csharp/Json.cs.meta",
+      "sha256": "b9005806533657f33446a6b6cb43ed5699e9a8969b934ad7ddd433d81a87d3d8"
+    },
+    {
+      "path": "spine-csharp/MathUtils.cs",
+      "sha256": "93e9cb2ed9deed9ace1c5fd5020372b34722b0e8d3d96bf3fe742ea25eea7c04"
+    },
+    {
+      "path": "spine-csharp/MathUtils.cs.meta",
+      "sha256": "ba2f8330ff82cb4f3296ebc4b22f2f71ae7bef4ccf694aeb222c67896ee23e33"
+    },
+    {
+      "path": "spine-csharp/package.json",
+      "sha256": "712dbff9a06edc8d2d0d4bcb971463fd19d733b560fce70f2a1100cbc7ccedd3"
+    },
+    {
+      "path": "spine-csharp/package.json.meta",
+      "sha256": "0bd53b06205ab0c0d4357edd5a57763d1d23f71137d0dfc7370c4c5ef16f7793"
+    },
+    {
+      "path": "spine-csharp/PathConstraint.cs",
+      "sha256": "04a330c750db27e73d10c09b75af4e745a7e278172e5552cdadbfb71f51c69df"
+    },
+    {
+      "path": "spine-csharp/PathConstraint.cs.meta",
+      "sha256": "ea64af67a61b28383fd5ab90ca6f5a296bdb2d6ba3622a36192ae47ab2ccd7ae"
+    },
+    {
+      "path": "spine-csharp/PathConstraintData.cs",
+      "sha256": "34ad452a384bd8b4fdc40da43df49844d084c0061f6c291c520be6c099382a7f"
+    },
+    {
+      "path": "spine-csharp/PathConstraintData.cs.meta",
+      "sha256": "2cc395a252188e424fe1fb5115708d5c04be553c4aa530913198c56e73297a88"
+    },
+    {
+      "path": "spine-csharp/Skeleton.cs",
+      "sha256": "8fd5a7f114dfdbe03d119f692febf8913cf10f3c5d310d744a719c7b14f0ebb6"
+    },
+    {
+      "path": "spine-csharp/Skeleton.cs.meta",
+      "sha256": "4e4fcd0246290b9e701889d6a80395ff7c9ed30232f6664c92d11b69596a59c2"
+    },
+    {
+      "path": "spine-csharp/SkeletonBinary.cs",
+      "sha256": "61e9b52f35dc7b9a407e99474c296037ed457e8517710da6573414e070a1e5a6"
+    },
+    {
+      "path": "spine-csharp/SkeletonBinary.cs.meta",
+      "sha256": "03b73349388af10c524793ec94e4ac60e77e32d4068a2173b3c0924d0f85105f"
+    },
+    {
+      "path": "spine-csharp/SkeletonBounds.cs",
+      "sha256": "3907f20b6a75c928990d777e283931b70b38392285aba1eb80c41ade6f6a33ca"
+    },
+    {
+      "path": "spine-csharp/SkeletonBounds.cs.meta",
+      "sha256": "c1b19f7508b7431412a57f24db4afdc9c86d8734f7c3bc1a9b30122e7edf159f"
+    },
+    {
+      "path": "spine-csharp/SkeletonClipping.cs",
+      "sha256": "e400b6d9e810847c02c81890578f99281b2237d61b673c25620e67f7419174ba"
+    },
+    {
+      "path": "spine-csharp/SkeletonClipping.cs.meta",
+      "sha256": "4b0cfaea81c7f0923857c624d47fc53d18b246d8a391d9a25f678f3b1094399a"
+    },
+    {
+      "path": "spine-csharp/SkeletonData.cs",
+      "sha256": "78f8d648ab74f1c9791a39cd484c22a5c72622f6872bfe2e56db7d3bce496637"
+    },
+    {
+      "path": "spine-csharp/SkeletonData.cs.meta",
+      "sha256": "13755c48701f6b256246cb95fa228dd868c10bc93e3ccb06e26c7bda2265360f"
+    },
+    {
+      "path": "spine-csharp/SkeletonJson.cs",
+      "sha256": "a06abb203836df1b996ff70cb2caef5e2e5327cd88805faf03574963eee30375"
+    },
+    {
+      "path": "spine-csharp/SkeletonJson.cs.meta",
+      "sha256": "a521c5eb00be1511a5195bbf49d985643016d4d8162792ceeab81883be146966"
+    },
+    {
+      "path": "spine-csharp/SkeletonLoader.cs",
+      "sha256": "464a740802e77bf4a4e264f2844ba8295fe75a3f27763f33c6452a73b01b708c"
+    },
+    {
+      "path": "spine-csharp/SkeletonLoader.cs.meta",
+      "sha256": "914e44319efe02a4ed03a1af249b82ed46e15af33c1c08c1e241d201deaf6e14"
+    },
+    {
+      "path": "spine-csharp/Skin.cs",
+      "sha256": "12db174b74288ae5ebe4b076f669676fa786d81fa92ab331a93998a830824e9f"
+    },
+    {
+      "path": "spine-csharp/Skin.cs.meta",
+      "sha256": "534be6edec100372972eaae5951630326251b1b8dd44b0053ba6766b136ddd27"
+    },
+    {
+      "path": "spine-csharp/Slot.cs",
+      "sha256": "aff532b2e7f00d0e96aa315c8d5c7a313a8c0b288a382ead08f06870144c383c"
+    },
+    {
+      "path": "spine-csharp/Slot.cs.meta",
+      "sha256": "573bdf3a950e42387124d027ae63a45cfb2304f11b534200637186c005123f46"
+    },
+    {
+      "path": "spine-csharp/SlotData.cs",
+      "sha256": "a599eb8ccd48aa323700ec601bbfbc61157904afb1ceeff17b45a3e78a3790aa"
+    },
+    {
+      "path": "spine-csharp/SlotData.cs.meta",
+      "sha256": "829c7b8c558a3b8f750a0ffb00d63b769d3bce263f0997a731e761078649a54b"
+    },
+    {
+      "path": "spine-csharp/spine-csharp.asmdef",
+      "sha256": "e67300f8f0f0dc4552b03e13f1cb15d2522525bc0e4959778946a3c1da07f53b"
+    },
+    {
+      "path": "spine-csharp/spine-csharp.asmdef.meta",
+      "sha256": "a836d2a5aafa05eef0f5baafa0ed592bd7dfaa6b36b0bbc11291bef2b2e34b1c"
+    },
+    {
+      "path": "spine-csharp/TextureRegion.cs",
+      "sha256": "c08500219fc3a3a3da12013bb54f6841a53f6cbb3a4e7aaaf60896f689d32181"
+    },
+    {
+      "path": "spine-csharp/TextureRegion.cs.meta",
+      "sha256": "b02fbd06c035c3e10d3ac49e77ce8b8217bc4e007fe856174b98017f2185d753"
+    },
+    {
+      "path": "spine-csharp/TransformConstraint.cs",
+      "sha256": "fd223ab5758e9d32fcac29a6ef939a2dd30dc5900fd9f188d0357f2c4114e1f4"
+    },
+    {
+      "path": "spine-csharp/TransformConstraint.cs.meta",
+      "sha256": "409fd1f3ce9d6f2c20d42667d4e05f962e4bfccc1e919f86ed79427bbd4896da"
+    },
+    {
+      "path": "spine-csharp/TransformConstraintData.cs",
+      "sha256": "10f350b4a9e440e33fcd5535468c9b3dab1fc8eb01297ee838b016242bc47ef7"
+    },
+    {
+      "path": "spine-csharp/TransformConstraintData.cs.meta",
+      "sha256": "e11a2c5fe04c1b5c1f0ebe2a2f4cf290f51023a0e6efef01a24039a3ff4f0f49"
+    },
+    {
+      "path": "spine-csharp/Triangulator.cs",
+      "sha256": "c1fb3e7f2e6bca051523eff53bbbe43d491f58fbbf36b26a1489ecb849b926d8"
+    },
+    {
+      "path": "spine-csharp/Triangulator.cs.meta",
+      "sha256": "603a03c975ca377455d993005a9533d083a565f5981da563ed1aaf75176ba66b"
+    },
+    {
+      "path": "spine-unity/Asset Types/AnimationReferenceAsset.cs",
+      "sha256": "d50daf7178ce12b1ee088e9d4d02360d9a1bb60040dafca7ace61707ded174e4"
+    },
+    {
+      "path": "spine-unity/Asset Types/AnimationReferenceAsset.cs.meta",
+      "sha256": "124217c3fa210d7433bef8671ba9167619f19878b82200f7e4c69af7b86ca696"
+    },
+    {
+      "path": "spine-unity/Asset Types/AtlasAssetBase.cs",
+      "sha256": "857a6e19e758c629ac9093409ab56ed707a60d14467d563e6f594043784f0649"
+    },
+    {
+      "path": "spine-unity/Asset Types/AtlasAssetBase.cs.meta",
+      "sha256": "fd119c6879896971ee0c73056c271647f388b632fecf03cac6018d5ad840269d"
+    },
+    {
+      "path": "spine-unity/Asset Types/BlendModeMaterials.cs",
+      "sha256": "20e589622b161708d5c8e0de14dc40895635b5d2bb698ce2fec5424777dcd173"
+    },
+    {
+      "path": "spine-unity/Asset Types/BlendModeMaterials.cs.meta",
+      "sha256": "a10df0cbaef2dda877a642b2d92fd56f935959c8f437f89869619936c023e760"
+    },
+    {
+      "path": "spine-unity/Asset Types/EventDataReferenceAsset.cs",
+      "sha256": "8db54252d7c02c1263685b41fd621699e00a75e06408bffdc27c9ac64fa012ed"
+    },
+    {
+      "path": "spine-unity/Asset Types/EventDataReferenceAsset.cs.meta",
+      "sha256": "8a7c40f3d63fd984ce6ee29380062069aa8d635eb3203d908aab1b205295e8e0"
+    },
+    {
+      "path": "spine-unity/Asset Types/OnDemandTextureLoader.cs",
+      "sha256": "063add573b1d2d7f4baccc8f1246276011caacea0ad8628f8fdbdaa339befb94"
+    },
+    {
+      "path": "spine-unity/Asset Types/OnDemandTextureLoader.cs.meta",
+      "sha256": "757186223e10d9be27c11797f88dd2c61ba4c13262413fe239d55deea4ffaff7"
+    },
+    {
+      "path": "spine-unity/Asset Types/RegionlessAttachmentLoader.cs",
+      "sha256": "7a6bb271179bcc4b5ee16e1609ec8d9ca5e7d6b82367ef78c096a3033053a62b"
+    },
+    {
+      "path": "spine-unity/Asset Types/RegionlessAttachmentLoader.cs.meta",
+      "sha256": "3b16406657a05792c7cc08bf2523cca3c875eb685b9873879705e641c94a2c4f"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataAsset.cs",
+      "sha256": "f1782b0730cb1ad2da51208446321ca66378d24346ca971aacd9bf7de96a78b6"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataAsset.cs.meta",
+      "sha256": "e05c07c17d482a0b749f4d10163ca23b857d7d8841ed25004a290a3e4f723464"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataCompatibility.cs",
+      "sha256": "c3f40284642db5003fbd22b47c85d1b17c8d6abb5cfeac7868a1e85f16b06a51"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataCompatibility.cs.meta",
+      "sha256": "2c28feb6c9cbcc7c912b54232f271b0c2ff49c164aa48ca2e7febf5824b668cb"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataModifierAsset.cs",
+      "sha256": "585eaf6bdd4b0e5b16a2c9edca7ea9772dc6d86961baf37c0d7a9d892b4d74a8"
+    },
+    {
+      "path": "spine-unity/Asset Types/SkeletonDataModifierAsset.cs.meta",
+      "sha256": "8fc2b24fd03c2ef52eef2570e186ee1a11765f89604b1ef1f2a6af0f80b58262"
+    },
+    {
+      "path": "spine-unity/Asset Types/SpineAtlasAsset.cs",
+      "sha256": "8ea2e2aae69608ec4d853af7aafd5abd894e672e4fcf29df7291ac3ad1a2b558"
+    },
+    {
+      "path": "spine-unity/Asset Types/SpineAtlasAsset.cs.meta",
+      "sha256": "1061d9fd4dc8302ee46a09ac133716556b8d5f34fd2d90f2716be8fadd358540"
+    },
+    {
+      "path": "spine-unity/Asset Types/SpineSpriteAtlasAsset.cs",
+      "sha256": "ec5c9b6da578862c733685b4e1ad56d38ab7ab6bcf036a589d4fc8913c2dd715"
+    },
+    {
+      "path": "spine-unity/Asset Types/SpineSpriteAtlasAsset.cs.meta",
+      "sha256": "d49945e0a4116aae853fe1a9406a2e67a7a4658c63b2d7c7c7b8a4d42dff4b3b"
+    },
+    {
+      "path": "spine-unity/Asset Types.meta",
+      "sha256": "21ac59863719acdcb32a44302c269f92b9f5e9a309c3121c6ec4f189a1da3b01"
+    },
+    {
+      "path": "spine-unity/Components/EditorSkeletonPlayer.cs",
+      "sha256": "b7aba661cdbf8f4ad87c7fdbb814bf19425cf099f39040c31a44327e8a042e75"
+    },
+    {
+      "path": "spine-unity/Components/EditorSkeletonPlayer.cs.meta",
+      "sha256": "54eb56240f5d18dc8a08e71f6b95f19c608de0b6005d3438a9a4125a547ce5de"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoneFollower.cs",
+      "sha256": "8fd837d6475122144f7c59d560079bc4b880fa0ce189e85fe54d8be24ca02090"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoneFollower.cs.meta",
+      "sha256": "9a7e1f6570a40799e377027541520a95ac2722b0926c29dbf9dbc16046f829c8"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoneFollowerGraphic.cs",
+      "sha256": "7416ffbbac89d9d0050e28c6d93295dc25499ef13b49cfc0e343e4e9e2df2d44"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoneFollowerGraphic.cs.meta",
+      "sha256": "f60a645c1fa176f71eb960722f93cc407b9bc5347dc89271f3a3fd2731a86226"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoundingBoxFollower.cs",
+      "sha256": "ad6ab1f451c9704edbf050ec223355f4ef8f8f6949590c8591d4748094576a42"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoundingBoxFollower.cs.meta",
+      "sha256": "fbac2a7afae214ea340da10e8445ba2443fc0b71352a19210051033b493f0f5c"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoundingBoxFollowerGraphic.cs",
+      "sha256": "fc9ff75bf67dfbc055eeb4277150641a29ef7340ce48fcf848cc836bfc6f5c4f"
+    },
+    {
+      "path": "spine-unity/Components/Following/BoundingBoxFollowerGraphic.cs.meta",
+      "sha256": "68de6935558b9de2379e0d9b6dfbb92ecc2f8389d8a6cee80030d85347f91357"
+    },
+    {
+      "path": "spine-unity/Components/Following/PointFollower.cs",
+      "sha256": "d25eaadb90396f41130435e12aa164953ae38ecac9e0a6facaa6059f98a0d14e"
+    },
+    {
+      "path": "spine-unity/Components/Following/PointFollower.cs.meta",
+      "sha256": "357b8296ad3838e7673ef1b8927cdefbae23dbe81c9e2568f951578c9c51dd65"
+    },
+    {
+      "path": "spine-unity/Components/Following.meta",
+      "sha256": "b61038a8a9a880808368e0fea3d4d2cba42c8787451824cad2b2a098ff71ceaa"
+    },
+    {
+      "path": "spine-unity/Components/Internal/SkeletonSubmeshGraphic.cs",
+      "sha256": "cf23f1a1c2af5bee414b3036d4a45cc87d049dcc57e527b1cc70677dbb9f1f3c"
+    },
+    {
+      "path": "spine-unity/Components/Internal/SkeletonSubmeshGraphic.cs.meta",
+      "sha256": "a09191812b43641d4fcae289bc0342ef3fb3f13b7a722ff4124ebdc279315759"
+    },
+    {
+      "path": "spine-unity/Components/Internal.meta",
+      "sha256": "dbf6bc460a6e3c26b787d25ad7a91cd6e157a64bdcf725640315d045bab1b68d"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonMecanimRootMotion.cs",
+      "sha256": "2a8f62d3aca9cd26854ace75a53692a1310bb9b7442cbe3380f24138aece4b48"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonMecanimRootMotion.cs.meta",
+      "sha256": "5a52ea77e92c2e15381d241f0638beda90a0d3f94d7eb488296a1ece63145a58"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonRootMotion.cs",
+      "sha256": "5c35f4364e40380070eb32af093ccc9d85cbc7962900109cac3d4960a9f3389c"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonRootMotion.cs.meta",
+      "sha256": "e69cff655aa9562877e753f1e414084a8c421dcb730ea2f4fa7de04568469cd3"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonRootMotionBase.cs",
+      "sha256": "eefa75310ab1dc60992f491e3f379e06a0d948a68af3b6982d8552468a79b7c7"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion/SkeletonRootMotionBase.cs.meta",
+      "sha256": "4ca8146d5401e779c2827a3df8e5d879836c9576ea2a3ef30f85d312978ce451"
+    },
+    {
+      "path": "spine-unity/Components/RootMotion.meta",
+      "sha256": "43179bdf5513ec61b4481ead7a70c7ae354166a91bd2653938524588de203b9d"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonAnimation.cs",
+      "sha256": "02a17bc05485f172e877fe48f664e1aeeb71a63bc4d242c82f0f68846cd4e00e"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonAnimation.cs.meta",
+      "sha256": "262b9e9f02b8bd8438011ef27ba2a3b89cd231220dede90069ade691c1188a17"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonGraphic.cs",
+      "sha256": "4395aec36f3f745d8f00af1231efc88171e0de706a849aacbec5b5ced3f5d9a8"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonGraphic.cs.meta",
+      "sha256": "5e122441a646a198f4a946fbd30d080d4fbb95e1e008dd7e526ab368ee6cceda"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonMecanim.cs",
+      "sha256": "354a1329ccac71a8ec3c6e343527e61bb5604fcf9dc6e16ddbbc1c747d746be6"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonMecanim.cs.meta",
+      "sha256": "a1e149b1876fa43d2384f4f3a016a6ea9b6b8af30853ec6b323d93e8a7c1b375"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderer.cs",
+      "sha256": "7bbadf810a78c0c77ebc41872c6651ff2bc4234352bcfac33ac1ac4ebc56044d"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderer.cs.meta",
+      "sha256": "ad73fd79be9836dda925ef1277db2d8128996a113874cc864f470e3076fea971"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRendererCustomMaterials/SkeletonGraphicCustomMaterials.cs",
+      "sha256": "d973ea2b22f2ea405ab3bd35bf7b58795da0804a00441eaad4a908f21dc0be66"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRendererCustomMaterials/SkeletonGraphicCustomMaterials.cs.meta",
+      "sha256": "886af1da52eb00e63d785cb0321ed6450c98aacc6a59cd563e8905865ab7b77c"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRendererCustomMaterials/SkeletonRendererCustomMaterials.cs",
+      "sha256": "f1618b2fed9e0aa7e0b36503685e7d63c05b7d04c4a9eae781c1fea8a38186e2"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRendererCustomMaterials/SkeletonRendererCustomMaterials.cs.meta",
+      "sha256": "533aefafbdba2a1cecb71d84a4802e673899766c97766266b4ceb2c64ef497c6"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRendererCustomMaterials.meta",
+      "sha256": "ad000a5a20e7c12f4ec16140b83f45580fef28725d82c9848ba4f3d7f2fcd184"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderSeparator/SkeletonPartsRenderer.cs",
+      "sha256": "2ec63d1900cda17896ba2c2608dfc5eeccf0fe15228eb504065b7a91b99faccf"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderSeparator/SkeletonPartsRenderer.cs.meta",
+      "sha256": "135fb5c95f24fc90c024165d2aa23c118c032468cfbb490e841b9313da883135"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderSeparator/SkeletonRenderSeparator.cs",
+      "sha256": "2bdeaee56f669638ab1882c388f4e83799ed79d23f46d14529609140bb740f1a"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderSeparator/SkeletonRenderSeparator.cs.meta",
+      "sha256": "a70a2d52fe1d89d9a2a334dcf162c32b8a7d6386961609fb67be9df569b4a2c6"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonRenderSeparator.meta",
+      "sha256": "ddb1cb902c37c3f852730b6aa901fbc328a403579de3d47dae78211a303089b6"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/ActivateBasedOnFlipDirection.cs",
+      "sha256": "53d155f7af801b6998f560c1acd86f665e0019670c4d0bb553cf506a22584d7c"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/ActivateBasedOnFlipDirection.cs.meta",
+      "sha256": "f3634cb11faee00d0fec0ae34680e41ec1b31f89b61db94d3fd21709b33b8f96"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowLocationRigidbody.cs",
+      "sha256": "eb67095ec82ba3d53bd174daf50b27882512c446e07fd048dc4c474853d08db1"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowLocationRigidbody.cs.meta",
+      "sha256": "756d8f1cdc72ef02a95b6b4626bb540c4453f47e7e6d5af323511dea46a95620"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowLocationRigidbody2D.cs",
+      "sha256": "0c5de73b9543264c1f504835b1577ee7a8f14a0003232caffde7234d75ac2b55"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowLocationRigidbody2D.cs.meta",
+      "sha256": "80ac88ad5d38426539d6bdb3462f5b7a49636240f89b7cd84d70617eb13e92fd"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowSkeletonUtilityRootRotation.cs",
+      "sha256": "52289e82a7d70b4af690f639179c96047ac47509b8e47ce58dc689c5984dea97"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/FollowSkeletonUtilityRootRotation.cs.meta",
+      "sha256": "f77dd5cb33b77b34908f8aed945debd175d5c180fc783078696943b162b35e8d"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtility.cs",
+      "sha256": "d86a6d1d3de6200019a708eb1021df8334575f854aaa2d6b69250e8e460ba13a"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtility.cs.meta",
+      "sha256": "c7015dedf27f615bf823f3f9c8ce843fea3a43b5bad766e26448ffbca8a0f446"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtilityBone.cs",
+      "sha256": "34cef929060dbe93321c4dbdace55367bd8f99486159af9ffe9edc135e92d1ef"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtilityBone.cs.meta",
+      "sha256": "ed35052e1e97acd44753aa719c41094028caab98e5170c92427c95068432a563"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtilityConstraint.cs",
+      "sha256": "e2723ff795aa720917fd37e6581b68f0bcb958969e9975e5329f8ee1f676d24d"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility/SkeletonUtilityConstraint.cs.meta",
+      "sha256": "935fff2d75a887db5efef522621e53a42e6d6ef69c0815cc73e9573e8a806baf"
+    },
+    {
+      "path": "spine-unity/Components/SkeletonUtility.meta",
+      "sha256": "e8cbd07b62ec5ce4b522c811c4dc6804f7b16b875d47b4a531d6cf58f116d191"
+    },
+    {
+      "path": "spine-unity/Components.meta",
+      "sha256": "2ee77fa3bc45af45aedb53047a4f23de88a54d79799bd4991867210d8e6df61a"
+    },
+    {
+      "path": "spine-unity/ISkeletonAnimation.cs",
+      "sha256": "3aebe1b8ea4c90b195eaf8ba547c5b973ddcd12210d722b45a60c91b87ee48eb"
+    },
+    {
+      "path": "spine-unity/ISkeletonAnimation.cs.meta",
+      "sha256": "a8dad6c9ad735566524a8ff560cf47edf4e675f99d7f83f2a78801f4c6f09970"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicAdditive.mat",
+      "sha256": "d6e8c54dcb0f8cf9eb38df2a30c57f9281129a60679223f5c774a17d23b7d419"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicAdditive.mat.meta",
+      "sha256": "d19f2098b933e0cc38571e77dfc4b3e7fa42ff7ce35125c8ffc3247c80c2b9e0"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefault.mat",
+      "sha256": "a9dd443b860c76897a027336997043163e7c2067e1937fc78283ac539f9ad777"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefault.mat.meta",
+      "sha256": "76615319e7ca790fe853416d1deb26f6d07c4ebf563c3f6221dfce7121f17ae4"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefaultGrayscale.mat",
+      "sha256": "1fce7d3d67d3e851ca5cf92cd4d5f2dd1b54fb4e0b318fca0b35f5c01c948f96"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefaultGrayscale.mat.meta",
+      "sha256": "ab3f05e652e9f87f91cc8c7bbe8f9f114a4a48ad0c3f7d2289109e460372e076"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefaultOutline.mat",
+      "sha256": "8ed5ef65a9710ff260adc688cd1ce1858e0d2efa7832ba82bfed2a215771e268"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicDefaultOutline.mat.meta",
+      "sha256": "b2f58088a241797d0d6347e1f27a500bf54644052239104ff3b1648eae02dd7f"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicFill.mat",
+      "sha256": "d3dd36374417b5adb458c75ec78444049c1165348a13b5915f968068588a4a88"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicFill.mat.meta",
+      "sha256": "05b445523b54120978399a741b20895d2c1f9d0b208a602681f2b3924c3ee37b"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicMultiply.mat",
+      "sha256": "e6b0a0e03b9f6ef90924b1f82911a7ddd95426e76c81b1042d7664493ebad2f3"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicMultiply.mat.meta",
+      "sha256": "3a715a8981b69996d6f3dcb1cc7d31b2c5baa681c3d78df0b3c14396c14602f8"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicScreen.mat",
+      "sha256": "ec07464492a36c57b7b41688548410c2db320baaec9f470b2870bec65e55a172"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicScreen.mat.meta",
+      "sha256": "a53ded41d58bac3b41431bd342f01bd5f1b09fba91c6e7ad4d70c25bc1db8e8d"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicTintBlack.mat",
+      "sha256": "553c5c183ccaf9a7f8619dcbe5d3e272c611e91d2cd6dbd2ef083a3ddc12f612"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicTintBlack.mat.meta",
+      "sha256": "2a791f1f2566e8e0566e64df62a1a69aa24f989b077925d9e0581c7553a2d1f7"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicTintBlackOutline.mat",
+      "sha256": "5dc3f1274f448f17cf6e86299b6ad88676e418679e106cca329f57a8e7aefe87"
+    },
+    {
+      "path": "spine-unity/Materials/SkeletonGraphicTintBlackOutline.mat.meta",
+      "sha256": "3cdcc83716d7e609342c7b3ec52d3d995bd5e6a75f311677ed40b3e914093031"
+    },
+    {
+      "path": "spine-unity/Materials.meta",
+      "sha256": "59ef21401460bceca952bb8c2098ea2f3f38ae2014dc55c91ec8cfd95a1c06da"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/DoubleBuffered.cs",
+      "sha256": "65a4adb444db045ab6428f6ed4a27b024b623b86934a8bd653ae6a41455a3a0f"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/DoubleBuffered.cs.meta",
+      "sha256": "ab460a66a793b1ca918df2fd4cc5f5e26f352d7641a7ad5db6a7929bc8e5feec"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/MeshGenerator.cs",
+      "sha256": "edff8c9479f96903918b3d65878d6fc6a7a99afbd4aa265a82fb436ba4637fd4"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/MeshGenerator.cs.meta",
+      "sha256": "020a140f3667ee29014d9726ce2ab33e469c0775ada6c6e1f63acbdb07ea09ea"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/MeshRendererBuffers.cs",
+      "sha256": "993753d40128c54ad7ab8b4d0a5e24612863ed4096e4a0fedd2abd65affae0fa"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/MeshRendererBuffers.cs.meta",
+      "sha256": "da3877e84c5eadd22c37729f66a8fcef3b9f8702474479fc89ff9917e00f4cae"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/SkeletonRendererInstruction.cs",
+      "sha256": "fb53a177629a51523a7bf79f4bcfcb6821910355d40c138a0794bd71ead34289"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/SkeletonRendererInstruction.cs.meta",
+      "sha256": "c286d83ed37552c05c6e4c6d61cf685daf4c4e872430820672966f6f003b3e0b"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/SpineMesh.cs",
+      "sha256": "591994ba94db1a8742b60aa984afd83189b7cb66377e95b1badf44d84ed6f29c"
+    },
+    {
+      "path": "spine-unity/Mesh Generation/SpineMesh.cs.meta",
+      "sha256": "76242bf60c59af8e2dc2ec3f09d7a947406b5b3321d73a777fd2234f9994c30e"
+    },
+    {
+      "path": "spine-unity/Mesh Generation.meta",
+      "sha256": "10715c46285420842b645fa46de45dd9a79c97e9a003f2c844eb887087a828f8"
+    },
+    {
+      "path": "spine-unity/Modules/TK2D/SpriteCollectionAttachmentLoader.cs",
+      "sha256": "66741f3582579e4b3879a000ed65c21c2d5facfbfc72b168e4a67a696961c364"
+    },
+    {
+      "path": "spine-unity/Modules/TK2D/SpriteCollectionAttachmentLoader.cs.meta",
+      "sha256": "1650e0bc85ac75bed90f81c619d0675dd5e5cf0cbf073b7de2ed6a2c67e5c97f"
+    },
+    {
+      "path": "spine-unity/Modules/TK2D.meta",
+      "sha256": "fc0b0401901034bd312a74913801446223bd7a05528671e3ee19dac7f1324c5b"
+    },
+    {
+      "path": "spine-unity/Modules.meta",
+      "sha256": "f7cb8ae9beb42f88e9fa2e5100865778c064cfdcbb2f5a57bb66488da7f06cb6"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Additive.shader",
+      "sha256": "0887aa7c5afed400a66e7bdc0b09a163366c408e1673eada89000aa81a6f8509"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Additive.shader.meta",
+      "sha256": "8922bda66c1465315b3868aa693754d20b39cb28178a23852579318fcb1920f0"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Multiply.shader",
+      "sha256": "53d8489544a3de5da3eeeea9fdd41f91be1926414585e41c93007934f837ebee"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Multiply.shader.meta",
+      "sha256": "f954db980abf940f277b3e38f0ff8ce5195c28b572c3cd6bfa903dd6fb87426c"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Screen.shader",
+      "sha256": "42c35efb698080117dc783fcfddbbad32f9751bd2bf7bc9bb9935eca146f1636"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Screen.shader.meta",
+      "sha256": "b9a7b499569b755af18305cc7ec4d01e8d761849aa556f0c47a5604220b4d868"
+    },
+    {
+      "path": "spine-unity/Shaders/BlendModes.meta",
+      "sha256": "2f1eeae71d30281fd193d9ecafd482dff2a4aedbe23a022611968f9bdb36d5d1"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-BlendModes-NormalPass.cginc",
+      "sha256": "2b03c01a6548bc8a4422986e7b011fc9473c76207252738cc203e83f00886f3d"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-BlendModes-NormalPass.cginc.meta",
+      "sha256": "c93f5bfbb228ceb5b8965de56f25c85a2c84efb62aacf44bb4763edf5200dcdd"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-BlendModes-ShadowCasterPass.cginc",
+      "sha256": "15901cc7d2310d9559911f363e12540b555dc84d6a27656ed5869172ada4896c"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-BlendModes-ShadowCasterPass.cginc.meta",
+      "sha256": "56f6e3c01e0107ff1df20d3c50cbc2d64905b05c4bc63bfe2089c37aa4a3bb52"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Common.cginc",
+      "sha256": "6d7a655ceeef504d8cd2c3129844ab19ee5ca7a00f488c1d378699dfaca82c78"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Common.cginc.meta",
+      "sha256": "67c0f3bee6816e7404a37b64937838073040b3db522ab248204e8c35c8f5af52"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-DepthOnlyPass.cginc",
+      "sha256": "7f67bc5380a5210be3d727fd93c168376501b1e716b8b457add8a9ed49747793"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-DepthOnlyPass.cginc.meta",
+      "sha256": "5c584356d8f2e3ba852f13e456fa6e25c46571b20fefb7adc9786d207e4324d5"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Outline-Common.cginc",
+      "sha256": "4d93af85dbf2d0a5daeb7de28811c381e2caa15f1c8a062dec401269368a750b"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Outline-Common.cginc.meta",
+      "sha256": "f5e320975b123124b8873b4b3d0ff8e7cb491711bb1ef45c33e98ebf4c6f2921"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Lit-Common-Shadow.cginc",
+      "sha256": "580660a59e6a514efa642a3daac781707a525b8fce84621c95704387e3381514"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Lit-Common-Shadow.cginc.meta",
+      "sha256": "1b07356d415bc5db08b9e8b78564926a654276ba0d62f650bc989fa9169725db"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Lit-Common.cginc",
+      "sha256": "5d0c664960611637f47814f6bbeed1b0f5f18381eeb7870e5a118802dbc7d70d"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Lit-Common.cginc.meta",
+      "sha256": "1c7b7fda0c25096fe53dcd3a37f639b1beac3102ed38cbeaa4a71157c373effa"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Tint-Common.cginc",
+      "sha256": "cc34ef195731ae1acefe7a702052b0a0e1cb7019e9ecdd38c4bff3cd689743d6"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes/Spine-Skeleton-Tint-Common.cginc.meta",
+      "sha256": "3debb65e40bf05395bad5ce9144d9ce4a87175d506b03e38b5ec087ffc2d4393"
+    },
+    {
+      "path": "spine-unity/Shaders/CGIncludes.meta",
+      "sha256": "4c8479d2236c17b1c6d85d8bce4643e5d2974bb0774e8bf9963e45f4777b866c"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Additive-Outline.shader",
+      "sha256": "d7a358d50ab74ebca415d146daa25875f5b2fcc4cd0e9da77792009033450f68"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Additive-Outline.shader.meta",
+      "sha256": "cf4d322455ded6735ce9348f356003285e17f368d047aea0ccf73dd268b680ca"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Multiply-Outline.shader",
+      "sha256": "d2c2ed51afe09138f7dd8545cdfdb3d43b975ea031a3c4b6fd2362b9e360414e"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Multiply-Outline.shader.meta",
+      "sha256": "b1f5cc3943ee6cdbe8c3077090aa9b1a50f86eb7208b9a3b8e2ac758c602ae4c"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Screen-Outline.shader",
+      "sha256": "818158bbd541c3f0e7d029158a8ae504c05c6e17588cf352bd895f8bdcd0b2e8"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Screen-Outline.shader.meta",
+      "sha256": "d4b4c68dac0f383be0229ab574c87c485ceff1e2016c00463c971977cf45119d"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/BlendModes.meta",
+      "sha256": "3035f20028c3f0c064abfb783e85095ae0c07028625bb798517a63f0a2e406e3"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/CGIncludes/Spine-Outline-Pass.cginc",
+      "sha256": "7a7d448ccdcc660a2cb55a321015c63139c8ffa308d47e1bb1e569234c5d538e"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/CGIncludes/Spine-Outline-Pass.cginc.meta",
+      "sha256": "6d965f19a1128abe76c9a9488f7173eb935974b7d96ec38b8ca2e4277f2d4989"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/CGIncludes.meta",
+      "sha256": "bb2b8c79ce7196a992e2d834f92623c8a575a04e974e90362cdf2db156c50c75"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-Outline.shader",
+      "sha256": "3485acac888efab7ba1090e3b88fceb2fa8860418e7635c6818bc6627291c06b"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-Outline.shader.meta",
+      "sha256": "fb3a7748b2a25c5e800e09e590af3a0c94c847054d76573b10eeba061fdb763d"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack-Outline.shader",
+      "sha256": "d200951d8b9d5f76fc14bc881dc5a95ca857b83e11f99771b43297cce6035594"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack-Outline.shader.meta",
+      "sha256": "6c290d87590b9917067c1063ab7a47ac54bdf17105f67bfdedc2490fef3850c0"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/SkeletonGraphic.meta",
+      "sha256": "f166d8debcc0d92a8b4699babbb9329f4bd0870601572b130333425e96438b70"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Fill-Outline.shader",
+      "sha256": "9ca249084793dec113dc33f9c60fdd6320e0b3be035e7dc8938f390a05eefbec"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Fill-Outline.shader.meta",
+      "sha256": "0d64837dc5e8afd3d47f2a87a9e04731ee6abbd49157196be9aad8b2acd585e5"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Lit-Outline.shader",
+      "sha256": "398e7a1aca2325b5c26755cec1be4647f829afc8999d9f18835ad317c8e3a4bc"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Lit-Outline.shader.meta",
+      "sha256": "4ef9b98c5b285f57e52c40329bc23697afaab13c4dbaf26156ff797141d49dcd"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Lit-ZWrite-Outline.shader",
+      "sha256": "a5c8c9cd40dd72f43b9547af94db01fda927faa13174f0843a9c0097535de797"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Lit-ZWrite-Outline.shader.meta",
+      "sha256": "dd0b36586a59a9aba049b22b368798d5db044f1d9cdfc72ce41f1b7e6ab743ba"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Outline.shader",
+      "sha256": "f5db22eada452ef3c3f5b14aed88e888675ec98eafe294d11f8a72202e16d510"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Outline.shader.meta",
+      "sha256": "7adaaacc6d8897ec675ff7a31bc797df4b5e4d82f843aa612dd699ce4652ec44"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-OutlineOnly-ZWrite.shader",
+      "sha256": "1af29b1d52359b1246231a102c91b1eddaf452964a35141e86644141c2a721ab"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-OutlineOnly-ZWrite.shader.meta",
+      "sha256": "d918b8e5deeaa944c29d338a1cb76dd644520558810283cecf4e9e01652a9151"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Tint-Outline.shader",
+      "sha256": "7fae68b49be8932cf103acfed3dbf18fd90e407699d67d465737cf5653c096d8"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-Tint-Outline.shader.meta",
+      "sha256": "67374e9621e57d377c786bfc472ba559af4b581929af871c5cd5a3b1240ced9c"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-TintBlack-Outline.shader",
+      "sha256": "37f1c440fa39837769966a605387ee0a80ad6a98c49b86b8fee41cef8fb662dc"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Skeleton-TintBlack-Outline.shader.meta",
+      "sha256": "8c400221cde0b4d6463ede57452148cd2fbf61d940ed85ad96c8ef0c80577cd6"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Special-Skeleton-Grayscale-Outline.shader",
+      "sha256": "1572a577a151079c92666d6c7fc11ac1d142288210d23853183f1760c6c0a8b9"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Spine-Special-Skeleton-Grayscale-Outline.shader.meta",
+      "sha256": "809b218716c8e623c4828c31e0a9162fd9f02f1af0bcd3bd58869b0f48df09a5"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesPixelLit-Outline.shader",
+      "sha256": "19cb60f3fb7eb225dd2441186aa7fe8a66bd059300dbb62d602d81d9cf0709a6"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesPixelLit-Outline.shader.meta",
+      "sha256": "2d2e5a29d5cf01852b586a21dfda680f4ee0da6099ffb8f02d71149bda82bdbd"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesUnlit-Outline.shader",
+      "sha256": "021ddd75c1a4755e90590256dda838492cded3f5d7cdd89c7ac68e1e3c9a4bd7"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesUnlit-Outline.shader.meta",
+      "sha256": "ba28ee02732e78df8c29ba6b772c0b035eb13c51f32ed4e36cb424e0759b6dab"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesVertexLit-Outline.shader",
+      "sha256": "271f7107ee8001ed4fba653df05586a726ff641787849c15146cfd07fe12e77b"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite/SpritesVertexLit-Outline.shader.meta",
+      "sha256": "36c7ecdb0aae2e116c899826b1d37b41baad75e5e789634c86a71ada7d786720"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline/Sprite.meta",
+      "sha256": "6bb701fc0e9abd6b9247b7a24c9e8374944e92c39229e9874ea400f90f393489"
+    },
+    {
+      "path": "spine-unity/Shaders/Outline.meta",
+      "sha256": "c3af8763e80c0f71237679bee8d21755755607d15852c602f209019f6759b008"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/CGIncludes/Spine-SkeletonGraphic-NormalPass.cginc",
+      "sha256": "ac90986a8f5600ffb5b77847a8c41c772a19aa38631f948e41200b50eb71c778"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/CGIncludes/Spine-SkeletonGraphic-NormalPass.cginc.meta",
+      "sha256": "3da496f2bff959a920cf58d29251073f5ab2ee6077978e43ec3d1373c97d6387"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/CGIncludes.meta",
+      "sha256": "fa1dce6145a75596ee3621fb513017df2814a3ae1c70995b310dd5b25b55411b"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Additive.shader",
+      "sha256": "3a253c9a07313481901b24e1984697e26c67c9b2a7f75b162942e3cae832c1ea"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Additive.shader.meta",
+      "sha256": "2da2e9dbd1f4f7df173218797e3cfa98a63d3eca5015cb42676ec4eeb08b31d2"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Fill.shader",
+      "sha256": "cc2a30dd43727e2f746d76b2a20ad80235fec5eb5c913777577f8ae33df0dad8"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Fill.shader.meta",
+      "sha256": "477ad76127db5a8ffd06a628e1e0495b6cb950c89a81ead378a7fb632bd69f0e"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Multiply.shader",
+      "sha256": "fc62480150dd33808f0a9f358a272078866ed07830140a13518a648d4c525eea"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Multiply.shader.meta",
+      "sha256": "5fd0b497e92c019f5dac62eac4d0cadcfa4777816e3df06062fa247d6d2047fa"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Screen.shader",
+      "sha256": "f94ed9bced5f471aa722f657ec7ab060227d3605d4cebf32c56f7f5667260116"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Screen.shader.meta",
+      "sha256": "920b48fb52d7becd48bfa159de12371b6d5aedd488a135661552f173eec1018e"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack.shader",
+      "sha256": "1aaadcec3e9abd458034ae47552e330b031b2324681595d27ff4da385728f43e"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack.shader.meta",
+      "sha256": "d521d24982ba822c5563ec7d4273e86945340c59c221abf968b26c64b6b11b74"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic.shader",
+      "sha256": "3660049c32219cc89242dcae6851ebf0e6e834201e3d698755df476381a8cf5d"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic.shader.meta",
+      "sha256": "b88e7d8c60c17b446a3be109f249c906711ad03b131509bd68368c5cf27b0f25"
+    },
+    {
+      "path": "spine-unity/Shaders/SkeletonGraphic.meta",
+      "sha256": "06c709a9a63f5494fef1a3f592d0c430497b0a4a20ce6815f2cc0de0bffa49f3"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Fill.shader",
+      "sha256": "f9fe656c608ac6c28054321bca15d3108ba7f10f512b8367bdc90210d2ea7ea8"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Fill.shader.meta",
+      "sha256": "edc5e8cee3f90d40c225958c8eb34aee7568ac5b84a425410703546e0ff13809"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Lit-ZWrite.shader",
+      "sha256": "64392a808873ab102ea846f94d6bd1b0957647b8ca1d1d2b173003fe174d3931"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Lit-ZWrite.shader.meta",
+      "sha256": "7818cbe80ce2e196c607466e314f965e26b886b2ae89987414c59ad3c32a1e22"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Lit.shader",
+      "sha256": "e3f07d327fe28f4f6d2cfa980bda0b3bc34bcdad441147e4af04a0d7f8684e5d"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Lit.shader.meta",
+      "sha256": "c77eb5663faf1a8c9b9ebfa84b38dba5bf5e74c6f628a66670b3c3db91135522"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Tint.shader",
+      "sha256": "25d6115b04822fa73003e42c54c1081001a8f0e1ab4bd20d27aa61dff97fa039"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-Tint.shader.meta",
+      "sha256": "a088d76ff0ad876aa164f23a37549dcd861110159a32e660746d07e875dd2ec8"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-TintBlack.shader",
+      "sha256": "9879dcaed0f6560c70ec59a365426396a74f871ae0c0fdc47551d5f27a320a4a"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton-TintBlack.shader.meta",
+      "sha256": "17ffb5aa5dae43542f8507fa823ddbadf424873136c9abf34a073805d4d3a54f"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton.shader",
+      "sha256": "fc1112e6dbc7bdac9a107f7bf62234f78d66942e23daed310141b315e6faf130"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Skeleton.shader.meta",
+      "sha256": "00d982b8f2403368c5e9add2c27462733afbd4488d78b6ebf27b2aa3c2ba081e"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Special-Skeleton-Grayscale.shader",
+      "sha256": "2f7c8117455e6f3559a4d49ade056455efb982f3c7ffd076e29501fddb308243"
+    },
+    {
+      "path": "spine-unity/Shaders/Spine-Special-Skeleton-Grayscale.shader.meta",
+      "sha256": "16344d657fc13d748329fc80f092f63de12b9788052af506456088f48ff646cc"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraDepthNormalsTexture.shader",
+      "sha256": "2a47b438678f4e6c0d775bac677a2d935292f309fe7bb4d7e95be1c351aa487c"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraDepthNormalsTexture.shader.meta",
+      "sha256": "af9bc808e0c14c08c8420d6bf0a7268fccba0f666ecc2b786d4e5278caa873ad"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraDepthTexture.shader",
+      "sha256": "6d166b50c10e4bf7b6532142da27b9cc7e4edcd66820e9456f51e2432fec420a"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraDepthTexture.shader.meta",
+      "sha256": "373440a3792ab91d444db0d1277b609dd2e8bab01da28586e223de74a141153c"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraNormalsTexture.shader",
+      "sha256": "1c0aaea404c7d39ea3a65c9787dd766f5e4fc0fd1761b52fe6a01a6929f38cfb"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CameraNormalsTexture.shader.meta",
+      "sha256": "4ddd6ac7505ca54718eca815bf824b507579e26dd0b4e549eac0344c7d39a53d"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/ShaderMaths.cginc",
+      "sha256": "3f9760aa4645ae2b62e1b6696118d7e8bd3b8218bc96d5b8dfa4e217652d5a42"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/ShaderMaths.cginc.meta",
+      "sha256": "089e0b16946dcaf8b38fb52bb18f479dc2f7c015e3c91c05a6af62c80fd4a3ac"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/ShaderShared.cginc",
+      "sha256": "3767f83b901e37c910594c6bbf01f2125d60999b522149342d589ba55962136a"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/ShaderShared.cginc.meta",
+      "sha256": "e35a7634c7b52dab37a2eb31b9c9c6f2aacdba20729026f74bb92ac5285a2382"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteLighting.cginc",
+      "sha256": "b54a70cc4edf0fb00769a17b33f38ff75cf1dfb6faed4e75fc73b88ccc5019a3"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteLighting.cginc.meta",
+      "sha256": "d844e194167b4461da33d1d520c178482d8b11d2c0c5b7a9ea454e88870a8f78"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpritePixelLighting.cginc",
+      "sha256": "024d8f3e59a104b5dc817f688b00b87ba4c3f086596def402e98c37723f62aab"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpritePixelLighting.cginc.meta",
+      "sha256": "2900cf0fce386689dd14a1410814823c457e30f335dfd13529047f4b51aa26b2"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteShadows.cginc",
+      "sha256": "9f8be32dc2632662dea5b9434d44354ed430bfd6a341df88208f769f49f78359"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteShadows.cginc.meta",
+      "sha256": "c0ac9863fc3eac0c26b390457eb582dd741f1937488f1297b6a88753a912e30e"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteSpecular.cginc",
+      "sha256": "2ba344b243bec8bf665f58cb84722d2c3da7d2f539ae21753d7f371086fc40bd"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteSpecular.cginc.meta",
+      "sha256": "d0a6d431403a6e83d24545d12d0c5db4d55945e16e32843ab83a37813f8bc3a0"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteUnlit.cginc",
+      "sha256": "3ab685859af80ed37afd5add59d511fd26381105e382a021508e579fe910a8b3"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteUnlit.cginc.meta",
+      "sha256": "00e30347242cfc869a8c1e6a5fecf4027b6bd5109bb275ad4c66aaedefd8d6df"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteVertexLighting.cginc",
+      "sha256": "d7d020201dd3361fa66e5e7a46426b79c2d883b1d12bfcf079b47fb242521f2f"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes/SpriteVertexLighting.cginc.meta",
+      "sha256": "c29f6cd43e31cc6197cab418466754bd10a7b7f16ffd9e616dfe51ed8b7bedd1"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/CGIncludes.meta",
+      "sha256": "2ab43d18490d93b256df8844214b41eb636294db5d07c0a1c5c64688472327cd"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/README.md",
+      "sha256": "498188851b8583290cd83377c711fa8d5cab829c846a601f8d2d8c84a12ad9fa"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/README.md.meta",
+      "sha256": "54e2913cac2edddaa032aa19ea019ad7c7b264135d93500564d3c2dac884a89b"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpriteDepthNormalsTexture.shader",
+      "sha256": "4d453f11e9a580a4dd727af1dfcfdb441f01808eb990948c417df52e6bf2bfd4"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpriteDepthNormalsTexture.shader.meta",
+      "sha256": "9f5cdac87818b7a350655d501ea6c7363c33d159e0279b8f542123dcb15d7551"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesPixelLit.shader",
+      "sha256": "fdcb569b1e590cf1bb2ab70cd8bb0a3210ae5a5b5d4a1d09cf1e9d1b7930abcb"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesPixelLit.shader.meta",
+      "sha256": "98d221bcf707d7ed6a9accdb1e8cccae2010ad8d40ee459da40d1e3d264101c4"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesUnlit.shader",
+      "sha256": "a33cd818383941e76ba4eb7d060c29509f28d70f1542ea77f31558f39af12568"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesUnlit.shader.meta",
+      "sha256": "e8a27c21ea5be334eda7c40c637bc58539d36af6a482529bc101f9149d699024"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesVertexLit.shader",
+      "sha256": "6002cffab9089c1921365baac8239c9ea4e646fb5457a98133865e710b61d787"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite/SpritesVertexLit.shader.meta",
+      "sha256": "bca3bb928d900bcfe03e69567d344e5dfa2989448ec23a4b6d483e9a2de43969"
+    },
+    {
+      "path": "spine-unity/Shaders/Sprite.meta",
+      "sha256": "8fdb23da642552994bd5c58ee03c872a60920121165686b5d1d3a1786c07762d"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/Hidden-Spine-Bones.shader",
+      "sha256": "6f375aec8971cda3c6b73b88b915e7717b3dbdeca6f1f2548d7f90656d3581a1"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/Hidden-Spine-Bones.shader.meta",
+      "sha256": "8eb427b4e96fb20714a21dd9e8b1892dd7b635764a0f868833b7ce5ed1246773"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/HiddenPass.mat",
+      "sha256": "091db3f5f5f77c6263805cc9a5299e4ac415c690d9eab13daa8a6d96e6fd0ac2"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/HiddenPass.mat.meta",
+      "sha256": "8f19ade471af15316ed0e23afdb67c24b96d3869f7e78a3dcd2ef6f141e3f7b9"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/HiddenPass.shader",
+      "sha256": "205a19ba22bf2af6d5e9a438b223dcbfe489b6839e4acfcf52bde8f24ba89854"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility/HiddenPass.shader.meta",
+      "sha256": "e23027d8d8e8ecaa8e7323b439be7826b7fde15f93482640a77153bb8dc0ca5a"
+    },
+    {
+      "path": "spine-unity/Shaders/Utility.meta",
+      "sha256": "09b1850c663e343f64b1ae2d7bedb686cbf33a68114681edc89d29b24a200598"
+    },
+    {
+      "path": "spine-unity/Shaders.meta",
+      "sha256": "e541235e8c22cb57a7163d8c2696cf2f29c11fa77d53073f6b280ad21299a129"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/BlendModeMaterialsAsset.cs",
+      "sha256": "ea49ae8a139bf5757d5ac18af91694ce8e512c105585cd1634e5dead13add66e"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/BlendModeMaterialsAsset.cs.meta",
+      "sha256": "8848680e3e34f28ad1e661faf9838c023c7ee22f1f7e65e3eaad6dd3ca0239c7"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/Default BlendModeMaterials.asset",
+      "sha256": "b676dff9eea70e9bb34be98125a726432bc8e876d1f21f02c0aa6dd158e19fb5"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/Default BlendModeMaterials.asset.meta",
+      "sha256": "e11ccf112775679cb6b4baadf9898d3347a07e44193e3822932389e9232b8fb8"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAAdditive.mat",
+      "sha256": "44e24098c8650b12f015b9636a5eeb5ffb177d9622e0b4d6d56b9b0ba671c465"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAAdditive.mat.meta",
+      "sha256": "a46c00e33a00855f3bc6d2a132014f9e63d9037dc307298653f40f2dd8e6ef2d"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAMultiply.mat",
+      "sha256": "93fb2199efbd9c66367145083556c285a69573b3bdd9d26f3b902a7e935705b1"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAMultiply.mat.meta",
+      "sha256": "83fccbb193c1a3a40310b1984f3f0a6b7f93ef647398e80e61a3f660428485ea"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAScreen.mat",
+      "sha256": "95378a21df0a936418128189d738a628a11c1d21607538d7080e9d8214eea787"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonPMAScreen.mat.meta",
+      "sha256": "88f2ceb3e5e0965db3b8e5ea5a8259ce0b859053c852dd44a1894f723473afd5"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightAdditive.mat",
+      "sha256": "a434a42de718e5deafe5f916ef5e99949269ecdabbbea21735e760152348f45b"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightAdditive.mat.meta",
+      "sha256": "cac135c10e10608f68f333159cbe1653628f31c9941747008a2f802c87448b9b"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightMultiply.mat",
+      "sha256": "4177274f3cb45bae0653842da7f2d925d44348e78e279b5d203dbcfe12bd9ba0"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightMultiply.mat.meta",
+      "sha256": "786274b4c3567a3415798cb1b9a678c4685d83683e663d781dce8ee96dbe4210"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightScreen.mat",
+      "sha256": "f6c57a620557a1e461ede66e10c212fa754b0f60517883e825eff2345b93b907"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials/SkeletonStraightScreen.mat.meta",
+      "sha256": "7068fd11259ea7064fdc3c509319350c1a3321ca8f7c6435a4aec869ea723f58"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets/BlendModeMaterials.meta",
+      "sha256": "6f4075bc599235f0183366e2eba60383daa90a41b672809c4e4f8b39098cd8f5"
+    },
+    {
+      "path": "spine-unity/SkeletonDataModifierAssets.meta",
+      "sha256": "6ca6cfc20c52771e9d672aca5c682f9f037e2551c555b05d9cd8d06e7a89b3ef"
+    },
+    {
+      "path": "spine-unity/SpineAttributes.cs",
+      "sha256": "d334158358a7055472ed6d8922a4e936d4af9f6556c253a8315a869ed4258554"
+    },
+    {
+      "path": "spine-unity/SpineAttributes.cs.meta",
+      "sha256": "a64fe75d1cefaa75706f0193e5e6fc04c0f60c6429bf06dc6f273e034097cc27"
+    },
+    {
+      "path": "spine-unity/Utility/AtlasUtilities.cs",
+      "sha256": "6036991c0479c64eefdbc6d54fb0a0d7242f29c99b7271bf15366dee77f56eb7"
+    },
+    {
+      "path": "spine-unity/Utility/AtlasUtilities.cs.meta",
+      "sha256": "0582a30191bb8e3dcd3a01388ee6942e0fcdd9133c15ed9b25f327ec18162cdc"
+    },
+    {
+      "path": "spine-unity/Utility/AttachmentCloneExtensions.cs",
+      "sha256": "b97d18c2399f1f9de2304763961b66591adad75b91b8d23378b086cf33ce7ce8"
+    },
+    {
+      "path": "spine-unity/Utility/AttachmentCloneExtensions.cs.meta",
+      "sha256": "3562a97f85d5a6f8e85f13f91ce3bf60b737ec716c55146235d3fe8ab04b8bdb"
+    },
+    {
+      "path": "spine-unity/Utility/AttachmentRegionExtensions.cs",
+      "sha256": "6172570f941d58561f5ed850d8f5babc106714deccb3c2ca804458704188eab4"
+    },
+    {
+      "path": "spine-unity/Utility/AttachmentRegionExtensions.cs.meta",
+      "sha256": "d32d789206d1fc724f0d4f8e96dcd66ddff9429dab79ff4a57262e53e56d0c54"
+    },
+    {
+      "path": "spine-unity/Utility/BuildUtilities.cs",
+      "sha256": "12bfdb1b391555a8fadffa24d726220dcf46897700f3ee1202ecb983d4890d85"
+    },
+    {
+      "path": "spine-unity/Utility/BuildUtilities.cs.meta",
+      "sha256": "9a822ba2d65370ee2f8260577b1419698b9a0f649d74488b812e8cf71a40205f"
+    },
+    {
+      "path": "spine-unity/Utility/MaterialChecks.cs",
+      "sha256": "18f7b5664ff3a7cdea95055cc6ae0ef7718ff7e2cb1ce0afe076721d82261dde"
+    },
+    {
+      "path": "spine-unity/Utility/MaterialChecks.cs.meta",
+      "sha256": "8657ccc4b9b79dcfec3f89106b1c9ad85215b25c49366d6f132439a68235afa1"
+    },
+    {
+      "path": "spine-unity/Utility/MathUtilities.cs",
+      "sha256": "c6e5121a8f1930b54a353978a565d8f5c932e864eb796859f8e12521a57f4225"
+    },
+    {
+      "path": "spine-unity/Utility/MathUtilities.cs.meta",
+      "sha256": "e5fa932828bf23f50f1671ca20734df1711f404c3966c426aa527eecb2fcd135"
+    },
+    {
+      "path": "spine-unity/Utility/SettingsTriState.cs",
+      "sha256": "3ca3e924129826c75e0f6e0eeac5e4262c9b3b84a513d8c3232e50484b7c1a5e"
+    },
+    {
+      "path": "spine-unity/Utility/SettingsTriState.cs.meta",
+      "sha256": "b7c54d18b4aeb6bd0b9ae03d1c1eec38efd388729bd6d49926dfeb46be0b9470"
+    },
+    {
+      "path": "spine-unity/Utility/SkeletonExtensions.cs",
+      "sha256": "1807b743cac0cbf7af072692d02b0a63125c878e1dd88c609ed0954f3cbe98f3"
+    },
+    {
+      "path": "spine-unity/Utility/SkeletonExtensions.cs.meta",
+      "sha256": "022260e4de1ded72c55071659ede7f22602ac524ba0cde65aa4e72891ecff6b0"
+    },
+    {
+      "path": "spine-unity/Utility/TimelineExtensions.cs",
+      "sha256": "fc26511aee24b597abdfd732bd115473dbfd44c577ae5534167346492a9940d1"
+    },
+    {
+      "path": "spine-unity/Utility/TimelineExtensions.cs.meta",
+      "sha256": "3beefdad64b259082f15eab8b94055842013f5b64f3df44a573884317cbf85cf"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimation.cs",
+      "sha256": "40d560395a4cdecd6f4650d52877cad04f45b348afdb502ed1dba7ada36307bc"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimation.cs.meta",
+      "sha256": "9f6b57844bd3177f81f5c168191965671ed1a1c8217d16420ba60204a2c9e78d"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimationComplete.cs",
+      "sha256": "00886cd9a945bdc25b4a2d8f21a6134d4e1d66a628fb31be7af59801a3431940"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimationComplete.cs.meta",
+      "sha256": "0cde87067ffde890c80bf6142d21b8c04a00dad000342215e6344f0e124d7efe"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimationEnd.cs",
+      "sha256": "f5ccb13a019d55b7078f74f8afc4355db71bff32953fd9ec006bdb8c440bb3f7"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineAnimationEnd.cs.meta",
+      "sha256": "79c8ff7fab44acc4e1983b6d94745928323b2c16f5b7d6eb67871656543aab37"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineEvent.cs",
+      "sha256": "773b9963235ff6455884f48e5e7567d8c768e6e7905b4f274ea3feb927f7c049"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineEvent.cs.meta",
+      "sha256": "0c073687e955cf8dabbe11a360d45ed449186310fdabc2a0a1330c6f90044fec"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineTrackEntryEnd.cs",
+      "sha256": "6afd6bee7942e980b80a10ea8c63874063cd086fefdb3d6cbe9c5381dcc41600"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions/WaitForSpineTrackEntryEnd.cs.meta",
+      "sha256": "043a623dd6e7e9be329bae8b3d83ce85658bd9efd7cb1c4ba3299bbf1acc96eb"
+    },
+    {
+      "path": "spine-unity/Utility/YieldInstructions.meta",
+      "sha256": "ef2dd719b8e01cc18c6dbbe135b3f3266a00fc73154e8e9bf02be333e7bc8ec8"
+    },
+    {
+      "path": "spine-unity/Utility.meta",
+      "sha256": "a9158eb7bd883871af78d1127111c48fbbbf2568b35eba73ea725a77426a9a20"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+; Original class: ItemBase
+; Type4541.ItemToReward; wasmcode function 19000; offset=8540406 size=154
+; signature={'args': [127, 126, 127], 'returns': [127]}; localGroups=[(1, 127)]
+008250f9  i32.const [5001129]
+008250fe  i32.load8_u [0, 0]
+00825101  i32.eqz []
+00825102  if [-64]
+00825104    i32.const [3976584]
+00825109    call [900] ; 
+0082510c    i32.const [3976580]
+00825111    call [900] ; 
+00825114    i32.const [3923804]
+00825119    call [900] ; 
+0082511c    i32.const [3938108]
+00825121    call [900] ; 
+00825124    i32.const [5001129]
+00825129    i32.const [1]
+0082512b    i32.store8 [0, 0]
+0082512e  end []
+0082512f  i32.const [3923804]
+00825134  i32.load [2, 0]
+00825137  call [903] ; 
+0082513a  local.set [3]
+0082513c  local.get [3]
+0082513e  i32.const [3976580]
+00825143  i32.load [2, 0]
+00825146  call [944] ; 
+00825149  local.get [0]
+0082514b  i32.load [2, 8]
+0082514e  if [-64]
+00825150    i32.const [3938108]
+00825155    i32.load [2, 0]
+00825158    call [903] ; 
+0082515b    local.set [2]
+0082515d    local.get [2]
+0082515f    i32.const [0]
+00825161    i32.store [2, 24]
+00825164    local.get [0]
+00825166    i32.load [2, 8]
+00825169    i32.load [2, 8]
+0082516c    local.set [0]
+0082516e    local.get [2]
+00825170    local.get [1]
+00825172    i64.store [3, 16]
+00825175    local.get [2]
+00825177    local.get [0]
+00825179    i32.store [2, 8]
+0082517c    local.get [3]
+0082517e    local.get [2]
+00825180    i32.const [3976584]
+00825185    i32.load [2, 0]
+00825188    call [941] ; 
+0082518b  end []
+0082518c  local.get [3]
+0082518e  return []
+0082518f  end []

@@ -1,0 +1,41 @@
+; Original class: ItemManager
+; Type4500.GetPackageOpenReward; wasmcode function 11718; offset=5734892 size=119
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005781ed  i32.const [5009883]
+005781f2  i32.load8_u [0, 0]
+005781f5  i32.eqz []
+005781f6  if [-64]
+005781f8    i32.const [3971048]
+005781fd    call [900] ; 
+00578200    i32.const [3976588]
+00578205    call [900] ; 
+00578208    i32.const [3976580]
+0057820d    call [900] ; 
+00578210    i32.const [3923804]
+00578215    call [900] ; 
+00578218    i32.const [5009883]
+0057821d    i32.const [1]
+0057821f    i32.store8 [0, 0]
+00578222  end []
+00578223  i32.const [3923804]
+00578228  i32.load [2, 0]
+0057822b  call [903] ; 
+0057822e  local.set [1]
+00578230  local.get [1]
+00578232  i32.const [3976580]
+00578237  i32.load [2, 0]
+0057823a  call [944] ; 
+0057823d  local.get [1]
+0057823f  local.get [0]
+00578241  i32.load [2, 20]
+00578244  i32.const [3976588]
+00578249  i32.load [2, 0]
+0057824c  call [1376] ; 
+0057824f  local.get [0]
+00578251  i32.load [2, 20]
+00578254  i32.const [3971048]
+00578259  i32.load [2, 0]
+0057825c  call [11536] ; 
+0057825f  local.get [1]
+00578261  return []
+00578262  end []

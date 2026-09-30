@@ -1,0 +1,115 @@
+{
+  "atUtc": "2026-09-30T06:41:52.412368+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": [
+    {
+      "metadata": 33469,
+      "path": "disassembly/Type4379-33469.txt",
+      "sha256": "16d185c9db8135c3629ed1b78089b8ea6a535fb9b54f5e7b72cfe6df1e8b17e7"
+    },
+    {
+      "metadata": 33482,
+      "path": "disassembly/Type4379-33482.txt",
+      "sha256": "708142648232ea45eb42f522a57ec44e8b6a6fbfe3b63e3816d589f9b07184f2"
+    },
+    {
+      "metadata": 32704,
+      "path": "disassembly/Type4296-32704.txt",
+      "sha256": "03b3099ed1a79ecb6766bf9418b352dd35abdc00fbe6552cf5593ad10c9bf68a"
+    },
+    {
+      "metadata": 32709,
+      "path": "disassembly/Type4296-32709.txt",
+      "sha256": "8793561661883baba34d970305fc575642a722f5303bb06343553024dad20f26"
+    },
+    {
+      "metadata": 32710,
+      "path": "disassembly/Type4296-32710.txt",
+      "sha256": "fd6203507b50fd8f4b29fc5911c288d3008e451a309eef93146f8d7f7b8e7682"
+    },
+    {
+      "metadata": 32726,
+      "path": "disassembly/Type4296-32726.txt",
+      "sha256": "7d6f66350f602300bd7200dc3db94da15cf56257a84610d58ebe58b709d3dae1"
+    },
+    {
+      "metadata": 32735,
+      "path": "disassembly/Type4296-32735.txt",
+      "sha256": "ddbbdfe21d72fb8a828df6115a8a9d426f90b436a1bde3c6eff9cb299a426060"
+    },
+    {
+      "metadata": 32739,
+      "path": "disassembly/Type4296-32739.txt",
+      "sha256": "ede5a3e0674e9a8abdf3bebb068f6f671b2b0d3045ed9a3e7530ea5c20e455b2"
+    },
+    {
+      "metadata": 33920,
+      "path": "disassembly/Type4425-33920.txt",
+      "sha256": "3335efbc52d2d1115146b6f42e6cd1c2170309363e3787c15fd1fa11ea6622a2"
+    },
+    {
+      "metadata": 33928,
+      "path": "disassembly/Type4425-33928.txt",
+      "sha256": "fd0fdbb8b93d5679187d2548074a1ae9650ea3877747342b22fe83be1e2a57c1"
+    },
+    {
+      "metadata": 33929,
+      "path": "disassembly/Type4425-33929.txt",
+      "sha256": "df07be2caddedfb8c738fda8287348d55f76dbbf6d45d60beafbdf87681acdbf"
+    },
+    {
+      "metadata": 33932,
+      "path": "disassembly/Type4425-33932.txt",
+      "sha256": "60564d479661031ece5ad12fc8865c71c263cef1eeb301120048fe26dda1f995"
+    },
+    {
+      "metadata": 32420,
+      "path": "disassembly/Type4247-32420.txt",
+      "sha256": "a153cd18353ca47b80557d692b4727855665c29e8ef1e99d17624b61558a3af7"
+    }
+  ],
+  "originalPrefab": {
+    "source": "top-info-ui-evidence.json",
+    "import": "top-info-ui-import.json",
+    "nodes": 36,
+    "outlets": 25,
+    "sprites": 11,
+    "fonts": 1
+  },
+  "productionFiles": [
+    "OutgameUiControl.cs",
+    "OutgameTopInfoPage.cs",
+    "OutgameMenuTabPage.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "findings": [
+    "UIControl init reads module three times and resets current registry singleton, not necessarily this instance. Dispose clears registry/top and state listener but retains menu and global roots.",
+    "GamePlayState2 shows top/menu,3 closes queried menu and hides top,8 renders top mask6 on popup layer,11 shows top alone. Cached menu branch opens children then sets current3.",
+    "TopInfo keys2/4/5 map gold/diamonds/stamina; renderer loop visits only1/2/4. Key5 remains untouched. Part dictionary null returns before visibility.",
+    "Part canvas order is9 for any nonempty requested layer even for unselected parts; empty layer uses0. Selected raycasters enabled; unselected disabled.",
+    "Menu close requests main, hides all menu children, sets current0 and applies virtual visibility. Native scale change precedes MenuTabDispose; logical flag and GF_VisibleUI follow callbacks.",
+    "Menu refresh exceptions preserve the original partial native/logical visibility state; no catch/rollback invented.",
+    "Default WaitForEndOfFrame loader completed original main/shop/commander/item-info order in rendered PlayMode with timeScale0."
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T06:41:52.412368+00:00",
+    "scope": "UIControl lifecycle/state transitions, original TopInfo prefab/part rendering, native MenuTab visibility and actual rendered end-of-frame loading",
+    "checksPassed": 705,
+    "nativePlayModeChecks": 6,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Full menu data/role/page callbacks, account/avatar/SDK integration, remaining32 controllers, complete Main or Player build",
+    "commands": [
+      "RecoveredHudImporter.ImportTopInfoBatch",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameUiPlayModeValidation.RunRendered"
+    ],
+    "batchModeLimitation": "Batch-mode UI run timed out at first WaitForEndOfFrame; source wait unchanged, failed report retained in analysis/ui-native-batch-timeout.json"
+  },
+  "limits": [
+    "TopInfo account/avatar/buttons/value refresh and ellipsis remain incomplete.",
+    "Menu data refresh/request-main/role handlers in native test are fixtures. Mandatory production callback dependencies remain to be connected.",
+    "No full 38-controller Main, online login, complete playable outgame or new Player build."
+  ]
+}

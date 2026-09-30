@@ -1,0 +1,28 @@
+; Original class: GlobalData
+; Type3486.Jx; wasmcode1 function 3951; offset=1260056 size=79
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00133a19  i32.const [4989070]
+00133a1e  i32.load8_u [0, 0]
+00133a21  i32.eqz []
+00133a22  if [-64]
+00133a24    i32.const [3941104]
+00133a29    i32.const [1605]
+00133a2c    call_indirect [0, 0]
+00133a2f    i32.const [4080072] ; STRING "[MessageMapper] Failed to create request instance for cmdMerge=0x{0:X}: {1}"
+00133a34    i32.const [1605]
+00133a37    call_indirect [0, 0]
+00133a3a    i32.const [4989070]
+00133a3f    i32.const [1]
+00133a41    i32.store8 [0, 0]
+00133a44  end []
+00133a45  i32.const [3941104]
+00133a4a  i32.load [2, 0]
+00133a4d  i32.const [1149]
+00133a50  call_indirect [0, 0]
+00133a53  i32.const [4080072] ; STRING "[MessageMapper] Failed to create request instance for cmdMerge=0x{0:X}: {1}"
+00133a58  i32.load [2, 0]
+00133a5b  local.get [0]
+00133a5d  i32.const [0]
+00133a5f  i32.const [25241] ; TABLE UserDataPrefs.SetInt
+00133a63  call_indirect [5, 0]
+00133a66  end []

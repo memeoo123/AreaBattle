@@ -1,0 +1,30 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Shader Forge/Effect/miaozhun" {
+Properties {
+
+_Tex ("Tex", 2D) = "white" { }
+
+_Vspeed ("Vspeed", Float) = 0.0
+
+_Uspeed ("Uspeed", Float) = 0.0
+
+_color ("color", Color) = (1,1,1,1)
+
+_opacity ("opacity", Range(0, 5)) = 3.0
+
+}
+SubShader {
+ Tags { "IGNOREPROJECTOR" = "true" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "FORWARD"
+  Tags { "IGNOREPROJECTOR" = "true" "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 15628
+}
+}
+}

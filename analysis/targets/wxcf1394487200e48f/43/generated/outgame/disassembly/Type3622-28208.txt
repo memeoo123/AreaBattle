@@ -1,0 +1,14 @@
+; Original class: FileManager
+; Type3622.DelFile; wasmcode1 function 8541; offset=2855209 size=24
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+002b912a  local.get [1]
+002b912c  local.get [1]
+002b912e  local.get [1]
+002b9130  i32.const [2513] ; TABLE FileManager.IsFileExists
+002b9133  call_indirect [3, 0]
+002b9136  if [-64]
+002b9138    local.get [1]
+002b913a    i32.const [0]
+002b913c    call [1745] ; File.Delete
+002b913f  end []
+002b9140  end []

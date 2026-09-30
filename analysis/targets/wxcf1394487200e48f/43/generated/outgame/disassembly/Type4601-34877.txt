@@ -1,0 +1,105 @@
+; Original class: LoginProcedureBase
+; Type4601.Dispose; wasmcode1 function 57710; offset=18847821 size=323
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011f984e  i32.const [5001513]
+011f9853  i32.load8_u [0, 0]
+011f9856  i32.eqz []
+011f9857  if [-64]
+011f9859    i32.const [3947148]
+011f985e    i32.const [1605]
+011f9861    call_indirect [0, 0]
+011f9864    i32.const [4002636]
+011f9869    i32.const [1605]
+011f986c    call_indirect [0, 0]
+011f986f    i32.const [4005832] ; METHOD LoginProcedureBase.OqqyZo
+011f9874    i32.const [1605]
+011f9877    call_indirect [0, 0]
+011f987a    i32.const [4005840] ; METHOD LoginProcedureBase.PxzhQ
+011f987f    i32.const [1605]
+011f9882    call_indirect [0, 0]
+011f9885    i32.const [4005836] ; METHOD LoginProcedureBase.unq}
+011f988a    i32.const [1605]
+011f988d    call_indirect [0, 0]
+011f9890    i32.const [4054940] ; STRING "GF_ReceiveUserAttachment"
+011f9895    i32.const [1605]
+011f9898    call_indirect [0, 0]
+011f989b    i32.const [4054924] ; STRING "GF_ReceiveGetOtherGameData"
+011f98a0    i32.const [1605]
+011f98a3    call_indirect [0, 0]
+011f98a6    i32.const [4054932] ; STRING "GF_ReceiveLoginOut"
+011f98ab    i32.const [1605]
+011f98ae    call_indirect [0, 0]
+011f98b1    i32.const [5001513]
+011f98b6    i32.const [1]
+011f98b8    i32.store8 [0, 0]
+011f98bb  end []
+011f98bc  i32.const [4002636]
+011f98c1  i32.load [2, 0]
+011f98c4  local.get [0]
+011f98c6  i32.load [2, 12]
+011f98c9  local.get [0]
+011f98cb  i32.load [2, 16]
+011f98ce  i32.const [109640]
+011f98d2  call_indirect [3, 0]
+011f98d5  drop []
+011f98d6  local.get [0]
+011f98d8  i32.const [0]
+011f98da  i32.store [2, 12]
+011f98dd  local.get [0]
+011f98df  i32.const [0]
+011f98e1  i32.store [2, 32]
+011f98e4  i32.const [3947148]
+011f98e9  i32.load [2, 0]
+011f98ec  i32.const [109007]
+011f98f0  call_indirect [2, 0]
+011f98f3  local.set [1]
+011f98f5  local.get [1]
+011f98f7  local.get [0]
+011f98f9  i32.const [4005832] ; METHOD LoginProcedureBase.OqqyZo
+011f98fe  i32.load [2, 0]
+011f9901  i32.const [0]
+011f9903  i32.const [24682] ; TABLE EventHandler..ctor
+011f9907  call_indirect [6, 0]
+011f990a  i32.const [4054932] ; STRING "GF_ReceiveLoginOut"
+011f990f  i32.load [2, 0]
+011f9912  local.get [1]
+011f9914  i32.const [0]
+011f9916  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+011f991a  call_indirect [5, 0]
+011f991d  i32.const [3947148]
+011f9922  i32.load [2, 0]
+011f9925  i32.const [109007]
+011f9929  call_indirect [2, 0]
+011f992c  local.set [1]
+011f992e  local.get [1]
+011f9930  local.get [0]
+011f9932  i32.const [4005836] ; METHOD LoginProcedureBase.unq}
+011f9937  i32.load [2, 0]
+011f993a  i32.const [0]
+011f993c  i32.const [24682] ; TABLE EventHandler..ctor
+011f9940  call_indirect [6, 0]
+011f9943  i32.const [4054924] ; STRING "GF_ReceiveGetOtherGameData"
+011f9948  i32.load [2, 0]
+011f994b  local.get [1]
+011f994d  i32.const [0]
+011f994f  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+011f9953  call_indirect [5, 0]
+011f9956  i32.const [3947148]
+011f995b  i32.load [2, 0]
+011f995e  i32.const [109007]
+011f9962  call_indirect [2, 0]
+011f9965  local.set [1]
+011f9967  local.get [1]
+011f9969  local.get [0]
+011f996b  i32.const [4005840] ; METHOD LoginProcedureBase.PxzhQ
+011f9970  i32.load [2, 0]
+011f9973  i32.const [0]
+011f9975  i32.const [24682] ; TABLE EventHandler..ctor
+011f9979  call_indirect [6, 0]
+011f997c  i32.const [4054940] ; STRING "GF_ReceiveUserAttachment"
+011f9981  i32.load [2, 0]
+011f9984  local.get [1]
+011f9986  i32.const [0]
+011f9988  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+011f998c  call_indirect [5, 0]
+011f998f  end []

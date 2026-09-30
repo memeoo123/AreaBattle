@@ -1,0 +1,37 @@
+; Original class: ExtesionMethod
+; Type4268.signEnumToStr; wasmcode function 3626; offset=1142066 size=92
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00116d33  i32.const [5009155]
+00116d38  i32.load8_u [0, 0]
+00116d3b  i32.eqz []
+00116d3c  if [-64]
+00116d3e    i32.const [3931796]
+00116d43    call [900] ; 
+00116d46    i32.const [4034536] ; STRING ""
+00116d4b    call [900] ; 
+00116d4e    i32.const [5009155]
+00116d53    i32.const [1]
+00116d55    i32.store8 [0, 0]
+00116d58  end []
+00116d59  local.get [0]
+00116d5b  i32.const [5]
+00116d5d  i32.gt_u []
+00116d5e  if [-64]
+00116d60    i32.const [4034536] ; STRING ""
+00116d65    i32.load [2, 0]
+00116d68    return []
+00116d69  end []
+00116d6a  i32.const [3931796]
+00116d6f  i32.load [2, 0]
+00116d72  call [901] ; 
+00116d75  i32.const [3931796]
+00116d7a  i32.load [2, 0]
+00116d7d  i32.load [2, 92]
+00116d80  i32.load [2, 12]
+00116d83  local.get [0]
+00116d85  i32.const [2]
+00116d87  i32.shl []
+00116d88  i32.add []
+00116d89  i32.load [2, 16]
+00116d8c  return []
+00116d8d  end []

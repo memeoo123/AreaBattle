@@ -1,0 +1,32 @@
+; Original class: DiceGameControl
+; Type4038.IsUnlock; wasmcode function 6143; offset=2199007 size=87
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00218de0  i32.const [5008743]
+00218de5  i32.load8_u [0, 0]
+00218de8  i32.eqz []
+00218de9  if [-64]
+00218deb    i32.const [3953440]
+00218df0    call [900] ; 
+00218df3    i32.const [3930996]
+00218df8    call [900] ; 
+00218dfb    i32.const [5008743]
+00218e00    i32.const [1]
+00218e02    i32.store8 [0, 0]
+00218e05  end []
+00218e06  i32.const [3953440]
+00218e0b  i32.load [2, 0]
+00218e0e  call [935] ; 
+00218e11  i32.const [0]
+00218e13  call [1254] ; LevelControl.get_CurLevel
+00218e16  local.set [0]
+00218e18  i32.const [3930996]
+00218e1d  i32.load [2, 0]
+00218e20  call [901] ; 
+00218e23  local.get [0]
+00218e25  i32.const [3930996]
+00218e2a  i32.load [2, 0]
+00218e2d  i32.load [2, 92]
+00218e30  i32.load [2, 0]
+00218e33  i32.gt_s []
+00218e34  return []
+00218e35  end []

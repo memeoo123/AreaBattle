@@ -1,0 +1,22 @@
+{
+  "status": "continuation_branches_verified_concrete_hosts_pending",
+  "source": [
+    "disassembly/Type4107-31525.txt",
+    "disassembly/Type4107-31502.txt",
+    "play-state-ui-generics.json"
+  ],
+  "verified": [
+    "States10 and15 differ in small-index reset",
+    "State12 initializes then increments main level and closes pause UI",
+    "State14 initializes then increments small level",
+    "State11 clears ADHelper flag28 and waits for Hide callback",
+    "Return callback closes Play/Guide UI, clears special mode, initializes, changes to2 then Show(null)"
+  ],
+  "remaining": [
+    "State branches1/2/4/5/6/7/8/9/13 and concrete hosts",
+    "Production startup/account/menu ownership",
+    "Actual scene loading, persistence and Player E2E"
+  ],
+  "checks": 565,
+  "freshPlayMode": false
+}

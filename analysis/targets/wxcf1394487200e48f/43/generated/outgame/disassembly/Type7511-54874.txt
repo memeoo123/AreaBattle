@@ -1,0 +1,73 @@
+; Original class: BaseController
+; Type7511.reportPlatformBack; wasmcode function 4015; offset=1310620 size=210
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0013ff9f  i32.const [5005054]
+0013ffa4  i32.load8_u [0, 0]
+0013ffa7  i32.eqz []
+0013ffa8  if [-64]
+0013ffaa    i32.const [3930112]
+0013ffaf    call [900] ; 
+0013ffb2    i32.const [4100164] ; STRING "video uptype 6 not report"
+0013ffb7    call [900] ; 
+0013ffba    i32.const [4077760] ; STRING "VIDEO"
+0013ffbf    call [900] ; 
+0013ffc2    i32.const [4036744] ; STRING " 游戏位返回 uptype=6"
+0013ffc7    call [900] ; 
+0013ffca    i32.const [3943536]
+0013ffcf    call [900] ; 
+0013ffd2    i32.const [5005054]
+0013ffd7    i32.const [1]
+0013ffd9    i32.store8 [0, 0]
+0013ffdc  end []
+0013ffdd  i32.const [4077760] ; STRING "VIDEO"
+0013ffe2  i32.load [2, 0]
+0013ffe5  local.get [0]
+0013ffe7  i32.load [2, 12]
+0013ffea  i32.load [2, 16]
+0013ffed  i32.const [0]
+0013ffef  call [1019] ; String.Equals
+0013fff2  local.set [2]
+0013fff4  local.get [0]
+0013fff6  i32.load [2, 8]
+0013fff9  local.set [1]
+0013fffb  local.get [2]
+0013fffd  if [-64]
+0013ffff    local.get [1]
+00140001    i32.const [4100164] ; STRING "video uptype 6 not report"
+00140006    i32.load [2, 0]
+00140009    i32.const [0]
+0014000b    call [921] ; String.Concat
+0014000e    i32.const [0]
+00140010    call [999] ; XYXLOG.Log
+00140013    return []
+00140014  end []
+00140015  local.get [1]
+00140017  i32.const [4036744] ; STRING " 游戏位返回 uptype=6"
+0014001c  i32.load [2, 0]
+0014001f  i32.const [0]
+00140021  call [921] ; String.Concat
+00140024  i32.const [0]
+00140026  call [999] ; XYXLOG.Log
+00140029  i32.const [3943536]
+0014002e  i32.load [2, 0]
+00140031  call [903] ; 
+00140034  local.set [1]
+00140036  local.get [1]
+00140038  i32.const [0]
+0014003a  call [2456] ; ads_up_event..ctor
+0014003d  local.get [0]
+0014003f  local.get [1]
+00140041  local.get [0]
+00140043  call [4013] ; BaseController.setInfo
+00140046  local.get [1]
+00140048  i64.const [4618441417868443648]
+00140053  i64.store [3, 80]
+00140056  i32.const [3930112]
+0014005b  i32.load [2, 0]
+0014005e  call [901] ; 
+00140061  local.get [0]
+00140063  call [2513] ; DAUEventConstant.get_Instance
+00140066  local.get [1]
+00140068  local.get [0]
+0014006a  call [2512] ; DAUEventConstant.reportSever
+0014006d  end []

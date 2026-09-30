@@ -1,0 +1,164 @@
+; Original class: DBTSDKManager
+; Type3135.InitSDK; wasmcode function 6172; offset=2206754 size=490
+; signature={'args': [127], 'returns': []}; localGroups=[(3, 127)]
+0021ac25  global.get [0]
+0021ac27  i32.const [16]
+0021ac29  i32.sub []
+0021ac2a  local.set [0]
+0021ac2c  local.get [0]
+0021ac2e  global.set [0]
+0021ac30  i32.const [4988612]
+0021ac35  i32.load8_u [0, 0]
+0021ac38  i32.eqz []
+0021ac39  if [-64]
+0021ac3b    i32.const [3927988]
+0021ac40    call [900] ; 
+0021ac43    i32.const [3928180]
+0021ac48    call [900] ; 
+0021ac4b    i32.const [3928952]
+0021ac50    call [900] ; 
+0021ac53    i32.const [3929208]
+0021ac58    call [900] ; 
+0021ac5b    i32.const [3930128]
+0021ac60    call [900] ; 
+0021ac63    i32.const [3926996]
+0021ac68    call [900] ; 
+0021ac6b    i32.const [3983080]
+0021ac70    call [900] ; 
+0021ac73    i32.const [3925284]
+0021ac78    call [900] ; 
+0021ac7b    i32.const [3937964]
+0021ac80    call [900] ; 
+0021ac83    i32.const [3941512]
+0021ac88    call [900] ; 
+0021ac8b    i32.const [4106020] ; STRING "请确保keep_sign_code=0"
+0021ac90    call [900] ; 
+0021ac93    i32.const [4103152] ; STRING "初始化SDK: useCommonGameActHelper={0} 请确保{1}"
+0021ac98    call [900] ; 
+0021ac9b    i32.const [4106024] ; STRING "请确保keep_sign_code=1"
+0021aca0    call [900] ; 
+0021aca3    i32.const [4988612]
+0021aca8    i32.const [1]
+0021acaa    i32.store8 [0, 0]
+0021acad  end []
+0021acae  i32.const [3930128]
+0021acb3  i32.load [2, 0]
+0021acb6  call [901] ; 
+0021acb9  i32.const [4106020] ; STRING "请确保keep_sign_code=0"
+0021acbe  i32.const [4106024] ; STRING "请确保keep_sign_code=1"
+0021acc3  i32.const [3930128]
+0021acc8  i32.load [2, 0]
+0021accb  i32.load [2, 92]
+0021acce  i32.load8_u [0, 4]
+0021acd1  select []
+0021acd2  i32.load [2, 0]
+0021acd5  local.set [1]
+0021acd7  i32.const [3926996]
+0021acdc  i32.load [2, 0]
+0021acdf  i32.const [1]
+0021ace1  call [909] ; 
+0021ace4  local.set [2]
+0021ace6  i32.const [3930128]
+0021aceb  i32.load [2, 0]
+0021acee  call [901] ; 
+0021acf1  local.get [0]
+0021acf3  i32.const [3930128]
+0021acf8  i32.load [2, 0]
+0021acfb  i32.load [2, 92]
+0021acfe  i32.load8_u [0, 4]
+0021ad01  i32.store8 [0, 15]
+0021ad04  i32.const [3928952]
+0021ad09  i32.load [2, 0]
+0021ad0c  local.get [0]
+0021ad0e  i32.const [15]
+0021ad10  i32.add []
+0021ad11  call [910] ; 
+0021ad14  local.set [3]
+0021ad16  i32.const [4103152] ; STRING "初始化SDK: useCommonGameActHelper={0} 请确保{1}"
+0021ad1b  i32.load [2, 0]
+0021ad1e  local.get [3]
+0021ad20  local.get [1]
+0021ad22  i32.const [0]
+0021ad24  call [1047] ; String.Format
+0021ad27  local.set [1]
+0021ad29  local.get [2]
+0021ad2b  local.get [1]
+0021ad2d  call [905] ; 
+0021ad30  local.get [2]
+0021ad32  local.get [1]
+0021ad34  i32.store [2, 16]
+0021ad37  i32.const [3929208]
+0021ad3c  i32.load [2, 0]
+0021ad3f  call [901] ; 
+0021ad42  local.get [2]
+0021ad44  i32.const [0]
+0021ad46  call [1495] ; CLog.ReleaseLog
+0021ad49  i32.const [3930128]
+0021ad4e  i32.load [2, 0]
+0021ad51  i32.load [2, 92]
+0021ad54  i32.const [0]
+0021ad56  i32.store8 [0, 5]
+0021ad59  i32.const [3941512]
+0021ad5e  i32.load [2, 0]
+0021ad61  call [901] ; 
+0021ad64  i32.const [0]
+0021ad66  call [9611] ; VideoBtnManager.lt½ox
+0021ad69  block [-64]
+0021ad6b    local.get [0]
+0021ad6d    call [974] ; DBTSDKManager.get_Instance
+0021ad70    i32.load8_u [0, 44]
+0021ad73    if [-64]
+0021ad75      i32.const [3937964]
+0021ad7a      i32.load [2, 0]
+0021ad7d      call [901] ; 
+0021ad80      i32.const [3937964]
+0021ad85      i32.load [2, 0]
+0021ad88      i32.load [2, 92]
+0021ad8b      i32.load [2, 8]
+0021ad8e      local.get [0]
+0021ad90      call [7314] ; ReportManager.InitReportManager
+0021ad93      i32.const [3927988]
+0021ad98      i32.load [2, 0]
+0021ad9b      i32.load [2, 92]
+0021ad9e      i32.load [2, 0]
+0021ada1      i32.const [0]
+0021ada3      i32.store8 [0, 20]
+0021ada6      i32.const [3928180]
+0021adab      i32.load [2, 0]
+0021adae      i32.load [2, 92]
+0021adb1      i32.load [2, 0]
+0021adb4      i32.const [0]
+0021adb6      i32.store [2, 28]
+0021adb9      br [1]
+0021adbb    end []
+0021adbc    i32.const [3930128]
+0021adc1    i32.load [2, 0]
+0021adc4    call [901] ; 
+0021adc7    local.get [0]
+0021adc9    call [974] ; DBTSDKManager.get_Instance
+0021adcc    local.get [0]
+0021adce    call [12680] ; DBTSDKManager.InitDBTSDK
+0021add1    local.get [0]
+0021add3    call [974] ; DBTSDKManager.get_Instance
+0021add6    local.set [2]
+0021add8    i32.const [3925284]
+0021addd    i32.load [2, 0]
+0021ade0    call [903] ; 
+0021ade3    local.set [1]
+0021ade5    local.get [1]
+0021ade7    i32.const [3983080]
+0021adec    i32.load [2, 0]
+0021adef    call [944] ; 
+0021adf2    local.get [2]
+0021adf4    local.get [1]
+0021adf6    i32.store [2, 60]
+0021adf9    local.get [0]
+0021adfb    call [974] ; DBTSDKManager.get_Instance
+0021adfe    i32.const [1]
+0021ae00    i32.store8 [0, 44]
+0021ae03  end []
+0021ae04  local.get [0]
+0021ae06  i32.const [16]
+0021ae08  i32.add []
+0021ae09  global.set [0]
+0021ae0b  end []

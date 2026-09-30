@@ -1,0 +1,10 @@
+; Original class: UserInfoControl
+; Type4228.IsHeadPortUnlock; wasmcode function 14890; offset=7256733 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+006eba9e  local.get [0]
+006ebaa0  i32.load [2, 8]
+006ebaa3  local.get [1]
+006ebaa5  local.get [1]
+006ebaa7  call [9649] ; UserInfoManager.HaveHeadPort
+006ebaaa  return []
+006ebaab  end []

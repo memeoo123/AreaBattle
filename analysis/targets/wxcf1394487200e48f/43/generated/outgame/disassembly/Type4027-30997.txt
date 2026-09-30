@@ -1,0 +1,38 @@
+; Original class: CommanderControl
+; Type4027.IsCanUpgrate; wasmcode function 12863; offset=6187221 size=98
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005e68d6  i32.const [5008675]
+005e68db  i32.load8_u [0, 0]
+005e68de  i32.eqz []
+005e68df  if [-64]
+005e68e1    i32.const [3953568]
+005e68e6    call [900] ; 
+005e68e9    i32.const [3978976]
+005e68ee    call [900] ; 
+005e68f1    i32.const [5008675]
+005e68f6    i32.const [1]
+005e68f8    i32.store8 [0, 0]
+005e68fb  end []
+005e68fc  local.get [1]
+005e68fe  local.get [1]
+005e6900  call [1711] ; CommanderData.get_config
+005e6903  i32.load [2, 32]
+005e6906  i32.const [0]
+005e6908  i32.const [3978976]
+005e690d  i32.load [2, 0]
+005e6910  call [930] ; 
+005e6913  i32.load [2, 8]
+005e6916  i32.load [2, 16]
+005e6919  local.set [0]
+005e691b  i32.const [3953568]
+005e6920  i32.load [2, 0]
+005e6923  call [935] ; 
+005e6926  local.get [0]
+005e6928  i32.const [0]
+005e692a  call [3512] ; ToolControl.GetItemNum
+005e692d  local.get [1]
+005e692f  local.get [1]
+005e6931  call [3393] ; CommanderData.get_NextCost
+005e6934  i32.ge_s []
+005e6935  return []
+005e6936  end []

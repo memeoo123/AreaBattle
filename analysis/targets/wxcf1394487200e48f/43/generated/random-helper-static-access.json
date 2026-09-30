@@ -1,0 +1,143 @@
+{
+  "scope": "Decoded direct RandomHelper type-pointer references in both recovered WASM modules; reflection/runtime-generated aliases not covered",
+  "candidateFunctions": 69,
+  "directStaticAccesses": [
+    {
+      "file": "wasmcode-1621.txt",
+      "instructions": [
+        "00082a62  i32.const [3937580] ; type: RandomHelper",
+        "00082a67  i32.load [2, 0]",
+        "00082a6a  i32.load [2, 92]",
+        "00082a6d  i32.load [2, 0]",
+        "00082a70  local.set [2]",
+        "00082a72  local.get [0]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode-4876.txt",
+      "instructions": [
+        "0019975e  i32.const [3937580] ; type: RandomHelper",
+        "00199763  i32.load [2, 0]",
+        "00199766  i32.load [2, 92]",
+        "00199769  i32.load [2, 0]",
+        "0019976c  local.set [1]",
+        "0019976e  local.get [1]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode-10954.txt",
+      "instructions": [
+        "0050f8e3  i32.const [3937580] ; type: RandomHelper",
+        "0050f8e8  i32.load [2, 0]",
+        "0050f8eb  i32.load [2, 92]",
+        "0050f8ee  i32.load [2, 0]",
+        "0050f8f1  local.set [4]",
+        "0050f8f3  local.get [4]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode-10956.txt",
+      "instructions": [
+        "005100c1    i32.const [3937580] ; type: RandomHelper",
+        "005100c6    i32.load [2, 0]",
+        "005100c9    i32.load [2, 92]",
+        "005100cc    i32.load [2, 0]",
+        "005100cf    local.set [5]",
+        "005100d1    local.get [2]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode-10957.txt",
+      "instructions": [
+        "0051031c        i32.const [3937580] ; type: RandomHelper",
+        "00510321        i32.load [2, 0]",
+        "00510324        i32.load [2, 92]",
+        "00510327        i32.load [2, 0]",
+        "0051032a        local.set [7]",
+        "0051032c        local.get [7]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode-17959.txt",
+      "instructions": [
+        "0079af68  i32.const [3937580] ; type: RandomHelper",
+        "0079af6d  i32.load [2, 0]",
+        "0079af70  i32.load [2, 92]",
+        "0079af73  local.get [0]",
+        "0079af75  i32.store [2, 0]",
+        "0079af78  i32.const [3937580] ; type: RandomHelper"
+      ],
+      "classification": "write-instance"
+    },
+    {
+      "file": "wasmcode-17959.txt",
+      "instructions": [
+        "0079af78  i32.const [3937580] ; type: RandomHelper",
+        "0079af7d  i32.load [2, 0]",
+        "0079af80  i32.load [2, 92]",
+        "0079af83  drop []",
+        "0079af84  end []",
+        ""
+      ],
+      "classification": "unused-static-base"
+    },
+    {
+      "file": "wasmcode1-12156.txt",
+      "instructions": [
+        "00422c36  i32.const [3937580] ; type: RandomHelper",
+        "00422c3b  i32.load [2, 0]",
+        "00422c3e  i32.load [2, 92]",
+        "00422c41  i32.load [2, 0]",
+        "00422c44  local.set [2]",
+        "00422c46  local.get [0]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode1-24053.txt",
+      "instructions": [
+        "008e24de  i32.const [3937580] ; type: RandomHelper",
+        "008e24e3  i32.load [2, 0]",
+        "008e24e6  i32.load [2, 92]",
+        "008e24e9  i32.load [2, 0]",
+        "008e24ec  local.set [2]",
+        "008e24ee  local.get [0]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode1-24054.txt",
+      "instructions": [
+        "008e2546  i32.const [3937580] ; type: RandomHelper",
+        "008e254b  i32.load [2, 0]",
+        "008e254e  i32.load [2, 92]",
+        "008e2551  i32.load [2, 0]",
+        "008e2554  local.set [2]",
+        "008e2556  local.get [0]"
+      ],
+      "classification": "read-instance"
+    },
+    {
+      "file": "wasmcode1-24055.txt",
+      "instructions": [
+        "008e25b1  i32.const [3937580] ; type: RandomHelper",
+        "008e25b6  i32.load [2, 0]",
+        "008e25b9  i32.load [2, 92]",
+        "008e25bc  i32.load [2, 0]",
+        "008e25bf  local.set [2]",
+        "008e25c1  local.get [0]"
+      ],
+      "classification": "read-instance"
+    }
+  ],
+  "summary": {
+    "write-instance": 1,
+    "read-instance": 9,
+    "unused-static-base": 1
+  }
+}

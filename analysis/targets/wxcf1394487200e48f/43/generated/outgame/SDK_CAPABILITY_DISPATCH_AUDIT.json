@@ -1,0 +1,24 @@
+{
+  "status": "source_dispatch_verified_platform_managers_pending",
+  "source": [
+    "disassembly/Type3135-23915.txt",
+    "disassembly/Type3135-23904.txt",
+    "sdk-initialization-generics.json"
+  ],
+  "verified": [
+    "GetState functions0-22 plus defaultfalse",
+    "Feature5 fixedtrue;6 and17 invert zero;21 requires exactly1",
+    "Features11 and12 share policy manager query",
+    "Cache refresh15 uses resolver readiness query",
+    "InitDBTSDK generic calls resolve Ads,Iap,Report,AppInfo,AppUser,SDKTool in that order"
+  ],
+  "remaining": [
+    "Concrete platform manager implementations and transport",
+    "Full SDK refresh and initialization owner",
+    "Production account/menu/persistence/build/E2E"
+  ],
+  "checks": 556,
+  "freshAdsPlaymodeChecks": 7,
+  "priorFlyPlaymodeChecks": 8,
+  "dynamicScope": "Fresh native PlayMode; readiness and platform/report transport are explicit fixtures"
+}

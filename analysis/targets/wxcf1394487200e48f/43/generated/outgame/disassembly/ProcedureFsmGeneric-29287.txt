@@ -1,0 +1,112 @@
+; Original shared generic: FsmManager.CreateFsm
+; ProcedureFsmGeneric.CreateFsm; wasmcode function 19678; offset=8820228 size=287
+; signature={'args': [127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+00869607  local.get [4]
+00869609  i32.load [2, 28]
+0086960c  i32.eqz []
+0086960d  if [-64]
+0086960f    i32.const [3959004]
+00869614    call [900] ; 
+00869617    i32.const [3973652]
+0086961c    call [900] ; 
+0086961f    local.get [4]
+00869621    call [954] ; 
+00869624  end []
+00869625  local.get [4]
+00869627  i32.load [2, 28]
+0086962a  i32.load [2, 0]
+0086962d  i32.load [2, 0]
+00869630  local.get [4]
+00869632  i32.load [2, 28]
+00869635  i32.load [2, 0]
+00869638  local.get [0]
+0086963a  local.get [1]
+0086963c  call [1075] ; 
+0086963f  local.set [6]
+00869641  local.get [4]
+00869643  i32.load [2, 28]
+00869646  local.set [5]
+00869648  local.get [6]
+0086964a  if [-64]
+0086964c    local.get [5]
+0086964e    i32.load [2, 4]
+00869651    i32.load [2, 0]
+00869654    local.get [4]
+00869656    i32.load [2, 28]
+00869659    i32.load [2, 4]
+0086965c    i32.const [0]
+0086965e    local.get [1]
+00869660    call [1014] ; 
+00869663    local.set [0]
+00869665    i32.const [4044084] ; STRING "Already exist FSM '{0}'."
+0086966a    call [902] ; 
+0086966d    local.get [0]
+0086966f    i32.const [0]
+00869671    call [1015] ; String.Format
+00869674    local.set [0]
+00869676    i32.const [3932324]
+0086967b    call [902] ; 
+0086967e    call [903] ; 
+00869681    local.set [1]
+00869683    local.get [1]
+00869685    local.get [0]
+00869687    i32.const [0]
+00869689    i32.const [10659] ; TABLE GameFrameworkException..ctor
+0086968d    global.set [3]
+0086968f    i32.const [10659] ; TABLE GameFrameworkException..ctor
+00869693    call_indirect [2, 0]
+00869696    local.get [1]
+00869698    i32.const [4000276]
+0086969d    call [902] ; 
+008696a0    i32.const [1106]
+008696a3    global.set [3]
+008696a5    i32.const [1106]
+008696a8    call_indirect [0, 0]
+008696ab    unreachable []
+008696ac  end []
+008696ad  local.get [5]
+008696af  i32.const [4]
+008696b1  call [904] ; 
+008696b4  call [903] ; 
+008696b7  local.set [5]
+008696b9  local.get [4]
+008696bb  i32.load [2, 28]
+008696be  i32.load [2, 20]
+008696c1  i32.load [2, 0]
+008696c4  local.get [4]
+008696c6  i32.load [2, 28]
+008696c9  i32.load [2, 20]
+008696cc  local.get [5]
+008696ce  local.get [1]
+008696d0  local.get [2]
+008696d2  local.get [3]
+008696d4  call [1397] ; 
+008696d7  local.get [5]
+008696d9  local.get [4]
+008696db  i32.load [2, 28]
+008696de  i32.load [2, 4]
+008696e1  i32.load [2, 0]
+008696e4  local.get [4]
+008696e6  i32.load [2, 28]
+008696e9  i32.load [2, 4]
+008696ec  i32.const [0]
+008696ee  local.get [1]
+008696f0  call [1014] ; 
+008696f3  i32.store [2, 12]
+008696f6  local.get [0]
+008696f8  i32.load [2, 16]
+008696fb  local.get [5]
+008696fd  i32.load [2, 12]
+00869700  local.get [5]
+00869702  i32.const [3959004]
+00869707  i32.load [2, 0]
+0086970a  call [932] ; 
+0086970d  local.get [0]
+0086970f  i32.load [2, 20]
+00869712  local.get [5]
+00869714  i32.const [3973652]
+00869719  i32.load [2, 0]
+0086971c  call [941] ; 
+0086971f  local.get [5]
+00869721  return []
+00869722  end []

@@ -1,0 +1,24 @@
+{
+  "status": "collection_logic_verified_visual_host_pending",
+  "checks": 516,
+  "source": [
+    "disassembly/Type4057-31241.txt",
+    "disassembly/Type4058-31212.txt",
+    "disassembly/Type4056-31238.txt",
+    "disassembly/Type4053-31227.txt"
+  ],
+  "correction": "Previous request.Mode int was provisional and incorrect. Metadata names callback/addMoneyShow and arrival invocation prove Action Completion and bool UpdateDisplayedValue; ShopUI passes null completion.",
+  "verified": [
+    "Create count5 through100; above100 min(10,6+(amount-100)/50), with unchecked subtraction",
+    "Int32.Parse target label; gold/diamond label equal to current inventory subtracts amount for animation baseline",
+    "Asset paths golditem1001,diamonditem1002,strengthitem1004; other ids null",
+    "Each arrival returns object to pool, increments count, plays target tween, optionally updates label, then completion only at exact total",
+    "Final arrival snaps to end value to correct truncated division remainder; no second inventory grant",
+    "Pool exception occurs before count mutation; invalid label throws"
+  ],
+  "remaining": [
+    "Recover actual gold/diamond/strength prefab assets",
+    "Instantiate original pool and Tween animation with observed .025s spawn cadence,1.1s cleanup wait,.4s scatter,.5s return and target pulse",
+    "Confirm tween generic settings and clean-up scheduler before production connection"
+  ]
+}

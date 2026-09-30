@@ -1,0 +1,47 @@
+; Original class: AudioManager
+; Type3421.k«`X^; wasmcode function 13122; offset=6290179 size=131
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005ffb04  i32.const [5011673]
+005ffb09  i32.load8_u [0, 0]
+005ffb0c  i32.eqz []
+005ffb0d  if [-64]
+005ffb0f    i32.const [4000688]
+005ffb14    call [900] ; 
+005ffb17    i32.const [3936516]
+005ffb1c    call [900] ; 
+005ffb1f    i32.const [3941136]
+005ffb24    call [900] ; 
+005ffb27    i32.const [4045276] ; STRING "AudioListener"
+005ffb2c    call [900] ; 
+005ffb2f    i32.const [5011673]
+005ffb34    i32.const [1]
+005ffb36    i32.store8 [0, 0]
+005ffb39  end []
+005ffb3a  local.get [0]
+005ffb3c  i32.load [2, 8]
+005ffb3f  local.set [1]
+005ffb41  i32.const [3936516]
+005ffb46  i32.load [2, 0]
+005ffb49  call [901] ; 
+005ffb4c  local.get [1]
+005ffb4e  i32.const [0]
+005ffb50  i32.const [0]
+005ffb52  call [940] ; Object.op_Equality
+005ffb55  if [-64]
+005ffb57    i32.const [3941136]
+005ffb5c    i32.load [2, 0]
+005ffb5f    call [901] ; 
+005ffb62    local.get [0]
+005ffb64    i32.const [8]
+005ffb66    i32.add []
+005ffb67    i32.const [0]
+005ffb69    i32.const [4045276] ; STRING "AudioListener"
+005ffb6e    i32.load [2, 0]
+005ffb71    i32.const [0]
+005ffb73    call [4685] ; Utils.NewGameObject
+005ffb76    i32.const [4000688]
+005ffb7b    i32.load [2, 0]
+005ffb7e    call [1094] ; 
+005ffb81    i32.store [2, 0]
+005ffb84  end []
+005ffb85  end []

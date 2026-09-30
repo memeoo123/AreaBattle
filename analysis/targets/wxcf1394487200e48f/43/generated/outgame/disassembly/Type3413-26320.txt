@@ -1,0 +1,104 @@
+; Original class: AudioLoopFadeAction
+; Type3413.F½¶i; wasmcode function 6272; offset=2248497 size=300
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+00224f32  i32.const [5011655]
+00224f37  i32.load8_u [0, 0]
+00224f3a  i32.eqz []
+00224f3b  if [-64]
+00224f3d    i32.const [3948888]
+00224f42    call [900] ; 
+00224f45    i32.const [3948892]
+00224f4a    call [900] ; 
+00224f4d    i32.const [4000628]
+00224f52    call [900] ; 
+00224f55    i32.const [3932308]
+00224f5a    call [900] ; 
+00224f5d    i32.const [3936516]
+00224f62    call [900] ; 
+00224f65    i32.const [4026780] ; METHOD Zz«¦.¯sre¶ª
+00224f6a    call [900] ; 
+00224f6d    i32.const [4026776] ; METHOD Zz«¦.YlQop«
+00224f72    call [900] ; 
+00224f75    i32.const [3944296]
+00224f7a    call [900] ; 
+00224f7d    i32.const [5011655]
+00224f82    i32.const [1]
+00224f84    i32.store8 [0, 0]
+00224f87  end []
+00224f88  i32.const [3944296]
+00224f8d  i32.load [2, 0]
+00224f90  call [903] ; 
+00224f93  local.set [4]
+00224f95  local.get [4]
+00224f97  local.get [1]
+00224f99  i32.store [2, 8]
+00224f9c  local.get [4]
+00224f9e  local.get [3]
+00224fa0  i32.store [2, 12]
+00224fa3  local.get [4]
+00224fa5  local.get [0]
+00224fa7  i32.store [2, 20]
+00224faa  local.get [4]
+00224fac  local.get [2]
+00224fae  i32.store8 [0, 16]
+00224fb1  local.get [4]
+00224fb3  i32.load [2, 8]
+00224fb6  local.set [1]
+00224fb8  i32.const [3936516]
+00224fbd  i32.load [2, 0]
+00224fc0  call [901] ; 
+00224fc3  local.get [1]
+00224fc5  i32.const [0]
+00224fc7  i32.const [0]
+00224fc9  call [946] ; Object.op_Inequality
+00224fcc  if [-64]
+00224fce    i32.const [3948888]
+00224fd3    i32.load [2, 0]
+00224fd6    call [903] ; 
+00224fd9    local.set [1]
+00224fdb    local.get [1]
+00224fdd    local.get [4]
+00224fdf    i32.const [4026780] ; METHOD Zz«¦.¯sre¶ª
+00224fe4    i32.load [2, 0]
+00224fe7    i32.const [0]
+00224fe9    call [8097] ; CompleteHandler..ctor
+00224fec    i32.const [3948892]
+00224ff1    i32.load [2, 0]
+00224ff4    call [903] ; 
+00224ff7    local.set [2]
+00224ff9    local.get [2]
+00224ffb    local.get [4]
+00224ffd    i32.const [4026776] ; METHOD Zz«¦.YlQop«
+00225002    i32.load [2, 0]
+00225005    i32.const [0]
+00225007    call [7893] ; EveryHandle..ctor
+0022500a    local.get [0]
+0022500c    i32.load [2, 72]
+0022500f    if [-64]
+00225011      i32.const [3932308]
+00225016      i32.load [2, 0]
+00225019      call [901] ; 
+0022501c      i32.const [4000628]
+00225021      i32.load [2, 0]
+00225024      call [1051] ; 
+00225027      local.get [0]
+00225029      i32.load [2, 72]
+0022502c      i32.const [0]
+0022502e      call [3796] ; TimeModule.RemoveTime
+00225031    end []
+00225032    i32.const [3932308]
+00225037    i32.load [2, 0]
+0022503a    call [901] ; 
+0022503d    local.get [0]
+0022503f    i32.const [4000628]
+00225044    i32.load [2, 0]
+00225047    call [1051] ; 
+0022504a    local.get [0]
+0022504c    i32.load [2, 52]
+0022504f    local.get [1]
+00225051    local.get [2]
+00225053    i32.const [0]
+00225055    call [7022] ; TimeModule.SetCountDownByMillisecond
+00225058    i32.store [2, 72]
+0022505b  end []
+0022505c  end []

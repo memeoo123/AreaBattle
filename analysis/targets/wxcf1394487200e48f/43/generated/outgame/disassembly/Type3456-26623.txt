@@ -1,0 +1,183 @@
+; Original class: ConfigRead
+; Type3456.£Td; wasmcode function 3647; offset=1147386 size=553
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+001181fd  i32.const [5011814]
+00118202  i32.load8_u [0, 0]
+00118205  i32.eqz []
+00118206  if [-64]
+00118208    i32.const [3928176]
+0011820d    call [900] ; 
+00118210    i32.const [3929208]
+00118215    call [900] ; 
+00118218    i32.const [3929800]
+0011821d    call [900] ; 
+00118220    i32.const [4008648]
+00118225    call [900] ; 
+00118228    i32.const [3926996]
+0011822d    call [900] ; 
+00118230    i32.const [4012520]
+00118235    call [900] ; 
+00118238    i32.const [3939956]
+0011823d    call [900] ; 
+00118240    i32.const [4067936] ; STRING "ResourcesInfo为NULL"
+00118245    call [900] ; 
+00118248    i32.const [4082620] ; STRING "allAssetsOperationHandle  == null"
+0011824d    call [900] ; 
+00118250    i32.const [5011814]
+00118255    i32.const [1]
+00118257    i32.store8 [0, 0]
+0011825a  end []
+0011825b  i32.const [3929800]
+00118260  i32.load [2, 0]
+00118263  call [901] ; 
+00118266  block [-64]
+00118268    i32.const [3929800]
+0011826d    i32.load [2, 0]
+00118270    i32.load [2, 92]
+00118273    i32.load [2, 4]
+00118276    br_if [0]
+00118278    i32.const [3928176]
+0011827d    i32.load [2, 0]
+00118280    call [901] ; 
+00118283    i32.const [5011829]
+00118288    i32.load8_u [0, 0]
+0011828b    i32.eqz []
+0011828c    if [-64]
+0011828e      i32.const [3928176]
+00118293      call [900] ; 
+00118296      i32.const [5011829]
+0011829b      i32.const [1]
+0011829d      i32.store8 [0, 0]
+001182a0    end []
+001182a1    i32.const [3928176]
+001182a6    i32.load [2, 0]
+001182a9    call [901] ; 
+001182ac    i32.const [3928176]
+001182b1    i32.load [2, 0]
+001182b4    i32.load [2, 92]
+001182b7    i32.load8_u [0, 36]
+001182ba    br_if [0]
+001182bc    i32.const [3926996]
+001182c1    i32.load [2, 0]
+001182c4    i32.const [1]
+001182c6    call [909] ; 
+001182c9    local.set [1]
+001182cb    local.get [1]
+001182cd    i32.const [4067936] ; STRING "ResourcesInfo为NULL"
+001182d2    i32.load [2, 0]
+001182d5    call [905] ; 
+001182d8    local.get [1]
+001182da    i32.const [4067936] ; STRING "ResourcesInfo为NULL"
+001182df    i32.load [2, 0]
+001182e2    i32.store [2, 16]
+001182e5    i32.const [3929208]
+001182ea    i32.load [2, 0]
+001182ed    call [901] ; 
+001182f0    local.get [1]
+001182f2    i32.const [0]
+001182f4    i32.const [2087] ; TABLE CLog.Error
+001182f7    global.set [3]
+001182f9    i32.const [2087] ; TABLE CLog.Error
+001182fc    call_indirect [0, 0]
+001182ff  end []
+00118300  i32.const [3929800]
+00118305  i32.load [2, 0]
+00118308  call [901] ; 
+0011830b  i32.const [3929800]
+00118310  i32.load [2, 0]
+00118313  i32.load [2, 92]
+00118316  i32.load8_u [0, 12]
+00118319  local.set [2]
+0011831b  i32.const [3929800]
+00118320  i32.load [2, 0]
+00118323  call [901] ; 
+00118326  i32.const [3929800]
+0011832b  i32.load [2, 0]
+0011832e  i32.load [2, 92]
+00118331  local.set [1]
+00118333  local.get [2]
+00118335  if [-64]
+00118337    local.get [1]
+00118339    i32.load8_u [0, 28]
+0011833c    if [-64]
+0011833e      i32.const [3929800]
+00118343      i32.load [2, 0]
+00118346      call [901] ; 
+00118349      i32.const [3929800]
+0011834e      i32.load [2, 0]
+00118351      i32.load [2, 92]
+00118354      i32.load [2, 8]
+00118357      i32.eqz []
+00118358      if [-64]
+0011835a        i32.const [3926996]
+0011835f        i32.load [2, 0]
+00118362        i32.const [1]
+00118364        call [909] ; 
+00118367        local.set [1]
+00118369        local.get [1]
+0011836b        i32.const [4082620] ; STRING "allAssetsOperationHandle  == null"
+00118370        i32.load [2, 0]
+00118373        call [905] ; 
+00118376        local.get [1]
+00118378        i32.const [4082620] ; STRING "allAssetsOperationHandle  == null"
+0011837d        i32.load [2, 0]
+00118380        i32.store [2, 16]
+00118383        i32.const [3929208]
+00118388        i32.load [2, 0]
+0011838b        call [901] ; 
+0011838e        local.get [1]
+00118390        i32.const [0]
+00118392        i32.const [2087] ; TABLE CLog.Error
+00118395        global.set [3]
+00118397        i32.const [2087] ; TABLE CLog.Error
+0011839a        call_indirect [0, 0]
+0011839d      end []
+0011839e      i32.const [3929800]
+001183a3      i32.load [2, 0]
+001183a6      call [901] ; 
+001183a9      local.get [0]
+001183ab      local.get [0]
+001183ad      i32.const [24504] ; TABLE ConfigRead.GetConfigDataForNewResWebgl
+001183b1      global.set [3]
+001183b3      i32.const [24504] ; TABLE ConfigRead.GetConfigDataForNewResWebgl
+001183b7      call_indirect [1, 0]
+001183ba      i32.const [3939956]
+001183bf      i32.load [2, 0]
+001183c2      call [924] ; 
+001183c5      return []
+001183c6    end []
+001183c7    local.get [0]
+001183c9    i32.const [4008648]
+001183ce    i32.load [2, 0]
+001183d1    i32.const [117469]
+001183d5    global.set [3]
+001183d7    i32.const [117469]
+001183db    call_indirect [1, 0]
+001183de    local.set [0]
+001183e0    local.get [0]
+001183e2    i32.const [0]
+001183e4    i32.const [2681] ; TABLE AssetOperationHandle.get_mainObject
+001183e7    global.set [3]
+001183e9    i32.const [2681] ; TABLE AssetOperationHandle.get_mainObject
+001183ec    call_indirect [1, 0]
+001183ef    i32.const [3939956]
+001183f4    i32.load [2, 0]
+001183f7    call [927] ; 
+001183fa    local.set [1]
+001183fc    local.get [0]
+001183fe    i32.const [0]
+00118400    i32.const [2075] ; TABLE AssetOperationHandle.Release
+00118403    global.set [3]
+00118405    i32.const [2075] ; TABLE AssetOperationHandle.Release
+00118408    call_indirect [0, 0]
+0011840b    local.get [1]
+0011840d    return []
+0011840e  end []
+0011840f  local.get [1]
+00118411  i32.load [2, 4]
+00118414  local.get [0]
+00118416  i32.const [4012520]
+0011841b  i32.load [2, 0]
+0011841e  call [2074] ; 
+00118421  return []
+00118422  end []

@@ -1,0 +1,30 @@
+; Original class: DiceGameControl
+; Type4038.GetPieceOverNum; wasmcode function 19959; offset=8968338 size=73
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0088d893  i32.const [5008735]
+0088d898  i32.load8_u [0, 0]
+0088d89b  i32.eqz []
+0088d89c  if [-64]
+0088d89e    i32.const [3953368]
+0088d8a3    call [900] ; 
+0088d8a6    i32.const [5008735]
+0088d8ab    i32.const [1]
+0088d8ad    i32.store8 [0, 0]
+0088d8b0  end []
+0088d8b1  i32.const [3953368]
+0088d8b6  i32.load [2, 0]
+0088d8b9  call [935] ; 
+0088d8bc  drop []
+0088d8bd  local.get [1]
+0088d8bf  local.get [1]
+0088d8c1  local.get [1]
+0088d8c3  call [6141] ; DiceShopControl.GetItemCount
+0088d8c6  i32.const [3953368]
+0088d8cb  i32.load [2, 0]
+0088d8ce  call [935] ; 
+0088d8d1  local.get [1]
+0088d8d3  local.get [1]
+0088d8d5  call [12538] ; DiceShopControl.GetPieceMaxCount
+0088d8d8  i32.sub []
+0088d8d9  return []
+0088d8da  end []

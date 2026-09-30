@@ -1,0 +1,29 @@
+; Original class: ArenaControl
+; Type4018.IsShowTip; wasmcode function 13233; offset=6346499 size=58
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0060d704  local.get [0]
+0060d706  i32.load [2, 20]
+0060d709  i32.load [2, 20]
+0060d70c  i32.load8_u [0, 9]
+0060d70f  if [-64]
+0060d711    local.get [1]
+0060d713    i32.const [1]
+0060d715    i32.const [0]
+0060d717    call [949] ; GameObject.SetActive
+0060d71a    local.get [0]
+0060d71c    i32.load [2, 20]
+0060d71f    i32.load [2, 20]
+0060d722    i32.const [0]
+0060d724    i32.store8 [0, 9]
+0060d727    return []
+0060d728  end []
+0060d729  local.get [1]
+0060d72b  i32.const [0]
+0060d72d  call [1586] ; GameObject.get_activeSelf
+0060d730  if [-64]
+0060d732    local.get [1]
+0060d734    i32.const [0]
+0060d736    i32.const [0]
+0060d738    call [949] ; GameObject.SetActive
+0060d73b  end []
+0060d73c  end []

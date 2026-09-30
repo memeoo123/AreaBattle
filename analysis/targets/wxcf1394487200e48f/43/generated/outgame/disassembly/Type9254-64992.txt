@@ -1,0 +1,11 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.ReadFileSync; wasmcode1 function 68395; offset=21657388 size=20
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+014a772d  local.get [1]
+014a772f  i32.const [64797] ; TABLE WX_Handler.get_Instance
+014a7733  call_indirect [2, 0]
+014a7736  local.get [1]
+014a7738  local.get [1]
+014a773a  call [18469] ; WX_Handler.ReadFileSync
+014a773e  return []
+014a773f  end []

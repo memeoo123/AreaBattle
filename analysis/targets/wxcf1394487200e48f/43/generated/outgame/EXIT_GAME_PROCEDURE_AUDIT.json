@@ -1,0 +1,50 @@
+{
+  "atUtc": "2026-09-30T05:37:26.133541+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameProcedureExitGame.cs",
+  "sourceMethods": [
+    34113,
+    34114,
+    34115,
+    34116,
+    34117,
+    34118,
+    27464
+  ],
+  "sequence": [
+    "OnInit stores FSM owner after empty base init",
+    "OnEnter original procedure log",
+    "Existing OutgameUserPreferences.OnSave",
+    "Current message dispatcher.SendMessage ExitGame with null args",
+    "OnLeave base log, OnDestroy state event cleanup; no own resource cleanup or state transition"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:37:26.133541+00:00",
+    "scope": "Concrete ProcedureExitGame using recovered UserDataPreferences save and message dispatcher",
+    "checksPassed": 680,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Real disk restart/platform persistence or complete Main teardown/production menu lifecycle",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "cases": [
+    "Serialized preferences reloaded into fresh preferences instance before lifecycle shutdown",
+    "Write/report precede ExitGame; FSM current state already exit in callback",
+    "Write exception keeps current state but prevents exit notification",
+    "SaveDisabled normal early return still permits exit notification"
+  ],
+  "nextSource": {
+    "exitHandlerUsage": 4008012,
+    "metadata": 30618,
+    "class": "MineGameMain",
+    "path": "disassembly/Type3974-30618.txt"
+  },
+  "remaining": [
+    "MineGameMain30618 resource release listener and service graph",
+    "Base state event cleanup",
+    "Real disk/platform transport and end-to-end production runtime"
+  ]
+}

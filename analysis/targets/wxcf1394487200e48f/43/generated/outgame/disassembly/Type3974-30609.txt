@@ -1,0 +1,67 @@
+; Original class: MineGameMain
+; Type3974.]RciRW; wasmcode function 18539; offset=8352282 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f721d  i32.const [5010127]
+007f7222  i32.load8_u [0, 0]
+007f7225  i32.eqz []
+007f7226  if [-64]
+007f7228    i32.const [3927888]
+007f722d    call [900] ; 
+007f7230    i32.const [3989352]
+007f7235    call [900] ; 
+007f7238    i32.const [4000588]
+007f723d    call [900] ; 
+007f7240    i32.const [3932308]
+007f7245    call [900] ; 
+007f7248    i32.const [4008024] ; METHOD MineGameMain.eScR
+007f724d    call [900] ; 
+007f7250    i32.const [4078088] ; STRING "VersionMondule初始化完成"
+007f7255    call [900] ; 
+007f7258    i32.const [5010127]
+007f725d    i32.const [1]
+007f725f    i32.store8 [0, 0]
+007f7262  end []
+007f7263  local.get [0]
+007f7265  i32.const [4078088] ; STRING "VersionMondule初始化完成"
+007f726a  i32.load [2, 0]
+007f726d  local.get [0]
+007f726f  call [2125] ; MineGameMain.O{P^xr
+007f7272  i32.const [3932308]
+007f7277  i32.load [2, 0]
+007f727a  call [901] ; 
+007f727d  i32.const [4000588]
+007f7282  i32.load [2, 0]
+007f7285  call [1051] ; 
+007f7288  local.set [1]
+007f728a  i32.const [3927888]
+007f728f  i32.load [2, 0]
+007f7292  call [903] ; 
+007f7295  local.set [2]
+007f7297  local.get [2]
+007f7299  local.get [0]
+007f729b  i32.const [4008024] ; METHOD MineGameMain.eScR
+007f72a0  i32.load [2, 0]
+007f72a3  i32.const [0]
+007f72a5  call [1002] ; Action..ctor
+007f72a8  i32.const [3989352]
+007f72ad  i32.load [2, 0]
+007f72b0  call [1032] ; 
+007f72b3  local.set [0]
+007f72b5  local.get [1]
+007f72b7  local.get [2]
+007f72b9  i32.store [2, 12]
+007f72bc  local.get [0]
+007f72be  local.set [2]
+007f72c0  local.get [1]
+007f72c2  i32.load [2, 0]
+007f72c5  local.set [0]
+007f72c7  local.get [1]
+007f72c9  local.get [2]
+007f72cb  local.get [0]
+007f72cd  i32.load [2, 232]
+007f72d1  local.get [0]
+007f72d3  i32.load [2, 228]
+007f72d7  global.set [3]
+007f72d9  global.get [3]
+007f72db  call_indirect [2, 0]
+007f72de  end []

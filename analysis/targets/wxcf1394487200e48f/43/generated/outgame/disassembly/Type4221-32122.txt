@@ -1,0 +1,54 @@
+; Original class: EffectCellection
+; Type4221.{sZc; wasmcode function 12446; offset=6026307 size=126
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+005bf446  i32.const [5007185]
+005bf44b  i32.load8_u [0, 0]
+005bf44e  i32.eqz []
+005bf44f  if [-64]
+005bf451    i32.const [3936516]
+005bf456    call [900] ; 
+005bf459    i32.const [5007185]
+005bf45e    i32.const [1]
+005bf460    i32.store8 [0, 0]
+005bf463  end []
+005bf464  local.get [0]
+005bf466  i32.load [2, 8]
+005bf469  i32.const [0]
+005bf46b  call [1505] ; Transform.get_childCount
+005bf46e  local.set [1]
+005bf470  loop [-64]
+005bf472    local.get [1]
+005bf474    i32.const [1]
+005bf476    i32.sub []
+005bf477    local.set [1]
+005bf479    local.get [1]
+005bf47b    i32.const [-1]
+005bf47d    i32.gt_s []
+005bf47e    if [-64]
+005bf480      local.get [0]
+005bf482      i32.load [2, 8]
+005bf485      local.get [1]
+005bf487      i32.const [0]
+005bf489      call [1145] ; Transform.GetChild
+005bf48c      i32.const [0]
+005bf48e      call [943] ; Component.get_gameObject
+005bf491      local.set [2]
+005bf493      i32.const [3936516]
+005bf498      i32.load [2, 0]
+005bf49b      call [901] ; 
+005bf49e      local.get [2]
+005bf4a0      i32.const [0]
+005bf4a2      i32.const [0]
+005bf4a4      call [946] ; Object.op_Inequality
+005bf4a7      i32.eqz []
+005bf4a8      br_if [1]
+005bf4aa      i32.const [3936516]
+005bf4af      i32.load [2, 0]
+005bf4b2      call [901] ; 
+005bf4b5      local.get [2]
+005bf4b7      i32.const [0]
+005bf4b9      call [1165] ; Object.Destroy
+005bf4bc      br [1]
+005bf4be    end []
+005bf4bf  end []
+005bf4c0  end []

@@ -1,0 +1,36 @@
+; Original class: X`nPj
+; Type4507.de~`~YY; wasmcode function 14650; offset=7198298 size=96
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006dd65b  i32.const [5009919]
+006dd660  i32.load8_u [0, 0]
+006dd663  i32.eqz []
+006dd664  if [-64]
+006dd666    i32.const [3928952]
+006dd66b    call [900] ; 
+006dd66e    i32.const [3932388]
+006dd673    call [900] ; 
+006dd676    i32.const [5009919]
+006dd67b    i32.const [1]
+006dd67d    i32.store8 [0, 0]
+006dd680  end []
+006dd681  local.get [1]
+006dd683  i32.load [2, 16]
+006dd686  i32.const [3928952]
+006dd68b  i32.load [2, 0]
+006dd68e  call [920] ; 
+006dd691  i32.load8_u [0, 0]
+006dd694  if [-64]
+006dd696    i32.const [0]
+006dd698    call [1286] ; GameModule.get_Config
+006dd69b    i32.load [2, 260]
+006dd69f    i32.load [2, 28]
+006dd6a2    local.set [0]
+006dd6a4    i32.const [3932388]
+006dd6a9    i32.load [2, 0]
+006dd6ac    call [901] ; 
+006dd6af    local.get [0]
+006dd6b1    i64.const [1]
+006dd6b3    i32.const [0]
+006dd6b5    call [2087] ; GameStatisticsExpansion.AddEventCount
+006dd6b8  end []
+006dd6b9  end []

@@ -1,0 +1,43 @@
+; Original class: LevelControl
+; Type4107.OwsNd; wasmcode function 18900; offset=8518088 size=110
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0081f9c9  i32.const [5008490]
+0081f9ce  i32.load8_u [0, 0]
+0081f9d1  i32.eqz []
+0081f9d2  if [-64]
+0081f9d4    i32.const [4018248]
+0081f9d9    call [900] ; 
+0081f9dc    i32.const [4018264]
+0081f9e1    call [900] ; 
+0081f9e4    i32.const [5008490]
+0081f9e9    i32.const [1]
+0081f9eb    i32.store8 [0, 0]
+0081f9ee  end []
+0081f9ef  i32.const [0]
+0081f9f1  call [1143] ; GameModule.get_UI
+0081f9f4  i32.const [4018264]
+0081f9f9  i32.load [2, 0]
+0081f9fc  call [1877] ; 
+0081f9ff  i32.const [0]
+0081fa01  call [1143] ; GameModule.get_UI
+0081fa04  i32.const [4018248]
+0081fa09  i32.load [2, 0]
+0081fa0c  call [1877] ; 
+0081fa0f  local.get [0]
+0081fa11  i32.const [0]
+0081fa13  i32.store [2, 24]
+0081fa16  local.get [0]
+0081fa18  local.get [0]
+0081fa1a  call [3327] ; LevelControl.InitGameData
+0081fa1d  local.get [0]
+0081fa1f  i32.const [2]
+0081fa21  i32.const [1]
+0081fa23  local.get [0]
+0081fa25  call [1444] ; LevelControl.SetPlaySate
+0081fa28  drop []
+0081fa29  i32.const [0]
+0081fa2b  call [3252] ; TransitionAnima.get_I
+0081fa2e  i32.const [0]
+0081fa30  i32.const [0]
+0081fa32  call [5580] ; TransitionAnima.Show
+0081fa35  end []

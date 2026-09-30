@@ -1,0 +1,24 @@
+; Original class: ServerTimeModule
+; Type4034.GetNowDateTime; wasmcode function 2072; offset=630207 size=60
+; signature={'args': [127, 127], 'returns': [126]}; localGroups=[(1, 126)]
+00099dc2  i32.const [5008710]
+00099dc7  i32.load8_u [0, 0]
+00099dca  i32.eqz []
+00099dcb  if [-64]
+00099dcd    i32.const [3940172]
+00099dd2    call [900] ; 
+00099dd5    i32.const [5008710]
+00099dda    i32.const [1]
+00099ddc    i32.store8 [0, 0]
+00099ddf  end []
+00099de0  local.get [0]
+00099de2  i64.load [3, 16]
+00099de5  local.set [2]
+00099de7  i32.const [3940172]
+00099dec  i32.load [2, 0]
+00099def  call [901] ; 
+00099df2  local.get [2]
+00099df4  i32.const [0]
+00099df6  call [1664] ; TimeHelper.ToDateTime
+00099df9  return []
+00099dfa  end []

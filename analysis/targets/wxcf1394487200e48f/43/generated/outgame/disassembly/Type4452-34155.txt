@@ -1,0 +1,47 @@
+; Original class: ProcedureStarGame
+; Type4452.iTMt; wasmcode1 function 54292; offset=17957340 size=124
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+011201dd  i32.const [5009790]
+011201e2  i32.load8_u [0, 0]
+011201e5  i32.eqz []
+011201e6  if [-64]
+011201e8    i32.const [3953432]
+011201ed    i32.const [1605]
+011201f0    call_indirect [0, 0]
+011201f3    i32.const [4034892] ; STRING " "
+011201f8    i32.const [1605]
+011201fb    call_indirect [0, 0]
+011201fe    i32.const [5009790]
+01120203    i32.const [1]
+01120205    i32.store8 [0, 0]
+01120208  end []
+01120209  local.get [1]
+0112020b  i32.const [4034892] ; STRING " "
+01120210  i32.load [2, 0]
+01120213  i32.const [0]
+01120215  i32.const [0]
+01120217  i32.const [8971] ; TABLE String.Split
+0112021b  call_indirect [8, 0]
+0112021e  local.set [0]
+01120220  local.get [0]
+01120222  i32.load [2, 16]
+01120225  i32.const [0]
+01120227  i32.const [2502] ; TABLE Int32.Parse
+0112022a  call_indirect [1, 0]
+0112022d  local.set [1]
+0112022f  local.get [0]
+01120231  i32.load [2, 20]
+01120234  i32.const [0]
+01120236  i32.const [2502] ; TABLE Int32.Parse
+01120239  call_indirect [1, 0]
+0112023c  local.set [0]
+0112023e  i32.const [3953432]
+01120243  i32.load [2, 0]
+01120246  i32.const [10272]
+0112024a  call_indirect [2, 0]
+0112024d  local.get [1]
+0112024f  local.get [0]
+01120251  i32.const [0]
+01120253  call [2973] ; ItemModuleControl.ChangeItemNum
+01120256  drop []
+01120257  end []

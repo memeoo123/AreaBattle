@@ -1,0 +1,66 @@
+; Original class: }Okqvk
+; Type4561.hyUge; wasmcode function 9906; offset=4760026 size=172
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0048a1db  i32.const [5001167]
+0048a1e0  i32.load8_u [0, 0]
+0048a1e3  i32.eqz []
+0048a1e4  if [-64]
+0048a1e6    i32.const [3954208]
+0048a1eb    call [900] ; 
+0048a1ee    i32.const [3954264]
+0048a1f3    call [900] ; 
+0048a1f6    i32.const [3954216]
+0048a1fb    call [900] ; 
+0048a1fe    i32.const [3973760]
+0048a203    call [900] ; 
+0048a206    i32.const [5001167]
+0048a20b    i32.const [1]
+0048a20d    i32.store8 [0, 0]
+0048a210  end []
+0048a211  block [-64]
+0048a213    local.get [0]
+0048a215    i32.load [2, 12]
+0048a218    local.set [3]
+0048a21a    local.get [3]
+0048a21c    i32.eqz []
+0048a21d    br_if [0]
+0048a21f    local.get [3]
+0048a221    local.get [2]
+0048a223    i32.const [3954208]
+0048a228    i32.load [2, 0]
+0048a22b    call [987] ; 
+0048a22e    i32.eqz []
+0048a22f    br_if [0]
+0048a231    local.get [0]
+0048a233    i32.load [2, 12]
+0048a236    local.get [2]
+0048a238    i32.const [3954216]
+0048a23d    i32.load [2, 0]
+0048a240    call [982] ; 
+0048a243    local.get [1]
+0048a245    i32.const [3973760]
+0048a24a    i32.load [2, 0]
+0048a24d    call [941] ; 
+0048a250    local.get [0]
+0048a252    i32.load [2, 16]
+0048a255    local.get [1]
+0048a257    i32.const [3954264]
+0048a25c    i32.load [2, 0]
+0048a25f    call [1202] ; 
+0048a262    drop []
+0048a263    local.get [1]
+0048a265    i32.const [0]
+0048a267    call [1008] ; GameObject.get_transform
+0048a26a    local.get [0]
+0048a26c    i32.load [2, 8]
+0048a26f    i32.const [0]
+0048a271    call [1008] ; GameObject.get_transform
+0048a274    i32.const [0]
+0048a276    i32.const [0]
+0048a278    call [1686] ; Transform.SetParent
+0048a27b    local.get [1]
+0048a27d    i32.const [0]
+0048a27f    i32.const [0]
+0048a281    call [949] ; GameObject.SetActive
+0048a284  end []
+0048a285  end []

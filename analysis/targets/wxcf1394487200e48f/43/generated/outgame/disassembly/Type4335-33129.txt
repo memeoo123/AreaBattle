@@ -1,0 +1,74 @@
+; Original class: CommanderSkillItem
+; Type4335.SetData; wasmcode function 12854; offset=6184745 size=182
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005e5f2a  global.get [0]
+005e5f2c  i32.const [16]
+005e5f2e  i32.sub []
+005e5f2f  local.set [2]
+005e5f31  local.get [2]
+005e5f33  global.set [0]
+005e5f35  i32.const [5008835]
+005e5f3a  i32.load8_u [0, 0]
+005e5f3d  i32.eqz []
+005e5f3e  if [-64]
+005e5f40    i32.const [3957276]
+005e5f45    call [900] ; 
+005e5f48    i32.const [3934404]
+005e5f4d    call [900] ; 
+005e5f50    i32.const [4066636] ; STRING "PublicIcon"
+005e5f55    call [900] ; 
+005e5f58    i32.const [5008835]
+005e5f5d    i32.const [1]
+005e5f5f    i32.store8 [0, 0]
+005e5f62  end []
+005e5f63  local.get [0]
+005e5f65  local.get [1]
+005e5f67  i32.store [2, 40]
+005e5f6a  local.get [0]
+005e5f6c  local.get [0]
+005e5f6e  call [12855] ; CommanderSkillItem.RefreshData
+005e5f71  local.get [0]
+005e5f73  i32.load [2, 40]
+005e5f76  i32.load [2, 8]
+005e5f79  drop []
+005e5f7a  i32.const [0]
+005e5f7c  call [1060] ; ConfigMgr.get_Instance
+005e5f7f  i32.load [2, 84]
+005e5f82  local.set [1]
+005e5f84  local.get [2]
+005e5f86  local.get [0]
+005e5f88  i32.load [2, 40]
+005e5f8b  i32.load [2, 8]
+005e5f8e  i32.const [2000] ; TABLE FieldDescriptor.CrossLink
+005e5f91  i32.add []
+005e5f92  i32.store [2, 12]
+005e5f95  local.get [1]
+005e5f97  i32.const [3934404]
+005e5f9c  i32.load [2, 0]
+005e5f9f  local.get [2]
+005e5fa1  i32.const [12]
+005e5fa3  i32.add []
+005e5fa4  call [910] ; 
+005e5fa7  i32.const [3957276]
+005e5fac  i32.load [2, 0]
+005e5faf  call [982] ; 
+005e5fb2  local.set [1]
+005e5fb4  local.get [0]
+005e5fb6  i32.load [2, 56]
+005e5fb9  local.get [1]
+005e5fbb  i32.load [2, 28]
+005e5fbe  i32.const [4066636] ; STRING "PublicIcon"
+005e5fc3  i32.load [2, 0]
+005e5fc6  i32.const [0]
+005e5fc8  i32.const [0]
+005e5fca  call [1300] ; UIExtension.SetSprite
+005e5fcd  drop []
+005e5fce  local.get [0]
+005e5fd0  i32.const [0]
+005e5fd2  local.get [0]
+005e5fd4  call [5149] ; CommanderSkillItem.Selected
+005e5fd7  local.get [2]
+005e5fd9  i32.const [16]
+005e5fdb  i32.add []
+005e5fdc  global.set [0]
+005e5fde  end []

@@ -1,0 +1,23 @@
+; Original class: FileManager
+; Type7576.ReadFileSync; wasmcode1 function 62782; offset=20207011 size=50
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+013455a6  local.get [0]
+013455a8  i32.const [8984] ; TABLE BridgeManager.get_xyxFunc
+013455ac  call_indirect [2, 0]
+013455af  local.set [1]
+013455b1  local.get [0]
+013455b3  local.set [2]
+013455b5  local.get [1]
+013455b7  i32.load [2, 0]
+013455ba  i32.const [1144]
+013455bd  i32.add []
+013455be  local.set [0]
+013455c0  local.get [1]
+013455c2  local.get [2]
+013455c4  local.get [0]
+013455c6  i32.load [2, 192]
+013455ca  local.get [0]
+013455cc  i32.load [2, 188]
+013455d0  call_indirect [3, 0]
+013455d3  return []
+013455d4  end []

@@ -1,0 +1,28 @@
+; Original class: Text
+; Type8277.OnEnable; wasmcode function 15622; offset=7523478 size=69
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0072cc97  i32.const [4985218]
+0072cc9c  i32.load8_u [0, 0]
+0072cc9f  i32.eqz []
+0072cca0  if [-64]
+0072cca2    i32.const [3932056]
+0072cca7    call [900] ; 
+0072ccaa    i32.const [4985218]
+0072ccaf    i32.const [1]
+0072ccb1    i32.store8 [0, 0]
+0072ccb4  end []
+0072ccb5  local.get [0]
+0072ccb7  i32.const [0]
+0072ccb9  call [7589] ; MaskableGraphic.OnEnable
+0072ccbc  local.get [0]
+0072ccbe  local.get [0]
+0072ccc0  call [3260] ; Text.get_cachedTextGenerator
+0072ccc3  i32.const [0]
+0072ccc5  i32.store8 [0, 104]
+0072ccc8  i32.const [3932056]
+0072cccd  i32.load [2, 0]
+0072ccd0  call [901] ; 
+0072ccd3  local.get [0]
+0072ccd5  i32.const [0]
+0072ccd7  call [7861] ; FontUpdateTracker.TrackText
+0072ccda  end []

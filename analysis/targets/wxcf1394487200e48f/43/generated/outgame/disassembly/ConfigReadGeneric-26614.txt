@@ -1,0 +1,149 @@
+; Original shared generic: ConfigRead.readConfigVByUnityJson
+; ConfigReadGeneric.readConfigVByUnityJson; wasmcode function 3646; offset=1147009 size=375
+; signature={'args': [127], 'returns': [127]}; localGroups=[(3, 127)]
+00118084  global.get [0]
+00118086  i32.const [16]
+00118088  i32.sub []
+00118089  local.set [2]
+0011808b  local.get [2]
+0011808d  global.set [0]
+0011808f  local.get [0]
+00118091  i32.load [2, 28]
+00118094  i32.eqz []
+00118095  if [-64]
+00118097    i32.const [3929208]
+0011809c    call [900] ; 
+0011809f    i32.const [3929800]
+001180a4    call [900] ; 
+001180a7    i32.const [3926996]
+001180ac    call [900] ; 
+001180af    i32.const [3936516]
+001180b4    call [900] ; 
+001180b7    i32.const [3940520]
+001180bc    call [900] ; 
+001180bf    i32.const [4101324] ; STRING "{"
+001180c4    call [900] ; 
+001180c7    i32.const [4106352] ; STRING "配置文件不存在"
+001180cc    call [900] ; 
+001180cf    local.get [0]
+001180d1    call [954] ; 
+001180d4  end []
+001180d5  local.get [2]
+001180d7  i32.const [0]
+001180d9  i32.store [2, 12]
+001180dc  local.get [0]
+001180de  i32.load [2, 28]
+001180e1  i32.load [2, 0]
+001180e4  local.set [1]
+001180e6  i32.const [3940520]
+001180eb  i32.load [2, 0]
+001180ee  call [901] ; 
+001180f1  local.get [1]
+001180f3  i32.const [0]
+001180f5  call [912] ; Type.GetTypeFromHandle
+001180f8  local.set [1]
+001180fa  local.get [1]
+001180fc  local.set [3]
+001180fe  local.get [1]
+00118100  i32.load [2, 0]
+00118103  i32.const [-64]
+00118105  i32.sub []
+00118106  local.set [1]
+00118108  local.get [3]
+0011810a  local.get [1]
+0011810c  i32.load [2, 192]
+00118110  local.get [1]
+00118112  i32.load [2, 188]
+00118116  global.set [3]
+00118118  global.get [3]
+0011811a  call_indirect [1, 0]
+0011811d  local.set [1]
+0011811f  i32.const [3929800]
+00118124  i32.load [2, 0]
+00118127  call [901] ; 
+0011812a  local.get [1]
+0011812c  i32.const [0]
+0011812e  call [3647] ; ConfigRead.£Td
+00118131  local.set [3]
+00118133  i32.const [3936516]
+00118138  i32.load [2, 0]
+0011813b  call [901] ; 
+0011813e  block [-64]
+00118140    block [-64]
+00118142      local.get [3]
+00118144      i32.const [0]
+00118146      i32.const [0]
+00118148      call [946] ; Object.op_Inequality
+0011814b      if [-64]
+0011814d        local.get [3]
+0011814f        i32.const [0]
+00118151        call [1904] ; TextAsset.get_text
+00118154        local.set [1]
+00118156        local.get [1]
+00118158        local.get [1]
+0011815a        i32.const [4101324] ; STRING "{"
+0011815f        i32.load [2, 0]
+00118162        i32.const [0]
+00118164        call [1822] ; String.IndexOf
+00118167        i32.const [0]
+00118169        call [1225] ; String.Substring
+0011816c        local.set [1]
+0011816e        local.get [0]
+00118170        i32.load [2, 28]
+00118173        i32.load [2, 4]
+00118176        i32.load [2, 0]
+00118179        local.get [0]
+0011817b        i32.load [2, 28]
+0011817e        i32.load [2, 4]
+00118181        i32.const [0]
+00118183        local.get [1]
+00118185        call [1014] ; 
+00118188        local.set [0]
+0011818a        local.get [0]
+0011818c        i32.eqz []
+0011818d        br_if [1]
+0011818f        br [2]
+00118191      end []
+00118192      i32.const [3926996]
+00118197      i32.load [2, 0]
+0011819a      i32.const [1]
+0011819c      call [909] ; 
+0011819f      local.set [0]
+001181a1      i32.const [4106352] ; STRING "配置文件不存在"
+001181a6      i32.load [2, 0]
+001181a9      local.get [1]
+001181ab      i32.const [0]
+001181ad      call [921] ; String.Concat
+001181b0      local.set [1]
+001181b2      local.get [0]
+001181b4      local.get [1]
+001181b6      call [905] ; 
+001181b9      local.get [0]
+001181bb      local.get [1]
+001181bd      i32.store [2, 16]
+001181c0      i32.const [3929208]
+001181c5      i32.load [2, 0]
+001181c8      call [901] ; 
+001181cb      local.get [0]
+001181cd      i32.const [0]
+001181cf      i32.const [2087] ; TABLE CLog.Error
+001181d2      global.set [3]
+001181d4      i32.const [2087] ; TABLE CLog.Error
+001181d7      call_indirect [0, 0]
+001181da    end []
+001181db    local.get [2]
+001181dd    i32.const [12]
+001181df    i32.add []
+001181e0    i32.const [4]
+001181e2    call [919] ; 
+001181e5    local.get [2]
+001181e7    i32.load [2, 12]
+001181ea    local.set [0]
+001181ec  end []
+001181ed  local.get [2]
+001181ef  i32.const [16]
+001181f1  i32.add []
+001181f2  global.set [0]
+001181f4  local.get [0]
+001181f6  return []
+001181f7  end []

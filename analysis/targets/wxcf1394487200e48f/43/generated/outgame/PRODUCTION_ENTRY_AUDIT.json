@@ -1,0 +1,232 @@
+{
+  "status": "production_entry_incomplete",
+  "classification": "Authoritative serialized scene evidence plus conservative textual runtime reference inventory; references alone do not prove construction or execution.",
+  "buildSettingsSha256": "7f84beae987272e3c083caac79ec4269c7380d50bb65abf59dc6721365dfc96d",
+  "scenes": [
+    {
+      "path": "Assets/AreaBattle/Scenes/Battle.unity",
+      "sha256": "c09c94bfaade6bbbcee58a661beac187321e8e0de5a7f872464eb9880bd9f0a5",
+      "scripts": [
+        {
+          "guid": "2ff711ce5fa75a84b864d2412a46195c",
+          "script": "UnityProject\\Assets\\AreaBattle\\Scripts\\BattleView.cs"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "type": "OutgameStartupEntry",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 27,
+          "text": "public sealed class OutgameStartupEntry"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 31,
+          "text": "public OutgameStartupEntry(IOutgameStartupEntryHost host,Action migrate)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 33,
+          "text": "public OutgameStartupEntry(IOutgameStartupEntryHost host,OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameMenuView",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameMenuSceneBinding.cs",
+          "line": 7,
+          "text": "readonly OutgameMenuView menu;"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameMenuSceneBinding.cs",
+          "line": 9,
+          "text": "public OutgameMenuSceneBinding(OutgameMenuView menu,OutgameModelRoots roots)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameMenuView.cs",
+          "line": 8,
+          "text": "public sealed class OutgameMenuView : MonoBehaviour"
+        }
+      ]
+    },
+    {
+      "type": "OutgameMenuSceneBinding",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameMenuSceneBinding.cs",
+          "line": 5,
+          "text": "public sealed class OutgameMenuSceneBinding : IDisposable"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameMenuSceneBinding.cs",
+          "line": 9,
+          "text": "public OutgameMenuSceneBinding(OutgameMenuView menu,OutgameModelRoots roots)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameLocalDataManager",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameDataSaveRegistry.cs",
+          "line": 42,
+          "text": "public static void Apply(OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameLocalDataManager.cs",
+          "line": 4,
+          "text": "public sealed class OutgameLocalDataManager:IOutgameDataManager"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameLocalDataManager.cs",
+          "line": 11,
+          "text": "readonly Action<OutgameLocalDataManager,string> registerSaveData;"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameLocalDataManager.cs",
+          "line": 17,
+          "text": "public OutgameLocalDataManager(OutgameProfile profile,string skills,string products,Func<DateTime> now,OutgameDataManagerStorage storage,IOutgameDataStorageHost host,Action<string> requestDownload,Action<OutgameLocalDataManager,string> registerSaveData)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 33,
+          "text": "public OutgameStartupEntry(IOutgameStartupEntryHost host,OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameCommanderManager",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameCommanderManager.cs",
+          "line": 7,
+          "text": "public sealed class OutgameCommanderManager:IOutgameDataManager"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameCommanderManager.cs",
+          "line": 19,
+          "text": "public OutgameCommanderManager(OutgameProfile profile,string configs,OutgameDataManagerStorage storage,IOutgameDataStorageHost host,Action<string> requestDownload)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameDataSaveRegistry.cs",
+          "line": 42,
+          "text": "public static void Apply(OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 33,
+          "text": "public OutgameStartupEntry(IOutgameStartupEntryHost host,OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameSkinManager",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameDataSaveRegistry.cs",
+          "line": 42,
+          "text": "public static void Apply(OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSkinManager.cs",
+          "line": 4,
+          "text": "public sealed class OutgameSkinManager:IOutgameDataManager"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSkinManager.cs",
+          "line": 11,
+          "text": "readonly Action<OutgameSkinManager> setInstance;"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSkinManager.cs",
+          "line": 16,
+          "text": "public OutgameSkinManager(OutgameProfile profile,string soldiers,string scenes,OutgameDataManagerStorage storage,IOutgameDataStorageHost host,Action<string> requestDownload,Action<OutgameSkinManager> setInstance)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameStartupEntry.cs",
+          "line": 33,
+          "text": "public OutgameStartupEntry(IOutgameStartupEntryHost host,OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameSdkFunctionInitialization",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSdkFunctionInitialization.cs",
+          "line": 15,
+          "text": "public static class OutgameSdkFunctionInitialization"
+        }
+      ]
+    },
+    {
+      "type": "OutgameSdkFunctionActions",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSdkFunctionActions.cs",
+          "line": 19,
+          "text": "public sealed class OutgameSdkFunctionActions:IOutgameSdkFunctionActions"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameSdkFunctionActions.cs",
+          "line": 25,
+          "text": "public OutgameSdkFunctionActions(IOutgameSdkActionManagers managers,Func<bool> closeAdsTips,Func<int,bool,bool> isOpen,Func<string,string> language)"
+        }
+      ]
+    },
+    {
+      "type": "OutgameXyxVideoBridge",
+      "runtimeSourceMentions": [
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameXyxVideoBridge.cs",
+          "line": 5,
+          "text": "public sealed class OutgameXyxVideoBridge"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameXyxVideoBridge.cs",
+          "line": 10,
+          "text": "public OutgameXyxVideoBridge(Func<bool> isReady,Action<Action<bool>> show,Action<string> warning,Action<string> afterVideo)"
+        },
+        {
+          "path": "UnityProject\\Assets\\AreaBattle\\Scripts\\OutgameXyxVideoBridge.cs",
+          "line": 13,
+          "text": "public OutgameXyxVideoBridge(OutgameAdModuleEntry wxEntry,Action<string> warning,Action<string> afterVideo)"
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "production-entry",
+      "state": "missing",
+      "evidence": "Only configured scene is Battle; entry component references recorded above. No recovered outgame startup owner composed in current runtime."
+    },
+    {
+      "id": "account-data-owner",
+      "state": "incomplete",
+      "next": "Recover and compose source procedure/login/data lifecycle without inferring authenticated success from local profile."
+    },
+    {
+      "id": "menu-lifecycle",
+      "state": "incomplete",
+      "next": "Create and bind original pages before activation; connect source scene-complete/main-page lifecycle."
+    },
+    {
+      "id": "return-to-lobby",
+      "state": "incomplete",
+      "next": "Bind battle completion to original outgame lifecycle and persistence; preserve existing standalone battle mode."
+    },
+    {
+      "id": "player-build-e2e",
+      "state": "not-proven",
+      "next": "Build and run actual production entry after composition; current isolated mechanical/PlayMode checks are insufficient."
+    }
+  ],
+  "priority": "Complete original startup owner and menu/data composition before extending optional platform API coverage."
+}

@@ -1,0 +1,38 @@
+; Original class: ResourcesModule
+; Type3832.CreateLoader; wasmcode function 17744; offset=7863535 size=92
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0077fcf0  i32.const [4988236]
+0077fcf5  i32.load8_u [0, 0]
+0077fcf8  i32.eqz []
+0077fcf9  if [-64]
+0077fcfb    i32.const [3928360]
+0077fd00    call [900] ; 
+0077fd03    i32.const [3938408]
+0077fd08    call [900] ; 
+0077fd0b    i32.const [4988236]
+0077fd10    i32.const [1]
+0077fd12    i32.store8 [0, 0]
+0077fd15  end []
+0077fd16  local.get [1]
+0077fd18  i32.eqz []
+0077fd19  if [-64]
+0077fd1b    i32.const [3938408]
+0077fd20    i32.load [2, 0]
+0077fd23    call [903] ; 
+0077fd26    local.set [0]
+0077fd28    local.get [0]
+0077fd2a    local.get [0]
+0077fd2c    call [10547] ; SceneLoader..ctor
+0077fd2f    local.get [0]
+0077fd31    return []
+0077fd32  end []
+0077fd33  i32.const [3928360]
+0077fd38  i32.load [2, 0]
+0077fd3b  call [903] ; 
+0077fd3e  local.set [0]
+0077fd40  local.get [0]
+0077fd42  i32.const [0]
+0077fd44  call [13164] ; AssetResLoader..ctor
+0077fd47  local.get [0]
+0077fd49  return []
+0077fd4a  end []

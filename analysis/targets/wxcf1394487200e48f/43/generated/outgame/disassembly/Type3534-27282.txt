@@ -1,0 +1,12 @@
+; Original class: TimeModule
+; Type3534.CheckTime; wasmcode function 10096; offset=4836437 size=19
+; signature={'args': [127, 126, 125, 127], 'returns': []}; localGroups=[]
+0049cc56  local.get [0]
+0049cc58  local.get [2]
+0049cc5a  f64.promote_f32 []
+0049cc5b  f64.store [3, 48]
+0049cc5e  local.get [0]
+0049cc60  local.get [1]
+0049cc62  local.get [0]
+0049cc64  call [10094] ; TimeModule.Check
+0049cc67  end []

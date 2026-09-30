@@ -1,0 +1,56 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.xbQn; wasmcode function 11003; offset=5325926 size=143
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00514467  i32.const [5007499]
+0051446c  i32.load8_u [0, 0]
+0051446f  i32.eqz []
+00514470  if [-64]
+00514472    i32.const [3953368]
+00514477    call [900] ; 
+0051447a    i32.const [3953360]
+0051447f    call [900] ; 
+00514482    i32.const [3934404]
+00514487    call [900] ; 
+0051448a    i32.const [5007499]
+0051448f    i32.const [1]
+00514491    i32.store8 [0, 0]
+00514494  end []
+00514495  block [-64]
+00514497    local.get [1]
+00514499    i32.load [2, 16]
+0051449c    i32.const [3934404]
+005144a1    i32.load [2, 0]
+005144a4    call [920] ; 
+005144a7    i32.load [2, 0]
+005144aa    i32.const [2]
+005144ac    i32.ne []
+005144ad    br_if [0]
+005144af    local.get [0]
+005144b1    i32.load [2, 144]
+005144b5    local.set [0]
+005144b7    local.get [0]
+005144b9    i32.eqz []
+005144ba    br_if [0]
+005144bc    i32.const [3953360]
+005144c1    i32.load [2, 0]
+005144c4    call [935] ; 
+005144c7    i32.load [2, 16]
+005144ca    i32.load [2, 20]
+005144cd    i32.load8_u [0, 24]
+005144d0    if [-64]
+005144d2      i32.const [1]
+005144d4      local.set [1]
+005144d6    else []
+005144d7      i32.const [3953368]
+005144dc      i32.load [2, 0]
+005144df      call [935] ; 
+005144e2      i32.const [0]
+005144e4      call [7971] ; DiceShopControl.IsHaveAnyRed
+005144e7      local.set [1]
+005144e9    end []
+005144ea    local.get [0]
+005144ec    local.get [1]
+005144ee    i32.const [0]
+005144f0    call [949] ; GameObject.SetActive
+005144f3  end []
+005144f4  end []

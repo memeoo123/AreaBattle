@@ -1,0 +1,114 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "mode": "static-only; no original target execution; no C# changes; no Unity run",
+  "skill2VictoryClear": {
+    "conclusion": "The traced Victory8 -> LoadPrefabControl.ClearModelEntityCache path does not recycle already emitted Skill2 clones. This is established by distinct owning objects and actual hierarchy, not pool naming.",
+    "chain": [
+      {
+        "file": "generated/combat-retry-disassembly/LevelControl-100664774.txt",
+        "offset": "0037a14c /0037a407..0037a414",
+        "fact": "br_table maps state8 to branch after0037a406; calls LoadPrefabControl.ClearModelEntityCache."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/LoadPrefabControl-31563.txt",
+        "offset": "00162bfc..00162d3e",
+        "fact": "Iterates receiver+24 dictionary keys, selects unsigned range1000<=id<7000 or ids9033/9034."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/LoadPrefabControl-31563.txt",
+        "offset": "00162d40..00162df3 /00162e46..00162f21 /001630e1..00163102",
+        "fact": "Fetches corresponding Transform from+24, obtains gameObject, Object.Destroy; clears/removes associated+20 cache and removes selected+24 keys. No read of SkillControl or NormalPool."
+      },
+      {
+        "file": "generated/combat-retry-disassembly/LoadPrefabControl-100664813.txt",
+        "offset": "005620ee..005621bf",
+        "fact": "GetEntityRoot creates root from EntityAssetName keyed by integer id, parents under loader+12, and registers Transform in loader+24."
+      },
+      {
+        "file": "generated/combat-disassembly/SkillControl-100665089.txt",
+        "offset": "0074d90c..0074d93f",
+        "fact": "If SkillControl+8 absent, new NormalPool and CreateObjectPool(name,300,10,null,false). Separate reference from loader entity-root dictionaries."
+      },
+      {
+        "file": "generated/combat-presentation-disassembly/Type4170-100665110.txt",
+        "offset": "003f5cd7..003f5ce7",
+        "fact": "Skill2 constructor copies SkillControl+8 to its field48."
+      },
+      {
+        "file": "generated/combat-presentation-disassembly/Type4169-100665118.txt",
+        "offset": "00707819..0070786b",
+        "fact": "Already-emitted fireball obtained from this pool48 with string effect/scene/Hdzd_Effect_Wy_Fire and callback."
+      },
+      {
+        "file": "generated/combat-presentation-disassembly/Type4167-100665113.txt",
+        "offset": "006b4b56..006b4b67",
+        "fact": "Callback reparents emitted clone to captured SkillItem transform (UI items1), not LoadPrefabControl entity root. No registration into loader integer dictionaries."
+      },
+      {
+        "file": "generated/combat-disassembly/SkillControl-100665099.txt",
+        "offset": "01014379..01014380",
+        "fact": "SkillControl.OnDispose explicitly destroys its pool8; OnGamePlayState has no such call. This lifecycle is distinct from Victory model-cache cleanup."
+      }
+    ],
+    "boundary": "This proves exclusion from this specific model-cache cleanup path. It does not claim that application shutdown, controller disposal or destroying the SkillUI hierarchy preserves clones. Ordinary same-level Again10 and local Skill2.Reset were separately traced."
+  },
+  "skill18LateLoad": {
+    "conclusion": "No cancellation linkage exists in the traced skill Reset/SkillControl/ResLoadHelper->ResourcesModule enqueue path. If the queued successful callback is delivered after Reset, it can recreate inactive ground or indicator objects. Exact global resource shutdown/failure delivery and original runtime completion timing are outside the proved path.",
+    "enqueue": [
+      {
+        "file": "generated/combat-presentation-disassembly/Type4205-100665242.txt",
+        "offset": "006dd52d..006dd582",
+        "fact": "Execute creates ground631 callback closure referencing skill, passes it to ResLoadHelper.LoadAsset, then drops returned loader handle."
+      },
+      {
+        "file": "generated/combat-presentation-disassembly/Type4205-100665241.txt",
+        "offset": "006dd181..006dd1d6",
+        "fact": "DragBegin similarly requests633 indicator and drops loader handle."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/ResLoadHelper-26217.txt",
+        "offset": "000aa070..000aa095",
+        "fact": "Checks old-resource-loader selection and forwards path/callback/userData; no token or skill epoch."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/ResourcesModule-29886.txt",
+        "offset": "00197089..00197093",
+        "fact": "Thin LoadAsset wrapper forwards to _LoadAsset."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/ResourcesModule-29887.txt",
+        "offset": "002be2c4..002be2e2",
+        "fact": "Lowercases path, appends.unity3d, forwards callback and userData to Load."
+      },
+      {
+        "file": "generated/combat-async-owner-disassembly/ResourcesModule-29889.txt",
+        "offset": "004f2c87..004f2ce7",
+        "fact": "Creates loader, Delegate.Combine(callback) into loader+12, stores userData+8, marks resource module pending32 and enqueues loader into module+40. Returns loader, which Skill18 discarded."
+      }
+    ],
+    "reset": {
+      "file": "generated/combat-presentation-disassembly/Type4205-100665243.txt",
+      "offset": "006dcbbd..006dcd02",
+      "fact": "Clears active/time/timers; hides current ground68; UnSpawn current bottle72; stops audio handle; destroys current indicator100 and ground68 then nulls both. No loader reference/callback unsubscribe/epoch increment/cancellation API."
+    },
+    "lateGroundCallback": {
+      "file": "generated/combat-presentation-disassembly/Type4203-100665249.txt",
+      "offset": "00645cff..00645e32",
+      "fact": "Reads asset631 from callback bundle and instantiates; unconditionally overwrites skill+68, immediately SetActive(false); reads current skill.position88/92/96 and current duration32 for particle7/(duration-1). It does not check active16, result state, reset generation or previous68 before replacement. A delivered callback after Reset recreates an inactive current ground, not automatically a visible poison zone."
+    },
+    "lateIndicatorCallback": {
+      "file": "generated/combat-presentation-disassembly/Type4205-100665245.txt",
+      "offset": "006dc289..006dc387",
+      "fact": "If current indicator100 is Unity-null, instantiates633, stores100, scale.25, SetActive(false). Reset makes this condition true; no active/drag-generation check. If a newer valid indicator exists, old callback does not replace it."
+    },
+    "notClaimed": [
+      "No artificial cancellation behavior has been added.",
+      "No forced fault, automatic poison-zone activation, orphan cleanup or hidden effect at origin has been invented.",
+      "Resource-loader mode, cache hit timing, download failure and globally disposing ResourcesModule can change whether/when the callback is delivered. These were not reconstructed as deterministic replay timing.",
+      "Bottle NormalPool async spawn is a separate late-load path; this audit is ground/indicator ResLoadHelper callbacks only."
+    ]
+  }
+}

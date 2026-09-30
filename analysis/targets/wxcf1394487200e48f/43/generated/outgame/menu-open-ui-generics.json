@@ -1,0 +1,127 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 4000572,
+      "encodedUsage": "0xc000bf8b",
+      "methodSpecIndex": 24517,
+      "methodSpecAddress": 777212,
+      "methodSpec": [
+        32617,
+        -1,
+        5489
+      ],
+      "declaringType": "GameDefine",
+      "method": "ShowUI",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4307,
+            "name": "CommanderUI"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4000576,
+      "encodedUsage": "0xc000bf8d",
+      "methodSpecIndex": 24518,
+      "methodSpecAddress": 777224,
+      "methodSpec": [
+        32617,
+        -1,
+        5490
+      ],
+      "declaringType": "GameDefine",
+      "method": "ShowUI",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4399,
+            "name": "Proj_xqzdStartUI"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4000584,
+      "encodedUsage": "0xc000bf91",
+      "methodSpecIndex": 24520,
+      "methodSpecAddress": 777248,
+      "methodSpec": [
+        32617,
+        -1,
+        5492
+      ],
+      "declaringType": "GameDefine",
+      "method": "ShowUI",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4408,
+            "name": "ShopUI"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4018436,
+      "encodedUsage": "0xc000cb25",
+      "methodSpecIndex": 26002,
+      "methodSpecAddress": 795032,
+      "methodSpec": [
+        27397,
+        -1,
+        6084
+      ],
+      "declaringType": "UIModule",
+      "method": "Show",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4370,
+            "name": "ItemInfoUI"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

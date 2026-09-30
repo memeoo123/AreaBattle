@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.FeedbackFunction; wasmcode1 function 66254; offset=21042610 size=54
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014115b3  i32.const [4988625]
+014115b8  i32.load8_u [0, 0]
+014115bb  i32.eqz []
+014115bc  if [-64]
+014115be    i32.const [3928180]
+014115c3    i32.const [1605]
+014115c6    call_indirect [0, 0]
+014115c9    i32.const [4988625]
+014115ce    i32.const [1]
+014115d0    i32.store8 [0, 0]
+014115d3  end []
+014115d4  i32.const [3928180]
+014115d9  i32.load [2, 0]
+014115dc  i32.load [2, 92]
+014115df  i32.load [2, 0]
+014115e2  i32.const [0]
+014115e4  call [9088] ; AppUserManager.ShowFeedback
+014115e7  end []

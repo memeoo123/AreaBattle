@@ -1,0 +1,160 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3959064,
+      "encodedUsage": "0xc0008217",
+      "methodSpecIndex": 16651,
+      "methodSpecAddress": 682820,
+      "methodSpec": [
+        10512,
+        977,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3959068,
+      "encodedUsage": "0xc0008219",
+      "methodSpecIndex": 16652,
+      "methodSpecAddress": 682832,
+      "methodSpec": [
+        10516,
+        977,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Clear",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 4003788,
+      "encodedUsage": "0xc000c1b7",
+      "methodSpecIndex": 24795,
+      "methodSpecAddress": 780548,
+      "methodSpec": [
+        71878,
+        -1,
+        5563
+      ],
+      "declaringType": "JsonMapper",
+      "method": "ToObject",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x150000",
+            "data": 3759868,
+            "name": null
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3973744,
+      "encodedUsage": "0xc0009d15",
+      "methodSpecIndex": 20106,
+      "methodSpecAddress": 724280,
+      "methodSpec": [
+        10674,
+        3077,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 3792,
+            "name": "GameDataVer"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3973804,
+      "encodedUsage": "0xc0009d33",
+      "methodSpecIndex": 20121,
+      "methodSpecAddress": 724460,
+      "methodSpec": [
+        10662,
+        3078,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "Clear",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 3797,
+            "name": "GameReportDataVer"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

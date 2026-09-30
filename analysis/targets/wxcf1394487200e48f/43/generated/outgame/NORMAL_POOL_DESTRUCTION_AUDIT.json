@@ -1,0 +1,29 @@
+{
+  "status": "destruction_contract_implemented_provider_integration_pending",
+  "source": [
+    "disassembly/Type3667-28679.txt",
+    "normal-pool-destroy-generics.json",
+    "disassembly/Type3664-28674.txt",
+    "disassembly/Type3595-27679.txt"
+  ],
+  "verified": [
+    "Request registered pool destruction if manager exists before root destruction",
+    "Unity-live root destroyed before loader-flag branch",
+    "New loader: iterate handle dictionary values, Release each, then UnloadUnusedAssets",
+    "Only old ResourcesInfo dictionary cleared at successful method end; new handles retained",
+    "Repeated destruction repeats retained-handle release; release exceptions stop before unused cleanup"
+  ],
+  "staticOnly": [
+    "Old branch calls ResourcesModule.UnloadUnusedBundle for each cached info",
+    "Pooled ReleaseUIForm delegates GlobalUnityEngineAPI.Destroy; helper checks Unity inequality before Object.Destroy"
+  ],
+  "remaining": [
+    "Concrete pool manager lookup/removal and original provider integration",
+    "Native handle lifetime and unused asset operation",
+    "Legacy backend dynamic validation",
+    "Production page/account composition and full build/E2E"
+  ],
+  "checks": 529,
+  "playmodeChecks": 8,
+  "dynamicScope": "New destruction order uses instrumented dependencies;8 Play Mode checks rerun existing coin flow, not destruction"
+}

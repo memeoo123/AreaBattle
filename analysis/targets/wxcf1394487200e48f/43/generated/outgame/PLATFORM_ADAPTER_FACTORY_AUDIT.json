@@ -1,0 +1,45 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "source": [
+    "disassembly/Type9202-64479.txt",
+    "disassembly/Type9240-64778.txt",
+    "disassembly/Type9254-64922.txt"
+  ],
+  "firstDayField": {
+    "declaringType": 9202,
+    "staticOffset": 4,
+    "name": "firstDayNoAd"
+  },
+  "normalization": "platformId<10001 ? platformId : platformId/100",
+  "sourceAddresses": {
+    "firstDayGate": "006338b8",
+    "normalization": "006338c8",
+    "video": "006339d8",
+    "managerModuleCache": "0045fe5d"
+  },
+  "mapping": {
+    "BANNER": {
+      "424": "WxCpsBanner",
+      "484": "WxGridBanner",
+      "883": "WxBanner"
+    },
+    "contains INTERSTITAL": {
+      "424": "CpsInters",
+      "425": "ApiInters",
+      "883": "WxInters"
+    },
+    "VIDEO": {
+      "883": "WxVideo"
+    },
+    "NATIVE/NATIVE_BIG/NATIVE_START/NATIVE_OVER/NATIVE_SPLASH": {
+      "883": "WxNative"
+    }
+  },
+  "checks": 476,
+  "productionConnected": false,
+  "remaining": [
+    "Nonvideo adapter constructor implementations",
+    "Production SDK runtime",
+    "Full configuration acquisition and startup binding"
+  ]
+}

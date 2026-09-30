@@ -1,0 +1,75 @@
+; Original class: LoginCtrl
+; Type4244.InitUserNetModule; wasmcode function 11476; offset=5630629 size=218
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0055eaa8  i32.const [5007330]
+0055eaad  i32.load8_u [0, 0]
+0055eab0  i32.eqz []
+0055eab1  if [-64]
+0055eab3    i32.const [3929208]
+0055eab8    call [900] ; 
+0055eabb    i32.const [3953608]
+0055eac0    call [900] ; 
+0055eac3    i32.const [3926996]
+0055eac8    call [900] ; 
+0055eacb    i32.const [4040464] ; STRING "/mini-data"
+0055ead0    call [900] ; 
+0055ead3    i32.const [4034536] ; STRING ""
+0055ead8    call [900] ; 
+0055eadb    i32.const [4061236] ; STRING "Login:InitUserNetModule"
+0055eae0    call [900] ; 
+0055eae3    i32.const [5007330]
+0055eae8    i32.const [1]
+0055eaea    i32.store8 [0, 0]
+0055eaed  end []
+0055eaee  i32.const [3926996]
+0055eaf3  i32.load [2, 0]
+0055eaf6  i32.const [1]
+0055eaf8  call [909] ; 
+0055eafb  local.set [1]
+0055eafd  local.get [1]
+0055eaff  i32.const [4061236] ; STRING "Login:InitUserNetModule"
+0055eb04  i32.load [2, 0]
+0055eb07  call [905] ; 
+0055eb0a  local.get [1]
+0055eb0c  i32.const [4061236] ; STRING "Login:InitUserNetModule"
+0055eb11  i32.load [2, 0]
+0055eb14  i32.store [2, 16]
+0055eb17  i32.const [3929208]
+0055eb1c  i32.load [2, 0]
+0055eb1f  call [901] ; 
+0055eb22  local.get [1]
+0055eb24  i32.const [0]
+0055eb26  call [1156] ; CLog.Warning
+0055eb29  i32.const [0]
+0055eb2b  call [7519] ; NetTool.get_BaseURL
+0055eb2e  i32.const [4040464] ; STRING "/mini-data"
+0055eb33  i32.load [2, 0]
+0055eb36  i32.const [0]
+0055eb38  call [921] ; String.Concat
+0055eb3b  local.set [2]
+0055eb3d  local.get [0]
+0055eb3f  i32.load [2, 0]
+0055eb42  i32.const [-64]
+0055eb44  i32.sub []
+0055eb45  local.set [1]
+0055eb47  local.get [0]
+0055eb49  local.get [2]
+0055eb4b  i32.const [4034536] ; STRING ""
+0055eb50  i32.load [2, 0]
+0055eb53  local.get [1]
+0055eb55  i32.load [2, 192]
+0055eb59  local.get [1]
+0055eb5b  i32.load [2, 188]
+0055eb5f  global.set [3]
+0055eb61  global.get [3]
+0055eb63  call_indirect [7, 0]
+0055eb66  i32.const [3953608]
+0055eb6b  i32.load [2, 0]
+0055eb6e  call [935] ; 
+0055eb71  i32.const [1]
+0055eb73  i32.store8 [0, 8]
+0055eb76  local.get [0]
+0055eb78  i32.const [0]
+0055eb7a  call [7600] ; LoginProcedureBase.CheckServerConnection
+0055eb7d  drop []
+0055eb7e  end []

@@ -1,0 +1,255 @@
+; Original class: AtlasLoader
+; Type2923.µ¤¬g¯; wasmcode function 8234; offset=3910387 size=716
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+003baaf6  global.get [0]
+003baaf8  i32.const [16]
+003baafa  i32.sub []
+003baafb  local.set [3]
+003baafd  local.get [3]
+003baaff  global.set [0]
+003bab01  i32.const [4989484]
+003bab06  i32.load8_u [0, 0]
+003bab09  i32.eqz []
+003bab0a  if [-64]
+003bab0c    i32.const [3928344]
+003bab11    call [900] ; 
+003bab14    i32.const [3989928]
+003bab19    call [900] ; 
+003bab1c    i32.const [3929208]
+003bab21    call [900] ; 
+003bab24    i32.const [3958596]
+003bab29    call [900] ; 
+003bab2c    i32.const [3958600]
+003bab31    call [900] ; 
+003bab34    i32.const [3926996]
+003bab39    call [900] ; 
+003bab3c    i32.const [3936516]
+003bab41    call [900] ; 
+003bab44    i32.const [3938048]
+003bab49    call [900] ; 
+003bab4c    i32.const [3927212]
+003bab51    call [900] ; 
+003bab54    i32.const [4103544] ; STRING "图集资源加载失败："
+003bab59    call [900] ; 
+003bab5c    i32.const [4081052] ; STRING "],bundle["
+003bab61    call [900] ; 
+003bab64    i32.const [4103548] ; STRING "图集资源包未加载："
+003bab69    call [900] ; 
+003bab6c    i32.const [4105888] ; STRING "触发图集firstpackLoad:["
+003bab71    call [900] ; 
+003bab74    i32.const [4039420] ; STRING ",AtlasName["
+003bab79    call [900] ; 
+003bab7c    i32.const [4081092] ; STRING "]]"
+003bab81    call [900] ; 
+003bab84    i32.const [4989484]
+003bab89    i32.const [1]
+003bab8b    i32.store8 [0, 0]
+003bab8e  end []
+003bab8f  local.get [3]
+003bab91  i32.const [0]
+003bab93  i32.store [2, 12]
+003bab96  local.get [3]
+003bab98  i32.const [0]
+003bab9a  i32.store [2, 8]
+003bab9d  i32.const [3938048]
+003baba2  i32.load [2, 0]
+003baba5  call [901] ; 
+003baba8  block [-64]
+003babaa    i32.const [3938048]
+003babaf    i32.load [2, 0]
+003babb2    i32.load [2, 92]
+003babb5    i32.load [2, 0]
+003babb8    local.get [1]
+003babba    i32.const [3958596]
+003babbf    i32.load [2, 0]
+003babc2    call [987] ; 
+003babc5    if [-64]
+003babc7      i32.const [3938048]
+003babcc      i32.load [2, 0]
+003babcf      call [901] ; 
+003babd2      i32.const [3938048]
+003babd7      i32.load [2, 0]
+003babda      i32.load [2, 92]
+003babdd      i32.load [2, 0]
+003babe0      local.get [1]
+003babe2      i32.const [3958600]
+003babe7      i32.load [2, 0]
+003babea      call [982] ; 
+003babed      local.set [4]
+003babef      i32.const [3929208]
+003babf4      i32.load [2, 0]
+003babf7      call [901] ; 
+003babfa      i32.const [3929208]
+003babff      i32.load [2, 0]
+003bac02      i32.load [2, 92]
+003bac05      i32.load8_u [0, 0]
+003bac08      if [-64]
+003bac0a        i32.const [3927212]
+003bac0f        i32.load [2, 0]
+003bac12        i32.const [7]
+003bac14        call [909] ; 
+003bac17        local.set [0]
+003bac19        local.get [0]
+003bac1b        i32.const [4105888] ; STRING "触发图集firstpackLoad:["
+003bac20        i32.load [2, 0]
+003bac23        call [905] ; 
+003bac26        local.get [0]
+003bac28        i32.const [4105888] ; STRING "触发图集firstpackLoad:["
+003bac2d        i32.load [2, 0]
+003bac30        i32.store [2, 16]
+003bac33        local.get [0]
+003bac35        local.get [1]
+003bac37        call [905] ; 
+003bac3a        local.get [0]
+003bac3c        local.get [1]
+003bac3e        i32.store [2, 20]
+003bac41        local.get [0]
+003bac43        i32.const [4081052] ; STRING "],bundle["
+003bac48        i32.load [2, 0]
+003bac4b        call [905] ; 
+003bac4e        local.get [0]
+003bac50        i32.const [4081052] ; STRING "],bundle["
+003bac55        i32.load [2, 0]
+003bac58        i32.store [2, 24]
+003bac5b        local.get [4]
+003bac5d        i32.const [0]
+003bac5f        call [1115] ; Object.get_name
+003bac62        local.set [1]
+003bac64        local.get [0]
+003bac66        local.get [1]
+003bac68        call [905] ; 
+003bac6b        local.get [0]
+003bac6d        local.get [1]
+003bac6f        i32.store [2, 28]
+003bac72        local.get [0]
+003bac74        i32.const [4039420] ; STRING ",AtlasName["
+003bac79        i32.load [2, 0]
+003bac7c        call [905] ; 
+003bac7f        local.get [0]
+003bac81        i32.const [4039420] ; STRING ",AtlasName["
+003bac86        i32.load [2, 0]
+003bac89        i32.store [2, 32]
+003bac8c        local.get [0]
+003bac8e        local.get [2]
+003bac90        call [905] ; 
+003bac93        local.get [0]
+003bac95        local.get [2]
+003bac97        i32.store [2, 36]
+003bac9a        local.get [0]
+003bac9c        i32.const [4081092] ; STRING "]]"
+003baca1        i32.load [2, 0]
+003baca4        call [905] ; 
+003baca7        local.get [0]
+003baca9        i32.const [4081092] ; STRING "]]"
+003bacae        i32.load [2, 0]
+003bacb1        i32.store [2, 40]
+003bacb4        local.get [0]
+003bacb6        i32.const [0]
+003bacb8        call [1024] ; String.Concat
+003bacbb        drop []
+003bacbc      end []
+003bacbd      local.get [4]
+003bacbf      local.get [2]
+003bacc1      i32.const [3989928]
+003bacc6      i32.load [2, 0]
+003bacc9      call [3190] ; 
+003baccc      local.set [0]
+003bacce      br [1]
+003bacd0    end []
+003bacd1    i32.const [0]
+003bacd3    local.set [0]
+003bacd5    i32.const [3928344]
+003bacda    i32.load [2, 0]
+003bacdd    call [901] ; 
+003bace0    local.get [1]
+003bace2    local.get [3]
+003bace4    i32.const [12]
+003bace6    i32.add []
+003bace7    local.get [3]
+003bace9    i32.const [8]
+003baceb    i32.add []
+003bacec    i32.const [0]
+003bacee    call [2520] ; AssetBundleManager.GetLoadedAssetBundle
+003bacf1    local.set [4]
+003bacf3    local.get [4]
+003bacf5    i32.eqz []
+003bacf6    if [-64]
+003bacf8      i32.const [3926996]
+003bacfd      i32.load [2, 0]
+003bad00      i32.const [1]
+003bad02      call [909] ; 
+003bad05      local.set [2]
+003bad07      i32.const [4103548] ; STRING "图集资源包未加载："
+003bad0c      i32.load [2, 0]
+003bad0f      local.get [1]
+003bad11      i32.const [0]
+003bad13      call [921] ; String.Concat
+003bad16      local.set [1]
+003bad18      local.get [2]
+003bad1a      local.get [1]
+003bad1c      call [905] ; 
+003bad1f      local.get [2]
+003bad21      local.get [1]
+003bad23      i32.store [2, 16]
+003bad26      i32.const [3929208]
+003bad2b      i32.load [2, 0]
+003bad2e      call [901] ; 
+003bad31      local.get [2]
+003bad33      i32.const [0]
+003bad35      call [2095] ; CLog.wKÂL
+003bad38      br [1]
+003bad3a    end []
+003bad3b    local.get [4]
+003bad3d    i32.load [2, 8]
+003bad40    local.set [1]
+003bad42    local.get [1]
+003bad44    if [-64]
+003bad46      local.get [1]
+003bad48      local.get [2]
+003bad4a      i32.const [3989928]
+003bad4f      i32.load [2, 0]
+003bad52      call [3190] ; 
+003bad55      local.set [0]
+003bad57    end []
+003bad58    i32.const [3936516]
+003bad5d    i32.load [2, 0]
+003bad60    call [901] ; 
+003bad63    i32.const [0]
+003bad65    local.get [0]
+003bad67    i32.const [0]
+003bad69    call [940] ; Object.op_Equality
+003bad6c    i32.eqz []
+003bad6d    br_if [0]
+003bad6f    i32.const [3926996]
+003bad74    i32.load [2, 0]
+003bad77    i32.const [1]
+003bad79    call [909] ; 
+003bad7c    local.set [0]
+003bad7e    i32.const [4103544] ; STRING "图集资源加载失败："
+003bad83    i32.load [2, 0]
+003bad86    local.get [2]
+003bad88    i32.const [0]
+003bad8a    call [921] ; String.Concat
+003bad8d    local.set [1]
+003bad8f    local.get [0]
+003bad91    local.get [1]
+003bad93    call [905] ; 
+003bad96    local.get [0]
+003bad98    local.get [1]
+003bad9a    i32.store [2, 16]
+003bad9d    i32.const [3929208]
+003bada2    i32.load [2, 0]
+003bada5    call [901] ; 
+003bada8    local.get [0]
+003badaa    i32.const [0]
+003badac    call [2095] ; CLog.wKÂL
+003badaf    i32.const [0]
+003badb1    local.set [0]
+003badb3  end []
+003badb4  local.get [3]
+003badb6  i32.const [16]
+003badb8  i32.add []
+003badb9  global.set [0]
+003badbb  local.get [0]
+003badbd  return []
+003badbe  end []

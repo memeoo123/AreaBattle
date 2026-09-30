@@ -1,0 +1,23 @@
+; Original class: DiceGameDataManager
+; Type4040.CreateNewData; wasmcode function 7981; offset=3797260 size=55
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0039f10d  i32.const [5008748]
+0039f112  i32.load8_u [0, 0]
+0039f115  i32.eqz []
+0039f116  if [-64]
+0039f118    i32.const [3931000]
+0039f11d    call [900] ; 
+0039f120    i32.const [5008748]
+0039f125    i32.const [1]
+0039f127    i32.store8 [0, 0]
+0039f12a  end []
+0039f12b  i32.const [3931000]
+0039f130  i32.load [2, 0]
+0039f133  call [903] ; 
+0039f136  local.set [0]
+0039f138  local.get [0]
+0039f13a  i32.const [1]
+0039f13c  i32.store [2, 28]
+0039f13f  local.get [0]
+0039f141  return []
+0039f142  end []

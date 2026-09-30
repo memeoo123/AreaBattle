@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.RemoveClickListener; wasmcode1 function 59948; offset=19451969 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128d042  i32.const [4989900]
+0128d047  i32.load8_u [0, 0]
+0128d04a  i32.eqz []
+0128d04b  if [-64]
+0128d04d    i32.const [3934348]
+0128d052    i32.const [1605]
+0128d055    call_indirect [0, 0]
+0128d058    i32.const [4989900]
+0128d05d    i32.const [1]
+0128d05f    i32.store8 [0, 0]
+0128d062  end []
+0128d063  i32.const [3934348]
+0128d068  i32.load [2, 0]
+0128d06b  i32.const [1149]
+0128d06e  call_indirect [0, 0]
+0128d071  local.get [0]
+0128d073  i32.const [25515] ; TABLE InputManager.get_Instance
+0128d077  call_indirect [2, 0]
+0128d07a  local.get [0]
+0128d07c  local.get [0]
+0128d07e  call [26978] ; InputManager.q~©¾
+0128d082  end []

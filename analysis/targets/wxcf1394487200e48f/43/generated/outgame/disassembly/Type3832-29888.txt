@@ -1,0 +1,139 @@
+; Original class: ResourcesModule
+; Type3832.LoadScene; wasmcode function 7266; offset=2876137 size=380
+; signature={'args': [127, 127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+002be2ec  i32.const [4988233]
+002be2f1  i32.load8_u [0, 0]
+002be2f4  i32.eqz []
+002be2f5  if [-64]
+002be2f7    i32.const [3968952]
+002be2fc    call [900] ; 
+002be2ff    i32.const [3948068]
+002be304    call [900] ; 
+002be307    i32.const [3948072]
+002be30c    call [900] ; 
+002be30f    i32.const [3938016]
+002be314    call [900] ; 
+002be317    i32.const [3938408]
+002be31c    call [900] ; 
+002be31f    i32.const [4040180] ; STRING "/"
+002be324    call [900] ; 
+002be327    i32.const [4040160] ; STRING ".unity"
+002be32c    call [900] ; 
+002be32f    i32.const [4096036] ; STRING "scene/"
+002be334    call [900] ; 
+002be337    i32.const [4040164] ; STRING ".unity3d"
+002be33c    call [900] ; 
+002be33f    i32.const [4988233]
+002be344    i32.const [1]
+002be346    i32.store8 [0, 0]
+002be349  end []
+002be34a  i32.const [3938016]
+002be34f  i32.load [2, 0]
+002be352  call [901] ; 
+002be355  i32.const [0]
+002be357  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+002be35a  drop []
+002be35b  local.get [1]
+002be35d  local.get [1]
+002be35f  i32.const [4040180] ; STRING "/"
+002be364  i32.load [2, 0]
+002be367  i32.const [0]
+002be369  call [2554] ; String.LastIndexOf
+002be36c  i32.const [1]
+002be36e  i32.add []
+002be36f  i32.const [0]
+002be371  call [1225] ; String.Substring
+002be374  local.set [5]
+002be376  local.get [1]
+002be378  i32.const [0]
+002be37a  call [1374] ; String.ToLower
+002be37d  local.set [1]
+002be37f  i32.const [4096036] ; STRING "scene/"
+002be384  i32.load [2, 0]
+002be387  local.get [1]
+002be389  i32.const [4040160] ; STRING ".unity"
+002be38e  i32.load [2, 0]
+002be391  i32.const [0]
+002be393  call [955] ; String.Concat
+002be396  local.set [1]
+002be398  local.get [1]
+002be39a  i32.const [4040164] ; STRING ".unity3d"
+002be39f  i32.load [2, 0]
+002be3a2  i32.const [0]
+002be3a4  call [1618] ; String.EndsWith
+002be3a7  i32.eqz []
+002be3a8  if [-64]
+002be3aa    local.get [1]
+002be3ac    i32.const [4040164] ; STRING ".unity3d"
+002be3b1    i32.load [2, 0]
+002be3b4    i32.const [0]
+002be3b6    call [921] ; String.Concat
+002be3b9    local.set [1]
+002be3bb  end []
+002be3bc  local.get [0]
+002be3be  local.get [1]
+002be3c0  i32.const [0]
+002be3c2  local.get [1]
+002be3c4  local.get [1]
+002be3c6  call [7269] ; ResourcesModule.CreateLoader
+002be3c9  i32.const [3938408]
+002be3ce  i32.load [2, 0]
+002be3d1  call [927] ; 
+002be3d4  local.set [1]
+002be3d6  local.get [1]
+002be3d8  i32.const [12]
+002be3da  i32.add []
+002be3db  local.set [6]
+002be3dd  local.get [6]
+002be3df  i32.load [2, 0]
+002be3e2  local.get [2]
+002be3e4  i32.const [0]
+002be3e6  call [1031] ; Delegate.Combine
+002be3e9  local.set [2]
+002be3eb  local.get [6]
+002be3ed  local.get [2]
+002be3ef  i32.const [3948068]
+002be3f4  i32.load [2, 0]
+002be3f7  call [937] ; 
+002be3fa  i32.store [2, 0]
+002be3fd  local.get [2]
+002be3ff  i32.const [3948068]
+002be404  i32.load [2, 0]
+002be407  call [937] ; 
+002be40a  drop []
+002be40b  local.get [1]
+002be40d  local.get [5]
+002be40f  i32.store [2, 40]
+002be412  local.get [1]
+002be414  local.get [3]
+002be416  i32.store8 [0, 44]
+002be419  local.get [1]
+002be41b  i32.load [2, 16]
+002be41e  local.get [4]
+002be420  i32.const [0]
+002be422  call [1031] ; Delegate.Combine
+002be425  local.set [2]
+002be427  local.get [1]
+002be429  local.get [2]
+002be42b  i32.const [3948072]
+002be430  i32.load [2, 0]
+002be433  call [937] ; 
+002be436  i32.store [2, 16]
+002be439  local.get [2]
+002be43b  i32.const [3948072]
+002be440  i32.load [2, 0]
+002be443  call [937] ; 
+002be446  drop []
+002be447  local.get [0]
+002be449  i32.const [1]
+002be44b  i32.store8 [0, 32]
+002be44e  local.get [0]
+002be450  i32.load [2, 40]
+002be453  local.get [1]
+002be455  i32.const [3968952]
+002be45a  i32.load [2, 0]
+002be45d  call [1001] ; 
+002be460  drop []
+002be461  local.get [1]
+002be463  return []
+002be464  end []

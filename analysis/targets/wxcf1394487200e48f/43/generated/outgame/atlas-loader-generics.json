@@ -1,0 +1,137 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3958596,
+      "encodedUsage": "0xc0008135",
+      "methodSpecIndex": 16538,
+      "methodSpecAddress": 681464,
+      "methodSpec": [
+        10517,
+        939,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10956,
+            "name": "AssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3958600,
+      "encodedUsage": "0xc0008137",
+      "methodSpecIndex": 16539,
+      "methodSpecAddress": 681476,
+      "methodSpec": [
+        10510,
+        939,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 10956,
+            "name": "AssetBundle"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3989928,
+      "encodedUsage": "0xc000b8e1",
+      "methodSpecIndex": 23664,
+      "methodSpecAddress": 766976,
+      "methodSpec": [
+        75781,
+        -1,
+        242
+      ],
+      "declaringType": "AssetBundle",
+      "method": "LoadAsset",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 6893,
+            "name": "SpriteAtlas"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4012516,
+      "encodedUsage": "0xc000c92f",
+      "methodSpecIndex": 25751,
+      "methodSpecAddress": 792020,
+      "methodSpec": [
+        29862,
+        -1,
+        242
+      ],
+      "declaringType": "ResourcesInfo",
+      "method": "LoadAsset",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 6893,
+            "name": "SpriteAtlas"
+          }
+        ]
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

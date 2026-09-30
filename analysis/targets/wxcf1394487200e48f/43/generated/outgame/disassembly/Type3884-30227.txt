@@ -1,0 +1,44 @@
+; Original class: MPBExtension
+; Type3884..cctor; wasmcode function 18723; offset=8459116 size=127
+; signature={'args': [127], 'returns': []}; localGroups=[]
+0081136d  i32.const [5025316]
+00811372  i32.load8_u [0, 0]
+00811375  i32.eqz []
+00811376  if [-64]
+00811378    i32.const [3935576]
+0081137d    call [900] ; 
+00811380    i32.const [3935664]
+00811385    call [900] ; 
+00811388    i32.const [4081376] ; STRING "_Color"
+0081138d    call [900] ; 
+00811390    i32.const [5025316]
+00811395    i32.const [1]
+00811397    i32.store8 [0, 0]
+0081139a  end []
+0081139b  i32.const [4081376] ; STRING "_Color"
+008113a0  i32.load [2, 0]
+008113a3  i32.const [0]
+008113a5  call [1212] ; Shader.PropertyToID
+008113a8  local.set [0]
+008113aa  i32.const [3935576]
+008113af  i32.load [2, 0]
+008113b2  i32.load [2, 92]
+008113b5  local.get [0]
+008113b7  i32.store [2, 0]
+008113ba  i32.const [3935664]
+008113bf  i32.load [2, 0]
+008113c2  call [903] ; 
+008113c5  local.set [0]
+008113c7  local.get [0]
+008113c9  i32.const [0]
+008113cb  call [2390] ; MaterialPropertyBlock..ctor
+008113ce  i32.const [3935576]
+008113d3  i32.load [2, 0]
+008113d6  i32.load [2, 92]
+008113d9  local.get [0]
+008113db  i32.store [2, 4]
+008113de  i32.const [3935576]
+008113e3  i32.load [2, 0]
+008113e6  i32.load [2, 92]
+008113e9  drop []
+008113ea  end []

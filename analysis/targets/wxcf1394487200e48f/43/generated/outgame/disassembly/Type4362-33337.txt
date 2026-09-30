@@ -1,0 +1,63 @@
+; Original class: ShopItem
+; Type4362.gmP}gv; wasmcode function 10404; offset=5017701 size=169
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+004c9068  i32.const [5008947]
+004c906d  i32.load8_u [0, 0]
+004c9070  i32.eqz []
+004c9071  if [-64]
+004c9073    i32.const [3953568]
+004c9078    call [900] ; 
+004c907b    i32.const [3944716]
+004c9080    call [900] ; 
+004c9083    i32.const [4034536] ; STRING ""
+004c9088    call [900] ; 
+004c908b    i32.const [5008947]
+004c9090    i32.const [1]
+004c9092    i32.store8 [0, 0]
+004c9095  end []
+004c9096  i32.const [3953568]
+004c909b  i32.load [2, 0]
+004c909e  call [935] ; 
+004c90a1  local.get [1]
+004c90a3  local.get [0]
+004c90a5  i32.load [2, 52]
+004c90a8  i32.const [1]
+004c90aa  i32.const [4034536] ; STRING ""
+004c90af  i32.load [2, 0]
+004c90b2  i32.const [1]
+004c90b4  i32.const [0]
+004c90b6  call [1799] ; ToolControl.ToolChange
+004c90b9  drop []
+004c90ba  i32.const [0]
+004c90bc  call [1193] ; GameModule.get_Audio
+004c90bf  i32.const [1]
+004c90c1  i32.const [2017]
+004c90c4  i32.const [0]
+004c90c6  call [1201] ; Extension.PlayerVoice
+004c90c9  i32.const [0]
+004c90cb  call [1587] ; GameModule.get_ADHelper
+004c90ce  local.set [2]
+004c90d0  local.get [0]
+004c90d2  i32.load [2, 52]
+004c90d5  local.set [3]
+004c90d7  local.get [0]
+004c90d9  i32.load [2, 40]
+004c90dc  local.get [1]
+004c90de  i32.const [0]
+004c90e0  call [5913] ; LocalDataManager.GetToolNum
+004c90e3  local.set [0]
+004c90e5  i32.const [3944716]
+004c90ea  i32.load [2, 0]
+004c90ed  call [901] ; 
+004c90f0  local.get [2]
+004c90f2  local.get [1]
+004c90f4  i32.const [1]
+004c90f6  local.get [3]
+004c90f8  local.get [0]
+004c90fa  i32.const [3944716]
+004c90ff  i32.load [2, 0]
+004c9102  i32.load [2, 92]
+004c9105  i32.load [2, 56]
+004c9108  i32.const [0]
+004c910a  call [5243] ; ADHelper.ReportToolGet
+004c910d  end []

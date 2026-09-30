@@ -1,0 +1,25 @@
+; Original class: InputManager
+; Type3603.AddTouchDebugListener; wasmcode1 function 59953; offset=19452352 size=65
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128d1c1  i32.const [4989969]
+0128d1c6  i32.load8_u [0, 0]
+0128d1c9  i32.eqz []
+0128d1ca  if [-64]
+0128d1cc    i32.const [3934348]
+0128d1d1    i32.const [1605]
+0128d1d4    call_indirect [0, 0]
+0128d1d7    i32.const [4989969]
+0128d1dc    i32.const [1]
+0128d1de    i32.store8 [0, 0]
+0128d1e1  end []
+0128d1e2  i32.const [3934348]
+0128d1e7  i32.load [2, 0]
+0128d1ea  i32.const [1149]
+0128d1ed  call_indirect [0, 0]
+0128d1f0  local.get [0]
+0128d1f2  i32.const [25515] ; TABLE InputManager.get_Instance
+0128d1f6  call_indirect [2, 0]
+0128d1f9  local.get [0]
+0128d1fb  local.get [0]
+0128d1fd  call [13097] ; InputManager.
+0128d200  end []

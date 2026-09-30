@@ -1,0 +1,35 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/TransformTrails" {
+Properties {
+
+_TintCd1 ("TintCd", Color) = (1,1,1,1)
+
+_Panner ("Panner", Vector) = (0,0,0,0)
+
+_Main_Tex2 ("Main_Tex2", 2D) = "white" { }
+
+_Noise_Tex01 ("Noise_Tex01", 2D) = "white" { }
+
+_Nosie_Mult2 ("Nosie_Mult", Range(0, 1)) = 0.0
+
+_Alpha_Mult1 ("Alpha_Mult", Range(0, 5)) = 1.0
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 46948
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

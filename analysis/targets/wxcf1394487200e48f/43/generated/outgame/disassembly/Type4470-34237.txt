@@ -1,0 +1,60 @@
+; Original class: LevelRankControl
+; Type4470.Req_GetHistoryRankInfo; wasmcode function 7627; offset=3644976 size=163
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+00379e33  i32.const [5009843]
+00379e38  i32.load8_u [0, 0]
+00379e3b  i32.eqz []
+00379e3c  if [-64]
+00379e3e    i32.const [3915568]
+00379e43    call [900] ; 
+00379e46    i32.const [4029156] ; METHOD aMPOj`.~ZMT
+00379e4b    call [900] ; 
+00379e4e    i32.const [3946912]
+00379e53    call [900] ; 
+00379e56    i32.const [5009843]
+00379e5b    i32.const [1]
+00379e5d    i32.store8 [0, 0]
+00379e60  end []
+00379e61  i32.const [3946912]
+00379e66  i32.load [2, 0]
+00379e69  call [903] ; 
+00379e6c  local.set [3]
+00379e6e  local.get [3]
+00379e70  local.get [0]
+00379e72  i32.store [2, 8]
+00379e75  local.get [3]
+00379e77  local.get [1]
+00379e79  i32.store [2, 12]
+00379e7c  local.get [0]
+00379e7e  i32.load [2, 24]
+00379e81  local.set [1]
+00379e83  local.get [1]
+00379e85  i32.load [2, 48]
+00379e88  local.set [5]
+00379e8a  i32.const [3915568]
+00379e8f  i32.load [2, 0]
+00379e92  call [903] ; 
+00379e95  local.set [4]
+00379e97  local.get [4]
+00379e99  local.get [3]
+00379e9b  i32.const [4029156] ; METHOD aMPOj`.~ZMT
+00379ea0  i32.load [2, 0]
+00379ea3  i32.const [0]
+00379ea5  call [1004] ; 
+00379ea8  local.get [1]
+00379eaa  local.get [5]
+00379eac  local.get [4]
+00379eae  i32.const [0]
+00379eb0  call [1031] ; Delegate.Combine
+00379eb3  i32.const [3915568]
+00379eb8  i32.load [2, 0]
+00379ebb  call [938] ; 
+00379ebe  i32.store [2, 48]
+00379ec1  local.get [0]
+00379ec3  i32.load [2, 24]
+00379ec6  local.get [3]
+00379ec8  i32.load [2, 12]
+00379ecb  local.get [2]
+00379ecd  local.get [0]
+00379ecf  call [10932] ; RanklistTransmitter.GetPlayerRankDataRequset
+00379ed2  end []

@@ -1,0 +1,10 @@
+; Original class: DiceShopControl
+; Type4047.GetBuyCount; wasmcode function 12540; offset=6057427 size=15
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005c6dd4  local.get [0]
+005c6dd6  i32.load [2, 8]
+005c6dd9  local.get [1]
+005c6ddb  local.get [1]
+005c6ddd  call [12533] ; DiceShopDataManager.GetBuyCount
+005c6de0  return []
+005c6de1  end []

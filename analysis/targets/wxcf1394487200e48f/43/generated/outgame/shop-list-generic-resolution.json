@@ -1,0 +1,86 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3979776,
+      "encodedUsage": "0xc000a8db",
+      "methodSpecIndex": 21613,
+      "methodSpecAddress": 742364,
+      "methodSpec": [
+        10655,
+        499,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4147,
+            "name": "SkinData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3955656,
+      "encodedUsage": "0xc0007b77",
+      "methodSpecIndex": 15803,
+      "methodSpecAddress": 672644,
+      "methodSpec": [
+        10510,
+        742,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 6826,
+            "name": "GameObject"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

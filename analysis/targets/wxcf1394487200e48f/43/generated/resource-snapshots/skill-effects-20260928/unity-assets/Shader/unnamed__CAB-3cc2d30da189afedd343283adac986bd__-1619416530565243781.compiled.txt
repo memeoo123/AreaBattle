@@ -1,0 +1,44 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Pingzi" {
+Properties {
+
+_TintCd1 ("TintCd", Color) = (1,1,1,1)
+
+_Main_Tex1 ("Main_Tex", 2D) = "white" { }
+
+_TexPanner1 ("TexPanner", Vector) = (0,0,0,0)
+
+_CdMult1 ("CdMult", Float) = 10.0
+
+_CdPower1 ("CdPower", Float) = 0.0
+
+_Edge_Power1 ("Edge_Power", Range(0, 5)) = 0.0
+
+_EdgeCD1 ("EdgeCD", Color) = (1,1,1,1)
+
+_Edgel_Mult1 ("Edgel_Mult", Range(0, 1)) = 0.0
+
+_AlphaPower1 ("AlphaPower", Float) = 0.0
+
+_HDDJ ("HD-DJ", 2D) = "white" { }
+
+_texcoord ("", 2D) = "white" { }
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Cull Off
+  GpuProgramID 20301
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

@@ -1,0 +1,25 @@
+; Original class: ConfigMgr
+; Type3907.GetAIDelayTime; wasmcode function 12794; offset=6163433 size=50
+; signature={'args': [127, 127, 127], 'returns': [125]}; localGroups=[]
+005e0bea  local.get [0]
+005e0bec  local.get [0]
+005e0bee  local.get [1]
+005e0bf0  local.get [0]
+005e0bf2  call [4481] ; ConfigMgr.Ml`R
+005e0bf5  i32.store [2, 288]
+005e0bf9  local.get [0]
+005e0bfb  i32.load [2, 288]
+005e0bff  local.set [0]
+005e0c01  local.get [0]
+005e0c03  i32.eqz []
+005e0c04  if [-64]
+005e0c06    f32.const [3.4028234663852886e+38]
+005e0c0b    return []
+005e0c0c  end []
+005e0c0d  local.get [0]
+005e0c0f  i32.load [2, 16]
+005e0c12  f32.convert_i32_s []
+005e0c13  f32.const [1000.0]
+005e0c18  f32.div []
+005e0c19  return []
+005e0c1a  end []

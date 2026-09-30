@@ -1,0 +1,30 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Original loading Resources prefab, native UGUI/SpriteRenderer/Animator and ScriptableObject-independent source progress/timeout callbacks. Scaled scalar tweens stepped deterministically. Full Main/UIControl composition and original matched visual replay are not covered.",
+    "checks": [
+        "Original loading hierarchy and native font/image/renderer/controller references are populated",
+        "AutoCanvasLayer finds ancestor canvas and adds original OrderOffer25",
+        "Original six sprite frames at12fps loop through0.5 seconds (loop=True, fps=12, duration=0.5, keys=6)",
+        "Native Animator advances original first and second sprite frames",
+        "Source initial fill requests random range0.6..0.8",
+        "Early Close defers final fill until initial tween completes",
+        "Default OutQuad drives native Image and825-unit animation anchor",
+        "Initial completion queues final tween without consuming current step twice",
+        "Final completion clears singleton immediately and schedules deferred native destruction",
+        "SetSpine enables five-second timeout without resetting accumulated time",
+        "Exact timeout boundary does not open retry tip",
+        "Timeout strictly greater than threshold resets timer and opens source retry/cancel tip once",
+        "Disabled timeout cannot emit repeated tips",
+        "Retry destroys loading page before state10 callback; native destruction remains deferred",
+        "Successful preparation resets actual page timer",
+        "Cancel waits for transition completion before destroying page or changing state",
+        "Cancel completion clears singleton unconditionally even when a newer page exists, then emits state11",
+        "UIControl creates original-path loading resource for each open and parents with worldPositionStays=false under UIStory",
+        "UIControl resets held page field44",
+        "UIControl Close clears held reference immediately while native page completion is still pending",
+        "Destroyed native owner retains source CLR field reset semantics",
+        "Native frame destroys only scheduled pages and preserves newer loading object",
+        "No fabricated singleton reassignment on delayed destroy"
+    ]
+}

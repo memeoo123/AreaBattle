@@ -1,0 +1,26 @@
+; <>c.Mif~}; wasmcode function 15369; offset=7401924 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0070f1c5  i32.const [5007519]
+0070f1ca  i32.load8_u [0, 0]
+0070f1cd  i32.eqz []
+0070f1ce  if [-64]
+0070f1d0    i32.const [4000568]
+0070f1d5    call [900] ; 
+0070f1d8    i32.const [5007519]
+0070f1dd    i32.const [1]
+0070f1df    i32.store8 [0, 0]
+0070f1e2  end []
+0070f1e3  i32.const [0]
+0070f1e5  call [1193] ; GameModule.get_Audio
+0070f1e8  i32.const [1]
+0070f1ea  i32.const [2001]
+0070f1ed  i32.const [0]
+0070f1ef  call [1201] ; Extension.PlayerVoice
+0070f1f2  i32.const [0]
+0070f1f4  call [1143] ; GameModule.get_UI
+0070f1f7  i32.const [1]
+0070f1f9  i32.const [4000568]
+0070f1fe  i32.load [2, 0]
+0070f201  call [5061] ; 
+0070f204  drop []
+0070f205  end []

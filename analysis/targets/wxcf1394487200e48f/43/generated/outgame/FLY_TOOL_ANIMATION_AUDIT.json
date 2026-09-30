@@ -1,0 +1,25 @@
+{
+  "status": "coroutine_and_native_callback_wiring_verified_tween_host_pending",
+  "checks": 519,
+  "source": [
+    "disassembly/Type4057-31241.txt",
+    "disassembly/Type4055-31235.txt",
+    "disassembly/Type4056-31237.txt",
+    "disassembly/Type4058-31218.txt",
+    "fly-tween-cleanup-generics.json"
+  ],
+  "verified": [
+    "Original WaitForSecondsRealtime type6855 from usage3941924; shared .025s and1.1s objects, unscaled",
+    "Native recovered icons parented with source world position and unit scale",
+    "Scatter .4s ease21 OutCirc; arrival .5s ease20 InCirc; independent tween update",
+    "Spawn completions feed next stage and collection; actual native Text reaches final amount once",
+    "After final wait queue StopEffect then global Target_Tween kill complete=false"
+  ],
+  "testScope": "IEnumerator advanced directly and tween completions invoked by test host; proves callback sequencing/native assets, not measured animation timing or visual fidelity",
+  "pending": [
+    "Concrete tween executor, target pulse and pool host",
+    "Original random scatter algorithm and global sub-id registry",
+    "Audio wrappers/real top-info targets and ShopUI production composition",
+    "Dynamic runtime visual verification"
+  ]
+}

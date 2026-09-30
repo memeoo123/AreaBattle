@@ -1,0 +1,150 @@
+; Original class: GameControl
+; Type4064.ZiZP`; wasmcode function 12185; offset=5921744 size=387
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+005a5bd3  global.get [0]
+005a5bd5  i32.const [16]
+005a5bd7  i32.sub []
+005a5bd8  local.set [3]
+005a5bda  local.get [3]
+005a5bdc  global.set [0]
+005a5bde  i32.const [5008368]
+005a5be3  i32.load8_u [0, 0]
+005a5be6  i32.eqz []
+005a5be7  if [-64]
+005a5be9    i32.const [3916056]
+005a5bee    call [900] ; 
+005a5bf1    i32.const [3989352]
+005a5bf6    call [900] ; 
+005a5bf9    i32.const [3953456]
+005a5bfe    call [900] ; 
+005a5c01    i32.const [3957792]
+005a5c06    call [900] ; 
+005a5c09    i32.const [3934404]
+005a5c0e    call [900] ; 
+005a5c11    i32.const [3936516]
+005a5c16    call [900] ; 
+005a5c19    i32.const [4028428] ; METHOD |UUvXo.WzgZ
+005a5c1e    call [900] ; 
+005a5c21    i32.const [3945912]
+005a5c26    call [900] ; 
+005a5c29    i32.const [5008368]
+005a5c2e    i32.const [1]
+005a5c30    i32.store8 [0, 0]
+005a5c33  end []
+005a5c34  i32.const [3945912]
+005a5c39  i32.load [2, 0]
+005a5c3c  call [903] ; 
+005a5c3f  local.set [2]
+005a5c41  local.get [2]
+005a5c43  local.get [0]
+005a5c45  i32.store [2, 8]
+005a5c48  block [-64]
+005a5c4a    local.get [0]
+005a5c4c    i32.load [2, 60]
+005a5c4f    local.get [1]
+005a5c51    i32.eq []
+005a5c52    br_if [0]
+005a5c54    local.get [0]
+005a5c56    i32.const [0]
+005a5c58    local.get [0]
+005a5c5a    call [7817] ; GameControl.UwOqS
+005a5c5d    local.get [0]
+005a5c5f    local.get [1]
+005a5c61    i32.store [2, 60]
+005a5c64    local.get [1]
+005a5c66    i32.const [1]
+005a5c68    i32.sub []
+005a5c69    local.set [4]
+005a5c6b    local.get [2]
+005a5c6d    local.get [4]
+005a5c6f    i32.store [2, 12]
+005a5c72    local.get [0]
+005a5c74    i32.load [2, 28]
+005a5c77    local.get [4]
+005a5c79    i32.const [2]
+005a5c7b    i32.shl []
+005a5c7c    i32.add []
+005a5c7d    i32.load [2, 16]
+005a5c80    local.set [4]
+005a5c82    i32.const [3936516]
+005a5c87    i32.load [2, 0]
+005a5c8a    call [901] ; 
+005a5c8d    local.get [4]
+005a5c8f    i32.const [0]
+005a5c91    i32.const [0]
+005a5c93    call [940] ; Object.op_Equality
+005a5c96    if [-64]
+005a5c98      i32.const [0]
+005a5c9a      call [1286] ; GameModule.get_Config
+005a5c9d      i32.load [2, 232]
+005a5ca1      local.set [0]
+005a5ca3      local.get [3]
+005a5ca5      local.get [1]
+005a5ca7      i32.store [2, 12]
+005a5caa      local.get [0]
+005a5cac      i32.const [3934404]
+005a5cb1      i32.load [2, 0]
+005a5cb4      local.get [3]
+005a5cb6      i32.const [12]
+005a5cb8      i32.add []
+005a5cb9      call [910] ; 
+005a5cbc      i32.const [3957792]
+005a5cc1      i32.load [2, 0]
+005a5cc4      call [982] ; 
+005a5cc7      i32.load [2, 20]
+005a5cca      local.set [0]
+005a5ccc      i32.const [3953456]
+005a5cd1      i32.load [2, 0]
+005a5cd4      call [935] ; 
+005a5cd7      drop []
+005a5cd8      i32.const [3916056]
+005a5cdd      i32.load [2, 0]
+005a5ce0      call [903] ; 
+005a5ce3      local.set [1]
+005a5ce5      local.get [1]
+005a5ce7      local.get [2]
+005a5ce9      i32.const [4028428] ; METHOD |UUvXo.WzgZ
+005a5cee      i32.load [2, 0]
+005a5cf1      i32.const [0]
+005a5cf3      call [1113] ; 
+005a5cf6      local.get [0]
+005a5cf8      local.get [0]
+005a5cfa      local.get [1]
+005a5cfc      i32.const [3989352]
+005a5d01      i32.load [2, 0]
+005a5d04      call [1032] ; 
+005a5d07      local.get [0]
+005a5d09      call [7609] ; LoadPrefabControl.LoadTexture
+005a5d0c      br [1]
+005a5d0e    end []
+005a5d0f    local.get [0]
+005a5d11    i32.load [2, 8]
+005a5d14    i32.load [2, 36]
+005a5d17    i32.const [0]
+005a5d19    call [7315] ; Renderer.get_sharedMaterial
+005a5d1c    local.get [0]
+005a5d1e    i32.load [2, 28]
+005a5d21    local.get [2]
+005a5d23    i32.load [2, 12]
+005a5d26    i32.const [2]
+005a5d28    i32.shl []
+005a5d29    i32.add []
+005a5d2a    i32.load [2, 16]
+005a5d2d    i32.const [0]
+005a5d2f    call [4374] ; Material.set_mainTexture
+005a5d32    local.get [0]
+005a5d34    i32.const [0]
+005a5d36    local.get [0]
+005a5d38    i32.load [2, 8]
+005a5d3b    i32.load [2, 36]
+005a5d3e    i32.const [0]
+005a5d40    call [977] ; Component.get_transform
+005a5d43    i32.const [0]
+005a5d45    local.get [0]
+005a5d47    call [5063] ; GameControl.xVsmhR]
+005a5d4a  end []
+005a5d4b  local.get [3]
+005a5d4d  i32.const [16]
+005a5d4f  i32.add []
+005a5d50  global.set [0]
+005a5d52  end []

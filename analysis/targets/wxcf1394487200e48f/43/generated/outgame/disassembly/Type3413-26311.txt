@@ -1,0 +1,36 @@
+; Original class: AudioLoopFadeAction
+; Type3413.cN´°¬I; wasmcode function 13128; offset=6295119 size=93
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00600e50  i32.const [5011650]
+00600e55  i32.load8_u [0, 0]
+00600e58  i32.eqz []
+00600e59  if [-64]
+00600e5b    i32.const [3927888]
+00600e60    call [900] ; 
+00600e63    i32.const [3990820] ; METHOD AudioLoopFadeAction.¢|¡YU
+00600e68    call [900] ; 
+00600e6b    i32.const [5011650]
+00600e70    i32.const [1]
+00600e72    i32.store8 [0, 0]
+00600e75  end []
+00600e76  i32.const [3927888]
+00600e7b  i32.load [2, 0]
+00600e7e  call [903] ; 
+00600e81  local.set [1]
+00600e83  local.get [1]
+00600e85  local.get [0]
+00600e87  i32.const [3990820] ; METHOD AudioLoopFadeAction.¢|¡YU
+00600e8c  i32.load [2, 0]
+00600e8f  i32.const [0]
+00600e91  call [1002] ; Action..ctor
+00600e94  local.get [0]
+00600e96  i32.const [1]
+00600e98  i32.store8 [0, 60]
+00600e9b  local.get [0]
+00600e9d  local.get [0]
+00600e9f  i32.load [2, 36]
+00600ea2  i32.const [0]
+00600ea4  local.get [1]
+00600ea6  local.get [0]
+00600ea8  call [6272] ; AudioLoopFadeAction.F½¶i
+00600eab  end []

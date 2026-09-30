@@ -1,0 +1,25 @@
+; Proj_xqzdPlayUI.CloseBefore wasmcode function18063
+007a271a i32.const [5007458]
+007a271f i32.load8_u [0, 0]
+007a2722 i32.eqz []
+007a2723 if [-64]
+007a2725   i32.const [3953440]
+007a272a   call [900] ; 
+007a272d   i32.const [4018272]
+007a2732   call [900] ; 
+007a2735   i32.const [5007458]
+007a273a   i32.const [1]
+007a273c   i32.store8 [0, 0]
+007a273f end []
+007a2740 i32.const [3953440]
+007a2745 i32.load [2, 0]
+007a2748 call [935] ; 
+007a274b f32.const [1.0]
+007a2750 i32.const [0]
+007a2752 call [4974] ; LevelControl.SetLevelSpeed
+007a2755 i32.const [0]
+007a2757 call [1143] ; GameModule.get_UI
+007a275a i32.const [4018272]
+007a275f i32.load [2, 0]
+007a2762 call [1877] ; 
+007a2765 end []

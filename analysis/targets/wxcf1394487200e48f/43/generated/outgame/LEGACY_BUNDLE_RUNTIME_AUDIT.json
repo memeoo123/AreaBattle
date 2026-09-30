@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T04:01:19.766858+00:00",
+  "implementation": "OutgameLegacyBundleRuntime",
+  "sourceMethods": [
+    23806,
+    23812,
+    23813,
+    23821,
+    23824,
+    23828,
+    23836,
+    23839,
+    23843,
+    23851,
+    23863,
+    23864,
+    23871
+  ],
+  "composition": "Shared loaded/download/error/dependency/duplicate-request/operation/pending-unload state connects recovered resolver, registry, acquisition, variant/dependency loading, requests, download completion, reuse and unload. GetRequest captures current native request.",
+  "initialState": {
+    "variants": [],
+    "manifest": null,
+    "disableUnload": false,
+    "unloadInterval": 60
+  },
+  "validation": {
+    "integratedChecks": 642,
+    "nativeChecks": 10,
+    "freshPlayer": false
+  },
+  "sourceFindings": [
+    "Initialize23815 calls helper23856 which unconditionally creates GameObject AssetBundleManager with manager type, stores static object field36, DontDestroyOnLoad(object).",
+    "LoadManifest23835 unloads/removes existing loaded wrapper then LoadAssetBundle(name,true), creates AssetBundleLoadManifestOperation for AssetBundleManifest and queues it. Not yet implemented."
+  ],
+  "qualification": "Runtime owns one explicit shared state instance; original static manager object/creation, manifest operation and full startup owner remain pending. Native fixture provides actual local manifest, local patch text, dependency name mapping and zero unload delay."
+}

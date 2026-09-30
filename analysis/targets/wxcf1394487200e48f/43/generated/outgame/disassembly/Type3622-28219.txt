@@ -1,0 +1,121 @@
+; Original class: FileManager
+; Type3622.SaveWebGLFile; wasmcode function 3362; offset=1049314 size=346
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+001002e3  i32.const [4988928]
+001002e8  i32.load8_u [0, 0]
+001002eb  i32.eqz []
+001002ec  if [-64]
+001002ee    i32.const [3929208]
+001002f3    call [900] ; 
+001002f6    i32.const [3930128]
+001002fb    call [900] ; 
+001002fe    i32.const [3926996]
+00100303    call [900] ; 
+00100306    i32.const [3927212]
+0010030b    call [900] ; 
+0010030e    i32.const [4081012] ; STRING "] value["
+00100313    call [900] ; 
+00100316    i32.const [4080932] ; STRING "]"
+0010031b    call [900] ; 
+0010031e    i32.const [4106168] ; STRING "调用小游戏存储数据：key["
+00100323    call [900] ; 
+00100326    i32.const [4988928]
+0010032b    i32.const [1]
+0010032d    i32.store8 [0, 0]
+00100330  end []
+00100331  i32.const [3929208]
+00100336  i32.load [2, 0]
+00100339  call [901] ; 
+0010033c  i32.const [3929208]
+00100341  i32.load [2, 0]
+00100344  i32.load [2, 92]
+00100347  i32.load8_u [0, 0]
+0010034a  if [-64]
+0010034c    i32.const [3926996]
+00100351    i32.load [2, 0]
+00100354    i32.const [1]
+00100356    call [909] ; 
+00100359    local.set [3]
+0010035b    i32.const [3927212]
+00100360    i32.load [2, 0]
+00100363    i32.const [5]
+00100365    call [909] ; 
+00100368    local.set [0]
+0010036a    local.get [0]
+0010036c    i32.const [4106168] ; STRING "调用小游戏存储数据：key["
+00100371    i32.load [2, 0]
+00100374    call [905] ; 
+00100377    local.get [0]
+00100379    i32.const [4106168] ; STRING "调用小游戏存储数据：key["
+0010037e    i32.load [2, 0]
+00100381    i32.store [2, 16]
+00100384    local.get [0]
+00100386    local.get [1]
+00100388    call [905] ; 
+0010038b    local.get [0]
+0010038d    local.get [1]
+0010038f    i32.store [2, 20]
+00100392    local.get [0]
+00100394    i32.const [4081012] ; STRING "] value["
+00100399    i32.load [2, 0]
+0010039c    call [905] ; 
+0010039f    local.get [0]
+001003a1    i32.const [4081012] ; STRING "] value["
+001003a6    i32.load [2, 0]
+001003a9    i32.store [2, 24]
+001003ac    local.get [0]
+001003ae    local.get [2]
+001003b0    call [905] ; 
+001003b3    local.get [0]
+001003b5    local.get [2]
+001003b7    i32.store [2, 28]
+001003ba    local.get [0]
+001003bc    i32.const [4080932] ; STRING "]"
+001003c1    i32.load [2, 0]
+001003c4    call [905] ; 
+001003c7    local.get [0]
+001003c9    i32.const [4080932] ; STRING "]"
+001003ce    i32.load [2, 0]
+001003d1    i32.store [2, 32]
+001003d4    local.get [0]
+001003d6    i32.const [0]
+001003d8    call [1024] ; String.Concat
+001003db    local.set [0]
+001003dd    local.get [3]
+001003df    local.get [0]
+001003e1    call [905] ; 
+001003e4    local.get [3]
+001003e6    local.get [0]
+001003e8    i32.store [2, 16]
+001003eb    i32.const [3929208]
+001003f0    i32.load [2, 0]
+001003f3    call [901] ; 
+001003f6    local.get [3]
+001003f8    i32.const [0]
+001003fa    call [1069] ; CLog.Log
+001003fd  end []
+001003fe  i32.const [3930128]
+00100403  i32.load [2, 0]
+00100406  call [901] ; 
+00100409  i32.const [0]
+0010040b  call [974] ; DBTSDKManager.get_Instance
+0010040e  i32.load [2, 16]
+00100411  local.set [0]
+00100413  local.get [0]
+00100415  local.set [3]
+00100417  local.get [0]
+00100419  i32.load [2, 0]
+0010041c  i32.const [2424]
+0010041f  i32.add []
+00100420  local.set [0]
+00100422  local.get [3]
+00100424  local.get [1]
+00100426  local.get [2]
+00100428  local.get [0]
+0010042a  i32.load [2, 192]
+0010042e  local.get [0]
+00100430  i32.load [2, 188]
+00100434  global.set [3]
+00100436  global.get [3]
+00100438  call_indirect [7, 0]
+0010043b  end []

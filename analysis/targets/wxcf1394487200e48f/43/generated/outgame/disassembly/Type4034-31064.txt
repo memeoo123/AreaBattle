@@ -1,0 +1,54 @@
+; Original class: ServerTimeModule
+; Type4034.`kneqli; wasmcode function 5701; offset=2004714 size=146
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+001e96ed  i32.const [5008713]
+001e96f2  i32.load8_u [0, 0]
+001e96f5  i32.eqz []
+001e96f6  if [-64]
+001e96f8    i32.const [3930616]
+001e96fd    call [900] ; 
+001e9700    i32.const [3938304]
+001e9705    call [900] ; 
+001e9708    i32.const [3940172]
+001e970d    call [900] ; 
+001e9710    i32.const [5008713]
+001e9715    i32.const [1]
+001e9717    i32.store8 [0, 0]
+001e971a  end []
+001e971b  block [-64]
+001e971d    i32.const [3938304]
+001e9722    i32.load [2, 0]
+001e9725    i32.load [2, 92]
+001e9728    i32.load [2, 0]
+001e972b    i32.const [0]
+001e972d    call [4288] ; SDKToolManager.GetServerTimeByServerTimeZone
+001e9730    i64.const [1]
+001e9732    i64.ge_s []
+001e9733    if [-64]
+001e9735      i32.const [3938304]
+001e973a      i32.load [2, 0]
+001e973d      i32.load [2, 92]
+001e9740      i32.load [2, 0]
+001e9743      i32.const [0]
+001e9745      call [4288] ; SDKToolManager.GetServerTimeByServerTimeZone
+001e9748      local.set [2]
+001e974a      br [1]
+001e974c    end []
+001e974d    i32.const [3930616]
+001e9752    i32.load [2, 0]
+001e9755    call [901] ; 
+001e9758    i32.const [0]
+001e975a    call [1287] ; DateTime.get_Now
+001e975d    local.set [2]
+001e975f    i32.const [3940172]
+001e9764    i32.load [2, 0]
+001e9767    call [901] ; 
+001e976a    local.get [2]
+001e976c    i32.const [0]
+001e976e    call [1474] ; TimeHelper.ToTimestampLong
+001e9771    local.set [2]
+001e9773  end []
+001e9774  local.get [0]
+001e9776  local.get [2]
+001e9778  i64.store [3, 16]
+001e977b  end []

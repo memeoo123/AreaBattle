@@ -1,0 +1,23 @@
+; Original class: WXAMS
+; Type7574.SetVideoMapping; wasmcode function 9591; offset=4592894 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00461501  local.get [0]
+00461503  call [1083] ; BridgeManager.get_xyxFunc
+00461506  local.set [1]
+00461508  local.get [0]
+0046150a  local.set [2]
+0046150c  local.get [1]
+0046150e  i32.load [2, 0]
+00461511  i32.const [920]
+00461514  i32.add []
+00461515  local.set [0]
+00461517  local.get [1]
+00461519  local.get [2]
+0046151b  local.get [0]
+0046151d  i32.load [2, 192]
+00461521  local.get [0]
+00461523  i32.load [2, 188]
+00461527  global.set [3]
+00461529  global.get [3]
+0046152b  call_indirect [2, 0]
+0046152e  end []

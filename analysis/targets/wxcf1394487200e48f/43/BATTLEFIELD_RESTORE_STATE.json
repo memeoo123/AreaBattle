@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43",
+    "representativeLevel": "layout5 mechanics replay; normal871/layout120 entry screenshot and original video checkpoints"
+  },
+  "status": "in_progress",
+  "completionClaim": "incomplete",
+  "sourceArtifacts": {
+    "restoreSpec": "generated/RESTORE_SPEC.json",
+    "goldenCases": "generated/golden-cases.json",
+    "implementation": "../../../../UnityProject",
+    "originalReferences": [
+      "evidence/original-reference/manifest.json"
+    ]
+  },
+  "subsystems": {
+    "phase-flow": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/flow-evidence.json"
+      ],
+      "unknowns": [
+        "Ordinary/special/PVP entry, running/pause/result/retry and nine tutorial entrances tested. Original replay remains open."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "preparation": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/controls-evidence.json"
+      ],
+      "unknowns": [
+        "Input, skill stock guards, original collider topology and 15 obstacle entities tested. Account inventory remains an explicit local fixture."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "deployment-and-production": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/combat-evidence.json"
+      ],
+      "unknowns": [
+        "Production and player-only Commander multiplier consumers tested, including strict boundaries and retained clocks."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "entities-and-attributes": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/combat-evidence.json"
+      ],
+      "unknowns": [
+        "Original unit data, summoned units and skill attribute mutations tested. Original runtime comparisons pending."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "targeting-and-movement": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/flow-evidence.json",
+        "generated/random-source-evidence.json"
+      ],
+      "unknowns": [
+        "Ordinary AI, forwarding, arrows and source-derived PVP skill target rules tested. Matched live mode traversal remains pending."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "attack-and-damage": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/combat-evidence.json"
+      ],
+      "unknowns": [
+        "Ordinary collision/arrival, 18 skills, Boss998/999 and PVP outcomes tested against static source fixtures."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "skills-buffs-status": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/combat-evidence.json"
+      ],
+      "unknowns": [
+        "18 skills implemented and traversed through production input. Skill15 source async continuation across retry is tested. No active TowerBuff producer was found; no behavior invented."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "waves-and-scaling": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/flow-evidence.json"
+      ],
+      "unknowns": [
+        "639 layouts and 561 normal-level mappings tested. Daily initial/refill selection is unknown; stored daily pool pop-last and explicit special/PVP entry adapters are tested."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "outcomes-and-persistence": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/flow-evidence.json"
+      ],
+      "unknowns": [
+        "Normal victory advances local saved progress; defeat/special does not. PVP sum-score outcomes and explicit special entry traversal tested; original account comparison is outside the local profile fixture."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    },
+    "presentation-and-feedback": {
+      "scope": "required",
+      "evidenceStatus": "partial",
+      "implementationStatus": "partial",
+      "validationStatus": "integration-pass",
+      "evidence": [
+        "generated/gameplay-symbols.json",
+        "generated/gameplay-method-map.json",
+        "generated/level-summary.json",
+        "generated/asset-evidence.json"
+      ],
+      "unknowns": [
+        "Original default GPU-animated soldiers, 15 obstacle models, waylines, arrows, gesture resources, UGUI result animations and skill native effects imported. Two original Boss Spines, soldiers, 18 skill resources, embedded ice/speed, dynamic HUD and Guide Spine/hand restored and traversed. Level871 user entry screenshot compared after source-derived background, initial labels, font fallback, commander and camp-highlight corrections. Full synchronized replay remains pending."
+      ],
+      "tests": [
+        "../../../../analysis/unity-mechanics-validation.json",
+        "../../../../analysis/player-smoke.json",
+        "../../../../analysis/unity-integrated-validation.json"
+      ],
+      "notes": "Source-derived production runtime fixtures pass for the listed paths; remaining unknowns and matched original replay prevent full subsystem acceptance."
+    }
+  },
+  "gates": {
+    "evidence": {
+      "status": "pending",
+      "evidence": []
+    },
+    "deterministic": {
+      "status": "pending",
+      "evidence": []
+    },
+    "integration": {
+      "status": "pending",
+      "evidence": []
+    },
+    "matchedReplay": {
+      "status": "blocked",
+      "evidence": []
+    }
+  },
+  "blockers": [
+    "Source-derived integration passes within fixture coverage; unresolved resource-load races and daily initial/refill entry remain explicit.",
+    "Original level871 entry screenshot compared; full visual/audio replay and other modes lack synchronized original frames."
+  ],
+  "nextActions": [
+    "Extend the recorded level871 entry comparison to original action and result frames",
+    "Resolve original RNG/resource-load timing and daily initial/refill selection against runtime evidence"
+  ],
+  "milestones": [
+    {
+      "id": "original871-entry-comparison",
+      "atUtc": "2026-09-28T08:01:27.373593+00:00",
+      "status": "single-frame-compared",
+      "evidence": [
+        "generated/original871-presentation-evidence.json",
+        "generated/original871-visual-comparison.json"
+      ],
+      "limits": "No original recording, exact time or RNG state; full replay not passed."
+    },
+    {
+      "id": "retry-commander-dynamic-correction",
+      "atUtc": "2026-09-28T08:16:02.460750+00:00",
+      "status": "source-derived-integration-pass",
+      "evidence": [
+        "generated/dynamic-ui-evidence.json"
+      ],
+      "caseCount": 240
+    },
+    {
+      "id": "result-hud-close-reopen-correction",
+      "atUtc": "2026-09-28T08:30:20.601803+00:00",
+      "status": "source-derived-integration-pass",
+      "caseCount": 243,
+      "evidence": [
+        "generated/result-hud-lifecycle-evidence.json"
+      ]
+    },
+    {
+      "id": "ordinary-build-smoke",
+      "atUtc": "2026-09-28T10:36:21.347857+00:00",
+      "mechanicsCasesPassed": 42,
+      "playerFrames": 600,
+      "integratedMechanicsCasesPassed": 259,
+      "retryTopologyPreserved": true,
+      "build": "../../../../Build/Windows/AreaBattle.exe",
+      "scope": "Ordinary layout5, controlled baseline configuration; full-goal claim remains incomplete"
+    },
+    {
+      "id": "original-video-20260928-checkpoints",
+      "atUtc": "2026-09-28T10:36:21.598227+00:00",
+      "status": "bounded-runtime-checkpoints-pass",
+      "caseCount": 259,
+      "evidence": [
+        "generated/video-20260928/original-video-evidence.json"
+      ]
+    },
+    {
+      "id": "video-fire25-seven-input-refinement",
+      "atUtc": "2026-09-28T10:36:21.746070+00:00",
+      "status": "bounded-checkpoints-pass",
+      "evidence": [
+        "generated/video-20260928/fire-and-input-evidence.json"
+      ]
+    },
+    {
+      "id": "original-video-timed-replay-diagnostic",
+      "atUtc": "2026-09-28T10:36:21.819508+00:00",
+      "status": "mismatch-observed",
+      "evidence": [
+        "generated/video-20260928/timed-replay-summary.json"
+      ]
+    },
+    {
+      "id": "original-video-full-input-replay",
+      "atUtc": "2026-09-28T10:36:21.894371+00:00",
+      "status": "mismatch-observed",
+      "evidence": [
+        "generated/video-20260928/full-replay-summary.json"
+      ]
+    },
+    {
+      "id": "video-soldier102-cosmetic-binding",
+      "atUtc": "2026-09-28T10:36:21.968399+00:00",
+      "status": "implemented-and-validated",
+      "evidence": [
+        "generated/video-soldier-skin-evidence.json"
+      ]
+    },
+    {
+      "id": "video-ai-phase-capture-timing",
+      "status": "mismatch-measured",
+      "atUtc": "2026-09-28T10:36:22.039919+00:00",
+      "evidence": [
+        "generated/video-20260928/timing-audit.json"
+      ]
+    },
+    {
+      "id": "original-ai-timer-oracle9",
+      "status": "bounded-original-code-checks-pass",
+      "atUtc": "2026-09-28T10:36:22.108433+00:00",
+      "evidence": [
+        "generated/ai-timer-oracle-evidence.json"
+      ]
+    },
+    {
+      "id": "video-fire-blue2-eight-point-explanation",
+      "status": "bounded-difference-explained",
+      "atUtc": "2026-09-28T11:02:09.767088+00:00",
+      "evidence": [
+        "generated/video-20260928/fire-target-audit.json"
+      ]
+    },
+    {
+      "id": "video-tower6-fire-regen-capture-audit",
+      "status": "bounded-state-divergence-confirmed",
+      "atUtc": "2026-09-28T11:09:28.446526+00:00",
+      "evidence": [
+        "generated/video-20260928/tower6-capture-audit.json"
+      ]
+    },
+    {
+      "id": "tower6-regen-phase-delay-decomposed",
+      "status": "regen-phase-delay-decomposed",
+      "atUtc": "2026-09-29T02:33:06.896598+00:00",
+      "evidence": [
+        "generated/video-20260928/tower6-regen-phase-audit.json"
+      ]
+    },
+    {
+      "id": "ai-withdrawal-source-branch-validation",
+      "status": "source-derived-protection-branch-validated",
+      "atUtc": "2026-09-29T02:38:29.452211+00:00",
+      "evidence": [
+        "generated/ai-withdrawal-validation.json"
+      ]
+    },
+    {
+      "id": "video-twelve-frame-visual-review",
+      "status": "visual-difference-open",
+      "atUtc": "2026-09-29T03:06:57.683088+00:00",
+      "evidence": [
+        "generated/video-20260928/visual-review-audit.json"
+      ]
+    },
+    {
+      "id": "source-game-camera-hdr-msaa-restored",
+      "status": "source-camera-flags-restored",
+      "atUtc": "2026-09-29T03:12:13.997741+00:00",
+      "evidence": [
+        "generated/video-20260928/camera-hdr-fix-audit.json"
+      ]
+    },
+    {
+      "id": "capture-text-mesh-and-viewport-audit",
+      "status": "capture-corrected-video-viewport-inferred",
+      "atUtc": "2026-09-29T03:24:39.304303+00:00",
+      "evidence": [
+        "generated/video-20260928/capture-registration-audit.json",
+        "generated/video-20260928/capture-registration-comparison.png"
+      ]
+    },
+    {
+      "id": "source-music-loop-fade-restored",
+      "status": "source-backed-production-loop-fade-restored",
+      "atUtc": "2026-09-29T03:36:09.369490+00:00",
+      "evidence": [
+        "generated/audio-loop-fade-fix-audit.json"
+      ]
+    },
+    {
+      "id": "managed-effect-readiness-lifetime-fixed",
+      "status": "source-confirmed lifetime fix; resource transport parity incomplete",
+      "atUtc": "2026-09-29T06:42:59.304810+00:00",
+      "evidence": [
+        "generated/effect-resource-readiness-audit.json"
+      ]
+    }
+  ]
+}

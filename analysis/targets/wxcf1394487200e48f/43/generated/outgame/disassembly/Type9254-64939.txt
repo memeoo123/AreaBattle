@@ -1,0 +1,22 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.OpenRank; wasmcode function 20418; offset=9195269 size=55
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+008c4f06  i32.const [5006702]
+008c4f0b  i32.load8_u [0, 0]
+008c4f0e  i32.eqz []
+008c4f0f  if [-64]
+008c4f11    i32.const [4105468] ; STRING "直接打开排行榜"
+008c4f16    call [900] ; 
+008c4f19    i32.const [5006702]
+008c4f1e    i32.const [1]
+008c4f20    i32.store8 [0, 0]
+008c4f23  end []
+008c4f24  i32.const [4105468] ; STRING "直接打开排行榜"
+008c4f29  i32.load [2, 0]
+008c4f2c  i32.const [0]
+008c4f2e  call [999] ; XYXLOG.Log
+008c4f31  i32.const [0]
+008c4f33  call [3563] ; OpenDataControl.get_Instance
+008c4f36  i32.const [0]
+008c4f38  call [11188] ; OpenDataControl.ShowFriendRank
+008c4f3b  end []

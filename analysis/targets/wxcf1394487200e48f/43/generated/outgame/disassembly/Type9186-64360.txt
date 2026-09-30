@@ -1,0 +1,279 @@
+; Original class: WxVideoAdapter
+; Type9186.startRequestAd; wasmcode function 14690; offset=7201987 size=745
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+006de4c6  global.get [0]
+006de4c8  i32.const [16]
+006de4ca  i32.sub []
+006de4cb  local.set [3]
+006de4cd  local.get [3]
+006de4cf  global.set [0]
+006de4d1  i32.const [5006864]
+006de4d6  i32.load8_u [0, 0]
+006de4d9  i32.eqz []
+006de4da  if [-64]
+006de4dc    i32.const [3915816]
+006de4e1    call [900] ; 
+006de4e4    i32.const [3915820]
+006de4e9    call [900] ; 
+006de4ec    i32.const [3928952]
+006de4f1    call [900] ; 
+006de4f4    i32.const [3930676]
+006de4f9    call [900] ; 
+006de4fc    i32.const [3980292]
+006de501    call [900] ; 
+006de504    i32.const [3927212]
+006de509    call [900] ; 
+006de50c    i32.const [3941720]
+006de511    call [900] ; 
+006de514    i32.const [4022592] ; METHOD WxVideoAdapter.<startRequestAd>b__5_0
+006de519    call [900] ; 
+006de51c    i32.const [4022596] ; METHOD WxVideoAdapter.<startRequestAd>b__5_1
+006de521    call [900] ; 
+006de524    i32.const [4082492] ; STRING "adunit-"
+006de529    call [900] ; 
+006de52c    i32.const [4049952] ; STRING "CreateRewardedVideoAd,"
+006de531    call [900] ; 
+006de534    i32.const [4036124] ; STRING " multiton:"
+006de539    call [900] ; 
+006de53c    i32.const [4035868] ; STRING " idCount:"
+006de541    call [900] ; 
+006de544    i32.const [4097116] ; STRING "startRequestAd "
+006de549    call [900] ; 
+006de54c    i32.const [4035500] ; STRING " autoloadSuccess no need load"
+006de551    call [900] ; 
+006de554    i32.const [5006864]
+006de559    i32.const [1]
+006de55b    i32.store8 [0, 0]
+006de55e  end []
+006de55f  local.get [3]
+006de561  i32.const [1]
+006de563  i32.store8 [0, 15]
+006de566  local.get [3]
+006de568  i32.const [0]
+006de56a  i32.store [2, 8]
+006de56d  block [-64]
+006de56f    local.get [0]
+006de571    i32.load [2, 20]
+006de574    local.set [1]
+006de576    local.get [1]
+006de578    i32.eqz []
+006de579    br_if [0]
+006de57b    local.get [1]
+006de57d    i32.load [2, 192]
+006de581    local.set [1]
+006de583    local.get [1]
+006de585    i32.eqz []
+006de586    br_if [0]
+006de588    i32.const [3980292]
+006de58d    i32.load [2, 0]
+006de590    drop []
+006de591    local.get [1]
+006de593    i32.load [2, 12]
+006de596    i32.const [1]
+006de598    i32.ne []
+006de599    br_if [0]
+006de59b    local.get [3]
+006de59d    i32.const [0]
+006de59f    i32.store8 [0, 15]
+006de5a2    i32.const [3927212]
+006de5a7    i32.load [2, 0]
+006de5aa    i32.const [5]
+006de5ac    call [909] ; 
+006de5af    local.set [1]
+006de5b1    local.get [0]
+006de5b3    i32.load [2, 8]
+006de5b6    local.set [2]
+006de5b8    local.get [1]
+006de5ba    local.get [2]
+006de5bc    call [905] ; 
+006de5bf    local.get [1]
+006de5c1    local.get [2]
+006de5c3    i32.store [2, 16]
+006de5c6    local.get [1]
+006de5c8    i32.const [4035868] ; STRING " idCount:"
+006de5cd    i32.load [2, 0]
+006de5d0    call [905] ; 
+006de5d3    local.get [1]
+006de5d5    i32.const [4035868] ; STRING " idCount:"
+006de5da    i32.load [2, 0]
+006de5dd    i32.store [2, 20]
+006de5e0    i32.const [3980292]
+006de5e5    i32.load [2, 0]
+006de5e8    drop []
+006de5e9    local.get [3]
+006de5eb    local.get [0]
+006de5ed    i32.load [2, 20]
+006de5f0    i32.load [2, 192]
+006de5f4    i32.load [2, 12]
+006de5f7    i32.store [2, 8]
+006de5fa    local.get [3]
+006de5fc    i32.const [8]
+006de5fe    i32.add []
+006de5ff    i32.const [0]
+006de601    call [966] ; Int32.ToString
+006de604    local.set [2]
+006de606    local.get [1]
+006de608    local.get [2]
+006de60a    call [905] ; 
+006de60d    local.get [1]
+006de60f    local.get [2]
+006de611    i32.store [2, 24]
+006de614    local.get [1]
+006de616    i32.const [4036124] ; STRING " multiton:"
+006de61b    i32.load [2, 0]
+006de61e    call [905] ; 
+006de621    local.get [1]
+006de623    i32.const [4036124] ; STRING " multiton:"
+006de628    i32.load [2, 0]
+006de62b    i32.store [2, 28]
+006de62e    i32.const [3928952]
+006de633    i32.load [2, 0]
+006de636    call [901] ; 
+006de639    local.get [3]
+006de63b    i32.const [15]
+006de63d    i32.add []
+006de63e    i32.const [0]
+006de640    call [1148] ; Boolean.ToString
+006de643    local.set [2]
+006de645    local.get [1]
+006de647    local.get [2]
+006de649    call [905] ; 
+006de64c    local.get [1]
+006de64e    local.get [2]
+006de650    i32.store [2, 32]
+006de653    local.get [1]
+006de655    i32.const [0]
+006de657    call [1024] ; String.Concat
+006de65a    i32.const [0]
+006de65c    call [999] ; XYXLOG.Log
+006de65f  end []
+006de660  local.get [0]
+006de662  i32.load [2, 8]
+006de665  i32.const [4097116] ; STRING "startRequestAd "
+006de66a  i32.load [2, 0]
+006de66d  local.get [0]
+006de66f  i32.load [2, 16]
+006de672  i32.load [2, 36]
+006de675  i32.const [0]
+006de677  call [955] ; String.Concat
+006de67a  i32.const [0]
+006de67c  call [999] ; XYXLOG.Log
+006de67f  block [-64]
+006de681    block [-64]
+006de683      block [-64]
+006de685        local.get [0]
+006de687        i32.load [2, 64]
+006de68a        local.set [1]
+006de68c        local.get [1]
+006de68e        if [-64]
+006de690          local.get [0]
+006de692          i32.load8_u [0, 68]
+006de695          i32.eqz []
+006de696          br_if [2]
+006de698          local.get [0]
+006de69a          i32.const [0]
+006de69c          i32.store8 [0, 68]
+006de69f          local.get [0]
+006de6a1          i32.load [2, 8]
+006de6a4          i32.const [4035500] ; STRING " autoloadSuccess no need load"
+006de6a9          i32.load [2, 0]
+006de6ac          i32.const [0]
+006de6ae          call [921] ; String.Concat
+006de6b1          i32.const [0]
+006de6b3          call [999] ; XYXLOG.Log
+006de6b6          local.get [0]
+006de6b8          local.get [0]
+006de6ba          i32.const [64382] ; TABLE WxVideoAdapter.delaySuccess
+006de6be          global.set [3]
+006de6c0          i32.const [64382] ; TABLE WxVideoAdapter.delaySuccess
+006de6c4          call_indirect [1, 0]
+006de6c7          i32.const [0]
+006de6c9          call [1712] ; CallFrameworkAdapter.Call_StartCoroutineResult
+006de6cc          drop []
+006de6cd          br [3]
+006de6cf        end []
+006de6d0      end []
+006de6d1      i32.const [3941720]
+006de6d6      i32.load [2, 0]
+006de6d9      call [903] ; 
+006de6dc      local.set [1]
+006de6de      local.get [1]
+006de6e0      i32.const [4082492] ; STRING "adunit-"
+006de6e5      i32.load [2, 0]
+006de6e8      local.get [0]
+006de6ea      i32.load [2, 16]
+006de6ed      i32.load [2, 36]
+006de6f0      i32.const [0]
+006de6f2      call [921] ; String.Concat
+006de6f5      i32.store [2, 8]
+006de6f8      local.get [1]
+006de6fa      local.get [3]
+006de6fc      i32.load8_u [0, 15]
+006de6ff      i32.store8 [0, 12]
+006de702      i32.const [4049952] ; STRING "CreateRewardedVideoAd,"
+006de707      i32.load [2, 0]
+006de70a      local.get [1]
+006de70c      i32.load [2, 8]
+006de70f      i32.const [0]
+006de711      call [921] ; String.Concat
+006de714      local.set [2]
+006de716      i32.const [3930676]
+006de71b      i32.load [2, 0]
+006de71e      call [901] ; 
+006de721      local.get [2]
+006de723      i32.const [0]
+006de725      call [1062] ; Debug.Log
+006de728      local.get [0]
+006de72a      local.get [1]
+006de72c      i32.const [0]
+006de72e      call [9567] ; WXBase.CreateRewardedVideoAd
+006de731      i32.store [2, 64]
+006de734      local.get [0]
+006de736      i32.load [2, 64]
+006de739      local.set [1]
+006de73b      i32.const [3915820]
+006de740      i32.load [2, 0]
+006de743      call [903] ; 
+006de746      local.set [2]
+006de748      local.get [2]
+006de74a      local.get [0]
+006de74c      i32.const [4022592] ; METHOD WxVideoAdapter.<startRequestAd>b__5_0
+006de751      i32.load [2, 0]
+006de754      i32.const [0]
+006de756      call [1004] ; 
+006de759      local.get [1]
+006de75b      local.get [2]
+006de75d      i32.const [0]
+006de75f      call [4187] ; WXBaseAd.OnLoad
+006de762      local.get [0]
+006de764      i32.load [2, 64]
+006de767      local.set [1]
+006de769      i32.const [3915816]
+006de76e      i32.load [2, 0]
+006de771      call [903] ; 
+006de774      local.set [2]
+006de776      local.get [2]
+006de778      local.get [0]
+006de77a      i32.const [4022596] ; METHOD WxVideoAdapter.<startRequestAd>b__5_1
+006de77f      i32.load [2, 0]
+006de782      i32.const [0]
+006de784      call [1004] ; 
+006de787      local.get [1]
+006de789      local.get [2]
+006de78b      i32.const [0]
+006de78d      call [4188] ; WXBaseAd.OnError
+006de790      local.get [0]
+006de792      i32.load [2, 64]
+006de795      local.set [1]
+006de797    end []
+006de798    local.get [1]
+006de79a    i32.const [0]
+006de79c    i32.const [0]
+006de79e    i32.const [0]
+006de7a0    call [9522] ; WXRewardedVideoAd.Load
+006de7a3  end []
+006de7a4  local.get [3]
+006de7a6  i32.const [16]
+006de7a8  i32.add []
+006de7a9  global.set [0]
+006de7ab  end []

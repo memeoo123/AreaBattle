@@ -1,0 +1,26 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.ReStartApp; wasmcode1 function 68396; offset=21657409 size=68
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+014a7742  i32.const [5006696]
+014a7747  i32.load8_u [0, 0]
+014a774a  i32.eqz []
+014a774b  if [-64]
+014a774d    i32.const [3938064]
+014a7752    i32.const [1605]
+014a7755    call_indirect [0, 0]
+014a7758    i32.const [5006696]
+014a775d    i32.const [1]
+014a775f    i32.store8 [0, 0]
+014a7762  end []
+014a7763  i32.const [3938064]
+014a7768  i32.load [2, 0]
+014a776b  i32.const [109007]
+014a776f  call_indirect [2, 0]
+014a7772  local.set [0]
+014a7774  local.get [0]
+014a7776  i32.const [0]
+014a7778  call [23538] ; RestartMiniProgramOption..ctor
+014a777c  local.get [0]
+014a777e  i32.const [0]
+014a7780  call [18459] ; WX.RestartMiniProgram
+014a7784  end []

@@ -1,0 +1,56 @@
+; Original class: UpdateManager
+; Type2920.aZjp; wasmcode function 6859; offset=2593843 size=149
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00279434  i32.const [4989452]
+00279439  i32.load8_u [0, 0]
+0027943c  i32.eqz []
+0027943d  if [-64]
+0027943f    i32.const [3956764]
+00279444    call [900] ; 
+00279447    i32.const [3956484]
+0027944c    call [900] ; 
+0027944f    i32.const [3956488]
+00279454    call [900] ; 
+00279457    i32.const [3956780]
+0027945c    call [900] ; 
+0027945f    i32.const [4989452]
+00279464    i32.const [1]
+00279466    i32.store8 [0, 0]
+00279469  end []
+0027946a  block [-64]
+0027946c    local.get [0]
+0027946e    local.get [0]
+00279470    call [2110] ; UpdateManager.get_IndexDict
+00279473    local.get [1]
+00279475    i32.const [3956764]
+0027947a    i32.load [2, 0]
+0027947d    call [1129] ; 
+00279480    i32.eqz []
+00279481    br_if [0]
+00279483    local.get [0]
+00279485    local.get [0]
+00279487    local.get [0]
+00279489    call [2110] ; UpdateManager.get_IndexDict
+0027948c    local.get [1]
+0027948e    i32.const [3956780]
+00279493    i32.load [2, 0]
+00279496    call [1128] ; 
+00279499    local.get [0]
+0027949b    call [4691] ; UpdateManager.k¨
+0027949e    local.get [0]
+002794a0    i32.load [2, 48]
+002794a3    local.get [1]
+002794a5    i32.const [3956484]
+002794aa    i32.load [2, 0]
+002794ad    call [1129] ; 
+002794b0    i32.eqz []
+002794b1    br_if [0]
+002794b3    local.get [0]
+002794b5    i32.load [2, 48]
+002794b8    local.get [1]
+002794ba    i32.const [3956488]
+002794bf    i32.load [2, 0]
+002794c2    call [1570] ; 
+002794c5    drop []
+002794c6  end []
+002794c7  end []

@@ -1,0 +1,20 @@
+; Tower.PlayIceEffect2; wasmcode function 15518; offset=7494115 size=52
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007259e4  i32.const [5007192]
+007259e9  i32.load8_u [0, 0]
+007259ec  i32.eqz []
+007259ed  if [-64]
+007259ef    i32.const [4096732]
+007259f4    call [900] ; 
+007259f7    i32.const [5007192]
+007259fc    i32.const [1]
+007259fe    i32.store8 [0, 0]
+00725a01  end []
+00725a02  local.get [0]
+00725a04  i32.load [2, 96]
+00725a07  i32.const [4096732]
+00725a0c  i32.load [2, 0]
+00725a0f  i32.const [1]
+00725a11  i32.const [0]
+00725a13  call [8302] ; 
+00725a16  end []

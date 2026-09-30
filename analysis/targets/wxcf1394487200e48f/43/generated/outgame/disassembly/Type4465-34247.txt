@@ -1,0 +1,110 @@
+; Original class: yPmq
+; Type4465.TeiRL; wasmcode function 15159; offset=7364804 size=282
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+007060c7  global.get [0]
+007060c9  i32.const [16]
+007060cb  i32.sub []
+007060cc  local.set [2]
+007060ce  local.get [2]
+007060d0  global.set [0]
+007060d2  i32.const [5009848]
+007060d7  i32.load8_u [0, 0]
+007060da  i32.eqz []
+007060db  if [-64]
+007060dd    i32.const [3915568]
+007060e2    call [900] ; 
+007060e5    i32.const [3926996]
+007060ea    call [900] ; 
+007060ed    i32.const [3937600]
+007060f2    call [900] ; 
+007060f5    i32.const [4029160] ; METHOD yPmq.TeiRL
+007060fa    call [900] ; 
+007060fd    i32.const [4053228] ; STRING "Event_RefreshAllPlayer"
+00706102    call [900] ; 
+00706105    i32.const [5009848]
+0070610a    i32.const [1]
+0070610c    i32.store8 [0, 0]
+0070610f  end []
+00706110  block [-64]
+00706112    local.get [0]
+00706114    i32.load [2, 8]
+00706117    local.get [1]
+00706119    i32.load [2, 20]
+0070611c    i32.ne []
+0070611d    br_if [0]
+0070611f    local.get [0]
+00706121    local.get [0]
+00706123    i32.load [2, 12]
+00706126    i32.const [1]
+00706128    i32.add []
+00706129    i32.store [2, 12]
+0070612c    local.get [0]
+0070612e    i32.load [2, 16]
+00706131    local.get [1]
+00706133    local.get [0]
+00706135    call [11584] ; LevelRankControl.~fhTXPs
+00706138    local.get [0]
+0070613a    i32.load [2, 12]
+0070613d    local.get [0]
+0070613f    i32.load [2, 20]
+00706142    i32.ne []
+00706143    br_if [0]
+00706145    local.get [0]
+00706147    i32.load [2, 16]
+0070614a    i32.load [2, 24]
+0070614d    local.set [1]
+0070614f    local.get [1]
+00706151    i32.load [2, 44]
+00706154    local.set [4]
+00706156    i32.const [3915568]
+0070615b    i32.load [2, 0]
+0070615e    call [903] ; 
+00706161    local.set [3]
+00706163    local.get [3]
+00706165    local.get [0]
+00706167    i32.const [4029160] ; METHOD yPmq.TeiRL
+0070616c    i32.load [2, 0]
+0070616f    i32.const [0]
+00706171    call [1004] ; 
+00706174    local.get [1]
+00706176    local.get [4]
+00706178    local.get [3]
+0070617a    i32.const [0]
+0070617c    call [1056] ; Delegate.Remove
+0070617f    i32.const [3915568]
+00706184    i32.load [2, 0]
+00706187    call [938] ; 
+0070618a    i32.store [2, 44]
+0070618d    i32.const [3926996]
+00706192    i32.load [2, 0]
+00706195    i32.const [1]
+00706197    call [909] ; 
+0070619a    local.set [1]
+0070619c    local.get [2]
+0070619e    local.get [0]
+007061a0    i32.load [2, 8]
+007061a3    i32.store [2, 12]
+007061a6    i32.const [3937600]
+007061ab    i32.load [2, 0]
+007061ae    local.get [2]
+007061b0    i32.const [12]
+007061b2    i32.add []
+007061b3    call [910] ; 
+007061b6    local.set [0]
+007061b8    local.get [1]
+007061ba    local.get [0]
+007061bc    call [905] ; 
+007061bf    local.get [1]
+007061c1    local.get [0]
+007061c3    i32.store [2, 16]
+007061c6    i32.const [4053228] ; STRING "Event_RefreshAllPlayer"
+007061cb    i32.load [2, 0]
+007061ce    local.get [1]
+007061d0    i32.const [0]
+007061d2    call [1230] ; MsgDispatcher.SendMessage
+007061d5  end []
+007061d6  local.get [2]
+007061d8  i32.const [16]
+007061da  i32.add []
+007061db  global.set [0]
+007061dd  end []

@@ -1,0 +1,20 @@
+; LoadPrefabControl.Contains; wasmcode function 11498; offset=5644758 size=51
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005621d7  i32.const [5008520]
+005621dc  i32.load8_u [0, 0]
+005621df  i32.eqz []
+005621e0  if [-64]
+005621e2    i32.const [3955644]
+005621e7    call [900] ; 
+005621ea    i32.const [5008520]
+005621ef    i32.const [1]
+005621f1    i32.store8 [0, 0]
+005621f4  end []
+005621f5  local.get [0]
+005621f7  i32.load [2, 16]
+005621fa  local.get [1]
+005621fc  i32.const [3955644]
+00562201  i32.load [2, 0]
+00562204  call [1129] ; 
+00562207  return []
+00562208  end []

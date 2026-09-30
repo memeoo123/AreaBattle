@@ -1,0 +1,30 @@
+; Original class: UserInfoControl
+; Type4228.OnInit; wasmcode function 14889; offset=7256650 size=82
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006eba4b  i32.const [5007225]
+006eba50  i32.load8_u [0, 0]
+006eba53  i32.eqz []
+006eba54  if [-64]
+006eba56    i32.const [3995148]
+006eba5b    call [900] ; 
+006eba5e    i32.const [3930256]
+006eba63    call [900] ; 
+006eba66    i32.const [5007225]
+006eba6b    i32.const [1]
+006eba6d    i32.store8 [0, 0]
+006eba70  end []
+006eba71  i32.const [3930256]
+006eba76  i32.load [2, 0]
+006eba79  call [901] ; 
+006eba7c  local.get [0]
+006eba7e  i32.const [0]
+006eba80  call [1309] ; DataManagerPool.get_Instance
+006eba83  i32.const [3995148]
+006eba88  i32.load [2, 0]
+006eba8b  call [1609] ; 
+006eba8e  i32.store [2, 8]
+006eba91  local.get [0]
+006eba93  i32.load [2, 8]
+006eba96  local.get [0]
+006eba98  call [6840] ; UserInfoManager.CheckInstallVersion
+006eba9b  end []

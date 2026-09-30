@@ -1,0 +1,341 @@
+; Original class: LoginProcedureBase
+; Type4601.Init; wasmcode function 11467; offset=5628859 size=1020
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0055e3be  global.get [0]
+0055e3c0  i32.const [16]
+0055e3c2  i32.sub []
+0055e3c3  local.set [3]
+0055e3c5  local.get [3]
+0055e3c7  global.set [0]
+0055e3c9  i32.const [5001502]
+0055e3ce  i32.load8_u [0, 0]
+0055e3d1  i32.eqz []
+0055e3d2  if [-64]
+0055e3d4    i32.const [3928180]
+0055e3d9    call [900] ; 
+0055e3dc    i32.const [3989352]
+0055e3e1    call [900] ; 
+0055e3e4    i32.const [3929424]
+0055e3e9    call [900] ; 
+0055e3ec    i32.const [3930088]
+0055e3f1    call [900] ; 
+0055e3f4    i32.const [3947148]
+0055e3f9    call [900] ; 
+0055e3fc    i32.const [4000596]
+0055e401    call [900] ; 
+0055e404    i32.const [3932308]
+0055e409    call [900] ; 
+0055e40c    i32.const [3932944]
+0055e411    call [900] ; 
+0055e414    i32.const [4002624]
+0055e419    call [900] ; 
+0055e41c    i32.const [3969632]
+0055e421    call [900] ; 
+0055e424    i32.const [3934200]
+0055e429    call [900] ; 
+0055e42c    i32.const [3975008]
+0055e431    call [900] ; 
+0055e434    i32.const [3975012]
+0055e439    call [900] ; 
+0055e43c    i32.const [3975004]
+0055e441    call [900] ; 
+0055e444    i32.const [3923484]
+0055e449    call [900] ; 
+0055e44c    i32.const [3935480]
+0055e451    call [900] ; 
+0055e454    i32.const [4005832] ; METHOD LoginProcedureBase.OqqyZo
+0055e459    call [900] ; 
+0055e45c    i32.const [4005840] ; METHOD LoginProcedureBase.PxzhQ
+0055e461    call [900] ; 
+0055e464    i32.const [4005836] ; METHOD LoginProcedureBase.unq}
+0055e469    call [900] ; 
+0055e46c    i32.const [3935492]
+0055e471    call [900] ; 
+0055e474    i32.const [3935488]
+0055e479    call [900] ; 
+0055e47c    i32.const [3935496]
+0055e481    call [900] ; 
+0055e484    i32.const [3935504]
+0055e489    call [900] ; 
+0055e48c    i32.const [3935508]
+0055e491    call [900] ; 
+0055e494    i32.const [3935516]
+0055e499    call [900] ; 
+0055e49c    i32.const [3938752]
+0055e4a1    call [900] ; 
+0055e4a4    i32.const [4054940] ; STRING "GF_ReceiveUserAttachment"
+0055e4a9    call [900] ; 
+0055e4ac    i32.const [4054924] ; STRING "GF_ReceiveGetOtherGameData"
+0055e4b1    call [900] ; 
+0055e4b4    i32.const [4054932] ; STRING "GF_ReceiveLoginOut"
+0055e4b9    call [900] ; 
+0055e4bc    i32.const [5001502]
+0055e4c1    i32.const [1]
+0055e4c3    i32.store8 [0, 0]
+0055e4c6  end []
+0055e4c7  i32.const [3932944]
+0055e4cc  i32.load [2, 0]
+0055e4cf  call [901] ; 
+0055e4d2  i32.const [0]
+0055e4d4  call [2587] ; HttpManager.get_Instance
+0055e4d7  local.get [1]
+0055e4d9  i32.const [0]
+0055e4db  call [11861] ; HttpManager.Init
+0055e4de  block [-64]
+0055e4e0    local.get [2]
+0055e4e2    if [-64]
+0055e4e4      i32.const [0]
+0055e4e6      local.set [1]
+0055e4e8      local.get [2]
+0055e4ea      i32.load [2, 8]
+0055e4ed      br_if [1]
+0055e4ef    end []
+0055e4f0    i32.const [1]
+0055e4f2    local.set [1]
+0055e4f4  end []
+0055e4f5  local.get [1]
+0055e4f7  i32.eqz []
+0055e4f8  if [-64]
+0055e4fa    i32.const [3935480]
+0055e4ff    i32.load [2, 0]
+0055e502    call [901] ; 
+0055e505    local.get [2]
+0055e507    local.get [0]
+0055e509    i32.const [18011] ; TABLE LoginHelper.SetAppVersion
+0055e50d    global.set [3]
+0055e50f    i32.const [18011] ; TABLE LoginHelper.SetAppVersion
+0055e513    call_indirect [0, 0]
+0055e516  end []
+0055e517  i32.const [3928180]
+0055e51c  i32.load [2, 0]
+0055e51f  i32.load [2, 92]
+0055e522  i32.load [2, 0]
+0055e525  local.get [0]
+0055e527  i32.store [2, 24]
+0055e52a  local.get [0]
+0055e52c  i32.const [3935516]
+0055e531  i32.load [2, 0]
+0055e534  call [903] ; 
+0055e537  i32.store [2, 32]
+0055e53a  i32.const [3932308]
+0055e53f  i32.load [2, 0]
+0055e542  call [901] ; 
+0055e545  local.get [0]
+0055e547  i32.const [4000596]
+0055e54c  i32.load [2, 0]
+0055e54f  call [1051] ; 
+0055e552  i32.store [2, 12]
+0055e555  i32.const [3923484]
+0055e55a  i32.load [2, 0]
+0055e55d  call [903] ; 
+0055e560  local.set [1]
+0055e562  local.get [1]
+0055e564  i32.const [3975004]
+0055e569  i32.load [2, 0]
+0055e56c  call [944] ; 
+0055e56f  i32.const [3934200]
+0055e574  i32.load [2, 0]
+0055e577  call [903] ; 
+0055e57a  local.set [2]
+0055e57c  local.get [2]
+0055e57e  local.get [0]
+0055e580  call [2252] ; ServerConnectionOver..ctor
+0055e583  local.get [1]
+0055e585  local.get [2]
+0055e587  i32.const [3975008]
+0055e58c  i32.load [2, 0]
+0055e58f  call [941] ; 
+0055e592  i32.const [3929424]
+0055e597  i32.load [2, 0]
+0055e59a  call [903] ; 
+0055e59d  local.set [2]
+0055e59f  local.get [2]
+0055e5a1  local.get [0]
+0055e5a3  call [2252] ; ServerConnectionOver..ctor
+0055e5a6  local.get [1]
+0055e5a8  local.get [2]
+0055e5aa  i32.const [3975008]
+0055e5af  i32.load [2, 0]
+0055e5b2  call [941] ; 
+0055e5b5  i32.const [3938752]
+0055e5ba  i32.load [2, 0]
+0055e5bd  call [903] ; 
+0055e5c0  local.set [2]
+0055e5c2  local.get [2]
+0055e5c4  local.get [0]
+0055e5c6  call [2252] ; ServerConnectionOver..ctor
+0055e5c9  local.get [1]
+0055e5cb  local.get [2]
+0055e5cd  i32.const [3975008]
+0055e5d2  i32.load [2, 0]
+0055e5d5  call [941] ; 
+0055e5d8  i32.const [3935488]
+0055e5dd  i32.load [2, 0]
+0055e5e0  call [903] ; 
+0055e5e3  local.set [2]
+0055e5e5  local.get [2]
+0055e5e7  local.get [0]
+0055e5e9  call [2252] ; ServerConnectionOver..ctor
+0055e5ec  local.get [1]
+0055e5ee  local.get [2]
+0055e5f0  i32.const [3975008]
+0055e5f5  i32.load [2, 0]
+0055e5f8  call [941] ; 
+0055e5fb  i32.const [3935492]
+0055e600  i32.load [2, 0]
+0055e603  call [903] ; 
+0055e606  local.set [2]
+0055e608  local.get [2]
+0055e60a  local.get [0]
+0055e60c  call [2252] ; ServerConnectionOver..ctor
+0055e60f  local.get [1]
+0055e611  local.get [2]
+0055e613  i32.const [3975008]
+0055e618  i32.load [2, 0]
+0055e61b  call [941] ; 
+0055e61e  i32.const [3935496]
+0055e623  i32.load [2, 0]
+0055e626  call [903] ; 
+0055e629  local.set [2]
+0055e62b  local.get [2]
+0055e62d  local.get [0]
+0055e62f  call [2252] ; ServerConnectionOver..ctor
+0055e632  local.get [1]
+0055e634  local.get [2]
+0055e636  i32.const [3975008]
+0055e63b  i32.load [2, 0]
+0055e63e  call [941] ; 
+0055e641  i32.const [3935508]
+0055e646  i32.load [2, 0]
+0055e649  call [903] ; 
+0055e64c  local.set [2]
+0055e64e  local.get [2]
+0055e650  local.get [0]
+0055e652  call [2252] ; ServerConnectionOver..ctor
+0055e655  local.get [1]
+0055e657  local.get [2]
+0055e659  i32.const [3975008]
+0055e65e  i32.load [2, 0]
+0055e661  call [941] ; 
+0055e664  i32.const [3930088]
+0055e669  i32.load [2, 0]
+0055e66c  call [903] ; 
+0055e66f  local.set [2]
+0055e671  local.get [2]
+0055e673  local.get [0]
+0055e675  call [2252] ; ServerConnectionOver..ctor
+0055e678  local.get [1]
+0055e67a  local.get [2]
+0055e67c  i32.const [3975008]
+0055e681  i32.load [2, 0]
+0055e684  call [941] ; 
+0055e687  i32.const [3935504]
+0055e68c  i32.load [2, 0]
+0055e68f  call [903] ; 
+0055e692  local.set [2]
+0055e694  local.get [2]
+0055e696  local.get [0]
+0055e698  call [2252] ; ServerConnectionOver..ctor
+0055e69b  local.get [1]
+0055e69d  local.get [2]
+0055e69f  i32.const [3975008]
+0055e6a4  i32.load [2, 0]
+0055e6a7  call [941] ; 
+0055e6aa  local.get [0]
+0055e6ac  i32.load [2, 0]
+0055e6af  local.set [2]
+0055e6b1  local.get [3]
+0055e6b3  local.get [0]
+0055e6b5  local.get [2]
+0055e6b7  i32.load [2, 208]
+0055e6bb  local.get [2]
+0055e6bd  i32.load [2, 204]
+0055e6c1  global.set [3]
+0055e6c3  global.get [3]
+0055e6c5  call_indirect [1, 0]
+0055e6c8  i32.store [2, 12]
+0055e6cb  local.get [0]
+0055e6cd  i32.load [2, 12]
+0055e6d0  local.set [2]
+0055e6d2  local.get [3]
+0055e6d4  i32.const [12]
+0055e6d6  i32.add []
+0055e6d7  i32.const [0]
+0055e6d9  call [966] ; Int32.ToString
+0055e6dc  local.set [4]
+0055e6de  local.get [1]
+0055e6e0  i32.const [3975012]
+0055e6e5  i32.load [2, 0]
+0055e6e8  call [1302] ; 
+0055e6eb  local.set [1]
+0055e6ed  local.get [0]
+0055e6ef  i32.const [4002624]
+0055e6f4  i32.load [2, 0]
+0055e6f7  local.get [2]
+0055e6f9  local.get [4]
+0055e6fb  local.get [0]
+0055e6fd  local.get [1]
+0055e6ff  call [7800] ; 
+0055e702  i32.store [2, 16]
+0055e705  local.get [0]
+0055e707  i32.load [2, 16]
+0055e70a  local.set [1]
+0055e70c  i32.const [3989352]
+0055e711  i32.load [2, 0]
+0055e714  call [1032] ; 
+0055e717  local.set [2]
+0055e719  i32.const [3969632]
+0055e71e  i32.load [2, 0]
+0055e721  local.get [1]
+0055e723  local.get [2]
+0055e725  call [2135] ; 
+0055e728  i32.const [3947148]
+0055e72d  i32.load [2, 0]
+0055e730  call [903] ; 
+0055e733  local.set [1]
+0055e735  local.get [1]
+0055e737  local.get [0]
+0055e739  i32.const [4005832] ; METHOD LoginProcedureBase.OqqyZo
+0055e73e  i32.load [2, 0]
+0055e741  i32.const [0]
+0055e743  call [1067] ; EventHandler..ctor
+0055e746  i32.const [4054932] ; STRING "GF_ReceiveLoginOut"
+0055e74b  i32.load [2, 0]
+0055e74e  local.get [1]
+0055e750  i32.const [0]
+0055e752  call [1146] ; MsgDispatcher.AddEventListener
+0055e755  i32.const [3947148]
+0055e75a  i32.load [2, 0]
+0055e75d  call [903] ; 
+0055e760  local.set [1]
+0055e762  local.get [1]
+0055e764  local.get [0]
+0055e766  i32.const [4005836] ; METHOD LoginProcedureBase.unq}
+0055e76b  i32.load [2, 0]
+0055e76e  i32.const [0]
+0055e770  call [1067] ; EventHandler..ctor
+0055e773  i32.const [4054924] ; STRING "GF_ReceiveGetOtherGameData"
+0055e778  i32.load [2, 0]
+0055e77b  local.get [1]
+0055e77d  i32.const [0]
+0055e77f  call [1146] ; MsgDispatcher.AddEventListener
+0055e782  i32.const [3947148]
+0055e787  i32.load [2, 0]
+0055e78a  call [903] ; 
+0055e78d  local.set [1]
+0055e78f  local.get [1]
+0055e791  local.get [0]
+0055e793  i32.const [4005840] ; METHOD LoginProcedureBase.PxzhQ
+0055e798  i32.load [2, 0]
+0055e79b  i32.const [0]
+0055e79d  call [1067] ; EventHandler..ctor
+0055e7a0  i32.const [4054940] ; STRING "GF_ReceiveUserAttachment"
+0055e7a5  i32.load [2, 0]
+0055e7a8  local.get [1]
+0055e7aa  i32.const [0]
+0055e7ac  call [1146] ; MsgDispatcher.AddEventListener
+0055e7af  local.get [3]
+0055e7b1  i32.const [16]
+0055e7b3  i32.add []
+0055e7b4  global.set [0]
+0055e7b6  end []

@@ -1,0 +1,175 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3961276,
+      "encodedUsage": "0xc0008659",
+      "methodSpecIndex": 17196,
+      "methodSpecAddress": 689360,
+      "methodSpec": [
+        10512,
+        1193,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3484,
+            "name": "EventHandler"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3961280,
+      "encodedUsage": "0xc000865b",
+      "methodSpecIndex": 17197,
+      "methodSpecAddress": 689372,
+      "methodSpec": [
+        10517,
+        1193,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3484,
+            "name": "EventHandler"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3961284,
+      "encodedUsage": "0xc000865d",
+      "methodSpecIndex": 17198,
+      "methodSpecAddress": 689384,
+      "methodSpec": [
+        10529,
+        1193,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Remove",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3484,
+            "name": "EventHandler"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3961288,
+      "encodedUsage": "0xc000865f",
+      "methodSpecIndex": 17199,
+      "methodSpecAddress": 689396,
+      "methodSpec": [
+        10510,
+        1193,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3484,
+            "name": "EventHandler"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3961292,
+      "encodedUsage": "0xc0008661",
+      "methodSpecIndex": 17200,
+      "methodSpecAddress": 689408,
+      "methodSpec": [
+        10511,
+        1193,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "set_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0xe0000",
+            "data": 102,
+            "name": "String"
+          },
+          {
+            "type": "0x120000",
+            "data": 3484,
+            "name": "EventHandler"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

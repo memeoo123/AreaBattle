@@ -1,0 +1,116 @@
+; Original class: LevelControl
+; Type4107.OnLevelCfgLoad; wasmcode function 18901; offset=8518200 size=320
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(4, 127)]
+0081fa3b  i32.const [5008508]
+0081fa40  i32.load8_u [0, 0]
+0081fa43  i32.eqz []
+0081fa44  if [-64]
+0081fa46    i32.const [4012492]
+0081fa4b    call [900] ; 
+0081fa4e    i32.const [4012496]
+0081fa53    call [900] ; 
+0081fa56    i32.const [4012500]
+0081fa5b    call [900] ; 
+0081fa5e    i32.const [4012520]
+0081fa63    call [900] ; 
+0081fa66    i32.const [4013044]
+0081fa6b    call [900] ; 
+0081fa6e    i32.const [3986652]
+0081fa73    call [900] ; 
+0081fa76    i32.const [3986664]
+0081fa7b    call [900] ; 
+0081fa7e    i32.const [3925928]
+0081fa83    call [900] ; 
+0081fa86    i32.const [5008508]
+0081fa8b    i32.const [1]
+0081fa8d    i32.store8 [0, 0]
+0081fa90  end []
+0081fa91  local.get [1]
+0081fa93  local.get [1]
+0081fa95  i32.const [0]
+0081fa97  i32.const [4012500]
+0081fa9c  i32.load [2, 0]
+0081fa9f  call [2564] ; 
+0081faa2  i32.const [0]
+0081faa4  call [2887] ; UtilitHelper.ToFileName
+0081faa7  i32.const [4012520]
+0081faac  i32.load [2, 0]
+0081faaf  call [2074] ; 
+0081fab2  i32.const [0]
+0081fab4  call [1904] ; TextAsset.get_text
+0081fab7  local.set [2]
+0081fab9  local.get [1]
+0081fabb  i32.const [1]
+0081fabd  i32.const [4012496]
+0081fac2  i32.load [2, 0]
+0081fac5  call [2564] ; 
+0081fac8  local.set [4]
+0081faca  local.get [1]
+0081facc  i32.const [2]
+0081face  i32.const [4012496]
+0081fad3  i32.load [2, 0]
+0081fad6  call [2564] ; 
+0081fad9  local.set [5]
+0081fadb  i32.const [4013044]
+0081fae0  i32.load [2, 0]
+0081fae3  call [2663] ; 
+0081fae6  local.set [6]
+0081fae8  i32.const [3925928]
+0081faed  i32.load [2, 0]
+0081faf0  call [903] ; 
+0081faf3  local.set [3]
+0081faf5  local.get [3]
+0081faf7  local.get [4]
+0081faf9  local.get [5]
+0081fafb  local.get [6]
+0081fafd  i32.const [3986652]
+0081fb02  i32.load [2, 0]
+0081fb05  call [9998] ; 
+0081fb08  local.get [0]
+0081fb0a  local.get [3]
+0081fb0c  i32.store [2, 32]
+0081fb0f  local.get [2]
+0081fb11  local.get [0]
+0081fb13  i32.load [2, 32]
+0081fb16  i32.const [3986664]
+0081fb1b  i32.load [2, 0]
+0081fb1e  call [6972] ; 
+0081fb21  i32.const [0]
+0081fb23  call [7663] ; JsonUtility.FromJsonOverwrite
+0081fb26  local.get [0]
+0081fb28  local.set [3]
+0081fb2a  local.get [1]
+0081fb2c  i32.const [1]
+0081fb2e  i32.const [4012496]
+0081fb33  i32.load [2, 0]
+0081fb36  call [2564] ; 
+0081fb39  local.set [4]
+0081fb3b  i32.const [4012492]
+0081fb40  i32.load [2, 0]
+0081fb43  local.set [2]
+0081fb45  global.get [0]
+0081fb47  i32.const [16]
+0081fb49  i32.sub []
+0081fb4a  local.set [0]
+0081fb4c  local.get [0]
+0081fb4e  global.set [0]
+0081fb50  local.get [1]
+0081fb52  i32.const [3]
+0081fb54  local.get [0]
+0081fb56  i32.const [15]
+0081fb58  i32.add []
+0081fb59  local.get [2]
+0081fb5b  call [7271] ; 
+0081fb5e  local.get [0]
+0081fb60  i32.load8_u [0, 15]
+0081fb63  local.set [2]
+0081fb65  local.get [0]
+0081fb67  i32.const [16]
+0081fb69  i32.add []
+0081fb6a  global.set [0]
+0081fb6c  local.get [3]
+0081fb6e  local.get [4]
+0081fb70  local.get [2]
+0081fb72  local.get [1]
+0081fb74  call [7631] ; LevelControl.InitGameByLevelConfig
+0081fb77  end []

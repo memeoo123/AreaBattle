@@ -1,0 +1,39 @@
+; Original class: LangModule
+; Type3493.Get; wasmcode function 1243; offset=423043 size=94
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00067484  i32.const [4989121]
+00067489  i32.load8_u [0, 0]
+0006748c  i32.eqz []
+0006748d  if [-64]
+0006748f    i32.const [4034704] ; STRING "\n"
+00067494    call [900] ; 
+00067497    i32.const [4080628] ; STRING "\\n"
+0006749c    call [900] ; 
+0006749f    i32.const [4989121]
+000674a4    i32.const [1]
+000674a6    i32.store8 [0, 0]
+000674a9  end []
+000674aa  local.get [0]
+000674ac  local.get [1]
+000674ae  local.get [0]
+000674b0  i32.load [2, 16]
+000674b3  local.get [0]
+000674b5  call [5950] ; LangModule.Get
+000674b8  local.set [0]
+000674ba  local.get [0]
+000674bc  if [-64]
+000674be    local.get [0]
+000674c0    i32.const [4080628] ; STRING "\\n"
+000674c5    i32.load [2, 0]
+000674c8    i32.const [4034704] ; STRING "\n"
+000674cd    i32.load [2, 0]
+000674d0    i32.const [0]
+000674d2    call [1368] ; String.Replace
+000674d5    local.set [0]
+000674d7  else []
+000674d8    i32.const [0]
+000674da    local.set [0]
+000674dc  end []
+000674dd  local.get [0]
+000674df  return []
+000674e0  end []

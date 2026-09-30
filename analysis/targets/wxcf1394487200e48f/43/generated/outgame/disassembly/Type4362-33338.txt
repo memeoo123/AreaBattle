@@ -1,0 +1,68 @@
+; Original class: ShopItem
+; Type4362.InitializeComponent; wasmcode function 16010; offset=7722870 size=218
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0075d777  i32.const [5008948]
+0075d77c  i32.load8_u [0, 0]
+0075d77f  i32.eqz []
+0075d780  if [-64]
+0075d782    i32.const [4018560]
+0075d787    call [900] ; 
+0075d78a    i32.const [4018588]
+0075d78f    call [900] ; 
+0075d792    i32.const [4018624]
+0075d797    call [900] ; 
+0075d79a    i32.const [4089952] ; STRING "imgIcon"
+0075d79f    call [900] ; 
+0075d7a2    i32.const [4098996] ; STRING "txt_info"
+0075d7a7    call [900] ; 
+0075d7aa    i32.const [4099032] ; STRING "txt_reddotnum"
+0075d7af    call [900] ; 
+0075d7b2    i32.const [4098988] ; STRING "txt_gold"
+0075d7b7    call [900] ; 
+0075d7ba    i32.const [4084388] ; STRING "btn_choose"
+0075d7bf    call [900] ; 
+0075d7c2    i32.const [5008948]
+0075d7c7    i32.const [1]
+0075d7c9    i32.store8 [0, 0]
+0075d7cc  end []
+0075d7cd  local.get [0]
+0075d7cf  local.get [0]
+0075d7d1  i32.const [4089952] ; STRING "imgIcon"
+0075d7d6  i32.load [2, 0]
+0075d7d9  i32.const [4018588]
+0075d7de  i32.load [2, 0]
+0075d7e1  call [970] ; 
+0075d7e4  i32.store [2, 60]
+0075d7e7  local.get [0]
+0075d7e9  local.get [0]
+0075d7eb  i32.const [4099032] ; STRING "txt_reddotnum"
+0075d7f0  i32.load [2, 0]
+0075d7f3  i32.const [4018624]
+0075d7f8  i32.load [2, 0]
+0075d7fb  call [970] ; 
+0075d7fe  i32.store [2, 64]
+0075d801  local.get [0]
+0075d803  local.get [0]
+0075d805  i32.const [4098988] ; STRING "txt_gold"
+0075d80a  i32.load [2, 0]
+0075d80d  i32.const [4018624]
+0075d812  i32.load [2, 0]
+0075d815  call [970] ; 
+0075d818  i32.store [2, 68]
+0075d81b  local.get [0]
+0075d81d  local.get [0]
+0075d81f  i32.const [4098996] ; STRING "txt_info"
+0075d824  i32.load [2, 0]
+0075d827  i32.const [4018624]
+0075d82c  i32.load [2, 0]
+0075d82f  call [970] ; 
+0075d832  i32.store [2, 72]
+0075d835  local.get [0]
+0075d837  local.get [0]
+0075d839  i32.const [4084388] ; STRING "btn_choose"
+0075d83e  i32.load [2, 0]
+0075d841  i32.const [4018560]
+0075d846  i32.load [2, 0]
+0075d849  call [970] ; 
+0075d84c  i32.store [2, 76]
+0075d84f  end []

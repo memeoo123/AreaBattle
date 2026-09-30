@@ -1,0 +1,570 @@
+; Original class: GameDataVersionMgr
+; Type3795.UserLogin; wasmcode function 12178; offset=5907996 size=1509
+; signature={'args': [127, 126, 127, 127, 127], 'returns': []}; localGroups=[(4, 127)]
+005a261f  global.get [0]
+005a2621  i32.const [-64]
+005a2623  i32.add []
+005a2624  local.set [4]
+005a2626  local.get [4]
+005a2628  global.set [0]
+005a262a  local.get [4]
+005a262c  local.get [1]
+005a262e  i64.store [3, 56]
+005a2631  i32.const [4988118]
+005a2636  i32.load8_u [0, 0]
+005a2639  i32.eqz []
+005a263a  if [-64]
+005a263c    i32.const [3928952]
+005a2641    call [900] ; 
+005a2644    i32.const [3929208]
+005a2649    call [900] ; 
+005a264c    i32.const [3930256]
+005a2651    call [900] ; 
+005a2654    i32.const [3930676]
+005a2659    call [900] ; 
+005a265c    i32.const [3959068]
+005a2661    call [900] ; 
+005a2664    i32.const [3961756]
+005a2669    call [900] ; 
+005a266c    i32.const [3967116]
+005a2671    call [900] ; 
+005a2674    i32.const [3967120]
+005a2679    call [900] ; 
+005a267c    i32.const [3967124]
+005a2681    call [900] ; 
+005a2684    i32.const [3932476]
+005a2689    call [900] ; 
+005a268c    i32.const [3932944]
+005a2691    call [900] ; 
+005a2694    i32.const [3934412]
+005a2699    call [900] ; 
+005a269c    i32.const [3926996]
+005a26a1    call [900] ; 
+005a26a4    i32.const [3987804]
+005a26a9    call [900] ; 
+005a26ac    i32.const [4055120] ; STRING "GameData:和上次登陆ID一样 不用刷新内存数据"
+005a26b1    call [900] ; 
+005a26b4    i32.const [4055108] ; STRING "GameData:上次登陆的UserID:"
+005a26b9    call [900] ; 
+005a26bc    i32.const [4055112] ; STRING "GameData:刷新一下内存数据"
+005a26c1    call [900] ; 
+005a26c4    i32.const [4055124] ; STRING "GameData:开始数据同步：Uid={0} IsNewPlayer={1} IsFocusUpdate={2}"
+005a26c9    call [900] ; 
+005a26cc    i32.const [4055132] ; STRING "GameData:强制下载数据"
+005a26d1    call [900] ; 
+005a26d4    i32.const [4055100] ; STRING "GameData:IsSynLocalData："
+005a26d9    call [900] ; 
+005a26dc    i32.const [4055128] ; STRING "GameData:强制上传数据"
+005a26e1    call [900] ; 
+005a26e4    i32.const [4068548] ; STRING "Save Error在项目存档的UpdateDataCallBack中，有进行Save相关非法操作"
+005a26e9    call [900] ; 
+005a26ec    i32.const [4988118]
+005a26f1    i32.const [1]
+005a26f3    i32.store8 [0, 0]
+005a26f6  end []
+005a26f7  local.get [4]
+005a26f9  i32.const [0]
+005a26fb  i32.store [2, 52]
+005a26fe  local.get [4]
+005a2700  i64.const [0]
+005a2702  i64.store [3, 40]
+005a2705  local.get [4]
+005a2707  i64.const [0]
+005a2709  i64.store [3, 32]
+005a270c  local.get [0]
+005a270e  i32.const [0]
+005a2710  i32.store8 [0, 40]
+005a2713  local.get [0]
+005a2715  i32.const [1]
+005a2717  i32.store8 [0, 17]
+005a271a  local.get [1]
+005a271c  local.get [2]
+005a271e  local.get [3]
+005a2720  local.get [4]
+005a2722  call [9890] ; jÁOb.ReportLoginStartSynData
+005a2725  i32.const [3926996]
+005a272a  i32.load [2, 0]
+005a272d  i32.const [1]
+005a272f  call [909] ; 
+005a2732  local.set [5]
+005a2734  local.get [4]
+005a2736  local.get [1]
+005a2738  i64.store [3, 8]
+005a273b  i32.const [3934412]
+005a2740  i32.load [2, 0]
+005a2743  local.get [4]
+005a2745  i32.const [8]
+005a2747  i32.add []
+005a2748  call [910] ; 
+005a274b  local.set [7]
+005a274d  local.get [4]
+005a274f  local.get [3]
+005a2751  i32.store8 [0, 0]
+005a2754  i32.const [3928952]
+005a2759  i32.load [2, 0]
+005a275c  local.get [4]
+005a275e  call [910] ; 
+005a2761  local.set [6]
+005a2763  local.get [4]
+005a2765  local.get [2]
+005a2767  i32.store8 [0, 31]
+005a276a  i32.const [3928952]
+005a276f  i32.load [2, 0]
+005a2772  local.get [4]
+005a2774  i32.const [31]
+005a2776  i32.add []
+005a2777  call [910] ; 
+005a277a  local.set [8]
+005a277c  i32.const [4055124] ; STRING "GameData:开始数据同步：Uid={0} IsNewPlayer={1} IsFocusUpdate={2}"
+005a2781  i32.load [2, 0]
+005a2784  local.get [7]
+005a2786  local.get [6]
+005a2788  local.get [8]
+005a278a  i32.const [0]
+005a278c  call [1301] ; String.Format
+005a278f  local.set [7]
+005a2791  local.get [5]
+005a2793  local.get [7]
+005a2795  call [905] ; 
+005a2798  local.get [5]
+005a279a  local.get [7]
+005a279c  i32.store [2, 16]
+005a279f  i32.const [3929208]
+005a27a4  i32.load [2, 0]
+005a27a7  call [901] ; 
+005a27aa  local.get [5]
+005a27ac  i32.const [0]
+005a27ae  call [1495] ; CLog.ReleaseLog
+005a27b1  local.get [0]
+005a27b3  local.get [2]
+005a27b5  i32.store8 [0, 18]
+005a27b8  local.get [4]
+005a27ba  i32.const [56]
+005a27bc  i32.add []
+005a27bd  i32.const [0]
+005a27bf  call [1452] ; Int64.ToString
+005a27c2  local.set [7]
+005a27c4  local.get [0]
+005a27c6  i32.const [0]
+005a27c8  i32.store8 [0, 30]
+005a27cb  i32.const [3932476]
+005a27d0  i32.load [2, 0]
+005a27d3  call [901] ; 
+005a27d6  block [-64]
+005a27d8    block [-64]
+005a27da      local.get [7]
+005a27dc      i32.const [0]
+005a27de      call [3934] ; GlobalData.get_LoginUserID
+005a27e1      i32.const [0]
+005a27e3      call [1019] ; String.Equals
+005a27e6      local.set [6]
+005a27e8      local.get [6]
+005a27ea      if [-64]
+005a27ec        i32.const [3926996]
+005a27f1        i32.load [2, 0]
+005a27f4        i32.const [1]
+005a27f6        call [909] ; 
+005a27f9        local.set [5]
+005a27fb        local.get [5]
+005a27fd        i32.const [4055120] ; STRING "GameData:和上次登陆ID一样 不用刷新内存数据"
+005a2802        i32.load [2, 0]
+005a2805        call [905] ; 
+005a2808        local.get [5]
+005a280a        i32.const [4055120] ; STRING "GameData:和上次登陆ID一样 不用刷新内存数据"
+005a280f        i32.load [2, 0]
+005a2812        i32.store [2, 16]
+005a2815        br [2]
+005a2817      end []
+005a2818    end []
+005a2819    local.get [0]
+005a281b    i32.const [1]
+005a281d    i32.store8 [0, 30]
+005a2820    i32.const [3932476]
+005a2825    i32.load [2, 0]
+005a2828    call [901] ; 
+005a282b    i32.const [0]
+005a282d    call [3934] ; GlobalData.get_LoginUserID
+005a2830    local.get [4]
+005a2832    call [9888] ; jÁOb.ReportLoginSynDataChangeUser
+005a2835    i32.const [3926996]
+005a283a    i32.load [2, 0]
+005a283d    i32.const [1]
+005a283f    call [909] ; 
+005a2842    local.set [5]
+005a2844    i32.const [0]
+005a2846    call [3934] ; GlobalData.get_LoginUserID
+005a2849    local.set [8]
+005a284b    i32.const [4055108] ; STRING "GameData:上次登陆的UserID:"
+005a2850    i32.load [2, 0]
+005a2853    local.get [8]
+005a2855    i32.const [0]
+005a2857    call [921] ; String.Concat
+005a285a    local.set [8]
+005a285c    local.get [5]
+005a285e    local.get [8]
+005a2860    call [905] ; 
+005a2863    local.get [5]
+005a2865    local.get [8]
+005a2867    i32.store [2, 16]
+005a286a  end []
+005a286b  i32.const [3929208]
+005a2870  i32.load [2, 0]
+005a2873  call [901] ; 
+005a2876  local.get [5]
+005a2878  i32.const [0]
+005a287a  call [1495] ; CLog.ReleaseLog
+005a287d  i32.const [3932476]
+005a2882  i32.load [2, 0]
+005a2885  call [901] ; 
+005a2888  local.get [7]
+005a288a  i32.const [0]
+005a288c  call [4409] ; GlobalData.set_LoginUserID
+005a288f  local.get [2]
+005a2891  if [-64]
+005a2893    local.get [4]
+005a2895    i32.const [27168] ; TABLE jÁOb.ReportLoginFocusUpdate
+005a2899    global.set [3]
+005a289b    i32.const [27168] ; TABLE jÁOb.ReportLoginFocusUpdate
+005a289f    call_indirect [3, 0]
+005a28a2    i32.const [3930676]
+005a28a7    i32.load [2, 0]
+005a28aa    call [901] ; 
+005a28ad    i32.const [4055132] ; STRING "GameData:强制下载数据"
+005a28b2    i32.load [2, 0]
+005a28b5    i32.const [0]
+005a28b7    call [1066] ; Debug.LogWarning
+005a28ba    i32.const [1]
+005a28bc    local.set [5]
+005a28be  else []
+005a28bf    local.get [6]
+005a28c1    i32.const [1]
+005a28c3    i32.xor []
+005a28c4    local.set [5]
+005a28c6  end []
+005a28c7  i32.const [0]
+005a28c9  call [1910] ; GamePath.get_Instance
+005a28cc  i32.const [0]
+005a28ce  call [5051] ; GamePath.ReshMineGameDataPath
+005a28d1  local.get [0]
+005a28d3  i32.const [0]
+005a28d5  i32.store8 [0, 28]
+005a28d8  i32.const [3926996]
+005a28dd  i32.load [2, 0]
+005a28e0  i32.const [1]
+005a28e2  call [909] ; 
+005a28e5  local.set [2]
+005a28e7  i32.const [3932476]
+005a28ec  i32.load [2, 0]
+005a28ef  call [901] ; 
+005a28f2  local.get [4]
+005a28f4  i32.const [0]
+005a28f6  call [7784] ; GlobalData.get_IsSynLocalData
+005a28f9  i32.store [2, 52]
+005a28fc  local.get [4]
+005a28fe  i32.const [52]
+005a2900  i32.add []
+005a2901  i32.const [0]
+005a2903  call [966] ; Int32.ToString
+005a2906  local.set [6]
+005a2908  i32.const [4055100] ; STRING "GameData:IsSynLocalData："
+005a290d  i32.load [2, 0]
+005a2910  local.get [6]
+005a2912  i32.const [0]
+005a2914  call [921] ; String.Concat
+005a2917  local.set [6]
+005a2919  local.get [2]
+005a291b  local.get [6]
+005a291d  call [905] ; 
+005a2920  local.get [2]
+005a2922  local.get [6]
+005a2924  i32.store [2, 16]
+005a2927  i32.const [3929208]
+005a292c  i32.load [2, 0]
+005a292f  call [901] ; 
+005a2932  local.get [2]
+005a2934  i32.const [0]
+005a2936  call [1495] ; CLog.ReleaseLog
+005a2939  block [-64]
+005a293b    block [-64]
+005a293d      block [-64]
+005a293f        block [-64]
+005a2941          i32.const [0]
+005a2943          call [7784] ; GlobalData.get_IsSynLocalData
+005a2946          br_if [0]
+005a2948          local.get [3]
+005a294a          i32.eqz []
+005a294b          br_if [0]
+005a294d          local.get [4]
+005a294f          call [9891] ; jÁOb.ReportLoginFocusUpload
+005a2952          local.get [0]
+005a2954          i32.const [1]
+005a2956          i32.store8 [0, 28]
+005a2959          i32.const [3930676]
+005a295e          i32.load [2, 0]
+005a2961          call [901] ; 
+005a2964          i32.const [4055128] ; STRING "GameData:强制上传数据"
+005a2969          i32.load [2, 0]
+005a296c          i32.const [0]
+005a296e          call [1066] ; Debug.LogWarning
+005a2971          local.get [0]
+005a2973          i32.const [0]
+005a2975          i32.store8 [0, 29]
+005a2978          br [1]
+005a297a        end []
+005a297b        local.get [0]
+005a297d        i32.const [0]
+005a297f        i32.store8 [0, 29]
+005a2982        local.get [5]
+005a2984        i32.eqz []
+005a2985        br_if [0]
+005a2987        i32.const [3926996]
+005a298c        i32.load [2, 0]
+005a298f        i32.const [1]
+005a2991        call [909] ; 
+005a2994        local.set [2]
+005a2996        local.get [2]
+005a2998        i32.const [4055112] ; STRING "GameData:刷新一下内存数据"
+005a299d        i32.load [2, 0]
+005a29a0        call [905] ; 
+005a29a3        local.get [2]
+005a29a5        i32.const [4055112] ; STRING "GameData:刷新一下内存数据"
+005a29aa        i32.load [2, 0]
+005a29ad        i32.store [2, 16]
+005a29b0        i32.const [3929208]
+005a29b5        i32.load [2, 0]
+005a29b8        call [901] ; 
+005a29bb        local.get [2]
+005a29bd        i32.const [0]
+005a29bf        call [1495] ; CLog.ReleaseLog
+005a29c2        i32.const [3930256]
+005a29c7        i32.load [2, 0]
+005a29ca        call [901] ; 
+005a29cd        local.get [4]
+005a29cf        i32.const [8]
+005a29d1        i32.add []
+005a29d2        i32.const [0]
+005a29d4        call [1309] ; DataManagerPool.get_Instance
+005a29d7        i32.load [2, 8]
+005a29da        i32.const [3961756]
+005a29df        i32.load [2, 0]
+005a29e2        call [1138] ; 
+005a29e5        i32.const [3987804]
+005a29ea        i32.load [2, 0]
+005a29ed        call [1163] ; 
+005a29f0        local.get [4]
+005a29f2        local.get [4]
+005a29f4        i64.load [3, 16]
+005a29f7        i64.store [3, 40]
+005a29fa        local.get [4]
+005a29fc        local.get [4]
+005a29fe        i64.load [3, 8]
+005a2a01        i64.store [3, 32]
+005a2a04        local.get [4]
+005a2a06        local.get [4]
+005a2a08        i32.const [32]
+005a2a0a        i32.add []
+005a2a0b        i32.store [2, 0]
+005a2a0e        local.get [4]
+005a2a10        i32.const [0]
+005a2a12        i32.store [2, 8]
+005a2a15        local.get [4]
+005a2a17        local.get [4]
+005a2a19        i32.load [2, 0]
+005a2a1c        i32.store [2, 12]
+005a2a1f        block [-64]
+005a2a21          block [-64]
+005a2a23            block [-64]
+005a2a25              block [-64]
+005a2a27                loop [-64]
+005a2a29                  block [-64]
+005a2a2b                    i32.const [4477188]
+005a2a30                    i32.const [0]
+005a2a32                    i32.store [2, 0]
+005a2a35                    i32.const [2205]
+005a2a38                    local.get [4]
+005a2a3a                    i32.const [32]
+005a2a3c                    i32.add []
+005a2a3d                    i32.const [3967120]
+005a2a42                    i32.load [2, 0]
+005a2a45                    call [2] ; 
+005a2a47                    local.set [2]
+005a2a49                    i32.const [4477188]
+005a2a4e                    i32.load [2, 0]
+005a2a51                    local.set [3]
+005a2a53                    i32.const [4477188]
+005a2a58                    i32.const [0]
+005a2a5a                    i32.store [2, 0]
+005a2a5d                    local.get [3]
+005a2a5f                    i32.const [1]
+005a2a61                    i32.eq []
+005a2a62                    br_if [0]
+005a2a64                    local.get [2]
+005a2a66                    i32.eqz []
+005a2a67                    br_if [5]
+005a2a69                    i32.const [4477188]
+005a2a6e                    i32.const [0]
+005a2a70                    i32.store [2, 0]
+005a2a73                    i32.const [2206]
+005a2a76                    local.get [4]
+005a2a78                    i32.const [32]
+005a2a7a                    i32.add []
+005a2a7b                    i32.const [3967124]
+005a2a80                    i32.load [2, 0]
+005a2a83                    call [2] ; 
+005a2a85                    local.set [2]
+005a2a87                    i32.const [4477188]
+005a2a8c                    i32.load [2, 0]
+005a2a8f                    local.set [3]
+005a2a91                    i32.const [4477188]
+005a2a96                    i32.const [0]
+005a2a98                    i32.store [2, 0]
+005a2a9b                    local.get [3]
+005a2a9d                    i32.const [1]
+005a2a9f                    i32.eq []
+005a2aa0                    br_if [2]
+005a2aa2                    local.get [2]
+005a2aa4                    i32.load8_u [0, 9]
+005a2aa7                    i32.eqz []
+005a2aa8                    br_if [1]
+005a2aaa                    i32.const [4477188]
+005a2aaf                    i32.const [0]
+005a2ab1                    i32.store [2, 0]
+005a2ab4                    i32.const [1372]
+005a2ab7                    i32.const [10]
+005a2ab9                    local.get [2]
+005a2abb                    i32.const [0]
+005a2abd                    call [5] ; 
+005a2abf                    i32.const [4477188]
+005a2ac4                    i32.load [2, 0]
+005a2ac7                    local.set [2]
+005a2ac9                    i32.const [4477188]
+005a2ace                    i32.const [0]
+005a2ad0                    i32.store [2, 0]
+005a2ad3                    local.get [2]
+005a2ad5                    i32.const [1]
+005a2ad7                    i32.ne []
+005a2ad8                    br_if [1]
+005a2ada                    br [3]
+005a2adc                  end []
+005a2add                end []
+005a2ade                i32.const [2694968]
+005a2ae3                call [0] ; 
+005a2ae5                local.set [2]
+005a2ae7                br [2]
+005a2ae9              end []
+005a2aea              i32.const [2694968]
+005a2aef              call [0] ; 
+005a2af1              local.set [2]
+005a2af3              br [1]
+005a2af5            end []
+005a2af6            i32.const [2694968]
+005a2afb            call [0] ; 
+005a2afd            local.set [2]
+005a2aff          end []
+005a2b00          call [1] ; 
+005a2b02          i32.const [2694968]
+005a2b07          call [9] ; 
+005a2b09          i32.ne []
+005a2b0a          br_if [3]
+005a2b0c          local.get [4]
+005a2b0e          local.get [2]
+005a2b10          call [8] ; 
+005a2b12          i32.load [2, 0]
+005a2b15          i32.store [2, 8]
+005a2b18          i32.const [4477188]
+005a2b1d          i32.const [0]
+005a2b1f          i32.store [2, 0]
+005a2b22          i32.const [214]
+005a2b25          call [7] ; 
+005a2b27          i32.const [4477188]
+005a2b2c          i32.load [2, 0]
+005a2b2f          local.set [2]
+005a2b31          i32.const [4477188]
+005a2b36          i32.const [0]
+005a2b38          i32.store [2, 0]
+005a2b3b          local.get [2]
+005a2b3d          i32.const [1]
+005a2b3f          i32.eq []
+005a2b40          br_if [2]
+005a2b42        end []
+005a2b43        local.get [4]
+005a2b45        i32.const [8]
+005a2b47        i32.add []
+005a2b48        call [1679] ; 
+005a2b4b        drop []
+005a2b4c        local.get [0]
+005a2b4e        i32.load8_u [0, 29]
+005a2b51        i32.eqz []
+005a2b52        br_if [0]
+005a2b54        i32.const [3930676]
+005a2b59        i32.load [2, 0]
+005a2b5c        call [901] ; 
+005a2b5f        i32.const [4068548] ; STRING "Save Error在项目存档的UpdateDataCallBack中，有进行Save相关非法操作"
+005a2b64        i32.load [2, 0]
+005a2b67        i32.const [0]
+005a2b69        i32.const [2369] ; TABLE Debug.LogError
+005a2b6c        global.set [3]
+005a2b6e        i32.const [2369] ; TABLE Debug.LogError
+005a2b71        call_indirect [0, 0]
+005a2b74      end []
+005a2b75      local.get [0]
+005a2b77      local.get [7]
+005a2b79      local.get [4]
+005a2b7b      call [12183] ; GameDataVersionMgr.L«
+005a2b7e      local.get [0]
+005a2b80      i32.load [2, 12]
+005a2b83      i32.const [3959068]
+005a2b88      i32.load [2, 0]
+005a2b8b      call [1078] ; 
+005a2b8e      i32.const [3932944]
+005a2b93      i32.load [2, 0]
+005a2b96      call [901] ; 
+005a2b99      i32.const [0]
+005a2b9b      call [2587] ; HttpManager.get_Instance
+005a2b9e      i32.const [0]
+005a2ba0      call [5998] ; HttpManager.Zi½E´
+005a2ba3      local.get [4]
+005a2ba5      i32.const [-64]
+005a2ba7      i32.sub []
+005a2ba8      global.set [0]
+005a2baa      return []
+005a2bab    end []
+005a2bac    call [6] ; 
+005a2bae    local.set [2]
+005a2bb0    call [1] ; 
+005a2bb2    drop []
+005a2bb3  end []
+005a2bb4  i32.const [4477188]
+005a2bb9  i32.const [0]
+005a2bbb  i32.store [2, 0]
+005a2bbe  i32.const [2296]
+005a2bc1  local.get [4]
+005a2bc3  i32.const [8]
+005a2bc5  i32.add []
+005a2bc6  call [3] ; 
+005a2bc8  drop []
+005a2bc9  i32.const [4477188]
+005a2bce  i32.load [2, 0]
+005a2bd1  local.set [0]
+005a2bd3  i32.const [4477188]
+005a2bd8  i32.const [0]
+005a2bda  i32.store [2, 0]
+005a2bdd  local.get [0]
+005a2bdf  i32.const [1]
+005a2be1  i32.eq []
+005a2be2  if [-64]
+005a2be4    i32.const [0]
+005a2be6    call [0] ; 
+005a2be8    drop []
+005a2be9    call [1] ; 
+005a2beb    drop []
+005a2bec    i32.const [109010]
+005a2bf0    global.set [3]
+005a2bf2    i32.const [109010]
+005a2bf6    call_indirect [6, 0]
+005a2bf9    unreachable []
+005a2bfa  end []
+005a2bfb  local.get [2]
+005a2bfd  call [10] ; 
+005a2bff  unreachable []
+005a2c00  end []

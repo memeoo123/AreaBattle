@@ -1,0 +1,49 @@
+{
+  "status": "concrete_open_host_and_real_full_page_lifecycle_verified",
+  "source": [
+    "UI_OPEN_LIFECYCLE_AUDIT.json",
+    "UI_OBJECT_INITIALIZATION_AUDIT.json",
+    "UI_CLOSE_HOST_AUDIT.json",
+    "fest-ui-import.json"
+  ],
+  "implementation": [
+    "OutgameUiOpenHost composes initializer/canvas/coroutine runner and shared lifetime/page",
+    "OutgameImportedUiOutlets adapts exact exported owner/name/path mappings, no fuzzy hierarchy lookup"
+  ],
+  "verified": [
+    "All13 original ValentineUI root outlets",
+    "Concrete cached initialization through sorting/closeLoading/Refresh",
+    "Real open coroutine pause and subsequent OpenLater/OpenUI",
+    "Actual close animation then two end-of-frame waits, native destruction and real handle releases",
+    "Shared page identity and ownership across initialization/open/close"
+  ],
+  "integratedChecks": 599,
+  "playMode": {
+    "passed": true,
+    "scope": "Real open/init/outlet/canvas/animation/close lifecycle on original activity prefab; page business hooks and resource provider isolated, no production account or native bundles",
+    "checks": [
+      "Real page binds all thirteen original root outlets",
+      "Opening animation waits while paused and retains initialized page/resources",
+      "Real OpenUI follows live initialized sorted page",
+      "Source initialization and OpenLater run in order across actual animation coroutine",
+      "Hide occurs with disposed flag while native object still exists",
+      "Dispose clears references before deferred native destruction and resource releases",
+      "Close notification follows actual native destruction and all handle releases",
+      "Second end-of-frame occurs after hide/dispose frame",
+      "Real close releases main, dynamic and custom handles in order"
+    ],
+    "error": "",
+    "openFrame": 119,
+    "hideFrame": 193,
+    "disposeFrame": 193,
+    "closeFrame": 194,
+    "batchMode": false
+  },
+  "remaining": [
+    "Production UIModule registration/window count/resource loader",
+    "Page business lifecycle hooks in real owner",
+    "Account/entry/menu composition and full Player acceptance"
+  ],
+  "launchNote": "-accept-apiupdate is batch-only. Run batch preflight with that flag before non-batch PlayMode. Current preflight exited0, no unrelated source changes; non-batch run exited0.",
+  "launchReference": "https://docs.unity.com/en-us/engine/6000.0/manual/unity-editor/command-line-arguments/editor"
+}

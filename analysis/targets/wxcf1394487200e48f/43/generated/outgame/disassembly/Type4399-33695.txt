@@ -1,0 +1,28 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.cOR; wasmcode function 7398; offset=2920539 size=68
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+002c905c  i32.const [5007495]
+002c9061  i32.load8_u [0, 0]
+002c9064  i32.eqz []
+002c9065  if [-64]
+002c9067    i32.const [3953552]
+002c906c    call [900] ; 
+002c906f    i32.const [5007495]
+002c9074    i32.const [1]
+002c9076    i32.store8 [0, 0]
+002c9079  end []
+002c907a  local.get [0]
+002c907c  i32.load [2, 136]
+002c9080  local.set [0]
+002c9082  local.get [0]
+002c9084  if [-64]
+002c9086    local.get [0]
+002c9088    i32.const [3953552]
+002c908d    i32.load [2, 0]
+002c9090    call [935] ; 
+002c9093    i32.const [0]
+002c9095    call [10445] ; SevendayActivityControl.IsHaveAnyRed
+002c9098    i32.const [0]
+002c909a    call [949] ; GameObject.SetActive
+002c909d  end []
+002c909e  end []

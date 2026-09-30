@@ -1,0 +1,42 @@
+; Original class: CommanderUI
+; Type4307.zOYlg; wasmcode function 20173; offset=9064986 size=100
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+008a521b  i32.const [5008212]
+008a5220  i32.load8_u [0, 0]
+008a5223  i32.eqz []
+008a5224  if [-64]
+008a5226    i32.const [3936516]
+008a522b    call [900] ; 
+008a522e    i32.const [5008212]
+008a5233    i32.const [1]
+008a5235    i32.store8 [0, 0]
+008a5238  end []
+008a5239  local.get [0]
+008a523b  i32.load [2, 12]
+008a523e  local.set [1]
+008a5240  i32.const [3936516]
+008a5245  i32.load [2, 0]
+008a5248  call [901] ; 
+008a524b  local.get [1]
+008a524d  i32.const [0]
+008a524f  i32.const [0]
+008a5251  call [946] ; Object.op_Inequality
+008a5254  if [-64]
+008a5256    local.get [0]
+008a5258    i32.load [2, 200]
+008a525c    local.set [0]
+008a525e    i32.const [3936516]
+008a5263    i32.load [2, 0]
+008a5266    call [901] ; 
+008a5269    local.get [0]
+008a526b    i32.const [0]
+008a526d    i32.const [0]
+008a526f    call [946] ; Object.op_Inequality
+008a5272    local.set [0]
+008a5274  else []
+008a5275    i32.const [0]
+008a5277    local.set [0]
+008a5279  end []
+008a527a  local.get [0]
+008a527c  return []
+008a527d  end []

@@ -1,0 +1,20 @@
+{
+  "status": "provider_cleanup_and_can_destroy_gates_restored",
+  "source": [
+    "disassembly/Type2938-22963.txt",
+    "disassembly/Type2938-22962.txt"
+  ],
+  "verified": [
+    "Status1/2 only",
+    "One provider CanDestroy false aborts entire group",
+    "Provider count must cover bundle refcount before all-provider destruction",
+    "Concrete provider Destroy releases actual owner reference, unregister precedes collection Clear",
+    "CanDestroy requires no positive refs and every referenced ID released, stops at first false"
+  ],
+  "remaining": [
+    "Resource index unregister22860 and dependency lookup22858",
+    "Native bundle-specific Destroy and resource-system Update",
+    "Production owner and Player E2E"
+  ],
+  "integratedChecks": 592
+}

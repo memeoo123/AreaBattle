@@ -1,0 +1,33 @@
+; Original class: ServerTimeModule
+; Type4034.USSgYp}; wasmcode function 10460; offset=5100824 size=76
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004dd519  i32.const [5008706]
+004dd51e  i32.load8_u [0, 0]
+004dd521  i32.eqz []
+004dd522  if [-64]
+004dd524    i32.const [3928952]
+004dd529    call [900] ; 
+004dd52c    i32.const [5008706]
+004dd531    i32.const [1]
+004dd533    i32.store8 [0, 0]
+004dd536  end []
+004dd537  block [-64]
+004dd539    local.get [1]
+004dd53b    i32.eqz []
+004dd53c    br_if [0]
+004dd53e    local.get [1]
+004dd540    i32.load [2, 12]
+004dd543    i32.eqz []
+004dd544    br_if [0]
+004dd546    local.get [1]
+004dd548    i32.load [2, 16]
+004dd54b    i32.const [3928952]
+004dd550    i32.load [2, 0]
+004dd553    call [920] ; 
+004dd556    i32.load8_u [0, 0]
+004dd559    br_if [0]
+004dd55b    local.get [0]
+004dd55d    local.get [1]
+004dd55f    call [5701] ; ServerTimeModule.`kneqli
+004dd562  end []
+004dd563  end []

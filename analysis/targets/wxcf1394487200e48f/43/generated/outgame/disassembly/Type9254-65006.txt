@@ -1,0 +1,131 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254..ctor; wasmcode function 20400; offset=9193362 size=418
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008c4793  i32.const [5006743]
+008c4798  i32.load8_u [0, 0]
+008c479b  i32.eqz []
+008c479c  if [-64]
+008c479e    i32.const [3959444]
+008c47a3    call [900] ; 
+008c47a6    i32.const [3918584]
+008c47ab    call [900] ; 
+008c47ae    i32.const [3927212]
+008c47b3    call [900] ; 
+008c47b6    i32.const [4088432] ; STRING "game_draw"
+008c47bb    call [900] ; 
+008c47be    i32.const [4100228] ; STRING "video_show"
+008c47c3    call [900] ; 
+008c47c6    i32.const [4100232] ; STRING "video_success"
+008c47cb    call [900] ; 
+008c47ce    i32.const [4088436] ; STRING "game_fail"
+008c47d3    call [900] ; 
+008c47d6    i32.const [4088460] ; STRING "game_start"
+008c47db    call [900] ; 
+008c47de    i32.const [4088456] ; STRING "game_quit"
+008c47e3    call [900] ; 
+008c47e6    i32.const [4088428] ; STRING "game_complete"
+008c47eb    call [900] ; 
+008c47ee    i32.const [4100184] ; STRING "video_click"
+008c47f3    call [900] ; 
+008c47f6    i32.const [4096072] ; STRING "scope.WxFriendInteraction"
+008c47fb    call [900] ; 
+008c47fe    i32.const [5006743]
+008c4803    i32.const [1]
+008c4805    i32.store8 [0, 0]
+008c4808  end []
+008c4809  i32.const [3927212]
+008c480e  i32.load [2, 0]
+008c4811  i32.const [5]
+008c4813  call [909] ; 
+008c4816  local.set [1]
+008c4818  local.get [1]
+008c481a  i32.const [4088460] ; STRING "game_start"
+008c481f  i32.load [2, 0]
+008c4822  call [905] ; 
+008c4825  local.get [1]
+008c4827  i32.const [4088460] ; STRING "game_start"
+008c482c  i32.load [2, 0]
+008c482f  i32.store [2, 16]
+008c4832  local.get [1]
+008c4834  i32.const [4088456] ; STRING "game_quit"
+008c4839  i32.load [2, 0]
+008c483c  call [905] ; 
+008c483f  local.get [1]
+008c4841  i32.const [4088456] ; STRING "game_quit"
+008c4846  i32.load [2, 0]
+008c4849  i32.store [2, 20]
+008c484c  local.get [1]
+008c484e  i32.const [4088436] ; STRING "game_fail"
+008c4853  i32.load [2, 0]
+008c4856  call [905] ; 
+008c4859  local.get [1]
+008c485b  i32.const [4088436] ; STRING "game_fail"
+008c4860  i32.load [2, 0]
+008c4863  i32.store [2, 24]
+008c4866  local.get [1]
+008c4868  i32.const [4088428] ; STRING "game_complete"
+008c486d  i32.load [2, 0]
+008c4870  call [905] ; 
+008c4873  local.get [1]
+008c4875  i32.const [4088428] ; STRING "game_complete"
+008c487a  i32.load [2, 0]
+008c487d  i32.store [2, 28]
+008c4880  local.get [1]
+008c4882  i32.const [4088432] ; STRING "game_draw"
+008c4887  i32.load [2, 0]
+008c488a  call [905] ; 
+008c488d  local.get [1]
+008c488f  i32.const [4088432] ; STRING "game_draw"
+008c4894  i32.load [2, 0]
+008c4897  i32.store [2, 32]
+008c489a  local.get [0]
+008c489c  local.get [1]
+008c489e  i32.store [2, 8]
+008c48a1  i32.const [3927212]
+008c48a6  i32.load [2, 0]
+008c48a9  i32.const [3]
+008c48ab  call [909] ; 
+008c48ae  local.set [1]
+008c48b0  local.get [1]
+008c48b2  i32.const [4100228] ; STRING "video_show"
+008c48b7  i32.load [2, 0]
+008c48ba  call [905] ; 
+008c48bd  local.get [1]
+008c48bf  i32.const [4100228] ; STRING "video_show"
+008c48c4  i32.load [2, 0]
+008c48c7  i32.store [2, 16]
+008c48ca  local.get [1]
+008c48cc  i32.const [4100184] ; STRING "video_click"
+008c48d1  i32.load [2, 0]
+008c48d4  call [905] ; 
+008c48d7  local.get [1]
+008c48d9  i32.const [4100184] ; STRING "video_click"
+008c48de  i32.load [2, 0]
+008c48e1  i32.store [2, 20]
+008c48e4  local.get [1]
+008c48e6  i32.const [4100232] ; STRING "video_success"
+008c48eb  i32.load [2, 0]
+008c48ee  call [905] ; 
+008c48f1  local.get [1]
+008c48f3  i32.const [4100232] ; STRING "video_success"
+008c48f8  i32.load [2, 0]
+008c48fb  i32.store [2, 24]
+008c48fe  local.get [0]
+008c4900  local.get [1]
+008c4902  i32.store [2, 12]
+008c4905  i32.const [3918584]
+008c490a  i32.load [2, 0]
+008c490d  call [903] ; 
+008c4910  local.set [1]
+008c4912  local.get [1]
+008c4914  i32.const [3959444]
+008c4919  i32.load [2, 0]
+008c491c  call [951] ; 
+008c491f  local.get [0]
+008c4921  local.get [1]
+008c4923  i32.store [2, 32]
+008c4926  local.get [0]
+008c4928  i32.const [4096072] ; STRING "scope.WxFriendInteraction"
+008c492d  i32.load [2, 0]
+008c4930  i32.store [2, 36]
+008c4933  end []

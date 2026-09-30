@@ -1,0 +1,39 @@
+; Proj_xqzdPlayUI.dxW{ wasmcode function18054
+007a1383 i32.const [5007454]
+007a1388 i32.load8_u [0, 0]
+007a138b i32.eqz []
+007a138c if [-64]
+007a138e   i32.const [3989352]
+007a1393   call [900] ; 
+007a1396   i32.const [4018480]
+007a139b   call [900] ; 
+007a139e   i32.const [5007454]
+007a13a3   i32.const [1]
+007a13a5   i32.store8 [0, 0]
+007a13a8 end []
+007a13a9 i32.const [0]
+007a13ab call [1143] ; GameModule.get_UI
+007a13ae i32.const [3989352]
+007a13b3 i32.load [2, 0]
+007a13b6 call [1032] ; 
+007a13b9 i32.const [4018480]
+007a13be i32.load [2, 0]
+007a13c1 call [1367] ; 
+007a13c4 local.set [0]
+007a13c6 local.get [0]
+007a13c8 local.set [1]
+007a13ca local.get [0]
+007a13cc i32.load [2, 0]
+007a13cf local.set [0]
+007a13d1 local.get [1]
+007a13d3 i32.const [1]
+007a13d5 local.get [0]
+007a13d7 i32.const [72]
+007a13da i32.add []
+007a13db i32.load [2, 192]
+007a13df local.get [0]
+007a13e1 i32.load [2, 260]
+007a13e5 global.set [3]
+007a13e7 global.get [3]
+007a13e9 call_indirect [2, 0]
+007a13ec end []

@@ -1,0 +1,57 @@
+; Original class: LoginSynData
+; Type4612.OnLeave; wasmcode function 18742; offset=8464951 size=165
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00812a38  i32.const [5001595]
+00812a3d  i32.load8_u [0, 0]
+00812a40  i32.eqz []
+00812a41  if [-64]
+00812a43    i32.const [3947148]
+00812a48    call [900] ; 
+00812a4b    i32.const [4005884] ; METHOD LoginSynData.bMO`W
+00812a50    call [900] ; 
+00812a53    i32.const [4005880] ; METHOD LoginSynData.vb{Lo
+00812a58    call [900] ; 
+00812a5b    i32.const [4054920] ; STRING "GF_ReceiveDataUploaded"
+00812a60    call [900] ; 
+00812a63    i32.const [4054888] ; STRING "GF_LoginSynDataOver"
+00812a68    call [900] ; 
+00812a6b    i32.const [5001595]
+00812a70    i32.const [1]
+00812a72    i32.store8 [0, 0]
+00812a75  end []
+00812a76  local.get [0]
+00812a78  local.get [1]
+00812a7a  local.get [2]
+00812a7c  local.get [0]
+00812a7e  call [3133] ; LoginStateBase.OnLeave
+00812a81  i32.const [3947148]
+00812a86  i32.load [2, 0]
+00812a89  call [903] ; 
+00812a8c  local.set [1]
+00812a8e  local.get [1]
+00812a90  local.get [0]
+00812a92  i32.const [4005884] ; METHOD LoginSynData.bMO`W
+00812a97  i32.load [2, 0]
+00812a9a  i32.const [0]
+00812a9c  call [1067] ; EventHandler..ctor
+00812a9f  i32.const [4054888] ; STRING "GF_LoginSynDataOver"
+00812aa4  i32.load [2, 0]
+00812aa7  local.get [1]
+00812aa9  i32.const [0]
+00812aab  call [1185] ; MsgDispatcher.RemoveEventListener
+00812aae  i32.const [3947148]
+00812ab3  i32.load [2, 0]
+00812ab6  call [903] ; 
+00812ab9  local.set [1]
+00812abb  local.get [1]
+00812abd  local.get [0]
+00812abf  i32.const [4005880] ; METHOD LoginSynData.vb{Lo
+00812ac4  i32.load [2, 0]
+00812ac7  i32.const [0]
+00812ac9  call [1067] ; EventHandler..ctor
+00812acc  i32.const [4054920] ; STRING "GF_ReceiveDataUploaded"
+00812ad1  i32.load [2, 0]
+00812ad4  local.get [1]
+00812ad6  i32.const [0]
+00812ad8  call [1185] ; MsgDispatcher.RemoveEventListener
+00812adb  end []

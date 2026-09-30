@@ -1,0 +1,80 @@
+; ResourcesModule.RemoveBundleInfo; wasmcode function 10673; offset=5188452 size=225
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004f2b65  i32.const [4988243]
+004f2b6a  i32.load8_u [0, 0]
+004f2b6d  i32.eqz []
+004f2b6e  if [-64]
+004f2b70    i32.const [3929208]
+004f2b75    call [900] ; 
+004f2b78    i32.const [3960092]
+004f2b7d    call [900] ; 
+004f2b80    i32.const [3926996]
+004f2b85    call [900] ; 
+004f2b88    i32.const [3938016]
+004f2b8d    call [900] ; 
+004f2b90    i32.const [4080932] ; STRING "]"
+004f2b95    call [900] ; 
+004f2b98    i32.const [4103324] ; STRING "卸载资源失败,资源已经被释放了["
+004f2b9d    call [900] ; 
+004f2ba0    i32.const [4988243]
+004f2ba5    i32.const [1]
+004f2ba7    i32.store8 [0, 0]
+004f2baa  end []
+004f2bab  i32.const [3938016]
+004f2bb0  i32.load [2, 0]
+004f2bb3  call [901] ; 
+004f2bb6  i32.const [0]
+004f2bb8  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f2bbb  drop []
+004f2bbc  local.get [1]
+004f2bbe  i32.load8_u [0, 8]
+004f2bc1  if [-64]
+004f2bc3    i32.const [3926996]
+004f2bc8    i32.load [2, 0]
+004f2bcb    i32.const [1]
+004f2bcd    call [909] ; 
+004f2bd0    local.set [0]
+004f2bd2    i32.const [4103324] ; STRING "卸载资源失败,资源已经被释放了["
+004f2bd7    i32.load [2, 0]
+004f2bda    local.get [1]
+004f2bdc    i32.load [2, 20]
+004f2bdf    i32.const [4080932] ; STRING "]"
+004f2be4    i32.load [2, 0]
+004f2be7    i32.const [0]
+004f2be9    call [955] ; String.Concat
+004f2bec    local.set [1]
+004f2bee    local.get [0]
+004f2bf0    local.get [1]
+004f2bf2    call [905] ; 
+004f2bf5    local.get [0]
+004f2bf7    local.get [1]
+004f2bf9    i32.store [2, 16]
+004f2bfc    i32.const [3929208]
+004f2c01    i32.load [2, 0]
+004f2c04    call [901] ; 
+004f2c07    local.get [0]
+004f2c09    i32.const [0]
+004f2c0b    call [1156] ; CLog.Warning
+004f2c0e    return []
+004f2c0f  end []
+004f2c10  local.get [1]
+004f2c12  i32.load [2, 0]
+004f2c15  local.set [2]
+004f2c17  local.get [1]
+004f2c19  i32.const [1]
+004f2c1b  local.get [2]
+004f2c1d  i32.load [2, 240]
+004f2c21  local.get [2]
+004f2c23  i32.load [2, 236]
+004f2c27  global.set [3]
+004f2c29  global.get [3]
+004f2c2b  call_indirect [2, 0]
+004f2c2e  local.get [0]
+004f2c30  i32.load [2, 52]
+004f2c33  local.get [1]
+004f2c35  i32.load [2, 20]
+004f2c38  i32.const [3960092]
+004f2c3d  i32.load [2, 0]
+004f2c40  call [1202] ; 
+004f2c43  drop []
+004f2c44  end []

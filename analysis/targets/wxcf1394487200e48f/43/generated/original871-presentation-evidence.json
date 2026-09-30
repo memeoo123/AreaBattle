@@ -1,0 +1,121 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "atUtc": "2026-09-28T08:01:27.373593+00:00",
+  "userConfirmation": "刚进入关卡，尚未操作",
+  "rules": [
+    {
+      "id": "background-scene-parent",
+      "status": "confirmed",
+      "value": {
+        "position": [
+          0,
+          0,
+          2.265000104904175
+        ],
+        "baseScale": [
+          0.25,
+          0,
+          0.4
+        ],
+        "aspect": "below .5625 multiply .5625/aspect; above multiply 2*cameraSize*aspect/2.5875000953674316"
+      },
+      "evidence": [
+        "original871-disassembly/wasmcode-19607.txt",
+        "original871-disassembly/wasmcode-7819.txt",
+        "assets/gameplay.unity_6a7134d1d26bb7354ce61871131a7a4c/Transform__28.json"
+      ]
+    },
+    {
+      "id": "tower-label-initial-versus-grade-refresh",
+      "status": "confirmed",
+      "value": {
+        "baseWorldOffset": [
+          0,
+          0.3,
+          0
+        ],
+        "initial": "battle.WorldToScreenPoint(base) -> UI.ScreenToWorldPoint -> UI-world up*(.1+grade*.15)",
+        "subsequentGradeChange": "battle-world up*(.1+(maxLines-1)*.05) before projection"
+      },
+      "evidence": [
+        "original871-disassembly/wasmcode-5595.txt",
+        "original871-disassembly/wasmcode-15515.txt",
+        "original871-disassembly/wasmcode-10061.txt",
+        "original871-disassembly/wasmcode-9712.txt",
+        "original871-disassembly/wasmcode-10060.txt"
+      ]
+    },
+    {
+      "id": "native-font-fallback-metrics",
+      "status": "confirmed",
+      "value": "Retain original defaultNullFont (one empty glyph), original font names and HYZhuZiMuTouRenW fallback; replacing primary with fallback changes best-fit metrics.",
+      "evidence": [
+        "unity-assets/Font/defaultNullFont__CAB-a14f3eb3adf948afc8e578331928efaf__6544835752251692798.json",
+        "presentation-prepared/hud-import.json"
+      ]
+    },
+    {
+      "id": "commander-in-level-presentation",
+      "status": "confirmed",
+      "value": {
+        "entities": [
+          8031,
+          8032,
+          8033,
+          8034,
+          8035,
+          8036
+        ],
+        "parent": "SkillUI/main/commandRoot",
+        "localPosition": [
+          0,
+          0,
+          3
+        ],
+        "localScale": [
+          70,
+          70,
+          0
+        ],
+        "rotation": "retain source prefab",
+        "animations": "idle loop -> skill nonloop on use -> idle loop on completion, scaled clock",
+        "sortingLayer": "UIPopup original ID2446685369"
+      },
+      "evidence": [
+        "tables/CommanderConfig.json",
+        "tables/EntityModelConfig.json",
+        "original871-disassembly/wasmcode-15922.txt",
+        "original871-disassembly/wasmcode-15918.txt",
+        "original871-disassembly/wasmcode-15919.txt",
+        "resource-snapshots/commanders-20260928/prepared/native-import.json",
+        "gesture-visuals/original-TagManager.json"
+      ]
+    },
+    {
+      "id": "entry-highlight-without-input",
+      "status": "confirmed",
+      "value": "LevelControl.OnGamePlayState calls ShowMyCampEffect on entry when guide does not take over; effect107 at player towers, Default sorting order -20.",
+      "evidence": [
+        "original871-disassembly/wasmcode-7630.txt",
+        "original871-disassembly/wasmcode-4973.txt"
+      ]
+    },
+    {
+      "id": "generic-tool-footer",
+      "status": "confirmed",
+      "value": "Unlocked + no specific stock + generic points >0 shows original go_toolValue footer; label formats LanguageConfig SkillUI.itemPointNum.",
+      "evidence": [
+        "original871-disassembly/wasmcode-10347.txt",
+        "original871-disassembly/wasmcode-15930.txt",
+        "original871-disassembly/wasmcode-15920.txt",
+        "original871-disassembly/wasmcode-5670.txt",
+        "tables/LanguageConfig.json"
+      ]
+    }
+  ],
+  "comparison": "original871-visual-comparison.json",
+  "classification": "source-backed corrections and single original entry frame compared; full battlefield fidelity remains incomplete"
+}

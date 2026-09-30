@@ -1,0 +1,30 @@
+; Original class: HczzqLocalDataManager
+; Type4085..ctor; wasmcode1 function 60862; offset=19626906 size=83
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+012b7b9b  i32.const [5008433]
+012b7ba0  i32.load8_u [0, 0]
+012b7ba3  i32.eqz []
+012b7ba4  if [-64]
+012b7ba6    i32.const [4101768] ; STRING "{0}/{1}"
+012b7bab    i32.const [1605]
+012b7bae    call_indirect [0, 0]
+012b7bb1    i32.const [4101876] ; STRING "{0}{1}/{2}"
+012b7bb6    i32.const [1605]
+012b7bb9    call_indirect [0, 0]
+012b7bbc    i32.const [5008433]
+012b7bc1    i32.const [1]
+012b7bc3    i32.store8 [0, 0]
+012b7bc6  end []
+012b7bc7  local.get [0]
+012b7bc9  i32.const [4101876] ; STRING "{0}{1}/{2}"
+012b7bce  i32.load [2, 0]
+012b7bd1  i32.store [2, 32]
+012b7bd4  local.get [0]
+012b7bd6  i32.const [4101768] ; STRING "{0}/{1}"
+012b7bdb  i32.load [2, 0]
+012b7bde  i32.store [2, 36]
+012b7be1  local.get [0]
+012b7be3  i32.const [0]
+012b7be5  i32.const [24581] ; TABLE DataManagerBase..ctor
+012b7be9  call_indirect [4, 0]
+012b7bec  end []

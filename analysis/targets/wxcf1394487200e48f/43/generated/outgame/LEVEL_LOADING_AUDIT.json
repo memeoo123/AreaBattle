@@ -1,0 +1,51 @@
+{
+  "atUtc": "2026-09-30T07:49:26.356769+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "LEVEL_LOADING_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T07:49:26.356769+00:00",
+    "scope": "Level config/resource and Player skin entity source helpers; concrete preload services; original loading-page import/runtime/UIControl methods",
+    "checksPassed": 741,
+    "newIntegratedChecks": 12,
+    "nativePlayModeChecks": 23,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "OutgameLevelResourceBundles.Build",
+      "RecoveredHudImporter.ImportLoadingBatch",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameLoadingPlayModeValidation.Run"
+    ],
+    "notClaimed": "Full Level/Player lifecycles, actual complete preload entity asset set, complete Main/account/lobby, original matched rendering or remote service/device verification"
+  },
+  "findings": [
+    "ConfigMgr level real-ID loop, stored CurrentLevelConfig, missing-key-only diagnostic, guide raw-id/upper-only index clamp and base-speed reset restored. Original table has561 entries and max560. No invented negative-level clamp.",
+    "Player equipped/random skin-to-entity lookup uses actual SkinCatalog/config; camp clamped2..4 with independent enemy category arrays, fallbacktype*1000 and optional animation+3000. Enemy random calls9 in index/category order over original81/3 rows.",
+    "LevelInfoCfg restored as ScriptableObject with Camp/Star/Obstacle arrays and shared IOutgameLevelLayout; existing battle LevelLayout implements interface without changing its fields/rules.",
+    "LoadHomeLevel/LoadLevel deliberately always dispatch: source Item1!=id OR Item1==id predicate is exhaustive. Mutable resource arguments determine tuple IDs; home callback captures filename while game callback reads argument0. New tuple assigned before FromJsonOverwrite, previous SO not destroyed.",
+    "Concrete OutgamePrefabPreloadServices uses live resource tuple, player skin resolver and actual loading page. Prepare completion remains explicit Action boundary for source31535 towers/obstacles/playUI/camera/coroutine, which are not all composed yet.",
+    "Original Resources loading GameObject273 has10 nodes. Three serialized outlets decoded from raw68-byte MonoBehaviour1605 by metadata offsets32/44/56. Partial UGUI schemas decoded via exact-consumption same-class full schemas from authorized bundles; raw hashes and schema provenance recorded separately.",
+    "Recovered11sprites and1font, SpriteRenderer source552 sortinglayerTop/order99, Animator52/Pulbic_man001 and sourceclip49/lodingSoldier. Six streamed PPtr frames at12fps loop0.5sec; negative initial sentinel normalized to0. Native PPtr keys hold for one sample, so no extra seventh hold key.",
+    "AutoCanvasLayer Start walks parents excluding self, copies parent layer, enables override and adds original offset25. Native test validates source parentCanvas42 => nested67.",
+    "Loading page preserves initial0.6..0.8 random range/1second defaultOutQuad, anchor825, N0 percent, earlyClose then final1-current duration, strict timeout>, SetSpine5 withoutreset, retry destroy thenstate10false and cancel transitioncallback then destroy/state11false.",
+    "Singleton cleanup is unconditional even when an older page closes after a newer page opens. Unity destruction is deferred. UIControl Close/Reset use CLR reference checks, allowing managed timer writes on a destroyed native owner, verified natively.",
+    "UIControl original Resources path explicitly maps to recovered prefab, creates on everyOpen and parents under actual UiNodes UIStory with worldPositionStays=false. Bind must occur before page Start; full Main/UI host composition remains open.",
+    "12 new integrated cases load rebuilt native bundles from recovered original level1/2 data. Prefab template cache is explicitly synthetic warm test data to isolate config/callback behavior; this does not prove full entity preload asset availability. No fake account/platform callbacks used.",
+    "Failed first import was Unity fake-null GetComponent combined with CLR ??; changed importer to Unity truth checks. Failed first integrated run was test fixture null loadEditorConfig dependency, fixed. First native animation check found extra PPtr hold key, corrected. Failure logs preserved."
+  ],
+  "remaining": [
+    "Complete Level4107 lifecycle/update/state/tower/obstacle/post-prepare graph and Player4462 lifecycle, then bind their actual services into full Main. Lifecycle coverage stays8/38, remaining30.",
+    "Supply real loading host common-tip/transition/level-state providers in complete UI graph; current native host verifies callback ordering only.",
+    "Restore all actual fixed preload entity templates and source resource addresses; warm synthetic templates are test-only.",
+    "Finish all objective subsystems and full persistent restart/failure/Player build acceptance; production scene remains Battle.unity."
+  ],
+  "artifacts": {
+    "import": "analysis/unity-loading-import-report.json",
+    "decoded": "generated/outgame/LOADING_UI_DECODED_COMPONENTS.json",
+    "manifest": "generated/outgame/loading-ui-import.json",
+    "integratedLog": "analysis/level-resource-integrated-fixed.log",
+    "nativeLog": "analysis/loading-page-native-fixed.log",
+    "nativeReport": "analysis/loading-page-native-validation.json"
+  }
+}

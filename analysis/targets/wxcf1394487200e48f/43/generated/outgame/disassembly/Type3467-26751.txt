@@ -1,0 +1,85 @@
+; Original class: DataManagerPool
+; Type3467.OnInit; wasmcode function 12656; offset=6101236 size=251
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d18f5  i32.const [4988998]
+005d18fa  i32.load8_u [0, 0]
+005d18fd  i32.eqz []
+005d18fe  if [-64]
+005d1900    i32.const [3929208]
+005d1905    call [900] ; 
+005d1908    i32.const [3930256]
+005d190d    call [900] ; 
+005d1910    i32.const [3961736]
+005d1915    call [900] ; 
+005d1918    i32.const [3919364]
+005d191d    call [900] ; 
+005d1920    i32.const [3926996]
+005d1925    call [900] ; 
+005d1928    i32.const [3943896]
+005d192d    call [900] ; 
+005d1930    i32.const [4103140] ; STRING "初始化DataManagerPool完成"
+005d1935    call [900] ; 
+005d1938    i32.const [4988998]
+005d193d    i32.const [1]
+005d193f    i32.store8 [0, 0]
+005d1942  end []
+005d1943  i32.const [3930256]
+005d1948  i32.load [2, 0]
+005d194b  call [901] ; 
+005d194e  i32.const [3930256]
+005d1953  i32.load [2, 0]
+005d1956  i32.load [2, 92]
+005d1959  i32.const [0]
+005d195b  i32.store8 [0, 4]
+005d195e  i32.const [3919364]
+005d1963  i32.load [2, 0]
+005d1966  call [903] ; 
+005d1969  local.set [1]
+005d196b  local.get [1]
+005d196d  i32.const [3961736]
+005d1972  i32.load [2, 0]
+005d1975  call [951] ; 
+005d1978  local.get [0]
+005d197a  local.get [1]
+005d197c  i32.store [2, 8]
+005d197f  i32.const [3943896]
+005d1984  i32.load [2, 0]
+005d1987  call [903] ; 
+005d198a  local.set [1]
+005d198c  local.get [1]
+005d198e  i32.const [0]
+005d1990  call [9859] ; ±¾«lK..ctor
+005d1993  local.get [0]
+005d1995  local.get [1]
+005d1997  i32.store [2, 12]
+005d199a  local.get [0]
+005d199c  i32.load [2, 12]
+005d199f  i32.const [0]
+005d19a1  call [9860] ; ±¾«lK.²Tdº¼
+005d19a4  local.get [0]
+005d19a6  i32.load8_u [0, 16]
+005d19a9  if [-64]
+005d19ab    local.get [0]
+005d19ad    local.get [0]
+005d19af    call [12652] ; DataManagerPool.d¸VbR¥
+005d19b2  end []
+005d19b3  i32.const [3926996]
+005d19b8  i32.load [2, 0]
+005d19bb  i32.const [1]
+005d19bd  call [909] ; 
+005d19c0  local.set [0]
+005d19c2  local.get [0]
+005d19c4  i32.const [4103140] ; STRING "初始化DataManagerPool完成"
+005d19c9  i32.load [2, 0]
+005d19cc  call [905] ; 
+005d19cf  local.get [0]
+005d19d1  i32.const [4103140] ; STRING "初始化DataManagerPool完成"
+005d19d6  i32.load [2, 0]
+005d19d9  i32.store [2, 16]
+005d19dc  i32.const [3929208]
+005d19e1  i32.load [2, 0]
+005d19e4  call [901] ; 
+005d19e7  local.get [0]
+005d19e9  i32.const [0]
+005d19eb  call [4006] ; CLog.mCªg¬
+005d19ee  end []

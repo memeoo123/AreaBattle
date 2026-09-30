@@ -1,0 +1,46 @@
+﻿{
+  "atUtc": "2026-09-30T05:07:49.155879+00:00",
+  "status": "pre-game-settings-restored-registration-roster-extracted",
+  "sourceMethods": [
+    30628,
+    30432,
+    30622,
+    30608
+  ],
+  "implementation": "OutgamePreGameSettings.cs",
+  "settingOrder": [
+    "ReportManager static field4=2",
+    "Input.multiTouchEnabled=false",
+    "ConfigMgr.GetLargNum new map Add(row.mag,row.magName)",
+    "BigNumExtension SetBigNumSymbol:Values.ToList then retain dictionary then First().Key",
+    "Application.targetFrameRate=60"
+  ],
+  "genericEvidence": {
+    "3956236": "Dictionary<int,string>.Add",
+    "3956264": "Dictionary<int,string>.get_Values",
+    "3998516": "Enumerable.ToList<string>",
+    "3997968": "Enumerable.First<KeyValuePair<int,string>>",
+    "3970356": "KeyValuePair<int,string>.get_Key"
+  },
+  "registrationRoster": "PRE_GAME_REGISTRATION_ROSTER.json",
+  "controllers": 38,
+  "procedureOrder": [
+    "ProcedurePreLoad",
+    "ProcedureStarGame",
+    "ProcedureExitGame"
+  ],
+  "firstProcedure": "ProcedurePreLoad",
+  "verification": {
+    "integrated": 662,
+    "nativeInputFrameSettings": true,
+    "originalLargeNumPayload": true,
+    "emptyMapPartialFailure": true,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "remaining": [
+    "ReportManager owner supplied at composition, not yet global service",
+    "Controller/procedure registration roster is evidence only",
+    "30617 overall composition and actual lifecycle/preload/account/menu remain incomplete"
+  ]
+}

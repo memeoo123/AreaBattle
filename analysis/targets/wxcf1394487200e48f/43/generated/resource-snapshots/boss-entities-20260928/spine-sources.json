@@ -1,0 +1,369 @@
+[
+  {
+    "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-2805175160648972110",
+    "name": "npc24.atlas",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+    "sourceSha256": "6b837a7ae969659c542e180c851fa6aa2800f2c53f9df3a2bdd0b23c794160af",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.atlas.txt",
+    "sha256": "c4157e8af951387fc2cdd0ecfacf723a8ca08ad6a0fdb90a1a2a83854a08ed81"
+  },
+  {
+    "id": "CAB-a5cbcddbf71a9f47f7352c65479f1e75:-2613148055829038102",
+    "name": "npc24",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss01.prefab_37d3af7f4a7607d4dd8624104c45cd37.unity3d",
+    "sourceSha256": "6b837a7ae969659c542e180c851fa6aa2800f2c53f9df3a2bdd0b23c794160af",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.txt",
+    "sha256": "2f1fd97dd7c4adabb53505e37fb2de9a44ee2675e68759bb79ca5096ff8f3783",
+    "version": "4.1.16",
+    "bones": 94,
+    "slots": 25,
+    "ik": [
+      {
+        "name": "line01_IK",
+        "bones": [
+          "bone2",
+          "bone3"
+        ],
+        "target": "bone5"
+      },
+      {
+        "name": "line02_IK",
+        "order": 1,
+        "bones": [
+          "bone4",
+          "bone15"
+        ],
+        "target": "bone16",
+        "bendPositive": false
+      }
+    ],
+    "transformConstraints": null,
+    "pathConstraints": [
+      {
+        "name": "line01",
+        "order": 2,
+        "bones": [
+          "bone2a",
+          "bone2b",
+          "bone2c",
+          "bone2d",
+          "bone2e",
+          "bone2f",
+          "bone2g",
+          "bone2h",
+          "bone2i",
+          "bone2j",
+          "bone2k",
+          "bone2l"
+        ],
+        "target": "line01",
+        "spacingMode": "percent",
+        "rotateMode": "chainScale",
+        "spacing": 0.084
+      },
+      {
+        "name": "line02",
+        "order": 3,
+        "bones": [
+          "bone4a",
+          "bone4b",
+          "bone4c",
+          "bone4d",
+          "bone4e",
+          "bone4f",
+          "bone4g",
+          "bone4h",
+          "bone4i",
+          "bone4j",
+          "bone4k",
+          "bone4l"
+        ],
+        "target": "line02",
+        "spacingMode": "percent",
+        "rotateMode": "chainScale",
+        "spacing": 0.083
+      }
+    ],
+    "animations": {
+      "attack": [
+        "slots",
+        "bones"
+      ],
+      "dead": [
+        "slots",
+        "bones"
+      ],
+      "idle": [
+        "slots",
+        "bones"
+      ],
+      "run": [
+        "slots",
+        "bones"
+      ],
+      "victory": [
+        "slots",
+        "bones"
+      ]
+    }
+  },
+  {
+    "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-4925732027355184233",
+    "name": "cloud",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+    "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/cloud.txt",
+    "sha256": "ed96fc6f445d2fe6b2421d8c524fcf0b2c9fd1e92f0eb7a11dc92b43d8bb1bb3",
+    "version": "4.1.16",
+    "bones": 3,
+    "slots": 2,
+    "ik": null,
+    "transformConstraints": null,
+    "pathConstraints": null,
+    "animations": {
+      "animation": [
+        "bones"
+      ]
+    }
+  },
+  {
+    "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-667853312334905757",
+    "name": "npc26",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+    "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.txt",
+    "sha256": "58776d769c4adbf54b425306668a8b58f88166ea5a48abd5418048e7c3942e4d",
+    "version": "4.1.16",
+    "bones": 60,
+    "slots": 17,
+    "ik": [
+      {
+        "name": "L_leg",
+        "order": 1,
+        "bones": [
+          "bone34",
+          "bone35"
+        ],
+        "target": "L_leg",
+        "bendPositive": false
+      },
+      {
+        "name": "R_leg",
+        "bones": [
+          "bone32",
+          "bone33"
+        ],
+        "target": "R_leg",
+        "bendPositive": false
+      }
+    ],
+    "transformConstraints": null,
+    "pathConstraints": null,
+    "animations": {
+      "attack": [
+        "bones"
+      ],
+      "dead": [
+        "bones",
+        "ik",
+        "attachments"
+      ],
+      "idle": [
+        "bones"
+      ],
+      "run": [
+        "bones",
+        "ik"
+      ],
+      "victory": [
+        "bones"
+      ]
+    }
+  },
+  {
+    "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:-69053168959669514",
+    "name": "cloud.atlas",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+    "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/cloud.atlas.txt",
+    "sha256": "5a54d0584a2c68ac7917864f42abe3033eea5af6c65a5ed94266a239c663e8bb"
+  },
+  {
+    "id": "CAB-4cbdf2fb4ff783260c6b88a76e110815:3822428077056672803",
+    "name": "npc26.atlas",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/boss02.prefab_c837f1c02600061202466cd6bb4c1302.unity3d",
+    "sourceSha256": "57fdaadd681b9cef08989aee5a963c6af76e958bf9790c72a0ec3c6d504cd8c4",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.atlas.txt",
+    "sha256": "faea02520a11fbc41945fe3b72830ae5c2e3aba688846eaf6338d0b7454db7f6"
+  },
+  {
+    "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-2805175160648972110",
+    "name": "npc24.atlas",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+    "sourceSha256": "8f072181544f14ce3e4e9ac58fda7f15769dab1ffdf3f08d386ef672ac5dba4d",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.atlas.txt",
+    "sha256": "c4157e8af951387fc2cdd0ecfacf723a8ca08ad6a0fdb90a1a2a83854a08ed81"
+  },
+  {
+    "id": "CAB-00f5755f1c988a9722cbc3238004bfdf:-2613148055829038102",
+    "name": "npc24",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier1.prefab_27b7fc52aa384de667fdd18a51be71a2.unity3d",
+    "sourceSha256": "8f072181544f14ce3e4e9ac58fda7f15769dab1ffdf3f08d386ef672ac5dba4d",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc24.txt",
+    "sha256": "2f1fd97dd7c4adabb53505e37fb2de9a44ee2675e68759bb79ca5096ff8f3783",
+    "version": "4.1.16",
+    "bones": 94,
+    "slots": 25,
+    "ik": [
+      {
+        "name": "line01_IK",
+        "bones": [
+          "bone2",
+          "bone3"
+        ],
+        "target": "bone5"
+      },
+      {
+        "name": "line02_IK",
+        "order": 1,
+        "bones": [
+          "bone4",
+          "bone15"
+        ],
+        "target": "bone16",
+        "bendPositive": false
+      }
+    ],
+    "transformConstraints": null,
+    "pathConstraints": [
+      {
+        "name": "line01",
+        "order": 2,
+        "bones": [
+          "bone2a",
+          "bone2b",
+          "bone2c",
+          "bone2d",
+          "bone2e",
+          "bone2f",
+          "bone2g",
+          "bone2h",
+          "bone2i",
+          "bone2j",
+          "bone2k",
+          "bone2l"
+        ],
+        "target": "line01",
+        "spacingMode": "percent",
+        "rotateMode": "chainScale",
+        "spacing": 0.084
+      },
+      {
+        "name": "line02",
+        "order": 3,
+        "bones": [
+          "bone4a",
+          "bone4b",
+          "bone4c",
+          "bone4d",
+          "bone4e",
+          "bone4f",
+          "bone4g",
+          "bone4h",
+          "bone4i",
+          "bone4j",
+          "bone4k",
+          "bone4l"
+        ],
+        "target": "line02",
+        "spacingMode": "percent",
+        "rotateMode": "chainScale",
+        "spacing": 0.083
+      }
+    ],
+    "animations": {
+      "attack": [
+        "slots",
+        "bones"
+      ],
+      "dead": [
+        "slots",
+        "bones"
+      ],
+      "idle": [
+        "slots",
+        "bones"
+      ],
+      "run": [
+        "slots",
+        "bones"
+      ],
+      "victory": [
+        "slots",
+        "bones"
+      ]
+    }
+  },
+  {
+    "id": "CAB-71eaaec95335b868bad1572e7073e552:-667853312334905757",
+    "name": "npc26",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+    "sourceSha256": "8e50655f05bf88c6ec1b891f5b91c3482e3fdc09c09aec7d4aecef2f8b9b90cb",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.txt",
+    "sha256": "58776d769c4adbf54b425306668a8b58f88166ea5a48abd5418048e7c3942e4d",
+    "version": "4.1.16",
+    "bones": 60,
+    "slots": 17,
+    "ik": [
+      {
+        "name": "L_leg",
+        "order": 1,
+        "bones": [
+          "bone34",
+          "bone35"
+        ],
+        "target": "L_leg",
+        "bendPositive": false
+      },
+      {
+        "name": "R_leg",
+        "bones": [
+          "bone32",
+          "bone33"
+        ],
+        "target": "R_leg",
+        "bendPositive": false
+      }
+    ],
+    "transformConstraints": null,
+    "pathConstraints": null,
+    "animations": {
+      "attack": [
+        "bones"
+      ],
+      "dead": [
+        "bones",
+        "ik",
+        "attachments"
+      ],
+      "idle": [
+        "bones"
+      ],
+      "run": [
+        "bones",
+        "ik"
+      ],
+      "victory": [
+        "bones"
+      ]
+    }
+  },
+  {
+    "id": "CAB-71eaaec95335b868bad1572e7073e552:3822428077056672803",
+    "name": "npc26.atlas",
+    "source": "generated/resource-snapshots/boss-entities-20260928/source-bundles/model/entity/bosssoldier2.prefab_7f1be01ec739266f6d76e912b8e7fe96.unity3d",
+    "sourceSha256": "8e50655f05bf88c6ec1b891f5b91c3482e3fdc09c09aec7d4aecef2f8b9b90cb",
+    "path": "generated/resource-snapshots/boss-entities-20260928/spine/npc26.atlas.txt",
+    "sha256": "faea02520a11fbc41945fe3b72830ae5c2e3aba688846eaf6338d0b7454db7f6"
+  }
+]

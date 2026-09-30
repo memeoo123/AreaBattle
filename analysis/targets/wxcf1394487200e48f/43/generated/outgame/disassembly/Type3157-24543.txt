@@ -1,0 +1,15 @@
+; Original class: AdsManager
+; Type3157.ShowBanner; wasmcode function 13324; offset=6447513 size=24
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0062619a  local.get [0]
+0062619c  local.get [0]
+0062619e  call [5234] ; AdsManager.IsOpenRemoveAds_Override
+006261a1  i32.eqz []
+006261a2  if [-64]
+006261a4    local.get [0]
+006261a6    local.get [1]
+006261a8    local.get [2]
+006261aa    local.get [0]
+006261ac    call [13325] ; AdsManager.ShowBannerStatic
+006261af  end []
+006261b0  end []

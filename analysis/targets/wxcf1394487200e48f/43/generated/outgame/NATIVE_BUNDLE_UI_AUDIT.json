@@ -1,0 +1,65 @@
+{
+  "atUtc": "2026-09-30T03:24:13.028074+00:00",
+  "status": "native-positive-subsystem-verified",
+  "pipeline": [
+    "Rebuilt source-imported ValentineUI prefab bundle for StandaloneWindows64",
+    "UnityWebRequestAssetBundle.GetAssetBundle(file URL) and SendWebRequest",
+    "OutgameLegacyWebDownload/DownloadUpdate populate loaded registry/remove request",
+    "BundleRegistry/BundleOperation Update retire operation",
+    "PackageLoad resumes native coroutine and completes AssetLoader",
+    "ResourcesInfo native AssetBundle.LoadAsset + Object.Instantiate(false)",
+    "UiLegacyLoader attaches/stretches/waits2frames",
+    "UiOpenLifecycle/UiObjectInitialization binds original outlets, activates, sorts"
+  ],
+  "bundleSha256": "08fdfb7aadb09a811ac86a835df5433843d01f7ac9e7e22c6ad3ca5aba79c5e2",
+  "sourcePrefabSha256": "52fedc8c981c5c1bf7a756b24b21cedd16b1173b271f582e107d696911981816",
+  "validation": {
+    "passed": true,
+    "batchMode": false,
+    "error": "",
+    "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route, no original server/variant/dependency/production account composition",
+    "requestFrame": 1,
+    "assetFrame": 3,
+    "pageFrame": 5,
+    "downloadedBytes": 2377959,
+    "checks": [
+      "Source canonical bundle key reaches native acquisition",
+      "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+      "Native request succeeds and recovered manager removes request/operation",
+      "Bundle prefab stays hidden until two actual frame yields while paused",
+      "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+      "Bundled page carries native sprite and text components"
+    ]
+  },
+  "integratedChecks": 624,
+  "limitations": [
+    "Local fixture maps one source key to rebuilt Windows bundle; does not prove original remote download URLs, variant/dependency acquisition, or WebGL transport.",
+    "UIRoot/bootstrap still instantiated from imported local Resources; native bundle test targets activity page.",
+    "Final manager cleanup and unload manager are explicit no-op test seams.",
+    "Page business hooks isolated; no full production account/menu startup or fresh Player build."
+  ],
+  "latestUnloadValidation": {
+    "atUtc": "2026-09-30T03:27:46.401797+00:00",
+    "report": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 1,
+      "assetFrame": 3,
+      "pageFrame": 5,
+      "downloadedBytes": 2377959,
+      "checks": [
+        "Source canonical bundle key reaches native acquisition",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native AssetBundle.Unload(true) runs through recovered cleanup with zero-delay fixture"
+      ]
+    },
+    "qualification": "Replaces prior no-op unload/cleanup seams with source unload manager; zero-second delay injected. Prior six-check load run retained as historical validation."
+  }
+}

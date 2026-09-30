@@ -1,0 +1,34 @@
+; Original shared generic: ConfigRead.¢­m`¢|
+; VideoConfigGeneric.¢­m`¢|; wasmcode function 20109; offset=9037605 size=78
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0089e726  local.get [1]
+0089e728  i32.load [2, 28]
+0089e72b  i32.eqz []
+0089e72c  if [-64]
+0089e72e    i32.const [4101324] ; STRING "{"
+0089e733    call [900] ; 
+0089e736    local.get [1]
+0089e738    call [954] ; 
+0089e73b  end []
+0089e73c  local.get [0]
+0089e73e  local.get [0]
+0089e740  i32.const [4101324] ; STRING "{"
+0089e745  i32.load [2, 0]
+0089e748  i32.const [0]
+0089e74a  call [1822] ; String.IndexOf
+0089e74d  i32.const [0]
+0089e74f  call [1225] ; String.Substring
+0089e752  local.set [0]
+0089e754  local.get [1]
+0089e756  i32.load [2, 28]
+0089e759  i32.load [2, 0]
+0089e75c  i32.load [2, 0]
+0089e75f  local.get [1]
+0089e761  i32.load [2, 28]
+0089e764  i32.load [2, 0]
+0089e767  i32.const [0]
+0089e769  local.get [0]
+0089e76b  call [1014] ; 
+0089e76e  i32.load [2, 8]
+0089e771  return []
+0089e772  end []

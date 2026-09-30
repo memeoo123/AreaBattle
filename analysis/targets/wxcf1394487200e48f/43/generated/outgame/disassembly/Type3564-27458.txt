@@ -1,0 +1,26 @@
+; Original class: UserVariable
+; Type3564.BuildVariable; wasmcode function 6835; offset=2574869 size=62
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00274a16  i32.const [4989702]
+00274a1b  i32.load8_u [0, 0]
+00274a1e  i32.eqz []
+00274a1f  if [-64]
+00274a21    i32.const [3941112]
+00274a26    call [900] ; 
+00274a29    i32.const [4989702]
+00274a2e    i32.const [1]
+00274a30    i32.store8 [0, 0]
+00274a33  end []
+00274a34  i32.const [3941112]
+00274a39  i32.load [2, 0]
+00274a3c  call [903] ; 
+00274a3f  local.set [2]
+00274a41  local.get [2]
+00274a43  local.get [0]
+00274a45  i32.store [2, 8]
+00274a48  local.get [2]
+00274a4a  local.get [1]
+00274a4c  i32.store [2, 12]
+00274a4f  local.get [2]
+00274a51  return []
+00274a52  end []

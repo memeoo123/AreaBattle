@@ -1,0 +1,35 @@
+; Original class: Event
+; Type9341..ctor; wasmcode1 function 28824; offset=11014721 size=92
+; signature={'args': [127, 125, 127, 127], 'returns': []}; localGroups=[]
+00a81242  local.get [2]
+00a81244  i32.eqz []
+00a81245  if [-64]
+00a81247    i32.const [3928236]
+00a8124c    i32.const [109006]
+00a81250    call_indirect [2, 0]
+00a81253    i32.const [109007]
+00a81257    call_indirect [2, 0]
+00a8125a    local.set [0]
+00a8125c    local.get [0]
+00a8125e    i32.const [4086204] ; STRING "data"
+00a81263    i32.const [109006]
+00a81267    call_indirect [2, 0]
+00a8126a    i32.const [4086208] ; STRING "data cannot be null."
+00a8126f    i32.const [109006]
+00a81273    call_indirect [2, 0]
+00a81276    i32.const [0]
+00a81278    call [928] ; ArgumentNullException..ctor
+00a8127b    local.get [0]
+00a8127d    i32.const [3998644] ; METHOD Event..ctor
+00a81282    i32.const [109006]
+00a81286    call_indirect [2, 0]
+00a81289    call [901] ; 
+00a8128c    unreachable []
+00a8128d  end []
+00a8128e  local.get [0]
+00a81290  local.get [2]
+00a81292  i32.store [2, 8]
+00a81295  local.get [0]
+00a81297  local.get [1]
+00a81299  f32.store [2, 12]
+00a8129c  end []

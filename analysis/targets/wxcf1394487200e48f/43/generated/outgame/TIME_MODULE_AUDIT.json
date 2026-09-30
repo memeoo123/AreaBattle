@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T09:55:40.893280+00:00",
+  "status": "source-module-restored-composition-pending",
+  "sourceEvidence": "TIME_MODULE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T09:55:40.893280+00:00",
+    "scope": "Source TimeModule full lifecycle/loop/Unity timers composed with existing countdown and native audio",
+    "checksPassed": 938,
+    "newIntegratedChecks": 25,
+    "nativePlayModeChecks": 19,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTimeModulePlayModeValidation.Run"
+    ],
+    "notClaimed": "Full Main/account/menu composition, shared UpdateManager/AudioManager/resource ownership, full outgame Player"
+  },
+  "findings": [
+    "Production OutgameTimeModule extends countdown implementation while sharing TimeId and preserving map creation/clear ordering. Full source lifecycle, looping helpers, Unity helpers, pending queues and messages restored. Existing countdown API and tests retained.",
+    "938 integrated checks passed,25 new source golden checks. 19 native checks passed with full module Update including original1001/2001 audio, actual Unity delta accumulation and DateTime fade, focus listener and shutdown disposal. Remaining resource/shared audio update owner is explicitly fixture.",
+    "Initial integrated invocation directly called report-returning ValidateIntegrated and did not auto-exit; after it produced938 passes, only own PID62448 was terminated. Initial native launch71540 hit existing-project lock and produced no result. Final successful native62124 and integrated51160 exited normally. Final logs below are authoritative.",
+    "Controller lifecycle count remains11/38,27 remaining. Method map unchanged4993. No full outgame Player build or acceptance claim."
+  ],
+  "remaining": [
+    "Restore shared UpdateManager and AudioManager3421/config/root/listener/node/resource helper composition, then bind real ownership into full Main module graph.",
+    "Continue remaining27 business controller lifecycles and full Main/account/module/menu graph; all original scope, restart/failure/return and runnable Player acceptance remain required."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/time-module-integrated-final.log",
+    "nativeLog": "analysis/time-module-native-final.log",
+    "nativeReport": "analysis/time-module-native-validation.json"
+  },
+  "disassembledMethodMapCount": 4993
+}

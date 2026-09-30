@@ -1,0 +1,52 @@
+; Original class: DAUAdsAdapter
+; Type7488.notifyRequestAdFail; wasmcode function 2711; offset=844792 size=126
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+000ce3f9  i32.const [5004948]
+000ce3fe  i32.load8_u [0, 0]
+000ce401  i32.eqz []
+000ce402  if [-64]
+000ce404    i32.const [3930104]
+000ce409    call [900] ; 
+000ce40c    i32.const [4093376] ; STRING "notifyRequestAdFail "
+000ce411    call [900] ; 
+000ce414    i32.const [5004948]
+000ce419    i32.const [1]
+000ce41b    i32.store8 [0, 0]
+000ce41e  end []
+000ce41f  block [-64]
+000ce421    local.get [0]
+000ce423    i32.load [2, 12]
+000ce426    i32.const [3]
+000ce428    i32.eq []
+000ce429    br_if [0]
+000ce42b    local.get [0]
+000ce42d    i32.load [2, 8]
+000ce430    i32.const [4093376] ; STRING "notifyRequestAdFail "
+000ce435    i32.load [2, 0]
+000ce438    i32.const [0]
+000ce43a    call [921] ; String.Concat
+000ce43d    i32.const [0]
+000ce43f    call [999] ; XYXLOG.Log
+000ce442    local.get [0]
+000ce444    i32.const [3]
+000ce446    i32.store [2, 12]
+000ce449    local.get [0]
+000ce44b    local.get [0]
+000ce44d    call [4475] ; NewAdsManager.stopDelayRequestAdConfig
+000ce450    local.get [0]
+000ce452    local.get [0]
+000ce454    call [4474] ; DAUAdsAdapter.stopShowTimeout
+000ce457    local.get [0]
+000ce459    i32.load [2, 32]
+000ce45c    local.set [1]
+000ce45e    local.get [1]
+000ce460    i32.eqz []
+000ce461    br_if [0]
+000ce463    i32.const [1]
+000ce465    i32.const [3930104]
+000ce46a    i32.load [2, 0]
+000ce46d    local.get [1]
+000ce46f    local.get [0]
+000ce471    call [1027] ; 
+000ce474  end []
+000ce475  end []

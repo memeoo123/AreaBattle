@@ -1,0 +1,569 @@
+{
+  "checks": [
+    {
+      "check": "source-and-copy-sha256",
+      "path": "work/input/__WITHOUT_MULTI_PLUGINCODE__.wxapkg",
+      "passed": true
+    },
+    {
+      "check": "source-and-copy-sha256",
+      "path": "work/input/_wasmcode_.wxapkg",
+      "passed": true
+    },
+    {
+      "check": "source-and-copy-sha256",
+      "path": "work/input/_wasmcode1_.wxapkg",
+      "passed": true
+    },
+    {
+      "check": "unpacked-entry-hashes",
+      "report": "unpack-__WITHOUT_MULTI_PLUGINCODE__.json",
+      "count": 22,
+      "passed": true
+    },
+    {
+      "check": "unpacked-entry-hashes",
+      "report": "unpack-_wasmcode1_.json",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "check": "unpacked-entry-hashes",
+      "report": "unpack-_wasmcode_.json",
+      "count": 3,
+      "passed": true
+    },
+    {
+      "check": "cached-resource-copy-hashes",
+      "count": 122,
+      "passed": true
+    },
+    {
+      "check": "unity-data-size-matches-loader",
+      "expected": 15103186,
+      "actual": 15103186,
+      "passed": true
+    },
+    {
+      "check": "wasm-validation",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "check": "configuration-JSON-roundtrip",
+      "count": 83,
+      "passed": true
+    },
+    {
+      "check": "soldier-EntityID-foreign-keys",
+      "checked": 8,
+      "missing": [
+        501,
+        650,
+        601
+      ],
+      "passed": false
+    }
+  ],
+  "tables": [
+    {
+      "name": "GuideDConfig",
+      "rows": 12,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubAchievementAccConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AIReplayFactorConfig",
+      "rows": 6,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GameItemConfig",
+      "rows": 79,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DiceShopTypeConfig",
+      "rows": 2,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ChannelProcedureConfig",
+      "rows": 5,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GlobalValueConfig",
+      "rows": 9,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "CommanderConfig",
+      "rows": 6,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubnoviceAccRewardConfig",
+      "rows": 8,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SkillConfig",
+      "rows": 180,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GuideTipsConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "CampConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "LanguageConfig",
+      "rows": 742,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DrawConfig",
+      "rows": 24,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubnoviceTaskConfig",
+      "rows": 49,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ArenaDailyRewardConfig",
+      "rows": 9,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AllSkillBConfig",
+      "rows": 18,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ArenaConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "PubTaskActivityConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "CountryConfigConfig",
+      "rows": 23,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SceneEffectConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "StatisticEventConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "DiceShopConfig",
+      "rows": 42,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "BossConfig",
+      "rows": 26,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "LimitedProductConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "MLanguageImageConfig",
+      "rows": 2,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AgentGradeConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "UIMonitorConfigConfig",
+      "rows": 41,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SoldierConfig",
+      "rows": 8,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubdailyLivenessConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GuideConfig",
+      "rows": 12,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "NewRankSettingConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "CommanderUpgradeBConfig",
+      "rows": 28,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "LargeNumConfig",
+      "rows": 108,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SummerRewardConfig",
+      "rows": 2,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "LevelConfig",
+      "rows": 561,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DiceGameConfig",
+      "rows": 24,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SpecialLevelConfig",
+      "rows": 20,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "RankRewardConfig",
+      "rows": 12,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "WXAMSConfig",
+      "rows": 59,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "MatchLevelConfig",
+      "rows": 61,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AIConfig",
+      "rows": 212,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AgentSkillUseConfig",
+      "rows": 9,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "OnceAudioConfig",
+      "rows": 53,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "MenuTabConfig",
+      "rows": 5,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GameProductConfig",
+      "rows": 16,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DicePointConfig",
+      "rows": 6,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "RaceConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "SceneSkinConfig",
+      "rows": 15,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubActivityConfig",
+      "rows": 9,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubNTActivityConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "HeadBoxConfig",
+      "rows": 8,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "CommanderBConfig",
+      "rows": 6,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DailyChallengeConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "FirstChargeConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ArenaInitAiSocreConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GuidebookConfig",
+      "rows": 11,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubTaskGroupConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "ArenaSeasonRewardConfig",
+      "rows": 9,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AllSkillConfig",
+      "rows": 18,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ArenaCupRangeConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubActivitySettingConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "ArenaInheritanceConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "VideoBtnConfig",
+      "rows": 65,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "EffectConfig",
+      "rows": 52,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "GuideBConfig",
+      "rows": 12,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "CommanderUpgradeConfig",
+      "rows": 28,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "HeadportConfig",
+      "rows": 4,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AudioConfig",
+      "rows": 55,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "DispatchConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "RankSubConfig",
+      "rows": 6,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AILevelFactorConfig",
+      "rows": 11,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubAchievementConfig",
+      "rows": 127,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "FuncSettingConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "GamePackageConfig",
+      "rows": 4,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "ChannelConfig",
+      "rows": 3,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "EntityModelConfig",
+      "rows": 155,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "AINameConfig",
+      "rows": 98,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SettingConfig",
+      "rows": 1,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": false
+    },
+    {
+      "name": "GameRewardConfig",
+      "rows": 10,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "PubTaskConfig",
+      "rows": 8,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "LevelBConfig",
+      "rows": 561,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    },
+    {
+      "name": "SkinConfig",
+      "rows": 81,
+      "duplicateIds": [],
+      "multipleRecordSchemaCheck": true
+    }
+  ],
+  "allChecksPassed": false
+}

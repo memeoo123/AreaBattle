@@ -1,0 +1,24 @@
+{
+  "status": "page_overrides_integrated_refresh_consumers_pending",
+  "source": [
+    "disassembly/Type4399-33678.txt",
+    "disassembly/Type4408-33793.txt",
+    "disassembly/Type4307-32828.txt",
+    "ui-import.json"
+  ],
+  "verified": [
+    "Main alone uses base scale visibility and on show hides bound btnPermit then RigthBar/btn_ads before RefreshUIInfo event",
+    "Shop uses SetActive and refreshes skin status on both show and hide",
+    "Commander uses SetActive, hides skill detail on hide, refreshes selected item then info on show",
+    "Actual imported menu routes through page-specific overrides",
+    "OutletInfos selects outer ads button despite duplicate name; original Commander scale1.01 is preserved"
+  ],
+  "remaining": [
+    "Bind actual page data refresh consumers to emitted lifecycle events",
+    "Full resource loading and async menu host",
+    "Production entry, live platform and Player E2E"
+  ],
+  "supersedes": "571 incorrectly generalized base visibility to Shop and Commander; 572 restores their source overrides",
+  "checks": 572,
+  "freshPlayMode": false
+}

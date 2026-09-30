@@ -1,0 +1,73 @@
+; Original class: PlayerControl
+; Type4462.MbP; wasmcode function 11065; offset=5348589 size=191
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+00519cee  i32.const [5009816]
+00519cf3  i32.load8_u [0, 0]
+00519cf6  i32.eqz []
+00519cf7  if [-64]
+00519cf9    i32.const [3927888]
+00519cfe    call [900] ; 
+00519d01    i32.const [3955644]
+00519d06    call [900] ; 
+00519d09    i32.const [3947684]
+00519d0e    call [900] ; 
+00519d11    i32.const [4029740] ; METHOD Mu]g`.zOdyR
+00519d16    call [900] ; 
+00519d19    i32.const [5009816]
+00519d1e    i32.const [1]
+00519d20    i32.store8 [0, 0]
+00519d23  end []
+00519d24  i32.const [3947684]
+00519d29  i32.load [2, 0]
+00519d2c  call [903] ; 
+00519d2f  local.set [4]
+00519d31  local.get [4]
+00519d33  local.get [0]
+00519d35  i32.store [2, 8]
+00519d38  local.get [4]
+00519d3a  local.get [1]
+00519d3c  i32.store [2, 12]
+00519d3f  local.get [4]
+00519d41  local.get [3]
+00519d43  i32.store [2, 20]
+00519d46  local.get [4]
+00519d48  local.get [2]
+00519d4a  i32.store [2, 16]
+00519d4d  local.get [4]
+00519d4f  i32.load [2, 12]
+00519d52  local.get [2]
+00519d54  i32.const [3955644]
+00519d59  i32.load [2, 0]
+00519d5c  call [1129] ; 
+00519d5f  i32.eqz []
+00519d60  if [-64]
+00519d62    local.get [4]
+00519d64    i32.load [2, 16]
+00519d67    local.set [1]
+00519d69    i32.const [3927888]
+00519d6e    i32.load [2, 0]
+00519d71    call [903] ; 
+00519d74    local.set [2]
+00519d76    local.get [2]
+00519d78    local.get [4]
+00519d7a    i32.const [4029740] ; METHOD Mu]g`.zOdyR
+00519d7f    i32.load [2, 0]
+00519d82    i32.const [0]
+00519d84    call [1002] ; Action..ctor
+00519d87    local.get [0]
+00519d89    local.get [1]
+00519d8b    i32.const [1]
+00519d8d    local.get [2]
+00519d8f    local.get [4]
+00519d91    call [11067] ; PlayerControl.LoadModel
+00519d94  end []
+00519d95  local.get [0]
+00519d97  local.get [4]
+00519d99  i32.load [2, 12]
+00519d9c  local.get [4]
+00519d9e  i32.load [2, 16]
+00519da1  local.get [4]
+00519da3  i32.load [2, 20]
+00519da6  local.get [4]
+00519da8  call [7427] ; PlayerControl.|jqbX
+00519dab  end []

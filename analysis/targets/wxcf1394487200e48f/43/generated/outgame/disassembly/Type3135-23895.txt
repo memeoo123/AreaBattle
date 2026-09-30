@@ -1,0 +1,99 @@
+; Original class: DBTSDKManager
+; Type3135.get_Instance; wasmcode function 974; offset=375439 size=299
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+0005ba92  i32.const [4988604]
+0005ba97  i32.load8_u [0, 0]
+0005ba9a  i32.eqz []
+0005ba9b  if [-64]
+0005ba9d    i32.const [3930128]
+0005baa2    call [900] ; 
+0005baa5    i32.const [4000732]
+0005baaa    call [900] ; 
+0005baad    i32.const [3932344]
+0005bab2    call [900] ; 
+0005bab5    i32.const [3936516]
+0005baba    call [900] ; 
+0005babd    i32.const [4050312] ; STRING "DBTSDKManager"
+0005bac2    call [900] ; 
+0005bac5    i32.const [4988604]
+0005baca    i32.const [1]
+0005bacc    i32.store8 [0, 0]
+0005bacf  end []
+0005bad0  i32.const [3930128]
+0005bad5  i32.load [2, 0]
+0005bad8  call [901] ; 
+0005badb  i32.const [3930128]
+0005bae0  i32.load [2, 0]
+0005bae3  i32.load [2, 92]
+0005bae6  i32.load [2, 0]
+0005bae9  local.set [0]
+0005baeb  i32.const [3936516]
+0005baf0  i32.load [2, 0]
+0005baf3  call [901] ; 
+0005baf6  local.get [0]
+0005baf8  i32.const [0]
+0005bafa  i32.const [0]
+0005bafc  call [940] ; Object.op_Equality
+0005baff  if [-64]
+0005bb01    i32.const [4050312] ; STRING "DBTSDKManager"
+0005bb06    i32.load [2, 0]
+0005bb09    i32.const [0]
+0005bb0b    call [1757] ; GameObject.Find
+0005bb0e    local.set [0]
+0005bb10    i32.const [3936516]
+0005bb15    i32.load [2, 0]
+0005bb18    call [901] ; 
+0005bb1b    local.get [0]
+0005bb1d    i32.const [0]
+0005bb1f    i32.const [0]
+0005bb21    call [940] ; Object.op_Equality
+0005bb24    if [-64]
+0005bb26      i32.const [3932344]
+0005bb2b      i32.load [2, 0]
+0005bb2e      call [903] ; 
+0005bb31      local.set [0]
+0005bb33      local.get [0]
+0005bb35      i32.const [4050312] ; STRING "DBTSDKManager"
+0005bb3a      i32.load [2, 0]
+0005bb3d      i32.const [0]
+0005bb3f      call [1292] ; GameObject..ctor
+0005bb42      i32.const [3936516]
+0005bb47      i32.load [2, 0]
+0005bb4a      call [901] ; 
+0005bb4d      local.get [0]
+0005bb4f      i32.const [0]
+0005bb51      call [1111] ; Object.DontDestroyOnLoad
+0005bb54    end []
+0005bb55    local.get [0]
+0005bb57    i32.const [4000732]
+0005bb5c    i32.load [2, 0]
+0005bb5f    call [1094] ; 
+0005bb62    local.set [1]
+0005bb64    i32.const [3930128]
+0005bb69    i32.load [2, 0]
+0005bb6c    call [901] ; 
+0005bb6f    i32.const [3930128]
+0005bb74    i32.load [2, 0]
+0005bb77    i32.load [2, 92]
+0005bb7a    local.get [1]
+0005bb7c    i32.store [2, 0]
+0005bb7f    i32.const [3930128]
+0005bb84    i32.load [2, 0]
+0005bb87    i32.load [2, 92]
+0005bb8a    drop []
+0005bb8b    i32.const [3930128]
+0005bb90    i32.load [2, 0]
+0005bb93    i32.load [2, 92]
+0005bb96    i32.load [2, 0]
+0005bb99    local.get [0]
+0005bb9b    i32.store [2, 12]
+0005bb9e  end []
+0005bb9f  i32.const [3930128]
+0005bba4  i32.load [2, 0]
+0005bba7  call [901] ; 
+0005bbaa  i32.const [3930128]
+0005bbaf  i32.load [2, 0]
+0005bbb2  i32.load [2, 92]
+0005bbb5  i32.load [2, 0]
+0005bbb8  return []
+0005bbb9  end []

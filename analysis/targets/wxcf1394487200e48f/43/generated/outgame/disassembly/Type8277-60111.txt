@@ -1,0 +1,33 @@
+; Original class: Text
+; Type8277.get_cachedTextGeneratorForLayout; wasmcode function 3801; offset=1195976 size=77
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00123fc9  i32.const [4985212]
+00123fce  i32.load8_u [0, 0]
+00123fd1  i32.eqz []
+00123fd2  if [-64]
+00123fd4    i32.const [3940000]
+00123fd9    call [900] ; 
+00123fdc    i32.const [4985212]
+00123fe1    i32.const [1]
+00123fe3    i32.store8 [0, 0]
+00123fe6  end []
+00123fe7  local.get [0]
+00123fe9  i32.load [2, 136]
+00123fed  local.set [1]
+00123fef  local.get [1]
+00123ff1  i32.eqz []
+00123ff2  if [-64]
+00123ff4    i32.const [3940000]
+00123ff9    i32.load [2, 0]
+00123ffc    call [903] ; 
+00123fff    local.set [1]
+00124001    local.get [1]
+00124003    i32.const [0]
+00124005    call [4239] ; TextGenerator..ctor
+00124008    local.get [0]
+0012400a    local.get [1]
+0012400c    i32.store [2, 136]
+00124010  end []
+00124011  local.get [1]
+00124013  return []
+00124014  end []

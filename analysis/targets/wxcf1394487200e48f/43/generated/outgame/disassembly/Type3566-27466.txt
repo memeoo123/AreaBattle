@@ -1,0 +1,43 @@
+; Original class: UserDataPrefs
+; Type3566.SetInt; wasmcode function 2749; offset=859613 size=103
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000d1dde  global.get [0]
+000d1de0  i32.const [16]
+000d1de2  i32.sub []
+000d1de3  local.set [2]
+000d1de5  local.get [2]
+000d1de7  global.set [0]
+000d1de9  i32.const [4989708]
+000d1dee  i32.load8_u [0, 0]
+000d1df1  i32.eqz []
+000d1df2  if [-64]
+000d1df4    i32.const [3934404]
+000d1df9    call [900] ; 
+000d1dfc    i32.const [3941104]
+000d1e01    call [900] ; 
+000d1e04    i32.const [4989708]
+000d1e09    i32.const [1]
+000d1e0b    i32.store8 [0, 0]
+000d1e0e  end []
+000d1e0f  local.get [2]
+000d1e11  local.get [1]
+000d1e13  i32.store [2, 12]
+000d1e16  i32.const [3934404]
+000d1e1b  i32.load [2, 0]
+000d1e1e  local.get [2]
+000d1e20  i32.const [12]
+000d1e22  i32.add []
+000d1e23  call [910] ; 
+000d1e26  local.set [1]
+000d1e28  i32.const [3941104]
+000d1e2d  i32.load [2, 0]
+000d1e30  call [901] ; 
+000d1e33  local.get [0]
+000d1e35  local.get [1]
+000d1e37  local.get [2]
+000d1e39  call [5521] ; UserDataPrefs.²¶e§
+000d1e3c  local.get [2]
+000d1e3e  i32.const [16]
+000d1e40  i32.add []
+000d1e41  global.set [0]
+000d1e43  end []

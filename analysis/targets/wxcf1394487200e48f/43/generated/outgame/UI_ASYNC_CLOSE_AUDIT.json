@@ -1,0 +1,19 @@
+{
+  "status": "source_async_order_restored_concrete_host_pending",
+  "source": [
+    "disassembly/Type3540-27347.txt"
+  ],
+  "verified": [
+    "CloseBefore then custom animation only for enum5, otherwise standard animation",
+    "Mark disposed then new WaitForEndOfFrame, SetVisible(false), Destroy(gameObject), virtualDispose, second new WaitForEndOfFrame",
+    "New resources release main handle then unload unused; legacy UI/{UIPath}.prefab unload",
+    "ReleaseDynamicResLoad then ReleaseCustomResLoad then CloseUI payload[page]",
+    "Deferred task probes verify each boundary; animation failure skips later cleanup as source"
+  ],
+  "remaining": [
+    "Concrete animation/awaiter/resource host",
+    "CloseSelf/UIModule registry production wiring",
+    "Actual PlayMode/Player E2E"
+  ],
+  "integratedChecks": 588
+}

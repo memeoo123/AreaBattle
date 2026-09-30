@@ -1,0 +1,71 @@
+; Original class: UIModule
+; Type3558.LoadUI; wasmcode function 9784; offset=4679004 size=201
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+0047655d  i32.const [4989678]
+00476562  i32.load8_u [0, 0]
+00476565  i32.eqz []
+00476566  if [-64]
+00476568    i32.const [4000624]
+0047656d    call [900] ; 
+00476570    i32.const [3932308]
+00476575    call [900] ; 
+00476578    i32.const [3948068]
+0047657d    call [900] ; 
+00476580    i32.const [4031260] ; METHOD <>c__DisplayClass18_0.<LoadUI>b__0
+00476585    call [900] ; 
+00476588    i32.const [3949184]
+0047658d    call [900] ; 
+00476590    i32.const [4075860] ; STRING "UI/"
+00476595    call [900] ; 
+00476598    i32.const [4989678]
+0047659d    i32.const [1]
+0047659f    i32.store8 [0, 0]
+004765a2  end []
+004765a3  i32.const [3949184]
+004765a8  i32.load [2, 0]
+004765ab  call [903] ; 
+004765ae  local.set [4]
+004765b0  local.get [4]
+004765b2  local.get [1]
+004765b4  i32.store [2, 8]
+004765b7  local.get [4]
+004765b9  local.get [0]
+004765bb  i32.store [2, 12]
+004765be  local.get [4]
+004765c0  local.get [2]
+004765c2  i32.store [2, 16]
+004765c5  local.get [4]
+004765c7  local.get [3]
+004765c9  i32.store [2, 20]
+004765cc  i32.const [3932308]
+004765d1  i32.load [2, 0]
+004765d4  call [901] ; 
+004765d7  i32.const [4000624]
+004765dc  i32.load [2, 0]
+004765df  call [1051] ; 
+004765e2  local.set [0]
+004765e4  i32.const [4075860] ; STRING "UI/"
+004765e9  i32.load [2, 0]
+004765ec  local.get [4]
+004765ee  i32.load [2, 8]
+004765f1  i32.const [0]
+004765f3  call [921] ; String.Concat
+004765f6  local.set [1]
+004765f8  i32.const [3948068]
+004765fd  i32.load [2, 0]
+00476600  call [903] ; 
+00476603  local.set [2]
+00476605  local.get [2]
+00476607  local.get [4]
+00476609  i32.const [4031260] ; METHOD <>c__DisplayClass18_0.<LoadUI>b__0
+0047660e  i32.load [2, 0]
+00476611  i32.const [0]
+00476613  call [1853] ; LoadAssetCompleteHandler..ctor
+00476616  local.get [0]
+00476618  local.get [1]
+0047661a  local.get [2]
+0047661c  i32.const [0]
+0047661e  i32.const [0]
+00476620  call [4844] ; ResourcesModule.LoadPrefab
+00476623  drop []
+00476624  end []

@@ -1,0 +1,25 @@
+; Original class: ±¿¶|x
+; Type3132..ctor; wasmcode function 9870; offset=4734409 size=61
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00483dca  i32.const [4988594]
+00483dcf  i32.load8_u [0, 0]
+00483dd2  i32.eqz []
+00483dd3  if [-64]
+00483dd5    i32.const [3939504]
+00483dda    call [900] ; 
+00483ddd    i32.const [4988594]
+00483de2    i32.const [1]
+00483de4    i32.store8 [0, 0]
+00483de7  end []
+00483de8  i32.const [3939504]
+00483ded  i32.load [2, 0]
+00483df0  call [903] ; 
+00483df3  local.set [2]
+00483df5  local.get [2]
+00483df7  local.get [1]
+00483df9  i32.const [0]
+00483dfb  call [1726] ; StringReader..ctor
+00483dfe  local.get [0]
+00483e00  local.get [2]
+00483e02  i32.store [2, 8]
+00483e05  end []

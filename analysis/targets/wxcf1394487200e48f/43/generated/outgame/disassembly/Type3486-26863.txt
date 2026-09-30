@@ -1,0 +1,21 @@
+; Original class: GlobalData
+; Type3486.get_InstallDay; wasmcode function 7785; offset=3733535 size=52
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0038f820  i32.const [4989074]
+0038f825  i32.load8_u [0, 0]
+0038f828  i32.eqz []
+0038f829  if [-64]
+0038f82b    i32.const [3938304]
+0038f830    call [900] ; 
+0038f833    i32.const [4989074]
+0038f838    i32.const [1]
+0038f83a    i32.store8 [0, 0]
+0038f83d  end []
+0038f83e  i32.const [3938304]
+0038f843  i32.load [2, 0]
+0038f846  i32.load [2, 92]
+0038f849  i32.load [2, 0]
+0038f84c  i32.const [0]
+0038f84e  call [10570] ; SDKToolManager.GetDaysByFirstLaunch
+0038f851  return []
+0038f852  end []

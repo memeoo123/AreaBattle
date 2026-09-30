@@ -1,0 +1,20 @@
+; Original class: ArenaControl
+; Type4018.Updata; wasmcode function 20770; offset=9315398 size=34
+; signature={'args': [127, 125, 125, 127], 'returns': []}; localGroups=[]
+008e2447  block [-64]
+008e2449    local.get [0]
+008e244b    i32.load [2, 24]
+008e244e    local.set [3]
+008e2450    local.get [3]
+008e2452    i32.eqz []
+008e2453    br_if [0]
+008e2455    local.get [3]
+008e2457    i32.load8_u [0, 24]
+008e245a    i32.eqz []
+008e245b    br_if [0]
+008e245d    local.get [0]
+008e245f    local.get [1]
+008e2461    local.get [0]
+008e2463    call [13230] ; ArenaControl.RefreshTime
+008e2466  end []
+008e2467  end []

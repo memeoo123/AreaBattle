@@ -1,0 +1,21 @@
+; Original class: DBTSDKManager
+; Type3135.ShowUserProtocolFunction; wasmcode1 function 66246; offset=21041149 size=54
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01410ffe  i32.const [4988628]
+01411003  i32.load8_u [0, 0]
+01411006  i32.eqz []
+01411007  if [-64]
+01411009    i32.const [3938304]
+0141100e    i32.const [1605]
+01411011    call_indirect [0, 0]
+01411014    i32.const [4988628]
+01411019    i32.const [1]
+0141101b    i32.store8 [0, 0]
+0141101e  end []
+0141101f  i32.const [3938304]
+01411024  i32.load [2, 0]
+01411027  i32.load [2, 92]
+0141102a  i32.load [2, 0]
+0141102d  i32.const [0]
+0141102f  call [11796] ; SDKToolManager.GotoTermsServiceStatic
+01411032  end []

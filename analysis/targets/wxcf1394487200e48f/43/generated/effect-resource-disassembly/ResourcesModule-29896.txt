@@ -1,0 +1,60 @@
+; ResourcesModule.UnloadUnusedBundle; wasmcode function 10672; offset=5188278 size=172
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+004f2ab9  i32.const [4988241]
+004f2abe  i32.load8_u [0, 0]
+004f2ac1  i32.eqz []
+004f2ac2  if [-64]
+004f2ac4    i32.const [3929208]
+004f2ac9    call [900] ; 
+004f2acc    i32.const [3926996]
+004f2ad1    call [900] ; 
+004f2ad4    i32.const [3938016]
+004f2ad9    call [900] ; 
+004f2adc    i32.const [4103096] ; STRING "准备卸载资源：["
+004f2ae1    call [900] ; 
+004f2ae4    i32.const [4080932] ; STRING "]"
+004f2ae9    call [900] ; 
+004f2aec    i32.const [4988241]
+004f2af1    i32.const [1]
+004f2af3    i32.store8 [0, 0]
+004f2af6  end []
+004f2af7  i32.const [3938016]
+004f2afc  i32.load [2, 0]
+004f2aff  call [901] ; 
+004f2b02  i32.const [0]
+004f2b04  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f2b07  drop []
+004f2b08  local.get [1]
+004f2b0a  if [-64]
+004f2b0c    i32.const [3926996]
+004f2b11    i32.load [2, 0]
+004f2b14    i32.const [1]
+004f2b16    call [909] ; 
+004f2b19    local.set [2]
+004f2b1b    i32.const [4103096] ; STRING "准备卸载资源：["
+004f2b20    i32.load [2, 0]
+004f2b23    local.get [1]
+004f2b25    i32.load [2, 20]
+004f2b28    i32.const [4080932] ; STRING "]"
+004f2b2d    i32.load [2, 0]
+004f2b30    i32.const [0]
+004f2b32    call [955] ; String.Concat
+004f2b35    local.set [3]
+004f2b37    local.get [2]
+004f2b39    local.get [3]
+004f2b3b    call [905] ; 
+004f2b3e    local.get [2]
+004f2b40    local.get [3]
+004f2b42    i32.store [2, 16]
+004f2b45    i32.const [3929208]
+004f2b4a    i32.load [2, 0]
+004f2b4d    call [901] ; 
+004f2b50    local.get [2]
+004f2b52    i32.const [0]
+004f2b54    call [2095] ; CLog.wKÂL
+004f2b57    local.get [0]
+004f2b59    local.get [1]
+004f2b5b    local.get [1]
+004f2b5d    call [10673] ; ResourcesModule.RemoveBundleInfo
+004f2b60  end []
+004f2b61  end []

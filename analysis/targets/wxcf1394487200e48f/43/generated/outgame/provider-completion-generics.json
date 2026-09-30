@@ -1,0 +1,219 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3975488,
+      "encodedUsage": "0xc000a07d",
+      "methodSpecIndex": 20542,
+      "methodSpecAddress": 729512,
+      "methodSpec": [
+        10641,
+        3129,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": ".ctor",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2930,
+            "name": "OperationHandleBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3975492,
+      "encodedUsage": "0xc000a07f",
+      "methodSpecIndex": 20543,
+      "methodSpecAddress": 729524,
+      "methodSpec": [
+        10655,
+        3129,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2930,
+            "name": "OperationHandleBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3975496,
+      "encodedUsage": "0xc000a081",
+      "methodSpecIndex": 20544,
+      "methodSpecAddress": 729536,
+      "methodSpec": [
+        10674,
+        3129,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2930,
+            "name": "OperationHandleBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3975500,
+      "encodedUsage": "0xc000a083",
+      "methodSpecIndex": 20545,
+      "methodSpecAddress": 729548,
+      "methodSpec": [
+        10682,
+        3129,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "Remove",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2930,
+            "name": "OperationHandleBase"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3986000,
+      "encodedUsage": "0xc000b3c1",
+      "methodSpecIndex": 23008,
+      "methodSpecAddress": 759104,
+      "methodSpec": [
+        4761,
+        175,
+        -1
+      ],
+      "declaringType": "TaskCompletionSource`1",
+      "method": "TrySetResult",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3985992,
+      "encodedUsage": "0xc000b3bd",
+      "methodSpecIndex": 23006,
+      "methodSpecAddress": 759080,
+      "methodSpec": [
+        4754,
+        175,
+        -1
+      ],
+      "declaringType": "TaskCompletionSource`1",
+      "method": ".ctor",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3985996,
+      "encodedUsage": "0xc000b3bf",
+      "methodSpecIndex": 23007,
+      "methodSpecAddress": 759092,
+      "methodSpec": [
+        4762,
+        175,
+        -1
+      ],
+      "declaringType": "TaskCompletionSource`1",
+      "method": "SetResult",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3986004,
+      "encodedUsage": "0xc000b3c3",
+      "methodSpecIndex": 23009,
+      "methodSpecAddress": 759116,
+      "methodSpec": [
+        4758,
+        175,
+        -1
+      ],
+      "declaringType": "TaskCompletionSource`1",
+      "method": "get_Task",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

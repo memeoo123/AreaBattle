@@ -1,0 +1,32 @@
+; Original class: SpineAnimator
+; Type4523.cohpx; wasmcode1 function 11451; offset=4111711 size=81
+; signature={'args': [127, 127], 'returns': [125]}; localGroups=[]
+003ebd60  i32.const [5001081]
+003ebd65  i32.load8_u [0, 0]
+003ebd68  i32.eqz []
+003ebd69  if [-64]
+003ebd6b    i32.const [3939160]
+003ebd70    i32.const [1605]
+003ebd73    call_indirect [0, 0]
+003ebd76    i32.const [5001081]
+003ebd7b    i32.const [1]
+003ebd7d    i32.store8 [0, 0]
+003ebd80  end []
+003ebd81  i32.const [3939160]
+003ebd86  i32.load [2, 0]
+003ebd89  i32.const [1149]
+003ebd8c  call_indirect [0, 0]
+003ebd8f  i32.const [0]
+003ebd91  i32.const [17762] ; TABLE SpineAnimator.buxg[~
+003ebd95  call_indirect [2, 0]
+003ebd98  if [-64]
+003ebd9a    i32.const [0]
+003ebd9c    i32.const [10005] ; TABLE Time.get_time
+003ebda0    call_indirect [19, 0]
+003ebda3    return []
+003ebda4  end []
+003ebda5  i32.const [0]
+003ebda7  i32.const [53904] ; TABLE Time.get_timeSinceLevelLoad
+003ebdab  call_indirect [19, 0]
+003ebdae  return []
+003ebdaf  end []

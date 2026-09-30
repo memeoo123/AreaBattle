@@ -1,0 +1,38 @@
+; Original class: AudioParallel
+; Type3428.qµ|yv; wasmcode function 13113; offset=6289310 size=92
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005ff79f  i32.const [5011707]
+005ff7a4  i32.load8_u [0, 0]
+005ff7a7  i32.eqz []
+005ff7a8  if [-64]
+005ff7aa    i32.const [3955200]
+005ff7af    call [900] ; 
+005ff7b2    i32.const [3955208]
+005ff7b7    call [900] ; 
+005ff7ba    i32.const [5011707]
+005ff7bf    i32.const [1]
+005ff7c1    i32.store8 [0, 0]
+005ff7c4  end []
+005ff7c5  block [-64]
+005ff7c7    local.get [0]
+005ff7c9    i32.load [2, 16]
+005ff7cc    local.set [2]
+005ff7ce    local.get [2]
+005ff7d0    i32.eqz []
+005ff7d1    br_if [0]
+005ff7d3    local.get [2]
+005ff7d5    local.get [1]
+005ff7d7    i32.const [3955200]
+005ff7dc    i32.load [2, 0]
+005ff7df    call [1129] ; 
+005ff7e2    i32.eqz []
+005ff7e3    br_if [0]
+005ff7e5    local.get [0]
+005ff7e7    i32.load [2, 16]
+005ff7ea    local.get [1]
+005ff7ec    i32.const [3955208]
+005ff7f1    i32.load [2, 0]
+005ff7f4    call [1570] ; 
+005ff7f7    drop []
+005ff7f8  end []
+005ff7f9  end []

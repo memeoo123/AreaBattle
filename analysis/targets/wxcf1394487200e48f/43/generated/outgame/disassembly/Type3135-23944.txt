@@ -1,0 +1,39 @@
+; Original class: DBTSDKManager
+; Type3135..cctor; wasmcode function 20048; offset=9009496 size=115
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00897959  i32.const [4988645]
+0089795e  i32.load8_u [0, 0]
+00897961  i32.eqz []
+00897962  if [-64]
+00897964    i32.const [3930128]
+00897969    call [900] ; 
+0089796c    i32.const [4085200] ; STRING "code"
+00897971    call [900] ; 
+00897974    i32.const [4988645]
+00897979    i32.const [1]
+0089797b    i32.store8 [0, 0]
+0089797e  end []
+0089797f  i32.const [3930128]
+00897984  i32.load [2, 0]
+00897987  i32.load [2, 92]
+0089798a  i32.const [1]
+0089798c  i32.store8 [0, 4]
+0089798f  i32.const [3930128]
+00897994  i32.load [2, 0]
+00897997  i32.load [2, 92]
+0089799a  i32.const [0]
+0089799c  i32.store8 [0, 5]
+0089799f  i32.const [3930128]
+008979a4  i32.load [2, 0]
+008979a7  i32.load [2, 92]
+008979aa  i32.const [4085200] ; STRING "code"
+008979af  i32.load [2, 0]
+008979b2  i32.store [2, 8]
+008979b5  i32.const [3930128]
+008979ba  i32.load [2, 0]
+008979bd  i32.load [2, 92]
+008979c0  drop []
+008979c1  i32.const [4085200] ; STRING "code"
+008979c6  i32.load [2, 0]
+008979c9  drop []
+008979ca  end []

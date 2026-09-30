@@ -1,0 +1,73 @@
+; Original class: ObjectBase
+; Type3668..ctor; wasmcode function 11233; offset=5524653 size=188
+; signature={'args': [127, 127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+00544cae  i32.const [4987666]
+00544cb3  i32.load8_u [0, 0]
+00544cb6  i32.eqz []
+00544cb7  if [-64]
+00544cb9    i32.const [3930616]
+00544cbe    call [900] ; 
+00544cc1    i32.const [3939452]
+00544cc6    call [900] ; 
+00544cc9    i32.const [4987666]
+00544cce    i32.const [1]
+00544cd0    i32.store8 [0, 0]
+00544cd3  end []
+00544cd4  local.get [2]
+00544cd6  if [-64]
+00544cd8    local.get [1]
+00544cda    i32.eqz []
+00544cdb    if [-64]
+00544cdd      i32.const [3939452]
+00544ce2      i32.load [2, 0]
+00544ce5      i32.load [2, 92]
+00544ce8      i32.load [2, 0]
+00544ceb      local.set [1]
+00544ced    end []
+00544cee    local.get [0]
+00544cf0    local.get [1]
+00544cf2    i32.store [2, 8]
+00544cf5    local.get [0]
+00544cf7    local.get [2]
+00544cf9    i32.store [2, 12]
+00544cfc    local.get [0]
+00544cfe    local.get [4]
+00544d00    i32.store [2, 20]
+00544d03    local.get [0]
+00544d05    local.get [3]
+00544d07    i32.store8 [0, 16]
+00544d0a    i32.const [3930616]
+00544d0f    i32.load [2, 0]
+00544d12    call [901] ; 
+00544d15    local.get [0]
+00544d17    i32.const [0]
+00544d19    call [1287] ; DateTime.get_Now
+00544d1c    i64.store [3, 24]
+00544d1f    return []
+00544d20  end []
+00544d21  i32.const [4071660] ; STRING "Target '{0}' is invalid."
+00544d26  call [902] ; 
+00544d29  local.get [1]
+00544d2b  i32.const [0]
+00544d2d  call [1015] ; String.Format
+00544d30  local.set [0]
+00544d32  i32.const [3932324]
+00544d37  call [902] ; 
+00544d3a  call [903] ; 
+00544d3d  local.set [1]
+00544d3f  local.get [1]
+00544d41  local.get [0]
+00544d43  i32.const [0]
+00544d45  i32.const [10659] ; TABLE GameFrameworkException..ctor
+00544d49  global.set [3]
+00544d4b  i32.const [10659] ; TABLE GameFrameworkException..ctor
+00544d4f  call_indirect [2, 0]
+00544d52  local.get [1]
+00544d54  i32.const [4008936] ; METHOD ObjectBase..ctor
+00544d59  call [902] ; 
+00544d5c  i32.const [1106]
+00544d5f  global.set [3]
+00544d61  i32.const [1106]
+00544d64  call_indirect [0, 0]
+00544d67  unreachable []
+00544d68  end []

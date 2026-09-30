@@ -1,0 +1,57 @@
+; Original class: BaseController
+; Type7511.reportRotaRequestAdSuccess; wasmcode function 4014; offset=1310461 size=157
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0013fefe  i32.const [5005051]
+0013ff03  i32.load8_u [0, 0]
+0013ff06  i32.eqz []
+0013ff07  if [-64]
+0013ff09    i32.const [3930112]
+0013ff0e    call [900] ; 
+0013ff11    i32.const [4036672] ; STRING " 广告位总请求成功 uptype=21"
+0013ff16    call [900] ; 
+0013ff19    i32.const [3943536]
+0013ff1e    call [900] ; 
+0013ff21    i32.const [5005051]
+0013ff26    i32.const [1]
+0013ff28    i32.store8 [0, 0]
+0013ff2b  end []
+0013ff2c  local.get [0]
+0013ff2e  i32.load [2, 80]
+0013ff31  i32.const [1]
+0013ff33  i32.eq []
+0013ff34  if [-64]
+0013ff36    local.get [0]
+0013ff38    i32.load [2, 8]
+0013ff3b    i32.const [4036672] ; STRING " 广告位总请求成功 uptype=21"
+0013ff40    i32.load [2, 0]
+0013ff43    i32.const [0]
+0013ff45    call [921] ; String.Concat
+0013ff48    i32.const [0]
+0013ff4a    call [999] ; XYXLOG.Log
+0013ff4d    local.get [0]
+0013ff4f    i32.const [2]
+0013ff51    i32.store [2, 80]
+0013ff54    i32.const [3943536]
+0013ff59    i32.load [2, 0]
+0013ff5c    call [903] ; 
+0013ff5f    local.set [1]
+0013ff61    local.get [1]
+0013ff63    i32.const [0]
+0013ff65    call [2456] ; ads_up_event..ctor
+0013ff68    local.get [0]
+0013ff6a    local.get [1]
+0013ff6c    local.get [0]
+0013ff6e    call [4013] ; BaseController.setInfo
+0013ff71    local.get [1]
+0013ff73    i64.const [4626604192193052672]
+0013ff7e    i64.store [3, 80]
+0013ff81    i32.const [3930112]
+0013ff86    i32.load [2, 0]
+0013ff89    call [901] ; 
+0013ff8c    local.get [0]
+0013ff8e    call [2513] ; DAUEventConstant.get_Instance
+0013ff91    local.get [1]
+0013ff93    local.get [0]
+0013ff95    call [2512] ; DAUEventConstant.reportSever
+0013ff98  end []
+0013ff99  end []

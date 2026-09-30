@@ -1,0 +1,78 @@
+; Original class: DiamondLimitedControl
+; Type4093.OnDispose; wasmcode1 function 64870; offset=20674184 size=239
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+013b7689  i32.const [5008447]
+013b768e  i32.load8_u [0, 0]
+013b7691  i32.eqz []
+013b7692  if [-64]
+013b7694    i32.const [3916884]
+013b7699    i32.const [1605]
+013b769c    call_indirect [0, 0]
+013b769f    i32.const [3996660] ; METHOD DiamondLimitedControl.`Uis
+013b76a4    i32.const [1605]
+013b76a7    call_indirect [0, 0]
+013b76aa    i32.const [3996656] ; METHOD DiamondLimitedControl.tQuOrO
+013b76af    i32.const [1605]
+013b76b2    call_indirect [0, 0]
+013b76b5    i32.const [3947148]
+013b76ba    i32.const [1605]
+013b76bd    call_indirect [0, 0]
+013b76c0    i32.const [4057408] ; STRING "IapSuccess"
+013b76c5    i32.const [1605]
+013b76c8    call_indirect [0, 0]
+013b76cb    i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+013b76d0    i32.const [1605]
+013b76d3    call_indirect [0, 0]
+013b76d6    i32.const [5008447]
+013b76db    i32.const [1]
+013b76dd    i32.store8 [0, 0]
+013b76e0  end []
+013b76e1  i32.const [3947148]
+013b76e6  i32.load [2, 0]
+013b76e9  i32.const [109007]
+013b76ed  call_indirect [2, 0]
+013b76f0  local.set [1]
+013b76f2  local.get [1]
+013b76f4  local.get [0]
+013b76f6  i32.const [3996656] ; METHOD DiamondLimitedControl.tQuOrO
+013b76fb  i32.load [2, 0]
+013b76fe  i32.const [0]
+013b7700  i32.const [24682] ; TABLE EventHandler..ctor
+013b7704  call_indirect [6, 0]
+013b7707  i32.const [4057408] ; STRING "IapSuccess"
+013b770c  i32.load [2, 0]
+013b770f  local.get [1]
+013b7711  i32.const [0]
+013b7713  i32.const [24665] ; TABLE MsgDispatcher.AddEventListener
+013b7717  call_indirect [5, 0]
+013b771a  i32.const [3947148]
+013b771f  i32.load [2, 0]
+013b7722  i32.const [109007]
+013b7726  call_indirect [2, 0]
+013b7729  local.set [1]
+013b772b  local.get [1]
+013b772d  local.get [0]
+013b772f  i32.const [3996660] ; METHOD DiamondLimitedControl.`Uis
+013b7734  i32.load [2, 0]
+013b7737  i32.const [0]
+013b7739  i32.const [24682] ; TABLE EventHandler..ctor
+013b773d  call_indirect [6, 0]
+013b7740  i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+013b7745  i32.load [2, 0]
+013b7748  local.get [1]
+013b774a  i32.const [0]
+013b774c  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+013b7750  call_indirect [5, 0]
+013b7753  local.get [0]
+013b7755  i32.const [0]
+013b7757  i32.store8 [0, 52]
+013b775a  i32.const [3916884]
+013b775f  i32.load [2, 0]
+013b7762  i32.load [2, 92]
+013b7765  i32.const [0]
+013b7767  i32.store [2, 0]
+013b776a  i32.const [3916884]
+013b776f  i32.load [2, 0]
+013b7772  i32.load [2, 92]
+013b7775  drop []
+013b7776  end []

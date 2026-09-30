@@ -1,0 +1,38 @@
+{
+  "atUtc": "2026-09-30T09:42:52.418763+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "TIME_COUNTDOWN_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T09:42:52.418763+00:00",
+    "scope": "Source TimeModule clock/countdown component bound to production audio fade; real local DateTime in native PlayMode",
+    "checksPassed": 913,
+    "newIntegratedChecks": 20,
+    "nativePlayModeChecks": 15,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTimeCountdownPlayModeValidation.Run"
+    ],
+    "notClaimed": "Complete TimeModule loop/Unity timers or event lifecycle; full UpdateManager/resource/AudioManager host and full outgame Player"
+  },
+  "findings": [
+    "OutgameTimeClock restores shared localDateTime/default08:00epoch/difference and milliseconds vs seconds conversion; OutgameTimeEvery source accumulator; OutgameTimeCountdowns implements initialization/registration/removal/complete and second/millisecond/minute passes/clear of countdown portion and audio delegate binding.",
+    "Source deferred cleanup, snapshot callbacks and live deadlines, same-frame addition reaching later every pass, cancellation semantics, float accumulation, exact equality, time rewind and overflow behavior retained. No substitute deltaTime or automatic pause/catch-up behavior.",
+    "913 integrated checks pass,20 new. Initial test incorrectly assumed ID order after Dictionary free-slot reuse; fixed test isolation with fresh source initialization, left production dictionary enumeration unchanged. Final log time-countdown-integrated-final.log is authoritative; initial log records that single test failure.",
+    "15 native PlayMode checks pass: actual source countdown registration/removal delegates replace earlier synthetic countdown driver, DateTime.Now drives recovered1001 loop-fade and2001 one-shot fade through AudioControl/UI/Parallel/type factory. Native cursor/pause/resume/fractional volume/fade completion/end/release/destruction verified; focus=false does not gate countdown.",
+    "TimeModule is still incomplete: loop/Unity timers and lifecycle/events remain. Countdown component is not substituted as a fake full startup module. Remaining audio resource/update/AudioManager host is explicit. Controller lifecycle count11/38,27 remaining. Method map4993 after extracting helper types3535/3536/3537."
+  ],
+  "remaining": [
+    "Continue source TimeModule3534 loop/Unity timers and helpers3535/3536, lifecycle/start/pause/focus/shutdown, preserving full source ordering; then shared UpdateManager and AudioManager/config/root/listener/node/resources composition.",
+    "Continue remaining27 business controller lifecycles and full Main/account/module/menu graph; all original scope, restart/failure/return and runnable Player acceptance remain required."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/time-countdown-integrated-final.log",
+    "initialTestFailureLog": "analysis/time-countdown-integrated.log",
+    "nativeLog": "analysis/time-countdown-native.log",
+    "nativeReport": "analysis/time-countdown-native-validation.json"
+  },
+  "disassembledMethodMapCount": 4993
+}

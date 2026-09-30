@@ -1,0 +1,114 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3956004,
+      "encodedUsage": "0xc0007c25",
+      "methodSpecIndex": 15890,
+      "methodSpecAddress": 673688,
+      "methodSpec": [
+        10517,
+        759,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956016,
+      "encodedUsage": "0xc0007c2b",
+      "methodSpecIndex": 15893,
+      "methodSpecAddress": 673724,
+      "methodSpec": [
+        10510,
+        759,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4547,
+            "name": "ProductUserData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3975764,
+      "encodedUsage": "0xc000a107",
+      "methodSpecIndex": 20611,
+      "methodSpecAddress": 730340,
+      "methodSpec": [
+        10662,
+        3141,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "Clear",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4545,
+            "name": "ProductBuyCount"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

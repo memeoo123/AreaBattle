@@ -1,0 +1,27 @@
+{
+  "atUtc": "2026-09-30T03:18:26.762020+00:00",
+  "status": "partial-subsystem-verified",
+  "methods": [
+    23812,
+    23843
+  ],
+  "genericEvidence": "legacy-bundle-lookup-generics.json",
+  "behavior": [
+    "Set dependencyMissing=0; error dictionary key existence blocks root even when stored error null",
+    "Missing root wrapper returns null",
+    "For each direct dependency: recheck ROOT error key, then dependency wrapper; missing sets marker1/returnsnull",
+    "No recursion, native bundle null check, or dependency-error-key check; dependencies are presumed provided by manager",
+    "Null dependency array propagates failure",
+    "Operation update phase loops current list by index; true increments, false removes without increment; observes list growth during update"
+  ],
+  "integration": "Registry method binds directly to OutgameLegacyBundleOperation lookup. OutgameLegacyBundleRequests.UpdateOperations restores only operation phase after original download registration/removal, not entire manager Update.",
+  "validation": {
+    "integratedChecks": 622,
+    "freshPlayMode": false,
+    "freshPlayer": false
+  },
+  "limitations": [
+    "Download request completion/registry population/dependency acquisition/variant selection and full production startup are still incomplete.",
+    "No positive native AssetBundle-to-UI test yet."
+  ]
+}

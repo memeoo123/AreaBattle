@@ -1,0 +1,33 @@
+; Original class: EchelonController
+; Type7518.loadNext; wasmcode function 19833; offset=8910632 size=81
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0087f729  i32.const [5005082]
+0087f72e  i32.load8_u [0, 0]
+0087f731  i32.eqz []
+0087f732  if [-64]
+0087f734    i32.const [4091852] ; STRING "loadNext "
+0087f739    call [900] ; 
+0087f73c    i32.const [5005082]
+0087f741    i32.const [1]
+0087f743    i32.store8 [0, 0]
+0087f746  end []
+0087f747  local.get [0]
+0087f749  i32.load [2, 8]
+0087f74c  i32.const [4091852] ; STRING "loadNext "
+0087f751  i32.load [2, 0]
+0087f754  i32.const [0]
+0087f756  call [921] ; String.Concat
+0087f759  i32.const [0]
+0087f75b  call [999] ; XYXLOG.Log
+0087f75e  local.get [0]
+0087f760  local.get [0]
+0087f762  call [12449] ; EchelonController.stopLoadNext
+0087f765  local.get [0]
+0087f767  local.get [0]
+0087f769  local.get [1]
+0087f76b  local.get [0]
+0087f76d  call [12452] ; EchelonController.loadNextDelay
+0087f770  i32.const [0]
+0087f772  call [1712] ; CallFrameworkAdapter.Call_StartCoroutineResult
+0087f775  i32.store [2, 88]
+0087f778  end []

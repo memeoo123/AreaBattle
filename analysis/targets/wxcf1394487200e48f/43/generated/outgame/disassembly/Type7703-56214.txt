@@ -1,0 +1,23 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.OnNewEventOnlyOnce; wasmcode function 14674; offset=7201072 size=57
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+006de131  i32.const [5005410]
+006de136  i32.load8_u [0, 0]
+006de139  i32.eqz []
+006de13a  if [-64]
+006de13c    i32.const [3984752]
+006de141    call [900] ; 
+006de144    i32.const [5005410]
+006de149    i32.const [1]
+006de14b    i32.store8 [0, 0]
+006de14e  end []
+006de14f  i32.const [3984752]
+006de154  i32.load [2, 0]
+006de157  call [1203] ; 
+006de15a  i32.const [0]
+006de15c  call [1260] ; XYXSDKModuleMgr.get_reporterSDK
+006de15f  local.get [1]
+006de161  local.get [2]
+006de163  local.get [1]
+006de165  call [10708] ; ReporterSDK.OnNewEventOnlyOnce
+006de168  end []

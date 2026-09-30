@@ -1,0 +1,32 @@
+; Original class: SerialController
+; Type7527.onVideoRewarded; wasmcode function 16057; offset=7752336 size=76
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00764a91  i32.const [5005111]
+00764a96  i32.load8_u [0, 0]
+00764a99  i32.eqz []
+00764a9a  if [-64]
+00764a9c    i32.const [4093976] ; STRING "onVideoRewarded"
+00764aa1    call [900] ; 
+00764aa4    i32.const [5005111]
+00764aa9    i32.const [1]
+00764aab    i32.store8 [0, 0]
+00764aae  end []
+00764aaf  local.get [0]
+00764ab1  i32.load [2, 8]
+00764ab4  i32.const [4093976] ; STRING "onVideoRewarded"
+00764ab9  i32.load [2, 0]
+00764abc  i32.const [0]
+00764abe  call [921] ; String.Concat
+00764ac1  i32.const [0]
+00764ac3  call [999] ; XYXLOG.Log
+00764ac6  local.get [0]
+00764ac8  i32.load [2, 32]
+00764acb  local.set [0]
+00764acd  local.get [0]
+00764acf  if [-64]
+00764ad1    local.get [0]
+00764ad3    i32.const [0]
+00764ad5    i32.const [0]
+00764ad7    call [1336] ; 
+00764ada  end []
+00764adb  end []

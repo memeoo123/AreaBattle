@@ -1,0 +1,73 @@
+; Original class: SerialVideoController
+; Type7533.show; wasmcode function 16053; offset=7750775 size=198
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 125)]
+0076447a  i32.const [5005129]
+0076447f  i32.load8_u [0, 0]
+00764482  i32.eqz []
+00764483  if [-64]
+00764485    i32.const [3915488]
+0076448a    call [900] ; 
+0076448d    i32.const [4030164] ; METHOD <>c__DisplayClass1_0.<show>b__0
+00764492    call [900] ; 
+00764495    i32.const [4030168] ; METHOD <>c__DisplayClass1_0.<show>b__1
+0076449a    call [900] ; 
+0076449d    i32.const [3948276]
+007644a2    call [900] ; 
+007644a5    i32.const [5005129]
+007644aa    i32.const [1]
+007644ac    i32.store8 [0, 0]
+007644af  end []
+007644b0  i32.const [3948276]
+007644b5  i32.load [2, 0]
+007644b8  call [903] ; 
+007644bb  local.set [3]
+007644bd  local.get [3]
+007644bf  local.get [0]
+007644c1  i32.store [2, 8]
+007644c4  local.get [3]
+007644c6  local.get [2]
+007644c8  i32.store [2, 12]
+007644cb  i32.const [0]
+007644cd  call [1342] ; Time.get_realtimeSinceStartup
+007644d0  local.set [4]
+007644d2  local.get [0]
+007644d4  i32.const [0]
+007644d6  i32.store8 [0, 92]
+007644d9  local.get [0]
+007644db  local.get [4]
+007644dd  f32.store [2, 52]
+007644e0  local.get [0]
+007644e2  local.get [1]
+007644e4  i32.store [2, 28]
+007644e7  i32.const [3915488]
+007644ec  i32.load [2, 0]
+007644ef  call [903] ; 
+007644f2  local.set [1]
+007644f4  local.get [1]
+007644f6  local.get [3]
+007644f8  i32.const [4030164] ; METHOD <>c__DisplayClass1_0.<show>b__0
+007644fd  i32.load [2, 0]
+00764500  i32.const [0]
+00764502  call [1004] ; 
+00764505  local.get [0]
+00764507  local.get [1]
+00764509  i32.store [2, 32]
+0076450c  i32.const [3915488]
+00764511  i32.load [2, 0]
+00764514  call [903] ; 
+00764517  local.set [1]
+00764519  local.get [1]
+0076451b  local.get [3]
+0076451d  i32.const [4030168] ; METHOD <>c__DisplayClass1_0.<show>b__1
+00764522  i32.load [2, 0]
+00764525  i32.const [0]
+00764527  call [1004] ; 
+0076452a  local.get [0]
+0076452c  local.get [1]
+0076452e  i32.store [2, 36]
+00764531  local.get [0]
+00764533  i32.const [0]
+00764535  i32.const [0]
+00764537  local.get [0]
+00764539  call [2422] ; BaseController.showAd
+0076453c  end []

@@ -1,0 +1,37 @@
+; Original class: ResLoadHelper
+; Type3393.LoadPrefabOri; wasmcode function 10689; offset=5190708 size=101
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+004f3435  i32.const [5011605]
+004f343a  i32.load8_u [0, 0]
+004f343d  i32.eqz []
+004f343e  if [-64]
+004f3440    i32.const [4000624]
+004f3445    call [900] ; 
+004f3448    i32.const [3932308]
+004f344d    call [900] ; 
+004f3450    i32.const [3938016]
+004f3455    call [900] ; 
+004f3458    i32.const [5011605]
+004f345d    i32.const [1]
+004f345f    i32.store8 [0, 0]
+004f3462  end []
+004f3463  i32.const [3938016]
+004f3468  i32.load [2, 0]
+004f346b  call [901] ; 
+004f346e  local.get [0]
+004f3470  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+004f3473  if [-64]
+004f3475    i32.const [3932308]
+004f347a    i32.load [2, 0]
+004f347d    call [901] ; 
+004f3480    i32.const [4000624]
+004f3485    i32.load [2, 0]
+004f3488    call [1051] ; 
+004f348b    local.get [0]
+004f348d    local.get [1]
+004f348f    local.get [2]
+004f3491    i32.const [0]
+004f3493    call [4844] ; ResourcesModule.LoadPrefab
+004f3496    drop []
+004f3497  end []
+004f3498  end []

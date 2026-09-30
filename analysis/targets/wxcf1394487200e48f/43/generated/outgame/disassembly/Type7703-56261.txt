@@ -1,0 +1,25 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.SetUserProperty; wasmcode1 function 38424; offset=14428959 size=66
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00dc2b20  i32.const [5005435]
+00dc2b25  i32.load8_u [0, 0]
+00dc2b28  i32.eqz []
+00dc2b29  if [-64]
+00dc2b2b    i32.const [3984752]
+00dc2b30    i32.const [1605]
+00dc2b33    call_indirect [0, 0]
+00dc2b36    i32.const [5005435]
+00dc2b3b    i32.const [1]
+00dc2b3d    i32.store8 [0, 0]
+00dc2b40  end []
+00dc2b41  i32.const [3984752]
+00dc2b46  i32.load [2, 0]
+00dc2b49  i32.const [8962]
+00dc2b4d  call_indirect [2, 0]
+00dc2b50  i32.const [0]
+00dc2b52  i32.const [9129] ; TABLE XYXSDKModuleMgr.get_reporterSDK
+00dc2b56  call_indirect [1, 0]
+00dc2b59  local.get [1]
+00dc2b5b  local.get [1]
+00dc2b5d  call [11990] ; ReporterSDK.SetUserProperty
+00dc2b60  end []

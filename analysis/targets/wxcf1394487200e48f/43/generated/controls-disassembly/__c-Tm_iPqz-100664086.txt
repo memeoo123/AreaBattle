@@ -1,0 +1,31 @@
+; <>c.Tm[iPqz; wasmcode function 15367; offset=7401762 size=92
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0070f123  i32.const [5008607]
+0070f128  i32.load8_u [0, 0]
+0070f12b  i32.eqz []
+0070f12c  if [-64]
+0070f12e    i32.const [3989352]
+0070f133    call [900] ; 
+0070f136    i32.const [3953440]
+0070f13b    call [900] ; 
+0070f13e    i32.const [4018484]
+0070f143    call [900] ; 
+0070f146    i32.const [5008607]
+0070f14b    i32.const [1]
+0070f14d    i32.store8 [0, 0]
+0070f150  end []
+0070f151  i32.const [0]
+0070f153  call [1143] ; GameModule.get_UI
+0070f156  i32.const [3989352]
+0070f15b  i32.load [2, 0]
+0070f15e  call [1032] ; 
+0070f161  i32.const [4018484]
+0070f166  i32.load [2, 0]
+0070f169  call [1367] ; 
+0070f16c  drop []
+0070f16d  i32.const [3953440]
+0070f172  i32.load [2, 0]
+0070f175  call [935] ; 
+0070f178  i32.const [0]
+0070f17a  call [4384] ; LevelControl.RefreshCampInfo
+0070f17d  end []

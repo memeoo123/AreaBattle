@@ -1,0 +1,66 @@
+; Original class: CommanderUI
+; Type4307.LtPNM; wasmcode function 12849; offset=6183386 size=166
+; signature={'args': [127, 124, 127], 'returns': [127]}; localGroups=[(1, 127)]
+005e59dd  global.get [0]
+005e59df  i32.const [16]
+005e59e1  i32.sub []
+005e59e2  local.set [0]
+005e59e4  local.get [0]
+005e59e6  global.set [0]
+005e59e8  i32.const [5008213]
+005e59ed  i32.load8_u [0, 0]
+005e59f0  i32.eqz []
+005e59f1  if [-64]
+005e59f3    i32.const [3935676]
+005e59f8    call [900] ; 
+005e59fb    i32.const [4034892] ; STRING " "
+005e5a00    call [900] ; 
+005e5a03    i32.const [5008213]
+005e5a08    i32.const [1]
+005e5a0a    i32.store8 [0, 0]
+005e5a0d  end []
+005e5a0e  i32.const [3935676]
+005e5a13  i32.load [2, 0]
+005e5a16  call [901] ; 
+005e5a19  i32.const [5013609]
+005e5a1e  i32.load8_u [0, 0]
+005e5a21  i32.eqz []
+005e5a22  if [-64]
+005e5a24    i32.const [3935676]
+005e5a29    call [900] ; 
+005e5a2c    i32.const [5013609]
+005e5a31    i32.const [1]
+005e5a33    i32.store8 [0, 0]
+005e5a36  end []
+005e5a37  i32.const [3935676]
+005e5a3c  i32.load [2, 0]
+005e5a3f  call [901] ; 
+005e5a42  local.get [0]
+005e5a44  local.get [1]
+005e5a46  i32.const [1]
+005e5a48  i32.const [0]
+005e5a4a  i32.const [0]
+005e5a4c  call [3322] ; Math.Round
+005e5a4f  f64.store [3, 8]
+005e5a52  local.get [0]
+005e5a54  i32.const [8]
+005e5a56  i32.add []
+005e5a57  i32.const [0]
+005e5a59  call [1737] ; Double.ToString
+005e5a5c  local.set [2]
+005e5a5e  i32.const [4034892] ; STRING " "
+005e5a63  i32.load [2, 0]
+005e5a66  local.set [3]
+005e5a68  local.get [3]
+005e5a6a  local.get [2]
+005e5a6c  local.get [3]
+005e5a6e  i32.const [0]
+005e5a70  call [2556] ; StringBuilderTool.Append
+005e5a73  local.set [2]
+005e5a75  local.get [0]
+005e5a77  i32.const [16]
+005e5a79  i32.add []
+005e5a7a  global.set [0]
+005e5a7c  local.get [2]
+005e5a7e  return []
+005e5a7f  end []

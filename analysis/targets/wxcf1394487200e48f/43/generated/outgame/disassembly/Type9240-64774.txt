@@ -1,0 +1,14 @@
+; Original class: WXFunctionManger
+; Type9240.OnRewardADCallBack; wasmcode1 function 39999; offset=14744661 size=24
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00e0fc56  local.get [0]
+00e0fc58  i32.load [2, 20]
+00e0fc5b  local.set [0]
+00e0fc5d  local.get [0]
+00e0fc5f  if [-64]
+00e0fc61    local.get [0]
+00e0fc63    local.get [1]
+00e0fc65    i32.const [0]
+00e0fc67    call [32369] ; ADModule.OnRewardADCallBack
+00e0fc6b  end []
+00e0fc6c  end []

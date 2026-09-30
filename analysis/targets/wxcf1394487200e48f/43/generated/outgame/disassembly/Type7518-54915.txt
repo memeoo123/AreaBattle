@@ -1,0 +1,30 @@
+; Original class: EchelonController
+; Type7518.setAdz; wasmcode function 19827; offset=8908256 size=80
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0087ede1  i32.const [5005068]
+0087ede6  i32.load8_u [0, 0]
+0087ede9  i32.eqz []
+0087edea  if [-64]
+0087edec    i32.const [4050192] ; STRING "DAU- "
+0087edf1    call [900] ; 
+0087edf4    i32.const [4039848] ; STRING "-EchelonController "
+0087edf9    call [900] ; 
+0087edfc    i32.const [5005068]
+0087ee01    i32.const [1]
+0087ee03    i32.store8 [0, 0]
+0087ee06  end []
+0087ee07  local.get [0]
+0087ee09  local.get [1]
+0087ee0b  local.get [0]
+0087ee0d  call [6253] ; BaseController.setAdz
+0087ee10  local.get [0]
+0087ee12  i32.const [4050192] ; STRING "DAU- "
+0087ee17  i32.load [2, 0]
+0087ee1a  local.get [1]
+0087ee1c  i32.load [2, 16]
+0087ee1f  i32.const [4039848] ; STRING "-EchelonController "
+0087ee24  i32.load [2, 0]
+0087ee27  i32.const [0]
+0087ee29  call [955] ; String.Concat
+0087ee2c  i32.store [2, 8]
+0087ee2f  end []

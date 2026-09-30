@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native MonoBehaviour Update, singleton/GameObject/scene persistence and default PlayerInput subscriptions. Device reads use an explicit scripted provider; no claim of OS/device touch injection, SDK, full Main entry or original matched replay.",
+    "checks": [
+        "Source singleton finds existing named native component and reuses one owner",
+        "Production singleton defaults to actual Unity input provider",
+        "Native Unity Update dispatches scripted WebGL touch frames with exact source order",
+        "Static listener wrappers preserve duplicates and remove one subscription",
+        "Actual Player OnInit/default PlayerInput receives shared manager touch and runs native home-camera raycast",
+        "Player disposal removes production touch callback while independent manager listeners keep receiving frames",
+        "Shutdown retains touch/key/scroll state and native singleton owner",
+        "Native Update continues after Shutdown with all prior subscriptions cleared",
+        "Singleton resides in Unity persistent scene across active-scene switch",
+        "Destroyed native singleton recreates named owner with fresh source defaults"
+    ]
+}

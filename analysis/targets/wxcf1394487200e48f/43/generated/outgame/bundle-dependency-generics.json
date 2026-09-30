@@ -1,0 +1,104 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3978892,
+      "encodedUsage": "0xc000a723",
+      "methodSpecIndex": 21393,
+      "methodSpecAddress": 739724,
+      "methodSpec": [
+        10674,
+        3234,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2938,
+            "name": "qÁ"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3965040,
+      "encodedUsage": "0xc0008d69",
+      "methodSpecIndex": 18100,
+      "methodSpecAddress": 700208,
+      "methodSpec": [
+        10699,
+        3234,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "MoveNext",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2938,
+            "name": "qÁ"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3965044,
+      "encodedUsage": "0xc0008d6b",
+      "methodSpecIndex": 18101,
+      "methodSpecAddress": 700220,
+      "methodSpec": [
+        10701,
+        3234,
+        -1
+      ],
+      "declaringType": "Enumerator",
+      "method": "get_Current",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 2938,
+            "name": "qÁ"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

@@ -1,0 +1,68 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.R{uaxTL; wasmcode1 function 54175; offset=17938104 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0111b6bb  i32.const [5007398]
+0111b6c0  i32.load8_u [0, 0]
+0111b6c3  i32.eqz []
+0111b6c4  if [-64]
+0111b6c6    i32.const [3953576]
+0111b6cb    i32.const [1605]
+0111b6ce    call_indirect [0, 0]
+0111b6d1    i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b6d6    i32.const [1605]
+0111b6d9    call_indirect [0, 0]
+0111b6dc    i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b6e1    i32.const [1605]
+0111b6e4    call_indirect [0, 0]
+0111b6e7    i32.const [3940924]
+0111b6ec    i32.const [1605]
+0111b6ef    call_indirect [0, 0]
+0111b6f2    i32.const [4057408] ; STRING "IapSuccess"
+0111b6f7    i32.const [1605]
+0111b6fa    call_indirect [0, 0]
+0111b6fd    i32.const [4098976] ; STRING "txt_costDiamond"
+0111b702    i32.const [1605]
+0111b705    call_indirect [0, 0]
+0111b708    i32.const [5007398]
+0111b70d    i32.const [1]
+0111b70f    i32.store8 [0, 0]
+0111b712  end []
+0111b713  i32.const [3953576]
+0111b718  i32.load [2, 0]
+0111b71b  i32.const [10272]
+0111b71f  call_indirect [2, 0]
+0111b722  local.set [1]
+0111b724  i32.const [3940924]
+0111b729  i32.load [2, 0]
+0111b72c  i32.const [109007]
+0111b730  call_indirect [2, 0]
+0111b733  local.set [2]
+0111b735  local.get [2]
+0111b737  local.get [0]
+0111b739  i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b73e  i32.load [2, 0]
+0111b741  i32.const [0]
+0111b743  i32.const [54239] ; TABLE UnityAction..ctor
+0111b747  call_indirect [6, 0]
+0111b74a  i32.const [3940924]
+0111b74f  i32.load [2, 0]
+0111b752  i32.const [109007]
+0111b756  call_indirect [2, 0]
+0111b759  local.set [3]
+0111b75b  local.get [3]
+0111b75d  local.get [0]
+0111b75f  i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b764  i32.load [2, 0]
+0111b767  i32.const [0]
+0111b769  i32.const [54239] ; TABLE UnityAction..ctor
+0111b76d  call_indirect [6, 0]
+0111b770  local.get [1]
+0111b772  i32.const [4057408] ; STRING "IapSuccess"
+0111b777  i32.load [2, 0]
+0111b77a  local.get [2]
+0111b77c  local.get [3]
+0111b77e  i32.const [4098976] ; STRING "txt_costDiamond"
+0111b783  i32.load [2, 0]
+0111b786  i32.const [0]
+0111b788  call [3228] ; UIControl.ShowCommonTip
+0111b78b  end []

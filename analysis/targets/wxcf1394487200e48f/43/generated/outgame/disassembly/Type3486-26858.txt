@@ -1,0 +1,29 @@
+; Original class: GlobalData
+; Type3486.get_IDFAIsOpen; wasmcode1 function 3949; offset=1259895 size=80
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00133978  i32.const [4989069]
+0013397d  i32.load8_u [0, 0]
+00133980  i32.eqz []
+00133981  if [-64]
+00133983    i32.const [3941104]
+00133988    i32.const [1605]
+0013398b    call_indirect [0, 0]
+0013398e    i32.const [4054860] ; STRING "GF_IDFAIsOpen"
+00133993    i32.const [1605]
+00133996    call_indirect [0, 0]
+00133999    i32.const [4989069]
+0013399e    i32.const [1]
+001339a0    i32.store8 [0, 0]
+001339a3  end []
+001339a4  i32.const [3941104]
+001339a9  i32.load [2, 0]
+001339ac  i32.const [1149]
+001339af  call_indirect [0, 0]
+001339b2  i32.const [4054860] ; STRING "GF_IDFAIsOpen"
+001339b7  i32.load [2, 0]
+001339ba  i32.const [0]
+001339bc  i32.const [0]
+001339be  i32.const [25250] ; TABLE UserDataPrefs.GetInt
+001339c2  call_indirect [3, 0]
+001339c5  return []
+001339c6  end []

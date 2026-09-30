@@ -1,0 +1,24 @@
+; Original class: Utility
+; Type3130.GetPlatformName; wasmcode function 9643; offset=4614284 size=58
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0046688d  i32.const [4988588]
+00466892  i32.load8_u [0, 0]
+00466895  i32.eqz []
+00466896  if [-64]
+00466898    i32.const [3941128]
+0046689d    call [900] ; 
+004668a0    i32.const [4988588]
+004668a5    i32.const [1]
+004668a7    i32.store8 [0, 0]
+004668aa  end []
+004668ab  i32.const [0]
+004668ad  call [1572] ; Application.get_platform
+004668b0  local.set [0]
+004668b2  i32.const [3941128]
+004668b7  i32.load [2, 0]
+004668ba  call [901] ; 
+004668bd  local.get [0]
+004668bf  local.get [0]
+004668c1  call [9642] ; Utility.H´©A
+004668c4  return []
+004668c5  end []

@@ -1,0 +1,45 @@
+; Original class: GlobalItemManager
+; Type4542..ctor; wasmcode function 12040; offset=5862213 size=131
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00597346  i32.const [5001132]
+0059734b  i32.load8_u [0, 0]
+0059734e  i32.eqz []
+0059734f  if [-64]
+00597351    i32.const [3955828]
+00597356    call [900] ; 
+00597359    i32.const [3955992]
+0059735e    call [900] ; 
+00597361    i32.const [3917552]
+00597366    call [900] ; 
+00597369    i32.const [3917516]
+0059736e    call [900] ; 
+00597371    i32.const [5001132]
+00597376    i32.const [1]
+00597378    i32.store8 [0, 0]
+0059737b  end []
+0059737c  local.get [0]
+0059737e  i32.const [10020] ; TABLE RewardUI.AdditionAwardItem
+00597382  i32.store [2, 20]
+00597385  i32.const [3917552]
+0059738a  i32.load [2, 0]
+0059738d  call [903] ; 
+00597390  local.set [1]
+00597392  local.get [1]
+00597394  i32.const [3955992]
+00597399  i32.load [2, 0]
+0059739c  call [951] ; 
+0059739f  local.get [0]
+005973a1  local.get [1]
+005973a3  i32.store [2, 32]
+005973a6  i32.const [3917516]
+005973ab  i32.load [2, 0]
+005973ae  call [903] ; 
+005973b1  local.set [1]
+005973b3  local.get [1]
+005973b5  i32.const [3955828]
+005973ba  i32.load [2, 0]
+005973bd  call [951] ; 
+005973c0  local.get [0]
+005973c2  local.get [1]
+005973c4  i32.store [2, 36]
+005973c7  end []

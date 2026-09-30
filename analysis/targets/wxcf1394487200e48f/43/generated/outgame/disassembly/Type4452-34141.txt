@@ -1,0 +1,102 @@
+; Original class: ProcedureStarGame
+; Type4452.rb~`ils; wasmcode function 18161; offset=8065913 size=293
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b137a  global.get [0]
+007b137c  i32.const [16]
+007b137e  i32.sub []
+007b137f  local.set [0]
+007b1381  local.get [0]
+007b1383  global.set [0]
+007b1385  i32.const [5009780]
+007b138a  i32.load8_u [0, 0]
+007b138d  i32.eqz []
+007b138e  if [-64]
+007b1390    i32.const [3953576]
+007b1395    call [900] ; 
+007b1398    i32.const [3953552]
+007b139d    call [900] ; 
+007b13a0    i32.const [3953440]
+007b13a5    call [900] ; 
+007b13a8    i32.const [3953448]
+007b13ad    call [900] ; 
+007b13b0    i32.const [3944712]
+007b13b5    call [900] ; 
+007b13b8    i32.const [3938304]
+007b13bd    call [900] ; 
+007b13c0    i32.const [4034536] ; STRING ""
+007b13c5    call [900] ; 
+007b13c8    i32.const [4052628] ; STRING "EnterGameHome"
+007b13cd    call [900] ; 
+007b13d0    i32.const [5009780]
+007b13d5    i32.const [1]
+007b13d7    i32.store8 [0, 0]
+007b13da  end []
+007b13db  i32.const [3944712]
+007b13e0  i32.load [2, 0]
+007b13e3  call [901] ; 
+007b13e6  i32.const [3944712]
+007b13eb  i32.load [2, 0]
+007b13ee  i32.load [2, 92]
+007b13f1  i32.load [2, 0]
+007b13f4  i32.const [0]
+007b13f6  call [1317] ; MsgDispatcher.SendMessage
+007b13f9  i32.const [4052628] ; STRING "EnterGameHome"
+007b13fe  i32.load [2, 0]
+007b1401  local.set [1]
+007b1403  i32.const [0]
+007b1405  call [1653] ; ADHelper.get_Instance
+007b1408  local.set [2]
+007b140a  local.get [0]
+007b140c  i32.const [3953440]
+007b1411  i32.load [2, 0]
+007b1414  call [935] ; 
+007b1417  i32.const [0]
+007b1419  call [1254] ; LevelControl.get_CurLevel
+007b141c  i32.store [2, 12]
+007b141f  local.get [2]
+007b1421  local.get [1]
+007b1423  local.get [0]
+007b1425  i32.const [12]
+007b1427  i32.add []
+007b1428  i32.const [0]
+007b142a  call [966] ; Int32.ToString
+007b142d  i32.const [0]
+007b142f  i32.const [0]
+007b1431  i32.const [0]
+007b1433  call [4031] ; ADHelper.Report_activity_enter
+007b1436  i32.const [3953448]
+007b143b  i32.load [2, 0]
+007b143e  call [935] ; 
+007b1441  local.get [0]
+007b1443  call [11590] ; LevelRankControl.EnterGameInit
+007b1446  i32.const [3953552]
+007b144b  i32.load [2, 0]
+007b144e  call [935] ; 
+007b1451  local.get [0]
+007b1453  call [10449] ; SevendayActivityControl.EnterGameInit
+007b1456  i32.const [3953440]
+007b145b  i32.load [2, 0]
+007b145e  call [935] ; 
+007b1461  i32.const [1]
+007b1463  i32.const [0]
+007b1465  i32.const [0]
+007b1467  call [1444] ; LevelControl.SetPlaySate
+007b146a  drop []
+007b146b  i32.const [3953576]
+007b1470  i32.load [2, 0]
+007b1473  call [935] ; 
+007b1476  i32.const [0]
+007b1478  call [6924] ; UIControl.CloseLoadingUI
+007b147b  i32.const [3938304]
+007b1480  i32.load [2, 0]
+007b1483  i32.load [2, 92]
+007b1486  i32.load [2, 0]
+007b1489  i32.const [4034536] ; STRING ""
+007b148e  i32.load [2, 0]
+007b1491  i32.const [0]
+007b1493  call [10563] ; SDKToolManager.ReportGameInteractive
+007b1496  local.get [0]
+007b1498  i32.const [16]
+007b149a  i32.add []
+007b149b  global.set [0]
+007b149d  end []

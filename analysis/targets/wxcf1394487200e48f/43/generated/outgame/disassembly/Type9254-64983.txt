@@ -1,0 +1,25 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.ShowRecommend; wasmcode1 function 68383; offset=21653881 size=66
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+014a697a  i32.const [5006727]
+014a697f  i32.load8_u [0, 0]
+014a6982  i32.eqz []
+014a6983  if [-64]
+014a6985    i32.const [3938284]
+014a698a    i32.const [1605]
+014a698d    call_indirect [0, 0]
+014a6990    i32.const [5006727]
+014a6995    i32.const [1]
+014a6997    i32.store8 [0, 0]
+014a699a  end []
+014a699b  i32.const [3938284]
+014a69a0  i32.load [2, 0]
+014a69a3  i32.const [1149]
+014a69a6  call_indirect [0, 0]
+014a69a9  local.get [1]
+014a69ab  i32.const [64606] ; TABLE SDKHandle.get_Instance
+014a69af  call_indirect [2, 0]
+014a69b2  local.get [1]
+014a69b4  local.get [1]
+014a69b6  call [22975] ; SDKHandle.ShowRecommend
+014a69ba  end []

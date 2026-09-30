@@ -1,0 +1,33 @@
+; Original class: LoginSynData
+; Type4612.bMO`W; wasmcode function 18740; offset=8464686 size=79
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0081292f  i32.const [5001598]
+00812934  i32.load8_u [0, 0]
+00812937  i32.eqz []
+00812938  if [-64]
+0081293a    i32.const [3922404]
+0081293f    call [900] ; 
+00812942    i32.const [5001598]
+00812947    i32.const [1]
+00812949    i32.store8 [0, 0]
+0081294c  end []
+0081294d  local.get [0]
+0081294f  call [10743] ; Report.ReportLoginSynDataFsmSuccess
+00812952  i32.const [1]
+00812954  i32.const [3922404]
+00812959  i32.load [2, 0]
+0081295c  local.get [0]
+0081295e  i32.load [2, 12]
+00812961  call [918] ; 
+00812964  i32.load [2, 32]
+00812967  i32.load8_u [0, 20]
+0081296a  if [-64]
+0081296c    local.get [0]
+0081296e    local.get [0]
+00812970    call [11458] ; LoginSynData.USY{qg
+00812973    return []
+00812974  end []
+00812975  local.get [0]
+00812977  local.get [0]
+00812979  call [7596] ; LoginSynData.}ehntR
+0081297c  end []

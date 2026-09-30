@@ -1,0 +1,22 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.PreloadRecommend; wasmcode1 function 38432; offset=14429456 size=58
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00dc2d11  i32.const [5005439]
+00dc2d16  i32.load8_u [0, 0]
+00dc2d19  i32.eqz []
+00dc2d1a  if [-64]
+00dc2d1c    i32.const [4079260] ; STRING "XYX_ISDK_PreloadRecommend"
+00dc2d21    i32.const [1605]
+00dc2d24    call_indirect [0, 0]
+00dc2d27    i32.const [5005439]
+00dc2d2c    i32.const [1]
+00dc2d2e    i32.store8 [0, 0]
+00dc2d31  end []
+00dc2d32  i32.const [4079260] ; STRING "XYX_ISDK_PreloadRecommend"
+00dc2d37  i32.load [2, 0]
+00dc2d3a  i32.const [0]
+00dc2d3c  i32.const [8833] ; TABLE XYXLOG.Log
+00dc2d40  call_indirect [4, 0]
+00dc2d43  i32.const [0]
+00dc2d45  call [18055] ; XYX.PreloadRecommend
+00dc2d49  end []

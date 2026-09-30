@@ -1,0 +1,38 @@
+; Original class: UserDataPrefs
+; Type3566.GetFloat; wasmcode function 6843; offset=2576302 size=100
+; signature={'args': [127, 125, 127], 'returns': [125]}; localGroups=[]
+00274faf  i32.const [4989718]
+00274fb4  i32.load8_u [0, 0]
+00274fb7  i32.eqz []
+00274fb8  if [-64]
+00274fba    i32.const [3938980]
+00274fbf    call [900] ; 
+00274fc2    i32.const [3941104]
+00274fc7    call [900] ; 
+00274fca    i32.const [4989718]
+00274fcf    i32.const [1]
+00274fd1    i32.store8 [0, 0]
+00274fd4  end []
+00274fd5  i32.const [3941104]
+00274fda  i32.load [2, 0]
+00274fdd  call [901] ; 
+00274fe0  local.get [0]
+00274fe2  i32.const [3941104]
+00274fe7  i32.load [2, 0]
+00274fea  i32.load [2, 92]
+00274fed  i32.load [2, 0]
+00274ff0  local.get [0]
+00274ff2  call [5520] ; UserDataPrefs.uHC´ZT
+00274ff5  local.set [0]
+00274ff7  local.get [0]
+00274ff9  if [-64]
+00274ffb    local.get [0]
+00274ffd    i32.const [3938980]
+00275002    i32.load [2, 0]
+00275005    call [920] ; 
+00275008    f32.load [2, 0]
+0027500b    local.set [1]
+0027500d  end []
+0027500e  local.get [1]
+00275010  return []
+00275011  end []

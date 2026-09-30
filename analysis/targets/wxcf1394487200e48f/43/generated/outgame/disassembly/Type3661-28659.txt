@@ -1,0 +1,61 @@
+; Original class: ProcedureManager
+; Type3661.Register; wasmcode function 11037; offset=5339252 size=170
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00517875  i32.const [4987651]
+0051787a  i32.load8_u [0, 0]
+0051787d  i32.eqz []
+0051787e  if [-64]
+00517880    i32.const [4000596]
+00517885    call [900] ; 
+00517888    i32.const [3932308]
+0051788d    call [900] ; 
+00517890    i32.const [4002616]
+00517895    call [900] ; 
+00517898    i32.const [4987651]
+0051789d    i32.const [1]
+0051789f    i32.store8 [0, 0]
+005178a2  end []
+005178a3  i32.const [3932308]
+005178a8  i32.load [2, 0]
+005178ab  call [901] ; 
+005178ae  local.get [0]
+005178b0  i32.const [4000596]
+005178b5  i32.load [2, 0]
+005178b8  call [1051] ; 
+005178bb  i32.store [2, 16]
+005178be  local.get [0]
+005178c0  i32.load [2, 16]
+005178c3  local.set [2]
+005178c5  local.get [2]
+005178c7  i32.eqz []
+005178c8  if [-64]
+005178ca    i32.const [3932324]
+005178cf    call [902] ; 
+005178d2    call [903] ; 
+005178d5    local.set [0]
+005178d7    local.get [0]
+005178d9    i32.const [4053684] ; STRING "FSM manager is invalid."
+005178de    call [902] ; 
+005178e1    i32.const [0]
+005178e3    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005178e7    global.set [3]
+005178e9    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005178ed    call_indirect [2, 0]
+005178f0    local.get [0]
+005178f2    i32.const [4009780] ; METHOD ProcedureManager.Register
+005178f7    call [902] ; 
+005178fa    i32.const [1106]
+005178fd    global.set [3]
+005178ff    i32.const [1106]
+00517902    call_indirect [0, 0]
+00517905    unreachable []
+00517906  end []
+00517907  local.get [0]
+00517909  i32.const [4002616]
+0051790e  i32.load [2, 0]
+00517911  local.get [2]
+00517913  local.get [0]
+00517915  local.get [1]
+00517917  call [12089] ; 
+0051791a  i32.store [2, 20]
+0051791d  end []

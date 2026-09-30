@@ -1,0 +1,99 @@
+{
+  "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+  "types": [
+    {
+      "typeIndex": 4145,
+      "name": "SkinManagerData",
+      "fields": [
+        {
+          "name": "skins",
+          "flags": "0x6",
+          "notSerialized": false
+        },
+        {
+          "name": "newSkins",
+          "flags": "0x6",
+          "notSerialized": false
+        },
+        {
+          "name": "usedSkin",
+          "flags": "0x6",
+          "notSerialized": false
+        }
+      ]
+    },
+    {
+      "typeIndex": 4146,
+      "name": "UsedSkinData",
+      "fields": [
+        {
+          "name": "t",
+          "flags": "0x6",
+          "notSerialized": false
+        },
+        {
+          "name": "id",
+          "flags": "0x6",
+          "notSerialized": false
+        }
+      ]
+    },
+    {
+      "typeIndex": 4147,
+      "name": "SkinData",
+      "fields": [
+        {
+          "name": "s",
+          "flags": "0x1",
+          "notSerialized": false,
+          "customAttributes": [
+            {
+              "attribute": "SerializeField",
+              "constructorMetadata": 50981,
+              "dataOffset": 60224,
+              "rawHex": "0125c70000000000"
+            }
+          ]
+        },
+        {
+          "name": "u",
+          "flags": "0x1",
+          "notSerialized": false,
+          "customAttributes": [
+            {
+              "attribute": "SerializeField",
+              "constructorMetadata": 50981,
+              "dataOffset": 60232,
+              "rawHex": "0125c70000000000"
+            }
+          ]
+        },
+        {
+          "name": "skinType",
+          "flags": "0x86",
+          "notSerialized": true
+        },
+        {
+          "name": "sortNo",
+          "flags": "0x86",
+          "notSerialized": true
+        },
+        {
+          "name": "special",
+          "flags": "0x86",
+          "notSerialized": true
+        },
+        {
+          "name": "isNew",
+          "flags": "0x86",
+          "notSerialized": true
+        },
+        {
+          "name": "castType",
+          "flags": "0x86",
+          "notSerialized": true
+        }
+      ]
+    }
+  ]
+}

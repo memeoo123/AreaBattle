@@ -1,0 +1,56 @@
+; ParentRaw.11494; wasmcode function 11494; offset=5643535 size=156
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+00561d10  i32.const [5008525]
+00561d15  i32.load8_u [0, 0]
+00561d18  i32.eqz []
+00561d19  if [-64]
+00561d1b    i32.const [3948068]
+00561d20    call [900] ; 
+00561d23    i32.const [3938016]
+00561d28    call [900] ; 
+00561d2b    i32.const [4029236]
+00561d30    call [900] ; 
+00561d33    i32.const [3946992]
+00561d38    call [900] ; 
+00561d3b    i32.const [5008525]
+00561d40    i32.const [1]
+00561d42    i32.store8 [0, 0]
+00561d45  end []
+00561d46  i32.const [3946992]
+00561d4b  i32.load [2, 0]
+00561d4e  call [903] ; 
+00561d51  local.set [0]
+00561d53  local.get [0]
+00561d55  local.get [1]
+00561d57  i32.store [2, 8]
+00561d5a  local.get [0]
+00561d5c  local.get [2]
+00561d5e  i32.store [2, 12]
+00561d61  local.get [0]
+00561d63  local.get [3]
+00561d65  i32.store [2, 16]
+00561d68  local.get [0]
+00561d6a  i32.load [2, 8]
+00561d6d  local.set [1]
+00561d6f  i32.const [3948068]
+00561d74  i32.load [2, 0]
+00561d77  call [903] ; 
+00561d7a  local.set [2]
+00561d7c  local.get [2]
+00561d7e  local.get [0]
+00561d80  i32.const [4029236]
+00561d85  i32.load [2, 0]
+00561d88  i32.const [0]
+00561d8a  call [1853] ; LoadAssetCompleteHandler..ctor
+00561d8d  local.get [0]
+00561d8f  i32.load [2, 16]
+00561d92  local.set [0]
+00561d94  i32.const [3938016]
+00561d99  i32.load [2, 0]
+00561d9c  call [901] ; 
+00561d9f  local.get [1]
+00561da1  local.get [2]
+00561da3  local.get [0]
+00561da5  i32.const [0]
+00561da7  call [10688] ; ResLoadHelper.LoadPrefab
+00561daa  end []

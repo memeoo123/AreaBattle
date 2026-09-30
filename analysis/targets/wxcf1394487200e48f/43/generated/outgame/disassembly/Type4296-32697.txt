@@ -1,0 +1,68 @@
+; Original class: UIControl
+; Type4296.OpenLoadingUI; wasmcode function 6921; offset=2623099 size=211
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0028067c  i32.const [5009213]
+00280681  i32.load8_u [0, 0]
+00280684  i32.eqz []
+00280685  if [-64]
+00280687    i32.const [4000632]
+0028068c    call [900] ; 
+0028068f    i32.const [3932308]
+00280694    call [900] ; 
+00280697    i32.const [4001080]
+0028069c    call [900] ; 
+0028069f    i32.const [4008864]
+002806a4    call [900] ; 
+002806a7    i32.const [3936516]
+002806ac    call [900] ; 
+002806af    i32.const [4012448]
+002806b4    call [900] ; 
+002806b7    i32.const [4054356] ; STRING "FirstScreenRes/Proj_xqzdLoadingUI"
+002806bc    call [900] ; 
+002806bf    i32.const [4076068] ; STRING "UIStory"
+002806c4    call [900] ; 
+002806c7    i32.const [5009213]
+002806cc    i32.const [1]
+002806ce    i32.store8 [0, 0]
+002806d1  end []
+002806d2  i32.const [4054356] ; STRING "FirstScreenRes/Proj_xqzdLoadingUI"
+002806d7  i32.load [2, 0]
+002806da  i32.const [4012448]
+002806df  i32.load [2, 0]
+002806e2  call [1490] ; 
+002806e5  local.set [1]
+002806e7  i32.const [3936516]
+002806ec  i32.load [2, 0]
+002806ef  call [901] ; 
+002806f2  local.get [0]
+002806f4  local.get [1]
+002806f6  i32.const [4008864]
+002806fb  i32.load [2, 0]
+002806fe  call [1465] ; 
+00280701  i32.const [4001080]
+00280706  i32.load [2, 0]
+00280709  call [1091] ; 
+0028070c  i32.store [2, 72]
+0028070f  local.get [0]
+00280711  i32.load [2, 72]
+00280714  i32.const [0]
+00280716  call [977] ; Component.get_transform
+00280719  local.set [1]
+0028071b  i32.const [3932308]
+00280720  i32.load [2, 0]
+00280723  call [901] ; 
+00280726  local.get [1]
+00280728  i32.const [4000632]
+0028072d  i32.load [2, 0]
+00280730  call [1051] ; 
+00280733  i32.const [4076068] ; STRING "UIStory"
+00280738  i32.load [2, 0]
+0028073b  i32.const [0]
+0028073d  call [3070] ; UIModule._GetUINode
+00280740  i32.const [0]
+00280742  i32.const [0]
+00280744  call [1686] ; Transform.SetParent
+00280747  local.get [0]
+00280749  i32.load [2, 72]
+0028074c  return []
+0028074d  end []

@@ -1,0 +1,25 @@
+; Original class: EchelonController
+; Type7518.checkRequest; wasmcode function 12453; offset=6027513 size=46
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005bf8fa  local.get [0]
+005bf8fc  local.get [0]
+005bf8fe  call [6254] ; BaseController.printAllState
+005bf901  block [-64]
+005bf903    local.get [0]
+005bf905    local.get [0]
+005bf907    call [7936] ; EchelonController.isNoReqing
+005bf90a    i32.eqz []
+005bf90b    br_if [0]
+005bf90d    local.get [0]
+005bf90f    local.get [0]
+005bf911    call [4516] ; BaseController.isRequestEnd
+005bf914    i32.eqz []
+005bf915    br_if [0]
+005bf917    local.get [0]
+005bf919    local.get [0]
+005bf91b    call [3370] ; SerialSplashController.stopLoadNext
+005bf91e    local.get [0]
+005bf920    local.get [0]
+005bf922    call [5196] ; BaseController.checkRequest
+005bf925  end []
+005bf926  end []

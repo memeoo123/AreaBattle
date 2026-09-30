@@ -1,0 +1,24 @@
+; ResourcesModule.LoadPrefab; wasmcode function 4844; offset=1667148 size=59
+; signature={'args': [127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+0019704d  i32.const [4988231]
+00197052  i32.load8_u [0, 0]
+00197055  i32.eqz []
+00197056  if [-64]
+00197058    i32.const [4040124] ; STRING ".prefab"
+0019705d    call [900] ; 
+00197060    i32.const [4988231]
+00197065    i32.const [1]
+00197067    i32.store8 [0, 0]
+0019706a  end []
+0019706b  local.get [0]
+0019706d  local.get [1]
+0019706f  i32.const [4040124] ; STRING ".prefab"
+00197074  i32.load [2, 0]
+00197077  i32.const [0]
+00197079  call [921] ; String.Concat
+0019707c  local.get [2]
+0019707e  local.get [3]
+00197080  local.get [0]
+00197082  call [7265] ; ResourcesModule._LoadAsset
+00197085  return []
+00197086  end []

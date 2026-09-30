@@ -1,0 +1,378 @@
+{
+    "classification": "diagnostic-only",
+    "unityVersion": "6000.0.68f1",
+    "normalLevel": 871,
+    "layout": 120,
+    "seed": 4305,
+    "assumedPreRecordingSeconds": 9.547019958496094,
+    "assumedResumePts": 0.8059999942779541,
+    "limitations": [
+        "The original begins paused after a pre-recording simulation interval.",
+        "Pre-recording duration is inferred from first blue regeneration and initial15, conditional on no earlier blue input. See regen-phase-evidence.json; rendering latency remains unknown.",
+        "Both RNG streams use fixture seed4305; original RNG, soldiers, line clocks and AI history are unknown.",
+        "Skills10/10/10 are evidence-based candidates, not original account data.",
+        "Recorded native presentation frame intervals approximate original simulation intervals; inputs are applied at first observed committed frame.",
+        "Stops before unknown later player inputs. A mismatch does not isolate a mechanics defect."
+    ],
+    "inputs": [
+        {
+            "pts": 4.102540016174316,
+            "kind": "connect",
+            "accepted": true,
+            "source": 2,
+            "target": 5
+        },
+        {
+            "pts": 5.819439888000488,
+            "kind": "connect",
+            "accepted": true,
+            "source": 1,
+            "target": 5
+        },
+        {
+            "pts": 7.737130165100098,
+            "kind": "connect",
+            "accepted": true,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "pts": 13.006739616394043,
+            "kind": "cut",
+            "accepted": true,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "pts": 15.1910400390625,
+            "kind": "connect",
+            "accepted": true,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "pts": 23.39533042907715,
+            "kind": "cut",
+            "accepted": true,
+            "source": 1,
+            "target": 2
+        },
+        {
+            "pts": 24.895740509033204,
+            "kind": "connect",
+            "accepted": true,
+            "source": 2,
+            "target": 1
+        },
+        {
+            "pts": 36.08522033691406,
+            "kind": "skill1",
+            "accepted": true,
+            "source": 0,
+            "target": 0
+        },
+        {
+            "pts": 52.3769416809082,
+            "kind": "skill2",
+            "accepted": true,
+            "source": 0,
+            "target": 0
+        },
+        {
+            "pts": 62.298580169677737,
+            "kind": "skill3",
+            "accepted": true,
+            "source": 0,
+            "target": 7
+        }
+    ],
+    "checkpoints": [
+        {
+            "pts": 1.0170600414276124,
+            "image": "half-second/003.png",
+            "originalScores": [
+                19,
+                19,
+                5,
+                5,
+                9,
+                5,
+                65
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                3
+            ],
+            "scores": [
+                19.0,
+                19.0,
+                5.0,
+                4.0,
+                9.0,
+                5.0,
+                64.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 35.38441848754883,
+            "image": "half-second/071.png",
+            "originalScores": [
+                30,
+                32,
+                5,
+                5,
+                3,
+                5,
+                54
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                30.0,
+                32.0,
+                5.0,
+                4.0,
+                5.0,
+                5.0,
+                52.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 36.385040283203128,
+            "image": "half-second/073.png",
+            "originalScores": [
+                30,
+                32,
+                5,
+                5,
+                5,
+                5,
+                52
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                30.0,
+                32.0,
+                5.0,
+                4.0,
+                8.0,
+                5.0,
+                52.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 52.00986862182617,
+            "image": "half-second/104.png",
+            "originalScores": [
+                44,
+                32,
+                5,
+                5,
+                43,
+                5,
+                52
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                45.0,
+                32.0,
+                5.0,
+                4.0,
+                47.0,
+                5.0,
+                52.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 61.04827117919922,
+            "image": "half-second/122.png",
+            "originalScores": [
+                57,
+                38,
+                0,
+                0,
+                65,
+                0,
+                46
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                55.0,
+                46.0,
+                0.0,
+                0.0,
+                65.0,
+                3.0,
+                48.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 62.28219985961914,
+            "image": "keyframes/007.png",
+            "originalScores": [
+                58,
+                38,
+                0,
+                0,
+                65,
+                0,
+                45
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                56.0,
+                46.0,
+                0.0,
+                0.0,
+                65.0,
+                3.0,
+                48.0
+            ],
+            "exact": false
+        },
+        {
+            "pts": 62.298580169677737,
+            "image": "keyframes/008.png",
+            "originalScores": [
+                58,
+                38,
+                0,
+                0,
+                65,
+                0,
+                0
+            ],
+            "originalCamps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "camps": [
+                1,
+                1,
+                2,
+                2,
+                1,
+                2,
+                3
+            ],
+            "scores": [
+                56.0,
+                46.0,
+                0.0,
+                0.0,
+                65.0,
+                3.0,
+                3.0
+            ],
+            "exact": false
+        }
+    ]
+}

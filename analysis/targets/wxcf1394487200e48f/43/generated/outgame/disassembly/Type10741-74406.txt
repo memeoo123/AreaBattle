@@ -1,0 +1,92 @@
+; Original class: UIVideoBtn
+; Type10741.ResetVideoBtnData; wasmcode function 4712; offset=1628870 size=230
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0018dac7  global.get [0]
+0018dac9  i32.const [16]
+0018dacb  i32.sub []
+0018dacc  local.set [2]
+0018dace  local.get [2]
+0018dad0  global.set [0]
+0018dad2  i32.const [5001932]
+0018dad7  i32.load8_u [0, 0]
+0018dada  i32.eqz []
+0018dadb  if [-64]
+0018dadd    i32.const [3929208]
+0018dae2    call [900] ; 
+0018dae5    i32.const [3934404]
+0018daea    call [900] ; 
+0018daed    i32.const [3926996]
+0018daf2    call [900] ; 
+0018daf5    i32.const [4105964] ; STRING "设置的ID与已有的ID是一样的=[{0}]"
+0018dafa    call [900] ; 
+0018dafd    i32.const [5001932]
+0018db02    i32.const [1]
+0018db04    i32.store8 [0, 0]
+0018db07  end []
+0018db08  block [-64]
+0018db0a    local.get [1]
+0018db0c    local.get [0]
+0018db0e    i32.load [2, 192]
+0018db12    i32.eq []
+0018db13    if [-64]
+0018db15      i32.const [3926996]
+0018db1a      i32.load [2, 0]
+0018db1d      i32.const [1]
+0018db1f      call [909] ; 
+0018db22      local.set [1]
+0018db24      local.get [2]
+0018db26      local.get [0]
+0018db28      i32.load [2, 192]
+0018db2c      i32.store [2, 12]
+0018db2f      i32.const [3934404]
+0018db34      i32.load [2, 0]
+0018db37      local.get [2]
+0018db39      i32.const [12]
+0018db3b      i32.add []
+0018db3c      call [910] ; 
+0018db3f      local.set [0]
+0018db41      i32.const [4105964] ; STRING "设置的ID与已有的ID是一样的=[{0}]"
+0018db46      i32.load [2, 0]
+0018db49      local.get [0]
+0018db4b      i32.const [0]
+0018db4d      call [1015] ; String.Format
+0018db50      local.set [0]
+0018db52      local.get [1]
+0018db54      local.get [0]
+0018db56      call [905] ; 
+0018db59      local.get [1]
+0018db5b      local.get [0]
+0018db5d      i32.store [2, 16]
+0018db60      i32.const [3929208]
+0018db65      i32.load [2, 0]
+0018db68      call [901] ; 
+0018db6b      local.get [1]
+0018db6d      i32.const [0]
+0018db6f      call [1069] ; CLog.Log
+0018db72      br [1]
+0018db74    end []
+0018db75    local.get [0]
+0018db77    local.get [1]
+0018db79    i32.store [2, 192]
+0018db7d    local.get [0]
+0018db7f    local.get [0]
+0018db81    call [5549] ; UIVideoBtn.GetVideoBtnData
+0018db84    local.get [0]
+0018db86    i32.load8_u [0, 204]
+0018db8a    if [-64]
+0018db8c      local.get [0]
+0018db8e      i32.load [2, 196]
+0018db92      br_if [1]
+0018db94    end []
+0018db95    local.get [0]
+0018db97    i32.const [0]
+0018db99    call [943] ; Component.get_gameObject
+0018db9c    i32.const [0]
+0018db9e    i32.const [0]
+0018dba0    call [949] ; GameObject.SetActive
+0018dba3  end []
+0018dba4  local.get [2]
+0018dba6  i32.const [16]
+0018dba8  i32.add []
+0018dba9  global.set [0]
+0018dbab  end []

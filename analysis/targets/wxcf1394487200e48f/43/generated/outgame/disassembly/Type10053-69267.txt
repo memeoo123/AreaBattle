@@ -1,0 +1,23 @@
+; Original class: Event
+; Type10053.get_rawType; wasmcode function 1945; offset=604842 size=50
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00093aab  i32.const [4981472]
+00093ab0  i32.load [2, 0]
+00093ab3  local.set [1]
+00093ab5  local.get [1]
+00093ab7  i32.eqz []
+00093ab8  if [-64]
+00093aba    i32.const [1196164]
+00093abf    call [923] ; 
+00093ac2    local.set [1]
+00093ac4    i32.const [4981472]
+00093ac9    local.get [1]
+00093acb    i32.store [2, 0]
+00093ace  end []
+00093acf  local.get [0]
+00093ad1  local.get [1]
+00093ad3  global.set [3]
+00093ad5  global.get [3]
+00093ad7  call_indirect [4, 0]
+00093ada  return []
+00093adb  end []

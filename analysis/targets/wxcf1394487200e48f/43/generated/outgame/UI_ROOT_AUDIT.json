@@ -1,0 +1,38 @@
+{
+  "status": "original-root-located-and-static-prefab-imported",
+  "atUtc": "2026-09-30T02:15:16.562216+00:00",
+  "source": [
+    "ui-root-evidence.json",
+    "ui-root-import.json"
+  ],
+  "resourceOrigin": "firstpack_ff021c07522462d993a45b8f8bca6b05.unity3d: assets/gameres/bundleres/ui/uiroot.prefab",
+  "bootstrapObjects": [
+    "level0:19 UICanvas",
+    "level0:33 UICamera",
+    "resources.assets:244 UICanvas resource copy"
+  ],
+  "verified": {
+    "passed": true,
+    "nodes": 13,
+    "canvases": 9,
+    "raycasters": 8,
+    "images": 3,
+    "scope": "Reloaded static prefab against source manifest; AdaptiveBangs and production startup pending"
+  },
+  "importReport": "analysis/unity-ui-root-import-report.json",
+  "validationReport": "analysis/unity-ui-root-validation.json",
+  "integratedChecks": 603,
+  "corrections": [
+    "Canvas receivesEvents is serialized-only in this Unity API",
+    "CanvasRenderer must use Unity null check, not C# null-coalescing",
+    "Canvas overrideSorting must be restored through serialized property for rootless prefab layers"
+  ],
+  "remaining": [
+    "AdaptiveBangs and CanvasAdaptive runtime behavior",
+    "Bootstrap source route/asset import and original Instantiate dispatch",
+    "Full account/menu/battle-return and Player acceptance"
+  ],
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false,
+  "followup": "UI_ROOT_INITIALIZATION_AUDIT.json"
+}

@@ -1,0 +1,376 @@
+; Original class: LoginServer
+; Type4609.OnEnter; wasmcode function 18749; offset=8466349 size=1085
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+00812fb0  global.get [0]
+00812fb2  i32.const [32]
+00812fb4  i32.sub []
+00812fb5  local.set [2]
+00812fb7  local.get [2]
+00812fb9  global.set [0]
+00812fbb  i32.const [5001577]
+00812fc0  i32.load8_u [0, 0]
+00812fc3  i32.eqz []
+00812fc4  if [-64]
+00812fc6    i32.const [3929208]
+00812fcb    call [900] ; 
+00812fce    i32.const [3947148]
+00812fd3    call [900] ; 
+00812fd6    i32.const [3920444]
+00812fdb    call [900] ; 
+00812fde    i32.const [3968592]
+00812fe3    call [900] ; 
+00812fe6    i32.const [3932944]
+00812feb    call [900] ; 
+00812fee    i32.const [3922404]
+00812ff3    call [900] ; 
+00812ff6    i32.const [3934780]
+00812ffb    call [900] ; 
+00812ffe    i32.const [3935480]
+00813003    call [900] ; 
+00813006    i32.const [4005856] ; METHOD LoginServer.itk
+0081300b    call [900] ; 
+0081300e    i32.const [4005852] ; METHOD LoginServer.bmmYz
+00813013    call [900] ; 
+00813016    i32.const [3936508]
+0081301b    call [900] ; 
+0081301e    i32.const [3926996]
+00813023    call [900] ; 
+00813026    i32.const [3938004]
+0081302b    call [900] ; 
+0081302e    i32.const [3941116]
+00813033    call [900] ; 
+00813036    i32.const [4061396] ; STRING "LoginProgress"
+0081303b    call [900] ; 
+0081303e    i32.const [4091928] ; STRING "loginExtStr: "
+00813043    call [900] ; 
+00813046    i32.const [4084864] ; STRING "channel: "
+0081304b    call [900] ; 
+0081304e    i32.const [4085564] ; STRING "country: "
+00813053    call [900] ; 
+00813056    i32.const [4061280] ; STRING "Login:发送登陆请求："
+0081305b    call [900] ; 
+0081305e    i32.const [4094748] ; STRING "platform: "
+00813063    call [900] ; 
+00813066    i32.const [4054928] ; STRING "GF_ReceiveLogin"
+0081306b    call [900] ; 
+0081306e    i32.const [5001577]
+00813073    i32.const [1]
+00813075    i32.store8 [0, 0]
+00813078  end []
+00813079  local.get [2]
+0081307b  i32.const [0]
+0081307d  i32.store [2, 28]
+00813080  local.get [0]
+00813082  local.get [1]
+00813084  local.get [1]
+00813086  call [3134] ; LoginStateBase.OnEnter
+00813089  i32.const [3947148]
+0081308e  i32.load [2, 0]
+00813091  call [903] ; 
+00813094  local.set [3]
+00813096  local.get [3]
+00813098  local.get [0]
+0081309a  i32.const [4005856] ; METHOD LoginServer.itk
+0081309f  i32.load [2, 0]
+008130a2  i32.const [0]
+008130a4  call [1067] ; EventHandler..ctor
+008130a7  i32.const [4054928] ; STRING "GF_ReceiveLogin"
+008130ac  i32.load [2, 0]
+008130af  local.get [3]
+008130b1  i32.const [0]
+008130b3  call [1146] ; MsgDispatcher.AddEventListener
+008130b6  i32.const [3920444]
+008130bb  i32.load [2, 0]
+008130be  call [903] ; 
+008130c1  local.set [3]
+008130c3  local.get [3]
+008130c5  local.get [0]
+008130c7  i32.const [4005852] ; METHOD LoginServer.bmmYz
+008130cc  i32.load [2, 0]
+008130cf  call [2089] ; 
+008130d2  local.get [0]
+008130d4  i32.const [6]
+008130d6  local.get [3]
+008130d8  i32.const [3968592]
+008130dd  i32.load [2, 0]
+008130e0  call [2968] ; 
+008130e3  i32.const [1]
+008130e5  i32.const [3922404]
+008130ea  i32.load [2, 0]
+008130ed  local.get [1]
+008130ef  call [918] ; 
+008130f2  i32.load [2, 52]
+008130f5  local.set [1]
+008130f7  i32.const [3926996]
+008130fc  i32.load [2, 0]
+008130ff  i32.const [2]
+00813101  call [909] ; 
+00813104  local.set [3]
+00813106  local.get [3]
+00813108  i32.const [4094748] ; STRING "platform: "
+0081310d  i32.load [2, 0]
+00813110  call [905] ; 
+00813113  local.get [3]
+00813115  i32.const [4094748] ; STRING "platform: "
+0081311a  i32.load [2, 0]
+0081311d  i32.store [2, 16]
+00813120  local.get [1]
+00813122  i32.load [2, 24]
+00813125  local.set [4]
+00813127  local.get [3]
+00813129  local.get [4]
+0081312b  call [905] ; 
+0081312e  local.get [3]
+00813130  local.get [4]
+00813132  i32.store [2, 20]
+00813135  i32.const [3929208]
+0081313a  i32.load [2, 0]
+0081313d  call [901] ; 
+00813140  i32.const [8192]
+00813144  local.get [3]
+00813146  i32.const [0]
+00813148  call [1698] ; CLog.Log
+0081314b  local.get [1]
+0081314d  i32.load [2, 28]
+00813150  if [-64]
+00813152    i32.const [3926996]
+00813157    i32.load [2, 0]
+0081315a    i32.const [2]
+0081315c    call [909] ; 
+0081315f    local.set [3]
+00813161    local.get [3]
+00813163    i32.const [4084864] ; STRING "channel: "
+00813168    i32.load [2, 0]
+0081316b    call [905] ; 
+0081316e    local.get [3]
+00813170    i32.const [4084864] ; STRING "channel: "
+00813175    i32.load [2, 0]
+00813178    i32.store [2, 16]
+0081317b    local.get [1]
+0081317d    i32.load [2, 28]
+00813180    local.set [4]
+00813182    local.get [3]
+00813184    local.get [4]
+00813186    call [905] ; 
+00813189    local.get [3]
+0081318b    local.get [4]
+0081318d    i32.store [2, 20]
+00813190    i32.const [3929208]
+00813195    i32.load [2, 0]
+00813198    call [901] ; 
+0081319b    i32.const [8192]
+0081319f    local.get [3]
+008131a1    i32.const [0]
+008131a3    call [1698] ; CLog.Log
+008131a6  end []
+008131a7  local.get [1]
+008131a9  i32.load [2, 32]
+008131ac  if [-64]
+008131ae    i32.const [3926996]
+008131b3    i32.load [2, 0]
+008131b6    i32.const [2]
+008131b8    call [909] ; 
+008131bb    local.set [3]
+008131bd    local.get [3]
+008131bf    i32.const [4085564] ; STRING "country: "
+008131c4    i32.load [2, 0]
+008131c7    call [905] ; 
+008131ca    local.get [3]
+008131cc    i32.const [4085564] ; STRING "country: "
+008131d1    i32.load [2, 0]
+008131d4    i32.store [2, 16]
+008131d7    local.get [1]
+008131d9    i32.load [2, 32]
+008131dc    local.set [4]
+008131de    local.get [3]
+008131e0    local.get [4]
+008131e2    call [905] ; 
+008131e5    local.get [3]
+008131e7    local.get [4]
+008131e9    i32.store [2, 20]
+008131ec    i32.const [3929208]
+008131f1    i32.load [2, 0]
+008131f4    call [901] ; 
+008131f7    i32.const [8192]
+008131fb    local.get [3]
+008131fd    i32.const [0]
+008131ff    call [1698] ; CLog.Log
+00813202  end []
+00813203  i32.const [3934780]
+00813208  i32.load [2, 0]
+0081320b  call [901] ; 
+0081320e  local.get [1]
+00813210  i32.const [0]
+00813212  call [1155] ; JsonMapper.ToJson
+00813215  local.set [3]
+00813217  i32.const [3926996]
+0081321c  i32.load [2, 0]
+0081321f  i32.const [2]
+00813221  call [909] ; 
+00813224  local.set [1]
+00813226  local.get [1]
+00813228  i32.const [4091928] ; STRING "loginExtStr: "
+0081322d  i32.load [2, 0]
+00813230  call [905] ; 
+00813233  local.get [1]
+00813235  i32.const [4091928] ; STRING "loginExtStr: "
+0081323a  i32.load [2, 0]
+0081323d  i32.store [2, 16]
+00813240  local.get [1]
+00813242  local.get [3]
+00813244  call [905] ; 
+00813247  local.get [1]
+00813249  local.get [3]
+0081324b  i32.store [2, 20]
+0081324e  i32.const [3929208]
+00813253  i32.load [2, 0]
+00813256  call [901] ; 
+00813259  i32.const [8192]
+0081325d  local.get [1]
+0081325f  i32.const [0]
+00813261  call [1698] ; CLog.Log
+00813264  i32.const [1]
+00813266  i32.const [3922404]
+0081326b  i32.load [2, 0]
+0081326e  local.get [0]
+00813270  i32.load [2, 12]
+00813273  call [918] ; 
+00813276  i32.load [2, 32]
+00813279  i32.load [2, 60]
+0081327c  local.set [1]
+0081327e  i32.const [3938004]
+00813283  i32.load [2, 0]
+00813286  call [903] ; 
+00813289  local.set [0]
+0081328b  local.get [0]
+0081328d  local.get [1]
+0081328f  i32.load [2, 8]
+00813292  i32.store [2, 8]
+00813295  local.get [0]
+00813297  local.get [1]
+00813299  i32.load [2, 44]
+0081329c  i32.store [2, 12]
+0081329f  i32.const [3935480]
+008132a4  i32.load [2, 0]
+008132a7  call [901] ; 
+008132aa  i32.const [5001754]
+008132af  i32.load8_u [0, 0]
+008132b2  i32.eqz []
+008132b3  if [-64]
+008132b5    i32.const [3935480]
+008132ba    call [900] ; 
+008132bd    i32.const [5001754]
+008132c2    i32.const [1]
+008132c4    i32.store8 [0, 0]
+008132c7  end []
+008132c8  i32.const [3935480]
+008132cd  i32.load [2, 0]
+008132d0  call [901] ; 
+008132d3  local.get [0]
+008132d5  i32.const [3935480]
+008132da  i32.load [2, 0]
+008132dd  i32.load [2, 92]
+008132e0  i32.load [2, 8]
+008132e3  i32.store [2, 20]
+008132e6  local.get [0]
+008132e8  local.get [3]
+008132ea  i32.store [2, 16]
+008132ed  local.get [0]
+008132ef  local.get [0]
+008132f1  call [5906] ; LoginHelper.GetDeviceID
+008132f4  i32.store [2, 24]
+008132f7  local.get [0]
+008132f9  local.get [0]
+008132fb  call [7602] ; LoginHelper.GetAppChannel
+008132fe  i32.store [2, 28]
+00813301  local.get [2]
+00813303  i32.const [3]
+00813305  i32.store [2, 28]
+00813308  i32.const [3936508]
+0081330d  i32.load [2, 0]
+00813310  local.set [3]
+00813312  local.get [2]
+00813314  i32.const [16]
+00813316  i32.add []
+00813317  local.set [1]
+00813319  local.get [1]
+0081331b  i32.const [-1]
+0081331d  i32.store [2, 4]
+00813320  local.get [1]
+00813322  local.get [3]
+00813324  i32.store [2, 0]
+00813327  local.get [1]
+00813329  local.get [2]
+0081332b  i32.load [2, 28]
+0081332e  i32.store [2, 8]
+00813331  local.get [0]
+00813333  local.get [1]
+00813335  i32.const [0]
+00813337  call [1009] ; Enum.ToString
+0081333a  i32.store [2, 32]
+0081333d  i32.const [3926996]
+00813342  i32.load [2, 0]
+00813345  i32.const [1]
+00813347  call [909] ; 
+0081334a  local.set [1]
+0081334c  i32.const [4061280] ; STRING "Login:发送登陆请求："
+00813351  i32.load [2, 0]
+00813354  local.get [0]
+00813356  i32.load [2, 8]
+00813359  i32.const [0]
+0081335b  call [921] ; String.Concat
+0081335e  local.set [3]
+00813360  local.get [1]
+00813362  local.get [3]
+00813364  call [905] ; 
+00813367  local.get [1]
+00813369  local.get [3]
+0081336b  i32.store [2, 16]
+0081336e  i32.const [8192]
+00813372  local.get [1]
+00813374  i32.const [0]
+00813376  call [1698] ; CLog.Log
+00813379  i32.const [3926996]
+0081337e  i32.load [2, 0]
+00813381  i32.const [1]
+00813383  call [909] ; 
+00813386  local.set [1]
+00813388  local.get [2]
+0081338a  i32.const [6]
+0081338c  i32.store [2, 12]
+0081338f  i32.const [3941116]
+00813394  i32.load [2, 0]
+00813397  local.get [2]
+00813399  i32.const [12]
+0081339b  i32.add []
+0081339c  call [910] ; 
+0081339f  local.set [3]
+008133a1  local.get [1]
+008133a3  local.get [3]
+008133a5  call [905] ; 
+008133a8  local.get [1]
+008133aa  local.get [3]
+008133ac  i32.store [2, 16]
+008133af  i32.const [4061396] ; STRING "LoginProgress"
+008133b4  i32.load [2, 0]
+008133b7  local.get [1]
+008133b9  i32.const [0]
+008133bb  call [1230] ; MsgDispatcher.SendMessage
+008133be  local.get [0]
+008133c0  i32.load [2, 8]
+008133c3  local.get [0]
+008133c5  call [10745] ; Report.ReportLoginStartServer
+008133c8  i32.const [3932944]
+008133cd  i32.load [2, 0]
+008133d0  call [901] ; 
+008133d3  i32.const [0]
+008133d5  call [2587] ; HttpManager.get_Instance
+008133d8  i32.load [2, 12]
+008133db  local.get [0]
+008133dd  i32.const [0]
+008133df  call [11455] ; LoginTransmitter.RequestLogin
+008133e2  local.get [2]
+008133e4  i32.const [32]
+008133e6  i32.add []
+008133e7  global.set [0]
+008133e9  end []

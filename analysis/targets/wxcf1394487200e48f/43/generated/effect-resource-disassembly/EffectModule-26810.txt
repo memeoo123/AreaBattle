@@ -1,0 +1,55 @@
+; EffectModule.get_WorldEffectRoot; wasmcode function 12434; offset=6023396 size=149
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005be8e5  i32.const [4989037]
+005be8ea  i32.load8_u [0, 0]
+005be8ed  i32.eqz []
+005be8ee  if [-64]
+005be8f0    i32.const [3932344]
+005be8f5    call [900] ; 
+005be8f8    i32.const [3936516]
+005be8fd    call [900] ; 
+005be900    i32.const [4081828] ; STRING "__WorldEffectRoot"
+005be905    call [900] ; 
+005be908    i32.const [4989037]
+005be90d    i32.const [1]
+005be90f    i32.store8 [0, 0]
+005be912  end []
+005be913  local.get [0]
+005be915  i32.load [2, 28]
+005be918  local.set [1]
+005be91a  i32.const [3936516]
+005be91f  i32.load [2, 0]
+005be922  call [901] ; 
+005be925  local.get [1]
+005be927  i32.const [0]
+005be929  i32.const [0]
+005be92b  call [940] ; Object.op_Equality
+005be92e  if [-64]
+005be930    i32.const [3932344]
+005be935    i32.load [2, 0]
+005be938    call [903] ; 
+005be93b    local.set [1]
+005be93d    local.get [1]
+005be93f    i32.const [4081828] ; STRING "__WorldEffectRoot"
+005be944    i32.load [2, 0]
+005be947    i32.const [0]
+005be949    call [1292] ; GameObject..ctor
+005be94c    local.get [0]
+005be94e    local.get [1]
+005be950    i32.const [0]
+005be952    call [1008] ; GameObject.get_transform
+005be955    i32.store [2, 28]
+005be958    local.get [0]
+005be95a    i32.load [2, 28]
+005be95d    local.set [1]
+005be95f    i32.const [3936516]
+005be964    i32.load [2, 0]
+005be967    call [901] ; 
+005be96a    local.get [1]
+005be96c    i32.const [0]
+005be96e    call [1111] ; Object.DontDestroyOnLoad
+005be971  end []
+005be972  local.get [0]
+005be974  i32.load [2, 28]
+005be977  return []
+005be978  end []

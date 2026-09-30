@@ -1,0 +1,39 @@
+; BuffControl.OnInit; wasmcode function 20396; offset=9193152 size=116
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008c46c3  i32.const [5008669]
+008c46c8  i32.load8_u [0, 0]
+008c46cb  i32.eqz []
+008c46cc  if [-64]
+008c46ce    i32.const [3991816]
+008c46d3    call [900] ; 
+008c46d6    i32.const [3947148]
+008c46db    call [900] ; 
+008c46de    i32.const [3944712]
+008c46e3    call [900] ; 
+008c46e6    i32.const [5008669]
+008c46eb    i32.const [1]
+008c46ed    i32.store8 [0, 0]
+008c46f0  end []
+008c46f1  i32.const [3944712]
+008c46f6  i32.load [2, 0]
+008c46f9  call [901] ; 
+008c46fc  i32.const [3944712]
+008c4701  i32.load [2, 0]
+008c4704  i32.load [2, 92]
+008c4707  i32.load [2, 4]
+008c470a  local.set [1]
+008c470c  i32.const [3947148]
+008c4711  i32.load [2, 0]
+008c4714  call [903] ; 
+008c4717  local.set [2]
+008c4719  local.get [2]
+008c471b  local.get [0]
+008c471d  i32.const [3991816]
+008c4722  i32.load [2, 0]
+008c4725  i32.const [0]
+008c4727  call [1067] ; 
+008c472a  local.get [1]
+008c472c  local.get [2]
+008c472e  i32.const [0]
+008c4730  call [1146] ; 
+008c4733  end []

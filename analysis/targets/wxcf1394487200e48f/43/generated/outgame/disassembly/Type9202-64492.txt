@@ -1,0 +1,107 @@
+; Original class: ADModule
+; Type9202.<ShowVideo>b__38_1; wasmcode function 21046; offset=9494304 size=280
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0090df23  global.get [0]
+0090df25  i32.const [16]
+0090df27  i32.sub []
+0090df28  local.set [2]
+0090df2a  local.get [2]
+0090df2c  global.set [0]
+0090df2e  local.get [2]
+0090df30  local.get [1]
+0090df32  i32.store8 [0, 15]
+0090df35  i32.const [5006940]
+0090df3a  i32.load8_u [0, 0]
+0090df3d  i32.eqz []
+0090df3e  if [-64]
+0090df40    i32.const [3927760]
+0090df45    call [900] ; 
+0090df48    i32.const [3928952]
+0090df4d    call [900] ; 
+0090df50    i32.const [3926996]
+0090df55    call [900] ; 
+0090df58    i32.const [4035400] ; STRING " VideoCloseEvent isEnded:"
+0090df5d    call [900] ; 
+0090df60    i32.const [4078160] ; STRING "VideoAdOnClose"
+0090df65    call [900] ; 
+0090df68    i32.const [5006940]
+0090df6d    i32.const [1]
+0090df6f    i32.store8 [0, 0]
+0090df72  end []
+0090df73  local.get [0]
+0090df75  local.get [2]
+0090df77  call [6343] ; ADModule.cancelAutoCloseVideo
+0090df7a  local.get [0]
+0090df7c  i32.const [0]
+0090df7e  i32.store8 [0, 25]
+0090df81  i32.const [3927760]
+0090df86  i32.load [2, 0]
+0090df89  call [901] ; 
+0090df8c  i32.const [3927760]
+0090df91  i32.load [2, 0]
+0090df94  i32.load [2, 92]
+0090df97  i32.load [2, 0]
+0090df9a  local.set [1]
+0090df9c  i32.const [3928952]
+0090dfa1  i32.load [2, 0]
+0090dfa4  call [901] ; 
+0090dfa7  local.get [2]
+0090dfa9  i32.const [15]
+0090dfab  i32.add []
+0090dfac  i32.const [0]
+0090dfae  call [1148] ; Boolean.ToString
+0090dfb1  local.set [3]
+0090dfb3  local.get [1]
+0090dfb5  i32.const [4035400] ; STRING " VideoCloseEvent isEnded:"
+0090dfba  i32.load [2, 0]
+0090dfbd  local.get [3]
+0090dfbf  i32.const [0]
+0090dfc1  call [955] ; String.Concat
+0090dfc4  i32.const [0]
+0090dfc6  call [999] ; XYXLOG.Log
+0090dfc9  local.get [0]
+0090dfcb  i32.load [2, 20]
+0090dfce  local.set [1]
+0090dfd0  local.get [1]
+0090dfd2  if [-64]
+0090dfd4    local.get [1]
+0090dfd6    local.get [2]
+0090dfd8    i32.load8_u [0, 15]
+0090dfdb    i32.const [0]
+0090dfdd    call [1336] ; 
+0090dfe0  end []
+0090dfe1  local.get [0]
+0090dfe3  i32.const [0]
+0090dfe5  i32.store [2, 20]
+0090dfe8  i32.const [3926996]
+0090dfed  i32.load [2, 0]
+0090dff0  i32.const [1]
+0090dff2  call [909] ; 
+0090dff5  local.set [0]
+0090dff7  local.get [2]
+0090dff9  local.get [2]
+0090dffb  i32.load8_u [0, 15]
+0090dffe  i32.store8 [0, 14]
+0090e001  i32.const [3928952]
+0090e006  i32.load [2, 0]
+0090e009  local.get [2]
+0090e00b  i32.const [14]
+0090e00d  i32.add []
+0090e00e  call [910] ; 
+0090e011  local.set [1]
+0090e013  local.get [0]
+0090e015  local.get [1]
+0090e017  call [905] ; 
+0090e01a  local.get [0]
+0090e01c  local.get [1]
+0090e01e  i32.store [2, 16]
+0090e021  i32.const [4078160] ; STRING "VideoAdOnClose"
+0090e026  i32.load [2, 0]
+0090e029  local.get [0]
+0090e02b  i32.const [0]
+0090e02d  call [1230] ; MsgDispatcher.SendMessage
+0090e030  local.get [2]
+0090e032  i32.const [16]
+0090e034  i32.add []
+0090e035  global.set [0]
+0090e037  end []

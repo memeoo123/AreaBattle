@@ -1,0 +1,14 @@
+; Original class: PiggyBankControl
+; Type3874.OnGM_SetPiggyNum; wasmcode1 function 54679; offset=18072388 size=30
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0113c345  i32.const [0]
+0113c347  i32.const [15943] ; TABLE GameModule.get_LocalData
+0113c34b  call_indirect [2, 0]
+0113c34e  local.get [1]
+0113c350  i32.const [0]
+0113c352  i32.const [2502] ; TABLE Int32.Parse
+0113c355  call_indirect [1, 0]
+0113c358  i32.const [0]
+0113c35a  i32.const [15013] ; TABLE LocalDataManager.set_CollectNum
+0113c35e  call_indirect [5, 0]
+0113c361  end []

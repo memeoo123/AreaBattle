@@ -1,0 +1,51 @@
+; Original class: Converter
+; Type3568.GetStringFromBytes; wasmcode function 12745; offset=6141261 size=123
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+005db550  local.get [0]
+005db552  i32.eqz []
+005db553  if [-64]
+005db555    i32.const [3932324]
+005db55a    call [902] ; 
+005db55d    call [903] ; 
+005db560    local.set [0]
+005db562    local.get [0]
+005db564    i32.const [4046160] ; STRING "Bytes is invalid."
+005db569    call [902] ; 
+005db56c    i32.const [0]
+005db56e    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005db572    global.set [3]
+005db574    i32.const [10659] ; TABLE GameFrameworkException..ctor
+005db578    call_indirect [2, 0]
+005db57b    local.get [0]
+005db57d    i32.const [4031356] ; METHOD Converter.GetStringFromBytes
+005db582    call [902] ; 
+005db585    i32.const [1106]
+005db588    global.set [3]
+005db58a    i32.const [1106]
+005db58d    call_indirect [0, 0]
+005db590    unreachable []
+005db591  end []
+005db592  i32.const [0]
+005db594  call [1103] ; Encoding.get_UTF8
+005db597  local.set [1]
+005db599  local.get [0]
+005db59b  local.set [2]
+005db59d  local.get [0]
+005db59f  i32.load [2, 12]
+005db5a2  local.set [3]
+005db5a4  local.get [1]
+005db5a6  i32.load [2, 0]
+005db5a9  local.set [0]
+005db5ab  local.get [1]
+005db5ad  local.get [2]
+005db5af  i32.const [0]
+005db5b1  local.get [3]
+005db5b3  local.get [0]
+005db5b5  i32.load [2, 480]
+005db5b9  local.get [0]
+005db5bb  i32.load [2, 476]
+005db5bf  global.set [3]
+005db5c1  global.get [3]
+005db5c3  call_indirect [9, 0]
+005db5c6  return []
+005db5c7  end []

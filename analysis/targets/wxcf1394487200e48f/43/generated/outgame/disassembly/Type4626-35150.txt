@@ -1,0 +1,102 @@
+; Original class: ActivityConfigMgr
+; Type4626.GetLimitTaskActivityConfig; wasmcode function 4029; offset=1315219 size=263
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+00141196  global.get [0]
+00141198  i32.const [16]
+0014119a  i32.sub []
+0014119b  local.set [2]
+0014119d  local.get [2]
+0014119f  global.set [0]
+001411a1  i32.const [5001684]
+001411a6  i32.load8_u [0, 0]
+001411a9  i32.eqz []
+001411aa  if [-64]
+001411ac    i32.const [3929208]
+001411b1    call [900] ; 
+001411b4    i32.const [3957624]
+001411b9    call [900] ; 
+001411bc    i32.const [3934404]
+001411c1    call [900] ; 
+001411c4    i32.const [3926996]
+001411c9    call [900] ; 
+001411cc    i32.const [4106460] ; STRING "限时X日任务子活动配置表不包含id"
+001411d1    call [900] ; 
+001411d4    i32.const [5001684]
+001411d9    i32.const [1]
+001411db    i32.store8 [0, 0]
+001411de  end []
+001411df  local.get [2]
+001411e1  i32.const [0]
+001411e3  i32.store [2, 12]
+001411e6  local.get [0]
+001411e8  i32.load [2, 64]
+001411eb  local.set [0]
+001411ed  local.get [2]
+001411ef  local.get [1]
+001411f1  i32.store [2, 8]
+001411f4  block [-64]
+001411f6    local.get [0]
+001411f8    i32.const [3934404]
+001411fd    i32.load [2, 0]
+00141200    local.get [2]
+00141202    i32.const [8]
+00141204    i32.add []
+00141205    call [910] ; 
+00141208    local.get [2]
+0014120a    i32.const [12]
+0014120c    i32.add []
+0014120d    i32.const [3957624]
+00141212    i32.load [2, 0]
+00141215    call [1017] ; 
+00141218    if [-64]
+0014121a      local.get [2]
+0014121c      i32.load [2, 12]
+0014121f      local.set [3]
+00141221      br [1]
+00141223    end []
+00141224    i32.const [3926996]
+00141229    i32.load [2, 0]
+0014122c    i32.const [2]
+0014122e    call [909] ; 
+00141231    local.set [0]
+00141233    local.get [0]
+00141235    i32.const [4106460] ; STRING "限时X日任务子活动配置表不包含id"
+0014123a    i32.load [2, 0]
+0014123d    call [905] ; 
+00141240    local.get [0]
+00141242    i32.const [4106460] ; STRING "限时X日任务子活动配置表不包含id"
+00141247    i32.load [2, 0]
+0014124a    i32.store [2, 16]
+0014124d    local.get [2]
+0014124f    local.get [1]
+00141251    i32.store [2, 4]
+00141254    i32.const [3934404]
+00141259    i32.load [2, 0]
+0014125c    local.get [2]
+0014125e    i32.const [4]
+00141260    i32.add []
+00141261    call [910] ; 
+00141264    local.set [1]
+00141266    local.get [0]
+00141268    local.get [1]
+0014126a    call [905] ; 
+0014126d    local.get [0]
+0014126f    local.get [1]
+00141271    i32.store [2, 20]
+00141274    i32.const [3929208]
+00141279    i32.load [2, 0]
+0014127c    call [901] ; 
+0014127f    local.get [0]
+00141281    i32.const [0]
+00141283    i32.const [2087] ; TABLE CLog.Error
+00141286    global.set [3]
+00141288    i32.const [2087] ; TABLE CLog.Error
+0014128b    call_indirect [0, 0]
+0014128e  end []
+0014128f  local.get [2]
+00141291  i32.const [16]
+00141293  i32.add []
+00141294  global.set [0]
+00141296  local.get [3]
+00141298  return []
+00141299  end []

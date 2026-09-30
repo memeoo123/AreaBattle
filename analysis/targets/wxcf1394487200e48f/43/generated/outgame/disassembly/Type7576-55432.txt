@@ -1,0 +1,22 @@
+; Original class: FileManager
+; Type7576.DeleteFile; wasmcode1 function 62785; offset=20207146 size=49
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0134562d  local.get [0]
+0134562f  i32.const [8984] ; TABLE BridgeManager.get_xyxFunc
+01345633  call_indirect [2, 0]
+01345636  local.set [1]
+01345638  local.get [0]
+0134563a  local.set [2]
+0134563c  local.get [1]
+0134563e  i32.load [2, 0]
+01345641  i32.const [1152]
+01345644  i32.add []
+01345645  local.set [0]
+01345647  local.get [1]
+01345649  local.get [2]
+0134564b  local.get [0]
+0134564d  i32.load [2, 192]
+01345651  local.get [0]
+01345653  i32.load [2, 188]
+01345657  call_indirect [5, 0]
+0134565a  end []

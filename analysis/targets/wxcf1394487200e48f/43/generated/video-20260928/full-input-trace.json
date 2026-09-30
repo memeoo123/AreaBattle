@@ -1,0 +1,187 @@
+{
+  "scope": "22 committed line-state changes across the supplied recording; cuts during a swipe may belong to one gesture. Native visible-state timing, not engine pointer timing. Later inputs manually verified from adjacent frames and capacity circles.",
+  "events": [
+    {
+      "pts": 4.10254,
+      "previousPts": 4.08523,
+      "kind": "connect",
+      "source": 2,
+      "target": 5,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 5.81944,
+      "previousPts": 5.80334,
+      "kind": "connect",
+      "source": 1,
+      "target": 5,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 7.73713,
+      "previousPts": 7.72049,
+      "kind": "connect",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 2
+    },
+    {
+      "pts": 13.00674,
+      "previousPts": 12.98981,
+      "kind": "cut",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 15.19104,
+      "previousPts": 15.17443,
+      "kind": "connect",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 2
+    },
+    {
+      "pts": 23.39533,
+      "previousPts": 23.3786,
+      "kind": "cut",
+      "source": 1,
+      "target": 2,
+      "expectedOutgoing": 1
+    },
+    {
+      "pts": 24.89574,
+      "previousPts": 24.87938,
+      "kind": "connect",
+      "source": 2,
+      "target": 1,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 64.46633,
+      "pts": 64.48295,
+      "kind": "cut",
+      "source": 2,
+      "target": 5,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 64.78305,
+      "pts": 64.79981,
+      "kind": "connect",
+      "source": 5,
+      "target": 3,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 65.85037,
+      "pts": 65.86681,
+      "kind": "connect",
+      "source": 5,
+      "target": 7,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 67.01784,
+      "pts": 67.03434,
+      "kind": "connect",
+      "source": 5,
+      "target": 6,
+      "expectedOutgoing": 3
+    },
+    {
+      "previousPts": 73.63778,
+      "pts": 73.65431,
+      "kind": "connect",
+      "source": 2,
+      "target": 5,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 74.90497,
+      "pts": 74.92175,
+      "kind": "connect",
+      "source": 2,
+      "target": 6,
+      "expectedOutgoing": 3
+    },
+    {
+      "previousPts": 75.62237,
+      "pts": 75.63934,
+      "kind": "connect",
+      "source": 6,
+      "target": 7,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 76.55597,
+      "pts": 76.57274,
+      "kind": "connect",
+      "source": 3,
+      "target": 4,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 77.4906,
+      "pts": 77.50691,
+      "kind": "connect",
+      "source": 7,
+      "target": 4,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 78.72384,
+      "pts": 78.7402,
+      "kind": "connect",
+      "source": 3,
+      "target": 7,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 79.64055,
+      "pts": 79.65754,
+      "kind": "cut",
+      "source": 5,
+      "target": 7,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 79.69063,
+      "pts": 79.7078,
+      "kind": "cut",
+      "source": 3,
+      "target": 7,
+      "expectedOutgoing": 1
+    },
+    {
+      "previousPts": 79.7574,
+      "pts": 79.77415,
+      "kind": "cut",
+      "source": 3,
+      "target": 4,
+      "expectedOutgoing": 0
+    },
+    {
+      "previousPts": 81.92529,
+      "pts": 81.94212,
+      "kind": "connect",
+      "source": 6,
+      "target": 4,
+      "expectedOutgoing": 2
+    },
+    {
+      "previousPts": 83.70971,
+      "pts": 83.72654,
+      "kind": "connect",
+      "source": 3,
+      "target": 4,
+      "expectedOutgoing": 1
+    }
+  ],
+  "lateEvidence": [
+    "late-input-review/index.json",
+    "late-input-review-extra/index.json",
+    "late-second-dot-refinement.json"
+  ],
+  "caveat": "AI directions and tower captures are excluded from player input events."
+}

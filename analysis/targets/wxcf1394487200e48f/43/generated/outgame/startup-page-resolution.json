@@ -1,0 +1,173 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3989352,
+      "encodedUsage": "0xc000b875",
+      "methodSpecIndex": 23610,
+      "methodSpecAddress": 766328,
+      "methodSpec": [
+        3356,
+        -1,
+        175
+      ],
+      "declaringType": "Array",
+      "method": "Empty",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4018452,
+      "encodedUsage": "0xc000cb2d",
+      "methodSpecIndex": 26006,
+      "methodSpecAddress": 795080,
+      "methodSpec": [
+        27397,
+        -1,
+        6067
+      ],
+      "declaringType": "UIModule",
+      "method": "Show",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4379,
+            "name": "MenuTabUI"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 4018380,
+      "encodedUsage": "0xc000cb09",
+      "methodSpecIndex": 25988,
+      "methodSpecAddress": 794864,
+      "methodSpec": [
+        27397,
+        -1,
+        6063
+      ],
+      "declaringType": "UIModule",
+      "method": "Show",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 4308,
+            "name": "CommonGetRewardUI"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3953616,
+      "encodedUsage": "0xc00077a3",
+      "methodSpecIndex": 15313,
+      "methodSpecAddress": 666764,
+      "methodSpec": [
+        26934,
+        579,
+        -1
+      ],
+      "declaringType": "ControlBase`1",
+      "method": "get_I",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4504,
+            "name": "x~bjQc"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3953528,
+      "encodedUsage": "0xc0007777",
+      "methodSpecIndex": 15291,
+      "methodSpecAddress": 666500,
+      "methodSpec": [
+        26934,
+        568,
+        -1
+      ],
+      "declaringType": "ControlBase`1",
+      "method": "get_I",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4453,
+            "name": "RedDotControl"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference.",
+  "additionalMetadataResolution": {
+    "menuSetVisible": {
+      "declaringTypeIndex": 3544,
+      "methodMetadata": 27322,
+      "slot": 9,
+      "argument": false
+    },
+    "loadScene": {
+      "methodMetadata": 26221,
+      "parameterTypes": [
+        "String",
+        "LoadAssetCompleteHandler",
+        "Boolean",
+        "LoadProgressHandler"
+      ],
+      "sourceArguments": [
+        "GamePlay",
+        "callback",
+        false,
+        null
+      ]
+    }
+  }
+}

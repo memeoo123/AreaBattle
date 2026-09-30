@@ -1,0 +1,200 @@
+; LineRendererEntity.}aces; wasmcode function 7617; offset=3637981 size=527
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003782de  i32.const [5007244]
+003782e3  i32.load8_u [0, 0]
+003782e6  i32.eqz []
+003782e7  if [-64]
+003782e9    i32.const [3993056]
+003782ee    call [900] ; 
+003782f1    i32.const [3993144]
+003782f6    call [900] ; 
+003782f9    i32.const [3936516] ; type: Object
+003782fe    call [900] ; 
+00378301    i32.const [4095508] ; literal: 'renderer_arrow_2'
+00378306    call [900] ; 
+00378309    i32.const [4095504] ; literal: 'renderer_arrow_1'
+0037830e    call [900] ; 
+00378311    i32.const [4095516] ; literal: 'renderer_bg_2'
+00378316    call [900] ; 
+00378319    i32.const [4095512] ; literal: 'renderer_bg_1'
+0037831e    call [900] ; 
+00378321    i32.const [5007244]
+00378326    i32.const [1]
+00378328    i32.store8 [0, 0]
+0037832b  end []
+0037832c  local.get [0]
+0037832e  i32.load8_u [0, 40]
+00378331  i32.eqz []
+00378332  if [-64]
+00378334    local.get [0]
+00378336    i32.load [2, 12]
+00378339    local.set [1]
+0037833b    i32.const [3936516] ; type: Object
+00378340    i32.load [2, 0]
+00378343    call [901] ; 
+00378346    local.get [1]
+00378348    i32.const [0]
+0037834a    i32.const [0]
+0037834c    call [940] ; 
+0037834f    if [-64]
+00378351      local.get [0]
+00378353      local.get [0]
+00378355      i32.const [0]
+00378357      call [977] ; 
+0037835a      i32.const [3993056]
+0037835f      i32.load [2, 0]
+00378362      call [1010] ; 
+00378365      i32.store [2, 12]
+00378368    end []
+00378369    local.get [0]
+0037836b    i32.load [2, 16]
+0037836e    local.set [1]
+00378370    i32.const [3936516] ; type: Object
+00378375    i32.load [2, 0]
+00378378    call [901] ; 
+0037837b    local.get [1]
+0037837d    i32.const [0]
+0037837f    i32.const [0]
+00378381    call [940] ; 
+00378384    if [-64]
+00378386      local.get [0]
+00378388      local.get [0]
+0037838a      i32.const [0]
+0037838c      call [977] ; 
+0037838f      i32.const [4095504] ; literal: 'renderer_arrow_1'
+00378394      i32.load [2, 0]
+00378397      i32.const [0]
+00378399      call [1102] ; 
+0037839c      i32.const [3993144]
+003783a1      i32.load [2, 0]
+003783a4      call [1010] ; 
+003783a7      i32.store [2, 16]
+003783aa    end []
+003783ab    local.get [0]
+003783ad    local.get [0]
+003783af    i32.load [2, 16]
+003783b2    local.get [0]
+003783b4    call [2941] ; LineRendererEntity.Lry[ot
+003783b7    local.get [0]
+003783b9    i32.load [2, 20]
+003783bc    local.set [1]
+003783be    i32.const [3936516] ; type: Object
+003783c3    i32.load [2, 0]
+003783c6    call [901] ; 
+003783c9    block [-64]
+003783cb      local.get [1]
+003783cd      i32.const [0]
+003783cf      i32.const [0]
+003783d1      call [940] ; 
+003783d4      if [-64]
+003783d6        local.get [0]
+003783d8        i32.const [0]
+003783da        call [977] ; 
+003783dd        i32.const [4095508] ; literal: 'renderer_arrow_2'
+003783e2        i32.load [2, 0]
+003783e5        i32.const [0]
+003783e7        call [1102] ; 
+003783ea        local.set [1]
+003783ec        i32.const [3936516] ; type: Object
+003783f1        i32.load [2, 0]
+003783f4        call [901] ; 
+003783f7        local.get [1]
+003783f9        i32.const [0]
+003783fb        i32.const [0]
+003783fd        call [946] ; 
+00378400        i32.eqz []
+00378401        br_if [1]
+00378403        local.get [0]
+00378405        i32.const [20]
+00378407        i32.add []
+00378408        local.get [1]
+0037840a        i32.const [3993144]
+0037840f        i32.load [2, 0]
+00378412        call [1010] ; 
+00378415        i32.store [2, 0]
+00378418      end []
+00378419      local.get [0]
+0037841b      local.get [0]
+0037841d      i32.load [2, 20]
+00378420      local.get [0]
+00378422      call [2941] ; LineRendererEntity.Lry[ot
+00378425    end []
+00378426    local.get [0]
+00378428    i32.load [2, 24]
+0037842b    local.set [1]
+0037842d    i32.const [3936516] ; type: Object
+00378432    i32.load [2, 0]
+00378435    call [901] ; 
+00378438    local.get [1]
+0037843a    i32.const [0]
+0037843c    i32.const [0]
+0037843e    call [940] ; 
+00378441    if [-64]
+00378443      local.get [0]
+00378445      local.get [0]
+00378447      i32.const [0]
+00378449      call [977] ; 
+0037844c      i32.const [4095512] ; literal: 'renderer_bg_1'
+00378451      i32.load [2, 0]
+00378454      i32.const [0]
+00378456      call [1102] ; 
+00378459      i32.const [3993144]
+0037845e      i32.load [2, 0]
+00378461      call [1010] ; 
+00378464      i32.store [2, 24]
+00378467    end []
+00378468    local.get [0]
+0037846a    local.get [0]
+0037846c    i32.load [2, 24]
+0037846f    local.get [0]
+00378471    call [2941] ; LineRendererEntity.Lry[ot
+00378474    local.get [0]
+00378476    i32.load [2, 28]
+00378479    local.set [1]
+0037847b    i32.const [3936516] ; type: Object
+00378480    i32.load [2, 0]
+00378483    call [901] ; 
+00378486    block [-64]
+00378488      local.get [1]
+0037848a      i32.const [0]
+0037848c      i32.const [0]
+0037848e      call [940] ; 
+00378491      if [-64]
+00378493        local.get [0]
+00378495        i32.const [0]
+00378497        call [977] ; 
+0037849a        i32.const [4095516] ; literal: 'renderer_bg_2'
+0037849f        i32.load [2, 0]
+003784a2        i32.const [0]
+003784a4        call [1102] ; 
+003784a7        local.set [1]
+003784a9        i32.const [3936516] ; type: Object
+003784ae        i32.load [2, 0]
+003784b1        call [901] ; 
+003784b4        local.get [1]
+003784b6        i32.const [0]
+003784b8        i32.const [0]
+003784ba        call [946] ; 
+003784bd        i32.eqz []
+003784be        br_if [1]
+003784c0        local.get [0]
+003784c2        i32.const [28]
+003784c4        i32.add []
+003784c5        local.get [1]
+003784c7        i32.const [3993144]
+003784cc        i32.load [2, 0]
+003784cf        call [1010] ; 
+003784d2        i32.store [2, 0]
+003784d5      end []
+003784d6      local.get [0]
+003784d8      local.get [0]
+003784da      i32.load [2, 28]
+003784dd      local.get [0]
+003784df      call [2941] ; LineRendererEntity.Lry[ot
+003784e2    end []
+003784e3    local.get [0]
+003784e5    i32.const [1]
+003784e7    i32.store8 [0, 40]
+003784ea  end []
+003784eb  end []
+

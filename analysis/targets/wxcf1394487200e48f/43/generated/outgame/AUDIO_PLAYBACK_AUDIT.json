@@ -1,0 +1,39 @@
+{
+  "atUtc": "2026-09-30T09:21:42.043220+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "AUDIO_PLAYBACK_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T09:21:42.043220+00:00",
+    "scope": "Source Once/Loop concrete playback actions and native source helper; original main-music1002 asset import",
+    "checksPassed": 875,
+    "newIntegratedChecks": 15,
+    "nativePlayModeChecks": 13,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameAudioPlaybackPlayModeValidation.Run"
+    ],
+    "notClaimed": "Full original audio resource/update/AudioManager composition, Fade/LoopFade, SDK playback, device recording or full outgame Player"
+  },
+  "findings": [
+    "OutgameAudioLoopAction and OutgameAudioOnceAction are concrete production actions that create and play real native AudioSource objects. Shared action services now require explicit new/legacy audio load tasks, original OutgameAssetHandle operation, logging/SDK-stop boundary, and production realtime/native destruction defaults.",
+    "Source asynchronous capture, late load after stop, null/destroyed-root faults, volume timing, both resource branches and end/release/dispose failure ordering retained. Native helper children inherit root layer and reset local transforms; destruction targets GameObject.",
+    "Once recovers strict real-time null-clip completion and native isPlaying/EndTime branches. Paused positive-EndTime playback still stops at boundary; exact-zero null-clip deadline remains pending. Exported WASM has no reachable Android scheduling or true SDK switch write, so no synthetic platform behavior added.",
+    "Original main-music1002 recovered AAC was already present in asset evidence but excluded from earlier combat-only preparation. prepare_outgame_main_audio.py decodes to PCM float32 without resampling and copies1002.wav to production Resources; source and decoded hashes preserved separately. Existing combat audio code and manifest remain unchanged.",
+    "875 integrated checks pass (15 new).13 native PlayMode checks pass using original1002 and2001: native cursor advancement/start seek, pause freeze/resume, volume messages, explicit stop/release/delayed destruction, positive EndTime during pause, natural one-shot completion. Resource/update ownership in this validation is an explicit fixture.",
+    "Lifecycle stays11/38 with27 remaining; indexed method-map4979. Full outgame objective still incomplete; no fresh Player build."
+  ],
+  "remaining": [
+    "Restore Fade/LoopFade including source countdowns. Restore AudioManager config/root/listener/node registry and Composite.NewAudio hook/factory. Recover actual helper load/unload operations and shared UpdateManager before full UI/controller production audio acceptance.",
+    "Continue remaining27 controller lifecycles and full Main/account/module/menu composition; validate all original objective subsystems including restart/failure/return flows and runnable Player."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-playback-integrated.log",
+    "nativeLog": "analysis/audio-playback-native.log",
+    "nativeReport": "analysis/audio-playback-native-validation.json",
+    "asset": "MAIN_AUDIO_ASSET_EVIDENCE.json"
+  },
+  "disassembledMethodMapCount": 4979
+}

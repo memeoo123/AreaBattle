@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,subprocess
+from datetime import datetime,timezone
+w=Path(__file__).resolve().parent.parent;t=w/'analysis/targets/wxcf1394487200e48f/43';o=t/'generated/outgame'
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+r=read(w/'analysis/unity-integrated-validation.json');v=read(w/'analysis/outgame-skin-validation.json');assert r['passed'] and v['passed'] and len(r['checks'])==333
+p=t/'OUTGAME_RESTORE_STATE.json';s=read(p);s['lastUpdatedAtUtc']=datetime.now(timezone.utc).isoformat();s['currentStage']='skin-mutations-and-save-projection';s['validation'].update(integratedChecksPassed=333,skinRecordChecksPassed=7)
+s['nextActions']=['Recover skin ordering and ShopUI acquisition/equip bindings with original prices and callback semantics.','Bind account startup and concrete statistics/save effects to production lifecycle.','Complete remaining outgame systems and verify a fresh playable build/end-to-end flows.']
+for sub in s['subsystems']:
+ if sub['id']=='skins-cosmetics':sub.update(evidenceStatus='Skin records, migration, unlock/equip/new flags and save projection confirmed',implementation='Source core implemented; ordering/shop payment/UI/lifecycle pending',validation='7 skin checks pass; full subsystem incomplete')
+write(p,s)
+p=o/'OUTGAME_RESTORE_SPEC.json';s=read(p);s['subsystemGates']['skin-mutations-and-save-projection']={'implementationReady':True,'scope':'SkinManager core methods only; excludes shop payment/UI/startup and original platform wire serialization','rules':['UnlockSoldierSkin ignores missing/already-owned ids; first unlock sets u/isNew then sets HaveSkinNum (StatisticEventConfig runtime offset56 =210001) to count of owned indexed soldier records with skinType<=3, including free skins.','UnlockSceneSkin ignores missing/already-owned ids and only sets u/isNew; no statistic, equip or save.','SetUserSkinId writes dictionary without ownership/id/category validation. CheckSkinNew2Modify resolves soldier then scene, throws when absent, clears isNew and always returns false.','OnSave clears/rebuilds newSkins from every held record isNew, including unknown records, and usedSkin from runtime equipment dictionary before serialization.'],'source':['disassembly/Type4150-31732.txt','disassembly/Type4150-31735.txt','disassembly/Type4150-31743.txt','disassembly/Type4150-31745.txt','disassembly/Type4150-31746.txt','disassembly/Type4150-31747.txt','disassembly/Type4150-31748.txt'],'implementation':['OutgameSkinCatalog.cs','OutgameSkinActions.cs']};write(p,s)
+p=o/'golden-cases.json';s=read(p);ids={c['id'] for c in s['cases']};s['cases'] += [dict(c,sourceContract='SkinManager unlock/equip/mark-new/OnSave') for c in v['checks'] if c['id'] not in ids];write(p,s)
+p=w/'analysis/VALIDATION_MANIFEST.json';old=read(p);subprocess.run(['python',str(w/'analysis/record_validation_manifest.py')],check=True);s=read(p)
+for k,val in old.items():
+ if k not in s:s[k]=val
+s.setdefault('validationHistory',[]).append(old.get('latestValidation',{}));s['latestValidation']={'scope':'Skin mutation effects and save projection with isolated restart','checksPassed':333,'outgameChecksPassed':66,'freshPlayerBuild':False,'freshPlayerSmoke':False,'notClaimed':'Shop acquisition/payment/UI, complete account startup or playable lobby'};write(p,s)
+note='\n\n## 皮肤操作与保存投影（333项）\n已补原 SkinManager 的首次解锁、重复/缺失忽略、兵种拥有数量统计、场景无统计、装备字典直接赋值、清除新标记恒返回 false，以及 OnSave 重建 newSkins/usedSkin。兵种计数包括免费皮肤；统计在解锁状态写入后执行。未知存档记录的新标记也参与保存投影。新增3项验证含隔离磁盘重启；Unity退出0，333集成检查通过（原267+关外66）。排序、商店价格/支付回调、原UI、启动与完整构建仍未完成，目标保持 active。\n'
+for p in [w/'AREA_BATTLE_HANDOFF.md',w/'RESTORE_PROGRESS.md',w/'analysis/VALIDATION_REPORT.md',t/'REVERSE_PROGRESS.md']:p.write_text(p.read_text(encoding='utf8')+note,encoding='utf8')
+b=['python','C:/Users/jiachengwei/.codex/skills/wechat-minigame-reconstruction-orchestrator/scripts/orchestrate.py'];a=['--project-root',str(w),'--target','wxcf1394487200e48f/43']
+for kind,p in [('unityProject',w/'UnityProject'),('validationManifest',w/'analysis/VALIDATION_MANIFEST.json'),('validationReport',w/'analysis/VALIDATION_REPORT.md')]:subprocess.run(b+['record-artifact']+a+['--kind',kind,'--path',str(p)],check=True,capture_output=True)
+for name in ['unityCompile','outgameCommanderCore','outgameInventoryCore','outgameToolDispatchCore','outgameProfileStore','outgameMenuNavigation','outgameCommanderActions','outgameUiImport','outgameMenuView','outgameCommanderView','outgameLevelProgression','outgameOriginalLocalData','outgameOriginalCommanders','outgameSkinRecords','outgameSkinActions']:
+ subprocess.run(b+['set-check']+a+['--name',name,'--result','pass','--evidence','333 integrated checks passed including skin mutations/save projection; full outgame incomplete.','--depends-on','unityProject','--depends-on','validationManifest'],check=True,capture_output=True)
+print('Recorded 333 checks; full goal remains incomplete.')

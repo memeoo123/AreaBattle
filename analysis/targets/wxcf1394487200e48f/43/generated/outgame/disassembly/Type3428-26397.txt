@@ -1,0 +1,58 @@
+; Original class: AudioParallel
+; Type3428.sJÁS; wasmcode function 20548; offset=9220134 size=144
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008cb027  global.get [0]
+008cb029  i32.const [16]
+008cb02b  i32.sub []
+008cb02c  local.set [2]
+008cb02e  local.get [2]
+008cb030  global.set [0]
+008cb032  i32.const [5011710]
+008cb037  i32.load8_u [0, 0]
+008cb03a  i32.eqz []
+008cb03b  if [-64]
+008cb03d    i32.const [3934404]
+008cb042    call [900] ; 
+008cb045    i32.const [3926996]
+008cb04a    call [900] ; 
+008cb04d    i32.const [4045280] ; STRING "AudioPlayEnd"
+008cb052    call [900] ; 
+008cb055    i32.const [5011710]
+008cb05a    i32.const [1]
+008cb05c    i32.store8 [0, 0]
+008cb05f  end []
+008cb060  local.get [0]
+008cb062  local.get [1]
+008cb064  local.get [2]
+008cb066  call [13113] ; AudioParallel.qµ|yv
+008cb069  i32.const [3926996]
+008cb06e  i32.load [2, 0]
+008cb071  i32.const [1]
+008cb073  call [909] ; 
+008cb076  local.set [0]
+008cb078  local.get [2]
+008cb07a  local.get [1]
+008cb07c  i32.store [2, 12]
+008cb07f  i32.const [3934404]
+008cb084  i32.load [2, 0]
+008cb087  local.get [2]
+008cb089  i32.const [12]
+008cb08b  i32.add []
+008cb08c  call [910] ; 
+008cb08f  local.set [1]
+008cb091  local.get [0]
+008cb093  local.get [1]
+008cb095  call [905] ; 
+008cb098  local.get [0]
+008cb09a  local.get [1]
+008cb09c  i32.store [2, 16]
+008cb09f  i32.const [4045280] ; STRING "AudioPlayEnd"
+008cb0a4  i32.load [2, 0]
+008cb0a7  local.get [0]
+008cb0a9  i32.const [0]
+008cb0ab  call [1230] ; MsgDispatcher.SendMessage
+008cb0ae  local.get [2]
+008cb0b0  i32.const [16]
+008cb0b2  i32.add []
+008cb0b3  global.set [0]
+008cb0b5  end []

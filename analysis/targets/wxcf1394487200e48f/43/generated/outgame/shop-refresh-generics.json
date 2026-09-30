@@ -1,0 +1,170 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3954992,
+      "encodedUsage": "0xc0007a2b",
+      "methodSpecIndex": 15637,
+      "methodSpecAddress": 670652,
+      "methodSpec": [
+        10507,
+        706,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Values",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x150000",
+            "data": 3762460,
+            "name": null
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956184,
+      "encodedUsage": "0xc0007c7f",
+      "methodSpecIndex": 15935,
+      "methodSpecAddress": 674228,
+      "methodSpec": [
+        10507,
+        767,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Values",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4364,
+            "name": "SkinItem"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3977016,
+      "encodedUsage": "0xc000a379",
+      "methodSpecIndex": 20924,
+      "methodSpecAddress": 734096,
+      "methodSpec": [
+        10674,
+        240,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 4364,
+            "name": "SkinItem"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3987576,
+      "encodedUsage": "0xc000b699",
+      "methodSpecIndex": 23372,
+      "methodSpecAddress": 763472,
+      "methodSpec": [
+        10579,
+        706,
+        -1
+      ],
+      "declaringType": "ValueCollection",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x150000",
+            "data": 3762460,
+            "name": null
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3987640,
+      "encodedUsage": "0xc000b6b9",
+      "methodSpecIndex": 23388,
+      "methodSpecAddress": 763664,
+      "methodSpec": [
+        10579,
+        767,
+        -1
+      ],
+      "declaringType": "ValueCollection",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4364,
+            "name": "SkinItem"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

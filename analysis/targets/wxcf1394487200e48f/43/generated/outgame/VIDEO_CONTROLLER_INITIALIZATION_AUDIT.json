@@ -1,0 +1,96 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "source_confirmed_partial_runtime",
+  "source": [
+    "disassembly/Type7544-55066.txt",
+    "disassembly/Type7511-54876.txt",
+    "disassembly/Type7511-54833.txt",
+    "disassembly/Type7527-54985.txt",
+    "disassembly/Type7511-54865.txt",
+    "video-init-fields.json",
+    "ad-controller-fields.json"
+  ],
+  "confirmed": [
+    {
+      "fact": "VIDEO exact branch overwrites new_request local to2, cacheAmount to1 and creates SerialVideoController unconditionally within that branch.",
+      "addresses": [
+        "0054afcb",
+        "0054affb",
+        "0054b00c",
+        "0054b049"
+      ]
+    },
+    {
+      "fact": "Publishes new controller to NewAdsManager.videoController static offset28, sets cacheAmount offset44, invokes virtual slot4 setAdz(config), then sets bidding offset48. Reads XYXGlobalConfig.NewAdsRequestDelayEnable offset100: true skips immediate load; false invokes virtual slot5 load.",
+      "addresses": [
+        "0054b0d4",
+        "0054b0f0",
+        "0054b152",
+        "0054b17b",
+        "0054b1c0",
+        "0054b213"
+      ]
+    },
+    {
+      "fact": "Base constructor Prefix DAU- , videoShowTime=-1, lastShowPriority=-1, cacheAmount=1, interval_fallback_interval=20 and four separate candidate lists.",
+      "addresses": [
+        "005fb2bd",
+        "005fb2ca",
+        "005fb2e5",
+        "005fb2ec"
+      ]
+    },
+    {
+      "fact": "getPlatList creates missing list and generates adapters whenever Count<=0. For each idsInfo normalize nonempty zkey containing INTERSTITAL to INTERSTITAL; call platform bridge slot37 with key and platformId. Skip null; init adapter with IdsInfo and current Adz; include only virtual slot12 canRequest=true. Existing nonempty list retained. Exceptions retain earlier appended entries.",
+      "addresses": [
+        "0008ad7c",
+        "0008adbc",
+        "0008aefc",
+        "0008af7a",
+        "0008afbb",
+        "0008afee",
+        "0008b02a"
+      ],
+      "resolvedSlot": {
+        "declaringType": 7488,
+        "metadata": 54724,
+        "slot": 12,
+        "method": "canRequest"
+      }
+    },
+    {
+      "fact": "Base setAdz assigns config and initializes list, clamps cacheAmount only if above nonzero list count. Serial setAdz calls base first then replaces TAG with DAU- + zkey + -SerialController.",
+      "addresses": [
+        "00221c04",
+        "00221c13",
+        "007647de",
+        "007647e7"
+      ]
+    }
+  ],
+  "implemented": [
+    "Source base cache/video timestamp/log prefix defaults in OutgameAdShowFlow",
+    "Post-publication serial video initialization ordering in OutgameVideoController.InitializeSerial",
+    "Lazy source adapter list construction in OutgameAdPlatformList"
+  ],
+  "pending": [
+    "Original Adz/IdsInfo config parsing and platform bridge factory slot37",
+    "Adapter init and canRequest source implementation",
+    "Production publisher and serial setAdz binding",
+    "Actual platform SDK and reporting services",
+    "Remote effective ad configuration is not established by this static branch proof"
+  ],
+  "adapterInitializationUpdate": {
+    "implemented": "Wx source init/canRequest, config references and consumed DTO fields",
+    "checks": 473,
+    "productionConnected": false,
+    "remaining": "Original complete config factory, SDK and controller setAdz binding"
+  },
+  "setAdzUpdate": {
+    "implemented": true,
+    "implementation": "OutgameSerialAdConfiguration.cs",
+    "checks": 479,
+    "productionConnected": false,
+    "scope": "Source binding, clamp, prefix and shared list identity. Runtime acquisition and service composition pending."
+  }
+}

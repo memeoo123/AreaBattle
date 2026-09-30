@@ -1,0 +1,30 @@
+; Original class: ProcedureExitGame
+; Type4448.LiZUh; wasmcode1 function 24313; offset=9439621 size=86
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00900986  i32.const [5009768]
+0090098b  i32.load8_u [0, 0]
+0090098e  i32.eqz []
+0090098f  if [-64]
+00900991    i32.const [3941104]
+00900996    i32.const [1605]
+00900999    call_indirect [0, 0]
+0090099c    i32.const [4053296] ; STRING "ExitGame"
+009009a1    i32.const [1605]
+009009a4    call_indirect [0, 0]
+009009a7    i32.const [5009768]
+009009ac    i32.const [1]
+009009ae    i32.store8 [0, 0]
+009009b1  end []
+009009b2  i32.const [3941104]
+009009b7  i32.load [2, 0]
+009009ba  i32.const [1149]
+009009bd  call_indirect [0, 0]
+009009c0  i32.const [0]
+009009c2  i32.const [25239] ; TABLE UserDataPrefs.OnSave
+009009c6  call_indirect [0, 0]
+009009c9  i32.const [4053296] ; STRING "ExitGame"
+009009ce  i32.load [2, 0]
+009009d1  i32.const [0]
+009009d3  i32.const [9222] ; TABLE MsgDispatcher.SendMessage
+009009d7  call_indirect [4, 0]
+009009da  end []

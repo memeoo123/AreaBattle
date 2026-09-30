@@ -1,0 +1,142 @@
+; Original class: LevelControl
+; Type4107..ctor; wasmcode function 18897; offset=8516363 size=431
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+0081f30e  i32.const [5008498]
+0081f313  i32.load8_u [0, 0]
+0081f316  i32.eqz []
+0081f317  if [-64]
+0081f319    i32.const [3953436]
+0081f31e    call [900] ; 
+0081f321    i32.const [3926888]
+0081f326    call [900] ; 
+0081f329    i32.const [3977072]
+0081f32e    call [900] ; 
+0081f331    i32.const [3973756]
+0081f336    call [900] ; 
+0081f339    i32.const [3972564]
+0081f33e    call [900] ; 
+0081f341    i32.const [3977872]
+0081f346    call [900] ; 
+0081f349    i32.const [3922968]
+0081f34e    call [900] ; 
+0081f351    i32.const [3923916]
+0081f356    call [900] ; 
+0081f359    i32.const [3923232]
+0081f35e    call [900] ; 
+0081f361    i32.const [3924044]
+0081f366    call [900] ; 
+0081f369    i32.const [5008498]
+0081f36e    i32.const [1]
+0081f370    i32.store8 [0, 0]
+0081f373  end []
+0081f374  i32.const [3924044]
+0081f379  i32.load [2, 0]
+0081f37c  call [903] ; 
+0081f37f  local.set [1]
+0081f381  local.get [1]
+0081f383  i32.const [3977872]
+0081f388  i32.load [2, 0]
+0081f38b  call [944] ; 
+0081f38e  local.get [0]
+0081f390  local.get [1]
+0081f392  i32.store [2, 56]
+0081f395  i32.const [3923916]
+0081f39a  i32.load [2, 0]
+0081f39d  call [903] ; 
+0081f3a0  local.set [1]
+0081f3a2  local.get [1]
+0081f3a4  i32.const [3977072]
+0081f3a9  i32.load [2, 0]
+0081f3ac  call [944] ; 
+0081f3af  local.get [0]
+0081f3b1  local.get [1]
+0081f3b3  i32.store [2, 64]
+0081f3b6  i32.const [3922968]
+0081f3bb  i32.load [2, 0]
+0081f3be  call [903] ; 
+0081f3c1  local.set [1]
+0081f3c3  local.get [1]
+0081f3c5  i32.const [3972564]
+0081f3ca  i32.load [2, 0]
+0081f3cd  call [944] ; 
+0081f3d0  local.get [0]
+0081f3d2  local.get [1]
+0081f3d4  i32.store [2, 68]
+0081f3d7  i32.const [3923232]
+0081f3dc  i32.load [2, 0]
+0081f3df  call [903] ; 
+0081f3e2  local.set [1]
+0081f3e4  local.get [1]
+0081f3e6  i32.const [3973756]
+0081f3eb  i32.load [2, 0]
+0081f3ee  call [944] ; 
+0081f3f1  local.get [0]
+0081f3f3  local.get [1]
+0081f3f5  i32.store [2, 72]
+0081f3f8  i32.const [3924044]
+0081f3fd  i32.load [2, 0]
+0081f400  call [903] ; 
+0081f403  local.set [1]
+0081f405  local.get [1]
+0081f407  i32.const [3977872]
+0081f40c  i32.load [2, 0]
+0081f40f  call [944] ; 
+0081f412  local.get [0]
+0081f414  local.get [1]
+0081f416  i32.store [2, 76]
+0081f419  i32.const [3924044]
+0081f41e  i32.load [2, 0]
+0081f421  call [903] ; 
+0081f424  local.set [1]
+0081f426  local.get [1]
+0081f428  i32.const [3977872]
+0081f42d  i32.load [2, 0]
+0081f430  call [944] ; 
+0081f433  local.get [0]
+0081f435  local.get [1]
+0081f437  i32.store [2, 80]
+0081f43a  local.get [0]
+0081f43c  i32.const [3926888]
+0081f441  i32.load [2, 0]
+0081f444  i32.const [3]
+0081f446  call [909] ; 
+0081f449  i32.store [2, 84]
+0081f44c  local.get [0]
+0081f44e  i32.const [3926888]
+0081f453  i32.load [2, 0]
+0081f456  i32.const [3]
+0081f458  call [909] ; 
+0081f45b  i32.store [2, 88]
+0081f45e  local.get [0]
+0081f460  i32.const [3926888]
+0081f465  i32.load [2, 0]
+0081f468  i32.const [3]
+0081f46a  call [909] ; 
+0081f46d  i32.store [2, 92]
+0081f470  i64.const [4575657222473777152]
+0081f47a  local.set [2]
+0081f47c  local.get [0]
+0081f47e  local.get [2]
+0081f480  i32.wrap_i64 []
+0081f481  i32.store [2, 100]
+0081f484  local.get [0]
+0081f486  local.get [2]
+0081f488  i64.const [32]
+0081f48a  i64.shr_u []
+0081f48b  i32.wrap_i64 []
+0081f48c  i32.store [2, 104]
+0081f48f  i32.const [3924044]
+0081f494  i32.load [2, 0]
+0081f497  call [903] ; 
+0081f49a  local.set [1]
+0081f49c  local.get [1]
+0081f49e  i32.const [3977872]
+0081f4a3  i32.load [2, 0]
+0081f4a6  call [944] ; 
+0081f4a9  local.get [0]
+0081f4ab  local.get [1]
+0081f4ad  i32.store [2, 112]
+0081f4b0  i32.const [3953436]
+0081f4b5  i32.load [2, 0]
+0081f4b8  drop []
+0081f4b9  end []

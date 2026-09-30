@@ -1,0 +1,18 @@
+{
+  "status": "source_unregister_composed_with_loader_cleanup",
+  "source": [
+    "disassembly/Type2927-22860.txt",
+    "resource-unregister-generics.json"
+  ],
+  "verified": [
+    "List<Provider>.Remove precedes source key lookup and Dictionary<string,Provider>.Remove",
+    "Concrete registry removes destroyed providers before loader-owned collection Clear",
+    "Actual provider destruction/refcount chain retained in integrated test"
+  ],
+  "remaining": [
+    "Provider original key construction and production registration",
+    "Dependency lookup22858 and concrete bundle destruction",
+    "Full runtime owner/Player"
+  ],
+  "integratedChecks": 592
+}

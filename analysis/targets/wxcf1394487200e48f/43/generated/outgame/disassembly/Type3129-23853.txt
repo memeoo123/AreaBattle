@@ -1,0 +1,136 @@
+; Original class: AssetBundleManager
+; Type3129.LoadLevelAsync; wasmcode function 13174; offset=6306164 size=397
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+00603977  i32.const [4988567]
+0060397c  i32.load8_u [0, 0]
+0060397f  i32.eqz []
+00603980  if [-64]
+00603982    i32.const [3928332]
+00603987    call [900] ; 
+0060398a    i32.const [3928344]
+0060398f    call [900] ; 
+00603992    i32.const [3929208]
+00603997    call [900] ; 
+0060399a    i32.const [3972116]
+0060399f    call [900] ; 
+006039a2    i32.const [3926996]
+006039a7    call [900] ; 
+006039aa    i32.const [3938016]
+006039af    call [900] ; 
+006039b2    i32.const [3927212]
+006039b7    call [900] ; 
+006039ba    i32.const [4035524] ; STRING " bundle"
+006039bf    call [900] ; 
+006039c2    i32.const [4061100] ; STRING "Loading "
+006039c7    call [900] ; 
+006039ca    i32.const [4035800] ; STRING " from "
+006039cf    call [900] ; 
+006039d2    i32.const [4988567]
+006039d7    i32.const [1]
+006039d9    i32.store8 [0, 0]
+006039dc  end []
+006039dd  i32.const [3926996]
+006039e2  i32.load [2, 0]
+006039e5  i32.const [1]
+006039e7  call [909] ; 
+006039ea  local.set [4]
+006039ec  i32.const [3927212]
+006039f1  i32.load [2, 0]
+006039f4  i32.const [5]
+006039f6  call [909] ; 
+006039f9  local.set [3]
+006039fb  local.get [3]
+006039fd  i32.const [4061100] ; STRING "Loading "
+00603a02  i32.load [2, 0]
+00603a05  call [905] ; 
+00603a08  local.get [3]
+00603a0a  i32.const [4061100] ; STRING "Loading "
+00603a0f  i32.load [2, 0]
+00603a12  i32.store [2, 16]
+00603a15  local.get [3]
+00603a17  local.get [1]
+00603a19  call [905] ; 
+00603a1c  local.get [3]
+00603a1e  local.get [1]
+00603a20  i32.store [2, 20]
+00603a23  local.get [3]
+00603a25  i32.const [4035800] ; STRING " from "
+00603a2a  i32.load [2, 0]
+00603a2d  call [905] ; 
+00603a30  local.get [3]
+00603a32  i32.const [4035800] ; STRING " from "
+00603a37  i32.load [2, 0]
+00603a3a  i32.store [2, 24]
+00603a3d  local.get [3]
+00603a3f  local.get [0]
+00603a41  call [905] ; 
+00603a44  local.get [3]
+00603a46  local.get [0]
+00603a48  i32.store [2, 28]
+00603a4b  local.get [3]
+00603a4d  i32.const [4035524] ; STRING " bundle"
+00603a52  i32.load [2, 0]
+00603a55  call [905] ; 
+00603a58  local.get [3]
+00603a5a  i32.const [4035524] ; STRING " bundle"
+00603a5f  i32.load [2, 0]
+00603a62  i32.store [2, 32]
+00603a65  local.get [3]
+00603a67  i32.const [0]
+00603a69  call [1024] ; String.Concat
+00603a6c  local.set [3]
+00603a6e  local.get [4]
+00603a70  local.get [3]
+00603a72  call [905] ; 
+00603a75  local.get [4]
+00603a77  local.get [3]
+00603a79  i32.store [2, 16]
+00603a7c  i32.const [3929208]
+00603a81  i32.load [2, 0]
+00603a84  call [901] ; 
+00603a87  local.get [4]
+00603a89  i32.const [0]
+00603a8b  call [1069] ; CLog.Log
+00603a8e  i32.const [3938016]
+00603a93  i32.load [2, 0]
+00603a96  call [901] ; 
+00603a99  i32.const [0]
+00603a9b  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+00603a9e  drop []
+00603a9f  i32.const [3928344]
+00603aa4  i32.load [2, 0]
+00603aa7  call [901] ; 
+00603aaa  local.get [0]
+00603aac  local.get [3]
+00603aae  call [5206] ; AssetBundleManager.RemapVariantName
+00603ab1  local.set [4]
+00603ab3  local.get [4]
+00603ab5  i32.const [0]
+00603ab7  local.get [3]
+00603ab9  call [3666] ; AssetBundleManager.LoadAssetBundle
+00603abc  i32.const [3928332]
+00603ac1  i32.load [2, 0]
+00603ac4  call [903] ; 
+00603ac7  local.set [0]
+00603ac9  local.get [0]
+00603acb  local.set [3]
+00603acd  local.get [3]
+00603acf  local.get [4]
+00603ad1  i32.store [2, 8]
+00603ad4  local.get [3]
+00603ad6  local.get [1]
+00603ad8  i32.store [2, 12]
+00603adb  local.get [3]
+00603add  local.get [2]
+00603adf  i32.store8 [0, 16]
+00603ae2  i32.const [3928344]
+00603ae7  i32.load [2, 0]
+00603aea  i32.load [2, 92]
+00603aed  i32.load [2, 28]
+00603af0  local.get [3]
+00603af2  i32.const [3972116]
+00603af7  i32.load [2, 0]
+00603afa  call [941] ; 
+00603afd  local.get [3]
+00603aff  return []
+00603b00  end []

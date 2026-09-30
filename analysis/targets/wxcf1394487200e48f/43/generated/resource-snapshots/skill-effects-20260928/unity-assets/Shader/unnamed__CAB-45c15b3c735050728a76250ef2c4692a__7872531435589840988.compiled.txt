@@ -1,0 +1,41 @@
+//////////////////////////////////////////
+//
+// NOTE: This is *not* a valid shader file
+//
+///////////////////////////////////////////
+Shader "Effect/Alpha Blend UV" {
+Properties {
+
+[Enum(Particle,0,Model,1)] _Mode ("Mode", Float) = 1.0
+
+[Enum(Stop,0,Move,1)] _Move ("Move", Float) = 0.0
+
+_MainColor ("Main Color", Color) = (1,1,1,1)
+
+_MainTextureSpeedx ("Main Texture Speed x", Float) = 0.0
+
+_MainTextureSpeedy ("Main Texture Speed y", Float) = 0.0
+
+_MainTexture ("Main Texture", 2D) = "white" { }
+
+_MaskTextureSpeedx ("Mask Texture Speed x", Float) = 0.0
+
+_MaskTextureSpeedy ("Mask Texture Speed y", Float) = 0.0
+
+_MaskTexture ("Mask Texture", 2D) = "white" { }
+
+}
+SubShader {
+ LOD 100
+ Tags { "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ Pass {
+ Name "Unlit"
+  LOD 100
+  Tags { "LIGHTMODE" = "FORWARDBASE" "QUEUE" = "Transparent" "RenderType" = "Transparent" }
+ ZWrite Off
+ Cull Off
+  GpuProgramID 52849
+}
+}
+CustomEditor "ASEMaterialInspector"
+}

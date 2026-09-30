@@ -1,0 +1,27 @@
+; Original shared generic: Text.GetFullName
+; ProcedureFsmGeneric.GetFullName; wasmcode function 15624; offset=7523606 size=60
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0072cd17  local.get [1]
+0072cd19  i32.load [2, 28]
+0072cd1c  i32.eqz []
+0072cd1d  if [-64]
+0072cd1f    i32.const [3940520]
+0072cd24    call [900] ; 
+0072cd27    local.get [1]
+0072cd29    call [954] ; 
+0072cd2c  end []
+0072cd2d  local.get [1]
+0072cd2f  i32.load [2, 28]
+0072cd32  i32.load [2, 0]
+0072cd35  local.set [1]
+0072cd37  i32.const [3940520]
+0072cd3c  i32.load [2, 0]
+0072cd3f  call [901] ; 
+0072cd42  local.get [1]
+0072cd44  i32.const [0]
+0072cd46  call [912] ; Type.GetTypeFromHandle
+0072cd49  local.get [0]
+0072cd4b  i32.const [0]
+0072cd4d  call [10125] ; Text.GetFullName
+0072cd50  return []
+0072cd51  end []

@@ -1,0 +1,30 @@
+; Original class: EffectControl
+; Type4058.StopEffect; wasmcode function 12444; offset=6026153 size=79
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005bf3aa  i32.const [5008796]
+005bf3af  i32.load8_u [0, 0]
+005bf3b2  i32.eqz []
+005bf3b3  if [-64]
+005bf3b5    i32.const [3955512]
+005bf3ba    call [900] ; 
+005bf3bd    i32.const [3974444]
+005bf3c2    call [900] ; 
+005bf3c5    i32.const [5008796]
+005bf3ca    i32.const [1]
+005bf3cc    i32.store8 [0, 0]
+005bf3cf  end []
+005bf3d0  local.get [0]
+005bf3d2  i32.load [2, 12]
+005bf3d5  local.get [1]
+005bf3d7  i32.const [3955512]
+005bf3dc  i32.load [2, 0]
+005bf3df  call [1129] ; 
+005bf3e2  if [-64]
+005bf3e4    local.get [0]
+005bf3e6    i32.load [2, 24]
+005bf3e9    local.get [1]
+005bf3eb    i32.const [3974444]
+005bf3f0    i32.load [2, 0]
+005bf3f3    call [1161] ; 
+005bf3f6  end []
+005bf3f7  end []

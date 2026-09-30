@@ -1,0 +1,1035 @@
+{
+  "target": {
+    "appid": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "status": "18skills all audited;25 unique configured IDs; no inferred filenames",
+  "events": [
+    {
+      "skillId": 1,
+      "audioIds": [
+        2016
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute after marking affected towers, before clearing enemy soldiers",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4166-100665106.txt",
+        "offset": "0064addf"
+      },
+      "productionHook": "audio-play already emitted"
+    },
+    {
+      "skillId": 1,
+      "audioIds": [
+        2018
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "SkillEnd only if at least one active different-camp tower was still state1 and changed to0; once total, not per tower",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4166-100665107.txt",
+        "offset": "0064a9f8..0064aa25 / 0064aad8"
+      },
+      "productionHook": "audio-play already emitted with count>0 condition"
+    },
+    {
+      "skillId": 2,
+      "audioIds": [
+        3121
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Each fireball pooled-object launch callback after object SetActive(true)",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4167-100665113.txt",
+        "offset": "006b4c07"
+      },
+      "productionHook": "audio-play after projectile-spawn; source asset readiness may delay actual playback"
+    },
+    {
+      "skillId": 2,
+      "audioIds": [
+        2021,
+        3122
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Arrival after target score/effect: current friendly=>2021; otherwise3122",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4168-100665115.txt",
+        "offset": "00706707 / 00706845 / 00706856"
+      },
+      "productionHook": "audio-play selected in projectile arrival callback"
+    },
+    {
+      "skillId": 3,
+      "audioIds": [
+        4401
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute only when selected target44 nonnull, before effect413",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4171-100665124.txt",
+        "offset": "006e7577..006e7583"
+      },
+      "productionHook": "audio-play before effect-show"
+    },
+    {
+      "skillId": 4,
+      "audioIds": [
+        2042
+      ],
+      "mode": 1,
+      "route": "ui-audio",
+      "trigger": "Execute direct UIAudioManager.Play(1,[2042])",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4173-100665128.txt",
+        "offset": "00707109..0070712d"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 5,
+      "audioIds": [
+        2043
+      ],
+      "mode": 1,
+      "route": "ui-audio",
+      "trigger": "Execute direct UIAudioManager.Play(1,[2043])",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4174-100665132.txt",
+        "offset": "00705ede..00705f02"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 6,
+      "audioIds": [
+        4501
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute only if target44 nonnull, after heal and target reset; fresh AI targetless cast is silent",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4175-100665134.txt",
+        "offset": "006b2042..006b204e"
+      },
+      "productionHook": "audio-play guarded by actual heal target"
+    },
+    {
+      "skillId": 7,
+      "audioIds": [
+        2027
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4179-100665140.txt",
+        "offset": "00645732"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 8,
+      "audioIds": [
+        2028
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4180-100665149.txt",
+        "offset": "006b0512"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 11,
+      "audioIds": [
+        2031
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4189-100665184.txt",
+        "offset": "007088ff"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 13,
+      "audioIds": [
+        2034
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4193-100665199.txt",
+        "offset": "006b1c26"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 14,
+      "audioIds": [
+        2035
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4195-100665206.txt",
+        "offset": "0070a13d"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 16,
+      "audioIds": [
+        2038
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4200-100665224.txt",
+        "offset": "00707a7b"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 17,
+      "audioIds": [
+        2039
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Execute once per accepted invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4202-100665228.txt",
+        "offset": "0069d7ec"
+      },
+      "productionHook": "audio-play"
+    },
+    {
+      "skillId": 9,
+      "audioIds": [
+        2029
+      ],
+      "mode": 1,
+      "route": "ui-audio",
+      "trigger": "End of Execute, direct UIAudioManager.Play(1,[2029]); not per draining projectile",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4182-100665152.txt",
+        "offset": "00ea6e10..00ea6e22"
+      },
+      "productionHook": "audio-play after StartDrain"
+    },
+    {
+      "skillId": 10,
+      "audioIds": [
+        2030
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Rain visual coroutine initial state before the first pair; once per coroutine invocation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4186-100665174.txt",
+        "offset": "006b1d86..006b1d92"
+      },
+      "productionHook": "audio-play before StartArrowRain"
+    },
+    {
+      "skillId": 12,
+      "audioIds": [
+        2026
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "OnDragBeginHandle; independent of whether player later completes or cancels the cast",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4191-100665192.txt",
+        "offset": "0079882a..00798836"
+      },
+      "productionHook": "View HandleSkillInput drag begin must play2026; do not trigger on CastSkill or AI Execute"
+    },
+    {
+      "skillId": 12,
+      "audioIds": [
+        2032,
+        2033
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "After WaitForSeconds0.8 and Show419: two consecutive mode1 PlayerVoice requests,2032 then2033, no extra delay",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4190-100665194.txt",
+        "offset": "00512f25 / 00512f84..00512ff4"
+      },
+      "productionHook": "two audio-play events after delayed419"
+    },
+    {
+      "skillId": 15,
+      "audioIds": [
+        2036,
+        2037
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Selected friendly=>2036 before532; enemy=>2037 before531. One call before starting serial score job, not one per +/-1 tick",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4196-100665216.txt",
+        "offset": "00540b8d..00540b9a / 00540d61..00540d6e"
+      },
+      "productionHook": "audio-play before once-per-cast effect"
+    },
+    {
+      "skillId": 18,
+      "audioIds": [
+        3121
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Pooled bottle callback after SetActive(true), before Bullet.Init. Not2039 (which belongs to17)",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4203-100665248.txt",
+        "offset": "00645ff4..00646003"
+      },
+      "productionHook": "audio-play after projectile-spawn"
+    },
+    {
+      "skillId": 18,
+      "audioIds": [
+        2040
+      ],
+      "mode": 1,
+      "route": "player-voice",
+      "trigger": "Bottle arrival if bottle object still exists, before2041 and ground activation",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4204-100665251.txt",
+        "offset": "006b2099..006b20a8"
+      },
+      "productionHook": "audio-play after projectile-arrival"
+    },
+    {
+      "skillId": 18,
+      "audioIds": [
+        2041
+      ],
+      "mode": 1,
+      "route": "ui-audio",
+      "trigger": "Same bottle arrival after2040: direct UIAudioManager.Play(1,[2041]); returned GUID array stored in skill field64",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4204-100665251.txt",
+        "offset": "006b20b7..006b20e0"
+      },
+      "productionHook": "audio-play with positive HandleId; adapter maps logical handle to playback instance",
+      "handle": "Original stores returned GUID array; end/reset stops field64[0] on parallelNode8, not all2041 playbacks"
+    },
+    {
+      "skillId": 18,
+      "audioIds": [
+        2041
+      ],
+      "mode": 1,
+      "route": "ui-audio",
+      "trigger": "Stop stored GUID at SkillEnd and Reset; stop invokes AudioFadeAction.OnStop, which fades out before disposal",
+      "source": {
+        "path": "generated/combat-presentation-disassembly/Type4205-100665240.txt",
+        "offset": "006dcb1a..006dcb53"
+      },
+      "productionHook": "audio-stop with same HandleId; Restart also emits stop before battle-reset",
+      "operation": "stop",
+      "resetSource": {
+        "path": "generated/combat-presentation-disassembly/Type4205-100665243.txt",
+        "offset": "006dcc4b..006dcc84"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "audioId": 2016,
+      "config": {
+        "id": 2016,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/skill_tree_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_tree_1.mp3.unity3d",
+          "file": "audio/once/game/skill_tree_1.mp3_7b525602a81435cb780dff14b5714864.unity3d",
+          "md5": "7b525602a81435cb780dff14b5714864",
+          "size": 34063,
+          "line": 1604,
+          "cached": true
+        }
+      ],
+      "recoveredAudioClip": [
+        "generated/unity-assets/AudioClip/skill_tree_1__CAB-b8ff3712ad57b7cac9aad4b913839062__212571151513552674__skill_tree_1.m4a"
+      ]
+    },
+    {
+      "audioId": 2018,
+      "config": {
+        "id": 2018,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/skill_tree_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_tree_2.mp3.unity3d",
+          "file": "audio/once/game/skill_tree_2.mp3_cbc1ba7f5338287521efc3d2196ed889.unity3d",
+          "md5": "cbc1ba7f5338287521efc3d2196ed889",
+          "size": 27954,
+          "line": 1605,
+          "cached": true
+        }
+      ],
+      "recoveredAudioClip": [
+        "generated/unity-assets/AudioClip/skill_tree_2__CAB-0bddde8da2e5dc63083bbb5b0426a4ee__4107087017007000255__skill_tree_2.m4a"
+      ]
+    },
+    {
+      "audioId": 2021,
+      "config": {
+        "id": 2021,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/skill_fire_recover.wav"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_fire_recover.wav.unity3d",
+          "file": "audio/once/game/skill_fire_recover.wav_dcfa16ed1a894a9bae4212da3a1abb21.unity3d",
+          "md5": "dcfa16ed1a894a9bae4212da3a1abb21",
+          "size": 67928,
+          "line": 1600,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2026,
+      "config": {
+        "id": 2026,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comm3_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comm3_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comm3_1.mp3_2f54ab845f577fd13fe30aa76cdf7f51.unity3d",
+          "md5": "2f54ab845f577fd13fe30aa76cdf7f51",
+          "size": 67778,
+          "line": 1582,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2027,
+      "config": {
+        "id": 2027,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comm3_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comm3_2.mp3.unity3d",
+          "file": "audio/once/game/skill_comm3_2.mp3_0889553844a8deedb57feb71d4c8d170.unity3d",
+          "md5": "0889553844a8deedb57feb71d4c8d170",
+          "size": 70249,
+          "line": 1583,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2028,
+      "config": {
+        "id": 2028,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comm3_3.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comm3_3.mp3.unity3d",
+          "file": "audio/once/game/skill_comm3_3.mp3_6ded93895f75549dd498aa93d47d46ac.unity3d",
+          "md5": "6ded93895f75549dd498aa93d47d46ac",
+          "size": 81316,
+          "line": 1584,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2029,
+      "config": {
+        "id": 2029,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder4_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder4_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder4_1.mp3_e7f76178b4746fa8a05318f0158848f9.unity3d",
+          "md5": "e7f76178b4746fa8a05318f0158848f9",
+          "size": 43653,
+          "line": 1587,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2030,
+      "config": {
+        "id": 2030,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder4_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder4_2.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder4_2.mp3_aa3b2c5a8d25bbeed906bec234375db8.unity3d",
+          "md5": "aa3b2c5a8d25bbeed906bec234375db8",
+          "size": 27604,
+          "line": 1588,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2031,
+      "config": {
+        "id": 2031,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder4_3_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder4_3_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder4_3_1.mp3_075ddbd10417a9cb46b1d9e66a0bfd90.unity3d",
+          "md5": "075ddbd10417a9cb46b1d9e66a0bfd90",
+          "size": 48109,
+          "line": 1589,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2032,
+      "config": {
+        "id": 2032,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder4_3_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder4_3_2.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder4_3_2.mp3_04ba503f477d1ccd8d4f177f9baa190c.unity3d",
+          "md5": "04ba503f477d1ccd8d4f177f9baa190c",
+          "size": 27332,
+          "line": 1590,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2033,
+      "config": {
+        "id": 2033,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder4_3_3.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder4_3_3.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder4_3_3.mp3_092127a2ac5c5b7be12204521ba19563.unity3d",
+          "md5": "092127a2ac5c5b7be12204521ba19563",
+          "size": 68230,
+          "line": 1591,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2034,
+      "config": {
+        "id": 2034,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder5_1_1.wav"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder5_1_1.wav.unity3d",
+          "file": "audio/once/game/skill_comonder5_1_1.wav_0a4889411ab6bcda20533a24ebcf373c.unity3d",
+          "md5": "0a4889411ab6bcda20533a24ebcf373c",
+          "size": 23456,
+          "line": 1592,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2035,
+      "config": {
+        "id": 2035,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder5_2_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder5_2_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder5_2_1.mp3_aae6d64f8fa72eb86e2434656ad0629e.unity3d",
+          "md5": "aae6d64f8fa72eb86e2434656ad0629e",
+          "size": 63242,
+          "line": 1593,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2036,
+      "config": {
+        "id": 2036,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder5_3_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder5_3_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder5_3_1.mp3_f8697be031ccaecbebeea429e069bfbb.unity3d",
+          "md5": "f8697be031ccaecbebeea429e069bfbb",
+          "size": 40158,
+          "line": 1594,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2037,
+      "config": {
+        "id": 2037,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder5_3_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder5_3_2.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder5_3_2.mp3_1f5e640cab18a6d12db8de24f3863496.unity3d",
+          "md5": "1f5e640cab18a6d12db8de24f3863496",
+          "size": 75786,
+          "line": 1595,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2038,
+      "config": {
+        "id": 2038,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder6_1_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder6_1_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder6_1_1.mp3_8e8c3978e36c491e5d01a214cee08ce4.unity3d",
+          "md5": "8e8c3978e36c491e5d01a214cee08ce4",
+          "size": 30157,
+          "line": 1596,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2039,
+      "config": {
+        "id": 2039,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder6_2_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder6_2_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder6_2_1.mp3_20285942dae5a2876ccc7d4da20ebd58.unity3d",
+          "md5": "20285942dae5a2876ccc7d4da20ebd58",
+          "size": 252265,
+          "line": 1597,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2040,
+      "config": {
+        "id": 2040,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder6_3_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder6_3_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder6_3_1.mp3_7dea84da4e767a290b40c99c06af621d.unity3d",
+          "md5": "7dea84da4e767a290b40c99c06af621d",
+          "size": 51396,
+          "line": 1598,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2041,
+      "config": {
+        "id": 2041,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 3,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder6_3_2.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder6_3_2.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder6_3_2.mp3_aa6dfc467b30c3dff2d20bbefed63cca.unity3d",
+          "md5": "aa6dfc467b30c3dff2d20bbefed63cca",
+          "size": 514008,
+          "line": 1599,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2042,
+      "config": {
+        "id": 2042,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder2_1_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder2_1_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder2_1_1.mp3_6f6ad4abafa6be57c649bc20ab87b377.unity3d",
+          "md5": "6f6ad4abafa6be57c649bc20ab87b377",
+          "size": 41650,
+          "line": 1585,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 2043,
+      "config": {
+        "id": 2043,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/Once/game/skill_comonder2_2_1.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_comonder2_2_1.mp3.unity3d",
+          "file": "audio/once/game/skill_comonder2_2_1.mp3_e94287bbfa540a89c41b175719c53140.unity3d",
+          "md5": "e94287bbfa540a89c41b175719c53140",
+          "size": 137695,
+          "line": 1586,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 3121,
+      "config": {
+        "id": 3121,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/boss/boss1_2_1.wav"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/boss/boss1_2_1.wav.unity3d",
+          "file": "audio/once/boss/boss1_2_1.wav_dd20b1aba6d71bc5d5e797ff3f34f3a0.unity3d",
+          "md5": "dd20b1aba6d71bc5d5e797ff3f34f3a0",
+          "size": 18860,
+          "line": 1568,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 3122,
+      "config": {
+        "id": 3122,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/boss/boss1_2_2.wav"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/boss/boss1_2_2.wav.unity3d",
+          "file": "audio/once/boss/boss1_2_2.wav_b0a032b09a96c1f15ec1bf9f105d17ed.unity3d",
+          "md5": "b0a032b09a96c1f15ec1bf9f105d17ed",
+          "size": 63084,
+          "line": 1569,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 4401,
+      "config": {
+        "id": 4401,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/skill_boom.mp3"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_boom.mp3.unity3d",
+          "file": "audio/once/game/skill_boom.mp3_aebe4f6f422b8cd8f0c1ea66b88ed6a1.unity3d",
+          "md5": "aebe4f6f422b8cd8f0c1ea66b88ed6a1",
+          "size": 26938,
+          "line": 1581,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    },
+    {
+      "audioId": 4501,
+      "config": {
+        "id": 4501,
+        "VoiceType": 2,
+        "Atype": 1,
+        "Ptype": 1,
+        "StartTime": 0,
+        "EndTime": 0,
+        "Vol": 1.0,
+        "ResPath": "Audio/once/game/skill_revert.wav"
+      },
+      "catalog": [
+        {
+          "name": "audio/once/game/skill_revert.wav.unity3d",
+          "file": "audio/once/game/skill_revert.wav_ff596e57cce80b0b94687e70d120221b.unity3d",
+          "md5": "ff596e57cce80b0b94687e70d120221b",
+          "size": 34094,
+          "line": 1603,
+          "cached": false
+        }
+      ],
+      "recoveredAudioClip": []
+    }
+  ],
+  "fade2041": {
+    "audioId": 2041,
+    "class": "AudioFadeAction",
+    "Ptype": 3,
+    "loop": false,
+    "fadeDurationMilliseconds": 1000,
+    "initialize": "AudioSource.volume=0, time=StartTime(0), loop=false, Play; store clip.length then start fade-in.",
+    "fadeIn": "Linear volume=baseVolume*(1000-remainingMilliseconds)/1000; baseVolume=(AudioConfig.Vol>0?Vol:1)*GetSettingVolume.2041 Vol1.",
+    "automaticFadeOut": "With EndTime0, while isPlaying, when AudioSource.time >= clip.length-1 and not already fading, call OnStop. For positive EndTime, threshold EndTime-1 instead.",
+    "explicitStop": "First OnStop marks fading flag60=true, captures current AudioSource.volume*GetSettingVolume into base48, cancels previous fade countdown and starts a new1000ms fade-out.",
+    "fadeOut": "Linear volume=baseVolume*remainingMilliseconds/1000. At completion force volume0 then AudioSource.Stop, cleanup source, completion callbacks and disposal. Repeated OnStop while already fading invokes completion/disposal branch; do not restart fade.",
+    "clock": "TimeModule.SetCountDownByMillisecond -> f10104 schedules at f10093()+1000. f10093 reads DateTime-based elapsed ticks*.0001 plus clock offset; independent of Unity.timeScale. Exact poll cadence is not original-runtime verified.",
+    "sources": [
+      {
+        "path": "generated/combat-disassembly/Raw-6276.txt",
+        "offset": "0022519e..0022521c (Ptype3 creates typeusage3928512 AudioFadeAction)"
+      },
+      {
+        "path": "generated/combat-presentation-disassembly/Type3408-100667231.txt",
+        "offset": "00225061..00225064"
+      },
+      {
+        "path": "generated/combat-presentation-disassembly/Type3406-100667240.txt",
+        "offset": "00480fea..004810fd"
+      },
+      {
+        "path": "generated/combat-disassembly/Raw-20593.txt",
+        "offset": "008cd5af..008cd63d"
+      },
+      {
+        "path": "generated/combat-disassembly/Raw-20594.txt",
+        "offset": "008cd675..008cd708"
+      },
+      {
+        "path": "generated/combat-disassembly/Raw-14985.txt",
+        "offset": "006f4f35..006f4f80"
+      },
+      {
+        "path": "generated/combat-disassembly/Raw-14986.txt",
+        "offset": "006f5016..006f5060"
+      },
+      {
+        "path": "generated/combat-disassembly/Raw-10093.txt",
+        "offset": "0049c2f8..0049c39e"
+      }
+    ]
+  },
+  "routeRules": {
+    "allModes": 1,
+    "mode1": "AudioParallel, overlapping independent instances; none of these skill callsites uses Single3.",
+    "player-voice": "Calls Extension.PlayerVoice, which checks AudioControl.IsSoundEffect first. No2012/2013 throttle applies to these IDs.",
+    "ui-audio": "Direct UIAudioManager.Play; bypasses Extension.PlayerVoice IsSoundEffect guard. Shared GetSettingVolume may mute audio; do not claim equivalent callsite gate."
+  },
+  "auditCoverage": {
+    "checked": "Execute, generated coroutine/delegate callbacks, SkillEnd, Reset and SkillBase callbacks across skill types4166..4205 plus SkillBase.",
+    "noAdditionalAudioFound": "Except1 conditional end2018 and18 explicit handle stop, no other direct PlayerVoice/UIAudioManager audio requests were found in skill end/arrival bodies.7/8/9/10/11/13/14/15/16/17 have Execute audio as listed; do not add arrival sounds based on asset names.",
+    "unknown": "Asset-load completion-to-audible-frame latency, countdown polling jitter and DSP runtime synchronization remain unverified."
+  },
+  "unityEventApi": {
+    "source": "UnityProject/Assets/AreaBattle/Scripts/BattleSkills.cs",
+    "event": "SkillVisual",
+    "kinds": [
+      "audio-play",
+      "audio-stop"
+    ],
+    "fields": [
+      "SkillId",
+      "Camp",
+      "AudioId",
+      "VoiceMode",
+      "HandleId",
+      "AudioRoute"
+    ],
+    "dragInput": "Skill12 DragBegin2026 belongs to View input hook. All other listed calls are now audio-play/stop events in BattleSkills; do not also play from effect-show or skill-start."
+  }
+}

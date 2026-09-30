@@ -1,0 +1,40 @@
+; Original class: Util
+; Type3196.SaveLoginUserInfo; wasmcode function 9644; offset=4614343 size=110
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004668c8  i32.const [5011026]
+004668cd  i32.load8_u [0, 0]
+004668d0  i32.eqz []
+004668d1  if [-64]
+004668d3    i32.const [3934780]
+004668d8    call [900] ; 
+004668db    i32.const [4061416] ; STRING "LoginUserInfo"
+004668e0    call [900] ; 
+004668e3    i32.const [4061420] ; STRING "LoginUserInfo.txt"
+004668e8    call [900] ; 
+004668eb    i32.const [5011026]
+004668f0    i32.const [1]
+004668f2    i32.store8 [0, 0]
+004668f5  end []
+004668f6  i32.const [0]
+004668f8  call [1910] ; GamePath.get_Instance
+004668fb  i32.load [2, 24]
+004668fe  i32.const [4061420] ; STRING "LoginUserInfo.txt"
+00466903  i32.load [2, 0]
+00466906  i32.const [0]
+00466908  call [921] ; String.Concat
+0046690b  drop []
+0046690c  i32.const [3934780]
+00466911  i32.load [2, 0]
+00466914  call [901] ; 
+00466917  local.get [0]
+00466919  i32.const [0]
+0046691b  call [1155] ; JsonMapper.ToJson
+0046691e  local.set [0]
+00466920  i32.const [0]
+00466922  call [1809] ; FileManager.get_Instance
+00466925  i32.const [4061416] ; STRING "LoginUserInfo"
+0046692a  i32.load [2, 0]
+0046692d  local.get [0]
+0046692f  i32.const [0]
+00466931  call [3362] ; FileManager.SaveWebGLFile
+00466934  end []

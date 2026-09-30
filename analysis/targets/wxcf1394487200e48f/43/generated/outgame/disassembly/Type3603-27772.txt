@@ -1,0 +1,34 @@
+; Original class: InputManager
+; Type3603.©yWE¥U; wasmcode1 function 59924; offset=19450238 size=67
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0128c97f  block [-64]
+0128c981    block [-64]
+0128c983      i32.const [0]
+0128c985      i32.const [5142] ; TABLE Application.get_platform
+0128c988      call_indirect [2, 0]
+0128c98b      i32.const [-19]
+0128c98d      i32.eq []
+0128c98e      br_if [0]
+0128c990      i32.const [0]
+0128c992      i32.const [5142] ; TABLE Application.get_platform
+0128c995      call_indirect [2, 0]
+0128c998      i32.const [1]
+0128c99a      i32.eq []
+0128c99b      br_if [0]
+0128c99d      i32.const [0]
+0128c99f      i32.const [5142] ; TABLE Application.get_platform
+0128c9a2      call_indirect [2, 0]
+0128c9a5      i32.const [-89]
+0128c9a8      i32.ne []
+0128c9a9      br_if [1]
+0128c9ab    end []
+0128c9ac    local.get [0]
+0128c9ae    local.get [0]
+0128c9b0    i32.const [25507] ; TABLE InputManager.GetTouchInput
+0128c9b4    call_indirect [4, 0]
+0128c9b7    return []
+0128c9b8  end []
+0128c9b9  local.get [0]
+0128c9bb  local.get [0]
+0128c9bd  call [8353] ; InputManager.¡o·LV
+0128c9c0  end []

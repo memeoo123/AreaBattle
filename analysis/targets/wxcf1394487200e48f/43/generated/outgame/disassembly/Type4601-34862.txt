@@ -1,0 +1,32 @@
+; Original class: LoginProcedureBase
+; Type4601.Login; wasmcode function 11465; offset=5628363 size=77
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0055e1cc  i32.const [5001504]
+0055e1d1  i32.load8_u [0, 0]
+0055e1d4  i32.eqz []
+0055e1d5  if [-64]
+0055e1d7    i32.const [3922404]
+0055e1dc    call [900] ; 
+0055e1df    i32.const [5001504]
+0055e1e4    i32.const [1]
+0055e1e6    i32.store8 [0, 0]
+0055e1e9  end []
+0055e1ea  local.get [0]
+0055e1ec  i32.const [1]
+0055e1ee  i32.const [0]
+0055e1f0  call [7723] ; ILoginProcedure.set_IsLogining
+0055e1f3  local.get [0]
+0055e1f5  i32.const [1]
+0055e1f7  i32.store [2, 28]
+0055e1fa  i32.const [1]
+0055e1fc  local.get [0]
+0055e1fe  call [10746] ; Report.ReportLoginRequest
+0055e201  i32.const [4]
+0055e203  i32.const [3922404]
+0055e208  i32.load [2, 0]
+0055e20b  local.get [0]
+0055e20d  i32.load [2, 16]
+0055e210  local.get [0]
+0055e212  i32.const [2]
+0055e214  call [1118] ; 
+0055e217  end []

@@ -1,0 +1,238 @@
+; Unknown.17960; wasmcode function 17960; offset=7974791 size=622
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+0079af8a  global.get [0]
+0079af8c  i32.const [16]
+0079af8e  i32.sub []
+0079af8f  local.set [3]
+0079af91  local.get [3]
+0079af93  global.set [0]
+0079af95  i32.const [5011593]
+0079af9a  i32.load8_u [0, 0]
+0079af9d  i32.eqz []
+0079af9e  if [-64]
+0079afa0    i32.const [3929208] ; type: CLog
+0079afa5    call [900] ; 
+0079afa8    i32.const [3934404] ; type: Int32
+0079afad    call [900] ; 
+0079afb0    i32.const [3974444]
+0079afb5    call [900] ; 
+0079afb8    i32.const [3974484]
+0079afbd    call [900] ; 
+0079afc0    i32.const [3974496]
+0079afc5    call [900] ; 
+0079afc8    i32.const [3974432]
+0079afcd    call [900] ; 
+0079afd0    i32.const [3974500]
+0079afd5    call [900] ; 
+0079afd8    i32.const [3974504]
+0079afdd    call [900] ; 
+0079afe0    i32.const [3923380]
+0079afe5    call [900] ; 
+0079afe8    i32.const [3926996]
+0079afed    call [900] ; 
+0079aff0    i32.const [3937580] ; type: RandomHelper
+0079aff5    call [900] ; 
+0079aff8    i32.const [4106488] ; literal: '随机次数[{0}]大于区间值[{1}]'
+0079affd    call [900] ; 
+0079b000    i32.const [4106484] ; literal: '随机区间值错误[{0}]小于[{1}]'
+0079b005    call [900] ; 
+0079b008    i32.const [5011593]
+0079b00d    i32.const [1]
+0079b00f    i32.store8 [0, 0]
+0079b012  end []
+0079b013  block [-64]
+0079b015    local.get [0]
+0079b017    local.get [2]
+0079b019    local.get [1]
+0079b01b    i32.sub []
+0079b01c    i32.gt_s []
+0079b01d    if [-64]
+0079b01f      i32.const [3926996]
+0079b024      i32.load [2, 0]
+0079b027      i32.const [1]
+0079b029      call [909] ; 
+0079b02c      local.set [4]
+0079b02e      local.get [3]
+0079b030      local.get [0]
+0079b032      i32.store [2, 12]
+0079b035      i32.const [3934404] ; type: Int32
+0079b03a      i32.load [2, 0]
+0079b03d      local.get [3]
+0079b03f      i32.const [12]
+0079b041      i32.add []
+0079b042      call [910] ; 
+0079b045      local.set [0]
+0079b047      local.get [3]
+0079b049      local.get [2]
+0079b04b      local.get [1]
+0079b04d      i32.sub []
+0079b04e      i32.store [2, 8]
+0079b051      i32.const [3934404] ; type: Int32
+0079b056      i32.load [2, 0]
+0079b059      local.get [3]
+0079b05b      i32.const [8]
+0079b05d      i32.add []
+0079b05e      call [910] ; 
+0079b061      local.set [1]
+0079b063      i32.const [4106488] ; literal: '随机次数[{0}]大于区间值[{1}]'
+0079b068      i32.load [2, 0]
+0079b06b      local.get [0]
+0079b06d      local.get [1]
+0079b06f      i32.const [0]
+0079b071      call [1047] ; 
+0079b074      local.set [0]
+0079b076      local.get [4]
+0079b078      local.get [0]
+0079b07a      call [905] ; 
+0079b07d      local.get [4]
+0079b07f      local.get [0]
+0079b081      i32.store [2, 16]
+0079b084      i32.const [3929208] ; type: CLog
+0079b089      i32.load [2, 0]
+0079b08c      call [901] ; 
+0079b08f      local.get [4]
+0079b091      i32.const [0]
+0079b093      call [1541] ; 
+0079b096      br [1]
+0079b098    end []
+0079b099    local.get [1]
+0079b09b    local.get [2]
+0079b09d    i32.gt_s []
+0079b09e    if [-64]
+0079b0a0      i32.const [3926996]
+0079b0a5      i32.load [2, 0]
+0079b0a8      i32.const [1]
+0079b0aa      call [909] ; 
+0079b0ad      local.set [0]
+0079b0af      local.get [3]
+0079b0b1      local.get [2]
+0079b0b3      i32.store [2, 12]
+0079b0b6      i32.const [3934404] ; type: Int32
+0079b0bb      i32.load [2, 0]
+0079b0be      local.get [3]
+0079b0c0      i32.const [12]
+0079b0c2      i32.add []
+0079b0c3      call [910] ; 
+0079b0c6      local.set [2]
+0079b0c8      local.get [3]
+0079b0ca      local.get [1]
+0079b0cc      i32.store [2, 8]
+0079b0cf      i32.const [3934404] ; type: Int32
+0079b0d4      i32.load [2, 0]
+0079b0d7      local.get [3]
+0079b0d9      i32.const [8]
+0079b0db      i32.add []
+0079b0dc      call [910] ; 
+0079b0df      local.set [1]
+0079b0e1      i32.const [4106484] ; literal: '随机区间值错误[{0}]小于[{1}]'
+0079b0e6      i32.load [2, 0]
+0079b0e9      local.get [2]
+0079b0eb      local.get [1]
+0079b0ed      i32.const [0]
+0079b0ef      call [1047] ; 
+0079b0f2      local.set [1]
+0079b0f4      local.get [0]
+0079b0f6      local.get [1]
+0079b0f8      call [905] ; 
+0079b0fb      local.get [0]
+0079b0fd      local.get [1]
+0079b0ff      i32.store [2, 16]
+0079b102      i32.const [3929208] ; type: CLog
+0079b107      i32.load [2, 0]
+0079b10a      call [901] ; 
+0079b10d      local.get [0]
+0079b10f      i32.const [0]
+0079b111      call [1541] ; 
+0079b114      br [1]
+0079b116    end []
+0079b117    i32.const [3923380]
+0079b11c    i32.load [2, 0]
+0079b11f    call [903] ; 
+0079b122    local.set [4]
+0079b124    local.get [4]
+0079b126    i32.const [3974432]
+0079b12b    i32.load [2, 0]
+0079b12e    call [944] ; 
+0079b131    loop [-64]
+0079b133      local.get [1]
+0079b135      local.get [2]
+0079b137      i32.lt_s []
+0079b138      if [-64]
+0079b13a        local.get [4]
+0079b13c        local.get [1]
+0079b13e        i32.const [3974444]
+0079b143        i32.load [2, 0]
+0079b146        call [1161] ; 
+0079b149        local.get [1]
+0079b14b        i32.const [1]
+0079b14d        i32.add []
+0079b14e        local.set [1]
+0079b150        br [1]
+0079b152      end []
+0079b153    end []
+0079b154    i32.const [3923380]
+0079b159    i32.load [2, 0]
+0079b15c    call [903] ; 
+0079b15f    local.set [2]
+0079b161    local.get [2]
+0079b163    i32.const [3974432]
+0079b168    i32.load [2, 0]
+0079b16b    call [944] ; 
+0079b16e    i32.const [0]
+0079b170    local.set [1]
+0079b172    loop [-64]
+0079b174      local.get [0]
+0079b176      local.get [1]
+0079b178      i32.gt_s []
+0079b179      if [-64]
+0079b17b        i32.const [3974500]
+0079b180        i32.load [2, 0]
+0079b183        drop []
+0079b184        local.get [4]
+0079b186        i32.load [2, 12]
+0079b189        local.set [5]
+0079b18b        i32.const [3937580] ; type: RandomHelper
+0079b190        i32.load [2, 0]
+0079b193        call [901] ; 
+0079b196        i32.const [0]
+0079b198        local.get [5]
+0079b19a        i32.const [1]
+0079b19c        i32.sub []
+0079b19d        local.get [1]
+0079b19f        call [1621] ; 
+0079b1a2        local.set [5]
+0079b1a4        local.get [2]
+0079b1a6        local.get [4]
+0079b1a8        local.get [5]
+0079b1aa        i32.const [3974504]
+0079b1af        i32.load [2, 0]
+0079b1b2        call [930] ; 
+0079b1b5        i32.const [3974444]
+0079b1ba        i32.load [2, 0]
+0079b1bd        call [1161] ; 
+0079b1c0        local.get [4]
+0079b1c2        local.get [5]
+0079b1c4        i32.const [3974484]
+0079b1c9        i32.load [2, 0]
+0079b1cc        call [1218] ; 
+0079b1cf        local.get [1]
+0079b1d1        i32.const [1]
+0079b1d3        i32.add []
+0079b1d4        local.set [1]
+0079b1d6        br [1]
+0079b1d8      end []
+0079b1d9    end []
+0079b1da    local.get [2]
+0079b1dc    i32.const [3974496]
+0079b1e1    i32.load [2, 0]
+0079b1e4    call [1302] ; 
+0079b1e7    local.set [5]
+0079b1e9  end []
+0079b1ea  local.get [3]
+0079b1ec  i32.const [16]
+0079b1ee  i32.add []
+0079b1ef  global.set [0]
+0079b1f1  local.get [5]
+0079b1f3  return []
+0079b1f4  end []
+

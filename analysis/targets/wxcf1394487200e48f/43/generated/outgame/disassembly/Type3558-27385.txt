@@ -1,0 +1,277 @@
+; Original class: UIModule
+; Type3558.Initialize; wasmcode function 15047; offset=7318903 size=807
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006fad78  i32.const [4989674]
+006fad7d  i32.load8_u [0, 0]
+006fad80  i32.eqz []
+006fad81  if [-64]
+006fad83    i32.const [3915464]
+006fad88    call [900] ; 
+006fad8b    i32.const [3928176]
+006fad90    call [900] ; 
+006fad93    i32.const [3989352]
+006fad98    call [900] ; 
+006fad9b    i32.const [3929208]
+006fada0    call [900] ; 
+006fada3    i32.const [3930676]
+006fada8    call [900] ; 
+006fadab    i32.const [4000624]
+006fadb0    call [900] ; 
+006fadb3    i32.const [3932308]
+006fadb8    call [900] ; 
+006fadbb    i32.const [4000964]
+006fadc0    call [900] ; 
+006fadc3    i32.const [3948068]
+006fadc8    call [900] ; 
+006fadcb    i32.const [3926996]
+006fadd0    call [900] ; 
+006fadd3    i32.const [3936516]
+006fadd8    call [900] ; 
+006faddb    i32.const [4018364]
+006fade0    call [900] ; 
+006fade3    i32.const [4018368]
+006fade8    call [900] ; 
+006fadeb    i32.const [4103884] ; STRING "开始加载UIModule"
+006fadf0    call [900] ; 
+006fadf3    i32.const [4076116] ; STRING "UI相机未找到"
+006fadf8    call [900] ; 
+006fadfb    i32.const [4054812] ; STRING "GFUICanvas"
+006fae00    call [900] ; 
+006fae03    i32.const [4076084] ; STRING "UIcanvas未找到"
+006fae08    call [900] ; 
+006fae0b    i32.const [4075892] ; STRING "UICamera"
+006fae10    call [900] ; 
+006fae13    i32.const [4075880] ; STRING "UI/UIRoot"
+006fae18    call [900] ; 
+006fae1b    i32.const [4989674]
+006fae20    i32.const [1]
+006fae22    i32.store8 [0, 0]
+006fae25  end []
+006fae26  block [-64]
+006fae28    local.get [0]
+006fae2a    i32.load8_u [0, 8]
+006fae2d    if [-64]
+006fae2f      local.get [0]
+006fae31      i32.load [2, 12]
+006fae34      local.set [0]
+006fae36      local.get [0]
+006fae38      i32.eqz []
+006fae39      br_if [1]
+006fae3b      local.get [0]
+006fae3d      i32.load [2, 32]
+006fae40      local.get [0]
+006fae42      i32.load [2, 20]
+006fae45      local.get [0]
+006fae47      i32.load [2, 12]
+006fae4a      global.set [3]
+006fae4c      global.get [3]
+006fae4e      call_indirect [0, 0]
+006fae51      return []
+006fae52    end []
+006fae53    i32.const [0]
+006fae55    local.set [1]
+006fae57    i32.const [3926996]
+006fae5c    i32.load [2, 0]
+006fae5f    i32.const [1]
+006fae61    call [909] ; 
+006fae64    local.set [2]
+006fae66    local.get [2]
+006fae68    i32.const [4103884] ; STRING "开始加载UIModule"
+006fae6d    i32.load [2, 0]
+006fae70    call [905] ; 
+006fae73    local.get [2]
+006fae75    i32.const [4103884] ; STRING "开始加载UIModule"
+006fae7a    i32.load [2, 0]
+006fae7d    i32.store [2, 16]
+006fae80    i32.const [3929208]
+006fae85    i32.load [2, 0]
+006fae88    call [901] ; 
+006fae8b    local.get [2]
+006fae8d    i32.const [0]
+006fae8f    call [1495] ; CLog.ReleaseLog
+006fae92    local.get [0]
+006fae94    i32.const [4054812] ; STRING "GFUICanvas"
+006fae99    i32.load [2, 0]
+006fae9c    i32.const [0]
+006fae9e    call [7808] ; GameObject.FindGameObjectWithTag
+006faea1    i32.store [2, 16]
+006faea4    local.get [0]
+006faea6    i32.load [2, 16]
+006faea9    local.set [2]
+006faeab    i32.const [3936516]
+006faeb0    i32.load [2, 0]
+006faeb3    call [901] ; 
+006faeb6    local.get [2]
+006faeb8    i32.const [0]
+006faeba    i32.const [0]
+006faebc    call [940] ; Object.op_Equality
+006faebf    if [-64]
+006faec1      i32.const [3930676]
+006faec6      i32.load [2, 0]
+006faec9      call [901] ; 
+006faecc      i32.const [4076084] ; STRING "UIcanvas未找到"
+006faed1      i32.load [2, 0]
+006faed4      i32.const [0]
+006faed6      i32.const [2369] ; TABLE Debug.LogError
+006faed9      global.set [3]
+006faedb      i32.const [2369] ; TABLE Debug.LogError
+006faede      call_indirect [0, 0]
+006faee1    end []
+006faee2    local.get [0]
+006faee4    i32.load [2, 16]
+006faee7    local.set [2]
+006faee9    i32.const [3936516]
+006faeee    i32.load [2, 0]
+006faef1    call [901] ; 
+006faef4    local.get [2]
+006faef6    i32.const [0]
+006faef8    i32.const [0]
+006faefa    call [946] ; Object.op_Inequality
+006faefd    if [-64]
+006faeff      local.get [0]
+006faf01      i32.load [2, 16]
+006faf04      i32.const [0]
+006faf06      call [1008] ; GameObject.get_transform
+006faf09      i32.const [4075892] ; STRING "UICamera"
+006faf0e      i32.load [2, 0]
+006faf11      i32.const [0]
+006faf13      call [1102] ; Transform.Find
+006faf16      i32.const [0]
+006faf18      call [943] ; Component.get_gameObject
+006faf1b      local.set [1]
+006faf1d    end []
+006faf1e    i32.const [3936516]
+006faf23    i32.load [2, 0]
+006faf26    call [901] ; 
+006faf29    local.get [1]
+006faf2b    i32.const [0]
+006faf2d    i32.const [0]
+006faf2f    call [940] ; Object.op_Equality
+006faf32    if [-64]
+006faf34      i32.const [3930676]
+006faf39      i32.load [2, 0]
+006faf3c      call [901] ; 
+006faf3f      i32.const [4076116] ; STRING "UI相机未找到"
+006faf44      i32.load [2, 0]
+006faf47      i32.const [0]
+006faf49      i32.const [2369] ; TABLE Debug.LogError
+006faf4c      global.set [3]
+006faf4e      i32.const [2369] ; TABLE Debug.LogError
+006faf51      call_indirect [0, 0]
+006faf54    end []
+006faf55    local.get [1]
+006faf57    if [-64]
+006faf59      local.get [1]
+006faf5b      i32.const [4000964]
+006faf60      i32.load [2, 0]
+006faf63      call [1091] ; 
+006faf66      local.set [1]
+006faf68    else []
+006faf69      i32.const [0]
+006faf6b      local.set [1]
+006faf6d    end []
+006faf6e    local.get [0]
+006faf70    local.get [1]
+006faf72    i32.store [2, 24]
+006faf75    local.get [0]
+006faf77    i32.load [2, 16]
+006faf7a    local.set [1]
+006faf7c    i32.const [3936516]
+006faf81    i32.load [2, 0]
+006faf84    call [901] ; 
+006faf87    local.get [1]
+006faf89    i32.const [0]
+006faf8b    call [1111] ; Object.DontDestroyOnLoad
+006faf8e    i32.const [3928176]
+006faf93    i32.load [2, 0]
+006faf96    call [901] ; 
+006faf99    i32.const [5011829]
+006faf9e    i32.load8_u [0, 0]
+006fafa1    i32.eqz []
+006fafa2    if [-64]
+006fafa4      i32.const [3928176]
+006fafa9      call [900] ; 
+006fafac      i32.const [5011829]
+006fafb1      i32.const [1]
+006fafb3      i32.store8 [0, 0]
+006fafb6    end []
+006fafb7    i32.const [3928176]
+006fafbc    i32.load [2, 0]
+006fafbf    call [901] ; 
+006fafc2    i32.const [3928176]
+006fafc7    i32.load [2, 0]
+006fafca    i32.load [2, 92]
+006fafcd    i32.load8_u [0, 36]
+006fafd0    if [-64]
+006fafd2      i32.const [3915464]
+006fafd7      i32.load [2, 0]
+006fafda      call [903] ; 
+006fafdd      local.set [1]
+006fafdf      local.get [1]
+006fafe1      local.get [0]
+006fafe3      i32.const [4018364]
+006fafe8      i32.load [2, 0]
+006fafeb      i32.const [0]
+006fafed      call [1004] ; 
+006faff0      i32.const [3989352]
+006faff5      i32.load [2, 0]
+006faff8      call [1032] ; 
+006faffb      local.set [0]
+006faffd      i32.const [4075880] ; STRING "UI/UIRoot"
+006fb002      i32.load [2, 0]
+006fb005      local.get [1]
+006fb007      local.get [0]
+006fb009      i32.const [0]
+006fb00b      i32.const [24179] ; TABLE NewResLoadHelper.LoadPrefabOri
+006fb00f      global.set [3]
+006fb011      i32.const [24179] ; TABLE NewResLoadHelper.LoadPrefabOri
+006fb015      call_indirect [10, 0]
+006fb018      drop []
+006fb019      return []
+006fb01a    end []
+006fb01b    i32.const [3932308]
+006fb020    i32.load [2, 0]
+006fb023    call [901] ; 
+006fb026    i32.const [4000624]
+006fb02b    i32.load [2, 0]
+006fb02e    call [1051] ; 
+006fb031    local.set [1]
+006fb033    i32.const [3948068]
+006fb038    i32.load [2, 0]
+006fb03b    call [903] ; 
+006fb03e    local.set [2]
+006fb040    local.get [2]
+006fb042    local.get [0]
+006fb044    i32.const [4018368]
+006fb049    i32.load [2, 0]
+006fb04c    i32.const [0]
+006fb04e    call [1853] ; LoadAssetCompleteHandler..ctor
+006fb051    local.get [1]
+006fb053    i32.const [4075880] ; STRING "UI/UIRoot"
+006fb058    i32.load [2, 0]
+006fb05b    local.get [2]
+006fb05d    i32.const [0]
+006fb05f    i32.const [0]
+006fb061    call [4844] ; ResourcesModule.LoadPrefab
+006fb064    drop []
+006fb065    i32.const [4000624]
+006fb06a    i32.load [2, 0]
+006fb06d    call [1051] ; 
+006fb070    local.set [0]
+006fb072    local.get [0]
+006fb074    local.set [1]
+006fb076    local.get [0]
+006fb078    i32.load [2, 0]
+006fb07b    local.set [0]
+006fb07d    local.get [1]
+006fb07f    f32.const [0.0]
+006fb084    f32.const [0.0]
+006fb089    local.get [0]
+006fb08b    i32.load [2, 248]
+006fb08f    local.get [0]
+006fb091    i32.load [2, 244]
+006fb095    global.set [3]
+006fb097    global.get [3]
+006fb099    call_indirect [21, 0]
+006fb09c  end []
+006fb09d  end []

@@ -1,0 +1,23 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetNetworkingStateStatic; wasmcode function 14683; offset=7201464 size=46
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+006de2b9  i32.const [0]
+006de2bb  call [1083] ; BridgeManager.get_xyxFunc
+006de2be  local.set [0]
+006de2c0  local.get [0]
+006de2c2  local.set [1]
+006de2c4  local.get [0]
+006de2c6  i32.load [2, 0]
+006de2c9  local.set [0]
+006de2cb  local.get [1]
+006de2cd  local.get [0]
+006de2cf  i32.const [416]
+006de2d2  i32.add []
+006de2d3  i32.load [2, 192]
+006de2d7  local.get [0]
+006de2d9  i32.load [2, 604]
+006de2dd  global.set [3]
+006de2df  global.get [3]
+006de2e1  call_indirect [1, 0]
+006de2e4  return []
+006de2e5  end []

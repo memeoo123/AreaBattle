@@ -1,0 +1,58 @@
+; Original class: MineGameMain
+; Type3974.Vlsvu; wasmcode1 function 56564; offset=18530661 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011ac166  i32.const [5010133]
+011ac16b  i32.load8_u [0, 0]
+011ac16e  i32.eqz []
+011ac16f  if [-64]
+011ac171    i32.const [4000604]
+011ac176    i32.const [1605]
+011ac179    call_indirect [0, 0]
+011ac17c    i32.const [3932308]
+011ac181    i32.const [1605]
+011ac184    call_indirect [0, 0]
+011ac187    i32.const [4090296] ; STRING "img_using"
+011ac18c    i32.const [1605]
+011ac18f    call_indirect [0, 0]
+011ac192    i32.const [5010133]
+011ac197    i32.const [1]
+011ac199    i32.store8 [0, 0]
+011ac19c  end []
+011ac19d  i32.const [3932308]
+011ac1a2  i32.load [2, 0]
+011ac1a5  i32.const [1149]
+011ac1a8  call_indirect [0, 0]
+011ac1ab  i32.const [0]
+011ac1ad  i32.const [24391] ; TABLE GameFrameEntry.Start
+011ac1b1  call_indirect [0, 0]
+011ac1b4  local.get [0]
+011ac1b6  i32.const [4090296] ; STRING "img_using"
+011ac1bb  i32.load [2, 0]
+011ac1be  local.get [0]
+011ac1c0  i32.const [14093] ; TABLE MineGameMain.O{P^xr
+011ac1c4  call_indirect [5, 0]
+011ac1c7  i32.const [0]
+011ac1c9  i32.const [2292] ; TABLE GamePath.get_Instance
+011ac1cc  call_indirect [2, 0]
+011ac1cf  i32.const [0]
+011ac1d1  i32.const [20561] ; TABLE GamePath.FindMineGamePath
+011ac1d5  call_indirect [4, 0]
+011ac1d8  local.get [0]
+011ac1da  i32.const [1]
+011ac1dc  i32.store8 [0, 38]
+011ac1df  i32.const [4000604]
+011ac1e4  i32.load [2, 0]
+011ac1e7  i32.const [85664]
+011ac1eb  call_indirect [2, 0]
+011ac1ee  local.get [0]
+011ac1f0  i32.load [2, 28]
+011ac1f3  local.get [0]
+011ac1f5  i32.load [2, 32]
+011ac1f8  i32.const [0]
+011ac1fa  i32.const [24753] ; TABLE LangModule.SetLocalLangLibrary
+011ac1fe  call_indirect [6, 0]
+011ac201  local.get [0]
+011ac203  local.get [0]
+011ac205  i32.const [14109] ; TABLE MineGameMain.OcsUh
+011ac209  call_indirect [4, 0]
+011ac20c  end []

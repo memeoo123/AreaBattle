@@ -1,0 +1,41 @@
+{
+  "status": "pool_collection_implemented_resource_provider_pending",
+  "source": [
+    "normal-pool-generic-bodies.json",
+    "normal-pool-rgctx.json",
+    "disassembly/PoolGeneric-28732.txt",
+    "disassembly/PoolGeneric-28733.txt",
+    "disassembly/PoolGeneric-28734.txt",
+    "disassembly/PoolGeneric-28735.txt",
+    "disassembly/PoolGeneric-28736.txt",
+    "disassembly/PoolGeneric-28737.txt",
+    "disassembly/PoolGeneric-28738.txt",
+    "disassembly/PoolGeneric-28739.txt",
+    "disassembly/PoolGeneric-28740.txt",
+    "disassembly/PoolGeneric-28741.txt",
+    "disassembly/PoolGeneric-28742.txt",
+    "disassembly/PoolGeneric-28743.txt",
+    "disassembly/PoolGeneric-28744.txt",
+    "disassembly/PoolGeneric-28745.txt",
+    "disassembly/PoolGeneric-28746.txt"
+  ],
+  "verified": [
+    "Register AddLast then Release; Spawn first same-name available entry in list order",
+    "Unspawn reference-matches original target and calls Release after lifecycle",
+    "Only unoccupied unlocked entries are automatic release candidates",
+    "Expired<=cutoff entries released first independent of quota; remaining quota selection swaps node values by ascending priority then timestamp",
+    "Capacity/expiry changes trigger release; update accumulates realElapsedSeconds and uses source float comparison",
+    "Remove entry before release callback; shutdown also removes active entries"
+  ],
+  "remaining": [
+    "Original NormalPool synchronous/asynchronous load and release helpers",
+    "Production page/account wiring and full build/E2E",
+    "Exercise reuse across consecutive Play Mode reward runs"
+  ],
+  "knownDifferences": [
+    "InvalidOperationException replaces GameFrameworkException",
+    "Original diagnostic log formatting not connected"
+  ],
+  "checks": 527,
+  "playmodeChecks": 8
+}

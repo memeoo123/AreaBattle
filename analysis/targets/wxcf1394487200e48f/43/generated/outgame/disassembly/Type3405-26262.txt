@@ -1,0 +1,45 @@
+; Original class: AudioActionBase
+; Type3405.VrWÀÀ; wasmcode function 13136; offset=6296869 size=117
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00601526  i32.const [5011626]
+0060152b  i32.load8_u [0, 0]
+0060152e  i32.eqz []
+0060152f  if [-64]
+00601531    i32.const [3990796] ; METHOD AudioActionBase.hsy¦y
+00601536    call [900] ; 
+00601539    i32.const [3949340]
+0060153e    call [900] ; 
+00601541    i32.const [5011626]
+00601546    i32.const [1]
+00601548    i32.store8 [0, 0]
+0060154b  end []
+0060154c  local.get [0]
+0060154e  i32.load [2, 0]
+00601551  local.set [1]
+00601553  local.get [0]
+00601555  local.get [1]
+00601557  i32.load [2, 232]
+0060155b  local.get [1]
+0060155d  i32.load [2, 228]
+00601561  global.set [3]
+00601563  global.get [3]
+00601565  call_indirect [0, 0]
+00601568  i32.const [3949340]
+0060156d  i32.load [2, 0]
+00601570  call [903] ; 
+00601573  local.set [1]
+00601575  local.get [1]
+00601577  local.get [0]
+00601579  i32.const [3990796] ; METHOD AudioActionBase.hsy¦y
+0060157e  i32.load [2, 0]
+00601581  i32.const [0]
+00601583  call [2351] ; UpdateHandle..ctor
+00601586  local.get [0]
+00601588  local.get [1]
+0060158a  i32.const [0]
+0060158c  call [2890] ; UpdateManager.AddHandle
+0060158f  i32.store [2, 8]
+00601592  local.get [0]
+00601594  local.get [0]
+00601596  call [13137] ; AudioActionBase.|F[¬´c
+00601599  end []

@@ -1,0 +1,23 @@
+; Original class: LoginCtrl
+; Type4244.Init; wasmcode function 18759; offset=8468758 size=56
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00813917  i32.const [5007332]
+0081391c  i32.load8_u [0, 0]
+0081391f  i32.eqz []
+00813920  if [-64]
+00813922    i32.const [4034536] ; STRING ""
+00813927    call [900] ; 
+0081392a    i32.const [5007332]
+0081392f    i32.const [1]
+00813931    i32.store8 [0, 0]
+00813934  end []
+00813935  local.get [0]
+00813937  local.get [1]
+00813939  i32.const [4034536] ; STRING ""
+0081393e  i32.load [2, 0]
+00813941  i32.const [0]
+00813943  call [11467] ; LoginProcedureBase.Init
+00813946  local.get [0]
+00813948  i32.const [1]
+0081394a  i32.store8 [0, 20]
+0081394d  end []

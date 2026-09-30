@@ -1,0 +1,31 @@
+; Original class: ProcedureStarGame
+; Type4452.j|u^~nO; wasmcode function 18163; offset=8066281 size=81
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007b14ea  i32.const [5009787]
+007b14ef  i32.load8_u [0, 0]
+007b14f2  i32.eqz []
+007b14f3  if [-64]
+007b14f5    i32.const [3953568]
+007b14fa    call [900] ; 
+007b14fd    i32.const [4034536] ; STRING ""
+007b1502    call [900] ; 
+007b1505    i32.const [5009787]
+007b150a    i32.const [1]
+007b150c    i32.store8 [0, 0]
+007b150f  end []
+007b1510  local.get [1]
+007b1512  i32.const [0]
+007b1514  call [1453] ; Int32.Parse
+007b1517  local.set [0]
+007b1519  i32.const [3953568]
+007b151e  i32.load [2, 0]
+007b1521  call [935] ; 
+007b1524  i32.const [1002]
+007b1527  local.get [0]
+007b1529  i32.const [1]
+007b152b  i32.const [4034536] ; STRING ""
+007b1530  i32.load [2, 0]
+007b1533  i32.const [0]
+007b1535  call [2291] ; ToolControl.ToolChange
+007b1538  drop []
+007b1539  end []

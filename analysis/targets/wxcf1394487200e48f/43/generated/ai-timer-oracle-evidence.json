@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-28T10:36:22.108433+00:00",
+  "status": "source-scheduler-boundaries-verified",
+  "oracle": "generated/original-ai-timer-cases.json",
+  "checks": [
+    "original-ai-timer-delay-positive",
+    "original-ai-timer-delay-crosses-zero",
+    "original-ai-timer-delay-exact-zero",
+    "original-ai-timer-timer-exact-zero",
+    "original-ai-timer-first-running-frame",
+    "original-ai-timer-negative-delay-next-frame",
+    "original-ai-timer-timer-residual",
+    "original-ai-timer-large-delta-one-action",
+    "original-ai-timer-negative-timer-zero-delta"
+  ],
+  "sourceFunction": {
+    "function": 21038,
+    "offset": 9492148,
+    "size": 149,
+    "bodySha256": "e18b6603c95ab93bf22f8d3fac70d80e31100837808658640c372e3940722043",
+    "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+    "harnessSha256": "4e06207b00b91d596eb20dd375795d6591eed3feb7e479849da1f456fa75459e"
+  },
+  "AI99": {
+    "delayMs": 400,
+    "actionTimeCandidatesMs": [
+      200,
+      400
+    ]
+  },
+  "conclusion": "Production scheduler agrees with all9 isolated original-WASM boundary cases; no evidence-backed timer correction needed. Do not force a0.15s offset from two visible AI responses.",
+  "limitations": [
+    "Scheduler arithmetic/control flow only; not original random stream, AI policy or complete initialization.",
+    "Does not establish original pre-recording clock/RNG state or random calls consumed by initialization/skin selection."
+  ]
+}

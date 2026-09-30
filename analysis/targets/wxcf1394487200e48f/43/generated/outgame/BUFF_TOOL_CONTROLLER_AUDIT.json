@@ -1,0 +1,35 @@
+{
+  "atUtc": "2026-09-30T10:40:45.409612+00:00",
+  "status": "buff-and-tool-controls-bound-full-main-incomplete",
+  "sourceEvidence": "BUFF_TOOL_CONTROLLER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T10:40:45.409612+00:00",
+    "scope": "Buff4025 registration/lifecycle and Tool4256 source reward/query façade composed with actual dispatcher, source inventory and LogicModule",
+    "checksPassed": 1008,
+    "newIntegratedChecks": 14,
+    "nativePlayModeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full Main, platform/account, ItemModuleControl/global item acquisition and full outgame Player; no new native run"
+  },
+  "implementedLifecycleControllers": 13,
+  "remainingLifecycleControllers": 25,
+  "findings": [
+    "Source default legacy confirmed by prior audited source files; production priority corrected from alternate modern acquisition to mandatory Main roster.",
+    "BuffControl and ToolControl bound as concrete registry entries. Buff disposal retains exact prefix failure and current-dispatcher behavior. Tool lifecycle intentionally empty per source and retains slot.",
+    "14 new checks cover actual logic shutdown, duplicate subscriptions, dictionary failure, source hash equality, live reward list/reason, rejected debit continuation, partial failure, overflow, zero multiplier, query boundary/narrowing, current inventory and report flags.",
+    "1008 integrated pass; no fresh PlayMode or Player. Existing battle classes/assets untouched."
+  ],
+  "remaining": [
+    "Follow source-default legacy production Main path. Finish original controller roster and data/config owners; next ItemModuleControl3875/ItemManager4500/ItemConfigMgr4534 with original item factory. Avoid substituting generic GlobalItemManager or project-specific GameItemConfig3942 for shared GameItemConfig4527.",
+    "Complete remaining25 controller lifecycles and actual menu/account/business flows, persistence/restart/failure/return, and full runnable outgame Player acceptance. Keep modern acquisition explicitly incomplete but not on default startup critical path absent evidence enabling mode."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/buff-tool-controller-integrated.log"
+  },
+  "disassembledMethodMapCount": 5089
+}

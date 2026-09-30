@@ -1,0 +1,27 @@
+; ConfigMgr.GetRandomChineseName; wasmcode function 12789; offset=6161092 size=73
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005e02c5  i32.const [5010022]
+005e02ca  i32.load8_u [0, 0]
+005e02cd  i32.eqz []
+005e02ce  if [-64]
+005e02d0    i32.const [4010600]
+005e02d5    call [900] ; 
+005e02d8    i32.const [3937580] ; type: RandomHelper
+005e02dd    call [900] ; 
+005e02e0    i32.const [5010022]
+005e02e5    i32.const [1]
+005e02e7    i32.store8 [0, 0]
+005e02ea  end []
+005e02eb  local.get [0]
+005e02ed  i32.load [2, 320]
+005e02f1  local.set [0]
+005e02f3  i32.const [3937580] ; type: RandomHelper
+005e02f8  i32.load [2, 0]
+005e02fb  call [901] ; 
+005e02fe  local.get [0]
+005e0300  i32.const [4010600]
+005e0305  i32.load [2, 0]
+005e0308  call [2673] ; 
+005e030b  return []
+005e030c  end []
+

@@ -1,0 +1,37 @@
+; Original class: ±¿¶|x
+; Type3132.IsWordBreak; wasmcode function 9875; offset=4735193 size=89
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+004840da  i32.const [4988590]
+004840df  i32.load8_u [0, 0]
+004840e2  i32.eqz []
+004840e3  if [-64]
+004840e5    i32.const [3929396]
+004840ea    call [900] ; 
+004840ed    i32.const [4101984] ; STRING "{}[],:\""
+004840f2    call [900] ; 
+004840f5    i32.const [4988590]
+004840fa    i32.const [1]
+004840fc    i32.store8 [0, 0]
+004840ff  end []
+00484100  i32.const [3929396]
+00484105  i32.load [2, 0]
+00484108  call [901] ; 
+0048410b  local.get [0]
+0048410d  i32.const [0]
+0048410f  call [1276] ; Char.IsWhiteSpace
+00484112  if [-64]
+00484114    i32.const [1]
+00484116    local.set [0]
+00484118  else []
+00484119    i32.const [4101984] ; STRING "{}[],:\""
+0048411e    i32.load [2, 0]
+00484121    local.get [0]
+00484123    i32.const [0]
+00484125    call [1289] ; String.IndexOf
+00484128    i32.const [-1]
+0048412a    i32.ne []
+0048412b    local.set [0]
+0048412d  end []
+0048412e  local.get [0]
+00484130  return []
+00484131  end []

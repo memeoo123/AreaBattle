@@ -1,0 +1,88 @@
+000de24b i32.const [5007246]
+000de250 i32.load8_u [0, 0]
+000de253 i32.eqz []
+000de254 if [-64]
+000de256   i32.const [3935664] ; type: MaterialPropertyBlock
+000de25b   call [900] ; 
+000de25e   i32.const [3936516] ; type: Object
+000de263   call [900] ; 
+000de266   i32.const [4081760] ; literal: '_Vspeed'
+000de26b   call [900] ; 
+000de26e   i32.const [5007246]
+000de273   i32.const [1]
+000de275   i32.store8 [0, 0]
+000de278 end []
+000de279 i32.const [3936516] ; type: Object
+000de27e i32.load [2, 0]
+000de281 call [901] ; 
+000de284 local.get [1]
+000de286 i32.const [0]
+000de288 i32.const [0]
+000de28a call [940] ; 
+000de28d i32.eqz []
+000de28e if [-64]
+000de290   i32.const [5010220]
+000de295   i32.load8_u [0, 0]
+000de298   i32.eqz []
+000de299   if [-64]
+000de29b     i32.const [3929796] ; type: ConfigMgr
+000de2a0     call [900] ; 
+000de2a3     i32.const [5010220]
+000de2a8     i32.const [1]
+000de2aa     i32.store8 [0, 0]
+000de2ad   end []
+000de2ae   local.get [1]
+000de2b0   i32.const [3929796] ; type: ConfigMgr
+000de2b5   i32.load [2, 0]
+000de2b8   i32.load [2, 92]
+000de2bb   f32.load [2, 20]
+000de2be   i32.const [0]
+000de2c0   call [5920] ; 
+000de2c3   local.get [0]
+000de2c5   local.set [2]
+000de2c7   local.get [0]
+000de2c9   i32.load [2, 44]
+000de2cc   local.set [0]
+000de2ce   local.get [0]
+000de2d0   i32.eqz []
+000de2d1   if [-64]
+000de2d3     i32.const [3935664] ; type: MaterialPropertyBlock
+000de2d8     i32.load [2, 0]
+000de2db     call [903] ; 
+000de2de     local.set [0]
+000de2e0     local.get [0]
+000de2e2     i32.const [0]
+000de2e4     call [2390] ; 
+000de2e7     local.get [2]
+000de2e9     local.get [0]
+000de2eb     i32.store [2, 44]
+000de2ee     local.get [2]
+000de2f0     i32.load [2, 44]
+000de2f3     local.set [0]
+000de2f5   end []
+000de2f6   i32.const [5010217]
+000de2fb   i32.load8_u [0, 0]
+000de2fe   i32.eqz []
+000de2ff   if [-64]
+000de301     i32.const [3929796] ; type: ConfigMgr
+000de306     call [900] ; 
+000de309     i32.const [5010217]
+000de30e     i32.const [1]
+000de310     i32.store8 [0, 0]
+000de313   end []
+000de314   local.get [0]
+000de316   i32.const [4081760] ; literal: '_Vspeed'
+000de31b   i32.load [2, 0]
+000de31e   i32.const [3929796] ; type: ConfigMgr
+000de323   i32.load [2, 0]
+000de326   i32.load [2, 92]
+000de329   f32.load [2, 28]
+000de32c   i32.const [0]
+000de32e   call [7581] ; 
+000de331   local.get [1]
+000de333   local.get [2]
+000de335   i32.load [2, 44]
+000de338   i32.const [0]
+000de33a   call [2926] ; 
+000de33d end []
+000de33e end []

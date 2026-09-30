@@ -1,0 +1,43 @@
+; Original class: UIModule
+; Type3558.CloseForName; wasmcode function 6911; offset=2621047 size=115
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0027fe78  i32.const [4989685]
+0027fe7d  i32.load8_u [0, 0]
+0027fe80  i32.eqz []
+0027fe81  if [-64]
+0027fe83    i32.const [3958676]
+0027fe88    call [900] ; 
+0027fe8b    i32.const [3958684]
+0027fe90    call [900] ; 
+0027fe93    i32.const [3958692]
+0027fe98    call [900] ; 
+0027fe9b    i32.const [4989685]
+0027fea0    i32.const [1]
+0027fea2    i32.store8 [0, 0]
+0027fea5  end []
+0027fea6  local.get [0]
+0027fea8  i32.load [2, 48]
+0027feab  local.get [1]
+0027fead  i32.const [3958676]
+0027feb2  i32.load [2, 0]
+0027feb5  call [987] ; 
+0027feb8  if [-64]
+0027feba    local.get [0]
+0027febc    i32.load [2, 48]
+0027febf    local.get [1]
+0027fec1    i32.const [3958692]
+0027fec6    i32.load [2, 0]
+0027fec9    call [982] ; 
+0027fecc    local.set [2]
+0027fece    local.get [0]
+0027fed0    i32.load [2, 48]
+0027fed3    local.get [1]
+0027fed5    i32.const [3958684]
+0027feda    i32.load [2, 0]
+0027fedd    call [1202] ; 
+0027fee0    drop []
+0027fee1    local.get [2]
+0027fee3    local.get [0]
+0027fee5    call [13074] ; BaseUI._closeUI
+0027fee8  end []
+0027fee9  end []

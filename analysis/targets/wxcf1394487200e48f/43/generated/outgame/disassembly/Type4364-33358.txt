@@ -1,0 +1,35 @@
+; Original class: SkinItem
+; Type4364.Qut; wasmcode function 10342; offset=4962556 size=86
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+004bb8fd  i32.const [5008962]
+004bb902  i32.load8_u [0, 0]
+004bb905  i32.eqz []
+004bb906  if [-64]
+004bb908    i32.const [3953552]
+004bb90d    call [900] ; 
+004bb910    i32.const [3953616]
+004bb915    call [900] ; 
+004bb918    i32.const [5008962]
+004bb91d    i32.const [1]
+004bb91f    i32.store8 [0, 0]
+004bb922  end []
+004bb923  local.get [1]
+004bb925  i32.const [1301]
+004bb928  i32.eq []
+004bb929  if [-64]
+004bb92b    i32.const [3953552]
+004bb930    i32.load [2, 0]
+004bb933    call [935] ; 
+004bb936    i32.const [0]
+004bb938    call [5689] ; SevendayActivityControl.IsInActivity
+004bb93b    return []
+004bb93c  end []
+004bb93d  i32.const [3953616]
+004bb942  i32.load [2, 0]
+004bb945  call [935] ; 
+004bb948  i32.const [0]
+004bb94a  call [2052] ; x~bjQc.get_Status
+004bb94d  i32.const [5]
+004bb94f  i32.ne []
+004bb950  return []
+004bb951  end []

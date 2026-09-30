@@ -1,0 +1,23 @@
+; Original class: ExtesionMethod
+; Type4268.IntToString; wasmcode function 1470; offset=475982 size=54
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0007434f  i32.const [5009157]
+00074354  i32.load8_u [0, 0]
+00074357  i32.eqz []
+00074358  if [-64]
+0007435a    i32.const [3931796]
+0007435f    call [900] ; 
+00074362    i32.const [5009157]
+00074367    i32.const [1]
+00074369    i32.store8 [0, 0]
+0007436c  end []
+0007436d  i32.const [3931796]
+00074372  i32.load [2, 0]
+00074375  call [901] ; 
+00074378  local.get [0]
+0007437a  i64.extend_i32_s []
+0007437b  i32.const [0]
+0007437d  local.get [0]
+0007437f  call [12325] ; ExtesionMethod.LongToString
+00074382  return []
+00074383  end []

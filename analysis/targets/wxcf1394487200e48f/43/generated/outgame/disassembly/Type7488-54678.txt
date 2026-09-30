@@ -1,0 +1,32 @@
+; Original class: DAUAdsAdapter
+; Type7488.showAd; wasmcode function 8041; offset=3826313 size=68
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003a628a  local.get [0]
+003a628c  local.get [0]
+003a628e  call [4474] ; DAUAdsAdapter.stopShowTimeout
+003a6291  local.get [0]
+003a6293  local.get [0]
+003a6295  local.get [0]
+003a6297  local.get [0]
+003a6299  call [8042] ; DAUAdsAdapter.getShowTimeout
+003a629c  local.get [0]
+003a629e  call [8040] ; DAUAdsAdapter.showTimeout
+003a62a1  i32.const [0]
+003a62a3  call [1712] ; CallFrameworkAdapter.Call_StartCoroutineResult
+003a62a6  i32.store [2, 40]
+003a62a9  local.get [0]
+003a62ab  local.set [1]
+003a62ad  local.get [0]
+003a62af  i32.load [2, 0]
+003a62b2  local.set [0]
+003a62b4  local.get [1]
+003a62b6  local.get [0]
+003a62b8  i32.const [40]
+003a62ba  i32.add []
+003a62bb  i32.load [2, 192]
+003a62bf  local.get [0]
+003a62c1  i32.load [2, 228]
+003a62c5  global.set [3]
+003a62c7  global.get [3]
+003a62c9  call_indirect [0, 0]
+003a62cc  end []

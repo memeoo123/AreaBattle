@@ -1,0 +1,33 @@
+; Original class: ItemManager
+; Type4500.GetItem; wasmcode function 7675; offset=3657381 size=85
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0037cea6  i32.const [5009881]
+0037ceab  i32.load8_u [0, 0]
+0037ceae  i32.eqz []
+0037ceaf  if [-64]
+0037ceb1    i32.const [3931808]
+0037ceb6    call [900] ; 
+0037ceb9    i32.const [3922392]
+0037cebe    call [900] ; 
+0037cec1    i32.const [5009881]
+0037cec6    i32.const [1]
+0037cec8    i32.store8 [0, 0]
+0037cecb  end []
+0037cecc  local.get [1]
+0037cece  i32.load [2, 8]
+0037ced1  local.set [0]
+0037ced3  i32.const [3931808]
+0037ced8  i32.load [2, 0]
+0037cedb  call [903] ; 
+0037cede  local.set [1]
+0037cee0  local.get [1]
+0037cee2  local.get [0]
+0037cee4  local.get [0]
+0037cee6  call [7876] ; FactoryBase..ctor
+0037cee9  i32.const [0]
+0037ceeb  i32.const [3922392]
+0037cef0  i32.load [2, 0]
+0037cef3  local.get [1]
+0037cef5  call [918] ; 
+0037cef8  return []
+0037cef9  end []

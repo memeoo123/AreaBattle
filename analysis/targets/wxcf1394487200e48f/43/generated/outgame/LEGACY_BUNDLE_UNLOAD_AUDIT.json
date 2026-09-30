@@ -1,0 +1,46 @@
+{
+  "atUtc": "2026-09-30T03:27:46.401797+00:00",
+  "status": "partial-subsystem-native-verified",
+  "sourceMethods": [
+    "23821 UnloadAssetBundle",
+    "UnloadDependencies wasmcode13169",
+    "UnloadAssetBundleInternal wasmcode8248",
+    "23851 cleanup wasmcode8246"
+  ],
+  "behavior": [
+    "Unload root internal then each direct dependency, leave dependency map intact",
+    "Disabled gate checked per internal unload; use readiness lookup, fallback loaded dictionary only if missing-dependency marker1",
+    "Decrement reference count; enqueue only at exactly0, set float countdown from Utility static int field0",
+    "Cleanup clear scratch list, scan pending backwards decrement Time.deltaTime, collect <=0; no reference recheck",
+    "Unload(true), remove loaded entry by item name, optional success log, remove pending in that order; exceptions propagate"
+  ],
+  "validation": {
+    "integratedChecks": 626,
+    "nativeBundleUiPlayMode": {
+      "passed": true,
+      "batchMode": false,
+      "error": "",
+      "scope": "Native file-URL UnityWebRequestAssetBundle of rebuilt original imported ValentineUI through recovered download registry/operation/package/resource/page initialization; local fixture route and zero-second unload delay, no original server/variant/dependency/production account composition",
+      "requestFrame": 1,
+      "assetFrame": 3,
+      "pageFrame": 5,
+      "downloadedBytes": 2377959,
+      "checks": [
+        "Source canonical bundle key reaches native acquisition",
+        "Native downloaded AssetBundle reaches ready ResourcesInfo without imported-asset lookup",
+        "Native request succeeds and recovered manager removes request/operation",
+        "Bundle prefab stays hidden until two actual frame yields while paused",
+        "Bundle-loaded page binds thirteen original outlets, activates and retains original resource owner",
+        "Bundled page carries native sprite and text components",
+        "Resource disposal queues manager unload after clearing loader owner",
+        "Native AssetBundle.Unload(true) runs through recovered cleanup with zero-delay fixture"
+      ]
+    }
+  },
+  "nativeFixture": "Same rebuilt Windows Valentine bundle. Explicit zero-second delay for test; verifies resource disposal -> loader reset -> refcount0 -> delayed queue -> native Unload(true) -> loaded dictionary empty. Does not infer actual configured Utility delay.",
+  "pending": [
+    "Resolve Utility unload delay and static disable configuration for production",
+    "Acquisition must cancel pending unload on reuse if source dictates; not implemented yet",
+    "Original requests/variants/dependencies, ResourcesModule startup/firstpack, full production account/menu"
+  ]
+}

@@ -1,0 +1,202 @@
+; Original class: AtlasLoader
+; Type2923.¶´Q; wasmcode function 20620; offset=9241124 size=577
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+008d0227  i32.const [4989477]
+008d022c  i32.load8_u [0, 0]
+008d022f  i32.eqz []
+008d0230  if [-64]
+008d0232    i32.const [3989352]
+008d0237    call [900] ; 
+008d023a    i32.const [3928440]
+008d023f    call [900] ; 
+008d0242    i32.const [3929208]
+008d0247    call [900] ; 
+008d024a    i32.const [4026764] ; METHOD H ±S´s.¬­¸Gn¾
+008d024f    call [900] ; 
+008d0252    i32.const [3944276]
+008d0257    call [900] ; 
+008d025a    i32.const [3948068]
+008d025f    call [900] ; 
+008d0262    i32.const [3926996]
+008d0267    call [900] ; 
+008d026a    i32.const [3936516]
+008d026f    call [900] ; 
+008d0272    i32.const [3938016]
+008d0277    call [900] ; 
+008d027a    i32.const [4040136] ; STRING ".spriteatlas.unity3d"
+008d027f    call [900] ; 
+008d0282    i32.const [4040132] ; STRING ".spriteatlas"
+008d0287    call [900] ; 
+008d028a    i32.const [4075888] ; STRING "UIAtlas/"
+008d028f    call [900] ; 
+008d0292    i32.const [4103540] ; STRING "图集未找到，重新加载"
+008d0297    call [900] ; 
+008d029a    i32.const [4067776] ; STRING "RequestAtlas:"
+008d029f    call [900] ; 
+008d02a2    i32.const [4989477]
+008d02a7    i32.const [1]
+008d02a9    i32.store8 [0, 0]
+008d02ac  end []
+008d02ad  i32.const [3944276]
+008d02b2  i32.load [2, 0]
+008d02b5  call [903] ; 
+008d02b8  local.set [3]
+008d02ba  local.get [3]
+008d02bc  local.get [1]
+008d02be  i32.store [2, 8]
+008d02c1  local.get [3]
+008d02c3  local.get [0]
+008d02c5  i32.store [2, 16]
+008d02c8  i32.const [3928440]
+008d02cd  i32.load [2, 0]
+008d02d0  i32.load [2, 92]
+008d02d3  i32.load8_u [0, 0]
+008d02d6  i32.eqz []
+008d02d7  if [-64]
+008d02d9    i32.const [3926996]
+008d02de    i32.load [2, 0]
+008d02e1    i32.const [1]
+008d02e3    call [909] ; 
+008d02e6    local.set [1]
+008d02e8    i32.const [4067776] ; STRING "RequestAtlas:"
+008d02ed    i32.load [2, 0]
+008d02f0    local.get [3]
+008d02f2    i32.load [2, 8]
+008d02f5    i32.const [0]
+008d02f7    call [921] ; String.Concat
+008d02fa    local.set [4]
+008d02fc    local.get [1]
+008d02fe    local.get [4]
+008d0300    call [905] ; 
+008d0303    local.get [1]
+008d0305    local.get [4]
+008d0307    i32.store [2, 16]
+008d030a    i32.const [3929208]
+008d030f    i32.load [2, 0]
+008d0312    call [901] ; 
+008d0315    local.get [1]
+008d0317    i32.const [0]
+008d0319    call [2095] ; CLog.wKÂL
+008d031c    local.get [3]
+008d031e    i32.const [0]
+008d0320    i32.store [2, 12]
+008d0323    local.get [3]
+008d0325    local.get [3]
+008d0327    i32.const [4075888] ; STRING "UIAtlas/"
+008d032c    i32.load [2, 0]
+008d032f    local.get [3]
+008d0331    i32.load [2, 8]
+008d0334    i32.const [4040136] ; STRING ".spriteatlas.unity3d"
+008d0339    i32.load [2, 0]
+008d033c    i32.const [0]
+008d033e    call [955] ; String.Concat
+008d0341    i32.const [0]
+008d0343    call [1374] ; String.ToLower
+008d0346    local.get [3]
+008d0348    i32.load [2, 8]
+008d034b    local.get [3]
+008d034d    call [8234] ; AtlasLoader.µ¤¬g¯
+008d0350    i32.store [2, 12]
+008d0353    local.get [3]
+008d0355    i32.load [2, 12]
+008d0358    local.set [1]
+008d035a    i32.const [3936516]
+008d035f    i32.load [2, 0]
+008d0362    call [901] ; 
+008d0365    block [-64]
+008d0367      i32.const [0]
+008d0369      local.get [1]
+008d036b      i32.const [0]
+008d036d      call [940] ; Object.op_Equality
+008d0370      i32.eqz []
+008d0371      br_if [0]
+008d0373      local.get [0]
+008d0375      i32.load8_u [0, 12]
+008d0378      i32.eqz []
+008d0379      br_if [0]
+008d037b      local.get [0]
+008d037d      i32.const [0]
+008d037f      i32.store [2, 16]
+008d0382      local.get [0]
+008d0384      local.get [2]
+008d0386      i32.store [2, 16]
+008d0389      i32.const [3929208]
+008d038e      i32.load [2, 0]
+008d0391      call [901] ; 
+008d0394      i32.const [3929208]
+008d0399      i32.load [2, 0]
+008d039c      i32.load [2, 92]
+008d039f      i32.load8_u [0, 0]
+008d03a2      if [-64]
+008d03a4        i32.const [3926996]
+008d03a9        i32.load [2, 0]
+008d03ac        i32.const [1]
+008d03ae        call [909] ; 
+008d03b1        local.set [0]
+008d03b3        local.get [3]
+008d03b5        i32.load [2, 8]
+008d03b8        i32.const [4103540] ; STRING "图集未找到，重新加载"
+008d03bd        i32.load [2, 0]
+008d03c0        i32.const [0]
+008d03c2        call [921] ; String.Concat
+008d03c5        local.set [1]
+008d03c7        local.get [0]
+008d03c9        local.get [1]
+008d03cb        call [905] ; 
+008d03ce        local.get [0]
+008d03d0        local.get [1]
+008d03d2        i32.store [2, 16]
+008d03d5        i32.const [3929208]
+008d03da        i32.load [2, 0]
+008d03dd        call [901] ; 
+008d03e0        local.get [0]
+008d03e2        i32.const [0]
+008d03e4        call [1069] ; CLog.Log
+008d03e7      end []
+008d03e8      i32.const [4075888] ; STRING "UIAtlas/"
+008d03ed      i32.load [2, 0]
+008d03f0      local.get [3]
+008d03f2      i32.load [2, 8]
+008d03f5      i32.const [4040132] ; STRING ".spriteatlas"
+008d03fa      i32.load [2, 0]
+008d03fd      i32.const [0]
+008d03ff      call [955] ; String.Concat
+008d0402      local.set [0]
+008d0404      i32.const [3948068]
+008d0409      i32.load [2, 0]
+008d040c      call [903] ; 
+008d040f      local.set [1]
+008d0411      local.get [1]
+008d0413      local.get [3]
+008d0415      i32.const [4026764] ; METHOD H ±S´s.¬­¸Gn¾
+008d041a      i32.load [2, 0]
+008d041d      i32.const [0]
+008d041f      call [1853] ; LoadAssetCompleteHandler..ctor
+008d0422      i32.const [3989352]
+008d0427      i32.load [2, 0]
+008d042a      call [1032] ; 
+008d042d      local.set [2]
+008d042f      i32.const [3938016]
+008d0434      i32.load [2, 0]
+008d0437      call [901] ; 
+008d043a      local.get [0]
+008d043c      local.get [1]
+008d043e      local.get [2]
+008d0440      i32.const [0]
+008d0442      call [2240] ; ResLoadHelper.LoadAsset
+008d0445      drop []
+008d0446      return []
+008d0447    end []
+008d0448    local.get [2]
+008d044a    i32.load [2, 32]
+008d044d    local.get [3]
+008d044f    i32.load [2, 12]
+008d0452    local.get [2]
+008d0454    i32.load [2, 20]
+008d0457    local.get [2]
+008d0459    i32.load [2, 12]
+008d045c    global.set [3]
+008d045e    global.get [3]
+008d0460    call_indirect [2, 0]
+008d0463  end []
+008d0464  end []

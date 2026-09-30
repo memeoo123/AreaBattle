@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native UIControl/TopInfo/MenuTab with original prefabs and default WaitForEndOfFrame menu loading. Menu data/role/account callbacks are explicit fixtures; no complete Main or Player claim.",
+    "checks": [
+        "Home entry starts main immediately before native end-of-frame waits",
+        "Native end-of-frame loads preserve original page order while timeScale is zero",
+        "Battle state closes native menu and top, preserving active root",
+        "Result state activates original header parts on popup layer",
+        "Return to home reuses native pages and restores top ordering",
+        "Disposed UI controller removes state listener and clears registry"
+    ]
+}

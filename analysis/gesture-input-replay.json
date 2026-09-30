@@ -1,0 +1,22 @@
+{
+    "layout": 5,
+    "source": 3,
+    "target": 2,
+    "point": {
+        "x": 0.7271400094032288,
+        "y": 0.0,
+        "z": 2.338881731033325
+    },
+    "previewValid": true,
+    "committed": true,
+    "inputs": [
+        "BeginTowerDrag(source)",
+        "MoveTowerDrag(point beyond target,directHit=0)",
+        "EndTowerDrag() cached target submission",
+        "BeginTowerDrag(source)",
+        "EndTowerDrag() without move rejects stale target"
+    ],
+    "events": [
+        "connect:line=6:tower=3"
+    ]
+}

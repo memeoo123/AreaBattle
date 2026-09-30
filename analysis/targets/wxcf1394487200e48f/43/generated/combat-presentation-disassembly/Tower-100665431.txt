@@ -1,0 +1,44 @@
+; Tower.SQxRa{; wasmcode function 10051; offset=4823661 size=123
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00499a6e  i32.const [5007210]
+00499a73  i32.load8_u [0, 0]
+00499a76  i32.eqz []
+00499a77  if [-64]
+00499a79    i32.const [3939452]
+00499a7e    call [900] ; 
+00499a81    i32.const [4106600] ; STRING "黄"
+00499a86    call [900] ; 
+00499a89    i32.const [4105328] ; STRING "灰"
+00499a8e    call [900] ; 
+00499a91    i32.const [4105564] ; STRING "红"
+00499a96    call [900] ; 
+00499a99    i32.const [4105780] ; STRING "蓝"
+00499a9e    call [900] ; 
+00499aa1    i32.const [4105588] ; STRING "绿"
+00499aa6    call [900] ; 
+00499aa9    i32.const [4106512] ; STRING "青"
+00499aae    call [900] ; 
+00499ab1    i32.const [5007210]
+00499ab6    i32.const [1]
+00499ab8    i32.store8 [0, 0]
+00499abb  end []
+00499abc  i32.const [3939452]
+00499ac1  i32.load [2, 0]
+00499ac4  i32.load [2, 92]
+00499ac7  local.set [1]
+00499ac9  local.get [0]
+00499acb  i32.const [6]
+00499acd  i32.le_u []
+00499ace  if [-64]
+00499ad0    local.get [0]
+00499ad2    i32.const [2]
+00499ad4    i32.shl []
+00499ad5    i32.const [1709628]
+00499ada    i32.add []
+00499adb    i32.load [2, 0]
+00499ade    local.set [1]
+00499ae0  end []
+00499ae1  local.get [1]
+00499ae3  i32.load [2, 0]
+00499ae6  return []
+00499ae7  end []

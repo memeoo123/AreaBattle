@@ -1,0 +1,14 @@
+; Original class: DiceGameControl
+; Type4038.AddTzByAd; wasmcode function 12554; offset=6060883 size=24
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005c7b54  local.get [0]
+005c7b56  i32.load [2, 16]
+005c7b59  i32.const [1]
+005c7b5b  local.get [0]
+005c7b5d  call [12547] ; DiceGameDataManager.ChangeAdNum
+005c7b60  drop []
+005c7b61  local.get [0]
+005c7b63  i32.const [1]
+005c7b65  local.get [0]
+005c7b67  call [3639] ; DiceGameControl.GM_AddTzNum
+005c7b6a  end []

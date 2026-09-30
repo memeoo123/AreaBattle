@@ -1,0 +1,76 @@
+; Original class: ResourcesModule
+; Type3832.UnloadUnusedBundle; wasmcode function 17742; offset=7862658 size=211
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0077f985  i32.const [4988242]
+0077f98a  i32.load8_u [0, 0]
+0077f98d  i32.eqz []
+0077f98e  if [-64]
+0077f990    i32.const [3929208]
+0077f995    call [900] ; 
+0077f998    i32.const [3926996]
+0077f99d    call [900] ; 
+0077f9a0    i32.const [3938016]
+0077f9a5    call [900] ; 
+0077f9a8    i32.const [4080932] ; STRING "]"
+0077f9ad    call [900] ; 
+0077f9b0    i32.const [4103328] ; STRING "卸载资源失败，未找到资源：["
+0077f9b5    call [900] ; 
+0077f9b8    i32.const [4040164] ; STRING ".unity3d"
+0077f9bd    call [900] ; 
+0077f9c0    i32.const [4988242]
+0077f9c5    i32.const [1]
+0077f9c7    i32.store8 [0, 0]
+0077f9ca  end []
+0077f9cb  i32.const [3938016]
+0077f9d0  i32.load [2, 0]
+0077f9d3  call [901] ; 
+0077f9d6  i32.const [0]
+0077f9d8  call [2476] ; ResLoadHelper.CheckUseRightResLoad
+0077f9db  drop []
+0077f9dc  local.get [1]
+0077f9de  i32.const [0]
+0077f9e0  call [1374] ; String.ToLower
+0077f9e3  i32.const [4040164] ; STRING ".unity3d"
+0077f9e8  i32.load [2, 0]
+0077f9eb  i32.const [0]
+0077f9ed  call [921] ; String.Concat
+0077f9f0  local.set [2]
+0077f9f2  local.get [0]
+0077f9f4  local.get [2]
+0077f9f6  local.get [0]
+0077f9f8  call [10678] ; ResourcesModule.GetBundleInfo
+0077f9fb  local.set [3]
+0077f9fd  local.get [3]
+0077f9ff  i32.eqz []
+0077fa00  if [-64]
+0077fa02    i32.const [3926996]
+0077fa07    i32.load [2, 0]
+0077fa0a    i32.const [1]
+0077fa0c    call [909] ; 
+0077fa0f    local.set [1]
+0077fa11    i32.const [4103328] ; STRING "卸载资源失败，未找到资源：["
+0077fa16    i32.load [2, 0]
+0077fa19    local.get [2]
+0077fa1b    i32.const [4080932] ; STRING "]"
+0077fa20    i32.load [2, 0]
+0077fa23    i32.const [0]
+0077fa25    call [955] ; String.Concat
+0077fa28    local.set [2]
+0077fa2a    local.get [1]
+0077fa2c    local.get [2]
+0077fa2e    call [905] ; 
+0077fa31    local.get [1]
+0077fa33    local.get [2]
+0077fa35    i32.store [2, 16]
+0077fa38    i32.const [3929208]
+0077fa3d    i32.load [2, 0]
+0077fa40    call [901] ; 
+0077fa43    local.get [1]
+0077fa45    i32.const [0]
+0077fa47    call [1156] ; CLog.Warning
+0077fa4a  end []
+0077fa4b  local.get [0]
+0077fa4d  local.get [3]
+0077fa4f  local.get [0]
+0077fa51  call [10672] ; ResourcesModule.UnloadUnusedBundle
+0077fa54  end []

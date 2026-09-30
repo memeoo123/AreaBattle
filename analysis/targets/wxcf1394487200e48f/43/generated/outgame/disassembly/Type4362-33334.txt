@@ -1,0 +1,47 @@
+; Original class: ShopItem
+; Type4362.Awake; wasmcode function 16011; offset=7723090 size=136
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0075d855  i32.const [5008945]
+0075d85a  i32.load8_u [0, 0]
+0075d85d  i32.eqz []
+0075d85e  if [-64]
+0075d860    i32.const [3927888]
+0075d865    call [900] ; 
+0075d868    i32.const [3995120]
+0075d86d    call [900] ; 
+0075d870    i32.const [3930256]
+0075d875    call [900] ; 
+0075d878    i32.const [4013888] ; METHOD ShopItem.qyoahL
+0075d87d    call [900] ; 
+0075d880    i32.const [5008945]
+0075d885    i32.const [1]
+0075d887    i32.store8 [0, 0]
+0075d88a  end []
+0075d88b  i32.const [3930256]
+0075d890  i32.load [2, 0]
+0075d893  call [901] ; 
+0075d896  local.get [0]
+0075d898  i32.const [0]
+0075d89a  call [1309] ; DataManagerPool.get_Instance
+0075d89d  i32.const [3995120]
+0075d8a2  i32.load [2, 0]
+0075d8a5  call [1609] ; 
+0075d8a8  i32.store [2, 40]
+0075d8ab  local.get [0]
+0075d8ad  i32.load [2, 76]
+0075d8b0  local.set [1]
+0075d8b2  i32.const [3927888]
+0075d8b7  i32.load [2, 0]
+0075d8ba  call [903] ; 
+0075d8bd  local.set [2]
+0075d8bf  local.get [2]
+0075d8c1  local.get [0]
+0075d8c3  i32.const [4013888] ; METHOD ShopItem.qyoahL
+0075d8c8  i32.load [2, 0]
+0075d8cb  i32.const [0]
+0075d8cd  call [1002] ; Action..ctor
+0075d8d0  local.get [1]
+0075d8d2  local.get [2]
+0075d8d4  i32.const [0]
+0075d8d6  call [1121] ; UIExtension.AddClick
+0075d8d9  end []

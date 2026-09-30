@@ -1,0 +1,36 @@
+; Original class: UIVideoBtn
+; Type10741.VideoClickReport; wasmcode function 9773; offset=4676884 size=101
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00475d15  i32.const [5001942]
+00475d1a  i32.load8_u [0, 0]
+00475d1d  i32.eqz []
+00475d1e  if [-64]
+00475d20    i32.const [3937964]
+00475d25    call [900] ; 
+00475d28    i32.const [5001942]
+00475d2d    i32.const [1]
+00475d2f    i32.store8 [0, 0]
+00475d32  end []
+00475d33  i32.const [3937964]
+00475d38  i32.load [2, 0]
+00475d3b  call [901] ; 
+00475d3e  i32.const [3937964]
+00475d43  i32.load [2, 0]
+00475d46  i32.load [2, 92]
+00475d49  i32.load [2, 8]
+00475d4c  i32.const [3]
+00475d4e  i32.const [0]
+00475d50  call [3099] ; ReportManager.TrackVideo
+00475d53  i32.const [3937964]
+00475d58  i32.load [2, 0]
+00475d5b  i32.load [2, 92]
+00475d5e  i32.load [2, 8]
+00475d61  local.get [0]
+00475d63  i32.load [2, 208]
+00475d67  local.get [0]
+00475d69  i32.load [2, 212]
+00475d6d  local.get [0]
+00475d6f  i32.load [2, 216]
+00475d73  i32.const [0]
+00475d75  call [5762] ; ReportManager.NewReportVideoClick
+00475d78  end []

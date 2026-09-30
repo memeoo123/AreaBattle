@@ -1,0 +1,127 @@
+; Original class: WxVideoAdapter
+; Type9186.<startShowAd>g__ShowVideoSuccess|7_0; wasmcode function 14691; offset=7202734 size=335
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+006de7b1  global.get [0]
+006de7b3  i32.const [16]
+006de7b5  i32.sub []
+006de7b6  local.set [2]
+006de7b8  local.get [2]
+006de7ba  global.set [0]
+006de7bc  i32.const [5006870]
+006de7c1  i32.load8_u [0, 0]
+006de7c4  i32.eqz []
+006de7c5  if [-64]
+006de7c7    i32.const [3944800]
+006de7cc    call [900] ; 
+006de7cf    i32.const [3928952]
+006de7d4    call [900] ; 
+006de7d7    i32.const [3984736]
+006de7dc    call [900] ; 
+006de7df    i32.const [3927212]
+006de7e4    call [900] ; 
+006de7e7    i32.const [4069640] ; STRING "ShowVideoSuccess "
+006de7ec    call [900] ; 
+006de7ef    i32.const [4036028] ; STRING " isClosed:"
+006de7f4    call [900] ; 
+006de7f7    i32.const [5006870]
+006de7fc    i32.const [1]
+006de7fe    i32.store8 [0, 0]
+006de801  end []
+006de802  i32.const [3927212]
+006de807  i32.load [2, 0]
+006de80a  i32.const [5]
+006de80c  call [909] ; 
+006de80f  local.set [1]
+006de811  local.get [0]
+006de813  i32.load [2, 8]
+006de816  local.set [3]
+006de818  local.get [1]
+006de81a  local.get [3]
+006de81c  call [905] ; 
+006de81f  local.get [1]
+006de821  local.get [3]
+006de823  i32.store [2, 16]
+006de826  local.get [1]
+006de828  i32.const [4069640] ; STRING "ShowVideoSuccess "
+006de82d  i32.load [2, 0]
+006de830  call [905] ; 
+006de833  local.get [1]
+006de835  i32.const [4069640] ; STRING "ShowVideoSuccess "
+006de83a  i32.load [2, 0]
+006de83d  i32.store [2, 20]
+006de840  local.get [2]
+006de842  local.get [0]
+006de844  i32.load [2, 12]
+006de847  i32.store [2, 12]
+006de84a  i32.const [3944800]
+006de84f  i32.load [2, 0]
+006de852  local.set [3]
+006de854  local.get [2]
+006de856  i32.const [-1]
+006de858  i32.store [2, 4]
+006de85b  local.get [2]
+006de85d  local.get [3]
+006de85f  i32.store [2, 0]
+006de862  local.get [2]
+006de864  local.get [2]
+006de866  i32.load [2, 12]
+006de869  i32.store [2, 8]
+006de86c  local.get [2]
+006de86e  i32.const [0]
+006de870  call [1009] ; Enum.ToString
+006de873  local.set [3]
+006de875  local.get [1]
+006de877  local.get [3]
+006de879  call [905] ; 
+006de87c  local.get [1]
+006de87e  local.get [3]
+006de880  i32.store [2, 24]
+006de883  local.get [1]
+006de885  i32.const [4036028] ; STRING " isClosed:"
+006de88a  i32.load [2, 0]
+006de88d  call [905] ; 
+006de890  local.get [1]
+006de892  i32.const [4036028] ; STRING " isClosed:"
+006de897  i32.load [2, 0]
+006de89a  i32.store [2, 28]
+006de89d  i32.const [3928952]
+006de8a2  i32.load [2, 0]
+006de8a5  call [901] ; 
+006de8a8  local.get [0]
+006de8aa  i32.const [69]
+006de8ad  i32.add []
+006de8ae  i32.const [0]
+006de8b0  call [1148] ; Boolean.ToString
+006de8b3  local.set [3]
+006de8b5  local.get [1]
+006de8b7  local.get [3]
+006de8b9  call [905] ; 
+006de8bc  local.get [1]
+006de8be  local.get [3]
+006de8c0  i32.store [2, 32]
+006de8c3  local.get [1]
+006de8c5  i32.const [0]
+006de8c7  call [1024] ; String.Concat
+006de8ca  i32.const [0]
+006de8cc  call [999] ; XYXLOG.Log
+006de8cf  local.get [0]
+006de8d1  i32.load8_u [0, 69]
+006de8d4  i32.eqz []
+006de8d5  if [-64]
+006de8d7    local.get [0]
+006de8d9    i32.const [1]
+006de8db    i32.const [3984736]
+006de8e0    i32.load [2, 0]
+006de8e3    call [1728] ; 
+006de8e6    i32.load8_u [0, 76]
+006de8e9    i32.eqz []
+006de8ea    i32.const [0]
+006de8ec    call [2710] ; DAUAdsAdapter.notifyShowAd
+006de8ef  end []
+006de8f0  i32.const [0]
+006de8f2  call [9578] ; WXAmsMgr.REWARD_AD_SHOW
+006de8f5  local.get [2]
+006de8f7  i32.const [16]
+006de8f9  i32.add []
+006de8fa  global.set [0]
+006de8fc  end []

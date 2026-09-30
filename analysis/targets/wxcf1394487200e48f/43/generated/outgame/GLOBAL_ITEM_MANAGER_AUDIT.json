@@ -1,0 +1,116 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "status": "price_random_shared_provider_implemented_power_and_account_pending",
+  "sourceMethodsIndexed": 1774,
+  "registeredTypeIndex": 4500,
+  "source": [
+    "global-item-fields.json",
+    "disassembly/Type4542-34588.txt",
+    "disassembly/Type4542-34576.txt",
+    "disassembly/Type4542-34579.txt",
+    "disassembly/Type4542-34580.txt"
+  ],
+  "confirmed": [
+    "Init stores IItemDataFunction host then decodes record; null creates lists and timestamps-1",
+    "Init gets current time, converts to timestamp, SynServerTime, invokes item/product initialization methods, sets dirty and registers statistics callback",
+    "GetNowDateTime with nonnull host invokes interface slot4 twice and returns second result; null host uses DateTime.Now",
+    "SynServerTime writes data.saveTimestamp and installs update handle only if absent",
+    "OnSave rebuilds source lists from runtime state then updates timestamp and serializes record"
+  ],
+  "implementation": "OutgameItemRecords.cs",
+  "checks": 490,
+  "productionConnected": false,
+  "pending": [
+    "Verify native wasm power versus Unity rounding boundaries and connect source config",
+    "Implement reward side effects and statistics bus production host",
+    "Connect real ItemManager4500 registration provider; keep LocalData Int32 inventory distinct",
+    "Trace StoreDataManager manual activation separately"
+  ],
+  "indexImplementation": {
+    "files": [
+      "OutgameGlobalItemIndexes.cs",
+      "OutgameItemRecords.cs"
+    ],
+    "checks": 493,
+    "source": [
+      "global-item-init-generics.json"
+    ],
+    "cloneEvidence": "ItemUserData.Clone/ProductUserData.Clone share wasmcode1 function1361 with Object.MemberwiseClone metadata3953; native wrapper table109131",
+    "detail": "Config-qualified dictionary Add; duplicate failure retains earlier entries; source field40/44 snapshots are memberwise clones; nested references stay shared; haveBuyTimes self-write not corrected."
+  },
+  "saveImplementation": {
+    "files": [
+      "OutgameGlobalItemPersistence.cs"
+    ],
+    "checks": 496,
+    "source": [
+      "global-item-save-generics.json"
+    ],
+    "detail": "Product then item live lists rebuilt in place before timestamp; no snapshot or dirty mutation; original double clock callback and reentrant Data target behavior preserved."
+  },
+  "timestampImplementation": {
+    "files": [
+      "OutgameGlobalItemPersistence.cs"
+    ],
+    "checks": 497,
+    "source": [
+      "item-timestamp-evidence.json"
+    ],
+    "detail": "1970-01-01 08:00:00 unspecified epoch, direct DateTime subtraction and Int64 milliseconds; default persistence converter connected."
+  },
+  "lifecycleImplementation": {
+    "files": [
+      "OutgameGlobalItemLifecycle.cs"
+    ],
+    "checks": 500,
+    "source": [
+      "global-item-lifecycle-generics.json"
+    ],
+    "detail": "Init decode/time/handle/indexes/dirty/statistics order; handle0 valid; repeat init retains handle; failed add/remove and duplicate index preserve original partial state; statistics callback Int32 unbox to Int64 count."
+  },
+  "productUpdateImplementation": {
+    "files": [
+      "OutgameProductUpdates.cs",
+      "OutgameGlobalItemLifecycle.cs"
+    ],
+    "checks": 504,
+    "source": [
+      "global-item-update-generics.json",
+      "product-config-fields.json"
+    ],
+    "detail": "Original update schedule, interval catchup without multiple grants, hours/weekdays, strict boundary, overflow and month-end exception preserved. Lifecycle overload registers actual scheduler. Reset engine and IItemManager.Update implementation still dependencies."
+  },
+  "productResetImplementation": {
+    "files": [
+      "OutgameProductResets.cs",
+      "OutgameItemRecords.cs"
+    ],
+    "checks": 506,
+    "source": [
+      "product-reset-generics.json",
+      "product-buy-count-evidence.json"
+    ],
+    "detail": "Original reset mode branches, price callback order, dirty update, config-id snapshot and ordered UI messages; scheduler integration tested. Prior flat HaveBuyCounts model superseded by original nested ProductBuyCount wire."
+  },
+  "priceSourceEvidence": "PRODUCT_PRICE_AUDIT.json",
+  "priceImplementation": {
+    "files": [
+      "OutgameProductPrices.cs"
+    ],
+    "checks": 509,
+    "source": [
+      "product-price-control-flow.json",
+      "product-price-generics.json"
+    ],
+    "detail": "Six array/scalar modes, separate purchase counts, compact indexes, allocation, original arithmetic and exception scopes. Resets call real formula implementation. Random and power delegates remain required source platform dependencies."
+  },
+  "randomImplementation": {
+    "files": [
+      "GameRandomSource.cs",
+      "OutgameProductPrices.cs",
+      "BattleView.cs"
+    ],
+    "checks": 511,
+    "detail": "Shared managed source; inclusive range and list overload dispatch; empty list and upper overflow preserve source failure. Seeded interleaving verified; original seed/timing not claimed."
+  }
+}

@@ -1,0 +1,48 @@
+; Original class: PVPController
+; Type4009.xPZNj^m; wasmcode function 7480; offset=3600298 size=131
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0036efad  i32.const [5008596]
+0036efb2  i32.load8_u [0, 0]
+0036efb5  i32.eqz []
+0036efb6  if [-64]
+0036efb8    i32.const [3947148]
+0036efbd    call [900] ; 
+0036efc0    i32.const [3944712]
+0036efc5    call [900] ; 
+0036efc8    i32.const [4009212] ; METHOD PVPController.OnGamePlayState
+0036efcd    call [900] ; 
+0036efd0    i32.const [5008596]
+0036efd5    i32.const [1]
+0036efd7    i32.store8 [0, 0]
+0036efda  end []
+0036efdb  i32.const [3944712]
+0036efe0  i32.load [2, 0]
+0036efe3  call [901] ; 
+0036efe6  i32.const [3944712]
+0036efeb  i32.load [2, 0]
+0036efee  i32.load [2, 92]
+0036eff1  i32.load [2, 4]
+0036eff4  local.set [2]
+0036eff6  i32.const [3947148]
+0036effb  i32.load [2, 0]
+0036effe  call [903] ; 
+0036f001  local.set [3]
+0036f003  local.get [3]
+0036f005  local.get [0]
+0036f007  i32.const [4009212] ; METHOD PVPController.OnGamePlayState
+0036f00c  i32.load [2, 0]
+0036f00f  i32.const [0]
+0036f011  call [1067] ; EventHandler..ctor
+0036f014  local.get [1]
+0036f016  if [-64]
+0036f018    local.get [2]
+0036f01a    local.get [3]
+0036f01c    i32.const [0]
+0036f01e    call [1146] ; MsgDispatcher.AddEventListener
+0036f021    return []
+0036f022  end []
+0036f023  local.get [2]
+0036f025  local.get [3]
+0036f027  i32.const [0]
+0036f029  call [1185] ; MsgDispatcher.RemoveEventListener
+0036f02c  end []

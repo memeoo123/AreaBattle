@@ -1,0 +1,3014 @@
+; MineGameMain.l{t; wasmcode1 function 56561; offset=18529556 size=140
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011abd15  i32.const [5010120]
+011abd1a  i32.load8_u [0, 0]
+011abd1d  i32.eqz []
+011abd1e  if [-64]
+011abd20    i32.const [3928740] ; type: BigNumExtension
+011abd25    i32.const [1605]
+011abd28    call_indirect [0, 0]
+011abd2b    i32.const [3937964] ; type: ReportManager
+011abd30    i32.const [1605]
+011abd33    call_indirect [0, 0]
+011abd36    i32.const [5010120]
+011abd3b    i32.const [1]
+011abd3d    i32.store8 [0, 0]
+011abd40  end []
+011abd41  i32.const [3937964] ; type: ReportManager
+011abd46  i32.load [2, 0]
+011abd49  i32.const [1149]
+011abd4c  call_indirect [0, 0]
+011abd4f  i32.const [3937964] ; type: ReportManager
+011abd54  i32.load [2, 0]
+011abd57  i32.load [2, 92]
+011abd5a  i32.const [1]
+011abd5c  i32.store [2, 4]
+011abd5f  i32.const [0]
+011abd61  i32.const [0]
+011abd63  i32.const [55601]
+011abd67  call_indirect [4, 0]
+011abd6a  i32.const [0]
+011abd6c  i32.const [9388] ; table candidate: ConfigMgr.get_Instance
+011abd70  call_indirect [2, 0]
+011abd73  i32.const [0]
+011abd75  call [30616] ; ConfigMgr.tUoqgMq
+011abd79  local.set [0]
+011abd7b  i32.const [3928740] ; type: BigNumExtension
+011abd80  i32.load [2, 0]
+011abd83  i32.const [1149]
+011abd86  call_indirect [0, 0]
+011abd89  local.get [0]
+011abd8b  i32.const [0]
+011abd8d  i32.const [25378]
+011abd91  call_indirect [4, 0]
+011abd94  i32.const [-43]
+011abd96  i32.const [0]
+011abd98  i32.const [51816]
+011abd9c  call_indirect [4, 0]
+011abd9f  end []
+
+; MineGameMain.YuLR{; wasmcode function 18537; offset=8352063 size=86
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007f7140  i32.const [5010121]
+007f7145  i32.load8_u [0, 0]
+007f7148  i32.eqz []
+007f7149  if [-64]
+007f714b    i32.const [4049220] ; literal: 'ConfigLoadOver'
+007f7150    call [900] ; 
+007f7153    i32.const [5010121]
+007f7158    i32.const [1]
+007f715a    i32.store8 [0, 0]
+007f715d  end []
+007f715e  local.get [0]
+007f7160  i32.const [4049220] ; literal: 'ConfigLoadOver'
+007f7165  i32.load [2, 0]
+007f7168  local.get [0]
+007f716a  call [2125] ; MineGameMain.O{P^xr
+007f716d  local.get [0]
+007f716f  call [1060] ; ConfigMgr.get_Instance
+007f7172  drop []
+007f7173  local.get [0]
+007f7175  local.get [1]
+007f7177  local.get [0]
+007f7179  call [12784] ; ConfigMgr.SetConfigABRes
+007f717c  local.get [0]
+007f717e  call [1060] ; ConfigMgr.get_Instance
+007f7181  local.get [0]
+007f7183  call [12786] ; ConfigMgr.Initialize
+007f7186  local.get [0]
+007f7188  i32.const [1]
+007f718a  i32.store8 [0, 36]
+007f718d  local.get [0]
+007f718f  local.get [0]
+007f7191  call [11336] ; MineGameMain.~SW
+007f7194  end []
+
+; MineGameMain.OnApplicationFocus; wasmcode function 18540; offset=8352481 size=649
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f72e4  global.get [0]
+007f72e6  i32.const [48]
+007f72e8  i32.sub []
+007f72e9  local.set [2]
+007f72eb  local.get [2]
+007f72ed  global.set [0]
+007f72ef  local.get [2]
+007f72f1  local.get [1]
+007f72f3  i32.store8 [0, 47]
+007f72f6  i32.const [5010122]
+007f72fb  i32.load8_u [0, 0]
+007f72fe  i32.eqz []
+007f72ff  if [-64]
+007f7301    i32.const [3989352]
+007f7306    call [900] ; 
+007f7309    i32.const [3928952] ; type: Boolean
+007f730e    call [900] ; 
+007f7311    i32.const [3929208] ; type: CLog
+007f7316    call [900] ; 
+007f7319    i32.const [3953440]
+007f731e    call [900] ; 
+007f7321    i32.const [3953480]
+007f7326    call [900] ; 
+007f7329    i32.const [3930256] ; type: DataManagerPool
+007f732e    call [900] ; 
+007f7331    i32.const [3932476] ; type: GlobalData
+007f7336    call [900] ; 
+007f7339    i32.const [3935996] ; type: MineGameMain
+007f733e    call [900] ; 
+007f7341    i32.const [3926996]
+007f7346    call [900] ; 
+007f7349    i32.const [4018328]
+007f734e    call [900] ; 
+007f7351    i32.const [4018480]
+007f7356    call [900] ; 
+007f7359    i32.const [3941104] ; type: UserDataPrefs
+007f735e    call [900] ; 
+007f7361    i32.const [4105300] ; literal: '游戏失去焦点，开始上传数据'
+007f7366    call [900] ; 
+007f7369    i32.const [4064432] ; literal: 'OnApplicationFocus：'
+007f736e    call [900] ; 
+007f7371    i32.const [4104316] ; literal: '数据存储完成'
+007f7376    call [900] ; 
+007f7379    i32.const [4055232] ; literal: 'GamePause'
+007f737e    call [900] ; 
+007f7381    i32.const [5010122]
+007f7386    i32.const [1]
+007f7388    i32.store8 [0, 0]
+007f738b  end []
+007f738c  i32.const [3928952] ; type: Boolean
+007f7391  i32.load [2, 0]
+007f7394  call [901] ; 
+007f7397  local.get [2]
+007f7399  i32.const [47]
+007f739b  i32.add []
+007f739c  i32.const [0]
+007f739e  call [1148] ; 
+007f73a1  local.set [1]
+007f73a3  local.get [0]
+007f73a5  i32.const [4064432] ; literal: 'OnApplicationFocus：'
+007f73aa  i32.load [2, 0]
+007f73ad  local.get [1]
+007f73af  i32.const [0]
+007f73b1  call [921] ; 
+007f73b4  local.get [2]
+007f73b6  call [2125] ; MineGameMain.O{P^xr
+007f73b9  block [-64]
+007f73bb    i32.const [3935996] ; type: MineGameMain
+007f73c0    i32.load [2, 0]
+007f73c3    i32.load [2, 92]
+007f73c6    i32.load8_u [0, 0]
+007f73c9    i32.eqz []
+007f73ca    br_if [0]
+007f73cc    i32.const [3932476] ; type: GlobalData
+007f73d1    i32.load [2, 0]
+007f73d4    call [901] ; 
+007f73d7    i32.const [4988221]
+007f73dc    i32.load8_u [0, 0]
+007f73df    i32.eqz []
+007f73e0    if [-64]
+007f73e2      i32.const [3932476] ; type: GlobalData
+007f73e7      call [900] ; 
+007f73ea      i32.const [4988221]
+007f73ef      i32.const [1]
+007f73f1      i32.store8 [0, 0]
+007f73f4    end []
+007f73f5    i32.const [3932476] ; type: GlobalData
+007f73fa    i32.load [2, 0]
+007f73fd    call [901] ; 
+007f7400    i32.const [3932476] ; type: GlobalData
+007f7405    i32.load [2, 0]
+007f7408    i32.load [2, 92]
+007f740b    i32.load8_u [0, 28]
+007f740e    i32.eqz []
+007f740f    if [-64]
+007f7411      i32.const [3926996]
+007f7416      i32.load [2, 0]
+007f7419      i32.const [1]
+007f741b      call [909] ; 
+007f741e      local.set [1]
+007f7420      local.get [2]
+007f7422      local.get [2]
+007f7424      i32.load8_u [0, 47]
+007f7427      i32.const [1]
+007f7429      i32.xor []
+007f742a      i32.store8 [0, 46]
+007f742d      i32.const [3928952] ; type: Boolean
+007f7432      i32.load [2, 0]
+007f7435      local.get [2]
+007f7437      i32.const [46]
+007f7439      i32.add []
+007f743a      call [910] ; 
+007f743d      local.set [3]
+007f743f      local.get [1]
+007f7441      local.get [3]
+007f7443      call [905] ; 
+007f7446      local.get [1]
+007f7448      local.get [3]
+007f744a      i32.store [2, 16]
+007f744d      i32.const [4055232] ; literal: 'GamePause'
+007f7452      i32.load [2, 0]
+007f7455      local.get [1]
+007f7457      i32.const [0]
+007f7459      call [1230] ; 
+007f745c    end []
+007f745d    local.get [2]
+007f745f    i32.load8_u [0, 47]
+007f7462    br_if [0]
+007f7464    block [-64]
+007f7466      i32.const [0]
+007f7468      call [1143] ; GameModule.get_UI
+007f746b      i32.const [4018328]
+007f7470      i32.load [2, 0]
+007f7473      call [1503] ; 
+007f7476      i32.eqz []
+007f7477      br_if [0]
+007f7479      i32.const [3953440]
+007f747e      i32.load [2, 0]
+007f7481      call [935] ; 
+007f7484      i32.load [2, 8]
+007f7487      i32.const [6]
+007f7489      i32.ne []
+007f748a      br_if [0]
+007f748c      i32.const [3953480]
+007f7491      i32.load [2, 0]
+007f7494      call [935] ; 
+007f7497      i32.load8_u [0, 8]
+007f749a      br_if [0]
+007f749c      i32.const [0]
+007f749e      call [1143] ; GameModule.get_UI
+007f74a1      i32.const [3989352]
+007f74a6      i32.load [2, 0]
+007f74a9      call [1032] ; 
+007f74ac      i32.const [4018480]
+007f74b1      i32.load [2, 0]
+007f74b4      call [1367] ; 
+007f74b7      drop []
+007f74b8    end []
+007f74b9    i32.const [3926996]
+007f74be    i32.load [2, 0]
+007f74c1    i32.const [1]
+007f74c3    call [909] ; 
+007f74c6    local.set [1]
+007f74c8    local.get [1]
+007f74ca    i32.const [4105300] ; literal: '游戏失去焦点，开始上传数据'
+007f74cf    i32.load [2, 0]
+007f74d2    call [905] ; 
+007f74d5    local.get [1]
+007f74d7    i32.const [4105300] ; literal: '游戏失去焦点，开始上传数据'
+007f74dc    i32.load [2, 0]
+007f74df    i32.store [2, 16]
+007f74e2    i32.const [3929208] ; type: CLog
+007f74e7    i32.load [2, 0]
+007f74ea    call [901] ; 
+007f74ed    local.get [2]
+007f74ef    i64.const [4575657221408423936]
+007f74f9    i64.store [3, 32]
+007f74fc    local.get [2]
+007f74fe    i64.const [4575657221408423936]
+007f7508    i64.store [3, 16]
+007f750b    local.get [2]
+007f750d    i64.const [1065353216]
+007f7513    i64.store [3, 24]
+007f7516    local.get [2]
+007f7518    i64.const [1065353216]
+007f751e    i64.store [3, 8]
+007f7521    local.get [2]
+007f7523    i32.const [8]
+007f7525    i32.add []
+007f7526    local.get [1]
+007f7528    i32.const [0]
+007f752a    call [1867] ; 
+007f752d    i32.const [3941104] ; type: UserDataPrefs
+007f7532    i32.load [2, 0]
+007f7535    call [901] ; 
+007f7538    i32.const [0]
+007f753a    call [1820] ; 
+007f753d    i32.const [3930256] ; type: DataManagerPool
+007f7542    i32.load [2, 0]
+007f7545    call [901] ; 
+007f7548    i32.const [0]
+007f754a    call [1309] ; 
+007f754d    i32.const [0]
+007f754f    call [2323] ; 
+007f7552    local.get [0]
+007f7554    i32.const [4104316] ; literal: '数据存储完成'
+007f7559    i32.load [2, 0]
+007f755c    local.get [2]
+007f755e    call [2125] ; MineGameMain.O{P^xr
+007f7561  end []
+007f7562  local.get [2]
+007f7564  i32.const [48]
+007f7566  i32.add []
+007f7567  global.set [0]
+007f7569  end []
+
+; MineGameMain.O{P^xr; wasmcode function 2125; offset=661139 size=95
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000a1694  i32.const [5010123]
+000a1699  i32.load8_u [0, 0]
+000a169c  i32.eqz []
+000a169d  if [-64]
+000a169f    i32.const [3929208] ; type: CLog
+000a16a4    call [900] ; 
+000a16a7    i32.const [3926996]
+000a16ac    call [900] ; 
+000a16af    i32.const [5010123]
+000a16b4    i32.const [1]
+000a16b6    i32.store8 [0, 0]
+000a16b9  end []
+000a16ba  local.get [0]
+000a16bc  i32.load8_u [0, 12]
+000a16bf  if [-64]
+000a16c1    i32.const [3926996]
+000a16c6    i32.load [2, 0]
+000a16c9    i32.const [1]
+000a16cb    call [909] ; 
+000a16ce    local.set [0]
+000a16d0    local.get [0]
+000a16d2    local.get [1]
+000a16d4    call [905] ; 
+000a16d7    local.get [0]
+000a16d9    local.get [1]
+000a16db    i32.store [2, 16]
+000a16de    i32.const [3929208] ; type: CLog
+000a16e3    i32.load [2, 0]
+000a16e6    call [901] ; 
+000a16e9    local.get [0]
+000a16eb    i32.const [0]
+000a16ed    call [1069] ; 
+000a16f0  end []
+000a16f1  end []
+
+; MineGameMain.{eNzt]; wasmcode1 function 56567; offset=18531697 size=233
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+011ac574  i32.const [5010124]
+011ac579  i32.load8_u [0, 0]
+011ac57c  i32.eqz []
+011ac57d  if [-64]
+011ac57f    i32.const [3927888] ; type: Action
+011ac584    i32.const [1605]
+011ac587    call_indirect [0, 0]
+011ac58a    i32.const [3989352]
+011ac58f    i32.const [1605]
+011ac592    call_indirect [0, 0]
+011ac595    i32.const [4000624]
+011ac59a    i32.const [1605]
+011ac59d    call_indirect [0, 0]
+011ac5a0    i32.const [3932308] ; type: GameFrameEntry
+011ac5a5    i32.const [1605]
+011ac5a8    call_indirect [0, 0]
+011ac5ab    i32.const [4008016] ; method: MineGameMain.NnO`t
+011ac5b0    i32.const [1605]
+011ac5b3    call_indirect [0, 0]
+011ac5b6    i32.const [4034536] ; literal: ''
+011ac5bb    i32.const [1605]
+011ac5be    call_indirect [0, 0]
+011ac5c1    i32.const [5010124]
+011ac5c6    i32.const [1]
+011ac5c8    i32.store8 [0, 0]
+011ac5cb  end []
+011ac5cc  local.get [0]
+011ac5ce  i32.const [4034536] ; literal: ''
+011ac5d3  i32.load [2, 0]
+011ac5d6  local.get [0]
+011ac5d8  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac5dc  call_indirect [5, 0]
+011ac5df  i32.const [3932308] ; type: GameFrameEntry
+011ac5e4  i32.load [2, 0]
+011ac5e7  i32.const [1149]
+011ac5ea  call_indirect [0, 0]
+011ac5ed  i32.const [4000624]
+011ac5f2  i32.load [2, 0]
+011ac5f5  i32.const [85664]
+011ac5f9  call_indirect [2, 0]
+011ac5fc  local.set [1]
+011ac5fe  i32.const [3927888] ; type: Action
+011ac603  i32.load [2, 0]
+011ac606  i32.const [109007]
+011ac60a  call_indirect [2, 0]
+011ac60d  local.set [2]
+011ac60f  local.get [2]
+011ac611  local.get [0]
+011ac613  i32.const [4008016] ; method: MineGameMain.NnO`t
+011ac618  i32.load [2, 0]
+011ac61b  i32.const [0]
+011ac61d  i32.const [4366]
+011ac620  call_indirect [6, 0]
+011ac623  i32.const [3989352]
+011ac628  i32.load [2, 0]
+011ac62b  i32.const [85927]
+011ac62f  call_indirect [2, 0]
+011ac632  local.set [0]
+011ac634  local.get [1]
+011ac636  local.get [2]
+011ac638  i32.store [2, 12]
+011ac63b  local.get [0]
+011ac63d  local.set [2]
+011ac63f  local.get [1]
+011ac641  i32.load [2, 0]
+011ac644  local.set [0]
+011ac646  local.get [1]
+011ac648  local.get [2]
+011ac64a  local.get [0]
+011ac64c  i32.load [2, 232]
+011ac650  local.get [0]
+011ac652  i32.load [2, 228]
+011ac656  call_indirect [5, 0]
+011ac659  end []
+
+; MineGameMain.fS{|; wasmcode function 18532; offset=8350260 size=186
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007f6a35  i32.const [5010125]
+007f6a3a  i32.load8_u [0, 0]
+007f6a3d  i32.eqz []
+007f6a3e  if [-64]
+007f6a40    i32.const [3989352]
+007f6a45    call [900] ; 
+007f6a48    i32.const [3948068] ; type: LoadAssetCompleteHandler
+007f6a4d    call [900] ; 
+007f6a50    i32.const [4008040] ; method: MineGameMain.YuLR{
+007f6a55    call [900] ; 
+007f6a58    i32.const [3938016] ; type: ResLoadHelper
+007f6a5d    call [900] ; 
+007f6a60    i32.const [3938304] ; type: SDKToolManager
+007f6a65    call [900] ; 
+007f6a68    i32.const [4061112] ; literal: 'LoadingUIShow'
+007f6a6d    call [900] ; 
+007f6a70    i32.const [4086212] ; literal: 'data/config'
+007f6a75    call [900] ; 
+007f6a78    i32.const [5010125]
+007f6a7d    i32.const [1]
+007f6a7f    i32.store8 [0, 0]
+007f6a82  end []
+007f6a83  local.get [0]
+007f6a85  i32.const [4061112] ; literal: 'LoadingUIShow'
+007f6a8a  i32.load [2, 0]
+007f6a8d  local.get [0]
+007f6a8f  call [2125] ; MineGameMain.O{P^xr
+007f6a92  i32.const [3938304] ; type: SDKToolManager
+007f6a97  i32.load [2, 0]
+007f6a9a  i32.load [2, 92]
+007f6a9d  i32.load [2, 0]
+007f6aa0  i32.const [0]
+007f6aa2  call [4827] ; 
+007f6aa5  i32.const [3948068] ; type: LoadAssetCompleteHandler
+007f6aaa  i32.load [2, 0]
+007f6aad  call [903] ; 
+007f6ab0  local.set [1]
+007f6ab2  local.get [1]
+007f6ab4  local.get [0]
+007f6ab6  i32.const [4008040] ; method: MineGameMain.YuLR{
+007f6abb  i32.load [2, 0]
+007f6abe  i32.const [0]
+007f6ac0  call [1853] ; 
+007f6ac3  i32.const [3989352]
+007f6ac8  i32.load [2, 0]
+007f6acb  call [1032] ; 
+007f6ace  local.set [0]
+007f6ad0  i32.const [3938016] ; type: ResLoadHelper
+007f6ad5  i32.load [2, 0]
+007f6ad8  call [901] ; 
+007f6adb  i32.const [4086212] ; literal: 'data/config'
+007f6ae0  i32.load [2, 0]
+007f6ae3  local.get [1]
+007f6ae5  local.get [0]
+007f6ae7  i32.const [0]
+007f6ae9  call [2240] ; 
+007f6aec  drop []
+007f6aed  end []
+
+; MineGameMain.NSe~i; wasmcode function 11337; offset=5575688 size=1457
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00551409  i32.const [5010126]
+0055140e  i32.load8_u [0, 0]
+00551411  i32.eqz []
+00551412  if [-64]
+00551414    i32.const [3953520]
+00551419    call [900] ; 
+0055141c    i32.const [3953592]
+00551421    call [900] ; 
+00551424    i32.const [3953608]
+00551429    call [900] ; 
+0055142c    i32.const [3953416]
+00551431    call [900] ; 
+00551434    i32.const [3953424]
+00551439    call [900] ; 
+0055143c    i32.const [3953432]
+00551441    call [900] ; 
+00551444    i32.const [3953560]
+00551449    call [900] ; 
+0055144c    i32.const [3953320]
+00551451    call [900] ; 
+00551454    i32.const [3953312]
+00551459    call [900] ; 
+0055145c    i32.const [3953368]
+00551461    call [900] ; 
+00551464    i32.const [3953456]
+00551469    call [900] ; 
+0055146c    i32.const [3953504]
+00551471    call [900] ; 
+00551474    i32.const [3953360]
+00551479    call [900] ; 
+0055147c    i32.const [3953328]
+00551481    call [900] ; 
+00551484    i32.const [3953584]
+00551489    call [900] ; 
+0055148c    i32.const [3953568]
+00551491    call [900] ; 
+00551494    i32.const [3953464]
+00551499    call [900] ; 
+0055149c    i32.const [3953512]
+005514a1    call [900] ; 
+005514a4    i32.const [3953600]
+005514a9    call [900] ; 
+005514ac    i32.const [3953488]
+005514b1    call [900] ; 
+005514b4    i32.const [3953384]
+005514b9    call [900] ; 
+005514bc    i32.const [3953624]
+005514c1    call [900] ; 
+005514c4    i32.const [3953576]
+005514c9    call [900] ; 
+005514cc    i32.const [3953544]
+005514d1    call [900] ; 
+005514d4    i32.const [3953376]
+005514d9    call [900] ; 
+005514dc    i32.const [3953552]
+005514e1    call [900] ; 
+005514e4    i32.const [3953440]
+005514e9    call [900] ; 
+005514ec    i32.const [3953496]
+005514f1    call [900] ; 
+005514f4    i32.const [3953616]
+005514f9    call [900] ; 
+005514fc    i32.const [3953304]
+00551501    call [900] ; 
+00551504    i32.const [3953448]
+00551509    call [900] ; 
+0055150c    i32.const [3953480]
+00551511    call [900] ; 
+00551514    i32.const [3953352]
+00551519    call [900] ; 
+0055151c    i32.const [3953528]
+00551521    call [900] ; 
+00551524    i32.const [3953344]
+00551529    call [900] ; 
+0055152c    i32.const [3953336]
+00551531    call [900] ; 
+00551534    i32.const [3953392]
+00551539    call [900] ; 
+0055153c    i32.const [3953400]
+00551541    call [900] ; 
+00551544    i32.const [4000608]
+00551549    call [900] ; 
+0055154c    i32.const [3932308] ; type: GameFrameEntry
+00551551    call [900] ; 
+00551554    i32.const [5010126]
+00551559    i32.const [1]
+0055155b    i32.store8 [0, 0]
+0055155e  end []
+0055155f  i32.const [3932308] ; type: GameFrameEntry
+00551564  i32.load [2, 0]
+00551567  call [901] ; 
+0055156a  i32.const [4000608]
+0055156f  i32.load [2, 0]
+00551572  call [1051] ; 
+00551575  i32.const [3953624]
+0055157a  i32.load [2, 0]
+0055157d  call [935] ; 
+00551580  i32.const [0]
+00551582  i32.const [0]
+00551584  call [1622] ; 
+00551587  i32.const [4000608]
+0055158c  i32.load [2, 0]
+0055158f  call [1051] ; 
+00551592  i32.const [3953336]
+00551597  i32.load [2, 0]
+0055159a  call [935] ; 
+0055159d  i32.const [0]
+0055159f  i32.const [0]
+005515a1  call [1622] ; 
+005515a4  i32.const [4000608]
+005515a9  i32.load [2, 0]
+005515ac  call [1051] ; 
+005515af  i32.const [3953400]
+005515b4  i32.load [2, 0]
+005515b7  call [935] ; 
+005515ba  i32.const [0]
+005515bc  i32.const [0]
+005515be  call [1622] ; 
+005515c1  i32.const [4000608]
+005515c6  i32.load [2, 0]
+005515c9  call [1051] ; 
+005515cc  i32.const [3953384]
+005515d1  i32.load [2, 0]
+005515d4  call [935] ; 
+005515d7  i32.const [0]
+005515d9  i32.const [0]
+005515db  call [1622] ; 
+005515de  i32.const [4000608]
+005515e3  i32.load [2, 0]
+005515e6  call [1051] ; 
+005515e9  i32.const [3953432]
+005515ee  i32.load [2, 0]
+005515f1  call [935] ; 
+005515f4  i32.const [0]
+005515f6  i32.const [0]
+005515f8  call [1622] ; 
+005515fb  i32.const [4000608]
+00551600  i32.load [2, 0]
+00551603  call [1051] ; 
+00551606  i32.const [3953328]
+0055160b  i32.load [2, 0]
+0055160e  call [935] ; 
+00551611  i32.const [0]
+00551613  i32.const [0]
+00551615  call [1622] ; 
+00551618  i32.const [4000608]
+0055161d  i32.load [2, 0]
+00551620  call [1051] ; 
+00551623  i32.const [3953376]
+00551628  i32.load [2, 0]
+0055162b  call [935] ; 
+0055162e  i32.const [0]
+00551630  i32.const [0]
+00551632  call [1622] ; 
+00551635  i32.const [4000608]
+0055163a  i32.load [2, 0]
+0055163d  call [1051] ; 
+00551640  i32.const [3953544]
+00551645  i32.load [2, 0]
+00551648  call [935] ; 
+0055164b  i32.const [0]
+0055164d  i32.const [0]
+0055164f  call [1622] ; 
+00551652  i32.const [4000608]
+00551657  i32.load [2, 0]
+0055165a  call [1051] ; 
+0055165d  i32.const [3953344]
+00551662  i32.load [2, 0]
+00551665  call [935] ; 
+00551668  i32.const [0]
+0055166a  i32.const [0]
+0055166c  call [1622] ; 
+0055166f  i32.const [4000608]
+00551674  i32.load [2, 0]
+00551677  call [1051] ; 
+0055167a  i32.const [3953312]
+0055167f  i32.load [2, 0]
+00551682  call [935] ; 
+00551685  i32.const [0]
+00551687  i32.const [0]
+00551689  call [1622] ; 
+0055168c  i32.const [4000608]
+00551691  i32.load [2, 0]
+00551694  call [1051] ; 
+00551697  i32.const [3953600]
+0055169c  i32.load [2, 0]
+0055169f  call [935] ; 
+005516a2  i32.const [0]
+005516a4  i32.const [0]
+005516a6  call [1622] ; 
+005516a9  i32.const [4000608]
+005516ae  i32.load [2, 0]
+005516b1  call [1051] ; 
+005516b4  i32.const [3953512]
+005516b9  i32.load [2, 0]
+005516bc  call [935] ; 
+005516bf  i32.const [0]
+005516c1  i32.const [0]
+005516c3  call [1622] ; 
+005516c6  i32.const [4000608]
+005516cb  i32.load [2, 0]
+005516ce  call [1051] ; 
+005516d1  i32.const [3953480]
+005516d6  i32.load [2, 0]
+005516d9  call [935] ; 
+005516dc  i32.const [0]
+005516de  i32.const [0]
+005516e0  call [1622] ; 
+005516e3  i32.const [4000608]
+005516e8  i32.load [2, 0]
+005516eb  call [1051] ; 
+005516ee  i32.const [3953304]
+005516f3  i32.load [2, 0]
+005516f6  call [935] ; 
+005516f9  i32.const [0]
+005516fb  i32.const [0]
+005516fd  call [1622] ; 
+00551700  i32.const [4000608]
+00551705  i32.load [2, 0]
+00551708  call [1051] ; 
+0055170b  i32.const [3953320]
+00551710  i32.load [2, 0]
+00551713  call [935] ; 
+00551716  i32.const [0]
+00551718  i32.const [0]
+0055171a  call [1622] ; 
+0055171d  i32.const [4000608]
+00551722  i32.load [2, 0]
+00551725  call [1051] ; 
+00551728  i32.const [3953504]
+0055172d  i32.load [2, 0]
+00551730  call [935] ; 
+00551733  i32.const [0]
+00551735  i32.const [0]
+00551737  call [1622] ; 
+0055173a  i32.const [4000608]
+0055173f  i32.load [2, 0]
+00551742  call [1051] ; 
+00551745  i32.const [3953416]
+0055174a  i32.load [2, 0]
+0055174d  call [935] ; 
+00551750  i32.const [0]
+00551752  i32.const [0]
+00551754  call [1622] ; 
+00551757  i32.const [4000608]
+0055175c  i32.load [2, 0]
+0055175f  call [1051] ; 
+00551762  i32.const [3953352]
+00551767  i32.load [2, 0]
+0055176a  call [935] ; 
+0055176d  i32.const [0]
+0055176f  i32.const [0]
+00551771  call [1622] ; 
+00551774  i32.const [4000608]
+00551779  i32.load [2, 0]
+0055177c  call [1051] ; 
+0055177f  i32.const [3953424]
+00551784  i32.load [2, 0]
+00551787  call [935] ; 
+0055178a  i32.const [0]
+0055178c  i32.const [0]
+0055178e  call [1622] ; 
+00551791  i32.const [4000608]
+00551796  i32.load [2, 0]
+00551799  call [1051] ; 
+0055179c  i32.const [3953440]
+005517a1  i32.load [2, 0]
+005517a4  call [935] ; 
+005517a7  i32.const [0]
+005517a9  i32.const [0]
+005517ab  call [1622] ; 
+005517ae  i32.const [4000608]
+005517b3  i32.load [2, 0]
+005517b6  call [1051] ; 
+005517b9  i32.const [3953456]
+005517be  i32.load [2, 0]
+005517c1  call [935] ; 
+005517c4  i32.const [0]
+005517c6  i32.const [0]
+005517c8  call [1622] ; 
+005517cb  i32.const [4000608]
+005517d0  i32.load [2, 0]
+005517d3  call [1051] ; 
+005517d6  i32.const [3953464]
+005517db  i32.load [2, 0]
+005517de  call [935] ; 
+005517e1  i32.const [0]
+005517e3  i32.const [0]
+005517e5  call [1622] ; 
+005517e8  i32.const [4000608]
+005517ed  i32.load [2, 0]
+005517f0  call [1051] ; 
+005517f3  i32.const [3953560]
+005517f8  i32.load [2, 0]
+005517fb  call [935] ; 
+005517fe  i32.const [0]
+00551800  i32.const [0]
+00551802  call [1622] ; 
+00551805  i32.const [4000608]
+0055180a  i32.load [2, 0]
+0055180d  call [1051] ; 
+00551810  i32.const [3953584]
+00551815  i32.load [2, 0]
+00551818  call [935] ; 
+0055181b  i32.const [0]
+0055181d  i32.const [0]
+0055181f  call [1622] ; 
+00551822  i32.const [4000608]
+00551827  i32.load [2, 0]
+0055182a  call [1051] ; 
+0055182d  i32.const [3953520]
+00551832  i32.load [2, 0]
+00551835  call [935] ; 
+00551838  i32.const [0]
+0055183a  i32.const [0]
+0055183c  call [1622] ; 
+0055183f  i32.const [4000608]
+00551844  i32.load [2, 0]
+00551847  call [1051] ; 
+0055184a  i32.const [3953592]
+0055184f  i32.load [2, 0]
+00551852  call [935] ; 
+00551855  i32.const [0]
+00551857  i32.const [0]
+00551859  call [1622] ; 
+0055185c  i32.const [4000608]
+00551861  i32.load [2, 0]
+00551864  call [1051] ; 
+00551867  i32.const [3953608]
+0055186c  i32.load [2, 0]
+0055186f  call [935] ; 
+00551872  i32.const [0]
+00551874  i32.const [0]
+00551876  call [1622] ; 
+00551879  i32.const [4000608]
+0055187e  i32.load [2, 0]
+00551881  call [1051] ; 
+00551884  i32.const [3953568]
+00551889  i32.load [2, 0]
+0055188c  call [935] ; 
+0055188f  i32.const [0]
+00551891  i32.const [0]
+00551893  call [1622] ; 
+00551896  i32.const [4000608]
+0055189b  i32.load [2, 0]
+0055189e  call [1051] ; 
+005518a1  i32.const [3953576]
+005518a6  i32.load [2, 0]
+005518a9  call [935] ; 
+005518ac  i32.const [0]
+005518ae  i32.const [0]
+005518b0  call [1622] ; 
+005518b3  i32.const [4000608]
+005518b8  i32.load [2, 0]
+005518bb  call [1051] ; 
+005518be  i32.const [3953528]
+005518c3  i32.load [2, 0]
+005518c6  call [935] ; 
+005518c9  i32.const [0]
+005518cb  i32.const [0]
+005518cd  call [1622] ; 
+005518d0  i32.const [4000608]
+005518d5  i32.load [2, 0]
+005518d8  call [1051] ; 
+005518db  i32.const [3953496]
+005518e0  i32.load [2, 0]
+005518e3  call [935] ; 
+005518e6  i32.const [0]
+005518e8  i32.const [0]
+005518ea  call [1622] ; 
+005518ed  i32.const [4000608]
+005518f2  i32.load [2, 0]
+005518f5  call [1051] ; 
+005518f8  i32.const [3953616]
+005518fd  i32.load [2, 0]
+00551900  call [935] ; 
+00551903  i32.const [0]
+00551905  i32.const [0]
+00551907  call [1622] ; 
+0055190a  i32.const [4000608]
+0055190f  i32.load [2, 0]
+00551912  call [1051] ; 
+00551915  i32.const [3953448]
+0055191a  i32.load [2, 0]
+0055191d  call [935] ; 
+00551920  i32.const [0]
+00551922  i32.const [0]
+00551924  call [1622] ; 
+00551927  i32.const [4000608]
+0055192c  i32.load [2, 0]
+0055192f  call [1051] ; 
+00551932  i32.const [3953488]
+00551937  i32.load [2, 0]
+0055193a  call [935] ; 
+0055193d  i32.const [0]
+0055193f  i32.const [0]
+00551941  call [1622] ; 
+00551944  i32.const [4000608]
+00551949  i32.load [2, 0]
+0055194c  call [1051] ; 
+0055194f  i32.const [3953392]
+00551954  i32.load [2, 0]
+00551957  call [935] ; 
+0055195a  i32.const [0]
+0055195c  i32.const [0]
+0055195e  call [1622] ; 
+00551961  i32.const [4000608]
+00551966  i32.load [2, 0]
+00551969  call [1051] ; 
+0055196c  i32.const [3953552]
+00551971  i32.load [2, 0]
+00551974  call [935] ; 
+00551977  i32.const [0]
+00551979  i32.const [0]
+0055197b  call [1622] ; 
+0055197e  i32.const [4000608]
+00551983  i32.load [2, 0]
+00551986  call [1051] ; 
+00551989  i32.const [3953360]
+0055198e  i32.load [2, 0]
+00551991  call [935] ; 
+00551994  i32.const [0]
+00551996  i32.const [0]
+00551998  call [1622] ; 
+0055199b  i32.const [4000608]
+005519a0  i32.load [2, 0]
+005519a3  call [1051] ; 
+005519a6  i32.const [3953368]
+005519ab  i32.load [2, 0]
+005519ae  call [935] ; 
+005519b1  i32.const [0]
+005519b3  i32.const [0]
+005519b5  call [1622] ; 
+005519b8  end []
+
+; MineGameMain.]RciRW; wasmcode function 18539; offset=8352282 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f721d  i32.const [5010127]
+007f7222  i32.load8_u [0, 0]
+007f7225  i32.eqz []
+007f7226  if [-64]
+007f7228    i32.const [3927888] ; type: Action
+007f722d    call [900] ; 
+007f7230    i32.const [3989352]
+007f7235    call [900] ; 
+007f7238    i32.const [4000588]
+007f723d    call [900] ; 
+007f7240    i32.const [3932308] ; type: GameFrameEntry
+007f7245    call [900] ; 
+007f7248    i32.const [4008024] ; method: MineGameMain.eScR
+007f724d    call [900] ; 
+007f7250    i32.const [4078088] ; literal: 'VersionMondule初始化完成'
+007f7255    call [900] ; 
+007f7258    i32.const [5010127]
+007f725d    i32.const [1]
+007f725f    i32.store8 [0, 0]
+007f7262  end []
+007f7263  local.get [0]
+007f7265  i32.const [4078088] ; literal: 'VersionMondule初始化完成'
+007f726a  i32.load [2, 0]
+007f726d  local.get [0]
+007f726f  call [2125] ; MineGameMain.O{P^xr
+007f7272  i32.const [3932308] ; type: GameFrameEntry
+007f7277  i32.load [2, 0]
+007f727a  call [901] ; 
+007f727d  i32.const [4000588]
+007f7282  i32.load [2, 0]
+007f7285  call [1051] ; 
+007f7288  local.set [1]
+007f728a  i32.const [3927888] ; type: Action
+007f728f  i32.load [2, 0]
+007f7292  call [903] ; 
+007f7295  local.set [2]
+007f7297  local.get [2]
+007f7299  local.get [0]
+007f729b  i32.const [4008024] ; method: MineGameMain.eScR
+007f72a0  i32.load [2, 0]
+007f72a3  i32.const [0]
+007f72a5  call [1002] ; 
+007f72a8  i32.const [3989352]
+007f72ad  i32.load [2, 0]
+007f72b0  call [1032] ; 
+007f72b3  local.set [0]
+007f72b5  local.get [1]
+007f72b7  local.get [2]
+007f72b9  i32.store [2, 12]
+007f72bc  local.get [0]
+007f72be  local.set [2]
+007f72c0  local.get [1]
+007f72c2  i32.load [2, 0]
+007f72c5  local.set [0]
+007f72c7  local.get [1]
+007f72c9  local.get [2]
+007f72cb  local.get [0]
+007f72cd  i32.load [2, 232]
+007f72d1  local.get [0]
+007f72d3  i32.load [2, 228]
+007f72d7  global.set [3]
+007f72d9  global.get [3]
+007f72db  call_indirect [2, 0]
+007f72de  end []
+
+; MineGameMain.Awake; wasmcode function 18542; offset=8353308 size=373
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f761f  i32.const [5010128]
+007f7624  i32.load8_u [0, 0]
+007f7627  i32.eqz []
+007f7628  if [-64]
+007f762a    i32.const [3927888] ; type: Action
+007f762f    call [900] ; 
+007f7632    i32.const [3928176] ; type: AppSetting
+007f7637    call [900] ; 
+007f763a    i32.const [3989352]
+007f763f    call [900] ; 
+007f7642    i32.const [3930128] ; type: DBTSDKManager
+007f7647    call [900] ; 
+007f764a    i32.const [4000636]
+007f764f    call [900] ; 
+007f7652    i32.const [3932308] ; type: GameFrameEntry
+007f7657    call [900] ; 
+007f765a    i32.const [4008020] ; method: MineGameMain.]RciRW
+007f765f    call [900] ; 
+007f7662    i32.const [3936516] ; type: Object
+007f7667    call [900] ; 
+007f766a    i32.const [3941104] ; type: UserDataPrefs
+007f766f    call [900] ; 
+007f7672    i32.const [4052604] ; literal: 'Enter MineGameMain'
+007f7677    call [900] ; 
+007f767a    i32.const [5010128]
+007f767f    i32.const [1]
+007f7681    i32.store8 [0, 0]
+007f7684  end []
+007f7685  local.get [0]
+007f7687  i32.const [4052604] ; literal: 'Enter MineGameMain'
+007f768c  i32.load [2, 0]
+007f768f  local.get [0]
+007f7691  call [2125] ; MineGameMain.O{P^xr
+007f7694  local.get [0]
+007f7696  i32.const [0]
+007f7698  i32.store8 [0, 36]
+007f769b  i32.const [3930128] ; type: DBTSDKManager
+007f76a0  i32.load [2, 0]
+007f76a3  call [901] ; 
+007f76a6  i32.const [0]
+007f76a8  call [6172] ; 
+007f76ab  local.get [0]
+007f76ad  i32.load [2, 16]
+007f76b0  local.set [1]
+007f76b2  i32.const [3928176] ; type: AppSetting
+007f76b7  i32.load [2, 0]
+007f76ba  call [901] ; 
+007f76bd  i32.const [4988220]
+007f76c2  i32.load8_u [0, 0]
+007f76c5  i32.eqz []
+007f76c6  if [-64]
+007f76c8    i32.const [3928176] ; type: AppSetting
+007f76cd    call [900] ; 
+007f76d0    i32.const [4988220]
+007f76d5    i32.const [1]
+007f76d7    i32.store8 [0, 0]
+007f76da  end []
+007f76db  i32.const [3928176] ; type: AppSetting
+007f76e0  i32.load [2, 0]
+007f76e3  call [901] ; 
+007f76e6  i32.const [3928176] ; type: AppSetting
+007f76eb  i32.load [2, 0]
+007f76ee  i32.load [2, 92]
+007f76f1  local.get [1]
+007f76f3  i32.store [2, 28]
+007f76f6  i32.const [3928176] ; type: AppSetting
+007f76fb  i32.load [2, 0]
+007f76fe  i32.load [2, 92]
+007f7701  drop []
+007f7702  i32.const [3936516] ; type: Object
+007f7707  i32.load [2, 0]
+007f770a  call [901] ; 
+007f770d  local.get [0]
+007f770f  i32.const [0]
+007f7711  call [1111] ; 
+007f7714  i32.const [3941104] ; type: UserDataPrefs
+007f7719  i32.load [2, 0]
+007f771c  call [901] ; 
+007f771f  i32.const [0]
+007f7721  call [6842] ; 
+007f7724  i32.const [3932308] ; type: GameFrameEntry
+007f7729  i32.load [2, 0]
+007f772c  call [901] ; 
+007f772f  i32.const [4000636]
+007f7734  i32.load [2, 0]
+007f7737  call [1051] ; 
+007f773a  local.set [1]
+007f773c  i32.const [3927888] ; type: Action
+007f7741  i32.load [2, 0]
+007f7744  call [903] ; 
+007f7747  local.set [2]
+007f7749  local.get [2]
+007f774b  local.get [0]
+007f774d  i32.const [4008020] ; method: MineGameMain.]RciRW
+007f7752  i32.load [2, 0]
+007f7755  i32.const [0]
+007f7757  call [1002] ; 
+007f775a  i32.const [3989352]
+007f775f  i32.load [2, 0]
+007f7762  call [1032] ; 
+007f7765  local.set [0]
+007f7767  local.get [1]
+007f7769  local.get [2]
+007f776b  i32.store [2, 12]
+007f776e  local.get [0]
+007f7770  local.set [2]
+007f7772  local.get [1]
+007f7774  i32.load [2, 0]
+007f7777  local.set [0]
+007f7779  local.get [1]
+007f777b  local.get [2]
+007f777d  local.get [0]
+007f777f  i32.load [2, 232]
+007f7783  local.get [0]
+007f7785  i32.load [2, 228]
+007f7789  global.set [3]
+007f778b  global.get [3]
+007f778d  call_indirect [2, 0]
+007f7790  end []
+
+; MineGameMain.aRgYPnz; wasmcode1 function 56563; offset=18529868 size=791
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+011abe4f  global.get [0]
+011abe51  i32.const [48]
+011abe53  i32.sub []
+011abe54  local.set [2]
+011abe56  local.get [2]
+011abe58  global.set [0]
+011abe5a  local.get [2]
+011abe5c  local.get [1]
+011abe5e  i32.store8 [0, 47]
+011abe61  i32.const [5010129]
+011abe66  i32.load8_u [0, 0]
+011abe69  i32.eqz []
+011abe6a  if [-64]
+011abe6c    i32.const [3989352]
+011abe71    i32.const [1605]
+011abe74    call_indirect [0, 0]
+011abe77    i32.const [3928952] ; type: Boolean
+011abe7c    i32.const [1605]
+011abe7f    call_indirect [0, 0]
+011abe82    i32.const [3929208] ; type: CLog
+011abe87    i32.const [1605]
+011abe8a    call_indirect [0, 0]
+011abe8d    i32.const [3953440]
+011abe92    i32.const [1605]
+011abe95    call_indirect [0, 0]
+011abe98    i32.const [3953480]
+011abe9d    i32.const [1605]
+011abea0    call_indirect [0, 0]
+011abea3    i32.const [3930256] ; type: DataManagerPool
+011abea8    i32.const [1605]
+011abeab    call_indirect [0, 0]
+011abeae    i32.const [3932476] ; type: GlobalData
+011abeb3    i32.const [1605]
+011abeb6    call_indirect [0, 0]
+011abeb9    i32.const [3935996] ; type: MineGameMain
+011abebe    i32.const [1605]
+011abec1    call_indirect [0, 0]
+011abec4    i32.const [3926996]
+011abec9    i32.const [1605]
+011abecc    call_indirect [0, 0]
+011abecf    i32.const [4018328]
+011abed4    i32.const [1605]
+011abed7    call_indirect [0, 0]
+011abeda    i32.const [4018480]
+011abedf    i32.const [1605]
+011abee2    call_indirect [0, 0]
+011abee5    i32.const [3941104] ; type: UserDataPrefs
+011abeea    i32.const [1605]
+011abeed    call_indirect [0, 0]
+011abef0    i32.const [4069212] ; literal: 'SetPanel/textVer'
+011abef5    i32.const [1605]
+011abef8    call_indirect [0, 0]
+011abefb    i32.const [4103748] ; literal: '小时'
+011abf00    i32.const [1605]
+011abf03    call_indirect [0, 0]
+011abf06    i32.const [4075032] ; literal: 'TipMeBg'
+011abf0b    i32.const [1605]
+011abf0e    call_indirect [0, 0]
+011abf11    i32.const [4105240] ; literal: '活跃度表不包含ID:'
+011abf16    i32.const [1605]
+011abf19    call_indirect [0, 0]
+011abf1c    i32.const [5010129]
+011abf21    i32.const [1]
+011abf23    i32.store8 [0, 0]
+011abf26  end []
+011abf27  i32.const [3928952] ; type: Boolean
+011abf2c  i32.load [2, 0]
+011abf2f  i32.const [1149]
+011abf32  call_indirect [0, 0]
+011abf35  local.get [2]
+011abf37  i32.const [47]
+011abf39  i32.add []
+011abf3a  i32.const [0]
+011abf3c  i32.const [68563]
+011abf40  call_indirect [1, 0]
+011abf43  local.set [1]
+011abf45  local.get [0]
+011abf47  i32.const [4069212] ; literal: 'SetPanel/textVer'
+011abf4c  i32.load [2, 0]
+011abf4f  local.get [1]
+011abf51  i32.const [0]
+011abf53  i32.const [1476]
+011abf56  call_indirect [3, 0]
+011abf59  local.get [2]
+011abf5b  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011abf5f  call_indirect [5, 0]
+011abf62  block [-64]
+011abf64    i32.const [3935996] ; type: MineGameMain
+011abf69    i32.load [2, 0]
+011abf6c    i32.load [2, 92]
+011abf6f    i32.load8_u [0, 0]
+011abf72    i32.eqz []
+011abf73    br_if [0]
+011abf75    i32.const [3932476] ; type: GlobalData
+011abf7a    i32.load [2, 0]
+011abf7d    i32.const [1149]
+011abf80    call_indirect [0, 0]
+011abf83    i32.const [4988221]
+011abf88    i32.load8_u [0, 0]
+011abf8b    i32.eqz []
+011abf8c    if [-64]
+011abf8e      i32.const [3932476] ; type: GlobalData
+011abf93      i32.const [1605]
+011abf96      call_indirect [0, 0]
+011abf99      i32.const [4988221]
+011abf9e      i32.const [1]
+011abfa0      i32.store8 [0, 0]
+011abfa3    end []
+011abfa4    i32.const [3932476] ; type: GlobalData
+011abfa9    i32.load [2, 0]
+011abfac    i32.const [1149]
+011abfaf    call_indirect [0, 0]
+011abfb2    i32.const [3932476] ; type: GlobalData
+011abfb7    i32.load [2, 0]
+011abfba    i32.load [2, 92]
+011abfbd    i32.load8_u [0, 28]
+011abfc0    i32.eqz []
+011abfc1    if [-64]
+011abfc3      i32.const [3926996]
+011abfc8      i32.load [2, 0]
+011abfcb      i32.const [0]
+011abfcd      i32.const [4408]
+011abfd0      call_indirect [1, 0]
+011abfd3      local.set [1]
+011abfd5      local.get [2]
+011abfd7      local.get [2]
+011abfd9      i32.load8_u [0, 47]
+011abfdc      i32.store8 [0, 46]
+011abfdf      i32.const [3928952] ; type: Boolean
+011abfe4      i32.load [2, 0]
+011abfe7      local.get [2]
+011abfe9      i32.const [46]
+011abfeb      i32.add []
+011abfec      i32.const [1832]
+011abfef      call_indirect [1, 0]
+011abff2      local.set [3]
+011abff4      local.get [1]
+011abff6      local.get [3]
+011abff8      i32.const [1272]
+011abffb      call_indirect [4, 0]
+011abffe      local.get [1]
+011ac000      local.get [3]
+011ac002      i32.store [2, 20]
+011ac005      i32.const [4105240] ; literal: '活跃度表不包含ID:'
+011ac00a      i32.load [2, 0]
+011ac00d      local.get [1]
+011ac00f      i32.const [0]
+011ac011      i32.const [2831]
+011ac014      call_indirect [5, 0]
+011ac017    end []
+011ac018    local.get [2]
+011ac01a    i32.load8_u [0, 47]
+011ac01d    br_if [0]
+011ac01f    block [-64]
+011ac021      i32.const [0]
+011ac023      i32.const [9436] ; table candidate: GameModule.get_UI
+011ac027      call_indirect [2, 0]
+011ac02a      i32.const [4018328]
+011ac02f      i32.load [2, 0]
+011ac032      i32.const [109279]
+011ac036      call_indirect [1, 0]
+011ac039      i32.eqz []
+011ac03a      br_if [0]
+011ac03c      i32.const [3953440]
+011ac041      i32.load [2, 0]
+011ac044      i32.const [10272]
+011ac048      call_indirect [2, 0]
+011ac04b      i32.load [2, 8]
+011ac04e      i32.const [5]
+011ac050      i32.ne []
+011ac051      br_if [0]
+011ac053      i32.const [3953480]
+011ac058      i32.load [2, 0]
+011ac05b      i32.const [10272]
+011ac05f      call_indirect [2, 0]
+011ac062      i32.load8_u [0, 8]
+011ac065      br_if [0]
+011ac067      i32.const [0]
+011ac069      i32.const [9436] ; table candidate: GameModule.get_UI
+011ac06d      call_indirect [2, 0]
+011ac070      i32.const [3989352]
+011ac075      i32.load [2, 0]
+011ac078      i32.const [85927]
+011ac07c      call_indirect [2, 0]
+011ac07f      i32.const [4018480]
+011ac084      i32.load [2, 0]
+011ac087      i32.const [10047]
+011ac08b      call_indirect [3, 0]
+011ac08e      drop []
+011ac08f    end []
+011ac090    i32.const [3926996]
+011ac095    i32.load [2, 0]
+011ac098    i32.const [0]
+011ac09a    i32.const [4408]
+011ac09d    call_indirect [1, 0]
+011ac0a0    local.set [1]
+011ac0a2    local.get [1]
+011ac0a4    i32.const [4103748] ; literal: '小时'
+011ac0a9    i32.load [2, 0]
+011ac0ac    i32.const [1272]
+011ac0af    call_indirect [4, 0]
+011ac0b2    local.get [1]
+011ac0b4    i32.const [4103748] ; literal: '小时'
+011ac0b9    i32.load [2, 0]
+011ac0bc    i32.store [2, 20]
+011ac0bf    i32.const [3929208] ; type: CLog
+011ac0c4    i32.load [2, 0]
+011ac0c7    i32.const [1149]
+011ac0ca    call_indirect [0, 0]
+011ac0cd    local.get [2]
+011ac0cf    i64.const [4575657221408423936]
+011ac0d9    i64.store [3, 32]
+011ac0dc    local.get [2]
+011ac0de    i64.const [4575657221408423936]
+011ac0e8    i64.store [3, 16]
+011ac0eb    local.get [2]
+011ac0ed    i64.const [1065353216]
+011ac0f3    i64.store [3, 24]
+011ac0f6    local.get [2]
+011ac0f8    i64.const [1065353216]
+011ac0fe    i64.store [3, 8]
+011ac101    local.get [2]
+011ac103    i32.const [8]
+011ac105    i32.add []
+011ac106    local.get [1]
+011ac108    i32.const [0]
+011ac10a    i32.const [25416]
+011ac10e    call_indirect [5, 0]
+011ac111    i32.const [3941104] ; type: UserDataPrefs
+011ac116    i32.load [2, 0]
+011ac119    i32.const [1149]
+011ac11c    call_indirect [0, 0]
+011ac11f    i32.const [0]
+011ac121    i32.const [25239]
+011ac125    call_indirect [0, 0]
+011ac128    i32.const [3930256] ; type: DataManagerPool
+011ac12d    i32.load [2, 0]
+011ac130    i32.const [1149]
+011ac133    call_indirect [0, 0]
+011ac136    i32.const [0]
+011ac138    i32.const [2246]
+011ac13b    call_indirect [2, 0]
+011ac13e    i32.const [0]
+011ac140    i32.const [24598]
+011ac144    call_indirect [4, 0]
+011ac147    local.get [0]
+011ac149    i32.const [4075032] ; literal: 'TipMeBg'
+011ac14e    i32.load [2, 0]
+011ac151    local.get [2]
+011ac153    i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac157    call_indirect [5, 0]
+011ac15a  end []
+011ac15b  local.get [2]
+011ac15d  i32.const [48]
+011ac15f  i32.add []
+011ac160  global.set [0]
+011ac162  end []
+
+; MineGameMain.~ejn}; wasmcode function 18538; offset=8352151 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007f7198  i32.const [5010130]
+007f719d  i32.load8_u [0, 0]
+007f71a0  i32.eqz []
+007f71a1  if [-64]
+007f71a3    i32.const [4000604]
+007f71a8    call [900] ; 
+007f71ab    i32.const [3932308] ; type: GameFrameEntry
+007f71b0    call [900] ; 
+007f71b3    i32.const [4105060] ; literal: '核心模块初始化完成'
+007f71b8    call [900] ; 
+007f71bb    i32.const [5010130]
+007f71c0    i32.const [1]
+007f71c2    i32.store8 [0, 0]
+007f71c5  end []
+007f71c6  i32.const [3932308] ; type: GameFrameEntry
+007f71cb  i32.load [2, 0]
+007f71ce  call [901] ; 
+007f71d1  i32.const [0]
+007f71d3  call [4419] ; 
+007f71d6  local.get [0]
+007f71d8  i32.const [4105060] ; literal: '核心模块初始化完成'
+007f71dd  i32.load [2, 0]
+007f71e0  local.get [0]
+007f71e2  call [2125] ; MineGameMain.O{P^xr
+007f71e5  i32.const [0]
+007f71e7  call [1910] ; 
+007f71ea  i32.const [0]
+007f71ec  call [5052] ; 
+007f71ef  local.get [0]
+007f71f1  i32.const [1]
+007f71f3  i32.store8 [0, 38]
+007f71f6  i32.const [4000604]
+007f71fb  i32.load [2, 0]
+007f71fe  call [1051] ; 
+007f7201  local.get [0]
+007f7203  i32.load [2, 28]
+007f7206  local.get [0]
+007f7208  i32.load [2, 32]
+007f720b  i32.const [0]
+007f720d  call [4979] ; 
+007f7210  local.get [0]
+007f7212  local.get [0]
+007f7214  call [5880] ; MineGameMain.OcsUh
+007f7217  end []
+
+; MineGameMain.NnO`t; wasmcode function 18541; offset=8353132 size=174
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f756f  i32.const [5010131]
+007f7574  i32.load8_u [0, 0]
+007f7577  i32.eqz []
+007f7578  if [-64]
+007f757a    i32.const [3927888] ; type: Action
+007f757f    call [900] ; 
+007f7582    i32.const [3989352]
+007f7587    call [900] ; 
+007f758a    i32.const [4000632]
+007f758f    call [900] ; 
+007f7592    i32.const [3932308] ; type: GameFrameEntry
+007f7597    call [900] ; 
+007f759a    i32.const [4008036] ; method: MineGameMain.silT
+007f759f    call [900] ; 
+007f75a2    i32.const [5010131]
+007f75a7    i32.const [1]
+007f75a9    i32.store8 [0, 0]
+007f75ac  end []
+007f75ad  i32.const [3932308] ; type: GameFrameEntry
+007f75b2  i32.load [2, 0]
+007f75b5  call [901] ; 
+007f75b8  i32.const [4000632]
+007f75bd  i32.load [2, 0]
+007f75c0  call [1051] ; 
+007f75c3  local.set [1]
+007f75c5  i32.const [3927888] ; type: Action
+007f75ca  i32.load [2, 0]
+007f75cd  call [903] ; 
+007f75d0  local.set [2]
+007f75d2  local.get [2]
+007f75d4  local.get [0]
+007f75d6  i32.const [4008036] ; method: MineGameMain.silT
+007f75db  i32.load [2, 0]
+007f75de  i32.const [0]
+007f75e0  call [1002] ; 
+007f75e3  i32.const [3989352]
+007f75e8  i32.load [2, 0]
+007f75eb  call [1032] ; 
+007f75ee  local.set [0]
+007f75f0  local.get [1]
+007f75f2  local.get [2]
+007f75f4  i32.store [2, 12]
+007f75f7  local.get [0]
+007f75f9  local.set [2]
+007f75fb  local.get [1]
+007f75fd  i32.load [2, 0]
+007f7600  local.set [0]
+007f7602  local.get [1]
+007f7604  local.get [2]
+007f7606  local.get [0]
+007f7608  i32.load [2, 232]
+007f760c  local.get [0]
+007f760e  i32.load [2, 228]
+007f7612  global.set [3]
+007f7614  global.get [3]
+007f7616  call_indirect [2, 0]
+007f7619  end []
+
+; MineGameMain.lZkOT; wasmcode function 11335; offset=5575288 size=62
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00551279  i32.const [5010132]
+0055127e  i32.load8_u [0, 0]
+00551281  i32.eqz []
+00551282  if [-64]
+00551284    i32.const [3947096] ; type: }dgQT}
+00551289    call [900] ; 
+0055128c    i32.const [5010132]
+00551291    i32.const [1]
+00551293    i32.store8 [0, 0]
+00551296  end []
+00551297  i32.const [3947096] ; type: }dgQT}
+0055129c  i32.load [2, 0]
+0055129f  call [903] ; 
+005512a2  local.set [0]
+005512a4  local.get [0]
+005512a6  i32.const [0]
+005512a8  i32.store [2, 8]
+005512ab  local.get [0]
+005512ad  local.get [1]
+005512af  i32.store [2, 16]
+005512b2  local.get [0]
+005512b4  return []
+005512b5  end []
+
+; MineGameMain.LiX]pq; wasmcode1 function 8473; offset=2839294 size=239
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 125)]
+002b5301  global.get [0]
+002b5303  i32.const [32]
+002b5305  i32.sub []
+002b5306  local.set [0]
+002b5308  local.get [0]
+002b530a  global.set [0]
+002b530c  i32.const [5019290]
+002b5311  i32.load8_u [0, 0]
+002b5314  i32.eqz []
+002b5315  if [-64]
+002b5317    i32.const [3941368] ; type: Vector3
+002b531c    i32.const [1605]
+002b531f    call_indirect [0, 0]
+002b5322    i32.const [5019290]
+002b5327    i32.const [1]
+002b5329    i32.store8 [0, 0]
+002b532c  end []
+002b532d  i32.const [3941368] ; type: Vector3
+002b5332  i32.load [2, 0]
+002b5335  i32.load [2, 92]
+002b5338  local.set [1]
+002b533a  local.get [1]
+002b533c  f32.load [2, 24]
+002b533f  f32.const [-9.8100004196167]
+002b5344  f32.mul []
+002b5345  local.set [2]
+002b5347  local.get [1]
+002b5349  f32.load [2, 28]
+002b534c  f32.const [-9.8100004196167]
+002b5351  f32.mul []
+002b5352  local.set [3]
+002b5354  local.get [0]
+002b5356  local.get [1]
+002b5358  f32.load [2, 32]
+002b535b  f32.const [-9.8100004196167]
+002b5360  f32.mul []
+002b5361  f32.store [2, 24]
+002b5364  local.get [0]
+002b5366  local.get [0]
+002b5368  i32.load [2, 24]
+002b536b  i32.store [2, 8]
+002b536e  local.get [0]
+002b5370  local.get [3]
+002b5372  f32.store [2, 20]
+002b5375  local.get [0]
+002b5377  local.get [2]
+002b5379  f32.store [2, 16]
+002b537c  local.get [0]
+002b537e  local.get [0]
+002b5380  i64.load [3, 16]
+002b5383  i64.store [3, 0]
+002b5386  local.get [0]
+002b5388  i32.const [0]
+002b538a  call [4657] ; 
+002b538d  f32.const [0.004999999888241291]
+002b5392  i32.const [0]
+002b5394  call [4656] ; 
+002b5397  f32.const [0.019999999552965164]
+002b539c  i32.const [0]
+002b539e  call [2863] ; 
+002b53a1  i32.const [0]
+002b53a3  i32.const [0]
+002b53a5  i32.const [0]
+002b53a7  call [3833] ; 
+002b53aa  i32.const [0]
+002b53ac  i32.const [0]
+002b53ae  call [4641] ; 
+002b53b1  i32.const [0]
+002b53b3  i32.const [0]
+002b53b5  call [4637] ; 
+002b53b8  i32.const [0]
+002b53ba  i32.const [0]
+002b53bc  call [4636] ; 
+002b53bf  i32.const [0]
+002b53c1  i32.const [0]
+002b53c3  call [4638] ; 
+002b53c6  f32.const [50.0]
+002b53cb  i32.const [0]
+002b53cd  call [4640] ; 
+002b53d0  f32.const [3.0]
+002b53d5  i32.const [0]
+002b53d7  call [4639] ; 
+002b53da  i32.const [0]
+002b53dc  i32.const [0]
+002b53de  i32.const [52129]
+002b53e2  call_indirect [4, 0]
+002b53e5  local.get [0]
+002b53e7  i32.const [32]
+002b53e9  i32.add []
+002b53ea  global.set [0]
+002b53ec  end []
+
+; MineGameMain.Vlsvu; wasmcode1 function 56564; offset=18530661 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011ac166  i32.const [5010133]
+011ac16b  i32.load8_u [0, 0]
+011ac16e  i32.eqz []
+011ac16f  if [-64]
+011ac171    i32.const [4000604]
+011ac176    i32.const [1605]
+011ac179    call_indirect [0, 0]
+011ac17c    i32.const [3932308] ; type: GameFrameEntry
+011ac181    i32.const [1605]
+011ac184    call_indirect [0, 0]
+011ac187    i32.const [4090296] ; literal: 'img_using'
+011ac18c    i32.const [1605]
+011ac18f    call_indirect [0, 0]
+011ac192    i32.const [5010133]
+011ac197    i32.const [1]
+011ac199    i32.store8 [0, 0]
+011ac19c  end []
+011ac19d  i32.const [3932308] ; type: GameFrameEntry
+011ac1a2  i32.load [2, 0]
+011ac1a5  i32.const [1149]
+011ac1a8  call_indirect [0, 0]
+011ac1ab  i32.const [0]
+011ac1ad  i32.const [24391]
+011ac1b1  call_indirect [0, 0]
+011ac1b4  local.get [0]
+011ac1b6  i32.const [4090296] ; literal: 'img_using'
+011ac1bb  i32.load [2, 0]
+011ac1be  local.get [0]
+011ac1c0  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac1c4  call_indirect [5, 0]
+011ac1c7  i32.const [0]
+011ac1c9  i32.const [2292]
+011ac1cc  call_indirect [2, 0]
+011ac1cf  i32.const [0]
+011ac1d1  i32.const [20561]
+011ac1d5  call_indirect [4, 0]
+011ac1d8  local.get [0]
+011ac1da  i32.const [1]
+011ac1dc  i32.store8 [0, 38]
+011ac1df  i32.const [4000604]
+011ac1e4  i32.load [2, 0]
+011ac1e7  i32.const [85664]
+011ac1eb  call_indirect [2, 0]
+011ac1ee  local.get [0]
+011ac1f0  i32.load [2, 28]
+011ac1f3  local.get [0]
+011ac1f5  i32.load [2, 32]
+011ac1f8  i32.const [0]
+011ac1fa  i32.const [24753] ; literal: ''
+011ac1fe  call_indirect [6, 0]
+011ac201  local.get [0]
+011ac203  local.get [0]
+011ac205  i32.const [14109] ; table candidate: MineGameMain.OcsUh
+011ac209  call_indirect [4, 0]
+011ac20c  end []
+
+; MineGameMain.~SW; wasmcode function 11336; offset=5575352 size=334
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005512b9  i32.const [5010134]
+005512be  i32.load8_u [0, 0]
+005512c1  i32.eqz []
+005512c2  if [-64]
+005512c4    i32.const [3947148] ; type: EventHandler
+005512c9    call [900] ; 
+005512cc    i32.const [4000608]
+005512d1    call [900] ; 
+005512d4    i32.const [4000616]
+005512d9    call [900] ; 
+005512dc    i32.const [3932308] ; type: GameFrameEntry
+005512e1    call [900] ; 
+005512e4    i32.const [3935000] ; type: LangFont
+005512e9    call [900] ; 
+005512ec    i32.const [4008012] ; method: MineGameMain.LiZUh
+005512f1    call [900] ; 
+005512f4    i32.const [4009776]
+005512f9    call [900] ; 
+005512fc    i32.const [3937964] ; type: ReportManager
+00551301    call [900] ; 
+00551304    i32.const [4053296] ; literal: 'ExitGame'
+00551309    call [900] ; 
+0055130c    i32.const [4103880] ; literal: '开始初始化进游戏前的逻辑'
+00551311    call [900] ; 
+00551314    i32.const [4103896] ; literal: '开始游戏'
+00551319    call [900] ; 
+0055131c    i32.const [5010134]
+00551321    i32.const [1]
+00551323    i32.store8 [0, 0]
+00551326  end []
+00551327  local.get [0]
+00551329  i32.const [4103880] ; literal: '开始初始化进游戏前的逻辑'
+0055132e  i32.load [2, 0]
+00551331  local.get [0]
+00551333  call [2125] ; MineGameMain.O{P^xr
+00551336  local.get [0]
+00551338  local.get [0]
+0055133a  call [11334] ; MineGameMain.luSmgbx
+0055133d  local.get [0]
+0055133f  local.get [0]
+00551341  call [11333] ; MineGameMain.uMlm
+00551344  local.get [0]
+00551346  local.get [0]
+00551348  call [11337] ; MineGameMain.NSe~i
+0055134b  i32.const [0]
+0055134d  call [2848] ; 
+00551350  i32.const [0]
+00551352  call [8222] ; 
+00551355  i32.const [3932308] ; type: GameFrameEntry
+0055135a  i32.load [2, 0]
+0055135d  call [901] ; 
+00551360  i32.const [4000608]
+00551365  i32.load [2, 0]
+00551368  call [1051] ; 
+0055136b  i32.const [1]
+0055136d  i32.const [0]
+0055136f  call [5881] ; 
+00551372  local.get [0]
+00551374  i32.const [0]
+00551376  i32.store8 [0, 38]
+00551379  local.get [0]
+0055137b  i32.const [1]
+0055137d  i32.store8 [0, 24]
+00551380  i32.const [3935000] ; type: LangFont
+00551385  i32.load [2, 0]
+00551388  call [901] ; 
+0055138b  i32.const [0]
+0055138d  call [11658] ; LangFont.SetLangFont
+00551390  local.get [0]
+00551392  i32.const [4103896] ; literal: '开始游戏'
+00551397  i32.load [2, 0]
+0055139a  local.get [0]
+0055139c  call [2125] ; MineGameMain.O{P^xr
+0055139f  i32.const [0]
+005513a1  call [6054] ; 
+005513a4  i32.const [3937964] ; type: ReportManager
+005513a9  i32.load [2, 0]
+005513ac  call [901] ; 
+005513af  i32.const [3937964] ; type: ReportManager
+005513b4  i32.load [2, 0]
+005513b7  i32.load [2, 92]
+005513ba  i32.load [2, 8]
+005513bd  i32.const [0]
+005513bf  call [5757] ; 
+005513c2  i32.const [3947148] ; type: EventHandler
+005513c7  i32.load [2, 0]
+005513ca  call [903] ; 
+005513cd  local.set [1]
+005513cf  local.get [1]
+005513d1  local.get [0]
+005513d3  i32.const [4008012] ; method: MineGameMain.LiZUh
+005513d8  i32.load [2, 0]
+005513db  i32.const [0]
+005513dd  call [1067] ; 
+005513e0  i32.const [4053296] ; literal: 'ExitGame'
+005513e5  i32.load [2, 0]
+005513e8  local.get [1]
+005513ea  i32.const [0]
+005513ec  call [1146] ; 
+005513ef  i32.const [4000616]
+005513f4  i32.load [2, 0]
+005513f7  call [1051] ; 
+005513fa  i32.const [4009776]
+005513ff  i32.load [2, 0]
+00551402  call [11036] ; 
+00551405  end []
+
+; MineGameMain.LiZUh; wasmcode1 function 56569; offset=18532064 size=243
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+011ac6e1  i32.const [5010135]
+011ac6e6  i32.load8_u [0, 0]
+011ac6e9  i32.eqz []
+011ac6ea  if [-64]
+011ac6ec    i32.const [3934192] ; type: IapManager
+011ac6f1    i32.const [1605]
+011ac6f4    call_indirect [0, 0]
+011ac6f7    i32.const [3935996] ; type: MineGameMain
+011ac6fc    i32.const [1605]
+011ac6ff    call_indirect [0, 0]
+011ac702    i32.const [3936516] ; type: Object
+011ac707    i32.const [1605]
+011ac70a    call_indirect [0, 0]
+011ac70d    i32.const [3941104] ; type: UserDataPrefs
+011ac712    i32.const [1605]
+011ac715    call_indirect [0, 0]
+011ac718    i32.const [4103732] ; literal: '客户端逻辑退出完成，开始释放资源'
+011ac71d    i32.const [1605]
+011ac720    call_indirect [0, 0]
+011ac723    i32.const [5010135]
+011ac728    i32.const [1]
+011ac72a    i32.store8 [0, 0]
+011ac72d  end []
+011ac72e  local.get [0]
+011ac730  i32.const [4103732] ; literal: '客户端逻辑退出完成，开始释放资源'
+011ac735  i32.load [2, 0]
+011ac738  local.get [0]
+011ac73a  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac73e  call_indirect [5, 0]
+011ac741  i32.const [0]
+011ac743  i32.const [24321]
+011ac747  call_indirect [2, 0]
+011ac74a  i32.const [0]
+011ac74c  call [6512] ; 
+011ac74f  local.get [0]
+011ac751  i32.const [1]
+011ac753  i32.store8 [0, 37]
+011ac756  i32.const [3934192] ; type: IapManager
+011ac75b  i32.load [2, 0]
+011ac75e  i32.load [2, 92]
+011ac761  i32.load [2, 0]
+011ac764  i32.const [0]
+011ac766  i32.store [2, 12]
+011ac769  local.get [0]
+011ac76b  i32.const [0]
+011ac76d  i32.const [2414]
+011ac770  call_indirect [1, 0]
+011ac773  local.set [0]
+011ac775  i32.const [3936516] ; type: Object
+011ac77a  i32.load [2, 0]
+011ac77d  i32.const [1149]
+011ac780  call_indirect [0, 0]
+011ac783  local.get [0]
+011ac785  i32.const [0]
+011ac787  i32.const [2825]
+011ac78a  call_indirect [4, 0]
+011ac78d  i32.const [0]
+011ac78f  i32.const [9789]
+011ac793  call_indirect [2, 0]
+011ac796  i32.const [0]
+011ac798  i32.const [2414]
+011ac79b  call_indirect [1, 0]
+011ac79e  i32.const [0]
+011ac7a0  i32.const [2825]
+011ac7a3  call_indirect [4, 0]
+011ac7a6  i32.const [3941104] ; type: UserDataPrefs
+011ac7ab  i32.load [2, 0]
+011ac7ae  i32.const [1149]
+011ac7b1  call_indirect [0, 0]
+011ac7b4  i32.const [0]
+011ac7b6  i32.const [25239]
+011ac7ba  call_indirect [0, 0]
+011ac7bd  i32.const [0]
+011ac7bf  call [5955] ; 
+011ac7c2  i32.const [3935996] ; type: MineGameMain
+011ac7c7  i32.load [2, 0]
+011ac7ca  i32.load [2, 92]
+011ac7cd  i32.const [0]
+011ac7cf  i32.store8 [0, 0]
+011ac7d2  end []
+
+; MineGameMain.~o{ctcp; wasmcode1 function 56566; offset=18530901 size=794
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+011ac258  global.get [0]
+011ac25a  i32.const [48]
+011ac25c  i32.sub []
+011ac25d  local.set [2]
+011ac25f  local.get [2]
+011ac261  global.set [0]
+011ac263  local.get [2]
+011ac265  local.get [1]
+011ac267  i32.store8 [0, 47]
+011ac26a  i32.const [5010136]
+011ac26f  i32.load8_u [0, 0]
+011ac272  i32.eqz []
+011ac273  if [-64]
+011ac275    i32.const [3989352]
+011ac27a    i32.const [1605]
+011ac27d    call_indirect [0, 0]
+011ac280    i32.const [3928952] ; type: Boolean
+011ac285    i32.const [1605]
+011ac288    call_indirect [0, 0]
+011ac28b    i32.const [3929208] ; type: CLog
+011ac290    i32.const [1605]
+011ac293    call_indirect [0, 0]
+011ac296    i32.const [3953440]
+011ac29b    i32.const [1605]
+011ac29e    call_indirect [0, 0]
+011ac2a1    i32.const [3953480]
+011ac2a6    i32.const [1605]
+011ac2a9    call_indirect [0, 0]
+011ac2ac    i32.const [3930256] ; type: DataManagerPool
+011ac2b1    i32.const [1605]
+011ac2b4    call_indirect [0, 0]
+011ac2b7    i32.const [3932476] ; type: GlobalData
+011ac2bc    i32.const [1605]
+011ac2bf    call_indirect [0, 0]
+011ac2c2    i32.const [3935996] ; type: MineGameMain
+011ac2c7    i32.const [1605]
+011ac2ca    call_indirect [0, 0]
+011ac2cd    i32.const [3926996]
+011ac2d2    i32.const [1605]
+011ac2d5    call_indirect [0, 0]
+011ac2d8    i32.const [4018328]
+011ac2dd    i32.const [1605]
+011ac2e0    call_indirect [0, 0]
+011ac2e3    i32.const [4018480]
+011ac2e8    i32.const [1605]
+011ac2eb    call_indirect [0, 0]
+011ac2ee    i32.const [3941104] ; type: UserDataPrefs
+011ac2f3    i32.const [1605]
+011ac2f6    call_indirect [0, 0]
+011ac2f9    i32.const [4106440] ; literal: '阵营信息获取失败，无法判定胜负'
+011ac2fe    i32.const [1605]
+011ac301    call_indirect [0, 0]
+011ac304    i32.const [4101868] ; literal: '{0}{1}'
+011ac309    i32.const [1605]
+011ac30c    call_indirect [0, 0]
+011ac30f    i32.const [4084372] ; literal: 'btn_again'
+011ac314    i32.const [1605]
+011ac317    call_indirect [0, 0]
+011ac31a    i32.const [4095896] ; literal: 'run'
+011ac31f    i32.const [1605]
+011ac322    call_indirect [0, 0]
+011ac325    i32.const [5010136]
+011ac32a    i32.const [1]
+011ac32c    i32.store8 [0, 0]
+011ac32f  end []
+011ac330  i32.const [3928952] ; type: Boolean
+011ac335  i32.load [2, 0]
+011ac338  i32.const [1149]
+011ac33b  call_indirect [0, 0]
+011ac33e  local.get [2]
+011ac340  i32.const [47]
+011ac342  i32.add []
+011ac343  i32.const [0]
+011ac345  i32.const [68563]
+011ac349  call_indirect [1, 0]
+011ac34c  local.set [1]
+011ac34e  local.get [0]
+011ac350  i32.const [4101868] ; literal: '{0}{1}'
+011ac355  i32.load [2, 0]
+011ac358  local.get [1]
+011ac35a  i32.const [0]
+011ac35c  i32.const [1476]
+011ac35f  call_indirect [3, 0]
+011ac362  local.get [2]
+011ac364  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac368  call_indirect [5, 0]
+011ac36b  block [-64]
+011ac36d    i32.const [3935996] ; type: MineGameMain
+011ac372    i32.load [2, 0]
+011ac375    i32.load [2, 92]
+011ac378    i32.load8_u [0, 0]
+011ac37b    i32.eqz []
+011ac37c    br_if [0]
+011ac37e    i32.const [3932476] ; type: GlobalData
+011ac383    i32.load [2, 0]
+011ac386    i32.const [1149]
+011ac389    call_indirect [0, 0]
+011ac38c    i32.const [4988221]
+011ac391    i32.load8_u [0, 0]
+011ac394    i32.eqz []
+011ac395    if [-64]
+011ac397      i32.const [3932476] ; type: GlobalData
+011ac39c      i32.const [1605]
+011ac39f      call_indirect [0, 0]
+011ac3a2      i32.const [4988221]
+011ac3a7      i32.const [1]
+011ac3a9      i32.store8 [0, 0]
+011ac3ac    end []
+011ac3ad    i32.const [3932476] ; type: GlobalData
+011ac3b2    i32.load [2, 0]
+011ac3b5    i32.const [1149]
+011ac3b8    call_indirect [0, 0]
+011ac3bb    i32.const [3932476] ; type: GlobalData
+011ac3c0    i32.load [2, 0]
+011ac3c3    i32.load [2, 92]
+011ac3c6    i32.load8_u [0, 28]
+011ac3c9    i32.eqz []
+011ac3ca    if [-64]
+011ac3cc      i32.const [3926996]
+011ac3d1      i32.load [2, 0]
+011ac3d4      i32.const [0]
+011ac3d6      i32.const [4408]
+011ac3d9      call_indirect [1, 0]
+011ac3dc      local.set [1]
+011ac3de      local.get [2]
+011ac3e0      local.get [2]
+011ac3e2      i32.load8_u [0, 47]
+011ac3e5      i32.const [1]
+011ac3e7      i32.xor []
+011ac3e8      i32.store8 [0, 46]
+011ac3eb      i32.const [3928952] ; type: Boolean
+011ac3f0      i32.load [2, 0]
+011ac3f3      local.get [2]
+011ac3f5      i32.const [46]
+011ac3f7      i32.add []
+011ac3f8      i32.const [1832]
+011ac3fb      call_indirect [1, 0]
+011ac3fe      local.set [3]
+011ac400      local.get [1]
+011ac402      local.get [3]
+011ac404      i32.const [1272]
+011ac407      call_indirect [4, 0]
+011ac40a      local.get [1]
+011ac40c      local.get [3]
+011ac40e      i32.store [2, 20]
+011ac411      i32.const [4106440] ; literal: '阵营信息获取失败，无法判定胜负'
+011ac416      i32.load [2, 0]
+011ac419      local.get [1]
+011ac41b      i32.const [0]
+011ac41d      i32.const [2831]
+011ac420      call_indirect [5, 0]
+011ac423    end []
+011ac424    local.get [2]
+011ac426    i32.load8_u [0, 47]
+011ac429    br_if [0]
+011ac42b    block [-64]
+011ac42d      i32.const [0]
+011ac42f      i32.const [9436] ; table candidate: GameModule.get_UI
+011ac433      call_indirect [2, 0]
+011ac436      i32.const [4018328]
+011ac43b      i32.load [2, 0]
+011ac43e      i32.const [109279]
+011ac442      call_indirect [1, 0]
+011ac445      i32.eqz []
+011ac446      br_if [0]
+011ac448      i32.const [3953440]
+011ac44d      i32.load [2, 0]
+011ac450      i32.const [10272]
+011ac454      call_indirect [2, 0]
+011ac457      i32.load [2, 8]
+011ac45a      i32.const [4]
+011ac45c      i32.ne []
+011ac45d      br_if [0]
+011ac45f      i32.const [3953480]
+011ac464      i32.load [2, 0]
+011ac467      i32.const [10272]
+011ac46b      call_indirect [2, 0]
+011ac46e      i32.load8_u [0, 8]
+011ac471      br_if [0]
+011ac473      i32.const [0]
+011ac475      i32.const [9436] ; table candidate: GameModule.get_UI
+011ac479      call_indirect [2, 0]
+011ac47c      i32.const [3989352]
+011ac481      i32.load [2, 0]
+011ac484      i32.const [85927]
+011ac488      call_indirect [2, 0]
+011ac48b      i32.const [4018480]
+011ac490      i32.load [2, 0]
+011ac493      i32.const [10047]
+011ac497      call_indirect [3, 0]
+011ac49a      drop []
+011ac49b    end []
+011ac49c    i32.const [3926996]
+011ac4a1    i32.load [2, 0]
+011ac4a4    i32.const [0]
+011ac4a6    i32.const [4408]
+011ac4a9    call_indirect [1, 0]
+011ac4ac    local.set [1]
+011ac4ae    local.get [1]
+011ac4b0    i32.const [4095896] ; literal: 'run'
+011ac4b5    i32.load [2, 0]
+011ac4b8    i32.const [1272]
+011ac4bb    call_indirect [4, 0]
+011ac4be    local.get [1]
+011ac4c0    i32.const [4095896] ; literal: 'run'
+011ac4c5    i32.load [2, 0]
+011ac4c8    i32.store [2, 16]
+011ac4cb    i32.const [3929208] ; type: CLog
+011ac4d0    i32.load [2, 0]
+011ac4d3    i32.const [1149]
+011ac4d6    call_indirect [0, 0]
+011ac4d9    local.get [2]
+011ac4db    i64.const [4575657221408423936]
+011ac4e5    i64.store [3, 32]
+011ac4e8    local.get [2]
+011ac4ea    i64.const [4575657221408423936]
+011ac4f4    i64.store [3, 16]
+011ac4f7    local.get [2]
+011ac4f9    i64.const [1065353216]
+011ac4ff    i64.store [3, 24]
+011ac502    local.get [2]
+011ac504    i64.const [1065353216]
+011ac50a    i64.store [3, 8]
+011ac50d    local.get [2]
+011ac50f    i32.const [8]
+011ac511    i32.add []
+011ac512    local.get [1]
+011ac514    i32.const [0]
+011ac516    i32.const [25416]
+011ac51a    call_indirect [5, 0]
+011ac51d    i32.const [3941104] ; type: UserDataPrefs
+011ac522    i32.load [2, 0]
+011ac525    i32.const [1149]
+011ac528    call_indirect [0, 0]
+011ac52b    i32.const [0]
+011ac52d    i32.const [25239]
+011ac531    call_indirect [0, 0]
+011ac534    i32.const [3930256] ; type: DataManagerPool
+011ac539    i32.load [2, 0]
+011ac53c    i32.const [1149]
+011ac53f    call_indirect [0, 0]
+011ac542    i32.const [0]
+011ac544    i32.const [2246]
+011ac547    call_indirect [2, 0]
+011ac54a    i32.const [0]
+011ac54c    i32.const [24598]
+011ac550    call_indirect [4, 0]
+011ac553    local.get [0]
+011ac555    i32.const [4084372] ; literal: 'btn_again'
+011ac55a    i32.load [2, 0]
+011ac55d    local.get [2]
+011ac55f    i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac563    call_indirect [5, 0]
+011ac566  end []
+011ac567  local.get [2]
+011ac569  i32.const [48]
+011ac56b  i32.add []
+011ac56c  global.set [0]
+011ac56e  end []
+
+; MineGameMain.OnApplicationQuit; wasmcode1 function 56568; offset=18531932 size=130
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011ac65d  i32.const [5010137]
+011ac662  i32.load8_u [0, 0]
+011ac665  i32.eqz []
+011ac666  if [-64]
+011ac668    i32.const [3930256] ; type: DataManagerPool
+011ac66d    i32.const [1605]
+011ac670    call_indirect [0, 0]
+011ac673    i32.const [3941104] ; type: UserDataPrefs
+011ac678    i32.const [1605]
+011ac67b    call_indirect [0, 0]
+011ac67e    i32.const [4105312] ; literal: '游戏退出，数据存储完成'
+011ac683    i32.const [1605]
+011ac686    call_indirect [0, 0]
+011ac689    i32.const [5010137]
+011ac68e    i32.const [1]
+011ac690    i32.store8 [0, 0]
+011ac693  end []
+011ac694  i32.const [3941104] ; type: UserDataPrefs
+011ac699  i32.load [2, 0]
+011ac69c  i32.const [1149]
+011ac69f  call_indirect [0, 0]
+011ac6a2  i32.const [0]
+011ac6a4  i32.const [25239]
+011ac6a8  call_indirect [0, 0]
+011ac6ab  i32.const [3930256] ; type: DataManagerPool
+011ac6b0  i32.load [2, 0]
+011ac6b3  i32.const [1149]
+011ac6b6  call_indirect [0, 0]
+011ac6b9  i32.const [0]
+011ac6bb  i32.const [2246]
+011ac6be  call_indirect [2, 0]
+011ac6c1  i32.const [0]
+011ac6c3  i32.const [24598]
+011ac6c7  call_indirect [4, 0]
+011ac6ca  local.get [0]
+011ac6cc  i32.const [4105312] ; literal: '游戏退出，数据存储完成'
+011ac6d1  i32.load [2, 0]
+011ac6d4  local.get [0]
+011ac6d6  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011ac6da  call_indirect [5, 0]
+011ac6dd  end []
+
+; MineGameMain.OcsUh; wasmcode function 5880; offset=2076065 size=87
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001fada2  i32.const [5010138]
+001fada7  i32.load8_u [0, 0]
+001fadaa  i32.eqz []
+001fadab  if [-64]
+001fadad    i32.const [3927888] ; type: Action
+001fadb2    call [900] ; 
+001fadb5    i32.const [4008028] ; method: MineGameMain.fS{|
+001fadba    call [900] ; 
+001fadbd    i32.const [5010138]
+001fadc2    i32.const [1]
+001fadc4    i32.store8 [0, 0]
+001fadc7  end []
+001fadc8  i32.const [3927888] ; type: Action
+001fadcd  i32.load [2, 0]
+001fadd0  call [903] ; 
+001fadd3  local.set [1]
+001fadd5  local.get [1]
+001fadd7  local.get [0]
+001fadd9  i32.const [4008028] ; method: MineGameMain.fS{|
+001fadde  i32.load [2, 0]
+001fade1  i32.const [0]
+001fade3  call [1002] ; 
+001fade6  local.get [0]
+001fade8  local.get [0]
+001fadea  local.get [1]
+001fadec  local.get [0]
+001fadee  call [11335] ; MineGameMain.lZkOT
+001fadf1  i32.const [0]
+001fadf3  call [1227] ; 
+001fadf6  drop []
+001fadf7  end []
+
+; MineGameMain.uMlm; wasmcode function 11333; offset=5574908 size=267
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005510fd  i32.const [5010139]
+00551102  i32.load8_u [0, 0]
+00551105  i32.eqz []
+00551106  if [-64]
+00551108    i32.const [4000616]
+0055110d    call [900] ; 
+00551110    i32.const [3932308] ; type: GameFrameEntry
+00551115    call [900] ; 
+00551118    i32.const [3975752]
+0055111d    call [900] ; 
+00551120    i32.const [3975756]
+00551125    call [900] ; 
+00551128    i32.const [3975748]
+0055112d    call [900] ; 
+00551130    i32.const [3923632]
+00551135    call [900] ; 
+00551138    i32.const [3937256] ; type: ProcedureExitGame
+0055113d    call [900] ; 
+00551140    i32.const [3937260] ; type: ProcedurePreLoad
+00551145    call [900] ; 
+00551148    i32.const [3937264] ; type: ProcedureStarGame
+0055114d    call [900] ; 
+00551150    i32.const [5010139]
+00551155    i32.const [1]
+00551157    i32.store8 [0, 0]
+0055115a  end []
+0055115b  i32.const [3923632]
+00551160  i32.load [2, 0]
+00551163  call [903] ; 
+00551166  local.set [0]
+00551168  local.get [0]
+0055116a  i32.const [3975748]
+0055116f  i32.load [2, 0]
+00551172  call [944] ; 
+00551175  i32.const [3937260] ; type: ProcedurePreLoad
+0055117a  i32.load [2, 0]
+0055117d  call [903] ; 
+00551180  local.set [1]
+00551182  local.get [1]
+00551184  i32.const [0]
+00551186  call [4333] ; ProcedureExitGame..ctor, ProcedurePreLoad..ctor, ProcedureStarGame..ctor
+00551189  local.get [0]
+0055118b  local.get [1]
+0055118d  i32.const [3975752]
+00551192  i32.load [2, 0]
+00551195  call [941] ; 
+00551198  i32.const [3937264] ; type: ProcedureStarGame
+0055119d  i32.load [2, 0]
+005511a0  call [903] ; 
+005511a3  local.set [1]
+005511a5  local.get [1]
+005511a7  i32.const [0]
+005511a9  call [4333] ; ProcedureExitGame..ctor, ProcedurePreLoad..ctor, ProcedureStarGame..ctor
+005511ac  local.get [0]
+005511ae  local.get [1]
+005511b0  i32.const [3975752]
+005511b5  i32.load [2, 0]
+005511b8  call [941] ; 
+005511bb  i32.const [3937256] ; type: ProcedureExitGame
+005511c0  i32.load [2, 0]
+005511c3  call [903] ; 
+005511c6  local.set [1]
+005511c8  local.get [1]
+005511ca  i32.const [0]
+005511cc  call [4333] ; ProcedureExitGame..ctor, ProcedurePreLoad..ctor, ProcedureStarGame..ctor
+005511cf  local.get [0]
+005511d1  local.get [1]
+005511d3  i32.const [3975752]
+005511d8  i32.load [2, 0]
+005511db  call [941] ; 
+005511de  i32.const [3932308] ; type: GameFrameEntry
+005511e3  i32.load [2, 0]
+005511e6  call [901] ; 
+005511e9  i32.const [4000616]
+005511ee  i32.load [2, 0]
+005511f1  call [1051] ; 
+005511f4  local.get [0]
+005511f6  i32.const [3975756]
+005511fb  i32.load [2, 0]
+005511fe  call [1302] ; 
+00551201  i32.const [0]
+00551203  call [11037] ; 
+00551206  end []
+
+; MineGameMain.[O`f; wasmcode1 function 56565; offset=18530830 size=69
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+011ac20f  i32.const [5010140]
+011ac214  i32.load8_u [0, 0]
+011ac217  i32.eqz []
+011ac218  if [-64]
+011ac21a    i32.const [3947096] ; type: }dgQT}
+011ac21f    i32.const [1605]
+011ac222    call_indirect [0, 0]
+011ac225    i32.const [5010140]
+011ac22a    i32.const [1]
+011ac22c    i32.store8 [0, 0]
+011ac22f  end []
+011ac230  i32.const [3947096] ; type: }dgQT}
+011ac235  i32.load [2, 0]
+011ac238  i32.const [109007]
+011ac23c  call_indirect [2, 0]
+011ac23f  local.set [0]
+011ac241  local.get [0]
+011ac243  i32.const [1]
+011ac245  i32.store [2, 8]
+011ac248  local.get [0]
+011ac24a  local.get [1]
+011ac24c  i32.store [2, 16]
+011ac24f  local.get [0]
+011ac251  return []
+011ac252  end []
+
+; MineGameMain.Update; wasmcode function 18535; offset=8350671 size=765
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127), (2, 125)]
+007f6bd4  global.get [0]
+007f6bd6  i32.const [16]
+007f6bd8  i32.sub []
+007f6bd9  local.set [4]
+007f6bdb  local.get [4]
+007f6bdd  global.set [0]
+007f6bdf  i32.const [5010141]
+007f6be4  i32.load8_u [0, 0]
+007f6be7  i32.eqz []
+007f6be8  if [-64]
+007f6bea    i32.const [3932308] ; type: GameFrameEntry
+007f6bef    call [900] ; 
+007f6bf2    i32.const [5010141]
+007f6bf7    i32.const [1]
+007f6bf9    i32.store8 [0, 0]
+007f6bfc  end []
+007f6bfd  local.get [4]
+007f6bff  i32.const [8]
+007f6c01  i32.add []
+007f6c02  local.set [1]
+007f6c04  local.get [1]
+007f6c06  i32.const [0]
+007f6c08  i32.store [2, 4]
+007f6c0b  block [-64]
+007f6c0d    block [-64]
+007f6c0f      block [-64]
+007f6c11        block [-64]
+007f6c13          block [-64]
+007f6c15            local.get [0]
+007f6c17            i32.load8_u [0, 37]
+007f6c1a            br_if [0]
+007f6c1c            local.get [0]
+007f6c1e            i32.load8_u [0, 38]
+007f6c21            if [-64]
+007f6c23              i32.const [0]
+007f6c25              call [1246] ; 
+007f6c28              local.set [5]
+007f6c2a              i32.const [0]
+007f6c2c              call [1563] ; 
+007f6c2f              local.set [6]
+007f6c31              i32.const [3932308] ; type: GameFrameEntry
+007f6c36              i32.load [2, 0]
+007f6c39              call [901] ; 
+007f6c3c              local.get [5]
+007f6c3e              local.get [6]
+007f6c40              i32.const [0]
+007f6c42              call [5059] ; 
+007f6c45            end []
+007f6c46            local.get [0]
+007f6c48            i32.load8_u [0, 24]
+007f6c4b            i32.eqz []
+007f6c4c            br_if [0]
+007f6c4e            i32.const [4477188]
+007f6c53            i32.const [0]
+007f6c55            i32.store [2, 0]
+007f6c58            i32.const [10253]
+007f6c5c            i32.const [0]
+007f6c5e            call [45] ; 
+007f6c60            local.set [5]
+007f6c62            i32.const [4477188]
+007f6c67            i32.load [2, 0]
+007f6c6a            local.set [0]
+007f6c6c            i32.const [4477188]
+007f6c71            i32.const [0]
+007f6c73            i32.store [2, 0]
+007f6c76            block [-64]
+007f6c78              local.get [0]
+007f6c7a              i32.const [1]
+007f6c7c              i32.ne []
+007f6c7d              if [-64]
+007f6c7f                i32.const [4477188]
+007f6c84                i32.const [0]
+007f6c86                i32.store [2, 0]
+007f6c89                i32.const [10254]
+007f6c8d                i32.const [0]
+007f6c8f                call [45] ; 
+007f6c91                local.set [6]
+007f6c93                i32.const [4477188]
+007f6c98                i32.load [2, 0]
+007f6c9b                local.set [0]
+007f6c9d                i32.const [4477188]
+007f6ca2                i32.const [0]
+007f6ca4                i32.store [2, 0]
+007f6ca7                block [-64]
+007f6ca9                  local.get [0]
+007f6cab                  i32.const [1]
+007f6cad                  i32.eq []
+007f6cae                  br_if [0]
+007f6cb0                  i32.const [4477188]
+007f6cb5                  i32.const [0]
+007f6cb7                  i32.store [2, 0]
+007f6cba                  i32.const [1149]
+007f6cbd                  i32.const [3932308] ; type: GameFrameEntry
+007f6cc2                  i32.load [2, 0]
+007f6cc5                  call [11] ; 
+007f6cc7                  i32.const [4477188]
+007f6ccc                  i32.load [2, 0]
+007f6ccf                  local.set [0]
+007f6cd1                  i32.const [4477188]
+007f6cd6                  i32.const [0]
+007f6cd8                  i32.store [2, 0]
+007f6cdb                  local.get [0]
+007f6cdd                  i32.const [1]
+007f6cdf                  i32.eq []
+007f6ce0                  br_if [0]
+007f6ce2                  i32.const [4477188]
+007f6ce7                  i32.const [0]
+007f6ce9                  i32.store [2, 0]
+007f6cec                  i32.const [10255]
+007f6cf0                  local.get [5]
+007f6cf2                  local.get [6]
+007f6cf4                  i32.const [0]
+007f6cf6                  call [353] ; 
+007f6cf9                  i32.const [4477188]
+007f6cfe                  i32.load [2, 0]
+007f6d01                  local.set [0]
+007f6d03                  i32.const [4477188]
+007f6d08                  i32.const [0]
+007f6d0a                  i32.store [2, 0]
+007f6d0d                  local.get [0]
+007f6d0f                  i32.const [1]
+007f6d11                  i32.ne []
+007f6d12                  br_if [3]
+007f6d14                end []
+007f6d15                i32.const [2694968]
+007f6d1a                call [0] ; 
+007f6d1c                local.set [0]
+007f6d1e                br [1]
+007f6d20              end []
+007f6d21              i32.const [2694968]
+007f6d26              call [0] ; 
+007f6d28              local.set [0]
+007f6d2a            end []
+007f6d2b            call [1] ; 
+007f6d2d            i32.const [2694968]
+007f6d32            call [9] ; 
+007f6d34            i32.ne []
+007f6d35            br_if [4]
+007f6d37            local.get [0]
+007f6d39            call [8] ; 
+007f6d3b            local.set [0]
+007f6d3d            i32.const [4477188]
+007f6d42            i32.const [0]
+007f6d44            i32.store [2, 0]
+007f6d47            i32.const [1192]
+007f6d4a            i32.const [3931644] ; type: Exception
+007f6d4f            call [3] ; 
+007f6d51            local.set [2]
+007f6d53            i32.const [4477188]
+007f6d58            i32.load [2, 0]
+007f6d5b            local.set [3]
+007f6d5d            i32.const [4477188]
+007f6d62            i32.const [0]
+007f6d64            i32.store [2, 0]
+007f6d67            local.get [3]
+007f6d69            i32.const [1]
+007f6d6b            i32.eq []
+007f6d6c            br_if [2]
+007f6d6e            local.get [0]
+007f6d70            i32.load [2, 0]
+007f6d73            i32.load [2, 0]
+007f6d76            local.set [3]
+007f6d78            i32.const [4477188]
+007f6d7d            i32.const [0]
+007f6d7f            i32.store [2, 0]
+007f6d82            i32.const [1193]
+007f6d85            local.get [2]
+007f6d87            local.get [3]
+007f6d89            call [2] ; 
+007f6d8b            local.set [2]
+007f6d8d            i32.const [4477188]
+007f6d92            i32.load [2, 0]
+007f6d95            local.set [3]
+007f6d97            i32.const [4477188]
+007f6d9c            i32.const [0]
+007f6d9e            i32.store [2, 0]
+007f6da1            local.get [3]
+007f6da3            i32.const [1]
+007f6da5            i32.eq []
+007f6da6            br_if [2]
+007f6da8            local.get [2]
+007f6daa            i32.eqz []
+007f6dab            br_if [1]
+007f6dad            local.get [1]
+007f6daf            i32.load [2, 4]
+007f6db2            local.set [2]
+007f6db4            local.get [1]
+007f6db6            local.get [2]
+007f6db8            i32.const [2]
+007f6dba            i32.shl []
+007f6dbb            i32.add []
+007f6dbc            local.get [0]
+007f6dbe            i32.load [2, 0]
+007f6dc1            i32.store [2, 0]
+007f6dc4            local.get [1]
+007f6dc6            local.get [2]
+007f6dc8            i32.const [1]
+007f6dca            i32.add []
+007f6dcb            i32.store [2, 4]
+007f6dce            call [15] ; 
+007f6dd0            local.get [1]
+007f6dd2            i32.load [2, 4]
+007f6dd5            i32.const [2]
+007f6dd7            i32.shl []
+007f6dd8            local.get [1]
+007f6dda            i32.add []
+007f6ddb            i32.const [4]
+007f6ddd            i32.sub []
+007f6dde            i32.load [2, 0]
+007f6de1            local.set [0]
+007f6de3            i32.const [3926996]
+007f6de8            call [902] ; 
+007f6deb            i32.const [1]
+007f6ded            call [909] ; 
+007f6df0            local.set [2]
+007f6df2            local.get [2]
+007f6df4            local.get [0]
+007f6df6            call [905] ; 
+007f6df9            local.get [2]
+007f6dfb            local.get [0]
+007f6dfd            i32.store [2, 16]
+007f6e00            i32.const [3929208] ; type: CLog
+007f6e05            call [902] ; 
+007f6e08            call [901] ; 
+007f6e0b            local.get [2]
+007f6e0d            i32.const [0]
+007f6e0f            call [1156] ; 
+007f6e12            local.get [1]
+007f6e14            i32.load [2, 4]
+007f6e17            i32.const [1]
+007f6e19            i32.sub []
+007f6e1a            local.set [0]
+007f6e1c            local.get [1]
+007f6e1e            local.get [0]
+007f6e20            i32.store [2, 4]
+007f6e23            local.get [1]
+007f6e25            local.get [0]
+007f6e27            i32.const [2]
+007f6e29            i32.shl []
+007f6e2a            i32.add []
+007f6e2b            i32.load [2, 0]
+007f6e2e            drop []
+007f6e2f          end []
+007f6e30          local.get [4]
+007f6e32          i32.const [16]
+007f6e34          i32.add []
+007f6e35          global.set [0]
+007f6e37          return []
+007f6e38        end []
+007f6e39        i32.const [4]
+007f6e3b        call [14] ; 
+007f6e3d        local.set [1]
+007f6e3f        local.get [1]
+007f6e41        local.get [0]
+007f6e43        i32.load [2, 0]
+007f6e46        i32.store [2, 0]
+007f6e49        i32.const [4477188]
+007f6e4e        i32.const [0]
+007f6e50        i32.store [2, 0]
+007f6e53        i32.const [1194]
+007f6e56        local.get [1]
+007f6e58        i32.const [2694968]
+007f6e5d        i32.const [0]
+007f6e5f        call [5] ; 
+007f6e61        i32.const [4477188]
+007f6e66        i32.load [2, 0]
+007f6e69        local.set [0]
+007f6e6b        i32.const [4477188]
+007f6e70        i32.const [0]
+007f6e72        i32.store [2, 0]
+007f6e75        local.get [0]
+007f6e77        i32.const [1]
+007f6e79        i32.ne []
+007f6e7a        br_if [1]
+007f6e7c      end []
+007f6e7d      call [6] ; 
+007f6e7f      local.set [0]
+007f6e81      call [1] ; 
+007f6e83      drop []
+007f6e84      i32.const [4477188]
+007f6e89      i32.const [0]
+007f6e8b      i32.store [2, 0]
+007f6e8e      i32.const [214]
+007f6e91      call [7] ; 
+007f6e93      i32.const [4477188]
+007f6e98      i32.load [2, 0]
+007f6e9b      local.set [1]
+007f6e9d      i32.const [4477188]
+007f6ea2      i32.const [0]
+007f6ea4      i32.store [2, 0]
+007f6ea7      local.get [1]
+007f6ea9      i32.const [1]
+007f6eab      i32.ne []
+007f6eac      br_if [1]
+007f6eae      i32.const [0]
+007f6eb0      call [0] ; 
+007f6eb2      drop []
+007f6eb3      call [1] ; 
+007f6eb5      drop []
+007f6eb6      i32.const [109010]
+007f6eba      global.set [3]
+007f6ebc      i32.const [109010]
+007f6ec0      call_indirect [6, 0]
+007f6ec3    end []
+007f6ec4    unreachable []
+007f6ec5  end []
+007f6ec6  local.get [0]
+007f6ec8  call [10] ; 
+007f6eca  unreachable []
+007f6ecb  end []
+
+; MineGameMain.silT; wasmcode function 18536; offset=8351438 size=624
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+007f6ed1  i32.const [5010142]
+007f6ed6  i32.load8_u [0, 0]
+007f6ed9  i32.eqz []
+007f6eda  if [-64]
+007f6edc    i32.const [3927888] ; type: Action
+007f6ee1    call [900] ; 
+007f6ee4    i32.const [3989352]
+007f6ee9    call [900] ; 
+007f6eec    i32.const [4000592]
+007f6ef1    call [900] ; 
+007f6ef4    i32.const [4000596]
+007f6ef9    call [900] ; 
+007f6efc    i32.const [4000604]
+007f6f01    call [900] ; 
+007f6f04    i32.const [4000608]
+007f6f09    call [900] ; 
+007f6f0c    i32.const [4000612]
+007f6f11    call [900] ; 
+007f6f14    i32.const [4000616]
+007f6f19    call [900] ; 
+007f6f1c    i32.const [4000628]
+007f6f21    call [900] ; 
+007f6f24    i32.const [3932308] ; type: GameFrameEntry
+007f6f29    call [900] ; 
+007f6f2c    i32.const [4008032] ; method: MineGameMain.~ejn}
+007f6f31    call [900] ; 
+007f6f34    i32.const [5010142]
+007f6f39    i32.const [1]
+007f6f3b    i32.store8 [0, 0]
+007f6f3e  end []
+007f6f3f  i32.const [3932308] ; type: GameFrameEntry
+007f6f44  i32.load [2, 0]
+007f6f47  call [901] ; 
+007f6f4a  i32.const [4000604]
+007f6f4f  i32.load [2, 0]
+007f6f52  call [1051] ; 
+007f6f55  local.set [1]
+007f6f57  i32.const [3989352]
+007f6f5c  i32.load [2, 0]
+007f6f5f  call [1032] ; 
+007f6f62  local.set [2]
+007f6f64  local.get [1]
+007f6f66  i32.const [0]
+007f6f68  i32.store [2, 12]
+007f6f6b  local.get [1]
+007f6f6d  local.set [3]
+007f6f6f  local.get [1]
+007f6f71  i32.load [2, 0]
+007f6f74  local.set [1]
+007f6f76  local.get [3]
+007f6f78  local.get [2]
+007f6f7a  local.get [1]
+007f6f7c  i32.load [2, 232]
+007f6f80  local.get [1]
+007f6f82  i32.load [2, 228]
+007f6f86  global.set [3]
+007f6f88  global.get [3]
+007f6f8a  call_indirect [2, 0]
+007f6f8d  i32.const [4000596]
+007f6f92  i32.load [2, 0]
+007f6f95  call [1051] ; 
+007f6f98  local.set [1]
+007f6f9a  i32.const [3989352]
+007f6f9f  i32.load [2, 0]
+007f6fa2  call [1032] ; 
+007f6fa5  local.set [2]
+007f6fa7  local.get [1]
+007f6fa9  i32.const [0]
+007f6fab  i32.store [2, 12]
+007f6fae  local.get [1]
+007f6fb0  local.set [3]
+007f6fb2  local.get [1]
+007f6fb4  i32.load [2, 0]
+007f6fb7  local.set [1]
+007f6fb9  local.get [3]
+007f6fbb  local.get [2]
+007f6fbd  local.get [1]
+007f6fbf  i32.load [2, 232]
+007f6fc3  local.get [1]
+007f6fc5  i32.load [2, 228]
+007f6fc9  global.set [3]
+007f6fcb  global.get [3]
+007f6fcd  call_indirect [2, 0]
+007f6fd0  i32.const [4000608]
+007f6fd5  i32.load [2, 0]
+007f6fd8  call [1051] ; 
+007f6fdb  local.set [1]
+007f6fdd  i32.const [3989352]
+007f6fe2  i32.load [2, 0]
+007f6fe5  call [1032] ; 
+007f6fe8  local.set [2]
+007f6fea  local.get [1]
+007f6fec  i32.const [0]
+007f6fee  i32.store [2, 12]
+007f6ff1  local.get [1]
+007f6ff3  local.set [3]
+007f6ff5  local.get [1]
+007f6ff7  i32.load [2, 0]
+007f6ffa  local.set [1]
+007f6ffc  local.get [3]
+007f6ffe  local.get [2]
+007f7000  local.get [1]
+007f7002  i32.load [2, 232]
+007f7006  local.get [1]
+007f7008  i32.load [2, 228]
+007f700c  global.set [3]
+007f700e  global.get [3]
+007f7010  call_indirect [2, 0]
+007f7013  i32.const [4000628]
+007f7018  i32.load [2, 0]
+007f701b  call [1051] ; 
+007f701e  local.set [1]
+007f7020  i32.const [3989352]
+007f7025  i32.load [2, 0]
+007f7028  call [1032] ; 
+007f702b  local.set [2]
+007f702d  local.get [1]
+007f702f  i32.const [0]
+007f7031  i32.store [2, 12]
+007f7034  local.get [1]
+007f7036  local.set [3]
+007f7038  local.get [1]
+007f703a  i32.load [2, 0]
+007f703d  local.set [1]
+007f703f  local.get [3]
+007f7041  local.get [2]
+007f7043  local.get [1]
+007f7045  i32.load [2, 232]
+007f7049  local.get [1]
+007f704b  i32.load [2, 228]
+007f704f  global.set [3]
+007f7051  global.get [3]
+007f7053  call_indirect [2, 0]
+007f7056  i32.const [4000592]
+007f705b  i32.load [2, 0]
+007f705e  call [1051] ; 
+007f7061  local.set [1]
+007f7063  i32.const [3989352]
+007f7068  i32.load [2, 0]
+007f706b  call [1032] ; 
+007f706e  local.set [2]
+007f7070  local.get [1]
+007f7072  i32.const [0]
+007f7074  i32.store [2, 12]
+007f7077  local.get [1]
+007f7079  local.set [3]
+007f707b  local.get [1]
+007f707d  i32.load [2, 0]
+007f7080  local.set [1]
+007f7082  local.get [3]
+007f7084  local.get [2]
+007f7086  local.get [1]
+007f7088  i32.load [2, 232]
+007f708c  local.get [1]
+007f708e  i32.load [2, 228]
+007f7092  global.set [3]
+007f7094  global.get [3]
+007f7096  call_indirect [2, 0]
+007f7099  i32.const [4000612]
+007f709e  i32.load [2, 0]
+007f70a1  call [1051] ; 
+007f70a4  local.set [1]
+007f70a6  i32.const [3989352]
+007f70ab  i32.load [2, 0]
+007f70ae  call [1032] ; 
+007f70b1  local.set [2]
+007f70b3  local.get [1]
+007f70b5  i32.const [0]
+007f70b7  i32.store [2, 12]
+007f70ba  local.get [1]
+007f70bc  local.set [3]
+007f70be  local.get [1]
+007f70c0  i32.load [2, 0]
+007f70c3  local.set [1]
+007f70c5  local.get [3]
+007f70c7  local.get [2]
+007f70c9  local.get [1]
+007f70cb  i32.load [2, 232]
+007f70cf  local.get [1]
+007f70d1  i32.load [2, 228]
+007f70d5  global.set [3]
+007f70d7  global.get [3]
+007f70d9  call_indirect [2, 0]
+007f70dc  i32.const [4000616]
+007f70e1  i32.load [2, 0]
+007f70e4  call [1051] ; 
+007f70e7  local.set [1]
+007f70e9  i32.const [3927888] ; type: Action
+007f70ee  i32.load [2, 0]
+007f70f1  call [903] ; 
+007f70f4  local.set [2]
+007f70f6  local.get [2]
+007f70f8  local.get [0]
+007f70fa  i32.const [4008032] ; method: MineGameMain.~ejn}
+007f70ff  i32.load [2, 0]
+007f7102  i32.const [0]
+007f7104  call [1002] ; 
+007f7107  i32.const [3989352]
+007f710c  i32.load [2, 0]
+007f710f  call [1032] ; 
+007f7112  local.set [0]
+007f7114  local.get [1]
+007f7116  local.get [2]
+007f7118  i32.store [2, 12]
+007f711b  local.get [0]
+007f711d  local.set [3]
+007f711f  local.get [1]
+007f7121  i32.load [2, 0]
+007f7124  local.set [0]
+007f7126  local.get [1]
+007f7128  local.get [3]
+007f712a  local.get [0]
+007f712c  i32.load [2, 232]
+007f7130  local.get [0]
+007f7132  i32.load [2, 228]
+007f7136  global.set [3]
+007f7138  global.get [3]
+007f713a  call_indirect [2, 0]
+007f713d  end []
+
+; MineGameMain.jg~tmVp; wasmcode1 function 56562; offset=18529698 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+011abda3  i32.const [5010143]
+011abda8  i32.load8_u [0, 0]
+011abdab  i32.eqz []
+011abdac  if [-64]
+011abdae    i32.const [4000604]
+011abdb3    i32.const [1605]
+011abdb6    call_indirect [0, 0]
+011abdb9    i32.const [3932308] ; type: GameFrameEntry
+011abdbe    i32.const [1605]
+011abdc1    call_indirect [0, 0]
+011abdc4    i32.const [4101428] ; literal: '{0}'
+011abdc9    i32.const [1605]
+011abdcc    call_indirect [0, 0]
+011abdcf    i32.const [5010143]
+011abdd4    i32.const [1]
+011abdd6    i32.store8 [0, 0]
+011abdd9  end []
+011abdda  i32.const [3932308] ; type: GameFrameEntry
+011abddf  i32.load [2, 0]
+011abde2  i32.const [1149]
+011abde5  call_indirect [0, 0]
+011abde8  i32.const [0]
+011abdea  i32.const [24391]
+011abdee  call_indirect [0, 0]
+011abdf1  local.get [0]
+011abdf3  i32.const [4101428] ; literal: '{0}'
+011abdf8  i32.load [2, 0]
+011abdfb  local.get [0]
+011abdfd  i32.const [14093] ; table candidate: MineGameMain.O{P^xr
+011abe01  call_indirect [5, 0]
+011abe04  i32.const [0]
+011abe06  i32.const [2292]
+011abe09  call_indirect [2, 0]
+011abe0c  i32.const [0]
+011abe0e  i32.const [20561]
+011abe12  call_indirect [4, 0]
+011abe15  local.get [0]
+011abe17  i32.const [0]
+011abe19  i32.store8 [0, 38]
+011abe1c  i32.const [4000604]
+011abe21  i32.load [2, 0]
+011abe24  i32.const [85664]
+011abe28  call_indirect [2, 0]
+011abe2b  local.get [0]
+011abe2d  i32.load [2, 28]
+011abe30  local.get [0]
+011abe32  i32.load [2, 32]
+011abe35  i32.const [0]
+011abe37  i32.const [24753] ; literal: ''
+011abe3b  call_indirect [6, 0]
+011abe3e  local.get [0]
+011abe40  local.get [0]
+011abe42  i32.const [14109] ; table candidate: MineGameMain.OcsUh
+011abe46  call_indirect [4, 0]
+011abe49  end []
+
+; MineGameMain..ctor; wasmcode function 18534; offset=8350646 size=23
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007f6bb7  local.get [0]
+007f6bb9  i32.const [1]
+007f6bbb  i32.store [2, 28]
+007f6bbe  local.get [0]
+007f6bc0  i32.const [1]
+007f6bc2  i32.store8 [0, 12]
+007f6bc5  local.get [0]
+007f6bc7  i32.const [0]
+007f6bc9  call [1226] ; 
+007f6bcc  end []
+
+; MineGameMain.luSmgbx; wasmcode function 11334; offset=5575176 size=111
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00551209  i32.const [5010144]
+0055120e  i32.load8_u [0, 0]
+00551211  i32.eqz []
+00551212  if [-64]
+00551214    i32.const [3928740] ; type: BigNumExtension
+00551219    call [900] ; 
+0055121c    i32.const [3937964] ; type: ReportManager
+00551221    call [900] ; 
+00551224    i32.const [5010144]
+00551229    i32.const [1]
+0055122b    i32.store8 [0, 0]
+0055122e  end []
+0055122f  i32.const [3937964] ; type: ReportManager
+00551234  i32.load [2, 0]
+00551237  call [901] ; 
+0055123a  i32.const [3937964] ; type: ReportManager
+0055123f  i32.load [2, 0]
+00551242  i32.load [2, 92]
+00551245  i32.const [2]
+00551247  i32.store [2, 4]
+0055124a  i32.const [0]
+0055124c  i32.const [0]
+0055124e  call [5003] ; 
+00551251  i32.const [0]
+00551253  call [1060] ; ConfigMgr.get_Instance
+00551256  i32.const [0]
+00551258  call [12791] ; ConfigMgr.GetLargNum
+0055125b  local.set [0]
+0055125d  i32.const [3928740] ; type: BigNumExtension
+00551262  i32.load [2, 0]
+00551265  call [901] ; 
+00551268  local.get [0]
+0055126a  i32.const [0]
+0055126c  call [8189] ; 
+0055126f  i32.const [60]
+00551271  i32.const [0]
+00551273  call [6311] ; 
+00551276  end []
+
+; MineGameMain.eScR; wasmcode function 18533; offset=8350448 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007f6af3  i32.const [5010145]
+007f6af8  i32.load8_u [0, 0]
+007f6afb  i32.eqz []
+007f6afc  if [-64]
+007f6afe    i32.const [3927888] ; type: Action
+007f6b03    call [900] ; 
+007f6b06    i32.const [3989352]
+007f6b0b    call [900] ; 
+007f6b0e    i32.const [4000624]
+007f6b13    call [900] ; 
+007f6b16    i32.const [3932308] ; type: GameFrameEntry
+007f6b1b    call [900] ; 
+007f6b1e    i32.const [4008016] ; method: MineGameMain.NnO`t
+007f6b23    call [900] ; 
+007f6b26    i32.const [4106244] ; literal: '资源模块初始化完成，开始初始化其他次级模块'
+007f6b2b    call [900] ; 
+007f6b2e    i32.const [5010145]
+007f6b33    i32.const [1]
+007f6b35    i32.store8 [0, 0]
+007f6b38  end []
+007f6b39  local.get [0]
+007f6b3b  i32.const [4106244] ; literal: '资源模块初始化完成，开始初始化其他次级模块'
+007f6b40  i32.load [2, 0]
+007f6b43  local.get [0]
+007f6b45  call [2125] ; MineGameMain.O{P^xr
+007f6b48  i32.const [3932308] ; type: GameFrameEntry
+007f6b4d  i32.load [2, 0]
+007f6b50  call [901] ; 
+007f6b53  i32.const [4000624]
+007f6b58  i32.load [2, 0]
+007f6b5b  call [1051] ; 
+007f6b5e  local.set [1]
+007f6b60  i32.const [3927888] ; type: Action
+007f6b65  i32.load [2, 0]
+007f6b68  call [903] ; 
+007f6b6b  local.set [2]
+007f6b6d  local.get [2]
+007f6b6f  local.get [0]
+007f6b71  i32.const [4008016] ; method: MineGameMain.NnO`t
+007f6b76  i32.load [2, 0]
+007f6b79  i32.const [0]
+007f6b7b  call [1002] ; 
+007f6b7e  i32.const [3989352]
+007f6b83  i32.load [2, 0]
+007f6b86  call [1032] ; 
+007f6b89  local.set [0]
+007f6b8b  local.get [1]
+007f6b8d  local.get [2]
+007f6b8f  i32.store [2, 12]
+007f6b92  local.get [0]
+007f6b94  local.set [2]
+007f6b96  local.get [1]
+007f6b98  i32.load [2, 0]
+007f6b9b  local.set [0]
+007f6b9d  local.get [1]
+007f6b9f  local.get [2]
+007f6ba1  local.get [0]
+007f6ba3  i32.load [2, 232]
+007f6ba7  local.get [0]
+007f6ba9  i32.load [2, 228]
+007f6bad  global.set [3]
+007f6baf  global.get [3]
+007f6bb1  call_indirect [2, 0]
+007f6bb4  end []
+
+; MineGameMain.T~RUzn; wasmcode function 913; offset=362854 size=3
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00058967  nop []
+00058968  end []
+

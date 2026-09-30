@@ -1,0 +1,69 @@
+; Original class: ProcedureStarGame
+; Type4452.OnLeave; wasmcode1 function 54298; offset=17958633 size=208
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+011206ea  i32.const [5009775]
+011206ef  i32.load8_u [0, 0]
+011206f2  i32.eqz []
+011206f3  if [-64]
+011206f5    i32.const [3947148]
+011206fa    i32.const [1605]
+011206fd    call_indirect [0, 0]
+01120700    i32.const [4009848] ; METHOD ProcedureStarGame.|ccabr
+01120705    i32.const [1605]
+01120708    call_indirect [0, 0]
+0112070b    i32.const [4009816] ; METHOD ProcedureStarGame.cRzj|
+01120710    i32.const [1605]
+01120713    call_indirect [0, 0]
+01120716    i32.const [4067088] ; STRING "ReadyExitGame"
+0112071b    i32.const [1605]
+0112071e    call_indirect [0, 0]
+01120721    i32.const [4055232] ; STRING "GamePause"
+01120726    i32.const [1605]
+01120729    call_indirect [0, 0]
+0112072c    i32.const [5009775]
+01120731    i32.const [1]
+01120733    i32.store8 [0, 0]
+01120736  end []
+01120737  local.get [0]
+01120739  local.get [1]
+0112073b  local.get [2]
+0112073d  i32.const [0]
+0112073f  i32.const [26372] ; TABLE ProcedureBase.OnLeave
+01120743  call_indirect [6, 0]
+01120746  i32.const [3947148]
+0112074b  i32.load [2, 0]
+0112074e  i32.const [109007]
+01120752  call_indirect [2, 0]
+01120755  local.set [1]
+01120757  local.get [1]
+01120759  local.get [0]
+0112075b  i32.const [4009816] ; METHOD ProcedureStarGame.cRzj|
+01120760  i32.load [2, 0]
+01120763  i32.const [0]
+01120765  i32.const [24682] ; TABLE EventHandler..ctor
+01120769  call_indirect [6, 0]
+0112076c  i32.const [4055232] ; STRING "GamePause"
+01120771  i32.load [2, 0]
+01120774  local.get [1]
+01120776  i32.const [0]
+01120778  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+0112077c  call_indirect [5, 0]
+0112077f  i32.const [3947148]
+01120784  i32.load [2, 0]
+01120787  i32.const [109007]
+0112078b  call_indirect [2, 0]
+0112078e  local.set [1]
+01120790  local.get [1]
+01120792  local.get [0]
+01120794  i32.const [4009848] ; METHOD ProcedureStarGame.|ccabr
+01120799  i32.load [2, 0]
+0112079c  i32.const [0]
+0112079e  i32.const [24682] ; TABLE EventHandler..ctor
+011207a2  call_indirect [6, 0]
+011207a5  i32.const [4067088] ; STRING "ReadyExitGame"
+011207aa  i32.load [2, 0]
+011207ad  local.get [1]
+011207af  i32.const [0]
+011207b1  i32.const [24658] ; TABLE MsgDispatcher.RemoveEventListener
+011207b5  call_indirect [5, 0]
+011207b8  end []

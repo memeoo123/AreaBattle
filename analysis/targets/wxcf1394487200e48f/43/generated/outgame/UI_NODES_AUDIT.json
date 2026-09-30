@@ -1,0 +1,30 @@
+{
+  "status": "source_node_cache_composed_with_modern_loader",
+  "source": [
+    "disassembly/Type3558-27394.txt",
+    "ui-node-generics.json"
+  ],
+  "verified": [
+    "Dictionary<string,Transform>.TryGetValue and Add",
+    "Miss searches under module UIRoot RectTransform using exact supplied path",
+    "Missing node logs original message then uses module root Transform and caches fallback",
+    "Later appearing nodes do not replace cached fallback",
+    "Cached destroyed Transform remains returned without revalidation",
+    "Concrete node cache now routes original prefab load into UIWindow container"
+  ],
+  "integratedChecks": 603,
+  "startupEvidence": {
+    "source": "disassembly/Type3558-27385.txt",
+    "canvasRootTag": "GFUICanvas",
+    "cameraChild": "UICamera",
+    "resourcePath": "UI/UIRoot",
+    "catalogInspection": "Located UIRoot in firstpack and UICanvas/UICamera in bootstrap scene; see UI_ROOT_AUDIT.json. GFUICanvas tag and bootstrap custom scripts still pending production import."
+  },
+  "remaining": [
+    "Original canvas root/camera and UIRoot startup callback",
+    "Legacy loader body and production resource acquisition",
+    "Actual page catalog/factories and full account/startup/menu",
+    "Full Player acceptance"
+  ],
+  "correction": "Source generic callback confirms field20 is RectTransform, not Canvas. Runtime cache provider corrected and now tested against original UIRoot."
+}

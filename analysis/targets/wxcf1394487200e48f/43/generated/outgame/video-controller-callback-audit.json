@@ -1,0 +1,116 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "methods": [
+    {
+      "cls": "EchelonVideoController",
+      "method": "show",
+      "metadata": 54950,
+      "module": "wasmcode1",
+      "function": 64187,
+      "path": "disassembly/Type7521-54950.txt"
+    },
+    {
+      "cls": "EchelonVideoController",
+      "method": "close",
+      "metadata": 54951,
+      "module": "wasmcode1",
+      "function": 64188,
+      "path": "disassembly/Type7521-54951.txt"
+    },
+    {
+      "cls": "EchelonVideoController",
+      "method": ".ctor",
+      "metadata": 54952,
+      "module": "wasmcode",
+      "function": 3962,
+      "path": "disassembly/Type7521-54952.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": ".ctor",
+      "metadata": 54953,
+      "module": "wasmcode",
+      "function": 913,
+      "path": "disassembly/Type7520-54953.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": "<show>b__0",
+      "metadata": 54954,
+      "module": "wasmcode",
+      "function": 9929,
+      "path": "disassembly/Type7520-54954.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": "<show>b__1",
+      "metadata": 54955,
+      "module": "wasmcode",
+      "function": 9928,
+      "path": "disassembly/Type7520-54955.txt"
+    },
+    {
+      "cls": "SerialVideoController",
+      "method": "show",
+      "metadata": 55035,
+      "module": "wasmcode",
+      "function": 16053,
+      "path": "disassembly/Type7533-55035.txt"
+    },
+    {
+      "cls": "SerialVideoController",
+      "method": "close",
+      "metadata": 55036,
+      "module": "wasmcode1",
+      "function": 48896,
+      "path": "disassembly/Type7533-55036.txt"
+    },
+    {
+      "cls": "SerialVideoController",
+      "method": ".ctor",
+      "metadata": 55037,
+      "module": "wasmcode",
+      "function": 3962,
+      "path": "disassembly/Type7533-55037.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": ".ctor",
+      "metadata": 55038,
+      "module": "wasmcode",
+      "function": 913,
+      "path": "disassembly/Type7532-55038.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": "<show>b__0",
+      "metadata": 55039,
+      "module": "wasmcode",
+      "function": 9929,
+      "path": "disassembly/Type7532-55039.txt"
+    },
+    {
+      "cls": "<>c__DisplayClass1_0",
+      "method": "<show>b__1",
+      "metadata": 55040,
+      "module": "wasmcode",
+      "function": 9928,
+      "path": "disassembly/Type7532-55040.txt"
+    }
+  ],
+  "confirmed": [
+    "SerialVideoController.show and EchelonVideoController.show reset source byte92=false, read realtime into float52, store shown callback28, create reward callback32 that unconditionally sets byte92=true and ignores incoming bool, and close callback36 that invokes captured original closed callback with current byte92, ignoring incoming close bool. Then call BaseController.showAd with source arguments0,0.",
+    "SerialVideoController.close enumerates getPlatList. Only adapters state(offset12)==4 are finished, followed by NewAdsManager.setIsInterVideoShow(false), then current close callback36(false). Consequently wrapper reports current byte92 instead of false. Callback field is not cleared by these wrappers; repeated closes of multiple state4 adapters can invoke repeatedly.",
+    "BaseController.isReady accepts (adapter.state==2 && adapter.canShow()) OR adapter.isCacheRequest(). Table1746 resolves wasmcode function1545, a virtual dispatch helper using supplied slot8. Metadata slot8 is DAUAdsAdapter.isCacheRequest, base returns true. canShow bypasses interval unless guarantee/non-BANNER, then negates interval>realtime-sharedLastShowTime. finish calls virtual onFinishClearCache before state0. Implemented OutgameAdReadiness/OutgameAdAdapterState,431 checks pass."
+  ],
+  "pending": [
+    "Verify serial versus echelon initialization from original active ad configuration.",
+    "Restore native adapter initialization and listener events before production SDK connection."
+  ],
+  "qualification": "Source investigation only. Existing 429 integrated checks remain latest runtime result; no native controller implementation or live advertisement claimed.",
+  "implementation": [
+    "OutgameVideoController.cs",
+    "OutgameAdShowFlow.cs"
+  ],
+  "validation": "443 integrated checks; restored entry/controller/display flow tested with controlled adapter, not live SDK"
+}

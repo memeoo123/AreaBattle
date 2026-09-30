@@ -1,0 +1,12 @@
+; Original class: CommanderControl
+; Type4027.GetLevel; wasmcode1 function 30749; offset=11816362 size=22
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00b44dab  local.get [0]
+00b44dad  i32.load [2, 8]
+00b44db0  local.get [1]
+00b44db2  local.get [1]
+00b44db4  i32.const [14470] ; TABLE CommanderManager.GetCommanderData
+00b44db8  call_indirect [3, 0]
+00b44dbb  i32.load [2, 16]
+00b44dbe  return []
+00b44dbf  end []

@@ -1,0 +1,29 @@
+; Original class: SerialController
+; Type7527.checkRequest; wasmcode function 10499; offset=5146474 size=53
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004e876b  local.get [0]
+004e876d  local.get [0]
+004e876f  call [6254] ; BaseController.printAllState
+004e8772  block [-64]
+004e8774    local.get [0]
+004e8776    local.get [0]
+004e8778    call [4516] ; BaseController.isRequestEnd
+004e877b    i32.eqz []
+004e877c    if [-64]
+004e877e      local.get [0]
+004e8780      local.get [0]
+004e8782      call [5195] ; BaseController.getNowCacheNum
+004e8785      local.get [0]
+004e8787      i32.load [2, 44]
+004e878a      i32.lt_s []
+004e878b      br_if [1]
+004e878d    end []
+004e878e    local.get [0]
+004e8790    local.get [0]
+004e8792    call [5196] ; BaseController.checkRequest
+004e8795    return []
+004e8796  end []
+004e8797  local.get [0]
+004e8799  local.get [0]
+004e879b  call [10498] ; SerialController.loadNext
+004e879e  end []

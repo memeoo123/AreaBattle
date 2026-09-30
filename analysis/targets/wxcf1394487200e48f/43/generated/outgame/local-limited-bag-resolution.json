@@ -1,0 +1,175 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3957308,
+      "encodedUsage": "0xc0007eb1",
+      "methodSpecIndex": 16216,
+      "methodSpecAddress": 677600,
+      "methodSpec": [
+        10517,
+        850,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 3943,
+            "name": "GameProductConfig"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3957316,
+      "encodedUsage": "0xc0007eb5",
+      "methodSpecIndex": 16218,
+      "methodSpecAddress": 677624,
+      "methodSpec": [
+        10510,
+        850,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0x1c0000",
+            "data": 394,
+            "name": "Object"
+          },
+          {
+            "type": "0x120000",
+            "data": 3943,
+            "name": "GameProductConfig"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3955892,
+      "encodedUsage": "0xc0007bed",
+      "methodSpecIndex": 15862,
+      "methodSpecAddress": 673352,
+      "methodSpec": [
+        10512,
+        754,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4098,
+            "name": "LimitedItemBagInfo"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3970304,
+      "encodedUsage": "0xc0009689",
+      "methodSpecIndex": 19268,
+      "methodSpecAddress": 714224,
+      "methodSpec": [
+        10636,
+        754,
+        -1
+      ],
+      "declaringType": "KeyValuePair`2",
+      "method": "get_Value",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4098,
+            "name": "LimitedItemBagInfo"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3955900,
+      "encodedUsage": "0xc0007bf1",
+      "methodSpecIndex": 15864,
+      "methodSpecAddress": 673376,
+      "methodSpec": [
+        10520,
+        754,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "GetEnumerator",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 4098,
+            "name": "LimitedItemBagInfo"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

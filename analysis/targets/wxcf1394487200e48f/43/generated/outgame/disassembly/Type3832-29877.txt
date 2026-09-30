@@ -1,0 +1,134 @@
+; Original class: ResourcesModule
+; Type3832.AddAssetBundlePackList; wasmcode function 7270; offset=2876876 size=394
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+002be5cf  i32.const [4988225]
+002be5d4  i32.load8_u [0, 0]
+002be5d7  i32.eqz []
+002be5d8  if [-64]
+002be5da    i32.const [3929208]
+002be5df    call [900] ; 
+002be5e2    i32.const [3958592]
+002be5e7    call [900] ; 
+002be5ea    i32.const [3958596]
+002be5ef    call [900] ; 
+002be5f2    i32.const [3958600]
+002be5f7    call [900] ; 
+002be5fa    i32.const [3926996]
+002be5ff    call [900] ; 
+002be602    i32.const [3936516]
+002be607    call [900] ; 
+002be60a    i32.const [3938048]
+002be60f    call [900] ; 
+002be612    i32.const [4081120] ; STRING "]中，无需添加"
+002be617    call [900] ; 
+002be61a    i32.const [4106220] ; STRING "资源[{aseetBundleName}]已经添加到pack["
+002be61f    call [900] ; 
+002be622    i32.const [4106412] ; STRING "错误的资源引用：资源[{{aseetBundleName}}]存在于多个pack中:[{0}] [{1}]"
+002be627    call [900] ; 
+002be62a    i32.const [4988225]
+002be62f    i32.const [1]
+002be631    i32.store8 [0, 0]
+002be634  end []
+002be635  i32.const [3938048]
+002be63a  i32.load [2, 0]
+002be63d  call [901] ; 
+002be640  i32.const [3938048]
+002be645  i32.load [2, 0]
+002be648  i32.load [2, 92]
+002be64b  i32.load [2, 0]
+002be64e  local.get [0]
+002be650  i32.const [3958596]
+002be655  i32.load [2, 0]
+002be658  call [987] ; 
+002be65b  local.set [3]
+002be65d  i32.const [3938048]
+002be662  i32.load [2, 0]
+002be665  call [901] ; 
+002be668  i32.const [3938048]
+002be66d  i32.load [2, 0]
+002be670  i32.load [2, 92]
+002be673  i32.load [2, 0]
+002be676  local.set [2]
+002be678  block [-64]
+002be67a    local.get [3]
+002be67c    if [-64]
+002be67e      local.get [2]
+002be680      local.get [0]
+002be682      i32.const [3958600]
+002be687      i32.load [2, 0]
+002be68a      call [982] ; 
+002be68d      local.set [2]
+002be68f      i32.const [3936516]
+002be694      i32.load [2, 0]
+002be697      call [901] ; 
+002be69a      local.get [2]
+002be69c      local.get [1]
+002be69e      i32.const [0]
+002be6a0      call [940] ; Object.op_Equality
+002be6a3      local.set [3]
+002be6a5      i32.const [3926996]
+002be6aa      i32.load [2, 0]
+002be6ad      i32.const [1]
+002be6af      call [909] ; 
+002be6b2      local.set [2]
+002be6b4      local.get [1]
+002be6b6      i32.const [0]
+002be6b8      call [1115] ; Object.get_name
+002be6bb      local.set [1]
+002be6bd      local.get [3]
+002be6bf      if [-64]
+002be6c1        i32.const [4106220] ; STRING "资源[{aseetBundleName}]已经添加到pack["
+002be6c6        i32.load [2, 0]
+002be6c9        local.get [1]
+002be6cb        i32.const [4081120] ; STRING "]中，无需添加"
+002be6d0        i32.load [2, 0]
+002be6d3        i32.const [0]
+002be6d5        call [955] ; String.Concat
+002be6d8        local.set [0]
+002be6da        local.get [2]
+002be6dc        local.get [0]
+002be6de        call [905] ; 
+002be6e1        br [2]
+002be6e3      end []
+002be6e4      i32.const [3938048]
+002be6e9      i32.load [2, 0]
+002be6ec      call [901] ; 
+002be6ef      i32.const [3938048]
+002be6f4      i32.load [2, 0]
+002be6f7      i32.load [2, 92]
+002be6fa      i32.load [2, 0]
+002be6fd      local.get [0]
+002be6ff      i32.const [3958600]
+002be704      i32.load [2, 0]
+002be707      call [982] ; 
+002be70a      local.set [0]
+002be70c      i32.const [4106412] ; STRING "错误的资源引用：资源[{{aseetBundleName}}]存在于多个pack中:[{0}] [{1}]"
+002be711      i32.load [2, 0]
+002be714      local.get [1]
+002be716      local.get [0]
+002be718      i32.const [0]
+002be71a      call [1047] ; String.Format
+002be71d      local.set [0]
+002be71f      local.get [2]
+002be721      local.get [0]
+002be723      call [905] ; 
+002be726      br [1]
+002be728    end []
+002be729    local.get [2]
+002be72b    local.get [0]
+002be72d    local.get [1]
+002be72f    i32.const [3958592]
+002be734    i32.load [2, 0]
+002be737    call [932] ; 
+002be73a    return []
+002be73b  end []
+002be73c  local.get [2]
+002be73e  local.get [0]
+002be740  i32.store [2, 16]
+002be743  i32.const [3929208]
+002be748  i32.load [2, 0]
+002be74b  call [901] ; 
+002be74e  local.get [2]
+002be750  i32.const [0]
+002be752  call [1541] ; CLog.dZz£
+002be755  end []

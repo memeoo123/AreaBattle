@@ -1,0 +1,48 @@
+; Original class: LoginSDK_XYX
+; Type4608.L{e[b; wasmcode function 11463; offset=5628126 size=143
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0055e0df  i32.const [5001566]
+0055e0e4  i32.load8_u [0, 0]
+0055e0e7  i32.eqz []
+0055e0e8  if [-64]
+0055e0ea    i32.const [3928180]
+0055e0ef    call [900] ; 
+0055e0f2    i32.const [3929208]
+0055e0f7    call [900] ; 
+0055e0fa    i32.const [3926996]
+0055e0ff    call [900] ; 
+0055e102    i32.const [4061376] ; STRING "Login:，主动拉起登陆"
+0055e107    call [900] ; 
+0055e10a    i32.const [5001566]
+0055e10f    i32.const [1]
+0055e111    i32.store8 [0, 0]
+0055e114  end []
+0055e115  i32.const [3926996]
+0055e11a  i32.load [2, 0]
+0055e11d  i32.const [1]
+0055e11f  call [909] ; 
+0055e122  local.set [1]
+0055e124  local.get [1]
+0055e126  i32.const [4061376] ; STRING "Login:，主动拉起登陆"
+0055e12b  i32.load [2, 0]
+0055e12e  call [905] ; 
+0055e131  local.get [1]
+0055e133  i32.const [4061376] ; STRING "Login:，主动拉起登陆"
+0055e138  i32.load [2, 0]
+0055e13b  i32.store [2, 16]
+0055e13e  i32.const [3929208]
+0055e143  i32.load [2, 0]
+0055e146  call [901] ; 
+0055e149  i32.const [8192]
+0055e14d  local.get [1]
+0055e14f  i32.const [0]
+0055e151  call [1698] ; CLog.Log
+0055e154  i32.const [3928180]
+0055e159  i32.load [2, 0]
+0055e15c  i32.load [2, 92]
+0055e15f  i32.load [2, 0]
+0055e162  local.get [0]
+0055e164  i32.load [2, 24]
+0055e167  i32.const [0]
+0055e169  call [8285] ; AppUserManager.Login
+0055e16c  end []

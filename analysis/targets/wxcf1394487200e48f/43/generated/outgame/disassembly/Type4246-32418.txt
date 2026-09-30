@@ -1,0 +1,27 @@
+; Original class: DataManagerSave
+; Type4246..ctor; wasmcode function 12650; offset=6098843 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d0f9c  i32.const [5007348]
+005d0fa1  i32.load8_u [0, 0]
+005d0fa4  i32.eqz []
+005d0fa5  if [-64]
+005d0fa7    i32.const [3960416]
+005d0fac    call [900] ; 
+005d0faf    i32.const [3919016]
+005d0fb4    call [900] ; 
+005d0fb7    i32.const [5007348]
+005d0fbc    i32.const [1]
+005d0fbe    i32.store8 [0, 0]
+005d0fc1  end []
+005d0fc2  i32.const [3919016]
+005d0fc7  i32.load [2, 0]
+005d0fca  call [903] ; 
+005d0fcd  local.set [1]
+005d0fcf  local.get [1]
+005d0fd1  i32.const [3960416]
+005d0fd6  i32.load [2, 0]
+005d0fd9  call [951] ; 
+005d0fdc  local.get [0]
+005d0fde  local.get [1]
+005d0fe0  i32.store [2, 12]
+005d0fe3  end []

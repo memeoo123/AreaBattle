@@ -1,0 +1,58 @@
+{
+  "atUtc": "2026-09-30T05:34:18.471951+00:00",
+  "status": "partial-subsystem",
+  "implementation": "OutgameProcedureStarGame.cs",
+  "sourceMethods": [
+    34149,
+    34154,
+    34134,
+    34144,
+    34158,
+    34160,
+    34161,
+    34162
+  ],
+  "sourceEvidence": {
+    "ConfigMgr108": "dicWXAMS",
+    "WXAMSConfig12": "PlacementId int",
+    "WXAMSConfig16": "ReportLable string",
+    "usage3959456": "Dictionary<string,int>.Add",
+    "AssetBundleManagerStatic52": "CloseAutoUnLoadAssetBundle projected shared runtime DisableUnload",
+    "Type34158": "MineGameExitLogic send then ChangeState<ProcedureExitGame>",
+    "debugRoster": "STAR_GAME_DEBUG_REGISTRATION.json"
+  },
+  "sequence": [
+    "Base enter log",
+    "Build mapping by Add(ReportLable,PlacementId), then WXAMS.SetVideoMapping",
+    "Disable auto unload true",
+    "ReadyExitGame listener",
+    "18 debug registrations in executed source order",
+    "GamePause listener",
+    "ReportManager.StartGameModel(0)",
+    "GlobalData.CheckNewDay",
+    "Existing OutgameStartupEntry.Enter: menu/reward/migration/prefabs/GamePlay completion"
+  ],
+  "timing": [
+    "OnUpdate adds scaled dt; if >=30 touches report singleton then subtracts30 exactly once",
+    "Pause true adds0, truncates float to int; nonzero whole part touches report then subtracts whole; no actual report method in recovered body",
+    "Leave logs then removes GamePause then ReadyExitGame; no elapsed reset or unload flag reset"
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T05:34:18.471951+00:00",
+    "scope": "Concrete ProcedureStarGame entry/exit/timing integrated with original startup entry",
+    "checksPassed": 677,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Actual debug handlers/platform reporting/production scene or complete account/menu composition",
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ]
+  },
+  "remaining": [
+    "18 debug callbacks passed as source metadata registration requests; actual handlers must be implemented/bound",
+    "Report model/new-day/base event cleanup remain required service actions",
+    "Concrete original exit procedure not yet implemented",
+    "Real PreLoad services, Main30617/38controls and native Player/menu composition"
+  ]
+}

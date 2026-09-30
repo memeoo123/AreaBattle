@@ -1,0 +1,33 @@
+; Original class: InputManager
+; Type3603.|Á; wasmcode function 7698; offset=3663974 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0037e867  i32.const [4989898]
+0037e86c  i32.load8_u [0, 0]
+0037e86f  i32.eqz []
+0037e870  if [-64]
+0037e872    i32.const [3946476]
+0037e877    call [900] ; 
+0037e87a    i32.const [4989898]
+0037e87f    i32.const [1]
+0037e881    i32.store8 [0, 0]
+0037e884  end []
+0037e885  local.get [0]
+0037e887  local.set [2]
+0037e889  local.get [0]
+0037e88b  i32.load [2, 60]
+0037e88e  local.get [1]
+0037e890  i32.const [0]
+0037e892  call [1056] ; Delegate.Remove
+0037e895  local.set [0]
+0037e897  local.get [2]
+0037e899  local.get [0]
+0037e89b  i32.const [3946476]
+0037e8a0  i32.load [2, 0]
+0037e8a3  call [937] ; 
+0037e8a6  i32.store [2, 60]
+0037e8a9  local.get [0]
+0037e8ab  i32.const [3946476]
+0037e8b0  i32.load [2, 0]
+0037e8b3  call [937] ; 
+0037e8b6  drop []
+0037e8b7  end []

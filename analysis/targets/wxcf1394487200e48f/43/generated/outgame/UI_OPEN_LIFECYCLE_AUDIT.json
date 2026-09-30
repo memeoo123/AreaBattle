@@ -1,0 +1,30 @@
+{
+  "status": "source_load_callback_and_open_coroutine_restored",
+  "source": [
+    "disassembly/Type3544-27321.txt",
+    "disassembly/Type3544-27323.txt",
+    "disassembly/Type3539-27343.txt"
+  ],
+  "virtualCalls": {
+    "348/slot20": "closeLoading",
+    "300/slot14": "Refresh",
+    "316/slot16": "OpenAnimCustomize",
+    "332/slot18": "OpenLater"
+  },
+  "verified": [
+    "Disposed callback immediately destroys late native instance",
+    "Null result does not store legacy resource or initialize",
+    "Non-null legacy result stores resource before init; modern does not write it",
+    "InitGameObject -> addCanvas -> closeLoading -> Refresh -> cached branch",
+    "Cache skips animation and event but not initialization",
+    "Custom/standard animation coroutine awaited; captures original object name",
+    "Dispose during animation skips OpenLater and OpenUI",
+    "OpenLater precedes OpenUI; disposal inside OpenLater does not suppress event"
+  ],
+  "integratedChecks": 596,
+  "remaining": [
+    "Concrete UIObject.initGameObject/Outlet bindings and initialization virtuals",
+    "Concrete addCanvas and source UIModule registration",
+    "Original loading routes, production entry/account owner, full Player"
+  ]
+}

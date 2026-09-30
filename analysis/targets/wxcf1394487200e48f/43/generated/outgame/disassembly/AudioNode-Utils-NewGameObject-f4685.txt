@@ -1,0 +1,53 @@
+; Unknown.4685; wasmcode function 4685; offset=1619243 size=125
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0018b52e  i32.const [4988910]
+0018b533  i32.load8_u [0, 0]
+0018b536  i32.eqz []
+0018b537  if [-64]
+0018b539    i32.const [3932344] ; type: GameObject
+0018b53e    call [900] ; 
+0018b541    i32.const [3941136] ; type: Utils
+0018b546    call [900] ; 
+0018b549    i32.const [4988910]
+0018b54e    i32.const [1]
+0018b550    i32.store8 [0, 0]
+0018b553  end []
+0018b554  i32.const [3932344] ; type: GameObject
+0018b559  i32.load [2, 0]
+0018b55c  call [903] ; 
+0018b55f  local.set [2]
+0018b561  local.get [2]
+0018b563  i32.const [0]
+0018b565  call [1781] ; 
+0018b568  block [-64]
+0018b56a    local.get [1]
+0018b56c    if [-64]
+0018b56e      i32.const [0]
+0018b570      local.set [3]
+0018b572      local.get [1]
+0018b574      i32.load [2, 8]
+0018b577      br_if [1]
+0018b579    end []
+0018b57a    i32.const [1]
+0018b57c    local.set [3]
+0018b57e  end []
+0018b57f  local.get [3]
+0018b581  i32.eqz []
+0018b582  if [-64]
+0018b584    local.get [2]
+0018b586    local.get [1]
+0018b588    i32.const [0]
+0018b58a    call [1375] ; 
+0018b58d  end []
+0018b58e  i32.const [3941136] ; type: Utils
+0018b593  i32.load [2, 0]
+0018b596  call [901] ; 
+0018b599  local.get [0]
+0018b59b  local.get [2]
+0018b59d  i32.const [1]
+0018b59f  local.get [2]
+0018b5a1  call [9635] ; 
+0018b5a4  local.get [2]
+0018b5a6  return []
+0018b5a7  end []
+

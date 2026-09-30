@@ -1,0 +1,26 @@
+; Original class: AudioCompositeBase
+; Type3425..ctor; wasmcode function 6275; offset=2248856 size=64
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+00225099  i32.const [5011700]
+0022509e  i32.load8_u [0, 0]
+002250a1  i32.eqz []
+002250a2  if [-64]
+002250a4    i32.const [3941136]
+002250a9    call [900] ; 
+002250ac    i32.const [5011700]
+002250b1    i32.const [1]
+002250b3    i32.store8 [0, 0]
+002250b6  end []
+002250b7  i32.const [3941136]
+002250bc  i32.load [2, 0]
+002250bf  call [901] ; 
+002250c2  local.get [0]
+002250c4  local.get [1]
+002250c6  local.get [3]
+002250c8  i32.const [0]
+002250ca  call [4685] ; Utils.NewGameObject
+002250cd  i32.store [2, 12]
+002250d0  local.get [0]
+002250d2  local.get [2]
+002250d4  i32.store [2, 8]
+002250d7  end []

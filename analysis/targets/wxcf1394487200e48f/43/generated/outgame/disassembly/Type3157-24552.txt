@@ -1,0 +1,55 @@
+; Original class: AdsManager
+; Type3157.ShowInterstNew; wasmcode function 13323; offset=6447380 size=132
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00626115  i32.const [5010549]
+0062611a  i32.load8_u [0, 0]
+0062611d  i32.eqz []
+0062611e  if [-64]
+00626120    i32.const [4054964] ; STRING "GF_ShowInterst"
+00626125    call [900] ; 
+00626128    i32.const [4040520] ; STRING "0"
+0062612d    call [900] ; 
+00626130    i32.const [5010549]
+00626135    i32.const [1]
+00626137    i32.store8 [0, 0]
+0062613a  end []
+0062613b  block [-64]
+0062613d    local.get [0]
+0062613f    local.get [0]
+00626141    call [5235] ; AdsManager.CheckCanShowInterst
+00626144    i32.eqz []
+00626145    br_if [0]
+00626147    i32.const [4054964] ; STRING "GF_ShowInterst"
+0062614c    i32.load [2, 0]
+0062614f    i32.const [0]
+00626151    call [1317] ; MsgDispatcher.SendMessage
+00626154    local.get [0]
+00626156    local.get [0]
+00626158    i32.load [2, 12]
+0062615b    local.get [1]
+0062615d    i32.const [4040520] ; STRING "0"
+00626162    i32.load [2, 0]
+00626165    local.get [0]
+00626167    call [8344] ; AdsManager.ShowInterstitialResult
+0062616a    drop []
+0062616b    local.get [2]
+0062616d    i32.eqz []
+0062616e    br_if [0]
+00626170    local.get [0]
+00626172    local.get [0]
+00626174    i32.load [2, 12]
+00626177    i32.const [4040520] ; STRING "0"
+0062617c    i32.load [2, 0]
+0062617f    local.get [0]
+00626181    call [6332] ; AdsManager.IsInterstitialReadyStatic
+00626184    i32.eqz []
+00626185    br_if [0]
+00626187    local.get [0]
+00626189    local.get [0]
+0062618b    local.get [0]
+0062618d    call [6330] ; AdsManager.Wait05
+00626190    i32.const [0]
+00626192    call [1227] ; MonoBehaviour.StartCoroutine
+00626195    drop []
+00626196  end []
+00626197  end []

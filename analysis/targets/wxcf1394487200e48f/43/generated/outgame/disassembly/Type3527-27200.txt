@@ -1,0 +1,30 @@
+; Original class: YOResourcesModule
+; Type3527.LoadPrefab; wasmcode1 function 36876; offset=14064962 size=73
+; signature={'args': [127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00d69d43  i32.const [4989572]
+00d69d48  i32.load8_u [0, 0]
+00d69d4b  i32.eqz []
+00d69d4c  if [-64]
+00d69d4e    i32.const [4040124] ; STRING ".prefab"
+00d69d53    i32.const [1605]
+00d69d56    call_indirect [0, 0]
+00d69d59    i32.const [4989572]
+00d69d5e    i32.const [1]
+00d69d60    i32.store8 [0, 0]
+00d69d63  end []
+00d69d64  local.get [0]
+00d69d66  local.get [1]
+00d69d68  i32.const [4040124] ; STRING ".prefab"
+00d69d6d  i32.load [2, 0]
+00d69d70  i32.const [0]
+00d69d72  i32.const [1476] ; TABLE String.Concat
+00d69d75  call_indirect [3, 0]
+00d69d78  i32.const [0]
+00d69d7a  i32.const [1905] ; TABLE String.ToLower
+00d69d7d  call_indirect [1, 0]
+00d69d80  local.get [2]
+00d69d82  local.get [3]
+00d69d84  local.get [0]
+00d69d86  call [9833] ; YOResourcesModule._LoadAsset
+00d69d89  return []
+00d69d8a  end []

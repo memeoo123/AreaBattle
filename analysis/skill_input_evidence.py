@@ -1,0 +1,18 @@
+"""Record source-backed input/stock rules; loadout quantities are explicit fixture inputs."""
+import json,hashlib
+from pathlib import Path
+R=Path(__file__).parent/'targets/wxcf1394487200e48f/43'
+facts=[
+ {'id':'input-unlock','rule':'SkillItem.Init reads AllSkillConfig.unLockLevel at config+16; CurrentLevel >= threshold. Config useType(+32)==0 binds click; ==1 enables drag collider.', 'source':'SkillItem.txt','function':10349,'offsets':['004bc0c5','004bc0dc','004bc207','004bc23a','004bc31d']},
+ {'id':'execution-guard','rule':'SkillControl.Execute rejects CommanderBase matching SkillBase.inSkill, then calls Commander virtual can-execute. On accepted execute, set haveUseSkill and call CommanderBase.Execute.', 'source':'SkillControl.txt','function':5674,'offsets':['001e689b','001e68cd','001e6933','001e697d']},
+ {'id':'stock-precedence','rule':'Drag release requires positive item stock gameItem=type+2000 or positive generic stock. Execute(nonfree) subtracts specific item first; on failure subtracts generic1005. Commercial purchase route outside current in-level reconstruction.', 'source':'SkillControl.txt','function':5674,'offsets':['001e68d7','001e68fa','001e691b'],'releaseFunction':15937,'releaseOffsets':['0074db39','0074db50','0074db77']},
+ {'id':'target-camp-gate','rule':'Drag move raycasts tower colliders; targetType2 requires nonplayer camp (neutral allowed),0 player camp,8 accepts either. DragEnd interfaces can replace target validity, used by ground poison.', 'source':'SkillControl.txt','function':15935,'offsets':['0074d4b6','0074d4c8','0074d5c0','0074d5e7'],'releaseFunction':15937},
+ {'id':'drag-preview','rule':'Dragged cover follows UI camera ScreenToWorldPoint of pointer(x,y+50,z=5). Target marker is tower position+up*.01. Drag release restores cover and hides target markers.', 'source':'SkillControl.txt','function':15935,'offsets':['0074d831','0074d85e','0074d52a']}
+]
+j={'target':{'appId':'wxcf1394487200e48f','version':'43'},'facts':facts,
+ 'sourceHashes':{s:hashlib.sha256((R/'generated/skill-input'/s).read_bytes()).hexdigest() for s in ['SkillControl.txt','SkillItem.txt']},
+ 'fixturePolicy':'CommanderMode,skill levels and item counts are controlled local inputs, not inferred from the original account.',
+ 'unknowns':['Original current account inventory and commander selection','Exact event/frame ordering against original running UI']}
+(R/'generated/skill-input-evidence.json').write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+p=R/'generated/RESTORE_SPEC.json';spec=json.loads(p.read_text(encoding='utf-8'));spec['skillInputImplementation']={'ready':True,'evidence':'generated/skill-input-evidence.json','scope':'Source unlock/click/drag/item guard with explicit controlled local loadout; no commercial actions','fullGoalComplete':False};p.write_text(json.dumps(spec,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print('Recorded five skill input rules and explicit fixture boundary.')

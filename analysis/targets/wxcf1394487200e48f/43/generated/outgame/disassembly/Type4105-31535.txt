@@ -1,0 +1,113 @@
+; Original class: sYmVuk
+; Type4105.^kw}; wasmcode function 15186; offset=7374095 size=288
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00708512  i32.const [5008512]
+00708517  i32.load8_u [0, 0]
+0070851a  i32.eqz []
+0070851b  if [-64]
+0070851d    i32.const [3989352]
+00708522    call [900] ; 
+00708525    i32.const [3953384]
+0070852a    call [900] ; 
+0070852d    i32.const [4018328]
+00708532    call [900] ; 
+00708535    i32.const [4018484]
+0070853a    call [900] ; 
+0070853d    i32.const [5008512]
+00708542    i32.const [1]
+00708544    i32.store8 [0, 0]
+00708547  end []
+00708548  local.get [0]
+0070854a  i32.load [2, 8]
+0070854d  local.get [0]
+0070854f  call [11599] ; LevelControl.LYrncx
+00708552  local.get [0]
+00708554  i32.load [2, 8]
+00708557  local.get [0]
+00708559  call [11598] ; LevelControl.PymUmwd
+0070855c  i32.const [3953384]
+00708561  i32.load [2, 0]
+00708564  call [935] ; 
+00708567  local.get [0]
+00708569  call [6057] ; GameControl.stwkS
+0070856c  i32.const [0]
+0070856e  call [1143] ; GameModule.get_UI
+00708571  i32.const [4018328]
+00708576  i32.load [2, 0]
+00708579  call [1503] ; 
+0070857c  local.set [2]
+0070857e  i32.const [0]
+00708580  call [1143] ; GameModule.get_UI
+00708583  local.set [1]
+00708585  block [-64]
+00708587    local.get [2]
+00708589    i32.eqz []
+0070858a    if [-64]
+0070858c      local.get [1]
+0070858e      i32.const [3989352]
+00708593      i32.load [2, 0]
+00708596      call [1032] ; 
+00708599      i32.const [4018484]
+0070859e      i32.load [2, 0]
+007085a1      call [1367] ; 
+007085a4      drop []
+007085a5      br [1]
+007085a7    end []
+007085a8    local.get [1]
+007085aa    i32.const [4018328]
+007085af    i32.load [2, 0]
+007085b2    call [1503] ; 
+007085b5    local.set [1]
+007085b7    local.get [1]
+007085b9    local.set [2]
+007085bb    local.get [1]
+007085bd    i32.load [2, 0]
+007085c0    local.set [1]
+007085c2    local.get [2]
+007085c4    local.get [1]
+007085c6    i32.const [112]
+007085c9    i32.add []
+007085ca    i32.load [2, 192]
+007085ce    local.get [1]
+007085d0    i32.load [2, 300]
+007085d4    global.set [3]
+007085d6    global.get [3]
+007085d8    call_indirect [0, 0]
+007085db  end []
+007085dc  local.get [0]
+007085de  i32.load [2, 8]
+007085e1  local.get [0]
+007085e3  call [4384] ; LevelControl.RefreshCampInfo
+007085e6  local.get [0]
+007085e8  i32.load8_u [0, 12]
+007085eb  i32.eqz []
+007085ec  if [-64]
+007085ee    local.get [0]
+007085f0    i32.const [4]
+007085f2    i32.const [1]
+007085f4    local.get [0]
+007085f6    call [1444] ; LevelControl.SetPlaySate
+007085f9    drop []
+007085fa  end []
+007085fb  i32.const [3953384]
+00708600  i32.load [2, 0]
+00708603  call [935] ; 
+00708606  local.set [1]
+00708608  local.get [0]
+0070860a  i32.load [2, 8]
+0070860d  local.get [0]
+0070860f  call [1254] ; LevelControl.get_CurLevel
+00708612  drop []
+00708613  local.get [1]
+00708615  local.get [0]
+00708617  local.get [0]
+00708619  call [7819] ; GameControl.SetCameraSize
+0070861c  i32.const [0]
+0070861e  call [1388] ; UpdateManager.get_Instance
+00708621  local.get [0]
+00708623  local.get [0]
+00708625  call [11592] ; LevelControl.yLy^az
+00708628  i32.const [0]
+0070862a  call [1227] ; MonoBehaviour.StartCoroutine
+0070862d  drop []
+0070862e  end []

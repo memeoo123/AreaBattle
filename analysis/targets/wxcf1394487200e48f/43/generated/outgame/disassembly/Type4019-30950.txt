@@ -1,0 +1,21 @@
+; Original class: ArenaManager
+; Type4019..ctor; wasmcode function 20758; offset=9312487 size=52
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008e18e8  i32.const [5008666]
+008e18ed  i32.load8_u [0, 0]
+008e18f0  i32.eqz []
+008e18f1  if [-64]
+008e18f3    i32.const [4034536] ; STRING ""
+008e18f8    call [900] ; 
+008e18fb    i32.const [5008666]
+008e1900    i32.const [1]
+008e1902    i32.store8 [0, 0]
+008e1905  end []
+008e1906  local.get [0]
+008e1908  i32.const [4034536] ; STRING ""
+008e190d  i32.load [2, 0]
+008e1910  i32.store [2, 28]
+008e1913  local.get [0]
+008e1915  i32.const [0]
+008e1917  call [3381] ; DataManagerBase..ctor
+008e191a  end []

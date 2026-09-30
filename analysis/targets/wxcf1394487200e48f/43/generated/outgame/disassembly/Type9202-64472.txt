@@ -1,0 +1,147 @@
+; Original class: ADModule
+; Type9202.CanShowInterAD; wasmcode function 8372; offset=4018318 size=390
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(3, 127)]
+003d5091  global.get [0]
+003d5093  i32.const [16]
+003d5095  i32.sub []
+003d5096  local.set [3]
+003d5098  local.get [3]
+003d509a  global.set [0]
+003d509c  i32.const [5006926]
+003d50a1  i32.load8_u [0, 0]
+003d50a4  i32.eqz []
+003d50a5  if [-64]
+003d50a7    i32.const [3927760]
+003d50ac    call [900] ; 
+003d50af    i32.const [3928952]
+003d50b4    call [900] ; 
+003d50b7    i32.const [3936304]
+003d50bc    call [900] ; 
+003d50bf    i32.const [3927212]
+003d50c4    call [900] ; 
+003d50c7    i32.const [4046972] ; STRING "CanShowInterAD videoShowing:"
+003d50cc    call [900] ; 
+003d50cf    i32.const [4036036] ; STRING " isInterstitialReady:"
+003d50d4    call [900] ; 
+003d50d7    i32.const [4035572] ; STRING " canShowInterAD:"
+003d50dc    call [900] ; 
+003d50df    i32.const [5006926]
+003d50e4    i32.const [1]
+003d50e6    i32.store8 [0, 0]
+003d50e9  end []
+003d50ea  i32.const [3936304]
+003d50ef  i32.load [2, 0]
+003d50f2  call [901] ; 
+003d50f5  local.get [3]
+003d50f7  i32.const [0]
+003d50f9  call [1381] ; NewAdsManager.get_Instance
+003d50fc  i32.const [0]
+003d50fe  call [5867] ; NewAdsManager.isInterstitialReady
+003d5101  i32.store8 [0, 15]
+003d5104  i32.const [3927212]
+003d5109  i32.load [2, 0]
+003d510c  i32.const [7]
+003d510e  call [909] ; 
+003d5111  local.set [1]
+003d5113  i32.const [3927760]
+003d5118  i32.load [2, 0]
+003d511b  call [901] ; 
+003d511e  i32.const [3927760]
+003d5123  i32.load [2, 0]
+003d5126  i32.load [2, 92]
+003d5129  i32.load [2, 0]
+003d512c  local.set [2]
+003d512e  local.get [1]
+003d5130  local.get [2]
+003d5132  call [905] ; 
+003d5135  local.get [1]
+003d5137  local.get [2]
+003d5139  i32.store [2, 16]
+003d513c  local.get [1]
+003d513e  i32.const [4046972] ; STRING "CanShowInterAD videoShowing:"
+003d5143  i32.load [2, 0]
+003d5146  call [905] ; 
+003d5149  local.get [1]
+003d514b  i32.const [4046972] ; STRING "CanShowInterAD videoShowing:"
+003d5150  i32.load [2, 0]
+003d5153  i32.store [2, 20]
+003d5156  i32.const [3928952]
+003d515b  i32.load [2, 0]
+003d515e  call [901] ; 
+003d5161  local.get [0]
+003d5163  i32.const [25]
+003d5165  i32.add []
+003d5166  i32.const [0]
+003d5168  call [1148] ; Boolean.ToString
+003d516b  local.set [2]
+003d516d  local.get [1]
+003d516f  local.get [2]
+003d5171  call [905] ; 
+003d5174  local.get [1]
+003d5176  local.get [2]
+003d5178  i32.store [2, 24]
+003d517b  local.get [1]
+003d517d  i32.const [4035572] ; STRING " canShowInterAD:"
+003d5182  i32.load [2, 0]
+003d5185  call [905] ; 
+003d5188  local.get [1]
+003d518a  i32.const [4035572] ; STRING " canShowInterAD:"
+003d518f  i32.load [2, 0]
+003d5192  i32.store [2, 28]
+003d5195  local.get [0]
+003d5197  i32.const [11]
+003d5199  i32.add []
+003d519a  i32.const [0]
+003d519c  call [1148] ; Boolean.ToString
+003d519f  local.set [2]
+003d51a1  local.get [1]
+003d51a3  local.get [2]
+003d51a5  call [905] ; 
+003d51a8  local.get [1]
+003d51aa  local.get [2]
+003d51ac  i32.store [2, 32]
+003d51af  local.get [1]
+003d51b1  i32.const [4036036] ; STRING " isInterstitialReady:"
+003d51b6  i32.load [2, 0]
+003d51b9  call [905] ; 
+003d51bc  local.get [1]
+003d51be  i32.const [4036036] ; STRING " isInterstitialReady:"
+003d51c3  i32.load [2, 0]
+003d51c6  i32.store [2, 36]
+003d51c9  local.get [3]
+003d51cb  i32.const [15]
+003d51cd  i32.add []
+003d51ce  i32.const [0]
+003d51d0  call [1148] ; Boolean.ToString
+003d51d3  local.set [2]
+003d51d5  local.get [1]
+003d51d7  local.get [2]
+003d51d9  call [905] ; 
+003d51dc  local.get [1]
+003d51de  local.get [2]
+003d51e0  i32.store [2, 40]
+003d51e3  local.get [1]
+003d51e5  i32.const [0]
+003d51e7  call [1024] ; String.Concat
+003d51ea  i32.const [0]
+003d51ec  call [999] ; XYXLOG.Log
+003d51ef  local.get [0]
+003d51f1  i32.load8_u [0, 25]
+003d51f4  i32.eqz []
+003d51f5  if [-64]
+003d51f7    local.get [0]
+003d51f9    i32.load8_u [0, 11]
+003d51fc    local.set [4]
+003d51fe  end []
+003d51ff  local.get [3]
+003d5201  i32.load8_u [0, 15]
+003d5204  local.set [0]
+003d5206  local.get [3]
+003d5208  i32.const [16]
+003d520a  i32.add []
+003d520b  global.set [0]
+003d520d  local.get [0]
+003d520f  local.get [4]
+003d5211  i32.and []
+003d5212  return []
+003d5213  end []

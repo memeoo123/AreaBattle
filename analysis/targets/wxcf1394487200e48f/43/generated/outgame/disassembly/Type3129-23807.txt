@@ -1,0 +1,47 @@
+; Original class: AssetBundleManager
+; Type3129.­OAC; wasmcode1 function 14882; offset=5302972 size=117
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+0050eabd  i32.const [4988521]
+0050eac2  i32.load8_u [0, 0]
+0050eac5  i32.eqz []
+0050eac6  if [-64]
+0050eac8    i32.const [4080552] ; STRING "\\"
+0050eacd    i32.const [1605]
+0050ead0    call_indirect [0, 0]
+0050ead3    i32.const [4087920] ; STRING "file://"
+0050ead8    i32.const [1605]
+0050eadb    call_indirect [0, 0]
+0050eade    i32.const [4040180] ; STRING "/"
+0050eae3    i32.const [1605]
+0050eae6    call_indirect [0, 0]
+0050eae9    i32.const [4988521]
+0050eaee    i32.const [1]
+0050eaf0    i32.store8 [0, 0]
+0050eaf3  end []
+0050eaf4  block [-64]
+0050eaf6    i32.const [0]
+0050eaf8    call [9085] ; Application.get_isMobilePlatform
+0050eafb    i32.eqz []
+0050eafc    if [-64]
+0050eafe      i32.const [0]
+0050eb00      call [9086] ; Application.get_isConsolePlatform
+0050eb03      i32.eqz []
+0050eb04      br_if [1]
+0050eb06    end []
+0050eb07    i32.const [0]
+0050eb09    i32.const [51801] ; TABLE Application.get_streamingAssetsPath
+0050eb0d    call_indirect [2, 0]
+0050eb10    return []
+0050eb11  end []
+0050eb12  i32.const [0]
+0050eb14  i32.const [51801] ; TABLE Application.get_streamingAssetsPath
+0050eb18  call_indirect [2, 0]
+0050eb1b  local.set [0]
+0050eb1d  i32.const [4087920] ; STRING "file://"
+0050eb22  i32.load [2, 0]
+0050eb25  local.get [0]
+0050eb27  i32.const [0]
+0050eb29  i32.const [1476] ; TABLE String.Concat
+0050eb2c  call_indirect [3, 0]
+0050eb2f  return []
+0050eb30  end []

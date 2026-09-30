@@ -1,0 +1,60 @@
+; Original class: XYXLogin
+; Type7609.LoginSDK; wasmcode function 9318; offset=4535678 size=176
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0045357f  i32.const [5005968]
+00453584  i32.load8_u [0, 0]
+00453587  i32.eqz []
+00453588  if [-64]
+0045358a    i32.const [3915956]
+0045358f    call [900] ; 
+00453592    i32.const [3942528]
+00453597    call [900] ; 
+0045359a    i32.const [4070336] ; STRING "Start LoginSDK"
+0045359f    call [900] ; 
+004535a2    i32.const [5005968]
+004535a7    i32.const [1]
+004535a9    i32.store8 [0, 0]
+004535ac  end []
+004535ad  i32.const [3942528]
+004535b2  i32.load [2, 0]
+004535b5  call [901] ; 
+004535b8  i32.const [3942528]
+004535bd  i32.load [2, 0]
+004535c0  i32.load [2, 92]
+004535c3  i32.load [2, 8]
+004535c6  i32.const [4070336] ; STRING "Start LoginSDK"
+004535cb  i32.load [2, 0]
+004535ce  i32.const [0]
+004535d0  call [1433] ; XYXLOG.Log
+004535d3  i32.const [3942528]
+004535d8  i32.load [2, 0]
+004535db  i32.load [2, 92]
+004535de  i32.load [2, 0]
+004535e1  local.get [0]
+004535e3  i32.const [0]
+004535e5  call [1031] ; Delegate.Combine
+004535e8  local.set [0]
+004535ea  local.get [0]
+004535ec  i32.const [3915956]
+004535f1  i32.load [2, 0]
+004535f4  call [938] ; 
+004535f7  local.set [1]
+004535f9  i32.const [3942528]
+004535fe  i32.load [2, 0]
+00453601  i32.load [2, 92]
+00453604  local.get [1]
+00453606  i32.store [2, 0]
+00453609  i32.const [3942528]
+0045360e  i32.load [2, 0]
+00453611  i32.load [2, 92]
+00453614  drop []
+00453615  local.get [0]
+00453617  i32.const [3915956]
+0045361c  i32.load [2, 0]
+0045361f  call [938] ; 
+00453622  drop []
+00453623  local.get [0]
+00453625  call [9319] ; XYXLogin.BridgeLogin
+00453628  local.get [0]
+0045362a  call [9315] ; XYXLogin.SetFirstInstallVersion
+0045362d  end []

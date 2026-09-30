@@ -1,0 +1,31 @@
+{
+  "status": "cleanup_controller_verified_host_pending",
+  "checks": 518,
+  "source": [
+    "disassembly/Type4058-31221.txt",
+    "disassembly/Type4058-31223.txt",
+    "disassembly/Type4058-31219.txt",
+    "disassembly/Type4058-31209.txt",
+    "fly-tween-cleanup-generics.json"
+  ],
+  "verified": [
+    "StopEffect queues only tracked id and does not deduplicate",
+    "Update drains pending before timeout checks",
+    "Child ids fly_{id}_{sub} are killed with complete=true, then stop coroutine, remove coroutine/time entries and subids",
+    "Strict time>nextCheck and age>4; nextCheck=old+(Time.time+1), preserving repeated clock reads",
+    "Exceptions preserve source partial state, including duplicate stop queue failure"
+  ],
+  "tweenResolution": {
+    "4017576": "OnComplete",
+    "4017676": "SetUpdate(bool independentUpdate)",
+    "4017592": "SetAutoKill",
+    "4017620": "SetId",
+    "4017552": "Pause",
+    "4017616": "SetEase"
+  },
+  "pending": [
+    "Actual native pool, tween and scheduler host",
+    "Verify tween easing enum and implementation against original before constructing animation",
+    "Runtime concurrent effects and complete callback reentrancy"
+  ]
+}

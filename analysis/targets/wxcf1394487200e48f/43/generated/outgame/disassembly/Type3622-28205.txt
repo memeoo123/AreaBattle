@@ -1,0 +1,129 @@
+; Original class: FileManager
+; Type3622.ReadWebGLFile; wasmcode function 5084; offset=1744048 size=373
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+001a9cb3  i32.const [4988922]
+001a9cb8  i32.load8_u [0, 0]
+001a9cbb  i32.eqz []
+001a9cbc  if [-64]
+001a9cbe    i32.const [3929208]
+001a9cc3    call [900] ; 
+001a9cc6    i32.const [3930128]
+001a9ccb    call [900] ; 
+001a9cce    i32.const [3926996]
+001a9cd3    call [900] ; 
+001a9cd6    i32.const [3927212]
+001a9cdb    call [900] ; 
+001a9cde    i32.const [3939452]
+001a9ce3    call [900] ; 
+001a9ce6    i32.const [4106172] ; STRING "调用小游戏读取数据：key["
+001a9ceb    call [900] ; 
+001a9cee    i32.const [4081012] ; STRING "] value["
+001a9cf3    call [900] ; 
+001a9cf6    i32.const [4080932] ; STRING "]"
+001a9cfb    call [900] ; 
+001a9cfe    i32.const [4988922]
+001a9d03    i32.const [1]
+001a9d05    i32.store8 [0, 0]
+001a9d08  end []
+001a9d09  i32.const [3930128]
+001a9d0e  i32.load [2, 0]
+001a9d11  call [901] ; 
+001a9d14  i32.const [0]
+001a9d16  call [974] ; DBTSDKManager.get_Instance
+001a9d19  i32.load [2, 16]
+001a9d1c  local.set [0]
+001a9d1e  local.get [0]
+001a9d20  local.set [2]
+001a9d22  local.get [0]
+001a9d24  i32.load [2, 0]
+001a9d27  i32.const [2432]
+001a9d2a  i32.add []
+001a9d2b  local.set [0]
+001a9d2d  local.get [2]
+001a9d2f  local.get [1]
+001a9d31  i32.const [3939452]
+001a9d36  i32.load [2, 0]
+001a9d39  i32.load [2, 92]
+001a9d3c  i32.load [2, 0]
+001a9d3f  local.get [0]
+001a9d41  i32.load [2, 192]
+001a9d45  local.get [0]
+001a9d47  i32.load [2, 188]
+001a9d4b  global.set [3]
+001a9d4d  global.get [3]
+001a9d4f  call_indirect [10, 0]
+001a9d52  local.set [2]
+001a9d54  i32.const [3929208]
+001a9d59  i32.load [2, 0]
+001a9d5c  call [901] ; 
+001a9d5f  i32.const [3929208]
+001a9d64  i32.load [2, 0]
+001a9d67  i32.load [2, 92]
+001a9d6a  i32.load8_u [0, 0]
+001a9d6d  if [-64]
+001a9d6f    i32.const [3926996]
+001a9d74    i32.load [2, 0]
+001a9d77    i32.const [1]
+001a9d79    call [909] ; 
+001a9d7c    local.set [3]
+001a9d7e    i32.const [3927212]
+001a9d83    i32.load [2, 0]
+001a9d86    i32.const [5]
+001a9d88    call [909] ; 
+001a9d8b    local.set [0]
+001a9d8d    local.get [0]
+001a9d8f    i32.const [4106172] ; STRING "调用小游戏读取数据：key["
+001a9d94    i32.load [2, 0]
+001a9d97    call [905] ; 
+001a9d9a    local.get [0]
+001a9d9c    i32.const [4106172] ; STRING "调用小游戏读取数据：key["
+001a9da1    i32.load [2, 0]
+001a9da4    i32.store [2, 16]
+001a9da7    local.get [0]
+001a9da9    local.get [1]
+001a9dab    call [905] ; 
+001a9dae    local.get [0]
+001a9db0    local.get [1]
+001a9db2    i32.store [2, 20]
+001a9db5    local.get [0]
+001a9db7    i32.const [4081012] ; STRING "] value["
+001a9dbc    i32.load [2, 0]
+001a9dbf    call [905] ; 
+001a9dc2    local.get [0]
+001a9dc4    i32.const [4081012] ; STRING "] value["
+001a9dc9    i32.load [2, 0]
+001a9dcc    i32.store [2, 24]
+001a9dcf    local.get [0]
+001a9dd1    local.get [2]
+001a9dd3    call [905] ; 
+001a9dd6    local.get [0]
+001a9dd8    local.get [2]
+001a9dda    i32.store [2, 28]
+001a9ddd    local.get [0]
+001a9ddf    i32.const [4080932] ; STRING "]"
+001a9de4    i32.load [2, 0]
+001a9de7    call [905] ; 
+001a9dea    local.get [0]
+001a9dec    i32.const [4080932] ; STRING "]"
+001a9df1    i32.load [2, 0]
+001a9df4    i32.store [2, 32]
+001a9df7    local.get [0]
+001a9df9    i32.const [0]
+001a9dfb    call [1024] ; String.Concat
+001a9dfe    local.set [0]
+001a9e00    local.get [3]
+001a9e02    local.get [0]
+001a9e04    call [905] ; 
+001a9e07    local.get [3]
+001a9e09    local.get [0]
+001a9e0b    i32.store [2, 16]
+001a9e0e    i32.const [3929208]
+001a9e13    i32.load [2, 0]
+001a9e16    call [901] ; 
+001a9e19    local.get [3]
+001a9e1b    i32.const [0]
+001a9e1d    call [1069] ; CLog.Log
+001a9e20  end []
+001a9e21  local.get [2]
+001a9e23  return []
+001a9e24  end []

@@ -1,0 +1,68 @@
+; Original class: Proj_xqzdLoadingUI
+; Type4387.vczznp; wasmcode1 function 54164; offset=17936779 size=212
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0111b18e  i32.const [5007403]
+0111b193  i32.load8_u [0, 0]
+0111b196  i32.eqz []
+0111b197  if [-64]
+0111b199    i32.const [3953576]
+0111b19e    i32.const [1605]
+0111b1a1    call_indirect [0, 0]
+0111b1a4    i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b1a9    i32.const [1605]
+0111b1ac    call_indirect [0, 0]
+0111b1af    i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b1b4    i32.const [1605]
+0111b1b7    call_indirect [0, 0]
+0111b1ba    i32.const [3940924]
+0111b1bf    i32.const [1605]
+0111b1c2    call_indirect [0, 0]
+0111b1c5    i32.const [4069368] ; STRING "SevendayClose"
+0111b1ca    i32.const [1605]
+0111b1cd    call_indirect [0, 0]
+0111b1d0    i32.const [4040180] ; STRING "/"
+0111b1d5    i32.const [1605]
+0111b1d8    call_indirect [0, 0]
+0111b1db    i32.const [5007403]
+0111b1e0    i32.const [1]
+0111b1e2    i32.store8 [0, 0]
+0111b1e5  end []
+0111b1e6  i32.const [3953576]
+0111b1eb  i32.load [2, 0]
+0111b1ee  i32.const [10272]
+0111b1f2  call_indirect [2, 0]
+0111b1f5  local.set [1]
+0111b1f7  i32.const [3940924]
+0111b1fc  i32.load [2, 0]
+0111b1ff  i32.const [109007]
+0111b203  call_indirect [2, 0]
+0111b206  local.set [2]
+0111b208  local.get [2]
+0111b20a  local.get [0]
+0111b20c  i32.const [4009900] ; METHOD Proj_xqzdLoadingUI.`tOWNx
+0111b211  i32.load [2, 0]
+0111b214  i32.const [0]
+0111b216  i32.const [54239] ; TABLE UnityAction..ctor
+0111b21a  call_indirect [6, 0]
+0111b21d  i32.const [3940924]
+0111b222  i32.load [2, 0]
+0111b225  i32.const [109007]
+0111b229  call_indirect [2, 0]
+0111b22c  local.set [3]
+0111b22e  local.get [3]
+0111b230  local.get [0]
+0111b232  i32.const [4009904] ; METHOD Proj_xqzdLoadingUI.kZuZb
+0111b237  i32.load [2, 0]
+0111b23a  i32.const [0]
+0111b23c  i32.const [54239] ; TABLE UnityAction..ctor
+0111b240  call_indirect [6, 0]
+0111b243  local.get [1]
+0111b245  i32.const [4069368] ; STRING "SevendayClose"
+0111b24a  i32.load [2, 0]
+0111b24d  local.get [2]
+0111b24f  local.get [3]
+0111b251  i32.const [4040180] ; STRING "/"
+0111b256  i32.load [2, 0]
+0111b259  i32.const [0]
+0111b25b  call [3228] ; UIControl.ShowCommonTip
+0111b25e  end []

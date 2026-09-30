@@ -1,0 +1,29 @@
+; Original class: GlobalData
+; Type3486.get_IsFirstStart; wasmcode1 function 27712; offset=10537444 size=80
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00a0c9e5  i32.const [4989077]
+00a0c9ea  i32.load8_u [0, 0]
+00a0c9ed  i32.eqz []
+00a0c9ee  if [-64]
+00a0c9f0    i32.const [3941104]
+00a0c9f5    i32.const [1605]
+00a0c9f8    call_indirect [0, 0]
+00a0c9fb    i32.const [4054836] ; STRING "GF_FirstStart"
+00a0ca00    i32.const [1605]
+00a0ca03    call_indirect [0, 0]
+00a0ca06    i32.const [4989077]
+00a0ca0b    i32.const [1]
+00a0ca0d    i32.store8 [0, 0]
+00a0ca10  end []
+00a0ca11  i32.const [3941104]
+00a0ca16  i32.load [2, 0]
+00a0ca19  i32.const [1149]
+00a0ca1c  call_indirect [0, 0]
+00a0ca1f  i32.const [4054836] ; STRING "GF_FirstStart"
+00a0ca24  i32.load [2, 0]
+00a0ca27  i32.const [0]
+00a0ca29  i32.const [0]
+00a0ca2b  i32.const [25250] ; TABLE UserDataPrefs.GetInt
+00a0ca2f  call_indirect [3, 0]
+00a0ca32  return []
+00a0ca33  end []

@@ -1,0 +1,320 @@
+; Original class: <InitSDKOpenFunction>d__36
+; Type3134.MoveNext; wasmcode function 15396; offset=7425849 size=913
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+00714f3c  i32.const [0]
+00714f3e  local.set [1]
+00714f40  i32.const [4988646]
+00714f45  i32.load8_u [0, 0]
+00714f48  i32.eqz []
+00714f49  if [-64]
+00714f4b    i32.const [3994676] ; METHOD DBTSDKManager.AdsVideoFunction
+00714f50    call [900] ; 
+00714f53    i32.const [3994680] ; METHOD DBTSDKManager.DrawVideo
+00714f58    call [900] ; 
+00714f5b    i32.const [3994684] ; METHOD DBTSDKManager.FeedbackFunction
+00714f60    call [900] ; 
+00714f63    i32.const [3994688] ; METHOD DBTSDKManager.GDPRUserFunction
+00714f68    call [900] ; 
+00714f6b    i32.const [3994692] ; METHOD DBTSDKManager.OpenPrivacyRecall
+00714f70    call [900] ; 
+00714f73    i32.const [3994696] ; METHOD DBTSDKManager.ShowGameBanHaoFunction
+00714f78    call [900] ; 
+00714f7b    i32.const [3994700] ; METHOD DBTSDKManager.ShowLoginFunction
+00714f80    call [900] ; 
+00714f83    i32.const [3994704] ; METHOD DBTSDKManager.ShowOppoGameCenter
+00714f88    call [900] ; 
+00714f8b    i32.const [3994708] ; METHOD DBTSDKManager.ShowPolicyFunction
+00714f90    call [900] ; 
+00714f93    i32.const [3994712] ; METHOD DBTSDKManager.ShowShareFunction
+00714f98    call [900] ; 
+00714f9b    i32.const [3994716] ; METHOD DBTSDKManager.ShowUserProtocolFunction
+00714fa0    call [900] ; 
+00714fa3    i32.const [3994720] ; METHOD DBTSDKManager.StartRestore
+00714fa8    call [900] ; 
+00714fab    i32.const [3958040]
+00714fb0    call [900] ; 
+00714fb3    i32.const [3940924]
+00714fb8    call [900] ; 
+00714fbb    i32.const [3941916]
+00714fc0    call [900] ; 
+00714fc3    i32.const [3941928]
+00714fc8    call [900] ; 
+00714fcb    i32.const [4988646]
+00714fd0    i32.const [1]
+00714fd2    i32.store8 [0, 0]
+00714fd5  end []
+00714fd6  i32.const [-1]
+00714fd8  local.set [3]
+00714fda  block [-64]
+00714fdc    block [-64]
+00714fde      block [-64]
+00714fe0        block [-64]
+00714fe2          block [-64]
+00714fe4            local.get [0]
+00714fe6            i32.load [2, 8]
+00714fe9            br_table [0, 1, 3, 4]
+00714fef          end []
+00714ff0          local.get [0]
+00714ff2          i32.const [-1]
+00714ff4          i32.store [2, 8]
+00714ff7          local.get [0]
+00714ff9          i32.const [3941916]
+00714ffe          i32.load [2, 0]
+00715001          call [903] ; 
+00715004          i32.store [2, 12]
+00715007          i32.const [1]
+00715009          local.set [3]
+0071500b          br [1]
+0071500d        end []
+0071500e        local.get [0]
+00715010        i32.load [2, 16]
+00715013        local.set [1]
+00715015        local.get [0]
+00715017        i32.const [-1]
+00715019        i32.store [2, 8]
+0071501c        local.get [1]
+0071501e        i32.load [2, 56]
+00715021        local.set [3]
+00715023        i32.const [3940924]
+00715028        i32.load [2, 0]
+0071502b        call [903] ; 
+0071502e        local.set [2]
+00715030        local.get [2]
+00715032        local.get [1]
+00715034        i32.const [3994676] ; METHOD DBTSDKManager.AdsVideoFunction
+00715039        i32.load [2, 0]
+0071503c        i32.const [0]
+0071503e        call [1153] ; UnityAction..ctor
+00715041        local.get [3]
+00715043        i32.const [5]
+00715045        local.get [2]
+00715047        i32.const [3958040]
+0071504c        i32.load [2, 0]
+0071504f        call [1049] ; 
+00715052        local.get [1]
+00715054        i32.load [2, 56]
+00715057        local.set [3]
+00715059        i32.const [3940924]
+0071505e        i32.load [2, 0]
+00715061        call [903] ; 
+00715064        local.set [2]
+00715066        local.get [2]
+00715068        local.get [1]
+0071506a        i32.const [3994712] ; METHOD DBTSDKManager.ShowShareFunction
+0071506f        i32.load [2, 0]
+00715072        i32.const [0]
+00715074        call [1153] ; UnityAction..ctor
+00715077        local.get [3]
+00715079        i32.const [7]
+0071507b        local.get [2]
+0071507d        i32.const [3958040]
+00715082        i32.load [2, 0]
+00715085        call [1049] ; 
+00715088        local.get [1]
+0071508a        i32.load [2, 56]
+0071508d        local.set [3]
+0071508f        i32.const [3940924]
+00715094        i32.load [2, 0]
+00715097        call [903] ; 
+0071509a        local.set [2]
+0071509c        local.get [2]
+0071509e        local.get [1]
+007150a0        i32.const [3994700] ; METHOD DBTSDKManager.ShowLoginFunction
+007150a5        i32.load [2, 0]
+007150a8        i32.const [0]
+007150aa        call [1153] ; UnityAction..ctor
+007150ad        local.get [3]
+007150af        i32.const [8]
+007150b1        local.get [2]
+007150b3        i32.const [3958040]
+007150b8        i32.load [2, 0]
+007150bb        call [1049] ; 
+007150be        local.get [1]
+007150c0        i32.load [2, 56]
+007150c3        local.set [3]
+007150c5        i32.const [3940924]
+007150ca        i32.load [2, 0]
+007150cd        call [903] ; 
+007150d0        local.set [2]
+007150d2        local.get [2]
+007150d4        local.get [1]
+007150d6        i32.const [3994684] ; METHOD DBTSDKManager.FeedbackFunction
+007150db        i32.load [2, 0]
+007150de        i32.const [0]
+007150e0        call [1153] ; UnityAction..ctor
+007150e3        local.get [3]
+007150e5        i32.const [9]
+007150e7        local.get [2]
+007150e9        i32.const [3958040]
+007150ee        i32.load [2, 0]
+007150f1        call [1049] ; 
+007150f4        local.get [1]
+007150f6        i32.load [2, 56]
+007150f9        local.set [3]
+007150fb        i32.const [3940924]
+00715100        i32.load [2, 0]
+00715103        call [903] ; 
+00715106        local.set [2]
+00715108        local.get [2]
+0071510a        local.get [1]
+0071510c        i32.const [3994688] ; METHOD DBTSDKManager.GDPRUserFunction
+00715111        i32.load [2, 0]
+00715114        i32.const [0]
+00715116        call [1153] ; UnityAction..ctor
+00715119        local.get [3]
+0071511b        i32.const [10]
+0071511d        local.get [2]
+0071511f        i32.const [3958040]
+00715124        i32.load [2, 0]
+00715127        call [1049] ; 
+0071512a        local.get [1]
+0071512c        i32.load [2, 56]
+0071512f        local.set [3]
+00715131        i32.const [3940924]
+00715136        i32.load [2, 0]
+00715139        call [903] ; 
+0071513c        local.set [2]
+0071513e        local.get [2]
+00715140        local.get [1]
+00715142        i32.const [3994708] ; METHOD DBTSDKManager.ShowPolicyFunction
+00715147        i32.load [2, 0]
+0071514a        i32.const [0]
+0071514c        call [1153] ; UnityAction..ctor
+0071514f        local.get [3]
+00715151        i32.const [11]
+00715153        local.get [2]
+00715155        i32.const [3958040]
+0071515a        i32.load [2, 0]
+0071515d        call [1049] ; 
+00715160        local.get [1]
+00715162        i32.load [2, 56]
+00715165        local.set [3]
+00715167        i32.const [3940924]
+0071516c        i32.load [2, 0]
+0071516f        call [903] ; 
+00715172        local.set [2]
+00715174        local.get [2]
+00715176        local.get [1]
+00715178        i32.const [3994716] ; METHOD DBTSDKManager.ShowUserProtocolFunction
+0071517d        i32.load [2, 0]
+00715180        i32.const [0]
+00715182        call [1153] ; UnityAction..ctor
+00715185        local.get [3]
+00715187        i32.const [12]
+00715189        local.get [2]
+0071518b        i32.const [3958040]
+00715190        i32.load [2, 0]
+00715193        call [1049] ; 
+00715196        local.get [1]
+00715198        i32.load [2, 56]
+0071519b        local.set [3]
+0071519d        i32.const [3940924]
+007151a2        i32.load [2, 0]
+007151a5        call [903] ; 
+007151a8        local.set [2]
+007151aa        local.get [2]
+007151ac        local.get [1]
+007151ae        i32.const [3994696] ; METHOD DBTSDKManager.ShowGameBanHaoFunction
+007151b3        i32.load [2, 0]
+007151b6        i32.const [0]
+007151b8        call [1153] ; UnityAction..ctor
+007151bb        local.get [3]
+007151bd        i32.const [17]
+007151bf        local.get [2]
+007151c1        i32.const [3958040]
+007151c6        i32.load [2, 0]
+007151c9        call [1049] ; 
+007151cc        local.get [1]
+007151ce        i32.load [2, 56]
+007151d1        local.set [3]
+007151d3        i32.const [3940924]
+007151d8        i32.load [2, 0]
+007151db        call [903] ; 
+007151de        local.set [2]
+007151e0        local.get [2]
+007151e2        local.get [1]
+007151e4        i32.const [3994720] ; METHOD DBTSDKManager.StartRestore
+007151e9        i32.load [2, 0]
+007151ec        i32.const [0]
+007151ee        call [1153] ; UnityAction..ctor
+007151f1        local.get [3]
+007151f3        i32.const [19]
+007151f5        local.get [2]
+007151f7        i32.const [3958040]
+007151fc        i32.load [2, 0]
+007151ff        call [1049] ; 
+00715202        local.get [1]
+00715204        i32.load [2, 56]
+00715207        local.set [3]
+00715209        i32.const [3940924]
+0071520e        i32.load [2, 0]
+00715211        call [903] ; 
+00715214        local.set [2]
+00715216        local.get [2]
+00715218        local.get [1]
+0071521a        i32.const [3994704] ; METHOD DBTSDKManager.ShowOppoGameCenter
+0071521f        i32.load [2, 0]
+00715222        i32.const [0]
+00715224        call [1153] ; UnityAction..ctor
+00715227        local.get [3]
+00715229        i32.const [20]
+0071522b        local.get [2]
+0071522d        i32.const [3958040]
+00715232        i32.load [2, 0]
+00715235        call [1049] ; 
+00715238        local.get [1]
+0071523a        i32.load [2, 56]
+0071523d        local.set [3]
+0071523f        i32.const [3940924]
+00715244        i32.load [2, 0]
+00715247        call [903] ; 
+0071524a        local.set [2]
+0071524c        local.get [2]
+0071524e        local.get [1]
+00715250        i32.const [3994680] ; METHOD DBTSDKManager.DrawVideo
+00715255        i32.load [2, 0]
+00715258        i32.const [0]
+0071525a        call [1153] ; UnityAction..ctor
+0071525d        local.get [3]
+0071525f        i32.const [21]
+00715261        local.get [2]
+00715263        i32.const [3958040]
+00715268        i32.load [2, 0]
+0071526b        call [1049] ; 
+0071526e        local.get [1]
+00715270        i32.load [2, 56]
+00715273        local.set [3]
+00715275        i32.const [3940924]
+0071527a        i32.load [2, 0]
+0071527d        call [903] ; 
+00715280        local.set [2]
+00715282        local.get [2]
+00715284        local.get [1]
+00715286        i32.const [3994692] ; METHOD DBTSDKManager.OpenPrivacyRecall
+0071528b        i32.load [2, 0]
+0071528e        i32.const [0]
+00715290        call [1153] ; UnityAction..ctor
+00715293        local.get [3]
+00715295        i32.const [22]
+00715297        local.get [2]
+00715299        i32.const [3958040]
+0071529e        i32.load [2, 0]
+007152a1        call [1049] ; 
+007152a4        local.get [0]
+007152a6        i32.const [3941928]
+007152ab        i32.load [2, 0]
+007152ae        call [903] ; 
+007152b1        i32.store [2, 12]
+007152b4        i32.const [2]
+007152b6        local.set [3]
+007152b8      end []
+007152b9      i32.const [1]
+007152bb      local.set [1]
+007152bd    end []
+007152be    local.get [0]
+007152c0    local.get [3]
+007152c2    i32.store [2, 8]
+007152c5  end []
+007152c6  local.get [1]
+007152c8  return []
+007152c9  end []

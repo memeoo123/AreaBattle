@@ -1,0 +1,101 @@
+; Original class: WxVideoAdapter
+; Type9186.startShowAd; wasmcode function 14689; offset=7201702 size=283
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+006de3a9  i32.const [5006865]
+006de3ae  i32.load8_u [0, 0]
+006de3b1  i32.eqz []
+006de3b2  if [-64]
+006de3b4    i32.const [3915844]
+006de3b9    call [900] ; 
+006de3bc    i32.const [3915836]
+006de3c1    call [900] ; 
+006de3c4    i32.const [4022608] ; METHOD WxVideoAdapter.CloseCallback
+006de3c9    call [900] ; 
+006de3cc    i32.const [4022600] ; METHOD WxVideoAdapter.<startShowAd>g__ShowVideoFail|7_1
+006de3d1    call [900] ; 
+006de3d4    i32.const [4022604] ; METHOD WxVideoAdapter.<startShowAd>g__ShowVideoSuccess|7_0
+006de3d9    call [900] ; 
+006de3dc    i32.const [4097124] ; STRING "startShowAd"
+006de3e1    call [900] ; 
+006de3e4    i32.const [4078156] ; STRING "VideoAd is null"
+006de3e9    call [900] ; 
+006de3ec    i32.const [5006865]
+006de3f1    i32.const [1]
+006de3f3    i32.store8 [0, 0]
+006de3f6  end []
+006de3f7  local.get [0]
+006de3f9  i32.load [2, 8]
+006de3fc  i32.const [4097124] ; STRING "startShowAd"
+006de401  i32.load [2, 0]
+006de404  i32.const [0]
+006de406  call [921] ; String.Concat
+006de409  i32.const [0]
+006de40b  call [999] ; XYXLOG.Log
+006de40e  local.get [0]
+006de410  i32.load [2, 64]
+006de413  local.set [1]
+006de415  local.get [1]
+006de417  i32.eqz []
+006de418  if [-64]
+006de41a    local.get [0]
+006de41c    i32.load [2, 8]
+006de41f    i32.const [4078156] ; STRING "VideoAd is null"
+006de424    i32.load [2, 0]
+006de427    i32.const [0]
+006de429    call [921] ; String.Concat
+006de42c    i32.const [0]
+006de42e    call [999] ; XYXLOG.Log
+006de431    local.get [0]
+006de433    i32.const [0]
+006de435    i32.const [4078156] ; STRING "VideoAd is null"
+006de43a    i32.load [2, 0]
+006de43d    i32.const [0]
+006de43f    call [2987] ; DAUAdsAdapter.notifyShowAdError
+006de442    return []
+006de443  end []
+006de444  local.get [0]
+006de446  i32.const [0]
+006de448  i32.store8 [0, 69]
+006de44b  i32.const [3915836]
+006de450  i32.load [2, 0]
+006de453  call [903] ; 
+006de456  local.set [2]
+006de458  local.get [2]
+006de45a  local.get [0]
+006de45c  i32.const [4022608] ; METHOD WxVideoAdapter.CloseCallback
+006de461  i32.load [2, 0]
+006de464  i32.const [0]
+006de466  call [1004] ; 
+006de469  local.get [1]
+006de46b  local.get [2]
+006de46d  i32.const [0]
+006de46f  call [9520] ; WXRewardedVideoAd.OnClose
+006de472  local.get [0]
+006de474  i32.load [2, 64]
+006de477  local.set [1]
+006de479  i32.const [3915844]
+006de47e  i32.load [2, 0]
+006de481  call [903] ; 
+006de484  local.set [2]
+006de486  local.get [2]
+006de488  local.get [0]
+006de48a  i32.const [4022604] ; METHOD WxVideoAdapter.<startShowAd>g__ShowVideoSuccess|7_0
+006de48f  i32.load [2, 0]
+006de492  i32.const [0]
+006de494  call [1004] ; 
+006de497  i32.const [3915844]
+006de49c  i32.load [2, 0]
+006de49f  call [903] ; 
+006de4a2  local.set [3]
+006de4a4  local.get [3]
+006de4a6  local.get [0]
+006de4a8  i32.const [4022600] ; METHOD WxVideoAdapter.<startShowAd>g__ShowVideoFail|7_1
+006de4ad  i32.load [2, 0]
+006de4b0  i32.const [0]
+006de4b2  call [1004] ; 
+006de4b5  local.get [1]
+006de4b7  local.get [2]
+006de4b9  local.get [3]
+006de4bb  i32.const [0]
+006de4bd  call [4186] ; WXBaseAd.Show
+006de4c0  end []

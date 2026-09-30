@@ -1,0 +1,100 @@
+; Original class: TimeModule
+; Type3534.PRemoveLoopTimer; wasmcode function 15571; offset=7510817 size=268
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00729b24  global.get [0]
+00729b26  i32.const [16]
+00729b28  i32.sub []
+00729b29  local.set [2]
+00729b2b  local.get [2]
+00729b2d  global.set [0]
+00729b2f  i32.const [4989614]
+00729b34  i32.load8_u [0, 0]
+00729b37  i32.eqz []
+00729b38  if [-64]
+00729b3a    i32.const [3929208]
+00729b3f    call [900] ; 
+00729b42    i32.const [3956504]
+00729b47    call [900] ; 
+00729b4a    i32.const [3956508]
+00729b4f    call [900] ; 
+00729b52    i32.const [3956520]
+00729b57    call [900] ; 
+00729b5a    i32.const [3934404]
+00729b5f    call [900] ; 
+00729b62    i32.const [3926996]
+00729b67    call [900] ; 
+00729b6a    i32.const [4067452] ; STRING "RemoveLoopTimer，未找到对应ID[{0}]的数据类"
+00729b6f    call [900] ; 
+00729b72    i32.const [4989614]
+00729b77    i32.const [1]
+00729b79    i32.store8 [0, 0]
+00729b7c  end []
+00729b7d  block [-64]
+00729b7f    local.get [0]
+00729b81    i32.load [2, 76]
+00729b84    local.get [1]
+00729b86    i32.const [3956504]
+00729b8b    i32.load [2, 0]
+00729b8e    call [1129] ; 
+00729b91    if [-64]
+00729b93      local.get [0]
+00729b95      i32.load [2, 76]
+00729b98      local.get [1]
+00729b9a      i32.const [3956520]
+00729b9f      i32.load [2, 0]
+00729ba2      call [1128] ; 
+00729ba5      local.set [3]
+00729ba7      local.get [3]
+00729ba9      i32.const [0]
+00729bab      i32.store [2, 24]
+00729bae      local.get [3]
+00729bb0      i32.const [0]
+00729bb2      i32.store [2, 28]
+00729bb5      local.get [0]
+00729bb7      i32.load [2, 76]
+00729bba      local.get [1]
+00729bbc      i32.const [3956508]
+00729bc1      i32.load [2, 0]
+00729bc4      call [1570] ; 
+00729bc7      drop []
+00729bc8      br [1]
+00729bca    end []
+00729bcb    i32.const [3926996]
+00729bd0    i32.load [2, 0]
+00729bd3    i32.const [1]
+00729bd5    call [909] ; 
+00729bd8    local.set [0]
+00729bda    local.get [2]
+00729bdc    local.get [1]
+00729bde    i32.store [2, 12]
+00729be1    i32.const [3934404]
+00729be6    i32.load [2, 0]
+00729be9    local.get [2]
+00729beb    i32.const [12]
+00729bed    i32.add []
+00729bee    call [910] ; 
+00729bf1    local.set [1]
+00729bf3    i32.const [4067452] ; STRING "RemoveLoopTimer，未找到对应ID[{0}]的数据类"
+00729bf8    i32.load [2, 0]
+00729bfb    local.get [1]
+00729bfd    i32.const [0]
+00729bff    call [1015] ; String.Format
+00729c02    local.set [1]
+00729c04    local.get [0]
+00729c06    local.get [1]
+00729c08    call [905] ; 
+00729c0b    local.get [0]
+00729c0d    local.get [1]
+00729c0f    i32.store [2, 16]
+00729c12    i32.const [3929208]
+00729c17    i32.load [2, 0]
+00729c1a    call [901] ; 
+00729c1d    local.get [0]
+00729c1f    i32.const [0]
+00729c21    call [1156] ; CLog.Warning
+00729c24  end []
+00729c25  local.get [2]
+00729c27  i32.const [16]
+00729c29  i32.add []
+00729c2a  global.set [0]
+00729c2c  end []

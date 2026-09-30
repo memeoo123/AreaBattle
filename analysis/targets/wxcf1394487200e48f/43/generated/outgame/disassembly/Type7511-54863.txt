@@ -1,0 +1,31 @@
+; Original class: BaseController
+; Type7511.removeCacheList; wasmcode function 13090; offset=6271199 size=80
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005fb0e0  i32.const [5005043]
+005fb0e5  i32.load8_u [0, 0]
+005fb0e8  i32.eqz []
+005fb0e9  if [-64]
+005fb0eb    i32.const [3973068]
+005fb0f0    call [900] ; 
+005fb0f3    i32.const [3973076]
+005fb0f8    call [900] ; 
+005fb0fb    i32.const [5005043]
+005fb100    i32.const [1]
+005fb102    i32.store8 [0, 0]
+005fb105  end []
+005fb106  local.get [0]
+005fb108  i32.load [2, 72]
+005fb10b  local.get [1]
+005fb10d  i32.const [3973068]
+005fb112  i32.load [2, 0]
+005fb115  call [1209] ; 
+005fb118  if [-64]
+005fb11a    local.get [0]
+005fb11c    i32.load [2, 72]
+005fb11f    local.get [1]
+005fb121    i32.const [3973076]
+005fb126    i32.load [2, 0]
+005fb129    call [1351] ; 
+005fb12c    drop []
+005fb12d  end []
+005fb12e  end []

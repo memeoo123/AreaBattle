@@ -1,0 +1,51 @@
+{
+  "atUtc": "2026-09-30T06:54:09.703281+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "GAME_CONTROLLER_FIELD_EVIDENCE.json",
+  "controllerType": 4064,
+  "productionFiles": [
+    "OutgameGameControl.cs",
+    "OutgameGameSceneMono.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "sceneImport": {
+    "manifest": "model-roots.json",
+    "selectedNodes": 21,
+    "cameras": 4,
+    "sourceComponent": "generated/unity-assets/MonoBehaviour/unnamed__BuildPlayer-GamePlay__59.json",
+    "scope": "All17 GameSceneMono serialized references; selected ancestor transforms in original sibling order. Unreferenced scene children not claimed."
+  },
+  "findings": [
+    "Metadata resolves arr_homeGroud as Texture2D[], correcting earlier handoff GameObject[] statement. Original OnInit clears UseAnimationIns first, then allocates by dicSceneSkin.Count.",
+    "GameControl now owns shared current scene id, home texture array, game sprite dictionary(capacity10), lazy effect dictionary, native root and camera references. OnDispose only clears registry slot4064.",
+    "InitScene finds first Tag10 object named objSceneRoot, copies four camera references, activates game root, applies source screen/aspect adjustment and selects current skin. Missing/repeated initialization retains source partial state semantics.",
+    "Original soldierRoot child1 is model backdrop; source sibling order restored during import. Preview component remains separately available to prior callers.",
+    "Home texture callback stores captured array index but applies effect for current selection. LoadGameScene sets same current id used by home path; same-id home selection is skipped.",
+    "Battle background LoadAsset11001 callback parents/normalizes object and GetComponentInChildren<SpriteRenderer>. Sprite.Create uses full texture rect, pivot0.5, default100PPU. Completion caches under current id, preserving duplicate Dictionary.Add failures.",
+    "Effect cache keys are current id plus0 or100. Cached effects reactivate without reparenting; callback sets parent/active, initializes Spine animation and then Dictionary.Add.",
+    "Home and game camera/root activation sequences, source MoveCamera comparison against home world position, and SetCameraSize baseline vector(0.25,0,0.4) retained.",
+    "ClearRenderModel destroys unlock-root children in reverse order using deferred native Destroy. Native validation confirms next-frame removal and retained scene on disposal."
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T06:54:09.703281+00:00",
+    "scope": "GameControl concrete lifecycle/shared scene state, original GameSceneMono references, native texture/effect reuse and deferred unlock-model destruction",
+    "checksPassed": 711,
+    "nativePlayModeChecks": 7,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "Original resource transport, battle asset11001 acquisition, remaining31 controller lifecycles, full Main/account/menu composition or complete playable outgame",
+    "commands": [
+      "prepare_outgame_model_roots.py",
+      "OutgameModelRootsImporter.ImportBatch",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameGamePlayModeValidation.Run"
+    ]
+  },
+  "remaining": [
+    "Complete entity/preload service paths and original remote service bindings. Asset11001 and scene textures now pass native local bundle integration.",
+    "Wire GameControl into full Main and LevelControl/PlayerControl state transitions.",
+    "Complete all remaining31 controller lifecycles and full outgame objective; no final acceptance or Player build."
+  ],
+  "resourceBinding": "OutgameGameSceneResources -> OutgameLoadPrefabControl -> OutgameResLoadHelper -> legacy scheduler/package/runtime; verified by PREFAB_LOADER_NATIVE_AUDIT.json"
+}

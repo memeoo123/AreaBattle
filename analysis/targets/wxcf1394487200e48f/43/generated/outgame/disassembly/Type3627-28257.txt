@@ -1,0 +1,48 @@
+; Original class: Json
+; Type3627.coPD; wasmcode function 11670; offset=5704181 size=151
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005709f6  i32.const [4988952]
+005709fb  i32.load8_u [0, 0]
+005709fe  i32.eqz []
+005709ff  if [-64]
+00570a01    i32.const [4034704] ; STRING "\n"
+00570a06    call [900] ; 
+00570a09    i32.const [4034820] ; STRING "\r "
+00570a0e    call [900] ; 
+00570a11    i32.const [4034536] ; STRING ""
+00570a16    call [900] ; 
+00570a19    i32.const [4034792] ; STRING "\r"
+00570a1e    call [900] ; 
+00570a21    i32.const [4034712] ; STRING "\n "
+00570a26    call [900] ; 
+00570a29    i32.const [4988952]
+00570a2e    i32.const [1]
+00570a30    i32.store8 [0, 0]
+00570a33  end []
+00570a34  local.get [0]
+00570a36  i32.const [4034820] ; STRING "\r "
+00570a3b  i32.load [2, 0]
+00570a3e  i32.const [4034536] ; STRING ""
+00570a43  i32.load [2, 0]
+00570a46  i32.const [0]
+00570a48  call [1368] ; String.Replace
+00570a4b  i32.const [4034712] ; STRING "\n "
+00570a50  i32.load [2, 0]
+00570a53  i32.const [4034536] ; STRING ""
+00570a58  i32.load [2, 0]
+00570a5b  i32.const [0]
+00570a5d  call [1368] ; String.Replace
+00570a60  i32.const [4034792] ; STRING "\r"
+00570a65  i32.load [2, 0]
+00570a68  i32.const [4034536] ; STRING ""
+00570a6d  i32.load [2, 0]
+00570a70  i32.const [0]
+00570a72  call [1368] ; String.Replace
+00570a75  i32.const [4034704] ; STRING "\n"
+00570a7a  i32.load [2, 0]
+00570a7d  i32.const [4034536] ; STRING ""
+00570a82  i32.load [2, 0]
+00570a85  i32.const [0]
+00570a87  call [1368] ; String.Replace
+00570a8a  return []
+00570a8b  end []

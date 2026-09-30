@@ -1,0 +1,139 @@
+; Original class: ADModule
+; Type9202.ShowBanner; wasmcode function 13424; offset=6504183 size=421
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+00633efa  i32.const [5006916]
+00633eff  i32.load8_u [0, 0]
+00633f02  i32.eqz []
+00633f03  if [-64]
+00633f05    i32.const [3927760]
+00633f0a    call [900] ; 
+00633f0d    i32.const [3915488]
+00633f12    call [900] ; 
+00633f15    i32.const [3936304]
+00633f1a    call [900] ; 
+00633f1d    i32.const [4026328] ; METHOD <>c.<ShowBanner>b__10_0
+00633f22    call [900] ; 
+00633f25    i32.const [4026332] ; METHOD <>c.<ShowBanner>b__10_1
+00633f2a    call [900] ; 
+00633f2d    i32.const [3943976]
+00633f32    call [900] ; 
+00633f35    i32.const [4035356] ; STRING " ShowBanner firstDayNoAd"
+00633f3a    call [900] ; 
+00633f3d    i32.const [5006916]
+00633f42    i32.const [1]
+00633f44    i32.store8 [0, 0]
+00633f47  end []
+00633f48  i32.const [3927760]
+00633f4d  i32.load [2, 0]
+00633f50  call [901] ; 
+00633f53  i32.const [3927760]
+00633f58  i32.load [2, 0]
+00633f5b  i32.load [2, 92]
+00633f5e  i32.load8_u [0, 4]
+00633f61  if [-64]
+00633f63    i32.const [3927760]
+00633f68    i32.load [2, 0]
+00633f6b    call [901] ; 
+00633f6e    i32.const [3927760]
+00633f73    i32.load [2, 0]
+00633f76    i32.load [2, 92]
+00633f79    i32.load [2, 0]
+00633f7c    i32.const [4035356] ; STRING " ShowBanner firstDayNoAd"
+00633f81    i32.load [2, 0]
+00633f84    i32.const [0]
+00633f86    call [921] ; String.Concat
+00633f89    i32.const [0]
+00633f8b    call [999] ; XYXLOG.Log
+00633f8e    return []
+00633f8f  end []
+00633f90  i32.const [3936304]
+00633f95  i32.load [2, 0]
+00633f98  call [901] ; 
+00633f9b  i32.const [0]
+00633f9d  call [1381] ; NewAdsManager.get_Instance
+00633fa0  local.set [3]
+00633fa2  i32.const [3943976]
+00633fa7  i32.load [2, 0]
+00633faa  call [901] ; 
+00633fad  i32.const [3943976]
+00633fb2  i32.load [2, 0]
+00633fb5  i32.load [2, 92]
+00633fb8  i32.load [2, 8]
+00633fbb  local.set [0]
+00633fbd  local.get [0]
+00633fbf  i32.eqz []
+00633fc0  if [-64]
+00633fc2    i32.const [3943976]
+00633fc7    i32.load [2, 0]
+00633fca    call [901] ; 
+00633fcd    i32.const [3943976]
+00633fd2    i32.load [2, 0]
+00633fd5    i32.load [2, 92]
+00633fd8    i32.load [2, 0]
+00633fdb    local.set [2]
+00633fdd    i32.const [3915488]
+00633fe2    i32.load [2, 0]
+00633fe5    call [903] ; 
+00633fe8    local.set [0]
+00633fea    local.get [0]
+00633fec    local.get [2]
+00633fee    i32.const [4026328] ; METHOD <>c.<ShowBanner>b__10_0
+00633ff3    i32.load [2, 0]
+00633ff6    i32.const [0]
+00633ff8    call [1004] ; 
+00633ffb    i32.const [3943976]
+00634000    i32.load [2, 0]
+00634003    i32.load [2, 92]
+00634006    local.get [0]
+00634008    i32.store [2, 8]
+0063400b    i32.const [3943976]
+00634010    i32.load [2, 0]
+00634013    i32.load [2, 92]
+00634016    drop []
+00634017  end []
+00634018  i32.const [3943976]
+0063401d  i32.load [2, 0]
+00634020  call [901] ; 
+00634023  i32.const [3943976]
+00634028  i32.load [2, 0]
+0063402b  i32.load [2, 92]
+0063402e  i32.load [2, 12]
+00634031  local.set [2]
+00634033  local.get [2]
+00634035  i32.eqz []
+00634036  if [-64]
+00634038    i32.const [3943976]
+0063403d    i32.load [2, 0]
+00634040    call [901] ; 
+00634043    i32.const [3943976]
+00634048    i32.load [2, 0]
+0063404b    i32.load [2, 92]
+0063404e    i32.load [2, 0]
+00634051    local.set [4]
+00634053    i32.const [3915488]
+00634058    i32.load [2, 0]
+0063405b    call [903] ; 
+0063405e    local.set [2]
+00634060    local.get [2]
+00634062    local.get [4]
+00634064    i32.const [4026332] ; METHOD <>c.<ShowBanner>b__10_1
+00634069    i32.load [2, 0]
+0063406c    i32.const [0]
+0063406e    call [1004] ; 
+00634071    i32.const [3943976]
+00634076    i32.load [2, 0]
+00634079    i32.load [2, 92]
+0063407c    local.get [2]
+0063407e    i32.store [2, 12]
+00634081    i32.const [3943976]
+00634086    i32.load [2, 0]
+00634089    i32.load [2, 92]
+0063408c    drop []
+0063408d  end []
+0063408e  local.get [3]
+00634090  local.get [1]
+00634092  local.get [0]
+00634094  local.get [2]
+00634096  i32.const [0]
+00634098  call [11267] ; NewAdsManager.showBanner
+0063409b  end []

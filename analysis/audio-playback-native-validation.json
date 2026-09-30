@@ -1,0 +1,20 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native AudioSource playback/time/pause/end/destruction using recovered original1002 and2001 clips. Resource tasks and update ownership are explicit fixture boundaries. No device recording, full AudioManager/resource host, Fade/LoopFade or Player-build claim.",
+    "checks": [
+        "Original main-music1002 decoded/imported and native loop source created with start callback",
+        "Unity audio engine advances original1002 from configured start time",
+        "Native pause freezes playback cursor across editor frames",
+        "Production settings/message/action chain adjusts live source volume during pause",
+        "Native unpause resumes loop cursor",
+        "Loop source external stop does not invent auto-completion in empty original Update",
+        "Loop Stop ends, releases actual handle and disposes source ownership",
+        "Production DestroyAudioSource destroys native child GameObject after frame boundary",
+        "Concrete once action runs native original clip without looping",
+        "Positive EndTime stops even while paused when native cursor reaches boundary, matching original branch",
+        "Original button2001 available for natural completion",
+        "Natural-completion case starts real original sound clip",
+        "Once Update observes native clip completion and removes update/data/source"
+    ]
+}

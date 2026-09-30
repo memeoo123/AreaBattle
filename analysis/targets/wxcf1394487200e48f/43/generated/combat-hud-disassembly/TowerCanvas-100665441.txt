@@ -1,0 +1,54 @@
+; TowerCanvas.Clear wasmcode function6996
+0028a739 i32.const [5007216]
+0028a73e i32.load8_u [0, 0]
+0028a741 i32.eqz []
+0028a742 if [-64]
+0028a744   i32.const [3974352]
+0028a749   call [900] ; 
+0028a74c   i32.const [3936516] ; type: Object
+0028a751   call [900] ; 
+0028a754   i32.const [5007216]
+0028a759   i32.const [1]
+0028a75b   i32.store8 [0, 0]
+0028a75e end []
+0028a75f local.get [0]
+0028a761 i32.load [2, 12]
+0028a764 local.set [2]
+0028a766 i32.const [3936516] ; type: Object
+0028a76b i32.load [2, 0]
+0028a76e call [901] ; 
+0028a771 local.get [0]
+0028a773 i32.const [12]
+0028a775 i32.add []
+0028a776 local.set [1]
+0028a778 local.get [2]
+0028a77a i32.const [0]
+0028a77c i32.const [0]
+0028a77e call [946] ; Object.op_Inequality
+0028a781 if [-64]
+0028a783   local.get [1]
+0028a785   i32.load [2, 0]
+0028a788   i32.const [0]
+0028a78a   i32.const [0]
+0028a78c   call [949] ; GameObject.SetActive
+0028a78f end []
+0028a790 local.get [0]
+0028a792 i32.const [0]
+0028a794 i32.store [2, 12]
+0028a797 local.get [0]
+0028a799 i32.load [2, 24]
+0028a79c i32.const [3974352]
+0028a7a1 i32.load [2, 0]
+0028a7a4 call [1013] ; 
+0028a7a7 local.get [0]
+0028a7a9 i32.load [2, 28]
+0028a7ac i32.const [3974352]
+0028a7b1 i32.load [2, 0]
+0028a7b4 call [1013] ; 
+0028a7b7 local.get [0]
+0028a7b9 i32.const [0]
+0028a7bb i32.store [2, 32]
+0028a7be local.get [0]
+0028a7c0 i32.const [0]
+0028a7c2 i32.store8 [0, 8]
+0028a7c5 end []

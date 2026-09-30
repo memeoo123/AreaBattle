@@ -1,0 +1,68 @@
+; ResLoadHelper.CheckUseRightResLoad; wasmcode function 2476; offset=781450 size=202
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+000bec8d  i32.const [5011598]
+000bec92  i32.load8_u [0, 0]
+000bec95  i32.eqz []
+000bec96  if [-64]
+000bec98    i32.const [3928176]
+000bec9d    call [900] ; 
+000beca0    i32.const [3929208]
+000beca5    call [900] ; 
+000beca8    i32.const [3926996]
+000becad    call [900] ; 
+000becb0    i32.const [4103960] ; STRING "当前使用的是新资源加载，请使用NewResLoadHelper"
+000becb5    call [900] ; 
+000becb8    i32.const [5011598]
+000becbd    i32.const [1]
+000becbf    i32.store8 [0, 0]
+000becc2  end []
+000becc3  i32.const [3928176]
+000becc8  i32.load [2, 0]
+000beccb  call [901] ; 
+000becce  i32.const [5011829]
+000becd3  i32.load8_u [0, 0]
+000becd6  i32.eqz []
+000becd7  if [-64]
+000becd9    i32.const [3928176]
+000becde    call [900] ; 
+000bece1    i32.const [5011829]
+000bece6    i32.const [1]
+000bece8    i32.store8 [0, 0]
+000beceb  end []
+000becec  i32.const [3928176]
+000becf1  i32.load [2, 0]
+000becf4  call [901] ; 
+000becf7  i32.const [3928176]
+000becfc  i32.load [2, 0]
+000becff  i32.load [2, 92]
+000bed02  i32.load8_u [0, 36]
+000bed05  local.set [1]
+000bed07  local.get [1]
+000bed09  if [-64]
+000bed0b    i32.const [3926996]
+000bed10    i32.load [2, 0]
+000bed13    i32.const [1]
+000bed15    call [909] ; 
+000bed18    local.set [0]
+000bed1a    local.get [0]
+000bed1c    i32.const [4103960] ; STRING "当前使用的是新资源加载，请使用NewResLoadHelper"
+000bed21    i32.load [2, 0]
+000bed24    call [905] ; 
+000bed27    local.get [0]
+000bed29    i32.const [4103960] ; STRING "当前使用的是新资源加载，请使用NewResLoadHelper"
+000bed2e    i32.load [2, 0]
+000bed31    i32.store [2, 16]
+000bed34    i32.const [3929208]
+000bed39    i32.load [2, 0]
+000bed3c    call [901] ; 
+000bed3f    local.get [0]
+000bed41    i32.const [0]
+000bed43    i32.const [2087] ; TABLE CLog.Error
+000bed46    global.set [3]
+000bed48    i32.const [2087] ; TABLE CLog.Error
+000bed4b    call_indirect [0, 0]
+000bed4e  end []
+000bed4f  local.get [1]
+000bed51  i32.eqz []
+000bed52  return []
+000bed53  end []

@@ -1,0 +1,32 @@
+; Original class: XYXLogin
+; Type7609.LoginLog; wasmcode function 4180; offset=1393461 size=89
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00154336  i32.const [5005976]
+0015433b  i32.load8_u [0, 0]
+0015433e  i32.eqz []
+0015433f  if [-64]
+00154341    i32.const [3942528]
+00154346    call [900] ; 
+00154349    i32.const [3942500]
+0015434e    call [900] ; 
+00154351    i32.const [5005976]
+00154356    i32.const [1]
+00154358    i32.store8 [0, 0]
+0015435b  end []
+0015435c  i32.const [3942500]
+00154361  i32.load [2, 0]
+00154364  i32.load [2, 92]
+00154367  i32.load8_u [0, 1]
+0015436a  if [-64]
+0015436c    i32.const [3942528]
+00154371    i32.load [2, 0]
+00154374    call [901] ; 
+00154377    i32.const [3942528]
+0015437c    i32.load [2, 0]
+0015437f    i32.load [2, 92]
+00154382    i32.load [2, 8]
+00154385    local.get [0]
+00154387    i32.const [0]
+00154389    call [1433] ; XYXLOG.Log
+0015438c  end []
+0015438d  end []

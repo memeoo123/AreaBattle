@@ -1,0 +1,100 @@
+; Original class: LoginSynData
+; Type4612.OnEnter; wasmcode function 18743; offset=8465118 size=301
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00812adf  i32.const [5001596]
+00812ae4  i32.load8_u [0, 0]
+00812ae7  i32.eqz []
+00812ae8  if [-64]
+00812aea    i32.const [3947148]
+00812aef    call [900] ; 
+00812af2    i32.const [3932304]
+00812af7    call [900] ; 
+00812afa    i32.const [3932476]
+00812aff    call [900] ; 
+00812b02    i32.const [3922404]
+00812b07    call [900] ; 
+00812b0a    i32.const [4005884] ; METHOD LoginSynData.bMO`W
+00812b0f    call [900] ; 
+00812b12    i32.const [4005880] ; METHOD LoginSynData.vb{Lo
+00812b17    call [900] ; 
+00812b1a    i32.const [4054920] ; STRING "GF_ReceiveDataUploaded"
+00812b1f    call [900] ; 
+00812b22    i32.const [4054888] ; STRING "GF_LoginSynDataOver"
+00812b27    call [900] ; 
+00812b2a    i32.const [5001596]
+00812b2f    i32.const [1]
+00812b31    i32.store8 [0, 0]
+00812b34  end []
+00812b35  local.get [0]
+00812b37  local.get [1]
+00812b39  local.get [0]
+00812b3b  call [3134] ; LoginStateBase.OnEnter
+00812b3e  i32.const [3947148]
+00812b43  i32.load [2, 0]
+00812b46  call [903] ; 
+00812b49  local.set [1]
+00812b4b  local.get [1]
+00812b4d  local.get [0]
+00812b4f  i32.const [4005884] ; METHOD LoginSynData.bMO`W
+00812b54  i32.load [2, 0]
+00812b57  i32.const [0]
+00812b59  call [1067] ; EventHandler..ctor
+00812b5c  i32.const [4054888] ; STRING "GF_LoginSynDataOver"
+00812b61  i32.load [2, 0]
+00812b64  local.get [1]
+00812b66  i32.const [0]
+00812b68  call [1146] ; MsgDispatcher.AddEventListener
+00812b6b  i32.const [3947148]
+00812b70  i32.load [2, 0]
+00812b73  call [903] ; 
+00812b76  local.set [1]
+00812b78  local.get [1]
+00812b7a  local.get [0]
+00812b7c  i32.const [4005880] ; METHOD LoginSynData.vb{Lo
+00812b81  i32.load [2, 0]
+00812b84  i32.const [0]
+00812b86  call [1067] ; EventHandler..ctor
+00812b89  i32.const [4054920] ; STRING "GF_ReceiveDataUploaded"
+00812b8e  i32.load [2, 0]
+00812b91  local.get [1]
+00812b93  i32.const [0]
+00812b95  call [1146] ; MsgDispatcher.AddEventListener
+00812b98  i32.const [3932476]
+00812b9d  i32.load [2, 0]
+00812ba0  call [901] ; 
+00812ba3  local.get [0]
+00812ba5  i32.const [0]
+00812ba7  call [3934] ; GlobalData.get_LoginUserID
+00812baa  i32.store [2, 24]
+00812bad  i32.const [3932304]
+00812bb2  i32.load [2, 0]
+00812bb5  call [901] ; 
+00812bb8  i32.const [0]
+00812bba  call [3620] ; GameDataVersionMgr.get_Instance
+00812bbd  i32.const [1]
+00812bbf  i32.const [3922404]
+00812bc4  i32.load [2, 0]
+00812bc7  local.get [0]
+00812bc9  i32.load [2, 12]
+00812bcc  call [918] ; 
+00812bcf  i32.load [2, 32]
+00812bd2  i64.load [3, 8]
+00812bd5  i32.const [1]
+00812bd7  i32.const [3922404]
+00812bdc  i32.load [2, 0]
+00812bdf  local.get [0]
+00812be1  i32.load [2, 12]
+00812be4  call [918] ; 
+00812be7  i32.load [2, 32]
+00812bea  i32.load8_u [0, 21]
+00812bed  i32.const [1]
+00812bef  i32.const [3922404]
+00812bf4  i32.load [2, 0]
+00812bf7  local.get [0]
+00812bf9  i32.load [2, 12]
+00812bfc  call [918] ; 
+00812bff  i32.load [2, 32]
+00812c02  i32.load8_u [0, 20]
+00812c05  i32.const [0]
+00812c07  call [12178] ; GameDataVersionMgr.UserLogin
+00812c0a  end []

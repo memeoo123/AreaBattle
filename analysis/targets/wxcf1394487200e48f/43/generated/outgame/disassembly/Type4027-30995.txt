@@ -1,0 +1,42 @@
+; Original class: CommanderControl
+; Type4027.{Oc; wasmcode function 8117; offset=3847656 size=81
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+003ab5e9  global.get [0]
+003ab5eb  i32.const [16]
+003ab5ed  i32.sub []
+003ab5ee  local.set [3]
+003ab5f0  local.get [3]
+003ab5f2  global.set [0]
+003ab5f4  local.get [3]
+003ab5f6  local.get [1]
+003ab5f8  i32.store [2, 12]
+003ab5fb  local.get [0]
+003ab5fd  i32.load [2, 8]
+003ab600  local.get [1]
+003ab602  local.get [2]
+003ab604  local.get [3]
+003ab606  call [12856] ; CommanderManager.UpgradeCommander
+003ab609  local.set [1]
+003ab60b  local.get [1]
+003ab60d  if [-64]
+003ab60f    i32.const [0]
+003ab611    call [1587] ; GameModule.get_ADHelper
+003ab614    local.get [0]
+003ab616    local.get [3]
+003ab618    call [8116] ; CommanderControl.riypR
+003ab61b    i32.load [2, 16]
+003ab61e    local.get [3]
+003ab620    i32.const [12]
+003ab622    i32.add []
+003ab623    i32.const [0]
+003ab625    call [966] ; Int32.ToString
+003ab628    i32.const [0]
+003ab62a    call [13437] ; ADHelper.ReportCommanderLevelup
+003ab62d  end []
+003ab62e  local.get [3]
+003ab630  i32.const [16]
+003ab632  i32.add []
+003ab633  global.set [0]
+003ab635  local.get [1]
+003ab637  return []
+003ab638  end []

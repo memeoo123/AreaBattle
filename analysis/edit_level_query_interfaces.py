@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('UnityProject/Assets/AreaBattle/Scripts/OutgameLevelControl.cs');s=p.read_text(encoding='utf-8-sig').replace('bool Active {get;}int CampId {get;}float Score {get;}','bool Active {get;}int CampId {get;}float Score {get;}\n        GameObject Entity {get;}Vector3 SourcePosition68 {get;}');p.write_text(s,encoding='utf8')
+p=Path('UnityProject/Assets/AreaBattle/Editor/OutgameLevelControlValidation.cs');s=p.read_text(encoding='utf-8-sig').replace('public bool Active=>Enabled;public int CampId=>Camp;public float Score=>Amount;','public GameObject Entity {get;set;}public Vector3 SourcePosition68 {get;set;}\n            public bool Active=>Enabled;public int CampId=>Camp;public float Score=>Amount;');p.write_text(s,encoding='utf8')

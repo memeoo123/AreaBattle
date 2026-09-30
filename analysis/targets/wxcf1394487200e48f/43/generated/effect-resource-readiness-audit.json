@@ -1,0 +1,80 @@
+{
+  "target": "wxcf1394487200e48f/43",
+  "atUtc": "2026-09-29T06:42:59.304810+00:00",
+  "status": "source-confirmed lifetime fix; resource transport parity incomplete",
+  "rules": [
+    {
+      "rule": "BaseEffect model loading selects NewResLoadHelper.LoadPrefabAsync or AssetbundleModule.LoadPrefab using GameFrameEntry static field36. These are distinct from a direct ResourcesModule.Load request.",
+      "source": "effect-resource-lifecycle-disassembly/f9900.txt",
+      "offsets": [
+        "0048891f..004889ae",
+        "00488ca4..00488caf"
+      ]
+    },
+    {
+      "rule": "Legacy AssetbundleModule checks its path/asset cache before the load-await branch. A non-null cached GameObject bypasses that await; no universal minimum-frame or fixed delay is established.",
+      "source": "effect-resource-lifecycle-disassembly/f9946.txt",
+      "offsets": [
+        "0048fb39..0048fbf9",
+        "0048fc38..0048fced",
+        "0048fe48..0048fe54"
+      ]
+    },
+    {
+      "rule": "BaseEffect Play awaits readiness and then calls virtual Start. Start sets active and only then creates positive-duration WaitForSeconds.",
+      "source": "effect-resource-lifecycle-disassembly/f9898.txt",
+      "offsets": [
+        "00487ef4..00487f7a"
+      ],
+      "related": [
+        "effect-resource-lifecycle-disassembly/f9880.txt",
+        "effect-resource-lifecycle-disassembly/f13406.txt"
+      ]
+    },
+    {
+      "rule": "BaseEffect readiness predicate accepts loaded(field49) OR disposed(field50). Dispose marks field50 and destroys an existing object; pending-load races need further source-path validation.",
+      "source": "effect-resource-lifecycle-disassembly/f20505.txt",
+      "related": [
+        "effect-resource-lifecycle-disassembly/f13086.txt"
+      ]
+    }
+  ],
+  "fix": {
+    "file": "UnityProject/Assets/AreaBattle/Scripts/BattleSkillPresentation.cs",
+    "before": "Step flushes a newly created managed effect then immediately subtracts the whole preceding delta from its lifetime. A sufficiently long delta destroys the model in its creation Step.",
+    "after": "Record creation Step; managed effects created by this Step do not consume its preceding delta. Already-ready effects still count the next Step. Projectile clocks and battle mechanics are unchanged.",
+    "scope": "Lifetime only; Resources.Load remains synchronous."
+  },
+  "validation": {
+    "checksPassed": 267,
+    "newCases": [
+      "managed-effect-lifetime-starts-at-model-readiness",
+      "managed-effect-already-ready-counts-next-frame"
+    ],
+    "build": {
+      "result": "Succeeded",
+      "size": "274526157",
+      "errors": 0,
+      "warnings": 5
+    },
+    "playerSmoke": {
+      "passed": true,
+      "retryTopologyPreserved": true,
+      "simulationReused": true,
+      "frames": 600,
+      "spawnsBeforeRetry": 9,
+      "spawnsAfterRetry": 9,
+      "lineCount": 15,
+      "error": ""
+    },
+    "numericReplayUnchanged": true,
+    "resourceFiles": 240,
+    "guidReferences": 1363
+  },
+  "unknowns": [
+    "Original session resource cache state and selected new/legacy transport branch are unconfirmed.",
+    "Cold-load scheduling/IO and callback delivery cannot be inferred from a single video.",
+    "No fixed 0.18378-second delay introduced; local synchronous readiness still differs from a cold original load.",
+    "Pending-close/retry resource races and complete original visual/audio parity remain open."
+  ]
+}

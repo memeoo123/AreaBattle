@@ -1,0 +1,20 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.CheckFavorites; wasmcode1 function 68427; offset=21660567 size=52
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+014a8398  i32.const [5006708]
+014a839d  i32.load8_u [0, 0]
+014a83a0  i32.eqz []
+014a83a1  if [-64]
+014a83a3    i32.const [4104036] ; STRING "微信小程序无检查收藏接口"
+014a83a8    i32.const [1605]
+014a83ab    call_indirect [0, 0]
+014a83ae    i32.const [5006708]
+014a83b3    i32.const [1]
+014a83b5    i32.store8 [0, 0]
+014a83b8  end []
+014a83b9  i32.const [4104036] ; STRING "微信小程序无检查收藏接口"
+014a83be  i32.load [2, 0]
+014a83c1  i32.const [0]
+014a83c3  i32.const [9119] ; TABLE XYXLOG.Warning
+014a83c7  call_indirect [4, 0]
+014a83ca  end []

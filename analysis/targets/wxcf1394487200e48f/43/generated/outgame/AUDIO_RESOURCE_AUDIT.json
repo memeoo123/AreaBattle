@@ -1,0 +1,36 @@
+{
+  "atUtc": "2026-09-30T10:30:34.403430+00:00",
+  "status": "source-audio-resource-helper-and-native-legacy-verified-modern-module-pending",
+  "sourceEvidence": "AUDIO_RESOURCE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-09-30T10:30:34.403430+00:00",
+    "scope": "Audio helper path branches and legacy native asset operation/transport/config/audio/reference/unload/reentry; sealed IEnumerator error specialization",
+    "checksPassed": 994,
+    "newIntegratedChecks": 16,
+    "nativePlayModeChecks": 18,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameAudioResourcePlayModeValidation.Run"
+    ],
+    "notClaimed": "Modern module acquisition, full generic coroutine wrapper, actual remote server, complete Main/account/menu or full outgame Player"
+  },
+  "findings": [
+    "OutgameAudioResources implements both async wrappers, firstpack branch and unload, and binds AudioActionServices. OutgameNewResourceAsyncHelper preserves source guard and generic type.",
+    "OutgameLegacyAssetOperation, OutgameAssetbundleAsyncLoader and shared BundleRuntime.LoadAssetAsync use existing manifest/remap/acquisition/unload. Source failure/retention and native task propagation retained.",
+    "994 integrated pass (16 new),18 native pass. Native actual bundle file download/request -> original2001 manager playback -> reference count2/1/0 -> native Unload(true) -> fresh download verified. Config read from original rebuilt native firstpack.",
+    "Full goal remains in progress; lifecycle count11/38 unchanged,27 remain."
+  ],
+  "remaining": [
+    "Restore modern new-resource module selection/acquisition: AppSetting field40 selects KeWanResLoadModule3511 or YOResourcesModule3527; NewResLoadHelper26176 guard and typed forwarding exist, provider loading remains explicit boundary. Finish production resource/config composition in full Main owner.",
+    "Continue remaining27 business controller lifecycles, original menu/account/module workflows, persistence/restart/failure/return, and runnable full outgame Player acceptance."
+  ],
+  "artifacts": {
+    "integratedLog": "analysis/audio-resource-integrated.log",
+    "nativeLog": "analysis/audio-resource-native.log",
+    "nativeReport": "analysis/audio-resource-native-validation.json"
+  },
+  "disassembledMethodMapCount": 5081
+}

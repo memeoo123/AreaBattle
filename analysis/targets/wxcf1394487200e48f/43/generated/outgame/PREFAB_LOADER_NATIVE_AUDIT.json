@@ -1,0 +1,71 @@
+{
+  "atUtc": "2026-09-30T07:06:29.704060+00:00",
+  "status": "partial-subsystem",
+  "sourceEvidence": "PREFAB_LOADER_SOURCE_EVIDENCE.json",
+  "productionFiles": [
+    "OutgameLoadPrefabControl.cs",
+    "OutgameResourcePaths.cs",
+    "OutgameCoreControllerBindings.cs",
+    "OutgameGameControl.cs"
+  ],
+  "findings": [
+    "Controller4117 OnInit and Updata have proven empty source bodies; OnDispose clears registry only. Existing OutgamePrefabCache handles InitData/ClearModelEntityCache with shared dictionaries.",
+    "All13 Path.GetPath cases recovered including uppercase .Json, duplicated Materials/materials prefix, case11 without extension, and unknown enum passthrough. ToFileName uses last forward slash then first dot.",
+    "ResLoadHelper legacy route reads modern flag and logs/returns on modern. LoadPrefab prefixes Prefabs/ and checks route again in LoadPrefabOri; scheduler supplies .prefab and lowercase .unity3d.",
+    "LoadAsset11001 uses original EntityModelConfig AssetName GameScene/HD4_CJ_1 and PathEnum8. Cold load caches native template before instantiation and names instance from config; warm route names from cached template.",
+    "Concurrent same-path requests share scheduler loader but each callback retains its original argument array; second completion replaces template cache rather than duplicate Add.",
+    "LoadPrefab path route instantiates native asset and retains Clone suffix; LoadTexture uses ConfigMgr.dic_res mapping and has no prefab cache write. Missing configuration logs without successful callback.",
+    "GameControl resource interface now forwards source argument arrays, including empty arrays and effect key/parent context. Concrete OutgameGameSceneResources resolves LoadPrefabControl at request time.",
+    "Original imported HD4_CJ_1 prefab, scene_skin_idle1, scene_skin_game1 and eff_idle_GuBao are packed as four native bundles. Native manifest/package/scheduler/download runtime loads them from local file patch URLs, with five requests including manifest.",
+    "Validation initially checked prefab Sprite presence too early because original prefab already contains a Sprite. Corrected harness waits for GameSprites cache completion; preserved early failure report. Production callback order unchanged."
+  ],
+  "verification": {
+    "atUtc": "2026-09-30T07:06:29.704060+00:00",
+    "scope": "Source Path/ResLoadHelper/LoadPrefabControl loading branches and GameControl integration through native bundle runtime",
+    "checksPassed": 718,
+    "nativePlayModeChecks": 8,
+    "nativeRequests": 5,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "notClaimed": "LoadPrefabControl entity-pool/preload business paths, remaining30 controller lifecycles, actual remote URLs/services, full Main/account/Player",
+    "commands": [
+      "OutgamePrefabLoaderBundles.Build",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgamePrefabLoaderPlayModeValidation.Run"
+    ]
+  },
+  "remaining": [
+    "Entity/preload source branches now implemented and verified by ENTITY_PRELOAD_AUDIT.json; concrete Level/Player/loading-page host composition remains pending.",
+    "Bind original remote resource/SDK services and complete Main/account/module graph.",
+    "Restore remaining30 lifecycles, UI business callbacks and all pending outgame systems; complete persistence/restart/failed-callback/Player acceptance."
+  ],
+  "bundles": [
+    {
+      "name": "prefab-loader-native-bundles",
+      "bytes": 1679,
+      "sha256": "3ae04459ff113b8b43802b776ad22626075f4c44df7a5efe4a18820e42ea0e96"
+    },
+    {
+      "name": "scene-prefab",
+      "bytes": 4289,
+      "sha256": "c0cc326bc066906922af15133fc75fd792f293679fa6b95617615907a8aad7a2"
+    },
+    {
+      "name": "home-texture",
+      "bytes": 1725608,
+      "sha256": "ff98af4475ce605f13814337af76163e4e0a1b1149ff0059f9d8d645b63ff085"
+    },
+    {
+      "name": "game-texture",
+      "bytes": 2372515,
+      "sha256": "97df4cb912ac9e765c013304d3446bc91f6201fcd6eedb09db16200376ce0760"
+    },
+    {
+      "name": "effect-prefab",
+      "bytes": 42449,
+      "sha256": "236249314f7efc7b43d89f68564db33e9c801d8dc445a02541fb3a9cf1873cac"
+    }
+  ],
+  "entityPreloadFollowup": "ENTITY_PRELOAD_AUDIT.json"
+}

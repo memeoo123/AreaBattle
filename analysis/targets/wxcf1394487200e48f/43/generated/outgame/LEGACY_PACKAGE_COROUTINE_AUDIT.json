@@ -1,0 +1,37 @@
+{
+  "atUtc": "2026-09-30T03:13:11.547413+00:00",
+  "status": "partial-subsystem-verified",
+  "methods": [
+    29855,
+    29858,
+    23782
+  ],
+  "source": "Type3825-29858.txt, wasmcode15150",
+  "behavior": [
+    "State2 exits without starting package operation",
+    "Firstpack ContainsKey wins: get bundle, access bundle.name and log, Complete, exit; no async fallback and outside catch",
+    "Async manager returns null: Error then exit",
+    "Yield StartCoroutine(operation) before retrieving result",
+    "GetAssetBundle is virtual slot10, metadata23782; result Bundle field8",
+    "Inside try: assign native bundle, Unity-null calls Error. Catch Exception sends GF_ResLoadError(bundleName), logs exception. Then Complete outside catch",
+    "Null-bundle Error therefore precedes Complete, accounting increments twice; callbacks already cleared prevent duplicate callback"
+  ],
+  "implementation": "OutgameLegacyPackageLoad supplies the source coroutine via OutgameLegacyAssetLoader.LoadBundle boundary; operation interface and coroutine scheduler are explicit adapters",
+  "validation": {
+    "integratedChecks": 618,
+    "freshPlayMode": false,
+    "freshPlayer": false,
+    "covered": [
+      "null operation exit",
+      "yield scheduler token",
+      "null native bundle error followed by completion",
+      "result exception event/log followed by completion",
+      "firstpack null entry throws outside result catch without fallback"
+    ]
+  },
+  "limitations": [
+    "Actual AssetBundleManager downloader/dependencies/operation provider not implemented or exercised.",
+    "Positive firstpack/native bundle transport not executed in these tests.",
+    "Full production startup/account/menu remains incomplete."
+  ]
+}

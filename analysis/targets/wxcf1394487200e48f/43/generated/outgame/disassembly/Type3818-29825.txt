@@ -1,0 +1,48 @@
+; Original class: ½rH
+; Type3818.GetGFVersion; wasmcode1 function 42538; offset=15322804 size=119
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00e9ceb5  i32.const [4988198]
+00e9ceba  i32.load8_u [0, 0]
+00e9cebd  i32.eqz []
+00e9cebe  if [-64]
+00e9cec0    i32.const [4039208] ; STRING ","
+00e9cec5    i32.const [1605]
+00e9cec8    call_indirect [0, 0]
+00e9cecb    i32.const [4087240] ; STRING "empty"
+00e9ced0    i32.const [1605]
+00e9ced3    call_indirect [0, 0]
+00e9ced6    i32.const [4988198]
+00e9cedb    i32.const [1]
+00e9cedd    i32.store8 [0, 0]
+00e9cee0  end []
+00e9cee1  local.get [0]
+00e9cee3  i32.load [2, 8]
+00e9cee6  local.set [0]
+00e9cee8  local.get [0]
+00e9ceea  if [-64]
+00e9ceec    local.get [0]
+00e9ceee    i32.load [2, 28]
+00e9cef1    i32.const [4039208] ; STRING ","
+00e9cef6    i32.load [2, 0]
+00e9cef9    i32.const [0]
+00e9cefb    i32.const [0]
+00e9cefd    i32.const [8971] ; TABLE String.Split
+00e9cf01    call_indirect [8, 0]
+00e9cf04    local.set [0]
+00e9cf06    local.get [0]
+00e9cf08    i32.load [2, 12]
+00e9cf0b    i32.const [1]
+00e9cf0d    i32.ge_s []
+00e9cf0e    if [-64]
+00e9cf10      local.get [0]
+00e9cf12      i32.load [2, 16]
+00e9cf15      return []
+00e9cf16    end []
+00e9cf17    i32.const [4087240] ; STRING "empty"
+00e9cf1c    i32.load [2, 0]
+00e9cf1f    return []
+00e9cf20  end []
+00e9cf21  i32.const [4087240] ; STRING "empty"
+00e9cf26  i32.load [2, 0]
+00e9cf29  return []
+00e9cf2a  end []

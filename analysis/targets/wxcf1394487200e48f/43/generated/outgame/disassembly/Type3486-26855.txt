@@ -1,0 +1,24 @@
+; Original class: GlobalData
+; Type3486.set_IsSynLocalData; wasmcode function 12047; offset=5865724 size=66
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005980fd  i32.const [4989066]
+00598102  i32.load8_u [0, 0]
+00598105  i32.eqz []
+00598106  if [-64]
+00598108    i32.const [3941104]
+0059810d    call [900] ; 
+00598110    i32.const [4054892] ; STRING "GF_LoginUserID"
+00598115    call [900] ; 
+00598118    i32.const [4989066]
+0059811d    i32.const [1]
+0059811f    i32.store8 [0, 0]
+00598122  end []
+00598123  i32.const [3941104]
+00598128  i32.load [2, 0]
+0059812b  call [901] ; 
+0059812e  i32.const [4054892] ; STRING "GF_LoginUserID"
+00598133  i32.load [2, 0]
+00598136  local.get [0]
+00598138  i32.const [0]
+0059813a  call [2749] ; UserDataPrefs.SetInt
+0059813d  end []

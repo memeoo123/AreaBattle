@@ -1,0 +1,48 @@
+; Original class: ServerTimeModule
+; Type4034.GetYear; wasmcode function 10461; offset=5100901 size=116
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 126)]
+004dd568  global.get [0]
+004dd56a  i32.const [16]
+004dd56c  i32.sub []
+004dd56d  local.set [1]
+004dd56f  local.get [1]
+004dd571  global.set [0]
+004dd573  i32.const [5008705]
+004dd578  i32.load8_u [0, 0]
+004dd57b  i32.eqz []
+004dd57c  if [-64]
+004dd57e    i32.const [3930616]
+004dd583    call [900] ; 
+004dd586    i32.const [3940172]
+004dd58b    call [900] ; 
+004dd58e    i32.const [5008705]
+004dd593    i32.const [1]
+004dd595    i32.store8 [0, 0]
+004dd598  end []
+004dd599  local.get [0]
+004dd59b  i64.load [3, 16]
+004dd59e  local.set [2]
+004dd5a0  i32.const [3940172]
+004dd5a5  i32.load [2, 0]
+004dd5a8  call [901] ; 
+004dd5ab  local.get [1]
+004dd5ad  local.get [2]
+004dd5af  i32.const [0]
+004dd5b1  call [1664] ; TimeHelper.ToDateTime
+004dd5b4  i64.store [3, 8]
+004dd5b7  i32.const [3930616]
+004dd5bc  i32.load [2, 0]
+004dd5bf  call [901] ; 
+004dd5c2  local.get [1]
+004dd5c4  i32.const [8]
+004dd5c6  i32.add []
+004dd5c7  i32.const [0]
+004dd5c9  call [1358] ; DateTime.get_Year
+004dd5cc  local.set [0]
+004dd5ce  local.get [1]
+004dd5d0  i32.const [16]
+004dd5d2  i32.add []
+004dd5d3  global.set [0]
+004dd5d5  local.get [0]
+004dd5d7  return []
+004dd5d8  end []

@@ -1,0 +1,20 @@
+; Original class: <>c
+; Type4449.yhfimS; wasmcode function 15322; offset=7399013 size=34
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0070e666  i32.const [0]
+0070e668  call [4957] ; LoginCtrl.get_I
+0070e66b  i32.load8_u [0, 64]
+0070e66e  if [-64]
+0070e670    i32.const [0]
+0070e672    call [4957] ; LoginCtrl.get_I
+0070e675    i32.load8_u [0, 65]
+0070e678    i32.const [0]
+0070e67a    i32.ne []
+0070e67b    local.set [0]
+0070e67d  else []
+0070e67e    i32.const [0]
+0070e680    local.set [0]
+0070e682  end []
+0070e683  local.get [0]
+0070e685  return []
+0070e686  end []

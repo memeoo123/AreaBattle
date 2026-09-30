@@ -1,0 +1,32 @@
+; Original class: DiceShopControl
+; Type4047.`xxve; wasmcode function 7969; offset=3795071 size=77
+; signature={'args': [127, 127, 126, 127], 'returns': []}; localGroups=[]
+0039e880  i32.const [5008772]
+0039e885  i32.load8_u [0, 0]
+0039e888  i32.eqz []
+0039e889  if [-64]
+0039e88b    i32.const [3954784]
+0039e890    call [900] ; 
+0039e893    i32.const [5008772]
+0039e898    i32.const [1]
+0039e89a    i32.store8 [0, 0]
+0039e89d  end []
+0039e89e  local.get [0]
+0039e8a0  local.get [1]
+0039e8a2  local.get [0]
+0039e8a4  call [12536] ; DiceShopControl.RandomPointShopData
+0039e8a7  local.set [1]
+0039e8a9  local.get [0]
+0039e8ab  i32.load [2, 24]
+0039e8ae  i32.const [13]
+0039e8b0  local.get [1]
+0039e8b2  i32.const [3954784]
+0039e8b7  i32.load [2, 0]
+0039e8ba  call [1308] ; 
+0039e8bd  local.get [0]
+0039e8bf  i32.load [2, 8]
+0039e8c2  local.get [1]
+0039e8c4  local.get [2]
+0039e8c6  local.get [0]
+0039e8c8  call [12531] ; DiceShopDataManager.RefreshShopData
+0039e8cb  end []

@@ -1,0 +1,4343 @@
+{
+  "status": "evidence-audited-production-binding-incomplete",
+  "sourceMethod": 30608,
+  "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+  "memorySha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "methodCount": 114,
+  "implementedLifecycleControllers": 14,
+  "binding": "OutgameCoreControllerBindings.cs",
+  "emptyBodies": 31,
+  "correction": "Type4561 declares all three slots explicitly as GameFramework.IControl.*; these are not inherited ControlBase lifecycle methods. ControlBase`1 declares only get_I and ctor.",
+  "controllers": [
+    {
+      "order": 0,
+      "typeIndex": 4561,
+      "name": "}Okqvk",
+      "usageAddress": 3953624,
+      "methodSpec": [
+        26934,
+        580,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4561,
+          "name": "}Okqvk",
+          "parentEvidence": {
+            "typePointer": 118320,
+            "code": 21,
+            "genericClass": 3700524,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26632
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34676,
+          "declaringType": 4561,
+          "methodName": "GameFramework.IControl.OnInit",
+          "explicitInterface": true,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 15202,
+          "body": {
+            "offset": 7379892,
+            "size": 9,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4561-34676.txt",
+          "sha256": "bf2dc6f2796e6ff66a6fb53ad97193ea7dc9b43b0341f8638fbfb75c1c897ccb",
+          "namedCalls": [
+            "}Okqvk.Wel~Nf"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePrefabPoolControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34668,
+          "declaringType": 4561,
+          "methodName": "GameFramework.IControl.Updata",
+          "explicitInterface": true,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4561-34668.txt",
+          "sha256": "594c44094ea88d0f7267ba3c9eda22e8b21f1babea24df0fcd61f76d9531358b",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePrefabPoolControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34675,
+          "declaringType": 4561,
+          "methodName": "GameFramework.IControl.OnDispose",
+          "explicitInterface": true,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 42699,
+          "body": {
+            "offset": 15367954,
+            "size": 105,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4561-34675.txt",
+          "sha256": "2e99163583f47e19ad9d0734e49e28bae72f64ee795feba9482ffb512ff27d83",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePrefabPoolControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "typeIndex": 4025,
+      "name": "BuffControl",
+      "usageAddress": 3953336,
+      "methodSpec": [
+        26934,
+        544,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4025,
+          "name": "BuffControl",
+          "parentEvidence": {
+            "typePointer": 118032,
+            "code": 21,
+            "genericClass": 3699948,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26344
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30980,
+          "declaringType": 4025,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 20396,
+          "body": {
+            "offset": 9193152,
+            "size": 116,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4025-30980.txt",
+          "sha256": "04a7d48e4af9276846214115dab08a5f8365066ee5c2314af7e92cbff55e4ab4",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBuffControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30983,
+          "declaringType": 4025,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4025-30983.txt",
+          "sha256": "a8ac8d1365682a53f5d51cdb5a4f881404e1943c0baf7a87beac460a159c4e74",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBuffControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30984,
+          "declaringType": 4025,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 68280,
+          "body": {
+            "offset": 21630078,
+            "size": 210,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4025-30984.txt",
+          "sha256": "245e5479cfbd0ebb22d8d5f4ee90f073889dc9665b2267bc9ee5f29582b5eb83",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBuffControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "typeIndex": 4065,
+      "name": "GuideControl",
+      "usageAddress": 3953400,
+      "methodSpec": [
+        26934,
+        552,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4065,
+          "name": "GuideControl",
+          "parentEvidence": {
+            "typePointer": 118096,
+            "code": 21,
+            "genericClass": 3700076,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26408
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31287,
+          "declaringType": 4065,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4065-31287.txt",
+          "sha256": "c50e57b5af47d6e840b25592f497157561e9a1b726b54a070a7d5076c06c53bd",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31283,
+          "declaringType": 4065,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4065-31283.txt",
+          "sha256": "a2d278dbc5f9ad7c18099703c1689aa051a79a0bb7c5901e642a8a1c792c090a",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31288,
+          "declaringType": 4065,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 60977,
+          "body": {
+            "offset": 19663030,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4065-31288.txt",
+          "sha256": "e89294cca373693570c6479b4a7479876f0dd842bf606ab76794a7a0dcfc8ed0",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "typeIndex": 4064,
+      "name": "GameControl",
+      "usageAddress": 3953384,
+      "methodSpec": [
+        26934,
+        550,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4064,
+          "name": "GameControl",
+          "parentEvidence": {
+            "typePointer": 118080,
+            "code": 21,
+            "genericClass": 3700044,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26392
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31264,
+          "declaringType": 4064,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19608,
+          "body": {
+            "offset": 8803174,
+            "size": 98,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4064-31264.txt",
+          "sha256": "c24f28a2ecc06b9a374a91dc761c1fd873b90a7980540f29575455378763ccfd",
+          "namedCalls": [
+            "ConfigMgr.get_Instance"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGameControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31254,
+          "declaringType": 4064,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4064-31254.txt",
+          "sha256": "4de9381268f46813c5a4bada58c7353f14358c1df7f966009d64776b9b0ae3a4",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGameControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31257,
+          "declaringType": 4064,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 61951,
+          "body": {
+            "offset": 19948837,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4064-31257.txt",
+          "sha256": "552e54a8c07f9554b96ddc36d11a43d6612f5fbecaa5b916608aec3d5cf95811",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGameControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "typeIndex": 3875,
+      "name": "ItemModuleControl",
+      "usageAddress": 3953432,
+      "methodSpec": [
+        26934,
+        556,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 3875,
+          "name": "ItemModuleControl",
+          "parentEvidence": {
+            "typePointer": 118128,
+            "code": 21,
+            "genericClass": 3700140,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26440
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30185,
+          "declaringType": 3875,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18991,
+          "body": {
+            "offset": 8538679,
+            "size": 9,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type3875-30185.txt",
+          "sha256": "a7e058f018cad91141b67ab579e639549035a4aabb88bfc98276f4c12d813cf7",
+          "namedCalls": [
+            "ItemModuleControl.InitMgr"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameItemModuleControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30184,
+          "declaringType": 3875,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type3875-30184.txt",
+          "sha256": "abab9ca2158569e695287a1c6e05d56686193b858abb6d5762d254a1d8d8ee65",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameItemModuleControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30188,
+          "declaringType": 3875,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 59536,
+          "body": {
+            "offset": 19332051,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type3875-30188.txt",
+          "sha256": "cd5637abe73791259760a712f4bd4bdb242355844d9f10eeb4d3d092457373d6",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameItemModuleControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "typeIndex": 4060,
+      "name": "BattleControl",
+      "usageAddress": 3953328,
+      "methodSpec": [
+        26934,
+        543,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4060,
+          "name": "BattleControl",
+          "parentEvidence": {
+            "typePointer": 118024,
+            "code": 21,
+            "genericClass": 3699932,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26336
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31249,
+          "declaringType": 4060,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 20471,
+          "body": {
+            "offset": 9204149,
+            "size": 213,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4060-31249.txt",
+          "sha256": "73a4bcc15d70f4da0a8313f39ef48b534ec6205687722526e3f1a1ffcc3471bf",
+          "namedCalls": [
+            "ConfigMgr.get_Instance"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31246,
+          "declaringType": 4060,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4060-31246.txt",
+          "sha256": "8aa2615c9721582a322d0e48a94c81831499e6fc4870c7c6c162a5d6d21e3bed",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31250,
+          "declaringType": 4060,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 68961,
+          "body": {
+            "offset": 21853631,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4060-31250.txt",
+          "sha256": "1fe8664d38dd39e2849826d45afb28b4be653d38c7520298540f58b76210a0ad",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "typeIndex": 4058,
+      "name": "EffectControl",
+      "usageAddress": 3953376,
+      "methodSpec": [
+        26934,
+        549,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4058,
+          "name": "EffectControl",
+          "parentEvidence": {
+            "typePointer": 118072,
+            "code": 21,
+            "genericClass": 3700028,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26384
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31213,
+          "declaringType": 4058,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19825,
+          "body": {
+            "offset": 8907909,
+            "size": 193,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4058-31213.txt",
+          "sha256": "b56098f0a05faf4f70d06d528c645923709026179f598bd83ca128696be25648",
+          "namedCalls": [
+            "NormalPool.CreateObjectPool"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31223,
+          "declaringType": 4058,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19824,
+          "body": {
+            "offset": 8906575,
+            "size": 1332,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4058-31223.txt",
+          "sha256": "d121050681cadace6c809d68ce671dc923e6ea2a488e7259f10fe91c3c50f92d",
+          "namedCalls": [
+            "Time.get_time"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31215,
+          "declaringType": 4058,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 64172,
+          "body": {
+            "offset": 20475354,
+            "size": 71,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4058-31215.txt",
+          "sha256": "91eafe721406b0f4ae7f29fc255d776e45994da61d4b740864882783174673c8",
+          "namedCalls": [
+            "EffectControl.DestoryPool"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "typeIndex": 4034,
+      "name": "ServerTimeModule",
+      "usageAddress": 3953544,
+      "methodSpec": [
+        26934,
+        570,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4034,
+          "name": "ServerTimeModule",
+          "parentEvidence": {
+            "typePointer": 118240,
+            "code": 21,
+            "genericClass": 3700364,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26552
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31067,
+          "declaringType": 4034,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 16046,
+          "body": {
+            "offset": 7748439,
+            "size": 215,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4034-31067.txt",
+          "sha256": "b83be25b49fdc8a56ef9e14ececfcf0988516008c46e92499609530fddaa05e4",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener",
+            "ServerTimeModule.USSgYp}",
+            "ServerTimeModule.`kneqli"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameServerTimeControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31057,
+          "declaringType": 4034,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 16045,
+          "body": {
+            "offset": 7748155,
+            "size": 282,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4034-31057.txt",
+          "sha256": "a3889f629e1ae90bd6491389431633bb5701465b439234ac677774b8e69e57e3",
+          "namedCalls": [
+            "ServerTimeModule.`kneqli",
+            "SDKToolManager.GetNetworkingStateStatic",
+            "DateTime.get_Now",
+            "TimeHelper.ToTimestampLong",
+            "ServerTimeModule.GetTodayOfYear",
+            "MsgDispatcher.SendMessage"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameServerTimeControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31062,
+          "declaringType": 4034,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 48724,
+          "body": {
+            "offset": 16992970,
+            "size": 160,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4034-31062.txt",
+          "sha256": "e36e8d6407c93b159d77c72a9050c25f340805912c2134ae95e8c432bf52ee97",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameServerTimeControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "typeIndex": 4027,
+      "name": "CommanderControl",
+      "usageAddress": 3953344,
+      "methodSpec": [
+        26934,
+        545,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4027,
+          "name": "CommanderControl",
+          "parentEvidence": {
+            "typePointer": 118040,
+            "code": 21,
+            "genericClass": 3699964,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26352
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30993,
+          "declaringType": 4027,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 20195,
+          "body": {
+            "offset": 9070880,
+            "size": 72,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4027-30993.txt",
+          "sha256": "eeba9a37c24d23ef48d9602f26b0e28d3b80fba2fa5fe27c6d102c5025dc2a3c",
+          "namedCalls": [
+            "DataManagerPool.get_Instance"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameControllerRegistry.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30998,
+          "declaringType": 4027,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4027-30998.txt",
+          "sha256": "9cd8eb9b18566b900a92e8fba9cf95fea43741e115317c20bdbe8dd085eff8f7",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameControllerRegistry.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31005,
+          "declaringType": 4027,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 67219,
+          "body": {
+            "offset": 21377192,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4027-31005.txt",
+          "sha256": "b8bf2e91138ab0b2e12b8cf2fcba025a4b410e88d8135ded3fc6bcbe08737e15",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameControllerRegistry.cs"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "typeIndex": 4018,
+      "name": "ArenaControl",
+      "usageAddress": 3953312,
+      "methodSpec": [
+        26934,
+        541,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4018,
+          "name": "ArenaControl",
+          "parentEvidence": {
+            "typePointer": 118008,
+            "code": 21,
+            "genericClass": 3699900,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26320
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30875,
+          "declaringType": 4018,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 20772,
+          "body": {
+            "offset": 9315526,
+            "size": 416,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4018-30875.txt",
+          "sha256": "1bb179ad0f7c4dc25f5bb4ee24d3d3b6fa5a389a74a96f7e692d152b9f68e6fe",
+          "namedCalls": [
+            "GameModule.get_Config",
+            "DataManagerPool.get_Instance",
+            "ArenaControl.OnLateInit",
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30883,
+          "declaringType": 4018,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 20770,
+          "body": {
+            "offset": 9315398,
+            "size": 34,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4018-30883.txt",
+          "sha256": "5a9663a093041d5d2cbfe10fcc9e2dd7963193433d6dd00c51074d2f8030c754",
+          "namedCalls": [
+            "ArenaControl.RefreshTime"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30876,
+          "declaringType": 4018,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 69988,
+          "body": {
+            "offset": 22147759,
+            "size": 296,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4018-30876.txt",
+          "sha256": "2eecefcbecfe7ab7ee638c4b4b69627a858e17d9fcac334ae71054d17419f304",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "typeIndex": 4507,
+      "name": "X`nPj",
+      "usageAddress": 3953600,
+      "methodSpec": [
+        26934,
+        577,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4507,
+          "name": "X`nPj",
+          "parentEvidence": {
+            "typePointer": 118296,
+            "code": 21,
+            "genericClass": 3700476,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26608
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34426,
+          "declaringType": 4507,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14653,
+          "body": {
+            "offset": 7198505,
+            "size": 230,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4507-34426.txt",
+          "sha256": "13f8ef2c870658fff52d3a8e0c1e836748a4f2f4ff6ef828b8f6d92bfdad23e6",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener",
+            "GameStatisticsExpansion.RegisteredValueFunc"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34425,
+          "declaringType": 4507,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4507-34425.txt",
+          "sha256": "fc5fea47f4065eb8a360eee5fc0d04e46d79a69ebc18522da352f0fd3dafc696",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34433,
+          "declaringType": 4507,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 38307,
+          "body": {
+            "offset": 14409608,
+            "size": 286,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4507-34433.txt",
+          "sha256": "ff30120b1e82d2f9f4d4f9c7d4d0a1f868c61b78c6123b6754d077ad3a53cd84",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "typeIndex": 3982,
+      "name": "RaceActivityControl",
+      "usageAddress": 3953512,
+      "methodSpec": [
+        26934,
+        566,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 3982,
+          "name": "RaceActivityControl",
+          "parentEvidence": {
+            "typePointer": 118208,
+            "code": 21,
+            "genericClass": 3700300,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26520
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30679,
+          "declaringType": 3982,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 17986,
+          "body": {
+            "offset": 7981268,
+            "size": 186,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type3982-30679.txt",
+          "sha256": "188f0188d578ec997319aa8457255624f76f46ec27597b3c4116ce21fb1b89d9",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "RaceDataManager.InitRaceActivityData",
+            "GameModule.get_Lang",
+            "LangModule.Get",
+            "RaceActivityControl.U]~Yy"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30681,
+          "declaringType": 3982,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 17985,
+          "body": {
+            "offset": 7981104,
+            "size": 162,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type3982-30681.txt",
+          "sha256": "6937c2069d214c352917f89acfa1662c274974b66a6e731f77f8445d1325b7d9",
+          "namedCalls": [
+            "GameModule.get_UI"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30674,
+          "declaringType": 3982,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 53753,
+          "body": {
+            "offset": 17794346,
+            "size": 15,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type3982-30674.txt",
+          "sha256": "d19fb3ba34c44a36bd5e70afd5559b55729f5374807576709295ae08d98adbf6",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "typeIndex": 4009,
+      "name": "PVPController",
+      "usageAddress": 3953480,
+      "methodSpec": [
+        26934,
+        562,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4009,
+          "name": "PVPController",
+          "parentEvidence": {
+            "typePointer": 118176,
+            "code": 21,
+            "genericClass": 3700236,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26488
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30830,
+          "declaringType": 4009,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18346,
+          "body": {
+            "offset": 8261755,
+            "size": 1037,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4009-30830.txt",
+          "sha256": "fc98fb96a43de847c096c7543b4e35db89d9c688d043ba65c57e8b48e7c5d2c8",
+          "namedCalls": [
+            "ConfigMgr.get_Instance",
+            "PVPController.xPZNj^m"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30827,
+          "declaringType": 4009,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18343,
+          "body": {
+            "offset": 8259899,
+            "size": 745,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4009-30827.txt",
+          "sha256": "5a644d5307865fd1028c7f25c07591ce5de0cb6b0b41d4bbc4c4762708eb7dbe",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30834,
+          "declaringType": 4009,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 55390,
+          "body": {
+            "offset": 18298007,
+            "size": 87,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4009-30834.txt",
+          "sha256": "ea6eb4f7fd55e3124a0ba20412692b4d0ad3d8fa49272323896bd9cfa75a6436",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "typeIndex": 4005,
+      "name": "AICampController",
+      "usageAddress": 3953304,
+      "methodSpec": [
+        26934,
+        540,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4005,
+          "name": "AICampController",
+          "parentEvidence": {
+            "typePointer": 118000,
+            "code": 21,
+            "genericClass": 3699884,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26312
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30801,
+          "declaringType": 4005,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4005-30801.txt",
+          "sha256": "46d41ad51f3e62f4311f1475331cae7b518886ddad52433b4ef8587beb676057",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30797,
+          "declaringType": 4005,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 21040,
+          "body": {
+            "offset": 9492414,
+            "size": 612,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4005-30797.txt",
+          "sha256": "6cccbb32848afabcd2c711ae463168e23639eb2c2410161b6b6f2abb477587fa",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30808,
+          "declaringType": 4005,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 70838,
+          "body": {
+            "offset": 22403394,
+            "size": 74,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4005-30808.txt",
+          "sha256": "c54fc1eee1ec09e1d8417c7625fefb6ddad16ad8d5dfa740e743fc0dd7201cba",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "typeIndex": 3904,
+      "name": "AudioControl",
+      "usageAddress": 3953320,
+      "methodSpec": [
+        26934,
+        542,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 3904,
+          "name": "AudioControl",
+          "parentEvidence": {
+            "typePointer": 118016,
+            "code": 21,
+            "genericClass": 3699916,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26328
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30381,
+          "declaringType": 3904,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type3904-30381.txt",
+          "sha256": "dd854e2a85d5fc5626f886033dc435b3e761201bc780b182cd44919a61d5f865",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameAudioControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30385,
+          "declaringType": 3904,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type3904-30385.txt",
+          "sha256": "434743c68288f06ee845e070ed16568e490dc9322393e6e3179f03def3ef605c",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameAudioControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30380,
+          "declaringType": 3904,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 69383,
+          "body": {
+            "offset": 22004912,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type3904-30380.txt",
+          "sha256": "e8c196a3f11d3814fce7826b1e7536fb5c16f8c31fe6fe16c69b7a529679b31a",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameAudioControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "typeIndex": 3903,
+      "name": "ProcessControl",
+      "usageAddress": 3953504,
+      "methodSpec": [
+        26934,
+        565,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 3903,
+          "name": "ProcessControl",
+          "parentEvidence": {
+            "typePointer": 118200,
+            "code": 21,
+            "genericClass": 3700284,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26512
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30379,
+          "declaringType": 3903,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18160,
+          "body": {
+            "offset": 8065870,
+            "size": 41,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type3903-30379.txt",
+          "sha256": "594755f6a48959f1d93737704c3e47a32127197961e302a4192affa27327e7ba",
+          "namedCalls": [
+            "ProcessControl.InitProcedure"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameProcessControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30378,
+          "declaringType": 3903,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type3903-30378.txt",
+          "sha256": "004993f8893de4def851ebec2753160460dd5e7df2cbee0968e019ae86d9dd34",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameProcessControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30376,
+          "declaringType": 3903,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 54285,
+          "body": {
+            "offset": 17954053,
+            "size": 70,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type3903-30376.txt",
+          "sha256": "a64d411d8ea0f2686c2cd7b628b620c2057cbdfc80e80a589d3b9bb3368321d9",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameProcessControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "typeIndex": 4080,
+      "name": "HczzqControl",
+      "usageAddress": 3953416,
+      "methodSpec": [
+        26934,
+        554,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4080,
+          "name": "HczzqControl",
+          "parentEvidence": {
+            "typePointer": 118112,
+            "code": 21,
+            "genericClass": 3700108,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26424
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31359,
+          "declaringType": 4080,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4080-31359.txt",
+          "sha256": "b3f09ad10a583d240f4d1e414722c3528e50b5c826eaf9bdeda09711599739f8",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31354,
+          "declaringType": 4080,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4080-31354.txt",
+          "sha256": "69a325cf70a36f48109b2bd2155508271e4bc3e7cda4c294292ff12bca6332ed",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31360,
+          "declaringType": 4080,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 60870,
+          "body": {
+            "offset": 19629460,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4080-31360.txt",
+          "sha256": "8eab1bb61962e6a6bec7a96b15be619287386a193406f19b1332abe36c4d1c9f",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "typeIndex": 4093,
+      "name": "DiamondLimitedControl",
+      "usageAddress": 3953352,
+      "methodSpec": [
+        26934,
+        546,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4093,
+          "name": "DiamondLimitedControl",
+          "parentEvidence": {
+            "typePointer": 118048,
+            "code": 21,
+            "genericClass": 3699980,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26360
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31417,
+          "declaringType": 4093,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19964,
+          "body": {
+            "offset": 8968877,
+            "size": 235,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4093-31417.txt",
+          "sha256": "9f8768895d0db85876332745f68bd3bfd498d7ce95313a8c6718b9e2334085dc",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "DiamondLimitedControl.InitData",
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31429,
+          "declaringType": 4093,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19962,
+          "body": {
+            "offset": 8968544,
+            "size": 321,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4093-31429.txt",
+          "sha256": "62d94b8330616a21b7353cd400c372a49a7cfe978a1742d1f0fa1d0965de258a",
+          "namedCalls": [
+            "ServerTimeModule.GetTodayOfYear",
+            "ServerTimeModule.GetNowTimestampLong",
+            "DiamondLimitedControl.InitData",
+            "DiamondLimitedControl.l`|MX",
+            "DiamondLimitedControl.RefreshUITime"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31415,
+          "declaringType": 4093,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 64870,
+          "body": {
+            "offset": 20674184,
+            "size": 239,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4093-31415.txt",
+          "sha256": "f28c6e26147419388c0be8f9c8a1d74dd1c701c38b02f1c409ba3b982cacad25",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "typeIndex": 4097,
+      "name": "ItemBagControl",
+      "usageAddress": 3953424,
+      "methodSpec": [
+        26934,
+        555,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4097,
+          "name": "ItemBagControl",
+          "parentEvidence": {
+            "typePointer": 118120,
+            "code": 21,
+            "genericClass": 3700124,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26432
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31447,
+          "declaringType": 4097,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19003,
+          "body": {
+            "offset": 8541052,
+            "size": 79,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4097-31447.txt",
+          "sha256": "740f06fb1bb027a8a6cf538b7a1df7ded3795bd6f564e04a9713204c617afa0b",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "ItemBagControl.InitLimitedBag"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31442,
+          "declaringType": 4097,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4097-31442.txt",
+          "sha256": "c67018eb0b229604c11682ef7daaf38c73a75fd470911c6783daf8c81fb3ea75",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31454,
+          "declaringType": 4097,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 59542,
+          "body": {
+            "offset": 19332293,
+            "size": 77,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4097-31454.txt",
+          "sha256": "7a89425c5f0731d444293a81b138e365d29d5501acf83cd3633e1cb7410c4285",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "typeIndex": 4107,
+      "name": "LevelControl",
+      "usageAddress": 3953440,
+      "methodSpec": [
+        26934,
+        557,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4107,
+          "name": "LevelControl",
+          "parentEvidence": {
+            "typePointer": 118136,
+            "code": 21,
+            "genericClass": 3700156,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26448
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31503,
+          "declaringType": 4107,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18902,
+          "body": {
+            "offset": 8518521,
+            "size": 69,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4107-31503.txt",
+          "sha256": "7b7a2b66dcc8a56cdc053a64cbf8fe2c59201e4da05b2c44f811b698b5136974",
+          "namedCalls": [
+            "LevelControl.mif`"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLevelControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31526,
+          "declaringType": 4107,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18898,
+          "body": {
+            "offset": 8516796,
+            "size": 730,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4107-31526.txt",
+          "sha256": "ec69c5fffa14f7147aaf0d883433498127fa1ae3c258789b14418862698c66c5",
+          "namedCalls": [
+            "LevelControl.RefreshCampInfo"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLevelControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31504,
+          "declaringType": 4107,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 58398,
+          "body": {
+            "offset": 19105739,
+            "size": 70,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4107-31504.txt",
+          "sha256": "835d599c8479381e22c69bb3baa050acb7bf537479fefeada9404c46e0edb5f4",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLevelControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "typeIndex": 4117,
+      "name": "LoadPrefabControl",
+      "usageAddress": 3953456,
+      "methodSpec": [
+        26934,
+        559,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4117,
+          "name": "LoadPrefabControl",
+          "parentEvidence": {
+            "typePointer": 118152,
+            "code": 21,
+            "genericClass": 3700188,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26464
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31553,
+          "declaringType": 4117,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4117-31553.txt",
+          "sha256": "fed647233889b473608971c6cefaa1b0c618de14913317e95d230dde9ab666e8",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLoadPrefabControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31551,
+          "declaringType": 4117,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4117-31551.txt",
+          "sha256": "0798bbe6f67542be3b6de6d1a1e4f8d76930c63caedf4f4381fb928daf92e6a2",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLoadPrefabControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31546,
+          "declaringType": 4117,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 57963,
+          "body": {
+            "offset": 18907374,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4117-31546.txt",
+          "sha256": "da364cd4fac9b03510f08d5b3d39c0826752942e8d375238bbb04df0c7ceb9cd",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLoadPrefabControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "typeIndex": 4118,
+      "name": "LocalDataControl",
+      "usageAddress": 3953464,
+      "methodSpec": [
+        26934,
+        560,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4118,
+          "name": "LocalDataControl",
+          "parentEvidence": {
+            "typePointer": 118160,
+            "code": 21,
+            "genericClass": 3700204,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26472
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31592,
+          "declaringType": 4118,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18784,
+          "body": {
+            "offset": 8473467,
+            "size": 225,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4118-31592.txt",
+          "sha256": "f2c8038cfad0e2b54e38d689681b8189dc5f1e61921ea89b5630110ffa816a8b",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLocalDataControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31585,
+          "declaringType": 4118,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4118-31585.txt",
+          "sha256": "572abc080ba327f18feb28a97e09bdee70d0216a26b3ad6b405015144253976a",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLocalDataControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31594,
+          "declaringType": 4118,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 57892,
+          "body": {
+            "offset": 18892373,
+            "size": 258,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4118-31594.txt",
+          "sha256": "f8bcf42ade537df55158e185ada0a81e27dafb60f21083e82eab02330e4eca1e",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameLocalDataControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "typeIndex": 4165,
+      "name": "SkillControl",
+      "usageAddress": 3953560,
+      "methodSpec": [
+        26934,
+        572,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4165,
+          "name": "SkillControl",
+          "parentEvidence": {
+            "typePointer": 118256,
+            "code": 21,
+            "genericClass": 3700396,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26568
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31840,
+          "declaringType": 4165,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 15936,
+          "body": {
+            "offset": 7657636,
+            "size": 160,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4165-31840.txt",
+          "sha256": "39c7d27cafe72fe26e118d952b4076a669d1ab3b12c9c5f2a15a24e21f6dd3f5",
+          "namedCalls": [
+            "EventSystem.get_current",
+            "PointerEventData..ctor",
+            "NormalPool.CreateObjectPool"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31835,
+          "declaringType": 4165,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 15934,
+          "body": {
+            "offset": 7656198,
+            "size": 105,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4165-31835.txt",
+          "sha256": "4b94df9a453dcd702ef09db7b8ef888212b8db35aef66ef147c86c11b95ea0d3",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31850,
+          "declaringType": 4165,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 48052,
+          "body": {
+            "offset": 16859936,
+            "size": 289,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4165-31850.txt",
+          "sha256": "1576ed1804e48ec9e79c7bbe872eef5b5c5f8023893418a544b5163c0dcb6c1d",
+          "namedCalls": [
+            "NormalPool.DestroyObjectPool"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "typeIndex": 4228,
+      "name": "UserInfoControl",
+      "usageAddress": 3953584,
+      "methodSpec": [
+        26934,
+        575,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4228,
+          "name": "UserInfoControl",
+          "parentEvidence": {
+            "typePointer": 118280,
+            "code": 21,
+            "genericClass": 3700444,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26592
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 32206,
+          "declaringType": 4228,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14889,
+          "body": {
+            "offset": 7256650,
+            "size": 82,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4228-32206.txt",
+          "sha256": "69a2060182ca438b52364f738f029cb9821d7c99ff76f0a1069a2dd5f30ec422",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "UserInfoManager.CheckInstallVersion"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 32213,
+          "declaringType": 4228,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4228-32213.txt",
+          "sha256": "2f1ae354364ce098c042c3f733a4714e515d565b659553579e24229c224441ee",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 32203,
+          "declaringType": 4228,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 41328,
+          "body": {
+            "offset": 14984304,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4228-32203.txt",
+          "sha256": "82fee2996b4aadde9a46dc30a0f0eda24c14e1cb68b83358610f6483653b7568",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "typeIndex": 4134,
+      "name": "RankControl",
+      "usageAddress": 3953520,
+      "methodSpec": [
+        26934,
+        567,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4134,
+          "name": "RankControl",
+          "parentEvidence": {
+            "typePointer": 118216,
+            "code": 21,
+            "genericClass": 3700316,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26528
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31663,
+          "declaringType": 4134,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 17949,
+          "body": {
+            "offset": 7972768,
+            "size": 385,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4134-31663.txt",
+          "sha256": "e044b659b7c15a94aef009a1ffdd5148a366cb9ab830ae81df824a1306c73e83",
+          "namedCalls": [
+            "ColorUtility.TryParseHtmlString",
+            "ConfigMgr.get_Instance",
+            "RankControl.Tsff",
+            "RankControl.InitDefaultRankList",
+            "RankControl.InitPlayerRank",
+            "RankControl.InitHomeInfo"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31672,
+          "declaringType": 4134,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4134-31672.txt",
+          "sha256": "4a3bb42a4b15a055a8a269cdb79d046a78110316bca7ed1d6e6971c15fb40828",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31682,
+          "declaringType": 4134,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 53704,
+          "body": {
+            "offset": 17783068,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4134-31682.txt",
+          "sha256": "5f369f5543caaa6e3f7e2ba38b5b6078c8801418facac2edf8858fe29d328ab8",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "typeIndex": 4239,
+      "name": "WayLineControl",
+      "usageAddress": 3953592,
+      "methodSpec": [
+        26934,
+        576,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4239,
+          "name": "WayLineControl",
+          "parentEvidence": {
+            "typePointer": 118288,
+            "code": 21,
+            "genericClass": 3700460,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26600
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 32326,
+          "declaringType": 4239,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14745,
+          "body": {
+            "offset": 7219343,
+            "size": 11,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4239-32326.txt",
+          "sha256": "37e1efab5f662b8e151a2c46ea0196591f6ab989014d7dd93e3ef7d2f6df089c",
+          "namedCalls": [
+            "WayLineControl.xPZNj^m"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 32324,
+          "declaringType": 4239,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14742,
+          "body": {
+            "offset": 7218396,
+            "size": 851,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4239-32324.txt",
+          "sha256": "d50c465c723e38e5b5c0bb6732059ec4dc4e2e51a32ce28f62f75b6a7112b7ab",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 32312,
+          "declaringType": 4239,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 39191,
+          "body": {
+            "offset": 14638593,
+            "size": 87,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4239-32312.txt",
+          "sha256": "9814d06cedf08e705beae7a7c678305eab82256fe90af5ba2e588d36eaf5cae5",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "typeIndex": 4240,
+      "name": "`u}ze",
+      "usageAddress": 3953608,
+      "methodSpec": [
+        26934,
+        578,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4240,
+          "name": "`u}ze",
+          "parentEvidence": {
+            "typePointer": 118304,
+            "code": 21,
+            "genericClass": 3700492,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26616
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 32362,
+          "declaringType": 4240,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14624,
+          "body": {
+            "offset": 7188639,
+            "size": 48,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4240-32362.txt",
+          "sha256": "3c21edee8c5575ad28e8f28312b875a2d4fcc0dcc3ec5d3a0e05628bdb1233be",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 32358,
+          "declaringType": 4240,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 14623,
+          "body": {
+            "offset": 7188276,
+            "size": 362,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4240-32358.txt",
+          "sha256": "1787c9175ab1753082c8781d116500febff02dc6d16fc2381f534d29acb52f7f",
+          "namedCalls": [
+            "DataManagerPool.get_Instance",
+            "DataManagerPool.SaveData",
+            "CLog.LogByColor"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 32361,
+          "declaringType": 4240,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 36675,
+          "body": {
+            "offset": 13993793,
+            "size": 151,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4240-32361.txt",
+          "sha256": "f0918205d1fc04855c6d799dd2cedb3c011504aa183a1a3eaef21aaa061bbac6",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "typeIndex": 4256,
+      "name": "ToolControl",
+      "usageAddress": 3953568,
+      "methodSpec": [
+        26934,
+        573,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4256,
+          "name": "ToolControl",
+          "parentEvidence": {
+            "typePointer": 118264,
+            "code": 21,
+            "genericClass": 3700412,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26576
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 32537,
+          "declaringType": 4256,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4256-32537.txt",
+          "sha256": "5c5bc9d9b81c41a5c5aac2fb6dc4f3755093d7ad15a0266ec8e01d1bac964cb4",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameToolControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 32534,
+          "declaringType": 4256,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4256-32534.txt",
+          "sha256": "d17fa98302cef90a59c3cc7e03ea53583fdec8bb8f1622586dc5dc84a6814f53",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameToolControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 32540,
+          "declaringType": 4256,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4256-32540.txt",
+          "sha256": "c4d1fdfdd53fe8730ed15f17ef0a951a7e64c45f14dc1d8958e25b100bdb7a5f",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameToolControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "typeIndex": 4296,
+      "name": "UIControl",
+      "usageAddress": 3953576,
+      "methodSpec": [
+        26934,
+        574,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4296,
+          "name": "UIControl",
+          "parentEvidence": {
+            "typePointer": 118272,
+            "code": 21,
+            "genericClass": 3700428,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26584
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 32739,
+          "declaringType": 4296,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 15058,
+          "body": {
+            "offset": 7322660,
+            "size": 301,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4296-32739.txt",
+          "sha256": "ede5a3e0674e9a8abdf3bebb068f6f671b2b0d3045ed9a3e7530ea5c20e455b2",
+          "namedCalls": [
+            "GameModule.get_UI",
+            "RectTransform.get_rect",
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUiControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 32709,
+          "declaringType": 4296,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4296-32709.txt",
+          "sha256": "8793561661883baba34d970305fc575642a722f5303bb06343553024dad20f26",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUiControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 32735,
+          "declaringType": 4296,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 42486,
+          "body": {
+            "offset": 15311796,
+            "size": 193,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4296-32735.txt",
+          "sha256": "ddbbdfe21d72fb8a828df6115a8a9d426f90b436a1bde3c6eff9cb299a426060",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUiControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 29,
+      "typeIndex": 4453,
+      "name": "RedDotControl",
+      "usageAddress": 3953528,
+      "methodSpec": [
+        26934,
+        568,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4453,
+          "name": "RedDotControl",
+          "parentEvidence": {
+            "typePointer": 118224,
+            "code": 21,
+            "genericClass": 3700332,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26536
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34169,
+          "declaringType": 4453,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 17871,
+          "body": {
+            "offset": 7954312,
+            "size": 80,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4453-34169.txt",
+          "sha256": "fda5e6e758f61856b5769db0686c36e94816300a107eac89e4ccc26069cc7a44",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34167,
+          "declaringType": 4453,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 17870,
+          "body": {
+            "offset": 7954196,
+            "size": 115,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4453-34167.txt",
+          "sha256": "040d578752bc86612fbc67870a579860f53d206f405c2e3f5a4aac33da7f9810",
+          "namedCalls": [
+            "RedDotControl.]^mmWf{"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34166,
+          "declaringType": 4453,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 53250,
+          "body": {
+            "offset": 17716105,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4453-34166.txt",
+          "sha256": "58068720012b235e83628ba20815ee296cc54632a71bb069b0ccdf5c27cca320",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "typeIndex": 4462,
+      "name": "PlayerControl",
+      "usageAddress": 3953496,
+      "methodSpec": [
+        26934,
+        564,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4462,
+          "name": "PlayerControl",
+          "parentEvidence": {
+            "typePointer": 118192,
+            "code": 21,
+            "genericClass": 3700268,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26504
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34199,
+          "declaringType": 4462,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18220,
+          "body": {
+            "offset": 8098702,
+            "size": 249,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4462-34199.txt",
+          "sha256": "318e48b422a81c666141fb4e855ac5b3b580172cf6521deb84a35758fe24bfbe",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener",
+            "OnTouchHandle..ctor",
+            "InputManager.AddTouchBeginListener"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePlayerControl.cs"
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34196,
+          "declaringType": 4462,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18217,
+          "body": {
+            "offset": 8093852,
+            "size": 3568,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4462-34196.txt",
+          "sha256": "83845199b54b9aecf0037dfb80e6bd0900edf4dbaebbab5b8a7c6cb913a315c3",
+          "namedCalls": [
+            "PlayerControl.VkMN",
+            "Component.get_gameObject",
+            "GameObject.get_activeInHierarchy",
+            "Input.GetMouseButtonDown",
+            "Input.get_mousePosition",
+            "Screen.get_height",
+            "Input.GetMouseButton",
+            "Transform.set_localPosition",
+            "Transform.set_localScale",
+            "Input.GetMouseButtonUp",
+            "MsgDispatcher.SendMessage"
+          ],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePlayerControl.cs"
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34206,
+          "declaringType": 4462,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 54592,
+          "body": {
+            "offset": 18061561,
+            "size": 386,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4462-34206.txt",
+          "sha256": "fad502c092912c637cac5fa7194d06aa531251ea551808f759f1a0c1d1775d2e",
+          "namedCalls": [],
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgamePlayerControl.cs"
+        }
+      ]
+    },
+    {
+      "order": 31,
+      "typeIndex": 4504,
+      "name": "x~bjQc",
+      "usageAddress": 3953616,
+      "methodSpec": [
+        26934,
+        579,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4504,
+          "name": "x~bjQc",
+          "parentEvidence": {
+            "typePointer": 118312,
+            "code": 21,
+            "genericClass": 3700508,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26624
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34368,
+          "declaringType": 4504,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 13444,
+          "body": {
+            "offset": 6511791,
+            "size": 116,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4504-34368.txt",
+          "sha256": "07e556d5a83670b71e29299b9ae5e2d5e5e08d9b4122c9cc5ab8ce45f85efa6f",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34388,
+          "declaringType": 4504,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4504-34388.txt",
+          "sha256": "fb4c79b7c33d91d5a7aad8a81cf0bdae1ee84be0137159a48b7fbeae5171cebc",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34367,
+          "declaringType": 4504,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 32395,
+          "body": {
+            "offset": 12464656,
+            "size": 289,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4504-34367.txt",
+          "sha256": "b590020811de35bf6a7551bb2966c4f5c34f59799a68a2678cc019404e021208",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "typeIndex": 4470,
+      "name": "LevelRankControl",
+      "usageAddress": 3953448,
+      "methodSpec": [
+        26934,
+        558,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4470,
+          "name": "LevelRankControl",
+          "parentEvidence": {
+            "typePointer": 118144,
+            "code": 21,
+            "genericClass": 3700172,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26456
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34242,
+          "declaringType": 4470,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18895,
+          "body": {
+            "offset": 8516325,
+            "size": 12,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4470-34242.txt",
+          "sha256": "92bda33fb6d6b5da0bfbd63bb85d963e9e5cb5972ae803d8ed26c99c681f9142",
+          "namedCalls": [
+            "WXAvatar.get_Instance",
+            "WXAvatar.InitAtStartGame"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34229,
+          "declaringType": 4470,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18894,
+          "body": {
+            "offset": 8516256,
+            "size": 68,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4470-34229.txt",
+          "sha256": "21a25c515753245dce85e7a8b202a99d54177c4e68ef95059ad110160afc038d",
+          "namedCalls": [
+            "LevelRankControl.Req_GetRankInfo"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34243,
+          "declaringType": 4470,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 58381,
+          "body": {
+            "offset": 19092764,
+            "size": 9,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4470-34243.txt",
+          "sha256": "e960eef4cc5183603e941b938398d491acd0fa270e0438b7af9ad517c28c431b",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 33,
+      "typeIndex": 3874,
+      "name": "PiggyBankControl",
+      "usageAddress": 3953488,
+      "methodSpec": [
+        26934,
+        563,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 3874,
+          "name": "PiggyBankControl",
+          "parentEvidence": {
+            "typePointer": 118184,
+            "code": 21,
+            "genericClass": 3700252,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26496
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 30170,
+          "declaringType": 3874,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 18235,
+          "body": {
+            "offset": 8102006,
+            "size": 123,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type3874-30170.txt",
+          "sha256": "11a69474d6db1e7325fe61fd676f7fa41b5f6d5d73cdcb9c76a42e11e8e2376b",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 30168,
+          "declaringType": 3874,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type3874-30168.txt",
+          "sha256": "48816b492b18420359fad181b1e423c337f4d2215d3288ab9c62292d739a341b",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 30175,
+          "declaringType": 3874,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 54680,
+          "body": {
+            "offset": 18072420,
+            "size": 140,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type3874-30175.txt",
+          "sha256": "65399c9a9c747263b2fbde207ed6d55de9a0c5ed34a8a3bbf4d5ee20c1223a2e",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 34,
+      "typeIndex": 4076,
+      "name": "GuideBookControl",
+      "usageAddress": 3953392,
+      "methodSpec": [
+        26934,
+        551,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4076,
+          "name": "GuideBookControl",
+          "parentEvidence": {
+            "typePointer": 118088,
+            "code": 21,
+            "genericClass": 3700060,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26400
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31329,
+          "declaringType": 4076,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19299,
+          "body": {
+            "offset": 8651123,
+            "size": 72,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4076-31329.txt",
+          "sha256": "3d00c47fe2216565588f87882b2ea870c6eafb90c15f424f9d7d32bb4cd886c9",
+          "namedCalls": [
+            "DataManagerPool.get_Instance"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31334,
+          "declaringType": 4076,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4076-31334.txt",
+          "sha256": "58c5bdd485f4f9ffa964a030a15214cd50905c9e4a47521b0544e5bbbf42ca31",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31332,
+          "declaringType": 4076,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 60992,
+          "body": {
+            "offset": 19667142,
+            "size": 9,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4076-31332.txt",
+          "sha256": "f627ce71cc77a297c2ae8fc774c0d988ab75184c3d7c584f6123e76707328452",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 35,
+      "typeIndex": 4502,
+      "name": "SevendayActivityControl",
+      "usageAddress": 3953552,
+      "methodSpec": [
+        26934,
+        571,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4502,
+          "name": "SevendayActivityControl",
+          "parentEvidence": {
+            "typePointer": 118248,
+            "code": 21,
+            "genericClass": 3700380,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26560
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 34358,
+          "declaringType": 4502,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 913,
+          "body": {
+            "offset": 362854,
+            "size": 3,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4502-34358.txt",
+          "sha256": "588a9e6f4c8c6d2d1fd78e7fcf16c1975139c3d99f02f742c2158968950162be",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 34361,
+          "declaringType": 4502,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4502-34361.txt",
+          "sha256": "b7f5ab595b9c3e4e89ecb25b642be41b39dbf976664caa4156dc2af59402ef31",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 34357,
+          "declaringType": 4502,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 48623,
+          "body": {
+            "offset": 16969386,
+            "size": 63,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4502-34357.txt",
+          "sha256": "01c3762f07b1244a596f522297c6f90a28b7fba4738555e51b1dcf0b76cc4d5d",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 36,
+      "typeIndex": 4038,
+      "name": "DiceGameControl",
+      "usageAddress": 3953360,
+      "methodSpec": [
+        26934,
+        547,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4038,
+          "name": "DiceGameControl",
+          "parentEvidence": {
+            "typePointer": 118056,
+            "code": 21,
+            "genericClass": 3699996,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26368
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31122,
+          "declaringType": 4038,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19958,
+          "body": {
+            "offset": 8966891,
+            "size": 1446,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4038-31122.txt",
+          "sha256": "2822ebfe236694642d5a3613eddb2d183a71fb5246bd6338e959d80543b63f68",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener",
+            "DataManagerPool.get_Instance",
+            "ConfigMgr.get_Instance"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31110,
+          "declaringType": 4038,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19956,
+          "body": {
+            "offset": 8966719,
+            "size": 63,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4038-31110.txt",
+          "sha256": "982daa474af3cac28d48c05de0626365c72cf433d96098cbb39dbc96e448f0e5",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31088,
+          "declaringType": 4038,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 64857,
+          "body": {
+            "offset": 20668528,
+            "size": 241,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4038-31088.txt",
+          "sha256": "71d6aaa6ace3796d78e419614f74bacee67f548b06c3f7e68bc0441a660a4319",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    },
+    {
+      "order": 37,
+      "typeIndex": 4047,
+      "name": "DiceShopControl",
+      "usageAddress": 3953368,
+      "methodSpec": [
+        26934,
+        548,
+        -1
+      ],
+      "registerExtraArgument": 0,
+      "ancestry": [
+        {
+          "typeIndex": 4047,
+          "name": "DiceShopControl",
+          "parentEvidence": {
+            "typePointer": 118064,
+            "code": 21,
+            "genericClass": 3700012,
+            "definition": {
+              "typePointer": 3575116,
+              "code": 18,
+              "typeIndex": 3497
+            },
+            "classInst": 26376
+          }
+        },
+        {
+          "typeIndex": 3497,
+          "name": "ControlBase`1",
+          "parentEvidence": {
+            "typePointer": 3554252,
+            "code": 28,
+            "typeIndex": 394
+          }
+        },
+        {
+          "typeIndex": 394,
+          "name": "Object"
+        }
+      ],
+      "lifecycle": [
+        {
+          "slot": 4,
+          "contract": "OnInit",
+          "metadata": 31177,
+          "declaringType": 4047,
+          "methodName": "OnInit",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode",
+          "function": 19938,
+          "body": {
+            "offset": 8962074,
+            "size": 116,
+            "typeIndex": 0
+          },
+          "evidence": "disassembly/Type4047-31177.txt",
+          "sha256": "f65787502524d34c848f22529b14454c8289f9ecee7d312d557a824617d32232",
+          "namedCalls": [
+            "EventHandler..ctor",
+            "MsgDispatcher.AddEventListener"
+          ],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 5,
+          "contract": "Updata",
+          "metadata": 31183,
+          "declaringType": 4047,
+          "methodName": "Updata",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": true,
+          "module": "wasmcode",
+          "function": 1636,
+          "body": {
+            "offset": 536980,
+            "size": 3,
+            "typeIndex": 21
+          },
+          "evidence": "disassembly/Type4047-31183.txt",
+          "sha256": "5a981e190fdb4fd0afbb7b5ae49b2b86fbc29dbfa3af908d11eb52a54abadf9c",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        },
+        {
+          "slot": 6,
+          "contract": "OnDispose",
+          "metadata": 31171,
+          "declaringType": 4047,
+          "methodName": "OnDispose",
+          "explicitInterface": false,
+          "inherited": false,
+          "sourceBodyEmpty": false,
+          "module": "wasmcode1",
+          "function": 64835,
+          "body": {
+            "offset": 20665016,
+            "size": 281,
+            "typeIndex": 4
+          },
+          "evidence": "disassembly/Type4047-31171.txt",
+          "sha256": "c809a21cf15ea0fbb628fdcb48e3e0b4c0cc22584401d0a7928694f85b31c7d3",
+          "namedCalls": [],
+          "implementationStatus": "not-yet-bound-to-production-resolver",
+          "implementation": null
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Empty lifecycle body does not imply empty business controller.",
+    "Named calls are an inventory, not a complete semantic reconstruction.",
+    "No full production composition or Player validation claimed."
+  ]
+}

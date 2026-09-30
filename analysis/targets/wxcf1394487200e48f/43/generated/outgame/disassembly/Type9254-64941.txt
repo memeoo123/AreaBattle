@@ -1,0 +1,242 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.UpLoadRank; wasmcode function 20403; offset=9193996 size=627
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(4, 127)]
+008c4a0f  global.get [0]
+008c4a11  i32.const [48]
+008c4a13  i32.sub []
+008c4a14  local.set [0]
+008c4a16  local.get [0]
+008c4a18  global.set [0]
+008c4a1a  i32.const [5006704]
+008c4a1f  i32.load8_u [0, 0]
+008c4a22  i32.eqz []
+008c4a23  if [-64]
+008c4a25    i32.const [3930640]
+008c4a2a    call [900] ; 
+008c4a2d    i32.const [3934720]
+008c4a32    call [900] ; 
+008c4a35    i32.const [3926920]
+008c4a3a    call [900] ; 
+008c4a3d    i32.const [3934896]
+008c4a42    call [900] ; 
+008c4a45    i32.const [4096344] ; STRING "setRankOptions is null"
+008c4a4a    call [900] ; 
+008c4a4d    i32.const [4100600] ; STRING "wxgame"
+008c4a52    call [900] ; 
+008c4a55    i32.const [4096348] ; STRING "setRankOptions.value is not a number"
+008c4a5a    call [900] ; 
+008c4a5d    i32.const [4096080] ; STRING "score"
+008c4a62    call [900] ; 
+008c4a65    i32.const [4099856] ; STRING "user_rank"
+008c4a6a    call [900] ; 
+008c4a6d    i32.const [4099668] ; STRING "update_time"
+008c4a72    call [900] ; 
+008c4a75    i32.const [5006704]
+008c4a7a    i32.const [1]
+008c4a7c    i32.store8 [0, 0]
+008c4a7f  end []
+008c4a80  local.get [0]
+008c4a82  i32.const [0]
+008c4a84  i32.store [2, 44]
+008c4a87  local.get [0]
+008c4a89  i64.const [0]
+008c4a8b  i64.store [3, 32]
+008c4a8e  local.get [0]
+008c4a90  i64.const [0]
+008c4a92  i64.store [3, 24]
+008c4a95  block [-64]
+008c4a97    local.get [1]
+008c4a99    i32.eqz []
+008c4a9a    if [-64]
+008c4a9c      i32.const [4096344] ; STRING "setRankOptions is null"
+008c4aa1      i32.load [2, 0]
+008c4aa4      i32.const [0]
+008c4aa6      i32.const [8839] ; TABLE XYXLOG.Error
+008c4aaa      global.set [3]
+008c4aac      i32.const [8839] ; TABLE XYXLOG.Error
+008c4ab0      call_indirect [0, 0]
+008c4ab3      br [1]
+008c4ab5    end []
+008c4ab6    block [-64]
+008c4ab8      block [-64]
+008c4aba        local.get [1]
+008c4abc        i32.load [2, 8]
+008c4abf        local.set [2]
+008c4ac1        local.get [2]
+008c4ac3        if [-64]
+008c4ac5          i32.const [0]
+008c4ac7          local.set [3]
+008c4ac9          local.get [2]
+008c4acb          i32.load [2, 8]
+008c4ace          br_if [2]
+008c4ad0        end []
+008c4ad1      end []
+008c4ad2      i32.const [1]
+008c4ad4      local.set [3]
+008c4ad6    end []
+008c4ad7    local.get [3]
+008c4ad9    i32.eqz []
+008c4ada    if [-64]
+008c4adc      i32.const [0]
+008c4ade      call [3563] ; OpenDataControl.get_Instance
+008c4ae1      local.set [5]
+008c4ae3      local.get [1]
+008c4ae5      i32.load [2, 28]
+008c4ae8      local.set [4]
+008c4aea      i32.const [3926920]
+008c4aef      i32.load [2, 0]
+008c4af2      i32.const [1]
+008c4af4      call [909] ; 
+008c4af7      local.set [2]
+008c4af9      i32.const [3934896]
+008c4afe      i32.load [2, 0]
+008c4b01      call [903] ; 
+008c4b04      local.set [3]
+008c4b06      local.get [3]
+008c4b08      local.get [1]
+008c4b0a      i32.load [2, 8]
+008c4b0d      i32.store [2, 8]
+008c4b10      local.get [3]
+008c4b12      local.get [1]
+008c4b14      i32.load [2, 16]
+008c4b17      i32.store [2, 12]
+008c4b1a      local.get [2]
+008c4b1c      local.get [3]
+008c4b1e      call [905] ; 
+008c4b21      local.get [2]
+008c4b23      local.get [3]
+008c4b25      i32.store [2, 16]
+008c4b28      local.get [5]
+008c4b2a      local.get [4]
+008c4b2c      local.get [2]
+008c4b2e      i32.const [0]
+008c4b30      call [5854] ; OpenDataControl.SetUserRankScore
+008c4b33      br [1]
+008c4b35    end []
+008c4b36    local.get [1]
+008c4b38    i32.load [2, 16]
+008c4b3b    local.get [0]
+008c4b3d    i32.const [44]
+008c4b3f    i32.add []
+008c4b40    i32.const [0]
+008c4b42    call [1329] ; Int32.TryParse
+008c4b45    if [-64]
+008c4b47      i32.const [4099856] ; STRING "user_rank"
+008c4b4c      i32.load [2, 0]
+008c4b4f      local.set [5]
+008c4b51      i32.const [3934720]
+008c4b56      i32.load [2, 0]
+008c4b59      call [903] ; 
+008c4b5c      local.set [2]
+008c4b5e      i32.const [3934720]
+008c4b63      i32.load [2, 0]
+008c4b66      call [903] ; 
+008c4b69      local.set [3]
+008c4b6b      local.get [2]
+008c4b6d      i32.const [4100600] ; STRING "wxgame"
+008c4b72      i32.load [2, 0]
+008c4b75      local.get [3]
+008c4b77      i32.const [0]
+008c4b79      call [1222] ; JsonData.set_Item
+008c4b7c      local.get [2]
+008c4b7e      i32.const [4100600] ; STRING "wxgame"
+008c4b83      i32.load [2, 0]
+008c4b86      i32.const [0]
+008c4b88      call [1231] ; JsonData.get_Item
+008c4b8b      local.set [3]
+008c4b8d      local.get [0]
+008c4b8f      i32.load [2, 44]
+008c4b92      i32.const [0]
+008c4b94      call [1731] ; JsonData.op_Implicit
+008c4b97      local.set [4]
+008c4b99      local.get [3]
+008c4b9b      i32.const [4096080] ; STRING "score"
+008c4ba0      i32.load [2, 0]
+008c4ba3      local.get [4]
+008c4ba5      i32.const [0]
+008c4ba7      call [1222] ; JsonData.set_Item
+008c4baa      local.get [2]
+008c4bac      i32.const [4100600] ; STRING "wxgame"
+008c4bb1      i32.load [2, 0]
+008c4bb4      i32.const [0]
+008c4bb6      call [1231] ; JsonData.get_Item
+008c4bb9      local.set [3]
+008c4bbb      i32.const [3930640]
+008c4bc0      i32.load [2, 0]
+008c4bc3      call [901] ; 
+008c4bc6      local.get [0]
+008c4bc8      i32.const [8]
+008c4bca      i32.add []
+008c4bcb      i32.const [0]
+008c4bcd      call [5121] ; DateTimeOffset.get_Now
+008c4bd0      local.get [0]
+008c4bd2      local.get [0]
+008c4bd4      i64.load [3, 16]
+008c4bd7      i64.store [3, 32]
+008c4bda      local.get [0]
+008c4bdc      local.get [0]
+008c4bde      i64.load [3, 8]
+008c4be1      i64.store [3, 24]
+008c4be4      local.get [0]
+008c4be6      i32.const [24]
+008c4be8      i32.add []
+008c4be9      i32.const [0]
+008c4beb      call [1865] ; DateTimeOffset.ToUnixTimeSeconds
+008c4bee      i32.const [0]
+008c4bf0      call [11705] ; JsonData.op_Implicit
+008c4bf3      local.set [4]
+008c4bf5      local.get [3]
+008c4bf7      i32.const [4099668] ; STRING "update_time"
+008c4bfc      i32.load [2, 0]
+008c4bff      local.get [4]
+008c4c01      i32.const [0]
+008c4c03      call [1222] ; JsonData.set_Item
+008c4c06      i32.const [0]
+008c4c08      call [3563] ; OpenDataControl.get_Instance
+008c4c0b      local.set [4]
+008c4c0d      local.get [1]
+008c4c0f      i32.load [2, 28]
+008c4c12      local.set [6]
+008c4c14      i32.const [3926920]
+008c4c19      i32.load [2, 0]
+008c4c1c      i32.const [1]
+008c4c1e      call [909] ; 
+008c4c21      local.set [1]
+008c4c23      i32.const [3934896]
+008c4c28      i32.load [2, 0]
+008c4c2b      call [903] ; 
+008c4c2e      local.set [3]
+008c4c30      local.get [3]
+008c4c32      local.get [5]
+008c4c34      i32.store [2, 8]
+008c4c37      local.get [3]
+008c4c39      local.get [2]
+008c4c3b      i32.const [0]
+008c4c3d      call [2584] ; JsonData.ToJson
+008c4c40      i32.store [2, 12]
+008c4c43      local.get [1]
+008c4c45      local.get [3]
+008c4c47      call [905] ; 
+008c4c4a      local.get [1]
+008c4c4c      local.get [3]
+008c4c4e      i32.store [2, 16]
+008c4c51      local.get [4]
+008c4c53      local.get [6]
+008c4c55      local.get [1]
+008c4c57      i32.const [0]
+008c4c59      call [5854] ; OpenDataControl.SetUserRankScore
+008c4c5c      br [1]
+008c4c5e    end []
+008c4c5f    i32.const [4096348] ; STRING "setRankOptions.value is not a number"
+008c4c64    i32.load [2, 0]
+008c4c67    i32.const [0]
+008c4c69    i32.const [8839] ; TABLE XYXLOG.Error
+008c4c6d    global.set [3]
+008c4c6f    i32.const [8839] ; TABLE XYXLOG.Error
+008c4c73    call_indirect [0, 0]
+008c4c76  end []
+008c4c77  local.get [0]
+008c4c79  i32.const [48]
+008c4c7b  i32.add []
+008c4c7c  global.set [0]
+008c4c7e  end []

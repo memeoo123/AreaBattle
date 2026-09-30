@@ -1,0 +1,23 @@
+; Original class: Bridge_WX_XYXFunction
+; Type9254.GetBannerSizeScale; wasmcode1 function 68416; offset=21659159 size=58
+; signature={'args': [127, 127, 127], 'returns': [125]}; localGroups=[]
+014a7e18  i32.const [5006694]
+014a7e1d  i32.load8_u [0, 0]
+014a7e20  i32.eqz []
+014a7e21  if [-64]
+014a7e23    i32.const [3927760]
+014a7e28    i32.const [1605]
+014a7e2b    call_indirect [0, 0]
+014a7e2e    i32.const [5006694]
+014a7e33    i32.const [1]
+014a7e35    i32.store8 [0, 0]
+014a7e38  end []
+014a7e39  i32.const [3927760]
+014a7e3e  i32.load [2, 0]
+014a7e41  i32.const [1149]
+014a7e44  call_indirect [0, 0]
+014a7e47  local.get [1]
+014a7e49  i32.const [0]
+014a7e4b  call [32368] ; ADModule.getBannerSizeScale
+014a7e4f  return []
+014a7e50  end []

@@ -1,0 +1,44 @@
+﻿{
+  "atUtc": "2026-09-30T04:56:37.716507+00:00",
+  "status": "global-values-and-camp-dispatch-restored",
+  "source": [
+    "disassembly/Type3907-30435.txt",
+    "disassembly/Type3907-30410.txt",
+    "disassembly/Type3907-30407.txt",
+    "Global..cctor19394"
+  ],
+  "implementation": "OutgameConfigPresentation.cs",
+  "globalAssignments": {
+    "8": "float.Parse(GlobalValue101.Content1)",
+    "4": "copy8",
+    "12": "float.Parse(102.Content1)",
+    "16": "float.Parse(110.Content1)",
+    "20": "float.Parse(113.Content1.Split(;)[0])",
+    "28": "float.Parse(parts[1])*field8",
+    "24": "copy28",
+    "32": "float.Parse(parts[2])",
+    "36": "field20*.5f",
+    "40": "GlobalValue[current Global.ShareURL key].Content1"
+  },
+  "sourceDefaults": {
+    "CampSumNum": 9,
+    "ShareURLKey": 200
+  },
+  "campSemantics": [
+    "Inclusive loops0..currentCampSumNum with live bound lookup each test",
+    "First loop native ColorUtility.TryParseHtmlString(# + config field), bool ignored; line dictionary272 and three-color arrays276 indexer updates without Clear",
+    "Second loop requests every BasitionMaterial with arguments[campId,currentBasitionMaterial]; no wait before returning"
+  ],
+  "verification": {
+    "integrated": 657,
+    "originalDataGlobals": true,
+    "originalDataTenCamps": true,
+    "partialFailureAndOrder": true
+  },
+  "remaining": [
+    "Material completion30407 argument extraction/ToFileName/typed load and dictionary280 assignment not connected",
+    "64-table ConfigMgr owner and static resource/read state composition",
+    "Production online provider/Main/account/menu",
+    "No new PlayMode or Player build"
+  ]
+}

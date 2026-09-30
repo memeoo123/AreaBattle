@@ -1,0 +1,17 @@
+; Original class: LocalDataControl
+; Type4118.GetCoinNum; wasmcode1 function 57894; offset=18892660 size=27
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+01204775  local.get [0]
+01204777  i32.load [2, 8]
+0120477a  local.set [0]
+0120477c  local.get [0]
+0120477e  i32.eqz []
+0120477f  if [-64]
+01204781    i32.const [0]
+01204783    return []
+01204784  end []
+01204785  local.get [0]
+01204787  i32.load [2, 20]
+0120478a  i32.load [2, 20]
+0120478d  return []
+0120478e  end []

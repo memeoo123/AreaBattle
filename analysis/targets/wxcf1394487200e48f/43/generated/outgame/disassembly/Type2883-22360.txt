@@ -1,0 +1,25 @@
+; Original class: IEnumeratorAwaitExtensions
+; Type2883.IP¨»; wasmcode function 3340; offset=1038092 size=58
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+000fd70d  local.get [0]
+000fd70f  i32.eqz []
+000fd710  if [-64]
+000fd712    i32.const [3931644]
+000fd717    call [902] ; 
+000fd71a    call [903] ; 
+000fd71d    local.set [0]
+000fd71f    local.get [0]
+000fd721    i32.const [4044936] ; STRING "Assert hit in UnityAsyncUtil package!"
+000fd726    call [902] ; 
+000fd729    i32.const [0]
+000fd72b    call [1096] ; Exception..ctor
+000fd72e    local.get [0]
+000fd730    i32.const [4002612] ; METHOD IEnumeratorAwaitExtensions.IP¨»
+000fd735    call [902] ; 
+000fd738    i32.const [1106]
+000fd73b    global.set [3]
+000fd73d    i32.const [1106]
+000fd740    call_indirect [0, 0]
+000fd743    unreachable []
+000fd744  end []
+000fd745  end []

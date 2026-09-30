@@ -1,0 +1,68 @@
+; Original class: RaceActivityControl
+; Type3982.vXVzk; wasmcode function 10963; offset=5310595 size=201
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00510886  i32.const [5010167]
+0051088b  i32.load8_u [0, 0]
+0051088e  i32.eqz []
+0051088f  if [-64]
+00510891    i32.const [3916708]
+00510896    call [900] ; 
+00510899    i32.const [3976004]
+0051089e    call [900] ; 
+005108a1    i32.const [4029880] ; METHOD <>c.mdQe
+005108a6    call [900] ; 
+005108a9    i32.const [3947892]
+005108ae    call [900] ; 
+005108b1    i32.const [5010167]
+005108b6    i32.const [1]
+005108b8    i32.store8 [0, 0]
+005108bb  end []
+005108bc  local.get [0]
+005108be  i32.load [2, 16]
+005108c1  i32.load [2, 24]
+005108c4  local.set [1]
+005108c6  i32.const [3947892]
+005108cb  i32.load [2, 0]
+005108ce  call [901] ; 
+005108d1  i32.const [3947892]
+005108d6  i32.load [2, 0]
+005108d9  i32.load [2, 92]
+005108dc  i32.load [2, 4]
+005108df  local.set [0]
+005108e1  local.get [0]
+005108e3  i32.eqz []
+005108e4  if [-64]
+005108e6    i32.const [3947892]
+005108eb    i32.load [2, 0]
+005108ee    call [901] ; 
+005108f1    i32.const [3947892]
+005108f6    i32.load [2, 0]
+005108f9    i32.load [2, 92]
+005108fc    i32.load [2, 0]
+005108ff    local.set [2]
+00510901    i32.const [3916708]
+00510906    i32.load [2, 0]
+00510909    call [903] ; 
+0051090c    local.set [0]
+0051090e    local.get [0]
+00510910    local.get [2]
+00510912    i32.const [4029880] ; METHOD <>c.mdQe
+00510917    i32.load [2, 0]
+0051091a    i32.const [0]
+0051091c    call [1483] ; 
+0051091f    i32.const [3947892]
+00510924    i32.load [2, 0]
+00510927    i32.load [2, 92]
+0051092a    local.get [0]
+0051092c    i32.store [2, 4]
+0051092f    i32.const [3947892]
+00510934    i32.load [2, 0]
+00510937    i32.load [2, 92]
+0051093a    drop []
+0051093b  end []
+0051093c  local.get [1]
+0051093e  local.get [0]
+00510940  i32.const [3976004]
+00510945  i32.load [2, 0]
+00510948  call [1492] ; 
+0051094b  end []

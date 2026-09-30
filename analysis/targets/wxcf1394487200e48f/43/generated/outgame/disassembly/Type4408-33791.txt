@@ -1,0 +1,42 @@
+; Original class: ShopUI
+; Type4408.q^ZMYPj; wasmcode1 function 11598; offset=4166877 size=109
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003f94de  i32.const [5007566]
+003f94e3  i32.load8_u [0, 0]
+003f94e6  i32.eqz []
+003f94e7  if [-64]
+003f94e9    i32.const [3953536]
+003f94ee    i32.const [1605]
+003f94f1    call_indirect [0, 0]
+003f94f4    i32.const [5007566]
+003f94f9    i32.const [1]
+003f94fb    i32.store8 [0, 0]
+003f94fe  end []
+003f94ff  i32.const [3953536]
+003f9504  i32.load [2, 0]
+003f9507  i32.const [10272]
+003f950b  call_indirect [2, 0]
+003f950e  i32.const [0]
+003f9510  call [22680] ; SelectCardControl.HaveFree
+003f9514  local.set [1]
+003f9516  local.get [0]
+003f9518  i32.load [2, 240]
+003f951c  i32.const [0]
+003f951e  i32.const [2414] ; TABLE Component.get_gameObject
+003f9521  call_indirect [1, 0]
+003f9524  local.get [1]
+003f9526  i32.const [1]
+003f9528  i32.xor []
+003f9529  i32.const [0]
+003f952b  i32.const [2416] ; TABLE GameObject.SetActive
+003f952e  call_indirect [5, 0]
+003f9531  local.get [0]
+003f9533  i32.load [2, 248]
+003f9537  i32.const [0]
+003f9539  i32.const [2414] ; TABLE Component.get_gameObject
+003f953c  call_indirect [1, 0]
+003f953f  local.get [1]
+003f9541  i32.const [0]
+003f9543  i32.const [2416] ; TABLE GameObject.SetActive
+003f9546  call_indirect [5, 0]
+003f9549  end []

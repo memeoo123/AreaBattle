@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+namespace AreaBattle
+{
+    // Local import adapter for evidence-exported IUIoutlet bindings. Paths are exact
+    // source-object mappings from hud-import.json; no hierarchy name guessing.
+    public sealed class OutgameImportedUiOutlets
+    {
+        [Serializable] sealed class Manifest {public Prefab[] prefabs;}
+        [Serializable] sealed class Prefab {public string name;public Binding[] bindings;}
+        [Serializable] sealed class Binding {public string name,path,owner;}
+        readonly Binding[] bindings;readonly string owner;
+        public OutgameImportedUiOutlets(string manifestJson,string prefabName,string owner="")
+        {
+            this.owner=owner;var manifest=JsonUtility.FromJson<Manifest>(manifestJson);
+            foreach(var prefab in manifest.prefabs)if(prefab.name==prefabName){bindings=prefab.bindings;return;}
+            throw new InvalidOperationException("Missing imported UI prefab: "+prefabName);
+        }
+        public IEnumerable<KeyValuePair<string,object>> Read(GameObject root)
+        {
+            foreach(var binding in bindings)
+            {
+                if(binding.owner!=owner)continue;
+                var node=string.IsNullOrEmpty(binding.path)?root.transform:root.transform.Find(binding.path);
+                if(node==null)throw new InvalidOperationException("Missing original UI outlet path: "+binding.path);
+                yield return new KeyValuePair<string,object>(binding.name,node.gameObject);
+            }
+        }
+    }
+}

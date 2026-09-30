@@ -1,0 +1,44 @@
+; Original class: }Okqvk
+; Type4561.Wel~Nf; wasmcode function 9907; offset=4760199 size=120
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0048a288  i32.const [5001170]
+0048a28d  i32.load8_u [0, 0]
+0048a290  i32.eqz []
+0048a291  if [-64]
+0048a293    i32.const [3932344]
+0048a298    call [900] ; 
+0048a29b    i32.const [3936516]
+0048a2a0    call [900] ; 
+0048a2a3    i32.const [4066152] ; STRING "Pool"
+0048a2a8    call [900] ; 
+0048a2ab    i32.const [5001170]
+0048a2b0    i32.const [1]
+0048a2b2    i32.store8 [0, 0]
+0048a2b5  end []
+0048a2b6  i32.const [3932344]
+0048a2bb  i32.load [2, 0]
+0048a2be  call [903] ; 
+0048a2c1  local.set [1]
+0048a2c3  local.get [1]
+0048a2c5  i32.const [4066152] ; STRING "Pool"
+0048a2ca  i32.load [2, 0]
+0048a2cd  i32.const [0]
+0048a2cf  call [1292] ; GameObject..ctor
+0048a2d2  local.get [0]
+0048a2d4  local.get [1]
+0048a2d6  i32.store [2, 8]
+0048a2d9  local.get [0]
+0048a2db  i32.load [2, 8]
+0048a2de  local.set [1]
+0048a2e0  i32.const [3936516]
+0048a2e5  i32.load [2, 0]
+0048a2e8  call [901] ; 
+0048a2eb  local.get [1]
+0048a2ed  i32.const [0]
+0048a2ef  call [1111] ; Object.DontDestroyOnLoad
+0048a2f2  local.get [0]
+0048a2f4  i32.load [2, 8]
+0048a2f7  i32.const [0]
+0048a2f9  i32.const [0]
+0048a2fb  call [949] ; GameObject.SetActive
+0048a2fe  end []

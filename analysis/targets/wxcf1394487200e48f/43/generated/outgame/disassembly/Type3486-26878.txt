@@ -1,0 +1,28 @@
+; Original class: GlobalData
+; Type3486.ieÂ; wasmcode1 function 3950; offset=1259976 size=79
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+001339c9  i32.const [4989089]
+001339ce  i32.load8_u [0, 0]
+001339d1  i32.eqz []
+001339d2  if [-64]
+001339d4    i32.const [3941104]
+001339d9    i32.const [1605]
+001339dc    call_indirect [0, 0]
+001339df    i32.const [4054876] ; STRING "GF_IsShowEvaluate"
+001339e4    i32.const [1605]
+001339e7    call_indirect [0, 0]
+001339ea    i32.const [4989089]
+001339ef    i32.const [1]
+001339f1    i32.store8 [0, 0]
+001339f4  end []
+001339f5  i32.const [3941104]
+001339fa  i32.load [2, 0]
+001339fd  i32.const [1149]
+00133a00  call_indirect [0, 0]
+00133a03  i32.const [4054876] ; STRING "GF_IsShowEvaluate"
+00133a08  i32.load [2, 0]
+00133a0b  local.get [0]
+00133a0d  i32.const [0]
+00133a0f  i32.const [25241] ; TABLE UserDataPrefs.SetInt
+00133a13  call_indirect [5, 0]
+00133a16  end []

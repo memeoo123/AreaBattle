@@ -1,0 +1,69 @@
+; Type4206.jbOiMS; wasmcode function 20201; offset=9071476 size=195
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a6b77  i32.const [5010371]
+008a6b7c  i32.load8_u [0, 0]
+008a6b7f  i32.eqz []
+008a6b80  if [-64]
+008a6b82    i32.const [3976996]
+008a6b87    call [900] ; 
+008a6b8a    i32.const [3944660]
+008a6b8f    call [900] ; 
+008a6b92    i32.const [3944652]
+008a6b97    call [900] ; 
+008a6b9a    i32.const [3944656]
+008a6b9f    call [900] ; 
+008a6ba2    i32.const [5010371]
+008a6ba7    i32.const [1]
+008a6ba9    i32.store8 [0, 0]
+008a6bac  end []
+008a6bad  local.get [0]
+008a6baf  i32.load [2, 8]
+008a6bb2  local.set [1]
+008a6bb4  i32.const [3944660]
+008a6bb9  i32.load [2, 0]
+008a6bbc  call [903] ; 
+008a6bbf  local.set [2]
+008a6bc1  local.get [2]
+008a6bc3  i32.const [1]
+008a6bc5  i32.store [2, 12]
+008a6bc8  local.get [2]
+008a6bca  i32.const [16]
+008a6bcc  i32.store [2, 20]
+008a6bcf  local.get [1]
+008a6bd1  local.get [2]
+008a6bd3  i32.const [3976996]
+008a6bd8  i32.load [2, 0]
+008a6bdb  call [941] ; 
+008a6bde  local.get [0]
+008a6be0  i32.load [2, 8]
+008a6be3  local.set [1]
+008a6be5  i32.const [3944656]
+008a6bea  i32.load [2, 0]
+008a6bed  call [903] ; 
+008a6bf0  local.set [2]
+008a6bf2  local.get [2]
+008a6bf4  i32.const [17]
+008a6bf6  local.get [0]
+008a6bf8  call [8804] ; Type4202..ctor
+008a6bfb  local.get [1]
+008a6bfd  local.get [2]
+008a6bff  i32.const [3976996]
+008a6c04  i32.load [2, 0]
+008a6c07  call [941] ; 
+008a6c0a  local.get [0]
+008a6c0c  i32.load [2, 8]
+008a6c0f  local.set [0]
+008a6c11  i32.const [3944652]
+008a6c16  i32.load [2, 0]
+008a6c19  call [903] ; 
+008a6c1c  local.set [1]
+008a6c1e  local.get [1]
+008a6c20  i32.const [18]
+008a6c22  local.get [0]
+008a6c24  call [9298] ; Type4205..ctor
+008a6c27  local.get [0]
+008a6c29  local.get [1]
+008a6c2b  i32.const [3976996]
+008a6c30  i32.load [2, 0]
+008a6c33  call [941] ; 
+008a6c36  end []

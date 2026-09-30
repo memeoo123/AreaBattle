@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Actual restored Player controller registered in LogicModule, original model roots/meshes/baked animations, native physics and Animator trigger. Mouse/touch input is an explicit fixture; touch collider/AnimatorController are synthetic probes. Full Main/platform/account and matched original UI replay remain open.",
+    "checks": [
+        "LogicModule registration and LoadGameScreen initialize actual source scene and player roots",
+        "Three original baked model animations initialized through actual pooled loader and source Player callbacks",
+        "LogicModule mouse drag interpolates the original native category transforms",
+        "Drag release snaps native roots and dispatches ChooseSoldier with source wrapped category",
+        "Registered touch callback raycasts through actual home camera using original Scenes11 layer31",
+        "Source OnTouchBegin activates native Animator Trigger after physics hit",
+        "Original baked relax animations complete on native frames and source callbacks select looping idle",
+        "Home timer refresh runs through LogicModule and restarts only the matching equipped native animation",
+        "LogicModule shutdown unregisters source listener/cache while retaining native model objects",
+        "Retained baked completion after controller disposal uses source captured animator fallback without repopulating cache"
+    ]
+}

@@ -1,0 +1,108 @@
+; Original class: SkinItem
+; Type4364.otQuVXu; wasmcode function 15910; offset=7650846 size=306
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0074be1f  i32.const [5008965]
+0074be24  i32.load8_u [0, 0]
+0074be27  i32.eqz []
+0074be28  if [-64]
+0074be2a    i32.const [3989352]
+0074be2f    call [900] ; 
+0074be32    i32.const [3953576]
+0074be37    call [900] ; 
+0074be3a    i32.const [3953616]
+0074be3f    call [900] ; 
+0074be42    i32.const [4000604]
+0074be47    call [900] ; 
+0074be4a    i32.const [3932308]
+0074be4f    call [900] ; 
+0074be52    i32.const [3933916]
+0074be57    call [900] ; 
+0074be5a    i32.const [4018416]
+0074be5f    call [900] ; 
+0074be62    i32.const [4077796] ; STRING "ValentineUI.UnConnectedTips"
+0074be67    call [900] ; 
+0074be6a    i32.const [4069480] ; STRING "ShopUI.ActivityGetWay"
+0074be6f    call [900] ; 
+0074be72    i32.const [5008965]
+0074be77    i32.const [1]
+0074be79    i32.store8 [0, 0]
+0074be7c  end []
+0074be7d  block [-64]
+0074be7f    i32.const [7]
+0074be81    i32.const [3933916]
+0074be86    i32.load [2, 0]
+0074be89    local.get [0]
+0074be8b    i32.load [2, 52]
+0074be8e    call [918] ; 
+0074be91    i32.const [1301]
+0074be94    i32.eq []
+0074be95    br_if [0]
+0074be97    i32.const [3953616]
+0074be9c    i32.load [2, 0]
+0074be9f    call [935] ; 
+0074bea2    i32.const [0]
+0074bea4    call [2052] ; x~bjQc.get_Status
+0074bea7    i32.const [1]
+0074bea9    i32.sub []
+0074beaa    local.set [0]
+0074beac    local.get [0]
+0074beae    i32.const [4]
+0074beb0    i32.le_u []
+0074beb1    if [-64]
+0074beb3      i32.const [1]
+0074beb5      local.get [0]
+0074beb7      i32.shl []
+0074beb8      i32.const [19]
+0074beba      i32.and []
+0074bebb      i32.eqz []
+0074bebc      if [-64]
+0074bebe        i32.const [0]
+0074bec0        call [1143] ; GameModule.get_UI
+0074bec3        i32.const [3989352]
+0074bec8        i32.load [2, 0]
+0074becb        call [1032] ; 
+0074bece        i32.const [4018416]
+0074bed3        i32.load [2, 0]
+0074bed6        call [1367] ; 
+0074bed9        drop []
+0074beda        return []
+0074bedb      end []
+0074bedc      br [1]
+0074bede    end []
+0074bedf    i32.const [3953576]
+0074bee4    i32.load [2, 0]
+0074bee7    call [935] ; 
+0074beea    local.set [0]
+0074beec    i32.const [3932308]
+0074bef1    i32.load [2, 0]
+0074bef4    call [901] ; 
+0074bef7    local.get [0]
+0074bef9    i32.const [4000604]
+0074befe    i32.load [2, 0]
+0074bf01    call [1051] ; 
+0074bf04    i32.const [4077796] ; STRING "ValentineUI.UnConnectedTips"
+0074bf09    i32.load [2, 0]
+0074bf0c    i32.const [0]
+0074bf0e    call [1243] ; LangModule.Get
+0074bf11    i32.const [0]
+0074bf13    call [2225] ; UIControl.ShowToast
+0074bf16    return []
+0074bf17  end []
+0074bf18  i32.const [3953576]
+0074bf1d  i32.load [2, 0]
+0074bf20  call [935] ; 
+0074bf23  local.set [0]
+0074bf25  i32.const [3932308]
+0074bf2a  i32.load [2, 0]
+0074bf2d  call [901] ; 
+0074bf30  local.get [0]
+0074bf32  i32.const [4000604]
+0074bf37  i32.load [2, 0]
+0074bf3a  call [1051] ; 
+0074bf3d  i32.const [4069480] ; STRING "ShopUI.ActivityGetWay"
+0074bf42  i32.load [2, 0]
+0074bf45  i32.const [0]
+0074bf47  call [1243] ; LangModule.Get
+0074bf4a  i32.const [0]
+0074bf4c  call [2225] ; UIControl.ShowToast
+0074bf4f  end []

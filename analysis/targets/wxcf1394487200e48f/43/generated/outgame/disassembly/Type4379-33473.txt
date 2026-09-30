@@ -1,0 +1,33 @@
+; Original class: MenuTabUI
+; Type4379.vYRul; wasmcode function 11385; offset=5592826 size=82
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005556fb  i32.const [5009028]
+00555700  i32.load8_u [0, 0]
+00555703  i32.eqz []
+00555704  if [-64]
+00555706    i32.const [3953384]
+0055570b    call [900] ; 
+0055570e    i32.const [5009028]
+00555713    i32.const [1]
+00555715    i32.store8 [0, 0]
+00555718  end []
+00555719  i32.const [0]
+0055571b  call [1193] ; GameModule.get_Audio
+0055571e  i32.const [1]
+00555720  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+00555723  i32.const [0]
+00555725  call [1201] ; Extension.PlayerVoice
+00555728  local.get [0]
+0055572a  i32.const [2]
+0055572c  local.get [0]
+0055572e  call [3577] ; MenuTabUI.CheckUI
+00555731  if [-64]
+00555733    i32.const [3953384]
+00555738    i32.load [2, 0]
+0055573b    call [935] ; 
+0055573e    i32.const [1]
+00555740    f32.const [0.5]
+00555745    i32.const [0]
+00555747    call [3946] ; GameControl.MoveCamera
+0055574a  end []
+0055574b  end []

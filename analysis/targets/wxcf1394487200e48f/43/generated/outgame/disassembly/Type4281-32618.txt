@@ -1,0 +1,58 @@
+; Original class: GameDefine
+; Type4281.GetEffectPath; wasmcode function 5062; offset=1738255 size=162
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(2, 127)]
+001a8612  i32.const [5009168]
+001a8617  i32.load8_u [0, 0]
+001a861a  i32.eqz []
+001a861b  if [-64]
+001a861d    i32.const [3939452]
+001a8622    call [900] ; 
+001a8625    i32.const [4068608] ; STRING "Scene/"
+001a862a    call [900] ; 
+001a862d    i32.const [4052144] ; STRING "Effect/"
+001a8632    call [900] ; 
+001a8635    i32.const [4054408] ; STRING "Fly/"
+001a863a    call [900] ; 
+001a863d    i32.const [4060784] ; STRING "Line/"
+001a8642    call [900] ; 
+001a8645    i32.const [4040124] ; STRING ".prefab"
+001a864a    call [900] ; 
+001a864d    i32.const [4075860] ; STRING "UI/"
+001a8652    call [900] ; 
+001a8655    i32.const [5009168]
+001a865a    i32.const [1]
+001a865c    i32.store8 [0, 0]
+001a865f  end []
+001a8660  i32.const [3939452]
+001a8665  i32.load [2, 0]
+001a8668  i32.load [2, 92]
+001a866b  local.set [1]
+001a866d  i32.const [4052144] ; STRING "Effect/"
+001a8672  i32.load [2, 0]
+001a8675  local.set [3]
+001a8677  local.get [0]
+001a8679  i32.load [2, 12]
+001a867c  local.set [2]
+001a867e  local.get [2]
+001a8680  i32.const [3]
+001a8682  i32.le_u []
+001a8683  if [-64]
+001a8685    local.get [2]
+001a8687    i32.const [2]
+001a8689    i32.shl []
+001a868a    i32.const [1721964]
+001a868f    i32.add []
+001a8690    i32.load [2, 0]
+001a8693    local.set [1]
+001a8695  end []
+001a8696  local.get [3]
+001a8698  local.get [1]
+001a869a  i32.load [2, 0]
+001a869d  local.get [0]
+001a869f  i32.load [2, 16]
+001a86a2  i32.const [4040124] ; STRING ".prefab"
+001a86a7  i32.load [2, 0]
+001a86aa  i32.const [0]
+001a86ac  call [1098] ; String.Concat
+001a86af  return []
+001a86b0  end []

@@ -1,0 +1,23 @@
+; Original class: XYXCommon_DBT_ISDK
+; Type7703.GetLocaleLanguageCode; wasmcode function 14684; offset=7201511 size=46
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+006de2e8  i32.const [0]
+006de2ea  call [1083] ; BridgeManager.get_xyxFunc
+006de2ed  local.set [0]
+006de2ef  local.get [0]
+006de2f1  local.set [1]
+006de2f3  local.get [0]
+006de2f5  i32.load [2, 0]
+006de2f8  i32.const [1072]
+006de2fb  i32.add []
+006de2fc  local.set [0]
+006de2fe  local.get [1]
+006de300  local.get [0]
+006de302  i32.load [2, 192]
+006de306  local.get [0]
+006de308  i32.load [2, 188]
+006de30c  global.set [3]
+006de30e  global.get [3]
+006de310  call_indirect [1, 0]
+006de313  return []
+006de314  end []

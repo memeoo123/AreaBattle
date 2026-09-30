@@ -1,0 +1,25 @@
+; Original class: GlobalData
+; Type3486.get_MusicGameVolume; wasmcode function 7783; offset=3733396 size=70
+; signature={'args': [127], 'returns': [125]}; localGroups=[]
+0038f795  i32.const [4989078]
+0038f79a  i32.load8_u [0, 0]
+0038f79d  i32.eqz []
+0038f79e  if [-64]
+0038f7a0    i32.const [3941104]
+0038f7a5    call [900] ; 
+0038f7a8    i32.const [4062808] ; STRING "MusicGameVolume"
+0038f7ad    call [900] ; 
+0038f7b0    i32.const [4989078]
+0038f7b5    i32.const [1]
+0038f7b7    i32.store8 [0, 0]
+0038f7ba  end []
+0038f7bb  i32.const [3941104]
+0038f7c0  i32.load [2, 0]
+0038f7c3  call [901] ; 
+0038f7c6  i32.const [4062808] ; STRING "MusicGameVolume"
+0038f7cb  i32.load [2, 0]
+0038f7ce  f32.const [1.0]
+0038f7d3  i32.const [0]
+0038f7d5  call [6843] ; UserDataPrefs.GetFloat
+0038f7d8  return []
+0038f7d9  end []

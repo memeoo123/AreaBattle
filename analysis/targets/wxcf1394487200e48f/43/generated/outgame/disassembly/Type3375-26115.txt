@@ -1,0 +1,124 @@
+; Original class: AppSetting
+; Type3375.get_StreamingAssetsURL; wasmcode function 6314; offset=2264817 size=355
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+00228ef4  i32.const [5011379]
+00228ef9  i32.load8_u [0, 0]
+00228efc  i32.eqz []
+00228efd  if [-64]
+00228eff    i32.const [3928176]
+00228f04    call [900] ; 
+00228f07    i32.const [3934956]
+00228f0c    call [900] ; 
+00228f0f    i32.const [3927212]
+00228f14    call [900] ; 
+00228f17    i32.const [4040180] ; STRING "/"
+00228f1c    call [900] ; 
+00228f1f    i32.const [5011379]
+00228f24    i32.const [1]
+00228f26    i32.store8 [0, 0]
+00228f29  end []
+00228f2a  i32.const [3928176]
+00228f2f  i32.load [2, 0]
+00228f32  call [901] ; 
+00228f35  i32.const [5011425]
+00228f3a  i32.load8_u [0, 0]
+00228f3d  i32.eqz []
+00228f3e  if [-64]
+00228f40    i32.const [3928176]
+00228f45    call [900] ; 
+00228f48    i32.const [5011425]
+00228f4d    i32.const [1]
+00228f4f    i32.store8 [0, 0]
+00228f52  end []
+00228f53  i32.const [3928176]
+00228f58  i32.load [2, 0]
+00228f5b  call [901] ; 
+00228f5e  i32.const [3928176]
+00228f63  i32.load [2, 0]
+00228f66  i32.load [2, 92]
+00228f69  i32.load [2, 56]
+00228f6c  local.set [0]
+00228f6e  i32.const [3928176]
+00228f73  i32.load [2, 0]
+00228f76  call [901] ; 
+00228f79  local.get [0]
+00228f7b  i32.const [6]
+00228f7d  i32.eq []
+00228f7e  if [-64]
+00228f80    i32.const [3927212]
+00228f85    i32.load [2, 0]
+00228f88    i32.const [6]
+00228f8a    call [909] ; 
+00228f8d    local.set [0]
+00228f8f    i32.const [3928176]
+00228f94    i32.load [2, 0]
+00228f97    call [901] ; 
+00228f9a    i32.const [3928176]
+00228f9f    i32.load [2, 0]
+00228fa2    i32.load [2, 92]
+00228fa5    i32.load [2, 16]
+00228fa8    local.set [1]
+00228faa    local.get [0]
+00228fac    local.get [1]
+00228fae    call [905] ; 
+00228fb1    local.get [0]
+00228fb3    local.get [1]
+00228fb5    i32.store [2, 16]
+00228fb8    local.get [0]
+00228fba    i32.const [4040180] ; STRING "/"
+00228fbf    i32.load [2, 0]
+00228fc2    call [905] ; 
+00228fc5    local.get [0]
+00228fc7    i32.const [4040180] ; STRING "/"
+00228fcc    i32.load [2, 0]
+00228fcf    i32.store [2, 20]
+00228fd2    local.get [0]
+00228fd4    call [2620] ; AppSetting.get_PlatformName
+00228fd7    local.set [1]
+00228fd9    local.get [0]
+00228fdb    local.get [1]
+00228fdd    call [905] ; 
+00228fe0    local.get [0]
+00228fe2    local.get [1]
+00228fe4    i32.store [2, 24]
+00228fe7    local.get [0]
+00228fe9    i32.const [4040180] ; STRING "/"
+00228fee    i32.load [2, 0]
+00228ff1    call [905] ; 
+00228ff4    local.get [0]
+00228ff6    i32.const [4040180] ; STRING "/"
+00228ffb    i32.load [2, 0]
+00228ffe    i32.store [2, 28]
+00229001    local.get [0]
+00229003    call [1318] ; AppSetting.get_MineGameName
+00229006    local.set [1]
+00229008    i32.const [3934956]
+0022900d    i32.load [2, 0]
+00229010    call [901] ; 
+00229013    local.get [1]
+00229015    i32.const [0]
+00229017    call [5952] ; KeywordBuild.GetValue
+0022901a    local.set [1]
+0022901c    local.get [0]
+0022901e    local.get [1]
+00229020    call [905] ; 
+00229023    local.get [0]
+00229025    local.get [1]
+00229027    i32.store [2, 32]
+0022902a    local.get [0]
+0022902c    i32.const [4040180] ; STRING "/"
+00229031    i32.load [2, 0]
+00229034    call [905] ; 
+00229037    local.get [0]
+00229039    i32.const [4040180] ; STRING "/"
+0022903e    i32.load [2, 0]
+00229041    i32.store [2, 36]
+00229044    local.get [0]
+00229046    i32.const [0]
+00229048    call [1024] ; String.Concat
+0022904b    return []
+0022904c  end []
+0022904d  local.get [0]
+0022904f  call [13262] ; AppSetting.get_StreamingAssetsPath
+00229052  return []
+00229053  end []

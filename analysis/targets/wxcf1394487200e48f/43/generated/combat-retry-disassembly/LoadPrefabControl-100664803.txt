@@ -1,0 +1,50 @@
+; LoadPrefabControl.InitData; wasmcode function 11495; offset=5643693 size=159
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00561dae  i32.const [5008523]
+00561db3  i32.load8_u [0, 0]
+00561db6  i32.eqz []
+00561db7  if [-64]
+00561db9    i32.const [3953440]
+00561dbe    call [900] ; 
+00561dc1    i32.const [3955640]
+00561dc6    call [900] ; 
+00561dc9    i32.const [3954792]
+00561dce    call [900] ; 
+00561dd1    i32.const [3956400]
+00561dd6    call [900] ; 
+00561dd9    i32.const [3932476]
+00561dde    call [900] ; 
+00561de1    i32.const [4012452]
+00561de6    call [900] ; 
+00561de9    i32.const [4060676]
+00561dee    call [900] ; 
+00561df1    i32.const [5008523]
+00561df6    i32.const [1]
+00561df8    i32.store8 [0, 0]
+00561dfb  end []
+00561dfc  local.get [0]
+00561dfe  local.get [0]
+00561e00  call [4379] ; LoadPrefabControl.ClearModelEntityCache
+00561e03  local.get [0]
+00561e05  i32.load [2, 16]
+00561e08  i32.const [3955640]
+00561e0d  i32.load [2, 0]
+00561e10  call [1078] ; 
+00561e13  local.get [0]
+00561e15  i32.load [2, 20]
+00561e18  i32.const [3954792]
+00561e1d  i32.load [2, 0]
+00561e20  call [1078] ; 
+00561e23  local.get [0]
+00561e25  i32.load [2, 24]
+00561e28  i32.const [3956400]
+00561e2d  i32.load [2, 0]
+00561e30  call [1078] ; 
+00561e33  i32.const [4060676]
+00561e38  i32.load [2, 0]
+00561e3b  i32.const [4012452]
+00561e40  i32.load [2, 0]
+00561e43  call [1490] ; 
+00561e46  i32.const [0]
+00561e48  i32.store8 [0, 12]
+00561e4b  end []

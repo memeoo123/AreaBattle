@@ -1,0 +1,41 @@
+{
+  "status": "wrapper_verified_pool_methods_extracted",
+  "source": [
+    "normal-pool-generic-bodies.json",
+    "disassembly/PoolGeneric-28724.txt",
+    "disassembly/PoolGeneric-28725.txt",
+    "disassembly/PoolGeneric-28726.txt",
+    "disassembly/PoolGeneric-28727.txt",
+    "disassembly/PoolGeneric-28728.txt",
+    "disassembly/PoolGeneric-28729.txt",
+    "disassembly/PoolGeneric-28730.txt",
+    "disassembly/PoolGeneric-28731.txt"
+  ],
+  "extraction": {
+    "script": "analysis/extract_normal_pool_generics.py",
+    "methodCount": 23,
+    "genericPointersAddress": 2623360,
+    "pointerCount": 6294,
+    "methodTableAddress": 382304,
+    "specTableAddress": 483008,
+    "validation": "All generic pointer entries resolve to an original wasm table entry or zero"
+  },
+  "verified": [
+    "Constructor stores initial count0/1 and calls OnSpawn only when spawned, without updating time",
+    "Spawn increments unchecked Int32, updates DateTime.Now, then calls OnSpawn",
+    "Unspawn calls OnUnspawn, updates DateTime.Now, then decrements unchecked Int32",
+    "IsInUse is count>0; duplicate return may make count negative",
+    "Release forwards without counter reset"
+  ],
+  "remaining": [
+    "Decode concrete list/generic context for pool collection and first-match selection",
+    "Implement pool capacity, expiration filter, update and shutdown",
+    "Connect NormalPool original loading and resource release providers",
+    "Integrate production page/account flows"
+  ],
+  "knownDifferences": [
+    "InvalidOperationException used instead of original GameFrameworkException"
+  ],
+  "checks": 525,
+  "playmodeChecks": 8
+}

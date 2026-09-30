@@ -1,0 +1,21 @@
+{
+  "status": "shop_visibility_to_native_cards_connected_production_owner_pending",
+  "source": [
+    "disassembly/Type4408-33798.txt",
+    "disassembly/Type4408-33793.txt",
+    "shop-refresh-generics.json"
+  ],
+  "verified": [
+    "Shop refresh calls InitFirstAdsItem(0) before any card refresh",
+    "Soldier cards refreshed by category groups then scene cards",
+    "OutgameShopMenuBinding connects actual MenuView lifecycle to bound native cards",
+    "Initial hide, show and later hide refresh current soldier/scene new flags; Dispose removes owned subscription"
+  ],
+  "remaining": [
+    "Concrete first-ad reference owner; this validation uses explicit reset callback fixture",
+    "Main and commander data refresh composition",
+    "Production startup/account integration and Player E2E"
+  ],
+  "checks": 573,
+  "freshPlayMode": false
+}

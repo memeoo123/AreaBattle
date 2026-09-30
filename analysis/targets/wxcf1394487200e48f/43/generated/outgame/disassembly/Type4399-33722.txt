@@ -1,0 +1,135 @@
+; Original class: Proj_xqzdStartUI
+; Type4399.y}dcq; wasmcode function 7397; offset=2920135 size=403
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+002c8eca  i32.const [5007517]
+002c8ecf  i32.load8_u [0, 0]
+002c8ed2  i32.eqz []
+002c8ed3  if [-64]
+002c8ed5    i32.const [3927888]
+002c8eda    call [900] ; 
+002c8edd    i32.const [3989352]
+002c8ee2    call [900] ; 
+002c8ee5    i32.const [3953552]
+002c8eea    call [900] ; 
+002c8eed    i32.const [3947148]
+002c8ef2    call [900] ; 
+002c8ef5    i32.const [4010040] ; METHOD Proj_xqzdStartUI.PxSxw
+002c8efa    call [900] ; 
+002c8efd    i32.const [4010052] ; METHOD Proj_xqzdStartUI.TTx^o
+002c8f02    call [900] ; 
+002c8f05    i32.const [4010064] ; METHOD Proj_xqzdStartUI.cOR
+002c8f0a    call [900] ; 
+002c8f0d    i32.const [4069372] ; STRING "SevendayFinishTask"
+002c8f12    call [900] ; 
+002c8f15    i32.const [4069368] ; STRING "SevendayClose"
+002c8f1a    call [900] ; 
+002c8f1d    i32.const [4069380] ; STRING "SevendayUnlock"
+002c8f22    call [900] ; 
+002c8f25    i32.const [4069376] ; STRING "SevendayGetAccReward"
+002c8f2a    call [900] ; 
+002c8f2d    i32.const [5007517]
+002c8f32    i32.const [1]
+002c8f34    i32.store8 [0, 0]
+002c8f37  end []
+002c8f38  i32.const [3953552]
+002c8f3d  i32.load [2, 0]
+002c8f40  call [935] ; 
+002c8f43  i32.const [0]
+002c8f45  call [4809] ; SevendayActivityControl.IsUnlock
+002c8f48  local.set [1]
+002c8f4a  local.get [1]
+002c8f4c  if [-64]
+002c8f4e    local.get [0]
+002c8f50    i32.load [2, 132]
+002c8f54    local.set [2]
+002c8f56    i32.const [3927888]
+002c8f5b    i32.load [2, 0]
+002c8f5e    call [903] ; 
+002c8f61    local.set [3]
+002c8f63    local.get [3]
+002c8f65    local.get [0]
+002c8f67    i32.const [4010040] ; METHOD Proj_xqzdStartUI.PxSxw
+002c8f6c    i32.load [2, 0]
+002c8f6f    i32.const [0]
+002c8f71    call [1002] ; Action..ctor
+002c8f74    local.get [2]
+002c8f76    local.get [3]
+002c8f78    i32.const [0]
+002c8f7a    call [1121] ; UIExtension.AddClick
+002c8f7d    i32.const [3947148]
+002c8f82    i32.load [2, 0]
+002c8f85    call [903] ; 
+002c8f88    local.set [2]
+002c8f8a    local.get [2]
+002c8f8c    local.get [0]
+002c8f8e    i32.const [4010064] ; METHOD Proj_xqzdStartUI.cOR
+002c8f93    i32.load [2, 0]
+002c8f96    i32.const [0]
+002c8f98    call [1067] ; EventHandler..ctor
+002c8f9b    i32.const [4069380] ; STRING "SevendayUnlock"
+002c8fa0    i32.load [2, 0]
+002c8fa3    local.get [2]
+002c8fa5    i32.const [0]
+002c8fa7    call [1146] ; MsgDispatcher.AddEventListener
+002c8faa    i32.const [3947148]
+002c8faf    i32.load [2, 0]
+002c8fb2    call [903] ; 
+002c8fb5    local.set [2]
+002c8fb7    local.get [2]
+002c8fb9    local.get [0]
+002c8fbb    i32.const [4010064] ; METHOD Proj_xqzdStartUI.cOR
+002c8fc0    i32.load [2, 0]
+002c8fc3    i32.const [0]
+002c8fc5    call [1067] ; EventHandler..ctor
+002c8fc8    i32.const [4069372] ; STRING "SevendayFinishTask"
+002c8fcd    i32.load [2, 0]
+002c8fd0    local.get [2]
+002c8fd2    i32.const [0]
+002c8fd4    call [1146] ; MsgDispatcher.AddEventListener
+002c8fd7    i32.const [3947148]
+002c8fdc    i32.load [2, 0]
+002c8fdf    call [903] ; 
+002c8fe2    local.set [2]
+002c8fe4    local.get [2]
+002c8fe6    local.get [0]
+002c8fe8    i32.const [4010064] ; METHOD Proj_xqzdStartUI.cOR
+002c8fed    i32.load [2, 0]
+002c8ff0    i32.const [0]
+002c8ff2    call [1067] ; EventHandler..ctor
+002c8ff5    i32.const [4069376] ; STRING "SevendayGetAccReward"
+002c8ffa    i32.load [2, 0]
+002c8ffd    local.get [2]
+002c8fff    i32.const [0]
+002c9001    call [1146] ; MsgDispatcher.AddEventListener
+002c9004    i32.const [3947148]
+002c9009    i32.load [2, 0]
+002c900c    call [903] ; 
+002c900f    local.set [2]
+002c9011    local.get [2]
+002c9013    local.get [0]
+002c9015    i32.const [4010052] ; METHOD Proj_xqzdStartUI.TTx^o
+002c901a    i32.load [2, 0]
+002c901d    i32.const [0]
+002c901f    call [1067] ; EventHandler..ctor
+002c9022    i32.const [4069368] ; STRING "SevendayClose"
+002c9027    i32.load [2, 0]
+002c902a    local.get [2]
+002c902c    i32.const [0]
+002c902e    call [1146] ; MsgDispatcher.AddEventListener
+002c9031    i32.const [3989352]
+002c9036    i32.load [2, 0]
+002c9039    call [1032] ; 
+002c903c    drop []
+002c903d    local.get [0]
+002c903f    local.get [0]
+002c9041    local.get [0]
+002c9043    call [7398] ; Proj_xqzdStartUI.cOR
+002c9046  end []
+002c9047  local.get [0]
+002c9049  i32.load [2, 132]
+002c904d  i32.const [0]
+002c904f  call [943] ; Component.get_gameObject
+002c9052  local.get [1]
+002c9054  i32.const [0]
+002c9056  call [949] ; GameObject.SetActive
+002c9059  end []

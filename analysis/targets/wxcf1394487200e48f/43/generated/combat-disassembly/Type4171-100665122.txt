@@ -1,0 +1,21 @@
+; Type4171.IsEffective; wasmcode function 14821; offset=7238241 size=53
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+006e7262  i32.const [5010320]
+006e7267  i32.load8_u [0, 0]
+006e726a  i32.eqz []
+006e726b  if [-64]
+006e726d    i32.const [3953440]
+006e7272    call [900] ; 
+006e7275    i32.const [5010320]
+006e727a    i32.const [1]
+006e727c    i32.store8 [0, 0]
+006e727f  end []
+006e7280  local.get [1]
+006e7282  i32.load [2, 20]
+006e7285  i32.const [3953440]
+006e728a  i32.load [2, 0]
+006e728d  call [935] ; 
+006e7290  i32.load [2, 12]
+006e7293  i32.ne []
+006e7294  return []
+006e7295  end []

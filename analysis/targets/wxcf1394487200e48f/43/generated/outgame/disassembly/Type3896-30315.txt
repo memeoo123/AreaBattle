@@ -1,0 +1,31 @@
+; Original class: UIUtils
+; Type3896.Zdo{p; wasmcode1 function 10771; offset=3924832 size=76
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+003be361  i32.const [5009965]
+003be366  i32.load8_u [0, 0]
+003be369  i32.eqz []
+003be36a  if [-64]
+003be36c    i32.const [3936516]
+003be371    i32.const [1605]
+003be374    call_indirect [0, 0]
+003be377    i32.const [5009965]
+003be37c    i32.const [1]
+003be37e    i32.store8 [0, 0]
+003be381  end []
+003be382  i32.const [3936516]
+003be387  i32.load [2, 0]
+003be38a  i32.const [1149]
+003be38d  call_indirect [0, 0]
+003be390  local.get [0]
+003be392  i32.const [0]
+003be394  i32.const [0]
+003be396  i32.const [1285] ; TABLE Object.op_Inequality
+003be399  call_indirect [3, 0]
+003be39c  if [-64]
+003be39e    local.get [0]
+003be3a0    local.get [1]
+003be3a2    i32.const [0]
+003be3a4    i32.const [2416] ; TABLE GameObject.SetActive
+003be3a7    call_indirect [5, 0]
+003be3aa  end []
+003be3ab  end []

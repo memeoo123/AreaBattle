@@ -1,0 +1,29 @@
+; Original class: GlobalData
+; Type3486.get_IDFAReceiveAward; wasmcode1 function 2084; offset=702726 size=80
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+000ab907  i32.const [4989079]
+000ab90c  i32.load8_u [0, 0]
+000ab90f  i32.eqz []
+000ab910  if [-64]
+000ab912    i32.const [3941104]
+000ab917    i32.const [1605]
+000ab91a    call_indirect [0, 0]
+000ab91d    i32.const [4054916] ; STRING "GF_ReceiveAward"
+000ab922    i32.const [1605]
+000ab925    call_indirect [0, 0]
+000ab928    i32.const [4989079]
+000ab92d    i32.const [1]
+000ab92f    i32.store8 [0, 0]
+000ab932  end []
+000ab933  i32.const [3941104]
+000ab938  i32.load [2, 0]
+000ab93b  i32.const [1149]
+000ab93e  call_indirect [0, 0]
+000ab941  i32.const [4054916] ; STRING "GF_ReceiveAward"
+000ab946  i32.load [2, 0]
+000ab949  i32.const [0]
+000ab94b  i32.const [0]
+000ab94d  i32.const [25250] ; TABLE UserDataPrefs.GetInt
+000ab951  call_indirect [3, 0]
+000ab954  return []
+000ab955  end []

@@ -1,0 +1,21 @@
+; Original class: LevelRankControl
+; Type4470.GetPlayerUid; wasmcode function 3591; offset=1128673 size=50
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001138e2  i32.const [5009846]
+001138e7  i32.load8_u [0, 0]
+001138ea  i32.eqz []
+001138eb  if [-64]
+001138ed    i32.const [3939452]
+001138f2    call [900] ; 
+001138f5    i32.const [5009846]
+001138fa    i32.const [1]
+001138fc    i32.store8 [0, 0]
+001138ff  end []
+00113900  i32.const [3939452]
+00113905  i32.load [2, 0]
+00113908  i32.load [2, 92]
+0011390b  drop []
+0011390c  i32.const [0]
+0011390e  call [1307] ; XYXGlobalData.get_OpenID
+00113911  return []
+00113912  end []

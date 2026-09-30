@@ -1,0 +1,98 @@
+; Original class: CommanderUI
+; Type4307..ctor; wasmcode function 20175; offset=9065172 size=294
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+008a52d7  i32.const [5008197]
+008a52dc  i32.load8_u [0, 0]
+008a52df  i32.eqz []
+008a52e0  if [-64]
+008a52e2    i32.const [3955628]
+008a52e7    call [900] ; 
+008a52ea    i32.const [3917484]
+008a52ef    call [900] ; 
+008a52f2    i32.const [4101476] ; STRING "{0} <color=#FFFE18>+{1}</color>"
+008a52f7    call [900] ; 
+008a52fa    i32.const [4048920] ; STRING "CommanderUI.MaxLevel"
+008a52ff    call [900] ; 
+008a5302    i32.const [4101684] ; STRING "{0}% <color=#FFFE18>+{1}%</color>"
+008a5307    call [900] ; 
+008a530a    i32.const [4048876] ; STRING "Commander.Operating.{0}"
+008a530f    call [900] ; 
+008a5312    i32.const [4056592] ; STRING "HeroLevelUp_nopieces"
+008a5317    call [900] ; 
+008a531a    i32.const [4048888] ; STRING "Commander.Target.{0}"
+008a531f    call [900] ; 
+008a5322    i32.const [5008197]
+008a5327    i32.const [1]
+008a5329    i32.store8 [0, 0]
+008a532c  end []
+008a532d  local.get [0]
+008a532f  i32.const [-1]
+008a5331  i32.store [2, 116]
+008a5334  local.get [0]
+008a5336  i32.const [4048920] ; STRING "CommanderUI.MaxLevel"
+008a533b  i32.load [2, 0]
+008a533e  i32.store [2, 128]
+008a5342  local.get [0]
+008a5344  i32.const [4048888] ; STRING "Commander.Target.{0}"
+008a5349  i32.load [2, 0]
+008a534c  i32.store [2, 132]
+008a5350  local.get [0]
+008a5352  i32.const [4048876] ; STRING "Commander.Operating.{0}"
+008a5357  i32.load [2, 0]
+008a535a  i32.store [2, 136]
+008a535e  local.get [0]
+008a5360  i32.const [4101476] ; STRING "{0} <color=#FFFE18>+{1}</color>"
+008a5365  i32.load [2, 0]
+008a5368  i32.store [2, 140]
+008a536c  local.get [0]
+008a536e  i32.const [4101684] ; STRING "{0}% <color=#FFFE18>+{1}%</color>"
+008a5373  i32.load [2, 0]
+008a5376  i32.store [2, 144]
+008a537a  local.get [0]
+008a537c  i32.const [4056592] ; STRING "HeroLevelUp_nopieces"
+008a5381  i32.load [2, 0]
+008a5384  i32.store [2, 148]
+008a5388  i32.const [3917484]
+008a538d  i32.load [2, 0]
+008a5390  call [903] ; 
+008a5393  local.set [1]
+008a5395  local.get [1]
+008a5397  i32.const [3955628]
+008a539c  i32.load [2, 0]
+008a539f  call [951] ; 
+008a53a2  local.get [0]
+008a53a4  local.get [1]
+008a53a6  i32.store [2, 156]
+008a53aa  i32.const [3917484]
+008a53af  i32.load [2, 0]
+008a53b2  call [903] ; 
+008a53b5  local.set [1]
+008a53b7  local.get [1]
+008a53b9  i32.const [3955628]
+008a53be  i32.load [2, 0]
+008a53c1  call [951] ; 
+008a53c4  local.get [0]
+008a53c6  local.get [1]
+008a53c8  i32.store [2, 164]
+008a53cc  local.get [0]
+008a53ce  i32.const [-1]
+008a53d0  i32.store [2, 176]
+008a53d4  local.get [0]
+008a53d6  i32.const [0]
+008a53d8  call [1521] ; BaseUI..ctor
+008a53db  i64.const [5]
+008a53dd  local.set [2]
+008a53df  local.get [0]
+008a53e1  local.get [2]
+008a53e3  i32.wrap_i64 []
+008a53e4  i32.store [2, 48]
+008a53e7  local.get [0]
+008a53e9  local.get [2]
+008a53eb  i64.const [32]
+008a53ed  i64.shr_u []
+008a53ee  i32.wrap_i64 []
+008a53ef  i32.store [2, 52]
+008a53f2  local.get [0]
+008a53f4  i32.const [1]
+008a53f6  i32.store [2, 40]
+008a53f9  end []

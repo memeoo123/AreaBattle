@@ -1,0 +1,216 @@
+{
+  "target": {
+    "appId": "wxcf1394487200e48f",
+    "version": "43"
+  },
+  "source": "generated/wasm/wasmcode.static-memory.bin",
+  "sha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "registrationAddress": 1187060,
+  "registrationWords": [
+    11103,
+    337888,
+    6324,
+    72592,
+    6294,
+    382304,
+    34400,
+    200288,
+    26589,
+    483008,
+    11003,
+    3823136,
+    11003,
+    3867152,
+    0,
+    0
+  ],
+  "validation": {
+    "uniqueRegistration": true,
+    "methodSpecsBoundsChecked": 26589,
+    "typeDefinitions": 11003
+  },
+  "calls": [
+    {
+      "usageAddress": 3993520,
+      "encodedUsage": "0xc000bbcf",
+      "methodSpecIndex": 24039,
+      "methodSpecAddress": 771476,
+      "methodSpec": [
+        26612,
+        -1,
+        2817
+      ],
+      "declaringType": "ConfigRead",
+      "method": "readConfig",
+      "genericArguments": [
+        null,
+        [
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ]
+      ]
+    },
+    {
+      "usageAddress": 3956528,
+      "encodedUsage": "0xc0007d2b",
+      "methodSpecIndex": 16021,
+      "methodSpecAddress": 675260,
+      "methodSpec": [
+        10493,
+        783,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": ".ctor",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956532,
+      "encodedUsage": "0xc0007d2d",
+      "methodSpecIndex": 16022,
+      "methodSpecAddress": 675272,
+      "methodSpec": [
+        10512,
+        783,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "Add",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956536,
+      "encodedUsage": "0xc0007d2f",
+      "methodSpecIndex": 16023,
+      "methodSpecAddress": 675284,
+      "methodSpec": [
+        10517,
+        783,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "ContainsKey",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3956540,
+      "encodedUsage": "0xc0007d31",
+      "methodSpecIndex": 16024,
+      "methodSpecAddress": 675296,
+      "methodSpec": [
+        10530,
+        783,
+        -1
+      ],
+      "declaringType": "Dictionary`2",
+      "method": "TryGetValue",
+      "genericArguments": [
+        [
+          {
+            "type": "0x80080000",
+            "data": 215,
+            "name": "Int32"
+          },
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3978368,
+      "encodedUsage": "0xc000a61d",
+      "methodSpecIndex": 21262,
+      "methodSpecAddress": 738152,
+      "methodSpec": [
+        10644,
+        2817,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "get_Count",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    },
+    {
+      "usageAddress": 3978372,
+      "encodedUsage": "0xc000a61f",
+      "methodSpecIndex": 21263,
+      "methodSpecAddress": 738164,
+      "methodSpec": [
+        10650,
+        2817,
+        -1
+      ],
+      "declaringType": "List`1",
+      "method": "get_Item",
+      "genericArguments": [
+        [
+          {
+            "type": "0x120000",
+            "data": 3837,
+            "name": "VideoBtnData"
+          }
+        ],
+        null
+      ]
+    }
+  ],
+  "qualification": "Read-only static IL2CPP metadata resolution; no target code execution or UI timing inference."
+}

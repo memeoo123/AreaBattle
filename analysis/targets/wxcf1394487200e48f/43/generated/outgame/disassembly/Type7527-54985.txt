@@ -1,0 +1,30 @@
+; Original class: SerialController
+; Type7527.setAdz; wasmcode function 16055; offset=7751607 size=80
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+007647b8  i32.const [5005100]
+007647bd  i32.load8_u [0, 0]
+007647c0  i32.eqz []
+007647c1  if [-64]
+007647c3    i32.const [4039860] ; STRING "-SerialController "
+007647c8    call [900] ; 
+007647cb    i32.const [4050192] ; STRING "DAU- "
+007647d0    call [900] ; 
+007647d3    i32.const [5005100]
+007647d8    i32.const [1]
+007647da    i32.store8 [0, 0]
+007647dd  end []
+007647de  local.get [0]
+007647e0  local.get [1]
+007647e2  local.get [0]
+007647e4  call [6253] ; BaseController.setAdz
+007647e7  local.get [0]
+007647e9  i32.const [4050192] ; STRING "DAU- "
+007647ee  i32.load [2, 0]
+007647f1  local.get [1]
+007647f3  i32.load [2, 16]
+007647f6  i32.const [4039860] ; STRING "-SerialController "
+007647fb  i32.load [2, 0]
+007647fe  i32.const [0]
+00764800  call [955] ; String.Concat
+00764803  i32.store [2, 8]
+00764806  end []

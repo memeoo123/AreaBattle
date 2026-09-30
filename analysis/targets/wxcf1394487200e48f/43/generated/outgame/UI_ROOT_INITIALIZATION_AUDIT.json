@@ -1,0 +1,28 @@
+{
+  "status": "root-load-callback-composed-with-real-root-and-page",
+  "atUtc": "2026-09-30T02:19:55.868889+00:00",
+  "source": [
+    "disassembly/UiRootGeneric-27386.txt",
+    "ui-root-generic.json",
+    "ui-root-component-generics.json",
+    "ui-bootstrap-schema.json"
+  ],
+  "verified": [
+    "Instantiate callback receives UIRoot,true; actual resource dispatch remains supplied",
+    "Stored UIRoot is RectTransform; corrected OutgameUiNodes type",
+    "SetParent default worldPositionStays; localScale one; anchors0/1 and offsets0",
+    "Portrait && CanvasScaler.matchWidthOrHeight==1 && fixedWidth && width>720 applies symmetric horizontal inset",
+    "Initialized flag set before optional completion; exception does not roll back",
+    "Actual imported root now supplies UIWindow for modern page load and outlet initialization",
+    "Bootstrap fixed-size component payloads decoded, length/padding checked and source hashes retained"
+  ],
+  "integratedChecks": 604,
+  "remaining": [
+    "Production resource Instantiate dispatch and module owner",
+    "CanvasAdaptive and AdaptiveBangs runtime behavior",
+    "Choose actual bootstrap scene vs resource copy using source startup route; parameters differ",
+    "AtlasLoader lifecycle and complete account/menu/Player"
+  ],
+  "freshPlayModeRun": false,
+  "freshPlayerBuild": false
+}

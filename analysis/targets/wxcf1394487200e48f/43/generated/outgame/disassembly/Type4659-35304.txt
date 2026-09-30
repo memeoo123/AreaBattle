@@ -1,0 +1,39 @@
+; Original class: CommonModuleManagerBase
+; Type4659.get_DataKey; wasmcode function 20137; offset=9057169 size=92
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+008a3392  i32.const [5001340]
+008a3397  i32.load8_u [0, 0]
+008a339a  i32.eqz []
+008a339b  if [-64]
+008a339d    i32.const [4048956] ; STRING "CommonGameModule"
+008a33a2    call [900] ; 
+008a33a5    i32.const [5001340]
+008a33aa    i32.const [1]
+008a33ac    i32.store8 [0, 0]
+008a33af  end []
+008a33b0  local.get [0]
+008a33b2  call [962] ; 
+008a33b5  local.set [0]
+008a33b7  local.get [0]
+008a33b9  local.set [1]
+008a33bb  local.get [0]
+008a33bd  i32.load [2, 0]
+008a33c0  i32.const [-64]
+008a33c2  i32.sub []
+008a33c3  local.set [0]
+008a33c5  local.get [1]
+008a33c7  local.get [0]
+008a33c9  i32.load [2, 192]
+008a33cd  local.get [0]
+008a33cf  i32.load [2, 188]
+008a33d3  global.set [3]
+008a33d5  global.get [3]
+008a33d7  call_indirect [1, 0]
+008a33da  local.set [0]
+008a33dc  i32.const [4048956] ; STRING "CommonGameModule"
+008a33e1  i32.load [2, 0]
+008a33e4  local.get [0]
+008a33e6  i32.const [0]
+008a33e8  call [921] ; String.Concat
+008a33eb  return []
+008a33ec  end []

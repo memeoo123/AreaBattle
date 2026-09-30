@@ -1,0 +1,28 @@
+{
+  "atUtc": "2026-09-29T02:38:29.452211+00:00",
+  "status": "source-derived-protection-branch-validated",
+  "source": "analysis/ai-protect-source-audit.txt",
+  "originalOffsets": "0x6318d1..0x631bda",
+  "sourceSha256": "e3905b7f07573c514f1789b041d0d36a16c2b59497428a317a480174aef2c043",
+  "cases": [
+    {
+      "id": "ai-protect-empty-incoming-stops-before-later-source",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "ai-protect-first-source-withdraws-and-resumes-preserved-regen",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "ai-protect-incoming-enemy-reconnects-and-blocks-regen",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "totalIntegratedChecks": 262,
+  "productionGameplayModified": false,
+  "scope": "Controlled source-order fixtures demonstrate whole-action early return, withdrawal retaining regeneration progress, and reconnection against incoming enemies. They do not reproduce the original RNG or prove the observed session took identical actions.",
+  "validation": "Unity BattleBuild.ValidateMechanicsOnly exit0; all262 checks passed. Editor validation files only; prior player build and600-frame smoke retained, not rerun."
+}

@@ -1,0 +1,91 @@
+; Original class: UserInfoManager
+; Type4229.CreateNewData; wasmcode function 6839; offset=2575085 size=270
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00274af0  i32.const [5007232]
+00274af5  i32.load8_u [0, 0]
+00274af8  i32.eqz []
+00274af9  if [-64]
+00274afb    i32.const [3953544]
+00274b00    call [900] ; 
+00274b03    i32.const [3974444]
+00274b08    call [900] ; 
+00274b0b    i32.const [3974432]
+00274b10    call [900] ; 
+00274b13    i32.const [3923380]
+00274b18    call [900] ; 
+00274b1b    i32.const [3941108]
+00274b20    call [900] ; 
+00274b23    i32.const [5007232]
+00274b28    i32.const [1]
+00274b2a    i32.store8 [0, 0]
+00274b2d  end []
+00274b2e  i32.const [3941108]
+00274b33  i32.load [2, 0]
+00274b36  call [903] ; 
+00274b39  local.set [1]
+00274b3b  local.get [1]
+00274b3d  local.get [1]
+00274b3f  call [9650] ; UserInfoData..ctor
+00274b42  local.get [1]
+00274b44  i32.const [3953544]
+00274b49  i32.load [2, 0]
+00274b4c  call [935] ; 
+00274b4f  i32.const [0]
+00274b51  call [1848] ; ServerTimeModule.GetNowTimestampLong
+00274b54  i64.store [3, 32]
+00274b57  i32.const [3923380]
+00274b5c  i32.load [2, 0]
+00274b5f  call [903] ; 
+00274b62  local.set [2]
+00274b64  local.get [2]
+00274b66  i32.const [3974432]
+00274b6b  i32.load [2, 0]
+00274b6e  call [944] ; 
+00274b71  local.get [2]
+00274b73  i32.const [1]
+00274b75  i32.const [3974444]
+00274b7a  i32.load [2, 0]
+00274b7d  call [1161] ; 
+00274b80  local.get [2]
+00274b82  i32.const [2]
+00274b84  i32.const [3974444]
+00274b89  i32.load [2, 0]
+00274b8c  call [1161] ; 
+00274b8f  local.get [2]
+00274b91  i32.const [3]
+00274b93  i32.const [3974444]
+00274b98  i32.load [2, 0]
+00274b9b  call [1161] ; 
+00274b9e  local.get [2]
+00274ba0  i32.const [4]
+00274ba2  i32.const [3974444]
+00274ba7  i32.load [2, 0]
+00274baa  call [1161] ; 
+00274bad  local.get [1]
+00274baf  local.get [2]
+00274bb1  i32.store [2, 48]
+00274bb4  i32.const [3923380]
+00274bb9  i32.load [2, 0]
+00274bbc  call [903] ; 
+00274bbf  local.set [2]
+00274bc1  local.get [2]
+00274bc3  i32.const [3974432]
+00274bc8  i32.load [2, 0]
+00274bcb  call [944] ; 
+00274bce  local.get [2]
+00274bd0  i32.const [1]
+00274bd2  i32.const [3974444]
+00274bd7  i32.load [2, 0]
+00274bda  call [1161] ; 
+00274bdd  local.get [2]
+00274bdf  i32.const [2]
+00274be1  i32.const [3974444]
+00274be6  i32.load [2, 0]
+00274be9  call [1161] ; 
+00274bec  local.get [1]
+00274bee  local.get [2]
+00274bf0  i32.store [2, 52]
+00274bf3  local.get [0]
+00274bf5  local.get [1]
+00274bf7  i32.store [2, 20]
+00274bfa  end []

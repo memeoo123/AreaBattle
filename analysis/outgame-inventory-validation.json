@@ -1,0 +1,38 @@
+{
+    "schemaVersion": "1.0",
+    "unityVersion": "6000.0.68f1",
+    "passed": true,
+    "checks": [
+        {
+            "id": "outgame-inventory-seeds-only-configured-missing-records",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgame-inventory-reload-does-not-refill-exhausted-tools",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgame-inventory-source-currency-routing",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgame-inventory-insufficient-debit-is-atomic",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgame-inventory-source-overflow-rejected-before-store",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgame-inventory-integrates-commander-spend-and-roundtrip",
+            "result": "pass",
+            "detail": ""
+        }
+    ],
+    "limitations": "LocalDataManager inventory core only; complete account initialization, rewards, events and durable store pending."
+}
