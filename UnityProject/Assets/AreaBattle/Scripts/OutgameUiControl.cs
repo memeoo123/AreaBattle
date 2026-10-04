@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 namespace AreaBattle
 {
     public interface IOutgameMenuTabPage:IOutgameMenuItem {void DoClose();}
@@ -20,6 +21,10 @@ namespace AreaBattle
         public int CurrentPage;
         public float UiWidth {get;private set;}=1080f;
         public IOutgameTopInfoPage TopInfo {get;private set;}
+        Text goldText,diamondsText;
+        // Source32736/32715: lazily retry Unity-null cached outlet; disposal retains these fields.
+        public Text GoldText {get{if(goldText==null&&TopInfo!=null)goldText=((IOutgameCurrencyTopInfo)TopInfo).GoldText;return goldText;}}
+        public Text DiamondsText {get{if(diamondsText==null&&TopInfo!=null)diamondsText=((IOutgameCurrencyTopInfo)TopInfo).DiamondsText;return diamondsText;}}
         public IOutgameMenuTabPage MenuTab {get;private set;}
         public OutgameLoadingPage LoadingPage; // Source field72; loading-page show/close owns this reference.
         public OutgameUiControl(Func<OutgameUiModuleInitialization> module,OutgameControllerRegistry registry,Func<OutgameMessageDispatcher> messages,OutgameUiControlGlobals globals,OutgameMenuItems items,Func<IOutgameTopInfoPage> showTop,Func<IOutgameMenuTabPage> showMenu,Func<IOutgameMenuTabPage> getMenu,Action<int,int> switchMenuRoles,Func<string,OutgameLoadingPage> createLoading=null,Func<string,Transform> uiNode=null)

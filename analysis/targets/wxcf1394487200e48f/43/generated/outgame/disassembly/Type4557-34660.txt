@@ -1,0 +1,25 @@
+; Original class: DynamicRenderItem
+; Type4557.OnHidden; wasmcode function 12465; offset=6030623 size=59
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005c0520  i32.const [5001164]
+005c0525  i32.load8_u [0, 0]
+005c0528  i32.eqz []
+005c0529  if [-64]
+005c052b    i32.const [3933364]
+005c0530    call [900] ; 
+005c0533    i32.const [5001164]
+005c0538    i32.const [1]
+005c053a    i32.store8 [0, 0]
+005c053d  end []
+005c053e  local.get [0]
+005c0540  i32.load [2, 20]
+005c0543  local.set [0]
+005c0545  local.get [0]
+005c0547  if [-64]
+005c0549    i32.const [0]
+005c054b    i32.const [3933364]
+005c0550    i32.load [2, 0]
+005c0553    local.get [0]
+005c0555    call [1044] ; 
+005c0558  end []
+005c0559  end []

@@ -1,0 +1,52 @@
+; Original class: BaseHttpNetTransmitter
+; Type3727..ctor; wasmcode function 8206; offset=3888847 size=153
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003b56d0  i32.const [4987889]
+003b56d5  i32.load8_u [0, 0]
+003b56d8  i32.eqz []
+003b56d9  if [-64]
+003b56db    i32.const [3954444]
+003b56e0    call [900] ; 
+003b56e3    i32.const [3956232]
+003b56e8    call [900] ; 
+003b56eb    i32.const [3917604]
+003b56f0    call [900] ; 
+003b56f3    i32.const [3917236]
+003b56f8    call [900] ; 
+003b56fb    i32.const [3931420]
+003b5700    call [900] ; 
+003b5703    i32.const [4987889]
+003b5708    i32.const [1]
+003b570a    i32.store8 [0, 0]
+003b570d  end []
+003b570e  local.get [0]
+003b5710  i32.const [1]
+003b5712  i32.store8 [0, 8]
+003b5715  i32.const [3917604]
+003b571a  i32.load [2, 0]
+003b571d  call [903] ; 
+003b5720  local.set [1]
+003b5722  local.get [1]
+003b5724  i32.const [3956232]
+003b5729  i32.load [2, 0]
+003b572c  call [951] ; 
+003b572f  local.get [0]
+003b5731  local.get [1]
+003b5733  i32.store [2, 20]
+003b5736  i32.const [3917236]
+003b573b  i32.load [2, 0]
+003b573e  call [903] ; 
+003b5741  local.set [1]
+003b5743  local.get [1]
+003b5745  i32.const [3954444]
+003b574a  i32.load [2, 0]
+003b574d  call [951] ; 
+003b5750  local.get [0]
+003b5752  local.get [1]
+003b5754  i32.store [2, 24]
+003b5757  local.get [0]
+003b5759  i32.const [3931420]
+003b575e  i32.load [2, 0]
+003b5761  call [903] ; 
+003b5764  i32.store [2, 32]
+003b5767  end []

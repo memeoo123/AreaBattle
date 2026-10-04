@@ -8,6 +8,7 @@ namespace AreaBattle
         bool CompressData {get;set;}
         void OnInit();
         void OnSave();
+        void OnRelease();
     }
     public sealed class OutgameManagerRegistration
     {
@@ -51,8 +52,29 @@ namespace AreaBattle
             if(Managers!=null&&Managers.ContainsKey(sourceType))return (T)Managers[sourceType];
             warning("未找到["+sourceName+"]数据管理器");return null;
         }
+        // Shared generic26734: publish before initialization; duplicate returns the supplied object.
+        // Manual AddModel only applies the source attribute's AutoSyn (false when absent).
+        public T AddModel<T>(int sourceType,T manager,bool sourceAutoSyn,bool initialize=true) where T:class,IOutgameDataManager
+        {
+            _=manager.GetType();
+            if(!Managers.ContainsKey(sourceType))
+            {
+                manager.ParticipatesInSync=sourceAutoSyn;
+                Managers.Add(sourceType,manager);
+                if(initialize)manager.OnInit();
+            }
+            else error("已添加过数据管理器:"+manager);
+            return manager;
+        }
         public void SetSaveDisabled(bool disabled)
         {warning(disabled?"禁用数据全局存储":"激活数据全局存储");SaveDisabled=disabled;}
+        // Source26740 closes readiness, saves, then releases the live value collection.
+        // Release errors propagate; Clear is reached only after every manager returns.
+        public void OnRelease()
+        {
+            SourceReadyFlag=false;SaveData();
+            if(Managers!=null){foreach(var manager in Managers.Values)manager.OnRelease();Managers.Clear();}
+        }
         // SaveData f2323 checks only the disable flag and dictionary, not SourceReadyFlag.
         public void SaveData()
         {

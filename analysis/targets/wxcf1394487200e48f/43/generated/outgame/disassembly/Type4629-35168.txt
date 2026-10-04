@@ -1,0 +1,27 @@
+; Original class: ActivityBase
+; Type4629.FireEvent; wasmcode function 13376; offset=6480532 size=63
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0062e295  i32.const [5001694]
+0062e29a  i32.load8_u [0, 0]
+0062e29d  i32.eqz []
+0062e29e  if [-64]
+0062e2a0    i32.const [3922400]
+0062e2a5    call [900] ; 
+0062e2a8    i32.const [5001694]
+0062e2ad    i32.const [1]
+0062e2af    i32.store8 [0, 0]
+0062e2b2  end []
+0062e2b3  local.get [0]
+0062e2b5  i32.load [2, 16]
+0062e2b8  local.set [2]
+0062e2ba  local.get [2]
+0062e2bc  if [-64]
+0062e2be    i32.const [4]
+0062e2c0    i32.const [3922400]
+0062e2c5    i32.load [2, 0]
+0062e2c8    local.get [2]
+0062e2ca    local.get [0]
+0062e2cc    local.get [1]
+0062e2ce    call [1118] ; 
+0062e2d1  end []
+0062e2d2  end []

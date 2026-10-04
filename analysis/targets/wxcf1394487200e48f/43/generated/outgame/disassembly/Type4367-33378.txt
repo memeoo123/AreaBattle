@@ -1,0 +1,78 @@
+; Original class: TaskItemItem
+; Type4367.InitializeComponent; wasmcode function 15693; offset=7558439 size=252
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00735528  i32.const [5008973]
+0073552d  i32.load8_u [0, 0]
+00735530  i32.eqz []
+00735531  if [-64]
+00735533    i32.const [4018560]
+00735538    call [900] ;
+0073553b    i32.const [4018588]
+00735540    call [900] ;
+00735543    i32.const [4018624]
+00735548    call [900] ;
+0073554b    i32.const [4060860] ; STRING "LivenessCount"
+00735550    call [900] ;
+00735553    i32.const [4075052] ; STRING "Title"
+00735558    call [900] ;
+0073555b    i32.const [4056032] ; STRING "GotoBtn"
+00735560    call [900] ;
+00735563    i32.const [4059920] ; STRING "ItemIcon"
+00735568    call [900] ;
+0073556b    i32.const [4075284] ; STRING "Traget"
+00735570    call [900] ;
+00735573    i32.const [4089912] ; STRING "imgFull"
+00735578    call [900] ;
+0073557b    i32.const [5008973]
+00735580    i32.const [1]
+00735582    i32.store8 [0, 0]
+00735585  end []
+00735586  local.get [0]
+00735588  local.get [0]
+0073558a  i32.const [4075052] ; STRING "Title"
+0073558f  i32.load [2, 0]
+00735592  i32.const [4018624]
+00735597  i32.load [2, 0]
+0073559a  call [970] ;
+0073559d  i32.store [2, 68]
+007355a0  local.get [0]
+007355a2  local.get [0]
+007355a4  i32.const [4075284] ; STRING "Traget"
+007355a9  i32.load [2, 0]
+007355ac  i32.const [4018624]
+007355b1  i32.load [2, 0]
+007355b4  call [970] ;
+007355b7  i32.store [2, 72]
+007355ba  local.get [0]
+007355bc  local.get [0]
+007355be  i32.const [4056032] ; STRING "GotoBtn"
+007355c3  i32.load [2, 0]
+007355c6  i32.const [4018560]
+007355cb  i32.load [2, 0]
+007355ce  call [970] ;
+007355d1  i32.store [2, 76]
+007355d4  local.get [0]
+007355d6  local.get [0]
+007355d8  i32.const [4060860] ; STRING "LivenessCount"
+007355dd  i32.load [2, 0]
+007355e0  i32.const [4018624]
+007355e5  i32.load [2, 0]
+007355e8  call [970] ;
+007355eb  i32.store [2, 80]
+007355ee  local.get [0]
+007355f0  local.get [0]
+007355f2  i32.const [4059920] ; STRING "ItemIcon"
+007355f7  i32.load [2, 0]
+007355fa  i32.const [4018588]
+007355ff  i32.load [2, 0]
+00735602  call [970] ;
+00735605  i32.store [2, 84]
+00735608  local.get [0]
+0073560a  local.get [0]
+0073560c  i32.const [4089912] ; STRING "imgFull"
+00735611  i32.load [2, 0]
+00735614  i32.const [4018588]
+00735619  i32.load [2, 0]
+0073561c  call [970] ;
+0073561f  i32.store [2, 88]
+00735622  end []

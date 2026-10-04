@@ -1,0 +1,70 @@
+; Original class: LimitTimeTaskLivenessPoint
+; Type4709.AddItemOnlyModel; wasmcode function 18844; offset=8499774 size=172
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(2, 127)]
+0081b241  global.get [0]
+0081b243  i32.const [16]
+0081b245  i32.sub []
+0081b246  local.set [2]
+0081b248  local.get [2]
+0081b24a  global.set [0]
+0081b24c  i32.const [5001284]
+0081b251  i32.load8_u [0, 0]
+0081b254  i32.eqz []
+0081b255  if [-64]
+0081b257    i32.const [3934404]
+0081b25c    call [900] ;
+0081b25f    i32.const [3926996]
+0081b264    call [900] ;
+0081b267    i32.const [4048980] ; STRING "CommonGameModule_LimitTimeTask_LivenessPointAdd"
+0081b26c    call [900] ;
+0081b26f    i32.const [5001284]
+0081b274    i32.const [1]
+0081b276    i32.store8 [0, 0]
+0081b279  end []
+0081b27a  local.get [0]
+0081b27c  local.get [1]
+0081b27e  i32.const [0]
+0081b280  call [4987] ; ItemBase.AddItemOnlyModel
+0081b283  local.get [0]
+0081b285  i32.load [2, 8]
+0081b288  i32.const [44]
+0081b28a  i32.add []
+0081b28b  i32.const [0]
+0081b28d  call [966] ; Int32.ToString
+0081b290  local.set [0]
+0081b292  i32.const [4048980] ; STRING "CommonGameModule_LimitTimeTask_LivenessPointAdd"
+0081b297  i32.load [2, 0]
+0081b29a  local.get [0]
+0081b29c  i32.const [0]
+0081b29e  call [921] ; String.Concat
+0081b2a1  local.set [4]
+0081b2a3  i32.const [3926996]
+0081b2a8  i32.load [2, 0]
+0081b2ab  i32.const [1]
+0081b2ad  call [909] ;
+0081b2b0  local.set [0]
+0081b2b2  local.get [2]
+0081b2b4  local.get [1]
+0081b2b6  i64.store32 [2, 12]
+0081b2b9  i32.const [3934404]
+0081b2be  i32.load [2, 0]
+0081b2c1  local.get [2]
+0081b2c3  i32.const [12]
+0081b2c5  i32.add []
+0081b2c6  call [910] ;
+0081b2c9  local.set [3]
+0081b2cb  local.get [0]
+0081b2cd  local.get [3]
+0081b2cf  call [905] ;
+0081b2d2  local.get [0]
+0081b2d4  local.get [3]
+0081b2d6  i32.store [2, 16]
+0081b2d9  local.get [4]
+0081b2db  local.get [0]
+0081b2dd  i32.const [0]
+0081b2df  call [1738] ; CommonMsgDispatcher.SendMessage
+0081b2e2  local.get [2]
+0081b2e4  i32.const [16]
+0081b2e6  i32.add []
+0081b2e7  global.set [0]
+0081b2e9  end []

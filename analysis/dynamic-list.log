@@ -1,0 +1,23 @@
+attempt to write a readonly database
+attempt to write a readonly database
+Unity Editor version:    6000.3.7f1 (696ec25a53d1)
+Branch:                  6000.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 26.3.1 (a) (Build 25D771280a)
+Darwin version:          25.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        32768 MB
+Date:                    2026-10-03T07:38:27Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+No explicit failure code handling for error of type 1
+[Licensing::IpcConnector] Error: Failed to connect to LicenseClient-mt channel (error code: 0x80000000) .
+[Licensing::IpcConnector] Error: Connection to channel: "LicenseClient-mt" failed; code: "0x80000000"
+[Licensing::IpcConnector] Error: Failed to connect to LicenseClient-mt channel (error code: 0x80000000) .
+[Licensing::IpcConnector] Channel LicenseClient-mt-6000.3.7 doesn't exist
+Launching external process: /Applications/Unity6000.3.7f1/Unity-6000.3.7f1/Unity.app/Contents/Helpers/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 20527)
+2026-10-03 15:38:27.665 Unity[20526:51814854] Failure on line 688 in function id scheduleApplicationNotification(LSNotificationCode, NSWorkspaceNotificationCenter *): noErr == _LSModifyNotification(notificationID, 1, &code, 0, NULL, NULL, NULL)
+2026-10-03 15:38:27.824 Unity[20526:51814854] Error received in message reply handler: Connection invalid
+2026-10-03 15:38:27.824 Unity[20526:51814855] Connection Invalid error for service com.apple.hiservices-xpcservice.

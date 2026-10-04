@@ -1,0 +1,89 @@
+{
+  "status": "record-foundation-verified-full-owner-chain-pending",
+  "atUtc": "2026-10-03T08:24:44.946138+00:00",
+  "sourceEvidence": "STATISTICS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:24:44.946138+00:00",
+    "scope": "CommonMsgDispatcher4569 and mutable statistics records35015..35022, DTOs/key cache/index loop",
+    "checksPassed": 1171,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": false,
+    "nativeChecks": 0,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2284,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Distinct common/game message domains; replacing common singleton preserves captured old instances. Multicast mutation, null callbacks, shallow copy/key append and exception propagation checked.",
+      "Parent/child independence, null versus empty child-list lookup, first duplicate child, itemId0 first-creation asymmetry, null-dictionary overload differences, signed64 overflow and notification deltas checked.",
+      "JSON field/long values round-trip, indexing references/partial mutation and culture-dependent first-key caching checked; actual statistics disk save/restart not yet implemented.",
+      "CommonGameModule source registration identified; record foundation does not register an unfinished statistics manager or fabricate default activity values.",
+      "Prior red-dot17 native and guide-page26 native evidence remain historical suites; no fresh native run, captures or Player in this pure record/delegate batch."
+    ],
+    "notClaimed": "Full statistics manager/controller/offline/day refresh, activity/seven-day, Main/account/remaining20 controllers, Player or original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameCommonMessageDispatcher.cs",
+    "OutgameStatisticsRecords.cs"
+  ],
+  "checks": [
+    {
+      "id": "common-msg-independent-domain-and-shared-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "common-msg-key-appended-copy-and-original-reference-path",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "common-msg-multicast-reentry-removal-and-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-parent-add-set-reset-and-notification-deltas",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-child-first-match-and-total-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-zero-child-id-has-source-asymmetry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-listener-reentry-and-failure-after-mutation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-index-overwrite-retains-old-keys-and-aliases",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-null-dictionary-overload-differences",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-original-json-and-culture-cached-key",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Complete source GameStatisticsManager/control/offnet strategy and CommonGameModule data-pool ownership, then ActivityManager/ActivityControl and SevenDay.EnterGameInit. Finish actual Main/account/remaining20 controller factories and full business/reward-return/save-restart flow, then Player and source audiovisual acceptance."
+}

@@ -1,0 +1,26 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.POVNc; wasmcode function 12097; offset=5889590 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0059de37  i32.const [5001644]
+0059de3c  i32.load8_u [0, 0]
+0059de3f  i32.eqz []
+0059de40  if [-64]
+0059de42    i32.const [3945960]
+0059de47    call [900] ; 
+0059de4a    i32.const [5001644]
+0059de4f    i32.const [1]
+0059de51    i32.store8 [0, 0]
+0059de54  end []
+0059de55  i32.const [3945960]
+0059de5a  i32.load [2, 0]
+0059de5d  call [903] ; 
+0059de60  local.set [1]
+0059de62  local.get [1]
+0059de64  i32.const [0]
+0059de66  i32.store [2, 8]
+0059de69  local.get [1]
+0059de6b  local.get [0]
+0059de6d  i32.store [2, 16]
+0059de70  local.get [1]
+0059de72  return []
+0059de73  end []

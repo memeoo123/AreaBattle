@@ -1,0 +1,91 @@
+; Original class: TaskPanelUI
+; Type4416.RefreshPointDailyLivenessBar; wasmcode function 10173; offset=4887322 size=264
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(3, 127)]
+004a931d  i32.const [5007046]
+004a9322  i32.load8_u [0, 0]
+004a9325  i32.eqz []
+004a9326  if [-64]
+004a9328    i32.const [3998092]
+004a932d    call [900] ; 
+004a9330    i32.const [3921132]
+004a9335    call [900] ; 
+004a9338    i32.const [3986048]
+004a933d    call [900] ; 
+004a9340    i32.const [4030856] ; METHOD <>c.`bQz
+004a9345    call [900] ; 
+004a9348    i32.const [3948788]
+004a934d    call [900] ; 
+004a9350    i32.const [5007046]
+004a9355    i32.const [1]
+004a9357    i32.store8 [0, 0]
+004a935a  end []
+004a935b  local.get [0]
+004a935d  i32.const [0]
+004a935f  call [7059] ; TaskPanelUI.SetDailyTabReddot
+004a9362  i32.const [3986048]
+004a9367  i32.load [2, 0]
+004a936a  call [2550] ; 
+004a936d  i32.const [0]
+004a936f  call [8031] ; DailyTaskSubUI.VSoksmr
+004a9372  local.set [2]
+004a9374  i32.const [3986048]
+004a9379  i32.load [2, 0]
+004a937c  call [2550] ; 
+004a937f  i32.load [2, 20]
+004a9382  i32.load [2, 76]
+004a9385  i32.load [2, 16]
+004a9388  i32.load [2, 16]
+004a938b  local.set [3]
+004a938d  i32.const [3948788]
+004a9392  i32.load [2, 0]
+004a9395  call [901] ; 
+004a9398  i32.const [3948788]
+004a939d  i32.load [2, 0]
+004a93a0  i32.load [2, 92]
+004a93a3  i32.load [2, 4]
+004a93a6  local.set [1]
+004a93a8  local.get [1]
+004a93aa  i32.eqz []
+004a93ab  if [-64]
+004a93ad    i32.const [3948788]
+004a93b2    i32.load [2, 0]
+004a93b5    call [901] ; 
+004a93b8    i32.const [3948788]
+004a93bd    i32.load [2, 0]
+004a93c0    i32.load [2, 92]
+004a93c3    i32.load [2, 0]
+004a93c6    local.set [4]
+004a93c8    i32.const [3921132]
+004a93cd    i32.load [2, 0]
+004a93d0    call [903] ; 
+004a93d3    local.set [1]
+004a93d5    local.get [1]
+004a93d7    local.get [4]
+004a93d9    i32.const [4030856] ; METHOD <>c.`bQz
+004a93de    i32.load [2, 0]
+004a93e1    i32.const [0]
+004a93e3    call [1057] ; 
+004a93e6    i32.const [3948788]
+004a93eb    i32.load [2, 0]
+004a93ee    i32.load [2, 92]
+004a93f1    local.get [1]
+004a93f3    i32.store [2, 4]
+004a93f6    i32.const [3948788]
+004a93fb    i32.load [2, 0]
+004a93fe    i32.load [2, 92]
+004a9401    drop []
+004a9402  end []
+004a9403  local.get [2]
+004a9405  local.get [1]
+004a9407  i32.const [3998092]
+004a940c  i32.load [2, 0]
+004a940f  call [12407] ; 
+004a9412  local.get [3]
+004a9414  i32.le_s []
+004a9415  if [-64]
+004a9417    local.get [0]
+004a9419    i32.const [0]
+004a941b    local.get [1]
+004a941d    call [7056] ; TaskPanelUI.rVZ
+004a9420  end []
+004a9421  end []

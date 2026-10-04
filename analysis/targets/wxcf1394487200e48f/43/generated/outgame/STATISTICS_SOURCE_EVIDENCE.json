@@ -1,0 +1,934 @@
+{
+  "scope": "Source statistics/common-dispatcher owner chain; only record operations/DTO/key cache and common dispatcher are implemented in the current milestone. Full manager/controller/offline strategy remain pending.",
+  "types": {
+    "commonDispatcher": 4569,
+    "statisticsData": 4614,
+    "itemData": 4615,
+    "jsonData": 4616,
+    "manager": 4617,
+    "expansion": 4618,
+    "utils": 4619,
+    "controller": 4620,
+    "offNetStrategy": 4623,
+    "strategyBase": 4624
+  },
+  "registration": {
+    "sourceType": 4617,
+    "gameName": "CommonGameModule",
+    "autoSyn": true,
+    "compressData": false,
+    "dataKey": "CommonGameModuleGameStatisticsManager",
+    "qualification": "Original attribute, separate from Proj_hdzd; no new manager registration is claimed by the record foundation."
+  },
+  "implementedMetadata": [
+    34700,
+    34701,
+    34702,
+    34703,
+    34704,
+    34705,
+    34706,
+    34707,
+    34708,
+    34709,
+    34710,
+    34711,
+    34712,
+    35003,
+    35004,
+    35005,
+    35015,
+    35016,
+    35017,
+    35018,
+    35019,
+    35020,
+    35021,
+    35022,
+    35036,
+    35037,
+    35038
+  ],
+  "partialMethods": [
+    {
+      "metadata": 35011,
+      "scope": "Live indexing loop only; full refresh/registration/callback pending."
+    }
+  ],
+  "rules": [
+    "CommonMsgDispatcher owns an independent singleton and listener map; ClearEvent replaces it, leaving captured instances usable. SendMessage passes exact args, SendMessageGetKey appends key to a shallow copy only when a listener exists.",
+    "Parent counts and child counts are independent; first duplicate child wins. A null child list falls back to parent count, an empty child list does not.",
+    "Parent set-zero removes the whole record; reset and unchanged sets still broadcast deltas. Count arithmetic wraps signed64.",
+    "Child set itemId0 writes parent count on first record creation only; subsequent child sets create/update child0. Child set does not repair a null dictionary; add and nonzero parent set do.",
+    "Record mutation precedes message invocation; exceptions/reentry remain observable. Indexing does not clear prior keys and retains JSON record references.",
+    "Message key cache uses signed64 keys but formats Int32 with current culture only on first insertion, never cleared by statistics controller disposal."
+  ],
+  "pending": [
+    "Actual CommonGameModule manager/control/offline ownership and event provider registration",
+    "Original gzip persistence, clock anchoring, pool readiness coroutine and daily reset",
+    "SevenDay/Activity dependencies and Main composition"
+  ],
+  "sourceMethods": [
+    {
+      "metadata": 35006,
+      "sourceClass": "GameStatisticsManager",
+      "method": "get_DataKey",
+      "path": "disassembly/Type4617-35006.txt",
+      "sha256": "9d2492b6a482c7334e9b2e2ae3267ee8fefdc820c7d18b772995f630a7ece91c"
+    },
+    {
+      "metadata": 35007,
+      "sourceClass": "GameStatisticsManager",
+      "method": "OnInit",
+      "path": "disassembly/Type4617-35007.txt",
+      "sha256": "958700b39fb1700e24d0bc42082843482f52568acc4829a68276211c41705f2c"
+    },
+    {
+      "metadata": 35024,
+      "sourceClass": "GameStatisticsManager",
+      "method": "OnSave",
+      "path": "disassembly/Type4617-35024.txt",
+      "sha256": "6748828e1cfa98cc07fe4c1fb1b49af4b53f4c28f5bbd32b54094bc9b60a0db8"
+    },
+    {
+      "metadata": 35025,
+      "sourceClass": "GameStatisticsManager",
+      "method": "OnRelease",
+      "path": "disassembly/Type4617-35025.txt",
+      "sha256": "fffc344695d020f43d70d1344d8393c13ff0d92a13fc8e3e8adf7e6f22be1abb"
+    },
+    {
+      "metadata": 35026,
+      "sourceClass": "GameStatisticsManager",
+      "method": ".ctor",
+      "path": "disassembly/Type4617-35026.txt",
+      "sha256": "bde4725e31da500849d2bdc1d65f97dd88ebf73483d6cb308211619139146519"
+    },
+    {
+      "metadata": 35005,
+      "sourceClass": "GameStatisticsJsonData",
+      "method": ".ctor",
+      "path": "disassembly/Type4616-35005.txt",
+      "sha256": "3bf7e18cb13130718c7303d519a5f50d783c10e11f861b462d89a2ac9b5d0514"
+    },
+    {
+      "metadata": 35008,
+      "sourceClass": "GameStatisticsManager",
+      "method": "InitStrategy",
+      "path": "disassembly/Type4617-35008.txt",
+      "sha256": "594f2c513bff1a6abb71493edfd6e2a65ba2d196cf61e6662380c0ff7c9b2ceb"
+    },
+    {
+      "metadata": 35009,
+      "sourceClass": "GameStatisticsManager",
+      "method": "SaveData",
+      "path": "disassembly/Type4617-35009.txt",
+      "sha256": "d88b079cd6b124f0cfcffc2d0c5f6be95fb68770c92af8b28cca98da738015d9"
+    },
+    {
+      "metadata": 35010,
+      "sourceClass": "GameStatisticsManager",
+      "method": "UpdateDataCallBack",
+      "path": "disassembly/Type4617-35010.txt",
+      "sha256": "b3dcd5d2d8461308c0bf712797ba6bc6967c837e864974839cca0dfa215365f0"
+    },
+    {
+      "metadata": 35011,
+      "sourceClass": "GameStatisticsManager",
+      "method": "RefreshData",
+      "path": "disassembly/Type4617-35011.txt",
+      "sha256": "ce9912d12faed607b03e64c5a909229c2a267a19213772a84e005b0cf47f24d8"
+    },
+    {
+      "metadata": 35012,
+      "sourceClass": "GameStatisticsManager",
+      "method": "RegisteredGameEventValues",
+      "path": "disassembly/Type4617-35012.txt",
+      "sha256": "41a4c1b340f76cbbd62bd4774fa678108cf34f06ad3082689b7f55c0649ac74d"
+    },
+    {
+      "metadata": 35013,
+      "sourceClass": "GameStatisticsManager",
+      "method": "CommonGameModule_StatisticsEventResiger",
+      "path": "disassembly/Type4617-35013.txt",
+      "sha256": "e0fb27712c28344b39dec92bd6ea797cbd311c6e69cfe0f40c598d4279cd9ce9"
+    },
+    {
+      "metadata": 35014,
+      "sourceClass": "GameStatisticsManager",
+      "method": "CommonGameModule_StatisticsEventSet",
+      "path": "disassembly/Type4617-35014.txt",
+      "sha256": "63851010df1825b689a708a07474b55262ed435a82d2db4cbb5bcc6c588ba845"
+    },
+    {
+      "metadata": 35015,
+      "sourceClass": "GameStatisticsManager",
+      "method": "AddEventStatistics",
+      "path": "disassembly/Type4617-35015.txt",
+      "sha256": "4dbefdc2b6949c4734790a1c31126b1cfe28888b99da341455599c256be648b3"
+    },
+    {
+      "metadata": 35016,
+      "sourceClass": "GameStatisticsManager",
+      "method": "AddEventStatistics",
+      "path": "disassembly/Type4617-35016.txt",
+      "sha256": "b22066213d8c893771ec87707c0cf83550a66cd7caec61048cf227a2a403862e"
+    },
+    {
+      "metadata": 35017,
+      "sourceClass": "GameStatisticsManager",
+      "method": "SetEventStatistics",
+      "path": "disassembly/Type4617-35017.txt",
+      "sha256": "6125ca445025628a224792ef950d209105373e6faa0c55e33420fe00a3e9c0eb"
+    },
+    {
+      "metadata": 35018,
+      "sourceClass": "GameStatisticsManager",
+      "method": "SetEventStatistics",
+      "path": "disassembly/Type4617-35018.txt",
+      "sha256": "c20ac5060c332e9c92c7afe77abc9011f4697b43ab364408d5a52c2b9b296243"
+    },
+    {
+      "metadata": 35019,
+      "sourceClass": "GameStatisticsManager",
+      "method": "GetEventStatistics",
+      "path": "disassembly/Type4617-35019.txt",
+      "sha256": "510744d0c7e15cfeba665f70f5a617d0bbf7facaea28a3afb67174560d1d98bf"
+    },
+    {
+      "metadata": 35020,
+      "sourceClass": "GameStatisticsManager",
+      "method": "GetEventStatistics",
+      "path": "disassembly/Type4617-35020.txt",
+      "sha256": "ff87ad5461055fdec4b9d461eff41c66af9be93f24c6dc58a8d4b223e8b68855"
+    },
+    {
+      "metadata": 35021,
+      "sourceClass": "GameStatisticsManager",
+      "method": "ResetEventStatistics",
+      "path": "disassembly/Type4617-35021.txt",
+      "sha256": "2776dce8e90743cb73fcd281ae95974448069f2f0247590e4ae4653fd7fd5d55"
+    },
+    {
+      "metadata": 35022,
+      "sourceClass": "GameStatisticsManager",
+      "method": "GetGameStatisticsData",
+      "path": "disassembly/Type4617-35022.txt",
+      "sha256": "f1ba378015a1b5cb78f1c8af97e529323048ee73d12dadcbf356f724e157cdd0"
+    },
+    {
+      "metadata": 35023,
+      "sourceClass": "GameStatisticsManager",
+      "method": "Update",
+      "path": "disassembly/Type4617-35023.txt",
+      "sha256": "2deb4b164f5453373619e97bc7e160c454d6677257880c6d24bd94877b0db704"
+    },
+    {
+      "metadata": 35027,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "RegisteredValueFunc",
+      "path": "disassembly/Type4618-35027.txt",
+      "sha256": "916ea3543c031e2095dbceeafd2d27144a064c08168a4fb3b0a556980edbef2f"
+    },
+    {
+      "metadata": 35028,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "AddEventCount",
+      "path": "disassembly/Type4618-35028.txt",
+      "sha256": "a91614dcacede27ae92dbad387c4946cd101d096ac7709e14cfdb0bfd43f4f35"
+    },
+    {
+      "metadata": 35029,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "AddEventCount",
+      "path": "disassembly/Type4618-35029.txt",
+      "sha256": "440ecfca0a71f1b2c7ee607ab02df08ec38146140cf49759945ab79c6c828435"
+    },
+    {
+      "metadata": 35030,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "SetEventCount",
+      "path": "disassembly/Type4618-35030.txt",
+      "sha256": "250e6c6f2900df93ff7514be26f0b4127e84f9a443e9d05a37fd0d96e006444f"
+    },
+    {
+      "metadata": 35031,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "SetEventCount",
+      "path": "disassembly/Type4618-35031.txt",
+      "sha256": "296854c7d4d57185fda9be74bf89f9492302b2741e28995a57206965a208ed73"
+    },
+    {
+      "metadata": 35032,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "ResetEventCount",
+      "path": "disassembly/Type4618-35032.txt",
+      "sha256": "6a779f0585ac6b8e20a73b9568c6126bef6bd849e8d71bdeb3a609a737537b0b"
+    },
+    {
+      "metadata": 35033,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "EventCount",
+      "path": "disassembly/Type4618-35033.txt",
+      "sha256": "e29867267dff51aa700ce290927420cffc15c4b4d66db561b56541e746d214ae"
+    },
+    {
+      "metadata": 35034,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "EventCount",
+      "path": "disassembly/Type4618-35034.txt",
+      "sha256": "26071c790e26e11af25b040cfe0805d5fa2308304a688cd0aeb654415c3a0952"
+    },
+    {
+      "metadata": 35035,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "GameValue",
+      "path": "disassembly/Type4618-35035.txt",
+      "sha256": "bf2c17a2950fbe98e89ea097151af8a33ed9fed7e52fa7202f164d39504f0ea2"
+    },
+    {
+      "metadata": 35036,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "MessageKey",
+      "path": "disassembly/Type4618-35036.txt",
+      "sha256": "4fa1c9643cde8a31cca4b865a53869b6163a4e1e5fc30afbb081fda62733e61f"
+    },
+    {
+      "metadata": 35037,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": "ToStringNoGC",
+      "path": "disassembly/Type4618-35037.txt",
+      "sha256": "478792dfd3aa9b74650bd45540e6b0c150687bce4990d0757efb8b6e57625386"
+    },
+    {
+      "metadata": 35038,
+      "sourceClass": "GameStatisticsExpansion",
+      "method": ".cctor",
+      "path": "disassembly/Type4618-35038.txt",
+      "sha256": "fb26b1a13aefee1a8c57b980ae0f7e0eb747c67b77d0163be393aa4d39431d86"
+    },
+    {
+      "metadata": 35039,
+      "sourceClass": "StatistUtils",
+      "method": "GZipCompressString",
+      "path": "disassembly/Type4619-35039.txt",
+      "sha256": "fb1237ff27d2114f9d556d7cbdb01efbae3acb3a5be2c8b04022a3a4eea5f48a"
+    },
+    {
+      "metadata": 35040,
+      "sourceClass": "StatistUtils",
+      "method": "UwOi",
+      "path": "disassembly/Type4619-35040.txt",
+      "sha256": "f223f3bf9c608cf566e6733d5d15e3c0a1957ec5b8371ffdf2202874385de0ff"
+    },
+    {
+      "metadata": 35041,
+      "sourceClass": "StatistUtils",
+      "method": "GZipDecompressString",
+      "path": "disassembly/Type4619-35041.txt",
+      "sha256": "0a9d29f90dc455d8cc69877b31934c42083a569559ea5b9b4c696c0500d28802"
+    },
+    {
+      "metadata": 35042,
+      "sourceClass": "StatistUtils",
+      "method": "Decompress",
+      "path": "disassembly/Type4619-35042.txt",
+      "sha256": "ea20d7e38e27ab72f4476633d7cbe6f63c20cae2ecfbcfdab6e92fe0b6eefa15"
+    },
+    {
+      "metadata": 35043,
+      "sourceClass": "GameStatisticsControl",
+      "method": "get_isDirty",
+      "path": "disassembly/Type4620-35043.txt",
+      "sha256": "9ee93504025773768d99c784fea65abd46ed798be194bbb2ca1d9377aaa18144"
+    },
+    {
+      "metadata": 35044,
+      "sourceClass": "GameStatisticsControl",
+      "method": "get_I",
+      "path": "disassembly/Type4620-35044.txt",
+      "sha256": "530cffe00285d8f76565760b8e1c68d205ead866d417260c75894dc17e8d44d9"
+    },
+    {
+      "metadata": 35045,
+      "sourceClass": "GameStatisticsControl",
+      "method": "[olZ]L",
+      "path": "disassembly/Type4620-35045.txt",
+      "sha256": "b7f4884bf0c9f9bccd95e62c845cddd4b06af7ac0deb2b55ffa82842895119cb"
+    },
+    {
+      "metadata": 35046,
+      "sourceClass": "GameStatisticsControl",
+      "method": "lWw^Xd",
+      "path": "disassembly/Type4620-35046.txt",
+      "sha256": "a1a5dcadfb68c263aa4bf026ef120082e6adb44e2f3cb35d60328b81a8f4c0fc"
+    },
+    {
+      "metadata": 35047,
+      "sourceClass": "GameStatisticsControl",
+      "method": "chgc}m",
+      "path": "disassembly/Type4620-35047.txt",
+      "sha256": "0f5bbaa00f369c7b013057b77f710255f7c4c5608cfec05145df9b9c0cd3c535"
+    },
+    {
+      "metadata": 35048,
+      "sourceClass": "GameStatisticsControl",
+      "method": "MMjtT",
+      "path": "disassembly/Type4620-35048.txt",
+      "sha256": "7e77d61586e274c9b2f2bffe5534ac711c51c2ea0f7948cc7fceac69c1896384"
+    },
+    {
+      "metadata": 35049,
+      "sourceClass": "GameStatisticsControl",
+      "method": "xokgr",
+      "path": "disassembly/Type4620-35049.txt",
+      "sha256": "1a39d5d1eb68c06f6df9480b28f21eec544da782f192827879985ac1c0f2ec3c"
+    },
+    {
+      "metadata": 35050,
+      "sourceClass": "GameStatisticsControl",
+      "method": "ResetEventCount",
+      "path": "disassembly/Type4620-35050.txt",
+      "sha256": "3281d0b3ffdeeca15f891c81d1b4be43843fb95a79f87fb749ad59e49c899715"
+    },
+    {
+      "metadata": 35051,
+      "sourceClass": "GameStatisticsControl",
+      "method": "GetEventCount",
+      "path": "disassembly/Type4620-35051.txt",
+      "sha256": "ee87182c03b0f094cf4dee60ed8edeca0fc1d1486e2149fcc6e0bced093d5ebc"
+    },
+    {
+      "metadata": 35052,
+      "sourceClass": "GameStatisticsControl",
+      "method": "sybjRh",
+      "path": "disassembly/Type4620-35052.txt",
+      "sha256": "92f495aa3abbf787b5760ee19089fd8498a8415072922f6a3e4c68f2c1b58e74"
+    },
+    {
+      "metadata": 35053,
+      "sourceClass": "GameStatisticsControl",
+      "method": "OnInit",
+      "path": "disassembly/Type4620-35053.txt",
+      "sha256": "06f1d62491a2a6f34a3a1f95c8ded2b0d9a640facf5c93346f660d953250fd8a"
+    },
+    {
+      "metadata": 35054,
+      "sourceClass": "GameStatisticsControl",
+      "method": "xokgr",
+      "path": "disassembly/Type4620-35054.txt",
+      "sha256": "c552edf4b154d3379c838746fcb76def7fa60225cec982e29798e140214207aa"
+    },
+    {
+      "metadata": 35055,
+      "sourceClass": "GameStatisticsControl",
+      "method": "GetEventCount",
+      "path": "disassembly/Type4620-35055.txt",
+      "sha256": "59cd16c9f8d1ad242ba852e34890a902dd894ceed039b60aa667a941a9647ff1"
+    },
+    {
+      "metadata": 35056,
+      "sourceClass": "GameStatisticsControl",
+      "method": "set_isDirty",
+      "path": "disassembly/Type4620-35056.txt",
+      "sha256": "0f6c312002acc0a8f312417d8e3f409f2bbace112417ed5b2fe052e8802a2e2e"
+    },
+    {
+      "metadata": 35057,
+      "sourceClass": "GameStatisticsControl",
+      "method": "lWw^Xd",
+      "path": "disassembly/Type4620-35057.txt",
+      "sha256": "58c4a1b9c63ebfd609037432302fd2de916601597886a94555b0836735ce9039"
+    },
+    {
+      "metadata": 35058,
+      "sourceClass": "GameStatisticsControl",
+      "method": "Dispose",
+      "path": "disassembly/Type4620-35058.txt",
+      "sha256": "df307665cc9d1a9ff7079bea319252f3f7dce31d48948e4724a2641111026cb2"
+    },
+    {
+      "metadata": 35059,
+      "sourceClass": "GameStatisticsControl",
+      "method": ".ctor",
+      "path": "disassembly/Type4620-35059.txt",
+      "sha256": "a9c7069027103a648359f9a6cc16100b5f40f5218bbeed3169eca8d129462bf1"
+    },
+    {
+      "metadata": 35060,
+      "sourceClass": "GameStatisticsControl",
+      "method": "get_initOver",
+      "path": "disassembly/Type4620-35060.txt",
+      "sha256": "ed5fd49b5e62314d95840427d5cde42345ddd5c38d8e8061a1442e02c4e7a992"
+    },
+    {
+      "metadata": 35061,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "j`Qs",
+      "path": "disassembly/Type4623-35061.txt",
+      "sha256": "6a621103af4bbdebdbc2c5a00a0c68ced4da79fa9f7a833351ad0269e66ca610"
+    },
+    {
+      "metadata": 35062,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "YSQ",
+      "path": "disassembly/Type4623-35062.txt",
+      "sha256": "59accc1abdce8fb83de3c2bf37bed182ac8f7964ad74d2e156e12f6f18f9aca7"
+    },
+    {
+      "metadata": 35063,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "de~`~YY",
+      "path": "disassembly/Type4623-35063.txt",
+      "sha256": "b699a2428785094de7a6fb0b56ed1fcaa68ca2c9cc1e75b0bb914837e02e2ab9"
+    },
+    {
+      "metadata": 35064,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "UpdateDate",
+      "path": "disassembly/Type4623-35064.txt",
+      "sha256": "077421785e5247fe6279751ab0d0bcfd50b915168838e2696aa1c83be87bf9f5"
+    },
+    {
+      "metadata": 35065,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "vmitT",
+      "path": "disassembly/Type4623-35065.txt",
+      "sha256": "6a0b2968beaa5e931f906f32578823006603c121571c3b45cce38cd560d07a4b"
+    },
+    {
+      "metadata": 35066,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "^q}",
+      "path": "disassembly/Type4623-35066.txt",
+      "sha256": "84ad56e0cae511c56156d9f6cd7d329dbf7a91867d9697b8ddf668683ecb2f73"
+    },
+    {
+      "metadata": 35067,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "a{uX",
+      "path": "disassembly/Type4623-35067.txt",
+      "sha256": "78fe3198a77c9c5e07c1e7abb3e317d227252fa02042cebe17245383892c9b68"
+    },
+    {
+      "metadata": 35068,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "[yPqYYq",
+      "path": "disassembly/Type4623-35068.txt",
+      "sha256": "c2e02d9ba93147625dab026eefc2f896d6e41c64d80dcfa459098b3a38c49b89"
+    },
+    {
+      "metadata": 35069,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "f|W|f}U",
+      "path": "disassembly/Type4623-35069.txt",
+      "sha256": "a9dd3c47c2bdd59468aaaf3909b42b4a3602c64c25525ff743169c1b1ef2201f"
+    },
+    {
+      "metadata": 35070,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "fQdtec`",
+      "path": "disassembly/Type4623-35070.txt",
+      "sha256": "feb9d7e84f812f8df49e48c856d3f135d356322922301c43003d763b74ed5996"
+    },
+    {
+      "metadata": 35071,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "qcam`u^",
+      "path": "disassembly/Type4623-35071.txt",
+      "sha256": "607668cd6d2f8add142309e892479cdc3e8f53df984871c94da5ebfed30386d1"
+    },
+    {
+      "metadata": 35072,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "InitData",
+      "path": "disassembly/Type4623-35072.txt",
+      "sha256": "3cf7866eda1a0dd845c2e982a9c61fa403eaebae791fb6caa0bb2c4c2791fce6"
+    },
+    {
+      "metadata": 35073,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "POVNc",
+      "path": "disassembly/Type4623-35073.txt",
+      "sha256": "b299ad0854315300ac6c9d629d41012d961a65df5a05d68327c71971c95aeeb2"
+    },
+    {
+      "metadata": 35074,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "jqobST",
+      "path": "disassembly/Type4623-35074.txt",
+      "sha256": "8447d4d664ab36c65425bd1affd7901d3ba79db4fecf37de10d0e4c5e03d3988"
+    },
+    {
+      "metadata": 35075,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "njNk[",
+      "path": "disassembly/Type4623-35075.txt",
+      "sha256": "45d5a011935f4eab6b3154bac182e7c0c4cd36f32ed2e93c632375087d8cb8f1"
+    },
+    {
+      "metadata": 35076,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "ximtq",
+      "path": "disassembly/Type4623-35076.txt",
+      "sha256": "a545b58210cd6ca0e16185b880d4408ac8cb45a3a8561e9e3b93d2b853dd866a"
+    },
+    {
+      "metadata": 35077,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "[Zs[pOz",
+      "path": "disassembly/Type4623-35077.txt",
+      "sha256": "61319fd5e88fc9e5573b924c5ea634b0eff9a5416b74ae6a4cf78eb2cb27eef3"
+    },
+    {
+      "metadata": 35078,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "VZWWTdY",
+      "path": "disassembly/Type4623-35078.txt",
+      "sha256": "684d9938f2d49a9949f29d8d579cc84060f378939baf7105489f74b3f8707aa6"
+    },
+    {
+      "metadata": 35079,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "[TWP",
+      "path": "disassembly/Type4623-35079.txt",
+      "sha256": "e70daf361d19e9984ccd266f1c7a5169353f0095abaeda0d7525e0466b037087"
+    },
+    {
+      "metadata": 35080,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": ".ctor",
+      "path": "disassembly/Type4623-35080.txt",
+      "sha256": "7de6fc8da39a3fd6e3222e2c07e379c0152d5da6f64250031d7adcec9e463fbe"
+    },
+    {
+      "metadata": 35081,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "{j",
+      "path": "disassembly/Type4623-35081.txt",
+      "sha256": "e900345c7ddfd83370937495ec8ec63a2901900742ede3a1dadece66099337df"
+    },
+    {
+      "metadata": 35082,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "OnSave",
+      "path": "disassembly/Type4623-35082.txt",
+      "sha256": "c480112365af68c671d631761659a1016d5ced5aab02beb461a6413c8c4907d0"
+    },
+    {
+      "metadata": 35083,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "TNx{oW",
+      "path": "disassembly/Type4623-35083.txt",
+      "sha256": "a1c98dfc61ee85d4002e664f1e05da06c0c79433d529550f5167a7721fce2e0a"
+    },
+    {
+      "metadata": 35084,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "ZNqpStm",
+      "path": "disassembly/Type4623-35084.txt",
+      "sha256": "2b6a6ec74ae1b8bc3e9ea7a00293b9601aebb0722022c77e5c2a9eb377126c9d"
+    },
+    {
+      "metadata": 35085,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "nOQzzZZ",
+      "path": "disassembly/Type4623-35085.txt",
+      "sha256": "2e03a14278c330046a8ad617c2464d3a509766e06b2c68322126eee752193f3c"
+    },
+    {
+      "metadata": 35086,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "SraLLX",
+      "path": "disassembly/Type4623-35086.txt",
+      "sha256": "6645e6a54aecdaaf99d18598c5365f0eff94de35d25273017f87a82713b8e1cb"
+    },
+    {
+      "metadata": 35087,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "wSfunf",
+      "path": "disassembly/Type4623-35087.txt",
+      "sha256": "f90fa0d3ca61e2ee8266d566098d81eb5531ffb13404e6d95988e7e394344cae"
+    },
+    {
+      "metadata": 35088,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "N~mrWf",
+      "path": "disassembly/Type4623-35088.txt",
+      "sha256": "613c133e2914d97ba547be52f6e70125569b4134a9427e8ce6ea77e8d10777ac"
+    },
+    {
+      "metadata": 35089,
+      "sourceClass": "GameStatisticsOffNetStrategy",
+      "method": "{y|~",
+      "path": "disassembly/Type4623-35089.txt",
+      "sha256": "c6b329c5592e2906d997e5db1afba375c184c9b2cdcbe27a5e556e9f4e1fc896"
+    },
+    {
+      "metadata": 35090,
+      "sourceClass": "<>c",
+      "method": ".cctor",
+      "path": "disassembly/Type4621-35090.txt",
+      "sha256": "a120e0b63a2dbb65eef230bc081ec7e46a2d86903bc067a14a6db3e93de7c2ed"
+    },
+    {
+      "metadata": 35091,
+      "sourceClass": "<>c",
+      "method": ".ctor",
+      "path": "disassembly/Type4621-35091.txt",
+      "sha256": "cd35b216f6f28c7aacf969e417800ba32f1302c7909105a8ff9834fc13c40b0d"
+    },
+    {
+      "metadata": 35092,
+      "sourceClass": "<>c",
+      "method": "ypUk{",
+      "path": "disassembly/Type4621-35092.txt",
+      "sha256": "dcf1f270fa30680bd25c5c66f8cfb2a69b116245573136669c6bab01ef3d8bad"
+    },
+    {
+      "metadata": 35093,
+      "sourceClass": "ljbasYg",
+      "method": ".ctor",
+      "path": "disassembly/Type4622-35093.txt",
+      "sha256": "9d31c30a4652ccf2e0507b0e69351fa6ac54ffd213bbc16925f0eef6b40765ad"
+    },
+    {
+      "metadata": 35094,
+      "sourceClass": "ljbasYg",
+      "method": "System.IDisposable.Dispose",
+      "path": "disassembly/Type4622-35094.txt",
+      "sha256": "ffa42e692ca3756e5f054dc154107e4428911285a6d8f75e3346755a64519bb5"
+    },
+    {
+      "metadata": 35095,
+      "sourceClass": "ljbasYg",
+      "method": "MoveNext",
+      "path": "disassembly/Type4622-35095.txt",
+      "sha256": "ce7c58ed8650100655e7abd1b2e5bcacb9a3f89b9388d9f98b7568b29f3a8149"
+    },
+    {
+      "metadata": 35096,
+      "sourceClass": "ljbasYg",
+      "method": "System.Collections.Generic.IEnumerator<System.Object>.get_Current",
+      "path": "disassembly/Type4622-35096.txt",
+      "sha256": "a0e64541c59623d4f78e10318a86b65732c5dc9259ca04924adee7b539f6c844"
+    },
+    {
+      "metadata": 35097,
+      "sourceClass": "ljbasYg",
+      "method": "System.Collections.IEnumerator.Reset",
+      "path": "disassembly/Type4622-35097.txt",
+      "sha256": "886c1498042ce192d4bfe73126fe671929d1d6c2e38324741cea6cd551cd61a1"
+    },
+    {
+      "metadata": 35098,
+      "sourceClass": "ljbasYg",
+      "method": "System.Collections.IEnumerator.get_Current",
+      "path": "disassembly/Type4622-35098.txt",
+      "sha256": "98757dbeea414dc8edfd369fe3cb86a5d458c0b5b4f45984bf80600dce27789d"
+    },
+    {
+      "metadata": 35099,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "InitData",
+      "path": "disassembly/Type4624-35099.txt",
+      "sha256": "03064c5cbce0ca7a1cc42b51638afb10b9b7257d8ba5109885a60495085cf7e6"
+    },
+    {
+      "metadata": 35101,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "nOQzzZZ",
+      "path": "disassembly/Type4624-35101.txt",
+      "sha256": "b6aba25838a52b2f92c502930851acc9f65114108f2b936bdd63d85e61cfbcd7"
+    },
+    {
+      "metadata": 35102,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "fLqTc~]",
+      "path": "disassembly/Type4624-35102.txt",
+      "sha256": "1556971832833ca536ec6d1ffa2fd7c1aa9b230195379f917ccb6ff2a3caf466"
+    },
+    {
+      "metadata": 35103,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "Update",
+      "path": "disassembly/Type4624-35103.txt",
+      "sha256": "c7e2ffd3c3b192da92ec08af3ee88a3c9385d7ed487f038baee0cb249f671838"
+    },
+    {
+      "metadata": 35117,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "W{YQi",
+      "path": "disassembly/Type4624-35117.txt",
+      "sha256": "455d89ea235c70d0d1b4ac4048b1cd26a377bfd87d10fec12ee60f8cea470b33"
+    },
+    {
+      "metadata": 35118,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "Wsh|x",
+      "path": "disassembly/Type4624-35118.txt",
+      "sha256": "d8ed8251e33b5a50152c2c33e3821a067c9059ec20212e98d1860d99d7bf9653"
+    },
+    {
+      "metadata": 35119,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "lP^T",
+      "path": "disassembly/Type4624-35119.txt",
+      "sha256": "a45f0d248a22f897bbcb8fdc04a9a628d01dae2836617346f9f0de98553aeca5"
+    },
+    {
+      "metadata": 35120,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "xa`tZX",
+      "path": "disassembly/Type4624-35120.txt",
+      "sha256": "c6842166adf15e68b3c9ea036371624b66167a3590027f589f41c63e35a8947c"
+    },
+    {
+      "metadata": 35121,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "jginL",
+      "path": "disassembly/Type4624-35121.txt",
+      "sha256": "13d5b22a97d2f3ebfbd64ed4815eeb03ff20c77f141f81f497c60ffb87439b3b"
+    },
+    {
+      "metadata": 35122,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "xcqqT",
+      "path": "disassembly/Type4624-35122.txt",
+      "sha256": "1ffc949bc770002f08a42d32ae70d5155ae12da62f9890a53fdb73f56b6a3784"
+    },
+    {
+      "metadata": 35123,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "kdOswy",
+      "path": "disassembly/Type4624-35123.txt",
+      "sha256": "94a52d2aa0a00d6c0d7dafdbfb257b5b768e7b5b94d24743bb6e5f1e3e5e78ea"
+    },
+    {
+      "metadata": 35124,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "[Uhd^",
+      "path": "disassembly/Type4624-35124.txt",
+      "sha256": "09f550b93dcba14a4db69aa3c836edd30f8e66222e66c39ce93e703e5196b012"
+    },
+    {
+      "metadata": 35126,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": "OnSave",
+      "path": "disassembly/Type4624-35126.txt",
+      "sha256": "ec0a42416059eef46a656745d97c402612daa0095da6e85cea07a7e44adf3e00"
+    },
+    {
+      "metadata": 35127,
+      "sourceClass": "GameStatisticsStratrgyBase",
+      "method": ".ctor",
+      "path": "disassembly/Type4624-35127.txt",
+      "sha256": "de80d44f7bae06ab9dc830f226728caf29ce5481312608958ed72d43617e7623"
+    },
+    {
+      "metadata": 34700,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "gLtM|",
+      "path": "disassembly/Type4569-34700.txt",
+      "sha256": "d4df811e9bbe55ee9d0ee1074b09a7a9e5c59d5d2f5e3215517e08d5610cd569"
+    },
+    {
+      "metadata": 34701,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "SendMessage",
+      "path": "disassembly/Type4569-34701.txt",
+      "sha256": "325a5483acd9f97b5b45cebe52598e0c50b659e738372a7071fdba863a5d7308"
+    },
+    {
+      "metadata": 34702,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "TNUVcpu",
+      "path": "disassembly/Type4569-34702.txt",
+      "sha256": "55609db653ba133ff49767d44e21ff6adf49690eb320b7771f1142c0d8573876"
+    },
+    {
+      "metadata": 34703,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "k}NluPw",
+      "path": "disassembly/Type4569-34703.txt",
+      "sha256": "ec9f1fb307121878bd5be1d3a5b02aa3dd536d3f2508631794982a772f7b7e92"
+    },
+    {
+      "metadata": 34704,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "AddEventListener",
+      "path": "disassembly/Type4569-34704.txt",
+      "sha256": "4c8a3fd1bb47ce64463d0be688209581b4a9684b0a18cb11fd380214740b4db3"
+    },
+    {
+      "metadata": 34705,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": ".ctor",
+      "path": "disassembly/Type4569-34705.txt",
+      "sha256": "07ea6bc7c1ed9343e7904bbeafe9b37a9ecfa0ff5bf7fbe8042f23c85b6035c9"
+    },
+    {
+      "metadata": 34706,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "SendMessage",
+      "path": "disassembly/Type4569-34706.txt",
+      "sha256": "77dcdb94722c55d1957b5d1a10f4d6dce67de13d269a3163fe3e6fb68241e817"
+    },
+    {
+      "metadata": 34707,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "M{rb",
+      "path": "disassembly/Type4569-34707.txt",
+      "sha256": "03e6f20ca9eb7ce6fdcbcf0a38bf77f7705747ec198cd1ce4a6a10d3472f5caa"
+    },
+    {
+      "metadata": 34708,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "Ouvk",
+      "path": "disassembly/Type4569-34708.txt",
+      "sha256": "0542ea570c05cce7951b637aa0fde676edac0d2573179214edb2406ee8c46cb3"
+    },
+    {
+      "metadata": 34709,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "]yvb[}",
+      "path": "disassembly/Type4569-34709.txt",
+      "sha256": "366a46606b9ae44265fe470d1a431c81cc355f0057de57d1d0534530dae31288"
+    },
+    {
+      "metadata": 34710,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "{QZgO",
+      "path": "disassembly/Type4569-34710.txt",
+      "sha256": "49986cadc4fec1d81cb46ab6444b38ecf7518ff1b29ae881c8c9a9cdd0ac4161"
+    },
+    {
+      "metadata": 34711,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "RemoveEventListener",
+      "path": "disassembly/Type4569-34711.txt",
+      "sha256": "52ba9d7c5c2ae9dd272081303742fad384d88ab247078659c29b47e94de645d8"
+    },
+    {
+      "metadata": 34712,
+      "sourceClass": "CommonMsgDispatcher",
+      "method": "SendMessageGetKey",
+      "path": "disassembly/Type4569-34712.txt",
+      "sha256": "579598e18b683cdfdb43042674491723a36670a2da42b7746037c4fb97e5f782"
+    },
+    {
+      "metadata": 35003,
+      "sourceClass": "GameStatisticsData",
+      "method": ".ctor",
+      "path": "disassembly/Type4614-35003.txt",
+      "sha256": "d66f0364015f1de456a37a1c3dbd91113448afa3d1bfb7cc965b60e9b6251980"
+    },
+    {
+      "metadata": 35004,
+      "sourceClass": "StatisticsItemData",
+      "method": ".ctor",
+      "path": "disassembly/Type4615-35004.txt",
+      "sha256": "6c31a53615cd003d7e47f90c7a312df5c2fa20311f8fe363348cdd731517249b"
+    }
+  ]
+}

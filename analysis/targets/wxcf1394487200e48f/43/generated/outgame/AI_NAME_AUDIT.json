@@ -1,0 +1,42 @@
+{
+  "status": "source-algorithm-and-service-composition-verified-full-main-pending",
+  "atUtc": "2026-10-03T06:50:24.484692+00:00",
+  "sourceEvidence": "AI_NAME_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T06:50:24.484692+00:00",
+    "scope": "Original AI-name generation and production UserInfoRuntime with native item/profile persistence integration",
+    "checksPassed": 1105,
+    "newIntegratedChecks": 7,
+    "nativePlayModeChecks": 23,
+    "targetedChecks": 14,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2089,
+    "commands": [
+      "OutgameAiNamesValidation.Validate",
+      "OutgameItemRuntimePlayModeValidation.Run",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full Main/account/23 remaining controllers, remote SDK/report delivery, original seeded RNG sequence, dictionary iteration cross-runtime parity or full Player"
+  },
+  "implementation": [
+    "GameRandomSource.cs",
+    "OutgameAiNames.cs",
+    "OutgameUserInfoRuntime.cs"
+  ],
+  "verified": [
+    "Original country remapping, saturation removal/retry, half-open distinct name sampling and source insertion order.",
+    "Unity country RNG and shared managed name/insertion RNG remain separate; exact original error and lookup order preserved.",
+    "Real original tables drive default profile names; item10004 shares the actual UserInfoControl manager.",
+    "Native bundle/frame execution, login-gated writes, avatar unlock, actual file save/restart and explicit server callback verified."
+  ],
+  "remaining": [
+    "Full Main/account, timestamp/install-state and report host composition.",
+    "Original seeded random sequence and cross-runtime dictionary order parity are unverified."
+  ]
+}

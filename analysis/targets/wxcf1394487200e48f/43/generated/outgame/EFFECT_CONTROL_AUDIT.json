@@ -1,0 +1,161 @@
+{
+  "status": "effect-controller-lifecycle-native-account-verified-full-manager-production-pending",
+  "atUtc": "2026-10-03T14:10:43.919739+00:00",
+  "sourceEvidence": "EFFECT_CONTROL_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T14:10:43.919739+00:00",
+    "scope": "Original EffectControl4058 registry/LogicModule/NormalPool creation/sequence/fly cleanup with actual UIControl text caches and native task/account rewards",
+    "checksPassed": 1570,
+    "newIntegratedChecks": 16,
+    "targetedChecks": 16,
+    "nativeChecks": 14,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2748,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameEffectControlPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "EffectControl4058 OnInit31213 replaces coroutine/time dictionaries first. Only when held NormalPool is managed-null does it assign a newly constructed NormalPool and call CreateObjectPool(moneyPool,300,5f,null,false). Source fourth option is Transform root, not boolean. Reinitialization retains pool, pending cleanup ids, NextCheck timestamp, both WaitForSecondsRealtime instances and UIMessage name.",
+      "NormalPool28682 resolves IObjectPoolManager; absent manager returns without mutating any fields. With manager it stores name/cacheResources/root before creating single-spawn pool, then assigns AutoReleaseInterval, Capacity, ExpireTime, Priority0 in order. Only after successful settings it creates legacy resource dictionary then modern handle dictionary. Factory/setter failures leave source partial initialization; no synthetic root created. Existing injected-pool constructor retained as explicit compatibility composition.",
+      "NormalPool28679 destroys by stored source pool-name field24, not by dereferencing held pool.Name. Then destroys Unity-alive root, releases modern cached handles+UnloadUnusedAssets or unloads legacy resources, and clears only legacy dictionary. Noncached mode selected by EffectControl has no cache-handle ownership; final fixture releases externally retained test handles separately, not via invented production cleanup.",
+      "EffectControl31215 calls DestoryPool before clearing ControlBase<EffectControl> singleton. Failure prevents clear; success retains pool/coroutine/time/pending fields. Stale instance disposal clears current slot and repeated disposal repeats resource calls, matching source.",
+      "31214/31216 play voice before resolving current UIControl target Text. Money uses2019, diamond voice comes from original static provider endpoint.31217 Unity-null Text returns-1 before id, root, award or coroutine. Otherwise shared id is allocated then Unity-null root resolves UIMessage; optional ToolChange happens before UpdateManager.StartCoroutine, dictionary.Add and Time.time read. Save failure may leave economic mutation but no animation registration. Audio/config/target providers remain required.",
+      "Existing recovered31209/31219/31221/31223 cleanup is now controller-owned and driven through LogicModule.Updata. Pending duplicate ids, kill-complete reentrancy, first-failure propagation, delayed timeout enqueue and additive NextCheck+=Time.time+1 remain unchanged. Initialize only recreates coroutine/time maps; stale pending ids can raise KeyNotFound after reinit, as original.",
+      "Nested4052/31224 sequence owns original ids/counts array references, index, position and callbacks. Empty/exhausted array resets index0 before completed callback. Nonempty invokes Func<int,Vector3> with current index then Nullable<Vector3>.Value; absent function throws rather than using default position. Reads ids/current index AFTER callback, resolves GoodsType, reads counts, dispatches gold(kind1)/diamond(kind2) with rootnull, applyInventoryfalse, completionPlay, updateDisplayedValuetrue, then increments index. Other kinds advance index once but never schedule continuation. Callback or array/dispatch failure precedes index increment.",
+      "Actual FlyToolAnimation/Collection/IDs/Scatter/tween native implementations are reused. Controller owns shared realtime waits by retaining one animation object for lifetime. Native binding supplies existing tween runner and actual UpdateManager coroutines; standalone older FlyRuntime remains available to prior callers and tests.",
+      "Source UIControl32715/32736 lazily retry cached Unity-null Text when TopInfo managed reference exists, reading original fields132/152. OutgameUiControl now exposes those recovered getters and retains caches on source disposal. TopInfo original serialized outlets provide txt_goldNum/txt_DiamondNum. BindUi resolves current UI controller each request; native uses real UIControl/TopInfo getters and recovered UIMessage root. Complete TopInfo account/buttons lifecycle and full production composition remain pending.",
+      "Native account evidence distinguishes ItemManager award path from direct ToolChange: task reward50 reaches both records, then FlyMoney7(applyInventory=true) updates LocalData to57 while ItemManager stays50; diamonds direct path3 likewise uses local inventory. Sequence has applyInventory=false and changes neither balance. Independent file restart asserts these exact source values; an initial test incorrectly expecting both gold records57 was retained and corrected without changing production rules.",
+      "Pool-manager acquisition and original asset acquisition are explicit local validation hosts, exercising actual restored OutgameObjectPool and real OutgameAssetProvider/handles/original assets. Full original ObjectPoolManager module startup/resource catalog/network/SDK, production Main/account/platform/all business and final Player/original audiovisual equivalence are not claimed.",
+      "Final integrated retains32 existing ShouldRunBehaviour assertions and one Curl35 certificate failure. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException, one Curl35 and one Curl42; product checks and compilation pass. Initial tween delegate compile error and native incorrect dual-record expectation retained; corrected expected source ItemManager50/LocalData57 and local diamonds3 without changing production reward rules. Original task/TopInfo/currency/particle visible native capture retained; no original-frame audiovisual equivalence claimed."
+    ],
+    "notClaimed": "Full original ObjectPoolManager startup/resource acquisition, complete TopInfo account UI, production Main/account/platform, remaining17 controllers/all business, fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameEffectControl.cs",
+    "Scripts/OutgameNormalPool.cs",
+    "Scripts/OutgameFlyToolCleanup.cs",
+    "Scripts/OutgameCoreControllerBindings.cs",
+    "Scripts/OutgameUiControl.cs",
+    "Scripts/OutgameTopInfoPage.cs",
+    "Editor/OutgameEffectControlValidation.cs",
+    "Editor/OutgameEffectControlPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "effect-control-registry-init-original-pool-options-and-reinit-retains-owner",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-ui-target-source-lazy-cache-and-dispose-retained-text",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-normal-pool-manager-absence-and-creation-failure-field-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-normal-pool-setter-failure-retains-partial-created-pool",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-audio-before-null-target-no-id-root-or-coroutine",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-shared-id-fallback-root-economic-save-before-registration",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-save-failure-preserves-economic-write-without-coroutine",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-direct-fly-toolchange-preserves-source-local-and-global-record-split",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-logic-update-delayed-cleanup-and-additive-check-time",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-reinit-retains-pending-and-clock-then-source-key-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-dispose-failure-retains-registry-success-retains-fields",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-empty-sequence-completion-and-required-position-nullable",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-sequence-supported-order-single-step-and-shared-array-reread",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-sequence-callback-rereads-id-before-dispatch-and-failure-before-index",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-uncached-modern-pool-clone-return-reuse-and-source-handle-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-control-uncached-legacy-prefab-route-and-clone-name-retained",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/effect-control-task-native.png",
+    "frames": 8955,
+    "loadedIcons": 10,
+    "returnedIcons": 10,
+    "checks": [
+      "Real registry and LogicModule own original moneyPool controller",
+      "Native task pointer runs actual box effect and currency controller together",
+      "Source task claim reaches both economic records and first tier bit",
+      "Five original currency prefabs move in native rendered frames",
+      "Task fly completion refreshes original TopInfo and returns all icons through source pool",
+      "Presentation does not duplicate task reward",
+      "Direct economic fly calls save before concurrent animations complete",
+      "Actual realtime coroutines and tweens complete while scaled time is paused",
+      "Original single-spawn pool reuses gold icons and adds only five diamond prefabs",
+      "Native arrival callback advances gold then diamond sequence and completes exactly once",
+      "Sequence retains source split: ItemManager50, direct ToolChange LocalData57 and diamonds3",
+      "Controller disposal destroys registered pool before clearing source singleton",
+      "Native pool objects are destroyed on the subsequent Unity frame",
+      "Independent account restart restores source ItemManager50/LocalData57, diamonds3 and task claim bit"
+    ],
+    "scope": "Original EffectControl4058 registered in actual LogicModule, real UpdateManager coroutines/tweens, original TaskPanel/TopInfo/effect1016/currency assets and shared account/file rewards. Pool manager/resource acquisition and audio/report/platform are explicit local hosts; full production Main/all business/Player/original audiovisual equivalence pending."
+  },
+  "remaining": "Recover full original ObjectPoolManager module/factory registration and connect actual frame startup/resource ownership in place of local manager acquisition host; complete UIControl/TopInfo account bindings, full resource catalog/Main/account/login/platform, remaining17 controllers/all business and final Player/original audiovisual acceptance."
+}

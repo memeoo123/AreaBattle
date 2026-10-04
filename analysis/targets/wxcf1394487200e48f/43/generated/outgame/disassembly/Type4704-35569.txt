@@ -1,0 +1,18 @@
+; Original class: LimitTaskItemData
+; Type4704.get_BtnState; wasmcode function 3590; offset=1128645 size=27
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001138c6  local.get [0]
+001138c8  i32.load [2, 16]
+001138cb  i32.const [1]
+001138cd  i32.ne []
+001138ce  if [-64]
+001138d0    local.get [0]
+001138d2    local.get [0]
+001138d4    call [4967] ; LimitTaskItemData.get_CanComplete
+001138d7    i32.const [1]
+001138d9    i32.xor []
+001138da    return []
+001138db  end []
+001138dc  i32.const [2]
+001138de  return []
+001138df  end []

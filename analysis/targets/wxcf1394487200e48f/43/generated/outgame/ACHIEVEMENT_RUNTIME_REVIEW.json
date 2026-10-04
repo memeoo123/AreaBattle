@@ -1,0 +1,56 @@
+{
+  "status": "reviewed source notes; concrete manager/strategy/activity not implemented or validated",
+  "stage": "/private/tmp/areabattle-validation-20261003",
+  "foldedMethods": "/private/tmp/achievement-source-{metadata}.txt,35608..35689 and35155..35159",
+  "caution": "Fold helper represents i64.store32/load32 incorrectly in some listings; consult raw WASM. Virtual pointer offset188+8*slot, NOT offset196+8*slot. Constructor names may refer to shared body; resolve allocated type from usage.",
+  "generic": {
+    "classInst": 3386,
+    "initUsage": 3981456,
+    "updateManagerUsage": 3981460,
+    "baseLoadUsage": 3981464,
+    "cachedActivityUsage": 3981468,
+    "methods": "34690 cached Activity;34691 empty LoadData;34692 manager.UpdateData(bool);34693 InitData stores id/action, gets pool manager and invokes virtualslot5 when activity config exists",
+    "folded": "/private/tmp/achievement-generic-folded-{34690..34693}.txt"
+  },
+  "slots": {
+    "4": "LoadData(string)35662",
+    "5": "OnInit35665 invokes base UpdateManagerData(true) via wrapper11277 BEFORE remove/add StatisticsDataRefresh and PointAdded listeners",
+    "6": "Dispose35668 removes source-stat listeners then refresh and point listeners",
+    "7": "OnSave35669 snapshots map.Values into Data.datas then plain compact JSON SaveLocalData",
+    "8": "ResetProgress35663 clears ext statePts/accPts and all item progress/time/state; GetAccItems then RefreshAccItems, sorts existing TypeLists, sendsRefreshExt; does NOT rebuild map/group representatives",
+    "9": "Launch35660 empty",
+    "10": "GetAchievementReward35670",
+    "11": "ChangeProgress35666"
+  },
+  "strategy": {
+    "35659": "Serialize compact SaveData ext shares Data.ext; iterate Data.datas backwards, only state==1 append id/time; JsonUtility.ToJson uncompressed.",
+    "35671": "Parse compact SaveData; when ids nonnull and Count>0 create runtime Data, share ext, pad times with zeros when shorter, add ids with state1 progress0 time. Otherwise parse original full AchievementData JSON. Null times with nonemptyids fails; no catch in helper.",
+    "35662": "BaseLoad empty then helper35671. Null Data=>newData and append every global config row. ExistingData=>remove ids absent from configs then snapshot global config.Values.ToList, append any missing item id. Add source-stat listeners35678 then RefreshTaskProgress(null).",
+    "35664": "Foreach Data.datas read config contentType/content, set progress=Statistics.GameValue(contentType,new object[]{boxedInt32content}); after enumeration invoke live UpdateDataAction(Data). Includes claimed rows; rebuilds manager via callback.",
+    "35661": "Point event requires args nonnull length>=1; exact unboxInt32args0. Add unchecked to ext.accPts; capture old/new; foreach global AchievementAcc.Values, set stageId to each threshold<=new in enumeration order, not Max. ReportSuccess ParentName成就 ActivityName成就点阶段{stageId}, OldValues0 old/NewValues0 new. No explicit ext notification here.",
+    "35666": "Resolve cached actualActivity.Find(id), capture oldprogress, set new before LogByColor(成就进度变化,id,item.id,进度,value). ReportSuccess iff old<config.number AND new!=old (does not require reaching target); old/new lowInt32. Then replace captured Data.datas with new List(actualMap.Values), sort CompareTo. No state/claim guard, no dirty bit.",
+    "35670": "ActualActivity.map.TryGet -> captureConfig -> CanComplete gate. FreshRewards foreach each config via globalitemconfig, engine.GetItem, nonnull entity.AddItem(count). Only AFTER all rewards set originalitem.state1 then time=GameValue10000(empty). ReportReward ParentName成就 ActivityName成就{id} Values0 currentaccPts. Lookup global AchievementGroups[type][ConditionPriority(contentType,content)], IndexOf capturedConfig, advance index unless last. Find claimed item position in actual typeList, replace with actual next Achievement item, refresh whole map sort then nextconfig type sort, sendRefreshExt currentData.ext. Missing/exception retains original prefix.",
+    "35678": "If MessageKeys.Count!=0 return; live rows lookup currentConfig each id, distinct MessageKey(contentType) list; then subscribe keys. List<string> despite metadatasummary earlierint. No extra time listener.",
+    "35679": "Live rows lookup currentConfig id, skipnull, unsubscribe MessageKey(contentType). DOES NOT clear MessageKeys.",
+    "35680": "StatisticsEvent no catch. args nonnull len>=1; Convert.ToInt32(last), exact unboxInt64first; filter=-1 or exactInt32second when len>=3. Live index loop Data.datas, matchcontentType and(content==0||content==filter), collect distincttypes; newprogress=unchecked(old+uncheckedAbs64(delta)), ChangeProgress may replace/sort Data.datas DURING same live loop. Ifchanged rebuildManager.sortList/map with same allstate1 report+Sort+Clear+Add pattern and sendRefreshList, then sort touchedexistingTypeLists and sendRefreshTypeList; no ext message. Preserve mutation/reentry ordering."
+  },
+  "manager": {
+    "35645": "AssignData; map allocate/clear; TypeLists.Clear; live inputdatas assignment map[id]=item(lastduplicate wins); foreach globalAchievementGroups type/conditiongroups createTypeList. Singleconfig directmapindex add. Multiconfig scan order skip missing; last-config+ENTIREtypeList.Count==0 add even claimed; otherwise break at state!=1 then add. Fully claimed subgroup may contribute no representative. VERIFY raw branches before implementation. RefreshSortList then foreach TypeLists RefreshTypeListSort then RefreshExt(input.ext).",
+    "35647": "ClearSortList; foreachmap addvalue, allComplete &= state==1; ifall includingempty ReportComplete ActivityName成就. SortCompareTo, map.Clear, live loop map.Add(id,item), sendRefreshList currentSortList.",
+    "35648": "TryGet type; sortCompareTo; sendRefreshTypeList boxedtype. Missing no-op.",
+    "35651": "SortList.Clear then Strategy.Dispose, no null guard observed.",
+    "35642-54": "ActivityId1601001; OnInit createsOffStrategy; UpdateDataCallBack->slot4Load; wrappers reset slot8/launchslot9/claimslot10; Save slot7; InitStrategy nullguard then genericInitData(UpdateCallback,1601001); ctor sortList/typeDict initialized, map null."
+  },
+  "activity": {
+    "35608/18": "LazyaccItems publishempty thenRefresh clearsame, create index=i acc=AchievementAccList[i].id. DirectRefresh beforeGet throws.",
+    "other": "OnInit poolGetModel4722; gettersext/maps/types directmanager; MissingFindWarning不包含id为{0}的任务 thennull; Updateempty; Dispose setsaccItemsnull thenManager.OnRelease; Factoryallocusage3927868 Type4628AchievementFactory; Reset/Launch/Claim directstrategyslots8/9/10."
+  },
+  "events": {
+    "4049016": "CommonModule_Achievement_PointAdd",
+    "4049020": "CommonModule_Achievement_RefreshExt",
+    "4049024": "CommonModule_Achievement_RefreshList",
+    "4049028": "CommonModule_Achievement_RefreshTypeList",
+    "4049076": "CommonModule_StatisticsData_Refresh"
+  },
+  "next": "Resolve concrete generics/context, implement actual runtime before claiming owner/automatic persistence. Original activity1601001/sourceMgr4722 registration in actualActivityRuntime; compose through OutgameActivityControlValidation.Fixture BEFORE Init. Existing task/liveness fixtures are already initialized and unsuitable for late manager registration."
+}

@@ -1,0 +1,30 @@
+; Original class: TaskPanelUI
+; Type4416.SetDailyTabReddot; wasmcode function 7059; offset=2688313 size=75
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0029053a  i32.const [5007039]
+0029053f  i32.load8_u [0, 0]
+00290542  i32.eqz []
+00290543  if [-64]
+00290545    i32.const [3953600]
+0029054a    call [900] ; 
+0029054d    i32.const [5007039]
+00290552    i32.const [1]
+00290554    i32.store8 [0, 0]
+00290557  end []
+00290558  local.get [0]
+0029055a  i32.load [2, 124]
+0029055d  i32.const [0]
+0029055f  call [977] ; Component.get_transform
+00290562  i32.const [2]
+00290564  i32.const [0]
+00290566  call [1145] ; Transform.GetChild
+00290569  i32.const [0]
+0029056b  call [943] ; Component.get_gameObject
+0029056e  i32.const [3953600]
+00290573  i32.load [2, 0]
+00290576  call [935] ; 
+00290579  i32.const [0]
+0029057b  call [6752] ; X`nPj.tgksX
+0029057e  i32.const [0]
+00290580  call [949] ; GameObject.SetActive
+00290583  end []

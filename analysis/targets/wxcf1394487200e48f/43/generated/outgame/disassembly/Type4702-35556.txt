@@ -1,0 +1,34 @@
+; Original class: LimitTimeTaskChildData
+; Type4702..ctor; wasmcode function 18846; offset=8500046 size=97
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0081b34f  i32.const [5001268]
+0081b354  i32.load8_u [0, 0]
+0081b357  i32.eqz []
+0081b358  if [-64]
+0081b35a    i32.const [3931748]
+0081b35f    call [900] ;
+0081b362    i32.const [3974832]
+0081b367    call [900] ;
+0081b36a    i32.const [3923456]
+0081b36f    call [900] ;
+0081b372    i32.const [5001268]
+0081b377    i32.const [1]
+0081b379    i32.store8 [0, 0]
+0081b37c  end []
+0081b37d  i32.const [3923456]
+0081b382  i32.load [2, 0]
+0081b385  call [903] ;
+0081b388  local.set [1]
+0081b38a  local.get [1]
+0081b38c  i32.const [3974832]
+0081b391  i32.load [2, 0]
+0081b394  call [944] ;
+0081b397  local.get [0]
+0081b399  local.get [1]
+0081b39b  i32.store [2, 8]
+0081b39e  local.get [0]
+0081b3a0  i32.const [3931748]
+0081b3a5  i32.load [2, 0]
+0081b3a8  call [903] ;
+0081b3ab  i32.store [2, 12]
+0081b3ae  end []

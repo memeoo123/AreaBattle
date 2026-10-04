@@ -1,0 +1,22 @@
+; Original class: RedDotItemBase
+; Type4457.OnDestroy; wasmcode1 function 53246; offset=17715773 size=57
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+010e523e  i32.const [5009809]
+010e5243  i32.load8_u [0, 0]
+010e5246  i32.eqz []
+010e5247  if [-64]
+010e5249    i32.const [3953528]
+010e524e    i32.const [1605]
+010e5251    call_indirect [0, 0]
+010e5254    i32.const [5009809]
+010e5259    i32.const [1]
+010e525b    i32.store8 [0, 0]
+010e525e  end []
+010e525f  i32.const [3953528]
+010e5264  i32.load [2, 0]
+010e5267  i32.const [10272]
+010e526b  call_indirect [2, 0]
+010e526e  local.get [0]
+010e5270  local.get [0]
+010e5272  call [12093] ; RedDotControl.RemoveItem
+010e5275  end []

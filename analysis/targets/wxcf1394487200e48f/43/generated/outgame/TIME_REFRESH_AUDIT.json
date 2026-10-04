@@ -1,0 +1,107 @@
+{
+  "status": "native-automatic-crossday-verified-main-pending",
+  "atUtc": "2026-10-03T08:51:25.272873+00:00",
+  "sourceEvidence": "TIME_REFRESH_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:51:25.272873+00:00",
+    "scope": "Source TimeToRefreshControl4589 public scheduler/V1/V2 plus native automatic offnet daily reset, file restart and scaled cleanup",
+    "checksPassed": 1203,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": true,
+    "nativeChecks": 15,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2295,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTimeToRefreshPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Duration-based refresh, hour alignment/previous-day fallback, duplicate due countdowns, single-pass scaled timer, release-clock fallback, V1/V2 coalescing/removal and source existing-key countdown quirk verified.",
+      "Live list/dictionary mutation, callback exceptions with committed boundary, null keyed callbacks, unvalidated intervals and reference-identity array keys preserve source public-path behavior. Obfuscated alternate loops are not asserted equivalent.",
+      "Native actual Update advances scheduler; concrete offnet WaitUntil registers with singleton; automatic initial/next-day callbacks reset and save gzip file. New owner graph restores timestamps/counts without same-day duplicate refresh.",
+      "Native ordinary ExitGame clears immediately; awaited WaitForSeconds(.1f) cleanup remains pending during pause, completes after scaled resume, and leaves singleton; destruction clears/unsubscribes.",
+      "SDK timestamps/release flags and ad/item result messages are controlled explicit inputs. Binding to actual production GameFrameEntry/SDK/HTTP/account/Main/activity owners remains pending.",
+      "Native log retains independent UnityEditor.Search startup ArgumentOutOfRangeException, separate from15 passing assertions. No fresh Player or source audiovisual acceptance in this batch."
+    ],
+    "notClaimed": "Production SDK/HTTP/account/Main/common-module composition, activities/remaining20 controllers/full business, Player/original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameTimeToRefreshControl.cs"
+  ],
+  "checks": [
+    {
+      "id": "time-refresh-duration-boundary-and-double-countdown",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-midnight-is-not-duration-and-hour-rolls-back",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-scaled-single-pass-release-clock-and-nan",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-group-merge-reference-keys-and-existing-v2-countdown-quirk",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v2-order-empty-payload-and-dictionary-gated-countdown",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v1-removal-prunes-only-already-null-row",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v2-removal-whole-key-ignores-v1-and-countdowns",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-live-callback-mutation-and-exception-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-live-list-and-dictionary-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-null-keyed-callback-and-live-clear-failures",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Actual pool readiness prevents scheduler registration and launch count",
+    "Native singleton root reuses one component and one lifecycle subscription",
+    "Registration finishes during pause but scheduler waits for scaled time",
+    "First actual scheduler Update aligns midnight and resets daily count while retaining lifetime count",
+    "Automatic initial refresh persists through native owner Update and gzip file storage",
+    "Actual next-day scheduler tick resets daily data exactly at the duration boundary",
+    "Cross-day timestamp committed without invoking refresh callback from the harness",
+    "Real ordinary ExitGame message clears scheduler registry immediately",
+    "Native destruction removes scheduler lifecycle delegate after owner release",
+    "Independent owner graph restores automatic refresh timestamps and counts from compressed file",
+    "Restart registers fresh launch but actual scheduler ticks do not duplicate same-day reset",
+    "Disposal callback begins native scaled wait before clearing registry",
+    "Scaled cleanup stays pending during pause while queued owner removal completes",
+    "Native await clears registry after resume and retains source singleton/lifecycle subscription",
+    "Final destruction clears records and unregisters cleanup"
+  ],
+  "remaining": "Wire concrete statistics/refresh/common-module runtime to real GameFrameEntry/account/SDK/HTTP owners; restore ActivityManager/ActivityControl/SevenDay.EnterGameInit. Complete Main/remaining20 controllers/all business/save-restart/reward-return, then Player/source audiovisual acceptance."
+}

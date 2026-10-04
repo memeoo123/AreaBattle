@@ -1,0 +1,96 @@
+; Original class: JsonReader
+; Type10418..ctor; wasmcode function 7665; offset=3653852 size=264
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+0037c0dd  i32.const [4986457]
+0037c0e2  i32.load8_u [0, 0]
+0037c0e5  i32.eqz []
+0037c0e6  if [-64]
+0037c0e8    i32.const [3935156]
+0037c0ed    call [900] ; 
+0037c0f0    i32.const [3985316]
+0037c0f5    call [900] ; 
+0037c0f8    i32.const [3985300]
+0037c0fd    call [900] ; 
+0037c100    i32.const [3925608]
+0037c105    call [900] ; 
+0037c108    i32.const [4986457]
+0037c10d    i32.const [1]
+0037c10f    i32.store8 [0, 0]
+0037c112  end []
+0037c113  local.get [1]
+0037c115  i32.eqz []
+0037c116  if [-64]
+0037c118    i32.const [3928236]
+0037c11d    call [902] ; 
+0037c120    call [903] ; 
+0037c123    local.set [0]
+0037c125    local.get [0]
+0037c127    i32.const [4095336] ; STRING "reader"
+0037c12c    call [902] ; 
+0037c12f    i32.const [0]
+0037c131    i32.const [3161] ; TABLE ArgumentNullException..ctor
+0037c134    global.set [3]
+0037c136    i32.const [3161] ; TABLE ArgumentNullException..ctor
+0037c139    call_indirect [2, 0]
+0037c13c    local.get [0]
+0037c13e    i32.const [4004244] ; METHOD JsonReader..ctor
+0037c143    call [902] ; 
+0037c146    i32.const [1106]
+0037c149    global.set [3]
+0037c14b    i32.const [1106]
+0037c14e    call_indirect [0, 0]
+0037c151    unreachable []
+0037c152  end []
+0037c153  local.get [0]
+0037c155  i32.const [0]
+0037c157  i32.store8 [0, 30]
+0037c15a  local.get [0]
+0037c15c  i32.const [0]
+0037c15e  i32.store16 [1, 28]
+0037c161  i32.const [3925608]
+0037c166  i32.load [2, 0]
+0037c169  call [903] ; 
+0037c16c  local.set [3]
+0037c16e  local.get [3]
+0037c170  i32.const [3985300]
+0037c175  i32.load [2, 0]
+0037c178  call [944] ; 
+0037c17b  local.get [0]
+0037c17d  local.get [3]
+0037c17f  i32.store [2, 8]
+0037c182  local.get [0]
+0037c184  i32.load [2, 8]
+0037c187  i32.const [65553] ; TABLE <showTimeout>d__21.System.IDisposable.Dispose
+0037c18b  i32.const [3985316]
+0037c190  i32.load [2, 0]
+0037c193  call [3269] ; 
+0037c196  local.get [0]
+0037c198  i32.load [2, 8]
+0037c19b  i32.const [65543] ; TABLE DAUAdsAdapter.canRequest
+0037c19f  i32.const [3985316]
+0037c1a4  i32.load [2, 0]
+0037c1a7  call [3269] ; 
+0037c1aa  i32.const [3935156]
+0037c1af  i32.load [2, 0]
+0037c1b2  call [903] ; 
+0037c1b5  local.set [3]
+0037c1b7  local.get [3]
+0037c1b9  local.get [1]
+0037c1bb  local.get [0]
+0037c1bd  call [11573] ; Lexer..ctor
+0037c1c0  local.get [0]
+0037c1c2  local.get [3]
+0037c1c4  i32.store [2, 24]
+0037c1c7  local.get [0]
+0037c1c9  i32.const [1]
+0037c1cb  i32.store8 [0, 37]
+0037c1ce  local.get [0]
+0037c1d0  i32.const [0]
+0037c1d2  i32.store16 [1, 20]
+0037c1d5  local.get [0]
+0037c1d7  local.get [1]
+0037c1d9  i32.store [2, 32]
+0037c1dc  local.get [0]
+0037c1de  local.get [2]
+0037c1e0  i32.store8 [0, 36]
+0037c1e3  end []

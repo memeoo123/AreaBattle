@@ -1,0 +1,111 @@
+{
+  "status": "original-task-page-main-entry-verified-production-composition-pending",
+  "atUtc": "2026-10-03T13:17:58.529033+00:00",
+  "sourceEvidence": "TASK_PAGE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T13:17:58.529033+00:00",
+    "scope": "Original TaskPanelUI4416, TaskSingleton3990, main task opening route, native tabs/claim/close/reopen and task-record restart",
+    "checksPassed": 1521,
+    "newIntegratedChecks": 9,
+    "targetedChecks": 9,
+    "nativeChecks": 12,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2687,
+    "implementedLifecycleControllers": 20,
+    "remainingLifecycleControllers": 18,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTaskPagePlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "TaskSingleton3990 get_I resolves Activator.CreateInstance, assigns shared field BEFORE constrained ITaskSubUI.OnInit30755. Initialization failure keeps published instance, reentrant getter sees it, Clear is unconditional. Concrete generic instances3674/3675 are AchiTaskSubUI3986/DailyTaskSubUI3988. OutgameTaskSubviews is shared by all task pages in one application composition, alongside existing scoped controller owners.",
+      "TaskPanel ctor33870 calls BaseUI then writes Layer3 (UITip) and clears two animation fields. Original namespace Proj_hdzd.UI.MainMenu and resource TaskPanelUI original manifest retained. InitializeComponent33869 binds18 outlets in source order. Existing BaseUI load/open/close/resource/registry mechanisms own actual page lifecycle.",
+      "Awake33876 adds achievement then daily change handlers, daily then achievement generic pointer audio, acquires daily singleton, renders TopInfo mask6 at page layer, initializes original preview and liveness tiers then clears time text. OpenLater33878 initializes current view before registering close Button and Mask. Generic Toggle pointer uses source EventListener replacement semantics, with no Button global click message.",
+      "InitializeCurrent assigns RootUI and sets LateInited true BEFORE invoking OnLateInit, then daily red then achievement red. Render failure preserves true flag and partial rows; no implicit retry. GetTaskItem allocates unbound row before comparing against lazy achievement getter, then daily getter; comparisons can create unvisited subviews. Unknown current returns uninstantiated row. Known view instantiates original embedded template under selected content.",
+      "ToggleChanged early return only when true and selected matches. Otherwise effect close and content toggles run even on false. False then returns retaining selected/current. True stores selected, chooses known subview then InitializeCurrent. Effect failure precedes resetting handle and content changes. Existing row/late-init behavior is preserved across switches.",
+      "Countdown uses original Task.Refresh language key and String.Format after Daily view formats clock. SetTaskEmpty uses lazy singleton comparisons and routes only current view. Red dots use actual TaskControl original conditions and child2 under Toggle.",
+      "Close callback plays Audio.Play(1,new int[]{2001}) before CloseSelf. Button adds GF_UIButtonClick only after successful callback; Mask pointer does not. Base disposal precedes TaskPanel Dispose33875: TopInfo mask7 empty layer, lazy achievement OnDestroy, lazy daily OnDestroy, TaskControl.SetRedDot. No extra effect/preview/row disposal or list clearing is invented.",
+      "Original StartUI33679 registers taskBtn closure33726 then TaskControl.SetRedDot. Closure plays voice1/2001 then GameDefine.ShowUI<TaskPanelUI>(true). Shared32617 first gets existing UI, otherwise opens with Array.Empty<object>; existing page SetVisible only if visibility differs. New OutgameTaskEntryBinding uses actual original LeftBar/taskBtn and original registry, preserves existing-hidden show behavior, and does not invent refresh subscriptions or unlock gates.",
+      "Integrated and fresh native verification recorded separately. Explicit acquisition/audio/localization/sprite/effect/report test endpoints do not constitute complete production Main/account/platform composition.",
+      "Integrated retains32 existing ShouldRunBehaviour assertions, Curl35 certificate verification failure and Unity cloud configuration timeout. Native editor startup Search exception/Curl diagnostics remain separate from product checks. Initial native test wrongly expected in-memory reward fixture currency to persist; final test explicitly verifies disk-backed task claim/liveness and records fresh fixture currency separately."
+    ],
+    "notClaimed": "Production account currency persistence in this task-page fixture; full production Main/account/platform/effects/reports/audio/localization, original audiovisual equivalence or fresh Player."
+  },
+  "implementation": [
+    "Scripts/OutgameTaskSubviews.cs",
+    "Scripts/OutgameTaskPage.cs",
+    "Scripts/OutgameTaskEntryBinding.cs",
+    "Scripts/OutgameTaskRow.cs",
+    "Editor/OutgameTaskPageValidation.cs",
+    "Editor/OutgameTaskPagePlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "task-page-singleton-publication-reentry-failure-and-unconditional-clear",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-deferred-original-outlets-layer-and-real-subview-owner",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-toggle-late-init-once-false-event-and-effect-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-effect-failure-stops-tab-state-before-content",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-late-init-flag-is-written-before-render-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-countdown-empty-routing-unbound-row-and-pointer-audio",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-close-audio-before-hook-and-button-message",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-dispose-restores-top-clears-shared-owners-and-reopen",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-page-main-entry-original-button-open-show-and-audio-failure",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Native original main pointer publishes page and resource handle",
+    "Real two-frame load and OpenLater populate seven source daily rows on UITip",
+    "Actual TopInfo gold canvas follows task page layer",
+    "Native Toggle pointer initializes and displays original achievement rows",
+    "Native daily return retains original view and both toggle clicks play source audio",
+    "Native task claim starts source slide before award",
+    "Actual slide claim awards50 gold and updates page liveness/progress",
+    "Real asynchronous close removes registry, native object, resource handle and both singleton owners",
+    "Close restores actual top info original layer",
+    "Reopen creates fresh page/subviews and excludes actual claimed task",
+    "Native mask pointer completes page close",
+    "Independent task storage/activity/page restart restores actual claim and liveness"
+  ],
+  "remaining": "Compose Task/Achievement rewards with actual account ItemManager/LocalDataManager persistent storage and statistics owners, replacing the explicitly in-memory reward fixture for end-to-end currency restart proof. Continue production Main/account/platform/effect/report/audio/localization hosts, remaining18 controller lifecycles/all business and final Player/original audiovisual acceptance."
+}

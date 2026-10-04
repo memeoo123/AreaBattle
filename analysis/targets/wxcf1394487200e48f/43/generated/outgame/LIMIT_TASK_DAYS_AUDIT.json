@@ -1,0 +1,136 @@
+{
+  "status": "selection-and-original-day-list-verified-full-page-pending",
+  "atUtc": "2026-10-03T11:16:50.332142+00:00",
+  "sourceEvidence": "LIMIT_TASK_DAYS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T11:16:50.332142+00:00",
+    "scope": "Original shared selection provider/renderer and seven-day list/item binding with source-identity outlet resolution",
+    "checksPassed": 1377,
+    "newIntegratedChecks": 14,
+    "targetedChecks": 14,
+    "nativeChecks": 9,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2482,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameLimitTaskDaysPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "Source shared selection provider/renderer11 generic methods plus compiler default-duration wrapper restored; normal page4338 adds13 methods. Evidence18 normal methods,15 fields,23 usages; normal index5991. Selection lives on source task/day data. SetSelect preserves transition-before-callback, count after select, live data scan, GetHashCode-based deselection and optional centering. Refresh replays selection after rendering; hash collisions, callback mutation and failures verified.",
+      "CommonLimitTimeTaskPageItem binds actual child1301 and original seven day rows. Normal Button/locked Image/selected Image/name/red outlets, localization side effects before Chinese day-label overwrite, current-day gate, button selection message, single-row hiding, short-array/unbox failure behavior and DynamicBaseItem ownership/listener disposal restored. The page event endpoint is observed; complete page task refresh remains pending.",
+      "Two original sibling Scroll Views share a name. Original source-object IDs now determine exported outlet paths; runtime importer adapter walks preserved sibling topology. Exact day-list component6678087315481976053 is bound with its own scroll reference, leading30/spacing30/single fixed column and non-recycling settings. Previous static import layout stays unchanged; prior raw outlet name paths were ambiguous.",
+      "Integrated1377 including14 new passes. Native9 proves actual DynamicList LateUpdate, original button pointers and locked day, concrete statistic10015 to original task progress and day red, selected-page replay after native list refresh, common-message red clearing, and persistent native row after DynamicBaseItem disposal with listeners removed.",
+      "Integrated log retains32 existing ShouldRunBehaviour assertions and one Curl42; native log one UnityEditor.Search startup indexing ArgumentOutOfRangeException and one Curl42; final runs have no compiler errors. Initial compile attempt failed on a new test variable name collision, corrected and initial log retained. Native-only runner added after integrated pass and then compiled/passed; gameplay and integrated test sources unchanged.",
+      "All recorded inputs match isolated project. No new Player build, whole-page task/accumulator/preview/main/menu acceptance, platform success or original audiovisual equivalence claimed. Lifecycle19/38 unchanged."
+    ],
+    "notClaimed": "Task rows, accumulator/preview/full page, production menu/Main/account/platform/all business, remaining19 controllers, Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameDynamicSelection.cs",
+    "Scripts/OutgameLimitTaskPageItem.cs",
+    "Scripts/OutgameLimitTaskDayListBinding.cs",
+    "Scripts/OutgameLimitTaskModels.cs",
+    "Scripts/OutgameImportedUiOutlets.cs",
+    "Editor/OutgameDynamicSelectionValidation.cs",
+    "Editor/OutgameLimitTaskDaysValidation.cs",
+    "Editor/OutgameLimitTaskDaysPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "dynamic-selection-visible-offscreen-and-render-selected-after-scroll",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-selection-source-hash-collision-retains-multiple-selected-rows",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-selection-callback-mutation-captures-post-select-count-and-live-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-selection-selection-and-deselection-exceptions-keep-written-flags",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-selection-negative-empty-and-invalid-positive-index-contract",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-selection-renderer-rereads-region-after-render-and-missing-selection-interface",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-duplicate-source-scroll-names-resolve-distinct-outlets",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-original-seven-day-label-lock-and-selection-message",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-actual-task-red-refresh-filters-and-render-selection-replay",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-language-callback-rereads-day-and-source-partial-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-malformed-message-retains-original-short-array-and-unbox-failures",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-select-callback-single-row-hiding-and-no-dirty-write",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-programmatic-locked-selection-and-deselection-have-no-extra-gate",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-days-dispose-keeps-native-row-removes-subscriptions-and-runtime-button-listeners",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Actual imported CommonLimitTimeTaskUI day scroll and original day-item prefabs, native DynamicList LateUpdate, pointer selection, concrete limited-task statistics/red notifications and disposal. Full task/accumulator/preview/page lifecycle/menu/Main/Player and audiovisual acceptance pending.",
+    "checks": [
+      "Native LateUpdate renders original day rows in correct same-name scroll view",
+      "Original native button pointers dispatch page selection and deselect previous day",
+      "Locked original day has no active normal button",
+      "Actual statistic10015 updates original task and subscribed day red point",
+      "Native refresh renders data then replays selected page callback",
+      "Actual common activity refresh clears completed day's red point",
+      "Dynamic item disposal clears ownership while preserving native pooled row",
+      "Disposed original button removes selection handler",
+      "Non-recycling source row survives disposal across native frames until page owner destroys it"
+    ]
+  },
+  "remaining": "Restore CommonLimitTimeTaskItem task rows, LimitTimeTaskAccItem, SevendayAccPreviewItem and complete CommonLimitTimeTaskUI page lifecycle/refresh/claims over the recovered day selection list, then production seven-day menu/red entry. Continue Task/Achievement, full Main/account/SDK/HTTP/scene hosts, remaining19 controllers/all business/rewards/return, final Player and original audiovisual acceptance."
+}

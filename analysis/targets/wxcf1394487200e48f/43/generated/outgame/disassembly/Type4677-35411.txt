@@ -1,0 +1,24 @@
+; Original class: LivenessItemData
+; Type4677.get_Config; wasmcode function 4960; offset=1714289 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001a2872  local.get [0]
+001a2874  i32.load [2, 20]
+001a2877  local.set [1]
+001a2879  local.get [1]
+001a287b  i32.eqz []
+001a287c  if [-64]
+001a287e    local.get [0]
+001a2880    i32.const [0]
+001a2882    call [1189] ; ActivityConfigMgr.get_I
+001a2885    local.get [0]
+001a2887    i32.load [2, 8]
+001a288a    i32.const [0]
+001a288c    call [8357] ; ActivityConfigMgr.GetLivenessConfig
+001a288f    i32.store [2, 20]
+001a2892    local.get [0]
+001a2894    i32.load [2, 20]
+001a2897    local.set [1]
+001a2899  end []
+001a289a  local.get [1]
+001a289c  return []
+001a289d  end []

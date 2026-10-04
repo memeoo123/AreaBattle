@@ -11,7 +11,9 @@ namespace AreaBattle
         public int DefaultEase=6; // Recovered DOTween defaultEaseType = OutQuad.
         public int Count=>active.Count;
         public void To(Func<float> read,Action<float> write,float end,float duration,Action completed)
-        {active.Add(new Tween{Read=read,Write=write,End=end,Duration=duration,Complete=completed,Ease=DefaultEase});}
+        {To(read,write,end,duration,completed,DefaultEase);}
+        public void To(Func<float> read,Action<float> write,float end,float duration,Action completed,int ease)
+        {active.Add(new Tween{Read=read,Write=write,End=end,Duration=duration,Complete=completed,Ease=ease});}
         public void Advance(float scaledDelta)
         {
             if(scaledDelta>-.000001f&&scaledDelta<.000001f)return;

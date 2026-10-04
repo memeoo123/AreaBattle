@@ -1,0 +1,190 @@
+; Original class: ChildLimitTimeTaskActivity
+; Type4698.o|R{pl; wasmcode function 8135; offset=3866781 size=503
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(3, 127)]
+003b00a0  global.get [0]
+003b00a2  i32.const [16]
+003b00a4  i32.sub []
+003b00a5  local.set [3]
+003b00a7  local.get [3]
+003b00a9  global.set [0]
+003b00ab  i32.const [0]
+003b00ad  local.set [2]
+003b00af  i32.const [5001463]
+003b00b4  i32.load8_u [0, 0]
+003b00b7  i32.eqz []
+003b00b8  if [-64]
+003b00ba    i32.const [3929208]
+003b00bf    call [900] ;
+003b00c2    i32.const [3934404]
+003b00c7    call [900] ;
+003b00ca    i32.const [3974852]
+003b00cf    call [900] ;
+003b00d2    i32.const [3974856]
+003b00d7    call [900] ;
+003b00da    i32.const [3926996]
+003b00df    call [900] ;
+003b00e2    i32.const [3984764]
+003b00e7    call [900] ;
+003b00ea    i32.const [3984780]
+003b00ef    call [900] ;
+003b00f2    i32.const [4102720] ; STRING "不包含day为{0}的任务"
+003b00f7    call [900] ;
+003b00fa    i32.const [4102724] ; STRING "不包含id为{0}的任务"
+003b00ff    call [900] ;
+003b0102    i32.const [5001463]
+003b0107    i32.const [1]
+003b0109    i32.store8 [0, 0]
+003b010c  end []
+003b010d  i32.const [0]
+003b010f  call [1189] ; ActivityConfigMgr.get_I
+003b0112  local.get [1]
+003b0114  i32.const [0]
+003b0116  call [8355] ; ActivityConfigMgr.GetNoviceTaskConfig
+003b0119  local.set [4]
+003b011b  block [-64]
+003b011d    local.get [0]
+003b011f    i32.load [2, 80]
+003b0122    local.get [4]
+003b0124    i32.load [2, 16]
+003b0127    i32.const [3984764]
+003b012c    i32.load [2, 0]
+003b012f    call [5661] ;
+003b0132    if [-64]
+003b0134      loop [-64]
+003b0136        local.get [0]
+003b0138        i32.load [2, 80]
+003b013b        local.get [4]
+003b013d        i32.load [2, 16]
+003b0140        i32.const [3984780]
+003b0145        i32.load [2, 0]
+003b0148        call [4260] ;
+003b014b        local.set [5]
+003b014d        i32.const [3974852]
+003b0152        i32.load [2, 0]
+003b0155        drop []
+003b0156        local.get [2]
+003b0158        local.get [5]
+003b015a        i32.load [2, 12]
+003b015d        i32.lt_s []
+003b015e        if [-64]
+003b0160          local.get [1]
+003b0162          local.get [0]
+003b0164          i32.load [2, 80]
+003b0167          local.get [4]
+003b0169          i32.load [2, 16]
+003b016c          i32.const [3984780]
+003b0171          i32.load [2, 0]
+003b0174          call [4260] ;
+003b0177          local.get [2]
+003b0179          i32.const [3974856]
+003b017e          i32.load [2, 0]
+003b0181          call [930] ;
+003b0184          i32.load [2, 8]
+003b0187          i32.eq []
+003b0188          if [-64]
+003b018a            local.get [0]
+003b018c            i32.load [2, 80]
+003b018f            local.get [4]
+003b0191            i32.load [2, 16]
+003b0194            i32.const [3984780]
+003b0199            i32.load [2, 0]
+003b019c            call [4260] ;
+003b019f            local.get [2]
+003b01a1            i32.const [3974856]
+003b01a6            i32.load [2, 0]
+003b01a9            call [930] ;
+003b01ac            local.set [2]
+003b01ae            br [4]
+003b01b0          end []
+003b01b1          local.get [2]
+003b01b3          i32.const [1]
+003b01b5          i32.add []
+003b01b6          local.set [2]
+003b01b8          br [1]
+003b01ba        end []
+003b01bb      end []
+003b01bc      i32.const [0]
+003b01be      local.set [2]
+003b01c0      i32.const [3926996]
+003b01c5      i32.load [2, 0]
+003b01c8      i32.const [1]
+003b01ca      call [909] ;
+003b01cd      local.set [0]
+003b01cf      local.get [3]
+003b01d1      local.get [1]
+003b01d3      i32.store [2, 12]
+003b01d6      i32.const [3934404]
+003b01db      i32.load [2, 0]
+003b01de      local.get [3]
+003b01e0      i32.const [12]
+003b01e2      i32.add []
+003b01e3      call [910] ;
+003b01e6      local.set [1]
+003b01e8      i32.const [4102724] ; STRING "不包含id为{0}的任务"
+003b01ed      i32.load [2, 0]
+003b01f0      local.get [1]
+003b01f2      i32.const [0]
+003b01f4      call [1015] ; String.Format
+003b01f7      local.set [1]
+003b01f9      local.get [0]
+003b01fb      local.get [1]
+003b01fd      call [905] ;
+003b0200      local.get [0]
+003b0202      local.get [1]
+003b0204      i32.store [2, 16]
+003b0207      i32.const [3929208]
+003b020c      i32.load [2, 0]
+003b020f      call [901] ;
+003b0212      local.get [0]
+003b0214      i32.const [0]
+003b0216      i32.const [2087] ; TABLE CLog.Error
+003b0219      global.set [3]
+003b021b      i32.const [2087] ; TABLE CLog.Error
+003b021e      call_indirect [0, 0]
+003b0221      br [1]
+003b0223    end []
+003b0224    i32.const [3926996]
+003b0229    i32.load [2, 0]
+003b022c    i32.const [1]
+003b022e    call [909] ;
+003b0231    local.set [0]
+003b0233    local.get [3]
+003b0235    local.get [4]
+003b0237    i32.load [2, 16]
+003b023a    i32.store [2, 8]
+003b023d    i32.const [3934404]
+003b0242    i32.load [2, 0]
+003b0245    local.get [3]
+003b0247    i32.const [8]
+003b0249    i32.add []
+003b024a    call [910] ;
+003b024d    local.set [1]
+003b024f    i32.const [4102720] ; STRING "不包含day为{0}的任务"
+003b0254    i32.load [2, 0]
+003b0257    local.get [1]
+003b0259    i32.const [0]
+003b025b    call [1015] ; String.Format
+003b025e    local.set [1]
+003b0260    local.get [0]
+003b0262    local.get [1]
+003b0264    call [905] ;
+003b0267    local.get [0]
+003b0269    local.get [1]
+003b026b    i32.store [2, 16]
+003b026e    i32.const [3929208]
+003b0273    i32.load [2, 0]
+003b0276    call [901] ;
+003b0279    local.get [0]
+003b027b    i32.const [0]
+003b027d    i32.const [2087] ; TABLE CLog.Error
+003b0280    global.set [3]
+003b0282    i32.const [2087] ; TABLE CLog.Error
+003b0285    call_indirect [0, 0]
+003b0288  end []
+003b0289  local.get [3]
+003b028b  i32.const [16]
+003b028d  i32.add []
+003b028e  global.set [0]
+003b0290  local.get [2]
+003b0292  return []
+003b0293  end []

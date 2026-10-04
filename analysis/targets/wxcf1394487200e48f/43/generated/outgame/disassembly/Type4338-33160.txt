@@ -1,0 +1,17 @@
+; Original class: CommonLimitTimeTaskPageItem
+; Type4338.mwWhi; wasmcode function 6194; offset=2216165 size=34
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0021d0e6  local.get [0]
+0021d0e8  i32.load [2, 40]
+0021d0eb  local.get [0]
+0021d0ed  i32.load [2, 52]
+0021d0f0  i32.load [2, 12]
+0021d0f3  i32.const [0]
+0021d0f5  call [8138] ; ChildLimitTimeTaskActivity.ExitRewardWaitGet
+0021d0f8  local.set [1]
+0021d0fa  local.get [0]
+0021d0fc  i32.load [2, 72]
+0021d0ff  local.get [1]
+0021d101  i32.const [0]
+0021d103  call [949] ; GameObject.SetActive
+0021d106  end []

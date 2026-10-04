@@ -1,0 +1,16 @@
+; Original class: DynamicList
+; Type3868.GetSpaceListLength; wasmcode1 function 64267; offset=20502868 size=24
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0138d955  local.get [0]
+0138d957  i32.load [2, 72]
+0138d95a  local.set [0]
+0138d95c  local.get [0]
+0138d95e  i32.eqz []
+0138d95f  if [-64]
+0138d961    i32.const [0]
+0138d963    return []
+0138d964  end []
+0138d965  local.get [0]
+0138d967  i32.load [2, 12]
+0138d96a  return []
+0138d96b  end []

@@ -3,7 +3,7 @@ namespace AreaBattle
 {
     // Source ProcedureManager28658..28664. FSM manager owns ticking.
     public interface IOutgameProcedureManager {}
-    public sealed class OutgameProcedureManager:IOutgameStartupModule,IOutgameProcedureManager
+    public sealed class OutgameProcedureManager:IOutgameFrameModule,IOutgameProcedureManager
     {
         readonly Func<OutgameFsmManager> getFsmManager;
         OutgameFsmManager manager;
@@ -20,6 +20,7 @@ namespace AreaBattle
         }
         public void StartProcedure<T>() where T:IOutgameFsmState<IOutgameProcedureManager>
         {if(ProcedureFsm==null)throw new OutgameFrameworkException("You must initialize procedure first.");ProcedureFsm.Start<T>(Array.Empty<object>());}
+        void IOutgameFrameModule.Initialize(object[] args)=>Initialize();
         public void Start(){}
         public void Update(float deltaTime,float unscaledDeltaTime){}
         public void Shutdown()

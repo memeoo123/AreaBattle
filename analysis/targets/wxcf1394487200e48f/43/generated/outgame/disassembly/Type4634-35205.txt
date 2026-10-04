@@ -1,0 +1,23 @@
+; Original class: PubActivityConfigFormatter
+; Type4634.Deserialize; wasmcode1 function 54050; offset=17913831 size=59
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+011157e8  i32.const [5001713]
+011157ed  i32.load8_u [0, 0]
+011157f0  i32.eqz []
+011157f1  if [-64]
+011157f3    i32.const [3937364]
+011157f8    i32.const [1605]
+011157fb    call_indirect [0, 0]
+011157fe    i32.const [5001713]
+01115803    i32.const [1]
+01115805    i32.store8 [0, 0]
+01115808  end []
+01115809  i32.const [3937364]
+0111580e  i32.load [2, 0]
+01115811  i32.const [1149]
+01115814  call_indirect [0, 0]
+01115817  local.get [1]
+01115819  local.get [2]
+0111581b  local.get [1]
+0111581d  call [24241] ; PubActivityConfig.Deserialize
+01115821  end []

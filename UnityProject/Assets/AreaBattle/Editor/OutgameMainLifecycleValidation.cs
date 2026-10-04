@@ -6,7 +6,7 @@ namespace AreaBattle.EditorTools
     public static class OutgameMainLifecycleValidation
     {
         sealed class Manager:IOutgameDataManager
-        {public bool ParticipatesInSync{get;set;}public bool CompressData{get;set;}public string DataKey=>"fixture";public Action Save;public void OnInit(){}public void OnSave(){Save();}}
+        {public bool ParticipatesInSync{get;set;}public bool CompressData{get;set;}public string DataKey=>"fixture";public Action Save;public void OnInit(){}public void OnRelease(){}public void OnSave(){Save();}}
         public static BattleBuild.Report Run()
         {
             var report=new BattleBuild.Report{passed=true,unityVersion=Application.unityVersion};

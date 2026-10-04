@@ -1,0 +1,22 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Actual source refresh singleton/Unity Update, offnet readiness coroutine, compressed file save/restart, ExitGame and scaled await cleanup. SDK clock values/result messages are explicit test inputs; no production Main, platform response or Player claim.",
+    "checks": [
+        "Actual pool readiness prevents scheduler registration and launch count",
+        "Native singleton root reuses one component and one lifecycle subscription",
+        "Registration finishes during pause but scheduler waits for scaled time",
+        "First actual scheduler Update aligns midnight and resets daily count while retaining lifetime count",
+        "Automatic initial refresh persists through native owner Update and gzip file storage",
+        "Actual next-day scheduler tick resets daily data exactly at the duration boundary",
+        "Cross-day timestamp committed without invoking refresh callback from the harness",
+        "Real ordinary ExitGame message clears scheduler registry immediately",
+        "Native destruction removes scheduler lifecycle delegate after owner release",
+        "Independent owner graph restores automatic refresh timestamps and counts from compressed file",
+        "Restart registers fresh launch but actual scheduler ticks do not duplicate same-day reset",
+        "Disposal callback begins native scaled wait before clearing registry",
+        "Scaled cleanup stays pending during pause while queued owner removal completes",
+        "Native await clears registry after resume and retains source singleton/lifecycle subscription",
+        "Final destruction clears records and unregisters cleanup"
+    ]
+}

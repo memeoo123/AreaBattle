@@ -1,0 +1,42 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.{j; wasmcode function 19535; offset=8782517 size=114
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[(1, 126)]
+008602b8  i32.const [5001648]
+008602bd  i32.load8_u [0, 0]
+008602c0  i32.eqz []
+008602c1  if [-64]
+008602c3    i32.const [3930616]
+008602c8    call [900] ; 
+008602cb    i32.const [3932476]
+008602d0    call [900] ; 
+008602d3    i32.const [3940172]
+008602d8    call [900] ; 
+008602db    i32.const [5001648]
+008602e0    i32.const [1]
+008602e2    i32.store8 [0, 0]
+008602e5  end []
+008602e6  i32.const [3932476]
+008602eb  i32.load [2, 0]
+008602ee  call [901] ; 
+008602f1  i32.const [0]
+008602f3  call [1585] ; GlobalData.get_IsReleaseVersion
+008602f6  if [-64]
+008602f8    local.get [0]
+008602fa    local.get [0]
+008602fc    call [7802] ; GameStatisticsOffNetStrategy.TNx{oW
+008602ff    return []
+00860300  end []
+00860301  i32.const [3930616]
+00860306  i32.load [2, 0]
+00860309  call [901] ; 
+0086030c  i32.const [0]
+0086030e  call [1287] ; DateTime.get_Now
+00860311  local.set [3]
+00860313  i32.const [3940172]
+00860318  i32.load [2, 0]
+0086031b  call [901] ; 
+0086031e  local.get [3]
+00860320  i32.const [0]
+00860322  call [1474] ; TimeHelper.ToTimestampLong
+00860325  return []
+00860326  end []

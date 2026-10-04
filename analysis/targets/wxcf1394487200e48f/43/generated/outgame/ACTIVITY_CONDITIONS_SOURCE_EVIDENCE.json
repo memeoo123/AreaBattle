@@ -1,0 +1,178 @@
+{
+  "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+  "memorySha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "methods": [
+    {
+      "metadata": 35262,
+      "sourceClass": "ActivityItemData",
+      "method": "get_Config",
+      "path": "disassembly/Type4642-35262.txt",
+      "sha256": "ff4225dae57c0812b20ce13449e7bce2dedb0d4c45fc1e62c06af7f8fd11f1aa"
+    },
+    {
+      "metadata": 35263,
+      "sourceClass": "ActivityItemData",
+      "method": "get_NoticeCondition",
+      "path": "disassembly/Type4642-35263.txt",
+      "sha256": "371b6eb6d68e86d1d2d644d1cf510df3f42fe865e90eb023dd3ef75182bfbdea"
+    },
+    {
+      "metadata": 35264,
+      "sourceClass": "ActivityItemData",
+      "method": "get_LaunchCondition",
+      "path": "disassembly/Type4642-35264.txt",
+      "sha256": "478bdb0ae54774edbf0c85664b0775eaa165e0b9326aedf38fec25f5e8d97ef2"
+    },
+    {
+      "metadata": 35265,
+      "sourceClass": "ActivityItemData",
+      "method": "get_OverCondition",
+      "path": "disassembly/Type4642-35265.txt",
+      "sha256": "590b237ddb0f2a30bc048fab961603dc69ea0acdf532aec9018e2aac9cf77268"
+    },
+    {
+      "metadata": 35266,
+      "sourceClass": "ActivityItemData",
+      "method": "get_CloseCondition",
+      "path": "disassembly/Type4642-35266.txt",
+      "sha256": "40029a1917fbf394b8fc6cbde87a0b0398cc72f5dac138fc5d4cc8b59e36bd75"
+    },
+    {
+      "metadata": 35369,
+      "sourceClass": "ActivityStateBase",
+      "method": "lnUs^X",
+      "path": "disassembly/Type4667-35369.txt",
+      "sha256": "14b045ff52d3d8d09faee7c3601c059a6f9cc949225917f169573c7ec2564817"
+    }
+  ],
+  "fields": [
+    {
+      "owner": 4642,
+      "name": "id",
+      "offset": 8,
+      "typeCode": 8,
+      "typeData": 215
+    },
+    {
+      "owner": 4642,
+      "name": "state",
+      "offset": 12,
+      "typeCode": 17,
+      "typeData": 4666
+    },
+    {
+      "owner": 4642,
+      "name": "noticePop",
+      "offset": 16,
+      "typeCode": 2,
+      "typeData": 154
+    },
+    {
+      "owner": 4642,
+      "name": "launchPop",
+      "offset": 17,
+      "typeCode": 2,
+      "typeData": 154
+    },
+    {
+      "owner": 4642,
+      "name": "uniqueId",
+      "offset": 20,
+      "typeCode": 14,
+      "typeData": 102
+    },
+    {
+      "owner": 4642,
+      "name": "LaunchTimeStamp",
+      "offset": 24,
+      "typeCode": 10,
+      "typeData": 216
+    },
+    {
+      "owner": 4642,
+      "name": "WarmTimeStamp",
+      "offset": 32,
+      "typeCode": 10,
+      "typeData": 216
+    },
+    {
+      "owner": 4642,
+      "name": "m_config",
+      "offset": 40,
+      "typeCode": 18,
+      "typeData": 4635
+    },
+    {
+      "owner": 4642,
+      "name": "m_NoticeCondition",
+      "offset": 44,
+      "typeCode": 29,
+      "typeData": 3574276
+    },
+    {
+      "owner": 4642,
+      "name": "m_LaunchCondition",
+      "offset": 48,
+      "typeCode": 29,
+      "typeData": 3574276
+    },
+    {
+      "owner": 4642,
+      "name": "m_OverCondition",
+      "offset": 52,
+      "typeCode": 29,
+      "typeData": 3574276
+    },
+    {
+      "owner": 4642,
+      "name": "m_CloseCondition",
+      "offset": 56,
+      "typeCode": 29,
+      "typeData": 3574276
+    },
+    {
+      "owner": 4643,
+      "name": "key",
+      "offset": 8,
+      "typeCode": 8,
+      "typeData": 215
+    },
+    {
+      "owner": 4643,
+      "name": "value",
+      "offset": 16,
+      "typeCode": 10,
+      "typeData": 216
+    },
+    {
+      "owner": 4643,
+      "name": "arg",
+      "offset": 24,
+      "typeCode": 29,
+      "typeData": 3554252
+    },
+    {
+      "owner": 3767,
+      "name": "m_EventHandlers",
+      "offset": 0,
+      "typeCode": 21,
+      "typeData": 3702972
+    }
+  ],
+  "genericEvidence": "fsm-event-generics.json",
+  "findings": [
+    "ActivityItemData.Config35262 caches nonnull ActivityConfigMgr.GetActivityConfig(id); null retries, changing id/owner catalog does not invalidate previously cached reference. Required application-domain ConfigurationResolver exposes that original lookup dependency, with no default catalog.",
+    "35263..35266 use identical logic and separate caches44/48/52/56 for notice/launch/over/close. Each allocates Condition[] using PARAMETER length before parsing, repeatedly reads cached Config fields, writes key before converting. Short type arrays or null text retain partially filled cache; failures before allocation can retry. No cache repair on later access.",
+    "Condition4643 is a value type with int key, long value and object[] arg (unboxed layout size24). Type10000 exact invariant yyyyMMddHHmmss yields original timestamp or0; leaves arg null. Other types Split underscore, allocate args length-1, int.TryParse every preceding token (invalid/overflow becomes boxed0), long.TryParse last token (invalid/overflow becomes0). No logging or silent condition skipping on this runtime path.",
+    "ActivityStateBase35369 checks owner.config.open first; any nonzero enabled,0 returns false without array reads. Loops supplied type IDs rather than cached keys, passes cached arg array identity to GameStatisticsExpansion.GameValue and reads cached target after provider returns. Stops at first actual<target; empty enabled array true. This differs from ActivityNetStrategyBase35309 plain numeric/date loading-time checks.",
+    "Fsm FireEvent29267/29268 captures current state, rejects null with Current state is invalid., calls state.OnEvent with same FSM/sender/eventId and null or exact userData. Event dispatch does not change current time, catch errors or queue work.",
+    "FsmState29292 owns new Dictionary<int,FsmEventHandler<T>>. Subscribe29299 rejects null handler, sets missing key or Delegate.Combine existing value. Unsubscribe29300 rejects null even when key missing, Delegate.Remove one matching occurrence, retains null-valued key. OnEvent29302 TryGetValue then invokes captured nonnull multicast delegate, preserving snapshot/reentry and exception stop order.",
+    "Base state29293..29297 methods, including BOTH OnEnter overloads, are independent no-ops. OnDestroy29298 clears event dictionary, without FSM validation. ChangeState29301 casts original IFsm to concrete FSM, throws FSM is invalid. on null/incompatible, otherwise forwards generic target/args. Recovered API already uses concrete OutgameFsm and therefore preserves null validation/forwarding without an alternate IFsm implementation surface.",
+    "Verification includes original local PubActivityConfig fields, private-cache exclusion from JSON and reconstruction; actual recovered statistics item count10700 with parsed argument8/target4 drives real OutgameFsm transition and FsmManager shutdown. The state scenario is an Editor fixture, not the full activity-state restoration."
+  ],
+  "boundaries": [
+    "76 ActivityBase/four concrete states/base-state methods extracted for subsequent implementation; extraction is not completion. Only runtime condition method35369 is implemented in OutgameActivityConditions in this milestone.",
+    "Full ActivityControl/config owner/read lifecycle/ActivityBase/state-specific widgets/common-statistics listeners/SevenDay/ProcedurePreLoad/Main are pending. Legacy non-event IOutgameFsmState adapters have no registered event handlers and dispatch as an empty base state.",
+    "No native PlayMode or Player in this data/framework milestone. No activity UI or original audiovisual claim. Controller bindings remain18/38."
+  ]
+}

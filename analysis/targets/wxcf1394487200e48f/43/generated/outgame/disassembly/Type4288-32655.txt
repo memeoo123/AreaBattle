@@ -1,0 +1,202 @@
+; Original class: TimeUtility
+; Type4288.ToDDHHMMSS; wasmcode function 7015; offset=2670108 size=528
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(3, 127)]
+0028be1f  global.get [0]
+0028be21  i32.const [16]
+0028be23  i32.sub []
+0028be24  local.set [1]
+0028be26  local.get [1]
+0028be28  global.set [0]
+0028be2a  i32.const [5009198]
+0028be2f  i32.load8_u [0, 0]
+0028be32  i32.eqz []
+0028be33  if [-64]
+0028be35    i32.const [3977228]
+0028be3a    call [900] ; 
+0028be3d    i32.const [3977216]
+0028be42    call [900] ; 
+0028be45    i32.const [3977288]
+0028be4a    call [900] ; 
+0028be4d    i32.const [3923944]
+0028be52    call [900] ; 
+0028be55    i32.const [4104376] ; STRING "时"
+0028be5a    call [900] ; 
+0028be5d    i32.const [4105500] ; STRING "秒"
+0028be62    call [900] ; 
+0028be65    i32.const [4103664] ; STRING "天"
+0028be6a    call [900] ; 
+0028be6d    i32.const [4103104] ; STRING "分"
+0028be72    call [900] ; 
+0028be75    i32.const [5009198]
+0028be7a    i32.const [1]
+0028be7c    i32.store8 [0, 0]
+0028be7f  end []
+0028be80  i32.const [3923944]
+0028be85  i32.load [2, 0]
+0028be88  call [903] ; 
+0028be8b  local.set [2]
+0028be8d  local.get [2]
+0028be8f  i32.const [3977216]
+0028be94  i32.load [2, 0]
+0028be97  call [944] ; 
+0028be9a  local.get [0]
+0028be9c  i32.const [86400]
+0028bea0  i32.div_s []
+0028bea1  local.set [3]
+0028bea3  local.get [1]
+0028bea5  local.get [3]
+0028bea7  i32.store [2, 12]
+0028beaa  local.get [0]
+0028beac  local.get [3]
+0028beae  i32.const [86400]
+0028beb2  i32.mul []
+0028beb3  i32.sub []
+0028beb4  i32.const [3600]
+0028beb7  i32.div_s []
+0028beb8  local.set [4]
+0028beba  local.get [1]
+0028bebc  local.get [4]
+0028bebe  i32.store [2, 8]
+0028bec1  local.get [1]
+0028bec3  local.get [0]
+0028bec5  i32.const [60]
+0028bec7  i32.rem_s []
+0028bec8  i32.store [2, 0]
+0028becb  local.get [1]
+0028becd  local.get [0]
+0028becf  local.get [3]
+0028bed1  i32.const [86400]
+0028bed5  i32.mul []
+0028bed6  i32.sub []
+0028bed7  local.get [4]
+0028bed9  i32.const [3600]
+0028bedc  i32.mul []
+0028bedd  i32.sub []
+0028bede  i32.const [60]
+0028bee0  i32.div_s []
+0028bee1  i32.store [2, 4]
+0028bee4  block [-64]
+0028bee6    local.get [0]
+0028bee8    i32.const [86400]
+0028beec    i32.ge_s []
+0028beed    if [-64]
+0028beef      local.get [2]
+0028bef1      local.get [1]
+0028bef3      i32.const [12]
+0028bef5      i32.add []
+0028bef6      i32.const [0]
+0028bef8      call [966] ; Int32.ToString
+0028befb      i32.const [4103664] ; STRING "天"
+0028bf00      i32.load [2, 0]
+0028bf03      i32.const [0]
+0028bf05      call [921] ; String.Concat
+0028bf08      i32.const [3977228]
+0028bf0d      i32.load [2, 0]
+0028bf10      call [941] ; 
+0028bf13      local.get [2]
+0028bf15      local.get [1]
+0028bf17      i32.const [8]
+0028bf19      i32.add []
+0028bf1a      i32.const [0]
+0028bf1c      call [966] ; Int32.ToString
+0028bf1f      i32.const [2]
+0028bf21      i32.const [48]
+0028bf23      i32.const [0]
+0028bf25      call [2553] ; String.PadLeft
+0028bf28      i32.const [4104376] ; STRING "时"
+0028bf2d      i32.load [2, 0]
+0028bf30      i32.const [0]
+0028bf32      call [921] ; String.Concat
+0028bf35      i32.const [3977228]
+0028bf3a      i32.load [2, 0]
+0028bf3d      call [941] ; 
+0028bf40      local.get [2]
+0028bf42      i32.const [0]
+0028bf44      i32.const [3977288]
+0028bf49      i32.load [2, 0]
+0028bf4c      call [930] ; 
+0028bf4f      local.get [2]
+0028bf51      i32.const [1]
+0028bf53      i32.const [3977288]
+0028bf58      i32.load [2, 0]
+0028bf5b      call [930] ; 
+0028bf5e      i32.const [0]
+0028bf60      call [921] ; String.Concat
+0028bf63      local.set [0]
+0028bf65      br [1]
+0028bf67    end []
+0028bf68    local.get [2]
+0028bf6a    local.get [1]
+0028bf6c    i32.const [8]
+0028bf6e    i32.add []
+0028bf6f    i32.const [0]
+0028bf71    call [966] ; Int32.ToString
+0028bf74    i32.const [2]
+0028bf76    i32.const [48]
+0028bf78    i32.const [0]
+0028bf7a    call [2553] ; String.PadLeft
+0028bf7d    i32.const [4104376] ; STRING "时"
+0028bf82    i32.load [2, 0]
+0028bf85    i32.const [0]
+0028bf87    call [921] ; String.Concat
+0028bf8a    i32.const [3977228]
+0028bf8f    i32.load [2, 0]
+0028bf92    call [941] ; 
+0028bf95    local.get [2]
+0028bf97    local.get [1]
+0028bf99    i32.const [4]
+0028bf9b    i32.add []
+0028bf9c    i32.const [0]
+0028bf9e    call [966] ; Int32.ToString
+0028bfa1    i32.const [2]
+0028bfa3    i32.const [48]
+0028bfa5    i32.const [0]
+0028bfa7    call [2553] ; String.PadLeft
+0028bfaa    i32.const [4103104] ; STRING "分"
+0028bfaf    i32.load [2, 0]
+0028bfb2    i32.const [0]
+0028bfb4    call [921] ; String.Concat
+0028bfb7    i32.const [3977228]
+0028bfbc    i32.load [2, 0]
+0028bfbf    call [941] ; 
+0028bfc2    local.get [2]
+0028bfc4    local.get [1]
+0028bfc6    i32.const [0]
+0028bfc8    call [966] ; Int32.ToString
+0028bfcb    i32.const [2]
+0028bfcd    i32.const [48]
+0028bfcf    i32.const [0]
+0028bfd1    call [2553] ; String.PadLeft
+0028bfd4    i32.const [4105500] ; STRING "秒"
+0028bfd9    i32.load [2, 0]
+0028bfdc    i32.const [0]
+0028bfde    call [921] ; String.Concat
+0028bfe1    i32.const [3977228]
+0028bfe6    i32.load [2, 0]
+0028bfe9    call [941] ; 
+0028bfec    local.get [2]
+0028bfee    i32.const [0]
+0028bff0    i32.const [3977288]
+0028bff5    i32.load [2, 0]
+0028bff8    call [930] ; 
+0028bffb    local.get [2]
+0028bffd    i32.const [1]
+0028bfff    i32.const [3977288]
+0028c004    i32.load [2, 0]
+0028c007    call [930] ; 
+0028c00a    local.get [2]
+0028c00c    i32.const [2]
+0028c00e    i32.const [3977288]
+0028c013    i32.load [2, 0]
+0028c016    call [930] ; 
+0028c019    i32.const [0]
+0028c01b    call [955] ; String.Concat
+0028c01e    local.set [0]
+0028c020  end []
+0028c021  local.get [1]
+0028c023  i32.const [16]
+0028c025  i32.add []
+0028c026  global.set [0]
+0028c028  local.get [0]
+0028c02a  return []
+0028c02b  end []

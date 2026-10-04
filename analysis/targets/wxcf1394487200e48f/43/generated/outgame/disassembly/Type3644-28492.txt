@@ -1,0 +1,21 @@
+; Original class: WebRequestManager
+; Type3644.get_WorkingAgentCount; wasmcode1 function 39003; offset=14556683 size=52
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00de1e0c  i32.const [4987572]
+00de1e11  i32.load8_u [0, 0]
+00de1e14  i32.eqz []
+00de1e15  if [-64]
+00de1e17    i32.const [3988612]
+00de1e1c    i32.const [1605]
+00de1e1f    call_indirect [0, 0]
+00de1e22    i32.const [4987572]
+00de1e27    i32.const [1]
+00de1e29    i32.store8 [0, 0]
+00de1e2c  end []
+00de1e2d  local.get [0]
+00de1e2f  i32.load [2, 12]
+00de1e32  i32.const [3988612]
+00de1e37  i32.load [2, 0]
+00de1e3a  call [10822] ; 
+00de1e3d  return []
+00de1e3e  end []

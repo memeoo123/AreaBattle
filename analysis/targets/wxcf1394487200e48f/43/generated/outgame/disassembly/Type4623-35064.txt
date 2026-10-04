@@ -1,0 +1,244 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.UpdateDate; wasmcode function 19533; offset=8781856 size=642
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 125), (1, 126), (2, 127)]
+00860027  global.get [0]
+00860029  i32.const [16]
+0086002b  i32.sub []
+0086002c  local.set [1]
+0086002e  local.get [1]
+00860030  global.set [0]
+00860032  i32.const [5001638]
+00860037  i32.load8_u [0, 0]
+0086003a  i32.eqz []
+0086003b  if [-64]
+0086003d    i32.const [3989352]
+00860042    call [900] ; 
+00860045    i32.const [3930616]
+0086004a    call [900] ; 
+0086004d    i32.const [3932388]
+00860052    call [900] ; 
+00860055    i32.const [3940172]
+0086005a    call [900] ; 
+0086005d    i32.const [5001638]
+00860062    i32.const [1]
+00860064    i32.store8 [0, 0]
+00860067  end []
+00860068  local.get [1]
+0086006a  i64.const [0]
+0086006c  i64.store [3, 8]
+0086006f  local.get [0]
+00860071  i64.load [3, 24]
+00860074  i64.eqz []
+00860075  if [-64]
+00860077    local.get [0]
+00860079    local.get [0]
+0086007b    call [6042] ; GameStatisticsOffNetStrategy.[yPqYYq
+0086007e  end []
+0086007f  local.get [0]
+00860081  local.get [0]
+00860083  f32.load [2, 40]
+00860086  i32.const [0]
+00860088  call [1246] ; Time.get_deltaTime
+0086008b  f32.add []
+0086008c  f32.store [2, 40]
+0086008f  local.get [0]
+00860091  local.get [0]
+00860093  f32.load [2, 44]
+00860096  i32.const [0]
+00860098  call [1246] ; Time.get_deltaTime
+0086009b  f32.add []
+0086009c  f32.store [2, 44]
+0086009f  local.get [0]
+008600a1  local.get [0]
+008600a3  f32.load [2, 48]
+008600a6  i32.const [0]
+008600a8  call [1246] ; Time.get_deltaTime
+008600ab  f32.add []
+008600ac  f32.store [2, 48]
+008600af  block [-64]
+008600b1    local.get [0]
+008600b3    f32.load [2, 40]
+008600b6    local.set [3]
+008600b8    local.get [3]
+008600ba    f32.const [1.0]
+008600bf    f32.ge []
+008600c0    i32.eqz []
+008600c1    br_if [0]
+008600c3    local.get [0]
+008600c5    local.get [3]
+008600c7    f32.const [1.0]
+008600cc    f32.sub []
+008600cd    f32.store [2, 40]
+008600d0    local.get [0]
+008600d2    local.get [0]
+008600d4    call [7802] ; GameStatisticsOffNetStrategy.TNx{oW
+008600d7    local.set [4]
+008600d9    i32.const [3932388]
+008600de    i32.load [2, 0]
+008600e1    call [901] ; 
+008600e4    i32.const [10000]
+008600e8    local.get [4]
+008600ea    local.get [0]
+008600ec    call [2401] ; GameStatisticsExpansion.SetEventCount
+008600ef    local.get [0]
+008600f1    f32.load [2, 48]
+008600f4    local.set [3]
+008600f6    local.get [3]
+008600f8    f32.const [30.0]
+008600fd    f32.gt []
+008600fe    if [-64]
+00860100      local.get [0]
+00860102      local.get [3]
+00860104      f32.const [30.0]
+00860109      f32.sub []
+0086010a      f32.store [2, 48]
+0086010d      local.get [0]
+0086010f      call [1493] ; GameStatisticsControl.get_I
+00860112      i32.const [1]
+00860114      i32.store8 [0, 21]
+00860117    end []
+00860118    i32.const [3989352]
+0086011d    i32.load [2, 0]
+00860120    call [1032] ; 
+00860123    local.set [2]
+00860125    i32.const [3932388]
+0086012a    i32.load [2, 0]
+0086012d    call [901] ; 
+00860130    i32.const [10000]
+00860134    local.get [2]
+00860136    local.get [0]
+00860138    call [1568] ; GameStatisticsExpansion.GameValue
+0086013b    local.set [4]
+0086013d    i32.const [3940172]
+00860142    i32.load [2, 0]
+00860145    call [901] ; 
+00860148    local.get [1]
+0086014a    local.get [4]
+0086014c    i32.const [0]
+0086014e    call [1664] ; TimeHelper.ToDateTime
+00860151    i64.store [3, 8]
+00860154    i32.const [3930616]
+00860159    i32.load [2, 0]
+0086015c    call [901] ; 
+0086015f    local.get [1]
+00860161    i32.const [8]
+00860163    i32.add []
+00860164    i32.const [0]
+00860166    call [1782] ; DateTime.get_Hour
+00860169    local.set [2]
+0086016b    local.get [1]
+0086016d    i32.const [8]
+0086016f    i32.add []
+00860170    i32.const [0]
+00860172    call [2506] ; DateTime.get_DayOfWeek
+00860175    local.set [5]
+00860177    local.get [1]
+00860179    i32.const [8]
+0086017b    i32.add []
+0086017c    i32.const [0]
+0086017e    call [1628] ; DateTime.get_Day
+00860181    local.set [6]
+00860183    i32.const [10500]
+00860187    i32.const [3989352]
+0086018c    i32.load [2, 0]
+0086018f    call [1032] ; 
+00860192    local.get [0]
+00860194    call [1568] ; GameStatisticsExpansion.GameValue
+00860197    local.get [2]
+00860199    i64.extend_i32_s []
+0086019a    i64.ne []
+0086019b    if [-64]
+0086019d      i32.const [3932388]
+008601a2      i32.load [2, 0]
+008601a5      call [901] ; 
+008601a8      i32.const [10500]
+008601ac      local.get [0]
+008601ae      call [1480] ; GameStatisticsExpansion.MessageKey
+008601b1      i32.const [3989352]
+008601b6      i32.load [2, 0]
+008601b9      call [1032] ; 
+008601bc      i32.const [0]
+008601be      call [3392] ; CommonMsgDispatcher.SendMessageGetKey
+008601c1    end []
+008601c2    i32.const [3989352]
+008601c7    i32.load [2, 0]
+008601ca    call [1032] ; 
+008601cd    local.set [2]
+008601cf    i32.const [3932388]
+008601d4    i32.load [2, 0]
+008601d7    call [901] ; 
+008601da    i32.const [10501] ; TABLE AdsManager.ShowVideoStatic
+008601de    local.get [2]
+008601e0    local.get [0]
+008601e2    call [1568] ; GameStatisticsExpansion.GameValue
+008601e5    local.get [5]
+008601e7    i64.extend_i32_s []
+008601e8    i64.ne []
+008601e9    if [-64]
+008601eb      i32.const [3932388]
+008601f0      i32.load [2, 0]
+008601f3      call [901] ; 
+008601f6      i32.const [10501] ; TABLE AdsManager.ShowVideoStatic
+008601fa      local.get [0]
+008601fc      call [1480] ; GameStatisticsExpansion.MessageKey
+008601ff      i32.const [3989352]
+00860204      i32.load [2, 0]
+00860207      call [1032] ; 
+0086020a      i32.const [0]
+0086020c      call [3392] ; CommonMsgDispatcher.SendMessageGetKey
+0086020f    end []
+00860210    i32.const [3989352]
+00860215    i32.load [2, 0]
+00860218    call [1032] ; 
+0086021b    local.set [2]
+0086021d    i32.const [3932388]
+00860222    i32.load [2, 0]
+00860225    call [901] ; 
+00860228    i32.const [10502]
+0086022c    local.get [2]
+0086022e    local.get [0]
+00860230    call [1568] ; GameStatisticsExpansion.GameValue
+00860233    local.get [6]
+00860235    i64.extend_i32_s []
+00860236    i64.eq []
+00860237    br_if [0]
+00860239    i32.const [3932388]
+0086023e    i32.load [2, 0]
+00860241    call [901] ; 
+00860244    i32.const [10502]
+00860248    local.get [0]
+0086024a    call [1480] ; GameStatisticsExpansion.MessageKey
+0086024d    i32.const [3989352]
+00860252    i32.load [2, 0]
+00860255    call [1032] ; 
+00860258    i32.const [0]
+0086025a    call [3392] ; CommonMsgDispatcher.SendMessageGetKey
+0086025d  end []
+0086025e  local.get [0]
+00860260  f32.load [2, 44]
+00860263  local.set [3]
+00860265  local.get [3]
+00860267  f32.const [30.0]
+0086026c  f32.ge []
+0086026d  if [-64]
+0086026f    local.get [0]
+00860271    local.get [3]
+00860273    f32.const [30.0]
+00860278    f32.sub []
+00860279    f32.store [2, 44]
+0086027c    i32.const [3932388]
+00860281    i32.load [2, 0]
+00860284    call [901] ; 
+00860287    i32.const [10800]
+0086028b    i64.const [30]
+0086028d    local.get [0]
+0086028f    call [2087] ; GameStatisticsExpansion.AddEventCount
+00860292    local.get [0]
+00860294    local.get [0]
+00860296    call [6042] ; GameStatisticsOffNetStrategy.[yPqYYq
+00860299  end []
+0086029a  local.get [1]
+0086029c  i32.const [16]
+0086029e  i32.add []
+0086029f  global.set [0]
+008602a1  end []

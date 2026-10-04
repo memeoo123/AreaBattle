@@ -1,0 +1,29 @@
+; Original class: LimitTaskItemData
+; Type4704.get_childAct; wasmcode function 11556; offset=5663167 size=80
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+005669c0  i32.const [5001273]
+005669c5  i32.load8_u [0, 0]
+005669c8  i32.eqz []
+005669c9  if [-64]
+005669cb    i32.const [3988816]
+005669d0    call [900] ;
+005669d3    i32.const [3988864]
+005669d8    call [900] ;
+005669db    i32.const [5001273]
+005669e0    i32.const [1]
+005669e2    i32.store8 [0, 0]
+005669e5  end []
+005669e6  i32.const [0]
+005669e8  call [1484] ; ActivityControl.get_I
+005669eb  i32.const [1301001]
+005669f0  i32.const [3988864]
+005669f5  i32.load [2, 0]
+005669f8  call [2427] ;
+005669fb  local.get [0]
+005669fd  local.get [0]
+005669ff  call [7619] ; LimitTaskItemData.get_activityId
+00566a02  i32.const [3988816]
+00566a07  i32.load [2, 0]
+00566a0a  call [3415] ;
+00566a0d  return []
+00566a0e  end []

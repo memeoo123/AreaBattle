@@ -1,0 +1,27 @@
+; Original class: TaskNetStrategyBase
+; Type4683..ctor; wasmcode function 10175; offset=4887597 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004a942e  i32.const [5001423]
+004a9433  i32.load8_u [0, 0]
+004a9436  i32.eqz []
+004a9437  if [-64]
+004a9439    i32.const [3977216]
+004a943e    call [900] ;
+004a9441    i32.const [3923944]
+004a9446    call [900] ;
+004a9449    i32.const [5001423]
+004a944e    i32.const [1]
+004a9450    i32.store8 [0, 0]
+004a9453  end []
+004a9454  i32.const [3923944]
+004a9459  i32.load [2, 0]
+004a945c  call [903] ;
+004a945f  local.set [1]
+004a9461  local.get [1]
+004a9463  i32.const [3977216]
+004a9468  i32.load [2, 0]
+004a946b  call [944] ;
+004a946e  local.get [0]
+004a9470  local.get [1]
+004a9472  i32.store [2, 12]
+004a9475  end []

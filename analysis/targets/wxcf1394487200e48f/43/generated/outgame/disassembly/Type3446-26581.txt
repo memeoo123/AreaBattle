@@ -1,0 +1,31 @@
+; Original class: Helper
+; Type3446.CreateHelper; wasmcode function 7727; offset=3709869 size=81
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00389bae  i32.const [5011791]
+00389bb3  i32.load8_u [0, 0]
+00389bb6  i32.eqz []
+00389bb7  if [-64]
+00389bb9    i32.const [3932344]
+00389bbe    call [900] ; 
+00389bc1    i32.const [3936056]
+00389bc6    call [900] ; 
+00389bc9    i32.const [5011791]
+00389bce    i32.const [1]
+00389bd0    i32.store8 [0, 0]
+00389bd3  end []
+00389bd4  i32.const [3932344]
+00389bd9  i32.load [2, 0]
+00389bdc  call [903] ; 
+00389bdf  local.set [1]
+00389be1  local.get [1]
+00389be3  i32.const [0]
+00389be5  call [1781] ; GameObject..ctor
+00389be8  local.get [1]
+00389bea  local.get [0]
+00389bec  i32.const [0]
+00389bee  call [3353] ; GameObject.AddComponent
+00389bf1  i32.const [3936056]
+00389bf6  i32.load [2, 0]
+00389bf9  call [924] ; 
+00389bfc  return []
+00389bfd  end []

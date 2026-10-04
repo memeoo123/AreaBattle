@@ -1,0 +1,19 @@
+; Original class: ActivityControl
+; Type4637.bbR; wasmcode function 13351; offset=6466431 size=30
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0062ab80  local.get [0]
+0062ab82  local.get [0]
+0062ab84  call [3669] ; ActivityControl.get_activityMgr
+0062ab87  i32.eqz []
+0062ab88  if [-64]
+0062ab8a    i32.const [0]
+0062ab8c    return []
+0062ab8d  end []
+0062ab8e  local.get [0]
+0062ab90  local.get [0]
+0062ab92  call [3669] ; ActivityControl.get_activityMgr
+0062ab95  i32.load8_u [0, 32]
+0062ab98  i32.const [0]
+0062ab9a  i32.ne []
+0062ab9b  return []
+0062ab9c  end []

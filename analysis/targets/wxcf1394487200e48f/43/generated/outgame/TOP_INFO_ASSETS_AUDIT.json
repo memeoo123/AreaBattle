@@ -1,0 +1,158 @@
+{
+  "status": "original-top-info-assets-format-verified-full-page-pending",
+  "atUtc": "2026-10-03T14:35:25.502096+00:00",
+  "sourceEvidence": "TOP_INFO_ASSETS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T14:35:25.502096+00:00",
+    "scope": "Original TopInfo effect1007/1019 source assets/native ownership plus BigNumExtension27612 formatting",
+    "checksPassed": 1593,
+    "newIntegratedChecks": 12,
+    "targetedChecks": 12,
+    "nativeChecks": 10,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2786,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "RecoveredSkillEffectImporter.ImportTopInfoEffects",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTopInfoAssetsPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "particleRoundtrip": {
+      "particleSystems": 5,
+      "numericScalars": 9085
+    },
+    "nativeVisiblePixels": {
+      "gold": 131,
+      "diamond": 244
+    },
+    "observedBoundaries": [
+      "BigNumExtension.SetBigNumSymbol27611 preserves dictionary enumeration order through copied Values list and First key. BigToString27612 warns with original literal before zero if list is null; returns empty after warning. Callback exception propagates. Formatting uses BigInteger.ToString current culture, source hundredths scale100 and literal decimal dot.",
+      "Short branch uses raw.Length<=FirstMagnitude+2, PadLeft(2,0), decimal insertion two digits from right, then source first-four-character truncation or PadLeft(4,0). For raw length<=5 the loop overwrites a flag for each fractional character; only the last digit decides whether the entire fraction is dropped. Thus120 and150 both display1, while123 displays1.23. This source behavior is preserved, not rounded or corrected.",
+      "Large branch divides BigInteger by100 then derives group from quotient digit count and FirstMagnitude, decrementing at exact boundaries. Only symbol index saturates at last list entry, while decimal placement uses the original group. Negative sign participates in raw length/string operations. Empty symbol list or zero magnitude preserve original exceptions; no fallback introduced.",
+      "TopInfoUI33917/async33933 waits BaseUI.Await then shows1007 under imgIcon and1019 under imgDiamondIcon, retaining distinct IDs. Original33922 closes these IDs after removing two message listeners. These methods are source evidence for asset scope; full TopInfo lifecycle/account/auth disposal is not yet implemented by this milestone.",
+      "OriginalEffectConfig1007 and1019 are type0 duration0; exact resources hdzd_effect_jinbiglow and hdzd_eff_Diamond02. Modern paths preserve case; legacy appends .prefab.unity3d to lowercase path while retaining original prefab name for bundle lookup. Native fixtures use existing real EffectModule/new helper/legacy cache/provider without changing module behavior.",
+      "Both prefabs and their11 source bundle closure were already locally available and pass original directory size/MD5 and SHA256 verification. Seven original nodes, five particle systems, four materials/four textures and one builtin shader imported as editable assets. All9085 particle numeric scalar values/curves pass native Editor JSON readback tolerance; original native-reference identities checked by importer.",
+      "Diamond root has a source-disabled ParticleSystemRenderer with null material; its three child renderers provide visuals. Gold child scale200 and diamond children scale150 remain intact; both roots have unit scale. Initial validation incorrectly required every renderer to have a material; corrected test to check enabled renderers and separately assert the original disabled-null root. No production asset modified for this test failure.",
+      "Native validation first sampled before source particles emitted, then diagnosed the verification canvas placing UIRoot behind its camera because the canvas had not refreshed before original SetParent(worldPositionStays=true). The fixture now refreshes its camera canvas before calling the unchanged source root initialization and waits for actual particle emission. Initial reports and render diagnostics retained; no source particle timing/position/culling override introduced.",
+      "Gold first live particle may still have zero visible alpha under the original curve. Native verification observes real successive frames until each currency effect independently contributes nonzero pixels, retaining its visible/hidden image pair at that frame. Gold/diamond pixel counts need not be from one simultaneous frame; timing/alpha/particle simulation are not overridden.",
+      "Current-engine generated mipmaps derive from source decoded base texture; original compressed bytes remain preserved. Tests demonstrate native visible pixels and ownership/lifetime; they do not establish original screenshot/audio equivalence or full production resource acquisition.",
+      "TopInfo full account/profile refresh, avatar authorization, page open/close ownership and UIControl production assembly remain pending, as do RankControl and MatchControl dependencies, Main/platform/all remaining business and final Player acceptance. Lifecycle controller matrix remains21/38."
+    ],
+    "notClaimed": "Full TopInfo/account/auth/page lifecycle, production Main/resource catalog/platform, remaining17 controllers/all business, fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgamePreGameSettings.cs",
+    "Editor/RecoveredSkillEffectImporter.cs",
+    "Editor/OutgameTopInfoAssetsValidation.cs",
+    "Editor/OutgameTopInfoAssetsPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "top-info-assets-format-unconfigured-warning-before-zero-and-propagation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-format-hundredths-truncation-and-final-zero-rule",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-format-symbol-boundaries-truncate-without-rounding",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-format-arbitrary-precision-saturates-symbol-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-format-negative-source-text-and-current-culture",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-format-empty-and-zero-magnitude-fail-without-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-native-prefabs-original-particles-child-scale-and-bindings",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-source-config-zero-duration-and-modern-case-sensitive-paths",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-source-looping-effects-have-no-positive-duration-timer",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-modern-close-releases-only-selected-effect-handle",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-legacy-lowercase-bundle-distinct-prefab-name-and-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-assets-module-shutdown-releases-both-persistent-effects",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/top-info-effects-native.png",
+    "goldParticles": 1,
+    "diamondParticles": 3,
+    "goldPixels": 131,
+    "diamondPixels": 244,
+    "scope": "Original TopInfo prefab with effect1007/1019 via native AssetBundle, real EffectModule/provider and source image parents. Native rendering, persistent lifetime and explicit close/shutdown are exercised. Account/profile/avatar actions, complete page lifecycle/Main/Player and original-frame visual equivalence remain pending. Resource acquisition is a local validation bundle.",
+    "checks": [
+      "Original1007/1019 attach to the two original TopInfo image parents after native async bundle loads",
+      "Original resource names/case and one live provider handle per effect",
+      "Source zero-duration configuration and root scale retained",
+      "Both original currency effects emit live particles in native frames",
+      "Native materials and parent UIPopup sorting inherited by all original renderers",
+      "Each effect independently contributes visible camera pixels",
+      "Zero-duration effects stay registered across later native frames",
+      "Explicit gold close releases its handle while diamond remains live",
+      "Deferred native destruction removes gold only",
+      "Module shutdown releases the remaining persistent diamond and its native object"
+    ]
+  },
+  "remaining": "Finish full TopInfoUI account/profile/auth/actions and source Await/lifecycle ownership, then UIControl production binding. Recover GuideControl4065 and remaining17 controller lifecycle/business dependencies including Rank4134, plus Match4129 account dependency; complete real Main/resource/platform/all business/Player and original audiovisual acceptance."
+}

@@ -1,0 +1,28 @@
+; Original class: WXAvatar
+; Type9188.GetMyAvatarURl; wasmcode function 6813; offset=2565924 size=81
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+00272725  i32.const [5006876]
+0027272a  i32.load8_u [0, 0]
+0027272d  i32.eqz []
+0027272e  if [-64]
+00272730    i32.const [3941148]
+00272735    call [900] ; 
+00272738    i32.const [4086444] ; STRING "default"
+0027273d    call [900] ; 
+00272740    i32.const [4092880] ; STRING "myAvatarUrl"
+00272745    call [900] ; 
+00272748    i32.const [5006876]
+0027274d    i32.const [1]
+0027274f    i32.store8 [0, 0]
+00272752  end []
+00272753  i32.const [3941148]
+00272758  i32.load [2, 0]
+0027275b  call [901] ; 
+0027275e  i32.const [4092880] ; STRING "myAvatarUrl"
+00272763  i32.load [2, 0]
+00272766  i32.const [4086444] ; STRING "default"
+0027276b  i32.load [2, 0]
+0027276e  i32.const [0]
+00272770  call [1615] ; Utils_PlayerPrefs.GetString
+00272773  return []
+00272774  end []

@@ -1,0 +1,39 @@
+; Original class: EventListener
+; Type2907.Get; wasmcode function 7904; offset=3775416 size=104
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00399bb9  i32.const [4989411]
+00399bbe  i32.load8_u [0, 0]
+00399bc1  i32.eqz []
+00399bc2  if [-64]
+00399bc4    i32.const [4000748]
+00399bc9    call [900] ; 
+00399bcc    i32.const [4001000]
+00399bd1    call [900] ; 
+00399bd4    i32.const [3936516]
+00399bd9    call [900] ; 
+00399bdc    i32.const [4989411]
+00399be1    i32.const [1]
+00399be3    i32.store8 [0, 0]
+00399be6  end []
+00399be7  local.get [0]
+00399be9  i32.const [4001000]
+00399bee  i32.load [2, 0]
+00399bf1  call [1091] ; 
+00399bf4  local.set [1]
+00399bf6  i32.const [3936516]
+00399bfb  i32.load [2, 0]
+00399bfe  call [901] ; 
+00399c01  local.get [1]
+00399c03  i32.const [0]
+00399c05  i32.const [0]
+00399c07  call [940] ; Object.op_Equality
+00399c0a  if [-64]
+00399c0c    local.get [0]
+00399c0e    i32.const [4000748]
+00399c13    i32.load [2, 0]
+00399c16    call [1094] ; 
+00399c19    local.set [1]
+00399c1b  end []
+00399c1c  local.get [1]
+00399c1e  return []
+00399c1f  end []

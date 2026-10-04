@@ -1,0 +1,43 @@
+; Original class: TaskPanelUI
+; Type4416.^|`rnk; wasmcode function 10171; offset=4887140 size=105
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+004a9265  i32.const [5007044]
+004a926a  i32.load8_u [0, 0]
+004a926d  i32.eqz []
+004a926e  if [-64]
+004a9270    i32.const [4071740] ; STRING "Task.Refresh"
+004a9275    call [900] ; 
+004a9278    i32.const [5007044]
+004a927d    i32.const [1]
+004a927f    i32.store8 [0, 0]
+004a9282  end []
+004a9283  local.get [0]
+004a9285  i32.load [2, 140]
+004a9289  local.set [0]
+004a928b  local.get [0]
+004a928d  local.set [2]
+004a928f  i32.const [0]
+004a9291  call [1220] ; GameModule.get_Lang
+004a9294  i32.const [4071740] ; STRING "Task.Refresh"
+004a9299  i32.load [2, 0]
+004a929c  i32.const [0]
+004a929e  call [1243] ; LangModule.Get
+004a92a1  local.get [1]
+004a92a3  i32.const [0]
+004a92a5  call [1015] ; String.Format
+004a92a8  local.set [1]
+004a92aa  local.get [0]
+004a92ac  i32.load [2, 0]
+004a92af  local.set [0]
+004a92b1  local.get [2]
+004a92b3  local.get [1]
+004a92b5  local.get [0]
+004a92b7  i32.const [568]
+004a92ba  i32.add []
+004a92bb  i32.load [2, 192]
+004a92bf  local.get [0]
+004a92c1  i32.load [2, 756]
+004a92c5  global.set [3]
+004a92c7  global.get [3]
+004a92c9  call_indirect [2, 0]
+004a92cc  end []

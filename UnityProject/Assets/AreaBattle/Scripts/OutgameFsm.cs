@@ -22,7 +22,7 @@ namespace AreaBattle
         public abstract void Shutdown();
         internal static string QualifiedName(Type owner,string name)=>string.IsNullOrEmpty(name)?owner.FullName:owner.FullName+"."+name;
     }
-    // Source Fsm<T>29257..29270 lifecycle. Event dispatch is a separate, not yet restored surface.
+    // Source Fsm<T>29257..29270 lifecycle and current-state event dispatch.
     public sealed class OutgameFsm<T>:OutgameFsmBase where T:class
     {
         readonly Dictionary<string,IOutgameFsmState<T>> states=new Dictionary<string,IOutgameFsmState<T>>();
@@ -65,6 +65,13 @@ namespace AreaBattle
             if(next==null)throw new OutgameFrameworkException(string.Format("FSM '{0}' can not change state to '{1}' which is not exist.",QualifiedName(typeof(T),Name),type.FullName));
             CurrentState.OnLeave(this,false);CurrentState=next;CurrentStateTime=0;Enter(args);
         }
+        public void FireEvent(object sender,int eventId)=>FireEvent(sender,eventId,null);
+        public void FireEvent(object sender,int eventId,object userData)
+        {
+            var state=CurrentState;
+            if(state==null)throw new OutgameFrameworkException("Current state is invalid.");
+            if(state is IOutgameFsmEventState<T> events)events.OnEvent(this,sender,eventId,userData);
+        }
         public override void Update(float deltaTime,float unscaledDeltaTime)
         {if(CurrentState!=null){CurrentStateTime+=deltaTime;CurrentState.OnUpdate(this,deltaTime,unscaledDeltaTime);}}
         public override void Shutdown()
@@ -75,7 +82,7 @@ namespace AreaBattle
         }
     }
     // Original FsmManager: name/type registry plus live indexed update list.
-    public sealed class OutgameFsmManager:IOutgameStartupModule
+    public sealed class OutgameFsmManager:IOutgameFrameModule
     {
         readonly Dictionary<string,OutgameFsmBase> fsms=new Dictionary<string,OutgameFsmBase>();
         readonly List<OutgameFsmBase> updateList=new List<OutgameFsmBase>();
@@ -84,6 +91,7 @@ namespace AreaBattle
         public Action Initialized {get;set;}
         public int Count=>fsms.Count;
         public void Initialize(){IsInitialized=true;Initialized?.Invoke();}
+        void IOutgameFrameModule.Initialize(object[] args)=>Initialize();
         public void Start(){}
         public bool HasFsm<T>(string name) where T:class=>fsms.ContainsKey(OutgameFsmBase.QualifiedName(typeof(T),name));
         public OutgameFsm<T> CreateFsm<T>(T owner,params IOutgameFsmState<T>[] states) where T:class=>CreateFsm(string.Empty,owner,states);

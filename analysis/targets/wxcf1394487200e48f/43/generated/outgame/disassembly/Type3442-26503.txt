@@ -1,0 +1,33 @@
+; Original class: GameFrameWorkMono
+; Type3442..ctor; wasmcode function 19597; offset=8801593 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00864d3a  i32.const [5011774]
+00864d3f  i32.load8_u [0, 0]
+00864d42  i32.eqz []
+00864d43  if [-64]
+00864d45    i32.const [3931092]
+00864d4a    call [900] ; 
+00864d4d    i32.const [5011774]
+00864d52    i32.const [1]
+00864d54    i32.store8 [0, 0]
+00864d57  end []
+00864d58  local.get [0]
+00864d5a  i32.const [1]
+00864d5c  i32.store8 [0, 21]
+00864d5f  i32.const [3931092]
+00864d64  i32.load [2, 0]
+00864d67  call [903] ; 
+00864d6a  local.set [1]
+00864d6c  local.get [1]
+00864d6e  local.get [0]
+00864d70  call [12510] ; DomainData..ctor
+00864d73  local.get [0]
+00864d75  local.get [1]
+00864d77  i32.store [2, 24]
+00864d7a  local.get [0]
+00864d7c  i32.const [1]
+00864d7e  i32.store8 [0, 28]
+00864d81  local.get [0]
+00864d83  i32.const [0]
+00864d85  call [1226] ; RectTransform..ctor
+00864d88  end []

@@ -1,0 +1,24 @@
+; Original class: TaskItemData
+; Type4690.get_Config; wasmcode function 1687; offset=547550 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00085adf  local.get [0]
+00085ae1  i32.load [2, 60]
+00085ae4  local.set [1]
+00085ae6  local.get [1]
+00085ae8  i32.eqz []
+00085ae9  if [-64]
+00085aeb    local.get [0]
+00085aed    i32.const [0]
+00085aef    call [1189] ; ActivityConfigMgr.get_I
+00085af2    local.get [0]
+00085af4    i32.load [2, 16]
+00085af7    i32.const [0]
+00085af9    call [6337] ; ActivityConfigMgr.GetTaskConfig
+00085afc    i32.store [2, 60]
+00085aff    local.get [0]
+00085b01    i32.load [2, 60]
+00085b04    local.set [1]
+00085b06  end []
+00085b07  local.get [1]
+00085b09  return []
+00085b0a  end []

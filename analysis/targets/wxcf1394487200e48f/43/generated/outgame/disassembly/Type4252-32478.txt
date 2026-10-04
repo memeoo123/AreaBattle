@@ -1,0 +1,22 @@
+; Original class: TabButtonGroup
+; Type4252.Awake; wasmcode function 15710; offset=7565498 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007370bb  i32.const [5009073]
+007370c0  i32.load8_u [0, 0]
+007370c3  i32.eqz []
+007370c4  if [-64]
+007370c6    i32.const [3993384]
+007370cb    call [900] ; 
+007370ce    i32.const [5009073]
+007370d3    i32.const [1]
+007370d5    i32.store8 [0, 0]
+007370d8  end []
+007370d9  local.get [0]
+007370db  local.get [0]
+007370dd  i32.const [0]
+007370df  call [977] ; Component.get_transform
+007370e2  i32.const [3993384]
+007370e7  i32.load [2, 0]
+007370ea  call [1947] ; 
+007370ed  i32.store [2, 16]
+007370f0  end []

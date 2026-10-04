@@ -14,7 +14,7 @@ namespace AreaBattle.EditorTools
         sealed class EffectModule:IOutgameCollectionEffectModule
         {
             public readonly List<int> Closed=new List<int>();public void Close(int id)=>Closed.Add(id);
-            public IOutgameCollectionEffect Get(int id)=>throw new Exception("Unexpected Display");public int Show(int id,Vector3 p,Transform t,bool b,int option)=>throw new Exception("Unexpected Spawn");
+            public IOutgameCollectionEffect Get(int id)=>throw new Exception("Unexpected Display");public int Show(int id,Vector3 p,Transform t,int sortingLayer,int option)=>throw new Exception("Unexpected Spawn");
         }
         sealed class Soldier:IOutgameLevelSoldier
         {

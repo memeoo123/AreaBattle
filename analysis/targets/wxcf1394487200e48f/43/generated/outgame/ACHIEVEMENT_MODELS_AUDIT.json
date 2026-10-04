@@ -1,0 +1,105 @@
+{
+  "status": "original-achievement-models-point-factory-verified-runtime-pending",
+  "atUtc": "2026-10-03T12:49:49.763227+00:00",
+  "sourceEvidence": "ACHIEVEMENT_MODELS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T12:49:49.763227+00:00",
+    "scope": "Original Achievement storage/models and point factory",
+    "checksPassed": 1487,
+    "newIntegratedChecks": 12,
+    "targetedChecks": 12,
+    "nativeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2662,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Source4715..4719 models and4627/4628 point/factory restored from21 reviewed methods,17 fields,13 metadata usages; ordinary method index6239. Actual original tables127 achievements and3 cumulative thresholds30/60/90.",
+      "Storage public names/Int64 progress,time,statePts and Int32 accPts retained; private config/selection/show cache excluded. CanComplete resolves config before mutable progress, requires signed threshold and exact state0 without added show/time gates. Sort ready/incomplete/nonzero-state then cached config.id.",
+      "Rewards freshly allocate every call, keep signed Int32 quantities widened to Int64 and permit retry after malformed row repair. ShowCondition publishes cache first, boxes copied middle arguments, retains partial prefix after failure. First nonnull config caches remain, missing retry.",
+      "Cumulative item reads required owner1601001 live, unsigned Int64 bit selection masks index63, threshold short-circuits state query. Owner used in validation is explicit model fixture; concrete Achievement runtime remains pending. Runtime cumulative config declares only id; no rewards/claim rule inferred from extra raw JSON fields.",
+      "Allocation usage3927880 resolves AchievementPoint4627 despite shared constructor annotation. Exact category2/2 factory, regular Add applies real Int64 economy/report/delivery before point event with lowInt32 amount; inherited model-only omits point event. Use reports without debit. Delivery and point callback failures preserve source prefix.",
+      "1487 integrated checks including12 new; all2662 inputs byte-match isolated stage. No fresh native/Player run for these model changes; previous14 native task-liveness checks remain historical and are not claimed for Achievement.",
+      "Final integrated log retains32 existing ShouldRunBehaviour assertions and one Curl42; no compiler errors. Full manager/strategy/activity automatic save/restart, task/achievement page/controller/Main and remaining business are incomplete; lifecycle19/38 unchanged."
+    ],
+    "notClaimed": "Concrete Achievement manager/strategy/activity or automatic persistence, full task/achievement UI/controller/Main, production account/platform hosts, original audiovisual equivalence or fresh native/Player."
+  },
+  "implementation": [
+    "Scripts/OutgameAchievementModels.cs",
+    "Scripts/OutgameAchievementFactory.cs",
+    "Editor/OutgameAchievementModelsValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "achievement-model-original127-configs-three-cumulative-records-and-signed-targets",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-eligibility-state-zero-int64-and-independent-show-time-selection",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-sorting-ready-incomplete-claimed-and-cached-config-id",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-first-nonnull-config-cache-and-null-retry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-fresh-rewards-signed-quantity-and-retry-after-malformed-row",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-show-condition-boxed-middle-copy-and-partial-cache-on-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-cumulative-live-owner-int64-bit-wrap-and-threshold-short-circuit",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-cumulative-sorting-readiness-state-and-config-id",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-independent-file-schema-roundtrip-and-private-cache-exclusion",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-factory-exact-category-captured-config-and-actual-item-economy",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-factory-model-only-and-use-omit-point-event",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-model-factory-host-and-event-failure-retain-source-prefix",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Restore concrete AchievementMgr4722, AchievementStrategyBase4727, AchievementOffStrategy4725 and AchievementActivity4714 with actual ActivityControl, original statistics events, reward failure order, compact/legacy save migration and independent restart. Then complete TaskController4507/AchiTaskSubUI3986/TaskSingleton3990/TaskPanelUI4416 daily-achievement page/Main entry. Continue all remaining19 controller lifecycles, production Main/account/platform, business and original audiovisual/Player acceptance."
+}

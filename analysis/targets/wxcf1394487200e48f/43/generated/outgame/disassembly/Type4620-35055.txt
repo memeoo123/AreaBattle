@@ -1,0 +1,10 @@
+; Original class: GameStatisticsControl
+; Type4620.GetEventCount; wasmcode function 2694; offset=842912 size=15
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[]
+000cdca1  local.get [0]
+000cdca3  i32.load [2, 8]
+000cdca6  local.get [1]
+000cdca8  local.get [1]
+000cdcaa  call [12105] ; GameStatisticsManager.GetEventStatistics
+000cdcad  return []
+000cdcae  end []

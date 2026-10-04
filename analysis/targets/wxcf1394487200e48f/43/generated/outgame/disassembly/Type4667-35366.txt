@@ -1,0 +1,228 @@
+; Original class: ActivityStateBase
+; Type4667.dkeh]W; wasmcode function 8351; offset=4013032 size=619
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+003d3be9  i32.const [5001378]
+003d3bee  i32.load8_u [0, 0]
+003d3bf1  i32.eqz []
+003d3bf2  if [-64]
+003d3bf4    i32.const [3988824] ; METHOD ActivityBase.btnLaunch_Click
+003d3bf9    call [900] ; 
+003d3bfc    i32.const [3922400]
+003d3c01    call [900] ; 
+003d3c04    i32.const [3972476]
+003d3c09    call [900] ; 
+003d3c0c    i32.const [3977636]
+003d3c11    call [900] ; 
+003d3c14    i32.const [3972480]
+003d3c19    call [900] ; 
+003d3c1c    i32.const [3977640]
+003d3c21    call [900] ; 
+003d3c24    i32.const [3936516]
+003d3c29    call [900] ; 
+003d3c2c    i32.const [3940924]
+003d3c31    call [900] ; 
+003d3c34    i32.const [5001378]
+003d3c39    i32.const [1]
+003d3c3b    i32.store8 [0, 0]
+003d3c3e  end []
+003d3c3f  i32.const [1]
+003d3c41  i32.const [3922400]
+003d3c46  i32.load [2, 0]
+003d3c49  local.get [1]
+003d3c4b  call [918] ; 
+003d3c4e  local.set [0]
+003d3c50  i32.const [1]
+003d3c52  i32.const [3922400]
+003d3c57  i32.load [2, 0]
+003d3c5a  local.get [1]
+003d3c5c  call [918] ; 
+003d3c5f  local.set [2]
+003d3c61  i32.const [3940924]
+003d3c66  i32.load [2, 0]
+003d3c69  call [903] ; 
+003d3c6c  local.set [3]
+003d3c6e  local.get [3]
+003d3c70  local.get [2]
+003d3c72  i32.const [3988824] ; METHOD ActivityBase.btnLaunch_Click
+003d3c77  i32.load [2, 0]
+003d3c7a  i32.const [0]
+003d3c7c  call [1153] ; UnityAction..ctor
+003d3c7f  local.get [0]
+003d3c81  local.get [3]
+003d3c83  i32.store [2, 64]
+003d3c86  i32.const [0]
+003d3c88  local.set [0]
+003d3c8a  loop [-64]
+003d3c8c    block [-64]
+003d3c8e      i32.const [0]
+003d3c90      local.set [2]
+003d3c92      i32.const [1]
+003d3c94      i32.const [3922400]
+003d3c99      i32.load [2, 0]
+003d3c9c      local.get [1]
+003d3c9e      call [918] ; 
+003d3ca1      i32.load [2, 36]
+003d3ca4      local.set [3]
+003d3ca6      i32.const [3972476]
+003d3cab      i32.load [2, 0]
+003d3cae      drop []
+003d3caf      local.get [0]
+003d3cb1      local.get [3]
+003d3cb3      i32.load [2, 12]
+003d3cb6      i32.ge_s []
+003d3cb7      br_if [0]
+003d3cb9      i32.const [1]
+003d3cbb      i32.const [3922400]
+003d3cc0      i32.load [2, 0]
+003d3cc3      local.get [1]
+003d3cc5      call [918] ; 
+003d3cc8      i32.load [2, 36]
+003d3ccb      local.get [0]
+003d3ccd      i32.const [3972480]
+003d3cd2      i32.load [2, 0]
+003d3cd5      call [930] ; 
+003d3cd8      i32.const [0]
+003d3cda      call [943] ; Component.get_gameObject
+003d3cdd      i32.const [1]
+003d3cdf      i32.const [0]
+003d3ce1      call [949] ; GameObject.SetActive
+003d3ce4      i32.const [1]
+003d3ce6      i32.const [3922400]
+003d3ceb      i32.load [2, 0]
+003d3cee      local.get [1]
+003d3cf0      call [918] ; 
+003d3cf3      i32.load [2, 36]
+003d3cf6      local.get [0]
+003d3cf8      i32.const [3972480]
+003d3cfd      i32.load [2, 0]
+003d3d00      call [930] ; 
+003d3d03      i32.load [2, 176]
+003d3d07      i32.const [0]
+003d3d09      call [2021] ; UnityEventBase.RemoveAllListeners
+003d3d0c      i32.const [1]
+003d3d0e      i32.const [3922400]
+003d3d13      i32.load [2, 0]
+003d3d16      local.get [1]
+003d3d18      call [918] ; 
+003d3d1b      i32.load [2, 36]
+003d3d1e      local.get [0]
+003d3d20      i32.const [3972480]
+003d3d25      i32.load [2, 0]
+003d3d28      call [930] ; 
+003d3d2b      i32.load [2, 176]
+003d3d2f      i32.const [1]
+003d3d31      i32.const [3922400]
+003d3d36      i32.load [2, 0]
+003d3d39      local.get [1]
+003d3d3b      call [918] ; 
+003d3d3e      i32.load [2, 64]
+003d3d41      i32.const [0]
+003d3d43      call [1347] ; UnityEvent.AddListener
+003d3d46      local.get [0]
+003d3d48      i32.const [1]
+003d3d4a      i32.add []
+003d3d4b      local.set [0]
+003d3d4d      br [1]
+003d3d4f    end []
+003d3d50  end []
+003d3d51  loop [-64]
+003d3d53    block [-64]
+003d3d55      i32.const [1]
+003d3d57      i32.const [3922400]
+003d3d5c      i32.load [2, 0]
+003d3d5f      local.get [1]
+003d3d61      call [918] ; 
+003d3d64      i32.load [2, 40]
+003d3d67      local.set [0]
+003d3d69      i32.const [3977636]
+003d3d6e      i32.load [2, 0]
+003d3d71      drop []
+003d3d72      local.get [0]
+003d3d74      i32.load [2, 12]
+003d3d77      local.set [3]
+003d3d79      i32.const [1]
+003d3d7b      i32.const [3922400]
+003d3d80      i32.load [2, 0]
+003d3d83      local.get [1]
+003d3d85      call [918] ; 
+003d3d88      local.set [0]
+003d3d8a      local.get [2]
+003d3d8c      local.get [3]
+003d3d8e      i32.ge_s []
+003d3d8f      br_if [0]
+003d3d91      local.get [0]
+003d3d93      i32.load [2, 40]
+003d3d96      local.get [2]
+003d3d98      i32.const [3977640]
+003d3d9d      i32.load [2, 0]
+003d3da0      call [930] ; 
+003d3da3      local.set [0]
+003d3da5      i32.const [3936516]
+003d3daa      i32.load [2, 0]
+003d3dad      call [901] ; 
+003d3db0      block [-64]
+003d3db2        local.get [0]
+003d3db4        i32.const [0]
+003d3db6        i32.const [0]
+003d3db8        call [946] ; Object.op_Inequality
+003d3dbb        i32.eqz []
+003d3dbc        br_if [0]
+003d3dbe        i32.const [1]
+003d3dc0        i32.const [3922400]
+003d3dc5        i32.load [2, 0]
+003d3dc8        local.get [1]
+003d3dca        call [918] ; 
+003d3dcd        i32.load [2, 40]
+003d3dd0        local.get [2]
+003d3dd2        i32.const [3977640]
+003d3dd7        i32.load [2, 0]
+003d3dda        call [930] ; 
+003d3ddd        i32.const [0]
+003d3ddf        call [943] ; Component.get_gameObject
+003d3de2        local.set [0]
+003d3de4        i32.const [3936516]
+003d3de9        i32.load [2, 0]
+003d3dec        call [901] ; 
+003d3def        local.get [0]
+003d3df1        i32.const [0]
+003d3df3        i32.const [0]
+003d3df5        call [946] ; Object.op_Inequality
+003d3df8        i32.eqz []
+003d3df9        br_if [0]
+003d3dfb        i32.const [1]
+003d3dfd        i32.const [3922400]
+003d3e02        i32.load [2, 0]
+003d3e05        local.get [1]
+003d3e07        call [918] ; 
+003d3e0a        i32.load [2, 40]
+003d3e0d        local.get [2]
+003d3e0f        i32.const [3977640]
+003d3e14        i32.load [2, 0]
+003d3e17        call [930] ; 
+003d3e1a        i32.const [0]
+003d3e1c        call [943] ; Component.get_gameObject
+003d3e1f        i32.const [0]
+003d3e21        i32.const [0]
+003d3e23        call [949] ; GameObject.SetActive
+003d3e26      end []
+003d3e27      local.get [2]
+003d3e29      i32.const [1]
+003d3e2b      i32.add []
+003d3e2c      local.set [2]
+003d3e2e      br [1]
+003d3e30    end []
+003d3e31  end []
+003d3e32  local.get [0]
+003d3e34  i32.load [2, 20]
+003d3e37  i32.load8_u [0, 17]
+003d3e3a  i32.eqz []
+003d3e3b  if [-64]
+003d3e3d    i32.const [1]
+003d3e3f    i32.const [3922400]
+003d3e44    i32.load [2, 0]
+003d3e47    local.get [1]
+003d3e49    call [918] ; 
+003d3e4c    i32.const [0]
+003d3e4e    call [8359] ; ActivityBase.UnlockPopUI
+003d3e51  end []
+003d3e52  end []

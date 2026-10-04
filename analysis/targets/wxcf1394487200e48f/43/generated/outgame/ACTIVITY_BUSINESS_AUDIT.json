@@ -1,0 +1,95 @@
+{
+  "status": "complete-config-roster-verified-activity-control-pending",
+  "atUtc": "2026-10-03T09:52:55.916950+00:00",
+  "sourceEvidence": "ACTIVITY_BUSINESS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T09:52:55.916950+00:00",
+    "scope": "ActivityConfigMgr nine business schemas, remaining query/group methods, NoviceTask/Task/Achievement custom managers and concrete full config runtime",
+    "checksPassed": 1276,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": false,
+    "nativeChecks": 0,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2325,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Metadata-backed nine DTOs preserve original names, Int64 and nested ListArrayInt/Lang; shared achievement accumulator schema only has id. All remaining config group/query/null/missing diagnostics match source. Complete custom-manager inheritance roster is exactly4668/4675/4713.",
+      "Actual source resources load49 novice tasks/8 rewards/1 NT activity,8 tasks/3 liveness/1 task group/1 task activity,127 achievements/3 accumulator rows, then9 common activities/settings. Production config runtime reaches Completed==Expected==5 through real concrete loaders.",
+      "Source task list groups append and remain live; novice/liveness inner Add duplicates throw; novice activities obtain empty task groups. Achievement condition value keys group by contentType/content and sort by signed priority. Acquisition and grouping failures preserve prefix and suppress completion.",
+      "Novice/task capture binary mode once for their whole read sequence; Achievement always uses Unity JSON. Binary acquisition remains explicit required host. Load/release repeatedly resolve current owner, with captured first destination and source ordered partial failures.",
+      "Runtime disposal retains TasksByGroup as original35395; subsequent successful read appends8 new rows to8 retained old rows. Re-read without dispose appends custom instances then fails duplicate novice group after changing expected count. These original behaviors are explicitly tested.",
+      "Source40 bodies/102 fields/nine schemas and complete three-manager roster,22 new indexed bodies, total5871. Controller lifecycle bindings remain18/38; ActivityControl/concrete gameplay/Main assembly pending.",
+      "Full integration retains32 existing ShouldRunBehaviour editor assertions and one Curl42 shutdown abort; no compiler errors and all1276 product checks pass. No fresh native/Player; native10 remains prior1256 activity state run."
+    ],
+    "notClaimed": "ActivityControl/concrete activities/pop queues/SevenDay/Main and business UI/rewards production assembly, remaining20 controller bindings, binary/platform implementation, fresh native/Player or original-page audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameActivityBusinessSchemas.cs",
+    "Scripts/OutgameActivityBusinessConfig.cs",
+    "Scripts/OutgameActivityCustomConfigs.cs",
+    "Scripts/OutgameActivityConfigRuntime.cs",
+    "Editor/OutgameActivityBusinessValidation.cs",
+    "Scripts/OutgameActivityConfigManager.cs"
+  ],
+  "checks": [
+    {
+      "id": "activity-business-original-all-configs-and-production-roster",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-query-null-vs-missing-diagnostics",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-groups-live-aliases-duplicates-and-empty-novice",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-achievement-condition-value-key-and-priority-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-loader-captures-binary-once-and-achievement-always-json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-loader-current-owner-between-read-calls",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-complete-runtime-release-and-reread-stale-task-index",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-initialization-failure-prefix-and-repeat-without-dispose",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-dispose-failure-order-and-current-target",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-business-source-schema-signed64-and-shared-references",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Implement ActivityControl registration/state bookkeeping/pop queues/update/daily/item hooks using complete activity config roster plus actual offline data/states; restore concrete activities and SevenDay/ProcedurePreLoad. Finish production Main/account/SDK/HTTP/scene hosts, remaining20 controllers/all business/reward-return and Player/audiovisual acceptance."
+}

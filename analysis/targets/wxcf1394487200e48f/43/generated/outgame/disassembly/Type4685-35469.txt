@@ -1,0 +1,30 @@
+; Original class: TaskActivity
+; Type4685..ctor; wasmcode function 15698; offset=7559510 size=80
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00735957  i32.const [5001435]
+0073595c  i32.load8_u [0, 0]
+0073595f  i32.eqz []
+00735960  if [-64]
+00735962    i32.const [3955376]
+00735967    call [900] ;
+0073596a    i32.const [3917428]
+0073596f    call [900] ;
+00735972    i32.const [5001435]
+00735977    i32.const [1]
+00735979    i32.store8 [0, 0]
+0073597c  end []
+0073597d  i32.const [3917428]
+00735982  i32.load [2, 0]
+00735985  call [903] ;
+00735988  local.set [1]
+0073598a  local.get [1]
+0073598c  i32.const [3955376]
+00735991  i32.load [2, 0]
+00735994  call [951] ;
+00735997  local.get [0]
+00735999  local.get [1]
+0073599b  i32.store [2, 84]
+0073599e  local.get [0]
+007359a0  i32.const [0]
+007359a2  call [4543] ; ActivityBase..ctor
+007359a5  end []

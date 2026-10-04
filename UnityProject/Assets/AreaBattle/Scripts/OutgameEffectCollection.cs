@@ -7,7 +7,7 @@ namespace AreaBattle
     public interface IOutgameCollectionEffectModule
     {
         IOutgameCollectionEffect Get(int handle);
-        int Show(int effectId,Vector3 position,Transform parent,bool sourceFlag,int sourceOption);
+        int Show(int effectId,Vector3 position,Transform parent,int sourceSortingLayer,int sourceOption);
         void Close(int handle);
     }
     // Original EffectCellection4221. Misspelling retained on source Destory API.
@@ -29,7 +29,7 @@ namespace AreaBattle
         public void Spawn(int effectId,int sourceOption)
         {
             if(Handles.ContainsKey(effectId)){Display(effectId);return;}
-            if(Root!=null)Add(effectId,module().Show(effectId,Vector3.zero,Root,false,sourceOption));
+            if(Root!=null)Add(effectId,module().Show(effectId,Vector3.zero,Root,0,sourceOption));
         }
         public void Remove(int effectId)
         {if(Handles.TryGetValue(effectId,out int handle)){module().Close(handle);Handles.Remove(effectId);}}

@@ -1,0 +1,26 @@
+; Original class: BaseHttpNetTransmitter
+; Type3727.SetUrl; wasmcode function 13084; offset=6270370 size=69
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005fada3  i32.const [4987882]
+005fada8  i32.load8_u [0, 0]
+005fadab  i32.eqz []
+005fadac  if [-64]
+005fadae    i32.const [3932944]
+005fadb3    call [900] ; 
+005fadb6    i32.const [4987882]
+005fadbb    i32.const [1]
+005fadbd    i32.store8 [0, 0]
+005fadc0  end []
+005fadc1  local.get [0]
+005fadc3  local.get [1]
+005fadc5  i32.store [2, 16]
+005fadc8  i32.const [3932944]
+005fadcd  i32.load [2, 0]
+005fadd0  call [901] ; 
+005fadd3  local.get [0]
+005fadd5  i32.const [3932944]
+005fadda  i32.load [2, 0]
+005faddd  i32.load [2, 92]
+005fade0  i32.load8_u [0, 8]
+005fade3  i32.store8 [0, 8]
+005fade6  end []

@@ -1,0 +1,25 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.[Zs[pOz; wasmcode function 19537; offset=8782880 size=65
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00860421  i32.const [5001647]
+00860426  i32.load8_u [0, 0]
+00860429  i32.eqz []
+0086042a  if [-64]
+0086042c    i32.const [3932388]
+00860431    call [900] ; 
+00860434    i32.const [5001647]
+00860439    i32.const [1]
+0086043b    i32.store8 [0, 0]
+0086043e  end []
+0086043f  i32.const [3932388]
+00860444  i32.load [2, 0]
+00860447  call [901] ; 
+0086044a  i32.const [10001] ; TABLE EffectControl.`dhfq]
+0086044e  i64.const [1]
+00860450  i32.const [0]
+00860452  call [2087] ; GameStatisticsExpansion.AddEventCount
+00860455  i32.const [10004]
+00860459  i64.const [1]
+0086045b  i32.const [0]
+0086045d  call [2087] ; GameStatisticsExpansion.AddEventCount
+00860460  end []

@@ -1,0 +1,103 @@
+{
+  "status": "concrete-offnet-native-persistence-verified-refresh-main-pending",
+  "atUtc": "2026-10-03T08:43:20.274961+00:00",
+  "sourceEvidence": "STATISTICS_OFFNET_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:43:20.274961+00:00",
+    "scope": "Concrete statistics offnet4623, StatistUtils4619 and native owner/pool/update/coroutine/compressed file persistence",
+    "checksPassed": 1193,
+    "newIntegratedChecks": 9,
+    "targetedChecks": 9,
+    "freshPlayModeRun": true,
+    "nativeChecks": 15,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2292,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameStatisticsOffNetPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Real concrete strategy used throughout; native manager/control loads compressed files, waits for actual pool readiness and saves through actual UpdateManager frames. Independent owner teardown/recreation restores signed64 counts and timestamps.",
+      "Paused native scaled timers and advancing realtime anchor, completed coroutine handle retention, deferred server data, explicit failed/success ad messages, source daily callback, restart and queued update removal all verified.",
+      "TimeToRefreshControl itself is not yet restored. Fixture records exact source registration/removal and invokes daily callback explicitly; this is not automatic cross-day scheduling or a platform-result claim.",
+      "Final metadata review resolved parameter20643 to RefreshDelegate4584, not a bool or offset. Registration/removal signatures now take nullable second Action<long>; final native/full runs use matching corrected inputs. Earlier logs are retained as pre-callback-type-review evidence.",
+      "StatistUtils gzip handles external Python gzip fixture and source raw-JSON fallback. Save clears dirty before normalization/serialization/storage; failing writes/invalid rows retain source partial state. Byte-identical compressed output across runtimes is not claimed.",
+      "Native final log retains independent UnityEditor.Search startup indexing ArgumentOutOfRangeException, separate from15 passing product assertions. No screenshot/Player or original audiovisual acceptance in this batch."
+    ],
+    "notClaimed": "Original automatic refresh dispatcher, real SDK/HTTP/account/Main/common-module composition, activities/remaining20 controllers/full business, Player/original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameStatisticsCodec.cs",
+    "OutgameStatisticsOffNetStrategy.cs"
+  ],
+  "checks": [
+    {
+      "id": "statistics-offnet-codec-utf8-external-gzip-and-original-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-real-compressed-file-save-and-independent-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-save-pruning-partial-failure-and-dirty-cleared-before-io",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-deferred-server-load-raw-json-and-corrupt-reload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-clock-negative-zero-reentry-overflow-and-mode",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-frame-periods-single-pass-and-calendar-broadcast",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-item-ad-product-source-events-and-unboxing",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-daily-reset-order-and-readiness-iterator",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-fresh-negative-clock-and-disposal-listener-removal",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Native update does not fabricate pending server-data completion",
+    "Actual load publishes manager/provides completion and starts native readiness coroutine",
+    "Actual WaitUntil remains pending while pool save readiness is false",
+    "Unscaled anchored time advances during timeScale0 while scaled statistics timers remain frozen",
+    "Native coroutine registers once, increments launch count and retains completed handle",
+    "Native control Update saves compressed data through real file backend",
+    "Explicit failed ad result does not grant successful-ad count",
+    "Explicit refresh endpoint runs concrete daily reset after result messages",
+    "Native save commits both source timestamps",
+    "Reload retains completed coroutine handle and does not repeat initialization or daily registration",
+    "Independent native owner graph restores file statistics after teardown",
+    "Restart creates its own pending native readiness coroutine",
+    "Native scaled update resumes periodic clock write and fresh launch count",
+    "Release removes daily endpoint/stops retained coroutine and queues controller removal",
+    "Next actual UpdateManager frame removes controller delegate"
+  ],
+  "remaining": "Restore actual TimeToRefreshControl4589 scheduling/boundaries (23 methods extracted), wire concrete statistics runtime to real entry/account/SDK/HTTP/common-module owners, then ActivityManager/ActivityControl/SevenDay.EnterGameInit. Complete Main/remaining20 controllers/all business/save-restart/reward-return, then Player/source audiovisual acceptance."
+}

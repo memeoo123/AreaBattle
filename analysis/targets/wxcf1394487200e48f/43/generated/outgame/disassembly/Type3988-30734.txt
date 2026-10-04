@@ -1,0 +1,44 @@
+; Original class: DailyTaskSubUI
+; Type3988.OnDestory; wasmcode function 12662; offset=6104328 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005d2509  i32.const [5010189]
+005d250e  i32.load8_u [0, 0]
+005d2511  i32.eqz []
+005d2512  if [-64]
+005d2514    i32.const [3994856] ; METHOD DailyTaskSubUI.jqobST
+005d2519    call [900] ; 
+005d251c    i32.const [3944680]
+005d2521    call [900] ; 
+005d2524    i32.const [3925720]
+005d2529    call [900] ; 
+005d252c    i32.const [4049072] ; STRING "CommonModule_ResetTimeRefresh"
+005d2531    call [900] ; 
+005d2534    i32.const [5010189]
+005d2539    i32.const [1]
+005d253b    i32.store8 [0, 0]
+005d253e  end []
+005d253f  i32.const [3925720]
+005d2544  i32.load [2, 0]
+005d2547  i32.load [2, 92]
+005d254a  i32.const [0]
+005d254c  i32.store [2, 0]
+005d254f  i32.const [3925720]
+005d2554  i32.load [2, 0]
+005d2557  i32.load [2, 92]
+005d255a  drop []
+005d255b  i32.const [3944680]
+005d2560  i32.load [2, 0]
+005d2563  call [903] ; 
+005d2566  local.set [1]
+005d2568  local.get [1]
+005d256a  local.get [0]
+005d256c  i32.const [3994856] ; METHOD DailyTaskSubUI.jqobST
+005d2571  i32.load [2, 0]
+005d2574  i32.const [0]
+005d2576  call [1345] ; EventHandler..ctor
+005d2579  i32.const [4049072] ; STRING "CommonModule_ResetTimeRefresh"
+005d257e  i32.load [2, 0]
+005d2581  local.get [1]
+005d2583  i32.const [0]
+005d2585  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+005d2588  end []

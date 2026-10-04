@@ -30,6 +30,12 @@ def ancestry(index):
         index, entry['parentEvidence'] = decode_type(u(200288 + 4 * parent))
     return result
 implementations = {
+    4134: 'OutgameRankControl.cs',
+    4058: 'OutgameEffectControl.cs',
+    4507: 'OutgameTaskControl.cs',
+    4453: 'OutgameRedDotControl.cs',
+    4502: 'OutgameSevendayActivityControl.cs',
+    4060: 'OutgameBattleControl.cs', 4076: 'OutgameGuideBookControl.cs', 4228: 'OutgameUserInfoControl.cs',
     3875: 'OutgameItemModuleControl.cs',
     4025: 'OutgameBuffControl.cs', 4256: 'OutgameToolControl.cs',
     4561: 'OutgamePrefabPoolControl.cs', 4034: 'OutgameServerTimeControl.cs',
@@ -78,5 +84,8 @@ result = {'status': 'evidence-audited-production-binding-incomplete',
           'limits': ['Empty lifecycle body does not imply empty business controller.',
                      'Named calls are an inventory, not a complete semantic reconstruction.',
                      'No full production composition or Player validation claimed.']}
-(out / 'CONTROLLER_LIFECYCLE_MATRIX.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf8')
+destination = out / 'CONTROLLER_LIFECYCLE_MATRIX.json'
+serialized = json.dumps(result, ensure_ascii=False, indent=2) + '\n'
+if destination.exists() and b'\r\n' in destination.read_bytes(): serialized = serialized.replace('\n', '\r\n')
+destination.write_bytes(serialized.encode('utf8'))
 print(json.dumps({k: result[k] for k in ('status', 'methodCount', 'emptyBodies', 'correction')}, ensure_ascii=False))

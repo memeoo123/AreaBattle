@@ -1,0 +1,107 @@
+; Original class: CommonLimitTimeTaskUI
+; Type4310.n|fX^; wasmcode function 12836; offset=6177027 size=292
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 126)]
+005e4106  i32.const [5008235]
+005e410b  i32.load8_u [0, 0]
+005e410e  i32.eqz []
+005e410f  if [-64]
+005e4111    i32.const [3989352]
+005e4116    call [900] ; 
+005e4119    i32.const [3953552]
+005e411e    call [900] ; 
+005e4121    i32.const [3932388]
+005e4126    call [900] ; 
+005e4129    i32.const [4103200] ; STRING "剩余时间: "
+005e412e    call [900] ; 
+005e4131    i32.const [4069368] ; STRING "SevendayClose"
+005e4136    call [900] ; 
+005e4139    i32.const [4105232] ; STRING "活动结束"
+005e413e    call [900] ; 
+005e4141    i32.const [5008235]
+005e4146    i32.const [1]
+005e4148    i32.store8 [0, 0]
+005e414b  end []
+005e414c  i32.const [3953552]
+005e4151  i32.load [2, 0]
+005e4154  call [935] ; 
+005e4157  i32.const [0]
+005e4159  call [5689] ; SevendayActivityControl.IsInActivity
+005e415c  if [-64]
+005e415e    i32.const [3953552]
+005e4163    i32.load [2, 0]
+005e4166    call [935] ; 
+005e4169    i64.load [3, 24]
+005e416c    local.set [3]
+005e416e    i32.const [3989352]
+005e4173    i32.load [2, 0]
+005e4176    call [1032] ; 
+005e4179    local.set [1]
+005e417b    i32.const [3932388]
+005e4180    i32.load [2, 0]
+005e4183    call [901] ; 
+005e4186    local.get [3]
+005e4188    i32.const [10000]
+005e418c    local.get [1]
+005e418e    i32.const [0]
+005e4190    call [1568] ; GameStatisticsExpansion.GameValue
+005e4193    i64.sub []
+005e4194    local.set [3]
+005e4196    local.get [0]
+005e4198    i32.load [2, 164]
+005e419c    local.set [0]
+005e419e    local.get [3]
+005e41a0    i64.const [1000]
+005e41a3    i64.div_s []
+005e41a4    i32.wrap_i64 []
+005e41a5    i32.const [0]
+005e41a7    call [7015] ; TimeUtility.ToDDHHMMSS
+005e41aa    local.set [1]
+005e41ac    local.get [0]
+005e41ae    local.set [2]
+005e41b0    i32.const [4103200] ; STRING "剩余时间: "
+005e41b5    i32.load [2, 0]
+005e41b8    local.get [1]
+005e41ba    i32.const [0]
+005e41bc    call [921] ; String.Concat
+005e41bf    local.set [1]
+005e41c1    local.get [0]
+005e41c3    i32.load [2, 0]
+005e41c6    local.set [0]
+005e41c8    local.get [2]
+005e41ca    local.get [1]
+005e41cc    local.get [0]
+005e41ce    i32.const [568]
+005e41d1    i32.add []
+005e41d2    i32.load [2, 192]
+005e41d6    local.get [0]
+005e41d8    i32.load [2, 756]
+005e41dc    global.set [3]
+005e41de    global.get [3]
+005e41e0    call_indirect [2, 0]
+005e41e3    return []
+005e41e4  end []
+005e41e5  local.get [0]
+005e41e7  i32.load [2, 164]
+005e41eb  local.set [0]
+005e41ed  local.get [0]
+005e41ef  local.set [1]
+005e41f1  local.get [0]
+005e41f3  i32.load [2, 0]
+005e41f6  local.set [0]
+005e41f8  local.get [1]
+005e41fa  i32.const [4105232] ; STRING "活动结束"
+005e41ff  i32.load [2, 0]
+005e4202  local.get [0]
+005e4204  i32.const [568]
+005e4207  i32.add []
+005e4208  i32.load [2, 192]
+005e420c  local.get [0]
+005e420e  i32.load [2, 756]
+005e4212  global.set [3]
+005e4214  global.get [3]
+005e4216  call_indirect [2, 0]
+005e4219  i32.const [4069368] ; STRING "SevendayClose"
+005e421e  i32.load [2, 0]
+005e4221  i32.const [0]
+005e4223  call [1317] ; MsgDispatcher.SendMessage
+005e4226  end []

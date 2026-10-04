@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "frame-launch-pause-priority-escalation-and-retained-resume-source",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-focus-before-pause-gate-and-callback-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-pause-log-reentry-and-invalid-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-network-sample-initialization-threshold-and-sticky-disable",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-network-save-failure-preserves-selected-value",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-common-settings-order-dpi-and-source-ads-reference",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-common-settings-null-ads-keeps-earlier-side-effects",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-start-game-deferred-transition-and-state-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-start-game-message-failure-preserves-menu-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-domain-public-lookup-last-match-and-null-values",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Ten original frame launch/settings/pause/focus/sampler/domain cases; native15 verifies actual singleton/Unity messages/TimeModule/timeScale. SDK/transition/banner/global-name/scene endpoints explicit; actual account/Main/activity/Player remain pending."
+}

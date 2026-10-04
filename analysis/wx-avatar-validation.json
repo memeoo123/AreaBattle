@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "wx-avatar-original-default-resource-geometry-and-initialization",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-initialization-prefix-failure-and-retry-collision",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-cached-default-synchronous-null-callback-and-null-key",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-merged-callbacks-one-download-and-notification-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-failed-request-keeps-waiters-and-blocks-later-retry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-success-null-and-content-exception-use-default-texture",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-missing-default-fallback-propagates-retaining-queue",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-texture-callback-failure-retains-cache-and-both-waiters",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-sprite-callback-failure-retains-delegate-and-skips-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-callback-reentry-uses-current-cache-before-removal",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-start-host-failure-retains-download-marker",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-iterator-dispose-does-not-cancel-or-clear",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-preference-cache-write-failure-types-and-no-read-caching",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-nickname-url-defaults-and-single-instance",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-real-userdata-disabled-save-still-allows-source-pool-call",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-real-userdata-write-failure-stops-match-pool-save",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Real UnityWebRequestTexture local-file success/missing-file failure, original default sprite/cache/dedup/callback, actual TopInfo/Match/UserDataPrefs/shared account file save and independent restart. Local URLs are explicit native transport fixtures, not remote server/WeChat authorization. Main/platform/Rank/UI destinations remain incomplete."
+}

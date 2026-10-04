@@ -34,7 +34,7 @@ namespace AreaBattle
         public void CompleteTimer(){Complete?.Invoke();if(Loop)Elapsed-=Duration;else IsComplete=true;}
     }
     // TimeModule3534. This module is ready for the source startup owner; full app composition is separate.
-    public sealed class OutgameTimeModule:OutgameTimeCountdowns,IOutgameStartupModule
+    public sealed class OutgameTimeModule:OutgameTimeCountdowns,IOutgameFrameModule
     {
         readonly Func<OutgameMessageDispatcher> messages;readonly Action<object[]> log,warning;
         public Action Initialized{get;set;}public bool IsInitialized;public int Priority=>60;
@@ -48,6 +48,9 @@ namespace AreaBattle
         {this.messages=messages??(()=>OutgameMessageDispatcher.Shared);this.log=log??(args=>Debug.Log(args[0]));this.warning=warning??(args=>Debug.LogWarning(args[0]));}
         public override void Initialize()
         {InitializeCountdownMaps();LoopTimers=new Dictionary<int,OutgameLoopTimer>();UnityTimers=new Dictionary<int,OutgameUnityTimer>();EverySecondTimers=new Dictionary<int,OutgameUnityTimer>();EveryMinuteTimers=new Dictionary<int,OutgameUnityTimer>();ResetTimeFields();IsInitialized=true;Initialized?.Invoke();}
+        void IOutgameFrameModule.Initialize(object[] args)=>Initialize();
+        bool IOutgameFrameModule.IsInitialized=>IsInitialized;
+        void IOutgameFrameModule.Update(float delta,float unscaled)=>Update();
         public void Start(){messages().AddListener("GF_NewGamePause",GamePause);messages().AddListener("GF_GameFocus",GameFocus);}
         public void Update(){OutgameTimeClock.Now=localNow();CheckTime(OutgameTimeClock.Now,Time.realtimeSinceStartup);CheckLoopTimer(Time.deltaTime,Time.unscaledDeltaTime);CheckUnityTimer();}
         public void GamePause(object[] args){if((bool)args[0])foreach(var timer in LoopTimers.Values)timer.GamePause();}

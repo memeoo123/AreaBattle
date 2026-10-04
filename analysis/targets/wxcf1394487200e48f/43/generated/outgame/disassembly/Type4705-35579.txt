@@ -1,0 +1,24 @@
+; Original class: NoviceAccRewardItemData
+; Type4705.get_Config; wasmcode function 2481; offset=783156 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000bf335  local.get [0]
+000bf337  i32.load [2, 16]
+000bf33a  local.set [1]
+000bf33c  local.get [1]
+000bf33e  i32.eqz []
+000bf33f  if [-64]
+000bf341    local.get [0]
+000bf343    i32.const [0]
+000bf345    call [1189] ; ActivityConfigMgr.get_I
+000bf348    local.get [0]
+000bf34a    i32.load [2, 8]
+000bf34d    i32.const [0]
+000bf34f    call [13370] ; ActivityConfigMgr.GetNoviceAccRwardConfig
+000bf352    i32.store [2, 16]
+000bf355    local.get [0]
+000bf357    i32.load [2, 16]
+000bf35a    local.set [1]
+000bf35c  end []
+000bf35d  local.get [1]
+000bf35f  return []
+000bf360  end []

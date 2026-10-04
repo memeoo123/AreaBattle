@@ -1,0 +1,18 @@
+; Original shared generic: ½n»»¾¥.get_WaitingTaskCount
+; WebRequestTaskPoolGeneric.get_WaitingTaskCount; wasmcode1 function 20138; offset=8003048 size=42
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+007a1de9  local.get [1]
+007a1deb  i32.load [2, 16]
+007a1dee  i32.load [2, 96]
+007a1df1  i32.load [2, 204]
+007a1df5  i32.load [2, 0]
+007a1df8  local.get [1]
+007a1dfa  i32.load [2, 16]
+007a1dfd  i32.load [2, 96]
+007a1e00  i32.load [2, 204]
+007a1e04  local.get [0]
+007a1e06  i32.load [2, 16]
+007a1e09  i32.const [12532]
+007a1e0d  call_indirect [3, 0]
+007a1e10  return []
+007a1e11  end []

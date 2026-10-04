@@ -1,0 +1,33 @@
+; Original class: TaskItemData
+; Type4690..ctor; wasmcode function 10179; offset=4888831 size=87
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004a9900  i32.const [5001448]
+004a9905  i32.load8_u [0, 0]
+004a9908  i32.eqz []
+004a9909  if [-64]
+004a990b    i32.const [3972972]
+004a9910    call [900] ; 
+004a9913    i32.const [3923048]
+004a9918    call [900] ; 
+004a991b    i32.const [5001448]
+004a9920    i32.const [1]
+004a9922    i32.store8 [0, 0]
+004a9925  end []
+004a9926  local.get [0]
+004a9928  i32.const [1]
+004a992a  i32.store [2, 48]
+004a992d  i32.const [3923048]
+004a9932  i32.load [2, 0]
+004a9935  call [903] ; 
+004a9938  local.set [1]
+004a993a  local.get [1]
+004a993c  i32.const [3972972]
+004a9941  i32.load [2, 0]
+004a9944  call [944] ; 
+004a9947  local.get [0]
+004a9949  local.get [1]
+004a994b  i32.store [2, 52]
+004a994e  local.get [0]
+004a9950  i32.const [-1]
+004a9952  i32.store [2, 64]
+004a9955  end []

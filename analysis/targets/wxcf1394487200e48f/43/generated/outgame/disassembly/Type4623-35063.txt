@@ -1,0 +1,35 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.de~`~YY; wasmcode function 19531; offset=8781741 size=95
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0085ffae  i32.const [5001637]
+0085ffb3  i32.load8_u [0, 0]
+0085ffb6  i32.eqz []
+0085ffb7  if [-64]
+0085ffb9    i32.const [3928952]
+0085ffbe    call [900] ; 
+0085ffc1    i32.const [3932388]
+0085ffc6    call [900] ; 
+0085ffc9    i32.const [5001637]
+0085ffce    i32.const [1]
+0085ffd0    i32.store8 [0, 0]
+0085ffd3  end []
+0085ffd4  local.get [1]
+0085ffd6  i32.load [2, 16]
+0085ffd9  i32.const [3928952]
+0085ffde  i32.load [2, 0]
+0085ffe1  call [920] ; 
+0085ffe4  i32.load8_u [0, 0]
+0085ffe7  if [-64]
+0085ffe9    i32.const [3932388]
+0085ffee    i32.load [2, 0]
+0085fff1    call [901] ; 
+0085fff4    i32.const [10002]
+0085fff8    i64.const [1]
+0085fffa    local.get [1]
+0085fffc    call [2087] ; GameStatisticsExpansion.AddEventCount
+0085ffff    i32.const [10005] ; TABLE Time.get_time
+00860003    i64.const [1]
+00860005    local.get [1]
+00860007    call [2087] ; GameStatisticsExpansion.AddEventCount
+0086000a  end []
+0086000b  end []

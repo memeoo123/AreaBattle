@@ -1,0 +1,65 @@
+; Original class: CommonMsgDispatcher
+; Type4569.Ouvk; wasmcode function 12832; offset=6174943 size=182
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005e38e0  i32.const [5001187]
+005e38e5  i32.load8_u [0, 0]
+005e38e8  i32.eqz []
+005e38e9  if [-64]
+005e38eb    i32.const [3961176]
+005e38f0    call [900] ; 
+005e38f3    i32.const [3961180]
+005e38f8    call [900] ; 
+005e38fb    i32.const [3961184]
+005e3900    call [900] ; 
+005e3903    i32.const [3961188]
+005e3908    call [900] ; 
+005e390b    i32.const [3944680]
+005e3910    call [900] ; 
+005e3913    i32.const [5001187]
+005e3918    i32.const [1]
+005e391a    i32.store8 [0, 0]
+005e391d  end []
+005e391e  block [-64]
+005e3920    local.get [0]
+005e3922    i32.load [2, 8]
+005e3925    local.get [1]
+005e3927    i32.const [3961176]
+005e392c    i32.load [2, 0]
+005e392f    call [987] ; 
+005e3932    i32.eqz []
+005e3933    br_if [0]
+005e3935    local.get [0]
+005e3937    i32.load [2, 8]
+005e393a    local.set [3]
+005e393c    local.get [3]
+005e393e    local.get [1]
+005e3940    local.get [3]
+005e3942    local.get [1]
+005e3944    i32.const [3961184]
+005e3949    i32.load [2, 0]
+005e394c    call [982] ; 
+005e394f    local.get [2]
+005e3951    i32.const [0]
+005e3953    call [1056] ; Delegate.Remove
+005e3956    i32.const [3944680]
+005e395b    i32.load [2, 0]
+005e395e    call [937] ; 
+005e3961    i32.const [3961188]
+005e3966    i32.load [2, 0]
+005e3969    call [1058] ; 
+005e396c    local.get [0]
+005e396e    i32.load [2, 8]
+005e3971    local.get [1]
+005e3973    i32.const [3961184]
+005e3978    i32.load [2, 0]
+005e397b    call [982] ; 
+005e397e    br_if [0]
+005e3980    local.get [0]
+005e3982    i32.load [2, 8]
+005e3985    local.get [1]
+005e3987    i32.const [3961180]
+005e398c    i32.load [2, 0]
+005e398f    call [1202] ; 
+005e3992    drop []
+005e3993  end []
+005e3994  end []

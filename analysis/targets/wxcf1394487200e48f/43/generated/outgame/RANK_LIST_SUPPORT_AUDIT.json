@@ -1,0 +1,101 @@
+{
+  "status": "rank-list-prerequisites-verified-controller-integration-pending",
+  "atUtc": "2026-10-03T15:27:28.440137+00:00",
+  "sourceEvidence": "RANK_LIST_SUPPORT_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T15:27:28.440137+00:00",
+    "scope": "Original RankItemData/ReferencePool4142, weighted selection26201/26203/26206 and country helper32594/32591 prerequisites",
+    "checksPassed": 1672,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "nativeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "priorNativeChecks": 25,
+    "priorNativeReport": "analysis/rank-score-native-validation.json",
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2849,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "logDiagnostics": {
+      "ShouldRunBehaviour": 32,
+      "Curl error 35": 1,
+      "Curl error 42": 0,
+      "ArgumentOutOfRangeException": 0,
+      "error CS": 0
+    },
+    "observedBoundaries": [
+      "RankItemData4260 constructor leaves rankIndex/headBoxId zero and strings null. Clear32548 sets integers0 and countryN/name/score String.Empty. ReferencePool4142 is distinct from framework ReferencePool3449 and the GameObject pools.",
+      "ReferencePool31706 shared generic resolves type then locked type->collection dictionary. Collection31711 verifies type equality, increments using/acquire counters before queue lock, returns FIFO dequeued object without clearing; if empty, increments added count then generic new(). Release31707 rejects null, optional type validation, resolves collection. Collection31713 invokes Clear BEFORE queue lock and strict duplicate check, enqueues, then increments release/decrements using. Original strict flag defaultsfalse, so repeated release enqueues same identity twice. Exceptions preserve mutations already executed. Owner instance enables isolated test pools; Shared supplies original global app lifetime.",
+      "RandomHelper26201 invalid null/count<1/count>rows.Count returnsnull. count==rows.Count returns SAME list with no RNG. Otherwise unchecked sum(weight+1), each row captures weight before Managed.Next(0,sum), priority=random+weight+1. Comparator26206 returns unchecked(right.Value-left.Value). Select first requested original row references after sort; does not remove from source. Negative/zero weights and overflow are not repaired.26203 single selection follows cumulative weight and default first row; null logs source message, empty eventually index throws.",
+      "ConfigHelper.GetPlayerCountry32594 ALWAYS resets playerCountryID=-1 and pendingflagfalse, sets flagtrue BEFORE invoking AppInfoManager online OS country callback. Return currentID immediately; pending yields-1 and synchronous callback can set it. No culture/locale fallback. Callback32591 logs Color(0,1,0,1) countryCode:<code> before config access, scans country rows and code arrays in insertion order using exact equality, sets row.id on match, breaks outer iteration whenever existing currentID!=-1, finally sets flagtrue. Late callback has no generation protection and may overwrite current ID or terminate after first unmatched row due to already-set ID.",
+      "Full RankControl lifecycle/home/AI-list integration and actual AppInfoManager transport remain pending. These are source prerequisites only, roster21/38 unchanged. Runtime ports do not synthesize platform success."
+    ],
+    "notClaimed": "No new native run or Player. Full RankControl lifecycle/home/AI integration and AppInfoManager actual country transport/Main/platform/all business still pending."
+  },
+  "implementation": [
+    "Scripts/OutgameRankListSupport.cs",
+    "Editor/OutgameRankListSupportValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "rank-list-support-row-defaults-clear-and-fifo-reuse",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-default-double-release-and-strict-clear-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-release-failure-does-not-enqueue",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-pool-isolation-by-concrete-type",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-weighted-invalid-and-all-alias-consume-no-random",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-weighted-priority-with-zero-and-negative-weights",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-single-weight-boundaries-and-empty-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-country-pending-repeat-and-synchronous-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-country-first-match-case-and-late-callback-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-list-support-country-request-log-and-row-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Use verified rank-list support to complete RankControl home/AI list, constructor and full lifecycle with real country/row pool; bind registry only after complete. Then RanklistTransmitter/UserInfoUI/Main/account/platform/remaining17 roster/all business/final Player/original audiovisual acceptance."
+}

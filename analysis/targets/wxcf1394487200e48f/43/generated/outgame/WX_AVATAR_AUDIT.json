@@ -1,0 +1,178 @@
+{
+  "status": "wx-avatar-native-download-account-storage-verified-main-platform-pending",
+  "atUtc": "2026-10-03T15:10:15.473226+00:00",
+  "sourceEvidence": "WX_AVATAR_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T15:10:15.473226+00:00",
+    "scope": "Original WXAvatar/default resource/cache/native UnityWebRequest and real TopInfo/UserDataPrefs/Match/account file restart",
+    "checksPassed": 1645,
+    "newIntegratedChecks": 16,
+    "targetedChecks": 16,
+    "nativeChecks": 12,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2837,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameWxAvatarPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "restoredAccount": {
+      "matchNickname": "头像恢复验证",
+      "matchAvatar": "file:///var/folders/qh/7vmgtznd6lg3433k139bftk40000gn/T/AreaBattleWxAvatar-c8b3f3682c3e4eb89d7bb72e85e095d3/avatar.png",
+      "matchAuthorization": true,
+      "userDataPreference": 47
+    },
+    "observedBoundaries": [
+      "WXAvatar64375 lazy singleton publishes after constructor64382 allocates four dictionaries and download list. Managed composition represents one global owner per account/platform runtime; no automatic cache reset. Init64378 loads Resources/EnterGameUI/defaultIcon, captures texture dictionary before sprite.texture, adds texture then sprite under default and marks initialized last. Duplicate/missing asset failures preserve prefix.",
+      "GetMyNickName64376/AvatarURL64377 read Utils_PlayerPrefs keys myNickName/myAvatarUrl with original corrupted nickname/default literals, separate from UserDataPrefs. Utils_PlayerPrefs55732 returns only string cache entries, otherwise delegates without caching reads;55731 writes mixed cache before backend. ClearCache55739 clears dictionary. Native PlayerPrefsDefault55718/19 directly forwards to Unity PlayerPrefs. Platform base installation/reporting and other numeric APIs are outside this string-path adapter.",
+      "TryGetIcon_Sprite64379 returns cached sprite synchronously only when callback nonnull; otherwise combines queued callbacks, adding even null delegates, then downloads. Null key follows dictionary exception. DownLoadTexture64380 deduplicates using retained list; marker added before coroutine host. Neither success nor failure removes marker; failed URL never retries within same instance.",
+      "DownloadImage64381/64385 yields native UnityWebRequestTexture.GetTexture(url).SendWebRequest. Result must equal Success1. Non-success logs original error and returns without fallback, callbacks, removal or Avatar_Refresh. No request disposal is present in original iterator Dispose64384; explicit test cleanup owns requests separately.",
+      "On successful transport, GetContent/log/cache/sprite creation are inside catch(Exception). Unity-null content falls back to default texture; exception fallback uses default texture and may itself throw. Existing texture/sprite entries are never overwritten. Sprite.Create uses cached texture with rect dimensions from current downloaded/fallback texture, center pivot and native default PPU100. Downloaded default fallback creates a new sprite; does not return existing PPU80 default sprite.",
+      "After cache population, texture delegate then sprite delegate run OUTSIDE fallback catch, each removed only after callback returns. Exceptions retain current/subsequent callbacks and suppress later event. Reentrant GetAvatar uses the already-populated cache. Avatar_Refresh uses null payload. Iterator Reset throws; Dispose is empty and does not cancel pending continuation.",
+      "TopInfo binding now routes MyNickname/MyAvatarUrl/cache/download to WXAvatar runtime and SaveUserData to actual existing OutgameUserPreferences.OnSave. Real failed write stops later pool save, while disabled UserData save simply returns and caller continues to pool. Raw Utils preferences and UserData.txt have separate original paths; neither is replaced by Match or UserInfo.",
+      "Native verification uses local-file URI through real UnityWebRequestTexture and a missing-file URI, not simulated success or live WeChat authorization. Actual TopInfo/Match/UserDataPrefs/pool/file restart verifies independent persistence; general head/frame loader resolves the two original default profile sprites through explicit fixture mapping; this does not claim generic sprite catalog recovery.",
+      "Original resources.assets Sprite78 references Texture34. PNG is unchanged original decoded export128x128; PPU80,center pivot,7 vertices,15 indices, original textureRect/offset/settingsRaw64/uvTransform and25-point physics contour serialized. Unity6 runtime OverrideGeometry/OverridePhysicsShape were not persisted by CreateAsset, so importer writes original native geometry in both m_RD and Unity6 m_AtlasRD. Initial textureShape default caused wrong asset type; explicit Texture2D fixes it. Unity subset YAML requires inline nested-list opening for physics; initial diagnostics retained.",
+      "No original compressed ASTC-byte GPU equality claim: decoded source PNG is imported uncompressed with original dimensions/filter/wrap/color intent. Source resource provenance and exact geometry/physics fields retained; screenshot/native behavior verify current import.",
+      "Remaining: actual platform preference/authorization callback SDK installation, CallFrameworkAdapter coroutine/global ownership Main composition, rank network/full RankControl and UserInfoUI/general resource loader, remaining17 roster controllers/full business/final Player/original audiovisual acceptance. Current21/38 roster remains unchanged.",
+      "Native render validation initially omitted UIControl visibility and initial Canvas layout refresh before UIRoot size capture. Corrected test scene to the existing native composition sequence (Canvas.ForceUpdateCanvases before roots, real UIControl.ShowTopInfoUI); source page unchanged. Separate default/downloaded diagnostic previews belong only to the validation scene. Geometry test compares every vertex/index and25 physics points against original source JSON."
+    ],
+    "notClaimed": "Actual remote avatar/WeChat authorization, platform preference SDK installation/Main coroutine global composition, full Rank/UserInfoUI/general sprite/Main/platform/remaining17 roster/all business/fresh Player/original audiovisual equivalence; local-file native transport is explicit fixture."
+  },
+  "implementation": [
+    "Scripts/OutgameWxAvatar.cs",
+    "Editor/OutgameAvatarAssetImporter.cs",
+    "Editor/OutgameWxAvatarValidation.cs",
+    "Editor/OutgameWxAvatarPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "wx-avatar-original-default-resource-geometry-and-initialization",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-initialization-prefix-failure-and-retry-collision",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-cached-default-synchronous-null-callback-and-null-key",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-merged-callbacks-one-download-and-notification-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-failed-request-keeps-waiters-and-blocks-later-retry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-success-null-and-content-exception-use-default-texture",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-missing-default-fallback-propagates-retaining-queue",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-texture-callback-failure-retains-cache-and-both-waiters",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-sprite-callback-failure-retains-delegate-and-skips-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-callback-reentry-uses-current-cache-before-removal",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-start-host-failure-retains-download-marker",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-iterator-dispose-does-not-cancel-or-clear",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-preference-cache-write-failure-types-and-no-read-caching",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-nickname-url-defaults-and-single-instance",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-real-userdata-disabled-save-still-allows-source-pool-call",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "wx-avatar-real-userdata-write-failure-stops-match-pool-save",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/wx-avatar-native.png",
+    "restoredNickname": "头像恢复验证",
+    "restoredAvatar": "file:///var/folders/qh/7vmgtznd6lg3433k139bftk40000gn/T/AreaBattleWxAvatar-c8b3f3682c3e4eb89d7bb72e85e095d3/avatar.png",
+    "restoredAuthorization": true,
+    "restoredPreference": 47,
+    "scope": "Real UnityWebRequestTexture local-file success/missing-file failure, original default sprite/cache/dedup/callback, actual TopInfo/Match/UserDataPrefs/shared account file save and independent restart. Local URLs are explicit native transport fixtures, not remote server/WeChat authorization. Main/platform/Rank/UI destinations remain incomplete.",
+    "checks": [
+      "Original default resource is cached and returned synchronously without network",
+      "Two native avatar consumers share one real UnityWebRequestTexture request",
+      "Actual preference wrapper and TopInfo auth update real Match fields before download completion",
+      "Actual UserDataPrefs and Match pool files are saved in source auth path",
+      "Real native texture decode creates source100-PPU sprite and delivers both callbacks before refresh",
+      "Successful callbacks are removed while original download marker remains",
+      "Subsequent lookup is synchronous from actual native sprite cache",
+      "Actual missing-file transport failure retains waiters and emits no fallback or refresh",
+      "A later failed-URL request is deduplicated rather than automatically retried",
+      "Native page close releases owned effects/page handle after actual avatar callback",
+      "Independent native account restart restores real Match authorization and separate UserDataPrefs record",
+      "Fresh platform preference/cache owner restores raw preference values without persisting download caches"
+    ]
+  },
+  "remaining": "Recover real RankControl score/RanklistTransmitter and full UserInfoUI/general sprite resource destination. Complete WX platform authorization/preference backend and Main coroutine/ownership assembly, Guide and remaining17 roster controller lifecycle/business, real Main/account/platform/all business and final Player/original audiovisual acceptance."
+}

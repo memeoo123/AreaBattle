@@ -1,0 +1,85 @@
+; Original class: TabButton
+; Type4251.Awake; wasmcode function 15707; offset=7564851 size=248
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00736e36  i32.const [5009066]
+00736e3b  i32.load8_u [0, 0]
+00736e3e  i32.eqz []
+00736e3f  if [-64]
+00736e41    i32.const [3929208]
+00736e46    call [900] ; 
+00736e49    i32.const [3993060]
+00736e4e    call [900] ; 
+00736e51    i32.const [3926996]
+00736e56    call [900] ; 
+00736e59    i32.const [3936516]
+00736e5e    call [900] ; 
+00736e61    i32.const [4016324] ; METHOD TabButton.Vnsi
+00736e66    call [900] ; 
+00736e69    i32.const [3940924]
+00736e6e    call [900] ; 
+00736e71    i32.const [4105608] ; STRING "缺少Button组件"
+00736e76    call [900] ; 
+00736e79    i32.const [5009066]
+00736e7e    i32.const [1]
+00736e80    i32.store8 [0, 0]
+00736e83  end []
+00736e84  local.get [0]
+00736e86  local.get [0]
+00736e88  i32.const [3993060]
+00736e8d  i32.load [2, 0]
+00736e90  call [1010] ; 
+00736e93  i32.store [2, 28]
+00736e96  local.get [0]
+00736e98  i32.load [2, 28]
+00736e9b  local.set [1]
+00736e9d  i32.const [3936516]
+00736ea2  i32.load [2, 0]
+00736ea5  call [901] ; 
+00736ea8  local.get [1]
+00736eaa  i32.const [0]
+00736eac  i32.const [0]
+00736eae  call [946] ; Object.op_Inequality
+00736eb1  if [-64]
+00736eb3    local.get [0]
+00736eb5    i32.load [2, 28]
+00736eb8    i32.load [2, 176]
+00736ebc    local.set [1]
+00736ebe    i32.const [3940924]
+00736ec3    i32.load [2, 0]
+00736ec6    call [903] ; 
+00736ec9    local.set [2]
+00736ecb    local.get [2]
+00736ecd    local.get [0]
+00736ecf    i32.const [4016324] ; METHOD TabButton.Vnsi
+00736ed4    i32.load [2, 0]
+00736ed7    i32.const [0]
+00736ed9    call [1153] ; UnityAction..ctor
+00736edc    local.get [1]
+00736ede    local.get [2]
+00736ee0    i32.const [0]
+00736ee2    call [1347] ; UnityEvent.AddListener
+00736ee5    return []
+00736ee6  end []
+00736ee7  i32.const [3926996]
+00736eec  i32.load [2, 0]
+00736eef  i32.const [1]
+00736ef1  call [909] ; 
+00736ef4  local.set [0]
+00736ef6  local.get [0]
+00736ef8  i32.const [4105608] ; STRING "缺少Button组件"
+00736efd  i32.load [2, 0]
+00736f00  call [905] ; 
+00736f03  local.get [0]
+00736f05  i32.const [4105608] ; STRING "缺少Button组件"
+00736f0a  i32.load [2, 0]
+00736f0d  i32.store [2, 16]
+00736f10  i32.const [3929208]
+00736f15  i32.load [2, 0]
+00736f18  call [901] ; 
+00736f1b  local.get [0]
+00736f1d  i32.const [0]
+00736f1f  i32.const [2087] ; TABLE CLog.Error
+00736f22  global.set [3]
+00736f24  i32.const [2087] ; TABLE CLog.Error
+00736f27  call_indirect [0, 0]
+00736f2a  end []

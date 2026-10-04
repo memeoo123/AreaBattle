@@ -1,0 +1,44 @@
+; Original class: GameStatisticsManager
+; Type4617.InitStrategy; wasmcode function 12104; offset=5892154 size=114
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0059e83d  i32.const [5001606]
+0059e842  i32.load8_u [0, 0]
+0059e845  i32.eqz []
+0059e846  if [-64]
+0059e848    i32.const [3915544]
+0059e84d    call [900] ; 
+0059e850    i32.const [4001388] ; METHOD GameStatisticsManager.RefreshData
+0059e855    call [900] ; 
+0059e858    i32.const [5001606]
+0059e85d    i32.const [1]
+0059e85f    i32.store8 [0, 0]
+0059e862  end []
+0059e863  local.get [0]
+0059e865  i32.load [2, 28]
+0059e868  local.set [1]
+0059e86a  local.get [1]
+0059e86c  if [-64]
+0059e86e    i32.const [3915544]
+0059e873    i32.load [2, 0]
+0059e876    call [903] ; 
+0059e879    local.set [2]
+0059e87b    local.get [2]
+0059e87d    local.get [0]
+0059e87f    i32.const [4001388] ; METHOD GameStatisticsManager.RefreshData
+0059e884    i32.load [2, 0]
+0059e887    i32.const [0]
+0059e889    call [1004] ; 
+0059e88c    local.get [1]
+0059e88e    i32.load [2, 0]
+0059e891    local.set [0]
+0059e893    local.get [1]
+0059e895    local.get [2]
+0059e897    local.get [0]
+0059e899    i32.load [2, 224]
+0059e89d    local.get [0]
+0059e89f    i32.load [2, 220]
+0059e8a3    global.set [3]
+0059e8a5    global.get [3]
+0059e8a7    call_indirect [2, 0]
+0059e8aa  end []
+0059e8ab  end []

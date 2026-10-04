@@ -1,0 +1,121 @@
+{
+  "status": "account-item-activity-rewards-verified-production-main-pending",
+  "atUtc": "2026-10-03T13:29:25.381663+00:00",
+  "sourceEvidence": "ACCOUNT_REWARDS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T13:29:25.381663+00:00",
+    "scope": "Actual account item/local economy and activity reward composition, original page claims, source save/failure ordering and independent account restart",
+    "checksPassed": 1531,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "nativeChecks": 13,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2696,
+    "implementedLifecycleControllers": 20,
+    "remainingLifecycleControllers": 18,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameAccountRewardsPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "OutgameAccountItemRuntime composes original LocalDataManager4119, ItemRuntime/ItemManager4500 and ToolControl4256 in the existing account data pool, using caller-supplied real login/storage/version services. Original registration attributes remain Proj_hdzd/autoSyn=true/compressData=false. No successful account login, platform response or upload is supplied by production defaults.",
+      "ToolChange32533 calls actual DataManagerPool.SaveData on every normal return. New concrete account Tool effects preserve that owner rather than allowing an inert Save endpoint. Type6 resolves current ItemConfigMgr.GetGameItemConfig, actual ItemManager.GetItem, AddItem; missing entity endpoint remains required. Other presentation/skin/report callbacks remain explicit required hosts. LocalDataManager server callbacks replace Profile.inventory, so inventory and dispatcher projections rebind to current record on subsequent Tool calls.",
+      "OutgameActivityRewardBinding is installed BEFORE ActivityRuntime.Init. Source ActivityControl35226 remove/add GetCommonItem therefore attaches the actual account reward engine; Task/Achievement/optional limited-task factories share actual entity/config providers. Late replacement would omit the virtual liveness factory callback. Fixture construction now supports a before-init composition hook, leaving previous fixture defaults unchanged.",
+      "Original GameItemConfig is loaded via a real AssetBundle through the legacy config reader:79 items.1003 is daily liveness type2/3 param130001;1004 is original type1/4, not the synthetic achievement-point override used by isolated model tests. Both shared-global item statistics and activity events use the same account message owner.",
+      "Daily TaskComplete marks state1 BEFORE rewards. Global AddRewardsByItemSelf34598 calls each entity AddItemOnlyModel; the virtual liveness reward mutates actual task ext. Only then ItemManager.AddRewards34340 calls ToolChange for each non-type6 reward. Thus its pool save includes daily claim/liveness plus ItemManager and LocalDataManager currency. Source dirty task update still executes afterwards; no transaction or reordered award is introduced.",
+      "Achievement reward differs: source GetAchievementReward uses entity.AddItem before marking state/time. The Tool-triggered pool save captures currency but the achievement compact ids list still lacks that claim. Subsequent original account pool save persists claim/time. Tests prove the source distinction and independent restart after the proper account save.",
+      "Liveness reward endpoint awards through actual account before setting source claim bit; dirty update persists bit. Original package20000 uses real package/random/entity services through Tool type6, and nested gold/diamonds reach both manager records. Tests force low/high random inputs to cover all four original package branches: gold, diamonds, nested package8000 (drawing actual hero pieces8401 on high input) and dice points11001. Points use the recovered OutgameDicePoints owner and shared stock/message path; all sampled records are compared after independent restart.",
+      "Unsatisfied login progress and data-pool SaveDisabled retain their source save restrictions. Report failure during daily award leaves state1 and already-mutated shared inventory, but prevents later local economic delivery and storage. No invented rollback or success callback.",
+      "ItemRuntime now accepts an explicit UpdateManager registration/removal owner, retaining original static UpdateManager defaults. Account composition passes shared scheduler. Initial edit-mode validation invoking DontDestroyOnLoad was corrected by using the already-instantiated real scoped UpdateManager; native validation uses actual Unity Update.",
+      "Fresh native page pointers grant original achievement200 then daily50; both actual ItemManager and LocalDataManager records restore250 after independent storage/activity/page restart together with both claims and daily liveness. Full production Main/account/platform/presentation/skins/effects/reports and final Player/original audiovisual acceptance remain incomplete.",
+      "Final integrated retains32 existing ShouldRunBehaviour assertions and one Curl35 certificate failure. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42; product checks and compilation pass. Initial account integration fixture errors (edit-mode static scheduler, late item binding, daily versus achievement order assumptions) are preserved in initial diagnostics, corrected through explicit shared scheduler and before-init composition."
+    ],
+    "notClaimed": "Full production Main/login/account/platform, complete effect/audio/skin/report hosts, remaining18 controllers, original audiovisual equivalence or fresh Player."
+  },
+  "implementation": [
+    "Scripts/OutgameAccountItemRuntime.cs",
+    "Scripts/OutgameActivityRewardBinding.cs",
+    "Scripts/OutgameItemRuntime.cs",
+    "Editor/OutgameAccountRewardsValidation.cs",
+    "Editor/OutgameAccountRewardsPlayModeValidation.cs",
+    "Editor/OutgameTaskActivityValidation.cs",
+    "Editor/OutgameTaskRowsValidation.cs",
+    "Editor/OutgameTaskControlViewValidation.cs",
+    "Editor/OutgameTaskPageValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "account-rewards-same-pool-real-item-local-config-and-statistics-owners",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-daily-claim-before-reward-and-shared-pool-save-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-daily-currency-claim-and-liveness-independent-file-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-achievement-reward-economy-save-order-and-final-account-save",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-daily-liveness-award-shares-account-economy",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-login-gate-and-save-disabled-are-not-bypassed",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-report-failure-retains-global-prefix-before-local-and-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-tool-item-entity-package-path-persists-both-real-currencies",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-package-virtual-points-and-piece-branches-use-real-inventory",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "account-rewards-local-server-reload-rebinds-dispatcher-to-current-record",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Native original main pointer publishes page and resource handle",
+    "Real two-frame load and OpenLater populate seven source daily rows on UITip",
+    "Actual TopInfo gold canvas follows task page layer",
+    "Native Toggle pointer initializes and displays original achievement rows",
+    "Native achievement slide grants200 gold to both real account records and advances original row",
+    "Native daily return retains original view and both toggle clicks play source audio",
+    "Native task claim starts source slide before award",
+    "Native daily slide adds50 gold to both real account records and updates page liveness/progress",
+    "Real asynchronous close removes registry, native object, resource handle and both singleton owners",
+    "Close restores actual top info original layer",
+    "Reopen creates fresh page/subviews and excludes actual claimed task",
+    "Native mask pointer completes page close",
+    "Independent account/activity/page restart restores250 gold in both records, daily/achievement claims and liveness"
+  ],
+  "remaining": "Recover original EffectControl4058 and effect-module resource/handle ownership required by task effect1016 and shared Main/battle effects; connect actual visual/audio/report/skin/platform hosts. Continue full production Main/account/login/data-pool startup composition, remaining18 controller lifecycles and all business, final Player and original audiovisual acceptance."
+}

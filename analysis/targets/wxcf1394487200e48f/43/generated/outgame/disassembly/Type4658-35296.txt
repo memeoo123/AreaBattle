@@ -1,0 +1,52 @@
+; Original class: ActivityManager
+; Type4658.InitData; wasmcode function 13343; offset=6461384 size=143
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+006297cb  i32.const [5001337]
+006297d0  i32.load8_u [0, 0]
+006297d3  i32.eqz []
+006297d4  if [-64]
+006297d6    i32.const [3915456]
+006297db    call [900] ; 
+006297de    i32.const [3988912] ; METHOD ActivityManager.RefreshData
+006297e3    call [900] ; 
+006297e6    i32.const [3927952]
+006297eb    call [900] ; 
+006297ee    i32.const [5001337]
+006297f3    i32.const [1]
+006297f5    i32.store8 [0, 0]
+006297f8  end []
+006297f9  local.get [0]
+006297fb  i32.const [3927952]
+00629800  i32.load [2, 0]
+00629803  call [903] ; 
+00629806  i32.store [2, 24]
+00629809  local.get [0]
+0062980b  i32.load [2, 24]
+0062980e  local.get [0]
+00629810  i32.store [2, 8]
+00629813  local.get [0]
+00629815  i32.load [2, 24]
+00629818  local.set [1]
+0062981a  i32.const [3915456]
+0062981f  i32.load [2, 0]
+00629822  call [903] ; 
+00629825  local.set [2]
+00629827  local.get [2]
+00629829  local.get [0]
+0062982b  i32.const [3988912] ; METHOD ActivityManager.RefreshData
+00629830  i32.load [2, 0]
+00629833  i32.const [0]
+00629835  call [1004] ; 
+00629838  local.get [1]
+0062983a  i32.load [2, 0]
+0062983d  local.set [0]
+0062983f  local.get [1]
+00629841  local.get [2]
+00629843  local.get [0]
+00629845  i32.load [2, 224]
+00629849  local.get [0]
+0062984b  i32.load [2, 220]
+0062984f  global.set [3]
+00629851  global.get [3]
+00629853  call_indirect [2, 0]
+00629856  end []

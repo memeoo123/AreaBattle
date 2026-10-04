@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "limit-task-page-registry-load-original-outlets-and-day-selection-populates-page",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-day-pointer-writes-last-click-without-dirty-and-rebuilds",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-actual-task-claim-auto-refreshes-accumulator-through-page-listeners",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-countdown-source-format-and-end-message-does-not-close",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-message-argument-guards-and-source-invalid-mode-lookup",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-extension-refresh-ignores-payload-and-preview-uses-original-position",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-accumulator-render-failure-keeps-untracked-clone-and-cleared-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-source-disposal-removes-page-listeners-retains-provider-dictionary-preview",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-report-failure-retains-initialized-prefix-and-close-hook-failure-stops-button-message",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original UI bootstrap and composed CommonLimitTimeTaskUI, actual module load/close, day/task/accumulator/preview pointers, activity notifications without manual forwarding, automatic activity save and independent disk restart. Resource/report/localization/sprite/currency/skin/detail hosts remain explicit fixtures; production menu/Main/platform/Player/audiovisual acceptance pending."
+}

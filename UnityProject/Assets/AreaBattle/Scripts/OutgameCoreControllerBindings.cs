@@ -32,6 +32,10 @@ namespace AreaBattle
         }
         public static void BindLevel(OutgameControllerRegistry registry,OutgameLevelRuntimeState state,OutgameLevelResourceState resources,Func<int> globalPlayerCamp,Func<int> globalCampCount,Func<OutgameLegacyConfigManager> config,Func<bool> pvpActive,Func<OutgameMessageDispatcher> messages,Action<int,bool> setPlayState,Func<OutgameLoadPrefabControl> loader,Action<string> log)
         {registry.Bind(4107,()=>new OutgameLevelControl(registry,state,resources,globalPlayerCamp,globalCampCount,config,pvpActive,messages,setPlayState,loader,log));}
+        public static void BindRedDots(OutgameControllerRegistry registry,Action<Color,object[]> log)
+        {registry.Bind(4453,()=>new OutgameRedDotControl(registry,log));}
+        public static void BindBattle(OutgameControllerRegistry registry,Func<OutgameLegacyConfigManager> config)
+        {registry.Bind(4060,()=>new OutgameBattleControl(config,registry));}
         public static void BindGame(OutgameControllerRegistry registry,Func<OutgameLegacyConfigManager> config,IOutgameGameSceneResources resources,Func<int> usedScene,Func<float> heightAdjustment,Action<int> notifyShop)
         {registry.Bind(4064,()=>new OutgameGameControl(config,registry,resources,usedScene,heightAdjustment,notifyShop));}
         public static void BindPrefabLoader(OutgameControllerRegistry registry,Func<OutgameLegacyConfigManager> config,OutgameResLoadHelper resources,Func<OutgamePrefabCache> cache,Action<string> error,IOutgamePrefabPreloadHost preload=null)
@@ -44,6 +48,22 @@ namespace AreaBattle
         {registry.Bind(4256,()=>new OutgameToolControl(dispatcher,local,itemModuleCount,purchaseCost));}
         public static void BindItems(OutgameControllerRegistry registry,Func<OutgameDataManagerPool> pool,Func<OutgameItemConfigManager> config,Func<OutgameMessageDispatcher> messages,Action<string> warning)
         {registry.Bind(3875,()=>new OutgameItemModuleControl(registry,pool,config,messages,warning));}
+        public static void BindRank(OutgameControllerRegistry registry,OutgameRankScoreServices score,OutgameRankHomeServices home)
+        {
+            home.Registry=registry;home.HasCurrent=()=>registry.HasInstance(4134);
+            home.UserInfo=()=>((OutgameUserInfoControl)registry.Resolve(4228));score.Home=home;
+            score.Current=()=>((OutgameRankControl)registry.Resolve(4134));registry.Bind(4134,()=>new OutgameRankControl(score));
+        }
+        public static void BindUserInfo(OutgameControllerRegistry registry,Func<OutgameDataManagerPool> pool,Func<OutgameLegacyConfigManager> config,Action<string> reportCreateRole)
+        {registry.Bind(4228,()=>new OutgameUserInfoControl(registry,pool,config,reportCreateRole));}
+        public static void BindGuideBook(OutgameControllerRegistry registry,Func<OutgameDataManagerPool> pool,Func<OutgameLegacyConfigManager> config,Func<int> currentLevel,Func<OutgameMessageDispatcher> messages)
+        {registry.Bind(4076,()=>new OutgameGuideBookControl(pool,config,currentLevel,messages));}
+        public static void BindSevenday(OutgameControllerRegistry registry,OutgameSevendayActivityServices services)
+        {registry.Bind(4502,()=>new OutgameSevendayActivityControl(registry,services));}
+        public static void BindTasks(OutgameControllerRegistry registry,OutgameTaskControlServices services)
+        {registry.Bind(4507,()=>new OutgameTaskControl(services));}
+        public static void BindEffects(OutgameControllerRegistry registry,OutgameEffectControlServices services)
+        {registry.Bind(4058,()=>new OutgameEffectControl(registry,services));}
         static string ChannelName(int value)=>value== -1?"NOAB":value>=0&&value<5?"channel"+(char)('A'+value):value.ToString();
     }
 }

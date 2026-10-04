@@ -1,0 +1,204 @@
+{
+  "status": "match-account-runtime-verified-external-avatar-rank-ports-pending",
+  "atUtc": "2026-10-03T14:58:33.277486+00:00",
+  "sourceEvidence": "MATCH_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T14:58:33.277486+00:00",
+    "scope": "Original MatchManager/MatchControl and real TopInfo account/shared-pool/file persistence, original rank request/callback ordering",
+    "checksPassed": 1629,
+    "newIntegratedChecks": 18,
+    "targetedChecks": 18,
+    "nativeChecks": 20,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2824,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameMatchPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "restoredAccount": {
+      "gold": 37,
+      "diamonds": 5,
+      "name": "恢复测试",
+      "matchNickname": "platform-nickname",
+      "matchAvatar": "platform-avatar",
+      "matchAuthorization": true,
+      "dailyWins": 1,
+      "weeklyWins": 1,
+      "totalWins": 6,
+      "dailyLosses": 1,
+      "weeklyLosses": 1,
+      "totalLosses": 1,
+      "played": 2
+    },
+    "observedBoundaries": [
+      "MatchData31643 constructs rankData; MatchPlayerData31644 has no initializers. Original fields uid/nick/url and VN_d/DN_d/VN_w/DN_w/VN_t/DN_t/playNum/isGetWechatInfo retained. Explicit interface properties avoid adding duplicate JSON names.",
+      "MatchManager31658 always invokes LitJSON before Data assignment; null C# string fails in reader constructor, invalid typed data retains old record. Empty input returns null and triggers defaults. Original JsonReader71990 Text65543 has only [91 and {123 grammar columns, so literal root null65540 is rejected, unlike rankData:null inside object. First test used root null to trigger defaults and was corrected after confirming original grammar; implementation unchanged.",
+      "Fresh Data is published before OpenID. UID assignment captures player before getter. Win count captures a new player, resolves current level twice, subtracts3 unchecked and applies source Clamp(value,0,second-3), including negative maximum under reentry. Loss count/nickname share a captured player, URL assignment resolves current record again. Existing nonnull data is not repaired.",
+      "ConfigMgr30409 selects from existing ChineseNames via shared generic RandomHelper26198, System.Random.Next(list.Count), including final row. Distinct from ConfigHelper AI-name generation. Required current-level/OpenID providers remain externally supplied; test fixtures explicitly use level8 and fixture-openid.",
+      "MatchManager uses original DataKey MatchManager, registration4130/Proj_hdzd/AutoSyntrue/Compressfalse, real OutgameDataManagerStorage and pool. OnInit requests server only when enabled and participating; no synthetic completion. OnSave uses LitJSON original field schema. OnRelease31659 is empty and retains Data. Login gates, digest-before-write and disabled-pool semantics are inherited without repair.",
+      "MatchControl31646 invokes avatar initialization before GamePlayState listener;31648 only removes listener, retains manager/transmitter/update flag. Manager lazy lookup retries null and caches successful lookup. Source unused three rank dictionaries, dic_myData and camp list have no readers in the seven extracted control methods and are not represented by this adapter; rank result/display model and full transmitter remain pending.",
+      "GamePlayState null/empty returns; source enum payload uses existing managed int adapter with strict unboxing. Only8/9 and currentLevel>=3 proceed. playNum increments unchecked before SendRank, including if network endpoint is absent or fails. Updata is empty.",
+      "SendRank captures player and weight VN_t*rate20 before any OpenID/request. Day2,week3,total1 requests each capture current transmitter then query current OpenID, then read captured player fields. Prior callback remains active through all three requests; new callback is assigned to current transmitter only after all succeed. Requests alone do not increment wins/losses.",
+      "Win callback31653 clears CURRENT transmitter callback then fetches CURRENT manager/player once and increments all three wins. Loss callback31654 clears CURRENT transmitter then increments CAPTURED player losses. Retained callback invoked again increments again. No callback auto-save, rollback, retry, idempotence or success inference added.",
+      "TopInfo runtime binding resolves actual MatchControl.Manager.Data.rankData dynamically. Existing auth message order mutates real Match record, then supplied UserDataPrefs endpoint and entire actual shared pool save. Native tests additionally perform explicit response callbacks and pool save, then independent file-backed fresh account/Match reload. Native responses remain test stimuli, not actual server completion.",
+      "Pinned official LitJSON source commit aa1869387c0dbec44e56958ebbdc8ede8ea8c0e4 copied unchanged with Unlicense; original bundled commit unknown. Reviewed original ReadValue71864 typed primitive/constructor/unknown-field behavior, ToJson71871 and reader grammar/constructors plus tests support this Match field schema only. Full parser/framework/binary equivalence is not claimed.",
+      "Full WXAvatar download/default asset/UserDataPrefs authorization composition, RankControl/UserInfoUI, Main/account/platform/remaining17 roster controllers/all business/final Player/original audiovisual acceptance pending; controller roster remains21/38 because Match4129 is not a roster entry."
+    ],
+    "notClaimed": "Actual WXAvatar/UserDataPrefs platform composition, rank network/server responses, full Rank/UserInfoUI/general sprite/Main/platform/remaining17 roster/all business/fresh Player/original audiovisual equivalence; original bundled LitJSON commit unknown, full parser equivalence unclaimed."
+  },
+  "implementation": [
+    "Scripts/OutgameMatchRuntime.cs",
+    "Scripts/GameRandomSource.cs",
+    "Editor/OutgameMatchValidation.cs",
+    "Editor/OutgameMatchPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "match-fresh-schema-and-original-clamp",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-constructor-missing-vs-explicit-null-and-no-default-repair",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-typed-json-corruption-does-not-replace-live-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-fresh-default-failure-retains-published-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-fresh-provider-reentry-captures-target-and-rereads-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-real-file-roundtrip-schema-and-release-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-server-init-remains-pending-and-local-override",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-login-gate-digest-and-disabled-pool",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-events-init-failure-argument-types-level-gate-dispose",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-three-ranks-pre-response-counts-and-no-auto-save",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-request-failure-retains-play-prefix-and-prior-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-request-reentry-resolves-transmitter-and-id-each-time",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-response-installed-after-all-synchronous-requests",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-win-current-record-loss-captured-record-and-current-transmitter-clear",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-null-transmitter-preserves-play-and-openid-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-lazy-manager-cache-and-unchecked-counters",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-random-string-final-element-and-empty-source-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-top-info-auth-persists-real-match-with-separate-profile",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/match-native.png",
+    "restoredName": "恢复测试",
+    "restoredGold": 37,
+    "restoredDiamonds": 5,
+    "scope": "Native owned TopInfo/account/MatchManager/MatchControl shared file restart and rank request/callback ordering. Avatar/download/UserDataPrefs/RankScore/UserInfoUI/platform remain explicit test endpoints. No real authorization/network success/full Main/Player claim.",
+    "checks": [
+      "Native owned load binds25 source outlets and executes original Awake visibility",
+      "Native BaseUI WaitUntil emits page-ready then starts both original persistent effects",
+      "Owned page OpenLater installs source canvases and effects retain image parents",
+      "Actual UIControl resolves deferred currency outlets from the owned page",
+      "Real account tool mutations immediately refresh native currency texts and persist through shared pool",
+      "Real profile name event refreshes red dot and resolves original head/frame sprites",
+      "Native profile pointer reaches source empty-argument UserInfoUI request endpoint",
+      "Explicit test authorization event uses separate platform endpoints and source Match/name/save order",
+      "Deferred supplied avatar callback updates the exact native WeChat image",
+      "Native auth saves real Match fields through the same account pool",
+      "Native match emits day/week/total and increments play count before response",
+      "Explicit test response changes live wins, preserving source absence of automatic save",
+      "Explicit loss response updates all captured loss counters",
+      "Saved nondefault nickname clears the original red dot",
+      "Native close marks disposed but source TopInfo.Dispose retains base dictionary/arguments/destroyed-object reference",
+      "Source close releases both effects and main page handle after native frame boundaries",
+      "Closed page has removed both account and authorization listeners",
+      "Independent file-backed account/UserInfo restart restores actual currency/name and fresh page labels",
+      "Independent native account restart restores Match authorization, day/week/total wins/losses and play count",
+      "Reopened page owns fresh resource handles; real MatchManager restores saved authorization"
+    ]
+  },
+  "remaining": "Recover WXAvatar actual default icon/cache/download and UserDataPrefs authorization composition, RankControl score/full UserInfoUI and real RanklistTransmitter. Complete UI/general sprite/resource assembly, Guide and remaining17 controller lifecycle/business, real Main/account/platform/all business and final Player/original audiovisual acceptance."
+}

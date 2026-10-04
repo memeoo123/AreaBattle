@@ -15,6 +15,31 @@ namespace AreaBattle
         {
             Symbols=symbols.Values.ToList();ByMagnitude=symbols;FirstMagnitude=ByMagnitude.First().Key;
         }
+        // BigNumExtension.BigToString27612. Keep source truncation, symbol saturation,
+        // current-culture raw digits and the final-fraction-digit zero rule.
+        public string Format(System.Numerics.BigInteger value,Action<object[]> warning)
+        {
+            if(Symbols==null){warning(new object[]{"大数据表未配置"});return string.Empty;}
+            string raw=value.ToString(),suffix="";
+            if(value==System.Numerics.BigInteger.Zero)return "0";
+            string text;
+            if(raw.Length<=FirstMagnitude+2){
+                text=raw.PadLeft(2,'0');text=text.Insert(text.Length-2,".");
+                text=raw.Length>=4?text.Substring(0,4):text.PadLeft(4,'0');
+            }else{
+                string integer=(value/100).ToString();int group=integer.Length/FirstMagnitude;
+                if(integer.Length%FirstMagnitude==0)group--;
+                int index=Symbols.Count<=group-1?Symbols.Count-1:group-1;
+                suffix=Symbols[index];text=integer.Insert(integer.Length-group*FirstMagnitude,".").Substring(0,4);
+            }
+            int fraction=text.IndexOf(".")+1;
+            if(value.ToString().Length<=5){
+                bool lastZero=false;for(int i=fraction;i<text.Length;i++)lastZero=text[i]=='0';
+                if(lastZero)text=text.Substring(0,fraction-1);
+            }
+            if(text.EndsWith("."))text=text.Substring(0,text.Length-1);
+            return text+suffix;
+        }
         // ConfigMgr.GetLargNum30432 allocates a fresh map and uses Add, preserving enumeration order.
         public static Dictionary<int,string> FromConfig(Dictionary<object,LargeNumConfig> configs)
         {

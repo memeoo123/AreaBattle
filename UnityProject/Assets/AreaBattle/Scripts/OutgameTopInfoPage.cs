@@ -9,18 +9,27 @@ namespace AreaBattle
         bool Visible {get;}
         void RendererPart(int mask,string layer);
     }
-    // TopInfoUI33920 canvas setup and33928/33932 rendering; account/buttons remain separate.
-    public sealed class OutgameTopInfoPage:OutgameUiPage,IOutgameTopInfoPage
+    public interface IOutgameCurrencyTopInfo
     {
-        readonly Dictionary<int,GameObject> sourceParts;
+        Text GoldText {get;}
+        Text DiamondsText {get;}
+    }
+    // TopInfoUI33920 canvas setup and33928/33932 rendering; owned lifecycle in companion partial.
+    public sealed partial class OutgameTopInfoPage:OutgameUiPage,IOutgameTopInfoPage,IOutgameCurrencyTopInfo
+    {
+        Dictionary<int,GameObject> sourceParts;
         Dictionary<int,GameObject> parts;
         Dictionary<int,(Canvas canvas,GraphicRaycaster raycaster)> renderers;
         public int Layer=2;
+        public Text GoldText {get;private set;}
+        public Text DiamondsText {get;private set;}
         public OutgameTopInfoPage(GameObject root,Dictionary<int,GameObject> parts,Func<OutgameMessageDispatcher> messages=null):base(root,messages){sourceParts=parts;}
         public static OutgameTopInfoPage FromOriginal(GameObject root,Func<OutgameMessageDispatcher> messages=null)=>new OutgameTopInfoPage(root,new Dictionary<int,GameObject>{
             {2,root.transform.Find("objTopInfo/goldInfo").gameObject},
             {4,root.transform.Find("objTopInfo/diamondInfo").gameObject},
-            {5,root.transform.Find("objTopInfo/spInfo").gameObject}},messages);
+            {5,root.transform.Find("objTopInfo/spInfo").gameObject}},messages){
+                GoldText=root.transform.Find("objTopInfo/goldInfo/txt_goldNum").GetComponent<Text>(),
+                DiamondsText=root.transform.Find("objTopInfo/diamondInfo/txt_DiamondNum").GetComponent<Text>()};
         public void OpenParts()
         {
             parts=new Dictionary<int,GameObject>(sourceParts);

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace AreaBattle
 {
     // ObjectPool<T>28732..28746 and normal-pool-rgctx.json. Concrete prefab specialization.
-    public sealed class OutgameObjectPool
+    public sealed class OutgameObjectPool:IOutgameManagedObjectPool
     {
         readonly LinkedList<OutgamePoolEntry> objects=new LinkedList<OutgamePoolEntry>();
         readonly bool allowMultiSpawn;

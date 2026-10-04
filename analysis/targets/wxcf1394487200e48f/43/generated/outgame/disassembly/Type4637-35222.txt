@@ -1,0 +1,93 @@
+; Original class: ActivityControl
+; Type4637.[olZ]L; wasmcode function 13355; offset=6470126 size=279
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0062b9ef  i32.const [5001727]
+0062b9f4  i32.load8_u [0, 0]
+0062b9f7  i32.eqz []
+0062b9f8  if [-64]
+0062b9fa    i32.const [3988896] ; METHOD ActivityControl.[dMvk
+0062b9ff    call [900] ; 
+0062ba02    i32.const [3988900] ; METHOD ActivityControl.kfyXX^
+0062ba07    call [900] ; 
+0062ba0a    i32.const [3988880] ; METHOD ActivityControl.puqN}
+0062ba0f    call [900] ; 
+0062ba12    i32.const [3988884] ; METHOD ActivityControl.sybjRh
+0062ba17    call [900] ; 
+0062ba1a    i32.const [3947148]
+0062ba1f    call [900] ; 
+0062ba22    i32.const [3949340]
+0062ba27    call [900] ; 
+0062ba2a    i32.const [4048628] ; STRING "CloseUI"
+0062ba2f    call [900] ; 
+0062ba32    i32.const [4054844] ; STRING "GF_GameFocus"
+0062ba37    call [900] ; 
+0062ba3a    i32.const [4065104] ; STRING "OpenUI"
+0062ba3f    call [900] ; 
+0062ba42    i32.const [5001727]
+0062ba47    i32.const [1]
+0062ba49    i32.store8 [0, 0]
+0062ba4c  end []
+0062ba4d  i32.const [3947148]
+0062ba52  i32.load [2, 0]
+0062ba55  call [903] ; 
+0062ba58  local.set [1]
+0062ba5a  local.get [1]
+0062ba5c  local.get [0]
+0062ba5e  i32.const [3988896] ; METHOD ActivityControl.[dMvk
+0062ba63  i32.load [2, 0]
+0062ba66  i32.const [0]
+0062ba68  call [1067] ; EventHandler..ctor
+0062ba6b  i32.const [4065104] ; STRING "OpenUI"
+0062ba70  i32.load [2, 0]
+0062ba73  local.get [1]
+0062ba75  i32.const [0]
+0062ba77  call [1146] ; MsgDispatcher.AddEventListener
+0062ba7a  i32.const [3947148]
+0062ba7f  i32.load [2, 0]
+0062ba82  call [903] ; 
+0062ba85  local.set [1]
+0062ba87  local.get [1]
+0062ba89  local.get [0]
+0062ba8b  i32.const [3988900] ; METHOD ActivityControl.kfyXX^
+0062ba90  i32.load [2, 0]
+0062ba93  i32.const [0]
+0062ba95  call [1067] ; EventHandler..ctor
+0062ba98  i32.const [4048628] ; STRING "CloseUI"
+0062ba9d  i32.load [2, 0]
+0062baa0  local.get [1]
+0062baa2  i32.const [0]
+0062baa4  call [1146] ; MsgDispatcher.AddEventListener
+0062baa7  i32.const [3947148]
+0062baac  i32.load [2, 0]
+0062baaf  call [903] ; 
+0062bab2  local.set [1]
+0062bab4  local.get [1]
+0062bab6  local.get [0]
+0062bab8  i32.const [3988880] ; METHOD ActivityControl.puqN}
+0062babd  i32.load [2, 0]
+0062bac0  i32.const [0]
+0062bac2  call [1067] ; EventHandler..ctor
+0062bac5  i32.const [4054844] ; STRING "GF_GameFocus"
+0062baca  i32.load [2, 0]
+0062bacd  local.get [1]
+0062bacf  i32.const [0]
+0062bad1  call [1146] ; MsgDispatcher.AddEventListener
+0062bad4  i32.const [3949340]
+0062bad9  i32.load [2, 0]
+0062badc  call [903] ; 
+0062badf  local.set [1]
+0062bae1  local.get [1]
+0062bae3  local.get [0]
+0062bae5  i32.const [3988884] ; METHOD ActivityControl.sybjRh
+0062baea  i32.load [2, 0]
+0062baed  i32.const [0]
+0062baef  call [2351] ; UpdateHandle..ctor
+0062baf2  local.get [0]
+0062baf4  local.get [1]
+0062baf6  i32.store [2, 68]
+0062baf9  local.get [0]
+0062bafb  i32.load [2, 68]
+0062bafe  i32.const [0]
+0062bb00  call [2890] ; UpdateManager.AddHandle
+0062bb03  drop []
+0062bb04  end []

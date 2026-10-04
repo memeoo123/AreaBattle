@@ -1,0 +1,17 @@
+; Original class: GameStatisticsExpansion
+; Type4618.EventCount; wasmcode function 6043; offset=2140546 size=27
+; signature={'args': [127, 127], 'returns': [126]}; localGroups=[]
+0020a983  local.get [0]
+0020a985  call [1493] ; GameStatisticsControl.get_I
+0020a988  i32.eqz []
+0020a989  if [-64]
+0020a98b    i64.const [0]
+0020a98d    return []
+0020a98e  end []
+0020a98f  local.get [0]
+0020a991  call [1493] ; GameStatisticsControl.get_I
+0020a994  local.get [0]
+0020a996  local.get [0]
+0020a998  call [2694] ; GameStatisticsControl.GetEventCount
+0020a99b  return []
+0020a99c  end []

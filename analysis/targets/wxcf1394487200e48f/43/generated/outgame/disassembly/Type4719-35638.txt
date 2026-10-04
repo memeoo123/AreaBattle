@@ -1,0 +1,25 @@
+; Original class: AccAchievementItemData
+; Type4719.get_Config; wasmcode1 function 15005; offset=5339671 size=49
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00517a18  local.get [0]
+00517a1a  i32.load [2, 16]
+00517a1d  local.set [1]
+00517a1f  local.get [1]
+00517a21  i32.eqz []
+00517a22  if [-64]
+00517a24    local.get [0]
+00517a26    i32.const [0]
+00517a28    i32.const [7729] ; TABLE ActivityConfigMgr.get_I
+00517a2b    call_indirect [2, 0]
+00517a2e    local.get [0]
+00517a30    i32.load [2, 12]
+00517a33    i32.const [0]
+00517a35    call [32277] ; ActivityConfigMgr.GetAchievementAccConfig
+00517a39    i32.store [2, 16]
+00517a3c    local.get [0]
+00517a3e    i32.load [2, 16]
+00517a41    local.set [1]
+00517a43  end []
+00517a44  local.get [1]
+00517a46  return []
+00517a47  end []

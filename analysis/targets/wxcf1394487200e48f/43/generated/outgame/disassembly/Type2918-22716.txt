@@ -1,0 +1,42 @@
+; Original class: UIExtension
+; Type2918.AddClick; wasmcode function 1723; offset=560069 size=114
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00088bc6  i32.const [4989414]
+00088bcb  i32.load8_u [0, 0]
+00088bce  i32.eqz []
+00088bcf  if [-64]
+00088bd1    i32.const [3945552]
+00088bd6    call [900] ; 
+00088bd9    i32.const [4031220] ; METHOD m¿cYS .¾PJ«ª
+00088bde    call [900] ; 
+00088be1    i32.const [3949156]
+00088be6    call [900] ; 
+00088be9    i32.const [4989414]
+00088bee    i32.const [1]
+00088bf0    i32.store8 [0, 0]
+00088bf3  end []
+00088bf4  i32.const [3949156]
+00088bf9  i32.load [2, 0]
+00088bfc  call [903] ; 
+00088bff  local.set [2]
+00088c01  local.get [2]
+00088c03  local.get [1]
+00088c05  i32.store [2, 8]
+00088c08  local.get [0]
+00088c0a  local.get [2]
+00088c0c  call [7904] ; EventListener.Get
+00088c0f  local.set [0]
+00088c11  i32.const [3945552]
+00088c16  i32.load [2, 0]
+00088c19  call [903] ; 
+00088c1c  local.set [1]
+00088c1e  local.get [1]
+00088c20  local.get [2]
+00088c22  i32.const [4031220] ; METHOD m¿cYS .¾PJ«ª
+00088c27  i32.load [2, 0]
+00088c2a  local.get [2]
+00088c2c  call [7424] ; PointerDataDelegate..ctor
+00088c2f  local.get [0]
+00088c31  local.get [1]
+00088c33  i32.store [2, 12]
+00088c36  end []

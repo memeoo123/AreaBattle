@@ -1,0 +1,110 @@
+{
+  "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+  "memorySha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "activities": [
+    {
+      "typeIndex": 3975,
+      "name": "DailyChallengeActivity",
+      "parentChain": [
+        3975,
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4629,
+      "name": "ActivityBase",
+      "parentChain": [
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4639,
+      "name": "ChildActivityBase`1",
+      "parentChain": [
+        4639,
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4640,
+      "name": "FatherActivityBase`2",
+      "parentChain": [
+        4640,
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4676,
+      "name": "ChildTaskActivity",
+      "parentChain": [
+        4676,
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4685,
+      "name": "TaskActivity",
+      "parentChain": [
+        4685,
+        4629
+      ],
+      "registration": {
+        "activityId": 1300001,
+        "constructorMetadata": 35248,
+        "rawHex": "01b089000001000008c027ac42",
+        "attributeRangeIndex": 4429,
+        "dataOffset": 59039,
+        "dataEnd": 59052
+      }
+    },
+    {
+      "typeIndex": 4698,
+      "name": "ChildLimitTimeTaskActivity",
+      "parentChain": [
+        4698,
+        4639,
+        4629
+      ],
+      "registration": null
+    },
+    {
+      "typeIndex": 4699,
+      "name": "LimitTimeTaskActivity",
+      "parentChain": [
+        4699,
+        4640,
+        4629
+      ],
+      "registration": {
+        "activityId": 1301001,
+        "constructorMetadata": 35248,
+        "rawHex": "01b089000001000008c027b412",
+        "attributeRangeIndex": 4435,
+        "dataOffset": 59114,
+        "dataEnd": 59127
+      }
+    },
+    {
+      "typeIndex": 4714,
+      "name": "AchievementActivity",
+      "parentChain": [
+        4714,
+        4629
+      ],
+      "registration": {
+        "activityId": 1601001,
+        "constructorMetadata": 35248,
+        "rawHex": "01b089000001000008c030dbd2",
+        "attributeRangeIndex": 4439,
+        "dataOffset": 59173,
+        "dataEnd": 59186
+      }
+    }
+  ],
+  "qualification": "Complete Assembly-CSharp ActivityBase ancestry, including generic parent resolution; only three direct ActivityControlRegister attributes. ChildLimitTimeTaskActivity is constructed by the father, not automatically registered."
+}

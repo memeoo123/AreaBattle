@@ -1,0 +1,84 @@
+; Original class: GameFrameWorkMono
+; Type3442.`[zU; wasmcode function 2819; offset=874686 size=245
+; signature={'args': [127], 'returns': [127]}; localGroups=[]
+000d58bf  i32.const [5011779]
+000d58c4  i32.load8_u [0, 0]
+000d58c7  i32.eqz []
+000d58c8  if [-64]
+000d58ca    i32.const [3932320]
+000d58cf    call [900] ; 
+000d58d2    i32.const [4000760]
+000d58d7    call [900] ; 
+000d58da    i32.const [3932344]
+000d58df    call [900] ; 
+000d58e2    i32.const [3936516]
+000d58e7    call [900] ; 
+000d58ea    i32.const [4055156] ; STRING "GameFrameWorkMono"
+000d58ef    call [900] ; 
+000d58f2    i32.const [5011779]
+000d58f7    i32.const [1]
+000d58f9    i32.store8 [0, 0]
+000d58fc  end []
+000d58fd  i32.const [3932320]
+000d5902  i32.load [2, 0]
+000d5905  i32.load [2, 92]
+000d5908  i32.load [2, 0]
+000d590b  local.set [0]
+000d590d  i32.const [3936516]
+000d5912  i32.load [2, 0]
+000d5915  call [901] ; 
+000d5918  local.get [0]
+000d591a  i32.const [0]
+000d591c  i32.const [0]
+000d591e  call [940] ; Object.op_Equality
+000d5921  if [-64]
+000d5923    i32.const [4055156] ; STRING "GameFrameWorkMono"
+000d5928    i32.load [2, 0]
+000d592b    i32.const [0]
+000d592d    call [1757] ; GameObject.Find
+000d5930    local.set [0]
+000d5932    i32.const [3936516]
+000d5937    i32.load [2, 0]
+000d593a    call [901] ; 
+000d593d    local.get [0]
+000d593f    i32.const [0]
+000d5941    i32.const [0]
+000d5943    call [940] ; Object.op_Equality
+000d5946    if [-64]
+000d5948      i32.const [3932344]
+000d594d      i32.load [2, 0]
+000d5950      call [903] ; 
+000d5953      local.set [0]
+000d5955      local.get [0]
+000d5957      i32.const [4055156] ; STRING "GameFrameWorkMono"
+000d595c      i32.load [2, 0]
+000d595f      i32.const [0]
+000d5961      call [1292] ; GameObject..ctor
+000d5964      i32.const [3936516]
+000d5969      i32.load [2, 0]
+000d596c      call [901] ; 
+000d596f      local.get [0]
+000d5971      i32.const [0]
+000d5973      call [1111] ; Object.DontDestroyOnLoad
+000d5976    end []
+000d5977    local.get [0]
+000d5979    i32.const [4000760]
+000d597e    i32.load [2, 0]
+000d5981    call [1094] ; 
+000d5984    local.set [0]
+000d5986    i32.const [3932320]
+000d598b    i32.load [2, 0]
+000d598e    i32.load [2, 92]
+000d5991    local.get [0]
+000d5993    i32.store [2, 0]
+000d5996    i32.const [3932320]
+000d599b    i32.load [2, 0]
+000d599e    i32.load [2, 92]
+000d59a1    drop []
+000d59a2  end []
+000d59a3  i32.const [3932320]
+000d59a8  i32.load [2, 0]
+000d59ab  i32.load [2, 92]
+000d59ae  i32.load [2, 0]
+000d59b1  return []
+000d59b2  end []

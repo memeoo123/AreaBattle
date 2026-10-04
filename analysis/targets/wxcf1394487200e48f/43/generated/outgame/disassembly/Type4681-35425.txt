@@ -1,0 +1,42 @@
+; Original class: ChildTaskOffNetStrategy
+; Type4681.}Zo}Z; wasmcode function 20243; offset=9087184 size=119
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008aa8d3  i32.const [5001412]
+008aa8d8  i32.load8_u [0, 0]
+008aa8db  i32.eqz []
+008aa8dc  if [-64]
+008aa8de    i32.const [3955744]
+008aa8e3    call [900] ;
+008aa8e6    i32.const [3973952]
+008aa8eb    call [900] ;
+008aa8ee    i32.const [3923272]
+008aa8f3    call [900] ;
+008aa8f6    i32.const [5001412]
+008aa8fb    i32.const [1]
+008aa8fd    i32.store8 [0, 0]
+008aa900  end []
+008aa901  local.get [0]
+008aa903  i32.load [2, 8]
+008aa906  i32.load [2, 76]
+008aa909  i32.load [2, 16]
+008aa90c  local.set [1]
+008aa90e  local.get [0]
+008aa910  i32.load [2, 8]
+008aa913  i32.load [2, 80]
+008aa916  i32.const [3955744]
+008aa91b  i32.load [2, 0]
+008aa91e  call [1138] ;
+008aa921  local.set [0]
+008aa923  i32.const [3923272]
+008aa928  i32.load [2, 0]
+008aa92b  call [903] ;
+008aa92e  local.set [2]
+008aa930  local.get [2]
+008aa932  local.get [0]
+008aa934  i32.const [3973952]
+008aa939  i32.load [2, 0]
+008aa93c  call [1350] ;
+008aa93f  local.get [1]
+008aa941  local.get [2]
+008aa943  i32.store [2, 52]
+008aa946  end []

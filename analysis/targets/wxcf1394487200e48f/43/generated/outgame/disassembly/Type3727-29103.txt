@@ -1,0 +1,106 @@
+; Original class: BaseHttpNetTransmitter
+; Type3727.AddHttpProtocol; wasmcode function 2051; offset=624238 size=283
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+0009866f  global.get [0]
+00098671  i32.const [16]
+00098673  i32.sub []
+00098674  local.set [4]
+00098676  local.get [4]
+00098678  global.set [0]
+0009867a  i32.const [4987887]
+0009867f  i32.load8_u [0, 0]
+00098682  i32.eqz []
+00098683  if [-64]
+00098685    i32.const [3929208]
+0009868a    call [900] ; 
+0009868d    i32.const [3954448]
+00098692    call [900] ; 
+00098695    i32.const [3956236]
+0009869a    call [900] ; 
+0009869d    i32.const [3956244]
+000986a2    call [900] ; 
+000986a5    i32.const [3934404]
+000986aa    call [900] ; 
+000986ad    i32.const [3926996]
+000986b2    call [900] ; 
+000986b5    i32.const [4080500] ; STRING "[{0}]添加协议失败，重复的协议ID[{1}]"
+000986ba    call [900] ; 
+000986bd    i32.const [4987887]
+000986c2    i32.const [1]
+000986c4    i32.store8 [0, 0]
+000986c7  end []
+000986c8  block [-64]
+000986ca    local.get [0]
+000986cc    i32.load [2, 20]
+000986cf    local.get [1]
+000986d1    i32.const [3956244]
+000986d6    i32.load [2, 0]
+000986d9    call [1129] ; 
+000986dc    if [-64]
+000986de      i32.const [3926996]
+000986e3      i32.load [2, 0]
+000986e6      i32.const [1]
+000986e8      call [909] ; 
+000986eb      local.set [2]
+000986ed      local.get [4]
+000986ef      local.get [0]
+000986f1      i32.load [2, 12]
+000986f4      i32.store [2, 12]
+000986f7      i32.const [3934404]
+000986fc      i32.load [2, 0]
+000986ff      local.get [4]
+00098701      i32.const [12]
+00098703      i32.add []
+00098704      call [910] ; 
+00098707      local.set [0]
+00098709      local.get [4]
+0009870b      local.get [1]
+0009870d      i32.store [2, 8]
+00098710      i32.const [3934404]
+00098715      i32.load [2, 0]
+00098718      local.get [4]
+0009871a      i32.const [8]
+0009871c      i32.add []
+0009871d      call [910] ; 
+00098720      local.set [1]
+00098722      i32.const [4080500] ; STRING "[{0}]添加协议失败，重复的协议ID[{1}]"
+00098727      i32.load [2, 0]
+0009872a      local.get [0]
+0009872c      local.get [1]
+0009872e      i32.const [0]
+00098730      call [1047] ; String.Format
+00098733      local.set [0]
+00098735      local.get [2]
+00098737      local.get [0]
+00098739      call [905] ; 
+0009873c      local.get [2]
+0009873e      local.get [0]
+00098740      i32.store [2, 16]
+00098743      i32.const [3929208]
+00098748      i32.load [2, 0]
+0009874b      call [901] ; 
+0009874e      local.get [2]
+00098750      i32.const [0]
+00098752      call [1610] ; CLog.NetLog
+00098755      br [1]
+00098757    end []
+00098758    local.get [0]
+0009875a    i32.load [2, 20]
+0009875d    local.get [1]
+0009875f    local.get [2]
+00098761    i32.const [3956236]
+00098766    i32.load [2, 0]
+00098769    call [1049] ; 
+0009876c    local.get [0]
+0009876e    i32.load [2, 24]
+00098771    local.get [1]
+00098773    local.get [3]
+00098775    i32.const [3954448]
+0009877a    i32.load [2, 0]
+0009877d    call [1049] ; 
+00098780  end []
+00098781  local.get [4]
+00098783  i32.const [16]
+00098785  i32.add []
+00098786  global.set [0]
+00098788  end []

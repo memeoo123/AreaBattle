@@ -1,0 +1,45 @@
+; Original class: CommonLimitTimeTaskItem
+; Type4337..ctor; wasmcode function 20158; offset=9062554 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a489b  i32.const [5008849]
+008a48a0  i32.load8_u [0, 0]
+008a48a3  i32.eqz []
+008a48a4  if [-64]
+008a48a6    i32.const [3972860]
+008a48ab    call [900] ; 
+008a48ae    i32.const [3972880]
+008a48b3    call [900] ; 
+008a48b6    i32.const [3923032]
+008a48bb    call [900] ; 
+008a48be    i32.const [3923028]
+008a48c3    call [900] ; 
+008a48c6    i32.const [5008849]
+008a48cb    i32.const [1]
+008a48cd    i32.store8 [0, 0]
+008a48d0  end []
+008a48d1  i32.const [3923028]
+008a48d6  i32.load [2, 0]
+008a48d9  call [903] ; 
+008a48dc  local.set [1]
+008a48de  local.get [1]
+008a48e0  i32.const [3972860]
+008a48e5  i32.load [2, 0]
+008a48e8  call [944] ; 
+008a48eb  local.get [0]
+008a48ed  local.get [1]
+008a48ef  i32.store [2, 56]
+008a48f2  i32.const [3923032]
+008a48f7  i32.load [2, 0]
+008a48fa  call [903] ; 
+008a48fd  local.set [1]
+008a48ff  local.get [1]
+008a4901  i32.const [3972880]
+008a4906  i32.load [2, 0]
+008a4909  call [944] ; 
+008a490c  local.get [0]
+008a490e  local.get [1]
+008a4910  i32.store [2, 60]
+008a4913  local.get [0]
+008a4915  i32.const [0]
+008a4917  call [1862] ; DynamicBaseItem..ctor
+008a491a  end []

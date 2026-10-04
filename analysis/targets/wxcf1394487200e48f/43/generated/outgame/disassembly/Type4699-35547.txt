@@ -1,0 +1,24 @@
+; Original class: LimitTimeTaskActivity
+; Type4699.ActivityFactoryBase; wasmcode function 18850; offset=8500501 size=57
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0081b516  i32.const [5001259]
+0081b51b  i32.load8_u [0, 0]
+0081b51e  i32.eqz []
+0081b51f  if [-64]
+0081b521    i32.const [3935216]
+0081b526    call [900] ;
+0081b529    i32.const [5001259]
+0081b52e    i32.const [1]
+0081b530    i32.store8 [0, 0]
+0081b533  end []
+0081b534  i32.const [3935216]
+0081b539  i32.load [2, 0]
+0081b53c  call [903] ;
+0081b53f  local.set [0]
+0081b541  local.get [0]
+0081b543  local.get [1]
+0081b545  local.get [1]
+0081b547  call [5922] ; LimitTimeTaskFactory..ctor
+0081b54a  local.get [0]
+0081b54c  return []
+0081b54d  end []

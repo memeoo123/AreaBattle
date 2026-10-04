@@ -1,0 +1,39 @@
+; Original class: TaskActivity
+; Type4685.RemoveListener; wasmcode1 function 21358; offset=8571559 size=112
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0082caa8  i32.const [5001430]
+0082caad  i32.load8_u [0, 0]
+0082cab0  i32.eqz []
+0082cab1  if [-64]
+0082cab3    i32.const [3944680]
+0082cab8    i32.const [1605]
+0082cabb    call_indirect [0, 0]
+0082cabe    i32.const [4016532] ; METHOD TaskActivity.CommonActivity_Launch
+0082cac3    i32.const [1605]
+0082cac6    call_indirect [0, 0]
+0082cac9    i32.const [4048952] ; STRING "CommonActivity_Launch"
+0082cace    i32.const [1605]
+0082cad1    call_indirect [0, 0]
+0082cad4    i32.const [5001430]
+0082cad9    i32.const [1]
+0082cadb    i32.store8 [0, 0]
+0082cade  end []
+0082cadf  i32.const [3944680]
+0082cae4  i32.load [2, 0]
+0082cae7  i32.const [109007]
+0082caeb  call_indirect [2, 0]
+0082caee  local.set [1]
+0082caf0  local.get [1]
+0082caf2  local.get [0]
+0082caf4  i32.const [4016532] ; METHOD TaskActivity.CommonActivity_Launch
+0082caf9  i32.load [2, 0]
+0082cafc  i32.const [0]
+0082cafe  i32.const [7926] ; TABLE EventHandler..ctor
+0082cb01  call_indirect [6, 0]
+0082cb04  i32.const [4048952] ; STRING "CommonActivity_Launch"
+0082cb09  i32.load [2, 0]
+0082cb0c  local.get [1]
+0082cb0e  i32.const [0]
+0082cb10  i32.const [7927] ; TABLE CommonMsgDispatcher.RemoveEventListener
+0082cb13  call_indirect [5, 0]
+0082cb16  end []

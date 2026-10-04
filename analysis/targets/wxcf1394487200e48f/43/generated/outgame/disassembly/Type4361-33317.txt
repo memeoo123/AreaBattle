@@ -1,0 +1,65 @@
+; Original class: SevendayAccPreviewItem
+; Type4361.InitializeComponent; wasmcode function 16035; offset=7746934 size=204
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00763577  i32.const [5008935]
+0076357c  i32.load8_u [0, 0]
+0076357f  i32.eqz []
+00763580  if [-64]
+00763582    i32.const [4018588]
+00763587    call [900] ; 
+0076358a    i32.const [4018604]
+0076358f    call [900] ; 
+00763592    i32.const [4090200] ; STRING "img_bgRight"
+00763597    call [900] ; 
+0076359a    i32.const [4090196] ; STRING "img_bgLeft"
+0076359f    call [900] ; 
+007635a2    i32.const [4090284] ; STRING "img_touch"
+007635a7    call [900] ; 
+007635aa    i32.const [4095712] ; STRING "rewardP"
+007635af    call [900] ; 
+007635b2    i32.const [4049012] ; STRING "CommonLimitTimeTaskRewardItem"
+007635b7    call [900] ; 
+007635ba    i32.const [5008935]
+007635bf    i32.const [1]
+007635c1    i32.store8 [0, 0]
+007635c4  end []
+007635c5  local.get [0]
+007635c7  local.get [0]
+007635c9  i32.const [4090196] ; STRING "img_bgLeft"
+007635ce  i32.load [2, 0]
+007635d1  i32.const [4018604]
+007635d6  i32.load [2, 0]
+007635d9  call [970] ; 
+007635dc  i32.store [2, 52]
+007635df  local.get [0]
+007635e1  local.get [0]
+007635e3  i32.const [4090200] ; STRING "img_bgRight"
+007635e8  i32.load [2, 0]
+007635eb  i32.const [4018604]
+007635f0  i32.load [2, 0]
+007635f3  call [970] ; 
+007635f6  i32.store [2, 56]
+007635f9  local.get [0]
+007635fb  local.get [0]
+007635fd  i32.const [4090284] ; STRING "img_touch"
+00763602  i32.load [2, 0]
+00763605  i32.const [4018588]
+0076360a  i32.load [2, 0]
+0076360d  call [970] ; 
+00763610  i32.store [2, 60]
+00763613  local.get [0]
+00763615  local.get [0]
+00763617  i32.const [4049012] ; STRING "CommonLimitTimeTaskRewardItem"
+0076361c  i32.load [2, 0]
+0076361f  i32.const [0]
+00763621  call [1116] ; UIObject.Get
+00763624  i32.store [2, 64]
+00763627  local.get [0]
+00763629  local.get [0]
+0076362b  i32.const [4095712] ; STRING "rewardP"
+00763630  i32.load [2, 0]
+00763633  i32.const [4018604]
+00763638  i32.load [2, 0]
+0076363b  call [970] ; 
+0076363e  i32.store [2, 68]
+00763641  end []

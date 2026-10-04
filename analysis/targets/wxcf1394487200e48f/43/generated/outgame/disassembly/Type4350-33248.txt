@@ -1,0 +1,37 @@
+; Original class: LivenessPreviewItem
+; Type4350.VisibleBefore; wasmcode function 18800; offset=8482573 size=91
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00816f0e  i32.const [5008902]
+00816f13  i32.load8_u [0, 0]
+00816f16  i32.eqz []
+00816f17  if [-64]
+00816f19    i32.const [4005760] ; METHOD LivenessPreviewItem.wwkUT^
+00816f1e    call [900] ;
+00816f21    i32.const [3949340]
+00816f26    call [900] ;
+00816f29    i32.const [5008902]
+00816f2e    i32.const [1]
+00816f30    i32.store8 [0, 0]
+00816f33  end []
+00816f34  i32.const [3949340]
+00816f39  i32.load [2, 0]
+00816f3c  call [903] ;
+00816f3f  local.set [2]
+00816f41  local.get [2]
+00816f43  local.get [0]
+00816f45  i32.const [4005760] ; METHOD LivenessPreviewItem.wwkUT^
+00816f4a  i32.load [2, 0]
+00816f4d  i32.const [0]
+00816f4f  call [2351] ; UpdateHandle..ctor
+00816f52  local.get [1]
+00816f54  if [-64]
+00816f56    local.get [2]
+00816f58    i32.const [0]
+00816f5a    call [2890] ; UpdateManager.AddHandle
+00816f5d    drop []
+00816f5e    return []
+00816f5f  end []
+00816f60  local.get [2]
+00816f62  i32.const [0]
+00816f64  call [4201] ; UpdateManager.RemoveHandle
+00816f67  end []

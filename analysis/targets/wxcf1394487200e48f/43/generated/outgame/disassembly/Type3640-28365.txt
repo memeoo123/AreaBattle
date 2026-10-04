@@ -1,0 +1,26 @@
+; Original class: Pu¯z
+; Type3640.Reset; wasmcode function 9878; offset=4735525 size=64
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00484226  i32.const [4987493]
+0048422b  i32.load8_u [0, 0]
+0048422e  i32.eqz []
+0048422f  if [-64]
+00484231    i32.const [3934128]
+00484236    call [900] ; 
+00484239    i32.const [4987493]
+0048423e    i32.const [1]
+00484240    i32.store8 [0, 0]
+00484243  end []
+00484244  i32.const [6]
+00484246  i32.const [3934128]
+0048424b  i32.load [2, 0]
+0048424e  local.get [0]
+00484250  i32.load [2, 8]
+00484253  call [1044] ; 
+00484256  local.get [0]
+00484258  i32.const [0]
+0048425a  i32.store [2, 12]
+0048425d  local.get [0]
+0048425f  i32.const [0]
+00484261  i32.store [2, 16]
+00484264  end []

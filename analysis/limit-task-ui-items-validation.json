@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskPageItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskRewardItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskUI",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-original-icon-atlas-int64-and-missing-row",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-sprite-reentry-retains-input-count-and-live-selection",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-failures-preserve-source-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-progress-signed-long-upper-cap-and-zero-target",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-gameobject-pointer-replaces-listener-and-disposal-clears-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-progress-native-pointer-and-destroy-failure-order",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original limited-task reward/progress objects in native PlayMode with Canvas, pointer callbacks, reentry and deferred Object.Destroy. Sprite and popup are explicit observed fixture endpoints; complete page, production entry and original audiovisual acceptance remain pending."
+}

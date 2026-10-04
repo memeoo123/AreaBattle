@@ -1,0 +1,24 @@
+; Original class: GroupData
+; Type4689.get_Config; wasmcode function 11905; offset=5825576 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0058e429  local.get [0]
+0058e42b  i32.load [2, 20]
+0058e42e  local.set [1]
+0058e430  local.get [1]
+0058e432  i32.eqz []
+0058e433  if [-64]
+0058e435    local.get [0]
+0058e437    i32.const [0]
+0058e439    call [1189] ; ActivityConfigMgr.get_I
+0058e43c    local.get [0]
+0058e43e    i32.load [2, 8]
+0058e441    i32.const [0]
+0058e443    call [13368] ; ActivityConfigMgr.GetTaskGroupConfig
+0058e446    i32.store [2, 20]
+0058e449    local.get [0]
+0058e44b    i32.load [2, 20]
+0058e44e    local.set [1]
+0058e450  end []
+0058e451  local.get [1]
+0058e453  return []
+0058e454  end []

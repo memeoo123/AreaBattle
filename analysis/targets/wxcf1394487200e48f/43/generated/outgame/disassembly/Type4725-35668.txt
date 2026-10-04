@@ -1,0 +1,66 @@
+; Original class: AchievementOffStrategy
+; Type4725.[Uhd^; wasmcode1 function 70757; offset=22382200 size=197
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+01558679  i32.const [5001319]
+0155867e  i32.load8_u [0, 0]
+01558681  i32.eqz []
+01558682  if [-64]
+01558684    i32.const [3988788] ; METHOD AchievementOffStrategy.RefreshTaskProgress
+01558689    i32.const [1605]
+0155868c    call_indirect [0, 0]
+0155868f    i32.const [3988792] ; METHOD AchievementOffStrategy.`Tk~u
+01558694    i32.const [1605]
+01558697    call_indirect [0, 0]
+0155869a    i32.const [3944680]
+0155869f    i32.const [1605]
+015586a2    call_indirect [0, 0]
+015586a5    i32.const [4049016] ; STRING "CommonModule_Achievement_PointAdd"
+015586aa    i32.const [1605]
+015586ad    call_indirect [0, 0]
+015586b0    i32.const [4049076] ; STRING "CommonModule_StatisticsData_Refresh"
+015586b5    i32.const [1605]
+015586b8    call_indirect [0, 0]
+015586bb    i32.const [5001319]
+015586c0    i32.const [1]
+015586c2    i32.store8 [0, 0]
+015586c5  end []
+015586c6  local.get [0]
+015586c8  local.get [0]
+015586ca  call [32336] ; AchievementStrategyBase.MMjtT
+015586ce  i32.const [3944680]
+015586d3  i32.load [2, 0]
+015586d6  i32.const [109007]
+015586da  call_indirect [2, 0]
+015586dd  local.set [1]
+015586df  local.get [1]
+015586e1  local.get [0]
+015586e3  i32.const [3988788] ; METHOD AchievementOffStrategy.RefreshTaskProgress
+015586e8  i32.load [2, 0]
+015586eb  i32.const [0]
+015586ed  i32.const [7926] ; TABLE EventHandler..ctor
+015586f0  call_indirect [6, 0]
+015586f3  i32.const [4049076] ; STRING "CommonModule_StatisticsData_Refresh"
+015586f8  i32.load [2, 0]
+015586fb  local.get [1]
+015586fd  i32.const [0]
+015586ff  i32.const [7927] ; TABLE CommonMsgDispatcher.RemoveEventListener
+01558702  call_indirect [5, 0]
+01558705  i32.const [3944680]
+0155870a  i32.load [2, 0]
+0155870d  i32.const [109007]
+01558711  call_indirect [2, 0]
+01558714  local.set [1]
+01558716  local.get [1]
+01558718  local.get [0]
+0155871a  i32.const [3988792] ; METHOD AchievementOffStrategy.`Tk~u
+0155871f  i32.load [2, 0]
+01558722  i32.const [0]
+01558724  i32.const [7926] ; TABLE EventHandler..ctor
+01558727  call_indirect [6, 0]
+0155872a  i32.const [4049016] ; STRING "CommonModule_Achievement_PointAdd"
+0155872f  i32.load [2, 0]
+01558732  local.get [1]
+01558734  i32.const [0]
+01558736  i32.const [7927] ; TABLE CommonMsgDispatcher.RemoveEventListener
+01558739  call_indirect [5, 0]
+0155873c  end []

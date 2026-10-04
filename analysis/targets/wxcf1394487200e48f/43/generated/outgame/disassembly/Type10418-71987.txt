@@ -1,0 +1,27 @@
+; Original class: JsonReader
+; Type10418..ctor; wasmcode function 5959; offset=2103058 size=65
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00201713  i32.const [4986456]
+00201718  i32.load8_u [0, 0]
+0020171b  i32.eqz []
+0020171c  if [-64]
+0020171e    i32.const [3939504]
+00201723    call [900] ; 
+00201726    i32.const [4986456]
+0020172b    i32.const [1]
+0020172d    i32.store8 [0, 0]
+00201730  end []
+00201731  i32.const [3939504]
+00201736  i32.load [2, 0]
+00201739  call [903] ; 
+0020173c  local.set [2]
+0020173e  local.get [2]
+00201740  local.get [1]
+00201742  i32.const [0]
+00201744  call [1726] ; StringReader..ctor
+00201747  local.get [0]
+00201749  local.get [2]
+0020174b  i32.const [1]
+0020174d  local.get [0]
+0020174f  call [7665] ; JsonReader..ctor
+00201752  end []

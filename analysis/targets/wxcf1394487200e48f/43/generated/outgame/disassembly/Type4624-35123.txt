@@ -1,0 +1,40 @@
+; Original class: GameStatisticsStratrgyBase
+; Type4624.kdOswy; wasmcode function 19524; offset=8780134 size=101
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0085f967  i32.const [5001663]
+0085f96c  i32.load8_u [0, 0]
+0085f96f  i32.eqz []
+0085f970  if [-64]
+0085f972    i32.const [3932388]
+0085f977    call [900] ; 
+0085f97a    i32.const [3934404]
+0085f97f    call [900] ; 
+0085f982    i32.const [5001663]
+0085f987    i32.const [1]
+0085f989    i32.store8 [0, 0]
+0085f98c  end []
+0085f98d  block [-64]
+0085f98f    local.get [1]
+0085f991    i32.eqz []
+0085f992    br_if [0]
+0085f994    local.get [1]
+0085f996    i32.load [2, 12]
+0085f999    i32.eqz []
+0085f99a    br_if [0]
+0085f99c    local.get [1]
+0085f99e    i32.load [2, 16]
+0085f9a1    i32.const [3934404]
+0085f9a6    i32.load [2, 0]
+0085f9a9    call [920] ; 
+0085f9ac    i32.load [2, 0]
+0085f9af    local.set [0]
+0085f9b1    i32.const [3932388]
+0085f9b6    i32.load [2, 0]
+0085f9b9    call [901] ; 
+0085f9bc    i32.const [20000] ; TABLE DebuggerWindowIconBtnMono.Tezg`mj
+0085f9c0    local.get [0]
+0085f9c2    i64.const [1]
+0085f9c4    local.get [0]
+0085f9c6    call [3352] ; GameStatisticsExpansion.AddEventCount
+0085f9c9  end []
+0085f9ca  end []

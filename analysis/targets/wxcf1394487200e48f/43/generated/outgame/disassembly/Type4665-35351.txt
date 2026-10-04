@@ -1,0 +1,12 @@
+; Original class: ActivityOverState
+; Type4665.OnLeave; wasmcode function 8358; offset=4015332 size=20
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+003d44e5  local.get [0]
+003d44e7  local.get [1]
+003d44e9  local.get [2]
+003d44eb  local.get [0]
+003d44ed  call [8352] ; ActivityStateBase.OnLeave
+003d44f0  local.get [0]
+003d44f2  i32.const [1]
+003d44f4  i32.store8 [0, 16]
+003d44f7  end []

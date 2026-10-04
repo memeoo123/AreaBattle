@@ -1,0 +1,149 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.InitData; wasmcode function 19539; offset=8783720 size=448
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00860769  i32.const [5001643]
+0086076e  i32.load8_u [0, 0]
+00860771  i32.eqz []
+00860772  if [-64]
+00860774    i32.const [3947148]
+00860779    call [900] ; 
+0086077c    i32.const [4001392] ; METHOD GameStatisticsOffNetStrategy.[Zs[pOz
+00860781    call [900] ; 
+00860784    i32.const [4001408] ; METHOD GameStatisticsOffNetStrategy.SraLLX
+00860789    call [900] ; 
+0086078c    i32.const [4001416] ; METHOD GameStatisticsOffNetStrategy.njNk[
+00860791    call [900] ; 
+00860794    i32.const [4001396] ; METHOD GameStatisticsOffNetStrategy.de~`~YY
+00860799    call [900] ; 
+0086079c    i32.const [4001400] ; METHOD GameStatisticsOffNetStrategy.f|W|f}U
+008607a1    call [900] ; 
+008607a4    i32.const [4001404] ; METHOD GameStatisticsOffNetStrategy.wSfunf
+008607a9    call [900] ; 
+008607ac    i32.const [4059932] ; STRING "ItemUI_ProductReward"
+008607b1    call [900] ; 
+008607b4    i32.const [4054936] ; STRING "GF_ReceiveServerTime"
+008607b9    call [900] ; 
+008607bc    i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+008607c1    call [900] ; 
+008607c4    i32.const [4059928] ; STRING "ItemUI_ProductReset"
+008607c9    call [900] ; 
+008607cc    i32.const [4059952] ; STRING "Item_ItemChange"
+008607d1    call [900] ; 
+008607d4    i32.const [4054964] ; STRING "GF_ShowInterst"
+008607d9    call [900] ; 
+008607dc    i32.const [5001643]
+008607e1    i32.const [1]
+008607e3    i32.store8 [0, 0]
+008607e6  end []
+008607e7  local.get [0]
+008607e9  local.get [1]
+008607eb  local.get [0]
+008607ed  call [12096] ; GameStatisticsStratrgyBase.InitData
+008607f0  local.get [0]
+008607f2  i32.load [2, 12]
+008607f5  local.set [1]
+008607f7  local.get [1]
+008607f9  local.set [2]
+008607fb  local.get [1]
+008607fd  i32.load [2, 0]
+00860800  local.set [1]
+00860802  local.get [2]
+00860804  i32.const [1]
+00860806  local.get [1]
+00860808  i32.load [2, 272]
+0086080c  local.get [1]
+0086080e  i32.load [2, 268]
+00860812  global.set [3]
+00860814  global.get [3]
+00860816  call_indirect [2, 0]
+00860819  i32.const [3947148]
+0086081e  i32.load [2, 0]
+00860821  call [903] ; 
+00860824  local.set [1]
+00860826  local.get [1]
+00860828  local.get [0]
+0086082a  i32.const [4001392] ; METHOD GameStatisticsOffNetStrategy.[Zs[pOz
+0086082f  i32.load [2, 0]
+00860832  i32.const [0]
+00860834  call [1067] ; EventHandler..ctor
+00860837  i32.const [4054964] ; STRING "GF_ShowInterst"
+0086083c  i32.load [2, 0]
+0086083f  local.get [1]
+00860841  i32.const [0]
+00860843  call [1146] ; MsgDispatcher.AddEventListener
+00860846  i32.const [3947148]
+0086084b  i32.load [2, 0]
+0086084e  call [903] ; 
+00860851  local.set [1]
+00860853  local.get [1]
+00860855  local.get [0]
+00860857  i32.const [4001396] ; METHOD GameStatisticsOffNetStrategy.de~`~YY
+0086085c  i32.load [2, 0]
+0086085f  i32.const [0]
+00860861  call [1067] ; EventHandler..ctor
+00860864  i32.const [4054820] ; STRING "GF_AdsPlayCallBack"
+00860869  i32.load [2, 0]
+0086086c  local.get [1]
+0086086e  i32.const [0]
+00860870  call [1146] ; MsgDispatcher.AddEventListener
+00860873  i32.const [3947148]
+00860878  i32.load [2, 0]
+0086087b  call [903] ; 
+0086087e  local.set [1]
+00860880  local.get [1]
+00860882  local.get [0]
+00860884  i32.const [4001404] ; METHOD GameStatisticsOffNetStrategy.wSfunf
+00860889  i32.load [2, 0]
+0086088c  i32.const [0]
+0086088e  call [1067] ; EventHandler..ctor
+00860891  i32.const [4054936] ; STRING "GF_ReceiveServerTime"
+00860896  i32.load [2, 0]
+00860899  local.get [1]
+0086089b  i32.const [0]
+0086089d  call [1146] ; MsgDispatcher.AddEventListener
+008608a0  i32.const [3947148]
+008608a5  i32.load [2, 0]
+008608a8  call [903] ; 
+008608ab  local.set [1]
+008608ad  local.get [1]
+008608af  local.get [0]
+008608b1  i32.const [4001400] ; METHOD GameStatisticsOffNetStrategy.f|W|f}U
+008608b6  i32.load [2, 0]
+008608b9  i32.const [0]
+008608bb  call [1067] ; EventHandler..ctor
+008608be  i32.const [4059952] ; STRING "Item_ItemChange"
+008608c3  i32.load [2, 0]
+008608c6  local.get [1]
+008608c8  i32.const [0]
+008608ca  call [1146] ; MsgDispatcher.AddEventListener
+008608cd  i32.const [3947148]
+008608d2  i32.load [2, 0]
+008608d5  call [903] ; 
+008608d8  local.set [1]
+008608da  local.get [1]
+008608dc  local.get [0]
+008608de  i32.const [4001408] ; METHOD GameStatisticsOffNetStrategy.SraLLX
+008608e3  i32.load [2, 0]
+008608e6  i32.const [0]
+008608e8  call [1067] ; EventHandler..ctor
+008608eb  i32.const [4059928] ; STRING "ItemUI_ProductReset"
+008608f0  i32.load [2, 0]
+008608f3  local.get [1]
+008608f5  i32.const [0]
+008608f7  call [1146] ; MsgDispatcher.AddEventListener
+008608fa  i32.const [3947148]
+008608ff  i32.load [2, 0]
+00860902  call [903] ; 
+00860905  local.set [1]
+00860907  local.get [1]
+00860909  local.get [0]
+0086090b  i32.const [4001416] ; METHOD GameStatisticsOffNetStrategy.njNk[
+00860910  i32.load [2, 0]
+00860913  i32.const [0]
+00860915  call [1067] ; EventHandler..ctor
+00860918  i32.const [4059932] ; STRING "ItemUI_ProductReward"
+0086091d  i32.load [2, 0]
+00860920  local.get [1]
+00860922  i32.const [0]
+00860924  call [1146] ; MsgDispatcher.AddEventListener
+00860927  end []

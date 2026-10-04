@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "rank-transmitter-protocol-paths-duplicate-init-and-url-capture",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-match-upload-original-fields-and-independent-ext-uid",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-player-query-cache-stale-category-name-offset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-upload-send-failure-retains-prior-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-level-upload-increment-and-shared-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-query-response-routes-by-count-not-rank",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-business-error-still-invokes-upload-after-report",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-transport-failure-reports-without-protocol-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-late-callback-current-delegate-and-message-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-disposal-suppresses-inflight-response-and-send",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-invalid-raw-json-and-unknown-protocol-fail-after-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-cipher-independent-openssl-vector-and-key-normalization",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-cipher-errors-report-return-null-and-callback-exceptions",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-encrypted-envelope-shared-and-server-time-bypass",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-encrypted-response-and-plain-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-transmitter-real-match-first-response-and-independent-account-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original transmitter/protocol/cipher and explicit HTTP events verified. Actual WebRequestManager queue/agents/HTTP IO, platform URL/key ownership and report uploads remain pending. No new native run."
+}

@@ -1,0 +1,334 @@
+; Original class: CommonLimitTimeTaskUI
+; Type4310.Dispose; wasmcode function 20142; offset=9058212 size=895
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008a37a7  global.get [0]
+008a37a9  i32.const [48]
+008a37ab  i32.sub []
+008a37ac  local.set [1]
+008a37ae  local.get [1]
+008a37b0  global.set [0]
+008a37b2  i32.const [5008243]
+008a37b7  i32.load8_u [0, 0]
+008a37ba  i32.eqz []
+008a37bb  if [-64]
+008a37bd    i32.const [3992900] ; METHOD CommonLimitTimeTaskUI.hqW|zUo
+008a37c2    call [900] ; 
+008a37c5    i32.const [3992904] ; METHOD CommonLimitTimeTaskUI.mfMpYM
+008a37ca    call [900] ; 
+008a37cd    i32.const [3992908] ; METHOD CommonLimitTimeTaskUI.n|fX^
+008a37d2    call [900] ; 
+008a37d5    i32.const [3992912] ; METHOD CommonLimitTimeTaskUI.we`iOP}
+008a37da    call [900] ; 
+008a37dd    i32.const [3955872]
+008a37e2    call [900] ; 
+008a37e5    i32.const [3962728]
+008a37ea    call [900] ; 
+008a37ed    i32.const [3965828]
+008a37f2    call [900] ; 
+008a37f5    i32.const [3965832]
+008a37fa    call [900] ; 
+008a37fd    i32.const [3965836]
+008a3802    call [900] ; 
+008a3805    i32.const [3947148]
+008a380a    call [900] ; 
+008a380d    i32.const [3944680]
+008a3812    call [900] ; 
+008a3815    i32.const [3932388]
+008a381a    call [900] ; 
+008a381d    i32.const [3987616]
+008a3822    call [900] ; 
+008a3825    i32.const [4056000] ; STRING "GlobalEvent.CommonGameModule.LimitTimeTask.SelectPage"
+008a382a    call [900] ; 
+008a382d    i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+008a3832    call [900] ; 
+008a3835    i32.const [4049060] ; STRING "CommonModule_NoviceExtRefresh"
+008a383a    call [900] ; 
+008a383d    i32.const [5008243]
+008a3842    i32.const [1]
+008a3844    i32.store8 [0, 0]
+008a3847  end []
+008a3848  local.get [1]
+008a384a  i64.const [0]
+008a384c  i64.store [3, 40]
+008a384f  local.get [1]
+008a3851  i64.const [0]
+008a3853  i64.store [3, 32]
+008a3856  local.get [0]
+008a3858  i32.const [0]
+008a385a  i32.store [2, 8]
+008a385d  local.get [0]
+008a385f  i32.const [1]
+008a3861  i32.store8 [0, 26]
+008a3864  local.get [0]
+008a3866  i32.const [0]
+008a3868  i32.store [2, 12]
+008a386b  local.get [0]
+008a386d  i32.const [0]
+008a386f  i32.store [2, 16]
+008a3872  local.get [0]
+008a3874  i32.const [0]
+008a3876  i32.store [2, 44]
+008a3879  i32.const [3947148]
+008a387e  i32.load [2, 0]
+008a3881  call [903] ; 
+008a3884  local.set [2]
+008a3886  local.get [2]
+008a3888  local.get [0]
+008a388a  i32.const [3992904] ; METHOD CommonLimitTimeTaskUI.mfMpYM
+008a388f  i32.load [2, 0]
+008a3892  i32.const [0]
+008a3894  call [1067] ; EventHandler..ctor
+008a3897  i32.const [4056000] ; STRING "GlobalEvent.CommonGameModule.LimitTimeTask.SelectPage"
+008a389c  i32.load [2, 0]
+008a389f  local.get [2]
+008a38a1  i32.const [0]
+008a38a3  call [1185] ; MsgDispatcher.RemoveEventListener
+008a38a6  i32.const [3944680]
+008a38ab  i32.load [2, 0]
+008a38ae  call [903] ; 
+008a38b1  local.set [2]
+008a38b3  local.get [2]
+008a38b5  local.get [0]
+008a38b7  i32.const [3992912] ; METHOD CommonLimitTimeTaskUI.we`iOP}
+008a38bc  i32.load [2, 0]
+008a38bf  i32.const [0]
+008a38c1  call [1345] ; EventHandler..ctor
+008a38c4  i32.const [4049060] ; STRING "CommonModule_NoviceExtRefresh"
+008a38c9  i32.load [2, 0]
+008a38cc  local.get [2]
+008a38ce  i32.const [0]
+008a38d0  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+008a38d3  i32.const [3944680]
+008a38d8  i32.load [2, 0]
+008a38db  call [903] ; 
+008a38de  local.set [2]
+008a38e0  local.get [2]
+008a38e2  local.get [0]
+008a38e4  i32.const [3992900] ; METHOD CommonLimitTimeTaskUI.hqW|zUo
+008a38e9  i32.load [2, 0]
+008a38ec  i32.const [0]
+008a38ee  call [1345] ; EventHandler..ctor
+008a38f1  i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+008a38f6  i32.load [2, 0]
+008a38f9  local.get [2]
+008a38fb  i32.const [0]
+008a38fd  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+008a3900  i32.const [3932388]
+008a3905  i32.load [2, 0]
+008a3908  call [901] ; 
+008a390b  i32.const [10000]
+008a390f  i32.const [0]
+008a3911  call [1480] ; GameStatisticsExpansion.MessageKey
+008a3914  local.set [2]
+008a3916  i32.const [3944680]
+008a391b  i32.load [2, 0]
+008a391e  call [903] ; 
+008a3921  local.set [3]
+008a3923  local.get [3]
+008a3925  local.get [0]
+008a3927  i32.const [3992908] ; METHOD CommonLimitTimeTaskUI.n|fX^
+008a392c  i32.load [2, 0]
+008a392f  i32.const [0]
+008a3931  call [1345] ; EventHandler..ctor
+008a3934  local.get [2]
+008a3936  local.get [3]
+008a3938  i32.const [0]
+008a393a  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+008a393d  local.get [0]
+008a393f  i32.load [2, 116]
+008a3942  i32.const [3962728]
+008a3947  i32.load [2, 0]
+008a394a  call [12478] ; 
+008a394d  local.get [1]
+008a394f  i32.const [16]
+008a3951  i32.add []
+008a3952  local.get [0]
+008a3954  i32.load [2, 120]
+008a3957  i32.const [3955872]
+008a395c  i32.load [2, 0]
+008a395f  call [1138] ; 
+008a3962  i32.const [3987616]
+008a3967  i32.load [2, 0]
+008a396a  call [1163] ; 
+008a396d  local.get [1]
+008a396f  local.get [1]
+008a3971  i64.load [3, 24]
+008a3974  i64.store [3, 40]
+008a3977  local.get [1]
+008a3979  local.get [1]
+008a397b  i64.load [3, 16]
+008a397e  i64.store [3, 32]
+008a3981  local.get [1]
+008a3983  local.get [1]
+008a3985  i32.const [32]
+008a3987  i32.add []
+008a3988  i32.store [2, 8]
+008a398b  local.get [1]
+008a398d  i32.const [0]
+008a398f  i32.store [2, 16]
+008a3992  local.get [1]
+008a3994  local.get [1]
+008a3996  i32.load [2, 8]
+008a3999  i32.store [2, 20]
+008a399c  block [-64]
+008a399e    block [-64]
+008a39a0      block [-64]
+008a39a2        block [-64]
+008a39a4          loop [-64]
+008a39a6            block [-64]
+008a39a8              i32.const [4477188]
+008a39ad              i32.const [0]
+008a39af              i32.store [2, 0]
+008a39b2              i32.const [9717]
+008a39b6              local.get [1]
+008a39b8              i32.const [32]
+008a39ba              i32.add []
+008a39bb              i32.const [3965832]
+008a39c0              i32.load [2, 0]
+008a39c3              call [2] ; 
+008a39c5              local.set [0]
+008a39c7              i32.const [4477188]
+008a39cc              i32.load [2, 0]
+008a39cf              local.set [2]
+008a39d1              i32.const [4477188]
+008a39d6              i32.const [0]
+008a39d8              i32.store [2, 0]
+008a39db              local.get [2]
+008a39dd              i32.const [1]
+008a39df              i32.eq []
+008a39e0              br_if [0]
+008a39e2              local.get [0]
+008a39e4              i32.eqz []
+008a39e5              br_if [5]
+008a39e7              i32.const [4477188]
+008a39ec              i32.const [0]
+008a39ee              i32.store [2, 0]
+008a39f1              i32.const [9718]
+008a39f5              local.get [1]
+008a39f7              i32.const [32]
+008a39f9              i32.add []
+008a39fa              i32.const [3965836]
+008a39ff              i32.load [2, 0]
+008a3a02              call [2] ; 
+008a3a04              local.set [0]
+008a3a06              i32.const [4477188]
+008a3a0b              i32.load [2, 0]
+008a3a0e              local.set [2]
+008a3a10              i32.const [4477188]
+008a3a15              i32.const [0]
+008a3a17              i32.store [2, 0]
+008a3a1a              local.get [2]
+008a3a1c              i32.const [1]
+008a3a1e              i32.eq []
+008a3a1f              br_if [2]
+008a3a21              local.get [0]
+008a3a23              i32.eqz []
+008a3a24              br_if [1]
+008a3a26              i32.const [4477188]
+008a3a2b              i32.const [0]
+008a3a2d              i32.store [2, 0]
+008a3a30              i32.const [1182]
+008a3a33              i32.const [12]
+008a3a35              local.get [0]
+008a3a37              call [12] ; 
+008a3a39              i32.const [4477188]
+008a3a3e              i32.load [2, 0]
+008a3a41              local.set [0]
+008a3a43              i32.const [4477188]
+008a3a48              i32.const [0]
+008a3a4a              i32.store [2, 0]
+008a3a4d              local.get [0]
+008a3a4f              i32.const [1]
+008a3a51              i32.ne []
+008a3a52              br_if [1]
+008a3a54              br [3]
+008a3a56            end []
+008a3a57          end []
+008a3a58          i32.const [2694968]
+008a3a5d          call [0] ; 
+008a3a5f          local.set [0]
+008a3a61          br [2]
+008a3a63        end []
+008a3a64        i32.const [2694968]
+008a3a69        call [0] ; 
+008a3a6b        local.set [0]
+008a3a6d        br [1]
+008a3a6f      end []
+008a3a70      i32.const [2694968]
+008a3a75      call [0] ; 
+008a3a77      local.set [0]
+008a3a79    end []
+008a3a7a    call [1] ; 
+008a3a7c    i32.const [2694968]
+008a3a81    call [9] ; 
+008a3a83    i32.eq []
+008a3a84    if [-64]
+008a3a86      local.get [1]
+008a3a88      local.get [0]
+008a3a8a      call [8] ; 
+008a3a8c      i32.load [2, 0]
+008a3a8f      i32.store [2, 16]
+008a3a92      i32.const [4477188]
+008a3a97      i32.const [0]
+008a3a99      i32.store [2, 0]
+008a3a9c      i32.const [214]
+008a3a9f      call [7] ; 
+008a3aa1      i32.const [4477188]
+008a3aa6      i32.load [2, 0]
+008a3aa9      local.set [0]
+008a3aab      i32.const [4477188]
+008a3ab0      i32.const [0]
+008a3ab2      i32.store [2, 0]
+008a3ab5      local.get [0]
+008a3ab7      i32.const [1]
+008a3ab9      i32.ne []
+008a3aba      br_if [1]
+008a3abc      call [6] ; 
+008a3abe      local.set [0]
+008a3ac0      call [1] ; 
+008a3ac2      drop []
+008a3ac3    end []
+008a3ac4    i32.const [4477188]
+008a3ac9    i32.const [0]
+008a3acb    i32.store [2, 0]
+008a3ace    i32.const [9720]
+008a3ad2    local.get [1]
+008a3ad4    i32.const [16]
+008a3ad6    i32.add []
+008a3ad7    call [3] ; 
+008a3ad9    drop []
+008a3ada    i32.const [4477188]
+008a3adf    i32.load [2, 0]
+008a3ae2    local.set [1]
+008a3ae4    i32.const [4477188]
+008a3ae9    i32.const [0]
+008a3aeb    i32.store [2, 0]
+008a3aee    local.get [1]
+008a3af0    i32.const [1]
+008a3af2    i32.eq []
+008a3af3    if [-64]
+008a3af5      i32.const [0]
+008a3af7      call [0] ; 
+008a3af9      drop []
+008a3afa      call [1] ; 
+008a3afc      drop []
+008a3afd      i32.const [109010]
+008a3b01      global.set [3]
+008a3b03      i32.const [109010]
+008a3b07      call_indirect [6, 0]
+008a3b0a      unreachable []
+008a3b0b    end []
+008a3b0c    local.get [0]
+008a3b0e    call [10] ; 
+008a3b10    unreachable []
+008a3b11  end []
+008a3b12  local.get [1]
+008a3b14  i32.const [16]
+008a3b16  i32.add []
+008a3b17  call [5411] ; 
+008a3b1a  drop []
+008a3b1b  local.get [1]
+008a3b1d  i32.const [48]
+008a3b1f  i32.add []
+008a3b20  global.set [0]
+008a3b22  end []

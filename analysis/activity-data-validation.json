@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "activity-data-codec-utf8-multibuffer-and-raw-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-condition-date-number-invalid-and-short-circuit",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-first-load-constructor-config-order-and-publish",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-real-compressed-file-and-independent-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-server-deferred-raw-and-corrupt-json-recovery",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-state-reconciliation-all-launch-notice-over-combinations",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-duplicate-first-match-orphans-and-missing-config-record",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-condition-recheck-reentry-and-load-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-manager-registration-order-duplicate-and-config-reread",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-manager-null-config-construction-failure-and-retry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-manager-callback-reread-reentry-null-and-release",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-data-manager-save-live-data-dirty-and-failure",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original activity manager, concrete offline strategy, condition/reconciliation rules and real gzip file restart. Full ActivityControl/config loading/common-manager production factories/SevenDay/Main pending. No fresh native PlayMode or Player."
+}

@@ -1,0 +1,37 @@
+"""Publish verified owned TopInfoUI lifecycle/account and native save/restart milestone once."""
+from pathlib import Path
+import argparse,datetime,hashlib,json,shutil
+parser=argparse.ArgumentParser();parser.add_argument('validation_root',type=Path);validation=parser.parse_args().validation_root.resolve()
+workspace=Path(__file__).resolve().parent.parent;analysis=workspace/'analysis';target=analysis/'targets/wxcf1394487200e48f/43';out=target/'generated/outgame'
+def read(p):return json.loads(p.read_text())
+def write(p,v):
+ t=json.dumps(v,ensure_ascii=False,indent=2)+'\n';p.write_bytes((t.replace('\n','\r\n')if p.exists()and b'\r\n'in p.read_bytes()else t).encode())
+full=read(validation/'analysis/unity-integrated-validation.json');assert full['passed']and len(full['checks'])==1611 and all(r['result']=='pass'for r in full['checks'])
+log=(validation/'analysis/top-info-page-integrated.log').read_text();assert 'AREABATTLE_INTEGRATED_PASS cases=1611'in log and 'error CS'not in log
+focused=dict(full,checks=[r for r in full['checks']if r['id'].startswith('top-info-page-')]);assert len(focused['checks'])==18
+native=read(validation/'analysis/top-info-page-native-validation.json');assert native['passed']and len(native['checks'])==15 and native['restoredGold']==37 and native['restoredDiamonds']==5 and native['restoredName']=='恢复测试'
+native_log=(validation/'analysis/top-info-page-native.log').read_text();assert 'AREABATTLE_TOP_INFO_PAGE_NATIVE_PASS checks=15'in native_log and 'error CS'not in native_log
+focused['limitations']=native['scope'];evidence=read(out/'TOP_INFO_PAGE_SOURCE_EVIDENCE.json');assert len(evidence['methods'])==24 and len(evidence['fields'])==46
+for r in evidence['methods']:assert hashlib.sha256((out/r['path']).read_bytes()).hexdigest()==r['sha256']
+assert len(read(out/'method-map.json'))==6384 and read(out/'CONTROLLER_LIFECYCLE_MATRIX.json')['implementedLifecycleControllers']==21
+manifest=read(analysis/'VALIDATION_MANIFEST.json');paths={r['path']for r in manifest['sourceFingerprints']}
+files=('Scripts/OutgameTopInfoPage.cs','Scripts/OutgameTopInfoAccountPage.cs','Scripts/OutgameUiReadyAwait.cs','Editor/OutgameTopInfoPageValidation.cs','Editor/OutgameTopInfoPagePlayModeValidation.cs','Editor/BattleBuild.cs')
+for name in files:paths.update(('UnityProject/Assets/AreaBattle/'+name,'UnityProject/Assets/AreaBattle/'+name+'.meta'))
+fingerprints=[]
+for name in sorted(paths):
+ data=(workspace/name).read_bytes();assert data==(validation/name).read_bytes(),name;fingerprints.append(dict(path=name,sha256=hashlib.sha256(data).hexdigest()))
+now=datetime.datetime.now(datetime.timezone.utc).isoformat();milestone='top-info-owned-page-account-auth-native-restart';state=read(target/'OUTGAME_RESTORE_STATE.json');assert not any(r.get('id')==milestone for r in state['milestones'])
+next_priority='Recover actual MatchManager/MatchControl and WXAvatar/UserDataPrefs required TopInfo authorization dependencies, RankControl score and full UserInfoUI destination. Complete UIControl/general sprite/resource production assembly, Guide and remaining17 controller lifecycle/business, real Main/account/platform/all business and final Player/original audiovisual acceptance.'
+def diagnostics(s):return {k:s.count(k)for k in ('ShouldRunBehaviour','Curl error 35','Curl error 42','ArgumentOutOfRangeException','error CS')}
+record=dict(atUtc=now,scope='Original owned TopInfoUI account/profile/auth message flow, BaseUI ready predicate and native UIControl/account file restart',checksPassed=1611,newIntegratedChecks=18,targetedChecks=18,nativeChecks=15,freshPlayModeRun=True,freshPlayerBuild=False,freshPlayerSmoke=False,editorVersion=full['unityVersion'],platform='OSXEditor',projectVersionPreserved='6000.0.68f1',isolatedProject=str(validation/'UnityProject'),matchingSourceFingerprints=len(fingerprints),implementedLifecycleControllers=21,remainingLifecycleControllers=17,commands=['BattleBuild.ValidateMechanicsOnly','OutgameTopInfoPagePlayModeValidation.Run'],logDiagnostics=dict(integrated=diagnostics(log),native=diagnostics(native_log)),restoredAccount=dict(gold=37,diamonds=5,name='恢复测试'),observedBoundaries=evidence['findings']+['Initial refresh test passed refreshTop=false; corrected test argument, no economic code change. Native validation runner initially used nonexistent Close method name; corrected to existing source CloseForName; initial compiler diagnostic retained.'],notClaimed='Actual Match/Rank/WXAvatar/UserDataPrefs/full UserInfoUI/general sprite acquisition or production Main/platform/remaining17 controllers/all business/fresh Player/original audiovisual equivalence.')
+write(analysis/'top-info-page-validation.json',focused)
+for name in ('unity-integrated-validation.json','top-info-page-integrated.log','top-info-page-native-validation.json','top-info-page-native.log','top-info-page-initial-top-info-page-integrated.log','top-info-page-initial-unity-integrated-validation.json','top-info-page-initial-compile.log'):shutil.copy2(validation/'analysis'/name,analysis/name)
+shutil.copy2(validation/'analysis/captures/top-info-page-native.png',analysis/'captures/top-info-page-native.png')
+write(out/'TOP_INFO_PAGE_AUDIT.json',dict(status='original-top-info-owned-page-verified-required-business-ports-pending',atUtc=now,sourceEvidence='TOP_INFO_PAGE_SOURCE_EVIDENCE.json',verification=record,implementation=list(files),checks=focused['checks'],native=native,remaining=next_priority))
+state.update(lastUpdatedAtUtc=now,currentStage=milestone,nextPriority=next_priority,topInfoPageAudit='generated/outgame/TOP_INFO_PAGE_AUDIT.json');state['validation'].update(integratedChecksPassed=1611,topInfoPage=record);state['milestones'].append(dict(id=milestone,atUtc=now,status='original-top-info-owned-page-verified-required-business-ports-pending',integratedChecks=1611,newChecks=18,nativeChecks=15,freshPlayModeRun=True,remainingLifecycleControllers=17));write(target/'OUTGAME_RESTORE_STATE.json',state)
+by_path={r['path']:r for r in fingerprints};ordered=[by_path.pop(r['path'])for r in manifest['sourceFingerprints']if r['path']in by_path];manifest.update(atUtc=now,passed=True,caseCount=1611,latestValidation=record,sourceFingerprints=ordered+[by_path[n]for n in sorted(by_path)]);manifest['validationHistory'].append(record)
+for name in ('analysis/top-info-page-validation.json','analysis/top-info-page-native-validation.json'):
+ if name not in manifest['reports']:manifest['reports'].append(name)
+write(analysis/'VALIDATION_MANIFEST.json',manifest)
+execution=read(analysis/'RESTORATION_EXECUTION_STATE.json');execution.update(updatedAtUtc=now,verification=record,nextPriority=next_priority);execution['completedThisRun'].append(f'Owned original TopInfoUI25-outlet account/profile/auth/await/icons/disposal and real UIControl/cache restored;1611 integrated with18 new,15 native checks covering actual account tool gold37/diamonds5, profile name/save, native open/close/effect/main handle ownership and independent file restart. {len(fingerprints)} matching inputs;6384 indexed methods,21/38 controllers unchanged. Rank/Match/WXAvatar/UserDataPrefs/UserInfoUI/general sprite/Main/platform/business/Player still pending.');write(analysis/'RESTORATION_EXECUTION_STATE.json',execution)
+print(json.dumps(dict(integrated=1611,newChecks=18,native=15,fingerprints=len(fingerprints),indexedMethods=6384,controllers=21,remaining=17,diagnostics=record['logDiagnostics'])))

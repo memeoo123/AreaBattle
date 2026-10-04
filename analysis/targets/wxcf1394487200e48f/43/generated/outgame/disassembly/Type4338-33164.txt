@@ -1,0 +1,25 @@
+; Original class: CommonLimitTimeTaskPageItem
+; Type4338.OnCreate; wasmcode function 20153; offset=9061447 size=64
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+008a4448  i32.const [5008854]
+008a444d  i32.load8_u [0, 0]
+008a4450  i32.eqz []
+008a4451  if [-64]
+008a4453    i32.const [3919612]
+008a4458    call [900] ; 
+008a445b    i32.const [5008854]
+008a4460    i32.const [1]
+008a4462    i32.store8 [0, 0]
+008a4465  end []
+008a4466  local.get [0]
+008a4468  local.get [1]
+008a446a  i32.const [3919612]
+008a446f  i32.load [2, 0]
+008a4472  call [927] ; 
+008a4475  i32.store [2, 48]
+008a4478  local.get [1]
+008a447a  i32.const [3919612]
+008a447f  i32.load [2, 0]
+008a4482  call [927] ; 
+008a4485  drop []
+008a4486  end []

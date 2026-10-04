@@ -1,0 +1,95 @@
+{
+  "atUtc": "2026-10-03T06:37:47.463140+00:00",
+  "status": "manager-controller-original-names-and-native-item-persistence-verified-main-pending",
+  "sourceEvidence": "USER_INFO_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T06:37:47.463140+00:00",
+    "scope": "Production item/product service group and UserInfo manager/controller with real file persistence",
+    "checksPassed": 1098,
+    "newIntegratedChecks": 11,
+    "nativePlayModeChecks": 16,
+    "nativePlayModeScope": "ItemRuntime native config bundle, native UpdateManager, daily product reset, file save/restart and delayed download callback",
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2086,
+    "commands": [
+      "OutgameProductServicesValidation.Validate",
+      "OutgameItemRuntimePlayModeValidation.Run",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Complete Main/account/menu/23 remaining controllers, original RandAIInfo, server/SDK/report delivery, native powf parity, original-device parity or full Player"
+  },
+  "checks": [
+    {
+      "id": "user-info-original-defaults-real-file-save-and-independent-reload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-source-list-repair-native-null-json-and-whitespace-name",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-icon-message-precedes-store-and-rereads-reentrant-record",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-install-time-gates-and-create-failure-retain-source-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-controller-config-gating-persistence-and-report-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-real-avatar-item-shares-manager-record-and-unlock-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "user-info-server-startup-waits-for-callback",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "implementation": [
+    "OutgameUserInfoManager.cs",
+    "OutgameUserInfoControl.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "remaining": [
+    "Full Main/account/time/AppInfo/report host composition remains required; no SDK delivery claimed."
+  ],
+  "latestVerification": {
+    "atUtc": "2026-10-03T06:50:24.484692+00:00",
+    "scope": "Original AI-name generation and production UserInfoRuntime with native item/profile persistence integration",
+    "checksPassed": 1105,
+    "newIntegratedChecks": 7,
+    "nativePlayModeChecks": 23,
+    "targetedChecks": 14,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2089,
+    "commands": [
+      "OutgameAiNamesValidation.Validate",
+      "OutgameItemRuntimePlayModeValidation.Run",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full Main/account/23 remaining controllers, remote SDK/report delivery, original seeded RNG sequence, dictionary iteration cross-runtime parity or full Player"
+  },
+  "nameProviderAudit": "AI_NAME_AUDIT.json"
+}

@@ -1,0 +1,71 @@
+; Original class: GameFrameWorkMono
+; Type3442.Init; wasmcode function 12168; offset=5902201 size=208
+; signature={'args': [127], 'returns': []}; localGroups=[]
+005a0f7a  i32.const [5011760]
+005a0f7f  i32.load8_u [0, 0]
+005a0f82  i32.eqz []
+005a0f83  if [-64]
+005a0f85    i32.const [3929208]
+005a0f8a    call [900] ; 
+005a0f8d    i32.const [3932320]
+005a0f92    call [900] ; 
+005a0f95    i32.const [3932476]
+005a0f9a    call [900] ; 
+005a0f9d    i32.const [3926996]
+005a0fa2    call [900] ; 
+005a0fa5    i32.const [3938304]
+005a0faa    call [900] ; 
+005a0fad    i32.const [4103144] ; STRING "初始化GameFrameWorkMono"
+005a0fb2    call [900] ; 
+005a0fb5    i32.const [5011760]
+005a0fba    i32.const [1]
+005a0fbc    i32.store8 [0, 0]
+005a0fbf  end []
+005a0fc0  i32.const [3926996]
+005a0fc5  i32.load [2, 0]
+005a0fc8  i32.const [1]
+005a0fca  call [909] ; 
+005a0fcd  local.set [0]
+005a0fcf  local.get [0]
+005a0fd1  i32.const [4103144] ; STRING "初始化GameFrameWorkMono"
+005a0fd6  i32.load [2, 0]
+005a0fd9  call [905] ; 
+005a0fdc  local.get [0]
+005a0fde  i32.const [4103144] ; STRING "初始化GameFrameWorkMono"
+005a0fe3  i32.load [2, 0]
+005a0fe6  i32.store [2, 16]
+005a0fe9  i32.const [3929208]
+005a0fee  i32.load [2, 0]
+005a0ff1  call [901] ; 
+005a0ff4  local.get [0]
+005a0ff6  i32.const [0]
+005a0ff8  call [1495] ; CLog.ReleaseLog
+005a0ffb  local.get [0]
+005a0ffd  call [2819] ; GameFrameWorkMono.`[zU
+005a1000  i32.const [1]
+005a1002  i32.store8 [0, 20]
+005a1005  i32.const [0]
+005a1007  call [1460] ; Thread.get_CurrentThread
+005a100a  i32.const [0]
+005a100c  call [1725] ; Thread.get_ManagedThreadId
+005a100f  local.set [0]
+005a1011  i32.const [3932320]
+005a1016  i32.load [2, 0]
+005a1019  i32.load [2, 92]
+005a101c  local.get [0]
+005a101e  i32.store [2, 4]
+005a1021  i32.const [3932476]
+005a1026  i32.load [2, 0]
+005a1029  call [901] ; 
+005a102c  i32.const [0]
+005a102e  call [1585] ; GlobalData.get_IsReleaseVersion
+005a1031  if [-64]
+005a1033    i32.const [3938304]
+005a1038    i32.load [2, 0]
+005a103b    i32.load [2, 92]
+005a103e    i32.load [2, 0]
+005a1041    i32.const [0]
+005a1043    call [3832] ; SDKToolManager.IsSupportLogStatic
+005a1046    drop []
+005a1047  end []
+005a1048  end []

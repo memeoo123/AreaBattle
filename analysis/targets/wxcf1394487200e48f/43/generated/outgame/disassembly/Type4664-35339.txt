@@ -1,0 +1,47 @@
+; Original class: ActivityNoticeState
+; Type4664.OnLeave; wasmcode function 20961; offset=9452531 size=127
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+00903bf4  i32.const [5001358]
+00903bf9  i32.load8_u [0, 0]
+00903bfc  i32.eqz []
+00903bfd  if [-64]
+00903bff    i32.const [3988920] ; METHOD ActivityNoticeState.DateUpdate
+00903c04    call [900] ; 
+00903c07    i32.const [3944680]
+00903c0c    call [900] ; 
+00903c0f    i32.const [3932388]
+00903c14    call [900] ; 
+00903c17    i32.const [5001358]
+00903c1c    i32.const [1]
+00903c1e    i32.store8 [0, 0]
+00903c21  end []
+00903c22  local.get [0]
+00903c24  local.get [1]
+00903c26  local.get [2]
+00903c28  local.get [0]
+00903c2a  call [8352] ; ActivityStateBase.OnLeave
+00903c2d  i32.const [3932388]
+00903c32  i32.load [2, 0]
+00903c35  call [901] ; 
+00903c38  i32.const [10000]
+00903c3c  i32.const [0]
+00903c3e  call [1480] ; GameStatisticsExpansion.MessageKey
+00903c41  local.set [1]
+00903c43  i32.const [3944680]
+00903c48  i32.load [2, 0]
+00903c4b  call [903] ; 
+00903c4e  local.set [2]
+00903c50  local.get [2]
+00903c52  local.get [0]
+00903c54  i32.const [3988920] ; METHOD ActivityNoticeState.DateUpdate
+00903c59  i32.load [2, 0]
+00903c5c  i32.const [0]
+00903c5e  call [1345] ; EventHandler..ctor
+00903c61  local.get [1]
+00903c63  local.get [2]
+00903c65  i32.const [0]
+00903c67  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+00903c6a  local.get [0]
+00903c6c  i32.const [1]
+00903c6e  i32.store8 [0, 16]
+00903c71  end []

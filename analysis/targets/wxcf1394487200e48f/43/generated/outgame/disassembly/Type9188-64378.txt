@@ -1,0 +1,58 @@
+; Original class: WXAvatar
+; Type9188.InitAtStartGame; wasmcode function 6812; offset=2565755 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0027267e  i32.const [5006877]
+00272683  i32.load8_u [0, 0]
+00272686  i32.eqz []
+00272687  if [-64]
+00272689    i32.const [3960304]
+0027268e    call [900] ; 
+00272691    i32.const [3960528]
+00272696    call [900] ; 
+00272699    i32.const [4012464]
+0027269e    call [900] ; 
+002726a1    i32.const [4052632] ; STRING "EnterGameUI/defaultIcon"
+002726a6    call [900] ; 
+002726a9    i32.const [4086444] ; STRING "default"
+002726ae    call [900] ; 
+002726b1    i32.const [5006877]
+002726b6    i32.const [1]
+002726b8    i32.store8 [0, 0]
+002726bb  end []
+002726bc  local.get [0]
+002726be  i32.load8_u [0, 8]
+002726c1  i32.eqz []
+002726c2  if [-64]
+002726c4    i32.const [4052632] ; STRING "EnterGameUI/defaultIcon"
+002726c9    i32.load [2, 0]
+002726cc    i32.const [4012464]
+002726d1    i32.load [2, 0]
+002726d4    call [1490] ; 
+002726d7    local.set [1]
+002726d9    local.get [0]
+002726db    i32.load [2, 12]
+002726de    local.set [2]
+002726e0    local.get [1]
+002726e2    i32.const [0]
+002726e4    call [2365] ; Sprite.get_texture
+002726e7    local.set [3]
+002726e9    local.get [2]
+002726eb    i32.const [4086444] ; STRING "default"
+002726f0    i32.load [2, 0]
+002726f3    local.get [3]
+002726f5    i32.const [3960528]
+002726fa    i32.load [2, 0]
+002726fd    call [932] ; 
+00272700    local.get [0]
+00272702    i32.load [2, 16]
+00272705    i32.const [4086444] ; STRING "default"
+0027270a    i32.load [2, 0]
+0027270d    local.get [1]
+0027270f    i32.const [3960304]
+00272714    i32.load [2, 0]
+00272717    call [932] ; 
+0027271a    local.get [0]
+0027271c    i32.const [1]
+0027271e    i32.store8 [0, 8]
+00272721  end []
+00272722  end []

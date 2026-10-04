@@ -9,6 +9,12 @@ namespace AreaBattle
         [Serializable] public sealed class Name {public string key;}
         public int id,open;public Name activityName;
         public int[] launchType;public string[] launchParams,noticeParams,overParams;
+        // Remaining PubActivityConfig4635 fields used by the common activity manager.
+        public string module,uniqueId,parentName;
+        public int[] parentActivityID,noticeType,overType,closeType;
+        public string[] closeParams;
+        public int areaID,btnPriority,popPriority,noticeAutoPop,launchPopType;
+        public Name noticeDes;
     }
     public struct OutgameActivityWindow
     {public long Start,End,Notice;public int UnlockLevel;}

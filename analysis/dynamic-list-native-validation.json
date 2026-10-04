@@ -1,0 +1,22 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Real Unity LateUpdate, original GuideBook rows/popup, ScrollRect pointer drag, saved reward refresh and native destruction/pool reuse on a fresh page. Test canvas/camera and fixture account/audio/effects services; full production BaseUI/Main and original visual match not claimed.",
+    "checks": [
+        "Native LateUpdate binds original visible rows",
+        "Native objects respect slot capacity and only viewport rows are bound",
+        "Native ScrollRect drag advances rows using existing pooled roots",
+        "Pointer delivered: btnUnlock",
+        "Recycled row pointer opens newly bound book",
+        "Pointer delivered: OKBtn",
+        "Native normalized scroll returns to first row",
+        "Pointer delivered: btnUnlock",
+        "Pointer delivered: btnBox",
+        "Native reward callback refreshes visible row through data provider",
+        "Native OnDestroy recycles list objects before page hierarchy disappears",
+        "All pooled rows survive native page destruction",
+        "Fresh page reuses source pool and reads persisted claim",
+        "Pointer delivered: btnUnlock",
+        "Reopened pooled button invokes one current page callback"
+    ]
+}

@@ -1,0 +1,39 @@
+"""Publish verified TopInfo effect assets and source number formatting exactly once."""
+from pathlib import Path
+import argparse,datetime,hashlib,json,shutil
+parser=argparse.ArgumentParser();parser.add_argument('validation_root',type=Path);validation=parser.parse_args().validation_root.resolve()
+workspace=Path(__file__).resolve().parent.parent;analysis=workspace/'analysis';target=analysis/'targets/wxcf1394487200e48f/43';out=target/'generated/outgame'
+def read(p):return json.loads(p.read_text())
+def write(p,v):
+ t=json.dumps(v,ensure_ascii=False,indent=2)+'\n';p.write_bytes((t.replace('\n','\r\n')if p.exists()and b'\r\n'in p.read_bytes()else t).encode())
+full=read(validation/'analysis/unity-integrated-validation.json');assert full['passed']and len(full['checks'])==1593 and all(r['result']=='pass'for r in full['checks'])
+log=(validation/'analysis/top-info-assets-integrated.log').read_text();assert 'AREABATTLE_INTEGRATED_PASS cases=1593'in log and 'error CS'not in log
+focused=dict(full,checks=[r for r in full['checks']if r['id'].startswith('top-info-assets-')]);assert len(focused['checks'])==12
+native=read(validation/'analysis/top-info-assets-native-validation.json');assert native['passed']and len(native['checks'])==10 and native['goldPixels']>0 and native['diamondPixels']>0
+native_log=(validation/'analysis/top-info-assets-native.log').read_text();assert 'AREABATTLE_TOP_INFO_ASSETS_NATIVE_PASS checks=10'in native_log and 'error CS'not in native_log
+focused['limitations']=native['scope'];evidence=read(out/'TOP_INFO_ASSETS_SOURCE_EVIDENCE.json');assert len(evidence['methods'])==6
+for r in evidence['methods']:assert hashlib.sha256((out/r['path']).read_bytes()).hexdigest()==r['sha256']
+assert len(read(out/'method-map.json'))==6384 and read(out/'CONTROLLER_LIFECYCLE_MATRIX.json')['implementedLifecycleControllers']==21
+manifest=read(analysis/'VALIDATION_MANIFEST.json');paths={r['path']for r in manifest['sourceFingerprints']}
+files=('Scripts/OutgamePreGameSettings.cs','Editor/RecoveredSkillEffectImporter.cs','Editor/OutgameTopInfoAssetsValidation.cs','Editor/OutgameTopInfoAssetsPlayModeValidation.cs','Editor/BattleBuild.cs')
+for name in files:paths.update(('UnityProject/Assets/AreaBattle/'+name,'UnityProject/Assets/AreaBattle/'+name+'.meta'))
+assets=workspace/'UnityProject/Assets/AreaBattle/Resources/Recovered/TopInfoEffects'
+paths.add(str(assets.relative_to(workspace))+'.meta');paths.update(str(p.relative_to(workspace))for p in assets.rglob('*')if p.is_file())
+fingerprints=[]
+for name in sorted(paths):
+ data=(workspace/name).read_bytes();assert data==(validation/name).read_bytes(),name;fingerprints.append(dict(path=name,sha256=hashlib.sha256(data).hexdigest()))
+now=datetime.datetime.now(datetime.timezone.utc).isoformat();milestone='top-info-original-effect-assets-number-format';state=read(target/'OUTGAME_RESTORE_STATE.json');assert not any(r.get('id')==milestone for r in state['milestones'])
+next_priority='Finish full TopInfoUI account/profile/auth/actions and source Await/lifecycle ownership, then UIControl production binding. Recover GuideControl4065 and remaining17 controller lifecycle/business dependencies including Rank4134, plus Match4129 account dependency; complete real Main/resource/platform/all business/Player and original audiovisual acceptance.'
+def diagnostics(s):return {k:s.count(k)for k in ('ShouldRunBehaviour','Curl error 35','Curl error 42','ArgumentOutOfRangeException','error CS')}
+record=dict(atUtc=now,scope='Original TopInfo effect1007/1019 source assets/native ownership plus BigNumExtension27612 formatting',checksPassed=1593,newIntegratedChecks=12,targetedChecks=12,nativeChecks=10,freshPlayModeRun=True,freshPlayerBuild=False,freshPlayerSmoke=False,editorVersion=full['unityVersion'],platform='OSXEditor',projectVersionPreserved='6000.0.68f1',isolatedProject=str(validation/'UnityProject'),matchingSourceFingerprints=len(fingerprints),implementedLifecycleControllers=21,remainingLifecycleControllers=17,commands=['RecoveredSkillEffectImporter.ImportTopInfoEffects','BattleBuild.ValidateMechanicsOnly','OutgameTopInfoAssetsPlayModeValidation.Run'],logDiagnostics=dict(integrated=diagnostics(log),native=diagnostics(native_log)),particleRoundtrip=dict(particleSystems=5,numericScalars=9085),nativeVisiblePixels=dict(gold=native['goldPixels'],diamond=native['diamondPixels']),observedBoundaries=evidence['findings'],notClaimed='Full TopInfo/account/auth/page lifecycle, production Main/resource catalog/platform, remaining17 controllers/all business, fresh Player/original audiovisual equivalence.')
+write(analysis/'top-info-assets-validation.json',focused)
+for name in ('unity-integrated-validation.json','top-info-assets-integrated.log','top-info-assets-native-validation.json','top-info-assets-native.log','top-info-assets-initial-top-info-assets-integrated.log','top-info-assets-initial-unity-integrated-validation.json','top-info-assets-initial-top-info-assets-native.log','top-info-assets-initial-top-info-assets-native-validation.json','top-info-assets-camera-initial-top-info-assets-native.log','top-info-assets-camera-initial-top-info-assets-native-validation.json','top-info-assets-camera-initial-top-info-assets-render-diagnostics.txt','top-info-assets-render-diagnostics.txt','top-info-assets-emission-initial-top-info-assets-native.log','top-info-assets-emission-initial-top-info-assets-native-validation.json','top-info-assets-emission-initial-top-info-assets-render-diagnostics.txt'):shutil.copy2(validation/'analysis'/name,analysis/name)
+for p in (validation/'analysis/captures').glob('top-info-*.png'):shutil.copy2(p,analysis/'captures'/p.name)
+write(out/'TOP_INFO_ASSETS_AUDIT.json',dict(status='original-top-info-assets-format-verified-full-page-pending',atUtc=now,sourceEvidence='TOP_INFO_ASSETS_SOURCE_EVIDENCE.json',verification=record,implementation=list(files),checks=focused['checks'],native=native,remaining=next_priority))
+state.update(lastUpdatedAtUtc=now,currentStage=milestone,nextPriority=next_priority,topInfoAssetsAudit='generated/outgame/TOP_INFO_ASSETS_AUDIT.json');state['validation'].update(integratedChecksPassed=1593,topInfoAssets=record);state['milestones'].append(dict(id=milestone,atUtc=now,status='original-top-info-assets-format-verified-full-page-pending',integratedChecks=1593,newChecks=12,nativeChecks=10,freshPlayModeRun=True,remainingLifecycleControllers=17));write(target/'OUTGAME_RESTORE_STATE.json',state)
+by_path={r['path']:r for r in fingerprints};ordered=[by_path.pop(r['path'])for r in manifest['sourceFingerprints']if r['path']in by_path];manifest.update(atUtc=now,passed=True,caseCount=1593,latestValidation=record,sourceFingerprints=ordered+[by_path[n]for n in sorted(by_path)]);manifest['validationHistory'].append(record)
+for name in ('analysis/top-info-assets-validation.json','analysis/top-info-assets-native-validation.json'):
+ if name not in manifest['reports']:manifest['reports'].append(name)
+write(analysis/'VALIDATION_MANIFEST.json',manifest)
+execution=read(analysis/'RESTORATION_EXECUTION_STATE.json');execution.update(updatedAtUtc=now,verification=record,nextPriority=next_priority);execution['completedThisRun'].append(f'Original TopInfo1007/1019 effects from11 verified local bundles imported;5particles/9085numeric scalar readback matches. BigNumExtension27612 restored including source truncation/last-zero behavior.1593 integrated with12 new and10 native visible-pixel/persistent-lifetime/handle-release checks. {len(fingerprints)} matching inputs;6384 indexed methods,21/38 controllers unchanged. Complete TopInfo/account/auth/Main/platform/all business/Player pending.');write(analysis/'RESTORATION_EXECUTION_STATE.json',execution)
+print(json.dumps(dict(integrated=1593,newChecks=12,native=10,fingerprints=len(fingerprints),indexedMethods=6384,controllers=21,remaining=17,diagnostics=record['logDiagnostics'],pixels=record['nativeVisiblePixels'])))

@@ -186,6 +186,7 @@ namespace AreaBattle.EditorTools
             public Action Init,Save;
             public void OnInit()=>Init?.Invoke();
             public void OnSave()=>Save?.Invoke();
+            public void OnRelease(){}
         }
         sealed class VersionManager:IOutgameVersionManager
         {

@@ -1,0 +1,55 @@
+; Original class: GameFrameWorkMono
+; Type3442.cB½S·; wasmcode function 6052; offset=2141371 size=140
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0020acbe  global.get [0]
+0020acc0  i32.const [16]
+0020acc2  i32.sub []
+0020acc3  local.set [1]
+0020acc5  local.get [1]
+0020acc7  global.set [0]
+0020acc9  i32.const [5011781]
+0020acce  i32.load8_u [0, 0]
+0020acd1  i32.eqz []
+0020acd2  if [-64]
+0020acd4    i32.const [3928952]
+0020acd9    call [900] ; 
+0020acdc    i32.const [3926996]
+0020ace1    call [900] ; 
+0020ace4    i32.const [4054844] ; STRING "GF_GameFocus"
+0020ace9    call [900] ; 
+0020acec    i32.const [5011781]
+0020acf1    i32.const [1]
+0020acf3    i32.store8 [0, 0]
+0020acf6  end []
+0020acf7  i32.const [3926996]
+0020acfc  i32.load [2, 0]
+0020acff  i32.const [1]
+0020ad01  call [909] ; 
+0020ad04  local.set [2]
+0020ad06  local.get [1]
+0020ad08  local.get [0]
+0020ad0a  i32.load8_u [0, 28]
+0020ad0d  i32.store8 [0, 15]
+0020ad10  i32.const [3928952]
+0020ad15  i32.load [2, 0]
+0020ad18  local.get [1]
+0020ad1a  i32.const [15]
+0020ad1c  i32.add []
+0020ad1d  call [910] ; 
+0020ad20  local.set [0]
+0020ad22  local.get [2]
+0020ad24  local.get [0]
+0020ad26  call [905] ; 
+0020ad29  local.get [2]
+0020ad2b  local.get [0]
+0020ad2d  i32.store [2, 16]
+0020ad30  i32.const [4054844] ; STRING "GF_GameFocus"
+0020ad35  i32.load [2, 0]
+0020ad38  local.get [2]
+0020ad3a  i32.const [0]
+0020ad3c  call [1230] ; MsgDispatcher.SendMessage
+0020ad3f  local.get [1]
+0020ad41  i32.const [16]
+0020ad43  i32.add []
+0020ad44  global.set [0]
+0020ad46  end []

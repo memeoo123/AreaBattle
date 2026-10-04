@@ -1,0 +1,25 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Concrete source offnet/manager/control, native UpdateManager/WaitUntil/coroutine handle, compressed file restart and explicit result messages. SDK time/http and daily-refresh scheduler endpoints are isolated fixtures; no source TimeToRefreshControl, production Main, actual platform response or Player claim.",
+    "checks": [
+        "Native update does not fabricate pending server-data completion",
+        "Actual load publishes manager/provides completion and starts native readiness coroutine",
+        "Actual WaitUntil remains pending while pool save readiness is false",
+        "Unscaled anchored time advances during timeScale0 while scaled statistics timers remain frozen",
+        "Native coroutine registers once, increments launch count and retains completed handle",
+        "Native control Update saves compressed data through real file backend",
+        "Explicit failed ad result does not grant successful-ad count",
+        "Explicit refresh endpoint runs concrete daily reset after result messages",
+        "Native save commits both source timestamps",
+        "Reload retains completed coroutine handle and does not repeat initialization or daily registration",
+        "Independent native owner graph restores file statistics after teardown",
+        "Restart creates its own pending native readiness coroutine",
+        "Native scaled update resumes periodic clock write and fresh launch count",
+        "Release removes daily endpoint/stops retained coroutine and queues controller removal",
+        "Next actual UpdateManager frame removes controller delegate"
+    ],
+    "readyFrame": 386,
+    "restartFrame": 608,
+    "originalFirst": 1700000000000
+}

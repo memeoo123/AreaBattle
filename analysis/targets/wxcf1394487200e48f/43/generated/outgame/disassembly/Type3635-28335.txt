@@ -1,0 +1,26 @@
+; Original class: WebRequestAgentHelperErrorEventArgs
+; Type3635.Create; wasmcode function 6768; offset=2554924 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0026fc2d  i32.const [4987486]
+0026fc32  i32.load8_u [0, 0]
+0026fc35  i32.eqz []
+0026fc36  if [-64]
+0026fc38    i32.const [3942076]
+0026fc3d    call [900] ; 
+0026fc40    i32.const [4987486]
+0026fc45    i32.const [1]
+0026fc47    i32.store8 [0, 0]
+0026fc4a  end []
+0026fc4b  i32.const [3942076]
+0026fc50  i32.load [2, 0]
+0026fc53  call [903] ; 
+0026fc56  local.set [1]
+0026fc58  local.get [1]
+0026fc5a  local.get [1]
+0026fc5c  call [1721] ; DownloadAgentHelperUpdateLengthEventArgs..ctor
+0026fc5f  local.get [1]
+0026fc61  local.get [0]
+0026fc63  i32.store [2, 8]
+0026fc66  local.get [1]
+0026fc68  return []
+0026fc69  end []

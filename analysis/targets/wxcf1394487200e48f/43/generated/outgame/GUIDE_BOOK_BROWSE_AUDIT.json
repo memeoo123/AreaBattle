@@ -1,0 +1,106 @@
+{
+  "status": "items-tabs-native-layout-verified-full-page-main-pending",
+  "atUtc": "2026-10-03T07:18:47.060894+00:00",
+  "sourceEvidence": "GUIDE_BOOK_BROWSE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T07:18:47.060894+00:00",
+    "scope": "Original guide-book row rendering, tip collection/selection, TabButton/Group, click overloads and native end-of-frame sizing/destruction",
+    "checksPassed": 1127,
+    "newIntegratedChecks": 7,
+    "targetedChecks": 7,
+    "freshPlayModeRun": true,
+    "nativeChecks": 23,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2232,
+    "commands": [
+      "OutgameGuideBookBrowsePlayModeValidation.Run (non-batch, visible Game view)",
+      "BattleBuild.ValidateMechanicsOnly (-batchmode)"
+    ],
+    "observedBoundaries": [
+      "Batch PlayMode failed the frame-end height check; rendered non-batch Game view passed actual130->330 expansion and all23 native checks.",
+      "Rendered log includes an unrelated UnityEditor.Search.SearchDatabase startup exception; product checks passed. No Player or full-page visual acceptance claimed."
+    ],
+    "notClaimed": "Full DynamicList/popup/Spine/page lifecycle, actual localization/voice/toast/effects, Main/account/22 remaining controllers, SDK delivery or full Player"
+  },
+  "implementation": [
+    "OutgameGuideBookItem.cs",
+    "OutgameTipBookItem.cs",
+    "OutgameGuideBookBrowseBinding.cs",
+    "OutgameTabButton.cs",
+    "OutgameTabButtonGroup.cs",
+    "OutgameUiPointerClick.cs",
+    "OutgameGuideBookRewardBinding.cs"
+  ],
+  "sourceCorrection": "Previous UI evidence selected type4370 ItemInfoUI for the iterator; corrected to actual nested4368. Existing reward binding now sends source GF_UIButtonClick after successful callback return.",
+  "checks": [
+    {
+      "id": "guide-book-item-render-index-language-order-and-claim-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-vs-tip-locked-toast-source-level-rules",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-tip-original-dictionary-order-single-selection-and-latest-frame-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-tip-image-pointer-real-reward-record-and-duplicate-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-tab-programmatic-click-reentry-and-notify-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-ui-click-overloads-replace-append-and-throw-boundaries",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-reward-button-global-message-follows-return-only",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Actual Awake discovers two original tab components before page selection",
+    "Tip layout coroutines belong to native shared UpdateManager",
+    "Initial collapsed height survives native frame scheduling",
+    "Native pointer event delivered to tabBtnT",
+    "Native Start attaches group click delegates",
+    "Native pointer event delivered to btnUnlock",
+    "Pointer expansion changes selection immediately and leaves height until frame end",
+    "Actual WaitForEndOfFrame applies expanded description height: root=330, description=330, initial=130",
+    "Native pointer event delivered to btnUnlock",
+    "Second native item collapses first selection",
+    "Native parent layout follows both delayed height changes",
+    "Native pointer event delivered to btnBox0",
+    "Native reward pointer reaches real economic and claim records",
+    "Claim keeps expansion and hides reward row before delayed rebuild",
+    "Post-claim native coroutine resizes after reward row removal",
+    "Independent disk restart restores native claim and currency",
+    "Native pointer event delivered to tabBtnT",
+    "Clicking selected tab retains expansion without repeat voice",
+    "Native pointer event delivered to tabBtnG",
+    "Leaving tip tab clears item selection and hides original scroll view",
+    "Shared coroutine completes collapse while tip scroll view is inactive",
+    "Source BaseItem disposal clears references and callback while retaining rect field until native destroy",
+    "Native frame destroys both owned item objects"
+  ],
+  "remaining": [
+    "Complete original popup33041/additional hints33050 and DynamicList/ListData behavior; actual YD_0 Spine and localization/audio/effects services.",
+    "Full GuideBookUI/BaseUI disposal and actual Main/account production ownership; full goal still includes all other business flows and Player acceptance."
+  ]
+}

@@ -1,0 +1,21 @@
+; Original class: WebRequestManager
+; Type3644.GetAllWebRequestInfos; wasmcode1 function 39025; offset=14559373 size=53
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00de288e  i32.const [4987560]
+00de2893  i32.load8_u [0, 0]
+00de2896  i32.eqz []
+00de2897  if [-64]
+00de2899    i32.const [3988576]
+00de289e    i32.const [1605]
+00de28a1    call_indirect [0, 0]
+00de28a4    i32.const [4987560]
+00de28a9    i32.const [1]
+00de28ab    i32.store8 [0, 0]
+00de28ae  end []
+00de28af  local.get [0]
+00de28b1  i32.load [2, 12]
+00de28b4  i32.const [3988576]
+00de28b9  i32.load [2, 0]
+00de28bc  call [20144] ; 
+00de28c0  return []
+00de28c1  end []

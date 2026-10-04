@@ -1,0 +1,27 @@
+; Original class: RequestSendGameData
+; Type3733..ctor; wasmcode function 7277; offset=2878941 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002bedde  i32.const [4987890]
+002bede3  i32.load8_u [0, 0]
+002bede6  i32.eqz []
+002bede7  if [-64]
+002bede9    i32.const [3960416]
+002bedee    call [900] ; 
+002bedf1    i32.const [3919016]
+002bedf6    call [900] ; 
+002bedf9    i32.const [4987890]
+002bedfe    i32.const [1]
+002bee00    i32.store8 [0, 0]
+002bee03  end []
+002bee04  i32.const [3919016]
+002bee09  i32.load [2, 0]
+002bee0c  call [903] ; 
+002bee0f  local.set [1]
+002bee11  local.get [1]
+002bee13  i32.const [3960416]
+002bee18  i32.load [2, 0]
+002bee1b  call [951] ; 
+002bee1e  local.get [0]
+002bee20  local.get [1]
+002bee22  i32.store [2, 8]
+002bee25  end []

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "match-fresh-schema-and-original-clamp",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-constructor-missing-vs-explicit-null-and-no-default-repair",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-typed-json-corruption-does-not-replace-live-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-fresh-default-failure-retains-published-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-fresh-provider-reentry-captures-target-and-rereads-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-real-file-roundtrip-schema-and-release-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-server-init-remains-pending-and-local-override",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-login-gate-digest-and-disabled-pool",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-events-init-failure-argument-types-level-gate-dispose",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-three-ranks-pre-response-counts-and-no-auto-save",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-request-failure-retains-play-prefix-and-prior-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-request-reentry-resolves-transmitter-and-id-each-time",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-response-installed-after-all-synchronous-requests",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-win-current-record-loss-captured-record-and-current-transmitter-clear",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-null-transmitter-preserves-play-and-openid-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-lazy-manager-cache-and-unchecked-counters",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-random-string-final-element-and-empty-source-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "match-top-info-auth-persists-real-match-with-separate-profile",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Native owned TopInfo/account/MatchManager/MatchControl shared file restart and rank request/callback ordering. Avatar/download/UserDataPrefs/RankScore/UserInfoUI/platform remain explicit test endpoints. No real authorization/network success/full Main/Player claim."
+}

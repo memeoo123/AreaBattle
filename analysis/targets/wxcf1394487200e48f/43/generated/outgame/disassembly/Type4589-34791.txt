@@ -1,0 +1,40 @@
+; Original class: TimeToRefreshControl
+; Type4589..cctor; wasmcode function 15561; offset=7505760 size=118
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00728761  i32.const [5001247]
+00728766  i32.load8_u [0, 0]
+00728769  i32.eqz []
+0072876a  if [-64]
+0072876c    i32.const [3979972]
+00728771    call [900] ; 
+00728774    i32.const [3924444]
+00728779    call [900] ; 
+0072877c    i32.const [3940196]
+00728781    call [900] ; 
+00728784    i32.const [5001247]
+00728789    i32.const [1]
+0072878b    i32.store8 [0, 0]
+0072878e  end []
+0072878f  i32.const [3940196]
+00728794  i32.load [2, 0]
+00728797  i32.load [2, 92]
+0072879a  i64.const [0]
+0072879c  i64.store [3, 0]
+0072879f  i32.const [3924444]
+007287a4  i32.load [2, 0]
+007287a7  call [903] ; 
+007287aa  local.set [0]
+007287ac  local.get [0]
+007287ae  i32.const [3979972]
+007287b3  i32.load [2, 0]
+007287b6  call [944] ; 
+007287b9  i32.const [3940196]
+007287be  i32.load [2, 0]
+007287c1  i32.load [2, 92]
+007287c4  local.get [0]
+007287c6  i32.store [2, 12]
+007287c9  i32.const [3940196]
+007287ce  i32.load [2, 0]
+007287d1  i32.load [2, 92]
+007287d4  drop []
+007287d5  end []

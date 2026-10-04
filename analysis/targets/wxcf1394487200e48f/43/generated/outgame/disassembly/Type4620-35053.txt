@@ -1,0 +1,89 @@
+; Original class: GameStatisticsControl
+; Type4620.OnInit; wasmcode function 12118; offset=5894151 size=246
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0059f008  i32.const [5001635]
+0059f00d  i32.load8_u [0, 0]
+0059f010  i32.eqz []
+0059f011  if [-64]
+0059f013    i32.const [3995064]
+0059f018    call [900] ; 
+0059f01b    i32.const [3995096]
+0059f020    call [900] ; 
+0059f023    i32.const [3930256]
+0059f028    call [900] ; 
+0059f02b    i32.const [3954676]
+0059f030    call [900] ; 
+0059f033    i32.const [3917284]
+0059f038    call [900] ; 
+0059f03b    i32.const [3932396]
+0059f040    call [900] ; 
+0059f043    i32.const [5001635]
+0059f048    i32.const [1]
+0059f04a    i32.store8 [0, 0]
+0059f04d  end []
+0059f04e  local.get [0]
+0059f050  i32.load [2, 12]
+0059f053  i32.eqz []
+0059f054  if [-64]
+0059f056    i32.const [3917284]
+0059f05b    i32.load [2, 0]
+0059f05e    call [903] ; 
+0059f061    local.set [2]
+0059f063    local.get [2]
+0059f065    i32.const [3954676]
+0059f06a    i32.load [2, 0]
+0059f06d    call [951] ; 
+0059f070    local.get [0]
+0059f072    local.get [2]
+0059f074    i32.store [2, 12]
+0059f077  end []
+0059f078  local.get [0]
+0059f07a  local.get [1]
+0059f07c  i32.store [2, 16]
+0059f07f  i32.const [3930256]
+0059f084  i32.load [2, 0]
+0059f087  call [901] ; 
+0059f08a  local.get [0]
+0059f08c  i32.const [0]
+0059f08e  call [1309] ; DataManagerPool.get_Instance
+0059f091  i32.const [3995096]
+0059f096  i32.load [2, 0]
+0059f099  call [1609] ; 
+0059f09c  i32.store [2, 8]
+0059f09f  local.get [0]
+0059f0a1  i32.load [2, 8]
+0059f0a4  local.set [1]
+0059f0a6  local.get [1]
+0059f0a8  i32.eqz []
+0059f0a9  if [-64]
+0059f0ab    i32.const [3932396]
+0059f0b0    i32.load [2, 0]
+0059f0b3    call [903] ; 
+0059f0b6    local.set [1]
+0059f0b8    local.get [1]
+0059f0ba    local.get [0]
+0059f0bc    call [12098] ; GameStatisticsManager..ctor
+0059f0bf    local.get [0]
+0059f0c1    local.get [1]
+0059f0c3    i32.store [2, 8]
+0059f0c6    i32.const [3930256]
+0059f0cb    i32.load [2, 0]
+0059f0ce    call [901] ; 
+0059f0d1    i32.const [0]
+0059f0d3    call [1309] ; DataManagerPool.get_Instance
+0059f0d6    local.get [0]
+0059f0d8    i32.load [2, 8]
+0059f0db    i32.const [3995064]
+0059f0e0    i32.load [2, 0]
+0059f0e3    call [8028] ; 
+0059f0e6    local.get [0]
+0059f0e8    i32.load [2, 8]
+0059f0eb    local.set [1]
+0059f0ed  end []
+0059f0ee  local.get [1]
+0059f0f0  local.get [0]
+0059f0f2  call [12104] ; GameStatisticsManager.InitStrategy
+0059f0f5  local.get [0]
+0059f0f7  local.get [0]
+0059f0f9  call [12116] ; GameStatisticsControl.[olZ]L
+0059f0fc  end []

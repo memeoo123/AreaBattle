@@ -1,0 +1,24 @@
+; Original class: AchievementActivity
+; Type4714.ActivityFactoryBase; wasmcode function 21011; offset=9479492 size=57
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0090a545  i32.const [5001297]
+0090a54a  i32.load8_u [0, 0]
+0090a54d  i32.eqz []
+0090a54e  if [-64]
+0090a550    i32.const [3927868]
+0090a555    call [900] ; 
+0090a558    i32.const [5001297]
+0090a55d    i32.const [1]
+0090a55f    i32.store8 [0, 0]
+0090a562  end []
+0090a563  i32.const [3927868]
+0090a568  i32.load [2, 0]
+0090a56b  call [903] ; 
+0090a56e  local.set [0]
+0090a570  local.get [0]
+0090a572  local.get [1]
+0090a574  i32.const [0]
+0090a576  call [5922] ; LimitTimeTaskFactory..ctor
+0090a579  local.get [0]
+0090a57b  return []
+0090a57c  end []

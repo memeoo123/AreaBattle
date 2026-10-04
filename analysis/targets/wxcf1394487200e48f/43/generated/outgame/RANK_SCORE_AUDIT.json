@@ -1,0 +1,188 @@
+{
+  "status": "rank-score-native-restart-verified-full-controller-pending",
+  "atUtc": "2026-10-03T15:22:40.548682+00:00",
+  "sourceEvidence": "RANK_SCORE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T15:22:40.548682+00:00",
+    "scope": "Original RankManager/RankControl score methods, WASM float oracle and real TopInfo/account file restart",
+    "checksPassed": 1662,
+    "newIntegratedChecks": 17,
+    "targetedChecks": 17,
+    "nativeChecks": 25,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2845,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameRankScorePlayModeValidation.Run",
+      "node analysis/run_original_rank_float_oracle.js"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "observedBoundaries": [
+      "RankData31689 fields playerCurRank/curPlayerScore/lastTime have no defaults. RankManager4137 registration Proj_hdzd AutoSyntrue Compressfalse confirmed source roster; storage DataKey RankManager, source pool and server/download gating retained. OnRelease31695 empty retains Data and builder.",
+      "UpdateDataCallBack31694 treats C# null/empty as fresh, otherwise LitJSON typed parse then assignment. Fresh record published before ConfigMgr newRankSettingConfig.intPlayerRank read; current Data re-resolved for config,empty string,timestamp writes. Nonempty score string is captured before resolving current RankControl; BigInteger.TryParse writes current field8 and ignores bool, therefore malformed number zeros live score. Missing string zeros current score. Existing JSON object is not repaired.",
+      "SetRank31697 captures Data, clamps only upper bound22000, writes rank before resolving server timestamp, then assigns timestamp to captured record. Negative rank is preserved. Manager getter31671 performs fresh pool lookup every time. RankControl AddScore31670 samples UnityRange150..400 exclusive, multiplies100 unchecked, max0, adds to THIS score then improves rank through31685. Rank helper32596 uses contiguous1-based RankSub keys, first areaValue>=rank or last visited row, inclusive shared managed RNG; empty table defaults1..2. Improve rank rereads live rank then resolves manager and clamps lower bound1 before SetRank.",
+      "ReduceScore31668 samples UnityRange100..200 exclusive and scales100, compares against FIRST current singleton score then resolves current singleton AGAIN for assignment/subtraction. Under owner replacement it can subtract from a different lower score and produce a negative result. No extra repair, save or UI event invented.",
+      "InitPlayerRank31679 runs only rank<=999. Captures now then current manager timestamp, unchecked64 difference divided by3600000, unchecked narrowed int hours; less than2 returns. Otherwise UnityRange1..10 exclusive times hours unchecked, rereads rank, resolves manager and SetRank. Clock is updated only through SetRank; no automatic save.",
+      "GetLargeNumZero31698 tests final character with Int32.TryParse. Numeric means two zeros; otherwise calls32597, adds2 unchecked and minimum2, marks suffix. ConfigHelper32597 returns last visited mag on unknown nonempty symbol, -1 only empty/no rows. GetLargeNumStr31699 inspects only final UTF16 character, strips only one suffix character, current-culture Single.TryParse (ignores result), FloatToInt32605 repeated f32 multiplication, then divides by(excessDecimals*10), not a power. Multichar suffixes, unknown suffixes, culture failures and excess decimals retain original odd outputs.",
+      "OnSave31700 captures Data and current score, writes BigNumExtension27612 formatted display string first, rereads Data and expands that current string, writes expansion to captured target, then serializes CURRENT Data with LitJSON and storage. Runtime score is unchanged. Failures preserve earlier mutations; login/pool/digest order inherited. Thus display truncation changes persisted score and restored score may differ from pre-save live score.",
+      "Original import-free WASM FloatToInt32605 executed directly in standalone module with one memory page, no initializer/imports/network. Seven source cases recorded in rank-float-oracle.json and compared by integrated tests. Input1.28 becomes f32 1.2799999713897705; source yields12799999 with7 decimal places. With K magnitude3/zeroLength5, original manager divides by20, truncates and stores639999. Initial native expected128000 was corrected after raw source oracle evidence; runtime implementation was unchanged.",
+      "Native real TopInfo/account/Match pool:123456 displays1.23K and saves123000; source AddScore gives138456, ReduceScore gives128456 displaying1.28K, stored639999; independent account/RankManager restart restores639999 and displays6.39K, preserving config-driven improved rank. Screenshot taken before restart shows live1.28K, not a claim of identical restored live value.",
+      "Only RankControl score/persistence/offline-rank methods are implemented in a partial class; no placeholder OnInit/home/AI-list methods or lifecycle registration. Constructor home buffers, full default score weights, AI-list generation, reference pool rows, country/home display and RanklistTransmitter remain next required work. Roster remains21/38. Full Main/platform/all business/final Player/audiovisual acceptance is not complete.",
+      "Rank weighted generic26201/26203 source additionally extracted for subsequent controller work; no claim these are wired yet. Extractor was accidentally run in working directory, rewrote289 existing evidence files only in line endings; verified each against original content and restored original bytes, manager index stayed6427 before this selected publication, all2837 prior fingerprint hashes unchanged. Added workspace guard to new extractor. No gameplay/user files affected."
+    ],
+    "notClaimed": "Full RankControl lifecycle/home/AI list/RanklistTransmitter; actual remote server/platform/Main/all business/fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameRankScore.cs",
+    "Editor/OutgameRankScoreValidation.cs",
+    "Editor/OutgameRankScorePlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "rank-score-original-registration-config-and-fresh-record",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-parse-defaults-malformed-score-and-corrupt-json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-bigint-and-current-owner-reload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-create-new-record-before-config-clock-and-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-rank-upper-only-clamp-and-timestamp-target",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-magnitude-first-match-unknown-last-and-last-character",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-float-decimal-count-and-source-excess-division",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-lossy-save-does-not-change-live-score-and-file-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-save-mutation-precedes-storage-login-and-disabled-gates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-server-download-remains-pending-and-release-retains",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-config-rank-step-boundaries-contiguous-keys-and-default",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-add-score-and-rank-update-save-is-explicit",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-reduce-reresolves-current-owner-after-comparison",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-offline-rank-gates-hours-and-current-manager",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-manager-getter-rereads-pool-without-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-current-culture-float-parse-preserved",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-top-info-real-rank-binding-and-account-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/rank-score-native.png",
+    "restoredName": "恢复测试",
+    "restoredGold": 37,
+    "restoredDiamonds": 5,
+    "scope": "Original RankManager and RankControl score portion, real TopInfo/account/Match shared storage with native live score display, add/reduce and lossy persistence/restart. RankControl home/AI-list lifecycle and server transmitter/platform/Main remain pending; rank controller is not registered as complete.",
+    "checks": [
+      "Native owned load binds25 source outlets and executes original Awake visibility",
+      "Native BaseUI WaitUntil emits page-ready then starts both original persistent effects",
+      "Owned page OpenLater installs source canvases and effects retain image parents",
+      "Actual UIControl resolves deferred currency outlets from the owned page",
+      "Real account tool mutations immediately refresh native currency texts and persist through shared pool",
+      "Actual RankControl BigInteger drives native TopInfo score label",
+      "Real RankManager save follows original display-shortening expansion without mutating live score",
+      "Source score reward and configured rank improvement reach actual native label",
+      "Source loss and explicit save retain original float-expansion record639999",
+      "Real profile name event refreshes red dot and resolves original head/frame sprites",
+      "Native profile pointer reaches source empty-argument UserInfoUI request endpoint",
+      "Explicit test authorization event uses separate platform endpoints and source Match/name/save order",
+      "Deferred supplied avatar callback updates the exact native WeChat image",
+      "Native auth saves real Match fields through the same account pool",
+      "Native match emits day/week/total and increments play count before response",
+      "Explicit test response changes live wins, preserving source absence of automatic save",
+      "Explicit loss response updates all captured loss counters",
+      "Saved nondefault nickname clears the original red dot",
+      "Native close marks disposed but source TopInfo.Dispose retains base dictionary/arguments/destroyed-object reference",
+      "Source close releases both effects and main page handle after native frame boundaries",
+      "Closed page has removed both account and authorization listeners",
+      "Independent file-backed account/UserInfo restart restores actual currency/name and fresh page labels",
+      "Independent native account restart restores Match authorization, day/week/total wins/losses and play count",
+      "Independent native account restart restores saved RankManager score/rank and current TopInfo display",
+      "Reopened page owns fresh resource handles; real MatchManager restores saved authorization"
+    ]
+  },
+  "remaining": "Complete RankControl home/AI lists, reference pool rows and full lifecycle, then real RanklistTransmitter and UserInfoUI/general sprite destination. Complete Main/account/platform/all remaining17 roster controllers and business, final Player/original audiovisual acceptance."
+}

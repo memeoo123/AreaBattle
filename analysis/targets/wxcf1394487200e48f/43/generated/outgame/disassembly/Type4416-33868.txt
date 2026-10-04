@@ -1,0 +1,49 @@
+; Original class: TaskPanelUI
+; Type4416.fLqTc~]; wasmcode function 7057; offset=2688068 size=126
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00290445  i32.const [5007034]
+0029044a  i32.load8_u [0, 0]
+0029044d  i32.eqz []
+0029044e  if [-64]
+00290450    i32.const [3933988]
+00290455    call [900] ; 
+00290458    i32.const [5007034]
+0029045d    i32.const [1]
+0029045f    i32.store8 [0, 0]
+00290462  end []
+00290463  i32.const [0]
+00290465  i32.const [3933988]
+0029046a  i32.load [2, 0]
+0029046d  local.get [0]
+0029046f  i32.load [2, 100]
+00290472  local.get [0]
+00290474  call [1027] ; 
+00290477  i32.const [1]
+00290479  i32.const [3933988]
+0029047e  i32.load [2, 0]
+00290481  local.get [0]
+00290483  i32.load [2, 100]
+00290486  call [918] ; 
+00290489  i32.eqz []
+0029048a  if [-64]
+0029048c    i32.const [2]
+0029048e    i32.const [3933988]
+00290493    i32.load [2, 0]
+00290496    local.get [0]
+00290498    i32.load [2, 100]
+0029049b    i32.const [1]
+0029049d    call [1027] ; 
+002904a0    i32.const [4]
+002904a2    i32.const [3933988]
+002904a7    i32.load [2, 0]
+002904aa    local.get [0]
+002904ac    i32.load [2, 100]
+002904af    call [1044] ; 
+002904b2  end []
+002904b3  local.get [0]
+002904b5  local.get [0]
+002904b7  call [7059] ; TaskPanelUI.SetDailyTabReddot
+002904ba  local.get [0]
+002904bc  local.get [0]
+002904be  call [7060] ; TaskPanelUI.SetAchTabReddot
+002904c1  end []

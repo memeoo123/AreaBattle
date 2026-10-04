@@ -1,0 +1,174 @@
+; Original class: TaskConfigMgr
+; Type4675.OnInit; wasmcode function 15697; offset=7558980 size=529
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00735747  i32.const [5001395]
+0073574c  i32.load8_u [0, 0]
+0073574f  i32.eqz []
+00735750  if [-64]
+00735752    i32.const [3928176]
+00735757    call [900] ; 
+0073575a    i32.const [3993548]
+0073575f    call [900] ; 
+00735762    i32.const [3993552]
+00735767    call [900] ; 
+0073576a    i32.const [3993556]
+0073576f    call [900] ; 
+00735772    i32.const [3993560]
+00735777    call [900] ; 
+0073577a    i32.const [3993792]
+0073577f    call [900] ; 
+00735782    i32.const [3993796]
+00735787    call [900] ; 
+0073578a    i32.const [3993800]
+0073578f    call [900] ; 
+00735792    i32.const [3993804]
+00735797    call [900] ; 
+0073579a    i32.const [3929800]
+0073579f    call [900] ; 
+007357a2    i32.const [3957708]
+007357a7    call [900] ; 
+007357aa    i32.const [3975964]
+007357af    call [900] ; 
+007357b2    i32.const [3923688]
+007357b7    call [900] ; 
+007357ba    i32.const [5001395]
+007357bf    i32.const [1]
+007357c1    i32.store8 [0, 0]
+007357c4  end []
+007357c5  i32.const [3928176]
+007357ca  i32.load [2, 0]
+007357cd  call [901] ; 
+007357d0  i32.const [5023024]
+007357d5  i32.load8_u [0, 0]
+007357d8  i32.eqz []
+007357d9  if [-64]
+007357db    i32.const [3928176]
+007357e0    call [900] ; 
+007357e3    i32.const [5023024]
+007357e8    i32.const [1]
+007357ea    i32.store8 [0, 0]
+007357ed  end []
+007357ee  i32.const [3928176]
+007357f3  i32.load [2, 0]
+007357f6  call [901] ; 
+007357f9  i32.const [3928176]
+007357fe  i32.load [2, 0]
+00735801  i32.load [2, 92]
+00735804  i32.load8_u [0, 39]
+00735807  local.set [2]
+00735809  i32.const [0]
+0073580b  call [1189] ; ActivityConfigMgr.get_I
+0073580e  i32.load [2, 80]
+00735811  local.set [0]
+00735813  i32.const [3929800]
+00735818  i32.load [2, 0]
+0073581b  call [901] ; 
+0073581e  block [-64]
+00735820    local.get [2]
+00735822    if [-64]
+00735824      local.get [0]
+00735826      i32.const [3993552]
+0073582b      i32.load [2, 0]
+0073582e      i32.const [110105]
+00735832      global.set [3]
+00735834      i32.const [110105]
+00735838      call_indirect [0, 0]
+0073583b      i32.const [0]
+0073583d      call [1189] ; ActivityConfigMgr.get_I
+00735840      i32.load [2, 84]
+00735843      i32.const [3993560]
+00735848      i32.load [2, 0]
+0073584b      i32.const [110105]
+0073584f      global.set [3]
+00735851      i32.const [110105]
+00735855      call_indirect [0, 0]
+00735858      i32.const [0]
+0073585a      call [1189] ; ActivityConfigMgr.get_I
+0073585d      i32.load [2, 76]
+00735860      i32.const [3993556]
+00735865      i32.load [2, 0]
+00735868      i32.const [110105]
+0073586c      global.set [3]
+0073586e      i32.const [110105]
+00735872      call_indirect [0, 0]
+00735875      i32.const [0]
+00735877      call [1189] ; ActivityConfigMgr.get_I
+0073587a      i32.load [2, 88]
+0073587d      i32.const [3993548]
+00735882      i32.load [2, 0]
+00735885      i32.const [110105]
+00735889      global.set [3]
+0073588b      i32.const [110105]
+0073588f      call_indirect [0, 0]
+00735892      br [1]
+00735894    end []
+00735895    local.get [0]
+00735897    i32.const [3993796]
+0073589c    i32.load [2, 0]
+0073589f    call [1333] ; 
+007358a2    i32.const [0]
+007358a4    call [1189] ; ActivityConfigMgr.get_I
+007358a7    i32.load [2, 84]
+007358aa    i32.const [3993804]
+007358af    i32.load [2, 0]
+007358b2    call [1333] ; 
+007358b5    i32.const [0]
+007358b7    call [1189] ; ActivityConfigMgr.get_I
+007358ba    i32.load [2, 76]
+007358bd    i32.const [3993800]
+007358c2    i32.load [2, 0]
+007358c5    call [1333] ; 
+007358c8    i32.const [0]
+007358ca    call [1189] ; ActivityConfigMgr.get_I
+007358cd    i32.load [2, 88]
+007358d0    i32.const [3993792]
+007358d5    i32.load [2, 0]
+007358d8    call [1333] ; 
+007358db  end []
+007358dc  i32.const [0]
+007358de  call [1189] ; ActivityConfigMgr.get_I
+007358e1  local.set [0]
+007358e3  i32.const [0]
+007358e5  call [1189] ; ActivityConfigMgr.get_I
+007358e8  i32.load [2, 84]
+007358eb  i32.const [3957708]
+007358f0  i32.load [2, 0]
+007358f3  call [1138] ; 
+007358f6  local.set [2]
+007358f8  i32.const [3923688]
+007358fd  i32.load [2, 0]
+00735900  call [903] ; 
+00735903  local.set [3]
+00735905  local.get [3]
+00735907  local.get [2]
+00735909  i32.const [3975964]
+0073590e  i32.load [2, 0]
+00735911  call [1350] ; 
+00735914  local.get [0]
+00735916  local.get [3]
+00735918  i32.store [2, 100]
+0073591b  i32.const [0]
+0073591d  call [1189] ; ActivityConfigMgr.get_I
+00735920  i32.const [0]
+00735922  call [13367] ; ActivityConfigMgr.LUO]QdU
+00735925  i32.const [0]
+00735927  call [1189] ; ActivityConfigMgr.get_I
+0073592a  i32.const [0]
+0073592c  call [13365] ; ActivityConfigMgr.jSMfg^
+0073592f  i32.const [0]
+00735931  call [1189] ; ActivityConfigMgr.get_I
+00735934  i32.const [0]
+00735936  call [13364] ; ActivityConfigMgr.V~bVe{j
+00735939  local.get [1]
+0073593b  if [-64]
+0073593d    local.get [1]
+0073593f    i32.load [2, 32]
+00735942    local.get [1]
+00735944    i32.load [2, 20]
+00735947    local.get [1]
+00735949    i32.load [2, 12]
+0073594c    global.set [3]
+0073594e    global.get [3]
+00735950    call_indirect [0, 0]
+00735953  end []
+00735954  end []

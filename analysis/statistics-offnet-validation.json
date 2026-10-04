@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "statistics-offnet-codec-utf8-external-gzip-and-original-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-real-compressed-file-save-and-independent-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-save-pruning-partial-failure-and-dirty-cleared-before-io",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-deferred-server-load-raw-json-and-corrupt-reload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-clock-negative-zero-reentry-overflow-and-mode",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-frame-periods-single-pass-and-calendar-broadcast",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-item-ad-product-source-events-and-unboxing",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-daily-reset-order-and-readiness-iterator",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-offnet-fresh-negative-clock-and-disposal-listener-removal",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Nine offnet/codec/persistence cases; native15 separately verifies actual UpdateManager/WaitUntil/file restart. SDK/HTTP and daily refresh endpoints are explicit fixtures; original TimeToRefreshControl/Main/platform/Player remain pending."
+}

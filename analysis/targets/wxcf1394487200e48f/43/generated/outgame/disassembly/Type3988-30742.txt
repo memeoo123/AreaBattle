@@ -1,0 +1,32 @@
+; Original class: DailyTaskSubUI
+; Type3988..ctor; wasmcode function 20030; offset=9005303 size=90
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008968f8  i32.const [5010193]
+008968fd  i32.load8_u [0, 0]
+00896900  i32.eqz []
+00896901  if [-64]
+00896903    i32.const [3956296]
+00896908    call [900] ; 
+0089690b    i32.const [3917616]
+00896910    call [900] ; 
+00896913    i32.const [3986044]
+00896918    call [900] ; 
+0089691b    i32.const [5010193]
+00896920    i32.const [1]
+00896922    i32.store8 [0, 0]
+00896925  end []
+00896926  i32.const [3917616]
+0089692b  i32.load [2, 0]
+0089692e  call [903] ; 
+00896931  local.set [1]
+00896933  local.get [1]
+00896935  i32.const [3956296]
+0089693a  i32.load [2, 0]
+0089693d  call [951] ; 
+00896940  local.get [0]
+00896942  local.get [1]
+00896944  i32.store [2, 24]
+00896947  i32.const [3986044]
+0089694c  i32.load [2, 0]
+0089694f  drop []
+00896950  end []

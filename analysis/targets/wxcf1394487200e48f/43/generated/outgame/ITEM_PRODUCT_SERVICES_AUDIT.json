@@ -1,0 +1,49 @@
+{
+  "atUtc": "2026-10-03T06:37:47.463140+00:00",
+  "status": "item-product-service-group-verified-full-main-composition-pending",
+  "verification": {
+    "atUtc": "2026-10-03T06:37:47.463140+00:00",
+    "scope": "Production item/product service group and UserInfo manager/controller with real file persistence",
+    "checksPassed": 1098,
+    "newIntegratedChecks": 11,
+    "nativePlayModeChecks": 16,
+    "nativePlayModeScope": "ItemRuntime native config bundle, native UpdateManager, daily product reset, file save/restart and delayed download callback",
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2086,
+    "commands": [
+      "OutgameProductServicesValidation.Validate",
+      "OutgameItemRuntimePlayModeValidation.Run",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Complete Main/account/menu/23 remaining controllers, original RandAIInfo, server/SDK/report delivery, native powf parity, original-device parity or full Player"
+  },
+  "implementation": [
+    "OutgameProductConfigProvider.cs",
+    "OutgameProductServices.cs",
+    "OutgameItemRuntime.cs"
+  ],
+  "source": [
+    "PRODUCT_PRICE_AUDIT.json",
+    "product-config-fields.json",
+    "product-reset-generics.json",
+    "global-item-update-generics.json",
+    "data-manager-registration-roster.json"
+  ],
+  "findings": [
+    "Shared price provider retains live original rows and write-through buyTypeOrder default; nested parameter access stays inside the source catch.",
+    "GlobalItemSlot creates actual product update/reset/pricing composition; actual ItemManager.Update host and native UpdateManager own ticking/removal.",
+    "ItemManager4500 registration preserves Proj_hdzd/autoSyn=true/compressData=false; entity factories/package manager/controller resolve actual shared owners.",
+    "Native legacy AssetBundle config loading, strict tick threshold, day reset, error continuation, message order, disk save/restart, login gate and server callback wait verified.",
+    "Original project JSON lacks some shared price fields; source errors are retained instead of synthesizing prices."
+  ],
+  "remaining": [
+    "Main/account/resource acquisition/report/virtual-item owners still need full application composition.",
+    "Unity Mathf.Pow is used by the runtime; original WASM powf boundary equivalence and source RNG sequence remain unverified."
+  ]
+}

@@ -1,0 +1,33 @@
+; Original class: LimitTimeTaskAccItem
+; Type4348.Awake; wasmcode function 18855; offset=8502082 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0081bb45  i32.const [5008894]
+0081bb4a  i32.load8_u [0, 0]
+0081bb4d  i32.eqz []
+0081bb4e  if [-64]
+0081bb50    i32.const [3927888]
+0081bb55    call [900] ; 
+0081bb58    i32.const [4005580] ; METHOD LimitTimeTaskAccItem.qyoahL
+0081bb5d    call [900] ; 
+0081bb60    i32.const [5008894]
+0081bb65    i32.const [1]
+0081bb67    i32.store8 [0, 0]
+0081bb6a  end []
+0081bb6b  local.get [0]
+0081bb6d  i32.load [2, 12]
+0081bb70  local.set [1]
+0081bb72  i32.const [3927888]
+0081bb77  i32.load [2, 0]
+0081bb7a  call [903] ; 
+0081bb7d  local.set [2]
+0081bb7f  local.get [2]
+0081bb81  local.get [0]
+0081bb83  i32.const [4005580] ; METHOD LimitTimeTaskAccItem.qyoahL
+0081bb88  i32.load [2, 0]
+0081bb8b  i32.const [0]
+0081bb8d  call [1002] ; Action..ctor
+0081bb90  local.get [1]
+0081bb92  local.get [2]
+0081bb94  i32.const [0]
+0081bb96  call [1723] ; UIExtension.AddClick
+0081bb99  end []

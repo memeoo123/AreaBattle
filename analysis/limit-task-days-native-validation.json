@@ -1,0 +1,16 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Actual imported CommonLimitTimeTaskUI day scroll and original day-item prefabs, native DynamicList LateUpdate, pointer selection, concrete limited-task statistics/red notifications and disposal. Full task/accumulator/preview/page lifecycle/menu/Main/Player and audiovisual acceptance pending.",
+    "checks": [
+        "Native LateUpdate renders original day rows in correct same-name scroll view",
+        "Original native button pointers dispatch page selection and deselect previous day",
+        "Locked original day has no active normal button",
+        "Actual statistic10015 updates original task and subscribed day red point",
+        "Native refresh renders data then replays selected page callback",
+        "Actual common activity refresh clears completed day's red point",
+        "Dynamic item disposal clears ownership while preserving native pooled row",
+        "Disposed original button removes selection handler",
+        "Non-recycling source row survives disposal across native frames until page owner destroys it"
+    ]
+}

@@ -1,0 +1,114 @@
+{
+  "status": "native-frame-teardown-verified-main-pending",
+  "atUtc": "2026-10-03T09:01:07.269862+00:00",
+  "sourceEvidence": "FRAME_ENTRY_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T09:01:07.269862+00:00",
+    "scope": "Source GameFrameEntry module core, actual data-pool release and concrete statistics runtime native teardown/file reload",
+    "checksPassed": 1214,
+    "newIntegratedChecks": 11,
+    "targetedChecks": 11,
+    "freshPlayModeRun": true,
+    "nativeChecks": 15,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2299,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameFrameEntryPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Source priority sorting, exact-type lookup, copied module list, callback-before-initialize, live node update and reverse shutdown retain source exception/reentry ordering. Existing Logic/FSM/Procedure/Time modules now implement shared frame contract.",
+      "DataManagerPool closes readiness then SaveData/OnRelease/Clear. Per-manager save errors are logged; release errors propagate and preserve dictionary. LocalData/Skin source OnRelease are nop and are explicitly restored.",
+      "StatisticsRuntime composes real control/manager/offnet/shared common messages/UpdateManager/refresh and uses same frame disposable field. Native actual LogicModule pool release occurs before frame global tail and stats/refresh cleanup; independent runtime restores compressed file.",
+      "Full GameFrameEntry launch/settings/pause, GameFrameWorkMono, actual account/SDK/HTTP/permission/config owners, activity/full Main remain pending. Factories supply existing concrete modules; SDK and host inputs are explicit native fixtures.",
+      "Initial compile found one older login-sync PoolManager fixture lacked new OnRelease interface member; fixture corrected, final1214 run is authoritative. Initial compile log retained.",
+      "Native log retains independent UnityEditor.Search startup indexing exception separate from15 passing assertions. No new Player or original audiovisual acceptance."
+    ],
+    "notClaimed": "Complete production GameFrameEntry/Main/account/SDK/HTTP/activity/business graph, remaining20 controllers, Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameFrameEntry.cs",
+    "OutgameStatisticsRuntime.cs",
+    "OutgameDataManagerPool.cs"
+  ],
+  "checks": [
+    {
+      "id": "frame-entry-priority-stable-ties-exact-type-and-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-initialize-live-args-and-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-start-enumerates-live-and-publishes-ready-last",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-update-live-nodes-not-initialization-gated",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-resources-short-circuit-and-uninitialized-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-shutdown-reverse-skip-tail-order-and-retained-fields",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-shutdown-failure-keeps-prefix-and-skips-global-tail",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-create-log-failure-does-not-publish",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-concrete-logic-fsm-procedure-time-lifecycle",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-pool-release-saves-before-live-release-and-retains-dictionary",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-pool-release-failure-and-live-mutation-stop-cleanup",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Runtime preserves real pending server-data gate",
+    "Real recovered modules share frame while statistics registers separate disposable",
+    "Runtime retains pre-init provider and loads nineteen source statistics providers",
+    "Concrete runtime coroutine waits for the same pool readiness",
+    "Statistics and actual refresh singleton share frame disposal field",
+    "Runtime native refresh reaches offnet daily reset automatically",
+    "Native owner update saves concrete runtime to compressed file",
+    "Actual logic module releases data pool before frame input/permission/config tail",
+    "Actual frame shutdown releases statistics manager then clears control/common singleton",
+    "Pool release stops actual coroutine; control self-unsubscribes while scaled refresh cleanup remains",
+    "Source frame ready flag remains while paused refresh registry awaits scaled cleanup",
+    "Next native update processes controller removal without prematurely finishing paused await",
+    "Refresh destruction removes last frame disposal subscriber",
+    "New production runtime graph reloads compressed file after actual frame teardown",
+    "Recreated runtime registers fresh launch without immediate duplicate daily reset"
+  ],
+  "remaining": "Complete GameFrameEntry launch/settings/pause and actual account/SDK/HTTP host wiring; restore extracted ActivityManager/ActivityControl/SevenDay.EnterGameInit. Complete Main/remaining20 controllers/all business/save-restart/reward-return, then Player/source audiovisual acceptance."
+}

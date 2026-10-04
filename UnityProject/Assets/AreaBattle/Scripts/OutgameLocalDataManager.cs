@@ -46,6 +46,8 @@ namespace AreaBattle
             long now=nowTimestamp();var date=OutgameLocalLimitedBags.ToSourceDateTime(now);
             charge.firstChargeTime=unchecked(now-(date.Hour*3600000+date.Minute*60000+date.Second*1000+date.Millisecond));
         }
+        // Source OnRelease31631/31731 is empty.
+        public void OnRelease(){}
         public void OnSave()
         {
             LimitedBags.PrepareSave(Record);Record.CaptureProfile(profile);storage.SaveLocalData(Record.ToOriginalJson());

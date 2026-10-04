@@ -1,5 +1,9 @@
 # AreaBattle restoration progress
 
+当前执行范围（用户2026-10-04调整）：**服务器相关工作先搁置，客户端恢复继续**。保留已完成的网络代码；网络登录、云存档同步、服务器时间、在线排行和远端上报暂不作为本阶段交付前置条件。优先本地用户资料/头像界面、结算奖励返回、本地保存重启、剩余控制器和Main本地装配，再完成客户端构建与视听验证。服务器事项仍属延期未完成，不计为完成，也不生成虚假成功结果。
+
+当前完整复原目标已按用户2026-10-04“继续”恢复执行，尚未完成整体验收。最新1772项集成检查全部通过，本批新增23项；2883份验证输入一致，新增登录传输原生8项通过。已恢复NetTool域名配置/缓存、服务器密钥信封解码和LoginTransmitter的18个协议及存档合并上传；通过实际WebRequestManager验证加密存档HTTP往返与服务器时间明文GET。生命周期仍为22/38、剩16，不代表业务完成率；普通方法索引6606。服务器相关装配按用户要求延期；客户端RankUI/OverUI、Main本地装配及剩余业务/客户端构建仍待完成。
+
 Updated 2026-09-28T10:36:21.347857+00:00. Target: 冲向那座塔 / wxcf1394487200e48f / 43.
 
 The active goal is complete in-level mechanics and presentation. Overall status: incomplete.
@@ -1517,3 +1521,348 @@ CONTROLLER_LIFECYCLE_MATRIX以原metadata接口槽4/5/6核验38控制器114方�
 - 实际ItemManager首次本地callback触发4表加载再record过滤→host/time/update/index/statistics，Gold model-only→Int64保存→同manager release/reinit→独立实例重启；服务端分支仅请求，等显式callback才创建全局。login10是隔离测试前提，Tool另由既有真实链验证。
 - 10checks含失败/重入/null/current替换/stale release/更新移除及config释放失败prefix。证据O/GLOBAL_ITEM_SLOT_SOURCE_EVIDENCE.json/AUDIT.json；完整关外未完成。
 - 下一步：实际product update/reset/price与共享config适配、旧资源reader、data pool/ItemManager/entity服务装配；继续24控制器及完整UserInfo/CommanderUI/Dice/report/Main/account/menu/business/Player。
+
+
+## 2026-10-03 恢复完整目标：商品服务与用户资料
+用户明确授权恢复并继续完整复原，目标 active。新增商品共享配置/刷新/重置/价格及 ItemRuntime 真实服务组，原生帧更新和文件保存重启验证16项通过；新增UserInfoManager/Control与头像框实体记录保存链7项。完整集成1098项通过，2086个输入文件与隔离验证副本逐字节一致；控制器15/38，余23。验证环境为Mac Unity6000.3.7f1隔离副本，原工程仍6000.0.68f1。无新Player或完整大厅验收。早期无图形截图崩溃及Mac触控读回断言已定位，最终启用图形完整检查通过。详见ITEM_PRODUCT_SERVICES_AUDIT、USER_INFO_AUDIT、USER_INFO_SOURCE_EVIDENCE和AREA_BATTLE_HANDOFF.md。下一步Main/account/model factories、RandAIInfo32592、CommanderUI/Dice/report及余23控制器；全部关外业务和原机视听时序验收仍未完成。
+
+
+## 2026-10-03 原始昵称与用户资料/道具原生联调
+
+恢复 ConfigHelper.RandAIInfo32592 与 RandomHelper.Randoms26196，保留国家映射、饱和重试、无放回抽样、插入顺序和两套随机源。新增 OutgameUserInfoRuntime 将原始昵称生成接入实际资料 manager，头像框奖励与 ItemRuntime 共用同一份资料。
+
+隔离 Unity 6000.3.7f1 完整回归 1105 项、定向检查 14 项、真实 PlayMode 23 项通过；2089 个验证输入与工作区逐字节一致。原工程仍为 6000.0.68f1。原生检查验证登录门槛、真实磁盘保存/独立重载，以及资料和道具的显式服务端回调。账号/报告为显式测试宿主，不代表真实平台接入。
+
+控制器仍为 15/38，完整 Main/账号/其余 23 控制器和全部关外业务、Player 构建及原版视听验收仍未完成，目标保持 active。证据见 AI_NAME_SOURCE_EVIDENCE.json、AI_NAME_AUDIT.json、analysis/ai-names-integrated-final.log、analysis/item-profile-native.log。
+
+
+## 2026-10-03 图鉴资料与控制器
+
+新增 OutgameGuideBookManager/Control/Runtime，接入真实数据池与控制器注册。根据原始方法恢复解锁边界、递归引导查询、领取记录、保存/通知顺序和释放行为；实际文件存档独立重载通过。图鉴 UI 和实际道具发放仍未接通。
+
+8 项定向检查、1113 项完整回归通过，2093 个验证输入逐字节匹配。控制器生命周期绑定 16/38，剩余22；反汇编索引5179。原生23项为上一批资料/道具验证，本批未重跑。完整 Main/账号/全部业务及 Player/视听验收仍未完成，目标保持 active。证据：GUIDE_BOOK_SOURCE_EVIDENCE.json、GUIDE_BOOK_AUDIT.json、analysis/guide-book-integrated.log。
+
+
+## 2026-10-03 图鉴原始资源与实际领奖按钮
+
+原包清单7个依赖包全部通过大小/MD5复核，导入原始 GuideBookUI/GuideBookItem（81/10节点）、58精灵、1字体和原生视口遮罩。新增实际领奖按钮接线，调用真实 ToolControl/LocalData/GuideBook 保存链，保留经济数据→效果→领取记录→UI顺序及失败/重入行为。7项定向检查、1120项完整回归通过；2224个验证输入与隔离工程一致。效果/声音/报告为观测测试端点；没有新的 PlayMode/Player 构建或完整原机验收。
+
+控制器仍16/38；原始方法索引5231。下一步恢复完整图鉴弹窗、动态列表、TipBookItem、标签和Spine生命周期，继续Main/账号/其余22控制器及全部业务。目标保持active，不将按钮级验证视为完整页面完成。证据：GUIDE_BOOK_UI_SOURCE_EVIDENCE.json、GUIDE_BOOK_UI_REWARD_AUDIT.json、analysis/guide-book-rewards-integrated.log。
+
+
+## 2026-10-03 图鉴条目、页签与原生帧布局
+
+恢复 GuideBookItem/TipBookItem 的原始名称/红点/锁定提示/指针回调，接入原始提示列表、单选展开和 TabButton/Group 生命周期；补正领奖按钮回调正常返回后的 GF_UIButtonClick。协程类型证据纠正为4368，保持 WaitForEndOfFrame 延迟、读取最新选中状态与 BaseItem 原生销毁。
+
+7项新增回归、1127项完整检查通过；真实可见 Game 视图下23项 PlayMode检查通过，覆盖展开130→330、页签切换、领奖后布局、实际文件重启和销毁。批处理帧末检查失败另存，不能替代此原生结果。2232个验证输入文件与隔离副本逐字节一致。控制器仍16/38，方法索引5359。
+
+完整图鉴动态列表/弹窗/Spine/整页生命周期、本地化声音效果真实服务、Main/账号/其余22控制器及全部业务、Player/原机验收仍未完成；目标保持active。最新证据：GUIDE_BOOK_BROWSE_SOURCE_EVIDENCE.json、GUIDE_BOOK_BROWSE_AUDIT.json、analysis/guide-book-browse-integrated.log、analysis/guide-book-browse-native-rendered.log。
+
+
+## 2026-10-03 图鉴原始弹窗与Spine
+
+完成图鉴原始弹窗标题/说明/图片、指挥官技能映射、攻防数值与附加提示、遮罩/OK关闭与领奖显隐；解析实际SkillControl.CurCommanderId，保留重入、缺失配置和失败顺序。图鉴自身YD_0与13项依赖已导入，保留独立网格、材质、纹理、骨骼/atlas及原生播放设置。GuideSprite本地查找包含25个原始精灵引用。
+
+6项新增检查、1133项完整回归通过；14项原生PlayMode通过，验证真实骨骼帧、隐藏/恢复、点击/领奖与文件重启。4张原生渲染图已检查；测试相机/画布、SkillControl/voice/close端点和本地atlas查找不代表完整Main或原包视听匹配。2266个验证输入与隔离副本逐字节一致，控制器仍16/38。
+
+继续完整DynamicList/ListData和BaseUI页面生命周期，再完成Main/账号/其余22控制器及全部业务、Player与原机验收。目标保持active。最新证据为GUIDE_BOOK_POPUP_SOURCE_EVIDENCE.json、GUIDE_BOOK_POPUP_AUDIT.json、analysis/guide-book-popup-integrated.log和guide-book-popup-native-verified.log。
+
+## 2026-10-03 DynamicList 滚动/回收与图鉴实交互
+
+完整目标继续 active/in_progress。恢复原始 DynamicList provider、布局、可见槽位复用、LateUpdate、单项刷新和反向对象池回收；图鉴行已接入实际弹窗/领奖回调，修正 provider.Data 替换后的引用行为。新增7组，最终1140项完整集成通过；15项原生 Game 视图检查通过（指针拖动、复用后点击、领奖、销毁回收、重开和保存重读）。2270份输入逐字节匹配；方法索引5434。三张截图已检查，验证画布不是原版视听验收。证据见 DYNAMIC_LIST_AUDIT.json、analysis/dynamic-list-integrated-final.log、analysis/dynamic-list-native-final-source.log。
+
+控制器仍16/38；尚有居中/tween列表路径、完整GuideBookUI/BaseUI/Main/account和剩余22控制器及全部业务闭环，最终Player/视听验收未完成。本批不增加完成率，也不将完整目标缩为图鉴。
+
+
+## 2026-10-03 自动每日刷新与离线统计重启验收
+
+TimeToRefreshControl4589公开调度路径、V1/V2合并/注销、到期边界和源回调重入行为已恢复。实际Unity Update自动触发具体离线统计首次/跨天刷新，压缩文件保存后销毁重建，确认同日不重复刷新。原生ExitGame与受缩放影响的0.1秒await清理通过。SDK时间/结果消息是明确受控输入，完整Main/账号/SDK/活动生产宿主仍待接入。
+
+最新完整1203项（新增10项）、本批原生15项通过，2295份验证输入匹配。控制器仍18/38，剩20；源方法索引5593。TIME_REFRESH_SOURCE_EVIDENCE.json/TIME_REFRESH_AUDIT.json及analysis/time-refresh-*.json/.log记录证据。目标保持active/in_progress，没有新Player或完整视听验收；历史局部构建不代表当前完整版本交付。接续以AREA_BATTLE_HANDOFF.md和analysis/RESTORATION_EXECUTION_STATE.json为准。
+
+
+## 2026-10-03 框架入口模块调度与统计Runtime实际退出链
+
+- 新OutgameFrameEntry恢复优先级稳定排序、精确类型Get/Have、GetAll快照、Initialize回调/参数顺序、Start枚举及实际链表Update/反向Shutdown；已有Logic/FSM/Procedure/Time接共同模块接口。构造依赖由明确工厂提供，不创建空占位模块。尚未实现完整入口CommonSettings/StartGame/PauseGame/GameFrameWorkMono。
+- 新OutgameStatisticsRuntime组装具体control/manager/offnet、共享common消息、实际UpdateManager与每日刷新单例；同一frame字段承载统计和刷新处置委托。平台使用现有IOutgameControllerPlatform，HTTP/账号/下载依赖仍要求实际宿主。
+- 补齐DataManagerPool26740.OnRelease：先关闭就绪标志，调用已有SaveData，再遍历真实manager.OnRelease并Clear，保留字典引用。保存异常按已有逐项日志继续，释放异常传播且保留集合；LocalData/Skin原始OnRelease为nop，已显式补齐接口。
+- 本批11项新增，全量1214通过；原生15项验证真实模块->数据池保存/释放->入口全局尾部->统计清理->缩放等待，以及独立Runtime文件重读。原生SDK/账号/下载/权限及config标志端点是受控夹具，不声称实际平台接通。
+- 2299份输入与隔离副本逐字节匹配；源方法索引5718（新增125份框架/活动及回调，提取不是实现）。控制器仍18/38，剩20；原工程固定6000.0.68f1，验证6000.3.7f1。本批未构建Player或完成完整Main/业务/视听验收。
+- FRAME_ENTRY_SOURCE_EVIDENCE.json含20原始方法、3份共享泛型及13字段；FRAME_ENTRY_AUDIT.json与analysis/frame-entry-*.json/.log为证据。首次编译旧PoolManager夹具缺新增接口，已修正；最终1214有效。原生UnityEditor.Search启动索引异常独立记录，15产品断言通过。
+- 下一步完成入口启动设置/场景切换/暂停和真实SDK/账号宿主，恢复已提取ActivityControl/ActivityManager/SevenDay.EnterGameInit，继续完整Main、20控制器、所有业务与Player/视听验收。状态保持active/in_progress。
+
+
+## 2026-10-03 启动设置、过渡回调与原生暂停/焦点链
+
+- 补齐GameFrameEntry.CommonSettings/StartGame/PauseGame/IsPauseGame：SDK初始化、DPI<=0回退96、fps60/sleep-1、文化设置、广告名称与抽样顺序；等待过渡回调后ReadyExitGame、隐藏banner、写场景状态并LoadScene(GameFrameworkLoad)。外部SDK/过渡/banner/全局名与场景宿主仍要求真实接线，测试不伪造平台完成。
+- 恢复GameFrameWorkMono正常单例/Init/焦点/暂停/抽样路径及DomainData公开查询。证据确认单例在已有同名对象上仍AddComponent，仅新根执行DontDestroyOnLoad；构造focus/sample标志true。暂停来源0/1/2递增，升级不重复通知，低优先级不能恢复，恢复保留旧来源，日志重入后消息读实时状态。
+- 网络抽样仅值-1才使用已有共享RNG生成1..100并先保存；阈值默认20，非空非法配置TryParse归0；标志只能被关闭。DomainConfig六个字符串字段按原名，公开GetValue类型2/3读取TD/RD，最后匹配含null覆盖。混淆别名不当作正常路径。
+- 新增10项/全量1224通过，真实Unity运行15项通过：原生组件、Unity SendMessage、timeScale和实际TimeModule由Frame.Update驱动，验证暂停flush、缩放冻结、恢复缩放后仍需焦点、changeTimeScale=false的源行为和注销/重建。未声称操作系统真实焦点事件或原始过渡动画视听验收。
+- 2303份输入与隔离副本逐字节一致；索引5723（新增DomainData5方法）；控制器仍18/38，剩20。FRAME_LAUNCH_SOURCE_EVIDENCE.json记录22方法、28字段与AddComponent泛型证据，FRAME_LAUNCH_AUDIT.json和analysis/frame-launch-*.json/.log为验收。原生UnityEditor.Search启动异常独立记录，产品断言通过。本批无新Player。
+- 下一步恢复已提取ActivityControl/ActivityManager/SevenDay.EnterGameInit并接ProcedurePreLoad活动初始化；继续真实账号/SDK/HTTP/过渡/场景/权限/config宿主、完整Main与全部剩余业务/Player/视听验收。目标保持active/in_progress。
+
+
+## 2026-10-03 活动管理器、离线存档与条件协调
+
+- 恢复ActivityManager4658、CommonModuleManagerBase4659、ActivityNetStrategyBase4660及具体ActivityOffNetStrategy4661，连接已有真实数据池和账号存储路径。活动配置/注册工厂/owner回调仍要求实际宿主；没有默认空业务或伪造服务端完成。
+- 数据保持原始int首次登录时间、long刷新/启动/预告时间、字符串uniqueId及弹窗标志；活动codec使用自身嵌套流释放。支持gzip和旧明文JSON，二次解析失败按原包记录Message/StackTrace后重新建数据，日志失败仍传播。
+- 现存记录仅处理首个匹配ID，保留重复行、孤立行和旧uniqueId；按launch/notice/over原条件协调state3/4，必要时重新查询launch。无效日期/整数条件被跳过，短数组失败，原顺序与重入保留。保存不清dirty，释放仅重置管理器注册标志。
+- 新增12项，全量1236通过，包含48组条件/状态组合、真实gzip文件保存与新backend/manager独立重读、注册/存储/回调失败前缀状态。2308份输入与隔离副本逐字节一致；源方法索引5757，控制器仍18/38、剩20。本批无新PlayMode/Player；最近入口15项原生是此前1224版本的独立证据。
+- ACTIVITY_DATA_SOURCE_EVIDENCE.json记录33方法、43字段与8条泛型证据；ACTIVITY_DATA_AUDIT.json、analysis/activity-data-validation.json及activity-data-integrated.log为验收。日志保留32条既有ShouldRunBehaviour编辑器断言及一次Unity云请求超时，与此前完整日志数量一致；产品1236检查全部通过且无编译错误。
+- 下一步恢复ActivityControl/ActivityConfigMgr、活动条件缓存与子类型图，接SevenDay.EnterGameInit及ProcedurePreLoad；继续完整Main/账号/SDK/HTTP/场景宿主、其余20控制器和全部业务/奖励返回，最后Player与原版视听验收。目标保持active/in_progress。
+
+
+## 2026-10-03 活动运行时条件缓存与状态机事件
+
+- 补齐ActivityItemData.Config及Notice/Launch/Over/Close四类条件缓存：参数数组长度决定容量，下划线拆分前段为boxed int统计参数、末段为long目标；日期精确转换、无效值归0、缓存提前赋值、失败后保留部分数组、缺配置重试与已缓存配置不失效均遵循原代码。此路径区别于离线加载时跳过无效文本的检查，未合并两者规则。
+- 恢复ActivityStateBase35369比较：open为0立即false，其余值允许；使用传入类型数组而非缓存key，透传缓存arg引用，provider返回后才读实时target。原始本地PubActivityConfig四组字段已验证，私有缓存不会进入JSON，重读后按配置重新构建。
+- 通过原始泛型注册表补齐Fsm.FireEvent和FsmState订阅/退订/分发/销毁：当前状态校验、null/原样payload、重复委托仅减一个、保留null字典键、重入快照、异常中止及OnDestroy清空。两个OnEnter重载独立为空，ChangeState helper保留参数数组和null校验。
+- 新增10项，全量1246通过；实际统计10700/道具8计数达到目标4后驱动真实OutgameFsm切换并由FsmManager销毁。该状态场景为明确Editor夹具，完整活动四状态/UI/监听器仍待实现。2311份输入与隔离副本逐字节一致，控制器仍18/38、剩20；本批无新PlayMode/Player。
+- ACTIVITY_CONDITIONS_SOURCE_EVIDENCE.json记录6方法、16字段；fsm-event-generics.json记录13共享泛型证据。另提取76份ActivityBase/四状态/基类方法用于后续，方法索引5833；提取不等于实现。ACTIVITY_CONDITIONS_AUDIT.json、analysis/activity-conditions-validation.json及集成日志为验收。
+- 完整日志仍有32条既有ShouldRunBehaviour编辑器断言及一次Unity云请求超时，数量与此前相同，产品1246项全部通过且无编译错误。最近原生15项仍是此前入口启动/暂停套件，不当作活动UI验收。
+- 下一步实现已提取ActivityBase和Close/Notice/Launch/Over状态，装配ActivityControl/config宿主，接SevenDay.EnterGameInit和ProcedurePreLoad；继续完整Main/账号/SDK/HTTP/场景/其余20控制器/全部业务及Player和原版视听验收。目标保持active/in_progress。
+
+
+## 2026-10-03 活动控制器与实际配置、存档、状态机装配
+
+- 恢复公共 ActivityControl4637 的全部36个方法（34个普通方法、2个共享泛型），以及排序回调、空初始化数据、活动注册属性和父活动报告名称缓存。连接已恢复的完整配置运行时、离线数据、统计、状态机、Unity更新循环及框架释放；公共活动控制器独立于38个项目启动控制器，数量仍18/38。
+- 按原版恢复父子注册与共享引用、延后覆盖、存档索引、按钮区域排序和重绑、道具工厂钩子、两类弹窗队列、开启/预告/结束记录与报告顺序、分钟/每日统计和保存。额外子活动刷新由Type.Equals(ActivityBase)槽126控制，仅精确基础类型执行；已按元数据纠正最初的子类判断并增加针对验证。
+- 保留原版边界：关闭队列向前移除会跳过相邻项；自动弹窗移除后关闭可能保留NoticeUi阻止下一弹窗；Cleanup保留道具钩子、队列和部分字段；重复Init新建manager即使数据池保留旧实例。报告/UI仍由明确宿主承接，无伪造平台成功。
+- 新增16项，全量1292通过；修正后代码重新通过13项真实Unity PlayMode，覆盖自动帧更新/自动弹窗/重入OpenUI、实际按钮指针事件、压缩保存/独立重启、四状态与退出。2329份输入与隔离工程逐字节一致。方法索引5873；源证据43个普通方法、2个共享泛型、44字段。
+- 集成日志仍有32条既有ShouldRunBehaviour断言及一次Curl42退出中止；原生日志保留一条UnityEditor.Search启动ArgumentOutOfRangeException，产品检查全部通过、无编译错误。初次测试编译错误、未改变存档导致写入去重的失败测试，以及类型判断修正前的运行证据均保留。
+- 证据：ACTIVITY_CONTROL_SOURCE_EVIDENCE.json、ACTIVITY_CONTROL_AUDIT.json，analysis/activity-control-validation.json、activity-control-integrated.log、activity-control-native-validation.json、activity-control-native.log。项目固定Unity版本未改，无新Player或原版整页视听验收。
+- 下一步：恢复带注册属性的具体活动/manager/工厂完整清单和FatherActivityBase/ChildActivityBase、ChildLimitTimeTaskActivity4698；接SevenDay.EnterGameInit与ProcedurePreLoad，再完成Main/账号/SDK/HTTP/场景、其余20控制器及所有业务/奖励返回/Player验收。目标保持active/in_progress。
+
+
+## 2026-10-03 限时任务实际活动、领奖与原生重启
+
+- 恢复 ChildLimitTimeTaskActivity4698 和 LimitTimeTaskActivity4699 的完整活动逻辑，并新增运行时装配，将实际父子活动、NoviceTaskManager、模型、统计消息、配置与活跃度工厂连接到公共活动系统。原始49条任务按7天初始化；应用宿主继续提供存储、报告和道具端点，原有注册保留。
+- 初始化沿用存档任务对象、保留并诊断失效ID，新增任务只加入运行时列表。保存按条件中的进度/状态筛选追加，保留零条件任务不追加及重复ID行为。重置保留accFlag、launchTime和lastClickDayId；初始列表通知用当前dayId，重置通知用各分组day。
+- 统计事件、生命周期过滤、参数筛选、终身统计、进度截断、报告阈值/槽位及异常前状态均按原始方法恢复。监听添加取配置键，移除取存档条件键；空条件允许重复注册时钟监听。完成计数提供者使用父活动自身ID的原始查找行为，以及导航遇到缺失日期的失败行为均保留。
+- 实际领奖先发奖励，再扣材料，再写领取状态和位标记，最后报告/通知/dirty；没有添加原版不存在的余额判断或事务回滚。任务与累计奖励使用32位移位后符号扩展到64位存档，初始化却按64位解码；第32/33位边界已验证。活跃度道具事件在任务写领取状态前发生，实际背包和派生累计进度均验证通过。
+- 新增21项定向检查，完整集成1344项通过；9项原生PlayMode通过，覆盖原配置实际活动、统计进度、测试按钮指针领奖、原生帧自动保存、独立文件重启、防重复发奖、时钟跨日和再次自动保存。测试按钮不是原始任务页面，尚未完成页面及视听验收。
+- 2339份验证输入与隔离工程逐字节匹配。源证据43方法、41字段、11回调/泛型调用、20原始字符串，方法索引5962。集成日志含32条既有ShouldRunBehaviour断言和一次Curl42；原生日志含一次UnityEditor.Search启动索引越界和一次Curl42，无编译错误。初次1339项中的一个测试预期失败日志保留；修正排序后异常场景并增补边界后1344通过。
+- 证据：LIMIT_TASK_ACTIVITIES_SOURCE_EVIDENCE.json、LIMIT_TASK_ACTIVITIES_AUDIT.json、analysis/limit-task-activities-validation.json、limit-task-activities-integrated.log、limit-task-activities-native-validation.json及native.log。未构建新Player，项目固定Unity版本未改；控制器生命周期仍18/38，剩20，不等于业务完成率。
+- 下一步恢复SevendayActivityControl.EnterGameInit和ProcedurePreLoad装配，再接原始限时任务页面、普通任务/成就活动及管理器。继续Main/账号/SDK/HTTP/场景、其余20控制器、全部业务奖励返回和最终Player/原版视听验收。完整目标保持active/in_progress。
+
+
+## 2026-10-03 七日控制器与真实公共预加载装配
+
+- 完成SevendayActivityControl4502全部方法并绑定控制器注册表，生命周期进展19/38，剩19。OnInit/Updata保持原始空实现，Dispose只清单例；进入游戏场景回调才执行EnterGameInit，位置保持在排行榜初始化之后、游戏状态/关闭加载/可交互报告之前。
+- 七日控制器实际绑定1301001父活动下的1301子活动；原配置中1301001自身挂在1300001下，必须保留公共控制器从ChildActivities查找的路径。日期取首次结束条件目标的低32位减1、活动LaunchTimeStamp对应日期的零点，再进行32位毫秒乘法后扩展；严格排除起止相等时刻，缓存与显式重新进入的差异保留。
+- 补写统计顺序为皮肤数量、当前关卡减1且非负、指挥官总等级。指挥官总等级已接真实manager字典的有符号32位累加。红点使用原版天数范围及累计奖励state0，解锁后日任务和累计奖励两条查询都会执行；回调修改后续配置键和中途异常的状态已验证。
+- 新增OutgameCommonPreLoadHost，接实际StatisticsRuntime与ActivityRuntime.Init(null)。保留真实ProcedurePreLoad的统计回调、ArenaRank动态查询、WaitUntil双登录标志、修复及FSM转换顺序。账号标志、网络、修复、场景、UI和报告由必需应用端点提供，未制造平台成功。
+- 新增9项检查，完整集成1353项通过；11项原生PlayMode通过，验证跨帧等待统计响应、两个登录标志分别阻止启动、真实等待完成后的FSM转换、延迟场景回调、原81条皮肤配置的3个初始解锁皮肤、原49条任务中通关进度补写为10及真实帧自动压缩保存。
+- 2344份输入与隔离工程逐字节一致；源证据34个相关既有方法、28字段、13调用映射，方法索引5962。集成日志仍含32条既有ShouldRunBehaviour断言和一次Curl42；原生含一次UnityEditor.Search启动索引越界和一次Curl42，无编译错误。最初1355项编辑模式尝试记录保留：完整公共运行时依赖PlayMode常驻对象，已移到真实原生验证；父活动测试改为同时处理子活动索引。
+- 证据：SEVENDAY_STARTUP_SOURCE_EVIDENCE.json、SEVENDAY_STARTUP_AUDIT.json、analysis/sevenday-startup-validation.json、sevenday-startup-integrated.log、sevenday-startup-native-validation.json及native.log。未构建新Player，固定项目Unity版本未改，完整Main/账号和原版页面视听验收尚未完成。
+- 下一步恢复CommonLimitTimeTaskUI及任务/日页/累计奖励/奖励条目原始资源与交互，接大厅七日入口与红点；继续普通任务/成就管理器、剩19控制器、完整生产Main/SDK/账号/网络/场景装配和全部业务奖励返回，最后进行Player与原版视听验收。完整目标保持active/in_progress。
+
+
+## 2026-10-03 原始任务条目、每日视图与原生领取
+
+- 恢复TaskItemItem4367/TaskItemItemData4366与DailyTaskSubUI3988，接实际普通任务活动/配置/经济模型。显示数据共享配置奖励数组，按原始首条件第二项取目标、低32位取进度；GameValue900001逐条过滤任务8，已领奖行隐藏，复用行不擅自重新显示。
+- 原始12资源包全部通过目录大小/MD5与SHA256核验，导入TaskPanelUI84节点、TaskItemItem12节点、40精灵与1来源字体。原包两处对象含重复Image，Unity AddComponent不接受；导入器保留首图形并把第二图形映射到后置满矩形子节点，保留来源ID及原节点顺序。这是明确的兼容适配，原粒子/动画和视听等价仍待验收。
+- 条目保留成就模式单向尺寸修改、特殊描述分支、进度截断/排名二态显示、精灵回调前奖励数量快照、随机替换及共享配置修改、回调重入后读取当前数据上报、销毁后保留数据/委托等原始行为。每日视图先更新进度再建行，实际策略领奖先于隐藏/活跃度/红点刷新。
+- 真实Button点击先禁用，飞币请求不直接入账，按0.7秒OutSine滑至localX1600后才调用实际任务领奖；完成时先启用按钮，再领奖、隐藏和上报。原始IsClaim未被条目置位，防止重复发奖依赖实际任务活动state门槛。保留回调异常前已执行状态。
+- 全量1463项（新增12项）和14项真实PlayMode通过；覆盖指针回调、防重复点击、timeScale0延后领奖、实际金币/活跃度、原生自动保存、独立文件重启防重领及延迟销毁。飞币/精灵/奖品弹层/随机奖励/报告/倒计时格式仍为明确必需宿主端点，尚不代表完整生产装配。
+- 2640份输入与隔离工程逐字节一致；36审阅方法含33新增索引，普通方法总数6194，53字段、25引用。集成日志保留32条既有ShouldRunBehaviour断言与一次Curl42；原生日志保留一次UnityEditor.Search启动ArgumentOutOfRangeException和一次Curl42，无编译错误。初次重复图形导入失败留作诊断，修正后导入/集成/原生验证通过。
+- 下一步完整TaskPanelUI4416生命周期、TaskSingleton泛型所有者、每日/成就页签、LivenessPreviewItem4350及活跃度档位交互、大厅任务入口与实际Achievement业务。页签/整页/原始特效未宣称完成；Main/账号/平台/全部业务、其余19控制器、最终Player和原版视听继续推进，完整目标保持active。
+- 证据：TASK_ROWS_SOURCE_EVIDENCE.json、TASK_ROWS_AUDIT.json、analysis/task-rows-validation.json、task-rows-integrated.log、task-rows-native-validation.json、task-rows-native.log与unity-task-panel-import-report.json。record_task_rows_milestone.py已执行，不可重复执行；source evidence脚本可幂等重跑。
+
+
+## 2026-10-03 活跃度奖励预览、领取与原始宝箱动画
+
+- 恢复LivenessPreviewItem4350及其异步状态机4349；保留UIObject先注册Visible更新、Awake再直接隐藏对象的顺序。SetData快照使用ItemIcon而非icon；预览先显示精灵/名称/x数量，再等原生帧，按名称宽度只扩不缩；保持重入、重叠刷新、销毁期间等待和监听释放的原始行为。
+- 恢复TaskPanelUI活跃度档位绑定：原始30/60/100阈值、状态图形、初次预览回调、可领取时移除旧运行时监听并绑定领取、红点与最低阈值判断、Glow画布层。预览缺配置时，先前可见性/位置改变保留；已领状态的旧回调/Glow不擅自修正。
+- 领取先捕获奖励ID/类型/低32位数量、隐藏Glow、请求Effect1016并播放宝箱Animation；等新WaitForEndOfFrame后才显示飞币或奖品、禁用按钮、调用真实每日活跃度策略发奖与位标记、刷新红点。原版未在等待帧之前禁用按钮，也没有内部重复领取门槛；保留多个待续回调可重复发奖的源行为，不虚构去重规则。失败/重入前缀均验证。
+- 从已验证资源直接补读6个原生Animation的完整字段；恢复2个共享legacy动画，18曲线/119关键帧含切线/权重精确回读。宝箱1.7秒手动播放、Glow1.5秒自动播放。原clip在3处引用原预制体本就不存在的hdzd_eff_bxGlow，保留为未绑定轨道，不补造节点。粒子、Effect1016实际运行时/资源和整页视听仍待验收。
+- 全量1475项（新增12项）和14项真实PlayMode通过：实际EventSystem选择/点击详情锚点、UpdateManager自动收起、帧后宽度扩展、timeScale0时宝箱暂停但WaitForEndOfFrame仍发真实奖励、恢复动画/自动存档及独立重启档位状态。飞币/精灵/弹层/报告等仍是明确必需生产宿主端点。
+- 2656份输入逐字节一致；30审阅方法含24新增索引，索引6218，63字段、20引用。集成日志保留32条既有ShouldRunBehaviour断言与一次Curl42；原生日志保留一次UnityEditor.Search启动ArgumentOutOfRangeException和一次Curl42，无编译错误。本批无新Player，生命周期19/38不变。
+- 下一步先补任务整页依赖的实际Achievement模型/管理器/策略/活动与任务控制器4507，再接TaskSingleton3990、TaskPanelUI4416完整生命周期/每日与成就页签/红点及大厅入口。继续Main/账号/平台、其余19控制器/全部业务、特效粒子和最终构建/原版视听；完整目标保持active。
+- 证据：TASK_LIVENESS_SOURCE_EVIDENCE.json、TASK_LIVENESS_AUDIT.json、analysis/task-liveness-validation.json、task-liveness-integrated.log、task-liveness-native-validation.json、task-liveness-native.log与task-panel-animation-import-report.json。record_task_liveness_milestone.py已执行，不可重跑；source evidence脚本可幂等重跑。
+
+
+## 2026-10-03 成就模型、存档结构与积分道具
+
+- 恢复原始4715..4719模型、4627/4628成就积分道具/工厂，审阅21方法、17字段、13引用。实际127条成就配置、30/60/90三档累计配置逐条接入。累计配置运行时类型仅声明id，不据原JSON额外字段补造领取规则。
+- 成就资格先取配置再读当前Int64进度，要求精确state0；不增加显示条件/时间门槛。排序为可领、未完成、已领，平级按缓存config.id。配置只缓存首个非空结果；奖励每次新建，保留有符号数量及失败后重试；显示条件先发布缓存，保留失败前缀和盒装Int32参数。
+- 累计模型实时访问1601001所有者，statePts使用无符号64位移位及低6位索引；达到阈值后才再次查询领取位。当前模型测试的所有者是明确fixture，实际成就Activity/Manager/Strategy仍待装配，未宣称自动保存。
+- 原始2/2工厂分配AchievementPoint（已解析类型引用，未被共享构造函数名误导）。普通Add先完成真实Int64库存/报告/发奖宿主，再发低32位积分事件；模型添加不发此事件，Use仅报告。保留中途失败已发生的前缀。
+- 最新1487项集成通过，新增12项；2662份源码/资源输入与隔离工程逐字节一致，普通方法索引6239。无编译错误，日志保留32条既有ShouldRunBehaviour断言与一次Curl42。本批无新PlayMode/Player；上一批14项活跃度原生验证仅作为历史结果。独立文件验证的是模型JSON结构，未冒充成就运行时自动保存重启。
+- 下一步补实际AchievementMgr4722/StrategyBase4727/OffStrategy4725/Activity4714的统计进度、领取失败顺序、紧凑/旧档读取和独立重启，再接TaskController4507/AchiTaskSubUI3986/TaskSingleton3990/TaskPanelUI4416及大厅入口；继续完整目标。生产仍为独立Battle.unity，生命周期19/38。
+- 证据：ACHIEVEMENT_MODELS_SOURCE_EVIDENCE.json、ACHIEVEMENT_MODELS_AUDIT.json、analysis/achievement-models-validation.json和achievement-models-integrated.log。record_achievement_models_milestone.py已执行，不可重复执行；source evidence脚本可幂等重跑。
+
+
+## 2026-10-03 实际成就活动、统计进度、领取与数据池存档
+
+- 恢复AchievementActivity4714、AchievementMgr4722、StrategyBase4727与OffStrategy4725，在ActivityRuntime.Init之前注册到实际活动/数据池；累计模型访问真实1601001所有者，原始127条成就与3档累计记录接通。泛型实例3386已确认Data4716/Activity4714/Manager4722。
+- 恢复统计消息的精确Int64增量/Int32筛选、绝对值溢出和实时排序顺序。ChangeProgress会替换并排序正在按索引遍历的列表，某条可能再次访问而另一条跳过；保留源行为。全量统计刷新按配置content参数重算，已领取记录保留state/time。
+- 成就领取先逐条发真实奖励，再设state/time并上报，随后推进同组代表项、排序和通知。宿主发奖失败保留已变库存但尚未设领取位，报告失败则保留领取位而尚未推进列表；不加原包没有的事务/回滚/额外门槛。积分事件使用低32位，累计阶段按字典最后符合项而非最大值。
+- 管理器索引重复ID为最后一条覆盖；多阶段全领回退判断整个类型列表是否为空，可能省略后续已领组。Reset只清值、刷新累计列表和当前类型排序，不擅自退回最初代表项。Dispose移除监听但保留MessageKeys，后续AddListeners的原始短路行为通过验证。
+- 成就Update与Launch原本为空，沿用数据池的账号保存触发点，无新造逐帧自动保存。Save从真实map复制列表，倒序写入仅已领ID/time与ext的紧凑JSON；读取紧凑和旧完整结构、补齐缺失时间、删过期ID/添新增配置、重算进度。真实数据池保存后的独立文件重启、空领取存档和禁用保存门槛均通过。
+- 全量1500项通过（本批13项），2668份源码/资源输入匹配隔离副本，63审阅方法含59新增索引，索引6298，17字段、31引用。无编译错误；32条既有ShouldRunBehaviour断言与一次Curl42保留。本批无新原生/Player；并未把数据池主动SaveData测试说成完整Main自动退出保存验收。
+- 下一步完整AchiTaskSubUI3986/TaskController4507/TaskSingleton3990/TaskPanelUI4416每日与成就页签、红点、Main入口；继续生产Main/账号/平台/特效与报告宿主、其余19控制器、全部业务和最终Player/原版视听。生产仍为独立Battle.unity，完整目标active。
+- 证据：ACHIEVEMENT_RUNTIME_SOURCE_EVIDENCE.json、ACHIEVEMENT_RUNTIME_AUDIT.json、analysis/achievement-runtime-validation.json、achievement-runtime-integrated.log。record_achievement_runtime_milestone.py已成功执行，不可再次执行；source evidence脚本可幂等重跑。
+
+
+## 2026-10-03 任务控制器、成就子页与原生领取
+
+- 恢复控制器4507，并由OutgameCoreControllerBindings.BindTasks注册实际resolver；同时连接普通Task与Achievement活动。生命周期覆盖20/38，剩18。这只是生命周期绑定数，不是业务完成率。
+- OnInit监听GF_AdsPlayCallBack/WarWin并注册900001恒0值函数，源InitHczzqEvent/Updata为空；Dispose只清两个活动缓存并移除三个事件，不清控制器槽/统计函数。原OnInit没有订阅LoadStartingUI，即使Dispose移除它，也不补造订阅。每日ActivityID静态初值130001从cctor确认。
+- 第10关入口规则、两次实时关卡读取、未解锁时清每日条件进度、真实原始LeftBar/taskBtn及child0红点已接。每日红点不套用任务8的UI过滤/receiveState；成就红点会重写正进度ArenaRank并跳过当前检查，保留源行为；Achi OR Daily短路顺序不变。
+- AchiTaskSubUI3986按类型去重，显示条件精确相等且使用空参数查询；不满足条件的首条也先占类型。仅当Rows全空时建行，后续刷新只重排，不擅自补行/重绑；缺行警告、空提示只开启不隐式关闭。投影使用目标/进度低32位，共享奖励/Lang，保留UID。领取先执行实际策略，再复用下一代表项或隐藏并移除类型映射。OnDestroy先清单例宿主再解绑，保留字段/行对象。
+- 全量1512项通过（新增12），11项真实PlayMode通过：原始入口显隐、实际EventSystem指针、稳定布局后的timeScale0滑动暂停、恢复后原始200金币/领取时间、同一行推进下一成就、回调后报告读取新行ID、数据池保存后独立运行时/页面重启及监听清理。首轮原生测量受到首帧布局影响，测试等待排版稳定后通过，生产代码未因此修改；初轮记录保留。
+- 2677份输入逐字节匹配隔离副本；34审阅方法含19新增索引、30字段、27引用，普通方法6317。集成保留32条既有ShouldRunBehaviour断言和一次Curl42；原生保留一次UnityEditor.Search启动ArgumentOutOfRangeException和一次Curl42，无编译错误。本批无新Player。
+- 下一步TaskSingleton3990具体泛型所有权、完整TaskPanelUI4416页签/生命周期/关闭/TopInfo/音频/预览所有权及原始Main任务按钮打开路由；TaskController和AchiTaskSubUI已完成本批范围。继续完整生产Main/账号/平台/特效报告宿主、剩18控制器/全部业务及Player/原版视听，目标active。
+- 证据：TASK_CONTROL_VIEW_SOURCE_EVIDENCE.json、TASK_CONTROL_VIEW_AUDIT.json、analysis/task-control-view-validation.json、task-control-view-integrated.log、task-control-view-native-validation.json和task-control-view-native.log。record_task_control_view_milestone.py已成功执行，不可重跑；source evidence脚本幂等。
+
+
+## 2026-10-03 完整任务页与大厅入口
+
+- TaskSingleton3990泛型注册及约束接口调用已核实；共享实例先发布再OnInit，保留失败实例与重入语义。TaskPanel4416绑定18原始出口，Layer3/UITip、每日/成就首次初始化、false页签事件、原始倒计时/音频/关闭顺序与TopInfo恢复已接。
+- 原始大厅taskBtn连接实际页面注册器，复用隐藏页面时恢复显示；资源加载、CloseUI与销毁/句柄释放沿用BaseUI所有权。关闭时不额外发明源代码不存在的预览、特效或行列表清理。
+- 1521项集成（新增9项）、12项真实PlayMode通过，2687份输入一致，普通方法6332。原生验证任务领取50金币及20活跃度、页签切换、关闭释放、重开新实例、任务领取记录/活跃度独立文件重启。本轮奖励库存仍是内存夹具，不宣称账号金币重启恢复；首次错误扩大重启断言范围的失败报告与日志保留。
+- 集成仍有32条既有ShouldRunBehaviour断言、Curl35证书失败及Unity云配置超时；原生有独立UnityEditor.Search启动异常与Curl42。无编译错误。控制器20/38，无新Player；生产Main/账号平台/真实道具存储、全部业务及原版视听仍待完成。
+- 证据：generated/outgame/TASK_PAGE_SOURCE_EVIDENCE.json（26方法、38字段、9引用、3泛型方法及约束上下文）与TASK_PAGE_AUDIT.json，analysis/task-page-integrated.log、task-page-native-validation.json。下一步任务奖励与真实ItemManager/LocalDataManager和账号存储整合。
+
+
+## 2026-10-03 账号经济与活动奖励持久化联调
+
+- 新OutgameAccountItemRuntime组合实际LocalDataManager4119、ItemRuntime/ItemManager4500与ToolControl4256，沿用原注册参数与账号存储门槛。ToolChange实际调用整个数据池SaveData；本地数据回调替换inventory后，后续工具操作绑定当前记录。
+- OutgameActivityRewardBinding在活动初始化前接入共享引擎，让原始GetCommonItem注册覆盖每日活跃度工厂。任务、成就及可选限时任务共用真实道具配置/实体。配置来自原始AssetBundle，未沿用模型测试中1004的合成类型。
+- 每日任务先写领取状态，self-model奖励更新金币与活跃度，再由ItemManager调用Tool保存双方经济记录；成就先发奖保存经济数据，再标记领取，后续账号保存补齐领取记录。这两个源顺序、登录门槛、禁用保存和报告失败前缀分别验证。
+- 1531项集成通过（新增10项），13项真实PlayMode通过，2696份输入逐字节一致。原生页面领取成就200金币和每日50金币后独立重启，ItemManager和LocalDataManager均恢复250，并保留双方领取状态与活跃度。礼包20000通过低/高随机输入覆盖金币、钻石、积分11001和嵌套8000→8401碎片，保存重启一致。
+- 初始集成发现测试装配顺序、EditMode调用静态DontDestroyOnLoad，以及每日/成就不同顺序的错误预期，已按源修正；初始诊断保留。最终集成仍有32条既有ShouldRunBehaviour断言与Curl35；原生保留独立Search启动异常/Curl42，无编译错误。
+- 控制器生命周期20/38、普通方法6332不变；本批为19已有方法、6证据依赖与2原始注册的组合审阅。报告、账号登录状态、皮肤/视觉/平台等宿主仍明确为测试端点，生产Main仍未装配，无新Player或原版逐帧验收声明。
+- 权威证据：ACCOUNT_REWARDS_SOURCE_EVIDENCE.json、ACCOUNT_REWARDS_AUDIT.json、analysis/account-rewards-integrated.log与account-rewards-native-validation.json。下一步恢复EffectControl4058及效果模块/任务1016资源生命周期，继续Main/账号/剩18控制器/全部业务与最终构建验收。
+
+
+## 2026-10-03 原始 EffectModule 与特效生命周期
+
+- 恢复EffectModule3483以及BaseEffect/UIEffect/FlyEffect/LineEffect，审阅52份普通方法、1份CreateEffect共享泛型、59字段与24处调用/字符串，普通方法索引6384。模块优先级20，保留配置重复键、空表、初始化/关闭不重置读表标记及根节点创建顺序。
+- 实际AssetOperationHandle接入实例化/释放；现代与旧加载入口为明确服务边界。保留局部位置/Euler旋转、原预制体缩放、父Canvas排序继承、Renderer绝对排序与Canvas累加。EffectCellection排序层参数纠正为整数ID0，并与真实模块联调。
+- 主动Close先移除句柄再Dispose；正常结束先销毁/释放再移除句柄，失败保留原有前缀状态。源码异步加载无取消：提前关闭后晚到对象可能留存，已明确验证。Line.Play调用Base.Play并启动自己的第二个计时器；重复Dispose/Release提示按原包保留。没有声称这些源行为已经修复。
+- 原包1016配置确认路径Effect/UI/hdzd_eff_bxGlow、持续5秒。真实PlayMode验证WaitUntil、时间缩放暂停、原生帧末销毁、实际飞行Tween和连线UI投影长度；使用明确测试预制体/资源提供者，尚未恢复1016原始粒子画面或接入完整任务页资源链。
+- 新增15项检查，完整集成1546项通过；本批原生11项通过，2707份验证输入与隔离副本逐字节匹配。生产固定Unity6000.0.68f1未变，验证用6000.3.7f1，无新Player；生命周期仍20/38。集成日志32条既有ShouldRunBehaviour断言/Curl35，原生Search启动异常/Curl42；最终无编译错误，初始接口编译及Canvas测试前提诊断保留。
+- 证据：EFFECT_MODULE_SOURCE_EVIDENCE.json、EFFECT_MODULE_AUDIT.json、analysis/effect-module-validation.json、effect-module-integrated.log、effect-module-native-validation.json及native.log。
+- 下一步获取并恢复原始1016预制体/粒子依赖，接现代/旧资源及任务页；补EffectControl4058的NormalPool/序列/飞币所有权。继续完整生产Main/账号登录/平台、剩18控制器、全部业务及最终Player/原版视听验收。目标保持active/in_progress。
+
+
+## 2026-10-03 原始任务宝箱粒子与领奖链路
+
+原始 effect1016 / hdzd_eff_bxGlow 的10个资源包依赖全部校验，其中新获取7包82086字节。恢复4组粒子、4材质、4纹理和原生Shader引用，7362个粒子数值及曲线回读一致。恢复新旧资源包装和EffectConfig读取，将真实EffectModule接入TaskPanel领取及页签回调，保留原始重复领取/覆盖句柄/自然完成后页内旧句柄语义。
+
+1554项完整集成（新增8项）和14项原生检查通过；实际Canvas/相机中粒子开关同帧差异486像素，验证有实际渲染。两档奖励累计150金币同时进入账号经济记录；保存后独立重启恢复两档领取状态。2738份输入与隔离工程逐字节一致；方法索引6384、控制器生命周期20/38未变。
+
+验证使用本地原生AssetBundle获取宿主，声音/飞币/报告/平台仍为明确测试端点，未完成生产Main/账号登录/完整资源目录或原版逐帧视听验收。集成保留32条既有ShouldRunBehaviour和Curl35；原生保留Search启动异常/Curl42，无编译错误。最初缺少Canvas排序前提的失败日志保留；最终使用原始UIRoot和已完成布局的宿主Canvas，并检查页面位于相机前方。
+
+证据：generated/outgame/TASK_BOX_EFFECT_SOURCE_EVIDENCE.json、TASK_BOX_EFFECT_AUDIT.json；analysis/task-box-effect-integrated.log、task-box-effect-native-validation.json 和 captures/task-box-effect-{with,without}-particles.png。下一步完整EffectControl4058/NormalPool/序列/飞币所有权，再继续其余18控制器、Main/账号/平台/全部业务和Player验收。目标保持active。
+
+
+## 2026-10-03 EffectControl、对象池创建与原生领奖飞币
+
+恢复EffectControl4058并接入注册器/LogicModule：原始moneyPool容量300、释放间隔/到期5秒、root=null、不缓存资源；重初始化只重建协程/时间字典，保留池、待清理项和检查时钟。NormalPool创建保留无管理器不写字段及失败时部分初始化顺序。销毁先调用池再清单例，不添加取消或状态重置。
+
+恢复原始金币/钻石序列、回调后重读数组、索引递增和异常顺序；缺少位置回调抛错，其他物品不会自动继续。复用已有原生飞币协程、Tween与清理算法；补齐UIControl货币Text惰性缓存和原TopInfo出口，保留Dispose后缓存字段。
+
+1570项集成（新增16项）、14项真实PlayMode通过；2748份验证输入匹配，方法索引6384。生命周期21/38、剩17。原生从任务页点击触发原始宝箱粒子及飞币，验证五金币图标移动、暂停时两个奖励并发、10个实例复用、金币→钻石实际回调序列、池对象销毁和独立文件重启。
+
+两份经济记录按原路径分别验收：任务奖励50进入ItemManager和LocalData，随后直接FlyMoney7仅通过ToolChange把LocalData改为57，ItemManager仍50；直接钻石为3。序列不重复发奖，重启保持以上数值。初始误以为两份记录均57的测试失败已保留并修正预期，未改生产奖励规则。
+
+池管理器获取/资源获取、声音/报告/平台仍为明确本地宿主；完整ObjectPoolManager模块、Main/真实账号登录/全部业务及Player/原版视听验收待完成。最终集成保留32条既有ShouldRunBehaviour和Curl35；原生Search启动异常及Curl35/42，无编译错误。证据：EFFECT_CONTROL_SOURCE_EVIDENCE.json（45方法/32字段/9调用）、EFFECT_CONTROL_AUDIT.json、analysis/effect-control-native-validation.json、captures/effect-control-task-native.png。下一步原始ObjectPoolManager模块与真实Frame/资源所有权，再推进完整生产装配；目标保持active。
+
+
+## 2026-10-03 原始ObjectPoolManager与实际Frame所有权
+
+恢复ObjectPoolManager3672全部模块生命周期及共享泛型工厂，依据11个普通方法、5个共享方法、4段泛型上下文和4处调用/字符串证据。Priority70、构造字典、初始化回调、实时枚举Update/Shutdown、类型FullName+池名格式、重复池异常、构造后Add及先Shutdown后Remove均按源实现。使用原始对象类型名，保留空名合并/点号碰撞和失败后的部分状态。
+
+NormalPool生命周期已通过实际Frame.GetModule和ObjectPoolManager管理，不再使用联调宿主的池注册字典。注意销毁也调用GetModule；Frame清空后再次销毁可能重新创建未初始化管理器，这是原始行为。Frame按管理器70→Logic12更新，退出按Logic→管理器清理。资源卸载/获取、声音/外部报告仍是明确宿主端点。
+
+1581项集成（新增11项）、16项原生通过；2755份输入与隔离工程一致，6384普通方法索引、控制器21/38未变。原生原始任务页、宝箱粒子、金币钻石序列经真实Frame更新，10个图标复用归还；timeScale=0时真实对象池自动到期释放，随后Frame清理和独立存档重启通过。原始ItemManager50/LocalData57及钻石3的分支差异仍保留。
+
+最终集成32条既有ShouldRunBehaviour/Curl35；原生Search启动异常/Curl35/42，无编译错误。初始重复声明已有框架异常类的编译日志保留，最终复用原有类。证据：POOL_MANAGER_SOURCE_EVIDENCE.json、POOL_MANAGER_AUDIT.json、analysis/pool-manager-native-validation.json、captures/pool-manager-task-native.png。下一步TopInfo账号及UIControl生产绑定、GuideControl4065与其余17控制器/完整Main资源账号平台和全部业务，最终Player及原版视听验收；目标保持active。
+
+
+## 2026-10-03 顶部栏原始特效与积分数字格式
+
+原始effect1007/1019的11包依赖已在本地，通过目录大小/MD5与SHA256核验，无新增下载。导入两个预制体、四材质、四贴图及原生内置着色器引用；5个粒子系统9085个数值字段/曲线通过Unity读回，保留金币子节点200倍、钻石子节点150倍和根节点单位缩放。钻石根粒子渲染器原本禁用且无材质，保留由三个子渲染器显示的结构。
+
+恢复BigNumExtension27612数字显示：未配置先告警、百进制缩放、四字符截断、后缀饱和、负号参与长度和原始异常均保留。小数检查循环只保留最后一位是否为零的结果，因此120/150均显示1，123显示1.23；没有改成四舍五入或推测修正。
+
+1593项集成（新增12项）、10项真实PlayMode通过；2786份输入与隔离工程逐字节一致，6384普通方法索引、生命周期21/38未变。真实AssetBundle及EffectModule/Provider向原始顶部栏图片挂载特效，金币131、钻石244个可见差异像素分别取自其自然发射帧；持续显示、独立关闭、延迟销毁和模块退出释放通过。截图中余额为原预制体文本，此轮未将余额显示声称为真实账号刷新。
+
+初始测试误要求禁用根渲染器也有材质，已按源结构纠正；验证场景先刷新相机画布再运行原始UIRoot挂载，避免根节点位于相机后方。原始粒子的发射/透明度曲线没有修改，测试等待真实可见帧。初始失败日志及相机诊断留存。最终集成32条既有ShouldRunBehaviour和1条Curl35；原生1条Search启动索引异常和1条Curl42，无编译错误。未构建新Player、未完成原版视听等价验收。
+
+证据：TOP_INFO_ASSETS_SOURCE_EVIDENCE.json、TOP_INFO_ASSETS_AUDIT.json、analysis/top-info-assets-validation.json、top-info-assets-integrated.log、top-info-assets-native-validation.json及native.log；原始参数报告位于resource-snapshots/top-info-effects-20261003/particle-roundtrip-validation.json。下一步完成TopInfoUI账号/昵称红点/头像授权、原始Await和页面开闭，再接UIControl生产装配；继续Rank/Match依赖、Guide及其余17控制器、Main/账号/平台/全部业务和最终Player验收。完整目标保持active/in_progress。
+
+
+## 2026-10-03 TopInfo完整页面生命周期与真实账号重启
+
+恢复TopInfoUI4425全部17方法及两异步状态方法的对应逻辑，25个原始绑定点通过已有BaseUI加载/关闭宿主接入。Awake按源顺序注册两个消息、捕获LocalDataManager、绑定两个个人资料指针、隐藏体力/匹配资料、刷新余额、启动特效等待再刷新资料。OpenLater仅创建原始Canvas/GraphicRaycaster分组；虚拟Refresh为空。
+
+余额读取捕获管理器的当前账号投影；昵称、红点、积分及头像/头像框依次重新解析所需服务，保留回调重入和异常留下的前序结果。原始Await只等待Transform可用或IsDisposed，活对象发GF_LoadUIOver；不等待打开动画。两次特效调用独立解析模块，保留第二次失败后的第一个ID、旧ID及Dispose后的迟到继续行为。Dispose仅移除两消息并关闭两特效，不调用基类、不清字典/参数/原生对象引用或指针委托。
+
+授权事件参数仅作门槛；保留长度1/空元素的原始失败，昵称与头像地址从必需平台端点取得。按源顺序写当前Match记录、请求头像、刷新匹配昵称、保存UserDataPrefs，再保存数据池。Match的完整存档管理器尚待恢复，此轮使用明确的活记录投影接口，未伪造微信授权或持久化成功；完整UserInfoUI打开目标、Rank分数和通用头像加载也仍是必需端点。
+
+1611项集成（新增18项）、15项真实PlayMode通过；2794份输入逐字节一致，24方法/46字段/8调用证据，普通方法索引6384、生命周期21/38未变。真实UIControl持有延迟加载的页面并重试货币缓存；实际Tool变更立即显示LocalData金币37/钻石5，UserInfo姓名更改刷新红点与原始头像。实际指针、明确测试授权/头像回调、原生两帧加载、WaitUntil、开闭与特效/主页面句柄释放通过；独立文件账号重启恢复37/5及“恢复测试”。未将直接Tool变更推断为ItemManager同步，也未将测试Match记录推断为真实平台存档。
+
+初始余额测试错误地传入refreshTop=false，修正测试参数后通过，经济函数未改；原生验证器关闭方法名修正为现有CloseForName，初始编译诊断保留。最终集成保留32条既有ShouldRunBehaviour及1条Curl35；原生保留1条Search启动索引异常及1条Curl42，无编译错误。未构建新Player或验收原版整页视听。
+
+证据：TOP_INFO_PAGE_SOURCE_EVIDENCE.json、TOP_INFO_PAGE_AUDIT.json、analysis/top-info-page-validation.json、top-info-page-integrated.log、top-info-page-native-validation.json及native.log；实际页面截图为analysis/captures/top-info-page-native.png。下一步恢复MatchManager/MatchControl、WXAvatar/UserDataPrefs、RankControl和完整UserInfoUI，补生产UIControl/资源加载、Guide及剩余17控制器、Main/账号/平台/全部业务和最终Player验收。完整目标保持active/in_progress。
+
+
+### Rank计分、原始浮点与真实账号重启（1662项）
+
+恢复RankManager4137的数据默认、LitJSON读取、分数解析、排名上限与时间写入、保存前格式化和源码字符串展开顺序；RankControl加减分、排名改善、离线回退均使用原版配置及随机边界。顶部信息栏读取实际计分控制器，账号池保存和独立重启通过。
+
+直接执行原包未改写FloatToInt WASM，7组结果接入回归。f32输入1.28经源码循环得到12799999和7位小数；K的展开长度5导致源码除以20，最终存639999。真实页面保存前显示1.28K，重启恢复639999并显示6.39K。初次测试错误预期128000已根据源程序结果纠正，运行代码没有为测试改变规则。
+
+1662项集成全部通过，新增17项，真实PlayMode25项；2845个输入与隔离副本逐字节一致，普通方法索引6435。本轮23方法/28字段，生命周期仍21/38。完整RankControl初始化、大厅/AI列表、引用池行及RanklistTransmitter继续恢复，不计入已完成生命周期。
+
+证据：RANK_SCORE_SOURCE_EVIDENCE.json、RANK_SCORE_AUDIT.json、analysis/rank-score-validation.json、rank-score-integrated.log、rank-score-native-validation.json、native.log及analysis/captures/rank-score-native.png。保留初次浮点预期失败日志。record_rank_score_milestone.py已成功执行，不要重复运行。完整目标保持active/in_progress。
+
+
+### 排行榜列表依赖：引用池、权重与国家回调（1672项）
+
+按原始ReferencePool4142及RankItemData4260恢复类型隔离的FIFO引用池和行清理，保留Clear先于重复释放检查、默认允许重复释放、获取不再次清理和异常已发生部分状态。它与原框架同名池3449、GameObject对象池不同。
+
+恢复RandomHelper共享泛型26201/26203及比较器26206：全部抽取直接返回原列表；部分抽取使用随机优先值加weight+1后降序排序，保留原对象引用、零/负权重与整数溢出。国家帮助器每次请求先清空ID，真实回调按配置精确代码匹配，异步未返回时保持-1；保留晚到回调覆盖和已有ID导致的提前退出，不编造平台成功。
+
+累计1672项集成通过，新增10项；2849输入与隔离副本逐字节一致，普通方法索引6443。本轮11普通方法/5共享泛型/16字段。无新原生运行，最近Rank计分原生25项记录仍保留；生命周期21/38未增加。这些依赖尚待接入完整RankControl大厅/AI列表/初始化，再接RanklistTransmitter、UserInfoUI、Main/平台和全部剩余业务。
+
+证据：RANK_LIST_SUPPORT_SOURCE_EVIDENCE.json、RANK_LIST_SUPPORT_AUDIT.json、analysis/rank-list-support-validation.json及rank-list-support-integrated.log。record_rank_list_support_milestone.py已成功执行，不要重复运行。完整目标保持active/in_progress。
+
+
+### RankControl完整生命周期与大厅/结算数据（1688项）
+
+RankControl4134按原版接入registry，恢复构造、颜色和配置顺序、头像框权重、默认分差、离线排名、100行大厅数据与结算AI名单。刷新使用实际ReferencePool FIFO复用行；退出仅清当前单例，保留列表字段，旧实例也能清除新实例的单例位置。
+
+保持原版边界：上方固定最多50名，不使用配置upPlayerScoreNum；大厅玩家国家字段为空；全部权重抽取别名可改变默认列表排序；结算上方负分不归零；分差比较器相等时返回1；名称在两个随机字段成功后才移除。国家回调清除单例、头像框空表和配置失败的部分状态经过验证。
+
+1688项集成全部通过，新增16项；真实PlayMode31项通过。原生验证100行初始化/复用、结算名单、退出、顶部信息栏及独立账号重启恢复分数和昵称并重建列表。截图只展示真实TopInfo，不声称RankUI/OverUI已渲染。2855输入与隔离副本一致，普通方法索引6443，本轮26方法/24字段，生命周期22/38、剩16。
+
+证据：RANK_CONTROL_SOURCE_EVIDENCE.json、RANK_CONTROL_AUDIT.json、analysis/rank-control-validation.json、rank-control-native-validation.json、integrated/native日志及analysis/captures/rank-control-native.png。record_rank_control_milestone.py已成功执行，不要重复运行。下一步补RankUI/OverUI行呈现和RanklistTransmitter4482、实际国家传输，再补UserInfoUI/Main/平台/其余16控制器及完整Player验收；目标仍active/in_progress。
+
+
+### 用户要求暂停时的检查点（2026-10-03）
+
+当前状态：**paused / 未完成**。完整复原目标保留，等待用户明确要求继续；此前章节中的active、继续开发或下一步描述属于历史记录，不构成恢复工作的授权。
+
+- 最新累计1704项集成检查全部通过；本轮排行榜传输协议新增16项。2859份源码/验证输入与隔离副本逐字节匹配。
+- 最近一次原生PlayMode验证为RankControl的31项；本轮协议/AES变更仅做集成验证，未运行新的原生场景或构建Player。
+- 控制器生命周期完成22/38、剩16。生产入口仍为独立Battle.unity，完整Main/账号/平台及全部业务未完成，不能以测试数量或控制器比例作为整体完成率。
+- 已补RanklistTransmitter与BaseHttpNetTransmitter协议、请求缓存、错误分发、真实Match响应/保存重启，以及原版AES-CBC加解密；独立OpenSSL向量一致。网络响应为显式测试事件，未宣称远端HTTP成功。
+- 保留原版上传遇业务错误仍回调、网络失败不回调、查询按data.count选择个人/列表、缓存请求沿用旧category/name/offset等行为。真实HTTP请求队列/agent、平台域名/密钥和错误上报仍待接入。
+- 最新报告已归档：analysis/rank-transmitter-validation.json、rank-transmitter-integrated.log；初次测试依赖访问的编译错误日志也保留。41份相关原始方法快照存于generated/outgame/rank-transmitter-source-snapshot，暂停检查点为RANK_TRANSMITTER_PAUSE_CHECKPOINT.json。普通方法索引仍6443；正式传输层SOURCE_EVIDENCE/AUDIT发布尚未完成。
+
+恢复后优先：完成传输层正式证据归档，恢复WebRequestManager/HttpManager/NetTool实际装配；补RankUI/OverUI和UserInfoUI呈现；继续Main/账号/平台、其余16控制器与全部业务，最终做Player、完整用户流程、保存重启、失败回调及原版视听时序验收。已完成里程碑记录脚本不要重复运行。本次仅更新文档/证据/状态，没有继续修改运行代码，没有提交版本。
+
+## 2026-10-04 登录传输、平台域名与密钥解码
+
+原版NetTool保持配置缺失/精确`"0"`默认RD、解析失败归0、首次非空结果缓存和日志异常前后顺序。恢复服务器时间密钥的Base64/UTF8、两次UTF16反转及有符号偏移。LoginTransmitter注册18个协议，恢复请求字段、同步管理器筛选和存档合并；首次提交后第4次更新发送，重复提交不重置倒计时，发送异常/重入保留原版顺序。基类Update修正为原版无参数虚方法，SetUrl保留忽略传入加密标志、读取全局设置的行为。
+
+1772项集成、23项新增定向、8项真实PlayMode全部通过；2883份输入与隔离工程一致。原生测试在游戏时间暂停时按帧推进传输器，经过实际WebRequestManager与Unity HTTP往返本地服务，验证加密合并数据和明文服务器时间GET。真实平台服务、HttpManager更新宿主及HttpNetAcion业务回调仍是待装配边界，没有宣称真实账号登录成功。
+
+首次原生测试误将空对象请求预期为POST，已按原管理器空数据GET分支修正断言；失败日志另存`analysis/login-transport-initial-*`，未为迎合测试改动运行时。最终原生日志含UnityEditor.Search启动索引异常、退出时Curl42；集成日志含Curl35证书错误，均保留原始记录。检查全部通过，不据此宣称外部网络已验证。
+
+证据：`analysis/login-transport-validation.json`、`analysis/login-transport-native-validation.json`、`generated/outgame/LOGIN_TRANSPORT_SOURCE_EVIDENCE.json`和`LOGIN_TRANSPORT_AUDIT.json`。普通方法索引6606，生命周期22/38不变。下一步恢复HttpManager所有权/密钥安装、HttpNetAcion业务响应与ServerTimeSync，再继续真实平台/Main/剩余业务和最终Player验收。

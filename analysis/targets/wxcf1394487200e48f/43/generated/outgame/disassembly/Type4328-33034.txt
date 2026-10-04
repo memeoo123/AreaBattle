@@ -1,0 +1,35 @@
+; Original class: GuideBookUI
+; Type4328.{z{mXm; wasmcode1 function 60982; offset=19663961 size=72
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+012c0c5a  block [-64]
+012c0c5c    local.get [1]
+012c0c5e    if [-64]
+012c0c60      i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+012c0c63      i32.const [0]
+012c0c65      i32.const [13880] ; TABLE AudioExtention.PlayVoice
+012c0c69      call_indirect [4, 0]
+012c0c6c      br [1]
+012c0c6e    end []
+012c0c6f    local.get [0]
+012c0c71    i32.load [2, 112]
+012c0c74    local.set [2]
+012c0c76    local.get [2]
+012c0c78    i32.eqz []
+012c0c79    br_if [0]
+012c0c7b    local.get [2]
+012c0c7d    i32.const [0]
+012c0c7f    i32.const [0]
+012c0c81    call [4501] ; TipBookItem.SetSelect
+012c0c84    local.get [0]
+012c0c86    i32.const [112]
+012c0c89    i32.add []
+012c0c8a    i32.const [0]
+012c0c8c    i32.store [2, 0]
+012c0c8f  end []
+012c0c90  local.get [0]
+012c0c92  i32.load [2, 148]
+012c0c96  local.get [1]
+012c0c98  i32.const [0]
+012c0c9a  i32.const [2416] ; TABLE GameObject.SetActive
+012c0c9d  call_indirect [5, 0]
+012c0ca0  end []

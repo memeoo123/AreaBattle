@@ -1,0 +1,33 @@
+; Original class: TaskItemItem
+; Type4367.Awake; wasmcode function 15694; offset=7558692 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00735627  i32.const [5008972]
+0073562c  i32.load8_u [0, 0]
+0073562f  i32.eqz []
+00735630  if [-64]
+00735632    i32.const [3927888]
+00735637    call [900] ;
+0073563a    i32.const [4016588] ; METHOD TaskItemItem.bfYk
+0073563f    call [900] ;
+00735642    i32.const [5008972]
+00735647    i32.const [1]
+00735649    i32.store8 [0, 0]
+0073564c  end []
+0073564d  local.get [0]
+0073564f  i32.load [2, 76]
+00735652  local.set [1]
+00735654  i32.const [3927888]
+00735659  i32.load [2, 0]
+0073565c  call [903] ;
+0073565f  local.set [2]
+00735661  local.get [2]
+00735663  local.get [0]
+00735665  i32.const [4016588] ; METHOD TaskItemItem.bfYk
+0073566a  i32.load [2, 0]
+0073566d  i32.const [0]
+0073566f  call [1002] ; Action..ctor
+00735672  local.get [1]
+00735674  local.get [2]
+00735676  i32.const [0]
+00735678  call [1121] ; UIExtension.AddClick
+0073567b  end []

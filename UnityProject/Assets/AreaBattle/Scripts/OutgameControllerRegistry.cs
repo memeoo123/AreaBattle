@@ -28,6 +28,7 @@ namespace AreaBattle
         public OutgameCommanderControl(Func<OutgameDataManagerPool> pool,OutgameControllerRegistry registry)
         {this.pool=pool;this.registry=registry;}
         public void OnInit()=>Manager=pool().GetModel<OutgameCommanderManager>(4028,"CommanderManager");
+        public int GetCommanderTotalLv()=>Manager.GetCommanderTotalLv(); //30989
         public void Updata(float deltaTime,float unscaledDeltaTime){} // Verified original empty body30998.
         public void OnDispose()=>registry.Clear(4027); // Source retains instance field8.
     }

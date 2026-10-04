@@ -1,0 +1,22 @@
+; Original class: TaskPanelUI
+; Type4416..ctor; wasmcode function 15670; offset=7542552 size=41
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+0073171b  local.get [0]
+0073171d  i32.const [0]
+0073171f  call [1521] ; BaseUI..ctor
+00731722  i64.const [0]
+00731724  local.set [2]
+00731726  local.get [0]
+00731728  local.get [2]
+0073172a  i32.wrap_i64 []
+0073172b  i32.store [2, 48]
+0073172e  local.get [0]
+00731730  local.get [2]
+00731732  i64.const [32]
+00731734  i64.shr_u []
+00731735  i32.wrap_i64 []
+00731736  i32.store [2, 52]
+00731739  local.get [0]
+0073173b  i32.const [3]
+0073173d  i32.store [2, 40]
+00731740  end []

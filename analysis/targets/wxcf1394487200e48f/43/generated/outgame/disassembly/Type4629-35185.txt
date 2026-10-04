@@ -1,0 +1,78 @@
+; Original class: ActivityBase
+; Type4629..ctor; wasmcode function 4543; offset=1533971 size=234
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00176814  i32.const [5001705]
+00176819  i32.load8_u [0, 0]
+0017681c  i32.eqz []
+0017681d  if [-64]
+0017681f    i32.const [3955112]
+00176824    call [900] ; 
+00176827    i32.const [3917380]
+0017682c    call [900] ; 
+0017682f    i32.const [3971828]
+00176834    call [900] ; 
+00176837    i32.const [3977624]
+0017683c    call [900] ; 
+0017683f    i32.const [3972452]
+00176844    call [900] ; 
+00176847    i32.const [3922816]
+0017684c    call [900] ; 
+0017684f    i32.const [3922944]
+00176854    call [900] ; 
+00176857    i32.const [3924000]
+0017685c    call [900] ; 
+0017685f    i32.const [5001705]
+00176864    i32.const [1]
+00176866    i32.store8 [0, 0]
+00176869  end []
+0017686a  i32.const [3922816]
+0017686f  i32.load [2, 0]
+00176872  call [903] ; 
+00176875  local.set [1]
+00176877  local.get [1]
+00176879  i32.const [3971828]
+0017687e  i32.load [2, 0]
+00176881  call [944] ; 
+00176884  local.get [0]
+00176886  local.get [1]
+00176888  i32.store [2, 24]
+0017688b  i32.const [3917380]
+00176890  i32.load [2, 0]
+00176893  call [903] ; 
+00176896  local.set [1]
+00176898  local.get [1]
+0017689a  i32.const [3955112]
+0017689f  i32.load [2, 0]
+001768a2  call [951] ; 
+001768a5  local.get [0]
+001768a7  local.get [1]
+001768a9  i32.store [2, 28]
+001768ac  local.get [0]
+001768ae  i32.const [1]
+001768b0  i32.store8 [0, 32]
+001768b3  i32.const [3922944]
+001768b8  i32.load [2, 0]
+001768bb  call [903] ; 
+001768be  local.set [1]
+001768c0  local.get [1]
+001768c2  i32.const [3972452]
+001768c7  i32.load [2, 0]
+001768ca  call [944] ; 
+001768cd  local.get [0]
+001768cf  local.get [1]
+001768d1  i32.store [2, 36]
+001768d4  i32.const [3924000]
+001768d9  i32.load [2, 0]
+001768dc  call [903] ; 
+001768df  local.set [1]
+001768e1  local.get [1]
+001768e3  i32.const [3977624]
+001768e8  i32.load [2, 0]
+001768eb  call [944] ; 
+001768ee  local.get [0]
+001768f0  local.get [1]
+001768f2  i32.store [2, 40]
+001768f5  local.get [0]
+001768f7  i32.const [1]
+001768f9  i32.store8 [0, 68]
+001768fc  end []

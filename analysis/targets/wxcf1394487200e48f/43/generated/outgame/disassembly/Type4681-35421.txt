@@ -1,0 +1,41 @@
+; Original class: ChildTaskOffNetStrategy
+; Type4681.cav[tY; wasmcode function 12903; offset=6205077 size=107
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005eae96  i32.const [5001408]
+005eae9b  i32.load8_u [0, 0]
+005eae9e  i32.eqz []
+005eae9f  if [-64]
+005eaea1    i32.const [3989352]
+005eaea6    call [900] ;
+005eaea9    i32.const [3932388]
+005eaeae    call [900] ;
+005eaeb1    i32.const [5001408]
+005eaeb6    i32.const [1]
+005eaeb8    i32.store8 [0, 0]
+005eaebb  end []
+005eaebc  i32.const [3989352]
+005eaec1  i32.load [2, 0]
+005eaec4  call [1032] ;
+005eaec7  local.set [1]
+005eaec9  i32.const [3932388]
+005eaece  i32.load [2, 0]
+005eaed1  call [901] ;
+005eaed4  i32.const [10000]
+005eaed8  local.get [1]
+005eaeda  i32.const [0]
+005eaedc  call [1568] ; GameStatisticsExpansion.GameValue
+005eaedf  local.get [0]
+005eaee1  i32.load [2, 8]
+005eaee4  i32.load [2, 76]
+005eaee7  i32.load [2, 16]
+005eaeea  i64.load [3, 40]
+005eaeed  i64.gt_s []
+005eaeee  if [-64]
+005eaef0    local.get [0]
+005eaef2    local.get [0]
+005eaef4    call [8133] ; ChildTaskOffNetStrategy.cgfzW^b
+005eaef7    local.get [0]
+005eaef9    local.get [0]
+005eaefb    call [4488] ; ChildTaskOffNetStrategy.vzSY^d
+005eaefe  end []
+005eaeff  end []

@@ -1,0 +1,114 @@
+{
+  "status": "original-achievement-runtime-verified-ui-main-pending",
+  "atUtc": "2026-10-03T12:56:53.552895+00:00",
+  "sourceEvidence": "ACHIEVEMENT_RUNTIME_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T12:56:53.552895+00:00",
+    "scope": "Original concrete Achievement activity/manager/strategy, statistics, claims and data pool storage",
+    "checksPassed": 1500,
+    "newIntegratedChecks": 13,
+    "targetedChecks": 13,
+    "nativeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2668,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Actual ActivityRuntime installs AchievementActivity4714 and AchievementMgr4722 before ActivityControl initialization. Models resolve actual1601001 owner. Manager is registered under CommonGameModuleAchievementMgr and uses existing account-aware storage/data pool save gates; no new per-frame autosave invented. Source Update35616 and Launch35660 are empty.",
+      "Generic Init34693 binds activityID/callback, pool manager, then virtualslot5 OnInit when configured. Concrete instantiation3386 resolves AchievementData4716/Activity4714/Mgr4722; shared canonical generic bodies and wrappers already verified in TASK_MANAGER_SOURCE_EVIDENCE. OffStrategy OnInit calls manager.UpdateData(true) BEFORE re-registering statistics-refresh/point callbacks, so parse/callback failure prevents later registration.",
+      "Manager callback publishes input, map allocate/clear, type dictionary clear, then last duplicate id wins. Source grouped representatives: singleton direct index; multi scans first state!=1, but last row is added even claimed only when ENTIRE type list is empty. Thus later all-claimed groups may have no visible representative. Raw35645 branches verified. Sorting rebuilds map in sorted order, reports all-claimed including empty, then list/type/ext messages preserve live fields/captured input.",
+      "Read compact ids/times when ids nonnull nonempty: create Data before assigning shared ext, pad short times with0, append claimed records; otherwise deserialize legacy full Data. Both schemas preserve source null/error behavior, no compression invented. Fresh load enumerates127 configs; existing removes obsolete ids and appends missing from snapshot Values. Refresh reads lifetime GameValue(contentType,[boxed content]) for every record including claimed, then publishes callback.",
+      "Statistics listeners gather distinct keys only when MessageKeys empty. Dispose removes from live configured rows but does NOT clear MessageKeys, so AddListeners after Dispose short-circuits. Statistics-refresh and point listeners remove/add separately. StatisticsEvent exact-unboxes Int64 delta, optional Int32 filter for len>=3 and converts final key. Delta absolute value wraps Int64.MinValue, no clamp. Source live Data index loop plus ChangeProgress replacement/sort can revisit/skip records; preserved and tested.",
+      "ChangeProgress assigns before logging/report. Success report happens whenever old<target and value!=old, even below target; then Data.datas replaced with actual map values and sorted. Point event exact-unboxes Int32, mutates accPts before report and picks last qualifying cumulative config in dictionary enumeration, not numeric maximum; sends no ext message.",
+      "Claim checks actual map and source CanComplete. Every reward entity regular Add happens BEFORE state1/time. Delivery failure therefore leaves changed inventory but unclaimed record; retry may award again. After claim/time, report precedes group representative replacement, whole sort/type sort/ext notification. Nonrepresentative claim can award/setstate then fail list[-1]; no invented transaction, rollback or hidden guard.",
+      "Reset clears ext and all item progress/state/time; rebuilds cumulative rows in same lazily initialized list, sorts CURRENT type lists and sends ext. It deliberately does not restore initial progressive representative or re-query lifetime stats. Activity disposal clears cumulative cache then manager releases sort list and strategy listeners.",
+      "Save copies actual map.Values into Data.datas then serializes shared ext and only state1 ids/times in REVERSE order, plain JSON, through captured manager.SaveLocalData. Verified real data-pool/account file restart with127 original rows, claimed timestamps/point mask, progress recomputation, legacy repair/padding and empty-claim fallback. Data pool disabled-save gate is retained.",
+      "1500 full integrated checks including13 new. No fresh native or Player run. UI/controller/Main/account/platform delivery hosts and final original audiovisual acceptance remain incomplete; lifecycle19/38 unchanged.",
+      "Final integrated log retains32 existing ShouldRunBehaviour assertions and one Curl42; no compiler errors. Initial run exposed an incorrectly chosen test initial value for the source live-sort case; corrected scenario verifies repeated/omitted visits. Final1500 checks pass."
+    ],
+    "notClaimed": "Full task/achievement UI/controller/Main, production account/platform/effect/report delivery hosts, original audiovisual equivalence or fresh native/Player."
+  },
+  "implementation": [
+    "Scripts/OutgameAchievementRuntime.cs",
+    "Scripts/OutgameAchievementStrategy.cs",
+    "Editor/OutgameAchievementRuntimeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "achievement-runtime-original127-owner-pool-fsm-and-three-live-cumulative-records",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-statistics-abs-filter-exact-unbox-and-progress-report-before-threshold",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-live-progress-reordering-keeps-original-multiple-visit-behavior",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-refresh-statistics-recomputes-all-records-and-preserves-claimed-time",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-claim-real-economy-point-event-time-and-next-representative",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-award-failure-remains-unclaimed-with-mutated-economy",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-report-failure-prefix-and-missing-visible-representative",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-point-stage-enumeration-order-no-ext-event-and-low-int32",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-compact-read-padding-legacy-repair-and-invalid-time-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-duplicate-last-wins-and-entire-type-claimed-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-reset-clears-values-retains-current-representatives-and-listeners",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-pool-account-save-and-independent-original-config-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "achievement-runtime-empty-claim-save-restart-and-pool-save-disable",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Complete AchiTaskSubUI3986/TaskController4507/TaskSingleton3990/TaskPanelUI4416 daily-achievement ownership, tabs/red dots and Main entry over actual Task and Achievement runtimes. Continue all remaining19 controller lifecycles, production Main/account/platform/effect/report hosts, business and original audiovisual/Player acceptance."
+}

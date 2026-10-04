@@ -1,0 +1,35 @@
+; Original class: GameStatisticsExpansion
+; Type4618..cctor; wasmcode function 19546; offset=8785441 size=102
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00860e22  i32.const [5001626]
+00860e27  i32.load8_u [0, 0]
+00860e2a  i32.eqz []
+00860e2b  if [-64]
+00860e2d    i32.const [3956824]
+00860e32    call [900] ; 
+00860e35    i32.const [3917712]
+00860e3a    call [900] ; 
+00860e3d    i32.const [3932388]
+00860e42    call [900] ; 
+00860e45    i32.const [5001626]
+00860e4a    i32.const [1]
+00860e4c    i32.store8 [0, 0]
+00860e4f  end []
+00860e50  i32.const [3917712]
+00860e55  i32.load [2, 0]
+00860e58  call [903] ; 
+00860e5b  local.set [0]
+00860e5d  local.get [0]
+00860e5f  i32.const [3956824]
+00860e64  i32.load [2, 0]
+00860e67  call [951] ; 
+00860e6a  i32.const [3932388]
+00860e6f  i32.load [2, 0]
+00860e72  i32.load [2, 92]
+00860e75  local.get [0]
+00860e77  i32.store [2, 0]
+00860e7a  i32.const [3932388]
+00860e7f  i32.load [2, 0]
+00860e82  i32.load [2, 92]
+00860e85  drop []
+00860e86  end []

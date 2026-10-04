@@ -1,0 +1,21 @@
+; Original class: GuideBookUI
+; Type4328.OnItemClick; wasmcode1 function 27456; offset=10482520 size=46
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+009ff359  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+009ff35c  i32.const [0]
+009ff35e  i32.const [13880] ; TABLE AudioExtention.PlayVoice
+009ff362  call_indirect [4, 0]
+009ff365  local.get [0]
+009ff367  local.get [2]
+009ff369  i32.store [2, 108]
+009ff36c  local.get [0]
+009ff36e  local.get [1]
+009ff370  i32.store [2, 104]
+009ff373  local.get [0]
+009ff375  local.get [0]
+009ff377  call [27453] ; GuideBookUI.ShowPopGuide
+009ff37b  local.get [0]
+009ff37d  local.get [2]
+009ff37f  local.get [0]
+009ff381  call [27454] ; GuideBookUI.RefreshPopGuide
+009ff385  end []

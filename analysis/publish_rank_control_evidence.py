@@ -1,0 +1,32 @@
+"""Publish reviewed full RankControl methods while preserving existing evidence bytes."""
+from pathlib import Path
+import argparse,json,hashlib,shutil,struct
+p=argparse.ArgumentParser();p.add_argument('validation_root',type=Path);stage=p.parse_args().validation_root.resolve()
+root=Path(__file__).resolve().parent.parent;out=root/'analysis/targets/wxcf1394487200e48f/43/generated/outgame';src=stage/'analysis/targets/wxcf1394487200e48f/43/generated/outgame';assert root!=stage
+rows=json.loads((out/'method-map.json').read_text());by={r['metadata']:r for r in rows};methods=[]
+for row in json.loads((src/'method-map.json').read_text()):
+ if not 31663<=row['metadata']<=31688:continue
+ data=(src/row['path']).read_bytes()
+ if row['metadata']in by:
+  row=by[row['metadata']];held=(out/row['path']).read_bytes();assert held.replace(b'\r\n',b'\n')==data.replace(b'\r\n',b'\n');data=held
+ else:shutil.copy2(src/row['path'],out/row['path']);rows.append(row)
+ methods.append(dict(row,sha256=hashlib.sha256(data).hexdigest()))
+assert len(methods)==26
+p=out/'method-map.json';s=json.dumps(sorted(rows,key=lambda r:r['metadata']),ensure_ascii=False,indent=2)+'\n';p.write_bytes(s.replace('\n','\r\n').encode()if b'\r\n'in p.read_bytes()else s.encode())
+ctx={'__file__':str(root/'analysis/recover_outgame_manager_registry.py')};exec(Path(ctx['__file__']).read_text().split('rows=[]')[0],ctx)
+ts,md,u,ms,b,mem,pairs=[ctx[n]for n in ('ts','md','u','ms','b','mem','pairs')];fields=[]
+for owner in (4134,4136):
+ for k in range(ts[owner][18]):
+  n,t,tok=struct.unpack_from('<3i',b,pairs[11][0]+12*(ts[owner][8]+k));ptr=u(200288+4*t);fields.append(dict(owner=owner,name=ms(n),typeKind=(u(ptr+4)>>16)&255,typeData=u(ptr),offset=u(u(3823136+4*owner)+4*k)))
+findings=[
+'Constructor31665 creates head-weight list, DynamicListProvider<RankItemData> and dic_userui; defaultScoreRandList remainsnull. OnInit31663 parses player#FCFFB6/normalAI#6D69A1/rareAI#00BFCF, re-resolves config for each field, loads HM up/low/show/gap, scale times/1000 and scale factors/10, GM re-gap; calls head init, default scores, offline player rank, home init in order. Updata31672 empty. OnDispose31682 unconditionally clears only current Rank singleton, retaining all row/list fields; stale owner can clear a newer slot.',
+'Head init31677 appends every config HeadBox as weight/config pair without clearing. RandomHeadBox31666 uses source shared weighted26203 and immediately dereferences Config. Default score init31674 reuses/clears list then inclusive min..max entries with unchecked Weight=(max-min+2)-i and Value=i*100. CalWeight31680 identical actual-i formula. Insertion sort31675 ascending/descending by Value is stable for ties; weighted all-selection aliases original input and may mutate default order.',
+'Country31664 uses cached country or real country-helper request when-1, checks raw Rank singleton presence without creating one, returns empty if absent, country_com if unresolved, else current config countryFlagName by dictionary key. PlayerName31683 reads actual current UserInfo manager.Name. GetPlayerRankData31676 acquires reference row, writes rank,country,name,formattedscore only, never assigns headBoxId.',
+'Home dictionary31667/31673 generates HomeRankShowNum-1 real AI names with country, logs count green, above=min(rank-1,50) independent of configured upPlayerScoreNum, then above AI data. Calls country helper regardless of cached country, exitsnull if raw Rank singleton vanished during request. Player encoded string starts empty country semicolon then live UserInfo name/formattedscore; playerListIndex set before dictionary add. Below count=max(lowPlayerScoreNum,HomeRankShowNum-above-1). Config defaults generate50 above+player+49 below at rank20000 and player+99 below at rank1.',
+'InitHomeInfo31669 gets dictionary from CURRENT lazy Rank owner, assigns it before releasing previous nonnull rows through real ReferencePool4142, clears provider list, then each dictionary entry acquires row and assigns rank,split fields0/1/2 and random frame id before adding. Clears current dictionary only after full success. Country callback clearing singleton causesnull dictionary assigned, old rows released/list cleared, then null traversal throws; empty frame weights fail after first row partial writes and retain full dictionary. Refresh reuses all100 rows FIFO.',
+'RandomRankAIScore31684 ordinary mode selects source weighted subset (null becomes empty), stable sorts selected values then sorts integer gaps; above comparator31688 returns a>b?-1:1, INCLUDING1 for equality; it is not subtraction or CompareTo. Above rankkey=i+rank-count; below=rank+i+1, all unchecked. AI names encode country/name, then score, managed inclusive0..3 and0..1. Removes names[0] only after metadata random and before dictionary.Add. Empty names logs then still throws original index error.',
+'Settlement mode starts running=minReGap plus1 only when lastRank==rank and above. Draws inclusive(running,running+maxReGap-1), adds running AGAIN; accept if bound0 or candidate*100<bound, else reset0 when running<maxReGap or redraw source min..max range(with above same-rank min+1). Stores running*100 then sorts. Above score=base+gap WITHOUT negative clamp; below subtracts with zero floor. Remembered field16 writes first computed score only if stillzero and lastRank==rank, before formatting/random/name consumption, for either branch. Source equality comparator also used for equal reset gaps.',
+'GetOverUIRankAIData31681 generates count real AI names then settlement dictionary, acquires rows with same three split fields and weighted frame. Registry binding4134 resolves real RankManager and UserInfo controller; original100 rows,refresh,settlement data,retaining disposal and independent RankManager/UserInfo file restart verified natively with TopInfo. Full RankUI/OverUI rendering and RanklistTransmitter/AppInfoManager actual transport/Main/platform/all business/final Player still pending; screenshot is actual TopInfo, not a claim of restored RankUI rendering.'
+]
+e=dict(status='rank-control-full-lifecycle-home-data-native-verified-ui-network-pending',metadataSha256=hashlib.sha256(b).hexdigest(),memorySha256=hashlib.sha256(mem).hexdigest(),methods=methods,fields=fields,dependencies=['RANK_SCORE_SOURCE_EVIDENCE.json','RANK_LIST_SUPPORT_SOURCE_EVIDENCE.json'],findings=findings)
+(out/'RANK_CONTROL_SOURCE_EVIDENCE.json').write_text(json.dumps(e,ensure_ascii=False,indent=2)+'\n');print(json.dumps(dict(methods=len(methods),fields=len(fields),indexedMethods=len(rows))))

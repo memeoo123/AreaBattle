@@ -1,0 +1,137 @@
+; Original class: ljbasYg
+; Type4622.MoveNext; wasmcode function 13897; offset=6939084 size=389
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127), (1, 126)]
+0069e1d1  i32.const [5001655]
+0069e1d6  i32.load8_u [0, 0]
+0069e1d9  i32.eqz []
+0069e1da  if [-64]
+0069e1dc    i32.const [3920476]
+0069e1e1    call [900] ; 
+0069e1e4    i32.const [3932388]
+0069e1e9    call [900] ; 
+0069e1ec    i32.const [4001412] ; METHOD GameStatisticsOffNetStrategy.jqobST
+0069e1f1    call [900] ; 
+0069e1f4    i32.const [3937816]
+0069e1f9    call [900] ; 
+0069e1fc    i32.const [3940196]
+0069e201    call [900] ; 
+0069e204    i32.const [4028456] ; METHOD <>c.ypUk{
+0069e209    call [900] ; 
+0069e20c    i32.const [3945956]
+0069e211    call [900] ; 
+0069e214    i32.const [3941940]
+0069e219    call [900] ; 
+0069e21c    i32.const [5001655]
+0069e221    i32.const [1]
+0069e223    i32.store8 [0, 0]
+0069e226  end []
+0069e227  block [-64]
+0069e229    block [-64]
+0069e22b      block [-64]
+0069e22d        local.get [0]
+0069e22f        i32.load [2, 8]
+0069e232        br_table [0, 1, 2]
+0069e237      end []
+0069e238      local.get [0]
+0069e23a      i32.const [-1]
+0069e23c      i32.store [2, 8]
+0069e23f      i32.const [3945956]
+0069e244      i32.load [2, 0]
+0069e247      call [901] ; 
+0069e24a      i32.const [3945956]
+0069e24f      i32.load [2, 0]
+0069e252      i32.load [2, 92]
+0069e255      i32.load [2, 4]
+0069e258      local.set [1]
+0069e25a      local.get [1]
+0069e25c      i32.eqz []
+0069e25d      if [-64]
+0069e25f        i32.const [3945956]
+0069e264        i32.load [2, 0]
+0069e267        call [901] ; 
+0069e26a        i32.const [3945956]
+0069e26f        i32.load [2, 0]
+0069e272        i32.load [2, 92]
+0069e275        i32.load [2, 0]
+0069e278        local.set [2]
+0069e27a        i32.const [3920476]
+0069e27f        i32.load [2, 0]
+0069e282        call [903] ; 
+0069e285        local.set [1]
+0069e287        local.get [1]
+0069e289        local.get [2]
+0069e28b        i32.const [4028456] ; METHOD <>c.ypUk{
+0069e290        i32.load [2, 0]
+0069e293        i32.const [0]
+0069e295        call [1158] ; 
+0069e298        i32.const [3945956]
+0069e29d        i32.load [2, 0]
+0069e2a0        i32.load [2, 92]
+0069e2a3        local.get [1]
+0069e2a5        i32.store [2, 4]
+0069e2a8        i32.const [3945956]
+0069e2ad        i32.load [2, 0]
+0069e2b0        i32.load [2, 92]
+0069e2b3        drop []
+0069e2b4      end []
+0069e2b5      i32.const [3941940]
+0069e2ba      i32.load [2, 0]
+0069e2bd      call [903] ; 
+0069e2c0      local.set [2]
+0069e2c2      local.get [2]
+0069e2c4      local.get [1]
+0069e2c6      i32.store [2, 8]
+0069e2c9      local.get [0]
+0069e2cb      local.get [2]
+0069e2cd      i32.store [2, 12]
+0069e2d0      local.get [0]
+0069e2d2      i32.const [1]
+0069e2d4      i32.store [2, 8]
+0069e2d7      i32.const [1]
+0069e2d9      return []
+0069e2da    end []
+0069e2db    local.get [0]
+0069e2dd    i32.load [2, 16]
+0069e2e0    local.set [1]
+0069e2e2    local.get [0]
+0069e2e4    i32.const [-1]
+0069e2e6    i32.store [2, 8]
+0069e2e9    i32.const [3940196]
+0069e2ee    i32.load [2, 0]
+0069e2f1    call [901] ; 
+0069e2f4    i32.const [0]
+0069e2f6    call [3257] ; TimeToRefreshControl.get_I
+0069e2f9    local.set [0]
+0069e2fb    local.get [1]
+0069e2fd    i32.load [2, 16]
+0069e300    i64.load [3, 16]
+0069e303    local.set [3]
+0069e305    i32.const [3937816]
+0069e30a    i32.load [2, 0]
+0069e30d    call [903] ; 
+0069e310    local.set [2]
+0069e312    local.get [2]
+0069e314    local.get [1]
+0069e316    i32.const [4001412] ; METHOD GameStatisticsOffNetStrategy.jqobST
+0069e31b    i32.load [2, 0]
+0069e31e    i32.const [0]
+0069e320    call [3110] ; RefreshDelegate..ctor
+0069e323    local.get [0]
+0069e325    i32.const [0]
+0069e327    local.get [3]
+0069e329    local.get [2]
+0069e32b    i32.const [0]
+0069e32d    i32.const [86400]
+0069e331    i32.const [0]
+0069e333    call [4751] ; TimeToRefreshControl.AddRefreshHandle
+0069e336    i32.const [3932388]
+0069e33b    i32.load [2, 0]
+0069e33e    call [901] ; 
+0069e341    i32.const [10902]
+0069e345    i64.const [1]
+0069e347    local.get [0]
+0069e349    call [2087] ; GameStatisticsExpansion.AddEventCount
+0069e34c  end []
+0069e34d  i32.const [0]
+0069e34f  return []
+0069e350  end []

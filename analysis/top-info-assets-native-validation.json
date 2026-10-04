@@ -1,0 +1,22 @@
+{
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/top-info-effects-native.png",
+    "goldParticles": 1,
+    "diamondParticles": 3,
+    "goldPixels": 131,
+    "diamondPixels": 244,
+    "scope": "Original TopInfo prefab with effect1007/1019 via native AssetBundle, real EffectModule/provider and source image parents. Native rendering, persistent lifetime and explicit close/shutdown are exercised. Account/profile/avatar actions, complete page lifecycle/Main/Player and original-frame visual equivalence remain pending. Resource acquisition is a local validation bundle.",
+    "checks": [
+        "Original1007/1019 attach to the two original TopInfo image parents after native async bundle loads",
+        "Original resource names/case and one live provider handle per effect",
+        "Source zero-duration configuration and root scale retained",
+        "Both original currency effects emit live particles in native frames",
+        "Native materials and parent UIPopup sorting inherited by all original renderers",
+        "Each effect independently contributes visible camera pixels",
+        "Zero-duration effects stay registered across later native frames",
+        "Explicit gold close releases its handle while diamond remains live",
+        "Deferred native destruction removes gold only",
+        "Module shutdown releases the remaining persistent diamond and its native object"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "frame-entry-priority-stable-ties-exact-type-and-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-initialize-live-args-and-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-start-enumerates-live-and-publishes-ready-last",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-update-live-nodes-not-initialization-gated",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-resources-short-circuit-and-uninitialized-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-shutdown-reverse-skip-tail-order-and-retained-fields",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-shutdown-failure-keeps-prefix-and-skips-global-tail",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-create-log-failure-does-not-publish",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-entry-concrete-logic-fsm-procedure-time-lifecycle",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-pool-release-saves-before-live-release-and-retains-dictionary",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-pool-release-failure-and-live-mutation-stop-cleanup",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Eleven source frame module and pool release cases; native15 verifies actual module/runtime/pool shutdown and compressed file reload. Full entry launch/settings/pause, account/SDK/HTTP/activity/Main and Player remain pending."
+}

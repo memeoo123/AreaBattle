@@ -1,0 +1,35 @@
+{
+  "status": "implemented-and-validated-see-ai-name-audit",
+  "nextImplementation": "Full Main/account host composition",
+  "source": [
+    {
+      "path": "disassembly/Type4265-32592.txt",
+      "sha256": "5b1b84e90a2919c315f74170ee7f7aa22b80e690a92a2b7aceff7b8e45b74d6c"
+    },
+    {
+      "path": "disassembly/Type3391-26196.txt",
+      "sha256": "3aec55f88cc03e771abb99d0b4151ab42875a79b282c982369e613e4570b2704"
+    },
+    {
+      "path": "disassembly/Type4268-32602.txt",
+      "sha256": "d616a0b21dd6cd5074c5209d6615bd6fdb4fcb5d8b05d4cbef6c9329312b478a"
+    },
+    {
+      "path": "disassembly/Type4268-32606.txt",
+      "sha256": "36a3f396b4652a53c1ae0f9ccfdd12a056beb289e121ca561c85f9e39f0ddd36"
+    }
+  ],
+  "observations": [
+    "ConfigMgr field offsets148/20 are dicCountryConfig/dicAIName; generated schemas already exist. Capture these two dictionaries, then source rereads current AIName count separately.",
+    "Country keys are copied to a list. Unity Random.Range picks key indexes; source maps id1 to2 and id10 to11. Per-country capacity is AIName.Count-1; saturated chosen keys are removed and selection retried.",
+    "Iterate country/count dictionary. RandomHelper.Randoms(count,1,nameCount) draws without replacement from [1,nameCount), using the shared System.Random inclusive helper for index selection. Its validation checks count > max-min first, then min > max; invalid branches log and return null.",
+    "Each chosen AIName row contributes zh_cn. Country dictionary lookup occurs even when prefix flag is false. True flag appends countryFlagName followed by signEnum2; cctor32606 stores semicolon at array index2.",
+    "First generated string is appended; later strings are inserted at shared inclusive Random(0,currentCount-1), never at the end. Unity country selection and managed random name/insertion streams remain distinct.",
+    "Generic method specs and actual config field indexes/offsets recorded in AI_NAME_SOURCE_EVIDENCE.json; implementation validation recorded in AI_NAME_AUDIT.json."
+  ],
+  "acceptanceStillRequired": [
+    "Full Main/account/server-time/install-state/report composition",
+    "Original-device RNG/iteration/runtime parity and full Player acceptance"
+  ],
+  "audit": "AI_NAME_AUDIT.json"
+}

@@ -1,0 +1,48 @@
+; Original class: TabButton
+; Type4251.OnDestroy; wasmcode function 15706; offset=7564719 size=130
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00736db2  i32.const [5009068]
+00736db7  i32.load8_u [0, 0]
+00736dba  i32.eqz []
+00736dbb  if [-64]
+00736dbd    i32.const [3936516]
+00736dc2    call [900] ; 
+00736dc5    i32.const [4016324] ; METHOD TabButton.Vnsi
+00736dca    call [900] ; 
+00736dcd    i32.const [3940924]
+00736dd2    call [900] ; 
+00736dd5    i32.const [5009068]
+00736dda    i32.const [1]
+00736ddc    i32.store8 [0, 0]
+00736ddf  end []
+00736de0  local.get [0]
+00736de2  i32.load [2, 28]
+00736de5  local.set [1]
+00736de7  i32.const [3936516]
+00736dec  i32.load [2, 0]
+00736def  call [901] ; 
+00736df2  local.get [1]
+00736df4  i32.const [0]
+00736df6  i32.const [0]
+00736df8  call [946] ; Object.op_Inequality
+00736dfb  if [-64]
+00736dfd    local.get [0]
+00736dff    i32.load [2, 28]
+00736e02    i32.load [2, 176]
+00736e06    local.set [1]
+00736e08    i32.const [3940924]
+00736e0d    i32.load [2, 0]
+00736e10    call [903] ; 
+00736e13    local.set [2]
+00736e15    local.get [2]
+00736e17    local.get [0]
+00736e19    i32.const [4016324] ; METHOD TabButton.Vnsi
+00736e1e    i32.load [2, 0]
+00736e21    i32.const [0]
+00736e23    call [1153] ; UnityAction..ctor
+00736e26    local.get [1]
+00736e28    local.get [2]
+00736e2a    i32.const [0]
+00736e2c    call [4701] ; UnityEvent.RemoveListener
+00736e2f  end []
+00736e30  end []

@@ -1,0 +1,18 @@
+; Original class: UnityWebRequestAgentHelper
+; Type3642.Reset; wasmcode function 14957; offset=7286448 size=31
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+006f2eb1  local.get [0]
+006f2eb3  i32.load [2, 12]
+006f2eb6  local.set [1]
+006f2eb8  local.get [1]
+006f2eba  if [-64]
+006f2ebc    local.get [1]
+006f2ebe    i32.const [0]
+006f2ec0    call [3067] ; UnityWebRequest.Dispose
+006f2ec3    local.get [0]
+006f2ec5    i32.const [12]
+006f2ec7    i32.add []
+006f2ec8    i32.const [0]
+006f2eca    i32.store [2, 0]
+006f2ecd  end []
+006f2ece  end []

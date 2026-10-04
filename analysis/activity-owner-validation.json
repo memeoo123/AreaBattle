@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "activity-owner-original-resource-read-and-normalized-conditions",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-online-override-duplicates-and-malformed-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-custom-async-completion-and-repeated-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-reentrant-callback-and-reread-keeps-lifecycle-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-normalization-live-current-owner-and-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-reader-host-selection-and-local-callback-capture",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-dispose-retains-fields-and-failure-stops-counter-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-factory-original-null-products-and-reread",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-base-child-query-cast-and-factory-dispatch",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-owner-config-offline-file-state-machine-save-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Common activity configuration owner/read lifecycle, base factory/child API, source resources/online JSON and actual activity data/FSM/gzip file restart. Business config dictionaries/groups, ActivityControl/concrete activities/pop queues and Main remain pending. Binary acquisition is an explicit host. No fresh native or Player."
+}

@@ -1,0 +1,148 @@
+; Original shared generic: GameFrameEntry.³F°j
+; FrameEntryGeneric.³F°j; wasmcode function 19601; offset=8801898 size=383
+; signature={'args': [127], 'returns': [127]}; localGroups=[(2, 127)]
+00864e6d  local.get [0]
+00864e6f  i32.load [2, 28]
+00864e72  i32.eqz []
+00864e73  if [-64]
+00864e75    i32.const [4000648]
+00864e7a    call [900] ; 
+00864e7d    i32.const [4017776] ; METHOD Type.GetType
+00864e82    call [900] ; 
+00864e85    i32.const [3940520]
+00864e8a    call [900] ; 
+00864e8d    i32.const [4101756] ; STRING "{0}.{1}"
+00864e92    call [900] ; 
+00864e95    i32.const [4055160] ; STRING "GameFramework."
+00864e9a    call [900] ; 
+00864e9d    local.get [0]
+00864e9f    call [954] ; 
+00864ea2  end []
+00864ea3  local.get [0]
+00864ea5  i32.load [2, 28]
+00864ea8  i32.load [2, 0]
+00864eab  local.set [0]
+00864ead  i32.const [3940520]
+00864eb2  i32.load [2, 0]
+00864eb5  call [901] ; 
+00864eb8  block [-64]
+00864eba    block [-64]
+00864ebc      block [-64]
+00864ebe        local.get [0]
+00864ec0        i32.const [0]
+00864ec2        call [912] ; Type.GetTypeFromHandle
+00864ec5        local.set [0]
+00864ec7        local.get [0]
+00864ec9        i32.load [2, 0]
+00864ecc        local.set [1]
+00864ece        local.get [0]
+00864ed0        local.get [1]
+00864ed2        i32.load [2, 400]
+00864ed6        local.get [1]
+00864ed8        i32.load [2, 396]
+00864edc        global.set [3]
+00864ede        global.get [3]
+00864ee0        call_indirect [1, 0]
+00864ee3        i32.const [4055160] ; STRING "GameFramework."
+00864ee8        i32.load [2, 0]
+00864eeb        i32.const [0]
+00864eed        call [1635] ; String.StartsWith
+00864ef0        if [-64]
+00864ef2          local.get [0]
+00864ef4          i32.load [2, 0]
+00864ef7          local.set [1]
+00864ef9          local.get [0]
+00864efb          local.get [1]
+00864efd          i32.load [2, 384]
+00864f01          local.get [1]
+00864f03          i32.load [2, 380]
+00864f07          global.set [3]
+00864f09          global.get [3]
+00864f0b          call_indirect [1, 0]
+00864f0e          local.set [1]
+00864f10          local.get [0]
+00864f12          local.set [2]
+00864f14          local.get [0]
+00864f16          i32.load [2, 0]
+00864f19          i32.const [-64]
+00864f1b          i32.sub []
+00864f1c          local.set [0]
+00864f1e          local.get [2]
+00864f20          local.get [0]
+00864f22          i32.load [2, 192]
+00864f26          local.get [0]
+00864f28          i32.load [2, 188]
+00864f2c          global.set [3]
+00864f2e          global.get [3]
+00864f30          call_indirect [1, 0]
+00864f33          local.set [0]
+00864f35          i32.const [4101756] ; STRING "{0}.{1}"
+00864f3a          i32.load [2, 0]
+00864f3d          local.get [1]
+00864f3f          local.get [0]
+00864f41          i32.const [0]
+00864f43          call [1047] ; String.Format
+00864f46          local.set [0]
+00864f48          i32.const [3940520]
+00864f4d          i32.load [2, 0]
+00864f50          call [901] ; 
+00864f53          local.get [0]
+00864f55          i32.const [4017776] ; METHOD Type.GetType
+00864f5a          i32.load [2, 0]
+00864f5d          i32.const [4000648]
+00864f62          i32.load [2, 0]
+00864f65          call [1677] ; 
+00864f68          local.set [1]
+00864f6a          local.get [1]
+00864f6c          i32.eqz []
+00864f6d          br_if [2]
+00864f6f          local.get [1]
+00864f71          return []
+00864f72        end []
+00864f73      end []
+00864f74      local.get [0]
+00864f76      local.set [1]
+00864f78      local.get [0]
+00864f7a      i32.load [2, 0]
+00864f7d      local.set [0]
+00864f7f      local.get [1]
+00864f81      local.get [0]
+00864f83      i32.load [2, 400]
+00864f87      local.get [0]
+00864f89      i32.load [2, 396]
+00864f8d      global.set [3]
+00864f8f      global.get [3]
+00864f91      call_indirect [1, 0]
+00864f94      local.set [0]
+00864f96      i32.const [4079592] ; STRING "You must get a Game Framework module, but '{0}' is not."
+00864f9b      call [902] ; 
+00864f9e      local.get [0]
+00864fa0      i32.const [0]
+00864fa2      call [1015] ; String.Format
+00864fa5      local.set [0]
+00864fa7      br [1]
+00864fa9    end []
+00864faa    i32.const [4046816] ; STRING "Can not find Game Framework module type '{0}'."
+00864faf    call [902] ; 
+00864fb2    local.get [0]
+00864fb4    i32.const [0]
+00864fb6    call [1015] ; String.Format
+00864fb9    local.set [0]
+00864fbb  end []
+00864fbc  i32.const [3931644]
+00864fc1  call [902] ; 
+00864fc4  call [903] ; 
+00864fc7  local.set [1]
+00864fc9  local.get [1]
+00864fcb  local.get [0]
+00864fcd  i32.const [0]
+00864fcf  call [1096] ; Exception..ctor
+00864fd2  local.get [1]
+00864fd4  i32.const [4000648]
+00864fd9  call [902] ; 
+00864fdc  i32.const [1106]
+00864fdf  global.set [3]
+00864fe1  i32.const [1106]
+00864fe4  call_indirect [0, 0]
+00864fe7  unreachable []
+00864fe8  end []

@@ -1,0 +1,67 @@
+; Original class: ActivityStateBase
+; Type4667.OnLeave; wasmcode function 8352; offset=4013653 size=179
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+003d3e56  i32.const [5001374]
+003d3e5b  i32.load8_u [0, 0]
+003d3e5e  i32.eqz []
+003d3e5f  if [-64]
+003d3e61    i32.const [3920440]
+003d3e66    call [900] ; 
+003d3e69    i32.const [3968484]
+003d3e6e    call [900] ; 
+003d3e71    i32.const [3968496]
+003d3e76    call [900] ; 
+003d3e79    i32.const [5001374]
+003d3e7e    i32.const [1]
+003d3e80    i32.store8 [0, 0]
+003d3e83  end []
+003d3e84  i32.const [3968484]
+003d3e89  i32.load [2, 0]
+003d3e8c  drop []
+003d3e8d  i32.const [3920440]
+003d3e92  i32.load [2, 0]
+003d3e95  call [903] ; 
+003d3e98  local.set [2]
+003d3e9a  local.get [2]
+003d3e9c  local.get [0]
+003d3e9e  local.get [0]
+003d3ea0  i32.const [11]
+003d3ea2  call [1170] ; 
+003d3ea5  call [2089] ; 
+003d3ea8  local.get [0]
+003d3eaa  i32.const [1]
+003d3eac  local.get [2]
+003d3eae  i32.const [3968496]
+003d3eb3  i32.load [2, 0]
+003d3eb6  call [3163] ; 
+003d3eb9  i32.const [3920440]
+003d3ebe  i32.load [2, 0]
+003d3ec1  call [903] ; 
+003d3ec4  local.set [2]
+003d3ec6  local.get [2]
+003d3ec8  local.get [0]
+003d3eca  local.get [0]
+003d3ecc  i32.const [10]
+003d3ece  call [1170] ; 
+003d3ed1  call [2089] ; 
+003d3ed4  local.get [0]
+003d3ed6  i32.const [2]
+003d3ed8  local.get [2]
+003d3eda  i32.const [3968496]
+003d3edf  i32.load [2, 0]
+003d3ee2  call [3163] ; 
+003d3ee5  local.get [0]
+003d3ee7  local.set [2]
+003d3ee9  local.get [0]
+003d3eeb  i32.load [2, 0]
+003d3eee  local.set [0]
+003d3ef0  local.get [2]
+003d3ef2  local.get [1]
+003d3ef4  local.get [0]
+003d3ef6  i32.load [2, 296]
+003d3efa  local.get [0]
+003d3efc  i32.load [2, 292]
+003d3f00  global.set [3]
+003d3f02  global.get [3]
+003d3f04  call_indirect [2, 0]
+003d3f07  end []

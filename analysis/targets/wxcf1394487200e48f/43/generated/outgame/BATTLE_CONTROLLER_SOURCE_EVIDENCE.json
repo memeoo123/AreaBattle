@@ -1,0 +1,128 @@
+{
+  "typeIndex": 4060,
+  "className": "BattleControl",
+  "fields": {
+    "3907": [
+      {
+        "offset": 28,
+        "name": "dicDispatch",
+        "fieldType": 4617
+      }
+    ],
+    "3937": [
+      {
+        "offset": 8,
+        "name": "id",
+        "fieldType": 17869
+      },
+      {
+        "offset": 12,
+        "name": "scoreLimit",
+        "fieldType": 17869
+      },
+      {
+        "offset": 16,
+        "name": "maxLine",
+        "fieldType": 17869
+      },
+      {
+        "offset": 20,
+        "name": "addSpace",
+        "fieldType": 17869
+      },
+      {
+        "offset": 24,
+        "name": "swanpSpaceOne",
+        "fieldType": 17869
+      },
+      {
+        "offset": 28,
+        "name": "swanpSpaceTwo",
+        "fieldType": 17869
+      },
+      {
+        "offset": 32,
+        "name": "swanpSpaceThree",
+        "fieldType": 17869
+      }
+    ],
+    "4060": [
+      {
+        "offset": 8,
+        "name": "Mpdi",
+        "fieldType": 15353
+      },
+      {
+        "offset": 12,
+        "name": "Olm|M",
+        "fieldType": 15353
+      },
+      {
+        "offset": 16,
+        "name": "dOnvr`",
+        "fieldType": 15353
+      }
+    ]
+  },
+  "dictionaryGetter": {
+    "usage": 3957220,
+    "methodSpec": [
+      10510,
+      842,
+      -1
+    ],
+    "declaringType": "Dictionary`2",
+    "method": "get_Item"
+  },
+  "methods": [
+    {
+      "metadata": 31246,
+      "path": "disassembly/Type4060-31246.txt",
+      "sha256": "8aa2615c9721582a322d0e48a94c81831499e6fc4870c7c6c162a5d6d21e3bed"
+    },
+    {
+      "metadata": 31247,
+      "path": "disassembly/Type4060-31247.txt",
+      "sha256": "d723417ab7be72856500db70f986872fe024c7ef9c93c9d5179265309c09c5bb"
+    },
+    {
+      "metadata": 31248,
+      "path": "disassembly/Type4060-31248.txt",
+      "sha256": "a581546c1a29976da44426d7c1169f5da74984e2d6f149cf4ad2b60e705bec44"
+    },
+    {
+      "metadata": 31249,
+      "path": "disassembly/Type4060-31249.txt",
+      "sha256": "73a4bcc15d70f4da0a8313f39ef48b534ec6205687722526e3f1a1ffcc3471bf"
+    },
+    {
+      "metadata": 31250,
+      "path": "disassembly/Type4060-31250.txt",
+      "sha256": "1fe8664d38dd39e2849826d45afb28b4be653d38c7520298540f58b76210a0ad"
+    },
+    {
+      "metadata": 31251,
+      "path": "disassembly/Type4060-31251.txt",
+      "sha256": "3c2b7080151d3f56dbb77adc31439ea8d0a9c3ff33bb4dbdfb84d738e253ba85"
+    },
+    {
+      "metadata": 31252,
+      "path": "disassembly/Type4060-31252.txt",
+      "sha256": "439ab5c6f409c4fdb675cb16f6a3b1f9853516f5446f4ac44dbb80ecdbe19a9f"
+    },
+    {
+      "metadata": 31253,
+      "path": "disassembly/Type4060-31253.txt",
+      "sha256": "0b76f7b86777560689d507102135b9f498afad9f54acea3bf70ca8c05c5f9806"
+    }
+  ],
+  "findings": [
+    "OnInit31249 resolves ConfigMgr separately for each dictionary lookup1/2/3, assigning instance fields8/12/16 after each successful get_Item. Missing keys throw; earlier assignments persist and later old references remain.",
+    "Getters select field8 for grade0, field12 for grade1 and field16 for every other integer, including negatives. They observe captured row mutation but not dictionary replacement until reinitialized.",
+    "GetSpawnTime31252 selects swanpSpaceOne for lines1, swanpSpaceTwo for2 and swanpSpaceThree for all others. It casts the signed integer to float before dividing by1000f; no clamp or validation.",
+    "GetDispatchAddScoreTime31253 uses addSpace cast to float then /1000f. Score and line count are returned without modification.",
+    "Updata31246 is an empty source body. OnDispose31250 unconditionally clears the singleton slot and retains all captured config fields; an old instance may clear a newer registry instance.",
+    "Existing BattleSimulation already independently implements these formulas. New validation checks both against recovered config, while preserving the current battle implementation and user data."
+  ],
+  "remaining": "Actual Main/account/all-controller composition, battle owner routing and full business/Player acceptance remain pending."
+}

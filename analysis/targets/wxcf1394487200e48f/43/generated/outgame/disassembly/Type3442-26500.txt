@@ -1,0 +1,182 @@
+; Original class: GameFrameWorkMono
+; Type3442.IpnqÁ´; wasmcode function 12167; offset=5901728 size=471
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+005a0da3  global.get [0]
+005a0da5  i32.const [16]
+005a0da7  i32.sub []
+005a0da8  local.set [1]
+005a0daa  local.get [1]
+005a0dac  global.set [0]
+005a0dae  i32.const [5011772]
+005a0db3  i32.load8_u [0, 0]
+005a0db6  i32.eqz []
+005a0db7  if [-64]
+005a0db9    i32.const [3928172]
+005a0dbe    call [900] ; 
+005a0dc1    i32.const [3929208]
+005a0dc6    call [900] ; 
+005a0dc9    i32.const [3932476]
+005a0dce    call [900] ; 
+005a0dd1    i32.const [3926996]
+005a0dd6    call [900] ; 
+005a0dd9    i32.const [3937580]
+005a0dde    call [900] ; 
+005a0de1    i32.const [3941104]
+005a0de6    call [900] ; 
+005a0de9    i32.const [4105624] ; STRING "网络随机上报1:"
+005a0dee    call [900] ; 
+005a0df1    i32.const [4105628] ; STRING "网络随机上报2:"
+005a0df6    call [900] ; 
+005a0df9    i32.const [4093080] ; STRING "net_status_game_statistic_filter"
+005a0dfe    call [900] ; 
+005a0e01    i32.const [5011772]
+005a0e06    i32.const [1]
+005a0e08    i32.store8 [0, 0]
+005a0e0b  end []
+005a0e0c  local.get [1]
+005a0e0e  i32.const [0]
+005a0e10  i32.store [2, 8]
+005a0e13  i32.const [3932476]
+005a0e18  i32.load [2, 0]
+005a0e1b  call [901] ; 
+005a0e1e  i32.const [0]
+005a0e20  call [3935] ; GlobalData.´`y¯r
+005a0e23  local.set [2]
+005a0e25  local.get [1]
+005a0e27  local.get [2]
+005a0e29  i32.store [2, 12]
+005a0e2c  local.get [2]
+005a0e2e  i32.const [-1]
+005a0e30  i32.eq []
+005a0e31  if [-64]
+005a0e33    i32.const [3937580]
+005a0e38    i32.load [2, 0]
+005a0e3b    call [901] ; 
+005a0e3e    i32.const [1]
+005a0e40    i32.const [100]
+005a0e43    local.get [1]
+005a0e45    call [1621] ; RandomHelper.Random
+005a0e48    local.set [2]
+005a0e4a    local.get [1]
+005a0e4c    local.get [2]
+005a0e4e    i32.store [2, 12]
+005a0e51    i32.const [3932476]
+005a0e56    i32.load [2, 0]
+005a0e59    call [901] ; 
+005a0e5c    local.get [2]
+005a0e5e    i32.const [0]
+005a0e60    call [3936] ; GlobalData.D¿ty»
+005a0e63    i32.const [3941104]
+005a0e68    i32.load [2, 0]
+005a0e6b    call [901] ; 
+005a0e6e    i32.const [0]
+005a0e70    call [1820] ; UserDataPrefs.OnSave
+005a0e73  end []
+005a0e74  i32.const [3926996]
+005a0e79  i32.load [2, 0]
+005a0e7c  i32.const [1]
+005a0e7e  call [909] ; 
+005a0e81  local.set [2]
+005a0e83  local.get [1]
+005a0e85  i32.const [12]
+005a0e87  i32.add []
+005a0e88  i32.const [0]
+005a0e8a  call [966] ; Int32.ToString
+005a0e8d  local.set [3]
+005a0e8f  i32.const [4105624] ; STRING "网络随机上报1:"
+005a0e94  i32.load [2, 0]
+005a0e97  local.get [3]
+005a0e99  i32.const [0]
+005a0e9b  call [921] ; String.Concat
+005a0e9e  local.set [3]
+005a0ea0  local.get [2]
+005a0ea2  local.get [3]
+005a0ea4  call [905] ; 
+005a0ea7  local.get [2]
+005a0ea9  local.get [3]
+005a0eab  i32.store [2, 16]
+005a0eae  i32.const [3929208]
+005a0eb3  i32.load [2, 0]
+005a0eb6  call [901] ; 
+005a0eb9  local.get [2]
+005a0ebb  i32.const [0]
+005a0ebd  call [1541] ; CLog.dZz£
+005a0ec0  i32.const [3928172]
+005a0ec5  i32.load [2, 0]
+005a0ec8  i32.load [2, 92]
+005a0ecb  i32.load [2, 0]
+005a0ece  i32.const [4093080] ; STRING "net_status_game_statistic_filter"
+005a0ed3  i32.load [2, 0]
+005a0ed6  i32.const [0]
+005a0ed8  call [1951] ; AppInfoManager.GetOnlineConfigParams
+005a0edb  local.set [2]
+005a0edd  local.get [1]
+005a0edf  i32.const [20]
+005a0ee1  i32.store [2, 8]
+005a0ee4  block [-64]
+005a0ee6    local.get [2]
+005a0ee8    if [-64]
+005a0eea      i32.const [0]
+005a0eec      local.set [3]
+005a0eee      local.get [2]
+005a0ef0      i32.load [2, 8]
+005a0ef3      br_if [1]
+005a0ef5    end []
+005a0ef6    i32.const [1]
+005a0ef8    local.set [3]
+005a0efa  end []
+005a0efb  local.get [3]
+005a0efd  i32.eqz []
+005a0efe  if [-64]
+005a0f00    local.get [2]
+005a0f02    local.get [1]
+005a0f04    i32.const [8]
+005a0f06    i32.add []
+005a0f07    i32.const [0]
+005a0f09    call [1329] ; Int32.TryParse
+005a0f0c    drop []
+005a0f0d  end []
+005a0f0e  i32.const [3926996]
+005a0f13  i32.load [2, 0]
+005a0f16  i32.const [1]
+005a0f18  call [909] ; 
+005a0f1b  local.set [2]
+005a0f1d  local.get [1]
+005a0f1f  i32.const [8]
+005a0f21  i32.add []
+005a0f22  i32.const [0]
+005a0f24  call [966] ; Int32.ToString
+005a0f27  local.set [3]
+005a0f29  i32.const [4105628] ; STRING "网络随机上报2:"
+005a0f2e  i32.load [2, 0]
+005a0f31  local.get [3]
+005a0f33  i32.const [0]
+005a0f35  call [921] ; String.Concat
+005a0f38  local.set [3]
+005a0f3a  local.get [2]
+005a0f3c  local.get [3]
+005a0f3e  call [905] ; 
+005a0f41  local.get [2]
+005a0f43  local.get [3]
+005a0f45  i32.store [2, 16]
+005a0f48  i32.const [3929208]
+005a0f4d  i32.load [2, 0]
+005a0f50  call [901] ; 
+005a0f53  local.get [2]
+005a0f55  i32.const [0]
+005a0f57  call [1541] ; CLog.dZz£
+005a0f5a  local.get [1]
+005a0f5c  i32.load [2, 8]
+005a0f5f  local.get [1]
+005a0f61  i32.load [2, 12]
+005a0f64  i32.le_s []
+005a0f65  if [-64]
+005a0f67    local.get [0]
+005a0f69    i32.const [0]
+005a0f6b    i32.store8 [0, 21]
+005a0f6e  end []
+005a0f6f  local.get [1]
+005a0f71  i32.const [16]
+005a0f73  i32.add []
+005a0f74  global.set [0]
+005a0f76  end []

@@ -1,0 +1,31 @@
+; Original class: TaskPanelUI
+; Type4416.TjuayX; wasmcode function 10172; offset=4887246 size=74
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004a92cf  i32.const [5007037]
+004a92d4  i32.load8_u [0, 0]
+004a92d7  i32.eqz []
+004a92d8  if [-64]
+004a92da    i32.const [3926888]
+004a92df    call [900] ; 
+004a92e2    i32.const [5007037]
+004a92e7    i32.const [1]
+004a92e9    i32.store8 [0, 0]
+004a92ec  end []
+004a92ed  i32.const [0]
+004a92ef  call [1193] ; GameModule.get_Audio
+004a92f2  local.set [0]
+004a92f4  i32.const [3926888]
+004a92f9  i32.load [2, 0]
+004a92fc  i32.const [1]
+004a92fe  call [909] ; 
+004a9301  local.set [1]
+004a9303  local.get [1]
+004a9305  i32.const [2001] ; TABLE FieldDescriptor.get_ExtendeeType
+004a9308  i32.store [2, 16]
+004a930b  local.get [0]
+004a930d  i32.const [1]
+004a930f  local.get [1]
+004a9311  i32.const [0]
+004a9313  call [2462] ; UIAudioManager.Play
+004a9316  drop []
+004a9317  end []

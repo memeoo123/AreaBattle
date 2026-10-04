@@ -1,0 +1,18 @@
+; Original class: GameStatisticsManager
+; Type4617.GetEventStatistics; wasmcode function 12105; offset=5892269 size=28
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[]
+0059e8ae  local.get [0]
+0059e8b0  local.get [1]
+0059e8b2  local.get [0]
+0059e8b4  call [3618] ; GameStatisticsManager.GetGameStatisticsData
+0059e8b7  local.set [0]
+0059e8b9  local.get [0]
+0059e8bb  i32.eqz []
+0059e8bc  if [-64]
+0059e8be    i64.const [0]
+0059e8c0    return []
+0059e8c1  end []
+0059e8c2  local.get [0]
+0059e8c4  i64.load [3, 16]
+0059e8c7  return []
+0059e8c8  end []

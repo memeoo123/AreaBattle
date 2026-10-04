@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "activity-condition-four-lazy-caches-and-typed-arguments",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-null-config-retry-and-cached-config-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-malformed-input-retains-partial-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-runtime-open-gate-live-target-and-source-type",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-original-config-and-json-cache-reconstruction",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-current-state-identity-null-and-state-change",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-duplicates-remove-one-reentry-and-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-exception-and-destroyed-state-subscriptions",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-state-base-overloads-and-change-state-forwarding",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-conditioned-event-uses-recovered-statistics-and-cache",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Source runtime activity condition caches/comparison and generic FSM events. Actual recovered statistics drives framework state transition in an Editor fixture. Full ActivityBase/four states/UI/config owner/control/SevenDay/Main pending; no new native or Player."
+}

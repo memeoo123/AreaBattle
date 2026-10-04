@@ -1,0 +1,23 @@
+; Original class: BaseItem
+; Type3538.Instantiate; wasmcode function 13077; offset=6269936 size=56
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005fabf1  i32.const [4989640]
+005fabf6  i32.load8_u [0, 0]
+005fabf9  i32.eqz []
+005fabfa  if [-64]
+005fabfc    i32.const [3934048]
+005fac01    call [900] ; 
+005fac04    i32.const [4989640]
+005fac09    i32.const [1]
+005fac0b    i32.store8 [0, 0]
+005fac0e  end []
+005fac0f  local.get [0]
+005fac11  i32.const [0]
+005fac13  i32.const [3934048]
+005fac18  i32.load [2, 0]
+005fac1b  local.get [1]
+005fac1d  call [918] ; 
+005fac20  local.get [2]
+005fac22  local.get [0]
+005fac24  call [2618] ; BaseItem.Instantiate
+005fac27  end []

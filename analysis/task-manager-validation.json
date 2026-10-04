@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "task-manager-pool-init-deferred-config-gate-and-original-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-server-deferred-callback-and-disabled-sync-local",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-legacy-progress-group-migration-and-condition-reconciliation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-new-child-reset-publication-and-sentinel-preservation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-duplicate-index-and-malformed-fallback-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-log-failure-keeps-appended-condition-before-uid-and-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-save-snapshot-before-activity-cached-owner-and-release",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-missing-save-owner-retries-and-file-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original TaskMgr and offline strategy over actual config/pool/account-aware storage and independent file restart. TaskActivity endpoints are explicit test callbacks; production parent/child activity, daily refresh, claims/UI/Main remain pending. No fresh native/Player run."
+}

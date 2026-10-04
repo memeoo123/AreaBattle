@@ -1,0 +1,9 @@
+; Original class: GameStatisticsControl
+; Type4620.ResetEventCount; wasmcode function 12117; offset=5894135 size=14
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0059eff8  local.get [0]
+0059effa  i32.load [2, 8]
+0059effd  local.get [1]
+0059efff  local.get [1]
+0059f001  call [12102] ; GameStatisticsManager.ResetEventStatistics
+0059f004  end []

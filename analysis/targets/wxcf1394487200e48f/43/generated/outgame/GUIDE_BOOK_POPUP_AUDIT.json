@@ -1,0 +1,123 @@
+{
+  "status": "popup-own-spine-verified-full-page-main-pending",
+  "atUtc": "2026-10-03T07:29:24.566639+00:00",
+  "sourceEvidence": "GUIDE_BOOK_POPUP_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T07:29:24.566639+00:00",
+    "scope": "Original GuideBook popup content/commander mapping/hints/close, own YD_0 Spine subtree and item-to-popup-to-reward state",
+    "checksPassed": 1133,
+    "newIntegratedChecks": 6,
+    "targetedChecks": 6,
+    "freshPlayModeRun": true,
+    "nativeChecks": 14,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2266,
+    "captures": [
+      {
+        "path": "analysis/guide-book-popup-native-open.png",
+        "sha256": "d2a49e8b35b05c5619a80d4a9c56df1383c17de74727fe3a80beab60ff5ac6fb"
+      },
+      {
+        "path": "analysis/guide-book-popup-native-animated.png",
+        "sha256": "10af03d724de68dd99c715d6fb5fdd84c979342c169858485752f16d70a55847"
+      },
+      {
+        "path": "analysis/guide-book-popup-native-defense.png",
+        "sha256": "69cd5468d34dd16a85b3ee27e3508e3442212d232977abd01123b77da5723bc6"
+      },
+      {
+        "path": "analysis/guide-book-popup-native-skill.png",
+        "sha256": "37ee81b2302bcf7a94dcfcdbf69371578614aee5e6dcb8d4e4fe32a43d7b48ba"
+      }
+    ],
+    "commands": [
+      "RecoveredGuideSpineImporter.ImportGuideBookBatch",
+      "OutgameGuideBookPopupValidation.Validate",
+      "OutgameGuideBookPopupPlayModeValidation.Run (non-batch Game view)",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "First isolated import lacked copied texture/mesh payloads; corrected dependency copy before successful import.",
+      "First native test checked wall time before Unity frames ran; final test also requires actual frame advancement. Native14 passed and generated four inspected captures.",
+      "Rendered log includes UnityEditor.Search startup exception, separate from product checks."
+    ],
+    "notClaimed": "Complete DynamicList/ListData, BaseUI/Main/account ownership, actual SkillControl/async atlas/language module/voice/close/effects services, remaining22 controllers, all business flows, SDK delivery or Player/visual-match acceptance"
+  },
+  "implementation": [
+    "OutgameGuideBookPopupBinding.cs",
+    "OutgameGuideBookSprites.cs",
+    "RecoveredGuideSpineImporter.cs"
+  ],
+  "checks": [
+    {
+      "id": "guide-popup-original-item-open-content-spine-and-reward-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-popup-commander-skill-format-reread-and-minus-one-sentinel",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-popup-pitch-empty-segments-retained-children-and-hint-alignment",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-popup-missing-config-and-failure-preserve-source-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-popup-native-close-button-mask-and-voice-failure-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-popup-deferred-sprite-callback-and-source-guide-one-null",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Native pointer delivered: btnUnlock",
+    "Own original Spine data initializes and selects YD",
+    "Native frames advance animation and generate mesh: from=0, to=0.07208008, vertices=4",
+    "Native pointer delivered: OKBtn",
+    "OK pointer closes original popup and clears selection",
+    "Hidden popup stops native animation updates",
+    "Reopened source component resumes native animation",
+    "Native pointer delivered: btnBox",
+    "Native popup reward applies real inventory/claim and hides button",
+    "Independent restart retains popup reward",
+    "Defense page replaces demonstration with source pitch",
+    "Skill page uses actual commander picture",
+    "Native pointer delivered: imgPopMask",
+    "Native image mask dispatch closes popup"
+  ],
+  "resourceImport": {
+    "passed": true,
+    "prefabCount": 1,
+    "resourceCount": 13,
+    "prefabs": [
+      {
+        "name": "YD_0",
+        "prefab": "Assets/AreaBattle/Resources/Recovered/GuideBookSpine/YD_0.prefab",
+        "sourceRoot": "CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-4364533787690783647",
+        "particleSystems": 0,
+        "renderers": 1,
+        "trails": 0,
+        "animations": 0,
+        "skinnedRenderers": 0
+      }
+    ],
+    "scope": "Original YD_0 source subtree and dependencies from generated/resource-snapshots/guide-book-ui-20261003/guide-spine/native/native-import.json; official Spine4.1 runtime. Original-frame visual acceptance remains pending."
+  },
+  "remaining": "Complete DynamicList/ListData, BaseUI/Main/account ownership, actual SkillControl/async atlas/language module/voice/close/effects services, remaining22 controllers, all business flows, SDK delivery or Player/visual-match acceptance"
+}

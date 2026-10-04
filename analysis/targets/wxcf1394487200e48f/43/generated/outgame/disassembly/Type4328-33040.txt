@@ -1,0 +1,67 @@
+; Original class: GuideBookUI
+; Type4328.RefreshReddot; wasmcode1 function 8450; offset=2828459 size=183
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002b28ac  i32.const [5008326]
+002b28b1  i32.load8_u [0, 0]
+002b28b4  i32.eqz []
+002b28b5  if [-64]
+002b28b7    i32.const [3953392]
+002b28bc    i32.const [1605]
+002b28bf    call_indirect [0, 0]
+002b28c2    i32.const [5008326]
+002b28c7    i32.const [1]
+002b28c9    i32.store8 [0, 0]
+002b28cc  end []
+002b28cd  i32.const [3953392]
+002b28d2  i32.load [2, 0]
+002b28d5  i32.const [10272]
+002b28d9  call_indirect [2, 0]
+002b28dc  i32.const [0]
+002b28de  i32.const [14761] ; TABLE GuideBookControl.HaveAnyUnGetGuideReward
+002b28e2  call_indirect [1, 0]
+002b28e5  local.set [1]
+002b28e7  local.get [0]
+002b28e9  i32.load [2, 200]
+002b28ed  i32.const [0]
+002b28ef  i32.const [2414] ; TABLE Component.get_gameObject
+002b28f2  call_indirect [1, 0]
+002b28f5  local.get [1]
+002b28f7  i32.const [0]
+002b28f9  i32.const [2416] ; TABLE GameObject.SetActive
+002b28fc  call_indirect [5, 0]
+002b28ff  local.get [0]
+002b2901  i32.load [2, 204]
+002b2905  i32.const [0]
+002b2907  i32.const [2414] ; TABLE Component.get_gameObject
+002b290a  call_indirect [1, 0]
+002b290d  local.get [1]
+002b290f  i32.const [0]
+002b2911  i32.const [2416] ; TABLE GameObject.SetActive
+002b2914  call_indirect [5, 0]
+002b2917  i32.const [3953392]
+002b291c  i32.load [2, 0]
+002b291f  i32.const [10272]
+002b2923  call_indirect [2, 0]
+002b2926  i32.const [0]
+002b2928  i32.const [14759] ; TABLE GuideBookControl.HaveAnyUnGetTipReward
+002b292c  call_indirect [1, 0]
+002b292f  local.set [1]
+002b2931  local.get [0]
+002b2933  i32.load [2, 208]
+002b2937  i32.const [0]
+002b2939  i32.const [2414] ; TABLE Component.get_gameObject
+002b293c  call_indirect [1, 0]
+002b293f  local.get [1]
+002b2941  i32.const [0]
+002b2943  i32.const [2416] ; TABLE GameObject.SetActive
+002b2946  call_indirect [5, 0]
+002b2949  local.get [0]
+002b294b  i32.load [2, 212]
+002b294f  i32.const [0]
+002b2951  i32.const [2414] ; TABLE Component.get_gameObject
+002b2954  call_indirect [1, 0]
+002b2957  local.get [1]
+002b2959  i32.const [0]
+002b295b  i32.const [2416] ; TABLE GameObject.SetActive
+002b295e  call_indirect [5, 0]
+002b2961  end []

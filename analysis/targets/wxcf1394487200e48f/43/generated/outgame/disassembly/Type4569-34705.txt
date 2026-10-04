@@ -1,0 +1,27 @@
+; Original class: CommonMsgDispatcher
+; Type4569..ctor; wasmcode function 8100; offset=3840939 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+003a9bac  i32.const [5001185]
+003a9bb1  i32.load8_u [0, 0]
+003a9bb4  i32.eqz []
+003a9bb5  if [-64]
+003a9bb7    i32.const [3961168]
+003a9bbc    call [900] ; 
+003a9bbf    i32.const [3919220]
+003a9bc4    call [900] ; 
+003a9bc7    i32.const [5001185]
+003a9bcc    i32.const [1]
+003a9bce    i32.store8 [0, 0]
+003a9bd1  end []
+003a9bd2  i32.const [3919220]
+003a9bd7  i32.load [2, 0]
+003a9bda  call [903] ; 
+003a9bdd  local.set [1]
+003a9bdf  local.get [1]
+003a9be1  i32.const [3961168]
+003a9be6  i32.load [2, 0]
+003a9be9  call [951] ; 
+003a9bec  local.get [0]
+003a9bee  local.get [1]
+003a9bf0  i32.store [2, 8]
+003a9bf3  end []

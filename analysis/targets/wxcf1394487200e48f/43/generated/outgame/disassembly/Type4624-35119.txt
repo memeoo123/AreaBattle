@@ -1,0 +1,62 @@
+; Original class: GameStatisticsStratrgyBase
+; Type4624.lP^T; wasmcode function 19523; offset=8779970 size=163
+; signature={'args': [127, 127, 127], 'returns': [126]}; localGroups=[(1, 126)]
+0085f8c5  global.get [0]
+0085f8c7  i32.const [16]
+0085f8c9  i32.sub []
+0085f8ca  local.set [0]
+0085f8cc  local.get [0]
+0085f8ce  global.set [0]
+0085f8d0  i32.const [5001660]
+0085f8d5  i32.load8_u [0, 0]
+0085f8d8  i32.eqz []
+0085f8d9  if [-64]
+0085f8db    i32.const [3989352]
+0085f8e0    call [900] ; 
+0085f8e3    i32.const [3930616]
+0085f8e8    call [900] ; 
+0085f8eb    i32.const [3932388]
+0085f8f0    call [900] ; 
+0085f8f3    i32.const [3940172]
+0085f8f8    call [900] ; 
+0085f8fb    i32.const [5001660]
+0085f900    i32.const [1]
+0085f902    i32.store8 [0, 0]
+0085f905  end []
+0085f906  i32.const [3989352]
+0085f90b  i32.load [2, 0]
+0085f90e  call [1032] ; 
+0085f911  local.set [1]
+0085f913  i32.const [3932388]
+0085f918  i32.load [2, 0]
+0085f91b  call [901] ; 
+0085f91e  i32.const [10000]
+0085f922  local.get [1]
+0085f924  local.get [0]
+0085f926  call [1568] ; GameStatisticsExpansion.GameValue
+0085f929  local.set [3]
+0085f92b  i32.const [3940172]
+0085f930  i32.load [2, 0]
+0085f933  call [901] ; 
+0085f936  local.get [0]
+0085f938  local.get [3]
+0085f93a  i32.const [0]
+0085f93c  call [1664] ; TimeHelper.ToDateTime
+0085f93f  i64.store [3, 8]
+0085f942  i32.const [3930616]
+0085f947  i32.load [2, 0]
+0085f94a  call [901] ; 
+0085f94d  local.get [0]
+0085f94f  i32.const [8]
+0085f951  i32.add []
+0085f952  i32.const [0]
+0085f954  call [1628] ; DateTime.get_Day
+0085f957  local.set [1]
+0085f959  local.get [0]
+0085f95b  i32.const [16]
+0085f95d  i32.add []
+0085f95e  global.set [0]
+0085f960  local.get [1]
+0085f962  i64.extend_i32_s []
+0085f963  return []
+0085f964  end []

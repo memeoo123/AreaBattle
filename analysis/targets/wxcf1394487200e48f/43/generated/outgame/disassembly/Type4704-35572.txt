@@ -1,0 +1,27 @@
+; Original class: LimitTaskItemData
+; Type4704..ctor; wasmcode function 18856; offset=8502171 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0081bb9c  i32.const [5001278]
+0081bba1  i32.load8_u [0, 0]
+0081bba4  i32.eqz []
+0081bba5  if [-64]
+0081bba7    i32.const [3972948]
+0081bbac    call [900] ;
+0081bbaf    i32.const [3923044]
+0081bbb4    call [900] ;
+0081bbb7    i32.const [5001278]
+0081bbbc    i32.const [1]
+0081bbbe    i32.store8 [0, 0]
+0081bbc1  end []
+0081bbc2  i32.const [3923044]
+0081bbc7  i32.load [2, 0]
+0081bbca  call [903] ;
+0081bbcd  local.set [1]
+0081bbcf  local.get [1]
+0081bbd1  i32.const [3972948]
+0081bbd6  i32.load [2, 0]
+0081bbd9  call [944] ;
+0081bbdc  local.get [0]
+0081bbde  local.get [1]
+0081bbe0  i32.store [2, 12]
+0081bbe3  end []

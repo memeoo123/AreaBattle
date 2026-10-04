@@ -1,0 +1,43 @@
+; Original class: AchiTaskSubUI
+; Type3986.OnInit; wasmcode function 21015; offset=9480916 size=127
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0090aad5  i32.const [5010180]
+0090aada  i32.load8_u [0, 0]
+0090aadd  i32.eqz []
+0090aade  if [-64]
+0090aae0    i32.const [3988780] ; METHOD AchiTaskSubUI.fysaz
+0090aae5    call [900] ; 
+0090aae8    i32.const [3988852]
+0090aaed    call [900] ; 
+0090aaf0    i32.const [3944680]
+0090aaf5    call [900] ; 
+0090aaf8    i32.const [4049024] ; STRING "CommonModule_Achievement_RefreshList"
+0090aafd    call [900] ; 
+0090ab00    i32.const [5010180]
+0090ab05    i32.const [1]
+0090ab07    i32.store8 [0, 0]
+0090ab0a  end []
+0090ab0b  local.get [0]
+0090ab0d  i32.const [0]
+0090ab0f  call [1484] ; ActivityControl.get_I
+0090ab12  i32.const [1601001]
+0090ab17  i32.const [3988852]
+0090ab1c  i32.load [2, 0]
+0090ab1f  call [2427] ; 
+0090ab22  i32.store [2, 16]
+0090ab25  i32.const [3944680]
+0090ab2a  i32.load [2, 0]
+0090ab2d  call [903] ; 
+0090ab30  local.set [1]
+0090ab32  local.get [1]
+0090ab34  local.get [0]
+0090ab36  i32.const [3988780] ; METHOD AchiTaskSubUI.fysaz
+0090ab3b  i32.load [2, 0]
+0090ab3e  i32.const [0]
+0090ab40  call [1345] ; EventHandler..ctor
+0090ab43  i32.const [4049024] ; STRING "CommonModule_Achievement_RefreshList"
+0090ab48  i32.load [2, 0]
+0090ab4b  local.get [1]
+0090ab4d  i32.const [0]
+0090ab4f  call [1710] ; CommonMsgDispatcher.AddEventListener
+0090ab52  end []

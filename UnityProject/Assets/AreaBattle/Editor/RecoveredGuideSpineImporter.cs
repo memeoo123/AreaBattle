@@ -12,7 +12,8 @@ namespace AreaBattle.EditorTools
 {
     public static class RecoveredGuideSpineImporter
     {
-        const string Dest="Assets/AreaBattle/Resources/Recovered/GuideSpine";
+        const string DefaultDest="Assets/AreaBattle/Resources/Recovered/GuideSpine";
+        static string Dest=DefaultDest;
         [Serializable] class Manifest {public Resource[] resources;public Prefab[] prefabs;public ShaderMap[] shaderMap;}
         [Serializable] class ShaderMap {public string sourceName,restoredName,path;}
         [Serializable] class Prefab {public string name,originalName,templatePath,sourceRoot;public SourceComponent[] components;}
@@ -35,18 +36,37 @@ namespace AreaBattle.EditorTools
             if (old == null) throw new InvalidDataException("GuideUI has no source YD_0 node");
             var parent = old.parent; int index = old.GetSiblingIndex();
             UnityEngine.Object.DestroyImmediate(old.gameObject);
-            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(Dest + "/YD_0.prefab");
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(DefaultDest + "/YD_0.prefab");
             if (prefab == null) throw new InvalidDataException("Guide Spine Import must precede HUD import");
             var instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, parent);
             instance.name = "YD_0"; instance.transform.SetSiblingIndex(index); instance.SetActive(false);
             if (guideUi.GetComponent<RecoveredGuidePresentation>() == null) guideUi.AddComponent<RecoveredGuidePresentation>();
         }
         [MenuItem("AreaBattle/Import recovered Guide Spine demonstration")]
-        public static void Import()
+        public static void Import()=>ImportAt("generated/resource-snapshots/hud-soldier300-20260928/guide-spine/native/native-import.json",DefaultDest,"analysis/unity-guide-spine-import-report.json","analysis/guide-spine-roundtrip");
+        public static void ImportGuideBookBatch()
         {
+            try{
+                const string destination="Assets/AreaBattle/Resources/Recovered/GuideBookSpine";
+                ImportAt("generated/resource-snapshots/guide-book-ui-20261003/guide-spine/native/native-import.json",destination,"analysis/unity-guide-book-spine-import-report.json","analysis/guide-book-spine-roundtrip");
+                const string path="Assets/AreaBattle/Resources/Recovered/GuideBook/GuideBookUI.prefab";
+                var page=PrefabUtility.LoadPrefabContents(path);
+                try{
+                    var old=page.transform.Find("guidePop/mainbg/guideIcon/YD_0");var parent=old.parent;int sibling=old.GetSiblingIndex();
+                    UnityEngine.Object.DestroyImmediate(old.gameObject);
+                    var demo=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(destination+"/YD_0.prefab"),parent);
+                    demo.name="YD_0";demo.transform.SetSiblingIndex(sibling);PrefabUtility.SaveAsPrefabAsset(page,path);
+                }finally{PrefabUtility.UnloadPrefabContents(page);}
+                if(Application.isBatchMode)EditorApplication.Exit(0);
+            }catch(Exception e){Debug.LogException(e);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
+            finally{Dest=DefaultDest;}
+        }
+        static void ImportAt(string sourceManifest,string destination,string reportPath,string roundtripPath)
+        {
+            Dest=destination;
             workspace=Directory.GetParent(Path.GetFullPath(Path.Combine(Application.dataPath,".."))).FullName;
             target=Path.Combine(workspace,"analysis/targets/wxcf1394487200e48f/43");
-            manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(Path.Combine(target,"generated/resource-snapshots/hud-soldier300-20260928/guide-spine/native/native-import.json")));
+            manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(Path.Combine(target,sourceManifest)));
             imported=new UnityEngine.Object[manifest.resources.Length];
             foreach(string folder in new[]{Dest,Dest+"/Textures",Dest+"/Meshes",Dest+"/Materials",Dest+"/Animations",Dest+"/Shaders",Dest+"/Spine"})Directory.CreateDirectory(folder);
             foreach(var source in manifest.shaderMap)File.Copy(Path.Combine(target,source.path),Dest+"/Shaders/"+Path.GetFileName(source.path),true);
@@ -76,7 +96,7 @@ namespace AreaBattle.EditorTools
                 foreach(var r in manifest.resources.Where(x=>!x.builtin&&x.type=="MonoBehaviour"&&x.scriptClass==script))
                     ImportNativeResource(r,Dest+"/Spine/"+Safe(r.id)+".asset",script=="SpineAtlasAsset"?typeof(SpineAtlasAsset):typeof(SkeletonDataAsset));
             foreach(var r in manifest.resources.Where(x=>!x.builtin&&x.type=="AnimationClip"))ImportNativeResource(r,Dest+"/Animations/"+Safe(r.id)+".anim",typeof(AnimationClip));
-            var report=new Report{resourceCount=manifest.resources.Length,prefabCount=manifest.prefabs.Length};
+            var report=new Report{resourceCount=manifest.resources.Length,prefabCount=manifest.prefabs.Length,scope="Original YD_0 source subtree and dependencies from "+sourceManifest+"; official Spine4.1 runtime. Original-frame visual acceptance remains pending."};
             foreach(var p in manifest.prefabs)
             {
                 string path=Dest+"/"+p.originalName+".prefab";
@@ -88,7 +108,7 @@ namespace AreaBattle.EditorTools
                     Type type=source.type=="MonoBehaviour"?typeof(SkeletonAnimation):typeof(Transform).Assembly.GetType("UnityEngine."+source.type)??AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType("UnityEngine."+source.type)).FirstOrDefault(t=>t!=null);
                     var t=string.IsNullOrEmpty(source.path)?prefab.transform:prefab.transform.Find(source.path);
                     if(t==null||type==null||t.GetComponent(type)==null)throw new InvalidDataException("Source component missing: "+p.originalName+"/"+source.path+" "+source.type);
-                    string roundtrip=Path.Combine(workspace,"analysis/guide-spine-roundtrip",p.name);Directory.CreateDirectory(roundtrip);
+                    string roundtrip=Path.Combine(workspace,roundtripPath,p.name);Directory.CreateDirectory(roundtrip);
                     File.WriteAllText(Path.Combine(roundtrip,source.fileId+".json"),EditorJsonUtility.ToJson(t.GetComponent(type),true));
                 }
                 int expected=p.components.Count(c=>c.type=="ParticleSystem");int actual=prefab.GetComponentsInChildren<ParticleSystem>(true).Length;
@@ -102,7 +122,7 @@ namespace AreaBattle.EditorTools
                 var meta=AssetImporter.GetAtPath(path);meta.userData=p.sourceRoot+" | source native component tree | original game code excluded; official Spine runtime bound";meta.SaveAndReimport();
                 report.prefabs.Add(new Entry{name=p.originalName,prefab=path,sourceRoot=p.sourceRoot,particleSystems=actual,renderers=prefab.GetComponentsInChildren<Renderer>(true).Length,trails=prefab.GetComponentsInChildren<TrailRenderer>(true).Length,animations=prefab.GetComponentsInChildren<Animation>(true).Length,skinnedRenderers=prefab.GetComponentsInChildren<SkinnedMeshRenderer>(true).Length});
             }
-            AssetDatabase.SaveAssets();report.passed=true;File.WriteAllText(Path.Combine(workspace,"analysis/unity-guide-spine-import-report.json"),JsonUtility.ToJson(report,true));
+            AssetDatabase.SaveAssets();report.passed=true;File.WriteAllText(Path.Combine(workspace,reportPath),JsonUtility.ToJson(report,true));
         }
         static void ImportTexture(Resource r)
         {

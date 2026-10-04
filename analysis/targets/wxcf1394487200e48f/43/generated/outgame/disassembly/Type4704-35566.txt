@@ -1,0 +1,24 @@
+; Original class: LimitTaskItemData
+; Type4704.get_Config; wasmcode function 1755; offset=567858 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0008aa33  local.get [0]
+0008aa35  i32.load [2, 24]
+0008aa38  local.set [1]
+0008aa3a  local.get [1]
+0008aa3c  i32.eqz []
+0008aa3d  if [-64]
+0008aa3f    local.get [0]
+0008aa41    i32.const [0]
+0008aa43    call [1189] ; ActivityConfigMgr.get_I
+0008aa46    local.get [0]
+0008aa48    i32.load [2, 8]
+0008aa4b    i32.const [0]
+0008aa4d    call [8355] ; ActivityConfigMgr.GetNoviceTaskConfig
+0008aa50    i32.store [2, 24]
+0008aa53    local.get [0]
+0008aa55    i32.load [2, 24]
+0008aa58    local.set [1]
+0008aa5a  end []
+0008aa5b  local.get [1]
+0008aa5d  return []
+0008aa5e  end []

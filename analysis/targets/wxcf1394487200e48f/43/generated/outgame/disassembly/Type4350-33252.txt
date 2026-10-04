@@ -1,0 +1,40 @@
+; Original class: LivenessPreviewItem
+; Type4350.~[evr; wasmcode function 11502; offset=5649898 size=92
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+005635eb  i32.const [5008905]
+005635f0  i32.load8_u [0, 0]
+005635f3  i32.eqz []
+005635f4  if [-64]
+005635f6    i32.const [4063596] ; STRING "Node"
+005635fb    call [900] ;
+005635fe    i32.const [5008905]
+00563603    i32.const [1]
+00563605    i32.store8 [0, 0]
+00563608  end []
+00563609  block [-64]
+0056360b    local.get [1]
+0056360d    local.get [0]
+0056360f    i32.load [2, 104]
+00563612    i32.const [0]
+00563614    call [1115] ; Object.get_name
+00563617    i32.const [0]
+00563619    call [1019] ; String.Equals
+0056361c    br_if [0]
+0056361e    local.get [1]
+00563620    local.get [0]
+00563622    i32.load [2, 76]
+00563625    i32.const [0]
+00563627    call [1115] ; Object.get_name
+0056362a    i32.const [0]
+0056362c    call [1019] ; String.Equals
+0056362f    br_if [0]
+00563631    local.get [1]
+00563633    i32.const [4063596] ; STRING "Node"
+00563638    i32.load [2, 0]
+0056363b    i32.const [0]
+0056363d    call [1237] ; String.Contains
+00563640    return []
+00563641  end []
+00563642  i32.const [1]
+00563644  return []
+00563645  end []

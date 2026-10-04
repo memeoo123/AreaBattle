@@ -1,0 +1,127 @@
+; Original class: GameFrameEntry
+; Type3433.CommonSettings; wasmcode function 6054; offset=2141560 size=386
+; signature={'args': [127], 'returns': []}; localGroups=[(1, 125), (1, 127)]
+0020ad7d  i32.const [5011736]
+0020ad82  i32.load8_u [0, 0]
+0020ad85  i32.eqz []
+0020ad86  if [-64]
+0020ad88    i32.const [3927988]
+0020ad8d    call [900] ; 
+0020ad90    i32.const [3928176]
+0020ad95    call [900] ; 
+0020ad98    i32.const [3930128]
+0020ad9d    call [900] ; 
+0020ada0    i32.const [4012460]
+0020ada5    call [900] ; 
+0020ada8    i32.const [4067928] ; STRING "ResourceCollection"
+0020adad    call [900] ; 
+0020adb0    i32.const [4039208] ; STRING ","
+0020adb5    call [900] ; 
+0020adb8    i32.const [5011736]
+0020adbd    i32.const [1]
+0020adbf    i32.store8 [0, 0]
+0020adc2  end []
+0020adc3  i32.const [3930128]
+0020adc8  i32.load [2, 0]
+0020adcb  call [901] ; 
+0020adce  i32.const [0]
+0020add0  call [6172] ; DBTSDKManager.InitSDK
+0020add3  i32.const [0]
+0020add5  call [3826] ; Screen.get_dpi
+0020add8  local.set [1]
+0020adda  i32.const [5011831]
+0020addf  i32.load8_u [0, 0]
+0020ade2  i32.eqz []
+0020ade3  if [-64]
+0020ade5    i32.const [3949364]
+0020adea    call [900] ; 
+0020aded    i32.const [5011831]
+0020adf2    i32.const [1]
+0020adf4    i32.store8 [0, 0]
+0020adf7  end []
+0020adf8  i32.const [3949364]
+0020adfd  i32.load [2, 0]
+0020ae00  i32.load [2, 92]
+0020ae03  local.get [1]
+0020ae05  f32.store [2, 0]
+0020ae08  i32.const [5011832]
+0020ae0d  i32.load8_u [0, 0]
+0020ae10  i32.eqz []
+0020ae11  if [-64]
+0020ae13    i32.const [3949364]
+0020ae18    call [900] ; 
+0020ae1b    i32.const [5011832]
+0020ae20    i32.const [1]
+0020ae22    i32.store8 [0, 0]
+0020ae25  end []
+0020ae26  i32.const [3949364]
+0020ae2b  i32.load [2, 0]
+0020ae2e  i32.load [2, 92]
+0020ae31  f32.load [2, 0]
+0020ae34  f32.const [0.0]
+0020ae39  f32.le []
+0020ae3a  if [-64]
+0020ae3c    i32.const [5011831]
+0020ae41    i32.load8_u [0, 0]
+0020ae44    i32.eqz []
+0020ae45    if [-64]
+0020ae47      i32.const [3949364]
+0020ae4c      call [900] ; 
+0020ae4f      i32.const [5011831]
+0020ae54      i32.const [1]
+0020ae56      i32.store8 [0, 0]
+0020ae59    end []
+0020ae5a    i32.const [3949364]
+0020ae5f    i32.load [2, 0]
+0020ae62    i32.load [2, 92]
+0020ae65    i32.const [1119879168]
+0020ae6b    i32.store [2, 0]
+0020ae6e  end []
+0020ae6f  i32.const [60]
+0020ae71  i32.const [0]
+0020ae73  call [6311] ; Application.set_targetFrameRate
+0020ae76  i32.const [-1]
+0020ae78  i32.const [0]
+0020ae7a  call [10538] ; Screen.set_sleepTimeout
+0020ae7d  i32.const [3928176]
+0020ae82  i32.load [2, 0]
+0020ae85  call [901] ; 
+0020ae88  i32.const [0]
+0020ae8a  call [5218] ; AppSetting.SetCultureBasedOnSetting
+0020ae8d  i32.const [3927988]
+0020ae92  i32.load [2, 0]
+0020ae95  i32.load [2, 92]
+0020ae98  i32.load [2, 0]
+0020ae9b  local.set [0]
+0020ae9d  i32.const [0]
+0020ae9f  call [1318] ; AppSetting.get_MineGameName
+0020aea2  local.set [2]
+0020aea4  i32.const [5011833]
+0020aea9  i32.load8_u [0, 0]
+0020aeac  i32.eqz []
+0020aead  if [-64]
+0020aeaf    i32.const [3928176]
+0020aeb4    call [900] ; 
+0020aeb7    i32.const [5011833]
+0020aebc    i32.const [1]
+0020aebe    i32.store8 [0, 0]
+0020aec1  end []
+0020aec2  i32.const [3928176]
+0020aec7  i32.load [2, 0]
+0020aeca  call [901] ; 
+0020aecd  local.get [0]
+0020aecf  local.get [2]
+0020aed1  i32.const [4039208] ; STRING ","
+0020aed6  i32.load [2, 0]
+0020aed9  i32.const [3928176]
+0020aede  i32.load [2, 0]
+0020aee1  i32.load [2, 92]
+0020aee4  i32.load [2, 48]
+0020aee7  i32.const [0]
+0020aee9  call [955] ; String.Concat
+0020aeec  i32.store [2, 12]
+0020aeef  local.get [0]
+0020aef1  call [2819] ; GameFrameWorkMono.`[zU
+0020aef4  local.get [0]
+0020aef6  call [12165] ; GameFrameWorkMono.D¿
+0020aef9  end []

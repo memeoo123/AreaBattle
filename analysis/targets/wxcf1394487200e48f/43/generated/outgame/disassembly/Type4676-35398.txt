@@ -1,0 +1,24 @@
+; Original class: ChildTaskActivity
+; Type4676.ActivityFactoryBase; wasmcode function 20250; offset=9088786 size=57
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+008aaf13  i32.const [5001396]
+008aaf18  i32.load8_u [0, 0]
+008aaf1b  i32.eqz []
+008aaf1c  if [-64]
+008aaf1e    i32.const [3939868]
+008aaf23    call [900] ;
+008aaf26    i32.const [5001396]
+008aaf2b    i32.const [1]
+008aaf2d    i32.store8 [0, 0]
+008aaf30  end []
+008aaf31  i32.const [3939868]
+008aaf36  i32.load [2, 0]
+008aaf39  call [903] ;
+008aaf3c  local.set [0]
+008aaf3e  local.get [0]
+008aaf40  local.get [1]
+008aaf42  local.get [1]
+008aaf44  call [3197] ; TaskFactory..ctor
+008aaf47  local.get [0]
+008aaf49  return []
+008aaf4a  end []

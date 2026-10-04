@@ -1,0 +1,70 @@
+; Original class: TaskLivenessPoint
+; Type4674.AddItemOnlyModel; wasmcode function 15688; offset=7554690 size=172
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(2, 127)]
+00734685  global.get [0]
+00734687  i32.const [16]
+00734689  i32.sub []
+0073468a  local.set [2]
+0073468c  local.get [2]
+0073468e  global.set [0]
+00734690  i32.const [5001393]
+00734695  i32.load8_u [0, 0]
+00734698  i32.eqz []
+00734699  if [-64]
+0073469b    i32.const [3934404]
+007346a0    call [900] ; 
+007346a3    i32.const [3926996]
+007346a8    call [900] ; 
+007346ab    i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+007346b0    call [900] ; 
+007346b3    i32.const [5001393]
+007346b8    i32.const [1]
+007346ba    i32.store8 [0, 0]
+007346bd  end []
+007346be  local.get [0]
+007346c0  local.get [1]
+007346c2  i32.const [0]
+007346c4  call [4987] ; ItemBase.AddItemOnlyModel
+007346c7  local.get [0]
+007346c9  i32.load [2, 8]
+007346cc  i32.const [44]
+007346ce  i32.add []
+007346cf  i32.const [0]
+007346d1  call [966] ; Int32.ToString
+007346d4  local.set [0]
+007346d6  i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+007346db  i32.load [2, 0]
+007346de  local.get [0]
+007346e0  i32.const [0]
+007346e2  call [921] ; String.Concat
+007346e5  local.set [4]
+007346e7  i32.const [3926996]
+007346ec  i32.load [2, 0]
+007346ef  i32.const [1]
+007346f1  call [909] ; 
+007346f4  local.set [0]
+007346f6  local.get [2]
+007346f8  local.get [1]
+007346fa  i64.store32 [2, 12]
+007346fd  i32.const [3934404]
+00734702  i32.load [2, 0]
+00734705  local.get [2]
+00734707  i32.const [12]
+00734709  i32.add []
+0073470a  call [910] ; 
+0073470d  local.set [3]
+0073470f  local.get [0]
+00734711  local.get [3]
+00734713  call [905] ; 
+00734716  local.get [0]
+00734718  local.get [3]
+0073471a  i32.store [2, 16]
+0073471d  local.get [4]
+0073471f  local.get [0]
+00734721  i32.const [0]
+00734723  call [1738] ; CommonMsgDispatcher.SendMessage
+00734726  local.get [2]
+00734728  i32.const [16]
+0073472a  i32.add []
+0073472b  global.set [0]
+0073472d  end []

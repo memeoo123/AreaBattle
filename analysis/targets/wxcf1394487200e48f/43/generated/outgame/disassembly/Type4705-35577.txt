@@ -1,0 +1,24 @@
+; Original class: NoviceAccRewardItemData
+; Type4705.CanComplete; wasmcode function 11259; offset=5534736 size=41
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00547411  local.get [0]
+00547413  i32.load [2, 12]
+00547416  i32.const [1]
+00547418  i32.ne []
+00547419  if [-64]
+0054741b    local.get [0]
+0054741d    local.get [0]
+0054741f    call [11257] ; NoviceAccRewardItemData.get_progress
+00547422    local.get [0]
+00547424    local.get [0]
+00547426    call [2481] ; NoviceAccRewardItemData.get_Config
+00547429    i32.load [2, 16]
+0054742c    i32.ge_s []
+0054742d    local.set [0]
+0054742f  else []
+00547430    i32.const [0]
+00547432    local.set [0]
+00547434  end []
+00547435  local.get [0]
+00547437  return []
+00547438  end []

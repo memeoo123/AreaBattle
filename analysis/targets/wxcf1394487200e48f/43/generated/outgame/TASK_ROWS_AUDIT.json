@@ -1,0 +1,128 @@
+{
+  "status": "original-task-rows-daily-view-native-claims-verified-page-pending",
+  "atUtc": "2026-10-03T12:31:25.059094+00:00",
+  "sourceEvidence": "TASK_ROWS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T12:31:25.059094+00:00",
+    "scope": "Original ordinary task row/daily-subview and native pointer/slide/claim/save/restart",
+    "checksPassed": 1463,
+    "newIntegratedChecks": 12,
+    "targetedChecks": 12,
+    "nativeChecks": 14,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2640,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "RecoveredHudImporter.ImportTaskPanelBatch",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTaskRowsPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "TaskItemItem4367/TaskItemItemData4366 and DailyTaskSubUI3988 restored. Source36 reviewed methods (33 newly indexed),53 fields,25 usages and TaskType compressed default constants. Index6194. Daily singleton creation/full page ownership is not included.",
+      "Original12 bundles verified against catalog size/MD5 and SHA256. Two prefabs:TaskPanelUI84 source nodes,TaskItemItem12;40 sprites and1 source font. Two original duplicate Image owners cannot be added directly by Unity; importer explicitly retains first owner and appends full-rect child for second Graphic after source siblings. No audiovisual equivalence claimed; source animation/particles pending.",
+      "Shared display projection retains config reward arrays and language object; first condition row element1 supplies target, low32 first saved value supplies progress, empty conditions retain previous display. GameValue900001 queried per row filters only id8 when zero. Claimed rows hide; reused rows not automatically reactivated. Progress before row refresh and actual strategy-before-UI claim order retained.",
+      "Task row preserves achievement-only geometry mutation, special localization branches, warning/exception boundaries, captured reward count before sprite reentry, source unchecked absolute/rank binary rendering, button enabled/state order, random substitution and shared reward mutation before callback, current data reporting after reentry. Dispose retains row data/delegate.",
+      "Click disables native Button, requests observed non-economic currency effect or award popup, then actual scaled localX1600/.7s/ease3 slide. Completion re-enables, invokes actual daily strategy, updates real economy/liveness, hides and reports. Source IsClaim is not set by row; actual activity guard prevents duplicate inventory award. OutSine float/double order source68862 restored without changing default easing.",
+      "1463 integrated including12 new; fresh visible PlayMode14 verifies pointer callback, disabled repeat suppression, timeScale0 delay, actual completion award/liveness, original row hide, automatic task save and independent file restart, retained fields/deferred native destruction. Currency/sprite/report/random reward/format endpoints remain required observed hosts, not full production assembly.",
+      "Full log retains32 existing ShouldRunBehaviour assertions and one Curl42. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42. No compiler errors. Initial duplicate-Graphic import failure retained as diagnostic; corrected import and both validations pass.",
+      "Full TaskPanelUI tabs/lifecycle, liveness reward preview/buttons, main task entry and Achievement pending. Production Main/account/platform/all business/remaining19 controllers, final Player and original audiovisual acceptance incomplete. Lifecycle19/38 unchanged."
+    ],
+    "notClaimed": "Whole task page/liveness controls/main entry or Achievement acceptance, complete production Main/platform/effect/report hosts, fresh Player/original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameTaskRow.cs",
+    "Scripts/OutgameDailyTaskView.cs",
+    "Scripts/OutgameScalarTweenRunner.cs",
+    "Scripts/OutgameFlyEasing.cs",
+    "Editor/OutgameTaskRowsValidation.cs",
+    "Editor/OutgameTaskRowsPlayModeValidation.cs",
+    "Editor/RecoveredHudImporter.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "task-rows-original-page-outlets-eight-real-task-projections-and-graphics",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-daily-claim-waits-for-slide-real-award-and-liveness",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-ordinary-progress-clamp-negative-and-rank-binary-display",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-achievement-layout-retained-state-and-live-localization",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-sprite-reentry-count-snapshot-and-published-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-random-reward-mutation-before-callback-and-live-report-after-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-effect-award-and-claim-failure-prefixes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-daily-filter-per-row-and-retained-hidden-row-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-daily-projection-first-condition-and-retained-value-on-empty",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-daily-countdown-validation-order-and-listener-removal",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-claim-save-and-independent-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-rows-disposal-retains-data-callback-and-source-destruction-order",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Actual statistics event projects readiness into original daily task Button and UGUI text",
+    "Original daily/achievement scroll geometry remains present alongside eight daily row clones",
+    "Native pointer disables Button and schedules slide before economy claim",
+    "Disabled native Button suppresses second pointer callback",
+    "Scaled slide and claim remain pending while native timeScale is zero",
+    "Native slide completion applies actual task reward and liveness once",
+    "Completion reaches original slide endpoint, re-enables/hides row and reports once",
+    "Currency host observes non-economic fly request and daily page refresh",
+    "Observed currency completion refreshes top display after actual task callback",
+    "Native activity updates save the row-triggered task claim automatically",
+    "Independent file owner recreates daily view without previously claimed row",
+    "Restarted daily claim cannot duplicate inventory reward",
+    "Source disposal clears ownership immediately and retains task projection/callback until native destruction",
+    "Owned original row is destroyed on subsequent native frames"
+  ],
+  "remaining": "Restore TaskPanelUI4416 full lifecycle and daily/achievement tab ownership, LivenessPreviewItem4350, liveness tier interactions and main task entry. Recover concrete Achievement runtime and integrate shared rows. Continue full Main/account/platform/remaining19 controllers/all business/reward return, final Player and original audiovisual acceptance."
+}

@@ -1,0 +1,40 @@
+; Original class: ReferencePool
+; Type4142..cctor; wasmcode function 17864; offset=7953836 size=118
+; signature={'args': [127], 'returns': []}; localGroups=[]
+00795dad  i32.const [5010235]
+00795db2  i32.load8_u [0, 0]
+00795db5  i32.eqz []
+00795db6  if [-64]
+00795db8    i32.const [3962012]
+00795dbd    call [900] ; 
+00795dc0    i32.const [3919440]
+00795dc5    call [900] ; 
+00795dc8    i32.const [3937756]
+00795dcd    call [900] ; 
+00795dd0    i32.const [5010235]
+00795dd5    i32.const [1]
+00795dd7    i32.store8 [0, 0]
+00795dda  end []
+00795ddb  i32.const [3919440]
+00795de0  i32.load [2, 0]
+00795de3  call [903] ; 
+00795de6  local.set [0]
+00795de8  local.get [0]
+00795dea  i32.const [3962012]
+00795def  i32.load [2, 0]
+00795df2  call [951] ; 
+00795df5  i32.const [3937756]
+00795dfa  i32.load [2, 0]
+00795dfd  i32.load [2, 92]
+00795e00  local.get [0]
+00795e02  i32.store [2, 0]
+00795e05  i32.const [3937756]
+00795e0a  i32.load [2, 0]
+00795e0d  i32.load [2, 92]
+00795e10  drop []
+00795e11  i32.const [3937756]
+00795e16  i32.load [2, 0]
+00795e19  i32.load [2, 92]
+00795e1c  i32.const [0]
+00795e1e  i32.store8 [0, 4]
+00795e21  end []

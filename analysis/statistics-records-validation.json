@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "common-msg-independent-domain-and-shared-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "common-msg-key-appended-copy-and-original-reference-path",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "common-msg-multicast-reentry-removal-and-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-parent-add-set-reset-and-notification-deltas",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-child-first-match-and-total-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-zero-child-id-has-source-asymmetry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-listener-reentry-and-failure-after-mutation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-index-overwrite-retains-old-keys-and-aliases",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-null-dictionary-overload-differences",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-record-original-json-and-culture-cached-key",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Ten CommonMsgDispatcher/record/JSON/key-cache checks. JSON round-trip is not actual statistics disk persistence. Full statistics manager/controller/offline strategy, CommonGameModule ownership and activity/Main/Player are unfinished. Prior red-dot native17 were not rerun for this batch."
+}

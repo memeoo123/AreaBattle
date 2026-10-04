@@ -1,0 +1,66 @@
+; Original class: GameStatisticsExpansion
+; Type4618.RegisteredValueFunc; wasmcode function 1973; offset=612223 size=173
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00095782  i32.const [5001622]
+00095787  i32.load8_u [0, 0]
+0009578a  i32.eqz []
+0009578b  if [-64]
+0009578d    i32.const [3954680]
+00095792    call [900] ; 
+00095795    i32.const [3954684]
+0009579a    call [900] ; 
+0009579d    i32.const [3954676]
+000957a2    call [900] ; 
+000957a5    i32.const [3917284]
+000957aa    call [900] ; 
+000957ad    i32.const [5001622]
+000957b2    i32.const [1]
+000957b4    i32.store8 [0, 0]
+000957b7  end []
+000957b8  block [-64]
+000957ba    local.get [0]
+000957bc    call [1493] ; GameStatisticsControl.get_I
+000957bf    i32.eqz []
+000957c0    br_if [0]
+000957c2    local.get [0]
+000957c4    call [1493] ; GameStatisticsControl.get_I
+000957c7    i32.load [2, 12]
+000957ca    local.set [3]
+000957cc    local.get [0]
+000957ce    call [1493] ; GameStatisticsControl.get_I
+000957d1    local.set [2]
+000957d3    block [-64]
+000957d5      local.get [3]
+000957d7      i32.eqz []
+000957d8      if [-64]
+000957da        i32.const [3917284]
+000957df        i32.load [2, 0]
+000957e2        call [903] ; 
+000957e5        local.set [3]
+000957e7        local.get [3]
+000957e9        i32.const [3954676]
+000957ee        i32.load [2, 0]
+000957f1        call [951] ; 
+000957f4        local.get [2]
+000957f6        local.get [3]
+000957f8        i32.store [2, 12]
+000957fb        br [1]
+000957fd      end []
+000957fe      local.get [2]
+00095800      i32.load [2, 12]
+00095803      local.get [0]
+00095805      i32.const [3954684]
+0009580a      i32.load [2, 0]
+0009580d      call [1129] ; 
+00095810      br_if [1]
+00095812    end []
+00095813    local.get [0]
+00095815    call [1493] ; GameStatisticsControl.get_I
+00095818    i32.load [2, 12]
+0009581b    local.get [0]
+0009581d    local.get [1]
+0009581f    i32.const [3954680]
+00095824    i32.load [2, 0]
+00095827    call [1049] ; 
+0009582a  end []
+0009582b  end []

@@ -1,0 +1,91 @@
+{
+  "status": "conditions-fsm-events-verified-activity-states-pending",
+  "atUtc": "2026-10-03T09:26:18.351821+00:00",
+  "sourceEvidence": "ACTIVITY_CONDITIONS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T09:26:18.351821+00:00",
+    "scope": "ActivityItemData lazy config and four runtime condition caches, ActivityStateBase condition comparison, generic Fsm/FsmState event dispatch",
+    "checksPassed": 1246,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": false,
+    "nativeChecks": 0,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2311,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Runtime condition parsing uses parameter-array length, cached config reference, underscore-separated boxed Int32 arguments and Int64 target; invalid date/numeric becomes0, null date args and partial cache on failure preserved.",
+      "Runtime comparison gates on nonzero config.open, uses supplied type IDs and exact cached args, reads target after provider reentry. Actual original local config parses and private caches are excluded from JSON/rebuilt after deserialize.",
+      "Recovered Fsm current-state event dispatch and FsmState subscriptions preserve duplicate/remove-one semantics, multicast snapshots, reentry, handler exception propagation, payload identity and OnDestroy cleanup. Generic ChangeState validates null and forwards args.",
+      "Existing concrete statistics item10700/8 reaches parsed target4 and changes actual recovered FSM state; test states are explicit Editor fixtures. Full activity states/widgets/listeners/config control/Main remain pending.",
+      "76 activity base/state bodies extracted for subsequent work, not claimed implemented. Controller bindings unchanged18/38. No new native PlayMode/Player or audiovisual acceptance.",
+      "Integration retains32 existing ShouldRunBehaviour editor assertions and one Unity cloud request timeout, same counts as previous1236 run; no compiler errors and all1246 product checks pass."
+    ],
+    "notClaimed": "Full ActivityBase/four state UI/listeners/config owner/control, SevenDay, production Main/business assembly, remaining20 controller bindings, native activity UI or Player/audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameActivityConditions.cs",
+    "Scripts/OutgameFsmState.cs",
+    "Editor/OutgameActivityConditionsValidation.cs"
+  ],
+  "checks": [
+    {
+      "id": "activity-condition-four-lazy-caches-and-typed-arguments",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-null-config-retry-and-cached-config-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-malformed-input-retains-partial-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-runtime-open-gate-live-target-and-source-type",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-condition-original-config-and-json-cache-reconstruction",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-current-state-identity-null-and-state-change",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-duplicates-remove-one-reentry-and-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-event-exception-and-destroyed-state-subscriptions",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-state-base-overloads-and-change-state-forwarding",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-fsm-conditioned-event-uses-recovered-statistics-and-cache",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Implement extracted ActivityBase/four concrete activity states and ActivityControl/config owner graph using recovered condition caches, concrete offline data and FSM events. Connect SevenDay.EnterGameInit and ProcedurePreLoad; wire real Main/account/SDK/HTTP/scene/config hosts, remaining20 controllers/all business/reward-return, then Player and audiovisual acceptance."
+}

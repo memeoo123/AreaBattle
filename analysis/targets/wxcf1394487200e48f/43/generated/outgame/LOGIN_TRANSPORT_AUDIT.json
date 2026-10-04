@@ -1,0 +1,196 @@
+{
+  "status": "login-transport-native-verified-owner-business-platform-pending",
+  "atUtc": "2026-10-04T14:26:45.763150+00:00",
+  "sourceEvidence": "LOGIN_TRANSPORT_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-04T14:26:45.763150+00:00",
+    "scope": "NetTool domain configuration/cache, server-time key envelope decoder and LoginTransmitter protocol/DTO/merged upload lifecycle; actual Unity HTTP encrypted upload and plaintext server-time GET",
+    "checksPassed": 1772,
+    "newIntegratedChecks": 23,
+    "targetedChecks": 23,
+    "nativeChecks": 8,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2883,
+    "implementedLifecycleControllers": 22,
+    "remainingLifecycleControllers": 16,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameLoginTransportPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "diagnosticExplanation": "Any UnityEditor.Search startup index exception remains in native log and is outside game stack. Initial native fixture incorrectly expected null-object POST; corrected against existing source manager null->GET and retained failed evidence. Runtime implementation unchanged for that correction.",
+    "observedBoundaries": [
+      "NetTool34268 caches first nonempty platform result. NetDtype absent/empty/exact0 defaults RD1; other strings use TryParse out value, including invalid->0 and spaced0->0. Warning boxes original enum RD1/TD2/RTD3 before querying SDK with hcrzd-u-cn-wx and default. RD adds https:// and :20150 even for null result. Assignment precedes final warning; failed lookup is retryable, failed final warning retains cache.",
+      "PngDataHandler28199 decodes Base64 UTF8, subtracts signed(timestamp/26)%26 from UTF16 units, reverses, parses two-character length, removes prefix, subtracts signed timestamp%26, reverses again and truncates to length. Catch Exception logs Decoding error: plus Message then returns empty; logging exceptions escape. No AES/report-error call in this decoder. Independent fixed vectors cover signed shifts, length truncation, Chinese and UTF16 surrogate pairs.",
+      "Base SetUrl29098 publishes URL before reading global encryption setting and ignores supplied bool. The prior single-argument convenience API remains; two-argument source signature added. Corrected Update29105 to parameterless virtual slot6 and Dispose29106 to virtual slot4, preparing original owner dispatch.",
+      "LoginTransmitter29245 constructs all18 URLs before registration, binds protocols2..19 to source paths/callbacks, and keeps duplicate-registration behavior. Actual HttpNetAcion business response handlers remain explicit composition dependencies; this milestone supplies no fake login success.",
+      "Canonical queue29229 overwrites repeated keys; only transition from no-pending sets countdown3. Updates29253/29254 decrement3->2->1->0, send on fourth, clear pending BEFORE Send4 and replace dictionary only AFTER normal return. Throw preserves old dictionary with pending false; disposed/missing protocol normal -1 still clears data. Reentrant queue during send mutates outgoing alias, sets pending and countdown, then loses data on replacement, preserving source behavior.",
+      "Immediate upload29233 sends RequestSendGameData.Datas by alias and returns transport serial. Canonical requests use server time2/null, login3/object, versions12/RequestList.keys, player-data6/keys, cutover14/userId+guestUserId+guestUid, user extension16/userExt and uploaded18/null. DTO3733 constructor allocates dictionary before caller replaces it. Versions29239 enumerates live pool.Values, filters AutoSyn, preserves order/duplicates/null keys and propagates null/mutation failures.",
+      "Altered obfuscation aliases such as29231/29232/29238 and Decode28203 are excluded. HttpManager owner/global key mutation, ServerTimeSync, HttpNetAcion business callbacks, real platform SDK/report composition, Main, remaining16 controllers and final Player/original audiovisual acceptance remain pending."
+    ],
+    "notClaimed": "Production HttpManager owner/global-key installation, HttpNetAcion business callbacks, ServerTimeSync, real platform SDK domain/login/report delivery, Main/RankUI/OverUI/full business/final Player/original audiovisual equivalence. Native fixture supplies login frame ticks and local server responses explicitly."
+  },
+  "implementation": [
+    "Scripts/OutgameNetTool.cs",
+    "Scripts/OutgameLoginTransmitter.cs",
+    "Scripts/OutgameRankTransmitter.cs",
+    "Editor/OutgameLoginTransportValidation.cs",
+    "Editor/OutgameLoginTransportPlayModeValidation.cs",
+    "Editor/OutgameWebRequestPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "login-transport-domain-default-exact-zero-and-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-domain-parse-failure-and-whitespace-zero",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-domain-empty-retry-and-rd-null-string-concat",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-domain-log-failure-before-query",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-domain-query-failure-does-not-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-domain-final-log-failure-retains-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-key-decoder-independent-known-vectors",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-key-malformed-base64-null-and-short-payload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-key-length-parse-and-bounds-errors",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-key-error-log-exception-propagates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-source-url-flag-ignored-global-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-all-eighteen-protocols-and-captured-actions",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-queue-overwrite-without-reset-and-fourth-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-new-batch-restarts-three-update-delay",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-null-key-does-not-arm-upload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-send-failure-leaves-data-and-clears-pending",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-disposed-flush-clears-data-without-send",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-reentrant-submit-before-dictionary-replacement",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-immediate-upload-alias-and-return-value",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-request-routing-and-json-field-shapes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-server-time-bypasses-encryption-login-uses-aes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-version-pool-filter-order-and-duplicates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "login-transport-version-pool-null-and-mutation-propagate",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Native LoginTransmitter frame countdown -> WebRequestManager -> Unity HTTP -> controlled loopback server, encrypted storage upload and plaintext server-time protocol. Test explicitly supplies frame ticks, domain result and response actions; production HttpManager/HttpNetAcion/ServerTimeSync/platform/Main not claimed.",
+    "checks": [
+      "Platform-domain boundary caches actual loopback URL; decoded key and global encryption flag configure login transmitter",
+      "Three native frames decrement without sending; repeated data does not reset countdown even at timeScale zero",
+      "Fourth native frame queues exactly one request before manager dispatch",
+      "Actual encrypted HTTP upload contains merged latest values and original Datas field",
+      "Encrypted server reply decrypts before registered protocol callback; manager reclaims helper",
+      "Server-time protocol bypasses encryption; null data follows the original manager GET path without encrypted header",
+      "Plain server-time reply dispatches successfully through reused helper and cached domain",
+      "Native transport shutdown releases owned helper"
+    ]
+  },
+  "remaining": "Recover HttpManager owner/global-key mutation, HttpNetAcion login/server-time/business responses and ServerTimeSync; install actual platform AppInfoManager/domain/report callbacks, then RankUI/OverUI/Main/account/remaining16 controllers/full business/final Player/original audiovisual acceptance."
+}

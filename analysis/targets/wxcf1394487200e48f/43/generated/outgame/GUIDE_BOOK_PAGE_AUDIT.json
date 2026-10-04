@@ -1,0 +1,125 @@
+{
+  "status": "page-lifecycle-centering-verified-main-services-pending",
+  "atUtc": "2026-10-03T08:01:34.669192+00:00",
+  "sourceEvidence": "GUIDE_BOOK_PAGE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:01:34.669192+00:00",
+    "scope": "Composed GuideBook page/BaseUI/UIModule lifecycle and source DynamicList positioning coroutine",
+    "checksPassed": 1148,
+    "newIntegratedChecks": 8,
+    "targetedChecks": 8,
+    "freshPlayModeRun": true,
+    "nativeChecks": 26,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2274,
+    "captures": [
+      {
+        "path": "analysis/guide-page-native-open.png",
+        "sha256": "10c2c0d965bd8c4e14ee7a510c9d181745a4ebc33a1253c74061d7e344d243d6"
+      },
+      {
+        "path": "analysis/guide-page-native-tips.png",
+        "sha256": "b76b587b4e1adb20644ec311262f5dcc5ca5e85d64817fb5abd439bbe7d94346"
+      },
+      {
+        "path": "analysis/guide-page-native-reopened.png",
+        "sha256": "4929d32f27fab3944a36f90a9f002446a1d65a0fab9982913b9144a5ab783245"
+      }
+    ],
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameGuideBookPagePlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Edit-mode initial cases lacked Unity Awake delivery; split recovered component preparation from source page Awake, and explicitly replay component Awake only in edit fixture. Native tests use actual callbacks.",
+      "Metadata confirms namespace Proj_hdzd.UI.MainMenu and inherited UIPath MainMenu/GuideBookUI; corrected initial guessed path before final matching verification.",
+      "Native validation uses original recovered scene canvas/UIRoot. Asset provider acquires local recovered prefab; it does not establish full remote/production resource routing.",
+      "Initial native centering fixture had a centered content pivot, so ScrollRect elastic correction moved the completed target from237.5 to244.48 (velocity16.93). Corrected only the isolated native fixture to top-anchored content; completion now follows the actual coroutine handle and finishes237.5 with zero velocity. Failed diagnostics/logs retained.",
+      "Frame-end centering preserves scaled-time pause, original single/pair boundary differences and older-routine completion stopping the latest stored handle.",
+      "UnityEditor.Search startup indexing exception remains separately recorded in native logs, not a passing product assertion."
+    ],
+    "notClaimed": "Complete actual Main/account/data-pool/remaining22 controllers and all business flows; replace fixture acquisition/SkillControl/language/atlas/audio/effects with owning production services; Player build, failure/visual/audio/timing acceptance. Selection-specific list subclasses are outside GuideBook and remain for their business owners."
+  },
+  "implementation": [
+    "OutgameGuideBookPage.cs",
+    "OutgameGuideBookListBinding.cs",
+    "OutgameGuideBookBrowseBinding.cs",
+    "OutgameDynamicList.cs"
+  ],
+  "checks": [
+    {
+      "id": "guide-page-registry-load-and-source-awake-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-page-actual-provider-popup-reward-and-tip-page-lookup",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-page-immediate-close-base-disposal-and-data-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-page-loading-flag-and-disposed-late-completion",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-center-single-clamps-stops-velocity-and-dirties",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-center-single-inverse-horizontal-and-inclusive-spacing",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-center-two-index-retains-distinct-source-edges",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-center-coroutine-first-yield-does-not-move",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Registry/handle exist before two-frame resource callback",
+    "OpenUI identifies initialized live page after animation",
+    "Real delayed loading reaches original outlets and native list render",
+    "Recovered UI bootstrap and layer own the page",
+    "Native Awake builds tips and selects guide tab",
+    "Frame-end positioning remains at start while scaled time is paused",
+    "Real frame-end routine interpolates with scaled deltaTime",
+    "Single centering reaches exact source destination",
+    "Older completion stops latest stored coroutine and keeps older destination",
+    "Pointer delivered: btnUnlock",
+    "Pointer delivered: btnBox",
+    "Composed page persists reward and refreshes actual row",
+    "Pointer delivered: tabBtnT",
+    "Native tab pointer uses initialized group handlers",
+    "CloseAction runs before registry removal",
+    "Pointer delivered: btnClose",
+    "Close button removes module page and starts source async close",
+    "Async hide precedes business disposal and handle release",
+    "CloseUI follows native destruction, guide/tip cleanup and all resource releases",
+    "Second frame-end separates disposal and dynamic/custom release",
+    "Main, dynamic and custom handles released in source order",
+    "List objects survive actual async page destruction in source pool",
+    "Registry reopens with fresh page and main handle",
+    "OpenUI identifies initialized live page after animation",
+    "New owner reuses pooled row and retained claimed state",
+    "Independent data manager restart confirms persisted guide claim"
+  ],
+  "remaining": "Complete actual Main/account/data-pool/remaining22 controllers and all business flows; replace fixture acquisition/SkillControl/language/atlas/audio/effects with owning production services; Player build, failure/visual/audio/timing acceptance. Selection-specific list subclasses are outside GuideBook and remain for their business owners."
+}

@@ -1,0 +1,36 @@
+; Original class: CommonLimitTimeTaskRewardItem
+; Type4340.InitializeComponent; wasmcode function 20144; offset=9059912 size=108
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a3e49  i32.const [5008867]
+008a3e4e  i32.load8_u [0, 0]
+008a3e51  i32.eqz []
+008a3e52  if [-64]
+008a3e54    i32.const [4018588]
+008a3e59    call [900] ; 
+008a3e5c    i32.const [4018624]
+008a3e61    call [900] ; 
+008a3e64    i32.const [4091092] ; STRING "itemCount"
+008a3e69    call [900] ; 
+008a3e6c    i32.const [4091100] ; STRING "itemIcon"
+008a3e71    call [900] ; 
+008a3e74    i32.const [5008867]
+008a3e79    i32.const [1]
+008a3e7b    i32.store8 [0, 0]
+008a3e7e  end []
+008a3e7f  local.get [0]
+008a3e81  local.get [0]
+008a3e83  i32.const [4091092] ; STRING "itemCount"
+008a3e88  i32.load [2, 0]
+008a3e8b  i32.const [4018624]
+008a3e90  i32.load [2, 0]
+008a3e93  call [970] ; 
+008a3e96  i32.store [2, 48]
+008a3e99  local.get [0]
+008a3e9b  local.get [0]
+008a3e9d  i32.const [4091100] ; STRING "itemIcon"
+008a3ea2  i32.load [2, 0]
+008a3ea5  i32.const [4018588]
+008a3eaa  i32.load [2, 0]
+008a3ead  call [970] ; 
+008a3eb0  i32.store [2, 52]
+008a3eb3  end []

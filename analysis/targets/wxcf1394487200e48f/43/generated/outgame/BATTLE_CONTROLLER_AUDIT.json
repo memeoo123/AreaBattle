@@ -1,0 +1,57 @@
+{
+  "status": "source-controller-bound-main-composition-pending",
+  "atUtc": "2026-10-03T08:05:53.136901+00:00",
+  "sourceEvidence": "BATTLE_CONTROLLER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:05:53.136901+00:00",
+    "scope": "Original BattleControl4060 config references, default branches, partial initialization and shared registry/logic lifecycle",
+    "checksPassed": 1153,
+    "newIntegratedChecks": 5,
+    "targetedChecks": 5,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "previousNativeEvidence": "guide-page-native-validation.json:26 checks at prior matching1148 revision; not rerun for this pure controller change",
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2276,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full Main/account/all controllers or complete battle owner composition; no new native/Player/source audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameBattleControl.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "checks": [
+    {
+      "id": "battle-control-original-dispatch-and-existing-battle-parity",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "battle-control-captured-row-reference-and-live-field-mutation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "battle-control-init-failure-keeps-source-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "battle-control-registry-logic-lifecycle-and-old-disposal",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "battle-control-init-resolves-live-config-three-times",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Compose actual Main/account/data-pool and remaining21 controller factories with recovered services; connect page owners to production resource, SkillControl, localization, atlas, audio/effects modules. Advance startup→lobby→battle→reward→return→restart, all remaining business flows, then Player/original audiovisual acceptance."
+}

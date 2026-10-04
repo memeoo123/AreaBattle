@@ -1,0 +1,22 @@
+; Original class: LivenessPreviewItem
+; Type4350..ctor; wasmcode function 11501; offset=5649842 size=55
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+005635b3  i32.const [5008904]
+005635b8  i32.load8_u [0, 0]
+005635bb  i32.eqz []
+005635bc  if [-64]
+005635be    i32.const [3941916]
+005635c3    call [900] ;
+005635c6    i32.const [5008904]
+005635cb    i32.const [1]
+005635cd    i32.store8 [0, 0]
+005635d0  end []
+005635d1  local.get [0]
+005635d3  i32.const [3941916]
+005635d8  i32.load [2, 0]
+005635db  call [903] ;
+005635de  i32.store [2, 80]
+005635e1  local.get [0]
+005635e3  i32.const [0]
+005635e5  call [3407] ; BaseItem..ctor
+005635e8  end []

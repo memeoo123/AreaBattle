@@ -1,0 +1,24 @@
+; Original class: AchievementItemData
+; Type4718.GetConfig; wasmcode function 2274; offset=701031 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000ab268  local.get [0]
+000ab26a  i32.load [2, 40]
+000ab26d  local.set [1]
+000ab26f  local.get [1]
+000ab271  i32.eqz []
+000ab272  if [-64]
+000ab274    local.get [0]
+000ab276    i32.const [0]
+000ab278    call [1189] ; ActivityConfigMgr.get_I
+000ab27b    local.get [0]
+000ab27d    i32.load [2, 8]
+000ab280    i32.const [0]
+000ab282    call [6338] ; ActivityConfigMgr.GetAchievementConfig
+000ab285    i32.store [2, 40]
+000ab288    local.get [0]
+000ab28a    i32.load [2, 40]
+000ab28d    local.set [1]
+000ab28f  end []
+000ab290  local.get [1]
+000ab292  return []
+000ab293  end []

@@ -1,0 +1,141 @@
+; Original class: ActivityLaunchState
+; Type4663.OnEnter; wasmcode function 20968; offset=9454452 size=385
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00904375  i32.const [5001351]
+0090437a  i32.load8_u [0, 0]
+0090437d  i32.eqz []
+0090437e  if [-64]
+00904380    i32.const [3989352]
+00904385    call [900] ; 
+00904388    i32.const [3968452]
+0090438d    call [900] ; 
+00904390    i32.const [3968464]
+00904395    call [900] ; 
+00904398    i32.const [3922400]
+0090439d    call [900] ; 
+009043a0    i32.const [5001351]
+009043a5    i32.const [1]
+009043a7    i32.store8 [0, 0]
+009043aa  end []
+009043ab  local.get [0]
+009043ad  local.get [1]
+009043af  local.get [0]
+009043b1  call [5237] ; ActivityStateBase.OnEnter
+009043b4  local.get [0]
+009043b6  i32.const [0]
+009043b8  i32.store8 [0, 16]
+009043bb  i32.const [1]
+009043bd  i32.const [3922400]
+009043c2  i32.load [2, 0]
+009043c5  local.get [1]
+009043c7  call [918] ; 
+009043ca  i32.load [2, 20]
+009043cd  i32.const [3]
+009043cf  i32.store [2, 12]
+009043d2  i32.const [0]
+009043d4  call [1484] ; ActivityControl.get_I
+009043d7  i32.const [1]
+009043d9  i32.const [0]
+009043db  call [3012] ; ActivityControl.iSkX[a~
+009043de  local.get [0]
+009043e0  i32.const [1]
+009043e2  i32.const [3922400]
+009043e7  i32.load [2, 0]
+009043ea  local.get [0]
+009043ec  i32.load [2, 12]
+009043ef  call [918] ; 
+009043f2  i32.load [2, 60]
+009043f5  i32.load [2, 72]
+009043f8  i32.const [1]
+009043fa  i32.const [3922400]
+009043ff  i32.load [2, 0]
+00904402  local.get [0]
+00904404  i32.load [2, 12]
+00904407  call [918] ; 
+0090440a  i32.load [2, 20]
+0090440d  i32.const [0]
+0090440f  call [3196] ; ActivityItemData.get_OverCondition
+00904412  local.get [0]
+00904414  call [2011] ; ActivityStateBase.lnUs^X
+00904417  if [-64]
+00904419    i32.const [0]
+0090441b    call [1484] ; ActivityControl.get_I
+0090441e    i32.const [1]
+00904420    i32.const [3922400]
+00904425    i32.load [2, 0]
+00904428    local.get [0]
+0090442a    i32.load [2, 12]
+0090442d    call [918] ; 
+00904430    i32.const [1]
+00904432    i32.const [3922400]
+00904437    i32.load [2, 0]
+0090443a    local.get [0]
+0090443c    i32.load [2, 12]
+0090443f    call [918] ; 
+00904442    i32.load [2, 60]
+00904445    i32.load [2, 8]
+00904448    i32.const [0]
+0090444a    i32.const [18379] ; TABLE ActivityControl.NoNof
+0090444e    global.set [3]
+00904450    i32.const [18379] ; TABLE ActivityControl.NoNof
+00904454    call_indirect [7, 0]
+00904457    local.get [0]
+00904459    local.get [1]
+0090445b    i32.const [3989352]
+00904460    i32.load [2, 0]
+00904463    call [1032] ; 
+00904466    i32.const [3968464]
+0090446b    i32.load [2, 0]
+0090446e    call [1569] ; 
+00904471    return []
+00904472  end []
+00904473  local.get [0]
+00904475  i32.const [1]
+00904477  i32.const [3922400]
+0090447c  i32.load [2, 0]
+0090447f  local.get [0]
+00904481  i32.load [2, 12]
+00904484  call [918] ; 
+00904487  i32.load [2, 60]
+0090448a  i32.load [2, 80]
+0090448d  i32.const [1]
+0090448f  i32.const [3922400]
+00904494  i32.load [2, 0]
+00904497  local.get [0]
+00904499  i32.load [2, 12]
+0090449c  call [918] ; 
+0090449f  i32.load [2, 20]
+009044a2  i32.const [0]
+009044a4  call [3011] ; ActivityItemData.get_CloseCondition
+009044a7  local.get [0]
+009044a9  call [2011] ; ActivityStateBase.lnUs^X
+009044ac  if [-64]
+009044ae    local.get [0]
+009044b0    local.get [1]
+009044b2    i32.const [3989352]
+009044b7    i32.load [2, 0]
+009044ba    call [1032] ; 
+009044bd    i32.const [3968452]
+009044c2    i32.load [2, 0]
+009044c5    call [1569] ; 
+009044c8    return []
+009044c9  end []
+009044ca  local.get [0]
+009044cc  local.set [2]
+009044ce  local.get [0]
+009044d0  i32.load [2, 0]
+009044d3  local.set [0]
+009044d5  local.get [2]
+009044d7  local.get [1]
+009044d9  local.get [2]
+009044db  local.get [2]
+009044dd  local.get [0]
+009044df  i32.const [80]
+009044e2  i32.add []
+009044e3  i32.load [2, 192]
+009044e7  local.get [0]
+009044e9  i32.load [2, 268]
+009044ed  global.set [3]
+009044ef  global.get [3]
+009044f1  call_indirect [8, 0]
+009044f4  end []

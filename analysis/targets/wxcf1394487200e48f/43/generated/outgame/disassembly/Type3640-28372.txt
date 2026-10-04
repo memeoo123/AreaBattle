@@ -1,0 +1,61 @@
+; Original class: Pu¯z
+; Type3640.Initialize; wasmcode function 15147; offset=7361017 size=177
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+007051fc  i32.const [4987499]
+00705201  i32.load8_u [0, 0]
+00705204  i32.eqz []
+00705205  if [-64]
+00705207    i32.const [3920240]
+0070520c    call [900] ; 
+0070520f    i32.const [3920236]
+00705214    call [900] ; 
+00705217    i32.const [3934128]
+0070521c    call [900] ; 
+0070521f    i32.const [4026200] ; METHOD Pu¯z.ºK´
+00705224    call [900] ; 
+00705227    i32.const [4026204] ; METHOD Pu¯z.¨·ª¨z
+0070522c    call [900] ; 
+0070522f    i32.const [4987499]
+00705234    i32.const [1]
+00705236    i32.store8 [0, 0]
+00705239  end []
+0070523a  local.get [0]
+0070523c  i32.const [0]
+0070523e  i32.store [2, 32]
+00705241  local.get [0]
+00705243  i32.load [2, 8]
+00705246  local.set [1]
+00705248  i32.const [3920236]
+0070524d  i32.load [2, 0]
+00705250  call [903] ; 
+00705253  local.set [2]
+00705255  local.get [2]
+00705257  local.get [0]
+00705259  i32.const [4026204] ; METHOD Pu¯z.¨·ª¨z
+0070525e  i32.load [2, 0]
+00705261  call [2260] ; 
+00705264  i32.const [0]
+00705266  i32.const [3934128]
+0070526b  i32.load [2, 0]
+0070526e  local.get [1]
+00705270  local.get [2]
+00705272  call [1027] ; 
+00705275  local.get [0]
+00705277  i32.load [2, 8]
+0070527a  local.set [1]
+0070527c  i32.const [3920240]
+00705281  i32.load [2, 0]
+00705284  call [903] ; 
+00705287  local.set [2]
+00705289  local.get [2]
+0070528b  local.get [0]
+0070528d  i32.const [4026200] ; METHOD Pu¯z.ºK´
+00705292  i32.load [2, 0]
+00705295  call [2260] ; 
+00705298  i32.const [2]
+0070529a  i32.const [3934128]
+0070529f  i32.load [2, 0]
+007052a2  local.get [1]
+007052a4  local.get [2]
+007052a6  call [1027] ; 
+007052a9  end []

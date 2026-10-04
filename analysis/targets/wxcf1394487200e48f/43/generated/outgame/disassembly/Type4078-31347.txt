@@ -1,0 +1,46 @@
+; Original class: GuideBookDataManager
+; Type4078.CreateNewData; wasmcode function 7742; offset=3716086 size=130
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0038b3f7  i32.const [5008414]
+0038b3fc  i32.load8_u [0, 0]
+0038b3ff  i32.eqz []
+0038b400  if [-64]
+0038b402    i32.const [3932744]
+0038b407    call [900] ; 
+0038b40a    i32.const [3974432]
+0038b40f    call [900] ; 
+0038b412    i32.const [3923380]
+0038b417    call [900] ; 
+0038b41a    i32.const [5008414]
+0038b41f    i32.const [1]
+0038b421    i32.store8 [0, 0]
+0038b424  end []
+0038b425  i32.const [3932744]
+0038b42a  i32.load [2, 0]
+0038b42d  call [903] ; 
+0038b430  local.set [0]
+0038b432  i32.const [3923380]
+0038b437  i32.load [2, 0]
+0038b43a  call [903] ; 
+0038b43d  local.set [1]
+0038b43f  local.get [1]
+0038b441  i32.const [3974432]
+0038b446  i32.load [2, 0]
+0038b449  call [944] ; 
+0038b44c  local.get [0]
+0038b44e  local.get [1]
+0038b450  i32.store [2, 8]
+0038b453  i32.const [3923380]
+0038b458  i32.load [2, 0]
+0038b45b  call [903] ; 
+0038b45e  local.set [1]
+0038b460  local.get [1]
+0038b462  i32.const [3974432]
+0038b467  i32.load [2, 0]
+0038b46a  call [944] ; 
+0038b46d  local.get [0]
+0038b46f  local.get [1]
+0038b471  i32.store [2, 12]
+0038b474  local.get [0]
+0038b476  return []
+0038b477  end []

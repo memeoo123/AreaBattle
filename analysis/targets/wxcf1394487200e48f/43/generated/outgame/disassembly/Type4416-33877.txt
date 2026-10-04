@@ -1,0 +1,276 @@
+; Original class: TaskPanelUI
+; Type4416.rVZ; wasmcode function 7056; offset=2687340 size=727
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(9, 127)]
+0029016f  global.get [0]
+00290171  i32.const [16]
+00290173  i32.sub []
+00290174  local.set [6]
+00290176  local.get [6]
+00290178  global.set [0]
+0029017a  i32.const [5007042]
+0029017f  i32.load8_u [0, 0]
+00290182  i32.eqz []
+00290183  if [-64]
+00290185    i32.const [3927888]
+0029018a    call [900] ; 
+0029018d    i32.const [3993288]
+00290192    call [900] ; 
+00290195    i32.const [3993060]
+0029019a    call [900] ; 
+0029019d    i32.const [3993068]
+002901a2    call [900] ; 
+002901a5    i32.const [3912144]
+002901aa    call [900] ; 
+002901ad    i32.const [3931300]
+002901b2    call [900] ; 
+002901b5    i32.const [3931476]
+002901ba    call [900] ; 
+002901bd    i32.const [3931796]
+002901c2    call [900] ; 
+002901c5    i32.const [3974936]
+002901ca    call [900] ; 
+002901cd    i32.const [3986048]
+002901d2    call [900] ; 
+002901d5    i32.const [3940520]
+002901da    call [900] ; 
+002901dd    i32.const [4030860] ; METHOD ~iytNR.P{TgyOz
+002901e2    call [900] ; 
+002901e5    i32.const [4030864] ; METHOD ~iytNR.bTSZ|o
+002901ea    call [900] ; 
+002901ed    i32.const [3948792]
+002901f2    call [900] ; 
+002901f5    i32.const [5007042]
+002901fa    i32.const [1]
+002901fc    i32.store8 [0, 0]
+002901ff  end []
+00290200  i32.const [3986048]
+00290205  i32.load [2, 0]
+00290208  call [2550] ; 
+0029020b  i32.const [0]
+0029020d  call [8031] ; DailyTaskSubUI.VSoksmr
+00290210  local.set [9]
+00290212  local.get [0]
+00290214  i32.load [2, 132]
+00290218  i32.const [1]
+0029021a  i32.const [0]
+0029021c  call [1145] ; Transform.GetChild
+0029021f  local.set [8]
+00290221  i32.const [3986048]
+00290226  i32.load [2, 0]
+00290229  call [2550] ; 
+0029022c  i32.load [2, 20]
+0029022f  i32.load [2, 76]
+00290232  i32.load [2, 16]
+00290235  i32.load [2, 16]
+00290238  local.set [10]
+0029023a  loop [-64]
+0029023c    local.get [8]
+0029023e    i32.const [0]
+00290240    call [1505] ; Transform.get_childCount
+00290243    local.get [7]
+00290245    i32.gt_s []
+00290246    if [-64]
+00290248      i32.const [3948792]
+0029024d      i32.load [2, 0]
+00290250      call [903] ; 
+00290253      local.set [2]
+00290255      local.get [2]
+00290257      local.get [0]
+00290259      i32.store [2, 16]
+0029025c      local.get [2]
+0029025e      local.get [8]
+00290260      local.get [7]
+00290262      i32.const [0]
+00290264      call [1145] ; Transform.GetChild
+00290267      i32.store [2, 8]
+0029026a      local.get [2]
+0029026c      local.get [9]
+0029026e      local.get [7]
+00290270      i32.const [3974936]
+00290275      i32.load [2, 0]
+00290278      call [930] ; 
+0029027b      i32.store [2, 12]
+0029027e      local.get [2]
+00290280      i32.load [2, 8]
+00290283      i32.const [3993060]
+00290288      i32.load [2, 0]
+0029028b      call [1010] ; 
+0029028e      local.set [4]
+00290290      local.get [2]
+00290292      i32.load [2, 8]
+00290295      i32.const [3993288]
+0029029a      i32.load [2, 0]
+0029029d      call [1812] ; 
+002902a0      local.set [3]
+002902a2      local.get [2]
+002902a4      i32.load [2, 12]
+002902a7      i32.load [2, 12]
+002902aa      local.set [5]
+002902ac      i32.const [3931796]
+002902b1      i32.load [2, 0]
+002902b4      call [901] ; 
+002902b7      local.get [3]
+002902b9      local.set [11]
+002902bb      local.get [5]
+002902bd      i32.const [0]
+002902bf      i32.const [0]
+002902c1      call [1470] ; ExtesionMethod.IntToString
+002902c4      local.set [5]
+002902c6      local.get [3]
+002902c8      i32.load [2, 0]
+002902cb      local.set [3]
+002902cd      local.get [11]
+002902cf      local.get [5]
+002902d1      local.get [3]
+002902d3      i32.load [2, 760]
+002902d7      local.get [3]
+002902d9      i32.load [2, 756]
+002902dd      global.set [3]
+002902df      global.get [3]
+002902e1      call_indirect [2, 0]
+002902e4      local.get [2]
+002902e6      i32.load [2, 8]
+002902e9      i32.const [0]
+002902eb      i32.const [0]
+002902ed      call [1145] ; Transform.GetChild
+002902f0      local.set [3]
+002902f2      local.get [2]
+002902f4      i32.load [2, 12]
+002902f7      i32.load [2, 16]
+002902fa      local.set [5]
+002902fc      local.get [3]
+002902fe      i32.const [0]
+00290300      i32.const [0]
+00290302      call [1145] ; Transform.GetChild
+00290305      i32.const [0]
+00290307      call [943] ; Component.get_gameObject
+0029030a      local.get [5]
+0029030c      i32.eqz []
+0029030d      i32.const [0]
+0029030f      call [949] ; GameObject.SetActive
+00290312      local.get [3]
+00290314      i32.const [1]
+00290316      i32.const [0]
+00290318      call [1145] ; Transform.GetChild
+0029031b      i32.const [0]
+0029031d      call [943] ; Component.get_gameObject
+00290320      local.get [5]
+00290322      i32.const [0]
+00290324      i32.ne []
+00290325      i32.const [0]
+00290327      call [949] ; GameObject.SetActive
+0029032a      block [-64]
+0029032c        block [-64]
+0029032e          local.get [2]
+00290330          i32.load [2, 12]
+00290333          local.set [3]
+00290335          local.get [3]
+00290337          i32.load [2, 12]
+0029033a          local.get [10]
+0029033c          i32.le_s []
+0029033d          if [-64]
+0029033f            local.get [3]
+00290341            i32.load [2, 16]
+00290344            br_if [2]
+00290346            local.get [4]
+00290348            i32.load [2, 176]
+0029034c            i32.const [0]
+0029034e            call [2021] ; UnityEventBase.RemoveAllListeners
+00290351            i32.const [3927888]
+00290356            i32.load [2, 0]
+00290359            call [903] ; 
+0029035c            local.set [3]
+0029035e            local.get [3]
+00290360            local.get [2]
+00290362            i32.const [4030864] ; METHOD ~iytNR.bTSZ|o
+00290367            i32.load [2, 0]
+0029036a            i32.const [0]
+0029036c            call [1002] ; Action..ctor
+0029036f            local.get [4]
+00290371            local.get [3]
+00290373            i32.const [0]
+00290375            call [1121] ; UIExtension.AddClick
+00290378            local.get [2]
+0029037a            i32.load [2, 8]
+0029037d            i32.const [0]
+0029037f            i32.const [0]
+00290381            call [1145] ; Transform.GetChild
+00290384            i32.const [2]
+00290386            i32.const [0]
+00290388            call [1145] ; Transform.GetChild
+0029038b            local.set [2]
+0029038d            local.get [2]
+0029038f            i32.const [0]
+00290391            call [943] ; Component.get_gameObject
+00290394            i32.const [1]
+00290396            i32.const [0]
+00290398            call [949] ; GameObject.SetActive
+0029039b            local.get [2]
+0029039d            i32.const [3993068]
+002903a2            i32.load [2, 0]
+002903a5            call [1010] ; 
+002903a8            local.set [2]
+002903aa            i32.const [3912144]
+002903af            i32.load [2, 0]
+002903b2            local.set [4]
+002903b4            i32.const [3940520]
+002903b9            i32.load [2, 0]
+002903bc            call [901] ; 
+002903bf            local.get [4]
+002903c1            i32.const [0]
+002903c3            call [912] ; Type.GetTypeFromHandle
+002903c6            local.set [4]
+002903c8            local.get [6]
+002903ca            local.get [0]
+002903cc            i32.load [2, 40]
+002903cf            i32.store [2, 12]
+002903d2            i32.const [3931300]
+002903d7            i32.load [2, 0]
+002903da            local.get [6]
+002903dc            i32.const [12]
+002903de            i32.add []
+002903df            call [910] ; 
+002903e2            local.set [3]
+002903e4            i32.const [3931476]
+002903e9            i32.load [2, 0]
+002903ec            call [901] ; 
+002903ef            local.get [2]
+002903f1            local.get [4]
+002903f3            local.get [3]
+002903f5            i32.const [0]
+002903f7            call [6112] ; Enum.GetName
+002903fa            i32.const [0]
+002903fc            call [3395] ; Canvas.set_sortingLayerName
+002903ff            br [2]
+00290401          end []
+00290402        end []
+00290403        local.get [1]
+00290405        i32.eqz []
+00290406        br_if [0]
+00290408        i32.const [3927888]
+0029040d        i32.load [2, 0]
+00290410        call [903] ; 
+00290413        local.set [3]
+00290415        local.get [3]
+00290417        local.get [2]
+00290419        i32.const [4030860] ; METHOD ~iytNR.P{TgyOz
+0029041e        i32.load [2, 0]
+00290421        i32.const [0]
+00290423        call [1002] ; Action..ctor
+00290426        local.get [4]
+00290428        local.get [3]
+0029042a        i32.const [0]
+0029042c        call [1121] ; UIExtension.AddClick
+0029042f      end []
+00290430      local.get [7]
+00290432      i32.const [1]
+00290434      i32.add []
+00290435      local.set [7]
+00290437      br [1]
+00290439    end []
+0029043a  end []
+0029043b  local.get [6]
+0029043d  i32.const [16]
+0029043f  i32.add []
+00290440  global.set [0]
+00290442  end []

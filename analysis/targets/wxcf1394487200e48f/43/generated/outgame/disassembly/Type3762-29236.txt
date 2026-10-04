@@ -1,0 +1,27 @@
+; Original class: LoginTransmitter
+; Type3762.¤H»e; wasmcode function 4956; offset=1712383 size=64
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+001a2100  i32.const [4987950]
+001a2105  i32.load8_u [0, 0]
+001a2108  i32.eqz []
+001a2109  if [-64]
+001a210b    i32.const [3938000]
+001a2110    call [900] ; 
+001a2113    i32.const [4987950]
+001a2118    i32.const [1]
+001a211a    i32.store8 [0, 0]
+001a211d  end []
+001a211e  i32.const [3938000]
+001a2123  i32.load [2, 0]
+001a2126  call [903] ; 
+001a2129  local.set [2]
+001a212b  local.get [2]
+001a212d  local.get [1]
+001a212f  i32.store [2, 8]
+001a2132  local.get [0]
+001a2134  i32.const [12]
+001a2136  local.get [2]
+001a2138  local.get [2]
+001a213a  call [2010] ; BaseHttpNetTransmitter.Send
+001a213d  drop []
+001a213e  end []

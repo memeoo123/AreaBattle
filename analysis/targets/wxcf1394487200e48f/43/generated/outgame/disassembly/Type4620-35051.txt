@@ -1,0 +1,11 @@
+; Original class: GameStatisticsControl
+; Type4620.GetEventCount; wasmcode function 4415; offset=1464195 size=17
+; signature={'args': [127, 127, 127, 127], 'returns': [126]}; localGroups=[]
+00165784  local.get [0]
+00165786  i32.load [2, 8]
+00165789  local.get [1]
+0016578b  local.get [2]
+0016578d  local.get [1]
+0016578f  call [12106] ; GameStatisticsManager.GetEventStatistics
+00165792  return []
+00165793  end []

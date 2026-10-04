@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "time-refresh-duration-boundary-and-double-countdown",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-midnight-is-not-duration-and-hour-rolls-back",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-scaled-single-pass-release-clock-and-nan",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-group-merge-reference-keys-and-existing-v2-countdown-quirk",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v2-order-empty-payload-and-dictionary-gated-countdown",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v1-removal-prunes-only-already-null-row",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-v2-removal-whole-key-ignores-v1-and-countdowns",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-live-callback-mutation-and-exception-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-live-list-and-dictionary-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "time-refresh-null-keyed-callback-and-live-clear-failures",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Ten original refresh scheduling/V1/V2 mutation cases. Native15 independently verifies actual Unity Update/offnet readiness/automatic cross-day/compressed file restart and scaled cleanup. SDK inputs controlled; production Main/account/platform/Player remain pending."
+}

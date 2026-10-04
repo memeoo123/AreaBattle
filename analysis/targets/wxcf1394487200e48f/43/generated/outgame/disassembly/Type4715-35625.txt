@@ -1,0 +1,49 @@
+; Original class: AchievementSaveData
+; Type4715..ctor; wasmcode function 13385; offset=6482518 size=146
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0062ea57  i32.const [5001298]
+0062ea5c  i32.load8_u [0, 0]
+0062ea5f  i32.eqz []
+0062ea60  if [-64]
+0062ea62    i32.const [3931744]
+0062ea67    call [900] ; 
+0062ea6a    i32.const [3974432]
+0062ea6f    call [900] ; 
+0062ea72    i32.const [3974512]
+0062ea77    call [900] ; 
+0062ea7a    i32.const [3923380]
+0062ea7f    call [900] ; 
+0062ea82    i32.const [3923384]
+0062ea87    call [900] ; 
+0062ea8a    i32.const [5001298]
+0062ea8f    i32.const [1]
+0062ea91    i32.store8 [0, 0]
+0062ea94  end []
+0062ea95  local.get [0]
+0062ea97  i32.const [3931744]
+0062ea9c  i32.load [2, 0]
+0062ea9f  call [903] ; 
+0062eaa2  i32.store [2, 8]
+0062eaa5  i32.const [3923380]
+0062eaaa  i32.load [2, 0]
+0062eaad  call [903] ; 
+0062eab0  local.set [1]
+0062eab2  local.get [1]
+0062eab4  i32.const [3974432]
+0062eab9  i32.load [2, 0]
+0062eabc  call [944] ; 
+0062eabf  local.get [0]
+0062eac1  local.get [1]
+0062eac3  i32.store [2, 12]
+0062eac6  i32.const [3923384]
+0062eacb  i32.load [2, 0]
+0062eace  call [903] ; 
+0062ead1  local.set [1]
+0062ead3  local.get [1]
+0062ead5  i32.const [3974512]
+0062eada  i32.load [2, 0]
+0062eadd  call [944] ; 
+0062eae0  local.get [0]
+0062eae2  local.get [1]
+0062eae4  i32.store [2, 16]
+0062eae7  end []

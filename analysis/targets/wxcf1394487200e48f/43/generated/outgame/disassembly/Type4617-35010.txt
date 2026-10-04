@@ -1,0 +1,37 @@
+; Original class: GameStatisticsManager
+; Type4617.UpdateDataCallBack; wasmcode function 19541; offset=8784262 size=89
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00860987  i32.const [5001607]
+0086098c  i32.load8_u [0, 0]
+0086098f  i32.eqz []
+00860990  if [-64]
+00860992    i32.const [4049076] ; STRING "CommonModule_StatisticsData_Refresh"
+00860997    call [900] ; 
+0086099a    i32.const [5001607]
+0086099f    i32.const [1]
+008609a1    i32.store8 [0, 0]
+008609a4  end []
+008609a5  local.get [0]
+008609a7  i32.load [2, 28]
+008609aa  local.set [0]
+008609ac  local.get [0]
+008609ae  local.set [2]
+008609b0  local.get [0]
+008609b2  i32.load [2, 0]
+008609b5  local.set [0]
+008609b7  local.get [2]
+008609b9  local.get [1]
+008609bb  local.get [0]
+008609bd  i32.const [48]
+008609bf  i32.add []
+008609c0  i32.load [2, 192]
+008609c4  local.get [0]
+008609c6  i32.load [2, 236]
+008609ca  global.set [3]
+008609cc  global.get [3]
+008609ce  call_indirect [2, 0]
+008609d1  i32.const [4049076] ; STRING "CommonModule_StatisticsData_Refresh"
+008609d6  i32.load [2, 0]
+008609d9  i32.const [0]
+008609db  call [3999] ; CommonMsgDispatcher.SendMessage
+008609de  end []

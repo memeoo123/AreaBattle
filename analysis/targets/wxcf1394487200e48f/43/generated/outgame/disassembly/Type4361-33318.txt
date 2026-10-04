@@ -1,0 +1,40 @@
+; Original class: SevendayAccPreviewItem
+; Type4361.~[evr; wasmcode function 10451; offset=5098973 size=92
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+004dcdde  i32.const [5008936]
+004dcde3  i32.load8_u [0, 0]
+004dcde6  i32.eqz []
+004dcde7  if [-64]
+004dcde9    i32.const [4063596] ; STRING "Node"
+004dcdee    call [900] ; 
+004dcdf1    i32.const [5008936]
+004dcdf6    i32.const [1]
+004dcdf8    i32.store8 [0, 0]
+004dcdfb  end []
+004dcdfc  block [-64]
+004dcdfe    local.get [1]
+004dce00    local.get [0]
+004dce02    i32.load [2, 60]
+004dce05    i32.const [0]
+004dce07    call [1115] ; Object.get_name
+004dce0a    i32.const [0]
+004dce0c    call [1019] ; String.Equals
+004dce0f    br_if [0]
+004dce11    local.get [1]
+004dce13    local.get [0]
+004dce15    i32.load [2, 64]
+004dce18    i32.const [0]
+004dce1a    call [1115] ; Object.get_name
+004dce1d    i32.const [0]
+004dce1f    call [1237] ; String.Contains
+004dce22    br_if [0]
+004dce24    local.get [1]
+004dce26    i32.const [4063596] ; STRING "Node"
+004dce2b    i32.load [2, 0]
+004dce2e    i32.const [0]
+004dce30    call [1237] ; String.Contains
+004dce33    return []
+004dce34  end []
+004dce35  i32.const [1]
+004dce37  return []
+004dce38  end []

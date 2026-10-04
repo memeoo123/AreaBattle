@@ -1,0 +1,46 @@
+; Original class: UIExtension
+; Type2918.AddClick; wasmcode function 1121; offset=402975 size=125
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00062620  i32.const [4989415]
+00062625  i32.load8_u [0, 0]
+00062628  i32.eqz []
+00062629  if [-64]
+0006262b    i32.const [4031216] ; METHOD ]©AµhF.¾PJ«ª
+00062630    call [900] ; 
+00062633    i32.const [3949152]
+00062638    call [900] ; 
+0006263b    i32.const [3940924]
+00062640    call [900] ; 
+00062643    i32.const [4989415]
+00062648    i32.const [1]
+0006264a    i32.store8 [0, 0]
+0006264d  end []
+0006264e  i32.const [3949152]
+00062653  i32.load [2, 0]
+00062656  call [903] ; 
+00062659  local.set [2]
+0006265b  local.get [2]
+0006265d  local.get [1]
+0006265f  i32.store [2, 8]
+00062662  local.get [2]
+00062664  local.get [0]
+00062666  i32.store [2, 12]
+00062669  local.get [2]
+0006266b  i32.load [2, 12]
+0006266e  i32.load [2, 176]
+00062672  local.set [0]
+00062674  i32.const [3940924]
+00062679  i32.load [2, 0]
+0006267c  call [903] ; 
+0006267f  local.set [1]
+00062681  local.get [1]
+00062683  local.get [2]
+00062685  i32.const [4031216] ; METHOD ]©AµhF.¾PJ«ª
+0006268a  i32.load [2, 0]
+0006268d  i32.const [0]
+0006268f  call [1153] ; UnityAction..ctor
+00062692  local.get [0]
+00062694  local.get [1]
+00062696  i32.const [0]
+00062698  call [1347] ; UnityEvent.AddListener
+0006269b  end []

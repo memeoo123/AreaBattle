@@ -1,0 +1,54 @@
+; Original class: ActivityControl
+; Type4637.Th[g^U; wasmcode function 13356; offset=6470407 size=135
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0062bb08  global.get [0]
+0062bb0a  i32.const [16]
+0062bb0c  i32.sub []
+0062bb0d  local.set [0]
+0062bb0f  local.get [0]
+0062bb11  global.set [0]
+0062bb13  i32.const [5001736]
+0062bb18  i32.load8_u [0, 0]
+0062bb1b  i32.eqz []
+0062bb1c  if [-64]
+0062bb1e    i32.const [3934404]
+0062bb23    call [900] ; 
+0062bb26    i32.const [3926996]
+0062bb2b    call [900] ; 
+0062bb2e    i32.const [4048948] ; STRING "CommonActivity_Close"
+0062bb33    call [900] ; 
+0062bb36    i32.const [5001736]
+0062bb3b    i32.const [1]
+0062bb3d    i32.store8 [0, 0]
+0062bb40  end []
+0062bb41  i32.const [3926996]
+0062bb46  i32.load [2, 0]
+0062bb49  i32.const [1]
+0062bb4b  call [909] ; 
+0062bb4e  local.set [2]
+0062bb50  local.get [0]
+0062bb52  local.get [1]
+0062bb54  i32.store [2, 12]
+0062bb57  i32.const [3934404]
+0062bb5c  i32.load [2, 0]
+0062bb5f  local.get [0]
+0062bb61  i32.const [12]
+0062bb63  i32.add []
+0062bb64  call [910] ; 
+0062bb67  local.set [1]
+0062bb69  local.get [2]
+0062bb6b  local.get [1]
+0062bb6d  call [905] ; 
+0062bb70  local.get [2]
+0062bb72  local.get [1]
+0062bb74  i32.store [2, 16]
+0062bb77  i32.const [4048948] ; STRING "CommonActivity_Close"
+0062bb7c  i32.load [2, 0]
+0062bb7f  local.get [2]
+0062bb81  i32.const [0]
+0062bb83  call [1738] ; CommonMsgDispatcher.SendMessage
+0062bb86  local.get [0]
+0062bb88  i32.const [16]
+0062bb8a  i32.add []
+0062bb8b  global.set [0]
+0062bb8d  end []

@@ -9,7 +9,7 @@ namespace AreaBattle
         void OnDispose();
     }
     // MineGameLogicModule26939..26946. Live indexed initialization, enumerated update/disposal.
-    public sealed class OutgameLogicModule:IOutgameStartupModule
+    public sealed class OutgameLogicModule:IOutgameFrameModule
     {
         List<IOutgameLogicControl> controls;
         readonly Action<bool> setAutoRegister;readonly Action initializeDataPool,releaseDataPool;
@@ -35,6 +35,7 @@ namespace AreaBattle
         public void Update(float deltaTime,float unscaledDeltaTime)
         {foreach(var control in controls)control.Updata(deltaTime,unscaledDeltaTime);}
         public void Shutdown(){releaseDataPool();foreach(var control in controls)control.OnDispose();controls.Clear();}
+        void IOutgameFrameModule.Initialize(object[] args)=>Initialize();
         public void Start(){}
     }
 }

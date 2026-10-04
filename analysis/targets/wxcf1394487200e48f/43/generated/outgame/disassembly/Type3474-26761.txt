@@ -1,0 +1,50 @@
+; Original class: BaseEffect
+; Type3474.getEffectFolder; wasmcode function 20503; offset=9210578 size=125
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+008c8ad3  i32.const [4989004]
+008c8ad8  i32.load8_u [0, 0]
+008c8adb  i32.eqz []
+008c8adc  if [-64]
+008c8ade    i32.const [3939452]
+008c8ae3    call [900] ; 
+008c8ae6    i32.const [4068608] ; STRING "Scene/"
+008c8aeb    call [900] ; 
+008c8aee    i32.const [4054408] ; STRING "Fly/"
+008c8af3    call [900] ; 
+008c8af6    i32.const [4060784] ; STRING "Line/"
+008c8afb    call [900] ; 
+008c8afe    i32.const [4075860] ; STRING "UI/"
+008c8b03    call [900] ; 
+008c8b06    i32.const [4989004]
+008c8b0b    i32.const [1]
+008c8b0d    i32.store8 [0, 0]
+008c8b10  end []
+008c8b11  block [-64]
+008c8b13    block [-64]
+008c8b15      local.get [0]
+008c8b17      i32.load [2, 12]
+008c8b1a      i32.load [2, 12]
+008c8b1d      local.set [0]
+008c8b1f      local.get [0]
+008c8b21      i32.const [4]
+008c8b23      i32.ge_u []
+008c8b24      if [-64]
+008c8b26        i32.const [3939452]
+008c8b2b        i32.load [2, 0]
+008c8b2e        i32.load [2, 92]
+008c8b31        local.set [0]
+008c8b33        br [2]
+008c8b35      end []
+008c8b36    end []
+008c8b37    local.get [0]
+008c8b39    i32.const [2]
+008c8b3b    i32.shl []
+008c8b3c    i32.const [1688124]
+008c8b41    i32.add []
+008c8b42    i32.load [2, 0]
+008c8b45    local.set [0]
+008c8b47  end []
+008c8b48  local.get [0]
+008c8b4a  i32.load [2, 0]
+008c8b4d  return []
+008c8b4e  end []

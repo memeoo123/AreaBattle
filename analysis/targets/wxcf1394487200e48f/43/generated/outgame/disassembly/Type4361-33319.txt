@@ -1,0 +1,33 @@
+; Original class: SevendayAccPreviewItem
+; Type4361.Awake; wasmcode function 16036; offset=7747139 size=88
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00763646  i32.const [5008937]
+0076364b  i32.load8_u [0, 0]
+0076364e  i32.eqz []
+0076364f  if [-64]
+00763651    i32.const [3927888]
+00763656    call [900] ; 
+00763659    i32.const [4013820] ; METHOD SevendayAccPreviewItem.qyoahL
+0076365e    call [900] ; 
+00763661    i32.const [5008937]
+00763666    i32.const [1]
+00763668    i32.store8 [0, 0]
+0076366b  end []
+0076366c  local.get [0]
+0076366e  i32.load [2, 12]
+00763671  local.set [1]
+00763673  i32.const [3927888]
+00763678  i32.load [2, 0]
+0076367b  call [903] ; 
+0076367e  local.set [2]
+00763680  local.get [2]
+00763682  local.get [0]
+00763684  i32.const [4013820] ; METHOD SevendayAccPreviewItem.qyoahL
+00763689  i32.load [2, 0]
+0076368c  i32.const [0]
+0076368e  call [1002] ; Action..ctor
+00763691  local.get [1]
+00763693  local.get [2]
+00763695  i32.const [0]
+00763697  call [1723] ; UIExtension.AddClick
+0076369a  end []

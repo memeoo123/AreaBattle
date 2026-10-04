@@ -10,6 +10,7 @@ namespace AreaBattle
             float t=time/duration;
             switch(ease)
             {
+                case 3:return (float)Math.Sin((double)(t*1.5707963705062866f)); // Source EaseManager68862 OutSine.
                 case 6:return -t*(t-2f);
                 case 20:return -(Mathf.Sqrt(1f-t*t)-1f);
                 case 21:t=t-1f;return Mathf.Sqrt(1f-t*t);

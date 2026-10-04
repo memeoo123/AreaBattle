@@ -1,0 +1,91 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.jqobST; wasmcode function 19536; offset=8782633 size=246
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[(1, 126)]
+0086032c  global.get [0]
+0086032e  i32.const [16]
+00860330  i32.sub []
+00860331  local.set [2]
+00860333  local.get [2]
+00860335  global.set [0]
+00860337  i32.const [5001645]
+0086033c  i32.load8_u [0, 0]
+0086033f  i32.eqz []
+00860340  if [-64]
+00860342    i32.const [3989352]
+00860347    call [900] ; 
+0086034a    i32.const [3932388]
+0086034f    call [900] ; 
+00860352    i32.const [3940184]
+00860357    call [900] ; 
+0086035a    i32.const [5001645]
+0086035f    i32.const [1]
+00860361    i32.store8 [0, 0]
+00860364  end []
+00860365  local.get [0]
+00860367  i32.load [2, 16]
+0086036a  local.get [1]
+0086036c  i64.store [3, 16]
+0086036f  local.get [2]
+00860371  call [1493] ; GameStatisticsControl.get_I
+00860374  i32.const [1]
+00860376  i32.store8 [0, 21]
+00860379  i32.const [3932388]
+0086037e  i32.load [2, 0]
+00860381  call [901] ; 
+00860384  i32.const [10901]
+00860388  i64.const [1]
+0086038a  local.get [2]
+0086038c  call [2087] ; GameStatisticsExpansion.AddEventCount
+0086038f  i32.const [10004]
+00860393  local.get [2]
+00860395  call [3942] ; GameStatisticsExpansion.ResetEventCount
+00860398  i32.const [10005] ; TABLE Time.get_time
+0086039c  local.get [2]
+0086039e  call [3942] ; GameStatisticsExpansion.ResetEventCount
+008603a1  i32.const [10009]
+008603a5  local.get [2]
+008603a7  call [3942] ; GameStatisticsExpansion.ResetEventCount
+008603aa  i32.const [10010] ; TABLE Lang.get_Value
+008603ae  local.get [2]
+008603b0  call [3942] ; GameStatisticsExpansion.ResetEventCount
+008603b3  i32.const [10016] ; TABLE CommonLimitTimeTaskRewardItem.SetData
+008603b7  local.get [2]
+008603b9  call [3942] ; GameStatisticsExpansion.ResetEventCount
+008603bc  i32.const [10801] ; TABLE KeyCollection.CheckVersion
+008603c0  local.get [2]
+008603c2  call [3942] ; GameStatisticsExpansion.ResetEventCount
+008603c5  i32.const [10000]
+008603c9  i32.const [3989352]
+008603ce  i32.load [2, 0]
+008603d1  call [1032] ; 
+008603d4  local.get [2]
+008603d6  call [1568] ; GameStatisticsExpansion.GameValue
+008603d9  local.set [1]
+008603db  local.get [0]
+008603dd  i32.load [2, 16]
+008603e0  i64.load [3, 8]
+008603e3  local.set [3]
+008603e5  i32.const [3940184]
+008603ea  i32.load [2, 0]
+008603ed  call [901] ; 
+008603f0  local.get [2]
+008603f2  local.get [1]
+008603f4  local.get [3]
+008603f6  i64.sub []
+008603f7  i64.const [10000]
+008603fb  i64.mul []
+008603fc  i64.store [3, 8]
+008603ff  i32.const [10900]
+00860403  local.get [2]
+00860405  i64.load [3, 8]
+00860408  i64.const [864000000000]
+0086040f  i64.div_s []
+00860410  i32.wrap_i64 []
+00860411  i64.extend_i32_s []
+00860412  local.get [2]
+00860414  call [2401] ; GameStatisticsExpansion.SetEventCount
+00860417  local.get [2]
+00860419  i32.const [16]
+0086041b  i32.add []
+0086041c  global.set [0]
+0086041e  end []

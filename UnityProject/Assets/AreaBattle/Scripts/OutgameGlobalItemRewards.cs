@@ -5,6 +5,7 @@ namespace AreaBattle
 {
     public interface IOutgameGlobalItemRewardHost
     {
+        void Update();
         IOutgameItemEntity GetItem(GameItemConfig config);
         void AddRewards(List<OutgameItemReward> rewards);
         void ExpendReward(List<OutgameItemReward> rewards);

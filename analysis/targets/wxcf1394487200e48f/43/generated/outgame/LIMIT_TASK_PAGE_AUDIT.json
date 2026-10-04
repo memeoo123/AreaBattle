@@ -1,0 +1,121 @@
+{
+  "status": "original-complete-page-native-restart-verified-menu-main-pending",
+  "atUtc": "2026-10-03T11:45:36.628367+00:00",
+  "sourceEvidence": "LIMIT_TASK_PAGE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T11:45:36.628367+00:00",
+    "scope": "Complete original limited-task page over recovered BaseUI and actual activity notifications, native open/claim/preview/close/save/restart",
+    "checksPassed": 1410,
+    "newIntegratedChecks": 9,
+    "targetedChecks": 9,
+    "nativeChecks": 17,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2506,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameLimitTaskPagePlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "CommonLimitTimeTaskUI4310 all15 methods restored with day comparator32896 and TimeUtility32655. New16 normal methods make index6044; evidence31 methods,24 fields,34 decoded usages. Original module namespace/resource path, layer2/open0/close0 and recovered BaseUI loading/close used.",
+      "Awake preview/mode labels/activity/config/buttons/listeners/countdown/lists/report order retained. Selected renderer drives task and accumulator population; day pointer writes lastClickDayId without Dirty. Real task/accumulator activity notifications drive page listeners without test forwarding. Accumulator callback can continue after its page synchronously disposed/rebuilt it; native deferred destruction preserves source behavior.",
+      "Countdown uses actual SevenDay cached interval and live clock, Chinese day+hour or hour+minute+second formatting, unchecked narrowing and original repeated end message without auto-close. Source malformed message guards and otherwise-unused accumulator-mode lookup preserve partial failure. Preview world position/list/frame refresh composed.",
+      "Dispose clears BaseUI lifetime, removes four page listeners, deselects days and disposes accumulator values. Providers/dictionary/preview references remain as source. Edit fixture defers root destruction through disposal; native test verifies actual two-frame opening and frame-separated async close/main handle release.",
+      "Integrated1410 including9 new passes. Native17 verifies original bootstrap/popup, actual day/task/accumulator pointers, page-owned refresh, real preview await, synchronous accumulator rebuild, duplicate guard, UpdateManager hiding, automatic activity save, ended-but-open page, close callback/registry/hide/dispose/release order, and independent file restart/reopen. Additional claimed tasks are seeded; inventory persistence and full activity playthrough not inferred.",
+      "Final logs contain zero compiler errors. Integrated retains32 existing ShouldRunBehaviour assertions and one Curl42; native one UnityEditor.Search startup indexing ArgumentOutOfRangeException and one Curl42. All recorded inputs match isolated project.",
+      "Resource acquisition/report/localization/sprite/detail/currency animation/skin UI hosts remain explicit fixture boundaries. Production menu/Main/account/platform/all business and new Player/original audiovisual acceptance not claimed. Lifecycle19/38 unchanged."
+    ],
+    "notClaimed": "Production menu/Main/account/platform/all business, remaining19 controllers, inventory persistence, new Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameLimitTaskPage.cs",
+    "Scripts/OutgameLimitTaskListBinding.cs",
+    "Scripts/OutgameLimitTaskDayListBinding.cs",
+    "Editor/OutgameLimitTaskPageValidation.cs",
+    "Editor/OutgameLimitTaskPagePlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "limit-task-page-registry-load-original-outlets-and-day-selection-populates-page",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-day-pointer-writes-last-click-without-dirty-and-rebuilds",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-actual-task-claim-auto-refreshes-accumulator-through-page-listeners",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-countdown-source-format-and-end-message-does-not-close",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-message-argument-guards-and-source-invalid-mode-lookup",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-extension-refresh-ignores-payload-and-preview-uses-original-position",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-accumulator-render-failure-keeps-untracked-clone-and-cleared-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-source-disposal-removes-page-listeners-retains-provider-dictionary-preview",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-page-report-failure-retains-initialized-prefix-and-close-hook-failure-stops-button-message",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Original UI bootstrap and composed CommonLimitTimeTaskUI, actual module load/close, day/task/accumulator/preview pointers, activity notifications without manual forwarding, automatic activity save and independent disk restart. Resource/report/localization/sprite/currency/skin/detail hosts remain explicit fixtures; production menu/Main/platform/Player/audiovisual acceptance pending.",
+    "requestFrame": 1,
+    "openFrame": 4,
+    "hideFrame": 18,
+    "closeFrame": 19,
+    "checks": [
+      "Page registry and resource handle precede original two-frame load",
+      "Native module load initializes original popup, seven-day list and report before completed open",
+      "Actual day pointer selects day2 and refreshes complete page without fixture forwarding",
+      "Actual task claim drives page's own activity listeners and accumulator rebuild",
+      "Unready accumulator opens complete page preview before actual frame await",
+      "Original Node selection retains frame-built reward preview",
+      "Actual accumulator claim synchronously rebuilds its own page; source handler completes after reference disposal",
+      "Newly rebuilt claimed accumulator prevents duplicate reward",
+      "Native selection update hides preview and activity manager automatically saves both claims",
+      "Source end message leaves original page open",
+      "Close callback precedes registry removal",
+      "Original close button removes registered owner and starts BaseUI async close",
+      "Async close marks disposed and hides before page business cleanup/handle release",
+      "CloseUI follows root destruction and main resource release",
+      "Frame-separated close retains source collections and clears day selection",
+      "Independent file restart and complete page reopen restore task/accumulator claims and derived liveness",
+      "Reopened claimed accumulator prevents new award with independently reset inventory host"
+    ]
+  },
+  "remaining": "Restore production seven-day menu entry/red/countdown subscriptions, then continue Task/Achievement and full Main/account/SDK/HTTP/scene assembly, remaining19 controllers/all business/rewards/return, final Player and original audiovisual acceptance."
+}

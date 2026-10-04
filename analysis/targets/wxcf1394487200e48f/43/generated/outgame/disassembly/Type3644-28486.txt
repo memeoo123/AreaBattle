@@ -1,0 +1,21 @@
+; Original class: WebRequestManager
+; Type3644.get_WaitingTaskCount; wasmcode1 function 39004; offset=14556736 size=52
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00de1e41  i32.const [4987569]
+00de1e46  i32.load8_u [0, 0]
+00de1e49  i32.eqz []
+00de1e4a  if [-64]
+00de1e4c    i32.const [3988608]
+00de1e51    i32.const [1605]
+00de1e54    call_indirect [0, 0]
+00de1e57    i32.const [4987569]
+00de1e5c    i32.const [1]
+00de1e5e    i32.store8 [0, 0]
+00de1e61  end []
+00de1e62  local.get [0]
+00de1e64  i32.load [2, 12]
+00de1e67  i32.const [3988608]
+00de1e6c  i32.load [2, 0]
+00de1e6f  call [7387] ; 
+00de1e72  return []
+00de1e73  end []

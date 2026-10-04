@@ -1,0 +1,46 @@
+; Original class: DynamicList
+; Type3868.jSjcq; wasmcode function 7942; offset=3789793 size=93
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0039d3e4  i32.const [0]
+0039d3e6  local.set [1]
+0039d3e8  loop [-64]
+0039d3ea    local.get [0]
+0039d3ec    i32.const [0]
+0039d3ee    call [977] ; Component.get_transform
+0039d3f1    i32.const [0]
+0039d3f3    call [1505] ; Transform.get_childCount
+0039d3f6    local.get [1]
+0039d3f8    i32.gt_s []
+0039d3f9    if [-64]
+0039d3fb      local.get [0]
+0039d3fd      i32.const [0]
+0039d3ff      call [977] ; Component.get_transform
+0039d402      local.get [1]
+0039d404      i32.const [0]
+0039d406      call [1145] ; Transform.GetChild
+0039d409      local.set [2]
+0039d40b      local.get [2]
+0039d40d      i32.const [0]
+0039d40f      call [1115] ; Object.get_name
+0039d412      local.get [0]
+0039d414      i32.load [2, 32]
+0039d417      i32.const [0]
+0039d419      call [1115] ; Object.get_name
+0039d41c      i32.const [0]
+0039d41e      call [1019] ; String.Equals
+0039d421      if [-64]
+0039d423        local.get [2]
+0039d425        i32.const [0]
+0039d427        call [943] ; Component.get_gameObject
+0039d42a        i32.const [0]
+0039d42c        i32.const [0]
+0039d42e        call [949] ; GameObject.SetActive
+0039d431      end []
+0039d432      local.get [1]
+0039d434      i32.const [1]
+0039d436      i32.add []
+0039d437      local.set [1]
+0039d439      br [1]
+0039d43b    end []
+0039d43c  end []
+0039d43d  end []

@@ -1,0 +1,210 @@
+; Original class: WebRequestManager
+; Type3644.£ySv; wasmcode function 6766; offset=2554292 size=589
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+0026f9b7  global.get [0]
+0026f9b9  i32.const [16]
+0026f9bb  i32.sub []
+0026f9bc  local.set [4]
+0026f9be  local.get [4]
+0026f9c0  global.set [0]
+0026f9c2  i32.const [4987556]
+0026f9c7  i32.load8_u [0, 0]
+0026f9ca  i32.eqz []
+0026f9cb  if [-64]
+0026f9cd    i32.const [3915868]
+0026f9d2    call [900] ; 
+0026f9d5    i32.const [3916080]
+0026f9da    call [900] ; 
+0026f9dd    i32.const [3916076]
+0026f9e2    call [900] ; 
+0026f9e5    i32.const [3929208]
+0026f9ea    call [900] ; 
+0026f9ed    i32.const [3934404]
+0026f9f2    call [900] ; 
+0026f9f5    i32.const [3926996]
+0026f9fa    call [900] ; 
+0026f9fd    i32.const [3943796]
+0026fa02    call [900] ; 
+0026fa05    i32.const [3988568]
+0026fa0a    call [900] ; 
+0026fa0d    i32.const [3988596]
+0026fa12    call [900] ; 
+0026fa15    i32.const [3988604]
+0026fa1a    call [900] ; 
+0026fa1d    i32.const [4022372] ; METHOD WebRequestManager.A£¨ª
+0026fa22    call [900] ; 
+0026fa25    i32.const [4022376] ; METHOD WebRequestManager.¨°Umt
+0026fa2a    call [900] ; 
+0026fa2d    i32.const [4022368] ; METHOD WebRequestManager.aQKA`£
+0026fa32    call [900] ; 
+0026fa35    i32.const [4103956] ; STRING "当前任务池最大任务代理数量为[{0}],已达到最大上线"
+0026fa3a    call [900] ; 
+0026fa3d    i32.const [4987556]
+0026fa42    i32.const [1]
+0026fa44    i32.store8 [0, 0]
+0026fa47  end []
+0026fa48  block [-64]
+0026fa4a    block [-64]
+0026fa4c      local.get [0]
+0026fa4e      i32.load [2, 12]
+0026fa51      i32.const [3988604]
+0026fa56      i32.load [2, 0]
+0026fa59      call [5560] ; 
+0026fa5c      local.set [2]
+0026fa5e      i32.const [3988596]
+0026fa63      i32.load [2, 0]
+0026fa66      drop []
+0026fa67      local.get [2]
+0026fa69      local.get [0]
+0026fa6b      i32.load [2, 12]
+0026fa6e      i32.load [2, 20]
+0026fa71      i32.ge_s []
+0026fa72      if [-64]
+0026fa74        i32.const [3926996]
+0026fa79        i32.load [2, 0]
+0026fa7c        i32.const [1]
+0026fa7e        call [909] ; 
+0026fa81        local.set [1]
+0026fa83        i32.const [3988596]
+0026fa88        i32.load [2, 0]
+0026fa8b        drop []
+0026fa8c        local.get [4]
+0026fa8e        local.get [0]
+0026fa90        i32.load [2, 12]
+0026fa93        i32.load [2, 20]
+0026fa96        i32.store [2, 12]
+0026fa99        i32.const [3934404]
+0026fa9e        i32.load [2, 0]
+0026faa1        local.get [4]
+0026faa3        i32.const [12]
+0026faa5        i32.add []
+0026faa6        call [910] ; 
+0026faa9        local.set [0]
+0026faab        i32.const [4103956] ; STRING "当前任务池最大任务代理数量为[{0}],已达到最大上线"
+0026fab0        i32.load [2, 0]
+0026fab3        local.get [0]
+0026fab5        i32.const [0]
+0026fab7        call [1015] ; String.Format
+0026faba        local.set [0]
+0026fabc        local.get [1]
+0026fabe        local.get [0]
+0026fac0        call [905] ; 
+0026fac3        local.get [1]
+0026fac5        local.get [0]
+0026fac7        i32.store [2, 16]
+0026faca        i32.const [3929208]
+0026facf        i32.load [2, 0]
+0026fad2        call [901] ; 
+0026fad5        local.get [1]
+0026fad7        i32.const [0]
+0026fad9        call [1541] ; CLog.dZz£
+0026fadc        br [2]
+0026fade      end []
+0026fadf    end []
+0026fae0    i32.const [3943796]
+0026fae5    i32.load [2, 0]
+0026fae8    call [903] ; 
+0026faeb    local.set [2]
+0026faed    local.get [2]
+0026faef    local.get [1]
+0026faf1    local.get [0]
+0026faf3    call [9876] ; Pu¯z..ctor
+0026faf6    local.get [2]
+0026faf8    i32.load [2, 20]
+0026fafb    local.set [1]
+0026fafd    i32.const [3915868]
+0026fb02    i32.load [2, 0]
+0026fb05    call [903] ; 
+0026fb08    local.set [3]
+0026fb0a    local.get [3]
+0026fb0c    local.get [0]
+0026fb0e    i32.const [4022368] ; METHOD WebRequestManager.aQKA`£
+0026fb13    i32.load [2, 0]
+0026fb16    i32.const [0]
+0026fb18    call [1004] ; 
+0026fb1b    local.get [1]
+0026fb1d    local.get [3]
+0026fb1f    i32.const [0]
+0026fb21    call [1031] ; Delegate.Combine
+0026fb24    local.set [1]
+0026fb26    local.get [2]
+0026fb28    local.get [1]
+0026fb2a    i32.const [3915868]
+0026fb2f    i32.load [2, 0]
+0026fb32    call [938] ; 
+0026fb35    i32.store [2, 20]
+0026fb38    local.get [1]
+0026fb3a    i32.const [3915868]
+0026fb3f    i32.load [2, 0]
+0026fb42    call [938] ; 
+0026fb45    drop []
+0026fb46    local.get [2]
+0026fb48    i32.load [2, 24]
+0026fb4b    local.set [1]
+0026fb4d    i32.const [3916076]
+0026fb52    i32.load [2, 0]
+0026fb55    call [903] ; 
+0026fb58    local.set [3]
+0026fb5a    local.get [3]
+0026fb5c    local.get [0]
+0026fb5e    i32.const [4022372] ; METHOD WebRequestManager.A£¨ª
+0026fb63    i32.load [2, 0]
+0026fb66    i32.const [0]
+0026fb68    call [1113] ; 
+0026fb6b    local.get [1]
+0026fb6d    local.get [3]
+0026fb6f    i32.const [0]
+0026fb71    call [1031] ; Delegate.Combine
+0026fb74    local.set [1]
+0026fb76    local.get [2]
+0026fb78    local.get [1]
+0026fb7a    i32.const [3916076]
+0026fb7f    i32.load [2, 0]
+0026fb82    call [938] ; 
+0026fb85    i32.store [2, 24]
+0026fb88    local.get [1]
+0026fb8a    i32.const [3916076]
+0026fb8f    i32.load [2, 0]
+0026fb92    call [938] ; 
+0026fb95    drop []
+0026fb96    local.get [2]
+0026fb98    i32.load [2, 28]
+0026fb9b    local.set [1]
+0026fb9d    i32.const [3916080]
+0026fba2    i32.load [2, 0]
+0026fba5    call [903] ; 
+0026fba8    local.set [3]
+0026fbaa    local.get [3]
+0026fbac    local.get [0]
+0026fbae    i32.const [4022376] ; METHOD WebRequestManager.¨°Umt
+0026fbb3    i32.load [2, 0]
+0026fbb6    i32.const [0]
+0026fbb8    call [1113] ; 
+0026fbbb    local.get [1]
+0026fbbd    local.get [3]
+0026fbbf    i32.const [0]
+0026fbc1    call [1031] ; Delegate.Combine
+0026fbc4    local.set [1]
+0026fbc6    local.get [2]
+0026fbc8    local.get [1]
+0026fbca    i32.const [3916080]
+0026fbcf    i32.load [2, 0]
+0026fbd2    call [938] ; 
+0026fbd5    i32.store [2, 28]
+0026fbd8    local.get [1]
+0026fbda    i32.const [3916080]
+0026fbdf    i32.load [2, 0]
+0026fbe2    call [938] ; 
+0026fbe5    drop []
+0026fbe6    local.get [0]
+0026fbe8    i32.load [2, 12]
+0026fbeb    local.get [2]
+0026fbed    i32.const [3988568]
+0026fbf2    i32.load [2, 0]
+0026fbf5    call [4721] ; 
+0026fbf8  end []
+0026fbf9  local.get [4]
+0026fbfb  i32.const [16]
+0026fbfd  i32.add []
+0026fbfe  global.set [0]
+0026fc00  end []

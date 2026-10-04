@@ -1,0 +1,123 @@
+; Original class: WebRequestManager
+; Type3644.get_Instance; wasmcode function 3484; offset=1086030 size=363
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+00109251  i32.const [4987574]
+00109256  i32.load8_u [0, 0]
+00109259  i32.eqz []
+0010925a  if [-64]
+0010925c    i32.const [4000912]
+00109261    call [900] ; 
+00109264    i32.const [4001164]
+00109269    call [900] ; 
+0010926c    i32.const [3932344]
+00109271    call [900] ; 
+00109274    i32.const [3936516]
+00109279    call [900] ; 
+0010927c    i32.const [3942084]
+00109281    call [900] ; 
+00109284    i32.const [4078736] ; STRING "WebRequestManager"
+00109289    call [900] ; 
+0010928c    i32.const [4987574]
+00109291    i32.const [1]
+00109293    i32.store8 [0, 0]
+00109296  end []
+00109297  i32.const [3942084]
+0010929c  i32.load [2, 0]
+0010929f  i32.load [2, 92]
+001092a2  i32.load [2, 0]
+001092a5  local.set [0]
+001092a7  i32.const [3936516]
+001092ac  i32.load [2, 0]
+001092af  call [901] ; 
+001092b2  local.get [0]
+001092b4  i32.const [0]
+001092b6  i32.const [0]
+001092b8  call [940] ; Object.op_Equality
+001092bb  if [-64]
+001092bd    i32.const [4078736] ; STRING "WebRequestManager"
+001092c2    i32.load [2, 0]
+001092c5    i32.const [0]
+001092c7    call [1757] ; GameObject.Find
+001092ca    local.set [0]
+001092cc    i32.const [3936516]
+001092d1    i32.load [2, 0]
+001092d4    call [901] ; 
+001092d7    local.get [0]
+001092d9    i32.const [0]
+001092db    i32.const [0]
+001092dd    call [940] ; Object.op_Equality
+001092e0    if [-64]
+001092e2      i32.const [3932344]
+001092e7      i32.load [2, 0]
+001092ea      call [903] ; 
+001092ed      local.set [0]
+001092ef      local.get [0]
+001092f1      i32.const [0]
+001092f3      call [1781] ; GameObject..ctor
+001092f6      local.get [0]
+001092f8      i32.const [4078736] ; STRING "WebRequestManager"
+001092fd      i32.load [2, 0]
+00109300      i32.const [0]
+00109302      call [1375] ; Object.set_name
+00109305    end []
+00109306    local.get [0]
+00109308    i32.const [4001164]
+0010930d    i32.load [2, 0]
+00109310    call [1091] ; 
+00109313    local.set [1]
+00109315    i32.const [3942084]
+0010931a    i32.load [2, 0]
+0010931d    i32.load [2, 92]
+00109320    local.get [1]
+00109322    i32.store [2, 0]
+00109325    i32.const [3942084]
+0010932a    i32.load [2, 0]
+0010932d    i32.load [2, 92]
+00109330    drop []
+00109331    i32.const [3942084]
+00109336    i32.load [2, 0]
+00109339    i32.load [2, 92]
+0010933c    i32.load [2, 0]
+0010933f    local.set [1]
+00109341    i32.const [3936516]
+00109346    i32.load [2, 0]
+00109349    call [901] ; 
+0010934c    local.get [1]
+0010934e    i32.const [0]
+00109350    i32.const [0]
+00109352    call [940] ; Object.op_Equality
+00109355    if [-64]
+00109357      local.get [0]
+00109359      i32.const [4000912]
+0010935e      i32.load [2, 0]
+00109361      call [1094] ; 
+00109364      local.set [1]
+00109366      i32.const [3942084]
+0010936b      i32.load [2, 0]
+0010936e      i32.load [2, 92]
+00109371      local.get [1]
+00109373      i32.store [2, 0]
+00109376      i32.const [3942084]
+0010937b      i32.load [2, 0]
+0010937e      i32.load [2, 92]
+00109381      drop []
+00109382      i32.const [3942084]
+00109387      i32.load [2, 0]
+0010938a      i32.load [2, 92]
+0010938d      i32.load [2, 0]
+00109390      local.get [0]
+00109392      call [9347] ; WebRequestManager.H`¼O
+00109395    end []
+00109396    i32.const [3936516]
+0010939b    i32.load [2, 0]
+0010939e    call [901] ; 
+001093a1    local.get [0]
+001093a3    i32.const [0]
+001093a5    call [1111] ; Object.DontDestroyOnLoad
+001093a8  end []
+001093a9  i32.const [3942084]
+001093ae  i32.load [2, 0]
+001093b1  i32.load [2, 92]
+001093b4  i32.load [2, 0]
+001093b7  return []
+001093b8  end []

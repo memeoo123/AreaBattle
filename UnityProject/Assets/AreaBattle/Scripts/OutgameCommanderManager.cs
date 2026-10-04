@@ -49,6 +49,9 @@ namespace AreaBattle
         public OutgameCommanderState GetCommanderData(int id)=>held.TryGetValue(id,out var state)?state:null;
         public void UnlockCommander(int id)=>GetCommanderData(id).level=1;
         public ICollection<OutgameCommanderState> GetCommanderDatas()=>held.Values;
+        // Original31020 sums every live indexed level with unchecked Int32 arithmetic.
+        public int GetCommanderTotalLv()
+        {int total=0;foreach(var pair in held)total=unchecked(total+pair.Value.level);return total;}
         public void OnRelease(){}
     }
 }

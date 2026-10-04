@@ -1,0 +1,45 @@
+; Original class: ChildTaskActivity
+; Type4676..ctor; wasmcode function 20246; offset=9088183 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008aacb8  i32.const [5001400]
+008aacbd  i32.load8_u [0, 0]
+008aacc0  i32.eqz []
+008aacc1  if [-64]
+008aacc3    i32.const [3956840]
+008aacc8    call [900] ;
+008aaccb    i32.const [3955724]
+008aacd0    call [900] ;
+008aacd3    i32.const [3917504]
+008aacd8    call [900] ;
+008aacdb    i32.const [3917716]
+008aace0    call [900] ;
+008aace3    i32.const [5001400]
+008aace8    i32.const [1]
+008aacea    i32.store8 [0, 0]
+008aaced  end []
+008aacee  i32.const [3917504]
+008aacf3  i32.load [2, 0]
+008aacf6  call [903] ;
+008aacf9  local.set [1]
+008aacfb  local.get [1]
+008aacfd  i32.const [3955724]
+008aad02  i32.load [2, 0]
+008aad05  call [951] ;
+008aad08  local.get [0]
+008aad0a  local.get [1]
+008aad0c  i32.store [2, 80]
+008aad0f  i32.const [3917716]
+008aad14  i32.load [2, 0]
+008aad17  call [903] ;
+008aad1a  local.set [1]
+008aad1c  local.get [1]
+008aad1e  i32.const [3956840]
+008aad23  i32.load [2, 0]
+008aad26  call [951] ;
+008aad29  local.get [0]
+008aad2b  local.get [1]
+008aad2d  i32.store [2, 84]
+008aad30  local.get [0]
+008aad32  i32.const [0]
+008aad34  call [4543] ; ActivityBase..ctor
+008aad37  end []

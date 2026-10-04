@@ -1,0 +1,104 @@
+{
+  "status": "source-assets-and-reward-binding-verified-full-page-main-pending",
+  "atUtc": "2026-10-03T07:05:16.579229+00:00",
+  "sourceEvidence": "GUIDE_BOOK_UI_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T07:05:16.579229+00:00",
+    "scope": "Original GuideBookUI resources and native reward-button binding with actual LocalData/GuideBook persistence",
+    "checksPassed": 1120,
+    "newIntegratedChecks": 7,
+    "targetedChecks": 7,
+    "nativeUguiButtonChecks": true,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "previousNativeEvidence": "item-runtime-native-validation.json and item-profile-native.log:23 checks, previous service-group batch",
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2224,
+    "commands": [
+      "OutgameGuideBookRewardsValidation.Validate",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Full guide-book popup/list/tab/Spine/native-frame/effects, Main/account/22 remaining controllers, SDK delivery or full Player",
+    "importedResources": {
+      "prefabs": 2,
+      "nodes": [
+        81,
+        10
+      ],
+      "sprites": 58,
+      "fonts": 1,
+      "verifiedSourceBundles": 7,
+      "manifestSha256": "ec31b1897f27a9782856f5ccb6d631340408e6a4ba5d3f78fb23bcdfb68de7c7",
+      "pendingComponents": [
+        "UIOutlet | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:5052693667961277657",
+        "SpriteAtlasList | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-2410143913618671560",
+        "DynamicList | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-641384949970309176",
+        "TabButtonGroup | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:1831501171134271916",
+        "TabButton | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-8113612263494049073",
+        "TabButton | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-7005569862071327764",
+        "UIOutlet | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-3786818648797129835",
+        "SpriteAtlasList | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-418758960094584696",
+        "MeshRenderer | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-2510690257586040808",
+        "SkeletonAnimation | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-7084851197601406438",
+        "MeshFilter | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:4386721713922125193",
+        "UILangText | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:2415038790340396145",
+        "UILangText | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-1347168849257010281",
+        "UILangText | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:8011531551796072805",
+        "UILangText | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-4598824283886198003",
+        "UILangText | CAB-6bfa8786befb1cf66d6a7f790d2e5d84:-3855976307956453323",
+        "UIOutlet | CAB-08d805117448cdbffd86932886e2dc06:-7711576760067226234",
+        "SpriteAtlasList | CAB-08d805117448cdbffd86932886e2dc06:3361493269813906601"
+      ]
+    }
+  },
+  "implementation": [
+    "OutgameGuideBookRewards.cs",
+    "OutgameGuideBookRewardBinding.cs",
+    "RecoveredHudImporter.cs"
+  ],
+  "checks": [
+    {
+      "id": "guide-book-native-button-original-reward-order-and-real-record-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-reward-effect-clamp-preserves-economic-amount-and-position",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-tip-original-reward-no-page-voice-and-parent-traversal",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-source-ignores-rejected-toolchange-and-does-not-recheck-unlock",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-source-save-and-effect-failure-keep-earlier-economic-change",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-reward-rereads-selection-after-external-callbacks",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-noncurrency-reward-skips-effects-and-red-dots-follow-current-claims",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": [
+    "Actual popup/list/tab/TipBookItem/Spine lifecycle and native effects; reward callback and economic/claim persistence are implemented.",
+    "Main/account/level progression production composition and full Player acceptance."
+  ]
+}

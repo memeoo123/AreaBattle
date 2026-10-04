@@ -1,0 +1,198 @@
+; Original class: TimeToRefreshControl
+; Type4589.get_I; wasmcode function 3257; offset=996816 size=606
+; signature={'args': [127], 'returns': [127]}; localGroups=[(2, 127)]
+000f35d3  i32.const [5001255]
+000f35d8  i32.load8_u [0, 0]
+000f35db  i32.eqz []
+000f35dc  if [-64]
+000f35de    i32.const [3927888]
+000f35e3    call [900] ; 
+000f35e6    i32.const [3947148]
+000f35eb    call [900] ; 
+000f35ee    i32.const [3932308]
+000f35f3    call [900] ; 
+000f35f6    i32.const [4000868]
+000f35fb    call [900] ; 
+000f35fe    i32.const [4001136]
+000f3603    call [900] ; 
+000f3606    i32.const [3932344]
+000f360b    call [900] ; 
+000f360e    i32.const [3936516]
+000f3613    call [900] ; 
+000f3616    i32.const [4017208] ; METHOD TimeToRefreshControl.LiZUh
+000f361b    call [900] ; 
+000f361e    i32.const [4017212] ; METHOD TimeToRefreshControl.LiZUh
+000f3623    call [900] ; 
+000f3626    i32.const [3940196]
+000f362b    call [900] ; 
+000f362e    i32.const [4053296] ; STRING "ExitGame"
+000f3633    call [900] ; 
+000f3636    i32.const [4074980] ; STRING "TimeToRefreshControl"
+000f363b    call [900] ; 
+000f363e    i32.const [5001255]
+000f3643    i32.const [1]
+000f3645    i32.store8 [0, 0]
+000f3648  end []
+000f3649  i32.const [3940196]
+000f364e  i32.load [2, 0]
+000f3651  call [901] ; 
+000f3654  i32.const [3940196]
+000f3659  i32.load [2, 0]
+000f365c  i32.load [2, 92]
+000f365f  i32.load [2, 8]
+000f3662  local.set [0]
+000f3664  i32.const [3936516]
+000f3669  i32.load [2, 0]
+000f366c  call [901] ; 
+000f366f  local.get [0]
+000f3671  i32.const [0]
+000f3673  i32.const [0]
+000f3675  call [940] ; Object.op_Equality
+000f3678  if [-64]
+000f367a    i32.const [4074980] ; STRING "TimeToRefreshControl"
+000f367f    i32.load [2, 0]
+000f3682    i32.const [0]
+000f3684    call [1757] ; GameObject.Find
+000f3687    local.set [0]
+000f3689    i32.const [3936516]
+000f368e    i32.load [2, 0]
+000f3691    call [901] ; 
+000f3694    local.get [0]
+000f3696    i32.const [0]
+000f3698    i32.const [0]
+000f369a    call [940] ; Object.op_Equality
+000f369d    if [-64]
+000f369f      i32.const [3932344]
+000f36a4      i32.load [2, 0]
+000f36a7      call [903] ; 
+000f36aa      local.set [0]
+000f36ac      local.get [0]
+000f36ae      i32.const [0]
+000f36b0      call [1781] ; GameObject..ctor
+000f36b3      local.get [0]
+000f36b5      i32.const [4074980] ; STRING "TimeToRefreshControl"
+000f36ba      i32.load [2, 0]
+000f36bd      i32.const [0]
+000f36bf      call [1375] ; Object.set_name
+000f36c2    end []
+000f36c3    local.get [0]
+000f36c5    i32.const [4001136]
+000f36ca    i32.load [2, 0]
+000f36cd    call [1091] ; 
+000f36d0    local.set [1]
+000f36d2    i32.const [3940196]
+000f36d7    i32.load [2, 0]
+000f36da    call [901] ; 
+000f36dd    i32.const [3940196]
+000f36e2    i32.load [2, 0]
+000f36e5    i32.load [2, 92]
+000f36e8    local.get [1]
+000f36ea    i32.store [2, 8]
+000f36ed    i32.const [3940196]
+000f36f2    i32.load [2, 0]
+000f36f5    i32.load [2, 92]
+000f36f8    drop []
+000f36f9    i32.const [3940196]
+000f36fe    i32.load [2, 0]
+000f3701    i32.load [2, 92]
+000f3704    i32.load [2, 8]
+000f3707    local.set [1]
+000f3709    i32.const [3936516]
+000f370e    i32.load [2, 0]
+000f3711    call [901] ; 
+000f3714    local.get [1]
+000f3716    i32.const [0]
+000f3718    i32.const [0]
+000f371a    call [940] ; Object.op_Equality
+000f371d    if [-64]
+000f371f      local.get [0]
+000f3721      i32.const [4000868]
+000f3726      i32.load [2, 0]
+000f3729      call [1094] ; 
+000f372c      local.set [1]
+000f372e      i32.const [3940196]
+000f3733      i32.load [2, 0]
+000f3736      call [901] ; 
+000f3739      i32.const [3940196]
+000f373e      i32.load [2, 0]
+000f3741      i32.load [2, 92]
+000f3744      local.get [1]
+000f3746      i32.store [2, 8]
+000f3749      i32.const [3940196]
+000f374e      i32.load [2, 0]
+000f3751      i32.load [2, 92]
+000f3754      drop []
+000f3755    end []
+000f3756    i32.const [3932308]
+000f375b    i32.load [2, 0]
+000f375e    call [901] ; 
+000f3761    i32.const [3932308]
+000f3766    i32.load [2, 0]
+000f3769    i32.load [2, 92]
+000f376c    i32.load [2, 16]
+000f376f    local.set [1]
+000f3771    i32.const [3927888]
+000f3776    i32.load [2, 0]
+000f3779    call [903] ; 
+000f377c    local.set [2]
+000f377e    local.get [2]
+000f3780    i32.const [0]
+000f3782    i32.const [4017208] ; METHOD TimeToRefreshControl.LiZUh
+000f3787    i32.load [2, 0]
+000f378a    i32.const [0]
+000f378c    call [1002] ; Action..ctor
+000f378f    local.get [1]
+000f3791    local.get [2]
+000f3793    i32.const [0]
+000f3795    call [1031] ; Delegate.Combine
+000f3798    local.set [1]
+000f379a    local.get [1]
+000f379c    i32.const [3927888]
+000f37a1    i32.load [2, 0]
+000f37a4    call [937] ; 
+000f37a7    local.set [2]
+000f37a9    i32.const [3932308]
+000f37ae    i32.load [2, 0]
+000f37b1    i32.load [2, 92]
+000f37b4    local.get [2]
+000f37b6    i32.store [2, 16]
+000f37b9    i32.const [3932308]
+000f37be    i32.load [2, 0]
+000f37c1    i32.load [2, 92]
+000f37c4    drop []
+000f37c5    local.get [1]
+000f37c7    i32.const [3927888]
+000f37cc    i32.load [2, 0]
+000f37cf    call [937] ; 
+000f37d2    drop []
+000f37d3    i32.const [3947148]
+000f37d8    i32.load [2, 0]
+000f37db    call [903] ; 
+000f37de    local.set [1]
+000f37e0    local.get [1]
+000f37e2    i32.const [0]
+000f37e4    i32.const [4017212] ; METHOD TimeToRefreshControl.LiZUh
+000f37e9    i32.load [2, 0]
+000f37ec    i32.const [0]
+000f37ee    call [1067] ; EventHandler..ctor
+000f37f1    i32.const [4053296] ; STRING "ExitGame"
+000f37f6    i32.load [2, 0]
+000f37f9    local.get [1]
+000f37fb    i32.const [0]
+000f37fd    call [1146] ; MsgDispatcher.AddEventListener
+000f3800    i32.const [3936516]
+000f3805    i32.load [2, 0]
+000f3808    call [901] ; 
+000f380b    local.get [0]
+000f380d    i32.const [0]
+000f380f    call [1111] ; Object.DontDestroyOnLoad
+000f3812  end []
+000f3813  i32.const [3940196]
+000f3818  i32.load [2, 0]
+000f381b  call [901] ; 
+000f381e  i32.const [3940196]
+000f3823  i32.load [2, 0]
+000f3826  i32.load [2, 92]
+000f3829  i32.load [2, 8]
+000f382c  return []
+000f382d  end []

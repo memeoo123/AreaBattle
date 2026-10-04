@@ -1,0 +1,107 @@
+{
+  "status": "manager-control-base-verified-concrete-offnet-pending",
+  "atUtc": "2026-10-03T08:33:17.990345+00:00",
+  "sourceEvidence": "STATISTICS_LIFECYCLE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:33:17.990345+00:00",
+    "scope": "GameStatisticsManager4617/control4620/expansion4618/abstract strategy4624 and DataManagerPool.AddModel26734",
+    "checksPassed": 1184,
+    "newIntegratedChecks": 13,
+    "targetedChecks": 13,
+    "freshPlayModeRun": false,
+    "nativeChecks": 0,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2288,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "Actual DataManagerPool fallback inserts manager before OnInit, preserves source AutoSyn-only manual registration and duplicate-return behavior. Existing managers reuse strategy; synchronous completion precedes update/disposal subscriptions.",
+      "Nineteen captured strategy providers register in original order with first-wins semantics. Messages, count mutation/dirty ordering, resolver reentry, static-save callback rereads, failed load/release boundaries checked.",
+      "Source get_initOver returns field16 Action; field20 is a separate constructor bool. Disposal subscribes to GameFrameEntry3433.disposableActions, not a fabricated quit action.",
+      "Initial1183 run preceded final cast-helper review. Runtime table1428/function938 proves explicit cast with invalid-type exception, so implementation/assertion corrected and synchronous-completion case added. Final1184 on matching inputs supersedes initial run.",
+      "Probe is explicitly test-only; source concrete offnet strategy is a required factory dependency. Abstract base source-empty LoadData/OnSave bodies are preserved, not used to fabricate a working offline implementation.",
+      "Real file storage forwards opaque text unchanged. This validates inherited storage seam, not statistics compression/JSON/day-refresh save-restart. Manual UpdateManager.Update verifies real delegate removal logic without a native PlayMode claim."
+    ],
+    "notClaimed": "Concrete offnet codec/clock/day refresh and production CommonGameModule/GameFrameEntry/Main composition; activities/remaining20 controllers/full business/Player/audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameStatisticsManager.cs",
+    "OutgameStatisticsControl.cs",
+    "OutgameStatisticsStrategy.cs",
+    "OutgameDataManagerPool.cs"
+  ],
+  "checks": [
+    {
+      "id": "statistics-lifecycle-pool-manual-add-publishes-before-init-and-retains-duplicate",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-registration-game-filter-and-add-failure-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-refresh-registers-nineteen-captured-providers-first-wins",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-refresh-null-index-and-provider-failure-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-message-register-set-parse-and-provider-gates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-expansion-dirty-order-owner-reentry-and-clock-exception",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-game-value-provider-catch-and-record-fallback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-update-pool-gate-and-save-callback-reread",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-load-before-common-refresh-and-real-storage-path",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-base-calendar-activity-and-null-argument-asymmetry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-control-dispose-defers-update-removal-and-retains-manager",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-manager-release-removes-listeners-before-cleanup-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "statistics-lifecycle-existing-manager-completes-before-update-registration",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Implement concrete GameStatisticsOffNetStrategy4623 and StatistUtils codec/server-local clock/day-refresh coroutine, then wire actual CommonGameModule/entry services into manager/control. Continue ActivityManager/ActivityControl and SevenDay.EnterGameInit, actual Main/account/remaining20 controllers/all business/reward-return/save-restart, then Player and source audiovisual acceptance."
+}

@@ -1,0 +1,257 @@
+; Original class: CommonLimitTimeTaskUI
+; Type4310.Awake; wasmcode function 20143; offset=9059109 size=802
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a3b28  i32.const [5008238]
+008a3b2d  i32.load8_u [0, 0]
+008a3b30  i32.eqz []
+008a3b31  if [-64]
+008a3b33    i32.const [3927888]
+008a3b38    call [900] ; 
+008a3b3b    i32.const [3988816]
+008a3b40    call [900] ; 
+008a3b43    i32.const [3988864]
+008a3b48    call [900] ; 
+008a3b4b    i32.const [3989352]
+008a3b50    call [900] ; 
+008a3b53    i32.const [3992900] ; METHOD CommonLimitTimeTaskUI.hqW|zUo
+008a3b58    call [900] ; 
+008a3b5b    i32.const [3992904] ; METHOD CommonLimitTimeTaskUI.mfMpYM
+008a3b60    call [900] ; 
+008a3b63    i32.const [3992908] ; METHOD CommonLimitTimeTaskUI.n|fX^
+008a3b68    call [900] ; 
+008a3b6b    i32.const [3992912] ; METHOD CommonLimitTimeTaskUI.we`iOP}
+008a3b70    call [900] ; 
+008a3b73    i32.const [3992916] ; METHOD CommonLimitTimeTaskUI.yvxOQM
+008a3b78    call [900] ; 
+008a3b7b    i32.const [3956236]
+008a3b80    call [900] ; 
+008a3b83    i32.const [3956232]
+008a3b88    call [900] ; 
+008a3b8b    i32.const [3917604]
+008a3b90    call [900] ; 
+008a3b93    i32.const [3947148]
+008a3b98    call [900] ; 
+008a3b9b    i32.const [3944680]
+008a3ba0    call [900] ; 
+008a3ba3    i32.const [3932388]
+008a3ba8    call [900] ; 
+008a3bab    i32.const [4011344]
+008a3bb0    call [900] ; 
+008a3bb3    i32.const [3937964]
+008a3bb8    call [900] ; 
+008a3bbb    i32.const [3938856]
+008a3bc0    call [900] ; 
+008a3bc3    i32.const [4056000] ; STRING "GlobalEvent.CommonGameModule.LimitTimeTask.SelectPage"
+008a3bc8    call [900] ; 
+008a3bcb    i32.const [4102540] ; STRING "七日嘉年华"
+008a3bd0    call [900] ; 
+008a3bd3    i32.const [4069364] ; STRING "SevendayAccPreviewItem"
+008a3bd8    call [900] ; 
+008a3bdb    i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+008a3be0    call [900] ; 
+008a3be3    i32.const [4049060] ; STRING "CommonModule_NoviceExtRefresh"
+008a3be8    call [900] ; 
+008a3beb    i32.const [4048960] ; STRING "CommonGameModule.CommonNoviceTaskUITemp.AccCompleteNum"
+008a3bf0    call [900] ; 
+008a3bf3    i32.const [4048964] ; STRING "CommonGameModule.CommonNoviceTaskUITemp.Liveness"
+008a3bf8    call [900] ; 
+008a3bfb    i32.const [5008238]
+008a3c00    i32.const [1]
+008a3c02    i32.store8 [0, 0]
+008a3c05  end []
+008a3c06  local.get [0]
+008a3c08  local.get [0]
+008a3c0a  i32.load [2, 16]
+008a3c0d  i32.const [4069364] ; STRING "SevendayAccPreviewItem"
+008a3c12  i32.load [2, 0]
+008a3c15  i32.const [0]
+008a3c17  call [1102] ; Transform.Find
+008a3c1a  i32.const [0]
+008a3c1c  call [943] ; Component.get_gameObject
+008a3c1f  i32.store [2, 128]
+008a3c23  i32.const [3938856]
+008a3c28  i32.load [2, 0]
+008a3c2b  call [903] ; 
+008a3c2e  local.set [1]
+008a3c30  local.get [1]
+008a3c32  i32.const [0]
+008a3c34  call [10450] ; SevendayAccPreviewItem..ctor
+008a3c37  local.get [0]
+008a3c39  local.get [1]
+008a3c3b  i32.store [2, 132]
+008a3c3f  local.get [0]
+008a3c41  i32.load [2, 132]
+008a3c45  local.get [0]
+008a3c47  i32.load [2, 128]
+008a3c4b  i32.const [0]
+008a3c4d  call [3661] ; BaseItem.InstantiateNoNewItem
+008a3c50  i32.const [3917604]
+008a3c55  i32.load [2, 0]
+008a3c58  call [903] ; 
+008a3c5b  local.set [1]
+008a3c5d  local.get [1]
+008a3c5f  i32.const [3956232]
+008a3c64  i32.load [2, 0]
+008a3c67  call [951] ; 
+008a3c6a  local.get [1]
+008a3c6c  i32.const [0]
+008a3c6e  i32.const [4048960] ; STRING "CommonGameModule.CommonNoviceTaskUITemp.AccCompleteNum"
+008a3c73  i32.load [2, 0]
+008a3c76  i32.const [3956236]
+008a3c7b  i32.load [2, 0]
+008a3c7e  call [1049] ; 
+008a3c81  local.get [1]
+008a3c83  i32.const [1]
+008a3c85  i32.const [4048964] ; STRING "CommonGameModule.CommonNoviceTaskUITemp.Liveness"
+008a3c8a  i32.load [2, 0]
+008a3c8d  i32.const [3956236]
+008a3c92  i32.load [2, 0]
+008a3c95  call [1049] ; 
+008a3c98  local.get [0]
+008a3c9a  local.get [1]
+008a3c9c  i32.store [2, 124]
+008a3c9f  local.get [0]
+008a3ca1  i32.const [0]
+008a3ca3  call [1484] ; ActivityControl.get_I
+008a3ca6  i32.const [1301001]
+008a3cab  i32.const [3988864]
+008a3cb0  i32.load [2, 0]
+008a3cb3  call [2427] ; 
+008a3cb6  i32.const [1301]
+008a3cb9  i32.const [3988816]
+008a3cbe  i32.load [2, 0]
+008a3cc1  call [3415] ; 
+008a3cc4  i32.store [2, 100]
+008a3cc7  local.get [0]
+008a3cc9  i32.const [0]
+008a3ccb  call [1189] ; ActivityConfigMgr.get_I
+008a3cce  i32.const [1301]
+008a3cd1  i32.const [0]
+008a3cd3  call [4029] ; ActivityConfigMgr.GetLimitTaskActivityConfig
+008a3cd6  i32.store [2, 104]
+008a3cd9  local.get [0]
+008a3cdb  i32.load [2, 136]
+008a3cdf  local.set [1]
+008a3ce1  i32.const [3927888]
+008a3ce6  i32.load [2, 0]
+008a3ce9  call [903] ; 
+008a3cec  local.set [2]
+008a3cee  local.get [2]
+008a3cf0  local.get [0]
+008a3cf2  i32.const [3992916] ; METHOD CommonLimitTimeTaskUI.yvxOQM
+008a3cf7  i32.load [2, 0]
+008a3cfa  i32.const [0]
+008a3cfc  call [1002] ; Action..ctor
+008a3cff  local.get [1]
+008a3d01  local.get [2]
+008a3d03  i32.const [0]
+008a3d05  call [1121] ; UIExtension.AddClick
+008a3d08  i32.const [3947148]
+008a3d0d  i32.load [2, 0]
+008a3d10  call [903] ; 
+008a3d13  local.set [1]
+008a3d15  local.get [1]
+008a3d17  local.get [0]
+008a3d19  i32.const [3992904] ; METHOD CommonLimitTimeTaskUI.mfMpYM
+008a3d1e  i32.load [2, 0]
+008a3d21  i32.const [0]
+008a3d23  call [1067] ; EventHandler..ctor
+008a3d26  i32.const [4056000] ; STRING "GlobalEvent.CommonGameModule.LimitTimeTask.SelectPage"
+008a3d2b  i32.load [2, 0]
+008a3d2e  local.get [1]
+008a3d30  i32.const [0]
+008a3d32  call [1146] ; MsgDispatcher.AddEventListener
+008a3d35  i32.const [3944680]
+008a3d3a  i32.load [2, 0]
+008a3d3d  call [903] ; 
+008a3d40  local.set [1]
+008a3d42  local.get [1]
+008a3d44  local.get [0]
+008a3d46  i32.const [3992912] ; METHOD CommonLimitTimeTaskUI.we`iOP}
+008a3d4b  i32.load [2, 0]
+008a3d4e  i32.const [0]
+008a3d50  call [1345] ; EventHandler..ctor
+008a3d53  i32.const [4049060] ; STRING "CommonModule_NoviceExtRefresh"
+008a3d58  i32.load [2, 0]
+008a3d5b  local.get [1]
+008a3d5d  i32.const [0]
+008a3d5f  call [1710] ; CommonMsgDispatcher.AddEventListener
+008a3d62  i32.const [3944680]
+008a3d67  i32.load [2, 0]
+008a3d6a  call [903] ; 
+008a3d6d  local.set [1]
+008a3d6f  local.get [1]
+008a3d71  local.get [0]
+008a3d73  i32.const [3992900] ; METHOD CommonLimitTimeTaskUI.hqW|zUo
+008a3d78  i32.load [2, 0]
+008a3d7b  i32.const [0]
+008a3d7d  call [1345] ; EventHandler..ctor
+008a3d80  i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+008a3d85  i32.load [2, 0]
+008a3d88  local.get [1]
+008a3d8a  i32.const [0]
+008a3d8c  call [1710] ; CommonMsgDispatcher.AddEventListener
+008a3d8f  i32.const [3932388]
+008a3d94  i32.load [2, 0]
+008a3d97  call [901] ; 
+008a3d9a  i32.const [10000]
+008a3d9e  i32.const [0]
+008a3da0  call [1480] ; GameStatisticsExpansion.MessageKey
+008a3da3  local.set [1]
+008a3da5  i32.const [3944680]
+008a3daa  i32.load [2, 0]
+008a3dad  call [903] ; 
+008a3db0  local.set [2]
+008a3db2  local.get [2]
+008a3db4  local.get [0]
+008a3db6  i32.const [3992908] ; METHOD CommonLimitTimeTaskUI.n|fX^
+008a3dbb  i32.load [2, 0]
+008a3dbe  i32.const [0]
+008a3dc0  call [1345] ; EventHandler..ctor
+008a3dc3  local.get [1]
+008a3dc5  local.get [2]
+008a3dc7  i32.const [0]
+008a3dc9  call [1710] ; CommonMsgDispatcher.AddEventListener
+008a3dcc  i32.const [3989352]
+008a3dd1  i32.load [2, 0]
+008a3dd4  call [1032] ; 
+008a3dd7  drop []
+008a3dd8  local.get [0]
+008a3dda  local.get [0]
+008a3ddc  local.get [0]
+008a3dde  call [12836] ; CommonLimitTimeTaskUI.n|fX^
+008a3de1  local.get [0]
+008a3de3  local.get [0]
+008a3de5  call [12835] ; CommonLimitTimeTaskUI.us^ql
+008a3de8  i32.const [3937964]
+008a3ded  i32.load [2, 0]
+008a3df0  call [901] ; 
+008a3df3  i32.const [3937964]
+008a3df8  i32.load [2, 0]
+008a3dfb  i32.load [2, 92]
+008a3dfe  i32.load [2, 8]
+008a3e01  i32.const [1]
+008a3e03  i32.const [0]
+008a3e05  i32.const [4011344]
+008a3e0a  i32.load [2, 0]
+008a3e0d  call [1157] ; 
+008a3e10  local.set [1]
+008a3e12  local.get [1]
+008a3e14  i32.const [4102540] ; STRING "七日嘉年华"
+008a3e19  i32.load [2, 0]
+008a3e1c  i32.store [2, 16]
+008a3e1f  local.get [1]
+008a3e21  local.get [0]
+008a3e23  i32.load [2, 100]
+008a3e26  i32.load [2, 60]
+008a3e29  i32.const [0]
+008a3e2b  call [2789] ; PubActivityConfig.GetParentReportStr
+008a3e2e  i32.store [2, 12]
+008a3e31  i32.const [3937964]
+008a3e36  i32.load [2, 0]
+008a3e39  i32.load [2, 92]
+008a3e3c  i32.load [2, 8]
+008a3e3f  local.get [1]
+008a3e41  i32.const [0]
+008a3e43  call [7310] ; ReportManager.NewReport_activity_enter
+008a3e46  end []

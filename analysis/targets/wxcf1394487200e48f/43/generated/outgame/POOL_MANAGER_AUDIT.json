@@ -1,0 +1,150 @@
+{
+  "status": "original-pool-manager-native-frame-verified-full-production-pending",
+  "atUtc": "2026-10-03T14:20:26.675930+00:00",
+  "sourceEvidence": "POOL_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T14:20:26.675930+00:00",
+    "scope": "Original ObjectPoolManager3672 normal/shared-generic factory/lifecycle plus real Frame70/Logic12/EffectControl/NormalPool ownership",
+    "checksPassed": 1581,
+    "newIntegratedChecks": 11,
+    "targetedChecks": 11,
+    "nativeChecks": 16,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2755,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgamePoolManagerPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 1,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "observedBoundaries": [
+      "ObjectPoolManager3672 has constructor-owned Dictionary<string,ObjectPoolBase> field16. Initialize28712 sets initialized flag before invoking retained callback; does not clear/recreate dictionary. Priority70, Start empty. Update28716 iterates live dictionary values and virtual slot11 with both unchanged deltas, without null guard. Mutation and exceptions abort iteration as original.",
+      "Shutdown28717 iterates live entries, skips managed-null values, calls slot12 on each nonnull pool, then clears dictionary and resets initialized=false. Failure leaves all entries and initialized state; retry may invoke earlier pools again. Initialized delegate retained.",
+      "Normal generic28718/28720 route through Text.GetFullName27496/27497: runtime Type.FullName getter slot26/2774, null or empty pool name returns type full name, otherwise original format {0}.{1}. NormalPool object3665 is original globally named g\\u0093t\\u0090\\u00b6O, not a renamed restoration CLR type. Dot collisions and null/empty alias are preserved. Generic factory API accepts source type full name plus concrete original-pool specialization factory; other object families remain caller-owned.",
+      "CreateSingleSpawnObjectPool28719 calls InternalCreate with allowMultiSpawn=false, capacity Int32.MaxValue, expireTime Single.MaxValue, priority0. InternalCreate28722 checks typed key before constructing pool; duplicate emits original Already exist object pool message and framework exception. Successful construction precedes key recomputation and Dictionary.Add; reentrant duplicate Add fails retaining the previously inserted owner.",
+      "InternalDestroy28723 TryGetValue miss returnsfalse. Hit calls pool.Shutdown before Dictionary.Remove and returns actual Remove boolean. Release failure retains registration; callback removal makes final returnfalse; unlike full manager shutdown, null entry is not skipped.",
+      "OutgameObjectPool now implements managed lifecycle contract; existing original register/spawn/unspawn/capacity/DateTime expiry/real-delta update/shutdown logic reused unchanged. NormalPool creation selects the actual manager single-spawn factory and applies original300/5/5/0 settings.",
+      "NormalPool28679 and28682 BOTH resolve GameFrameEntry.GetModule26446 at usage4000612. They do not use HaveModule. OutgameNormalPoolLifetime/Bind therefore acquires through actual Frame.GetModule even after a cleared frame, preserving new uninitialized manager creation followed by no-op destroy. Root/handle/resource teardown retains original order; resource unloading remains required endpoint.",
+      "Actual FrameEntry priority sorting places manager70 before Logic12 in update and reverses them at shutdown. EffectControl disposal removes its registered pool and handles resource hooks while manager is still present; then manager shutdown clears leftover pools and flag. Native validation drives Frame.Update from actual UpdateManager, including paused scaled time and real pool expiration.",
+      "Source framework exception is exposed as restoration-local OutgameFrameworkException. Existing OutgameObjectPool argument validation still uses earlier InvalidOperationException projection. General non-prefab pool families require their actual recovered object implementations/factories; no invented success factory supplied.",
+      "Full production Main/resource catalog/TopInfo account/SDK/platform/all remaining17 controllers and business/final Player/original audiovisual equivalence remain pending. Pool manager acquisition fixture is removed in this composition; native resource acquisition/unload, audio and external report/platform remain explicitly local test hosts.",
+      "Final integrated/native source compilation and product checks pass; exact environment log diagnostic counts retained above. Initial duplicate framework-exception declaration compile failure retained; final code reuses existing recovered OutgameFrameworkException. Native original task/particle/currency/account path runs through real Frame.Update and verifies unscaled automatic pool expiry, then reverse Frame.Shutdown. No whole-production/Main/Player/original audiovisual claim."
+    ],
+    "notClaimed": "Complete production module resource acquisition, TopInfo account UI, Main/account/platform, remaining17 controllers/all business, fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameObjectPoolManager.cs",
+    "Scripts/OutgameObjectPool.cs",
+    "Editor/OutgameObjectPoolManagerValidation.cs",
+    "Editor/OutgamePoolManagerPlayModeValidation.cs",
+    "Editor/OutgameEffectControlValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "pool-manager-initialize-priority-retained-registry-callback-and-shutdown-flag",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-original-full-type-key-null-empty-name-and-distinct-type",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-single-spawn-default-constructor-arguments-and-duplicate-before-factory",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-original-key-format-keeps-dot-collision-and-factory-failure-unregistered",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-factory-reentry-add-failure-retains-first-registered-owner",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-live-update-arguments-mutation-and-first-failure-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-destroy-releases-before-removal-failure-retains-registration",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-destroy-return-reflects-callback-removal-and-null-entry-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-shutdown-failure-retains-initialized-and-all-registrations",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-frame-priority-and-real-effect-pool-shutdown-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "pool-manager-normal-lifetime-uses-getmodule-even-after-frame-cleared",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/pool-manager-task-native.png",
+    "frames": 12133,
+    "loadedIcons": 10,
+    "returnedIcons": 10,
+    "checks": [
+      "Real Frame priority70/12, ObjectPoolManager and LogicModule own original moneyPool controller",
+      "Native task pointer runs actual box effect and currency controller together",
+      "Source task claim reaches both economic records and first tier bit",
+      "Five original currency prefabs move in native rendered frames",
+      "Task fly completion refreshes original TopInfo and returns all icons through source pool",
+      "Presentation does not duplicate task reward",
+      "Direct economic fly calls save before concurrent animations complete",
+      "Actual realtime coroutines and tweens complete while scaled time is paused",
+      "Original single-spawn pool reuses gold icons and adds only five diamond prefabs",
+      "Native arrival callback advances gold then diamond sequence and completes exactly once",
+      "Sequence retains source split: ItemManager50, direct ToolChange LocalData57 and diamonds3",
+      "All icon ownership lives in restored manager instead of local host registry",
+      "Frame-driven unscaled pool expiry releases original icons while scaled game time stays paused",
+      "Reverse Frame shutdown disposes Logic effects before ObjectPoolManager final clear",
+      "Native expired pool objects stay destroyed on the subsequent Unity frame",
+      "Independent account restart restores source ItemManager50/LocalData57, diamonds3 and task claim bit"
+    ],
+    "scope": "Original ObjectPoolManager70 and LogicModule12 through actual Frame dispatch, registered EffectControl4058, UpdateManager coroutines/tweens, original TaskPanel/TopInfo/effect1016/currency assets and shared account/file rewards. Resource acquisition and audio/report/platform remain explicit local hosts; full production Main/all business/Player/original audiovisual equivalence pending."
+  },
+  "remaining": "Complete TopInfoUI account/actions and UIControl production bindings, recover unresolved GuideControl4065 and remaining17 controller lifecycle/business dependencies for real Main/lobby/battle startup. Continue full resource catalog/account/login/platform/all business and final Player/original audiovisual acceptance."
+}

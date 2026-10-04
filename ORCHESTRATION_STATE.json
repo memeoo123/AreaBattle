@@ -15794,11 +15794,36 @@
     }
   },
   "createdAtUtc": "2026-09-28T03:23:16.512962+00:00",
-  "updatedAtUtc": "2026-09-30T11:37:00.235986+00:00",
+  "updatedAtUtc": "2026-10-04T14:38:39.372502+00:00",
   "currentWorkstream": {
     "id": "outgame",
     "objective": "关外逻辑完全复原",
-    "statePath": "E:\\Projects\\AreaBattle\\analysis\\targets\\wxcf1394487200e48f\\43\\OUTGAME_RESTORE_STATE.json",
-    "atUtc": "2026-09-29T06:56:31.829550+00:00"
+    "statePath": "analysis/targets/wxcf1394487200e48f/43/OUTGAME_RESTORE_STATE.json",
+    "atUtc": "2026-09-29T06:56:31.829550+00:00",
+    "status": "active",
+    "pausedAtUtc": "2026-10-03T15:42:02.817063+00:00",
+    "resumeOnlyOnUserRequest": false,
+    "resumedAtUtc": "2026-10-04T13:52:28.484209+00:00",
+    "nextPriority": "Prioritize client-only UserInfoUI/local avatar and profile editing, local OverUI/reward-return flows, remaining controller lifecycles and Main/local-data assembly; then runnable client build and save/restart/audiovisual validation. Defer server-dependent work per user instruction; do not simulate server success.",
+    "scopeOverride": {
+      "atUtc": "2026-10-04T14:38:39.372502+00:00",
+      "userInstruction": "关于服务器的可以先不用",
+      "status": "server-work-deferred-client-work-active",
+      "deferred": [
+        "HttpManager/network-login composition and global server-key installation",
+        "HttpNetAcion server response business and ServerTimeSync",
+        "Cloud save synchronization, live online ranking and remote reporting",
+        "Other flows that require a real server response"
+      ],
+      "active": [
+        "Local profile/avatar UI and local save/restart",
+        "Client UI, battle settlement and reward-return flows",
+        "Remaining controller lifecycles and Main local assembly",
+        "Runnable client build and local audiovisual acceptance"
+      ],
+      "preserveExistingServerImplementation": true,
+      "countDeferredAsComplete": false,
+      "synthesizeServerSuccess": false
+    }
   }
 }

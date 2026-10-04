@@ -1,0 +1,132 @@
+; Original class: ChildTaskOffNetStrategy
+; Type4681.XgZTeh; wasmcode function 20240; offset=9085192 size=349
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127), (1, 126)]
+008aa10d  global.get [0]
+008aa10f  i32.const [16]
+008aa111  i32.sub []
+008aa112  local.set [1]
+008aa114  local.get [1]
+008aa116  global.set [0]
+008aa118  i32.const [5001417]
+008aa11d  i32.load8_u [0, 0]
+008aa120  i32.eqz []
+008aa121  if [-64]
+008aa123    i32.const [3989352]
+008aa128    call [900] ;
+008aa12b    i32.const [3932388]
+008aa130    call [900] ;
+008aa133    i32.const [3934404]
+008aa138    call [900] ;
+008aa13b    i32.const [3934412]
+008aa140    call [900] ;
+008aa143    i32.const [3926996]
+008aa148    call [900] ;
+008aa14b    i32.const [4049072] ; STRING "CommonModule_ResetTimeRefresh"
+008aa150    call [900] ;
+008aa153    i32.const [5001417]
+008aa158    i32.const [1]
+008aa15a    i32.store8 [0, 0]
+008aa15d  end []
+008aa15e  block [-64]
+008aa160    block [-64]
+008aa162      block [-64]
+008aa164        block [-64]
+008aa166          local.get [0]
+008aa168          i32.load [2, 8]
+008aa16b          i32.load [2, 76]
+008aa16e          local.get [1]
+008aa170          call [2046] ; ChildTaskData.get_Config
+008aa173          i32.load [2, 28]
+008aa176          i32.const [1]
+008aa178          i32.sub []
+008aa179          br_table [0, 1, 2, 3]
+008aa17f        end []
+008aa180        local.get [0]
+008aa182        local.get [1]
+008aa184        i32.const [18556] ; TABLE ChildTaskOffNetStrategy.^mbuXy
+008aa188        global.set [3]
+008aa18a        i32.const [18556] ; TABLE ChildTaskOffNetStrategy.^mbuXy
+008aa18e        call_indirect [0, 0]
+008aa191        br [2]
+008aa193      end []
+008aa194      local.get [0]
+008aa196      local.get [1]
+008aa198      call [12903] ; ChildTaskOffNetStrategy.cav[tY
+008aa19b      br [1]
+008aa19d    end []
+008aa19e    local.get [0]
+008aa1a0    local.get [1]
+008aa1a2    i32.const [18563] ; TABLE ChildTaskOffNetStrategy.}e
+008aa1a6    global.set [3]
+008aa1a8    i32.const [18563] ; TABLE ChildTaskOffNetStrategy.}e
+008aa1ac    call_indirect [0, 0]
+008aa1af  end []
+008aa1b0  local.get [0]
+008aa1b2  local.get [1]
+008aa1b4  call [12901] ; ChildTaskOffNetStrategy.iNOQMZ
+008aa1b7  i32.const [3926996]
+008aa1bc  i32.load [2, 0]
+008aa1bf  i32.const [2]
+008aa1c1  call [909] ;
+008aa1c4  local.set [2]
+008aa1c6  local.get [1]
+008aa1c8  local.get [0]
+008aa1ca  i32.load [2, 8]
+008aa1cd  i32.load [2, 76]
+008aa1d0  i32.load [2, 8]
+008aa1d3  i32.store [2, 12]
+008aa1d6  i32.const [3934404]
+008aa1db  i32.load [2, 0]
+008aa1de  local.get [1]
+008aa1e0  i32.const [12]
+008aa1e2  i32.add []
+008aa1e3  call [910] ;
+008aa1e6  local.set [3]
+008aa1e8  local.get [2]
+008aa1ea  local.get [3]
+008aa1ec  call [905] ;
+008aa1ef  local.get [2]
+008aa1f1  local.get [3]
+008aa1f3  i32.store [2, 16]
+008aa1f6  local.get [0]
+008aa1f8  i32.load [2, 8]
+008aa1fb  i32.load [2, 76]
+008aa1fe  i32.load [2, 16]
+008aa201  i64.load [3, 40]
+008aa204  local.set [4]
+008aa206  i32.const [3989352]
+008aa20b  i32.load [2, 0]
+008aa20e  call [1032] ;
+008aa211  local.set [0]
+008aa213  i32.const [3932388]
+008aa218  i32.load [2, 0]
+008aa21b  call [901] ;
+008aa21e  local.get [1]
+008aa220  local.get [4]
+008aa222  i32.const [10000]
+008aa226  local.get [0]
+008aa228  i32.const [0]
+008aa22a  call [1568] ; GameStatisticsExpansion.GameValue
+008aa22d  i64.sub []
+008aa22e  i64.store [3, 0]
+008aa231  i32.const [3934412]
+008aa236  i32.load [2, 0]
+008aa239  local.get [1]
+008aa23b  call [910] ;
+008aa23e  local.set [0]
+008aa240  local.get [2]
+008aa242  local.get [0]
+008aa244  call [905] ;
+008aa247  local.get [2]
+008aa249  local.get [0]
+008aa24b  i32.store [2, 20]
+008aa24e  i32.const [4049072] ; STRING "CommonModule_ResetTimeRefresh"
+008aa253  i32.load [2, 0]
+008aa256  local.get [2]
+008aa258  i32.const [0]
+008aa25a  call [1738] ; CommonMsgDispatcher.SendMessage
+008aa25d  local.get [1]
+008aa25f  i32.const [16]
+008aa261  i32.add []
+008aa262  global.set [0]
+008aa264  end []

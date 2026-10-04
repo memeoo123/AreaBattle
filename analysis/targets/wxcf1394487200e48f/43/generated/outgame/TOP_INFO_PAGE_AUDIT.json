@@ -1,0 +1,190 @@
+{
+  "status": "original-top-info-owned-page-verified-required-business-ports-pending",
+  "atUtc": "2026-10-03T14:45:28.340170+00:00",
+  "sourceEvidence": "TOP_INFO_PAGE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T14:45:28.340170+00:00",
+    "scope": "Original owned TopInfoUI account/profile/auth message flow, BaseUI ready predicate and native UIControl/account file restart",
+    "checksPassed": 1611,
+    "newIntegratedChecks": 18,
+    "targetedChecks": 18,
+    "nativeChecks": 15,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2794,
+    "implementedLifecycleControllers": 21,
+    "remainingLifecycleControllers": 17,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTopInfoPagePlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "restoredAccount": {
+      "gold": 37,
+      "diamonds": 5,
+      "name": "恢复测试"
+    },
+    "observedBoundaries": [
+      "TopInfoUI ctor33929 initializes gold/diamond effect IDs to-1 and source layer2/open0/close0. All25 original UIOutlet bindings are attached using preserved source object/sibling mappings. Existing root-only constructor remains for earlier scoped presentation fixtures; owned constructor adds actual BaseUI modern/legacy load and asynchronous close hosts.",
+      "Awake33924 registers LoadStartingUI then Avatar_Refresh_OnAuth, captures LocalDataManager4119 once from data pool, replaces two GameObject profile pointer delegates, hides stamina, finds profile imgRed, enables normal user/hides Match user, RefreshInfo then async icons then RefreshProfile. Virtual Refresh33930 is empty. OpenLater33920 only constructs currency/stamina dictionaries and adds Canvas/GraphicRaycaster with source layer, without invoking base OpenLater.",
+      "RefreshInfo33921 has Unity-null GoldText and managed-null LocalData guard; captures Text before reading current local record. Diamond text has no independent null guard. LocalDataManager reference stays captured while its current account inventory projection can be replaced by the existing server callback. Actual account Tools.RefreshTopInfo callback reaches the owned page; source refreshTop flag must be true. Initial test accidentally supplied false and was corrected; dispatcher behavior unchanged.",
+      "RefreshProfile33927 captures name Text, resolves current UserInfo, then separately captures red and current name before language You lookup. Score Text is captured before reading RankControl.CurPlayerScore BigInteger value, passed to recovered BigNumExtension. Headport config uses icon/atlas offsets12/16; HeadBox uses12/20. Both sprite calls use mode0; null config skips only its own call. Rank score and general sprite acquisition remain required services, not invented domain rules.",
+      "BaseUI.Await27335/27361 yields new WaitUntil(predicate27340). Predicate emits GF_LoadUIOver with page identity whenever Transform is Unity-nonnull, even if disposed, then returns true even if callback destroys it. Otherwise rereads Transform or IsDisposed. This does not wait for OpenLater/animation and adds no cancellation gate. Native coroutine wait is default, controlled wait is test-only.",
+      "Icons33917/33933 await original readiness then resolve effect module separately for Show1007 under GoldIcon and Show1019 under DiamondIcon, writing each result after return. First success/second failure retains first new ID and old diamond ID. Repeated direct calls do not close old effects. Pending continuation after direct Dispose can still create effects as original.",
+      "Auth33918 returns only for null/zero-length argument array, evaluates args0.ToString then args1.ToString before checking emptiness; length1/null elements retain failures. Arguments are gates, not account values. Current MatchPlayerData4127.isGetWechatInfo offset48 is set first; nickname target captured before WXAvatar.GetMyNickName then assigned field12. New current player target captured before GetMyAvatarURl then assigned field16. Subsequent URL checks, avatar provider acquisition and current URL lookup retain original order.",
+      "Avatar download callback33926 assigns held WeChat Image sprite directly, with no disposed guard. After download request, MatchName Text is captured before current player name lookup, then UserDataPrefs.OnSave precedes entire DataManagerPool.SaveData. Exceptions retain previous writes and suppress later operations. IOutgameMatchPlayerInfo is an explicit live projection contract, not a replacement persisted Match record; actual MatchManager/WXAvatar/UserDataPrefs implementations remain pending.",
+      "Both profile GameObject pointer handlers33923 request UserInfoUI with empty args and no button audio/global button message. Full UserInfoUI destination is a required endpoint pending its restoration. TopInfo Dispose33922 removes both listeners then separately resolves effect module and closes gold then diamond. It does not call base.Dispose, reset IDs, clear object dictionary/arguments/native references, or remove button delegates. Standard close still marks disposed/destroys root/releases main and dynamic resources in original order.",
+      "Integrated tests share actual account LocalData/Items/Tool, UserInfoManager/controller, config, data pool/storage, source effect module and real UIControl lazy currency cache. Native fixture drives real open/await/OpenLater/close, original sprites/particles, native pointer event, explicit supplied authorization callback, then independent file-backed account/UserInfo restart. Test Match projection, Rank score, platform/avatar callbacks/UserDataPrefs and UserInfoUI destination are explicitly fixture endpoints; no platform success or Match persistence is inferred.",
+      "Full production resource catalog/Main/SDK/login/Match/Rank/UserInfoUI and remaining17 controller/all business/final Player/original audiovisual acceptance remain pending. Lifecycle matrix stays21/38. Current source project version remains6000.0.68f1; verification uses isolated6000.3.7f1.",
+      "Initial refresh test passed refreshTop=false; corrected test argument, no economic code change. Native validation runner initially used nonexistent Close method name; corrected to existing source CloseForName; initial compiler diagnostic retained."
+    ],
+    "notClaimed": "Actual Match/Rank/WXAvatar/UserDataPrefs/full UserInfoUI/general sprite acquisition or production Main/platform/remaining17 controllers/all business/fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameTopInfoPage.cs",
+    "Scripts/OutgameTopInfoAccountPage.cs",
+    "Scripts/OutgameUiReadyAwait.cs",
+    "Editor/OutgameTopInfoPageValidation.cs",
+    "Editor/OutgameTopInfoPagePlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "top-info-page-deferred-page-original25-outlets-awake-and-separate-icon-wait",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-real-tool-economy-refresh-and-server-record-replacement",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-loadstarting-refresh-nickname-red-score-and-distinct-sprite-fields",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-profile-reentry-captures-name-but-rereads-current-config",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-sprite-failure-preserves-earlier-profile-updates-and-skips-frame",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-both-user-pointers-request-empty-args-without-button-message",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-auth-null-empty-single-null-element-and-gate-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-auth-uses-platform-values-and-orders-download-name-save",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-auth-captures-target-before-getter-and-reresolves-current-player",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-auth-failure-keeps-prefix-and-suppresses-later-save",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-dispose-removes-listeners-closes-effects-retains-base-fields-and-clicks",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-disposal-first-effect-failure-stops-second-resolution",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-late-icon-continuation-after-direct-dispose-is-not-cancelled",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-second-icon-failure-retains-first-id-and-earlier-effects",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-auth-userdata-save-failure-prevents-pool-save-after-name",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-real-uicontrol-currency-cache-follows-owned-deferred-page",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-ready-predicate-null-disposed-live-and-callback-destruction",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "top-info-page-empty-refresh-and-missing-local-manager-retain-prefab-currency",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/top-info-page-native.png",
+    "restoredName": "恢复测试",
+    "restoredGold": 37,
+    "restoredDiamonds": 5,
+    "scope": "Owned original TopInfo25-outlet page: real UIControl, two-frame loading, native BaseUI WaitUntil/open/close, original effect1007/1019, shared LocalData/UserInfo/pool/file storage and tool-triggered text updates, actual profile pointer callbacks and explicit test authorization/download callback. Rank score, Match record, UserDataPrefs, UserInfoUI destination and external platform remain supplied test endpoints; no real platform authorization or complete Main/Player claim.",
+    "checks": [
+      "Native owned load binds25 source outlets and executes original Awake visibility",
+      "Native BaseUI WaitUntil emits page-ready then starts both original persistent effects",
+      "Owned page OpenLater installs source canvases and effects retain image parents",
+      "Actual UIControl resolves deferred currency outlets from the owned page",
+      "Real account tool mutations immediately refresh native currency texts and persist through shared pool",
+      "Real profile name event refreshes red dot and resolves original head/frame sprites",
+      "Native profile pointer reaches source empty-argument UserInfoUI request endpoint",
+      "Explicit test authorization event uses separate platform endpoints and source Match/name/save order",
+      "Deferred supplied avatar callback updates the exact native WeChat image",
+      "Saved nondefault nickname clears the original red dot",
+      "Native close marks disposed but source TopInfo.Dispose retains base dictionary/arguments/destroyed-object reference",
+      "Source close releases both effects and main page handle after native frame boundaries",
+      "Closed page has removed both account and authorization listeners",
+      "Independent file-backed account/UserInfo restart restores actual currency/name and fresh page labels",
+      "Reopened page owns fresh resource handles; fixture does not invent persisted Match authorization"
+    ]
+  },
+  "remaining": "Recover actual MatchManager/MatchControl and WXAvatar/UserDataPrefs required TopInfo authorization dependencies, RankControl score and full UserInfoUI destination. Complete UIControl/general sprite/resource production assembly, Guide and remaining17 controller lifecycle/business, real Main/account/platform/all business and final Player/original audiovisual acceptance."
+}

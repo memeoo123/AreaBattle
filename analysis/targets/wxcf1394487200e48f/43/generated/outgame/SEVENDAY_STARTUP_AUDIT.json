@@ -1,0 +1,113 @@
+{
+  "status": "sevenday-controller-common-native-startup-verified-pages-main-pending",
+  "atUtc": "2026-10-03T10:54:43.843958+00:00",
+  "sourceEvidence": "SEVENDAY_STARTUP_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T10:54:43.843958+00:00",
+    "scope": "SevendayActivityControl4502 all methods, concrete commander total level, common pre-load host and seven-day scene-completion binding",
+    "checksPassed": 1353,
+    "newIntegratedChecks": 9,
+    "targetedChecks": 9,
+    "nativeChecks": 11,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2344,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameCommonStartupPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "Source34 relevant existing methods,28 fields,13 usages retained; method index5962 unchanged. Controller4502 is now concretely bound; lifecycle matrix19/38. Empty OnInit/Updata preserved, Dispose clears registry only; scene completion separately calls EnterGameInit after level-rank initialization and before play-state1/loading-close/interactive.",
+      "Actual child1301 resolves through LimitTimeTaskActivity1301001, itself a child of1300001 in original config. Cached dates derive first over-condition target lowInt32 minus1, unspecified launch-date midnight, and overflowing Int32 millisecond multiplication before Int64 addition. Strict start/end bounds, lazy start0 refresh, explicit reentry refresh, null-child retained dates and exact red state0 verified. Both day/accumulator queries execute when unlocked.",
+      "Seeding uses actual skin catalog count, current level-minus1 unchecked/nonnegative clamp, and restored live commander dictionary signedInt32 sum. Callback changes to later level/config keys and failures after date publication retained. Original81-row skin config produces three initial unlocked soldier skins in native startup.",
+      "Concrete pre-load host routes original arena provider/statistics/activity endpoints to real StatisticsRuntime/ActivityRuntime. Native11 verifies server response remains pending across frames, activity initialization only after response, actual WaitUntil requires both independently controlled account flags, real FSM transition precedes delayed scene completion, seven-day seed10 and native automatic compressed task save. Required network/account/repair/UI/scene/report hosts remain explicit fixtures.",
+      "Integrated1353 including9 new passes; native11 passes. Integrated log retains32 existing ShouldRunBehaviour assertions and one Curl42 abort; native log retains one UnityEditor.Search startup indexing ArgumentOutOfRangeException and one Curl42 abort, zero compiler errors. Initial1355 edit-mode attempt retained: full common runtime needs PlayMode and fixture removal needed ChildActivities lookup. Full pre-load coverage moved to actual native run, not replaced by a synthetic success.",
+      "2344 source inputs match isolated project. Native-only fixture/runner skin catalog assertion refined after integrated pass, then compiled and passed native run; gameplay and integrated-test source unchanged. No new Player build, original task-page or complete Main/account/platform acceptance."
+    ],
+    "notClaimed": "Original common task UI/menu/red entry, complete production Main/SDK/account/HTTP/scene hosts, remaining19 controllers, Task/Achievement and remaining game business, platform success, Player or original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameSevendayActivityControl.cs",
+    "Scripts/OutgameCommonPreLoadHost.cs",
+    "Editor/OutgameSevendayValidation.cs",
+    "Editor/OutgameCommonStartupValidation.cs",
+    "Editor/OutgameCommonStartupPlayModeValidation.cs",
+    "Scripts/OutgameCommanderManager.cs",
+    "Scripts/OutgameControllerRegistry.cs",
+    "Scripts/OutgameCoreControllerBindings.cs",
+    "Scripts/OutgameStartupEntry.cs"
+  ],
+  "checks": [
+    {
+      "id": "sevenday-registry-lifecycle-empty-init-and-retained-dispose",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-scene-completion-seeds-real-task-statistics",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-strict-time-endpoints-caching-and-forced-enter-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-time-int32-truncation-multiplication-and-null-child-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-missing-parent-or-child-skips-seeding-but-retains-dates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-seed-callback-order-live-config-and-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-completed-level-wrap-and-commander-signed-sum",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-red-query-both-paths-and-exact-unclaimed-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "sevenday-red-day-bound-uses-condition-not-map-maximum",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Actual ProcedurePreLoad native WaitUntil, StatisticsRuntime and ActivityRuntime with original49 tasks, pending server callback, two explicit account flags, FSM transition, delayed scene-completion endpoint, SevenDay seeding/red and native automatic save. Account/network/UI/scene/report hosts remain explicit fixtures; full Main and original task pages/Player are not claimed.",
+    "checks": [
+      "Preload requests statistics data and leaves activities uninitialized while source callback is pending",
+      "Native frames cannot bypass pending statistics response",
+      "Real statistics callback initializes actual activity/task graph through Init(null)",
+      "Native WaitUntil preserves preload and short-circuits second login flag while first false",
+      "First ready flag alone cannot advance startup",
+      "Both flags resume actual FSM and startup; seven-day binding still waits for scene callback",
+      "Delayed scene completion seeds original seven-day lifetime task from actual statistic10015",
+      "Original81-row skin catalog seeds three initially unlocked soldier skins",
+      "Play state, loading close and interactive endpoint follow seven-day initialization",
+      "Original arena registration key retains provider that rereads current config event",
+      "Subsequent native common controller updates save newly seeded task progress to actual compressed file"
+    ]
+  },
+  "remaining": "Restore original CommonLimitTimeTaskUI and task/day/accumulator/reward page assets, interactions and production seven-day menu/red entry; complete Task/Achievement activities/managers. Continue production Main/account/SDK/HTTP/scene host assembly, remaining19 LogicModule controllers/all gameplay/shop/rewards/return and Player/audiovisual acceptance."
+}

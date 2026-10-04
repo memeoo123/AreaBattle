@@ -1,0 +1,103 @@
+; Original class: WXAvatar
+; Type9188.TryGetIcon_Sprite; wasmcode function 6811; offset=2565475 size=278
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00272566  i32.const [5006878]
+0027256b  i32.load8_u [0, 0]
+0027256e  i32.eqz []
+0027256f  if [-64]
+00272571    i32.const [3915764]
+00272576    call [900] ; 
+00272579    i32.const [3958268]
+0027257e    call [900] ; 
+00272581    i32.const [3958272]
+00272586    call [900] ; 
+00272589    i32.const [3960312]
+0027258e    call [900] ; 
+00272591    i32.const [3958280]
+00272596    call [900] ; 
+00272599    i32.const [3960320]
+0027259e    call [900] ; 
+002725a1    i32.const [3958284]
+002725a6    call [900] ; 
+002725a9    i32.const [5006878]
+002725ae    i32.const [1]
+002725b0    i32.store8 [0, 0]
+002725b3  end []
+002725b4  block [-64]
+002725b6    local.get [0]
+002725b8    i32.load [2, 16]
+002725bb    local.get [1]
+002725bd    i32.const [3960312]
+002725c2    i32.load [2, 0]
+002725c5    call [987] ; 
+002725c8    if [-64]
+002725ca      local.get [2]
+002725cc      i32.eqz []
+002725cd      br_if [1]
+002725cf      local.get [0]
+002725d1      i32.load [2, 16]
+002725d4      local.get [1]
+002725d6      i32.const [3960320]
+002725db      i32.load [2, 0]
+002725de      call [982] ; 
+002725e1      local.set [0]
+002725e3      local.get [2]
+002725e5      i32.load [2, 32]
+002725e8      local.get [0]
+002725ea      local.get [2]
+002725ec      i32.load [2, 20]
+002725ef      local.get [2]
+002725f1      i32.load [2, 12]
+002725f4      global.set [3]
+002725f6      global.get [3]
+002725f8      call_indirect [2, 0]
+002725fb      return []
+002725fc    end []
+002725fd    local.get [0]
+002725ff    i32.load [2, 24]
+00272602    local.get [1]
+00272604    i32.const [3958272]
+00272609    i32.load [2, 0]
+0027260c    call [987] ; 
+0027260f    local.set [4]
+00272611    local.get [0]
+00272613    i32.load [2, 24]
+00272616    local.set [3]
+00272618    block [-64]
+0027261a      local.get [4]
+0027261c      i32.eqz []
+0027261d      if [-64]
+0027261f        local.get [3]
+00272621        local.get [1]
+00272623        local.get [2]
+00272625        i32.const [3958268]
+0027262a        i32.load [2, 0]
+0027262d        call [932] ; 
+00272630        br [1]
+00272632      end []
+00272633      local.get [3]
+00272635      local.get [1]
+00272637      local.get [3]
+00272639      local.get [1]
+0027263b      i32.const [3958280]
+00272640      i32.load [2, 0]
+00272643      call [982] ; 
+00272646      local.get [2]
+00272648      i32.const [0]
+0027264a      call [1031] ; Delegate.Combine
+0027264d      i32.const [3915764]
+00272652      i32.load [2, 0]
+00272655      call [938] ; 
+00272658      i32.const [3958284]
+0027265d      i32.load [2, 0]
+00272660      call [1058] ; 
+00272663    end []
+00272664    local.get [0]
+00272666    local.get [1]
+00272668    local.get [1]
+0027266a    i32.const [64399] ; TABLE WXAvatar.DownLoadTexture
+0027266e    global.set [3]
+00272670    i32.const [64399] ; TABLE WXAvatar.DownLoadTexture
+00272674    call_indirect [2, 0]
+00272677  end []
+00272678  end []

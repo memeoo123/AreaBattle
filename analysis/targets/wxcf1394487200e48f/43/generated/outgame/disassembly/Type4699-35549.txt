@@ -1,0 +1,58 @@
+; Original class: LimitTimeTaskActivity
+; Type4699.OnInit; wasmcode function 18849; offset=8500332 size=168
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0081b46d  i32.const [5001261]
+0081b472  i32.load8_u [0, 0]
+0081b475  i32.eqz []
+0081b476  if [-64]
+0081b478    i32.const [3968320]
+0081b47d    call [900] ;
+0081b480    i32.const [3968308]
+0081b485    call [900] ;
+0081b488    i32.const [3920892]
+0081b48d    call [900] ;
+0081b490    i32.const [3932388]
+0081b495    call [900] ;
+0081b498    i32.const [4005584] ; METHOD LimitTimeTaskActivity.LimitTaskActDayComplete
+0081b49d    call [900] ;
+0081b4a0    i32.const [5001261]
+0081b4a5    i32.const [1]
+0081b4a7    i32.store8 [0, 0]
+0081b4aa  end []
+0081b4ab  i32.const [3968320]
+0081b4b0  i32.load [2, 0]
+0081b4b3  drop []
+0081b4b4  local.get [0]
+0081b4b6  local.get [0]
+0081b4b8  call [4966] ; LimitTimeTaskActivity.get_noviceTaskMgr
+0081b4bb  local.get [0]
+0081b4bd  i32.store [2, 24]
+0081b4c0  i32.const [3920892]
+0081b4c5  i32.load [2, 0]
+0081b4c8  call [903] ;
+0081b4cb  local.set [1]
+0081b4cd  local.get [1]
+0081b4cf  local.get [0]
+0081b4d1  i32.const [4005584] ; METHOD LimitTimeTaskActivity.LimitTaskActDayComplete
+0081b4d6  i32.load [2, 0]
+0081b4d9  i32.const [0]
+0081b4db  call [1057] ;
+0081b4de  i32.const [3932388]
+0081b4e3  i32.load [2, 0]
+0081b4e6  call [901] ;
+0081b4e9  i32.const [10021]
+0081b4ed  local.get [1]
+0081b4ef  i32.const [0]
+0081b4f1  call [1973] ; GameStatisticsExpansion.RegisteredValueFunc
+0081b4f4  local.get [0]
+0081b4f6  i32.const [0]
+0081b4f8  call [1189] ; ActivityConfigMgr.get_I
+0081b4fb  i32.load [2, 64]
+0081b4fe  local.get [0]
+0081b500  local.get [0]
+0081b502  call [4966] ; LimitTimeTaskActivity.get_noviceTaskMgr
+0081b505  i32.load [2, 28]
+0081b508  i32.const [3968308]
+0081b50d  i32.load [2, 0]
+0081b510  call [12299] ;
+0081b513  end []

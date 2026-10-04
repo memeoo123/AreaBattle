@@ -1,0 +1,75 @@
+; Original class: DynamicList
+; Type3868.UpdateList; wasmcode function 7943; offset=3789888 size=200
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0039d441  i32.const [5025227]
+0039d446  i32.load8_u [0, 0]
+0039d449  i32.eqz []
+0039d44a  if [-64]
+0039d44c    i32.const [3929208]
+0039d451    call [900] ; 
+0039d454    i32.const [3933368]
+0039d459    call [900] ; 
+0039d45c    i32.const [3926996]
+0039d461    call [900] ; 
+0039d464    i32.const [4104472] ; STRING "普通列表模式只能使用UpdateList<>泛型方法"
+0039d469    call [900] ; 
+0039d46c    i32.const [5025227]
+0039d471    i32.const [1]
+0039d473    i32.store8 [0, 0]
+0039d476  end []
+0039d477  local.get [0]
+0039d479  i32.load8_u [0, 140]
+0039d47d  if [-64]
+0039d47f    i32.const [3926996]
+0039d484    i32.load [2, 0]
+0039d487    i32.const [1]
+0039d489    call [909] ; 
+0039d48c    local.set [0]
+0039d48e    local.get [0]
+0039d490    i32.const [4104472] ; STRING "普通列表模式只能使用UpdateList<>泛型方法"
+0039d495    i32.load [2, 0]
+0039d498    call [905] ; 
+0039d49b    local.get [0]
+0039d49d    i32.const [4104472] ; STRING "普通列表模式只能使用UpdateList<>泛型方法"
+0039d4a2    i32.load [2, 0]
+0039d4a5    i32.store [2, 16]
+0039d4a8    i32.const [3929208]
+0039d4ad    i32.load [2, 0]
+0039d4b0    call [901] ; 
+0039d4b3    local.get [0]
+0039d4b5    i32.const [0]
+0039d4b7    i32.const [2087] ; TABLE CLog.Error
+0039d4ba    global.set [3]
+0039d4bc    i32.const [2087] ; TABLE CLog.Error
+0039d4bf    call_indirect [0, 0]
+0039d4c2    return []
+0039d4c3  end []
+0039d4c4  local.get [0]
+0039d4c6  i32.load8_u [0, 16]
+0039d4c9  if [-64]
+0039d4cb    local.get [0]
+0039d4cd    local.get [0]
+0039d4cf    call [4447] ; DynamicList.fPiN
+0039d4d2  end []
+0039d4d3  i32.const [1]
+0039d4d5  i32.const [3933368]
+0039d4da  i32.load [2, 0]
+0039d4dd  local.get [0]
+0039d4df  i32.load [2, 120]
+0039d4e2  call [918] ; 
+0039d4e5  local.set [1]
+0039d4e7  local.get [0]
+0039d4e9  local.get [1]
+0039d4eb  local.get [0]
+0039d4ed  call [4449] ; DynamicList.Lz~gOT
+0039d4f0  local.get [0]
+0039d4f2  local.get [1]
+0039d4f4  local.get [0]
+0039d4f6  call [4448] ; DynamicList.{m``Z
+0039d4f9  local.get [0]
+0039d4fb  local.get [0]
+0039d4fd  call [5104] ; DynamicList.tXzbua
+0039d500  local.get [0]
+0039d502  i32.const [1]
+0039d504  i32.store8 [0, 125]
+0039d507  end []

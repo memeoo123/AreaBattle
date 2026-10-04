@@ -1,0 +1,23 @@
+; Original class: TaskIapRefreshItem
+; Type4670.AddItem; wasmcode1 function 45906; offset=16340329 size=48
+; signature={'args': [127, 126, 127], 'returns': []}; localGroups=[]
+00f9556a  local.get [0]
+00f9556c  local.get [1]
+00f9556e  local.get [0]
+00f95570  i32.const [18424] ; TABLE ActivityVirtualItemBase.AddItem
+00f95574  call_indirect [22, 0]
+00f95577  local.get [0]
+00f95579  local.set [2]
+00f9557b  local.get [0]
+00f9557d  i32.load [2, 0]
+00f95580  local.set [0]
+00f95582  local.get [2]
+00f95584  local.get [1]
+00f95586  local.get [0]
+00f95588  i32.const [56]
+00f9558a  i32.add []
+00f9558b  i32.load [2, 192]
+00f9558f  local.get [0]
+00f95591  i32.load [2, 244]
+00f95595  call_indirect [22, 0]
+00f95598  end []

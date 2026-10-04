@@ -1,0 +1,125 @@
+; Original class: AchievementMgr
+; Type4722.RefreshTypeListSort; wasmcode function 13391; offset=6484503 size=350
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(2, 127)]
+0062f21a  global.get [0]
+0062f21c  i32.const [16]
+0062f21e  i32.sub []
+0062f21f  local.set [2]
+0062f221  local.get [2]
+0062f223  global.set [0]
+0062f225  i32.const [5001307]
+0062f22a  i32.load8_u [0, 0]
+0062f22d  i32.eqz []
+0062f22e  if [-64]
+0062f230    i32.const [3916648]
+0062f235    call [900] ; 
+0062f238    i32.const [3954728]
+0062f23d    call [900] ; 
+0062f240    i32.const [3934404]
+0062f245    call [900] ; 
+0062f248    i32.const [3971812]
+0062f24d    call [900] ; 
+0062f250    i32.const [3926996]
+0062f255    call [900] ; 
+0062f258    i32.const [4026352] ; METHOD <>c.<RefreshTypeListSort>b__14_0
+0062f25d    call [900] ; 
+0062f260    i32.const [3943996]
+0062f265    call [900] ; 
+0062f268    i32.const [4049028] ; STRING "CommonModule_Achievement_RefreshTypeList"
+0062f26d    call [900] ; 
+0062f270    i32.const [5001307]
+0062f275    i32.const [1]
+0062f277    i32.store8 [0, 0]
+0062f27a  end []
+0062f27b  local.get [2]
+0062f27d  i32.const [0]
+0062f27f  i32.store [2, 12]
+0062f282  local.get [0]
+0062f284  i32.load [2, 36]
+0062f287  local.get [1]
+0062f289  local.get [2]
+0062f28b  i32.const [12]
+0062f28d  i32.add []
+0062f28e  i32.const [3954728]
+0062f293  i32.load [2, 0]
+0062f296  call [1134] ; 
+0062f299  if [-64]
+0062f29b    local.get [2]
+0062f29d    i32.load [2, 12]
+0062f2a0    local.set [3]
+0062f2a2    i32.const [3943996]
+0062f2a7    i32.load [2, 0]
+0062f2aa    call [901] ; 
+0062f2ad    i32.const [3943996]
+0062f2b2    i32.load [2, 0]
+0062f2b5    i32.load [2, 92]
+0062f2b8    i32.load [2, 8]
+0062f2bb    local.set [0]
+0062f2bd    local.get [0]
+0062f2bf    i32.eqz []
+0062f2c0    if [-64]
+0062f2c2      i32.const [3943996]
+0062f2c7      i32.load [2, 0]
+0062f2ca      call [901] ; 
+0062f2cd      i32.const [3943996]
+0062f2d2      i32.load [2, 0]
+0062f2d5      i32.load [2, 92]
+0062f2d8      i32.load [2, 0]
+0062f2db      local.set [4]
+0062f2dd      i32.const [3916648]
+0062f2e2      i32.load [2, 0]
+0062f2e5      call [903] ; 
+0062f2e8      local.set [0]
+0062f2ea      local.get [0]
+0062f2ec      local.get [4]
+0062f2ee      i32.const [4026352] ; METHOD <>c.<RefreshTypeListSort>b__14_0
+0062f2f3      i32.load [2, 0]
+0062f2f6      i32.const [0]
+0062f2f8      call [1483] ; 
+0062f2fb      i32.const [3943996]
+0062f300      i32.load [2, 0]
+0062f303      i32.load [2, 92]
+0062f306      local.get [0]
+0062f308      i32.store [2, 8]
+0062f30b      i32.const [3943996]
+0062f310      i32.load [2, 0]
+0062f313      i32.load [2, 92]
+0062f316      drop []
+0062f317    end []
+0062f318    local.get [3]
+0062f31a    local.get [0]
+0062f31c    i32.const [3971812]
+0062f321    i32.load [2, 0]
+0062f324    call [1492] ; 
+0062f327    i32.const [3926996]
+0062f32c    i32.load [2, 0]
+0062f32f    i32.const [1]
+0062f331    call [909] ; 
+0062f334    local.set [0]
+0062f336    local.get [2]
+0062f338    local.get [1]
+0062f33a    i32.store [2, 8]
+0062f33d    i32.const [3934404]
+0062f342    i32.load [2, 0]
+0062f345    local.get [2]
+0062f347    i32.const [8]
+0062f349    i32.add []
+0062f34a    call [910] ; 
+0062f34d    local.set [1]
+0062f34f    local.get [0]
+0062f351    local.get [1]
+0062f353    call [905] ; 
+0062f356    local.get [0]
+0062f358    local.get [1]
+0062f35a    i32.store [2, 16]
+0062f35d    i32.const [4049028] ; STRING "CommonModule_Achievement_RefreshTypeList"
+0062f362    i32.load [2, 0]
+0062f365    local.get [0]
+0062f367    i32.const [0]
+0062f369    call [1738] ; CommonMsgDispatcher.SendMessage
+0062f36c  end []
+0062f36d  local.get [2]
+0062f36f  i32.const [16]
+0062f371  i32.add []
+0062f372  global.set [0]
+0062f374  end []

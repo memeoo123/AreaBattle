@@ -1,0 +1,50 @@
+; Original shared generic: ½n»»¾¥.AddAgent
+; WebRequestTaskPoolGeneric.AddAgent; wasmcode function 9857; offset=4728990 size=126
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0048289f  local.get [1]
+004828a1  i32.eqz []
+004828a2  if [-64]
+004828a4    i32.const [3932324]
+004828a9    call [902] ; 
+004828ac    call [903] ; 
+004828af    local.set [0]
+004828b1    local.get [0]
+004828b3    i32.const [4071724] ; STRING "Task agent is invalid."
+004828b8    call [902] ; 
+004828bb    i32.const [0]
+004828bd    i32.const [10659] ; TABLE GameFrameworkException..ctor
+004828c1    global.set [3]
+004828c3    i32.const [10659] ; TABLE GameFrameworkException..ctor
+004828c7    call_indirect [2, 0]
+004828ca    local.get [0]
+004828cc    i32.const [3988492]
+004828d1    call [902] ; 
+004828d4    i32.const [1106]
+004828d7    global.set [3]
+004828d9    i32.const [1106]
+004828dc    call_indirect [0, 0]
+004828df    unreachable []
+004828e0  end []
+004828e1  i32.const [3]
+004828e3  local.get [2]
+004828e5  i32.load [2, 16]
+004828e8  i32.load [2, 96]
+004828eb  i32.const [14]
+004828ed  call [904] ; 
+004828f0  local.get [1]
+004828f2  call [2813] ; 
+004828f5  local.get [2]
+004828f7  i32.load [2, 16]
+004828fa  i32.load [2, 96]
+004828fd  i32.load [2, 140]
+00482901  i32.load [2, 0]
+00482904  local.get [2]
+00482906  i32.load [2, 16]
+00482909  i32.load [2, 96]
+0048290c  i32.load [2, 140]
+00482910  local.get [0]
+00482912  i32.load [2, 8]
+00482915  local.get [1]
+00482917  call [1014] ; 
+0048291a  drop []
+0048291b  end []

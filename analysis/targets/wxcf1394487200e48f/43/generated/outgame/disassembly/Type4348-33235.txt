@@ -1,0 +1,18 @@
+; Original class: LimitTimeTaskAccItem
+; Type4348.RefreshRedInfo; wasmcode function 18853; offset=8501666 size=45
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0081b9a3  i32.const [5008895]
+0081b9a8  i32.load8_u [0, 0]
+0081b9ab  i32.eqz []
+0081b9ac  if [-64]
+0081b9ae    i32.const [4069376] ; STRING "SevendayGetAccReward"
+0081b9b3    call [900] ; 
+0081b9b6    i32.const [5008895]
+0081b9bb    i32.const [1]
+0081b9bd    i32.store8 [0, 0]
+0081b9c0  end []
+0081b9c1  i32.const [4069376] ; STRING "SevendayGetAccReward"
+0081b9c6  i32.load [2, 0]
+0081b9c9  i32.const [0]
+0081b9cb  call [1317] ; MsgDispatcher.SendMessage
+0081b9ce  end []

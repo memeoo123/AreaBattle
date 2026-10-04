@@ -1,0 +1,40 @@
+; Original class: TaskMgr
+; Type4692.InitStrategy; wasmcode function 15687; offset=7554576 size=112
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00734613  i32.const [5001450]
+00734618  i32.load8_u [0, 0]
+0073461b  i32.eqz []
+0073461c  if [-64]
+0073461e    i32.const [3915788]
+00734623    call [900] ;
+00734626    i32.const [3981476]
+0073462b    call [900] ;
+0073462e    i32.const [4016596] ; METHOD TaskMgr.UpdateCallback
+00734633    call [900] ;
+00734636    i32.const [5001450]
+0073463b    i32.const [1]
+0073463d    i32.store8 [0, 0]
+00734640  end []
+00734641  local.get [0]
+00734643  i32.load [2, 24]
+00734646  local.set [1]
+00734648  local.get [1]
+0073464a  if [-64]
+0073464c    i32.const [3915788]
+00734651    i32.load [2, 0]
+00734654    call [903] ;
+00734657    local.set [2]
+00734659    local.get [2]
+0073465b    local.get [0]
+0073465d    i32.const [4016596] ; METHOD TaskMgr.UpdateCallback
+00734662    i32.load [2, 0]
+00734665    i32.const [0]
+00734667    call [1004] ;
+0073466a    local.get [1]
+0073466c    local.get [2]
+0073466e    i32.const [1300001]
+00734673    i32.const [3981476]
+00734678    i32.load [2, 0]
+0073467b    call [11278] ;
+0073467e  end []
+0073467f  end []

@@ -1,0 +1,127 @@
+{
+  "status": "original-task-controller-achievement-subview-verified-full-page-main-pending",
+  "atUtc": "2026-10-03T13:06:46.915219+00:00",
+  "sourceEvidence": "TASK_CONTROL_VIEW_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T13:06:46.915219+00:00",
+    "scope": "Original task controller4507, main task visibility/red and Achievement subview3986 with native claim/restart",
+    "checksPassed": 1512,
+    "newIntegratedChecks": 12,
+    "targetedChecks": 12,
+    "nativeChecks": 11,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2677,
+    "implementedLifecycleControllers": 20,
+    "remainingLifecycleControllers": 18,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTaskControlViewPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "Controller4507 is now registered by concrete OutgameCoreControllerBindings.BindTasks into source resolver. OnInit subscribes MsgDispatcher GF_AdsPlayCallBack and WarWin, registers source900001 value function returning Int64 zero. InitHczzqEvent/Updata are empty. Source OnInit does NOT subscribe LoadStartingUI; external source callers must invoke RefreshData. Dispose removes three callbacks including that unused registration, clears two cached activity fields, retains controller registry slot and statistics provider.",
+      "Daily getter caches first nonnull TaskActivity1300001.TaskViewActivities[ActivityID.Daily] direct dictionary result; Achi getter caches ActivityControl1601001. ActivityID4273 cctor32609 literal130001 is verified. Config StatisticEventConfig offsets24/28/80 resolve DailyCompleteLv/DailyWatchAds/ArenaRank. Ads exact-unboxes bool and only success increments configured daily event; WarWin always increments configured daily completion event, via actual StatisticsExpansion.",
+      "RefreshData reads current LevelControl.CurLevel twice. Before10 it zeroes all recorded daily condition values with no claim/state/liveness reset. If second read>=10 SetRedDot runs and unlock=true. Only final entrance-visibility call guards absent page/root; earlier red call has no guard. Source StartUI33723 node0 sets task button active, node1 sets child0 red active, other indices no-op. Native original LeftBar/taskBtn hierarchy used.",
+      "Daily red scans all actual tasks CanComplete then cached liveness rows state0/threshold, independent of task8 UI filter and receive state. Achievement red scans actual map; positive ArenaRank records are overwritten with raw EventCount and immediately skipped for that scan; all other records use CanComplete. SetRedDot short-circuits Achi OR Daily and sets entrance node1.",
+      "AchiTaskSubUI3986 OnInit captures actualAchievement owner and subscribes common RefreshList. OnLateInit triggers actual manager RefreshSortList. OnDestroy clears required singleton owner BEFORE unsubscribing; retains RootUI, activity and rows. Full TaskSingleton generic ownership remains next work, not mocked as production complete.",
+      "Filter allocates list and type dictionary. First record of each config.type with state!=1 reserves type BEFORE show conditions, so hidden first record suppresses later same-type rows. Show predicates require exact GameValue(key,Array.Empty<object>())==target, ignoring copied middle args. State1 skips without reserving. Ordering comparator30733 computes both eligibility first, prioritizes ready then falls back CompareTo (which computes both again).",
+      "RefreshRows sets achievement tab red before unpacking/casting args0. Filter/sort, then only when row dictionary entirely empty creates unclaimed type rows, applies projections and Refresh. Existing nonempty dictionary never rebinding/adding missing rows in this method; it only SetAsLastSibling per visible type, catches Exception and warns boxedtype. Empty filtered list shows placeholder; nonempty list does not explicitly hide it. These non-obvious source rules preserved.",
+      "CreateRow requests original page row then publishes Rows[type] before SetData(Achievement,Claim) and IsClaim=false. Projection shares Lang/reward objects, liveness0, lowInt32 target/progress, content/contentType/id and ActionCache=true; UID unchanged. Claim invokes actual strategy BEFORE re-reading claimed config type, first state0 actual type representative and row lookup; reuses/creates row or sets ActionCachefalse,hides,removes type mapping without disposal.",
+      "Validation composes actual ordinary Task and Achievement before ActivityControl.Init, retains existing fixture defaults and restores both model scopes. Real original main/task prefabs and shared row assets used.1512 integrated including12 new; fresh11 native checks real EventSystem pointer, settled source layout, scaled pause/resume .7s slide, original200 gold/time, same row advance and source report reading next id after callback, data-pool independent restart and unsubscribe.",
+      "Native first attempt measured initial layout-group placement as tween motion; final validation waits for real initial rendered layout before pointer/motion check, without changing production code. Full TaskSingleton/TaskPanel lifecycle/tabs and Main opening/closing route remain pending. Lifecycle20/38 is only controller binding coverage, not total restoration percentage.",
+      "Final integrated retains32 existing ShouldRunBehaviour assertions and one Curl42. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42; no compiler errors. Fresh native11 checks pass after initial layout measurement corrected."
+    ],
+    "notClaimed": "Full TaskSingleton/TaskPanel lifecycle/tabs/Main startup or opening route, complete production account/platform/effect/report hosts, original audiovisual equivalence or fresh Player."
+  },
+  "implementation": [
+    "Scripts/OutgameTaskControl.cs",
+    "Scripts/OutgameAchievementTaskView.cs",
+    "Scripts/OutgameCoreControllerBindings.cs",
+    "Editor/OutgameTaskControlViewValidation.cs",
+    "Editor/OutgameTaskControlViewPlayModeValidation.cs",
+    "Editor/OutgameTaskRowsValidation.cs",
+    "Editor/OutgameTaskActivityValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "task-control-view-actual-resolver-owner-cache-and-statistic900001",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-ads-success-warwin-real-statistics-and-unsubscribe",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-level9-reset-level10-entrance-and-refresh-not-auto-subscribed",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-daily-red-includes-filtered-unreceived-and-liveness",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-rank-red-rewrites-positive-progress-and-skips-that-record",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-red-short-circuit-and-source-entrance-node-selection",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-original-achievement-rows-bind-real-config-and-parent",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-show-filter-equality-empty-args-and-reserved-type",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-projection-int32-truncation-shared-rewards-and-retained-uid",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-refresh-existing-only-reorders-and-missing-type-warns",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-actual-row-slide-claim-reuses-next-type-row-then-removes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-control-view-destroy-clears-owner-before-unsubscribe-and-retains-view-fields",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Original main task entrance hidden before level10",
+    "Original main task entrance enabled at level10",
+    "Real original first achievement renders ready under achievement content",
+    "Native pointer disables claim before scaled slide and economy",
+    "Real Unity frames at timeScale0 preserve paused slide and unclaimed state",
+    "Disabled native Button ignores repeat pointer",
+    "Native slide completion awards original200 gold and records actual achievement time",
+    "Same native type row advances to second original achievement after claim",
+    "Source UI report reads current next-row ID after callback reentry",
+    "Independent storage/activity/view startup restores claim and next visible original row",
+    "Destroyed subview clears owner and unsubscribes from live manager refresh"
+  ],
+  "remaining": "Recover TaskSingleton3990 concrete generic ownership and full TaskPanelUI4416 lifecycle/daily-achievement tabs/close/top-info/audio/preview ownership plus original Main task button opening route, over restored actual Task/Achievement runtimes and controller4507/AchiTaskSubUI3986. Continue production Main/account/platform/effect/report hosts, remaining18 controller lifecycles, all business and original audiovisual/Player acceptance."
+}

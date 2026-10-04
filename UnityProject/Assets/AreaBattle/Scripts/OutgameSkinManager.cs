@@ -23,6 +23,8 @@ namespace AreaBattle
         }
         public void UpdateDataCallBack(string text)
         {Catalog=OutgameSkinCatalog.FromOriginal(text,soldiers,scenes);profile.skins=Catalog.State;}
+        // Source OnRelease31631/31731 is empty.
+        public void OnRelease(){}
         public void OnSave()=>storage.SaveLocalData(Catalog.ToOriginalJson());
         public void ApplyLegacy(string oldLocalData)=>Catalog.ApplyLegacy(oldLocalData);
     }

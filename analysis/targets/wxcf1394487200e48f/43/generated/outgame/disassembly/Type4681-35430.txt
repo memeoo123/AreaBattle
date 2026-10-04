@@ -1,0 +1,57 @@
+; Original class: ChildTaskOffNetStrategy
+; Type4681.el`pLo; wasmcode1 function 67724; offset=21508139 size=157
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0148302e  i32.const [5001416]
+01483033  i32.load8_u [0, 0]
+01483036  i32.eqz []
+01483037  if [-64]
+01483039    i32.const [3992468] ; METHOD ChildTaskOffNetStrategy.pw|Me
+0148303e    i32.const [1605]
+01483041    call_indirect [0, 0]
+01483044    i32.const [3944680]
+01483049    i32.const [1605]
+0148304c    call_indirect [0, 0]
+0148304f    i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+01483054    i32.const [1605]
+01483057    call_indirect [0, 0]
+0148305a    i32.const [5001416]
+0148305f    i32.const [1]
+01483061    i32.store8 [0, 0]
+01483064  end []
+01483065  local.get [0]
+01483067  local.get [0]
+01483069  call [21327] ; TaskNetStrategyBase.el`pLo
+0148306d  local.get [0]
+0148306f  i32.load [2, 8]
+01483072  i32.load [2, 76]
+01483075  i32.const [8]
+01483077  i32.add []
+01483078  i32.const [0]
+0148307a  i32.const [1672] ; TABLE Int32.ToString
+0148307d  call_indirect [1, 0]
+01483080  local.set [1]
+01483082  i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+01483087  i32.load [2, 0]
+0148308a  local.get [1]
+0148308c  i32.const [0]
+0148308e  i32.const [1476] ; TABLE String.Concat
+01483091  call_indirect [3, 0]
+01483094  local.set [1]
+01483096  i32.const [3944680]
+0148309b  i32.load [2, 0]
+0148309e  i32.const [109007]
+014830a2  call_indirect [2, 0]
+014830a5  local.set [2]
+014830a7  local.get [2]
+014830a9  local.get [0]
+014830ab  i32.const [3992468] ; METHOD ChildTaskOffNetStrategy.pw|Me
+014830b0  i32.load [2, 0]
+014830b3  i32.const [0]
+014830b5  i32.const [7926] ; TABLE EventHandler..ctor
+014830b8  call_indirect [6, 0]
+014830bb  local.get [1]
+014830bd  local.get [2]
+014830bf  i32.const [0]
+014830c1  i32.const [7927] ; TABLE CommonMsgDispatcher.RemoveEventListener
+014830c4  call_indirect [5, 0]
+014830c7  end []

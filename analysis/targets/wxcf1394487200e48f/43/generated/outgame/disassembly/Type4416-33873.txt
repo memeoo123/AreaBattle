@@ -1,0 +1,30 @@
+; Original class: TaskPanelUI
+; Type4416.SetAchTabReddot; wasmcode function 7060; offset=2688389 size=76
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00290586  i32.const [5007038]
+0029058b  i32.load8_u [0, 0]
+0029058e  i32.eqz []
+0029058f  if [-64]
+00290591    i32.const [3953600]
+00290596    call [900] ; 
+00290599    i32.const [5007038]
+0029059e    i32.const [1]
+002905a0    i32.store8 [0, 0]
+002905a3  end []
+002905a4  local.get [0]
+002905a6  i32.load [2, 128]
+002905aa  i32.const [0]
+002905ac  call [977] ; Component.get_transform
+002905af  i32.const [2]
+002905b1  i32.const [0]
+002905b3  call [1145] ; Transform.GetChild
+002905b6  i32.const [0]
+002905b8  call [943] ; Component.get_gameObject
+002905bb  i32.const [3953600]
+002905c0  i32.load [2, 0]
+002905c3  call [935] ; 
+002905c6  i32.const [0]
+002905c8  call [6753] ; X`nPj.IsAchiCanComplete
+002905cb  i32.const [0]
+002905cd  call [949] ; GameObject.SetActive
+002905d0  end []

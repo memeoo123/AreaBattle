@@ -1,0 +1,40 @@
+; Original class: AchievementMgr
+; Type4722.InitStrategy; wasmcode function 21006; offset=9474268 size=112
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+009090df  i32.const [5001309]
+009090e4  i32.load8_u [0, 0]
+009090e7  i32.eqz []
+009090e8  if [-64]
+009090ea    i32.const [3988784] ; METHOD AchievementMgr.UpdateCallback
+009090ef    call [900] ; 
+009090f2    i32.const [3915452]
+009090f7    call [900] ; 
+009090fa    i32.const [3981456]
+009090ff    call [900] ; 
+00909102    i32.const [5001309]
+00909107    i32.const [1]
+00909109    i32.store8 [0, 0]
+0090910c  end []
+0090910d  local.get [0]
+0090910f  i32.load [2, 24]
+00909112  local.set [1]
+00909114  local.get [1]
+00909116  if [-64]
+00909118    i32.const [3915452]
+0090911d    i32.load [2, 0]
+00909120    call [903] ; 
+00909123    local.set [2]
+00909125    local.get [2]
+00909127    local.get [0]
+00909129    i32.const [3988784] ; METHOD AchievementMgr.UpdateCallback
+0090912e    i32.load [2, 0]
+00909131    i32.const [0]
+00909133    call [1004] ; 
+00909136    local.get [1]
+00909138    local.get [2]
+0090913a    i32.const [1601001]
+0090913f    i32.const [3981456]
+00909144    i32.load [2, 0]
+00909147    call [11278] ; 
+0090914a  end []
+0090914b  end []

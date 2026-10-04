@@ -1,0 +1,22 @@
+; Original shared generic: ObjectPoolManager.DestroyObjectPool
+; PoolManagerGeneric.DestroyObjectPool; wasmcode1 function 55680; offset=18369656 size=50
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+01184c79  local.get [2]
+01184c7b  i32.const [109026]
+01184c7f  call_indirect [0, 0]
+01184c82  local.get [0]
+01184c84  local.get [2]
+01184c86  i32.load [2, 28]
+01184c89  i32.load [2, 0]
+01184c8c  i32.load [2, 0]
+01184c8f  local.get [2]
+01184c91  i32.load [2, 28]
+01184c94  i32.load [2, 0]
+01184c97  i32.const [0]
+01184c99  local.get [1]
+01184c9b  i32.const [12481]
+01184c9f  call_indirect [8, 0]
+01184ca2  i32.const [0]
+01184ca4  call [24852] ; ObjectPoolManager.InternalDestroyObjectPool
+01184ca8  return []
+01184ca9  end []

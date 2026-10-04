@@ -1,0 +1,43 @@
+; Original class: RankManager
+; Type4137.CreateNewData; wasmcode function 7383; offset=2913518 size=124
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002c74ef  i32.const [5010227]
+002c74f4  i32.load8_u [0, 0]
+002c74f7  i32.eqz []
+002c74f8  if [-64]
+002c74fa    i32.const [3953544]
+002c74ff    call [900] ; 
+002c7502    i32.const [3937604]
+002c7507    call [900] ; 
+002c750a    i32.const [4034536] ; STRING ""
+002c750f    call [900] ; 
+002c7512    i32.const [5010227]
+002c7517    i32.const [1]
+002c7519    i32.store8 [0, 0]
+002c751c  end []
+002c751d  local.get [0]
+002c751f  i32.const [3937604]
+002c7524  i32.load [2, 0]
+002c7527  call [903] ; 
+002c752a  i32.store [2, 20]
+002c752d  local.get [0]
+002c752f  i32.load [2, 20]
+002c7532  i32.const [0]
+002c7534  call [1060] ; ConfigMgr.get_Instance
+002c7537  i32.load [2, 264]
+002c753b  i32.load [2, 8]
+002c753e  i32.store [2, 8]
+002c7541  local.get [0]
+002c7543  i32.load [2, 20]
+002c7546  i32.const [4034536] ; STRING ""
+002c754b  i32.load [2, 0]
+002c754e  i32.store [2, 12]
+002c7551  local.get [0]
+002c7553  i32.load [2, 20]
+002c7556  i32.const [3953544]
+002c755b  i32.load [2, 0]
+002c755e  call [935] ; 
+002c7561  i32.const [0]
+002c7563  call [1848] ; ServerTimeModule.GetNowTimestampLong
+002c7566  i64.store [3, 16]
+002c7569  end []

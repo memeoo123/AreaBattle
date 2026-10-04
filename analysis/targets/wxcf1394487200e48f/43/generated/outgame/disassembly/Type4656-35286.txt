@@ -1,0 +1,98 @@
+; Original class: ActivityFactoryBase
+; Type4656..ctor; wasmcode function 6336; offset=2285436 size=254
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+0022df7f  global.get [0]
+0022df81  i32.const [16]
+0022df83  i32.sub []
+0022df84  local.set [2]
+0022df86  local.get [2]
+0022df88  global.set [0]
+0022df8a  local.get [2]
+0022df8c  local.get [1]
+0022df8e  i32.store [2, 12]
+0022df91  i32.const [5001335]
+0022df96  i32.load8_u [0, 0]
+0022df99  i32.eqz []
+0022df9a  if [-64]
+0022df9c    i32.const [3930676]
+0022dfa1    call [900] ; 
+0022dfa4    i32.const [3957248]
+0022dfa9    call [900] ; 
+0022dfac    i32.const [3957256]
+0022dfb1    call [900] ; 
+0022dfb4    i32.const [3934404]
+0022dfb9    call [900] ; 
+0022dfbc    i32.const [4104344] ; STRING "无法创建当前道具 id :"
+0022dfc1    call [900] ; 
+0022dfc4    i32.const [5001335]
+0022dfc9    i32.const [1]
+0022dfcb    i32.store8 [0, 0]
+0022dfce  end []
+0022dfcf  i32.const [0]
+0022dfd1  call [2035] ; ItemConfigMgr.get_Instance
+0022dfd4  i32.load [2, 8]
+0022dfd7  local.set [3]
+0022dfd9  local.get [2]
+0022dfdb  local.get [1]
+0022dfdd  i32.store [2, 8]
+0022dfe0  block [-64]
+0022dfe2    local.get [3]
+0022dfe4    i32.const [3934404]
+0022dfe9    i32.load [2, 0]
+0022dfec    local.get [2]
+0022dfee    i32.const [8]
+0022dff0    i32.add []
+0022dff1    call [910] ; 
+0022dff4    i32.const [3957248]
+0022dff9    i32.load [2, 0]
+0022dffc    call [987] ; 
+0022dfff    if [-64]
+0022e001      i32.const [0]
+0022e003      call [2035] ; ItemConfigMgr.get_Instance
+0022e006      i32.load [2, 8]
+0022e009      local.set [1]
+0022e00b      local.get [2]
+0022e00d      local.get [2]
+0022e00f      i32.load [2, 12]
+0022e012      i32.store [2, 4]
+0022e015      local.get [0]
+0022e017      local.get [1]
+0022e019      i32.const [3934404]
+0022e01e      i32.load [2, 0]
+0022e021      local.get [2]
+0022e023      i32.const [4]
+0022e025      i32.add []
+0022e026      call [910] ; 
+0022e029      i32.const [3957256]
+0022e02e      i32.load [2, 0]
+0022e031      call [982] ; 
+0022e034      i32.store [2, 8]
+0022e037      br [1]
+0022e039    end []
+0022e03a    local.get [2]
+0022e03c    i32.const [12]
+0022e03e    i32.add []
+0022e03f    i32.const [0]
+0022e041    call [966] ; Int32.ToString
+0022e044    local.set [0]
+0022e046    i32.const [4104344] ; STRING "无法创建当前道具 id :"
+0022e04b    i32.load [2, 0]
+0022e04e    local.get [0]
+0022e050    i32.const [0]
+0022e052    call [921] ; String.Concat
+0022e055    local.set [0]
+0022e057    i32.const [3930676]
+0022e05c    i32.load [2, 0]
+0022e05f    call [901] ; 
+0022e062    local.get [0]
+0022e064    i32.const [0]
+0022e066    i32.const [2369] ; TABLE Debug.LogError
+0022e069    global.set [3]
+0022e06b    i32.const [2369] ; TABLE Debug.LogError
+0022e06e    call_indirect [0, 0]
+0022e071  end []
+0022e072  local.get [2]
+0022e074  i32.const [16]
+0022e076  i32.add []
+0022e077  global.set [0]
+0022e079  end []

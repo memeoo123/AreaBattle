@@ -59,6 +59,7 @@ namespace AreaBattle.EditorTools
         [Serializable] class RendererData { public bool m_CullTransparentMesh; }
         [Serializable] class ScrollData { public int m_Enabled=1,m_Horizontal,m_Vertical,m_Inertia,m_MovementType,m_HorizontalScrollbarVisibility,m_VerticalScrollbarVisibility; public float m_Elasticity,m_DecelerationRate,m_ScrollSensitivity,m_HorizontalScrollbarSpacing,m_VerticalScrollbarSpacing;public ObjectPointer m_Content,m_Viewport,m_HorizontalScrollbar,m_VerticalScrollbar; }
         [Serializable] class FitData { public int m_Enabled=1,m_HorizontalFit,m_VerticalFit,m_ShowMaskGraphic; }
+        [Serializable] class RectMaskData {public int m_Enabled=1;public Vector4 m_Padding;public Vector2Int m_Softness;}
         [Serializable] class ObjectPointer {public int m_FileID;public long m_PathID;}
         [Serializable] class Report {public string status;public int prefabs,sprites,fonts;public string[] skippedComponents;public string limitation;}
 
@@ -86,6 +87,30 @@ namespace AreaBattle.EditorTools
         public static void ImportOutgameBatch()
         {
             try{ImportOutgame();AssetDatabase.SaveAssets();if(Application.isBatchMode)EditorApplication.Exit(0);}
+            catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
+        }
+        public static void ImportTaskPanelBatch()
+        {
+            try{ImportManifest("generated/outgame/task-panel-ui-import.json","Assets/AreaBattle/Resources/Recovered/TaskPanel",2,"analysis/unity-task-panel-import-report.json");
+                string path=Path.Combine(workspace,"analysis/unity-task-panel-import-report.json");var report=JsonUtility.FromJson<Report>(File.ReadAllText(path));
+                report.limitation="Original task panel and shared task row static UGUI geometry, sprites/fonts/outlets. Task row runtime is separately bound. Full daily/achievement tabs, page lifecycle, preview, source particle/animation effects and original audiovisual matching remain pending.";
+                File.WriteAllText(path,JsonUtility.ToJson(report,true));AssetDatabase.SaveAssets();if(Application.isBatchMode)EditorApplication.Exit(0);}
+            catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
+        }
+        public static void ImportLimitTaskBatch()
+        {
+            try{ImportManifest("generated/outgame/limit-task-ui-import.json","Assets/AreaBattle/Resources/Recovered/LimitTask",4,"analysis/unity-limit-task-import-report.json");
+                string path=Path.Combine(workspace,"analysis/unity-limit-task-import-report.json");var report=JsonUtility.FromJson<Report>(File.ReadAllText(path));
+                report.limitation="Original limited-task page and task/day/reward prefabs with source UGUI fields, sprites/fonts/outlets imported. DynamicList and task/accumulator/preview controllers are separate required recovered bindings. Static hierarchy import alone does not claim complete page interactions or original audiovisual matching.";
+                File.WriteAllText(path,JsonUtility.ToJson(report,true));AssetDatabase.SaveAssets();if(Application.isBatchMode)EditorApplication.Exit(0);}
+            catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
+        }
+        public static void ImportGuideBookBatch()
+        {
+            try{ImportManifest("generated/outgame/guide-book-ui-import.json","Assets/AreaBattle/Resources/Recovered/GuideBook",2,"analysis/unity-guide-book-import-report.json");
+                string path=Path.Combine(workspace,"analysis/unity-guide-book-import-report.json");var report=JsonUtility.FromJson<Report>(File.ReadAllText(path));
+                report.limitation="Original GuideBookUI and GuideBookItem static UGUI hierarchy, sprite/font payloads and viewport masks imported. DynamicList, tabs, UI lifetime, popup/item controllers and YD_0 Spine binding remain pending; skipped components are explicitly listed. Reward binding is a separate implementation. No full page or visual-match claim.";
+                File.WriteAllText(path,JsonUtility.ToJson(report,true));AssetDatabase.SaveAssets();if(Application.isBatchMode)EditorApplication.Exit(0);}
             catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
         }
         public static void ImportFestActivityBatch()
@@ -152,7 +177,7 @@ namespace AreaBattle.EditorTools
         static void ImportManifest(string sourceRelative,string destination,int expectedCount,string reportRelative)
         {
             Destination=destination;manifestRelative=sourceRelative;
-            if(sourceRelative!="generated/outgame/ui-root-import.json"&&sourceRelative!="generated/outgame/tip-ui-import.json"&&sourceRelative!="generated/outgame/loading-ui-import.json")RecoveredGuideSpineImporter.Import();
+            if(sourceRelative!="generated/outgame/ui-root-import.json"&&sourceRelative!="generated/outgame/tip-ui-import.json"&&sourceRelative!="generated/outgame/loading-ui-import.json"&&sourceRelative!="generated/outgame/guide-book-ui-import.json")RecoveredGuideSpineImporter.Import();
             workspace=Directory.GetParent(Path.GetFullPath(Path.Combine(Application.dataPath,".."))).FullName;
             target=Path.Combine(workspace,"analysis/targets/wxcf1394487200e48f/43");
             var source=Path.Combine(target,manifestRelative);
@@ -201,6 +226,7 @@ namespace AreaBattle.EditorTools
         static void Build(Prefab source)
         {
             var nodes=new Dictionary<string,GameObject>();GameObject root=null;
+            var graphicSources=new Dictionary<string,Graphic>();var extraGraphics=new List<KeyValuePair<GameObject,ComponentSource>>();
             try
             {
                 foreach(var n in source.nodes)
@@ -210,16 +236,28 @@ namespace AreaBattle.EditorTools
                     var rt=(RectTransform)go.transform;var d=n.transform;
                     rt.anchorMin=d.m_AnchorMin;rt.anchorMax=d.m_AnchorMax;rt.pivot=d.m_Pivot;rt.sizeDelta=d.m_SizeDelta;rt.anchoredPosition=d.m_AnchoredPosition;
                     rt.localScale=d.m_LocalScale;rt.localRotation=d.m_LocalRotation;var pos=rt.localPosition;pos.z=d.m_LocalPosition.z;rt.localPosition=pos;
-                    foreach(var c in n.components)AddComponent(go,c);
+                    foreach(var c in n.components)
+                    {
+                        bool graphic=c.className=="Image"||c.className=="Text";
+                        // Serialized source permits duplicate Graphics; Unity AddComponent rejects them.
+                        // Preserve the first owner and defer extra full-rect children until original siblings exist.
+                        if(graphic&&go.GetComponent<Graphic>()!=null){extraGraphics.Add(new KeyValuePair<GameObject,ComponentSource>(go,c));continue;}
+                        AddComponent(go,c);if(graphic)graphicSources[c.sourceId]=go.GetComponent<Graphic>();
+                    }
                     go.SetActive(n.active);
                 }
                 if(root==null)throw new InvalidDataException(source.name+" root missing");
                 // Selectable may tint a sibling graphic (SkillItem.btn_normal targets bg).
-                var graphicSources=new Dictionary<string,Graphic>();var transformSources=new Dictionary<string,RectTransform>();
+                foreach(var entry in extraGraphics)
+                {
+                    var go=new GameObject("RecoveredGraphic_"+entry.Value.sourceId.Split(':').Last(),typeof(RectTransform));go.layer=entry.Key.layer;
+                    var rect=(RectTransform)go.transform;rect.SetParent(entry.Key.transform,false);rect.anchorMin=Vector2.zero;rect.anchorMax=Vector2.one;rect.offsetMin=Vector2.zero;rect.offsetMax=Vector2.zero;
+                    AddComponent(go,entry.Value);graphicSources[entry.Value.sourceId]=go.GetComponent<Graphic>();
+                    skipped.Add("Duplicate source Graphic represented by full-rect child | "+entry.Value.sourceId);
+                }
+                var transformSources=new Dictionary<string,RectTransform>();
                 foreach(var n in source.nodes)
                     if(!string.IsNullOrEmpty(n.transformSourceId))transformSources.Add(n.transformSourceId,(RectTransform)nodes[n.path].transform);
-                foreach(var n in source.nodes)foreach(var c in n.components)
-                    if(c.className=="Image"||c.className=="Text")graphicSources[c.sourceId]=nodes[n.path].GetComponent<Graphic>();
                 foreach(var n in source.nodes)foreach(var c in n.components)if(c.className=="Button"||c.className=="UIVideoBtn"||c.className=="Slider"||c.className=="Toggle")
                 {
                     var data=JsonUtility.FromJson<Data>(c.data);var pointer=data.m_TargetGraphic;
@@ -316,6 +354,8 @@ namespace AreaBattle.EditorTools
             }
             if(c.className=="Mask")
             {var source=JsonUtility.FromJson<FitData>(c.data);var mask=go.AddComponent<Mask>();mask.showMaskGraphic=source.m_ShowMaskGraphic!=0;mask.enabled=source.m_Enabled!=0;return;}
+            if(c.className=="RectMask2D")
+            {var source=JsonUtility.FromJson<RectMaskData>(c.data);var mask=go.AddComponent<RectMask2D>();mask.padding=source.m_Padding;mask.softness=source.m_Softness;mask.enabled=source.m_Enabled!=0;return;}
             if(c.className=="ContentSizeFitter")
             {var source=JsonUtility.FromJson<FitData>(c.data);var fit=go.AddComponent<ContentSizeFitter>();fit.horizontalFit=(ContentSizeFitter.FitMode)source.m_HorizontalFit;fit.verticalFit=(ContentSizeFitter.FitMode)source.m_VerticalFit;fit.enabled=source.m_Enabled!=0;return;}
             var d=JsonUtility.FromJson<Data>(c.data);

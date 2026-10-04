@@ -1,0 +1,103 @@
+{
+  "status": "controller-menu-native-verified-main-activity-pending",
+  "atUtc": "2026-10-03T08:15:25.233264+00:00",
+  "sourceEvidence": "RED_DOT_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T08:15:25.233264+00:00",
+    "scope": "Project RedDotControl4453, original item/event4457/4454, concrete registry/logic and MenuView binding",
+    "checksPassed": 1161,
+    "newIntegratedChecks": 8,
+    "targetedChecks": 8,
+    "freshPlayModeRun": true,
+    "nativeChecks": 17,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2281,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameRedDotPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Initial edit-only test used SendMessage on an inactive object; Unity suppresses delivery. It now directly invokes the source method for that edit assertion; native harness separately verifies actual deferred OnDestroy.",
+      "Final native path instantiates actual OutgameMenuView and recovered Main/Shop/Commander/MenuTab prefabs. Normally hidden item tab is explicitly activated by the fixture for lifecycle inspection; no claim to source menu visibility or screenshot matching.",
+      "Original persistent Tower_CheckReddot record retains null target, empty assembly type and runtime-only state2. No predicate is fabricated. A separate runtime listener is test observation only.",
+      "Framework RedDotModule3655 is distinct. Obfuscated34168 HeadportChange array-write boundary is documented in source evidence and is not claimed restored by the public menu lifecycle.",
+      "Source3989352 was resolved to Array.Empty<object>, so it introduces no external clock dependency. Native timing is actual Time.unscaledDeltaTime at timeScale0.",
+      "Final native log retains a UnityEditor.Search startup indexing ArgumentOutOfRangeException, separate from all17 passing product assertions."
+    ],
+    "notClaimed": "Activity/statistics and other business predicates, full Main/account/remaining20 controllers, new Player or original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameRedDotControl.cs",
+    "OutgameRedDotItem.cs",
+    "OutgameMenuRedDotBinding.cs",
+    "OutgameMenuView.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "checks": [
+    {
+      "id": "red-dot-source-unscaled-period-and-mode-boundaries",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-native-component-check-before-show-and-live-listeners",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-list-duplicates-remove-one-and-log-failure-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-exception-and-enumeration-mutation-source-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-start-null-event-inactive-and-registration-retention",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-init-dispose-and-old-singleton-slot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-uninitialized-null-list-and-nan-time",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "red-dot-original-menu-component-and-null-persistent-target",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Imported component binding leaves registration to actual Start",
+    "Actual Start registers the original menu component once",
+    "Original target exists before first timed refresh",
+    "Original null persistent target leaves timed red dot hidden",
+    "Native LogicModule refreshes through unscaled time while gameplay is paused",
+    "Check resets flag and invokes listener before Show",
+    "Actual frame update displays completed event result",
+    "Per-second timing retains first missing-target event cycle",
+    "Inactive hierarchy and disabled item remain registered and checked",
+    "Show changes target activeSelf without activating its hidden ancestors",
+    "Destroy request precedes native OnDestroy registration removal",
+    "Native destruction removes the actual component from the controller",
+    "Registration and destruction log exactly once",
+    "Real module shutdown releases data and clears registry slot",
+    "Reopen obtains a fresh source singleton after shutdown",
+    "Reopened component registers once without inventing missing original callback",
+    "Reopened native page is independently refreshed"
+  ],
+  "remaining": "Recover real activity/statistics ownership needed by SevenDay.EnterGameInit and menu predicates; complete actual Main/account/data-pool and remaining20 controller factories with recovered services. Connect real resources/SkillControl/language/audio/effects, startup→lobby→battle→reward→return→restart and all business flows, then Player/source audiovisual acceptance."
+}

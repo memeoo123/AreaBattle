@@ -1,0 +1,24 @@
+; Original class: ActivityBase
+; Type4629.ActivityFactoryBase; wasmcode function 20992; offset=9462388 size=57
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+00906275  i32.const [5001691]
+0090627a  i32.load8_u [0, 0]
+0090627d  i32.eqz []
+0090627e  if [-64]
+00906280    i32.const [3927924]
+00906285    call [900] ; 
+00906288    i32.const [5001691]
+0090628d    i32.const [1]
+0090628f    i32.store8 [0, 0]
+00906292  end []
+00906293  i32.const [3927924]
+00906298  i32.load [2, 0]
+0090629b  call [903] ; 
+0090629e  local.set [0]
+009062a0  local.get [0]
+009062a2  local.get [1]
+009062a4  i32.const [0]
+009062a6  call [6336] ; ActivityFactoryBase..ctor
+009062a9  local.get [0]
+009062ab  return []
+009062ac  end []

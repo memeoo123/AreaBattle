@@ -1,0 +1,12 @@
+{
+    "passed": false,
+    "error": "System.Exception: Server-time protocol bypasses payload encryption while manager serializes null and helper retains global encrypted header\n  at AreaBattle.EditorTools.OutgameLoginTransportPlayModeValidation.Check (System.Boolean condition, System.String why) [0x0001a] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameLoginTransportPlayModeValidation.cs:25 \n  at AreaBattle.EditorTools.OutgameLoginTransportPlayModeValidation.Poll () [0x002b7] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameLoginTransportPlayModeValidation.cs:64 ",
+    "scope": "Native LoginTransmitter frame countdown -> WebRequestManager -> Unity HTTP -> controlled loopback server, encrypted storage upload and plaintext server-time protocol. Test explicitly supplies frame ticks, domain result and response actions; production HttpManager/HttpNetAcion/ServerTimeSync/platform/Main not claimed.",
+    "checks": [
+        "Platform-domain boundary caches actual loopback URL; decoded key and global encryption flag configure login transmitter",
+        "Three native frames decrement without sending; repeated data does not reset countdown even at timeScale zero",
+        "Fourth native frame queues exactly one request before manager dispatch",
+        "Actual encrypted HTTP upload contains merged latest values and original Datas field",
+        "Encrypted server reply decrypts before registered protocol callback; manager reclaims helper"
+    ]
+}

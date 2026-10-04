@@ -1,0 +1,83 @@
+{
+  "status": "original-task-manager-offline-storage-verified-concrete-activity-pending",
+  "atUtc": "2026-10-03T12:06:12.112274+00:00",
+  "sourceEvidence": "TASK_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T12:06:12.112274+00:00",
+    "scope": "Original ordinary TaskMgr and offline strategy with actual storage/migration/file restart",
+    "checksPassed": 1439,
+    "newIntegratedChecks": 8,
+    "targetedChecks": 8,
+    "nativeChecks": 0,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2522,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "observedBoundaries": [
+      "TaskMgr4692/TaskOffStrategy4696 and shared NetStratrgyBase methods recovered. Source evidence18 normal methods (14 newly indexed),5 generic bodies,3 concrete wrappers,10 fields,11 usages,7 RGCTX slots and TaskData/TaskActivity/TaskMgr concrete type arguments. Normal index6088.",
+      "Manager OnInit only creates strategy; explicit initialization binds actual pool owner and config-gates UpdateData(true). Server waits for genuine callback. Manager publishes parsed input before Add indexing, retaining duplicate prefix and skipping activity callback on error.",
+      "Offline loading preserves gzip/raw JSON fallback, fresh versus existing migration branches, orphan cleanup, refresh sentinel, legacy signed progress and condition-key reconciliation. Migration/logging exceptions preserve original partial updates; UID initialized only after successful repair. New child reset occurs before append in reconciliation but after append in fresh data.",
+      "Save captures JSON-roundtrip compressed snapshot before activity SaveData callback, then stores through current manager. Cached nonnull activity retained; null retries; missing owner/throwing callback prevents storage. Independent actual file backend restart verifies signed limits/progress/state and liveness mask.",
+      "1439 integrated including8 new checks pass;2522 matching inputs. No fresh native or Player run. Log retains32 existing ShouldRunBehaviour assertions and one Curl42, zero compiler errors.",
+      "TaskActivity callbacks are explicit validation endpoints, not actual task business. Concrete parent/child activities, daily refresh/claim/UI and production runtime installation remain pending. Controller lifecycle19/38 unchanged; complete Main/account/platform/all business/Player/original audiovisual acceptance incomplete."
+    ],
+    "notClaimed": "Production ordinary task activity/automatic daily refresh/claim/UI, Achievement, complete Main/account/platform/all business, fresh native/Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameTaskManager.cs",
+    "Editor/OutgameTaskManagerValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "task-manager-pool-init-deferred-config-gate-and-original-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-server-deferred-callback-and-disabled-sync-local",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-legacy-progress-group-migration-and-condition-reconciliation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-new-child-reset-publication-and-sentinel-preservation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-duplicate-index-and-malformed-fallback-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-log-failure-keeps-appended-condition-before-uid-and-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-save-snapshot-before-activity-cached-owner-and-release",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-manager-missing-save-owner-retries-and-file-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": "Restore concrete ChildTaskActivity4676/TaskActivity4685 and ChildTaskOffNetStrategy4681/TaskNetStrategyBase4683, install actual TaskMgr/factory in activity runtime and verify daily refresh/claims/automatic save/UI; then Achievement. Continue full Main/account/platform and remaining19 controllers/all business/reward return, final Player and original audiovisual acceptance."
+}

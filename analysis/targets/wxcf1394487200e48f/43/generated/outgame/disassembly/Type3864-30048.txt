@@ -1,0 +1,11 @@
+; Original class: ButtonExtension
+; Type3864.AddRemoveListener; wasmcode function 4007; offset=1307668 size=18
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0013f415  local.get [0]
+0013f417  i32.const [0]
+0013f419  call [2021] ; UnityEventBase.RemoveAllListeners
+0013f41c  local.get [0]
+0013f41e  local.get [1]
+0013f420  i32.const [0]
+0013f422  call [1347] ; UnityEvent.AddListener
+0013f425  end []

@@ -1,0 +1,88 @@
+; Original class: GameStatisticsOffNetStrategy
+; Type4623.[yPqYYq; wasmcode function 6042; offset=2140304 size=241
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126), (1, 124)]
+0020a895  i32.const [5001639]
+0020a89a  i32.load8_u [0, 0]
+0020a89d  i32.eqz []
+0020a89e  if [-64]
+0020a8a0    i32.const [3930616]
+0020a8a5    call [900] ; 
+0020a8a8    i32.const [3932944]
+0020a8ad    call [900] ; 
+0020a8b0    i32.const [3938304]
+0020a8b5    call [900] ; 
+0020a8b8    i32.const [3940172]
+0020a8bd    call [900] ; 
+0020a8c0    i32.const [5001639]
+0020a8c5    i32.const [1]
+0020a8c7    i32.store8 [0, 0]
+0020a8ca  end []
+0020a8cb  i32.const [3938304]
+0020a8d0  i32.load [2, 0]
+0020a8d3  i32.load [2, 92]
+0020a8d6  i32.load [2, 0]
+0020a8d9  i32.const [0]
+0020a8db  call [4288] ; SDKToolManager.GetServerTimeByServerTimeZone
+0020a8de  local.set [2]
+0020a8e0  local.get [0]
+0020a8e2  local.get [2]
+0020a8e4  i64.store [3, 24]
+0020a8e7  local.get [2]
+0020a8e9  i64.eqz []
+0020a8ea  if [-64]
+0020a8ec    i32.const [3930616]
+0020a8f1    i32.load [2, 0]
+0020a8f4    call [901] ; 
+0020a8f7    i32.const [0]
+0020a8f9    call [1287] ; DateTime.get_Now
+0020a8fc    local.set [2]
+0020a8fe    i32.const [3940172]
+0020a903    i32.load [2, 0]
+0020a906    call [901] ; 
+0020a909    local.get [0]
+0020a90b    local.get [2]
+0020a90d    i32.const [0]
+0020a90f    call [1474] ; TimeHelper.ToTimestampLong
+0020a912    i64.store [3, 24]
+0020a915  end []
+0020a916  block [-64]
+0020a918    block [-64]
+0020a91a      i32.const [0]
+0020a91c      call [1342] ; Time.get_realtimeSinceStartup
+0020a91f      f32.const [1000.0]
+0020a924      f32.mul []
+0020a925      f64.promote_f32 []
+0020a926      local.set [3]
+0020a928      local.get [3]
+0020a92a      f64.abs []
+0020a92b      f64.const [9.223372036854776e+18]
+0020a934      f64.lt []
+0020a935      if [-64]
+0020a937        local.get [3]
+0020a939        i64.trunc_f64_s []
+0020a93a        local.set [2]
+0020a93c        br [2]
+0020a93e      end []
+0020a93f    end []
+0020a940    i64.const [-9223372036854775808]
+0020a94b    local.set [2]
+0020a94d  end []
+0020a94e  local.get [0]
+0020a950  local.get [2]
+0020a952  i64.store [3, 32]
+0020a955  i32.const [3932944]
+0020a95a  i32.load [2, 0]
+0020a95d  call [901] ; 
+0020a960  i32.const [0]
+0020a962  call [2587] ; HttpManager.get_Instance
+0020a965  i32.load [2, 12]
+0020a968  if [-64]
+0020a96a    i32.const [3932944]
+0020a96f    i32.load [2, 0]
+0020a972    call [901] ; 
+0020a975    i32.const [0]
+0020a977    call [2587] ; HttpManager.get_Instance
+0020a97a    i32.const [0]
+0020a97c    call [4405] ; HttpManager.RequestServerTime
+0020a97f  end []
+0020a980  end []

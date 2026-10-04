@@ -1,0 +1,127 @@
+; Original class: ChildTaskOffNetStrategy
+; Type4681.}aces; wasmcode function 20242; offset=9086813 size=370
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008aa760  i32.const [5001413]
+008aa765  i32.load8_u [0, 0]
+008aa768  i32.eqz []
+008aa769  if [-64]
+008aa76b    i32.const [3988868]
+008aa770    call [900] ;
+008aa773    i32.const [3992468] ; METHOD ChildTaskOffNetStrategy.pw|Me
+008aa778    call [900] ;
+008aa77b    i32.const [3916728]
+008aa780    call [900] ;
+008aa783    i32.const [3944680]
+008aa788    call [900] ;
+008aa78b    i32.const [3977604]
+008aa790    call [900] ;
+008aa793    i32.const [4027060] ; METHOD <>c.zuh
+008aa798    call [900] ;
+008aa79b    i32.const [3944548]
+008aa7a0    call [900] ;
+008aa7a3    i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+008aa7a8    call [900] ;
+008aa7ab    i32.const [5001413]
+008aa7b0    i32.const [1]
+008aa7b2    i32.store8 [0, 0]
+008aa7b5  end []
+008aa7b6  local.get [0]
+008aa7b8  i32.load [2, 8]
+008aa7bb  i32.load [2, 76]
+008aa7be  i32.const [8]
+008aa7c0  i32.add []
+008aa7c1  i32.const [0]
+008aa7c3  call [966] ; Int32.ToString
+008aa7c6  local.set [1]
+008aa7c8  i32.const [4049000] ; STRING "CommonGameModule_Task_LivenessPointAdd"
+008aa7cd  i32.load [2, 0]
+008aa7d0  local.get [1]
+008aa7d2  i32.const [0]
+008aa7d4  call [921] ; String.Concat
+008aa7d7  local.set [1]
+008aa7d9  i32.const [3944680]
+008aa7de  i32.load [2, 0]
+008aa7e1  call [903] ;
+008aa7e4  local.set [2]
+008aa7e6  local.get [2]
+008aa7e8  local.get [0]
+008aa7ea  i32.const [3992468] ; METHOD ChildTaskOffNetStrategy.pw|Me
+008aa7ef  i32.load [2, 0]
+008aa7f2  i32.const [0]
+008aa7f4  call [1345] ; EventHandler..ctor
+008aa7f7  local.get [1]
+008aa7f9  local.get [2]
+008aa7fb  i32.const [0]
+008aa7fd  call [1710] ; CommonMsgDispatcher.AddEventListener
+008aa800  local.get [0]
+008aa802  i32.load [2, 8]
+008aa805  i32.load [2, 76]
+008aa808  i32.load [2, 12]
+008aa80b  local.set [2]
+008aa80d  i32.const [3944548]
+008aa812  i32.load [2, 0]
+008aa815  call [901] ;
+008aa818  i32.const [3944548]
+008aa81d  i32.load [2, 0]
+008aa820  i32.load [2, 92]
+008aa823  i32.load [2, 4]
+008aa826  local.set [1]
+008aa828  local.get [1]
+008aa82a  i32.eqz []
+008aa82b  if [-64]
+008aa82d    i32.const [3944548]
+008aa832    i32.load [2, 0]
+008aa835    call [901] ;
+008aa838    i32.const [3944548]
+008aa83d    i32.load [2, 0]
+008aa840    i32.load [2, 92]
+008aa843    i32.load [2, 0]
+008aa846    local.set [3]
+008aa848    i32.const [3916728]
+008aa84d    i32.load [2, 0]
+008aa850    call [903] ;
+008aa853    local.set [1]
+008aa855    local.get [1]
+008aa857    local.get [3]
+008aa859    i32.const [4027060] ; METHOD <>c.zuh
+008aa85e    i32.load [2, 0]
+008aa861    i32.const [0]
+008aa863    call [1483] ;
+008aa866    i32.const [3944548]
+008aa86b    i32.load [2, 0]
+008aa86e    i32.load [2, 92]
+008aa871    local.get [1]
+008aa873    i32.store [2, 4]
+008aa876    i32.const [3944548]
+008aa87b    i32.load [2, 0]
+008aa87e    i32.load [2, 92]
+008aa881    drop []
+008aa882  end []
+008aa883  local.get [2]
+008aa885  local.get [1]
+008aa887  i32.const [3977604]
+008aa88c  i32.load [2, 0]
+008aa88f  call [1492] ;
+008aa892  local.get [0]
+008aa894  i32.const [0]
+008aa896  call [1484] ; ActivityControl.get_I
+008aa899  i32.const [1300001]
+008aa89e  i32.const [3988868]
+008aa8a3  i32.load [2, 0]
+008aa8a6  call [2427] ;
+008aa8a9  i32.store [2, 16]
+008aa8ac  local.get [0]
+008aa8ae  local.set [1]
+008aa8b0  local.get [0]
+008aa8b2  i32.load [2, 0]
+008aa8b5  local.set [0]
+008aa8b7  local.get [1]
+008aa8b9  i32.const [0]
+008aa8bb  local.get [0]
+008aa8bd  i32.load [2, 240]
+008aa8c1  local.get [0]
+008aa8c3  i32.load [2, 236]
+008aa8c7  global.set [3]
+008aa8c9  global.get [3]
+008aa8cb  call_indirect [2, 0]
+008aa8ce  end []

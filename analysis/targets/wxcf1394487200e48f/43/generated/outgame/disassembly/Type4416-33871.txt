@@ -1,0 +1,48 @@
+; Original class: TaskPanelUI
+; Type4416.XSlTcf; wasmcode function 7058; offset=2688195 size=117
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+002904c4  i32.const [5007036]
+002904c9  i32.load8_u [0, 0]
+002904cc  i32.eqz []
+002904cd  if [-64]
+002904cf    i32.const [3986048]
+002904d4    call [900] ; 
+002904d7    i32.const [3986040]
+002904dc    call [900] ; 
+002904df    i32.const [5007036]
+002904e4    i32.const [1]
+002904e6    i32.store8 [0, 0]
+002904e9  end []
+002904ea  block [-64]
+002904ec    block [-64]
+002904ee      local.get [0]
+002904f0      i32.load [2, 100]
+002904f3      i32.const [3986040]
+002904f8      i32.load [2, 0]
+002904fb      call [2550] ; 
+002904fe      i32.eq []
+002904ff      if [-64]
+00290501        local.get [0]
+00290503        i32.load [2, 168]
+00290507        local.set [0]
+00290509        br [1]
+0029050b      end []
+0029050c      local.get [0]
+0029050e      i32.load [2, 100]
+00290511      i32.const [3986048]
+00290516      i32.load [2, 0]
+00290519      call [2550] ; 
+0029051c      i32.ne []
+0029051d      br_if [1]
+0029051f      local.get [0]
+00290521      i32.load [2, 152]
+00290525      i32.const [0]
+00290527      call [943] ; Component.get_gameObject
+0029052a      local.set [0]
+0029052c    end []
+0029052d    local.get [0]
+0029052f    local.get [1]
+00290531    i32.const [0]
+00290533    call [949] ; GameObject.SetActive
+00290536  end []
+00290537  end []

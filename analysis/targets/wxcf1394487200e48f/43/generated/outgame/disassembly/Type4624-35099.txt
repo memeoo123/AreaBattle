@@ -1,0 +1,50 @@
+; Original class: GameStatisticsStratrgyBase
+; Type4624.InitData; wasmcode function 12096; offset=5889441 size=148
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0059dda2  i32.const [5001656]
+0059dda7  i32.load8_u [0, 0]
+0059ddaa  i32.eqz []
+0059ddab  if [-64]
+0059ddad    i32.const [3995096]
+0059ddb2    call [900] ; 
+0059ddb5    i32.const [3930256]
+0059ddba    call [900] ; 
+0059ddbd    i32.const [3944680]
+0059ddc2    call [900] ; 
+0059ddc5    i32.const [4001420] ; METHOD GameStatisticsStratrgyBase.kdOswy
+0059ddca    call [900] ; 
+0059ddcd    i32.const [4049036] ; STRING "CommonModule_Activity_Lunch"
+0059ddd2    call [900] ; 
+0059ddd5    i32.const [5001656]
+0059ddda    i32.const [1]
+0059dddc    i32.store8 [0, 0]
+0059dddf  end []
+0059dde0  local.get [0]
+0059dde2  local.get [1]
+0059dde4  i32.store [2, 8]
+0059dde7  i32.const [3930256]
+0059ddec  i32.load [2, 0]
+0059ddef  call [901] ; 
+0059ddf2  local.get [0]
+0059ddf4  i32.const [0]
+0059ddf6  call [1309] ; DataManagerPool.get_Instance
+0059ddf9  i32.const [3995096]
+0059ddfe  i32.load [2, 0]
+0059de01  call [1609] ; 
+0059de04  i32.store [2, 12]
+0059de07  i32.const [3944680]
+0059de0c  i32.load [2, 0]
+0059de0f  call [903] ; 
+0059de12  local.set [1]
+0059de14  local.get [1]
+0059de16  local.get [0]
+0059de18  i32.const [4001420] ; METHOD GameStatisticsStratrgyBase.kdOswy
+0059de1d  i32.load [2, 0]
+0059de20  i32.const [0]
+0059de22  call [1345] ; EventHandler..ctor
+0059de25  i32.const [4049036] ; STRING "CommonModule_Activity_Lunch"
+0059de2a  i32.load [2, 0]
+0059de2d  local.get [1]
+0059de2f  i32.const [0]
+0059de31  call [1710] ; CommonMsgDispatcher.AddEventListener
+0059de34  end []

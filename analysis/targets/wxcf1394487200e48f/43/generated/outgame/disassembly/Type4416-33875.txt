@@ -1,0 +1,46 @@
+; Original class: TaskPanelUI
+; Type4416.Dispose; wasmcode function 15676; offset=7543725 size=141
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00731bae  i32.const [5007040]
+00731bb3  i32.load8_u [0, 0]
+00731bb6  i32.eqz []
+00731bb7  if [-64]
+00731bb9    i32.const [3953600]
+00731bbe    call [900] ; 
+00731bc1    i32.const [3953576]
+00731bc6    call [900] ; 
+00731bc9    i32.const [3986048]
+00731bce    call [900] ; 
+00731bd1    i32.const [3986040]
+00731bd6    call [900] ; 
+00731bd9    i32.const [4034536] ; STRING ""
+00731bde    call [900] ; 
+00731be1    i32.const [5007040]
+00731be6    i32.const [1]
+00731be8    i32.store8 [0, 0]
+00731beb  end []
+00731bec  i32.const [3953576]
+00731bf1  i32.load [2, 0]
+00731bf4  call [935] ; 
+00731bf7  i32.load [2, 16]
+00731bfa  i32.const [7]
+00731bfc  i32.const [4034536] ; STRING ""
+00731c01  i32.load [2, 0]
+00731c04  i32.const [0]
+00731c06  call [2549] ; TopInfoUI.RendererPart
+00731c09  i32.const [3986040]
+00731c0e  i32.load [2, 0]
+00731c11  call [2550] ; 
+00731c14  i32.const [0]
+00731c16  call [13398] ; AchiTaskSubUI.OnDestory
+00731c19  i32.const [3986048]
+00731c1e  i32.load [2, 0]
+00731c21  call [2550] ; 
+00731c24  i32.const [0]
+00731c26  call [12662] ; DailyTaskSubUI.OnDestory
+00731c29  i32.const [3953600]
+00731c2e  i32.load [2, 0]
+00731c31  call [935] ; 
+00731c34  i32.const [0]
+00731c36  call [4665] ; X`nPj.SetRedDot
+00731c39  end []

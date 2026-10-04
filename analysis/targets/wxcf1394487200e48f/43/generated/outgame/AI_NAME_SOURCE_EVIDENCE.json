@@ -1,0 +1,149 @@
+{
+  "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
+  "memorySha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
+  "source": [
+    {
+      "path": "disassembly/Type4265-32592.txt",
+      "sha256": "5b1b84e90a2919c315f74170ee7f7aa22b80e690a92a2b7aceff7b8e45b74d6c"
+    },
+    {
+      "path": "disassembly/Type3391-26196.txt",
+      "sha256": "3aec55f88cc03e771abb99d0b4151ab42875a79b282c982369e613e4570b2704"
+    },
+    {
+      "path": "disassembly/Type4268-32602.txt",
+      "sha256": "d616a0b21dd6cd5074c5209d6615bd6fdb4fcb5d8b05d4cbef6c9329312b478a"
+    },
+    {
+      "path": "disassembly/Type4268-32606.txt",
+      "sha256": "36a3f396b4652a53c1ae0f9ccfdd12a056beb289e121ca561c85f9e39f0ddd36"
+    }
+  ],
+  "fields": [
+    {
+      "typeIndex": 3907,
+      "fieldIndex": 3,
+      "name": "dicAIName",
+      "offset": 20
+    },
+    {
+      "typeIndex": 3907,
+      "fieldIndex": 35,
+      "name": "dicCountryConfig",
+      "offset": 148
+    }
+  ],
+  "genericCalls": [
+    {
+      "usageAddress": 3956984,
+      "methodSpec": [
+        10510,
+        817,
+        -1
+      ],
+      "class": "Dictionary`2",
+      "method": "get_Item"
+    },
+    {
+      "usageAddress": 3957152,
+      "methodSpec": [
+        10510,
+        836,
+        -1
+      ],
+      "class": "Dictionary`2",
+      "method": "get_Item"
+    },
+    {
+      "usageAddress": 3957156,
+      "methodSpec": [
+        10504,
+        836,
+        -1
+      ],
+      "class": "Dictionary`2",
+      "method": "get_Keys"
+    },
+    {
+      "usageAddress": 3998496,
+      "methodSpec": [
+        43249,
+        -1,
+        175
+      ],
+      "class": "Enumerable",
+      "method": "ToList"
+    },
+    {
+      "usageAddress": 3955792,
+      "methodSpec": [
+        10517,
+        308,
+        -1
+      ],
+      "class": "Dictionary`2",
+      "method": "ContainsKey"
+    },
+    {
+      "usageAddress": 3955812,
+      "methodSpec": [
+        10510,
+        308,
+        -1
+      ],
+      "class": "Dictionary`2",
+      "method": "get_Item"
+    },
+    {
+      "usageAddress": 3970292,
+      "methodSpec": [
+        10635,
+        308,
+        -1
+      ],
+      "class": "KeyValuePair`2",
+      "method": "get_Key"
+    },
+    {
+      "usageAddress": 3970296,
+      "methodSpec": [
+        10636,
+        308,
+        -1
+      ],
+      "class": "KeyValuePair`2",
+      "method": "get_Value"
+    },
+    {
+      "usageAddress": 3977256,
+      "methodSpec": [
+        10679,
+        243,
+        -1
+      ],
+      "class": "List`1",
+      "method": "Insert"
+    },
+    {
+      "usageAddress": 3977228,
+      "methodSpec": [
+        10655,
+        243,
+        -1
+      ],
+      "class": "List`1",
+      "method": "Add"
+    }
+  ],
+  "findings": [
+    "ConfigMgr field offsets148/20 are dicCountryConfig/dicAIName; generated schemas already exist. Capture these two dictionaries, then source rereads current AIName count separately.",
+    "Country keys are copied to a list. Unity Random.Range picks key indexes; source maps id1 to2 and id10 to11. Per-country capacity is AIName.Count-1; saturated chosen keys are removed and selection retried.",
+    "Iterate country/count dictionary. RandomHelper.Randoms(count,1,nameCount) draws without replacement from [1,nameCount), using the shared System.Random inclusive helper for index selection. Its validation checks count > max-min first, then min > max; invalid branches log and return null.",
+    "Each chosen AIName row contributes zh_cn. Country dictionary lookup occurs even when prefix flag is false. True flag appends countryFlagName followed by signEnum2; cctor32606 stores semicolon at array index2.",
+    "First generated string is appended; later strings are inserted at shared inclusive Random(0,currentCount-1), never at the end. Unity country selection and managed random name/insertion streams remain distinct."
+  ],
+  "boundaries": [
+    "Source algorithms and call order reconstructed; original seeded RNG sequence and cross-runtime Dictionary iteration parity not claimed.",
+    "Platform timestamp/install state/account/report endpoints require full Main composition."
+  ]
+}

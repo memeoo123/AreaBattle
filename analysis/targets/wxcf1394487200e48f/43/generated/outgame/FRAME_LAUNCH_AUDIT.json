@@ -1,0 +1,108 @@
+{
+  "status": "native-pause-focus-verified-main-pending",
+  "atUtc": "2026-10-03T09:08:21.433241+00:00",
+  "sourceEvidence": "FRAME_LAUNCH_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T09:08:21.433241+00:00",
+    "scope": "Source GameFrameEntry launch/settings/pause and native GameFrameWorkMono focus/priority handling integrated with actual TimeModule",
+    "checksPassed": 1224,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": true,
+    "nativeChecks": 15,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2303,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameFrameLaunchPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "CommonSettings source SDK/DPI96/fps60/sleep-1/culture/ads/sampling order, transition-deferred StartGame ReadyExitGame/banner/name/scene prefix failures, sampler sticky disable and public domain last-match lookup verified.",
+      "Mono singleton always adds a component on existing root; only newly created roots become persistent. Init readiness/thread/support-log order, focus-before-pause, source0/1/2 priorities, silent escalation and retained source after resume preserved.",
+      "Native component Unity SendMessage and actual Time.timeScale/TimeModule via frame Update verify flush/reset, scaled pause, focus gate after resume, focus restoration, changeTimeScale=false and shutdown/unregistration/recreation.",
+      "Source proof4000760 resolves AddComponent; original DomainData list/config schema and public26530 restored. Obfuscated alternatives remain evidence only.",
+      "SDK/transition/banner/global-name/scene endpoints are explicit required hosts; controlled tests do not claim platform callbacks, OS focus behavior or original transition visuals. Main/account/activity and real scene assembly remain pending.",
+      "Native UnityEditor.Search startup indexing exception retained separately from15 passing product assertions. No fresh Player or original audiovisual acceptance."
+    ],
+    "notClaimed": "Production Main/account/SDK/HTTP/transition/GameFrameworkLoad/activity/business graph, remaining20 controllers, Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "OutgameFrameLaunch.cs",
+    "OutgameFrameWorkMono.cs"
+  ],
+  "checks": [
+    {
+      "id": "frame-launch-pause-priority-escalation-and-retained-resume-source",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-focus-before-pause-gate-and-callback-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-pause-log-reentry-and-invalid-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-network-sample-initialization-threshold-and-sticky-disable",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-network-save-failure-preserves-selected-value",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-common-settings-order-dpi-and-source-ads-reference",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-common-settings-null-ads-keeps-earlier-side-effects",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-start-game-deferred-transition-and-state-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-start-game-message-failure-preserves-menu-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "frame-launch-domain-public-lookup-last-match-and-null-values",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Original singleton adds a component to existing root without moving that root to persistent scene",
+    "Native component retains original constructor defaults and independent domain list",
+    "TimeScale changes even when uninitialized Mono rejects active pause",
+    "Init publishes readiness then captures actual Unity thread and checks release SDK log support endpoint",
+    "Actual frame Update advances recovered scaled loop timer",
+    "Active pause sends real source event and TimeModule flushes elapsed before resetting timer",
+    "Native scaled frames stay frozen without repeated pause notification",
+    "Unity message dispatch updates real TimeModule focus while lower-priority resume cannot clear active pause",
+    "Explicit active resume restores timeScale but retains unfocused state",
+    "Focus gate keeps actual timer stopped after timeScale resume",
+    "Focus restoration message resumes native timer accumulation",
+    "changeTimeScale=false preserves clock while emitting source pause flush",
+    "Source pause-state alone does not freeze scaled timer when timeScale stays1",
+    "Actual TimeModule Shutdown unregisters focus callback",
+    "Destroyed singleton recreates another original-default component on surviving root"
+  ],
+  "remaining": "Restore extracted ActivityControl/ActivityManager/SevenDay.EnterGameInit and connect real ProcedurePreLoad activity initialization; wire actual account/SDK/HTTP/transition/scene/permission/config owners into full Main. Complete remaining20 controllers/all business/reward-return, then Player/source audiovisual acceptance."
+}

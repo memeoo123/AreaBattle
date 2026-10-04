@@ -1,0 +1,42 @@
+; Original class: ChildTaskData
+; Type4687..ctor; wasmcode function 20245; offset=9088066 size=115
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008aac43  i32.const [5001440]
+008aac48  i32.load8_u [0, 0]
+008aac4b  i32.eqz []
+008aac4c  if [-64]
+008aac4e    i32.const [3931752]
+008aac53    call [900] ; 
+008aac56    i32.const [3977576]
+008aac5b    call [900] ; 
+008aac5e    i32.const [3923996]
+008aac63    call [900] ; 
+008aac66    i32.const [5001440]
+008aac6b    i32.const [1]
+008aac6d    i32.store8 [0, 0]
+008aac70  end []
+008aac71  i32.const [3923996]
+008aac76  i32.load [2, 0]
+008aac79  call [903] ; 
+008aac7c  local.set [1]
+008aac7e  local.get [1]
+008aac80  i32.const [3977576]
+008aac85  i32.load [2, 0]
+008aac88  call [944] ; 
+008aac8b  local.get [0]
+008aac8d  local.get [1]
+008aac8f  i32.store [2, 12]
+008aac92  i32.const [3931752]
+008aac97  i32.load [2, 0]
+008aac9a  call [903] ; 
+008aac9d  local.set [1]
+008aac9f  local.get [1]
+008aaca1  local.get [0]
+008aaca3  call [12331] ; Ext..ctor
+008aaca6  local.get [0]
+008aaca8  local.get [1]
+008aacaa  i32.store [2, 16]
+008aacad  local.get [0]
+008aacaf  i32.const [-1]
+008aacb1  i32.store [2, 24]
+008aacb4  end []

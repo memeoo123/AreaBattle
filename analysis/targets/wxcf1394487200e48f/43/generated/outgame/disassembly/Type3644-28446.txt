@@ -1,0 +1,121 @@
+; Original class: WebRequestManager
+; Type3644.AddWebRequest; wasmcode function 2882; offset=887298 size=307
+; signature={'args': [127, 127, 127, 127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+000d8a03  i32.const [4987535]
+000d8a08  i32.load8_u [0, 0]
+000d8a0b  i32.eqz []
+000d8a0c  if [-64]
+000d8a0e    i32.const [3929208]
+000d8a13    call [900] ; 
+000d8a16    i32.const [3934128]
+000d8a1b    call [900] ; 
+000d8a1e    i32.const [3988572]
+000d8a23    call [900] ; 
+000d8a26    i32.const [3988596]
+000d8a2b    call [900] ; 
+000d8a2e    i32.const [4987535]
+000d8a33    i32.const [1]
+000d8a35    i32.store8 [0, 0]
+000d8a38  end []
+000d8a39  block [-64]
+000d8a3b    local.get [1]
+000d8a3d    if [-64]
+000d8a3f      i32.const [0]
+000d8a41      local.set [6]
+000d8a43      local.get [1]
+000d8a45      i32.load [2, 8]
+000d8a48      br_if [1]
+000d8a4a    end []
+000d8a4b    i32.const [1]
+000d8a4d    local.set [6]
+000d8a4f  end []
+000d8a50  local.get [6]
+000d8a52  i32.eqz []
+000d8a53  if [-64]
+000d8a55    block [-64]
+000d8a57      local.get [0]
+000d8a59      local.get [0]
+000d8a5b      call [9343] ; WebRequestManager.get_TotalAgentCount
+000d8a5e      local.set [6]
+000d8a60      i32.const [3988596]
+000d8a65      i32.load [2, 0]
+000d8a68      drop []
+000d8a69      local.get [6]
+000d8a6b      local.get [0]
+000d8a6d      i32.load [2, 12]
+000d8a70      i32.load [2, 20]
+000d8a73      i32.gt_s []
+000d8a74      br_if [0]
+000d8a76      local.get [0]
+000d8a78      local.get [0]
+000d8a7a      call [9344] ; WebRequestManager.get_FreeAgentCount
+000d8a7d      i32.const [0]
+000d8a7f      i32.gt_s []
+000d8a80      br_if [0]
+000d8a82      local.get [0]
+000d8a84      local.get [0]
+000d8a86      i32.load [2, 24]
+000d8a89      i32.const [0]
+000d8a8b      call [7727] ; Helper.CreateHelper
+000d8a8e      i32.const [3934128]
+000d8a93      i32.load [2, 0]
+000d8a96      call [983] ; 
+000d8a99      local.get [0]
+000d8a9b      call [6766] ; WebRequestManager.£ySv
+000d8a9e    end []
+000d8a9f    i32.const [3929208]
+000d8aa4    i32.load [2, 0]
+000d8aa7    call [901] ; 
+000d8aaa    i32.const [3929208]
+000d8aaf    i32.load [2, 0]
+000d8ab2    i32.load [2, 92]
+000d8ab5    i32.load8_u [0, 0]
+000d8ab8    if [-64]
+000d8aba      local.get [0]
+000d8abc      local.get [1]
+000d8abe      local.get [0]
+000d8ac0      call [9345] ; WebRequestManager.fF®¤`
+000d8ac3    end []
+000d8ac4    local.get [1]
+000d8ac6    local.get [2]
+000d8ac8    local.get [3]
+000d8aca    local.get [0]
+000d8acc    f32.load [2, 16]
+000d8acf    local.get [4]
+000d8ad1    local.get [5]
+000d8ad3    local.get [0]
+000d8ad5    i32.load [2, 20]
+000d8ad8    local.get [0]
+000d8ada    call [6938] ; À¥cy.Create
+000d8add    local.set [1]
+000d8adf    local.get [0]
+000d8ae1    i32.load [2, 12]
+000d8ae4    local.get [1]
+000d8ae6    i32.const [3988572]
+000d8aeb    i32.load [2, 0]
+000d8aee    call [3785] ; 
+000d8af1    local.get [1]
+000d8af3    i32.load [2, 8]
+000d8af6    return []
+000d8af7  end []
+000d8af8  i32.const [3932324]
+000d8afd  call [902] ; 
+000d8b00  call [903] ; 
+000d8b03  local.set [0]
+000d8b05  local.get [0]
+000d8b07  i32.const [4104340] ; STRING "无效的web地址"
+000d8b0c  call [902] ; 
+000d8b0f  i32.const [0]
+000d8b11  i32.const [10659] ; TABLE GameFrameworkException..ctor
+000d8b15  global.set [3]
+000d8b17  i32.const [10659] ; TABLE GameFrameworkException..ctor
+000d8b1b  call_indirect [2, 0]
+000d8b1e  local.get [0]
+000d8b20  i32.const [4022364] ; METHOD WebRequestManager.AddWebRequest
+000d8b25  call [902] ; 
+000d8b28  i32.const [1106]
+000d8b2b  global.set [3]
+000d8b2d  i32.const [1106]
+000d8b30  call_indirect [0, 0]
+000d8b33  unreachable []
+000d8b34  end []

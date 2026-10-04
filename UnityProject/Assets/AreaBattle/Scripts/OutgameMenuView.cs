@@ -21,7 +21,7 @@ namespace AreaBattle
         float elapsed,width;int direction;
         // Provisional presentation curve: source tween duration/direction are proven, default easing is not.
         public AnimationCurve TransitionCurve=AnimationCurve.Linear(0,0,1,1);
-        public void Initialize(RectTransform parent,int currentLevel,OutgameCommanderProgression rules,Action<OutgameMenuPage,RectTransform> bindPage=null)
+        public void Initialize(RectTransform parent,int currentLevel,OutgameCommanderProgression rules,Action<OutgameMenuPage,RectTransform> bindPage=null,Func<OutgameRedDotControl> redDots=null)
         {
             if(Navigation!=null)throw new InvalidOperationException("Menu already initialized");
             pageParent=parent;width=parent.rect.width;
@@ -33,6 +33,7 @@ namespace AreaBattle
             }
             Menu=(RectTransform)Instantiate(Resources.Load<GameObject>("Recovered/Outgame/MenuTabUI"),parent,false).transform;
             Menu.name="MenuTabUI";Menu.gameObject.SetActive(true);
+            if(redDots!=null)OutgameMenuRedDotBinding.Bind(Menu,redDots);
             Navigation=new OutgameMenuNavigation();
             Navigation.FirstPageShown+=p=>{visibility[pages[p]].SetVisible(true);RefreshTabs();PageShown?.Invoke(p);};
             Navigation.TransitionStarted+=BeginTransition;

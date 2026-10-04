@@ -1,0 +1,21 @@
+; Original class: TabButton
+; Type4251.SetSelect; wasmcode function 3264; offset=999313 size=39
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+000f3f92  local.get [0]
+000f3f94  local.get [1]
+000f3f96  i32.store8 [0, 32]
+000f3f99  local.get [0]
+000f3f9b  i32.load [2, 12]
+000f3f9e  local.set [2]
+000f3fa0  local.get [2]
+000f3fa2  if [-64]
+000f3fa4    local.get [2]
+000f3fa6    local.get [1]
+000f3fa8    i32.const [0]
+000f3faa    call [1336] ; 
+000f3fad  end []
+000f3fae  local.get [0]
+000f3fb0  local.get [1]
+000f3fb2  local.get [0]
+000f3fb4  call [7067] ; TabButton.n[X
+000f3fb7  end []

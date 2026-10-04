@@ -1,0 +1,213 @@
+; Original class: ActivityBase
+; Type4629.RefreshFSM; wasmcode function 13374; offset=6479812 size=578
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+0062dfc7  i32.const [5001693]
+0062dfcc  i32.load8_u [0, 0]
+0062dfcf  i32.eqz []
+0062dfd0  if [-64]
+0062dfd2    i32.const [3927896]
+0062dfd7    call [900] ; 
+0062dfda    i32.const [3927940]
+0062dfdf    call [900] ; 
+0062dfe2    i32.const [3927948]
+0062dfe7    call [900] ; 
+0062dfea    i32.const [3927956]
+0062dfef    call [900] ; 
+0062dff2    i32.const [3989352]
+0062dff7    call [900] ; 
+0062dffa    i32.const [3926372]
+0062dfff    call [900] ; 
+0062e002    i32.const [4000596]
+0062e007    call [900] ; 
+0062e00a    i32.const [3932308]
+0062e00f    call [900] ; 
+0062e012    i32.const [4002620]
+0062e017    call [900] ; 
+0062e01a    i32.const [3969616]
+0062e01f    call [900] ; 
+0062e022    i32.const [3969620]
+0062e027    call [900] ; 
+0062e02a    i32.const [3969624]
+0062e02f    call [900] ; 
+0062e032    i32.const [3969628]
+0062e037    call [900] ; 
+0062e03a    i32.const [5001693]
+0062e03f    i32.const [1]
+0062e041    i32.store8 [0, 0]
+0062e044  end []
+0062e045  block [-64]
+0062e047    block [-64]
+0062e049      local.get [0]
+0062e04b      i32.load [2, 16]
+0062e04e      i32.eqz []
+0062e04f      if [-64]
+0062e051        i32.const [3932308]
+0062e056        i32.load [2, 0]
+0062e059        call [901] ; 
+0062e05c        local.get [0]
+0062e05e        i32.const [4000596]
+0062e063        i32.load [2, 0]
+0062e066        call [1051] ; 
+0062e069        i32.store [2, 12]
+0062e06c        i32.const [3926372]
+0062e071        i32.load [2, 0]
+0062e074        i32.const [4]
+0062e076        call [909] ; 
+0062e079        local.set [1]
+0062e07b        i32.const [3927896]
+0062e080        i32.load [2, 0]
+0062e083        call [903] ; 
+0062e086        local.set [2]
+0062e088        local.get [2]
+0062e08a        i32.const [0]
+0062e08c        call [3670] ; ActivityOverState..ctor
+0062e08f        local.get [1]
+0062e091        local.get [2]
+0062e093        call [905] ; 
+0062e096        local.get [1]
+0062e098        local.get [2]
+0062e09a        i32.store [2, 16]
+0062e09d        i32.const [3927948]
+0062e0a2        i32.load [2, 0]
+0062e0a5        call [903] ; 
+0062e0a8        local.set [2]
+0062e0aa        local.get [2]
+0062e0ac        i32.const [0]
+0062e0ae        call [3670] ; ActivityOverState..ctor
+0062e0b1        local.get [1]
+0062e0b3        local.get [2]
+0062e0b5        call [905] ; 
+0062e0b8        local.get [1]
+0062e0ba        local.get [2]
+0062e0bc        i32.store [2, 20]
+0062e0bf        i32.const [3927940]
+0062e0c4        i32.load [2, 0]
+0062e0c7        call [903] ; 
+0062e0ca        local.set [2]
+0062e0cc        local.get [2]
+0062e0ce        i32.const [0]
+0062e0d0        call [3670] ; ActivityOverState..ctor
+0062e0d3        local.get [1]
+0062e0d5        local.get [2]
+0062e0d7        call [905] ; 
+0062e0da        local.get [1]
+0062e0dc        local.get [2]
+0062e0de        i32.store [2, 24]
+0062e0e1        i32.const [3927956]
+0062e0e6        i32.load [2, 0]
+0062e0e9        call [903] ; 
+0062e0ec        local.set [2]
+0062e0ee        local.get [2]
+0062e0f0        i32.const [0]
+0062e0f2        call [3670] ; ActivityOverState..ctor
+0062e0f5        local.get [1]
+0062e0f7        local.get [2]
+0062e0f9        call [905] ; 
+0062e0fc        local.get [1]
+0062e0fe        local.get [2]
+0062e100        i32.store [2, 28]
+0062e103        local.get [0]
+0062e105        i32.load [2, 12]
+0062e108        local.set [2]
+0062e10a        local.get [0]
+0062e10c        i32.load [2, 20]
+0062e10f        i32.const [8]
+0062e111        i32.add []
+0062e112        i32.const [0]
+0062e114        call [966] ; Int32.ToString
+0062e117        local.set [3]
+0062e119        local.get [0]
+0062e11b        i32.const [4002620]
+0062e120        i32.load [2, 0]
+0062e123        local.get [2]
+0062e125        local.get [3]
+0062e127        local.get [0]
+0062e129        local.get [1]
+0062e12b        call [7800] ; 
+0062e12e        i32.store [2, 16]
+0062e131        local.get [0]
+0062e133        i32.load [2, 60]
+0062e136        i32.load [2, 28]
+0062e139        i32.const [1]
+0062e13b        i32.eq []
+0062e13c        if [-64]
+0062e13e          block [-64]
+0062e140            block [-64]
+0062e142              block [-64]
+0062e144                local.get [0]
+0062e146                i32.load [2, 20]
+0062e149                i32.load [2, 12]
+0062e14c                i32.const [1]
+0062e14e                i32.sub []
+0062e14f                br_table [6, 0, 1, 2, 5]
+0062e156              end []
+0062e157              local.get [0]
+0062e159              i32.load [2, 16]
+0062e15c              local.set [0]
+0062e15e              i32.const [3989352]
+0062e163              i32.load [2, 0]
+0062e166              call [1032] ; 
+0062e169              local.set [1]
+0062e16b              i32.const [3969624]
+0062e170              i32.load [2, 0]
+0062e173              local.get [0]
+0062e175              local.get [1]
+0062e177              call [2135] ; 
+0062e17a              return []
+0062e17b            end []
+0062e17c            local.get [0]
+0062e17e            i32.load [2, 16]
+0062e181            local.set [0]
+0062e183            i32.const [3989352]
+0062e188            i32.load [2, 0]
+0062e18b            call [1032] ; 
+0062e18e            local.set [1]
+0062e190            i32.const [3969620]
+0062e195            i32.load [2, 0]
+0062e198            local.get [0]
+0062e19a            local.get [1]
+0062e19c            call [2135] ; 
+0062e19f            return []
+0062e1a0          end []
+0062e1a1          local.get [0]
+0062e1a3          i32.load [2, 16]
+0062e1a6          local.set [0]
+0062e1a8          i32.const [3989352]
+0062e1ad          i32.load [2, 0]
+0062e1b0          call [1032] ; 
+0062e1b3          local.set [1]
+0062e1b5          i32.const [3969628]
+0062e1ba          i32.load [2, 0]
+0062e1bd          local.get [0]
+0062e1bf          local.get [1]
+0062e1c1          call [2135] ; 
+0062e1c4          return []
+0062e1c5        end []
+0062e1c6        br [2]
+0062e1c8      end []
+0062e1c9      local.get [0]
+0062e1cb      i32.load [2, 60]
+0062e1ce      i32.load [2, 28]
+0062e1d1      i32.const [1]
+0062e1d3      i32.ne []
+0062e1d4      br_if [0]
+0062e1d6      local.get [0]
+0062e1d8      i32.const [1]
+0062e1da      local.get [0]
+0062e1dc      call [13376] ; ActivityBase.FireEvent
+0062e1df    end []
+0062e1e0    return []
+0062e1e1  end []
+0062e1e2  local.get [0]
+0062e1e4  i32.load [2, 16]
+0062e1e7  local.set [0]
+0062e1e9  i32.const [3989352]
+0062e1ee  i32.load [2, 0]
+0062e1f1  call [1032] ; 
+0062e1f4  local.set [1]
+0062e1f6  i32.const [3969616]
+0062e1fb  i32.load [2, 0]
+0062e1fe  local.get [0]
+0062e200  local.get [1]
+0062e202  call [2135] ; 
+0062e205  end []

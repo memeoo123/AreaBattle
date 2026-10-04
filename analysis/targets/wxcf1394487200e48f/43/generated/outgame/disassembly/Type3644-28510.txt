@@ -1,0 +1,42 @@
+; Original class: WebRequestManager
+; Type3644.mlmC ; wasmcode function 9346; offset=4543396 size=115
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004553a5  i32.const [4987579]
+004553aa  i32.load8_u [0, 0]
+004553ad  i32.eqz []
+004553ae  if [-64]
+004553b0    i32.const [3929208]
+004553b5    call [900] ; 
+004553b8    i32.const [3926996]
+004553bd    call [900] ; 
+004553c0    i32.const [4054292] ; STRING "FindWebRequestAgent -> {0}"
+004553c5    call [900] ; 
+004553c8    i32.const [4987579]
+004553cd    i32.const [1]
+004553cf    i32.store8 [0, 0]
+004553d2  end []
+004553d3  i32.const [3926996]
+004553d8  i32.load [2, 0]
+004553db  i32.const [1]
+004553dd  call [909] ; 
+004553e0  local.set [1]
+004553e2  i32.const [4054292] ; STRING "FindWebRequestAgent -> {0}"
+004553e7  i32.load [2, 0]
+004553ea  local.get [0]
+004553ec  i32.load [2, 24]
+004553ef  i32.const [0]
+004553f1  call [1015] ; String.Format
+004553f4  local.set [0]
+004553f6  local.get [1]
+004553f8  local.get [0]
+004553fa  call [905] ; 
+004553fd  local.get [1]
+004553ff  local.get [0]
+00455401  i32.store [2, 16]
+00455404  i32.const [3929208]
+00455409  i32.load [2, 0]
+0045540c  call [901] ; 
+0045540f  local.get [1]
+00455411  i32.const [0]
+00455413  call [1069] ; CLog.Log
+00455416  end []

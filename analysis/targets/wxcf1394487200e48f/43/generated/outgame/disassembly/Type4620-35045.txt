@@ -1,0 +1,78 @@
+; Original class: GameStatisticsControl
+; Type4620.[olZ]L; wasmcode function 12116; offset=5893905 size=229
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+0059ef14  i32.const [5001632]
+0059ef19  i32.load8_u [0, 0]
+0059ef1c  i32.eqz []
+0059ef1d  if [-64]
+0059ef1f    i32.const [3927888]
+0059ef24    call [900] ; 
+0059ef27    i32.const [3932308]
+0059ef2c    call [900] ; 
+0059ef2f    i32.const [4001372] ; METHOD GameStatisticsControl.Dispose
+0059ef34    call [900] ; 
+0059ef37    i32.const [4001376] ; METHOD GameStatisticsControl.sybjRh
+0059ef3c    call [900] ; 
+0059ef3f    i32.const [3949340]
+0059ef44    call [900] ; 
+0059ef47    i32.const [5001632]
+0059ef4c    i32.const [1]
+0059ef4e    i32.store8 [0, 0]
+0059ef51  end []
+0059ef52  i32.const [3949340]
+0059ef57  i32.load [2, 0]
+0059ef5a  call [903] ; 
+0059ef5d  local.set [1]
+0059ef5f  local.get [1]
+0059ef61  local.get [0]
+0059ef63  i32.const [4001376] ; METHOD GameStatisticsControl.sybjRh
+0059ef68  i32.load [2, 0]
+0059ef6b  i32.const [0]
+0059ef6d  call [2351] ; UpdateHandle..ctor
+0059ef70  local.get [1]
+0059ef72  i32.const [0]
+0059ef74  call [2890] ; UpdateManager.AddHandle
+0059ef77  drop []
+0059ef78  i32.const [3932308]
+0059ef7d  i32.load [2, 0]
+0059ef80  call [901] ; 
+0059ef83  i32.const [3932308]
+0059ef88  i32.load [2, 0]
+0059ef8b  i32.load [2, 92]
+0059ef8e  i32.load [2, 16]
+0059ef91  local.set [1]
+0059ef93  i32.const [3927888]
+0059ef98  i32.load [2, 0]
+0059ef9b  call [903] ; 
+0059ef9e  local.set [2]
+0059efa0  local.get [2]
+0059efa2  local.get [0]
+0059efa4  i32.const [4001372] ; METHOD GameStatisticsControl.Dispose
+0059efa9  i32.load [2, 0]
+0059efac  i32.const [0]
+0059efae  call [1002] ; Action..ctor
+0059efb1  local.get [1]
+0059efb3  local.get [2]
+0059efb5  i32.const [0]
+0059efb7  call [1031] ; Delegate.Combine
+0059efba  local.set [0]
+0059efbc  local.get [0]
+0059efbe  i32.const [3927888]
+0059efc3  i32.load [2, 0]
+0059efc6  call [937] ; 
+0059efc9  local.set [1]
+0059efcb  i32.const [3932308]
+0059efd0  i32.load [2, 0]
+0059efd3  i32.load [2, 92]
+0059efd6  local.get [1]
+0059efd8  i32.store [2, 16]
+0059efdb  i32.const [3932308]
+0059efe0  i32.load [2, 0]
+0059efe3  i32.load [2, 92]
+0059efe6  drop []
+0059efe7  local.get [0]
+0059efe9  i32.const [3927888]
+0059efee  i32.load [2, 0]
+0059eff1  call [937] ; 
+0059eff4  drop []
+0059eff5  end []

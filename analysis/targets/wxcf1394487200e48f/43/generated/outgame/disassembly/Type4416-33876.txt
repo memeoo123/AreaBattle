@@ -1,0 +1,154 @@
+; Original class: TaskPanelUI
+; Type4416.Awake; wasmcode function 15677; offset=7543868 size=444
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00731c3f  i32.const [5007041]
+00731c44  i32.load8_u [0, 0]
+00731c47  i32.eqz []
+00731c48  if [-64]
+00731c4a    i32.const [3927888]
+00731c4f    call [900] ; 
+00731c52    i32.const [3953576]
+00731c57    call [900] ; 
+00731c5a    i32.const [3935300]
+00731c5f    call [900] ; 
+00731c62    i32.const [3939452]
+00731c67    call [900] ; 
+00731c6a    i32.const [4016608] ; METHOD TaskPanelUI.TjuayX
+00731c6f    call [900] ; 
+00731c72    i32.const [4016616] ; METHOD TaskPanelUI.q]Oy
+00731c77    call [900] ; 
+00731c7a    i32.const [3986048]
+00731c7f    call [900] ; 
+00731c82    i32.const [4018224]
+00731c87    call [900] ; 
+00731c8a    i32.const [3926004]
+00731c8f    call [900] ; 
+00731c92    i32.const [5007041]
+00731c97    i32.const [1]
+00731c99    i32.store8 [0, 0]
+00731c9c  end []
+00731c9d  local.get [0]
+00731c9f  i32.load [2, 128]
+00731ca3  local.set [1]
+00731ca5  i32.const [3926004]
+00731caa  i32.load [2, 0]
+00731cad  call [903] ; 
+00731cb0  local.set [2]
+00731cb2  local.get [2]
+00731cb4  local.get [0]
+00731cb6  i32.const [4016616] ; METHOD TaskPanelUI.q]Oy
+00731cbb  i32.load [2, 0]
+00731cbe  i32.const [0]
+00731cc0  call [2287] ; 
+00731cc3  local.get [1]
+00731cc5  local.get [2]
+00731cc7  i32.const [0]
+00731cc9  call [3071] ; UIExtension.AddChange
+00731ccc  local.get [0]
+00731cce  i32.load [2, 124]
+00731cd1  local.set [1]
+00731cd3  i32.const [3926004]
+00731cd8  i32.load [2, 0]
+00731cdb  call [903] ; 
+00731cde  local.set [2]
+00731ce0  local.get [2]
+00731ce2  local.get [0]
+00731ce4  i32.const [4016616] ; METHOD TaskPanelUI.q]Oy
+00731ce9  i32.load [2, 0]
+00731cec  i32.const [0]
+00731cee  call [2287] ; 
+00731cf1  local.get [1]
+00731cf3  local.get [2]
+00731cf5  i32.const [0]
+00731cf7  call [3071] ; UIExtension.AddChange
+00731cfa  local.get [0]
+00731cfc  i32.load [2, 124]
+00731cff  local.set [1]
+00731d01  i32.const [3927888]
+00731d06  i32.load [2, 0]
+00731d09  call [903] ; 
+00731d0c  local.set [2]
+00731d0e  local.get [2]
+00731d10  local.get [0]
+00731d12  i32.const [4016608] ; METHOD TaskPanelUI.TjuayX
+00731d17  i32.load [2, 0]
+00731d1a  i32.const [0]
+00731d1c  call [1002] ; Action..ctor
+00731d1f  local.get [1]
+00731d21  local.get [2]
+00731d23  i32.const [4018224]
+00731d28  i32.load [2, 0]
+00731d2b  call [1962] ; 
+00731d2e  local.get [0]
+00731d30  i32.load [2, 128]
+00731d34  local.set [1]
+00731d36  i32.const [3927888]
+00731d3b  i32.load [2, 0]
+00731d3e  call [903] ; 
+00731d41  local.set [2]
+00731d43  local.get [2]
+00731d45  local.get [0]
+00731d47  i32.const [4016608] ; METHOD TaskPanelUI.TjuayX
+00731d4c  i32.load [2, 0]
+00731d4f  i32.const [0]
+00731d51  call [1002] ; Action..ctor
+00731d54  local.get [1]
+00731d56  local.get [2]
+00731d58  i32.const [4018224]
+00731d5d  i32.load [2, 0]
+00731d60  call [1962] ; 
+00731d63  local.get [0]
+00731d65  i32.const [3986048]
+00731d6a  i32.load [2, 0]
+00731d6d  call [2550] ; 
+00731d70  i32.store [2, 100]
+00731d73  i32.const [3953576]
+00731d78  i32.load [2, 0]
+00731d7b  call [935] ; 
+00731d7e  i32.load [2, 16]
+00731d81  i32.const [6]
+00731d83  local.get [0]
+00731d85  i32.load [2, 40]
+00731d88  local.get [0]
+00731d8a  call [5597] ; TopInfoUI.RendererPart
+00731d8d  i32.const [3935300]
+00731d92  i32.load [2, 0]
+00731d95  call [903] ; 
+00731d98  local.set [1]
+00731d9a  local.get [1]
+00731d9c  i32.const [0]
+00731d9e  call [11501] ; LivenessPreviewItem..ctor
+00731da1  local.get [0]
+00731da3  local.get [1]
+00731da5  i32.store [2, 108]
+00731da8  local.get [0]
+00731daa  i32.load [2, 108]
+00731dad  local.get [0]
+00731daf  i32.load [2, 184]
+00731db3  i32.const [0]
+00731db5  call [3661] ; BaseItem.InstantiateNoNewItem
+00731db8  local.get [0]
+00731dba  i32.const [1]
+00731dbc  local.get [0]
+00731dbe  call [7056] ; TaskPanelUI.rVZ
+00731dc1  local.get [0]
+00731dc3  i32.load [2, 140]
+00731dc7  local.set [0]
+00731dc9  local.get [0]
+00731dcb  local.set [1]
+00731dcd  local.get [0]
+00731dcf  i32.load [2, 0]
+00731dd2  local.set [0]
+00731dd4  local.get [1]
+00731dd6  i32.const [3939452]
+00731ddb  i32.load [2, 0]
+00731dde  i32.load [2, 92]
+00731de1  i32.load [2, 0]
+00731de4  local.get [0]
+00731de6  i32.load [2, 760]
+00731dea  local.get [0]
+00731dec  i32.load [2, 756]
+00731df0  global.set [3]
+00731df2  global.get [3]
+00731df4  call_indirect [2, 0]
+00731df7  end []

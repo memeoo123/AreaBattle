@@ -1,0 +1,108 @@
+{
+  "status": "original-task-box-effect-native-binding-verified-full-controller-composition-pending",
+  "atUtc": "2026-10-03T13:59:41.576859+00:00",
+  "sourceEvidence": "TASK_BOX_EFFECT_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T13:59:41.576859+00:00",
+    "scope": "Original task-box effect1016 assets/resource wrappers and actual task reward/tab/timer/account binding",
+    "checksPassed": 1554,
+    "newIntegratedChecks": 8,
+    "targetedChecks": 8,
+    "nativeChecks": 14,
+    "nativeParticlePixels": 486,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2738,
+    "implementedLifecycleControllers": 20,
+    "remainingLifecycleControllers": 18,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameTaskBoxEffectPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "Original EffectConfig1016 references Effect/UI/hdzd_eff_bxGlow with type0 and duration5. Original catalog prefab and recursive dependency closure contain10 verified bundles,7 newly acquired totaling82086 bytes. Every source size/MD5/SHA256 rechecked; immutable baseline asset evidence remains unchanged. Snapshot exporter preserves baseline references and repairs tuple-map reference scanning locally.",
+      "Original prefab has4 GameObjects,1 root RectTransform,3 child Transforms and4 ParticleSystem/ParticleSystemRenderer pairs. Root scale100 retained, no synthetic particle replacement. Dependency descriptors contain4 original materials,4 source textures and2 builtin shaders (fileIDs200/203). Native importer remaps references and retains component fields. All7362 numeric particle scalars/curve fields roundtrip without differences; PPtr identities separately checked by importer. Current engine generates requested texture mipmaps from decoded base-level PNG, with original compressed bytes retained in source bundles.",
+      "RecoveredSkillEffectImporter now accepts a scoped snapshot/destination/readback directory via ImportManifest optional parameters. Existing skill import entry retains its original destinations/defaults; new ImportTaskBoxEffect imports only original1016 into Recovered/TaskBoxEffect. Original source ShaderIDs remain builtin; no translated custom shader or generated bitmap is needed for this prefab.",
+      "NewResLoadHelper26177/26188 checks modern mode, emits original misuse error and returns null on failure; otherwise awaits module LoadPrefabAsync with the unchanged caller path. New wrapper has explicit provider acquisition, preserving original case/path and async errors. No fabricated asset success, prefix/lowercase rewrite or fallback.",
+      "AssetbundleModule26237/26249 ignores the legacy-check boolean after diagnostic, derives missing name from substring after final slash, appends .prefab then lowercases path and appends .unity3d. Cache key concatenates lower bundle path and original-case asset name. Cached live UnityObject is cast toGameObject; missing/destroyed cache loads then writes/adds before Object.Instantiate. Each call returns a distinct clone without modern handle, rename or forced activation; instance disposal does not clear prefab cache.",
+      "OutgameEffectConfigReader specializes already-recovered ConfigRead26612 Unity JSON behavior: native TextAsset EffectConfig, substring from first brace, Datas list, original missing-file diagnostic/null. Other parser modes and config acquisition remain explicit. Tests build a real native AssetBundle from the original imported prefab plus original EffectConfig.bytes, not a fixture visual prefab.",
+      "OutgameEffectBinding.BindTask is installed before TaskPanelUI.Awake copies liveness services. Show/Close resolve current actual module on each call. Source liveness reward order remains Show1016, animation, frame wait, currency presentation, disable Button, actual award and red refresh. Account ItemManager/LocalDataManager/data-pool are shared with original daily task activity. No extra reward gate, rollback or cosmetic cancellation is introduced.",
+      "Tab changes close only the latest page effect handle. Natural effect completion removes module entry but retains the source page integer until later tab close. Overlapping box claims leave older effects owned by module timers; tests assert both provider references and subsequent selective close. Early-close late-load races from previous EffectModule milestone remain source behavior.",
+      "Native fixture uses recovered original UIRoot initialization and UITip Canvas, with a settled host Canvas before attaching through source worldPositionStays parenting. A simplified bare parent previously hid the true sorting context; initial diagnostic retained. Native provider loads the original prefab using AssetBundle.LoadAssetAsync and real recovered OutgameAssetProvider/OutgameAssetHandle. Acquisition host remains a local-bundle fixture, separate from full production catalog/network startup.",
+      "Full production Main/account/platform/resource catalog, complete EffectControl4058/NormalPool/sequence/currency-fly assembly, all remaining18 controllers and business, final Player and original-frame audiovisual equivalence remain incomplete. Actual original particle resource and task claim/tab/timer/account binding are the bounded restored scope.",
+      "Final integrated retains32 existing ShouldRunBehaviour assertions and one Curl35 certificate failure. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42; product checks and compilation pass. Initial missing Canvas sorting fixture failure preserved. Original UIRoot parenting requires settled host Canvas; final native depth check and same-frame renderer on/off pixel difference verify actual rendered particles, without claiming original-frame visual equivalence."
+    ],
+    "notClaimed": "Complete EffectControl4058/NormalPool/fly lifecycle and resource catalog, production Main/account/platform, remaining18 controllers/all business, fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameEffectResources.cs",
+    "Editor/OutgameTaskBoxEffectValidation.cs",
+    "Editor/OutgameTaskBoxEffectPlayModeValidation.cs",
+    "Editor/RecoveredSkillEffectImporter.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "task-box-effect-original-prefab-four-particles-source-scale-and-materials",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-original-config-native-bundle-specialized-reader",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-task-claim-actual-effect-and-shared-account-reward",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-tab-change-closes-current-effect-before-content-change",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-natural-completion-keeps-page-stale-handle-until-tab-change",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-legacy-source-cache-instantiates-distinct-original-prefabs",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-overlapping-claims-retain-earlier-effect-source-ownership",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-box-effect-new-loader-route-gate-and-config-missing-diagnostic",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Original main pointer opens complete task page and eligible liveness tiers",
+    "Original UI root is in front of the actual UI camera",
+    "Native tier pointer creates source1016 through actual EffectModule",
+    "Real end-of-frame claim grants50 to both account records and saves first tier bit",
+    "Native bundle supplies original named prefab under source box with scale100 and owned handle",
+    "All four original particle systems run in actual scaled native frames",
+    "Original textures/materials follow task UITip sorting layer",
+    "Original particle renderers contribute visible native camera pixels",
+    "Native achievement toggle closes and releases current box effect",
+    "Original task effect native object is destroyed after tab change",
+    "Second source box effect naturally expires after original five-second module duration",
+    "Natural module completion retains source page handle until a later tab callback",
+    "Independent account/file restart restores both economic records and both claimed tier bits",
+    "Reopened original task page shows both claimed boxes without recreating reward effects"
+  ],
+  "remaining": "Recover complete EffectControl4058 NormalPool creation/sequence/fly lifecycle and connect original currency/effect collection owners. Continue full production resource catalog, Main/account/login/platform/all remaining18 controllers and business, final Player and original audiovisual acceptance."
+}

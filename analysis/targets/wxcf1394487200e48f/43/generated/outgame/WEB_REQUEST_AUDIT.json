@@ -1,0 +1,227 @@
+{
+  "status": "helper-agent-task-queue-native-verified-manager-platform-pending",
+  "atUtc": "2026-10-04T14:04:21.029077+00:00",
+  "sourceEvidence": "WEB_REQUEST_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-04T14:04:21.029077+00:00",
+    "scope": "Original UnityWebRequest helper, task/agent and generic queue; actual loopback GET/POST/HTTP503/timeout/AES rank/cancellation/priority/reuse/shutdown",
+    "checksPassed": 1731,
+    "newIntegratedChecks": 27,
+    "targetedChecks": 27,
+    "nativeChecks": 21,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2869,
+    "implementedLifecycleControllers": 22,
+    "remainingLifecycleControllers": 16,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameWebRequestPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 1,
+        "Curl error 42": 0,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 2,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "diagnosticExplanation": "Native UnityEditor.Search.SearchDatabase startup index exception is outside game stack; retained in log. Curl42 follows cancellation of deliberately stalled loopback request. No compilation errors; all product checks pass.",
+    "observedBoundaries": [
+      "GET requires both callbacks, logs missing-handler error and creates no request. POST silently returns when either handler is absent. POST uses UploadHandlerRaw and DownloadHandlerBuffer, JSON UTF8 Content-Type, optional X-Encrypted:true, then caller header overrides. Request field is published before handler/header setup; no implicit disposal of a previous request or disposed-state gate.",
+      "Unity Update checks real completion/network/http errors and download-handler completion. ReportGameNetInfo is invoked before allocating the callback event, with unscaled f32 milliseconds and original WASM invalid/overflow cast sentinel. Status-code read catches exceptions, logs with another status read, then uses-9999. Success/failure events are newly allocated and Clear only after callback returns. Helper alone retains the request, allowing repeated callbacks; actual agent resets it before notifying manager. Callback/report exceptions skip later work.",
+      "Task3645 allocates fresh, increments shared unchecked serial, copies headers, aliases bytes/user data/callback; Clear retains header dictionary. Agent3640 publishes task/Doing before start callback, dispatches null body GET versus nonnull POST, resets elapsed after dispatch. Success/failure resets helper before status/callback, rereads current Task to set Done after callback. Timeout uses unscaled delta and >=deadline, reports Fail/status0/Timeout using configured timeout before reset/callback.",
+      "Task pool3812 uses descending priority and stable equal-priority order. Paused gates working update, waiting dispatch and free expiry. Tasks completed during agent.Update are reclaimed on a later pool.Update; reclamation resets agent, returns to free FIFO, removes working node, then clears task. Start publishes working ownership before callback and removes waiting only afterward. Source Start result0/3 recycle and clear,1 retains working,2 recycles but keeps waiting; values outside0..3 retain working and waiting. Capacity is a manager policy; pool itself does not enforce it.",
+      "Source GameFrameworkLinkedList3804 caches BCL nodes per-list in FIFO order, clears Value on release and delegates enumeration to BCL. Queue uses saved/current node sequence exactly. RemoveTask searches waiting before active; RemoveAllTasks clears waiting before resetting active. Free agents expire at>=300 scaled seconds, with Shutdown before removal. Generic method contexts independently resolve AddAfter/AddFirst/AddLast/Next/Previous and exact phase order.",
+      "This audit covers reviewed canonical methods, not obfuscation aliases with altered constants. WebRequestManager creation/header/debug/callback facade, HttpManager/NetTool/platform domain-key/report upload and production Main/RankUI/OverUI remain pending. Native validation uses an explicit loopback server and test composition; it does not establish external platform success."
+    ],
+    "notClaimed": "Original WebRequestManager/HttpManager/NetTool/platform URL-key/report delivery, production Main/RankUI/OverUI/all business/final Player/original audiovisual equivalence. Local server responses are explicit native test evidence, not external platform success."
+  },
+  "implementation": [
+    "Scripts/OutgameUnityWebRequestAgentHelper.cs",
+    "Scripts/OutgameWebRequestTaskPool.cs",
+    "Editor/OutgameWebRequestAgentValidation.cs",
+    "Editor/OutgameWebRequestTaskPoolValidation.cs",
+    "Editor/OutgameWebRequestPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "web-request-pool-stable-priority-order-and-working-first-info",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-priority-change-only-waiting-and-equal-no-reorder",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-completion-clears-next-tick-and-starts-next-without-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-start-outcomes-recycle-or-retain",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-start-exception-keeps-both-queue-references",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-pause-gates-updates-dispatch-and-expiry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-free-expiry-scaled-inclusive-and-return-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-capacity-is-manager-policy-not-pool-cap",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-cancel-waiting-before-active-and-clear-no-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-remove-all-failure-preserves-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-shutdown-failure-keeps-current-free-agent",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-start-reentry-new-tail-waits-until-next-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-original-node-fifo-clear-and-reuse",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-pool-actual-agent-timeout-then-next-tick-reuse",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-task-copy-alias-and-clear-retains-headers",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-fresh-events-clear-reference-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-invalid-helper-task-and-idle-update",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-start-event-before-dispatch-and-null-versus-empty-body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-start-throw-retains-working-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-completion-reset-before-callback-and-done-after",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-completion-throw-skips-done",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-reset-throw-keeps-task-and-status",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-callback-reentry-done-applies-to-current-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-timeout-unscaled-equality-report-before-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-timeout-report-failure-retries-before-reset",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-start-reset-timeout-and-shutdown-unsubscribe",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-agent-original-wasm-millisecond-conversion",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Real UnityWebRequest GET/POST/HTTP503/timeout with original helper/task/agent/queue, and real AES/rank protocol exchange over a controlled loopback TCP HTTP server. Manager/platform URL-key/report delivery and production Main are not claimed.",
+    "checks": [
+      "POST with missing handlers silently leaves request null",
+      "GET with missing handlers logs original error without sending",
+      "Native success disposes request and sets status before callback",
+      "Real GET preserves default content type and custom header without POST encryption flag",
+      "Real downloaded UTF8 bytes survive event Clear while retained event data is cleared",
+      "Real HTTP200 reports before callback and marks task done afterward",
+      "Native success disposes request and sets status before callback",
+      "Real POST transmits exact UTF8 body and original encrypted header",
+      "Native success disposes request and sets status before callback",
+      "Custom headers override defaults and empty bytes still produce POST",
+      "Native failure disposes request and sets status before callback",
+      "Actual HTTP503 reaches failure callback with source report-before-callback order",
+      "Native failure disposes request and sets status before callback",
+      "Source unscaled timeout disposes actual stalled request while game time is paused",
+      "Actual rank request goes through AES envelope, task, queue, agent, Unity HTTP and independent server bytes",
+      "Encrypted server response traverses real HTTP, AES decode and original rank query parser",
+      "Native pending cancellation clears task without sending an HTTP request",
+      "Native source queue sends higher priority first with one actual helper",
+      "Native queue reuses helper on next tick, clears prior task and never sends cancelled request",
+      "Native queue shutdown clears active ownership and disposes helper",
+      "Helper GameObject is destroyed at native frame boundary"
+    ]
+  },
+  "remaining": "Recover original WebRequestManager singleton/helper creation/header/debug counters/object serialization/callback facade; HttpManager/NetTool/AppInfoManager platform domain-key-report composition. Then RankUI/OverUI, UserInfoUI/general sprites and full Main/account/remaining16 controllers/business/final Player and original audiovisual acceptance."
+}

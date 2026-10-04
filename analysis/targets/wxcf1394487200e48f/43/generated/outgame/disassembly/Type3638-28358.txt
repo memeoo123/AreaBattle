@@ -1,0 +1,32 @@
+; Original class: WebRequestStartEventArgs
+; Type3638.Create; wasmcode function 9342; offset=4540154 size=76
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+004546fb  i32.const [4987490]
+00454700  i32.load8_u [0, 0]
+00454703  i32.eqz []
+00454704  if [-64]
+00454706    i32.const [3942092]
+0045470b    call [900] ; 
+0045470e    i32.const [4987490]
+00454713    i32.const [1]
+00454715    i32.store8 [0, 0]
+00454718  end []
+00454719  i32.const [3942092]
+0045471e  i32.load [2, 0]
+00454721  call [903] ; 
+00454724  local.set [3]
+00454726  local.get [3]
+00454728  local.get [3]
+0045472a  call [9341] ; WebRequestStartEventArgs..ctor
+0045472d  local.get [3]
+0045472f  local.get [1]
+00454731  i32.store [2, 12]
+00454734  local.get [3]
+00454736  local.get [0]
+00454738  i32.store [2, 8]
+0045473b  local.get [3]
+0045473d  local.get [2]
+0045473f  i32.store [2, 16]
+00454742  local.get [3]
+00454744  return []
+00454745  end []

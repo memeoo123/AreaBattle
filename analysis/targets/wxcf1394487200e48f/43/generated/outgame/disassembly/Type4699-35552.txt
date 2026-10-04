@@ -1,0 +1,48 @@
+; Original class: LimitTimeTaskActivity
+; Type4699.OnSave; wasmcode function 11554; offset=5661997 size=121
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0056652e  i32.const [5001264]
+00566533  i32.load8_u [0, 0]
+00566536  i32.eqz []
+00566537  if [-64]
+00566539    i32.const [3929440]
+0056653e    call [900] ;
+00566541    i32.const [3971848]
+00566546    call [900] ;
+00566549    i32.const [3971852]
+0056654e    call [900] ;
+00566551    i32.const [5001264]
+00566556    i32.const [1]
+00566558    i32.store8 [0, 0]
+0056655b  end []
+0056655c  i32.const [0]
+0056655e  local.set [1]
+00566560  loop [-64]
+00566562    i32.const [3971848]
+00566567    i32.load [2, 0]
+0056656a    drop []
+0056656b    local.get [1]
+0056656d    local.get [0]
+0056656f    i32.load [2, 24]
+00566572    i32.load [2, 12]
+00566575    i32.lt_s []
+00566576    if [-64]
+00566578      local.get [0]
+0056657a      i32.load [2, 24]
+0056657d      local.get [1]
+0056657f      i32.const [3971852]
+00566584      i32.load [2, 0]
+00566587      call [930] ;
+0056658a      i32.const [3929440]
+0056658f      i32.load [2, 0]
+00566592      call [924] ;
+00566595      i32.const [0]
+00566597      call [12907] ; ChildLimitTimeTaskActivity.{Sui
+0056659a      local.get [1]
+0056659c      i32.const [1]
+0056659e      i32.add []
+0056659f      local.set [1]
+005665a1      br [1]
+005665a3    end []
+005665a4  end []
+005665a5  end []

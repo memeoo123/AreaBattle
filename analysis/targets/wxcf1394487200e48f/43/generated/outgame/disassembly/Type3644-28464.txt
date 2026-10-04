@@ -1,0 +1,102 @@
+; Original class: WebRequestManager
+; Type3644.SetRequestHeader; wasmcode function 3764; offset=1190690 size=289
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00122b25  i32.const [4987550]
+00122b2a  i32.load8_u [0, 0]
+00122b2d  i32.eqz []
+00122b2e  if [-64]
+00122b30    i32.const [3929208]
+00122b35    call [900] ; 
+00122b38    i32.const [3960432]
+00122b3d    call [900] ; 
+00122b40    i32.const [3960440]
+00122b45    call [900] ; 
+00122b48    i32.const [3960416]
+00122b4d    call [900] ; 
+00122b50    i32.const [3960472]
+00122b55    call [900] ; 
+00122b58    i32.const [3919016]
+00122b5d    call [900] ; 
+00122b60    i32.const [3926996]
+00122b65    call [900] ; 
+00122b68    i32.const [4105936] ; STRING "设置Header["
+00122b6d    call [900] ; 
+00122b70    i32.const [4081212] ; STRING "]："
+00122b75    call [900] ; 
+00122b78    i32.const [4987550]
+00122b7d    i32.const [1]
+00122b7f    i32.store8 [0, 0]
+00122b82  end []
+00122b83  i32.const [3926996]
+00122b88  i32.load [2, 0]
+00122b8b  i32.const [1]
+00122b8d  call [909] ; 
+00122b90  local.set [3]
+00122b92  i32.const [4105936] ; STRING "设置Header["
+00122b97  i32.load [2, 0]
+00122b9a  local.get [1]
+00122b9c  i32.const [4081212] ; STRING "]："
+00122ba1  i32.load [2, 0]
+00122ba4  local.get [2]
+00122ba6  i32.const [0]
+00122ba8  call [1098] ; String.Concat
+00122bab  local.set [4]
+00122bad  local.get [3]
+00122baf  local.get [4]
+00122bb1  call [905] ; 
+00122bb4  local.get [3]
+00122bb6  local.get [4]
+00122bb8  i32.store [2, 16]
+00122bbb  i32.const [3929208]
+00122bc0  i32.load [2, 0]
+00122bc3  call [901] ; 
+00122bc6  local.get [3]
+00122bc8  i32.const [0]
+00122bca  call [1610] ; CLog.NetLog
+00122bcd  local.get [0]
+00122bcf  i32.load [2, 20]
+00122bd2  local.set [3]
+00122bd4  local.get [3]
+00122bd6  i32.eqz []
+00122bd7  if [-64]
+00122bd9    i32.const [3919016]
+00122bde    i32.load [2, 0]
+00122be1    call [903] ; 
+00122be4    local.set [3]
+00122be6    local.get [3]
+00122be8    i32.const [3960416]
+00122bed    i32.load [2, 0]
+00122bf0    call [951] ; 
+00122bf3    local.get [0]
+00122bf5    local.get [3]
+00122bf7    i32.store [2, 20]
+00122bfa    local.get [0]
+00122bfc    i32.load [2, 20]
+00122bff    local.set [3]
+00122c01  end []
+00122c02  local.get [3]
+00122c04  local.get [1]
+00122c06  i32.const [3960440]
+00122c0b  i32.load [2, 0]
+00122c0e  call [987] ; 
+00122c11  local.set [3]
+00122c13  local.get [0]
+00122c15  i32.load [2, 20]
+00122c18  local.set [0]
+00122c1a  local.get [3]
+00122c1c  if [-64]
+00122c1e    local.get [0]
+00122c20    local.get [1]
+00122c22    local.get [2]
+00122c24    i32.const [3960472]
+00122c29    i32.load [2, 0]
+00122c2c    call [1058] ; 
+00122c2f    return []
+00122c30  end []
+00122c31  local.get [0]
+00122c33  local.get [1]
+00122c35  local.get [2]
+00122c37  i32.const [3960432]
+00122c3c  i32.load [2, 0]
+00122c3f  call [932] ; 
+00122c42  end []

@@ -1,0 +1,44 @@
+; Original class: AchiTaskSubUI
+; Type3986.OnDestory; wasmcode function 13398; offset=6486065 size=129
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0062f832  i32.const [5010183]
+0062f837  i32.load8_u [0, 0]
+0062f83a  i32.eqz []
+0062f83b  if [-64]
+0062f83d    i32.const [3988780] ; METHOD AchiTaskSubUI.fysaz
+0062f842    call [900] ; 
+0062f845    i32.const [3944680]
+0062f84a    call [900] ; 
+0062f84d    i32.const [3925716]
+0062f852    call [900] ; 
+0062f855    i32.const [4049024] ; STRING "CommonModule_Achievement_RefreshList"
+0062f85a    call [900] ; 
+0062f85d    i32.const [5010183]
+0062f862    i32.const [1]
+0062f864    i32.store8 [0, 0]
+0062f867  end []
+0062f868  i32.const [3925716]
+0062f86d  i32.load [2, 0]
+0062f870  i32.load [2, 92]
+0062f873  i32.const [0]
+0062f875  i32.store [2, 0]
+0062f878  i32.const [3925716]
+0062f87d  i32.load [2, 0]
+0062f880  i32.load [2, 92]
+0062f883  drop []
+0062f884  i32.const [3944680]
+0062f889  i32.load [2, 0]
+0062f88c  call [903] ; 
+0062f88f  local.set [1]
+0062f891  local.get [1]
+0062f893  local.get [0]
+0062f895  i32.const [3988780] ; METHOD AchiTaskSubUI.fysaz
+0062f89a  i32.load [2, 0]
+0062f89d  i32.const [0]
+0062f89f  call [1345] ; EventHandler..ctor
+0062f8a2  i32.const [4049024] ; STRING "CommonModule_Achievement_RefreshList"
+0062f8a7  i32.load [2, 0]
+0062f8aa  local.get [1]
+0062f8ac  i32.const [0]
+0062f8ae  call [1652] ; CommonMsgDispatcher.RemoveEventListener
+0062f8b1  end []

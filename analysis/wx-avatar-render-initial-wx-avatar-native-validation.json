@@ -1,0 +1,24 @@
+{
+    "passed": true,
+    "error": "",
+    "capture": "/private/tmp/areabattle-validation-20261003/analysis/captures/wx-avatar-native.png",
+    "restoredNickname": "头像恢复验证",
+    "restoredAvatar": "file:///var/folders/qh/7vmgtznd6lg3433k139bftk40000gn/T/AreaBattleWxAvatar-b387ae00f7eb40fcaf7f819dec776f7a/avatar.png",
+    "restoredAuthorization": true,
+    "restoredPreference": 47,
+    "scope": "Real UnityWebRequestTexture local-file success/missing-file failure, original default sprite/cache/dedup/callback, actual TopInfo/Match/UserDataPrefs/shared account file save and independent restart. Local URLs are explicit native transport fixtures, not remote server/WeChat authorization. Main/platform/Rank/UI destinations remain incomplete.",
+    "checks": [
+        "Original default resource is cached and returned synchronously without network",
+        "Two native avatar consumers share one real UnityWebRequestTexture request",
+        "Actual preference wrapper and TopInfo auth update real Match fields before download completion",
+        "Actual UserDataPrefs and Match pool files are saved in source auth path",
+        "Real native texture decode creates source100-PPU sprite and delivers both callbacks before refresh",
+        "Successful callbacks are removed while original download marker remains",
+        "Subsequent lookup is synchronous from actual native sprite cache",
+        "Actual missing-file transport failure retains waiters and emits no fallback or refresh",
+        "A later failed-URL request is deduplicated rather than automatically retried",
+        "Native page close releases owned effects/page handle after actual avatar callback",
+        "Independent native account restart restores real Match authorization and separate UserDataPrefs record",
+        "Fresh platform preference/cache owner restores raw preference values without persisting download caches"
+    ]
+}

@@ -130,7 +130,12 @@ namespace AreaBattle.EditorTools
             test("original-pre-game-settings-native-and-number-symbols",()=>{
                 var reader=new OutgameLegacyConfigRead(name=>Resources.Load<TextAsset>("Recovered/FirstPack/Config/"+name),message=>throw new Exception(message));var configs=new Dictionary<object,LargeNumConfig>();reader.ReadTable(configs);
                 var symbols=new OutgameBigNumberSymbols();bool oldTouch=Input.multiTouchEnabled;int oldRate=Application.targetFrameRate,mode=0;try{
-                    var settings=new OutgamePreGameSettings(value=>mode=value,()=>{Require(mode==2&&!Input.multiTouchEnabled,"report then native touch setting precede symbols");return OutgameBigNumberSymbols.FromConfig(configs);},symbols);settings.Initialize();
+                    // Desktop backends can ignore the touch flag. Check the call/order and the
+                    // backend's actual readback separately, without requiring mobile behavior.
+                    Input.multiTouchEnabled=false;bool disabledReadback=Input.multiTouchEnabled;Input.multiTouchEnabled=oldTouch;
+                    bool touchCalled=false;
+                    var settings=new OutgamePreGameSettings(value=>mode=value,()=>{Require(mode==2&&touchCalled&&Input.multiTouchEnabled==disabledReadback,"report then native touch request precede symbols");return OutgameBigNumberSymbols.FromConfig(configs);},symbols,value=>{Require(!value&&mode==2,"source requests false after report mode");Input.multiTouchEnabled=value;touchCalled=true;});settings.Initialize();
+                    report.limitations+=" Native multiTouchEnabled=false readback on "+Application.platform+": "+disabledReadback+".";
                     Require(Application.targetFrameRate==60&&symbols.FirstMagnitude==3&&symbols.ByMagnitude[3]=="K"&&symbols.Symbols[0]=="K"&&symbols.Symbols.Count==configs.Count,"native frame setting and original symbol map");
                 }finally{Input.multiTouchEnabled=oldTouch;Application.targetFrameRate=oldRate;}
             });

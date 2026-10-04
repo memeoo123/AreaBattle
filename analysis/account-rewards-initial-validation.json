@@ -1,0 +1,48 @@
+{
+    "schemaVersion": "1.0",
+    "unityVersion": "6000.3.7f1",
+    "passed": false,
+    "checks": [
+        {
+            "id": "account-rewards-same-pool-real-item-local-config-and-statistics-owners",
+            "result": "fail",
+            "detail": "System.InvalidOperationException: The following game object is invoking the DontDestroyOnLoad method: UpdateManager. Notice that DontDestroyOnLoad can only be used in play mode and, as such, cannot be part of an editor script.\n  at (wrapper managed-to-native) UnityEngine.Object.DontDestroyOnLoad_Injected(intptr)\n  at UnityEngine.Object.DontDestroyOnLoad (UnityEngine.Object target) [0x00023] in <4ac7440922e348fbb08970d48cebc0b2>:0 \n  at AreaBattle.OutgameUpdateManager.get_Instance () [0x00055] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameUpdateManager.cs:26 \n  at AreaBattle.OutgameUpdateManager.AddHandle (System.Action callback) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameUpdateManager.cs:28 \n  at AreaBattle.OutgameGlobalItemSlot+LifecycleHost.AddUpdate (System.Action update) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameGlobalItemSlot.cs:58 \n  at AreaBattle.OutgameGlobalItemLifecycle.SynchronizeServerTime (System.Int64 timestamp) [0x0001c] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameGlobalItemLifecycle.cs:55 \n  at AreaBattle.OutgameGlobalItemLifecycle.Initialize (System.String text, System.Func`1[TResult] hostNow) [0x00018] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameGlobalItemLifecycle.cs:46 \n  at AreaBattle.OutgameGlobalItemLifecycle.InitializeWithHost (System.String text, AreaBattle.IOutgameGlobalItemRewardHost rewardHost) [0x00007] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameGlobalItemLifecycle.cs:41 \n  at AreaBattle.OutgameItemManager.UpdateDataCallBack (System.String text) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameItemManager.cs:23 \n  at AreaBattle.OutgameItemManager.UpdateData (System.Boolean allowServer) [0x0002a] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameItemManager.cs:22 \n  at AreaBattle.OutgameItemManager.OnInit () [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Scripts/OutgameItemManager.cs:20 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+Fixture.Register (AreaBattle.OutgameManagerRegistration r) [0x00024] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:67 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+Fixture..ctor (System.Boolean native, System.String path) [0x0038f] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:62 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c.<Run>b__9_1 () [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:84 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c__DisplayClass9_0.<Run>b__0 (System.String id, System.Action a) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:82 "
+        },
+        {
+            "id": "account-rewards-daily-reward-saves-currency-before-claim-then-dirty-saves-task",
+            "result": "fail",
+            "detail": "System.Exception: real source fifty gold and twenty liveness\n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c.<Run>b__9_2 () [0x0000f] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:92 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c__DisplayClass9_0.<Run>b__0 (System.String id, System.Action a) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:82 "
+        },
+        {
+            "id": "account-rewards-daily-currency-claim-and-liveness-independent-file-restart",
+            "result": "fail",
+            "detail": "System.Exception: new owners restore both currency records and task state from same account directory\n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c.<Run>b__9_3 () [0x0003a] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:100 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c__DisplayClass9_0.<Run>b__0 (System.String id, System.Action a) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:82 "
+        },
+        {
+            "id": "account-rewards-achievement-reward-economy-save-order-and-final-account-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-daily-liveness-award-shares-account-economy",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-login-gate-and-save-disabled-are-not-bypassed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-report-failure-retains-global-prefix-before-local-and-task",
+            "result": "fail",
+            "detail": "System.Exception: source global mutation before report; failed report prevents manager/tool/local save and task claim\n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c.<Run>b__9_7 () [0x00053] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:126 \n  at AreaBattle.EditorTools.OutgameAccountRewardsValidation+<>c__DisplayClass9_0.<Run>b__0 (System.String id, System.Action a) [0x00000] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameAccountRewardsValidation.cs:82 "
+        },
+        {
+            "id": "account-rewards-local-server-reload-rebinds-dispatcher-to-current-record",
+            "result": "pass",
+            "detail": ""
+        }
+    ],
+    "limitations": "Task/Achievement page and actual account ItemManager/LocalDataManager/Tool/data-pool/file-storage composition. Original config native bundle and live statistics owners. Account login state, reports/skins/presentation/download endpoints remain explicit fixture services; full production Main/platform/Player is not claimed."
+}

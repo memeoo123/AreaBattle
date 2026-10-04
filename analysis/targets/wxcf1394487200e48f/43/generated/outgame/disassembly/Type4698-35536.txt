@@ -1,0 +1,51 @@
+; Original class: ChildLimitTimeTaskActivity
+; Type4698.Launch; wasmcode function 20257; offset=9100789 size=139
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008addf8  i32.const [5001478]
+008addfd  i32.load8_u [0, 0]
+008ade00  i32.eqz []
+008ade01  if [-64]
+008ade03    i32.const [3989352]
+008ade08    call [900] ;
+008ade0b    i32.const [3932388]
+008ade10    call [900] ;
+008ade13    i32.const [5001478]
+008ade18    i32.const [1]
+008ade1a    i32.store8 [0, 0]
+008ade1d  end []
+008ade1e  local.get [0]
+008ade20  i32.load [2, 72]
+008ade23  i32.load [2, 12]
+008ade26  local.set [1]
+008ade28  local.get [1]
+008ade2a  i32.const [1]
+008ade2c  i32.store [2, 12]
+008ade2f  i32.const [3989352]
+008ade34  i32.load [2, 0]
+008ade37  call [1032] ;
+008ade3a  local.set [2]
+008ade3c  i32.const [3932388]
+008ade41  i32.load [2, 0]
+008ade44  call [901] ;
+008ade47  local.get [1]
+008ade49  i32.const [10000]
+008ade4d  local.get [2]
+008ade4f  i32.const [0]
+008ade51  call [1568] ; GameStatisticsExpansion.GameValue
+008ade54  i64.store [3, 32]
+008ade57  i32.const [29000] ; TABLE MessageOptions.set_MapEntry
+008ade5b  local.get [0]
+008ade5d  i32.load [2, 20]
+008ade60  i32.load [2, 8]
+008ade63  local.get [0]
+008ade65  i32.load [2, 72]
+008ade68  i32.load [2, 12]
+008ade6b  i64.load [3, 32]
+008ade6e  i32.const [0]
+008ade70  call [2402] ; GameStatisticsExpansion.SetEventCount
+008ade73  local.get [0]
+008ade75  local.get [0]
+008ade77  call [3653] ; ChildLimitTimeTaskActivity.u|P|lp
+008ade7a  i32.const [1]
+008ade7c  i32.store8 [0, 92]
+008ade7f  end []

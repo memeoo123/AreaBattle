@@ -1,0 +1,26 @@
+; Original class: WebRequestAgentHelperCompleteEventArgs
+; Type3634.Create; wasmcode function 9351; offset=4544622 size=62
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0045586f  i32.const [4987480]
+00455874  i32.load8_u [0, 0]
+00455877  i32.eqz []
+00455878  if [-64]
+0045587a    i32.const [3942072]
+0045587f    call [900] ; 
+00455882    i32.const [4987480]
+00455887    i32.const [1]
+00455889    i32.store8 [0, 0]
+0045588c  end []
+0045588d  i32.const [3942072]
+00455892  i32.load [2, 0]
+00455895  call [903] ; 
+00455898  local.set [1]
+0045589a  local.get [1]
+0045589c  local.get [1]
+0045589e  call [1721] ; DownloadAgentHelperUpdateLengthEventArgs..ctor
+004558a1  local.get [1]
+004558a3  local.get [0]
+004558a5  i32.store [2, 8]
+004558a8  local.get [1]
+004558aa  return []
+004558ab  end []

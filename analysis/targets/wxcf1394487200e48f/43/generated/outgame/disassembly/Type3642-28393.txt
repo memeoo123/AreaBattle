@@ -1,0 +1,33 @@
+; Original class: UnityWebRequestAgentHelper
+; Type3642.add_WebRequestAgentHelperComplete; wasmcode function 14955; offset=7284605 size=82
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+006f277e  i32.const [4987507]
+006f2783  i32.load8_u [0, 0]
+006f2786  i32.eqz []
+006f2787  if [-64]
+006f2789    i32.const [3920236]
+006f278e    call [900] ; 
+006f2791    i32.const [4987507]
+006f2796    i32.const [1]
+006f2798    i32.store8 [0, 0]
+006f279b  end []
+006f279c  local.get [0]
+006f279e  local.set [2]
+006f27a0  local.get [0]
+006f27a2  i32.load [2, 20]
+006f27a5  local.get [1]
+006f27a7  i32.const [0]
+006f27a9  call [1031] ; Delegate.Combine
+006f27ac  local.set [0]
+006f27ae  local.get [2]
+006f27b0  local.get [0]
+006f27b2  i32.const [3920236]
+006f27b7  i32.load [2, 0]
+006f27ba  call [938] ; 
+006f27bd  i32.store [2, 20]
+006f27c0  local.get [0]
+006f27c2  i32.const [3920236]
+006f27c7  i32.load [2, 0]
+006f27ca  call [938] ; 
+006f27cd  drop []
+006f27ce  end []

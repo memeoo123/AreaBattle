@@ -2,11 +2,15 @@ using System;
 using System.Collections.Generic;
 namespace AreaBattle
 {
-    public sealed class OutgameProductPriceConfig
+    public class OutgameProductPriceConfig
     {
-        public int[] buyTypeOrder,costItemPriceTypes,priceCalParam;
+        public virtual int[] buyTypeOrder {get;set;}
+        public virtual int[] costItemPriceTypes {get;set;}
+        public virtual int[] priceCalParam {get;set;}
         public int[][] costItemPriceParams;
-        public int getType,priceType;
+        public virtual int getType {get;set;}
+        public virtual int priceType {get;set;}
+        public virtual int[] GetCostItemPriceParameters(int index)=>costItemPriceParams[index];
     }
     // Source ProductUserData.UpdateConsumeItemPrice34610. Random/power providers are
     // explicit dependencies so platform-specific sequence/rounding is not invented.
@@ -46,21 +50,21 @@ namespace AreaBattle
                     int type=config(row.productId).costItemPriceTypes[i];
                     switch(type)
                     {
-                        case 0:row.consumeItemPriceArray[i]=config(row.productId).costItemPriceParams[i][1];break;
-                        case 1:row.consumeItemPriceArray[i]=randomInclusive(config(row.productId).costItemPriceParams[i][1],config(row.productId).costItemPriceParams[i][2]);break;
+                        case 0:row.consumeItemPriceArray[i]=config(row.productId).GetCostItemPriceParameters(i)[1];break;
+                        case 1:row.consumeItemPriceArray[i]=randomInclusive(config(row.productId).GetCostItemPriceParameters(i)[1],config(row.productId).GetCostItemPriceParameters(i)[2]);break;
                         case 2:
-                            int count=ItemCount(row,config(row.productId).costItemPriceParams[i][0]);
-                            int at=count%(config(row.productId).costItemPriceParams[i].Length-1)+1;
-                            row.consumeItemPriceArray[i]=config(row.productId).costItemPriceParams[i][at];break;
-                        case 3:row.consumeItemPriceArray[i]=Pick(config(row.productId).costItemPriceParams[i]);break;
+                            int count=ItemCount(row,config(row.productId).GetCostItemPriceParameters(i)[0]);
+                            int at=count%(config(row.productId).GetCostItemPriceParameters(i).Length-1)+1;
+                            row.consumeItemPriceArray[i]=config(row.productId).GetCostItemPriceParameters(i)[at];break;
+                        case 3:row.consumeItemPriceArray[i]=Pick(config(row.productId).GetCostItemPriceParameters(i));break;
                         case 4:
-                            int basis=config(row.productId).costItemPriceParams[i][1];
-                            int bought=ItemCount(row,config(row.productId).costItemPriceParams[i][0]);
-                            row.consumeItemPriceArray[i]=unchecked(basis+config(row.productId).costItemPriceParams[i][2]*bought);break;
+                            int basis=config(row.productId).GetCostItemPriceParameters(i)[1];
+                            int bought=ItemCount(row,config(row.productId).GetCostItemPriceParameters(i)[0]);
+                            row.consumeItemPriceArray[i]=unchecked(basis+config(row.productId).GetCostItemPriceParameters(i)[2]*bought);break;
                         case 5:
-                            int start=config(row.productId).costItemPriceParams[i][1];
-                            int factor=config(row.productId).costItemPriceParams[i][2];
-                            int exponent=ItemCount(row,config(row.productId).costItemPriceParams[i][0]);
+                            int start=config(row.productId).GetCostItemPriceParameters(i)[1];
+                            int factor=config(row.productId).GetCostItemPriceParameters(i)[2];
+                            int exponent=ItemCount(row,config(row.productId).GetCostItemPriceParameters(i)[0]);
                             row.consumeItemPriceArray[i]=unchecked(start*TruncatePower(power(factor,exponent)));break;
                     }
                 }

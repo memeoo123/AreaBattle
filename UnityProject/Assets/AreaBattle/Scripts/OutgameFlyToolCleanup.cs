@@ -14,13 +14,15 @@ namespace AreaBattle
     public sealed class OutgameFlyToolCleanup
     {
         readonly IOutgameFlyCleanupHost host;
-        readonly Dictionary<int,object> coroutines=new Dictionary<int,object>();
-        readonly Dictionary<int,float> started=new Dictionary<int,float>();
+        Dictionary<int,object> coroutines;
+        Dictionary<int,float> started;
         readonly List<int> pending=new List<int>();
         public float NextCheck {get;private set;}
         public int ActiveCount=>coroutines.Count;
         public int PendingCount=>pending.Count;
-        public OutgameFlyToolCleanup(IOutgameFlyCleanupHost host){this.host=host;}
+        public OutgameFlyToolCleanup(IOutgameFlyCleanupHost host,bool initialize=true){this.host=host;if(initialize)Initialize();}
+        // EffectControl31213 recreates tracking dictionaries; pending ids and NextCheck survive.
+        public void Initialize(){coroutines=new Dictionary<int,object>();started=new Dictionary<int,float>();}
         public void TrackCoroutine(int id,object coroutine)=>coroutines.Add(id,coroutine);
         public void TrackTime(int id,float time)=>started.Add(id,time);
         public void StopEffect(int id){if(coroutines.ContainsKey(id))pending.Add(id);}

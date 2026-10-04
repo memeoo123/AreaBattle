@@ -1,0 +1,54 @@
+; Original class: ActivityControl
+; Type4637.kzwsPU[; wasmcode function 20976; offset=9456979 size=153
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00904d56  i32.const [5001720]
+00904d5b  i32.load8_u [0, 0]
+00904d5e  i32.eqz []
+00904d5f  if [-64]
+00904d61    i32.const [3955152]
+00904d66    call [900] ; 
+00904d69    i32.const [3955140]
+00904d6e    call [900] ; 
+00904d71    i32.const [3971832]
+00904d76    call [900] ; 
+00904d79    i32.const [3922816]
+00904d7e    call [900] ; 
+00904d81    i32.const [5001720]
+00904d86    i32.const [1]
+00904d88    i32.store8 [0, 0]
+00904d8b  end []
+00904d8c  local.get [0]
+00904d8e  local.get [0]
+00904d90  call [13355] ; ActivityControl.[olZ]L
+00904d93  local.get [0]
+00904d95  local.get [0]
+00904d97  call [13347] ; ActivityControl.fl`PQ
+00904d9a  local.get [0]
+00904d9c  i32.load [2, 28]
+00904d9f  i32.const [3955152]
+00904da4  i32.load [2, 0]
+00904da7  call [1078] ; 
+00904daa  local.get [0]
+00904dac  i32.load [2, 16]
+00904daf  i32.const [3955140]
+00904db4  i32.load [2, 0]
+00904db7  call [1138] ; 
+00904dba  local.set [2]
+00904dbc  i32.const [3922816]
+00904dc1  i32.load [2, 0]
+00904dc4  call [903] ; 
+00904dc7  local.set [1]
+00904dc9  local.get [1]
+00904dcb  local.get [2]
+00904dcd  i32.const [3971832]
+00904dd2  i32.load [2, 0]
+00904dd5  call [1350] ; 
+00904dd8  local.get [0]
+00904dda  local.get [1]
+00904ddc  i32.store [2, 48]
+00904ddf  local.get [0]
+00904de1  local.get [0]
+00904de3  call [3669] ; ActivityControl.get_activityMgr
+00904de6  i32.const [0]
+00904de8  call [13342] ; ActivityManager.Init
+00904deb  end []

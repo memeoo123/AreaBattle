@@ -1,0 +1,22 @@
+; Original class: WebRequestBaseEventArgs
+; Type3636..ctor; wasmcode function 6767; offset=2554882 size=41
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 126)]
+0026fc05  local.get [0]
+0026fc07  i32.const [0]
+0026fc09  call [4418] ; GameFrameworkEventArgs..ctor
+0026fc0c  i64.const [0]
+0026fc0e  local.set [2]
+0026fc10  local.get [0]
+0026fc12  local.get [2]
+0026fc14  i32.wrap_i64 []
+0026fc15  i32.store [2, 8]
+0026fc18  local.get [0]
+0026fc1a  local.get [2]
+0026fc1c  i64.const [32]
+0026fc1e  i64.shr_u []
+0026fc1f  i32.wrap_i64 []
+0026fc20  i32.store [2, 12]
+0026fc23  local.get [0]
+0026fc25  i32.const [0]
+0026fc27  i32.store [2, 16]
+0026fc2a  end []

@@ -1,0 +1,27 @@
+; Original class: ActivityData
+; Type4641..ctor; wasmcode function 13345; offset=6461544 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00629869  i32.const [5001746]
+0062986e  i32.load8_u [0, 0]
+00629871  i32.eqz []
+00629872  if [-64]
+00629874    i32.const [3971884]
+00629879    call [900] ; 
+0062987c    i32.const [3922828]
+00629881    call [900] ; 
+00629884    i32.const [5001746]
+00629889    i32.const [1]
+0062988b    i32.store8 [0, 0]
+0062988e  end []
+0062988f  i32.const [3922828]
+00629894  i32.load [2, 0]
+00629897  call [903] ; 
+0062989a  local.set [1]
+0062989c  local.get [1]
+0062989e  i32.const [3971884]
+006298a3  i32.load [2, 0]
+006298a6  call [944] ; 
+006298a9  local.get [0]
+006298ab  local.get [1]
+006298ad  i32.store [2, 24]
+006298b0  end []

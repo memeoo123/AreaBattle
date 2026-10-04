@@ -1,0 +1,11 @@
+; Original class: GameStatisticsControl
+; Type4620.xokgr; wasmcode function 12115; offset=5893885 size=18
+; signature={'args': [127, 127, 127, 126, 127], 'returns': []}; localGroups=[]
+0059eefe  local.get [0]
+0059ef00  i32.load [2, 8]
+0059ef03  local.get [1]
+0059ef05  local.get [2]
+0059ef07  local.get [3]
+0059ef09  local.get [1]
+0059ef0b  call [12108] ; GameStatisticsManager.AddEventStatistics
+0059ef0e  end []

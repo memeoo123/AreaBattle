@@ -1,0 +1,36 @@
+; Original class: CommonLimitTimeTaskProgressItem
+; Type4339.InitializeComponent; wasmcode function 20146; offset=9060110 size=108
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+008a3f0f  i32.const [5008861]
+008a3f14  i32.load8_u [0, 0]
+008a3f17  i32.eqz []
+008a3f18  if [-64]
+008a3f1a    i32.const [4018588]
+008a3f1f    call [900] ; 
+008a3f22    i32.const [4018624]
+008a3f27    call [900] ; 
+008a3f2a    i32.const [4095008] ; STRING "progress"
+008a3f2f    call [900] ; 
+008a3f32    i32.const [4095004] ; STRING "progValue"
+008a3f37    call [900] ; 
+008a3f3a    i32.const [5008861]
+008a3f3f    i32.const [1]
+008a3f41    i32.store8 [0, 0]
+008a3f44  end []
+008a3f45  local.get [0]
+008a3f47  local.get [0]
+008a3f49  i32.const [4095008] ; STRING "progress"
+008a3f4e  i32.load [2, 0]
+008a3f51  i32.const [4018588]
+008a3f56  i32.load [2, 0]
+008a3f59  call [970] ; 
+008a3f5c  i32.store [2, 44]
+008a3f5f  local.get [0]
+008a3f61  local.get [0]
+008a3f63  i32.const [4095004] ; STRING "progValue"
+008a3f68  i32.load [2, 0]
+008a3f6b  i32.const [4018624]
+008a3f70  i32.load [2, 0]
+008a3f73  call [970] ; 
+008a3f76  i32.store [2, 48]
+008a3f79  end []

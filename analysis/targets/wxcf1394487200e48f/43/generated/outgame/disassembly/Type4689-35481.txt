@@ -1,0 +1,53 @@
+; Original class: GroupData
+; Type4689.ResetExtraRefreshTimes; wasmcode function 7744; offset=3716234 size=134
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0038b48b  i32.const [5001444]
+0038b490  i32.load8_u [0, 0]
+0038b493  i32.eqz []
+0038b494  if [-64]
+0038b496    i32.const [3974444]
+0038b49b    call [900] ; 
+0038b49e    i32.const [3974432]
+0038b4a3    call [900] ; 
+0038b4a6    i32.const [3923380]
+0038b4ab    call [900] ; 
+0038b4ae    i32.const [5001444]
+0038b4b3    i32.const [1]
+0038b4b5    i32.store8 [0, 0]
+0038b4b8  end []
+0038b4b9  i32.const [3923380]
+0038b4be  i32.load [2, 0]
+0038b4c1  call [903] ; 
+0038b4c4  local.set [1]
+0038b4c6  local.get [1]
+0038b4c8  i32.const [3974432]
+0038b4cd  i32.load [2, 0]
+0038b4d0  call [944] ; 
+0038b4d3  local.get [0]
+0038b4d5  local.get [1]
+0038b4d7  i32.store [2, 16]
+0038b4da  i32.const [0]
+0038b4dc  local.set [1]
+0038b4de  loop [-64]
+0038b4e0    local.get [0]
+0038b4e2    local.get [1]
+0038b4e4    call [11905] ; GroupData.get_Config
+0038b4e7    i32.load [2, 40]
+0038b4ea    i32.load [2, 12]
+0038b4ed    local.get [1]
+0038b4ef    i32.gt_s []
+0038b4f0    if [-64]
+0038b4f2      local.get [0]
+0038b4f4      i32.load [2, 16]
+0038b4f7      i32.const [0]
+0038b4f9      i32.const [3974444]
+0038b4fe      i32.load [2, 0]
+0038b501      call [1161] ; 
+0038b504      local.get [1]
+0038b506      i32.const [1]
+0038b508      i32.add []
+0038b509      local.set [1]
+0038b50b      br [1]
+0038b50d    end []
+0038b50e  end []
+0038b50f  end []

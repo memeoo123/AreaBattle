@@ -1,0 +1,15 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Native LoginTransmitter frame countdown -> WebRequestManager -> Unity HTTP -> controlled loopback server, encrypted storage upload and plaintext server-time protocol. Test explicitly supplies frame ticks, domain result and response actions; production HttpManager/HttpNetAcion/ServerTimeSync/platform/Main not claimed.",
+    "checks": [
+        "Platform-domain boundary caches actual loopback URL; decoded key and global encryption flag configure login transmitter",
+        "Three native frames decrement without sending; repeated data does not reset countdown even at timeScale zero",
+        "Fourth native frame queues exactly one request before manager dispatch",
+        "Actual encrypted HTTP upload contains merged latest values and original Datas field",
+        "Encrypted server reply decrypts before registered protocol callback; manager reclaims helper",
+        "Server-time protocol bypasses encryption; null data follows the original manager GET path without encrypted header",
+        "Plain server-time reply dispatches successfully through reused helper and cached domain",
+        "Native transport shutdown releases owned helper"
+    ]
+}

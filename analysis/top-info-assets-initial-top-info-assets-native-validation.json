@@ -1,0 +1,15 @@
+{
+    "passed": false,
+    "error": "System.Exception: Both original currency effects emit live particles in native frames\n  at AreaBattle.EditorTools.OutgameTopInfoAssetsPlayModeValidation.Check (System.Boolean b, System.String message) [0x0001a] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameTopInfoAssetsPlayModeValidation.cs:25 \n  at AreaBattle.EditorTools.OutgameTopInfoAssetsPlayModeValidation.Poll () [0x00276] in /private/tmp/areabattle-validation-20261003/UnityProject/Assets/AreaBattle/Editor/OutgameTopInfoAssetsPlayModeValidation.cs:64 ",
+    "capture": "",
+    "goldParticles": 0,
+    "diamondParticles": 0,
+    "goldPixels": 0,
+    "diamondPixels": 0,
+    "scope": "Original TopInfo prefab with effect1007/1019 via native AssetBundle, real EffectModule/provider and source image parents. Native rendering, persistent lifetime and explicit close/shutdown are exercised. Account/profile/avatar actions, complete page lifecycle/Main/Player and original-frame visual equivalence remain pending. Resource acquisition is a local validation bundle.",
+    "checks": [
+        "Original1007/1019 attach to the two original TopInfo image parents after native async bundle loads",
+        "Original resource names/case and one live provider handle per effect",
+        "Source zero-duration configuration and root scale retained"
+    ]
+}

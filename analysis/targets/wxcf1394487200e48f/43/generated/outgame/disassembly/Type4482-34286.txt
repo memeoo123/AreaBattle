@@ -1,0 +1,115 @@
+; Original class: RanklistTransmitter
+; Type4482.InitProtocol; wasmcode function 17925; offset=7967215 size=338
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+007991f2  i32.const [5009862]
+007991f7  i32.load8_u [0, 0]
+007991fa  i32.eqz []
+007991fb  if [-64]
+007991fd    i32.const [3915772]
+00799202    call [900] ; 
+00799205    i32.const [3937620]
+0079920a    call [900] ; 
+0079920d    i32.const [4010644] ; METHOD RanklistTransmitter.NU{
+00799212    call [900] ; 
+00799215    i32.const [4010648] ; METHOD RanklistTransmitter.PTXbp
+0079921a    call [900] ; 
+0079921d    i32.const [4010652] ; METHOD RanklistTransmitter.Ua}]
+00799222    call [900] ; 
+00799225    i32.const [4040476] ; STRING "/mini-toplist/query"
+0079922a    call [900] ; 
+0079922d    i32.const [4040472] ; STRING "/mini-toplist/knock"
+00799232    call [900] ; 
+00799235    i32.const [4040468] ; STRING "/mini-toplist/delete"
+0079923a    call [900] ; 
+0079923d    i32.const [5009862]
+00799242    i32.const [1]
+00799244    i32.store8 [0, 0]
+00799247  end []
+00799248  i32.const [3937620]
+0079924d  i32.load [2, 0]
+00799250  call [901] ; 
+00799253  i32.const [3937620]
+00799258  i32.load [2, 0]
+0079925b  i32.load [2, 92]
+0079925e  i32.load [2, 0]
+00799261  local.set [1]
+00799263  local.get [0]
+00799265  i32.load [2, 16]
+00799268  i32.const [4040472] ; STRING "/mini-toplist/knock"
+0079926d  i32.load [2, 0]
+00799270  i32.const [0]
+00799272  call [921] ; String.Concat
+00799275  local.set [3]
+00799277  i32.const [3915772]
+0079927c  i32.load [2, 0]
+0079927f  call [903] ; 
+00799282  local.set [2]
+00799284  local.get [2]
+00799286  local.get [0]
+00799288  i32.const [4010644] ; METHOD RanklistTransmitter.NU{
+0079928d  i32.load [2, 0]
+00799290  i32.const [0]
+00799292  call [1004] ; 
+00799295  local.get [0]
+00799297  local.get [1]
+00799299  local.get [3]
+0079929b  local.get [2]
+0079929d  i32.const [0]
+0079929f  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+007992a2  i32.const [3937620]
+007992a7  i32.load [2, 0]
+007992aa  i32.load [2, 92]
+007992ad  i32.load [2, 4]
+007992b0  local.set [1]
+007992b2  local.get [0]
+007992b4  i32.load [2, 16]
+007992b7  i32.const [4040476] ; STRING "/mini-toplist/query"
+007992bc  i32.load [2, 0]
+007992bf  i32.const [0]
+007992c1  call [921] ; String.Concat
+007992c4  local.set [3]
+007992c6  i32.const [3915772]
+007992cb  i32.load [2, 0]
+007992ce  call [903] ; 
+007992d1  local.set [2]
+007992d3  local.get [2]
+007992d5  local.get [0]
+007992d7  i32.const [4010648] ; METHOD RanklistTransmitter.PTXbp
+007992dc  i32.load [2, 0]
+007992df  i32.const [0]
+007992e1  call [1004] ; 
+007992e4  local.get [0]
+007992e6  local.get [1]
+007992e8  local.get [3]
+007992ea  local.get [2]
+007992ec  i32.const [0]
+007992ee  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+007992f1  i32.const [3937620]
+007992f6  i32.load [2, 0]
+007992f9  i32.load [2, 92]
+007992fc  i32.load [2, 8]
+007992ff  local.set [1]
+00799301  local.get [0]
+00799303  i32.load [2, 16]
+00799306  i32.const [4040468] ; STRING "/mini-toplist/delete"
+0079930b  i32.load [2, 0]
+0079930e  i32.const [0]
+00799310  call [921] ; String.Concat
+00799313  local.set [3]
+00799315  i32.const [3915772]
+0079931a  i32.load [2, 0]
+0079931d  call [903] ; 
+00799320  local.set [2]
+00799322  local.get [2]
+00799324  local.get [0]
+00799326  i32.const [4010652] ; METHOD RanklistTransmitter.Ua}]
+0079932b  i32.load [2, 0]
+0079932e  i32.const [0]
+00799330  call [1004] ; 
+00799333  local.get [0]
+00799335  local.get [1]
+00799337  local.get [3]
+00799339  local.get [2]
+0079933b  i32.const [0]
+0079933d  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00799340  end []

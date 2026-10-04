@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "rank-score-original-registration-config-and-fresh-record",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-parse-defaults-malformed-score-and-corrupt-json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-bigint-and-current-owner-reload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-create-new-record-before-config-clock-and-reentry",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-rank-upper-only-clamp-and-timestamp-target",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-magnitude-first-match-unknown-last-and-last-character",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-float-decimal-count-and-source-excess-division",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-lossy-save-does-not-change-live-score-and-file-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-save-mutation-precedes-storage-login-and-disabled-gates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-server-download-remains-pending-and-release-retains",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-config-rank-step-boundaries-contiguous-keys-and-default",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-add-score-and-rank-update-save-is-explicit",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-reduce-reresolves-current-owner-after-comparison",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-offline-rank-gates-hours-and-current-manager",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-manager-getter-rereads-pool-without-cache",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-current-culture-float-parse-preserved",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "rank-score-top-info-real-rank-binding-and-account-restart",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original RankManager and RankControl score portion, real TopInfo/account/Match shared storage with native live score display, add/reduce and lossy persistence/restart. RankControl home/AI-list lifecycle and server transmitter/platform/Main remain pending; rank controller is not registered as complete."
+}

@@ -1,0 +1,26 @@
+; Original class: AchievementActivity
+; Type4714.OnInit; wasmcode function 21009; offset=9479374 size=72
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0090a4cf  i32.const [5001294]
+0090a4d4  i32.load8_u [0, 0]
+0090a4d7  i32.eqz []
+0090a4d8  if [-64]
+0090a4da    i32.const [3995068]
+0090a4df    call [900] ; 
+0090a4e2    i32.const [3930256]
+0090a4e7    call [900] ; 
+0090a4ea    i32.const [5001294]
+0090a4ef    i32.const [1]
+0090a4f1    i32.store8 [0, 0]
+0090a4f4  end []
+0090a4f5  i32.const [3930256]
+0090a4fa  i32.load [2, 0]
+0090a4fd  call [901] ; 
+0090a500  local.get [0]
+0090a502  i32.const [0]
+0090a504  call [1309] ; DataManagerPool.get_Instance
+0090a507  i32.const [3995068]
+0090a50c  i32.load [2, 0]
+0090a50f  call [1609] ; 
+0090a512  i32.store [2, 72]
+0090a515  end []

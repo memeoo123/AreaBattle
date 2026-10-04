@@ -1,0 +1,68 @@
+; Original class: TipBookItem
+; Type4369.SetSelect; wasmcode1 function 4501; offset=1475605 size=173
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00168416  i32.const [5008981]
+0016841b  i32.load8_u [0, 0]
+0016841e  i32.eqz []
+0016841f  if [-64]
+00168421    i32.const [3935032]
+00168426    i32.const [1605]
+00168429    call_indirect [0, 0]
+0016842c    i32.const [5008981]
+00168431    i32.const [1]
+00168433    i32.store8 [0, 0]
+00168436  end []
+00168437  local.get [0]
+00168439  local.get [1]
+0016843b  i32.store8 [0, 48]
+0016843e  local.get [0]
+00168440  i32.load [2, 76]
+00168443  i32.const [0]
+00168445  i32.const [2414] ; TABLE Component.get_gameObject
+00168448  call_indirect [1, 0]
+0016844b  local.get [1]
+0016844d  i32.const [0]
+0016844f  i32.const [2416] ; TABLE GameObject.SetActive
+00168452  call_indirect [5, 0]
+00168455  local.get [0]
+00168457  i32.load [2, 72]
+0016845a  i32.const [0]
+0016845c  i32.const [2414] ; TABLE Component.get_gameObject
+0016845f  call_indirect [1, 0]
+00168462  local.get [1]
+00168464  i32.const [1]
+00168466  i32.xor []
+00168467  i32.const [0]
+00168469  i32.const [2416] ; TABLE GameObject.SetActive
+0016846c  call_indirect [5, 0]
+0016846f  local.get [0]
+00168471  i32.load [2, 80]
+00168474  i32.const [0]
+00168476  i32.const [2414] ; TABLE Component.get_gameObject
+00168479  call_indirect [1, 0]
+0016847c  local.get [1]
+0016847e  i32.const [0]
+00168480  i32.const [2416] ; TABLE GameObject.SetActive
+00168483  call_indirect [5, 0]
+00168486  local.get [0]
+00168488  i32.load [2, 52]
+0016848b  local.set [1]
+0016848d  i32.const [3935032]
+00168492  i32.load [2, 0]
+00168495  i32.const [1149]
+00168498  call_indirect [0, 0]
+0016849b  local.get [1]
+0016849d  i32.const [0]
+0016849f  i32.const [62981] ; TABLE LayoutRebuilder.ForceRebuildLayoutImmediate
+001684a3  call_indirect [4, 0]
+001684a6  i32.const [0]
+001684a8  i32.const [9789] ; TABLE UpdateManager.get_Instance
+001684ac  call_indirect [2, 0]
+001684af  local.get [0]
+001684b1  local.get [0]
+001684b3  call [20768] ; TipBookItem.Mvia
+001684b7  i32.const [0]
+001684b9  i32.const [9791] ; TABLE MonoBehaviour.StartCoroutine
+001684bd  call_indirect [3, 0]
+001684c0  drop []
+001684c1  end []

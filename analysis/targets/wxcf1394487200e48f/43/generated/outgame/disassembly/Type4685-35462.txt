@@ -1,0 +1,33 @@
+; Original class: TaskActivity
+; Type4685.AddListener; wasmcode function 10187; offset=4890943 size=93
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+004aa140  i32.const [5001429]
+004aa145  i32.load8_u [0, 0]
+004aa148  i32.eqz []
+004aa149  if [-64]
+004aa14b    i32.const [3944680]
+004aa150    call [900] ;
+004aa153    i32.const [4016532] ; METHOD TaskActivity.CommonActivity_Launch
+004aa158    call [900] ;
+004aa15b    i32.const [4048952] ; STRING "CommonActivity_Launch"
+004aa160    call [900] ;
+004aa163    i32.const [5001429]
+004aa168    i32.const [1]
+004aa16a    i32.store8 [0, 0]
+004aa16d  end []
+004aa16e  i32.const [3944680]
+004aa173  i32.load [2, 0]
+004aa176  call [903] ;
+004aa179  local.set [1]
+004aa17b  local.get [1]
+004aa17d  local.get [0]
+004aa17f  i32.const [4016532] ; METHOD TaskActivity.CommonActivity_Launch
+004aa184  i32.load [2, 0]
+004aa187  i32.const [0]
+004aa189  call [1345] ; EventHandler..ctor
+004aa18c  i32.const [4048952] ; STRING "CommonActivity_Launch"
+004aa191  i32.load [2, 0]
+004aa194  local.get [1]
+004aa196  i32.const [0]
+004aa198  call [1710] ; CommonMsgDispatcher.AddEventListener
+004aa19b  end []

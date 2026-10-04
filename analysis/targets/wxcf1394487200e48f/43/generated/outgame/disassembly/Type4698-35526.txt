@@ -1,0 +1,142 @@
+; Original class: ChildLimitTimeTaskActivity
+; Type4698.O{SQ]; wasmcode function 12910; offset=6215604 size=401
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(3, 127)]
+005ed7b7  global.get [0]
+005ed7b9  i32.const [16]
+005ed7bb  i32.sub []
+005ed7bc  local.set [2]
+005ed7be  local.get [2]
+005ed7c0  global.set [0]
+005ed7c2  i32.const [5001471]
+005ed7c7  i32.load8_u [0, 0]
+005ed7ca  i32.eqz []
+005ed7cb  if [-64]
+005ed7cd    i32.const [3916680]
+005ed7d2    call [900] ;
+005ed7d5    i32.const [3934404]
+005ed7da    call [900] ;
+005ed7dd    i32.const [3974848]
+005ed7e2    call [900] ;
+005ed7e5    i32.const [3926996]
+005ed7ea    call [900] ;
+005ed7ed    i32.const [3984764]
+005ed7f2    call [900] ;
+005ed7f5    i32.const [3984780]
+005ed7fa    call [900] ;
+005ed7fd    i32.const [4027040] ; METHOD <>c.`a|yk}
+005ed802    call [900] ;
+005ed805    i32.const [3944544]
+005ed80a    call [900] ;
+005ed80d    i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+005ed812    call [900] ;
+005ed815    i32.const [5001471]
+005ed81a    i32.const [1]
+005ed81c    i32.store8 [0, 0]
+005ed81f  end []
+005ed820  local.get [0]
+005ed822  i32.load [2, 80]
+005ed825  local.get [1]
+005ed827  i32.const [3984764]
+005ed82c  i32.load [2, 0]
+005ed82f  call [5661] ;
+005ed832  if [-64]
+005ed834    local.get [0]
+005ed836    i32.load [2, 80]
+005ed839    local.get [1]
+005ed83b    i32.const [3984780]
+005ed840    i32.load [2, 0]
+005ed843    call [4260] ;
+005ed846    local.set [4]
+005ed848    i32.const [3944544]
+005ed84d    i32.load [2, 0]
+005ed850    call [901] ;
+005ed853    i32.const [3944544]
+005ed858    i32.load [2, 0]
+005ed85b    i32.load [2, 92]
+005ed85e    i32.load [2, 8]
+005ed861    local.set [3]
+005ed863    local.get [3]
+005ed865    i32.eqz []
+005ed866    if [-64]
+005ed868      i32.const [3944544]
+005ed86d      i32.load [2, 0]
+005ed870      call [901] ;
+005ed873      i32.const [3944544]
+005ed878      i32.load [2, 0]
+005ed87b      i32.load [2, 92]
+005ed87e      i32.load [2, 0]
+005ed881      local.set [5]
+005ed883      i32.const [3916680]
+005ed888      i32.load [2, 0]
+005ed88b      call [903] ;
+005ed88e      local.set [3]
+005ed890      local.get [3]
+005ed892      local.get [5]
+005ed894      i32.const [4027040] ; METHOD <>c.`a|yk}
+005ed899      i32.load [2, 0]
+005ed89c      i32.const [0]
+005ed89e      call [1483] ;
+005ed8a1      i32.const [3944544]
+005ed8a6      i32.load [2, 0]
+005ed8a9      i32.load [2, 92]
+005ed8ac      local.get [3]
+005ed8ae      i32.store [2, 8]
+005ed8b1      i32.const [3944544]
+005ed8b6      i32.load [2, 0]
+005ed8b9      i32.load [2, 92]
+005ed8bc      drop []
+005ed8bd    end []
+005ed8be    local.get [4]
+005ed8c0    local.get [3]
+005ed8c2    i32.const [3974848]
+005ed8c7    i32.load [2, 0]
+005ed8ca    call [1492] ;
+005ed8cd    i32.const [3926996]
+005ed8d2    i32.load [2, 0]
+005ed8d5    i32.const [2]
+005ed8d7    call [909] ;
+005ed8da    local.set [3]
+005ed8dc    local.get [2]
+005ed8de    local.get [0]
+005ed8e0    i32.load [2, 8]
+005ed8e3    i32.store [2, 12]
+005ed8e6    i32.const [3934404]
+005ed8eb    i32.load [2, 0]
+005ed8ee    local.get [2]
+005ed8f0    i32.const [12]
+005ed8f2    i32.add []
+005ed8f3    call [910] ;
+005ed8f6    local.set [0]
+005ed8f8    local.get [3]
+005ed8fa    local.get [0]
+005ed8fc    call [905] ;
+005ed8ff    local.get [3]
+005ed901    local.get [0]
+005ed903    i32.store [2, 16]
+005ed906    local.get [2]
+005ed908    local.get [1]
+005ed90a    i32.store [2, 8]
+005ed90d    i32.const [3934404]
+005ed912    i32.load [2, 0]
+005ed915    local.get [2]
+005ed917    i32.const [8]
+005ed919    i32.add []
+005ed91a    call [910] ;
+005ed91d    local.set [0]
+005ed91f    local.get [3]
+005ed921    local.get [0]
+005ed923    call [905] ;
+005ed926    local.get [3]
+005ed928    local.get [0]
+005ed92a    i32.store [2, 20]
+005ed92d    i32.const [4049064] ; STRING "CommonModule_RefreshNoviceTaskList"
+005ed932    i32.load [2, 0]
+005ed935    local.get [3]
+005ed937    i32.const [0]
+005ed939    call [1738] ; CommonMsgDispatcher.SendMessage
+005ed93c  end []
+005ed93d  local.get [2]
+005ed93f  i32.const [16]
+005ed941  i32.add []
+005ed942  global.set [0]
+005ed944  end []

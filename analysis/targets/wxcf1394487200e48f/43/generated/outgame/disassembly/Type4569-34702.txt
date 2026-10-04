@@ -1,0 +1,58 @@
+; Original class: CommonMsgDispatcher
+; Type4569.TNUVcpu; wasmcode function 12833; offset=6175127 size=162
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+005e3998  i32.const [5001183]
+005e399d  i32.load8_u [0, 0]
+005e39a0  i32.eqz []
+005e39a1  if [-64]
+005e39a3    i32.const [3961172]
+005e39a8    call [900] ; 
+005e39ab    i32.const [3961176]
+005e39b0    call [900] ; 
+005e39b3    i32.const [3961184]
+005e39b8    call [900] ; 
+005e39bb    i32.const [3961188]
+005e39c0    call [900] ; 
+005e39c3    i32.const [3944680]
+005e39c8    call [900] ; 
+005e39cb    i32.const [5001183]
+005e39d0    i32.const [1]
+005e39d2    i32.store8 [0, 0]
+005e39d5  end []
+005e39d6  local.get [0]
+005e39d8  i32.load [2, 8]
+005e39db  local.get [1]
+005e39dd  i32.const [3961176]
+005e39e2  i32.load [2, 0]
+005e39e5  call [987] ; 
+005e39e8  local.set [3]
+005e39ea  local.get [0]
+005e39ec  i32.load [2, 8]
+005e39ef  local.set [0]
+005e39f1  local.get [3]
+005e39f3  if [-64]
+005e39f5    local.get [0]
+005e39f7    local.get [1]
+005e39f9    local.get [0]
+005e39fb    local.get [1]
+005e39fd    i32.const [3961184]
+005e3a02    i32.load [2, 0]
+005e3a05    call [982] ; 
+005e3a08    local.get [2]
+005e3a0a    i32.const [0]
+005e3a0c    call [1031] ; Delegate.Combine
+005e3a0f    i32.const [3944680]
+005e3a14    i32.load [2, 0]
+005e3a17    call [937] ; 
+005e3a1a    i32.const [3961188]
+005e3a1f    i32.load [2, 0]
+005e3a22    call [1058] ; 
+005e3a25    return []
+005e3a26  end []
+005e3a27  local.get [0]
+005e3a29  local.get [1]
+005e3a2b  local.get [2]
+005e3a2d  i32.const [3961172]
+005e3a32  i32.load [2, 0]
+005e3a35  call [932] ; 
+005e3a38  end []

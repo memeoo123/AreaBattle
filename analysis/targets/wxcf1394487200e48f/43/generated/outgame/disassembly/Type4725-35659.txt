@@ -1,0 +1,125 @@
+; Original class: AchievementOffStrategy
+; Type4725.qeih|; wasmcode function 13386; offset=6482666 size=356
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0062eaed  i32.const [5001312]
+0062eaf2  i32.load8_u [0, 0]
+0062eaf5  i32.eqz []
+0062eaf6  if [-64]
+0062eaf8    i32.const [3927884]
+0062eafd    call [900] ; 
+0062eb00    i32.const [3974444]
+0062eb05    call [900] ; 
+0062eb08    i32.const [3974516]
+0062eb0d    call [900] ; 
+0062eb10    i32.const [3974432]
+0062eb15    call [900] ; 
+0062eb18    i32.const [3974512]
+0062eb1d    call [900] ; 
+0062eb20    i32.const [3971816]
+0062eb25    call [900] ; 
+0062eb28    i32.const [3971820]
+0062eb2d    call [900] ; 
+0062eb30    i32.const [3923380]
+0062eb35    call [900] ; 
+0062eb38    i32.const [3923384]
+0062eb3d    call [900] ; 
+0062eb40    i32.const [5001312]
+0062eb45    i32.const [1]
+0062eb47    i32.store8 [0, 0]
+0062eb4a  end []
+0062eb4b  i32.const [3927884]
+0062eb50  i32.load [2, 0]
+0062eb53  call [903] ; 
+0062eb56  local.set [1]
+0062eb58  local.get [1]
+0062eb5a  i32.const [0]
+0062eb5c  call [13385] ; AchievementSaveData..ctor
+0062eb5f  local.get [1]
+0062eb61  local.get [0]
+0062eb63  i32.load [2, 20]
+0062eb66  i32.load [2, 8]
+0062eb69  i32.store [2, 8]
+0062eb6c  i32.const [3923380]
+0062eb71  i32.load [2, 0]
+0062eb74  call [903] ; 
+0062eb77  local.set [2]
+0062eb79  local.get [2]
+0062eb7b  i32.const [3974432]
+0062eb80  i32.load [2, 0]
+0062eb83  call [944] ; 
+0062eb86  local.get [1]
+0062eb88  local.get [2]
+0062eb8a  i32.store [2, 12]
+0062eb8d  i32.const [3923384]
+0062eb92  i32.load [2, 0]
+0062eb95  call [903] ; 
+0062eb98  local.set [2]
+0062eb9a  local.get [2]
+0062eb9c  i32.const [3974512]
+0062eba1  i32.load [2, 0]
+0062eba4  call [944] ; 
+0062eba7  local.get [1]
+0062eba9  local.get [2]
+0062ebab  i32.store [2, 16]
+0062ebae  i32.const [3971816]
+0062ebb3  i32.load [2, 0]
+0062ebb6  drop []
+0062ebb7  local.get [0]
+0062ebb9  i32.load [2, 20]
+0062ebbc  i32.load [2, 12]
+0062ebbf  i32.load [2, 12]
+0062ebc2  local.set [2]
+0062ebc4  loop [-64]
+0062ebc6    local.get [2]
+0062ebc8    i32.const [1]
+0062ebca    i32.sub []
+0062ebcb    local.set [2]
+0062ebcd    local.get [2]
+0062ebcf    i32.const [-1]
+0062ebd1    i32.gt_s []
+0062ebd2    if [-64]
+0062ebd4      local.get [0]
+0062ebd6      i32.load [2, 20]
+0062ebd9      i32.load [2, 12]
+0062ebdc      local.get [2]
+0062ebde      i32.const [3971820]
+0062ebe3      i32.load [2, 0]
+0062ebe6      call [930] ; 
+0062ebe9      i32.load [2, 24]
+0062ebec      i32.const [1]
+0062ebee      i32.ne []
+0062ebef      br_if [1]
+0062ebf1      local.get [1]
+0062ebf3      i32.load [2, 12]
+0062ebf6      local.get [0]
+0062ebf8      i32.load [2, 20]
+0062ebfb      i32.load [2, 12]
+0062ebfe      local.get [2]
+0062ec00      i32.const [3971820]
+0062ec05      i32.load [2, 0]
+0062ec08      call [930] ; 
+0062ec0b      i32.load [2, 8]
+0062ec0e      i32.const [3974444]
+0062ec13      i32.load [2, 0]
+0062ec16      call [1161] ; 
+0062ec19      local.get [1]
+0062ec1b      i32.load [2, 16]
+0062ec1e      local.get [0]
+0062ec20      i32.load [2, 20]
+0062ec23      i32.load [2, 12]
+0062ec26      local.get [2]
+0062ec28      i32.const [3971820]
+0062ec2d      i32.load [2, 0]
+0062ec30      call [930] ; 
+0062ec33      i64.load [3, 32]
+0062ec36      i32.const [3974516]
+0062ec3b      i32.load [2, 0]
+0062ec3e      call [3901] ; 
+0062ec41      br [1]
+0062ec43    end []
+0062ec44  end []
+0062ec45  local.get [1]
+0062ec47  i32.const [0]
+0062ec49  call [1584] ; JsonUtility.ToJson
+0062ec4c  return []
+0062ec4d  end []

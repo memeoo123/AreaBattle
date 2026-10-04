@@ -1,0 +1,78 @@
+; Original class: LivenessPreviewItem
+; Type4350.InitializeComponent; wasmcode function 18801; offset=8482666 size=252
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00816f6b  i32.const [5008899]
+00816f70  i32.load8_u [0, 0]
+00816f73  i32.eqz []
+00816f74  if [-64]
+00816f76    i32.const [4018588]
+00816f7b    call [900] ;
+00816f7e    i32.const [4018604]
+00816f83    call [900] ;
+00816f86    i32.const [4018624]
+00816f8b    call [900] ;
+00816f8e    i32.const [4090200] ; STRING "img_bgRight"
+00816f93    call [900] ;
+00816f96    i32.const [4090196] ; STRING "img_bgLeft"
+00816f9b    call [900] ;
+00816f9e    i32.const [4090284] ; STRING "img_touch"
+00816fa3    call [900] ;
+00816fa6    i32.const [4090192] ; STRING "img_Icon"
+00816fab    call [900] ;
+00816fae    i32.const [4098252] ; STRING "text_name"
+00816fb3    call [900] ;
+00816fb6    i32.const [4098248] ; STRING "text_count"
+00816fbb    call [900] ;
+00816fbe    i32.const [5008899]
+00816fc3    i32.const [1]
+00816fc5    i32.store8 [0, 0]
+00816fc8  end []
+00816fc9  local.get [0]
+00816fcb  local.get [0]
+00816fcd  i32.const [4090196] ; STRING "img_bgLeft"
+00816fd2  i32.load [2, 0]
+00816fd5  i32.const [4018604]
+00816fda  i32.load [2, 0]
+00816fdd  call [970] ;
+00816fe0  i32.store [2, 84]
+00816fe3  local.get [0]
+00816fe5  local.get [0]
+00816fe7  i32.const [4090200] ; STRING "img_bgRight"
+00816fec  i32.load [2, 0]
+00816fef  i32.const [4018604]
+00816ff4  i32.load [2, 0]
+00816ff7  call [970] ;
+00816ffa  i32.store [2, 88]
+00816ffd  local.get [0]
+00816fff  local.get [0]
+00817001  i32.const [4090192] ; STRING "img_Icon"
+00817006  i32.load [2, 0]
+00817009  i32.const [4018588]
+0081700e  i32.load [2, 0]
+00817011  call [970] ;
+00817014  i32.store [2, 92]
+00817017  local.get [0]
+00817019  local.get [0]
+0081701b  i32.const [4098248] ; STRING "text_count"
+00817020  i32.load [2, 0]
+00817023  i32.const [4018624]
+00817028  i32.load [2, 0]
+0081702b  call [970] ;
+0081702e  i32.store [2, 96]
+00817031  local.get [0]
+00817033  local.get [0]
+00817035  i32.const [4098252] ; STRING "text_name"
+0081703a  i32.load [2, 0]
+0081703d  i32.const [4018624]
+00817042  i32.load [2, 0]
+00817045  call [970] ;
+00817048  i32.store [2, 100]
+0081704b  local.get [0]
+0081704d  local.get [0]
+0081704f  i32.const [4090284] ; STRING "img_touch"
+00817054  i32.load [2, 0]
+00817057  i32.const [4018588]
+0081705c  i32.load [2, 0]
+0081705f  call [970] ;
+00817062  i32.store [2, 104]
+00817065  end []

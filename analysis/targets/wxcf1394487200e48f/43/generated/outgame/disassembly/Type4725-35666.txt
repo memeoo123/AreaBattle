@@ -1,0 +1,335 @@
+; Original class: AchievementOffStrategy
+; Type4725.qXVj; wasmcode function 20998; offset=9468101 size=969
+; signature={'args': [127, 127, 126, 127], 'returns': []}; localGroups=[(2, 127), (1, 126)]
+009078ca  global.get [0]
+009078cc  i32.const [-64]
+009078ce  i32.add []
+009078cf  local.set [3]
+009078d1  local.get [3]
+009078d3  global.set [0]
+009078d5  i32.const [5001318]
+009078da  i32.load8_u [0, 0]
+009078dd  i32.eqz []
+009078de  if [-64]
+009078e0    i32.const [3929208]
+009078e5    call [900] ; 
+009078e8    i32.const [3916648]
+009078ed    call [900] ; 
+009078f0    i32.const [3955104]
+009078f5    call [900] ; 
+009078f8    i32.const [3934404]
+009078fd    call [900] ; 
+00907900    i32.const [3934412]
+00907905    call [900] ; 
+00907908    i32.const [3971812]
+0090790d    call [900] ; 
+00907910    i32.const [3971784]
+00907915    call [900] ; 
+00907918    i32.const [3922812]
+0090791d    call [900] ; 
+00907920    i32.const [3981468]
+00907925    call [900] ; 
+00907928    i32.const [3981916]
+0090792d    call [900] ; 
+00907930    i32.const [3926996]
+00907935    call [900] ; 
+00907938    i32.const [4011360]
+0090793d    call [900] ; 
+00907940    i32.const [3937964]
+00907945    call [900] ; 
+00907948    i32.const [4026356] ; METHOD <>c.^^OU`z
+0090794d    call [900] ; 
+00907950    i32.const [3944000]
+00907955    call [900] ; 
+00907958    i32.const [4104096] ; STRING "成就进度变化"
+0090795d    call [900] ; 
+00907960    i32.const [4106280] ; STRING "进度"
+00907965    call [900] ; 
+00907968    i32.const [4089704] ; STRING "id"
+0090796d    call [900] ; 
+00907970    i32.const [4104080] ; STRING "成就"
+00907975    call [900] ; 
+00907978    i32.const [4104084] ; STRING "成就{0}"
+0090797d    call [900] ; 
+00907980    i32.const [5001318]
+00907985    i32.const [1]
+00907987    i32.store8 [0, 0]
+0090798a  end []
+0090798b  local.get [0]
+0090798d  i32.const [3981468]
+00907992  i32.load [2, 0]
+00907995  call [2575] ; 
+00907998  local.get [1]
+0090799a  local.get [3]
+0090799c  call [6340] ; AchievementActivity.pjOtS
+0090799f  local.set [4]
+009079a1  local.get [4]
+009079a3  i64.load [3, 16]
+009079a6  local.set [6]
+009079a8  local.get [4]
+009079aa  local.get [2]
+009079ac  i64.store [3, 16]
+009079af  i32.const [3926996]
+009079b4  i32.load [2, 0]
+009079b7  i32.const [5]
+009079b9  call [909] ; 
+009079bc  local.set [1]
+009079be  local.get [1]
+009079c0  i32.const [4104096] ; STRING "成就进度变化"
+009079c5  i32.load [2, 0]
+009079c8  call [905] ; 
+009079cb  local.get [1]
+009079cd  i32.const [4104096] ; STRING "成就进度变化"
+009079d2  i32.load [2, 0]
+009079d5  i32.store [2, 16]
+009079d8  local.get [1]
+009079da  i32.const [4089704] ; STRING "id"
+009079df  i32.load [2, 0]
+009079e2  call [905] ; 
+009079e5  local.get [1]
+009079e7  i32.const [4089704] ; STRING "id"
+009079ec  i32.load [2, 0]
+009079ef  i32.store [2, 20]
+009079f2  local.get [3]
+009079f4  local.get [4]
+009079f6  i32.load [2, 8]
+009079f9  i32.store [2, 24]
+009079fc  i32.const [3934404]
+00907a01  i32.load [2, 0]
+00907a04  local.get [3]
+00907a06  i32.const [24]
+00907a08  i32.add []
+00907a09  call [910] ; 
+00907a0c  local.set [5]
+00907a0e  local.get [1]
+00907a10  local.get [5]
+00907a12  call [905] ; 
+00907a15  local.get [1]
+00907a17  local.get [5]
+00907a19  i32.store [2, 24]
+00907a1c  local.get [1]
+00907a1e  i32.const [4106280] ; STRING "进度"
+00907a23  i32.load [2, 0]
+00907a26  call [905] ; 
+00907a29  local.get [1]
+00907a2b  i32.const [4106280] ; STRING "进度"
+00907a30  i32.load [2, 0]
+00907a33  i32.store [2, 28]
+00907a36  local.get [3]
+00907a38  local.get [2]
+00907a3a  i64.store [3, 56]
+00907a3d  i32.const [3934412]
+00907a42  i32.load [2, 0]
+00907a45  local.get [3]
+00907a47  i32.const [56]
+00907a49  i32.add []
+00907a4a  call [910] ; 
+00907a4d  local.set [5]
+00907a4f  local.get [1]
+00907a51  local.get [5]
+00907a53  call [905] ; 
+00907a56  local.get [1]
+00907a58  local.get [5]
+00907a5a  i32.store [2, 32]
+00907a5d  i32.const [3929208]
+00907a62  i32.load [2, 0]
+00907a65  call [901] ; 
+00907a68  local.get [3]
+00907a6a  i64.const [4575657222423478401]
+00907a74  i64.store [3, 48]
+00907a77  local.get [3]
+00907a79  i64.const [4575657222423478401]
+00907a83  i64.store [3, 16]
+00907a86  local.get [3]
+00907a88  i64.const [4570005646807662592]
+00907a92  i64.store [3, 40]
+00907a95  local.get [3]
+00907a97  i64.const [4570005646807662592]
+00907aa1  i64.store [3, 8]
+00907aa4  local.get [3]
+00907aa6  i32.const [8]
+00907aa8  i32.add []
+00907aa9  local.get [1]
+00907aab  i32.const [0]
+00907aad  call [1867] ; CLog.LogByColor
+00907ab0  block [-64]
+00907ab2    local.get [6]
+00907ab4    local.get [4]
+00907ab6    local.get [3]
+00907ab8    call [2274] ; AchievementItemData.GetConfig
+00907abb    i64.load [3, 40]
+00907abe    i64.ge_s []
+00907abf    br_if [0]
+00907ac1    local.get [2]
+00907ac3    local.get [6]
+00907ac5    i64.eq []
+00907ac6    br_if [0]
+00907ac8    i32.const [3937964]
+00907acd    i32.load [2, 0]
+00907ad0    call [901] ; 
+00907ad3    i32.const [3937964]
+00907ad8    i32.load [2, 0]
+00907adb    i32.load [2, 92]
+00907ade    i32.load [2, 8]
+00907ae1    i32.const [1]
+00907ae3    i32.const [0]
+00907ae5    i32.const [4011360]
+00907aea    i32.load [2, 0]
+00907aed    call [1157] ; 
+00907af0    local.set [1]
+00907af2    local.get [1]
+00907af4    i32.const [4104080] ; STRING "成就"
+00907af9    i32.load [2, 0]
+00907afc    i32.store [2, 16]
+00907aff    local.get [3]
+00907b01    local.get [4]
+00907b03    i32.load [2, 8]
+00907b06    i32.store [2, 36]
+00907b09    i32.const [3934404]
+00907b0e    i32.load [2, 0]
+00907b11    local.get [3]
+00907b13    i32.const [36]
+00907b15    i32.add []
+00907b16    call [910] ; 
+00907b19    local.set [4]
+00907b1b    local.get [1]
+00907b1d    i32.const [4104084] ; STRING "成就{0}"
+00907b22    i32.load [2, 0]
+00907b25    local.get [4]
+00907b27    i32.const [0]
+00907b29    call [1015] ; String.Format
+00907b2c    i32.store [2, 20]
+00907b2f    local.get [3]
+00907b31    i64.const [0]
+00907b33    i64.store [3, 56]
+00907b36    local.get [3]
+00907b38    i32.const [56]
+00907b3a    i32.add []
+00907b3b    local.get [6]
+00907b3d    i32.wrap_i64 []
+00907b3e    i32.const [3981916]
+00907b43    i32.load [2, 0]
+00907b46    call [1106] ; 
+00907b49    local.get [3]
+00907b4b    i64.load [3, 56]
+00907b4e    local.set [6]
+00907b50    local.get [1]
+00907b52    local.get [6]
+00907b54    i32.wrap_i64 []
+00907b55    i32.store [2, 56]
+00907b58    local.get [1]
+00907b5a    local.get [6]
+00907b5c    i64.const [32]
+00907b5e    i64.shr_u []
+00907b5f    i32.wrap_i64 []
+00907b60    i32.store [2, 60]
+00907b63    local.get [3]
+00907b65    i64.const [0]
+00907b67    i64.store [3, 24]
+00907b6a    local.get [3]
+00907b6c    i32.const [24]
+00907b6e    i32.add []
+00907b6f    local.get [2]
+00907b71    i32.wrap_i64 []
+00907b72    i32.const [3981916]
+00907b77    i32.load [2, 0]
+00907b7a    call [1106] ; 
+00907b7d    local.get [3]
+00907b7f    i64.load [3, 24]
+00907b82    local.set [2]
+00907b84    local.get [1]
+00907b86    local.get [2]
+00907b88    i32.wrap_i64 []
+00907b89    i32.store [2, 32]
+00907b8c    local.get [1]
+00907b8e    local.get [2]
+00907b90    i64.const [32]
+00907b92    i64.shr_u []
+00907b93    i32.wrap_i64 []
+00907b94    i32.store [2, 36]
+00907b97    i32.const [3937964]
+00907b9c    i32.load [2, 0]
+00907b9f    i32.load [2, 92]
+00907ba2    i32.load [2, 8]
+00907ba5    local.get [1]
+00907ba7    i32.const [0]
+00907ba9    call [3292] ; ReportManager.NewReport_activity_success
+00907bac  end []
+00907bad  local.get [0]
+00907baf  i32.load [2, 20]
+00907bb2  local.set [1]
+00907bb4  local.get [0]
+00907bb6  i32.const [3981468]
+00907bbb  i32.load [2, 0]
+00907bbe  call [2575] ; 
+00907bc1  i32.load [2, 72]
+00907bc4  i32.load [2, 28]
+00907bc7  i32.const [3955104]
+00907bcc  i32.load [2, 0]
+00907bcf  call [1138] ; 
+00907bd2  local.set [4]
+00907bd4  i32.const [3922812]
+00907bd9  i32.load [2, 0]
+00907bdc  call [903] ; 
+00907bdf  local.set [5]
+00907be1  local.get [5]
+00907be3  local.get [4]
+00907be5  i32.const [3971784]
+00907bea  i32.load [2, 0]
+00907bed  call [1350] ; 
+00907bf0  local.get [1]
+00907bf2  local.get [5]
+00907bf4  i32.store [2, 12]
+00907bf7  local.get [0]
+00907bf9  i32.load [2, 20]
+00907bfc  i32.load [2, 12]
+00907bff  local.set [0]
+00907c01  i32.const [3944000]
+00907c06  i32.load [2, 0]
+00907c09  call [901] ; 
+00907c0c  i32.const [3944000]
+00907c11  i32.load [2, 0]
+00907c14  i32.load [2, 92]
+00907c17  i32.load [2, 4]
+00907c1a  local.set [1]
+00907c1c  local.get [1]
+00907c1e  i32.eqz []
+00907c1f  if [-64]
+00907c21    i32.const [3944000]
+00907c26    i32.load [2, 0]
+00907c29    call [901] ; 
+00907c2c    i32.const [3944000]
+00907c31    i32.load [2, 0]
+00907c34    i32.load [2, 92]
+00907c37    i32.load [2, 0]
+00907c3a    local.set [4]
+00907c3c    i32.const [3916648]
+00907c41    i32.load [2, 0]
+00907c44    call [903] ; 
+00907c47    local.set [1]
+00907c49    local.get [1]
+00907c4b    local.get [4]
+00907c4d    i32.const [4026356] ; METHOD <>c.^^OU`z
+00907c52    i32.load [2, 0]
+00907c55    i32.const [0]
+00907c57    call [1483] ; 
+00907c5a    i32.const [3944000]
+00907c5f    i32.load [2, 0]
+00907c62    i32.load [2, 92]
+00907c65    local.get [1]
+00907c67    i32.store [2, 4]
+00907c6a    i32.const [3944000]
+00907c6f    i32.load [2, 0]
+00907c72    i32.load [2, 92]
+00907c75    drop []
+00907c76  end []
+00907c77  local.get [0]
+00907c79  local.get [1]
+00907c7b  i32.const [3971812]
+00907c80  i32.load [2, 0]
+00907c83  call [1492] ; 
+00907c86  local.get [3]
+00907c88  i32.const [-64]
+00907c8a  i32.sub []
+00907c8b  global.set [0]
+00907c8d  end []

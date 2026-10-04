@@ -1,0 +1,137 @@
+; Original class: UIExtension
+; Type2918.SetSpriteImage; wasmcode function 9789; offset=4680330 size=404
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+00476a8b  i32.const [4989419]
+00476a90  i32.load8_u [0, 0]
+00476a93  i32.eqz []
+00476a94  if [-64]
+00476a96    i32.const [3915464]
+00476a9b    call [900] ; 
+00476a9e    i32.const [3928176]
+00476aa3    call [900] ; 
+00476aa6    i32.const [3989352]
+00476aab    call [900] ; 
+00476aae    i32.const [3948068]
+00476ab3    call [900] ; 
+00476ab6    i32.const [3936516]
+00476abb    call [900] ; 
+00476abe    i32.const [3938016]
+00476ac3    call [900] ; 
+00476ac6    i32.const [4031224] ; METHOD N«Cz.K¡jPxH
+00476acb    call [900] ; 
+00476ace    i32.const [4031228] ; METHOD N«Cz.WZ±rP
+00476ad3    call [900] ; 
+00476ad6    i32.const [3949160]
+00476adb    call [900] ; 
+00476ade    i32.const [4040132] ; STRING ".spriteatlas"
+00476ae3    call [900] ; 
+00476ae6    i32.const [4075888] ; STRING "UIAtlas/"
+00476aeb    call [900] ; 
+00476aee    i32.const [4989419]
+00476af3    i32.const [1]
+00476af5    i32.store8 [0, 0]
+00476af8  end []
+00476af9  i32.const [3949160]
+00476afe  i32.load [2, 0]
+00476b01  call [903] ; 
+00476b04  local.set [3]
+00476b06  local.get [3]
+00476b08  local.get [2]
+00476b0a  i32.store [2, 8]
+00476b0d  local.get [3]
+00476b0f  local.get [0]
+00476b11  i32.store [2, 12]
+00476b14  local.get [3]
+00476b16  local.get [1]
+00476b18  i32.store [2, 16]
+00476b1b  local.get [3]
+00476b1d  i32.load [2, 12]
+00476b20  local.set [0]
+00476b22  i32.const [3936516]
+00476b27  i32.load [2, 0]
+00476b2a  call [901] ; 
+00476b2d  i32.const [0]
+00476b2f  local.get [0]
+00476b31  i32.const [0]
+00476b33  call [940] ; Object.op_Equality
+00476b36  i32.eqz []
+00476b37  if [-64]
+00476b39    i32.const [4075888] ; STRING "UIAtlas/"
+00476b3e    i32.load [2, 0]
+00476b41    local.get [3]
+00476b43    i32.load [2, 8]
+00476b46    i32.const [4040132] ; STRING ".spriteatlas"
+00476b4b    i32.load [2, 0]
+00476b4e    i32.const [0]
+00476b50    call [955] ; String.Concat
+00476b53    local.set [0]
+00476b55    i32.const [3928176]
+00476b5a    i32.load [2, 0]
+00476b5d    call [901] ; 
+00476b60    i32.const [5011829]
+00476b65    i32.load8_u [0, 0]
+00476b68    i32.eqz []
+00476b69    if [-64]
+00476b6b      i32.const [3928176]
+00476b70      call [900] ; 
+00476b73      i32.const [5011829]
+00476b78      i32.const [1]
+00476b7a      i32.store8 [0, 0]
+00476b7d    end []
+00476b7e    i32.const [3928176]
+00476b83    i32.load [2, 0]
+00476b86    call [901] ; 
+00476b89    i32.const [3928176]
+00476b8e    i32.load [2, 0]
+00476b91    i32.load [2, 92]
+00476b94    i32.load8_u [0, 36]
+00476b97    if [-64]
+00476b99      i32.const [3915464]
+00476b9e      i32.load [2, 0]
+00476ba1      call [903] ; 
+00476ba4      local.set [1]
+00476ba6      local.get [1]
+00476ba8      local.get [3]
+00476baa      i32.const [4031224] ; METHOD N«Cz.K¡jPxH
+00476baf      i32.load [2, 0]
+00476bb2      i32.const [0]
+00476bb4      call [1004] ; 
+00476bb7      local.get [0]
+00476bb9      local.get [1]
+00476bbb      i32.const [3989352]
+00476bc0      i32.load [2, 0]
+00476bc3      call [1032] ; 
+00476bc6      i32.const [0]
+00476bc8      i32.const [24178] ; TABLE NewResLoadHelper.LoadAsset
+00476bcc      global.set [3]
+00476bce      i32.const [24178] ; TABLE NewResLoadHelper.LoadAsset
+00476bd2      call_indirect [10, 0]
+00476bd5      return []
+00476bd6    end []
+00476bd7    i32.const [3948068]
+00476bdc    i32.load [2, 0]
+00476bdf    call [903] ; 
+00476be2    local.set [1]
+00476be4    local.get [1]
+00476be6    local.get [3]
+00476be8    i32.const [4031228] ; METHOD N«Cz.WZ±rP
+00476bed    i32.load [2, 0]
+00476bf0    i32.const [0]
+00476bf2    call [1853] ; LoadAssetCompleteHandler..ctor
+00476bf5    i32.const [3989352]
+00476bfa    i32.load [2, 0]
+00476bfd    call [1032] ; 
+00476c00    local.set [2]
+00476c02    i32.const [3938016]
+00476c07    i32.load [2, 0]
+00476c0a    call [901] ; 
+00476c0d    local.get [0]
+00476c0f    local.get [1]
+00476c11    local.get [2]
+00476c13    i32.const [0]
+00476c15    call [2240] ; ResLoadHelper.LoadAsset
+00476c18    drop []
+00476c19  end []
+00476c1a  i32.const [0]
+00476c1c  return []
+00476c1d  end []

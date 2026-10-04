@@ -1,0 +1,27 @@
+; Original class: GameFrameWorkMono
+; Type3442.¯; wasmcode function 6053; offset=2141512 size=46
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+0020ad49  local.get [0]
+0020ad4b  i32.load8_u [0, 28]
+0020ad4e  local.set [2]
+0020ad50  block [-64]
+0020ad52    block [-64]
+0020ad54      local.get [1]
+0020ad56      if [-64]
+0020ad58        local.get [2]
+0020ad5a        i32.eqz []
+0020ad5b        br_if [1]
+0020ad5d        br [2]
+0020ad5f      end []
+0020ad60      local.get [2]
+0020ad62      i32.eqz []
+0020ad63      br_if [1]
+0020ad65    end []
+0020ad66    local.get [0]
+0020ad68    local.get [1]
+0020ad6a    i32.store8 [0, 28]
+0020ad6d    local.get [0]
+0020ad6f    local.get [0]
+0020ad71    call [6052] ; GameFrameWorkMono.cB½S·
+0020ad74  end []
+0020ad75  end []

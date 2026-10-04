@@ -1,0 +1,19 @@
+; Original class: TaskPanelUI
+; Type4416.MucZ; wasmcode function 15674; offset=7543010 size=48
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+007318e3  i32.const [5007048]
+007318e8  i32.load8_u [0, 0]
+007318eb  i32.eqz []
+007318ec  if [-64]
+007318ee    i32.const [3953576]
+007318f3    call [900] ; 
+007318f6    i32.const [5007048]
+007318fb    i32.const [1]
+007318fd    i32.store8 [0, 0]
+00731900  end []
+00731901  i32.const [3953576]
+00731906  i32.load [2, 0]
+00731909  call [935] ; 
+0073190c  i32.const [0]
+0073190e  call [3782] ; UIControl.RefreshTopInfoUI
+00731911  end []

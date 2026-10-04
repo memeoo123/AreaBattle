@@ -1,0 +1,133 @@
+{
+  "status": "original-assets-and-two-item-types-verified-full-page-pending",
+  "atUtc": "2026-10-03T11:05:14.000731+00:00",
+  "sourceEvidence": "LIMIT_TASK_UI_ITEMS_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T11:05:14.000731+00:00",
+    "scope": "Original four limited-task prefabs and source progress/reward UI items",
+    "checksPassed": 1363,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "nativeChecks": 6,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2468,
+    "implementedLifecycleControllers": 19,
+    "remainingLifecycleControllers": 19,
+    "commands": [
+      "RecoveredHudImporter.ImportLimitTaskBatch",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameLimitTaskUiItemsPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "Original seven-bundle closure verified by catalog size/MD5 and acquired SHA256. Four native prefabs retain24/9/4/46 source nodes,49 sprites and one font. Four source hierarchy/UGUI/geometry/font/scroll-reference checks pass. Import explicitly skips14 custom components; runtime page binding remains pending.",
+      "Progress4339 and Reward4340 recovered from16 newly indexed normal methods. Evidence includes19 methods,16 fields,8 decoded usages. Normal index5978. Reward uses original GameItemConfig.icon/atlasName, signed Int64 counts, source missing-row retained UI, callback-before-live-item popup and reentrant original-argument count. Progress preserves upper-only cap, negative text and zero denominator reaching native Image as NaN.",
+      "GameObject AddClick replaces native pointer delegate with no button message. BaseItem disposal destroys before clearing fields/delegates; rect and reward data stay held. Native6 verifies real frames, imported text/fill, native pointer callbacks/live reread and deferred Object.Destroy.",
+      "Integrated1363 including10 new all pass. Integrated log contains32 existing ShouldRunBehaviour assertions and one Curl42; native log one UnityEditor.Search startup indexing ArgumentOutOfRangeException and one Curl42, no compiler errors. Native-only runner added after integrated run, then compiled and passed native checks; integrated gameplay/test sources unchanged.",
+      "All recorded inputs byte-match isolated validation project. Sprite delivery and PopItemInfo are required observed fixture endpoints, not asserted complete production services. No new Player, complete task page/menu, platform success or original audiovisual equivalence claimed."
+    ],
+    "notClaimed": "Task/day/accumulator/preview/page binding, production seven-day menu, full Main/account/SDK/network/scene, remaining19 controllers/all business, Player and original audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameLimitTaskUiItems.cs",
+    "Scripts/OutgameUiPointerClick.cs",
+    "Editor/OutgameLimitTaskUiItemsValidation.cs",
+    "Editor/OutgameLimitTaskUiItemsPlayModeValidation.cs",
+    "Editor/RecoveredHudImporter.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "importReport": {
+    "status": "imported-static-hierarchy",
+    "prefabs": 4,
+    "sprites": 49,
+    "fonts": 1,
+    "skippedComponents": [
+      "UIOutlet | CAB-771c97af303af9ca35e5b9406f2f6ad7:-8279866874199168241",
+      "SpriteAtlasList | CAB-771c97af303af9ca35e5b9406f2f6ad7:-740678094524139861",
+      "UIOutlet | CAB-771c97af303af9ca35e5b9406f2f6ad7:-2649020838900755079",
+      "UIOutlet | CAB-771c97af303af9ca35e5b9406f2f6ad7:7953696283522031887",
+      "UIOutlet | CAB-3c0820ec704ef1fb4f799c22d5903eb6:6250241897354618892",
+      "SpriteAtlasList | CAB-3c0820ec704ef1fb4f799c22d5903eb6:3479507035377351422",
+      "UIOutlet | CAB-e3b6d80d3a137ea30a5174736fff2f46:6537493022944023150",
+      "UIOutlet | CAB-2e9051c7109e6be74a5c6e81abf0dad6:-8923989470824149365",
+      "SpriteAtlasList | CAB-2e9051c7109e6be74a5c6e81abf0dad6:5675921069484557739",
+      "DynamicList | CAB-2e9051c7109e6be74a5c6e81abf0dad6:-1916771998422009902",
+      "DynamicList | CAB-2e9051c7109e6be74a5c6e81abf0dad6:6678087315481976053",
+      "UIOutlet | CAB-2e9051c7109e6be74a5c6e81abf0dad6:-8497155499780255853",
+      "UIOutlet | CAB-2e9051c7109e6be74a5c6e81abf0dad6:-5310363345451589120",
+      "UIOutlet | CAB-2e9051c7109e6be74a5c6e81abf0dad6:8862136983720408698"
+    ],
+    "limitation": "Original limited-task page and task/day/reward prefabs with source UGUI fields, sprites/fonts/outlets imported. DynamicList and task/accumulator/preview controllers are separate required recovered bindings. Static hierarchy import alone does not claim complete page interactions or original audiovisual matching."
+  },
+  "checks": [
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskPageItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskRewardItem",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-original-asset-CommonLimitTimeTaskUI",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-original-icon-atlas-int64-and-missing-row",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-sprite-reentry-retains-input-count-and-live-selection",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-reward-failures-preserve-source-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-progress-signed-long-upper-cap-and-zero-target",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-gameobject-pointer-replaces-listener-and-disposal-clears-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "limit-task-ui-progress-native-pointer-and-destroy-failure-order",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Original limited-task reward/progress objects in native PlayMode with Canvas, pointer callbacks, reentry and deferred Object.Destroy. Sprite and popup are explicit observed fixture endpoints; complete page, production entry and original audiovisual acceptance remain pending.",
+    "checks": [
+      "Original UGUI text and progress state survive native frames",
+      "Native pointer handler reaches progress self callback",
+      "Native reward pointer runs callback before live detail request",
+      "Source disposal clears ownership and delegates while retaining rect references",
+      "Object.Destroy leaves native objects alive until frame end",
+      "Next native frames destroy both owned original item objects"
+    ]
+  },
+  "remaining": "Restore source task/day selection provider, CommonLimitTimeTaskItem/PageItem, accumulator/preview and CommonLimitTimeTaskUI page lifecycle/refresh/claims, then production seven-day menu/red entry. Continue Task/Achievement, production Main/account/SDK/HTTP/scene hosts, remaining19 controllers and all business/rewards/return, final Player and original audiovisual acceptance."
+}

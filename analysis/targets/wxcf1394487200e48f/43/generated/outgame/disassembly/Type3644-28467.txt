@@ -1,0 +1,33 @@
+; Original class: WebRequestManager
+; Type3644.H`¼O; wasmcode function 9347; offset=4543512 size=91
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00455419  i32.const [4987553]
+0045541e  i32.load8_u [0, 0]
+00455421  i32.eqz []
+00455422  if [-64]
+00455424    i32.const [3988564]
+00455429    call [900] ; 
+0045542c    i32.const [3926368]
+00455431    call [900] ; 
+00455434    i32.const [4987553]
+00455439    i32.const [1]
+0045543b    i32.store8 [0, 0]
+0045543e  end []
+0045543f  local.get [0]
+00455441  local.get [0]
+00455443  call [9346] ; WebRequestManager.mlmC 
+00455446  i32.const [3926368]
+0045544b  i32.load [2, 0]
+0045544e  call [903] ; 
+00455451  local.set [1]
+00455453  local.get [1]
+00455455  i32.const [3988564]
+0045545a  i32.load [2, 0]
+0045545d  call [4720] ; 
+00455460  local.get [0]
+00455462  local.get [1]
+00455464  i32.store [2, 12]
+00455467  local.get [0]
+00455469  i32.const [1106247680]
+0045546f  i32.store [2, 16]
+00455472  end []

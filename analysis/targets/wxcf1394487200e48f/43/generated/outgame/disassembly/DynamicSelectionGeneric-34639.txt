@@ -1,0 +1,20 @@
+; Original shared generic: DynamicRenderItemSeletion.OnSelect
+; DynamicSelectionGeneric.OnSelect; wasmcode function 19847; offset=8919882 size=50
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00881b4b  i32.const [5014200]
+00881b50  i32.load8_u [0, 0]
+00881b53  i32.eqz []
+00881b54  if [-64]
+00881b56    i32.const [3933376]
+00881b5b    call [900] ; 
+00881b5e    i32.const [5014200]
+00881b63    i32.const [1]
+00881b65    i32.store8 [0, 0]
+00881b68  end []
+00881b69  i32.const [0]
+00881b6b  i32.const [3933376]
+00881b70  i32.load [2, 0]
+00881b73  local.get [0]
+00881b75  i32.load [2, 28]
+00881b78  call [1044] ; 
+00881b7b  end []

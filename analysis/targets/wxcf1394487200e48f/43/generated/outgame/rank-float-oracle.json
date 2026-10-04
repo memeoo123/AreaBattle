@@ -1,0 +1,68 @@
+{
+  "sourceMethod": {
+    "image": "Assembly-CSharp.dll",
+    "cls": "ExtesionMethod",
+    "method": "FloatToInt",
+    "function": 12326,
+    "module": "wasmcode",
+    "table": 15930,
+    "metadata": 32605,
+    "body": {
+      "offset": 5990846,
+      "size": 128,
+      "typeIndex": 210
+    },
+    "path": "disassembly/Type4268-32605.txt"
+  },
+  "sourceSha256": "c24737ccf49328dc4ef0fbfdf99f4290f0dd44d111e499f2d46691dfe5fd7f89",
+  "bodySha256": "8517614ccd831f856da2f018bd8e4d8ffaa8dc6057de51a887c1794f5b9a8fd7",
+  "harnessSha256": "e7fe3dcc74e097d4c0b7841e4a57297d924eeb6c8f5143236169c7cb6872d021",
+  "imports": [],
+  "memoryPages": 1,
+  "runtime": "v24.18.1",
+  "cases": [
+    {
+      "input": 0,
+      "f32Input": 0,
+      "integer": 0,
+      "decimals": 0
+    },
+    {
+      "input": 1.23,
+      "f32Input": 1.2300000190734863,
+      "integer": 123,
+      "decimals": 2
+    },
+    {
+      "input": 1.25,
+      "f32Input": 1.25,
+      "integer": 125,
+      "decimals": 2
+    },
+    {
+      "input": 1.28,
+      "f32Input": 1.2799999713897705,
+      "integer": 12799999,
+      "decimals": 7
+    },
+    {
+      "input": 1.38,
+      "f32Input": 1.3799999952316284,
+      "integer": 138,
+      "decimals": 2
+    },
+    {
+      "input": 1.2345,
+      "f32Input": 1.2345000505447388,
+      "integer": 12345,
+      "decimals": 4
+    },
+    {
+      "input": -1.25,
+      "f32Input": -1.25,
+      "integer": -125,
+      "decimals": 2
+    }
+  ],
+  "scope": "Unaltered original arithmetic body only; source manager string conversion separately reviewed."
+}

@@ -1,0 +1,83 @@
+; Original class: CommonLimitTimeTaskItem
+; Type4337.jQTcg; wasmcode function 20157; offset=9062341 size=211
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(2, 127)]
+008a47c8  global.get [0]
+008a47ca  i32.const [16]
+008a47cc  i32.sub []
+008a47cd  local.set [1]
+008a47cf  local.get [1]
+008a47d1  global.set [0]
+008a47d3  i32.const [5008847]
+008a47d8  i32.load8_u [0, 0]
+008a47db  i32.eqz []
+008a47dc  if [-64]
+008a47de    i32.const [3934404]
+008a47e3    call [900] ; 
+008a47e6    i32.const [3926996]
+008a47eb    call [900] ; 
+008a47ee    i32.const [4069372] ; STRING "SevendayFinishTask"
+008a47f3    call [900] ; 
+008a47f6    i32.const [5008847]
+008a47fb    i32.const [1]
+008a47fd    i32.store8 [0, 0]
+008a4800  end []
+008a4801  local.get [0]
+008a4803  i32.load [2, 44]
+008a4806  local.get [0]
+008a4808  i32.load [2, 52]
+008a480b  i32.load [2, 8]
+008a480e  i32.const [0]
+008a4810  call [12909] ; ChildLimitTimeTaskActivity.TaskComplete
+008a4813  i32.const [3926996]
+008a4818  i32.load [2, 0]
+008a481b  i32.const [2]
+008a481d  call [909] ; 
+008a4820  local.set [2]
+008a4822  local.get [1]
+008a4824  local.get [0]
+008a4826  i32.load [2, 52]
+008a4829  i32.const [0]
+008a482b  call [1755] ; LimitTaskItemData.get_Config
+008a482e  i32.load [2, 16]
+008a4831  i32.store [2, 12]
+008a4834  i32.const [3934404]
+008a4839  i32.load [2, 0]
+008a483c  local.get [1]
+008a483e  i32.const [12]
+008a4840  i32.add []
+008a4841  call [910] ; 
+008a4844  local.set [3]
+008a4846  local.get [2]
+008a4848  local.get [3]
+008a484a  call [905] ; 
+008a484d  local.get [2]
+008a484f  local.get [3]
+008a4851  i32.store [2, 16]
+008a4854  local.get [1]
+008a4856  local.get [0]
+008a4858  i32.load [2, 52]
+008a485b  i32.load [2, 8]
+008a485e  i32.store [2, 8]
+008a4861  i32.const [3934404]
+008a4866  i32.load [2, 0]
+008a4869  local.get [1]
+008a486b  i32.const [8]
+008a486d  i32.add []
+008a486e  call [910] ; 
+008a4871  local.set [0]
+008a4873  local.get [2]
+008a4875  local.get [0]
+008a4877  call [905] ; 
+008a487a  local.get [2]
+008a487c  local.get [0]
+008a487e  i32.store [2, 20]
+008a4881  i32.const [4069372] ; STRING "SevendayFinishTask"
+008a4886  i32.load [2, 0]
+008a4889  local.get [2]
+008a488b  i32.const [0]
+008a488d  call [1230] ; MsgDispatcher.SendMessage
+008a4890  local.get [1]
+008a4892  i32.const [16]
+008a4894  i32.add []
+008a4895  global.set [0]
+008a4897  end []

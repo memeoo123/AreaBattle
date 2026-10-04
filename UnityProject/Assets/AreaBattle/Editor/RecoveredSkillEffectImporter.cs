@@ -12,7 +12,7 @@ namespace AreaBattle.EditorTools
 {
     public static class RecoveredSkillEffectImporter
     {
-        const string Dest="Assets/AreaBattle/Resources/Recovered/SkillEffects";
+        static string Dest="Assets/AreaBattle/Resources/Recovered/SkillEffects";
         [Serializable] class Manifest {public Resource[] resources;public Prefab[] prefabs;public ShaderMap[] shaderMap;}
         [Serializable] class ShaderMap {public string sourceName,restoredName,path;}
         [Serializable] class Prefab {public string name,originalName,templatePath,sourceRoot;public SourceComponent[] components;}
@@ -54,12 +54,14 @@ namespace AreaBattle.EditorTools
             ImportManifest("prepared-embedded/native-import.json","unity-embedded-effect-import-report.json");
             ImportManifest("prepared-markers/native-import.json","unity-tower-marker-import-report.json");
         }
-        static void ImportManifest(string manifestPath,string reportName)
+        public static void ImportTaskBoxEffect()=>ImportManifest("prepared/native-import.json","unity-task-box-effect-import-report.json","task-box-effect-20261003","Assets/AreaBattle/Resources/Recovered/TaskBoxEffect","task-box-effect-roundtrip");
+        public static void ImportTopInfoEffects()=>ImportManifest("prepared/native-import.json","unity-top-info-effects-import-report.json","top-info-effects-20261003","Assets/AreaBattle/Resources/Recovered/TopInfoEffects","top-info-effects-roundtrip");
+        static void ImportManifest(string manifestPath,string reportName,string snapshot="skill-effects-20260928",string destination="Assets/AreaBattle/Resources/Recovered/SkillEffects",string readbackDirectory="skill-effect-roundtrip")
         {
-            packedCurves=curveSamples=0;
+            Dest=destination;packedCurves=curveSamples=0;
             workspace=Directory.GetParent(Path.GetFullPath(Path.Combine(Application.dataPath,".."))).FullName;
             target=Path.Combine(workspace,"analysis/targets/wxcf1394487200e48f/43");
-            manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(Path.Combine(target,"generated/resource-snapshots/skill-effects-20260928/"+manifestPath)));
+            manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(Path.Combine(target,"generated/resource-snapshots/"+snapshot+"/"+manifestPath)));
             imported=new UnityEngine.Object[manifest.resources.Length];
             foreach(string folder in new[]{Dest,Dest+"/Textures",Dest+"/Meshes",Dest+"/Materials",Dest+"/Animations",Dest+"/Shaders"})Directory.CreateDirectory(folder);
             foreach(var source in manifest.shaderMap)File.Copy(Path.Combine(target,source.path),Dest+"/Shaders/"+Path.GetFileName(source.path),true);
@@ -98,7 +100,7 @@ namespace AreaBattle.EditorTools
                     Type type=typeof(Transform).Assembly.GetType("UnityEngine."+source.type)??AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType("UnityEngine."+source.type)).FirstOrDefault(t=>t!=null);
                     var t=string.IsNullOrEmpty(source.path)?prefab.transform:prefab.transform.Find(source.path);
                     if(t==null||type==null||t.GetComponent(type)==null)throw new InvalidDataException("Source component missing: "+p.originalName+"/"+source.path+" "+source.type);
-                    string roundtrip=Path.Combine(workspace,"analysis/skill-effect-roundtrip",p.name);Directory.CreateDirectory(roundtrip);
+                    string roundtrip=Path.Combine(workspace,"analysis/"+readbackDirectory,p.name);Directory.CreateDirectory(roundtrip);
                     File.WriteAllText(Path.Combine(roundtrip,source.fileId+".json"),EditorJsonUtility.ToJson(t.GetComponent(type),true));
                 }
                 int expected=p.components.Count(c=>c.type=="ParticleSystem");int actual=prefab.GetComponentsInChildren<ParticleSystem>(true).Length;

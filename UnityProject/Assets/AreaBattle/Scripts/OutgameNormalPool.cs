@@ -32,20 +32,38 @@ namespace AreaBattle
         void UnloadUnusedAssets();
         void UnloadUnusedBundle(IOutgamePoolResourceInfo info);
     }
+    public interface IOutgameSingleSpawnPoolFactory
+    {
+        OutgameObjectPool CreateSingleSpawnObjectPool(string name);
+    }
     // NormalPool.Spawn28685, helpers28681/28684 and callbacks28687..28690.
     // Source destruction delegates manager/resource operations to explicit lifetime provider.
     public sealed class OutgameNormalPool
     {
         const string InvalidResource="添加对象出错，ResourcesInfo为null 或者ResourcesInfo的对象不是GameObject";
-        readonly OutgameObjectPool pool;readonly Transform root;readonly bool cacheResources;
+        OutgameObjectPool pool;Transform root;bool cacheResources;string name;
         readonly IOutgameNormalPoolResources resources;
-        readonly Dictionary<string,IOutgamePoolAssetHandle> handles=new Dictionary<string,IOutgamePoolAssetHandle>();
-        readonly Dictionary<string,IOutgamePoolResourceInfo> infos=new Dictionary<string,IOutgamePoolResourceInfo>();
+        Dictionary<string,IOutgamePoolAssetHandle> handles;
+        Dictionary<string,IOutgamePoolResourceInfo> infos;
+        public OutgameObjectPool Pool=>pool;
+        public Transform Root=>root;
+        public string Name=>name;
+        public bool CacheResources=>cacheResources;
+        public OutgameNormalPool(IOutgameNormalPoolResources resources){this.resources=resources;}
+        //28682: absent manager leaves all fields untouched; stores options before creation.
+        public void CreateObjectPool(Func<IOutgameSingleSpawnPoolFactory> manager,string name,int capacity,float expireTime,Transform root,bool cacheResources)
+        {
+            var owner=manager();if(owner==null)return;
+            this.name=name;this.cacheResources=cacheResources;this.root=root;
+            pool=owner.CreateSingleSpawnObjectPool(name);
+            pool.AutoReleaseInterval=expireTime;pool.Capacity=capacity;pool.ExpireTime=expireTime;pool.Priority=0;
+            infos=new Dictionary<string,IOutgamePoolResourceInfo>();handles=new Dictionary<string,IOutgamePoolAssetHandle>();
+        }
         public OutgameNormalPool(OutgameObjectPool pool,Transform root,bool cacheResources,IOutgameNormalPoolResources resources)
-        {this.pool=pool;this.root=root;this.cacheResources=cacheResources;this.resources=resources;}
+        {this.pool=pool;this.root=root;this.cacheResources=cacheResources;this.resources=resources;name=pool.Name;infos=new Dictionary<string,IOutgamePoolResourceInfo>();handles=new Dictionary<string,IOutgamePoolAssetHandle>();}
         public void DestroyObjectPool(IOutgameNormalPoolLifetime lifetime)
         {
-            lifetime.DestroyRegisteredPoolIfManagerExists(pool.Name);
+            lifetime.DestroyRegisteredPoolIfManagerExists(name);
             if(root!=null)lifetime.DestroyRoot(root.gameObject);
             if(resources.UseNewResourceLoader){
                 foreach(var handle in handles.Values)lifetime.ReleaseHandle(handle);

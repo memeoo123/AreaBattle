@@ -1,0 +1,109 @@
+; Original class: N«Cz
+; Type2916.WZ±rP; wasmcode function 15164; offset=7367257 size=311
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+00706a5c  i32.const [4989427]
+00706a61  i32.load8_u [0, 0]
+00706a64  i32.eqz []
+00706a65  if [-64]
+00706a67    i32.const [3929208]
+00706a6c    call [900] ; 
+00706a6f    i32.const [3926996]
+00706a74    call [900] ; 
+00706a77    i32.const [3936516]
+00706a7c    call [900] ; 
+00706a7f    i32.const [4012516]
+00706a84    call [900] ; 
+00706a87    i32.const [4103240] ; STRING "加载图集["
+00706a8c    call [900] ; 
+00706a8f    i32.const [4081132] ; STRING "]加载失败"
+00706a94    call [900] ; 
+00706a97    i32.const [4103528] ; STRING "图集["
+00706a9c    call [900] ; 
+00706a9f    i32.const [4080932] ; STRING "]"
+00706aa4    call [900] ; 
+00706aa7    i32.const [4989427]
+00706aac    i32.const [1]
+00706aae    i32.store8 [0, 0]
+00706ab1  end []
+00706ab2  local.get [1]
+00706ab4  i32.eqz []
+00706ab5  if [-64]
+00706ab7    i32.const [3926996]
+00706abc    i32.load [2, 0]
+00706abf    i32.const [1]
+00706ac1    call [909] ; 
+00706ac4    local.set [2]
+00706ac6    i32.const [4103528] ; STRING "图集["
+00706acb    i32.load [2, 0]
+00706ace    local.get [0]
+00706ad0    i32.load [2, 8]
+00706ad3    i32.const [4081132] ; STRING "]加载失败"
+00706ad8    i32.load [2, 0]
+00706adb    i32.const [0]
+00706add    call [955] ; String.Concat
+00706ae0    local.set [3]
+00706ae2    local.get [2]
+00706ae4    local.get [3]
+00706ae6    call [905] ; 
+00706ae9    local.get [2]
+00706aeb    local.get [3]
+00706aed    i32.store [2, 16]
+00706af0    i32.const [3929208]
+00706af5    i32.load [2, 0]
+00706af8    call [901] ; 
+00706afb    local.get [2]
+00706afd    i32.const [0]
+00706aff    call [1156] ; CLog.Warning
+00706b02  end []
+00706b03  i32.const [3926996]
+00706b08  i32.load [2, 0]
+00706b0b  i32.const [1]
+00706b0d  call [909] ; 
+00706b10  local.set [2]
+00706b12  i32.const [4103240] ; STRING "加载图集["
+00706b17  i32.load [2, 0]
+00706b1a  local.get [0]
+00706b1c  i32.load [2, 8]
+00706b1f  i32.const [4080932] ; STRING "]"
+00706b24  i32.load [2, 0]
+00706b27  i32.const [0]
+00706b29  call [955] ; String.Concat
+00706b2c  local.set [3]
+00706b2e  local.get [2]
+00706b30  local.get [3]
+00706b32  call [905] ; 
+00706b35  local.get [2]
+00706b37  local.get [3]
+00706b39  i32.store [2, 16]
+00706b3c  i32.const [3929208]
+00706b41  i32.load [2, 0]
+00706b44  call [901] ; 
+00706b47  local.get [2]
+00706b49  i32.const [0]
+00706b4b  call [1156] ; CLog.Warning
+00706b4e  local.get [1]
+00706b50  local.get [0]
+00706b52  i32.load [2, 8]
+00706b55  i32.const [4012516]
+00706b5a  i32.load [2, 0]
+00706b5d  call [2074] ; 
+00706b60  local.set [1]
+00706b62  i32.const [3936516]
+00706b67  i32.load [2, 0]
+00706b6a  call [901] ; 
+00706b6d  i32.const [0]
+00706b6f  local.get [1]
+00706b71  i32.const [0]
+00706b73  call [946] ; Object.op_Inequality
+00706b76  if [-64]
+00706b78    local.get [0]
+00706b7a    i32.load [2, 12]
+00706b7d    local.get [1]
+00706b7f    local.get [0]
+00706b81    i32.load [2, 16]
+00706b84    i32.const [0]
+00706b86    call [4253] ; SpriteAtlas.GetSprite
+00706b89    i32.const [0]
+00706b8b    call [4786] ; SpriteRenderer.set_sprite
+00706b8e  end []
+00706b8f  end []

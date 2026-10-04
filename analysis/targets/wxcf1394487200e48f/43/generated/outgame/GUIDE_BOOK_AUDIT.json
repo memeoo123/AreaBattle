@@ -1,0 +1,78 @@
+{
+  "status": "source-manager-controller-and-persistence-verified-ui-main-pending",
+  "atUtc": "2026-10-03T06:55:51.796395+00:00",
+  "sourceEvidence": "GUIDE_BOOK_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T06:55:51.796395+00:00",
+    "scope": "GuideBookDataManager/control/runtime, original config unlock rules and real persistence",
+    "checksPassed": 1113,
+    "newIntegratedChecks": 8,
+    "targetedChecks": 8,
+    "freshPlayModeRun": false,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "previousNativeEvidence": "item-runtime-native-validation.json and item-profile-native.log:23 checks, previous service-group batch",
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2093,
+    "commands": [
+      "OutgameGuideBookValidation.Validate",
+      "BattleBuild.ValidateMechanicsOnly"
+    ],
+    "notClaimed": "Guide-book UI/item-grant operations, full Main/account/22 remaining controllers, SDK delivery or full Player"
+  },
+  "implementation": [
+    "OutgameGuideBookManager.cs",
+    "OutgameGuideBookControl.cs",
+    "OutgameGuideBookRuntime.cs",
+    "OutgameCoreControllerBindings.cs"
+  ],
+  "checks": [
+    {
+      "id": "guide-book-original-record-construction-and-unrepaired-null-lists",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-production-registration-server-wait-and-local-override",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-claims-save-before-message-and-deduplicate-record-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-save-and-message-failure-retain-source-mutation-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-tip-inclusive-book-strict-and-recursive-guide-unlock",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-source-null-and-level-query-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-original-config-availability-and-claim-status",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-dispose-disables-update-retains-registry-and-data",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "remaining": [
+    "Actual guide-book UI and reward item-grant call sites.",
+    "Main/account/level progression production composition and full Player acceptance."
+  ]
+}

@@ -1,0 +1,52 @@
+; Original class: TaskPanelUI
+; Type4416.d^PuXQ; wasmcode function 10170; offset=4887009 size=130
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 127)]
+004a91e4  i32.const [5007045]
+004a91e9  i32.load8_u [0, 0]
+004a91ec  i32.eqz []
+004a91ed  if [-64]
+004a91ef    i32.const [3936516]
+004a91f4    call [900] ; 
+004a91f7    i32.const [5007045]
+004a91fc    i32.const [1]
+004a91fe    i32.store8 [0, 0]
+004a9201  end []
+004a9202  local.get [0]
+004a9204  i32.load [2, 112]
+004a9207  if [-64]
+004a9209    i32.const [0]
+004a920b    call [1758] ; GameModule.get_Effect
+004a920e    local.get [0]
+004a9210    i32.load [2, 112]
+004a9213    i32.const [0]
+004a9215    call [2139] ; EffectModule.Close
+004a9218    local.get [0]
+004a921a    i32.const [0]
+004a921c    i32.store [2, 112]
+004a921f  end []
+004a9220  local.get [0]
+004a9222  i32.load [2, 156]
+004a9226  local.set [2]
+004a9228  local.get [0]
+004a922a  i32.load [2, 124]
+004a922d  local.set [3]
+004a922f  i32.const [3936516]
+004a9234  i32.load [2, 0]
+004a9237  call [901] ; 
+004a923a  local.get [2]
+004a923c  local.get [1]
+004a923e  local.get [3]
+004a9240  i32.const [0]
+004a9242  call [940] ; Object.op_Equality
+004a9245  i32.const [0]
+004a9247  call [949] ; GameObject.SetActive
+004a924a  local.get [0]
+004a924c  i32.load [2, 160]
+004a9250  local.get [1]
+004a9252  local.get [0]
+004a9254  i32.load [2, 128]
+004a9258  i32.const [0]
+004a925a  call [940] ; Object.op_Equality
+004a925d  i32.const [0]
+004a925f  call [949] ; GameObject.SetActive
+004a9262  end []

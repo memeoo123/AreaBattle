@@ -1,0 +1,36 @@
+; Original class: ActivityNetStrategyBase
+; Type4660.oiyx; wasmcode function 13339; offset=6460748 size=99
+; signature={'args': [127, 127, 127, 127], 'returns': [127]}; localGroups=[]
+0062954d  i32.const [5001342]
+00629552  i32.load8_u [0, 0]
+00629555  i32.eqz []
+00629556  if [-64]
+00629558    i32.const [3930020]
+0062955d    call [900] ; 
+00629560    i32.const [3930616]
+00629565    call [900] ; 
+00629568    i32.const [4101216] ; STRING "yyyyMMddHHmmss"
+0062956d    call [900] ; 
+00629570    i32.const [5001342]
+00629575    i32.const [1]
+00629577    i32.store8 [0, 0]
+0062957a  end []
+0062957b  i32.const [3930020]
+00629580  i32.load [2, 0]
+00629583  call [901] ; 
+00629586  i32.const [0]
+00629588  call [958] ; CultureInfo.get_InvariantCulture
+0062958b  local.set [0]
+0062958d  i32.const [3930616]
+00629592  i32.load [2, 0]
+00629595  call [901] ; 
+00629598  local.get [1]
+0062959a  i32.const [4101216] ; STRING "yyyyMMddHHmmss"
+0062959f  i32.load [2, 0]
+006295a2  local.get [0]
+006295a4  i32.const [0]
+006295a6  local.get [2]
+006295a8  i32.const [0]
+006295aa  call [2708] ; DateTime.TryParseExact
+006295ad  return []
+006295ae  end []

@@ -1,0 +1,29 @@
+; Original class: NoviceAccRewardItemData
+; Type4705.get_childAct; wasmcode function 7511; offset=3614841 size=80
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+0037287a  i32.const [5001280]
+0037287f  i32.load8_u [0, 0]
+00372882  i32.eqz []
+00372883  if [-64]
+00372885    i32.const [3988816]
+0037288a    call [900] ;
+0037288d    i32.const [3988864]
+00372892    call [900] ;
+00372895    i32.const [5001280]
+0037289a    i32.const [1]
+0037289c    i32.store8 [0, 0]
+0037289f  end []
+003728a0  i32.const [0]
+003728a2  call [1484] ; ActivityControl.get_I
+003728a5  i32.const [1301001]
+003728aa  i32.const [3988864]
+003728af  i32.load [2, 0]
+003728b2  call [2427] ;
+003728b5  local.get [0]
+003728b7  local.get [0]
+003728b9  call [7512] ; NoviceAccRewardItemData.get_activityId
+003728bc  i32.const [3988816]
+003728c1  i32.load [2, 0]
+003728c4  call [3415] ;
+003728c7  return []
+003728c8  end []

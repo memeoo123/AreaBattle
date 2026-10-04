@@ -1,0 +1,538 @@
+; Original class: LoginTransmitter
+; Type3762.InitProtocol; wasmcode function 18737; offset=8462980 size=1608
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(18, 127)]
+00812287  i32.const [4987956]
+0081228c  i32.load8_u [0, 0]
+0081228f  i32.eqz []
+00812290  if [-64]
+00812292    i32.const [3915772]
+00812297    call [900] ; 
+0081229a    i32.const [4002288] ; METHOD HttpNetAcion.DataUploadedNetAction
+0081229f    call [900] ; 
+008122a2    i32.const [4002292] ; METHOD HttpNetAcion.DeleteCommonDataNetAction
+008122a7    call [900] ; 
+008122aa    i32.const [4002296] ; METHOD HttpNetAcion.DeletePlayerDataNetAction
+008122af    call [900] ; 
+008122b2    i32.const [4002300] ; METHOD HttpNetAcion.GetAllPlayerDataNetAction
+008122b7    call [900] ; 
+008122ba    i32.const [4002304] ; METHOD HttpNetAcion.GetCommonDataNetAction
+008122bf    call [900] ; 
+008122c2    i32.const [4002308] ; METHOD HttpNetAcion.GetOtherPlayerDataNetAction
+008122c7    call [900] ; 
+008122ca    i32.const [4002312] ; METHOD HttpNetAcion.GetPlayerDataNetAction
+008122cf    call [900] ; 
+008122d2    i32.const [4002316] ; METHOD HttpNetAcion.LoginNetAction
+008122d7    call [900] ; 
+008122da    i32.const [4002320] ; METHOD HttpNetAcion.LoginOutNetAction
+008122df    call [900] ; 
+008122e2    i32.const [4002324] ; METHOD HttpNetAcion.ReceiveCutoverLoginData
+008122e7    call [900] ; 
+008122ea    i32.const [4002328] ; METHOD HttpNetAcion.ReceiveForcedBind
+008122ef    call [900] ; 
+008122f2    i32.const [4002332] ; METHOD HttpNetAcion.ReceiveGameDataVersion
+008122f7    call [900] ; 
+008122fa    i32.const [4002336] ; METHOD HttpNetAcion.ReceiveUserAttachment
+008122ff    call [900] ; 
+00812302    i32.const [4002340] ; METHOD HttpNetAcion.ReceiveUserIsExists
+00812307    call [900] ; 
+0081230a    i32.const [4002344] ; METHOD HttpNetAcion.ServerTimeNetAction
+0081230f    call [900] ; 
+00812312    i32.const [4002348] ; METHOD HttpNetAcion.UpLoadPlayerDataNetAction
+00812317    call [900] ; 
+0081231a    i32.const [4002352] ; METHOD HttpNetAcion.UploadCommonDataNetAction
+0081231f    call [900] ; 
+00812322    i32.const [4002356] ; METHOD HttpNetAcion.UploadUserExtNetAction
+00812327    call [900] ; 
+0081232a    i32.const [4101868] ; STRING "{0}{1}"
+0081232f    call [900] ; 
+00812332    i32.const [4040396] ; STRING "/data/attachment/get"
+00812337    call [900] ; 
+0081233a    i32.const [4040424] ; STRING "/data/private/version"
+0081233f    call [900] ; 
+00812342    i32.const [4040428] ; STRING "/data/public/delete"
+00812347    call [900] ; 
+0081234a    i32.const [4040420] ; STRING "/data/private/update"
+0081234f    call [900] ; 
+00812352    i32.const [4040400] ; STRING "/data/bind"
+00812357    call [900] ; 
+0081235a    i32.const [4040440] ; STRING "/data/unreg"
+0081235f    call [900] ; 
+00812362    i32.const [4040496] ; STRING "/sys/nowTime"
+00812367    call [900] ; 
+0081236a    i32.const [4040372] ; STRING "/auth/login"
+0081236f    call [900] ; 
+00812372    i32.const [4040448] ; STRING "/data/user/uploaded"
+00812377    call [900] ; 
+0081237a    i32.const [4040436] ; STRING "/data/public/update"
+0081237f    call [900] ; 
+00812382    i32.const [4040408] ; STRING "/data/private/exists"
+00812387    call [900] ; 
+0081238a    i32.const [4040376] ; STRING "/auth/unsafe/bind"
+0081238f    call [900] ; 
+00812392    i32.const [4040432] ; STRING "/data/public/get"
+00812397    call [900] ; 
+0081239a    i32.const [4040416] ; STRING "/data/private/getall"
+0081239f    call [900] ; 
+008123a2    i32.const [4040404] ; STRING "/data/private/delete"
+008123a7    call [900] ; 
+008123aa    i32.const [4040412] ; STRING "/data/private/get"
+008123af    call [900] ; 
+008123b2    i32.const [4040444] ; STRING "/data/user/ext"
+008123b7    call [900] ; 
+008123ba    i32.const [4040452] ; STRING "/data/visit/get"
+008123bf    call [900] ; 
+008123c2    i32.const [4987956]
+008123c7    i32.const [1]
+008123c9    i32.store8 [0, 0]
+008123cc  end []
+008123cd  i32.const [4101868] ; STRING "{0}{1}"
+008123d2  i32.load [2, 0]
+008123d5  local.get [0]
+008123d7  i32.load [2, 16]
+008123da  i32.const [4040496] ; STRING "/sys/nowTime"
+008123df  i32.load [2, 0]
+008123e2  i32.const [0]
+008123e4  call [1047] ; String.Format
+008123e7  local.set [1]
+008123e9  i32.const [4101868] ; STRING "{0}{1}"
+008123ee  i32.load [2, 0]
+008123f1  local.get [0]
+008123f3  i32.load [2, 16]
+008123f6  i32.const [4040372] ; STRING "/auth/login"
+008123fb  i32.load [2, 0]
+008123fe  i32.const [0]
+00812400  call [1047] ; String.Format
+00812403  local.set [3]
+00812405  i32.const [4101868] ; STRING "{0}{1}"
+0081240a  i32.load [2, 0]
+0081240d  local.get [0]
+0081240f  i32.load [2, 16]
+00812412  i32.const [4040420] ; STRING "/data/private/update"
+00812417  i32.load [2, 0]
+0081241a  i32.const [0]
+0081241c  call [1047] ; String.Format
+0081241f  local.set [4]
+00812421  i32.const [4101868] ; STRING "{0}{1}"
+00812426  i32.load [2, 0]
+00812429  local.get [0]
+0081242b  i32.load [2, 16]
+0081242e  i32.const [4040416] ; STRING "/data/private/getall"
+00812433  i32.load [2, 0]
+00812436  i32.const [0]
+00812438  call [1047] ; String.Format
+0081243b  local.set [5]
+0081243d  i32.const [4101868] ; STRING "{0}{1}"
+00812442  i32.load [2, 0]
+00812445  local.get [0]
+00812447  i32.load [2, 16]
+0081244a  i32.const [4040412] ; STRING "/data/private/get"
+0081244f  i32.load [2, 0]
+00812452  i32.const [0]
+00812454  call [1047] ; String.Format
+00812457  local.set [6]
+00812459  i32.const [4101868] ; STRING "{0}{1}"
+0081245e  i32.load [2, 0]
+00812461  local.get [0]
+00812463  i32.load [2, 16]
+00812466  i32.const [4040404] ; STRING "/data/private/delete"
+0081246b  i32.load [2, 0]
+0081246e  i32.const [0]
+00812470  call [1047] ; String.Format
+00812473  local.set [7]
+00812475  i32.const [4101868] ; STRING "{0}{1}"
+0081247a  i32.load [2, 0]
+0081247d  local.get [0]
+0081247f  i32.load [2, 16]
+00812482  i32.const [4040452] ; STRING "/data/visit/get"
+00812487  i32.load [2, 0]
+0081248a  i32.const [0]
+0081248c  call [1047] ; String.Format
+0081248f  local.set [8]
+00812491  i32.const [4101868] ; STRING "{0}{1}"
+00812496  i32.load [2, 0]
+00812499  local.get [0]
+0081249b  i32.load [2, 16]
+0081249e  i32.const [4040436] ; STRING "/data/public/update"
+008124a3  i32.load [2, 0]
+008124a6  i32.const [0]
+008124a8  call [1047] ; String.Format
+008124ab  local.set [9]
+008124ad  i32.const [4101868] ; STRING "{0}{1}"
+008124b2  i32.load [2, 0]
+008124b5  local.get [0]
+008124b7  i32.load [2, 16]
+008124ba  i32.const [4040432] ; STRING "/data/public/get"
+008124bf  i32.load [2, 0]
+008124c2  i32.const [0]
+008124c4  call [1047] ; String.Format
+008124c7  local.set [10]
+008124c9  i32.const [4101868] ; STRING "{0}{1}"
+008124ce  i32.load [2, 0]
+008124d1  local.get [0]
+008124d3  i32.load [2, 16]
+008124d6  i32.const [4040428] ; STRING "/data/public/delete"
+008124db  i32.load [2, 0]
+008124de  i32.const [0]
+008124e0  call [1047] ; String.Format
+008124e3  local.set [11]
+008124e5  i32.const [4101868] ; STRING "{0}{1}"
+008124ea  i32.load [2, 0]
+008124ed  local.get [0]
+008124ef  i32.load [2, 16]
+008124f2  i32.const [4040424] ; STRING "/data/private/version"
+008124f7  i32.load [2, 0]
+008124fa  i32.const [0]
+008124fc  call [1047] ; String.Format
+008124ff  local.set [12]
+00812501  i32.const [4101868] ; STRING "{0}{1}"
+00812506  i32.load [2, 0]
+00812509  local.get [0]
+0081250b  i32.load [2, 16]
+0081250e  i32.const [4040408] ; STRING "/data/private/exists"
+00812513  i32.load [2, 0]
+00812516  i32.const [0]
+00812518  call [1047] ; String.Format
+0081251b  local.set [13]
+0081251d  i32.const [4101868] ; STRING "{0}{1}"
+00812522  i32.load [2, 0]
+00812525  local.get [0]
+00812527  i32.load [2, 16]
+0081252a  i32.const [4040400] ; STRING "/data/bind"
+0081252f  i32.load [2, 0]
+00812532  i32.const [0]
+00812534  call [1047] ; String.Format
+00812537  local.set [14]
+00812539  i32.const [4101868] ; STRING "{0}{1}"
+0081253e  i32.load [2, 0]
+00812541  local.get [0]
+00812543  i32.load [2, 16]
+00812546  i32.const [4040440] ; STRING "/data/unreg"
+0081254b  i32.load [2, 0]
+0081254e  i32.const [0]
+00812550  call [1047] ; String.Format
+00812553  local.set [15]
+00812555  i32.const [4101868] ; STRING "{0}{1}"
+0081255a  i32.load [2, 0]
+0081255d  local.get [0]
+0081255f  i32.load [2, 16]
+00812562  i32.const [4040444] ; STRING "/data/user/ext"
+00812567  i32.load [2, 0]
+0081256a  i32.const [0]
+0081256c  call [1047] ; String.Format
+0081256f  local.set [16]
+00812571  i32.const [4101868] ; STRING "{0}{1}"
+00812576  i32.load [2, 0]
+00812579  local.get [0]
+0081257b  i32.load [2, 16]
+0081257e  i32.const [4040376] ; STRING "/auth/unsafe/bind"
+00812583  i32.load [2, 0]
+00812586  i32.const [0]
+00812588  call [1047] ; String.Format
+0081258b  local.set [17]
+0081258d  i32.const [4101868] ; STRING "{0}{1}"
+00812592  i32.load [2, 0]
+00812595  local.get [0]
+00812597  i32.load [2, 16]
+0081259a  i32.const [4040448] ; STRING "/data/user/uploaded"
+0081259f  i32.load [2, 0]
+008125a2  i32.const [0]
+008125a4  call [1047] ; String.Format
+008125a7  local.set [18]
+008125a9  i32.const [4101868] ; STRING "{0}{1}"
+008125ae  i32.load [2, 0]
+008125b1  local.get [0]
+008125b3  i32.load [2, 16]
+008125b6  i32.const [4040396] ; STRING "/data/attachment/get"
+008125bb  i32.load [2, 0]
+008125be  i32.const [0]
+008125c0  call [1047] ; String.Format
+008125c3  local.set [19]
+008125c5  i32.const [3915772]
+008125ca  i32.load [2, 0]
+008125cd  call [903] ; 
+008125d0  local.set [2]
+008125d2  local.get [2]
+008125d4  i32.const [0]
+008125d6  i32.const [4002344] ; METHOD HttpNetAcion.ServerTimeNetAction
+008125db  i32.load [2, 0]
+008125de  i32.const [0]
+008125e0  call [1004] ; 
+008125e3  local.get [0]
+008125e5  i32.const [2]
+008125e7  local.get [1]
+008125e9  local.get [2]
+008125eb  local.get [0]
+008125ed  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008125f0  i32.const [3915772]
+008125f5  i32.load [2, 0]
+008125f8  call [903] ; 
+008125fb  local.set [1]
+008125fd  local.get [1]
+008125ff  i32.const [0]
+00812601  i32.const [4002316] ; METHOD HttpNetAcion.LoginNetAction
+00812606  i32.load [2, 0]
+00812609  i32.const [0]
+0081260b  call [1004] ; 
+0081260e  local.get [0]
+00812610  i32.const [3]
+00812612  local.get [3]
+00812614  local.get [1]
+00812616  local.get [0]
+00812618  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081261b  i32.const [3915772]
+00812620  i32.load [2, 0]
+00812623  call [903] ; 
+00812626  local.set [1]
+00812628  local.get [1]
+0081262a  i32.const [0]
+0081262c  i32.const [4002348] ; METHOD HttpNetAcion.UpLoadPlayerDataNetAction
+00812631  i32.load [2, 0]
+00812634  i32.const [0]
+00812636  call [1004] ; 
+00812639  local.get [0]
+0081263b  i32.const [4]
+0081263d  local.get [4]
+0081263f  local.get [1]
+00812641  local.get [0]
+00812643  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00812646  i32.const [3915772]
+0081264b  i32.load [2, 0]
+0081264e  call [903] ; 
+00812651  local.set [1]
+00812653  local.get [1]
+00812655  i32.const [0]
+00812657  i32.const [4002300] ; METHOD HttpNetAcion.GetAllPlayerDataNetAction
+0081265c  i32.load [2, 0]
+0081265f  i32.const [0]
+00812661  call [1004] ; 
+00812664  local.get [0]
+00812666  i32.const [5]
+00812668  local.get [5]
+0081266a  local.get [1]
+0081266c  local.get [0]
+0081266e  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00812671  i32.const [3915772]
+00812676  i32.load [2, 0]
+00812679  call [903] ; 
+0081267c  local.set [1]
+0081267e  local.get [1]
+00812680  i32.const [0]
+00812682  i32.const [4002312] ; METHOD HttpNetAcion.GetPlayerDataNetAction
+00812687  i32.load [2, 0]
+0081268a  i32.const [0]
+0081268c  call [1004] ; 
+0081268f  local.get [0]
+00812691  i32.const [6]
+00812693  local.get [6]
+00812695  local.get [1]
+00812697  local.get [0]
+00812699  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081269c  i32.const [3915772]
+008126a1  i32.load [2, 0]
+008126a4  call [903] ; 
+008126a7  local.set [1]
+008126a9  local.get [1]
+008126ab  i32.const [0]
+008126ad  i32.const [4002296] ; METHOD HttpNetAcion.DeletePlayerDataNetAction
+008126b2  i32.load [2, 0]
+008126b5  i32.const [0]
+008126b7  call [1004] ; 
+008126ba  local.get [0]
+008126bc  i32.const [7]
+008126be  local.get [7]
+008126c0  local.get [1]
+008126c2  local.get [0]
+008126c4  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008126c7  i32.const [3915772]
+008126cc  i32.load [2, 0]
+008126cf  call [903] ; 
+008126d2  local.set [1]
+008126d4  local.get [1]
+008126d6  i32.const [0]
+008126d8  i32.const [4002308] ; METHOD HttpNetAcion.GetOtherPlayerDataNetAction
+008126dd  i32.load [2, 0]
+008126e0  i32.const [0]
+008126e2  call [1004] ; 
+008126e5  local.get [0]
+008126e7  i32.const [8]
+008126e9  local.get [8]
+008126eb  local.get [1]
+008126ed  local.get [0]
+008126ef  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008126f2  i32.const [3915772]
+008126f7  i32.load [2, 0]
+008126fa  call [903] ; 
+008126fd  local.set [1]
+008126ff  local.get [1]
+00812701  i32.const [0]
+00812703  i32.const [4002352] ; METHOD HttpNetAcion.UploadCommonDataNetAction
+00812708  i32.load [2, 0]
+0081270b  i32.const [0]
+0081270d  call [1004] ; 
+00812710  local.get [0]
+00812712  i32.const [9]
+00812714  local.get [9]
+00812716  local.get [1]
+00812718  local.get [0]
+0081271a  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081271d  i32.const [3915772]
+00812722  i32.load [2, 0]
+00812725  call [903] ; 
+00812728  local.set [1]
+0081272a  local.get [1]
+0081272c  i32.const [0]
+0081272e  i32.const [4002304] ; METHOD HttpNetAcion.GetCommonDataNetAction
+00812733  i32.load [2, 0]
+00812736  i32.const [0]
+00812738  call [1004] ; 
+0081273b  local.get [0]
+0081273d  i32.const [10]
+0081273f  local.get [10]
+00812741  local.get [1]
+00812743  local.get [0]
+00812745  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00812748  i32.const [3915772]
+0081274d  i32.load [2, 0]
+00812750  call [903] ; 
+00812753  local.set [1]
+00812755  local.get [1]
+00812757  i32.const [0]
+00812759  i32.const [4002292] ; METHOD HttpNetAcion.DeleteCommonDataNetAction
+0081275e  i32.load [2, 0]
+00812761  i32.const [0]
+00812763  call [1004] ; 
+00812766  local.get [0]
+00812768  i32.const [11]
+0081276a  local.get [11]
+0081276c  local.get [1]
+0081276e  local.get [0]
+00812770  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00812773  i32.const [3915772]
+00812778  i32.load [2, 0]
+0081277b  call [903] ; 
+0081277e  local.set [1]
+00812780  local.get [1]
+00812782  i32.const [0]
+00812784  i32.const [4002332] ; METHOD HttpNetAcion.ReceiveGameDataVersion
+00812789  i32.load [2, 0]
+0081278c  i32.const [0]
+0081278e  call [1004] ; 
+00812791  local.get [0]
+00812793  i32.const [12]
+00812795  local.get [12]
+00812797  local.get [1]
+00812799  local.get [0]
+0081279b  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081279e  i32.const [3915772]
+008127a3  i32.load [2, 0]
+008127a6  call [903] ; 
+008127a9  local.set [1]
+008127ab  local.get [1]
+008127ad  i32.const [0]
+008127af  i32.const [4002340] ; METHOD HttpNetAcion.ReceiveUserIsExists
+008127b4  i32.load [2, 0]
+008127b7  i32.const [0]
+008127b9  call [1004] ; 
+008127bc  local.get [0]
+008127be  i32.const [13]
+008127c0  local.get [13]
+008127c2  local.get [1]
+008127c4  local.get [0]
+008127c6  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008127c9  i32.const [3915772]
+008127ce  i32.load [2, 0]
+008127d1  call [903] ; 
+008127d4  local.set [1]
+008127d6  local.get [1]
+008127d8  i32.const [0]
+008127da  i32.const [4002324] ; METHOD HttpNetAcion.ReceiveCutoverLoginData
+008127df  i32.load [2, 0]
+008127e2  i32.const [0]
+008127e4  call [1004] ; 
+008127e7  local.get [0]
+008127e9  i32.const [14]
+008127eb  local.get [14]
+008127ed  local.get [1]
+008127ef  local.get [0]
+008127f1  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008127f4  i32.const [3915772]
+008127f9  i32.load [2, 0]
+008127fc  call [903] ; 
+008127ff  local.set [1]
+00812801  local.get [1]
+00812803  i32.const [0]
+00812805  i32.const [4002320] ; METHOD HttpNetAcion.LoginOutNetAction
+0081280a  i32.load [2, 0]
+0081280d  i32.const [0]
+0081280f  call [1004] ; 
+00812812  local.get [0]
+00812814  i32.const [15]
+00812816  local.get [15]
+00812818  local.get [1]
+0081281a  local.get [0]
+0081281c  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081281f  i32.const [3915772]
+00812824  i32.load [2, 0]
+00812827  call [903] ; 
+0081282a  local.set [1]
+0081282c  local.get [1]
+0081282e  i32.const [0]
+00812830  i32.const [4002356] ; METHOD HttpNetAcion.UploadUserExtNetAction
+00812835  i32.load [2, 0]
+00812838  i32.const [0]
+0081283a  call [1004] ; 
+0081283d  local.get [0]
+0081283f  i32.const [16]
+00812841  local.get [16]
+00812843  local.get [1]
+00812845  local.get [0]
+00812847  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+0081284a  i32.const [3915772]
+0081284f  i32.load [2, 0]
+00812852  call [903] ; 
+00812855  local.set [1]
+00812857  local.get [1]
+00812859  i32.const [0]
+0081285b  i32.const [4002328] ; METHOD HttpNetAcion.ReceiveForcedBind
+00812860  i32.load [2, 0]
+00812863  i32.const [0]
+00812865  call [1004] ; 
+00812868  local.get [0]
+0081286a  i32.const [17]
+0081286c  local.get [17]
+0081286e  local.get [1]
+00812870  local.get [0]
+00812872  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+00812875  i32.const [3915772]
+0081287a  i32.load [2, 0]
+0081287d  call [903] ; 
+00812880  local.set [1]
+00812882  local.get [1]
+00812884  i32.const [0]
+00812886  i32.const [4002288] ; METHOD HttpNetAcion.DataUploadedNetAction
+0081288b  i32.load [2, 0]
+0081288e  i32.const [0]
+00812890  call [1004] ; 
+00812893  local.get [0]
+00812895  i32.const [18]
+00812897  local.get [18]
+00812899  local.get [1]
+0081289b  local.get [0]
+0081289d  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008128a0  i32.const [3915772]
+008128a5  i32.load [2, 0]
+008128a8  call [903] ; 
+008128ab  local.set [1]
+008128ad  local.get [1]
+008128af  i32.const [0]
+008128b1  i32.const [4002336] ; METHOD HttpNetAcion.ReceiveUserAttachment
+008128b6  i32.load [2, 0]
+008128b9  i32.const [0]
+008128bb  call [1004] ; 
+008128be  local.get [0]
+008128c0  i32.const [19]
+008128c2  local.get [19]
+008128c4  local.get [1]
+008128c6  local.get [0]
+008128c8  call [2051] ; BaseHttpNetTransmitter.AddHttpProtocol
+008128cb  end []

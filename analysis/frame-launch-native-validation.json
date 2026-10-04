@@ -1,0 +1,22 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Actual GameFrameWorkMono singleton, Init and Unity SendMessage focus/pause entry points, real Time.timeScale and recovered TimeModule driven by frame Update. Inputs are deliberate test messages; OS focus behavior, actual SDK/transition/GameFrameworkLoad/Main and Player/audiovisual are not claimed.",
+    "checks": [
+        "Original singleton adds a component to existing root without moving that root to persistent scene",
+        "Native component retains original constructor defaults and independent domain list",
+        "TimeScale changes even when uninitialized Mono rejects active pause",
+        "Init publishes readiness then captures actual Unity thread and checks release SDK log support endpoint",
+        "Actual frame Update advances recovered scaled loop timer",
+        "Active pause sends real source event and TimeModule flushes elapsed before resetting timer",
+        "Native scaled frames stay frozen without repeated pause notification",
+        "Unity message dispatch updates real TimeModule focus while lower-priority resume cannot clear active pause",
+        "Explicit active resume restores timeScale but retains unfocused state",
+        "Focus gate keeps actual timer stopped after timeScale resume",
+        "Focus restoration message resumes native timer accumulation",
+        "changeTimeScale=false preserves clock while emitting source pause flush",
+        "Source pause-state alone does not freeze scaled timer when timeScale stays1",
+        "Actual TimeModule Shutdown unregisters focus callback",
+        "Destroyed singleton recreates another original-default component on surviving root"
+    ]
+}

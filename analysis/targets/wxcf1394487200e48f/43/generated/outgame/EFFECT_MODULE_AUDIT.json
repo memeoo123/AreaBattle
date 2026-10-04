@@ -1,0 +1,145 @@
+{
+  "status": "effect-module-native-lifecycle-verified-resource-and-controller-composition-pending",
+  "atUtc": "2026-10-03T13:42:47.639490+00:00",
+  "sourceEvidence": "EFFECT_MODULE_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T13:42:47.639490+00:00",
+    "scope": "Original EffectModule/Base/UI/Fly/Line configuration, roots, async loading, sorting, scaled timers, native tween, explicit/natural destruction and actual asset handles",
+    "checksPassed": 1546,
+    "newIntegratedChecks": 15,
+    "targetedChecks": 15,
+    "nativeChecks": 11,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2707,
+    "implementedLifecycleControllers": 20,
+    "remainingLifecycleControllers": 18,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameEffectModulePlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "EffectModule3483 has priority20, initializes a new configuration dictionary and sets initialized before invoking its existing completion delegate. Start/Update are empty. ReadEffectData requires the legacy config resource or modern AppSetting flag, logs source diagnostics, skips duplicate rows retaining first, and marks AlreadySetData even on null list. Clear/Shutdown do not reset initialized or AlreadySetData. Reinitialize replaces configurations but retains the read flag and live-effect dictionary.",
+      "Shared generic26809 resolves type0/default UIEffect,1 FlyEffect,2 LineEffect,3 BaseEffect. UI/Fly missing parents use UIEffectRoot under UIModule canvas; Scene uses persistent __WorldEffectRoot. Line reads input parent.position before selecting its own RectTransform root under UIModule.UIRoot, with Canvas overrideSorting=true, order100 and Top layer. Missing config logs then dereferences null; missing line parent throws. No placeholder success is returned.",
+      "CreateEffect constructs/starts before optional SetOrder and casts generic T after all creation side effects. Sorting order -9999 disables SetComponent; -1 skips explicit override. Other orders call SetOrder with Top for layer -1, otherwise SortingLayer.IDToName. Direct CreateEffect is unregistered. Show registers UID then assigns completion; completion checks captured UID but removes the argument UID. Close removes the dictionary entry BEFORE virtual Dispose. Clear enumerates live Values and disposes before clearing effects then configs; failures propagate without rollback.",
+      "BaseEffect allocates process-shared UID under a lock, sets config/local position/Euler rotation/parent/component flag then virtual Start. Minimal parent-only constructor does not allocate UID or start. Start kicks async-void load, awaits a real WaitUntil(IsLoaded||IsDisposed), then virtual Play. Loading sets IsLoaded false; modern awaits a handle and instantiates, legacy awaits already-instantiated prefab. It parents with worldPositionStays=false, applies local position/Euler angles, calls SetComponent, then marks loaded. Prefab local scale is retained.",
+      "Resource paths are Effect/ plus UI/,Fly/,Line/,Scene/ for types0..3 respectively; unknown type folder is String.Empty. Modern asset acquisition remains a required explicit service, using existing real OutgameAssetHandle for Instantiate and Release. Original1016 is UI/hdzd_eff_bxGlow with5 seconds. No original1016 visual prefab or particle equivalence is claimed by this milestone.",
+      "Source load has no disposed/cancellation/null-result guard. Early Close satisfies Await; base Play can Stop on missing object and complete, while later load still instantiates and parents a now-unregistered orphan. This source race is preserved and directly tested; fixture cleanup explicitly disposes the late orphan. It is not advertised as fixed or leak-free.",
+      "SetActive writes native active state if present then its flag. SetOrder stores layer/order first; when native object exists it writes absolute order to active child Renderers and ADDS order to active child Canvases. No inactive inclusion or overrideSorting is added. Missing native object retains pending order. SetComponent gates on component flag/object, inherits parent Canvas layer/order+1 when order=-1, otherwise only applies pending order.",
+      "Base Play stops/completes on absent native object; otherwise applies requested active state and awaits scaled WaitForSeconds for positive double duration cast tofloat. After timer it returns if disposed; otherwise Stop then completion. Zero/negative/NaN duration has no timer. Dispose sets disposed first, Destroy if native exists, then handle.Release without clearing fields or invoking completion. Destroy failure prevents release; repeated calls preserve handle warning semantics.",
+      "Fly Play sets active, rotates from Vector3.up toward target-current world position, uses DOMove(target,flyTime,false) and completes by virtual Dispose then completion. It does not use config duration or cancel tween on early Dispose. Required native Move endpoint uses existing recovered tween runner with source default ease/scaled timing in PlayMode validation.",
+      "Line helper26782 invokes BaseEffect.Play (table24616), not SetComponent. Thus Line Play starts the base duration timer, sets direction target-origin, projects both points using UIModule camera and backing LineEffectRoot, scales Y to projected distance/256 retaining X/Z, assigns world origin and active state, then starts a SECOND scaled duration timer. Its own timer has no disposed guard and calls Stop plus completion. Repeated Dispose/Release diagnostics are source behavior, verified under actual asset handle ownership.",
+      "WorldToRectLocalPoint uses backing line-root field without creating it and ignores ScreenPointToLocalPointInRectangle boolean. Module root shutdown follows child disposal then world/UI/line roots in order, nulling only after successful native destruction.",
+      "EffectCellection4221 Show fourth argument is integer sorting-layer ID0, not boolean. Interface and both previous fixture implementations are corrected while preserving original call value, order and cache semantics. The existing collection now composes with actual recovered EffectModule in validation.",
+      "Full EffectControl4058 pooling/sequence/fly controller lifecycle, general resource/config acquisition composition, original particle assets/task page1016 binding, production Main/account/platform/all remaining business and Player/original audiovisual acceptance are still pending. Controller count remains20/38.",
+      "Final integrated retains32 existing ShouldRunBehaviour assertions and one Curl35 certificate failure. Native retains one UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42; product checks and compilation pass. Initial interface compilation diagnostic and native Canvas fixture assertion failures preserved; final tests use actual parent/overrideSorting premises. No original1016 visual equivalence or full production hosts claimed."
+    ],
+    "notClaimed": "Original1016 prefab/particle resources and task-page binding, EffectControl4058 lifecycle, complete resource acquisition, production Main/account/platform, remaining18 controllers/all business, fresh Player/original audiovisual equivalence."
+  },
+  "implementation": [
+    "Scripts/OutgameEffectModule.cs",
+    "Scripts/OutgameBaseEffect.cs",
+    "Scripts/OutgameEffectCollection.cs",
+    "Editor/OutgameEffectModuleValidation.cs",
+    "Editor/OutgameEffectModulePlayModeValidation.cs",
+    "Editor/OutgameLevelReuseValidation.cs",
+    "Editor/OutgameLevelReusePlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "effect-module-config-gates-retry-duplicate-first-wins-and-read-once",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-null-config-list-and-shutdown-retain-source-read-flags",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-lazy-root-hierarchy-sorting-and-shutdown-destruction",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-missing-config-errors-before-any-effect-registration",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-async-load-parent-position-rotation-order-and-retained-scale",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-canvas-inherited-order-inactive-children-and-additive-repeat",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-minus9999-disables-component-order-but-explicit-order-still-works",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-duration-dispose-release-then-completion-removes-handle",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-close-removes-before-dispose-failure-no-auto-completion",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-early-close-does-not-cancel-original-late-load",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-legacy-route-no-handle-and-unknown-type-uses-ui-with-empty-folder",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-collection-reuses-real-module-handle-and-clears-native-children",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-clear-failure-retains-live-dictionary-and-configs",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-fly-world-target-duration-and-dispose-before-callback",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "effect-module-line-geometry-two-source-timers-and-repeated-disposal",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Original task effect1016 resolves UI path and five-second duration",
+    "Native Show publishes original effect while provider is pending",
+    "Actual WaitUntil resumes Play after parenting and inherited canvas order",
+    "Original WaitForSeconds remains paused at timeScale zero",
+    "Five scaled seconds dispose native object, release real handle and unregister effect",
+    "Explicit native Close removes registration and releases handle immediately",
+    "Native Object.Destroy completes on subsequent frame",
+    "Original early-close race retains late-load orphan and unreleased newly acquired handle",
+    "Recovered fly effect uses actual scaled native tween and releases on completion",
+    "Native line uses parent world origin, UI-projected distance over256 and original direction",
+    "Original line timer still disposes after explicit close; actual handle prevents second provider release and reports repeated release"
+  ],
+  "remaining": "Acquire and reconstruct original Effect/UI/hdzd_eff_bxGlow effect1016 prefab/particles and dependencies, compose actual modern/legacy effect/config resources with task page/liveness and collection owners. Recover complete EffectControl4058 NormalPool/sequence/fly lifecycle. Continue production Main/account/login/platform/all remaining18 controllers and business, final Player and original audiovisual acceptance."
+}

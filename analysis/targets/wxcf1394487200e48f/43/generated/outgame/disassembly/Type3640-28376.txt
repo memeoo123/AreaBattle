@@ -1,0 +1,52 @@
+; Original class: Pu¯z
+; Type3640..ctor; wasmcode function 9876; offset=4735283 size=121
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 126)]
+00484136  local.get [1]
+00484138  i32.eqz []
+00484139  if [-64]
+0048413b    i32.const [3932324]
+00484140    call [902] ; 
+00484143    call [903] ; 
+00484146    local.set [0]
+00484148    local.get [0]
+0048414a    i32.const [4078696] ; STRING "Web request agent helper is invalid."
+0048414f    call [902] ; 
+00484152    i32.const [0]
+00484154    i32.const [10659] ; TABLE GameFrameworkException..ctor
+00484158    global.set [3]
+0048415a    i32.const [10659] ; TABLE GameFrameworkException..ctor
+0048415e    call_indirect [2, 0]
+00484161    local.get [0]
+00484163    i32.const [4026192] ; METHOD Pu¯z..ctor
+00484168    call [902] ; 
+0048416b    i32.const [1106]
+0048416e    global.set [3]
+00484170    i32.const [1106]
+00484173    call_indirect [0, 0]
+00484176    unreachable []
+00484177  end []
+00484178  local.get [0]
+0048417a  local.get [1]
+0048417c  i32.store [2, 8]
+0048417f  local.get [0]
+00484181  i32.const [0]
+00484183  i32.store [2, 12]
+00484186  i64.const [0]
+00484188  local.set [3]
+0048418a  local.get [0]
+0048418c  local.get [3]
+0048418e  i32.wrap_i64 []
+0048418f  i32.store [2, 16]
+00484192  local.get [0]
+00484194  local.get [3]
+00484196  i64.const [32]
+00484198  i64.shr_u []
+00484199  i32.wrap_i64 []
+0048419a  i32.store [2, 20]
+0048419d  local.get [0]
+0048419f  i32.const [0]
+004841a1  i32.store [2, 24]
+004841a4  local.get [0]
+004841a6  i32.const [0]
+004841a8  i32.store [2, 28]
+004841ab  end []

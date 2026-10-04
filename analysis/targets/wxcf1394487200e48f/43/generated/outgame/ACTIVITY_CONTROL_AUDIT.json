@@ -1,0 +1,144 @@
+{
+  "status": "common-control-runtime-verified-concrete-gameplay-pending",
+  "atUtc": "2026-10-03T10:07:31.493146+00:00",
+  "sourceEvidence": "ACTIVITY_CONTROL_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T10:07:31.493146+00:00",
+    "scope": "Complete common ActivityControl registration/data readiness/widgets/popups/update/daily/item hooks/report ordering and real configuration/offline manager/FSM runtime",
+    "checksPassed": 1292,
+    "newIntegratedChecks": 16,
+    "targetedChecks": 16,
+    "freshPlayModeRun": true,
+    "nativeChecks": 13,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2329,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameActivityControlPlayModeValidation.Run"
+    ],
+    "observedBoundaries": [
+      "All36 original ActivityControl methods restored through34 normal bodies/two shared generic implementations, plus nested comparators/empty init DTO/attribute/parent-report cache. Source43 normal bodies,2 shared generics,44 fields; metadata Type.Equals slot126 corrected and explicitly tested separately from IsSubclassOf slot21. Method index5873.",
+      "Actual full original config roster/offline compressed storage/pool/statistics/FSM graph works through Control.Init. Reflection parent/child/pending override, duplicate/null failures, exact-base child refresh, real UGUI area/sibling/listener arrangement and common item factory hook validated. Source global hook retained on cleanup, remove+append deduplicates repeated Init; fresh manager can differ from earlier pool duplicate.",
+      "Popup queues use signed descending priorities and exact UI types. Automatic notice marks before UI call, dirties current owner, removes one item after success; failure retains queue. Forward close removal skips adjacent matches and automatic popup can retain blocking NoticeUi reference, matching original.",
+      "Launch/Warm/Over virtual hooks, captured/reread Data timestamps, stats reset, mutable report payload initialization/message/delivery ordering match source. Parent-report cache preserves missing-parent separators. Reports/UI delivery remain explicit required app endpoints; no platform success fabricated.",
+      "Minute and daily counters preserve callback-sensitive row rereads, signed truncation and unchecked overflow. Update subtracts60 once and activity dirty clears after successful IO; pool disable and actual changed-payload write failure covered. Initial unchanged-payload failure test corrected for SDK write deduplication; initial compile/runtime logs retained.",
+      "Native13 on final code covers real UpdateManager frames, source state transitions, Unity pointer clicks, automatic popup and reentrant OpenUI, source CloseUI retention, compressed save and independent owner restart, cleanup and over/close. Scheduler registration captured explicitly in these fixtures; prior native daily scheduler evidence remains separate.",
+      "Integrated1292 pass with32 existing ShouldRunBehaviour assertions and one Curl42 shutdown abort, zero compiler errors. Native log retains one UnityEditor.Search startup ArgumentOutOfRangeException;13 product checks pass. Source2329 inputs match validation copy. Controller lifecycle remains18/38 because shared ActivityControl is outside LogicModule roster."
+    ],
+    "notClaimed": "Concrete activity subclasses/managers/factories/business UI/rewards and SevenDay/ProcedurePreLoad/Main assembly, remaining20 controllers, real report/UI/platform/account delivery, original-page audiovisual acceptance or new Player build."
+  },
+  "implementation": [
+    "Scripts/OutgameActivityControl.cs",
+    "Scripts/OutgameActivityRuntime.cs",
+    "Editor/OutgameActivityControlValidation.cs",
+    "Editor/OutgameActivityControlPlayModeValidation.cs"
+  ],
+  "checks": [
+    {
+      "id": "activity-control-real-original-config-and-offline-owner-graph",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-real-state-cycle-report-pop-and-file-restart",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-reflection-parent-child-and-pending-override",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-data-ready-last-row-wins-and-exact-base-child-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-popup-priority-exact-type-and-adjacent-close-skip",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-popup-failure-prefix-current-owner-and-retained-ui",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-bind-ui-launch-and-null-widget-semantics",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-statistics-live-row-after-clock-and-signed-minutes",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-daily-live-row-overflow-and-no-dirty",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-update-single-minute-subtraction-and-save-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-report-order-captured-data-and-mutable-owner",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-parent-report-cache-missing-trailing-separator",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-widget-area-sort-rebind-and-null-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-cleanup-retained-fields-hook-and-failure-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-item-hook-parent-first-immediate-children-and-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-control-reinit-hook-dedup-and-registration-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Actual ActivityControl/config/offline manager/FSM, native UpdateManager, Button pointer dispatch, popup lifecycle messages, compressed file save/restart and cleanup. Original page assets/report delivery/account/Main/concrete activity gameplay/Player remain pending; scheduler registration uses an explicit captured endpoint.",
+    "checks": [
+      "Native initialization loads full custom config roster, publishes offline activity and hides closed button",
+      "Actual Unity UpdateManager saves initial dirty activity without manual control.Update",
+      "Actual statistics event invokes control notice report/timestamp and FSM widget updates",
+      "Native pointer-click dispatch opens bound notice UI through recovered activity callback",
+      "Native control Update automatically opens queued popup, handles reentrant OpenUI, dequeues and saves flag",
+      "Original automatic popup close retains UI reference after queue was removed",
+      "Native launch transition resets warm timestamp, queues launch and hides description",
+      "Native launch pointer listener replaced notice listener",
+      "Launch data saved by subsequent native update frames",
+      "Controller cleanup destroys recovered activity FSM and removes its frame subscription",
+      "Independent owner graph restores compressed activity state, timestamp and popup flag",
+      "Native over transition dispatches completion report endpoint and clears timestamps",
+      "Native close transition resets popup flags and hides button"
+    ]
+  },
+  "remaining": "Restore attributed concrete activity inheritance/manager/factory roster, FatherActivityBase/ChildActivityBase and ChildLimitTimeTaskActivity4698; bind SevenDay.EnterGameInit and ProcedurePreLoad to actual shared activity runtime. Finish production Main/account/SDK/HTTP/scene hosts, remaining20 LogicModule controllers/all gameplay/shop/rewards/return and Player/audiovisual acceptance."
+}

@@ -1,0 +1,93 @@
+; Original class: ActivityCloseState
+; Type4662.Q}[bO; wasmcode function 20986; offset=9460754 size=258
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+00905c13  i32.const [5001344]
+00905c18  i32.load8_u [0, 0]
+00905c1b  i32.eqz []
+00905c1c  if [-64]
+00905c1e    i32.const [3989352]
+00905c23    call [900] ; 
+00905c26    i32.const [3968456]
+00905c2b    call [900] ; 
+00905c2e    i32.const [3922400]
+00905c33    call [900] ; 
+00905c36    i32.const [5001344]
+00905c3b    i32.const [1]
+00905c3d    i32.store8 [0, 0]
+00905c40  end []
+00905c41  block [-64]
+00905c43    local.get [0]
+00905c45    i32.load8_u [0, 16]
+00905c48    br_if [0]
+00905c4a    local.get [0]
+00905c4c    i32.const [1]
+00905c4e    i32.const [3922400]
+00905c53    i32.load [2, 0]
+00905c56    local.get [0]
+00905c58    i32.load [2, 12]
+00905c5b    call [918] ; 
+00905c5e    i32.load [2, 60]
+00905c61    i32.load [2, 80]
+00905c64    i32.const [1]
+00905c66    i32.const [3922400]
+00905c6b    i32.load [2, 0]
+00905c6e    local.get [0]
+00905c70    i32.load [2, 12]
+00905c73    call [918] ; 
+00905c76    i32.load [2, 20]
+00905c79    i32.const [0]
+00905c7b    call [3011] ; ActivityItemData.get_CloseCondition
+00905c7e    local.get [0]
+00905c80    call [2011] ; ActivityStateBase.lnUs^X
+00905c83    br_if [0]
+00905c85    local.get [0]
+00905c87    i32.const [1]
+00905c89    i32.const [3922400]
+00905c8e    i32.load [2, 0]
+00905c91    local.get [0]
+00905c93    i32.load [2, 12]
+00905c96    call [918] ; 
+00905c99    i32.load [2, 60]
+00905c9c    i32.load [2, 64]
+00905c9f    i32.const [1]
+00905ca1    i32.const [3922400]
+00905ca6    i32.load [2, 0]
+00905ca9    local.get [0]
+00905cab    i32.load [2, 12]
+00905cae    call [918] ; 
+00905cb1    i32.load [2, 20]
+00905cb4    i32.const [0]
+00905cb6    call [4541] ; ActivityItemData.get_LaunchCondition
+00905cb9    local.get [0]
+00905cbb    call [2011] ; ActivityStateBase.lnUs^X
+00905cbe    i32.eqz []
+00905cbf    br_if [0]
+00905cc1    i32.const [0]
+00905cc3    call [1484] ; ActivityControl.get_I
+00905cc6    i32.const [1]
+00905cc8    i32.const [3922400]
+00905ccd    i32.load [2, 0]
+00905cd0    local.get [0]
+00905cd2    i32.load [2, 12]
+00905cd5    call [918] ; 
+00905cd8    i32.const [1]
+00905cda    i32.const [3922400]
+00905cdf    i32.load [2, 0]
+00905ce2    local.get [0]
+00905ce4    i32.load [2, 12]
+00905ce7    call [918] ; 
+00905cea    i32.load [2, 60]
+00905ced    i32.load [2, 8]
+00905cf0    i32.const [0]
+00905cf2    call [5239] ; ActivityControl.hToytg
+00905cf5    local.get [0]
+00905cf7    local.get [0]
+00905cf9    i32.load [2, 12]
+00905cfc    i32.const [3989352]
+00905d01    i32.load [2, 0]
+00905d04    call [1032] ; 
+00905d07    i32.const [3968456]
+00905d0c    i32.load [2, 0]
+00905d0f    call [1569] ; 
+00905d12  end []
+00905d13  end []

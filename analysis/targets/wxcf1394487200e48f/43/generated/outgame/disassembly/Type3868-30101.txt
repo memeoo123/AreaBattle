@@ -1,0 +1,151 @@
+; Original class: DynamicList
+; Type3868.Awake; wasmcode function 19852; offset=8920667 size=443
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+00881e5e  i32.const [5025240]
+00881e63  i32.load8_u [0, 0]
+00881e66  i32.eqz []
+00881e67  if [-64]
+00881e69    i32.const [3929208]
+00881e6e    call [900] ; 
+00881e71    i32.const [3997144] ; METHOD DynamicList.}kyP|vv
+00881e76    call [900] ; 
+00881e79    i32.const [3997132] ; METHOD DynamicList.VeQWL
+00881e7e    call [900] ; 
+00881e81    i32.const [3926996]
+00881e86    call [900] ; 
+00881e89    i32.const [3936516]
+00881e8e    call [900] ; 
+00881e91    i32.const [3926000]
+00881e96    call [900] ; 
+00881e99    i32.const [3925992]
+00881e9e    call [900] ; 
+00881ea1    i32.const [3987012]
+00881ea6    call [900] ; 
+00881ea9    i32.const [3986980]
+00881eae    call [900] ; 
+00881eb1    i32.const [4051904] ; STRING "DynamicList组件prefabItem为空"
+00881eb6    call [900] ; 
+00881eb9    i32.const [5025240]
+00881ebe    i32.const [1]
+00881ec0    i32.store8 [0, 0]
+00881ec3  end []
+00881ec4  local.get [0]
+00881ec6  local.get [0]
+00881ec8  call [7942] ; DynamicList.jSjcq
+00881ecb  local.get [0]
+00881ecd  i32.load [2, 12]
+00881ed0  i32.load [2, 68]
+00881ed3  local.set [1]
+00881ed5  i32.const [3926000]
+00881eda  i32.load [2, 0]
+00881edd  call [903] ; 
+00881ee0  local.set [2]
+00881ee2  local.get [2]
+00881ee4  local.get [0]
+00881ee6  i32.const [3997144] ; METHOD DynamicList.}kyP|vv
+00881eeb  i32.load [2, 0]
+00881eee  call [1224] ; 
+00881ef1  local.get [1]
+00881ef3  local.get [2]
+00881ef5  i32.const [3987012]
+00881efa  i32.load [2, 0]
+00881efd  call [1546] ; 
+00881f00  local.get [0]
+00881f02  i32.load [2, 12]
+00881f05  i32.load [2, 44]
+00881f08  local.set [1]
+00881f0a  i32.const [3936516]
+00881f0f  i32.load [2, 0]
+00881f12  call [901] ; 
+00881f15  local.get [1]
+00881f17  i32.const [0]
+00881f19  i32.const [0]
+00881f1b  call [946] ; Object.op_Inequality
+00881f1e  if [-64]
+00881f20    local.get [0]
+00881f22    i32.load [2, 12]
+00881f25    i32.load [2, 44]
+00881f28    i32.load [2, 196]
+00881f2c    local.set [1]
+00881f2e    i32.const [3925992]
+00881f33    i32.load [2, 0]
+00881f36    call [903] ; 
+00881f39    local.set [2]
+00881f3b    local.get [2]
+00881f3d    local.get [0]
+00881f3f    i32.const [3997132] ; METHOD DynamicList.VeQWL
+00881f44    i32.load [2, 0]
+00881f47    call [1224] ; 
+00881f4a    local.get [1]
+00881f4c    local.get [2]
+00881f4e    i32.const [3986980]
+00881f53    i32.load [2, 0]
+00881f56    call [1546] ; 
+00881f59  end []
+00881f5a  local.get [0]
+00881f5c  i32.load [2, 12]
+00881f5f  i32.load [2, 48]
+00881f62  local.set [1]
+00881f64  i32.const [3936516]
+00881f69  i32.load [2, 0]
+00881f6c  call [901] ; 
+00881f6f  local.get [1]
+00881f71  i32.const [0]
+00881f73  i32.const [0]
+00881f75  call [946] ; Object.op_Inequality
+00881f78  if [-64]
+00881f7a    local.get [0]
+00881f7c    i32.load [2, 12]
+00881f7f    i32.load [2, 48]
+00881f82    i32.load [2, 196]
+00881f86    local.set [1]
+00881f88    i32.const [3925992]
+00881f8d    i32.load [2, 0]
+00881f90    call [903] ; 
+00881f93    local.set [2]
+00881f95    local.get [2]
+00881f97    local.get [0]
+00881f99    i32.const [3997132] ; METHOD DynamicList.VeQWL
+00881f9e    i32.load [2, 0]
+00881fa1    call [1224] ; 
+00881fa4    local.get [1]
+00881fa6    local.get [2]
+00881fa8    i32.const [3986980]
+00881fad    i32.load [2, 0]
+00881fb0    call [1546] ; 
+00881fb3  end []
+00881fb4  local.get [0]
+00881fb6  i32.load [2, 32]
+00881fb9  local.set [0]
+00881fbb  i32.const [3936516]
+00881fc0  i32.load [2, 0]
+00881fc3  call [901] ; 
+00881fc6  local.get [0]
+00881fc8  i32.const [0]
+00881fca  i32.const [0]
+00881fcc  call [940] ; Object.op_Equality
+00881fcf  if [-64]
+00881fd1    i32.const [3926996]
+00881fd6    i32.load [2, 0]
+00881fd9    i32.const [1]
+00881fdb    call [909] ; 
+00881fde    local.set [0]
+00881fe0    local.get [0]
+00881fe2    i32.const [4051904] ; STRING "DynamicList组件prefabItem为空"
+00881fe7    i32.load [2, 0]
+00881fea    call [905] ; 
+00881fed    local.get [0]
+00881fef    i32.const [4051904] ; STRING "DynamicList组件prefabItem为空"
+00881ff4    i32.load [2, 0]
+00881ff7    i32.store [2, 16]
+00881ffa    i32.const [3929208]
+00881fff    i32.load [2, 0]
+00882002    call [901] ; 
+00882005    local.get [0]
+00882007    i32.const [0]
+00882009    i32.const [2087] ; TABLE CLog.Error
+0088200c    global.set [3]
+0088200e    i32.const [2087] ; TABLE CLog.Error
+00882011    call_indirect [0, 0]
+00882014  end []
+00882015  end []

@@ -1,0 +1,65 @@
+; Original class: DailyTaskSubUI
+; Type3988.jqobST; wasmcode function 20031; offset=9005395 size=178
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[(1, 126)]
+00896956  i32.const [5010195]
+0089695b  i32.load8_u [0, 0]
+0089695e  i32.eqz []
+0089695f  if [-64]
+00896961    i32.const [3944708]
+00896966    call [900] ;
+00896969    i32.const [3934404]
+0089696e    call [900] ;
+00896971    i32.const [3934412]
+00896976    call [900] ;
+00896979    i32.const [3940172]
+0089697e    call [900] ;
+00896981    i32.const [5010195]
+00896986    i32.const [1]
+00896988    i32.store8 [0, 0]
+0089698b  end []
+0089698c  block [-64]
+0089698e    local.get [0]
+00896990    i32.load [2, 8]
+00896993    i32.eqz []
+00896994    br_if [0]
+00896996    local.get [1]
+00896998    i32.load [2, 16]
+0089699b    i32.const [3934404]
+008969a0    i32.load [2, 0]
+008969a3    call [920] ;
+008969a6    i32.load [2, 0]
+008969a9    local.set [2]
+008969ab    local.get [1]
+008969ad    i32.load [2, 20]
+008969b0    i32.const [3934412]
+008969b5    i32.load [2, 0]
+008969b8    call [920] ;
+008969bb    i64.load [3, 0]
+008969be    local.set [3]
+008969c0    i32.const [3944708]
+008969c5    i32.load [2, 0]
+008969c8    call [901] ;
+008969cb    local.get [2]
+008969cd    i32.const [3944708]
+008969d2    i32.load [2, 0]
+008969d5    i32.load [2, 92]
+008969d8    i32.load [2, 0]
+008969db    i32.ne []
+008969dc    br_if [0]
+008969de    i32.const [3940172]
+008969e3    i32.load [2, 0]
+008969e6    call [901] ;
+008969e9    local.get [3]
+008969eb    i64.const [1000]
+008969ee    i64.div_s []
+008969ef    i32.wrap_i64 []
+008969f0    i32.const [0]
+008969f2    call [7027] ; TimeHelper.ToHHMMSS
+008969f5    local.set [1]
+008969f7    local.get [0]
+008969f9    i32.load [2, 8]
+008969fc    local.get [1]
+008969fe    i32.const [0]
+00896a00    call [10171] ; TaskPanelUI.^|`rnk
+00896a03  end []
+00896a04  end []

@@ -1,0 +1,50 @@
+; Original class: ReferencePool
+; Type4142.Release; wasmcode function 7370; offset=2911127 size=127
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+002c6b98  i32.const [5010232]
+002c6b9d  i32.load8_u [0, 0]
+002c6ba0  i32.eqz []
+002c6ba1  if [-64]
+002c6ba3    i32.const [3937756]
+002c6ba8    call [900] ; 
+002c6bab    i32.const [5010232]
+002c6bb0    i32.const [1]
+002c6bb2    i32.store8 [0, 0]
+002c6bb5  end []
+002c6bb6  local.get [0]
+002c6bb8  i32.eqz []
+002c6bb9  if [-64]
+002c6bbb    i32.const [3931644]
+002c6bc0    call [902] ; 
+002c6bc3    call [903] ; 
+002c6bc6    local.set [0]
+002c6bc8    local.get [0]
+002c6bca    i32.const [4067196] ; STRING "Reference is invalid."
+002c6bcf    call [902] ; 
+002c6bd2    i32.const [0]
+002c6bd4    call [1096] ; Exception..ctor
+002c6bd7    local.get [0]
+002c6bd9    i32.const [4010804] ; METHOD ReferencePool.Release
+002c6bde    call [902] ; 
+002c6be1    i32.const [1106]
+002c6be4    global.set [3]
+002c6be6    i32.const [1106]
+002c6be9    call_indirect [0, 0]
+002c6bec    unreachable []
+002c6bed  end []
+002c6bee  local.get [0]
+002c6bf0  call [962] ; 
+002c6bf3  local.set [1]
+002c6bf5  i32.const [3937756]
+002c6bfa  i32.load [2, 0]
+002c6bfd  call [901] ; 
+002c6c00  local.get [1]
+002c6c02  local.get [0]
+002c6c04  call [10892] ; ReferencePool.tk|Y^N
+002c6c07  local.get [1]
+002c6c09  local.get [0]
+002c6c0b  call [7368] ; ReferencePool.hQWw
+002c6c0e  local.get [0]
+002c6c10  local.get [0]
+002c6c12  call [9916] ; ]|kP.Release
+002c6c15  end []

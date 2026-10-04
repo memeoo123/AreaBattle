@@ -1,0 +1,17 @@
+; Original class: GameStatisticsExpansion
+; Type4618.ResetEventCount; wasmcode function 3942; offset=1250676 size=32
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00131575  local.get [0]
+00131577  call [1493] ; GameStatisticsControl.get_I
+0013157a  if [-64]
+0013157c    local.get [0]
+0013157e    call [1493] ; GameStatisticsControl.get_I
+00131581    local.get [0]
+00131583    local.get [0]
+00131585    call [12117] ; GameStatisticsControl.ResetEventCount
+00131588    local.get [0]
+0013158a    call [1493] ; GameStatisticsControl.get_I
+0013158d    i32.const [1]
+0013158f    i32.store8 [0, 21]
+00131592  end []
+00131593  end []

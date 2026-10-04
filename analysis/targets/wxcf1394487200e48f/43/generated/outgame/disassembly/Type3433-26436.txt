@@ -1,0 +1,18 @@
+; Original class: GameFrameEntry
+; Type3433.PauseGame; wasmcode function 12170; offset=5902611 size=37
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+005a1114  local.get [1]
+005a1116  if [-64]
+005a1118    f32.const [0.0]
+005a111d    f32.const [1.0]
+005a1122    local.get [0]
+005a1124    select []
+005a1125    i32.const [0]
+005a1127    call [2762] ; Time.set_timeScale
+005a112a  end []
+005a112b  local.get [0]
+005a112d  call [2819] ; GameFrameWorkMono.`[zU
+005a1130  local.get [0]
+005a1132  local.get [0]
+005a1134  call [12166] ; GameFrameWorkMono.»qz°±
+005a1137  end []

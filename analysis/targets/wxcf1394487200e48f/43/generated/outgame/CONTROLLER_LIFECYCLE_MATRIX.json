@@ -4,7 +4,7 @@
   "metadataSha256": "7020f69737a55618a0846cb415e26e8bc81f39257db4cc9ac38c84bbd51c7717",
   "memorySha256": "b87eaa462507493f30f18e235442825e84d906b52392baf8a119171519dd0f77",
   "methodCount": 114,
-  "implementedLifecycleControllers": 14,
+  "implementedLifecycleControllers": 22,
   "binding": "OutgameCoreControllerBindings.cs",
   "emptyBodies": 31,
   "correction": "Type4561 declares all three slots explicitly as GameFramework.IControl.*; these are not inherited ControlBase lifecycle methods. ControlBase`1 declares only get_I and ctor.",
@@ -631,8 +631,8 @@
           "namedCalls": [
             "ConfigMgr.get_Instance"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBattleControl.cs"
         },
         {
           "slot": 5,
@@ -653,8 +653,8 @@
           "evidence": "disassembly/Type4060-31246.txt",
           "sha256": "8aa2615c9721582a322d0e48a94c81831499e6fc4870c7c6c162a5d6d21e3bed",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBattleControl.cs"
         },
         {
           "slot": 6,
@@ -675,8 +675,8 @@
           "evidence": "disassembly/Type4060-31250.txt",
           "sha256": "1fe8664d38dd39e2849826d45afb28b4be653d38c7520298540f58b76210a0ad",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameBattleControl.cs"
         }
       ]
     },
@@ -743,8 +743,8 @@
           "namedCalls": [
             "NormalPool.CreateObjectPool"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameEffectControl.cs"
         },
         {
           "slot": 5,
@@ -767,8 +767,8 @@
           "namedCalls": [
             "Time.get_time"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameEffectControl.cs"
         },
         {
           "slot": 6,
@@ -791,8 +791,8 @@
           "namedCalls": [
             "EffectControl.DestoryPool"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameEffectControl.cs"
         }
       ]
     },
@@ -1213,8 +1213,8 @@
             "MsgDispatcher.AddEventListener",
             "GameStatisticsExpansion.RegisteredValueFunc"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameTaskControl.cs"
         },
         {
           "slot": 5,
@@ -1235,8 +1235,8 @@
           "evidence": "disassembly/Type4507-34425.txt",
           "sha256": "fc5fea47f4065eb8a360eee5fc0d04e46d79a69ebc18522da352f0fd3dafc696",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameTaskControl.cs"
         },
         {
           "slot": 6,
@@ -1257,8 +1257,8 @@
           "evidence": "disassembly/Type4507-34433.txt",
           "sha256": "ff30120b1e82d2f9f4d4f9c7d4d0a1f868c61b78c6123b6754d077ad3a53cd84",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameTaskControl.cs"
         }
       ]
     },
@@ -2687,8 +2687,8 @@
             "DataManagerPool.get_Instance",
             "UserInfoManager.CheckInstallVersion"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUserInfoControl.cs"
         },
         {
           "slot": 5,
@@ -2709,8 +2709,8 @@
           "evidence": "disassembly/Type4228-32213.txt",
           "sha256": "2f1ae354364ce098c042c3f733a4714e515d565b659553579e24229c224441ee",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUserInfoControl.cs"
         },
         {
           "slot": 6,
@@ -2731,8 +2731,8 @@
           "evidence": "disassembly/Type4228-32203.txt",
           "sha256": "82fee2996b4aadde9a46dc30a0f0eda24c14e1cb68b83358610f6483653b7568",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameUserInfoControl.cs"
         }
       ]
     },
@@ -2804,8 +2804,8 @@
             "RankControl.InitPlayerRank",
             "RankControl.InitHomeInfo"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRankControl.cs"
         },
         {
           "slot": 5,
@@ -2826,8 +2826,8 @@
           "evidence": "disassembly/Type4134-31672.txt",
           "sha256": "4a3bb42a4b15a055a8a269cdb79d046a78110316bca7ed1d6e6971c15fb40828",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRankControl.cs"
         },
         {
           "slot": 6,
@@ -2848,8 +2848,8 @@
           "evidence": "disassembly/Type4134-31682.txt",
           "sha256": "5f369f5543caaa6e3f7e2ba38b5b6078c8801418facac2edf8858fe29d328ab8",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRankControl.cs"
         }
       ]
     },
@@ -3365,8 +3365,8 @@
           "evidence": "disassembly/Type4453-34169.txt",
           "sha256": "fda5e6e758f61856b5769db0686c36e94816300a107eac89e4ccc26069cc7a44",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRedDotControl.cs"
         },
         {
           "slot": 5,
@@ -3389,8 +3389,8 @@
           "namedCalls": [
             "RedDotControl.]^mmWf{"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRedDotControl.cs"
         },
         {
           "slot": 6,
@@ -3411,8 +3411,8 @@
           "evidence": "disassembly/Type4453-34166.txt",
           "sha256": "58068720012b235e83628ba20815ee296cc54632a71bb069b0ccdf5c27cca320",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameRedDotControl.cs"
         }
       ]
     },
@@ -3947,8 +3947,8 @@
           "namedCalls": [
             "DataManagerPool.get_Instance"
           ],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGuideBookControl.cs"
         },
         {
           "slot": 5,
@@ -3969,8 +3969,8 @@
           "evidence": "disassembly/Type4076-31334.txt",
           "sha256": "58c5bdd485f4f9ffa964a030a15214cd50905c9e4a47521b0544e5bbbf42ca31",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGuideBookControl.cs"
         },
         {
           "slot": 6,
@@ -3991,8 +3991,8 @@
           "evidence": "disassembly/Type4076-31332.txt",
           "sha256": "f627ce71cc77a297c2ae8fc774c0d988ab75184c3d7c584f6123e76707328452",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameGuideBookControl.cs"
         }
       ]
     },
@@ -4057,8 +4057,8 @@
           "evidence": "disassembly/Type4502-34358.txt",
           "sha256": "588a9e6f4c8c6d2d1fd78e7fcf16c1975139c3d99f02f742c2158968950162be",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameSevendayActivityControl.cs"
         },
         {
           "slot": 5,
@@ -4079,8 +4079,8 @@
           "evidence": "disassembly/Type4502-34361.txt",
           "sha256": "b7f5ab595b9c3e4e89ecb25b642be41b39dbf976664caa4156dc2af59402ef31",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameSevendayActivityControl.cs"
         },
         {
           "slot": 6,
@@ -4101,8 +4101,8 @@
           "evidence": "disassembly/Type4502-34357.txt",
           "sha256": "01c3762f07b1244a596f522297c6f90a28b7fba4738555e51b1dcf0b76cc4d5d",
           "namedCalls": [],
-          "implementationStatus": "not-yet-bound-to-production-resolver",
-          "implementation": null
+          "implementationStatus": "implemented-in-core-controller-bindings",
+          "implementation": "OutgameSevendayActivityControl.cs"
         }
       ]
     },

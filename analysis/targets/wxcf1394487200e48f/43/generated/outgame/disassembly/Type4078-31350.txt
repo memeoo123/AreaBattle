@@ -1,0 +1,22 @@
+; Original class: GuideBookDataManager
+; Type4078.ContainsTip; wasmcode function 11900; offset=5824993 size=54
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[]
+0058e1e2  i32.const [5008417]
+0058e1e7  i32.load8_u [0, 0]
+0058e1ea  i32.eqz []
+0058e1eb  if [-64]
+0058e1ed    i32.const [3974460]
+0058e1f2    call [900] ; 
+0058e1f5    i32.const [5008417]
+0058e1fa    i32.const [1]
+0058e1fc    i32.store8 [0, 0]
+0058e1ff  end []
+0058e200  local.get [0]
+0058e202  i32.load [2, 20]
+0058e205  i32.load [2, 12]
+0058e208  local.get [1]
+0058e20a  i32.const [3974460]
+0058e20f  i32.load [2, 0]
+0058e212  call [1425] ; 
+0058e215  return []
+0058e216  end []

@@ -1,0 +1,23 @@
+; Original shared generic: DynamicListProvider`1.LrMPZY
+; DynamicListGeneric.LrMPZY; wasmcode function 19853; offset=8921111 size=55
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00882018  i32.const [5014174]
+0088201d  i32.load8_u [0, 0]
+00882020  i32.eqz []
+00882021  if [-64]
+00882023    i32.const [3931280]
+00882028    call [900] ; 
+0088202b    i32.const [5014174]
+00882030    i32.const [1]
+00882032    i32.store8 [0, 0]
+00882035  end []
+00882036  i32.const [3931280]
+0088203b  i32.load [2, 0]
+0088203e  call [903] ; 
+00882041  local.set [1]
+00882043  local.get [1]
+00882045  local.get [0]
+00882047  i32.store [2, 8]
+0088204a  local.get [1]
+0088204c  return []
+0088204d  end []

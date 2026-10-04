@@ -1,0 +1,24 @@
+; Original class: ChildTaskData
+; Type4687.get_Config; wasmcode function 2046; offset=623861 size=45
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+000984f6  local.get [0]
+000984f8  i32.load [2, 20]
+000984fb  local.set [1]
+000984fd  local.get [1]
+000984ff  i32.eqz []
+00098500  if [-64]
+00098502    local.get [0]
+00098504    i32.const [0]
+00098506    call [1189] ; ActivityConfigMgr.get_I
+00098509    local.get [0]
+0009850b    i32.load [2, 8]
+0009850e    i32.const [0]
+00098510    call [13369] ; ActivityConfigMgr.GetTaskActivityConfig
+00098513    i32.store [2, 20]
+00098516    local.get [0]
+00098518    i32.load [2, 20]
+0009851b    local.set [1]
+0009851d  end []
+0009851e  local.get [1]
+00098520  return []
+00098521  end []

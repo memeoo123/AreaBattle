@@ -1,0 +1,12 @@
+; Original class: NoviceAccRewardItemData
+; Type4705.get_limitTaskActivityConfig; wasmcode function 7510; offset=3614820 size=20
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+00372865  i32.const [0]
+00372867  call [1189] ; ActivityConfigMgr.get_I
+0037286a  local.get [0]
+0037286c  local.get [0]
+0037286e  call [7512] ; NoviceAccRewardItemData.get_activityId
+00372871  i32.const [0]
+00372873  call [4029] ; ActivityConfigMgr.GetLimitTaskActivityConfig
+00372876  return []
+00372877  end []

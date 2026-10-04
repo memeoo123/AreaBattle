@@ -1,6 +1,6 @@
 {
     "schemaVersion": "1.0",
-    "unityVersion": "6000.0.68f1",
+    "unityVersion": "6000.3.7f1",
     "passed": true,
     "checks": [
         {
@@ -210,6 +210,3431 @@
         },
         {
             "id": "cut-retains-inflight-soldier-and-clock",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-default-exact-zero-and-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-parse-failure-and-whitespace-zero",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-empty-retry-and-rd-null-string-concat",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-log-failure-before-query",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-query-failure-does-not-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-domain-final-log-failure-retains-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-key-decoder-independent-known-vectors",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-key-malformed-base64-null-and-short-payload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-key-length-parse-and-bounds-errors",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-key-error-log-exception-propagates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-source-url-flag-ignored-global-snapshot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-all-eighteen-protocols-and-captured-actions",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-queue-overwrite-without-reset-and-fourth-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-new-batch-restarts-three-update-delay",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-null-key-does-not-arm-upload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-send-failure-leaves-data-and-clears-pending",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-disposed-flush-clears-data-without-send",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-reentrant-submit-before-dictionary-replacement",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-immediate-upload-alias-and-return-value",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-request-routing-and-json-field-shapes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-server-time-bypasses-encryption-login-uses-aes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-version-pool-filter-order-and-duplicates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "login-transport-version-pool-null-and-mutation-propagate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-init-log-before-pool-and-source-defaults",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-invalid-url-before-helper-and-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-headers-log-before-mutation-and-queue-snapshot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-capacity-boundary-orphan-helper-and-pending-request",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-null-helper-and-initialize-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-object-json-default-priority-and-user-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-serialization-error-fallback-and-error-handler-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-priority-object-overload-does-not-catch-serializer",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-string-overload-inverted-null-empty-nonempty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-success-event-field-lifetime-and-fresh-allocation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-failure-callback-throw-retains-event-and-undone-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-start-callback-throw-keeps-working-and-waiting",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-debug-counts-warn-after-limit-toast-once",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-debug-warning-failure-before-count-and-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-debug-clock-ke-wan-gate-and-reset-on-next-request",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-large-object-byte-threshold-debug-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-shutdown-pool-before-singleton-before-destroy",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-manager-source-empty-node-error",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-stable-priority-order-and-working-first-info",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-priority-change-only-waiting-and-equal-no-reorder",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-completion-clears-next-tick-and-starts-next-without-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-start-outcomes-recycle-or-retain",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-start-exception-keeps-both-queue-references",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-pause-gates-updates-dispatch-and-expiry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-free-expiry-scaled-inclusive-and-return-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-capacity-is-manager-policy-not-pool-cap",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-cancel-waiting-before-active-and-clear-no-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-remove-all-failure-preserves-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-shutdown-failure-keeps-current-free-agent",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-start-reentry-new-tail-waits-until-next-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-original-node-fifo-clear-and-reuse",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-pool-actual-agent-timeout-then-next-tick-reuse",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-task-copy-alias-and-clear-retains-headers",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-fresh-events-clear-reference-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-invalid-helper-task-and-idle-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-start-event-before-dispatch-and-null-versus-empty-body",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-start-throw-retains-working-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-completion-reset-before-callback-and-done-after",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-completion-throw-skips-done",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-reset-throw-keeps-task-and-status",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-callback-reentry-done-applies-to-current-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-timeout-unscaled-equality-report-before-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-timeout-report-failure-retries-before-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-start-reset-timeout-and-shutdown-unsubscribe",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "web-request-agent-original-wasm-millisecond-conversion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-protocol-paths-duplicate-init-and-url-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-match-upload-original-fields-and-independent-ext-uid",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-player-query-cache-stale-category-name-offset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-upload-send-failure-retains-prior-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-level-upload-increment-and-shared-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-query-response-routes-by-count-not-rank",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-business-error-still-invokes-upload-after-report",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-transport-failure-reports-without-protocol-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-late-callback-current-delegate-and-message-reentry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-disposal-suppresses-inflight-response-and-send",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-invalid-raw-json-and-unknown-protocol-fail-after-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-cipher-independent-openssl-vector-and-key-normalization",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-cipher-errors-report-return-null-and-callback-exceptions",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-encrypted-envelope-shared-and-server-time-bypass",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-encrypted-response-and-plain-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-transmitter-real-match-first-response-and-independent-account-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-constructor-and-original-config-lifecycle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-home-100-original-names-player-and-rank-span",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-home-refresh-fifo-identity-and-rank-one-alias-sort",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-default-weights-actual-offset-and-stable-sort",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-init-repeated-appends-heads-but-refreshes-score-list",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-init-partial-config-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-home-failed-frame-selection-retains-generated-dictionary",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-country-cache-pending-missing-config-and-disposed-slot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-player-row-source-pool-and-no-frame-overwrite",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-settlement-gaps-sort-remembered-and-name-consumption",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-settlement-bound-reset-and-equal-gap-comparator",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-above-negative-preserved-below-zero-and-invalid-count",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-random-metadata-failure-after-remember-before-name-removal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-empty-name-error-then-original-index-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-dispose-retains-data-clears-current-slot-unconditionally",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-control-home-current-owner-and-country-callback-slot-clear",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-row-defaults-clear-and-fifo-reuse",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-default-double-release-and-strict-clear-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-release-failure-does-not-enqueue",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-pool-isolation-by-concrete-type",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-weighted-invalid-and-all-alias-consume-no-random",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-weighted-priority-with-zero-and-negative-weights",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-single-weight-boundaries-and-empty-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-country-pending-repeat-and-synchronous-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-country-first-match-case-and-late-callback-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-list-support-country-request-log-and-row-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-original-registration-config-and-fresh-record",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-parse-defaults-malformed-score-and-corrupt-json",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-bigint-and-current-owner-reload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-create-new-record-before-config-clock-and-reentry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-rank-upper-only-clamp-and-timestamp-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-magnitude-first-match-unknown-last-and-last-character",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-float-decimal-count-and-source-excess-division",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-lossy-save-does-not-change-live-score-and-file-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-save-mutation-precedes-storage-login-and-disabled-gates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-server-download-remains-pending-and-release-retains",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-config-rank-step-boundaries-contiguous-keys-and-default",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-add-score-and-rank-update-save-is-explicit",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-reduce-reresolves-current-owner-after-comparison",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-offline-rank-gates-hours-and-current-manager",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-manager-getter-rereads-pool-without-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-current-culture-float-parse-preserved",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "rank-score-top-info-real-rank-binding-and-account-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-original-default-resource-geometry-and-initialization",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-initialization-prefix-failure-and-retry-collision",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-cached-default-synchronous-null-callback-and-null-key",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-merged-callbacks-one-download-and-notification-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-failed-request-keeps-waiters-and-blocks-later-retry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-success-null-and-content-exception-use-default-texture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-missing-default-fallback-propagates-retaining-queue",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-texture-callback-failure-retains-cache-and-both-waiters",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-sprite-callback-failure-retains-delegate-and-skips-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-callback-reentry-uses-current-cache-before-removal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-start-host-failure-retains-download-marker",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-iterator-dispose-does-not-cancel-or-clear",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-preference-cache-write-failure-types-and-no-read-caching",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-nickname-url-defaults-and-single-instance",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-real-userdata-disabled-save-still-allows-source-pool-call",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "wx-avatar-real-userdata-write-failure-stops-match-pool-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-fresh-schema-and-original-clamp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-constructor-missing-vs-explicit-null-and-no-default-repair",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-typed-json-corruption-does-not-replace-live-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-fresh-default-failure-retains-published-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-fresh-provider-reentry-captures-target-and-rereads-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-real-file-roundtrip-schema-and-release-retention",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-server-init-remains-pending-and-local-override",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-login-gate-digest-and-disabled-pool",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-events-init-failure-argument-types-level-gate-dispose",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-three-ranks-pre-response-counts-and-no-auto-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-request-failure-retains-play-prefix-and-prior-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-request-reentry-resolves-transmitter-and-id-each-time",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-response-installed-after-all-synchronous-requests",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-win-current-record-loss-captured-record-and-current-transmitter-clear",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-null-transmitter-preserves-play-and-openid-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-lazy-manager-cache-and-unchecked-counters",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-random-string-final-element-and-empty-source-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "match-top-info-auth-persists-real-match-with-separate-profile",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-deferred-page-original25-outlets-awake-and-separate-icon-wait",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-real-tool-economy-refresh-and-server-record-replacement",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-loadstarting-refresh-nickname-red-score-and-distinct-sprite-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-profile-reentry-captures-name-but-rereads-current-config",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-sprite-failure-preserves-earlier-profile-updates-and-skips-frame",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-both-user-pointers-request-empty-args-without-button-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-auth-null-empty-single-null-element-and-gate-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-auth-uses-platform-values-and-orders-download-name-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-auth-captures-target-before-getter-and-reresolves-current-player",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-auth-failure-keeps-prefix-and-suppresses-later-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-dispose-removes-listeners-closes-effects-retains-base-fields-and-clicks",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-disposal-first-effect-failure-stops-second-resolution",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-late-icon-continuation-after-direct-dispose-is-not-cancelled",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-second-icon-failure-retains-first-id-and-earlier-effects",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-auth-userdata-save-failure-prevents-pool-save-after-name",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-real-uicontrol-currency-cache-follows-owned-deferred-page",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-ready-predicate-null-disposed-live-and-callback-destruction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-page-empty-refresh-and-missing-local-manager-retain-prefab-currency",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-unconfigured-warning-before-zero-and-propagation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-hundredths-truncation-and-final-zero-rule",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-symbol-boundaries-truncate-without-rounding",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-arbitrary-precision-saturates-symbol-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-negative-source-text-and-current-culture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-format-empty-and-zero-magnitude-fail-without-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-native-prefabs-original-particles-child-scale-and-bindings",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-source-config-zero-duration-and-modern-case-sensitive-paths",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-source-looping-effects-have-no-positive-duration-timer",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-modern-close-releases-only-selected-effect-handle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-legacy-lowercase-bundle-distinct-prefab-name-and-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "top-info-assets-module-shutdown-releases-both-persistent-effects",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-initialize-priority-retained-registry-callback-and-shutdown-flag",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-original-full-type-key-null-empty-name-and-distinct-type",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-single-spawn-default-constructor-arguments-and-duplicate-before-factory",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-original-key-format-keeps-dot-collision-and-factory-failure-unregistered",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-factory-reentry-add-failure-retains-first-registered-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-live-update-arguments-mutation-and-first-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-destroy-releases-before-removal-failure-retains-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-destroy-return-reflects-callback-removal-and-null-entry-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-shutdown-failure-retains-initialized-and-all-registrations",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-frame-priority-and-real-effect-pool-shutdown-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pool-manager-normal-lifetime-uses-getmodule-even-after-frame-cleared",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-registry-init-original-pool-options-and-reinit-retains-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-ui-target-source-lazy-cache-and-dispose-retained-text",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-normal-pool-manager-absence-and-creation-failure-field-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-normal-pool-setter-failure-retains-partial-created-pool",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-audio-before-null-target-no-id-root-or-coroutine",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-shared-id-fallback-root-economic-save-before-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-save-failure-preserves-economic-write-without-coroutine",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-direct-fly-toolchange-preserves-source-local-and-global-record-split",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-logic-update-delayed-cleanup-and-additive-check-time",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-reinit-retains-pending-and-clock-then-source-key-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-dispose-failure-retains-registry-success-retains-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-empty-sequence-completion-and-required-position-nullable",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-sequence-supported-order-single-step-and-shared-array-reread",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-sequence-callback-rereads-id-before-dispatch-and-failure-before-index",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-uncached-modern-pool-clone-return-reuse-and-source-handle-retention",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-control-uncached-legacy-prefab-route-and-clone-name-retained",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-original-prefab-four-particles-source-scale-and-materials",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-original-config-native-bundle-specialized-reader",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-task-claim-actual-effect-and-shared-account-reward",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-tab-change-closes-current-effect-before-content-change",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-natural-completion-keeps-page-stale-handle-until-tab-change",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-legacy-source-cache-instantiates-distinct-original-prefabs",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-overlapping-claims-retain-earlier-effect-source-ownership",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-box-effect-new-loader-route-gate-and-config-missing-diagnostic",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-config-gates-retry-duplicate-first-wins-and-read-once",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-null-config-list-and-shutdown-retain-source-read-flags",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-lazy-root-hierarchy-sorting-and-shutdown-destruction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-missing-config-errors-before-any-effect-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-async-load-parent-position-rotation-order-and-retained-scale",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-canvas-inherited-order-inactive-children-and-additive-repeat",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-minus9999-disables-component-order-but-explicit-order-still-works",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-duration-dispose-release-then-completion-removes-handle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-close-removes-before-dispose-failure-no-auto-completion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-early-close-does-not-cancel-original-late-load",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-legacy-route-no-handle-and-unknown-type-uses-ui-with-empty-folder",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-collection-reuses-real-module-handle-and-clears-native-children",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-clear-failure-retains-live-dictionary-and-configs",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-fly-world-target-duration-and-dispose-before-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "effect-module-line-geometry-two-source-timers-and-repeated-disposal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-same-pool-real-item-local-config-and-statistics-owners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-daily-claim-before-reward-and-shared-pool-save-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-daily-currency-claim-and-liveness-independent-file-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-achievement-reward-economy-save-order-and-final-account-save",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-daily-liveness-award-shares-account-economy",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-login-gate-and-save-disabled-are-not-bypassed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-report-failure-retains-global-prefix-before-local-and-task",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-tool-item-entity-package-path-persists-both-real-currencies",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-package-virtual-points-and-piece-branches-use-real-inventory",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "account-rewards-local-server-reload-rebinds-dispatcher-to-current-record",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-singleton-publication-reentry-failure-and-unconditional-clear",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-deferred-original-outlets-layer-and-real-subview-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-toggle-late-init-once-false-event-and-effect-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-effect-failure-stops-tab-state-before-content",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-late-init-flag-is-written-before-render-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-countdown-empty-routing-unbound-row-and-pointer-audio",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-close-audio-before-hook-and-button-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-dispose-restores-top-clears-shared-owners-and-reopen",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-page-main-entry-original-button-open-show-and-audio-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-actual-resolver-owner-cache-and-statistic900001",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-ads-success-warwin-real-statistics-and-unsubscribe",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-level9-reset-level10-entrance-and-refresh-not-auto-subscribed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-daily-red-includes-filtered-unreceived-and-liveness",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-rank-red-rewrites-positive-progress-and-skips-that-record",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-red-short-circuit-and-source-entrance-node-selection",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-original-achievement-rows-bind-real-config-and-parent",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-show-filter-equality-empty-args-and-reserved-type",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-projection-int32-truncation-shared-rewards-and-retained-uid",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-refresh-existing-only-reorders-and-missing-type-warns",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-actual-row-slide-claim-reuses-next-type-row-then-removes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-control-view-destroy-clears-owner-before-unsubscribe-and-retains-view-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-original127-owner-pool-fsm-and-three-live-cumulative-records",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-statistics-abs-filter-exact-unbox-and-progress-report-before-threshold",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-live-progress-reordering-keeps-original-multiple-visit-behavior",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-refresh-statistics-recomputes-all-records-and-preserves-claimed-time",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-claim-real-economy-point-event-time-and-next-representative",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-award-failure-remains-unclaimed-with-mutated-economy",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-report-failure-prefix-and-missing-visible-representative",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-point-stage-enumeration-order-no-ext-event-and-low-int32",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-compact-read-padding-legacy-repair-and-invalid-time-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-duplicate-last-wins-and-entire-type-claimed-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-reset-clears-values-retains-current-representatives-and-listeners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-pool-account-save-and-independent-original-config-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-runtime-empty-claim-save-restart-and-pool-save-disable",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-original127-configs-three-cumulative-records-and-signed-targets",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-eligibility-state-zero-int64-and-independent-show-time-selection",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-sorting-ready-incomplete-claimed-and-cached-config-id",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-first-nonnull-config-cache-and-null-retry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-fresh-rewards-signed-quantity-and-retry-after-malformed-row",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-show-condition-boxed-middle-copy-and-partial-cache-on-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-cumulative-live-owner-int64-bit-wrap-and-threshold-short-circuit",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-cumulative-sorting-readiness-state-and-config-id",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-independent-file-schema-roundtrip-and-private-cache-exclusion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-factory-exact-category-captured-config-and-actual-item-economy",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-factory-model-only-and-use-omit-point-event",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "achievement-model-factory-host-and-event-failure-retain-source-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-original-animation-components-clips-and-tier-wiring",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-preview-initialization-visibility-selection-and-pointer-details",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-preview-publishes-snapshots-before-frame-and-grow-only-sizing",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-preview-reentry-overlap-fault-and-dispose-during-await",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-preview-button-opens-before-config-failure-and-only-first-reward",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-ready-replaces-all-listeners-and-shows-canvas-layer",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-no-invented-repeat-guard-before-end-of-frame",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-effect-frame-fly-and-red-error-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-reward-snapshot-before-wait-and-live-id-after-host-reentry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-item-award-quantity-one-before-all-configured-rewards",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-refreshed-state-does-not-clear-old-ready-callback-or-glow",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-liveness-real-liveness-award-save-and-independent-tier-state-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-original-page-outlets-eight-real-task-projections-and-graphics",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-daily-claim-waits-for-slide-real-award-and-liveness",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-ordinary-progress-clamp-negative-and-rank-binary-display",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-achievement-layout-retained-state-and-live-localization",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-sprite-reentry-count-snapshot-and-published-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-random-reward-mutation-before-callback-and-live-report-after-reentry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-effect-award-and-claim-failure-prefixes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-daily-filter-per-row-and-retained-hidden-row-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-daily-projection-first-condition-and-retained-value-on-empty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-daily-countdown-validation-order-and-listener-removal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-claim-save-and-independent-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-rows-disposal-retains-data-callback-and-source-destruction-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-original-eight-tasks-real-owner-fsm-factory-and-daily-initialization",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-statistics-shape-state-receive-filter-and-report-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-lifetime-inactive-clamp-unbox-and-condition-target-index",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-claim-real-economy-liveness-cost-order-and-repeat",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-reward-failure-claimed-prefix-and-unguarded-liveness-claim",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-daily-strict-boundary-auto-claim-and-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-interval-boundary-overflow-and-expiry-per-removal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-group-selection-first-picked-expiry-and-receive-mode",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-update-data-rebinds-existing-strategy-and-transient-other-view",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-automatic-dirty-save-real-file-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-ordinary-and-seven-day-share-real-parent-and-factory-graph",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-activity-child-type10-4-factory-base-award-before-use-without-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-pool-init-deferred-config-gate-and-original-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-server-deferred-callback-and-disabled-sync-local",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-legacy-progress-group-migration-and-condition-reconciliation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-new-child-reset-publication-and-sentinel-preservation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-duplicate-index-and-malformed-fallback-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-log-failure-keeps-appended-condition-before-uid-and-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-save-snapshot-before-activity-cached-owner-and-release",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-manager-missing-save-owner-retries-and-file-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-original-eight-tasks-three-liveness-tiers-and-target-description",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-reset-appends-copied-conditions-and-preserves-source-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-eligibility-exact-state-zero-without-receive-expiry-or-progress-gates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-source-sort-receive-status-priority-id-and-noncanonical-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-config-cache-null-retry-and-description-captured-targets",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-condition-key-equality-ignores-progress-and-preserves-null-distinction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-refresh-counters-replace-lists-with-zeroes-and-retain-unrelated-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-liveness-cache-explicit-refresh-dictionary-order-and-int32-bit-wrap",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-reward-cache-publishes-before-malformed-row-and-keeps-negative-count",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-source-shallow-clone-and-independent-file-schema-roundtrip",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-actual-task-liveness-factory-model-event-order-and-low-int32",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "task-model-liveness-event-failure-keeps-model-award-and-regular-add-omits-event",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-original-button-voice-page-registry-and-button-message-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-locked-initialization-skips-listeners-and-later-unlock-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-three-source-messages-refresh-real-task-and-accumulator-red",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-end-message-updates-visibility-only-without-gating-existing-click",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-initial-visibility-uses-captured-unlock-despite-red-query-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-voice-and-open-failures-stop-later-button-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-dispose-current-unlock-gate-and-retained-button-handler",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-repeat-initialize-duplicates-and-removes-one-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-entry-red-managed-null-guard-and-captured-native-object",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-registry-load-original-outlets-and-day-selection-populates-page",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-day-pointer-writes-last-click-without-dirty-and-rebuilds",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-actual-task-claim-auto-refreshes-accumulator-through-page-listeners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-countdown-source-format-and-end-message-does-not-close",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-message-argument-guards-and-source-invalid-mode-lookup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-extension-refresh-ignores-payload-and-preview-uses-original-position",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-accumulator-render-failure-keeps-untracked-clone-and-cleared-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-source-disposal-removes-page-listeners-retains-provider-dictionary-preview",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-page-report-failure-retains-initialized-prefix-and-close-hook-failure-stops-button-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-original-positions-last-id-criterion-and-exact-state-red",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-unready-preview-after-callback-and-missing-page",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-actual-gold-award-zero-extra-toolchange-and-delayed-completion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-diamond-low-int32-display-count-preserves-economic-long",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-missing-page-still-awards-and-processes-secondary-items",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-noncurrency-paramint-legacy-unlock-and-skin-popup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-effect-failure-preserves-claim-and-stops-later-visuals",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-acc-report-callback-changes-current-display-reward-after-award",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-visibility-registers-every-call-and-original-scale",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-selected-object-exact-touch-and-case-sensitive-substrings",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-setdata-only-then-live-data-after-frame-and-original-reward-click",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-overlapping-refresh-appends-and-hidden-preview-still-builds",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-dispose-during-await-exits-and-keeps-source-listener-contract",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-await-and-sprite-failures-preserve-source-partial-work",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-acc-preview-preview-pointer-only-calls-hook-without-dismissal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-original-row-children-targets-and-independent-scroll-binding",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-actual-original-reward-claim-finish-order-and-duplicate-guard",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-rejected-task-still-notifies-and-goto-handler-is-empty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-claim-report-failure-retains-award-but-prevents-finish-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-row-rebuild-before-data-fetch-and-source-disposal-asymmetry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-sprite-failure-leaves-untracked-clone-and-published-new-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-language-callback-precedes-three-live-button-state-queries",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-finish-event-rereads-current-row-after-activity-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-rows-page-filter-reads-live-threshold-and-sorts-only-button-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-visible-offscreen-and-render-selected-after-scroll",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-source-hash-collision-retains-multiple-selected-rows",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-callback-mutation-captures-post-select-count-and-live-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-selection-and-deselection-exceptions-keep-written-flags",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-negative-empty-and-invalid-positive-index-contract",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-selection-renderer-rereads-region-after-render-and-missing-selection-interface",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-duplicate-source-scroll-names-resolve-distinct-outlets",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-original-seven-day-label-lock-and-selection-message",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-actual-task-red-refresh-filters-and-render-selection-replay",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-language-callback-rereads-day-and-source-partial-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-malformed-message-retains-original-short-array-and-unbox-failures",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-select-callback-single-row-hiding-and-no-dirty-write",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-programmatic-locked-selection-and-deselection-have-no-extra-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-days-dispose-keeps-native-row-removes-subscriptions-and-runtime-button-listeners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-original-asset-CommonLimitTimeTaskItem",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-original-asset-CommonLimitTimeTaskPageItem",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-original-asset-CommonLimitTimeTaskRewardItem",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-original-asset-CommonLimitTimeTaskUI",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-reward-original-icon-atlas-int64-and-missing-row",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-reward-sprite-reentry-retains-input-count-and-live-selection",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-reward-failures-preserve-source-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-progress-signed-long-upper-cap-and-zero-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-gameobject-pointer-replaces-listener-and-disposal-clears-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-ui-progress-native-pointer-and-destroy-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-registry-lifecycle-empty-init-and-retained-dispose",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-scene-completion-seeds-real-task-statistics",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-strict-time-endpoints-caching-and-forced-enter-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-time-int32-truncation-multiplication-and-null-child-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-missing-parent-or-child-skips-seeding-but-retains-dates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-seed-callback-order-live-config-and-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-completed-level-wrap-and-commander-signed-sum",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-red-query-both-paths-and-exact-unclaimed-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "sevenday-red-day-bound-uses-condition-not-map-maximum",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-original49-runtime-registration-and-model-ownership",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-saved-object-identity-orphans-new-tasks-and-repeated-init",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-save-filter-zero-conditions-and-duplicate-runtime-ids",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-dispatcher-progress-clamp-filters-and-report-threshold",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-event-all-life-inactive-unbox-and-caught-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-listener-removal-recorded-versus-configured-keys",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-progress-no-match-dirty-and-fourth-slot-report",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-day-launch-utc-boundaries-upper-only-clamp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-day-complete-hidden-and-nonzero-state-navigation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-real-reward-cost-claim-reports-and-repeat-guard",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-claim-cost-and-report-failure-prefixes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-self-count-condition-suppresses-completion-statistic",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-acc-position-mask-reset-and-sorted-view",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-liveness-factory-event-before-claim-and-progress-derived",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-parent-provider-original-owner-id-and-save-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-acc-sign-extension-and-report-failure-after-award",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-empty-task-conditions-duplicate-clock-listeners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-init-notifications-current-day-reset-notifications-group-day",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-day-refresh-notification-failure-retains-day-before-dirty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-missing-day-and-empty-navigation-failure-boundaries",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-activity-actual-file-restart-progress-and-claim-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-original49-config-condition-and-reward-shapes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-config-cache-and-group-owner-independence",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-show-cache-boxing-and-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-reset-keeps-claim-state-and-partial-progress",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-eligibility-record-show-day-state-matrix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-live-statistics-callback-threshold-and-day",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-task-order-priority-and-signed-config-id",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-reward-cache-failure-and-json-runtime-exclusion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-cumulative-count-claimed-only-and-state-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-cumulative-item-ownership-difference",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-cumulative-invalid-mode-and-config-reread",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-target-progress-max-empty-missing-and-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-child-owner-capture-and-missing-membership",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-model-acc-order-reward-cache-and-page-selection",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-factory-type-routing-and-constructor-current-config",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-factory-real-model-event-truncation-regular-add-and-use",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "limit-task-factory-event-live-config-and-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-parent-match-and-discarded-other-construction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-view-data-retention-and-sort-boundary",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-repeated-reset-add-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-global-collision-and-missing-module-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-null-factory-and-sort-failure-persistence",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-real-child-refresh-fsm-and-owner-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-original-config-pool-and-new-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-compressed-file-restart-all-persisted-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-orphans-duplicates-and-first-config-day",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-empty-config-and-raw-parse-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-server-deferred-and-sync-disabled-local",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-reconciliation-and-index-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-current-config-terminal-read-and-live-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-family-novice-refresh-save-callback-order-and-release",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-real-original-config-and-offline-owner-graph",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-real-state-cycle-report-pop-and-file-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-reflection-parent-child-and-pending-override",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-data-ready-last-row-wins-and-exact-base-child-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-popup-priority-exact-type-and-adjacent-close-skip",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-popup-failure-prefix-current-owner-and-retained-ui",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-bind-ui-launch-and-null-widget-semantics",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-statistics-live-row-after-clock-and-signed-minutes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-daily-live-row-overflow-and-no-dirty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-update-single-minute-subtraction-and-save-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-report-order-captured-data-and-mutable-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-parent-report-cache-missing-trailing-separator",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-widget-area-sort-rebind-and-null-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-cleanup-retained-fields-hook-and-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-item-hook-parent-first-immediate-children-and-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-control-reinit-hook-dedup-and-registration-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-original-all-configs-and-production-roster",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-query-null-vs-missing-diagnostics",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-groups-live-aliases-duplicates-and-empty-novice",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-achievement-condition-value-key-and-priority-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-loader-captures-binary-once-and-achievement-always-json",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-loader-current-owner-between-read-calls",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-complete-runtime-release-and-reread-stale-task-index",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-initialization-failure-prefix-and-repeat-without-dispose",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-dispose-failure-order-and-current-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-business-source-schema-signed64-and-shared-references",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-original-resource-read-and-normalized-conditions",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-online-override-duplicates-and-malformed-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-custom-async-completion-and-repeated-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-reentrant-callback-and-reread-keeps-lifecycle-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-normalization-live-current-owner-and-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-reader-host-selection-and-local-callback-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-dispose-retains-fields-and-failure-stops-counter-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-factory-original-null-products-and-reread",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-base-child-query-cast-and-factory-dispatch",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-owner-config-offline-file-state-machine-save-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-real-statistics-close-notice-launch-over-close",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-entry-priorities-and-transition-hook-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-initial-disabled-noncanonical-open-and-invalid-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-unique-id-reset-order-and-dirty-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-refresh-replacement-and-init-failure-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-refresh-event-source-flags-and-double-launch-ui",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-native-button-listener-rebind-and-pop-payload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-countdown-format-live-text-and-sticky-description-array",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-original-launch-unsubscribe-array-mismatch",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-states-child-update-refresh-dispose-and-retained-fsm",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-condition-four-lazy-caches-and-typed-arguments",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-condition-null-config-retry-and-cached-config-retention",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-condition-malformed-input-retains-partial-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-condition-runtime-open-gate-live-target-and-source-type",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-condition-original-config-and-json-cache-reconstruction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-fsm-event-current-state-identity-null-and-state-change",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-fsm-event-duplicates-remove-one-reentry-and-snapshot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-fsm-event-exception-and-destroyed-state-subscriptions",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-fsm-state-base-overloads-and-change-state-forwarding",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-fsm-conditioned-event-uses-recovered-statistics-and-cache",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-codec-utf8-multibuffer-and-raw-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-condition-date-number-invalid-and-short-circuit",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-first-load-constructor-config-order-and-publish",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-real-compressed-file-and-independent-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-server-deferred-raw-and-corrupt-json-recovery",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-state-reconciliation-all-launch-notice-over-combinations",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-duplicate-first-match-orphans-and-missing-config-record",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-condition-recheck-reentry-and-load-failure-prefix",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-manager-registration-order-duplicate-and-config-reread",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-manager-null-config-construction-failure-and-retry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-manager-callback-reread-reentry-null-and-release",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "activity-data-manager-save-live-data-dirty-and-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-pause-priority-escalation-and-retained-resume-source",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-focus-before-pause-gate-and-callback-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-pause-log-reentry-and-invalid-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-network-sample-initialization-threshold-and-sticky-disable",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-network-save-failure-preserves-selected-value",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-common-settings-order-dpi-and-source-ads-reference",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-common-settings-null-ads-keeps-earlier-side-effects",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-start-game-deferred-transition-and-state-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-start-game-message-failure-preserves-menu-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-launch-domain-public-lookup-last-match-and-null-values",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-priority-stable-ties-exact-type-and-snapshot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-initialize-live-args-and-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-start-enumerates-live-and-publishes-ready-last",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-update-live-nodes-not-initialization-gated",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-resources-short-circuit-and-uninitialized-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-shutdown-reverse-skip-tail-order-and-retained-fields",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-shutdown-failure-keeps-prefix-and-skips-global-tail",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-create-log-failure-does-not-publish",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-entry-concrete-logic-fsm-procedure-time-lifecycle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-pool-release-saves-before-live-release-and-retains-dictionary",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "frame-pool-release-failure-and-live-mutation-stop-cleanup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-duration-boundary-and-double-countdown",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-midnight-is-not-duration-and-hour-rolls-back",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-scaled-single-pass-release-clock-and-nan",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-group-merge-reference-keys-and-existing-v2-countdown-quirk",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-v2-order-empty-payload-and-dictionary-gated-countdown",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-v1-removal-prunes-only-already-null-row",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-v2-removal-whole-key-ignores-v1-and-countdowns",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-live-callback-mutation-and-exception-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-live-list-and-dictionary-reentry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "time-refresh-null-keyed-callback-and-live-clear-failures",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-codec-utf8-external-gzip-and-original-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-real-compressed-file-save-and-independent-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-save-pruning-partial-failure-and-dirty-cleared-before-io",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-deferred-server-load-raw-json-and-corrupt-reload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-clock-negative-zero-reentry-overflow-and-mode",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-frame-periods-single-pass-and-calendar-broadcast",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-item-ad-product-source-events-and-unboxing",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-daily-reset-order-and-readiness-iterator",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-offnet-fresh-negative-clock-and-disposal-listener-removal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-pool-manual-add-publishes-before-init-and-retains-duplicate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-registration-game-filter-and-add-failure-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-refresh-registers-nineteen-captured-providers-first-wins",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-refresh-null-index-and-provider-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-message-register-set-parse-and-provider-gates",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-expansion-dirty-order-owner-reentry-and-clock-exception",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-game-value-provider-catch-and-record-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-update-pool-gate-and-save-callback-reread",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-load-before-common-refresh-and-real-storage-path",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-base-calendar-activity-and-null-argument-asymmetry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-control-dispose-defers-update-removal-and-retains-manager",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-manager-release-removes-listeners-before-cleanup-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-lifecycle-existing-manager-completes-before-update-registration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "common-msg-independent-domain-and-shared-reset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "common-msg-key-appended-copy-and-original-reference-path",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "common-msg-multicast-reentry-removal-and-failure",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-parent-add-set-reset-and-notification-deltas",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-child-first-match-and-total-fallback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-zero-child-id-has-source-asymmetry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-listener-reentry-and-failure-after-mutation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-index-overwrite-retains-old-keys-and-aliases",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-null-dictionary-overload-differences",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "statistics-record-original-json-and-culture-cached-key",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-source-unscaled-period-and-mode-boundaries",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-native-component-check-before-show-and-live-listeners",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-list-duplicates-remove-one-and-log-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-exception-and-enumeration-mutation-source-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-start-null-event-inactive-and-registration-retention",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-init-dispose-and-old-singleton-slot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-uninitialized-null-list-and-nan-time",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "red-dot-original-menu-component-and-null-persistent-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "battle-control-original-dispatch-and-existing-battle-parity",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "battle-control-captured-row-reference-and-live-field-mutation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "battle-control-init-failure-keeps-source-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "battle-control-registry-logic-lifecycle-and-old-disposal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "battle-control-init-resolves-live-config-three-times",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-page-registry-load-and-source-awake-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-page-actual-provider-popup-reward-and-tip-page-lookup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-page-immediate-close-base-disposal-and-data-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-page-loading-flag-and-disposed-late-completion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-center-single-clamps-stops-velocity-and-dirties",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-center-single-inverse-horizontal-and-inclusive-spacing",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-center-two-index-retains-distinct-source-edges",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-center-coroutine-first-yield-does-not-move",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-lazy-slots-native-scroll-reuse-and-visible-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-source-spacing-alignment-horizontal-and-column-shrink",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-empty-provider-force-refresh-and-source-sentinels",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-dispose-notifications-before-reverse-pool-recycle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-render-failure-and-rebinding-preserve-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "dynamic-list-normal-mode-grow-and-keep-bindings-source-behavior",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-original-dynamic-rows-popup-and-pool-reopen",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-original-item-open-content-spine-and-reward-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-commander-skill-format-reread-and-minus-one-sentinel",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-pitch-empty-segments-retained-children-and-hint-alignment",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-missing-config-and-failure-preserve-source-partial-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-native-close-button-mask-and-voice-failure-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-popup-deferred-sprite-callback-and-source-guide-one-null",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-item-render-index-language-order-and-claim-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-vs-tip-locked-toast-source-level-rules",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-tip-original-dictionary-order-single-selection-and-latest-frame-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-tip-image-pointer-real-reward-record-and-duplicate-refresh",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-tab-programmatic-click-reentry-and-notify-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-ui-click-overloads-replace-append-and-throw-boundaries",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-reward-button-global-message-follows-return-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-native-button-original-reward-order-and-real-record-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-reward-effect-clamp-preserves-economic-amount-and-position",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-tip-original-reward-no-page-voice-and-parent-traversal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-source-ignores-rejected-toolchange-and-does-not-recheck-unlock",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-source-save-and-effect-failure-keep-earlier-economic-change",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-reward-rereads-selection-after-external-callbacks",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-noncurrency-reward-skips-effects-and-red-dots-follow-current-claims",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-original-record-construction-and-unrepaired-null-lists",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-production-registration-server-wait-and-local-override",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-claims-save-before-message-and-deduplicate-record-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-save-and-message-failure-retain-source-mutation-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-tip-inclusive-book-strict-and-recursive-guide-unlock",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-source-null-and-level-query-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-original-config-availability-and-claim-status",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "guide-book-dispose-disables-update-retains-registry-and-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-randoms-exclusive-range-distinct-selection-and-error-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-ai-names-remap-exhaustion-group-order-and-insertion",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-ai-names-unprefixed-still-looks-up-country-and-captured-name",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-ai-names-captures-tables-but-rereads-third-config-count",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-ai-names-zero-count-still-resolves-config-and-exhaustion-fails",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-ai-names-original-tables-exclude-final-name-row",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "source-user-info-runtime-original-names-registration-items-and-disk-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-original-defaults-real-file-save-and-independent-reload",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-source-list-repair-native-null-json-and-whitespace-name",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-icon-message-precedes-store-and-rereads-reentrant-record",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-install-time-gates-and-create-failure-retain-source-state",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-controller-config-gating-persistence-and-report-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-real-avatar-item-shares-manager-record-and-unlock-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "user-info-server-startup-waits-for-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "product-provider-shared-row-defaults-and-current-slot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "product-provider-malformed-nested-price-catches-and-continues",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "product-services-original-config-daily-reset-message-order-and-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "product-services-interval-reset-prices-and-notification-failure-prefix",
             "result": "pass",
             "detail": ""
         },

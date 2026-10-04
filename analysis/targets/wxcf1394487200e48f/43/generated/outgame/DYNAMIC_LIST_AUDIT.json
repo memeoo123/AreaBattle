@@ -1,0 +1,108 @@
+{
+  "status": "scroll-provider-pool-verified-full-page-pending",
+  "atUtc": "2026-10-03T07:44:42.909470+00:00",
+  "sourceEvidence": "DYNAMIC_LIST_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T07:44:42.909470+00:00",
+    "scope": "Original DynamicList provider/layout/LateUpdate/scroll/recycle and GuideBook row binding",
+    "checksPassed": 1140,
+    "newIntegratedChecks": 7,
+    "targetedChecks": 7,
+    "freshPlayModeRun": true,
+    "nativeChecks": 15,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2270,
+    "captures": [
+      {
+        "path": "analysis/dynamic-list-native-top.png",
+        "sha256": "8d50d374c3a88400686d06348ee4310e9867c7009a2a2ec7a0d267a08d0d461d"
+      },
+      {
+        "path": "analysis/dynamic-list-native-scrolled.png",
+        "sha256": "174393e976b68d7e585b89f416f8bd9ea0350362070a9df0d2126bddd3c5683e"
+      },
+      {
+        "path": "analysis/dynamic-list-native-reopened.png",
+        "sha256": "bc65cc12f665b1ba5201e2225d0d6b692b5a8b4062584edd70b537660dc608f7"
+      }
+    ],
+    "commands": [
+      "OutgameDynamicListValidation.Validate",
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameDynamicListPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Sandboxed editor could not connect to local license service; validation ran with approved native access on the isolated copy.",
+      "First native capacity assertion incorrectly assumed reserve slots must be fewer than records; corrected to original capacity and viewport behavior.",
+      "Initial750-wide canvas cropped original835-wide rows; final fixture uses1080x1920 reference canvas with750x1334 capture. This is not original-frame visual acceptance.",
+      "Source33208/33213 stores provider and calls GetData; corrected previous row adapter to observe public data-list replacement.",
+      "Final native log contains UnityEditor.Search startup ArgumentOutOfRangeException, separate from the15 passing product checks; no product assertion failure."
+    ],
+    "notClaimed": "Centering/tween and selection-specific list paths; complete GuideBookUI/BaseUI resource/open/close ownership with actual services; Main/account/remaining22 controllers/all business flows; Player and original visual/audio/timing acceptance."
+  },
+  "implementation": [
+    "OutgameDynamicList.cs",
+    "OutgameGuideBookListBinding.cs",
+    "OutgameGuideBookItem.cs"
+  ],
+  "checks": [
+    {
+      "id": "dynamic-list-lazy-slots-native-scroll-reuse-and-visible-refresh",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-list-source-spacing-alignment-horizontal-and-column-shrink",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-list-empty-provider-force-refresh-and-source-sentinels",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-list-dispose-notifications-before-reverse-pool-recycle",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-list-render-failure-and-rebinding-preserve-partial-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "dynamic-list-normal-mode-grow-and-keep-bindings-source-behavior",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "guide-book-original-dynamic-rows-popup-and-pool-reopen",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "nativeChecks": [
+    "Native LateUpdate binds original visible rows",
+    "Native objects respect slot capacity and only viewport rows are bound",
+    "Native ScrollRect drag advances rows using existing pooled roots",
+    "Pointer delivered: btnUnlock",
+    "Recycled row pointer opens newly bound book",
+    "Pointer delivered: OKBtn",
+    "Native normalized scroll returns to first row",
+    "Pointer delivered: btnUnlock",
+    "Pointer delivered: btnBox",
+    "Native reward callback refreshes visible row through data provider",
+    "Native OnDestroy recycles list objects before page hierarchy disappears",
+    "All pooled rows survive native page destruction",
+    "Fresh page reuses source pool and reads persisted claim",
+    "Pointer delivered: btnUnlock",
+    "Reopened pooled button invokes one current page callback"
+  ],
+  "remaining": "Centering/tween and selection-specific list paths; complete GuideBookUI/BaseUI resource/open/close ownership with actual services; Main/account/remaining22 controllers/all business flows; Player and original visual/audio/timing acceptance."
+}

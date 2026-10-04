@@ -1,0 +1,28 @@
+{
+    "passed": true,
+    "error": "",
+    "scope": "Real UnityWebRequest GET/POST/HTTP503/timeout with original helper/task/agent/queue, and real AES/rank protocol exchange over a controlled loopback TCP HTTP server. Manager/platform URL-key/report delivery and production Main are not claimed.",
+    "checks": [
+        "POST with missing handlers silently leaves request null",
+        "GET with missing handlers logs original error without sending",
+        "Native success disposes request and sets status before callback",
+        "Real GET preserves default content type and custom header without POST encryption flag",
+        "Real downloaded UTF8 bytes survive event Clear while retained event data is cleared",
+        "Real HTTP200 reports before callback and marks task done afterward",
+        "Native success disposes request and sets status before callback",
+        "Real POST transmits exact UTF8 body and original encrypted header",
+        "Native success disposes request and sets status before callback",
+        "Custom headers override defaults and empty bytes still produce POST",
+        "Native failure disposes request and sets status before callback",
+        "Actual HTTP503 reaches failure callback with source report-before-callback order",
+        "Native failure disposes request and sets status before callback",
+        "Source unscaled timeout disposes actual stalled request while game time is paused",
+        "Actual rank request goes through AES envelope, task, queue, agent, Unity HTTP and independent server bytes",
+        "Encrypted server response traverses real HTTP, AES decode and original rank query parser",
+        "Native pending cancellation clears task without sending an HTTP request",
+        "Native source queue sends higher priority first with one actual helper",
+        "Native queue reuses helper on next tick, clears prior task and never sends cancelled request",
+        "Native queue shutdown clears active ownership and disposes helper",
+        "Helper GameObject is destroyed at native frame boundary"
+    ]
+}

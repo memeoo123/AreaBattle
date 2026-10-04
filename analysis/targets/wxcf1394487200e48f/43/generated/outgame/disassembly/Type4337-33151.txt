@@ -1,0 +1,54 @@
+; Original class: CommonLimitTimeTaskItem
+; Type4337.Awake; wasmcode function 20163; offset=9063880 size=150
+; signature={'args': [127, 127], 'returns': []}; localGroups=[(1, 127)]
+008a4dcb  i32.const [5008846]
+008a4dd0  i32.load8_u [0, 0]
+008a4dd3  i32.eqz []
+008a4dd4  if [-64]
+008a4dd6    i32.const [3992876] ; METHOD CommonLimitTimeTaskItem.Ve}SS
+008a4ddb    call [900] ; 
+008a4dde    i32.const [3992872] ; METHOD CommonLimitTimeTaskItem.jQTcg
+008a4de3    call [900] ; 
+008a4de6    i32.const [3940924]
+008a4deb    call [900] ; 
+008a4dee    i32.const [5008846]
+008a4df3    i32.const [1]
+008a4df5    i32.store8 [0, 0]
+008a4df8  end []
+008a4df9  local.get [0]
+008a4dfb  i32.load [2, 72]
+008a4dfe  i32.load [2, 176]
+008a4e02  local.set [1]
+008a4e04  i32.const [3940924]
+008a4e09  i32.load [2, 0]
+008a4e0c  call [903] ; 
+008a4e0f  local.set [2]
+008a4e11  local.get [2]
+008a4e13  local.get [0]
+008a4e15  i32.const [3992872] ; METHOD CommonLimitTimeTaskItem.jQTcg
+008a4e1a  i32.load [2, 0]
+008a4e1d  i32.const [0]
+008a4e1f  call [1153] ; UnityAction..ctor
+008a4e22  local.get [1]
+008a4e24  local.get [2]
+008a4e26  i32.const [0]
+008a4e28  call [4007] ; ButtonExtension.AddRemoveListener
+008a4e2b  local.get [0]
+008a4e2d  i32.load [2, 76]
+008a4e30  i32.load [2, 176]
+008a4e34  local.set [1]
+008a4e36  i32.const [3940924]
+008a4e3b  i32.load [2, 0]
+008a4e3e  call [903] ; 
+008a4e41  local.set [2]
+008a4e43  local.get [2]
+008a4e45  local.get [0]
+008a4e47  i32.const [3992876] ; METHOD CommonLimitTimeTaskItem.Ve}SS
+008a4e4c  i32.load [2, 0]
+008a4e4f  i32.const [0]
+008a4e51  call [1153] ; UnityAction..ctor
+008a4e54  local.get [1]
+008a4e56  local.get [2]
+008a4e58  i32.const [0]
+008a4e5a  call [4007] ; ButtonExtension.AddRemoveListener
+008a4e5d  end []

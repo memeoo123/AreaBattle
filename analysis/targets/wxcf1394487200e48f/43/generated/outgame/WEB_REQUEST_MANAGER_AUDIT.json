@@ -1,0 +1,181 @@
+{
+  "status": "http-manager-owner-native-verified-platform-pending",
+  "atUtc": "2026-10-04T14:13:06.837996+00:00",
+  "sourceEvidence": "WEB_REQUEST_MANAGER_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-04T14:13:06.837996+00:00",
+    "scope": "Original WebRequestManager owner, overload serialization/headers/debug counters/events and native singleton; actual AES rank HTTP, priority/cancel/KeWan/timeout/shutdown/recreation",
+    "checksPassed": 1749,
+    "newIntegratedChecks": 18,
+    "targetedChecks": 18,
+    "nativeChecks": 17,
+    "freshPlayModeRun": true,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2875,
+    "implementedLifecycleControllers": 22,
+    "remainingLifecycleControllers": 16,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameWebRequestManagerPlayModeValidation.Run"
+    ],
+    "logDiagnostics": {
+      "integrated": {
+        "ShouldRunBehaviour": 32,
+        "Curl error 35": 0,
+        "Curl error 42": 1,
+        "ArgumentOutOfRangeException": 0,
+        "error CS": 0
+      },
+      "native": {
+        "ShouldRunBehaviour": 0,
+        "Curl error 35": 0,
+        "Curl error 42": 2,
+        "ArgumentOutOfRangeException": 1,
+        "error CS": 0
+      }
+    },
+    "diagnosticExplanation": "Native UnityEditor.Search.SearchDatabase startup index exception is outside game stack; retained in log. Curl42 follows cancellation of deliberately stalled loopback request. No compilation errors; all product checks pass.",
+    "observedBoundaries": [
+      "Source singleton searches GameObject named WebRequestManager, obtains existing component or adds/publishes it before explicit initialization, then DontDestroyOnLoad. Initialize logs source helper type before replacing task pool and setting30s timeout. Native host owns this lifecycle; platform services factory is an explicit composition boundary.",
+      "Manager Update is gated by AppSetting.IsKeWan(field40), not game pause. Debug elapsed uses scaled time, changes>=60 to-1 on a subsequent update; counters reset only on next debug request. Actual queue uses unscaled timeout while game time is frozen.",
+      "Core AddWebRequest rejects null/empty URL before creating helper. It creates if total<=capacity and free<=0, while AddAgentHelper rejects total>=capacity. Equality therefore creates a real unused helper without disposing it. The rejection calls CLog.Log category131072 via27665, not CLog.Warning. Original Helper26581 creates a new GameObject and AddComponent(Type).",
+      "Object overload28465 uses LitJSON, catches serialization exception, logs literal JSON序列化失败：$ prefix, substitutes{}, UTF8 encodes and debug-logs byte length>14336 before core request. Priority object overload28487 has no catch. String overload28488 has inverted IsNullOrEmpty branch: nonempty produces GET, empty byte POST, null throws during UTF8 encoding. Byte, callback, priority and user-data overloads preserve routing.",
+      "SetRequestHeader logs before allocating/changing dictionary; queued tasks copy headers. Start/success/failure allocate fresh events with serial/URI/user-data and bytes/error; invoke current task callback0/1/2 then Clear. Exceptions skip event clear and later task Done. Actual RankTransmitter consumes these events unchanged.",
+      "Debug request monitor thresholds5 /data/user/ext,12 /data/private/update and12 /toplist/knock. It matches first Contains route, warns starting with sixth/thirteenth attempt before increment, toasts only at first threshold crossing, and increments after warning/toast. Current /mini-toplist/knock does not match legacy /toplist/knock. Failures preserve prefix and prevent enqueue.",
+      "Shutdown first shuts queue/agents, then clears static singleton and schedules owner GameObject destruction. Original unused helper remains outside queue ownership; test fixture explicitly cleans it only after asserting source behavior. Corrected queue empty RemoveFirst exception text to original First is invalid.; earlier1731 audit remains a historical checkpoint.",
+      "HttpManager/NetTool platform domain/key/login/server-time and report upload, actual Main/RankUI/OverUI/all business/final Player remain pending. Local native HTTP/AES tests demonstrate transport/owner behavior, not external platform success."
+    ],
+    "notClaimed": "HttpManager/NetTool/platform URL-key/login/server-time/report delivery, production Main/RankUI/OverUI/all business/final Player/original audiovisual equivalence. Local server responses are explicit native test evidence, not external platform success."
+  },
+  "implementation": [
+    "Scripts/OutgameWebRequestManagerHost.cs",
+    "Scripts/OutgameRankTransmitter.cs",
+    "Scripts/OutgameWebRequestTaskPool.cs",
+    "Editor/OutgameWebRequestManagerValidation.cs",
+    "Editor/OutgameWebRequestManagerPlayModeValidation.cs",
+    "Editor/OutgameWebRequestPlayModeValidation.cs",
+    "Editor/BattleBuild.cs"
+  ],
+  "checks": [
+    {
+      "id": "web-request-manager-init-log-before-pool-and-source-defaults",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-invalid-url-before-helper-and-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-headers-log-before-mutation-and-queue-snapshot",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-capacity-boundary-orphan-helper-and-pending-request",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-null-helper-and-initialize-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-object-json-default-priority-and-user-data",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-serialization-error-fallback-and-error-handler-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-priority-object-overload-does-not-catch-serializer",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-string-overload-inverted-null-empty-nonempty",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-success-event-field-lifetime-and-fresh-allocation",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-failure-callback-throw-retains-event-and-undone-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-start-callback-throw-keeps-working-and-waiting",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-debug-counts-warn-after-limit-toast-once",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-debug-warning-failure-before-count-and-task",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-debug-clock-ke-wan-gate-and-reset-on-next-request",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-large-object-byte-threshold-debug-only",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-shutdown-pool-before-singleton-before-destroy",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "web-request-manager-source-empty-node-error",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Native original WebRequestManager singleton/Update/helper creation/queue/callback events with actual AES rank HTTP, request priority, cancellation, headers, KeWan gate, unscaled timeout and shutdown/recreation. Platform HttpManager/NetTool/domain-key/report endpoints remain explicit test composition.",
+    "checks": [
+      "Native singleton creates persistent named owner and initializes original defaults",
+      "Repeated singleton access reuses owner without reinitialization",
+      "Native queued requests share one free helper and cancelled task never starts",
+      "Native manager callback preserves serial, URI and user data during dispatch",
+      "Native manager Update dispatches source priority queue and reclaims completed tasks",
+      "Real rank transmitter uses manager object serialization and actual encrypted HTTP bytes",
+      "Real encrypted rank response parses while manager callback event is cleared after dispatch",
+      "Native manager reuses the same actual helper across both requests",
+      "Actual KeWan setting prevents manager Update from starting queued HTTP",
+      "Native task snapshots manager headers before later changes",
+      "Actual HTTP503 reports and clears the failure event after callback",
+      "Native manager unscaled update times out stalled HTTP while game time is paused",
+      "Source capacity equality creates unused native helper and logs category131072 without destroying it",
+      "Reentrant queued request cancels without sending; timeout event clears normally",
+      "Manager shutdown disposes owned helpers before destroying singleton owner",
+      "Native frame destroys owned manager/helper while source unused helper remains",
+      "Fresh singleton access after native destruction creates independently initialized owner"
+    ]
+  },
+  "remaining": "Recover HttpManager/NetTool/AppInfoManager platform domain-key-login-server-time-report composition, then RankUI/OverUI, UserInfoUI/general sprites and full Main/account/remaining16 controllers/business/final Player and original audiovisual acceptance."
+}

@@ -1,0 +1,111 @@
+{
+  "status": "base-four-states-widgets-verified-control-assembly-pending",
+  "atUtc": "2026-10-03T09:38:36.841304+00:00",
+  "sourceEvidence": "ACTIVITY_STATES_SOURCE_EVIDENCE.json",
+  "verification": {
+    "atUtc": "2026-10-03T09:38:36.841304+00:00",
+    "scope": "ActivityBase lifecycle, Close/Notice/Launch/Over states, original statistics listeners, UGUI buttons/Text and countdown",
+    "checksPassed": 1256,
+    "newIntegratedChecks": 10,
+    "targetedChecks": 10,
+    "freshPlayModeRun": true,
+    "nativeChecks": 10,
+    "freshPlayerBuild": false,
+    "freshPlayerSmoke": false,
+    "editorVersion": "6000.3.7f1",
+    "platform": "OSXEditor",
+    "projectVersionPreserved": "6000.0.68f1",
+    "isolatedProject": "/private/tmp/areabattle-validation-20261003/UnityProject",
+    "matchingSourceFingerprints": 2316,
+    "commands": [
+      "BattleBuild.ValidateMechanicsOnly",
+      "OutgameActivityStatesPlayModeValidation.Run (non-batch Game view)"
+    ],
+    "observedBoundaries": [
+      "Actual statistics changes drive Close/Notice/Launch/Over and reset; source initial priorities, nested hook order, popup flags, unknown saved state, init/dirty failure prefixes and child lifecycle retained.",
+      "UGUI Button listeners are replaced using source type-based UI host; original notice event can request launch popup twice. Source launch unsubscribe arrays are crossed, leaving dormant callbacks gated by IsLeave. Countdown preserves three-segment format and sticky cached argument array.",
+      "Native10 checks exercise Unity pointer dispatch, actual Text/visibility, complete state cycle, owner destruction/recreation, actual automatic statistics clock updates and date-listener removal across frames. UI/pop/control endpoints remain explicit fixtures, not original pages or full Main.",
+      "Initial native run timed out waiting for seconds with a >day countdown that intentionally displays only day/hour/minute; eight preceding checks passed. Set fixture server-clock anchor to one hour before threshold, rerun passed10; no production change. Initial log/report preserved.",
+      "Source evidence references77 bodies and25 fields, including one explicitly pending factory. Generic child lookup remains pending. Method index5833 and controller bindings18/38 unchanged.",
+      "Full integration retains32 ShouldRunBehaviour editor assertions and one Curl42 shutdown abort; native log has UnityEditor.Search startup ArgumentOutOfRangeException and one Curl42 abort. No compiler errors; product1256 and native10 passed."
+    ],
+    "notClaimed": "ActivityFactoryBase/generic child lookup, ActivityControl/config/popup owner production graph, concrete SevenDay/Main/business assembly, remaining20 controller bindings, rendered original activity page, Player or audiovisual acceptance."
+  },
+  "implementation": [
+    "Scripts/OutgameActivityBase.cs",
+    "Scripts/OutgameActivityStateBase.cs",
+    "Scripts/OutgameActivityStates.cs",
+    "Editor/OutgameActivityStatesValidation.cs",
+    "Editor/OutgameActivityStatesPlayModeValidation.cs"
+  ],
+  "checks": [
+    {
+      "id": "activity-states-real-statistics-close-notice-launch-over-close",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-entry-priorities-and-transition-hook-order",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-initial-disabled-noncanonical-open-and-invalid-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-unique-id-reset-order-and-dirty-failure",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-refresh-replacement-and-init-failure-gate",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-refresh-event-source-flags-and-double-launch-ui",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-native-button-listener-rebind-and-pop-payload",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-countdown-format-live-text-and-sticky-description-array",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-original-launch-unsubscribe-array-mismatch",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "activity-states-child-update-refresh-dispose-and-retained-fsm",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "native": {
+    "passed": true,
+    "error": "",
+    "scope": "Actual recovered activity FSM/statistics/common-message path, Unity Button pointer handler, Text and native Update clock. ActivityControl/pop queues/UI opening remain explicit fixture hosts. No original activity page, rendered visual acceptance, platform or Player claim.",
+    "checks": [
+      "Native close state hides actual button hierarchy",
+      "Actual statistics message enters notice and updates Text, visibility and warm timestamp",
+      "Unity pointer-click dispatch invokes rebound notice UI host",
+      "Launch statistics rebinds actual pointer listener and hides description",
+      "Over statistics hides button and persists source flag",
+      "Close statistics resets progress and popup flags through complete native cycle",
+      "Native owner release destroys actual recovered FSM",
+      "Recreated owner starts saved notice state with original countdown formatting",
+      "Actual Unity Update advances statistics clock and refreshes notice Text without manual date callback",
+      "Leaving notice unregisters native clock text refresh across subsequent frames"
+    ]
+  },
+  "remaining": "Recover ActivityBase factory/child lookup and ActivityControl/config owner/pop queue graph; compose concrete offline activity data with these states and SevenDay.EnterGameInit/ProcedurePreLoad. Wire production Main/account/SDK/HTTP/scene/config hosts, remaining20 controllers/all business/reward-return, then Player and audiovisual acceptance."
+}

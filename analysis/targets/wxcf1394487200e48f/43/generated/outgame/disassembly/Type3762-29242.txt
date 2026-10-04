@@ -1,0 +1,33 @@
+; Original class: LoginTransmitter
+; Type3762..ctor; wasmcode function 18735; offset=8462881 size=87
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00812222  i32.const [4987955]
+00812227  i32.load8_u [0, 0]
+0081222a  i32.eqz []
+0081222b  if [-64]
+0081222d    i32.const [3960416]
+00812232    call [900] ; 
+00812235    i32.const [3919016]
+0081223a    call [900] ; 
+0081223d    i32.const [4987955]
+00812242    i32.const [1]
+00812244    i32.store8 [0, 0]
+00812247  end []
+00812248  i32.const [3919016]
+0081224d  i32.load [2, 0]
+00812250  call [903] ; 
+00812253  local.set [1]
+00812255  local.get [1]
+00812257  i32.const [3960416]
+0081225c  i32.load [2, 0]
+0081225f  call [951] ; 
+00812262  local.get [0]
+00812264  local.get [1]
+00812266  i32.store [2, 36]
+00812269  local.get [0]
+0081226b  i32.const [3]
+0081226d  i32.store [2, 44]
+00812270  local.get [0]
+00812272  local.get [0]
+00812274  call [8206] ; BaseHttpNetTransmitter..ctor
+00812277  end []

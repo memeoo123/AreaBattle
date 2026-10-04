@@ -1,0 +1,55 @@
+; Original class: ActivityManager
+; Type4658.RefreshData; wasmcode function 20966; offset=9454247 size=146
+; signature={'args': [127, 127, 127], 'returns': []}; localGroups=[]
+009042a8  i32.const [5001338]
+009042ad  i32.load8_u [0, 0]
+009042b0  i32.eqz []
+009042b1  if [-64]
+009042b3    i32.const [3929208]
+009042b8    call [900] ; 
+009042bb    i32.const [3926996]
+009042c0    call [900] ; 
+009042c3    i32.const [4105220] ; STRING "活动数据为null"
+009042c8    call [900] ; 
+009042cb    i32.const [5001338]
+009042d0    i32.const [1]
+009042d2    i32.store8 [0, 0]
+009042d5  end []
+009042d6  local.get [0]
+009042d8  local.get [1]
+009042da  i32.store [2, 28]
+009042dd  local.get [1]
+009042df  i32.eqz []
+009042e0  if [-64]
+009042e2    i32.const [3926996]
+009042e7    i32.load [2, 0]
+009042ea    i32.const [1]
+009042ec    call [909] ; 
+009042ef    local.set [0]
+009042f1    local.get [0]
+009042f3    i32.const [4105220] ; STRING "活动数据为null"
+009042f8    i32.load [2, 0]
+009042fb    call [905] ; 
+009042fe    local.get [0]
+00904300    i32.const [4105220] ; STRING "活动数据为null"
+00904305    i32.load [2, 0]
+00904308    i32.store [2, 16]
+0090430b    i32.const [3929208]
+00904310    i32.load [2, 0]
+00904313    call [901] ; 
+00904316    local.get [0]
+00904318    i32.const [0]
+0090431a    i32.const [2087] ; TABLE CLog.Error
+0090431d    global.set [3]
+0090431f    i32.const [2087] ; TABLE CLog.Error
+00904322    call_indirect [0, 0]
+00904325    return []
+00904326  end []
+00904327  local.get [0]
+00904329  local.get [1]
+0090432b  call [13341] ; ActivityManager.ManagerInit
+0090432e  i32.const [0]
+00904330  call [1484] ; ActivityControl.get_I
+00904333  i32.const [0]
+00904335  call [13350] ; ActivityControl.W{jWdUt
+00904338  end []

@@ -1,0 +1,58 @@
+; Original class: ActivityStateBase
+; Type4667.orrrS; wasmcode function 13338; offset=6460600 size=147
+; signature={'args': [127, 127, 127, 127, 127], 'returns': []}; localGroups=[]
+006294b9  i32.const [5001376]
+006294be  i32.load8_u [0, 0]
+006294c1  i32.eqz []
+006294c2  if [-64]
+006294c4    i32.const [3922400]
+006294c9    call [900] ; 
+006294cc    i32.const [3972476]
+006294d1    call [900] ; 
+006294d4    i32.const [3972480]
+006294d9    call [900] ; 
+006294dc    i32.const [5001376]
+006294e1    i32.const [1]
+006294e3    i32.store8 [0, 0]
+006294e6  end []
+006294e7  i32.const [0]
+006294e9  local.set [0]
+006294eb  loop [-64]
+006294ed    i32.const [1]
+006294ef    i32.const [3922400]
+006294f4    i32.load [2, 0]
+006294f7    local.get [1]
+006294f9    call [918] ; 
+006294fc    i32.load [2, 36]
+006294ff    local.set [2]
+00629501    i32.const [3972476]
+00629506    i32.load [2, 0]
+00629509    drop []
+0062950a    local.get [0]
+0062950c    local.get [2]
+0062950e    i32.load [2, 12]
+00629511    i32.lt_s []
+00629512    if [-64]
+00629514      i32.const [1]
+00629516      i32.const [3922400]
+0062951b      i32.load [2, 0]
+0062951e      local.get [1]
+00629520      call [918] ; 
+00629523      i32.load [2, 36]
+00629526      local.get [0]
+00629528      i32.const [3972480]
+0062952d      i32.load [2, 0]
+00629530      call [930] ; 
+00629533      i32.const [0]
+00629535      call [943] ; Component.get_gameObject
+00629538      i32.const [0]
+0062953a      i32.const [0]
+0062953c      call [949] ; GameObject.SetActive
+0062953f      local.get [0]
+00629541      i32.const [1]
+00629543      i32.add []
+00629544      local.set [0]
+00629546      br [1]
+00629548    end []
+00629549  end []
+0062954a  end []

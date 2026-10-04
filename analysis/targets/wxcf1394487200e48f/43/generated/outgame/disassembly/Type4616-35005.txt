@@ -1,0 +1,27 @@
+; Original class: GameStatisticsJsonData
+; Type4616..ctor; wasmcode function 12109; offset=5893446 size=73
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+0059ed47  i32.const [5001603]
+0059ed4c  i32.load8_u [0, 0]
+0059ed4f  i32.eqz []
+0059ed50  if [-64]
+0059ed52    i32.const [3973824]
+0059ed57    call [900] ; 
+0059ed5a    i32.const [3923244]
+0059ed5f    call [900] ; 
+0059ed62    i32.const [5001603]
+0059ed67    i32.const [1]
+0059ed69    i32.store8 [0, 0]
+0059ed6c  end []
+0059ed6d  i32.const [3923244]
+0059ed72  i32.load [2, 0]
+0059ed75  call [903] ; 
+0059ed78  local.set [1]
+0059ed7a  local.get [1]
+0059ed7c  i32.const [3973824]
+0059ed81  i32.load [2, 0]
+0059ed84  call [944] ; 
+0059ed87  local.get [0]
+0059ed89  local.get [1]
+0059ed8b  i32.store [2, 24]
+0059ed8e  end []

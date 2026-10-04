@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "unityVersion": "6000.3.7f1",
+  "passed": true,
+  "checks": [
+    {
+      "id": "task-model-original-eight-tasks-three-liveness-tiers-and-target-description",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-reset-appends-copied-conditions-and-preserves-source-failure-prefix",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-eligibility-exact-state-zero-without-receive-expiry-or-progress-gates",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-source-sort-receive-status-priority-id-and-noncanonical-state",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-config-cache-null-retry-and-description-captured-targets",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-condition-key-equality-ignores-progress-and-preserves-null-distinction",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-refresh-counters-replace-lists-with-zeroes-and-retain-unrelated-fields",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-liveness-cache-explicit-refresh-dictionary-order-and-int32-bit-wrap",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-reward-cache-publishes-before-malformed-row-and-keeps-negative-count",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-source-shallow-clone-and-independent-file-schema-roundtrip",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-actual-task-liveness-factory-model-event-order-and-low-int32",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "id": "task-model-liveness-event-failure-keeps-model-award-and-regular-add-omits-event",
+      "result": "pass",
+      "detail": ""
+    }
+  ],
+  "limitations": "Original ordinary-task models, storage schema and liveness factory over real config/item reward engine. Temporary file roundtrip only; actual TaskMgr/strategies/activities/UI, automatic persistence/Main/Player remain pending. No fresh native run."
+}

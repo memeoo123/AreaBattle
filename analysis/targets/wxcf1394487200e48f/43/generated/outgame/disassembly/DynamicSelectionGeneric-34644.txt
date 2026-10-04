@@ -1,0 +1,28 @@
+; Original shared generic: DynamicRenderItemSeletion.xYQag^R
+; DynamicSelectionGeneric.xYQag^R; wasmcode function 19843; offset=8919333 size=71
+; signature={'args': [127, 127], 'returns': []}; localGroups=[]
+00881926  i32.const [5014204]
+0088192b  i32.load8_u [0, 0]
+0088192e  i32.eqz []
+0088192f  if [-64]
+00881931    i32.const [3933376]
+00881936    call [900] ; 
+00881939    i32.const [5014204]
+0088193e    i32.const [1]
+00881940    i32.store8 [0, 0]
+00881943  end []
+00881944  local.get [0]
+00881946  i32.load [2, 16]
+00881949  local.set [1]
+0088194b  local.get [0]
+0088194d  local.get [1]
+0088194f  i32.const [3933376]
+00881954  i32.load [2, 0]
+00881957  call [983] ; 
+0088195a  i32.store [2, 28]
+0088195d  local.get [1]
+0088195f  i32.const [3933376]
+00881964  i32.load [2, 0]
+00881967  call [983] ; 
+0088196a  drop []
+0088196b  end []

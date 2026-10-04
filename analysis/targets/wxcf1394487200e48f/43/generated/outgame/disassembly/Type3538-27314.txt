@@ -1,0 +1,35 @@
+; Original class: BaseItem
+; Type3538.Instantiate; wasmcode function 2618; offset=822757 size=91
+; signature={'args': [127, 127, 127, 127], 'returns': []}; localGroups=[]
+000c8de6  i32.const [4989639]
+000c8deb  i32.load8_u [0, 0]
+000c8dee  i32.eqz []
+000c8def  if [-64]
+000c8df1    i32.const [4008864]
+000c8df6    call [900] ; 
+000c8df9    i32.const [3936516]
+000c8dfe    call [900] ; 
+000c8e01    i32.const [4989639]
+000c8e06    i32.const [1]
+000c8e08    i32.store8 [0, 0]
+000c8e0b  end []
+000c8e0c  i32.const [3936516]
+000c8e11  i32.load [2, 0]
+000c8e14  call [901] ; 
+000c8e17  local.get [1]
+000c8e19  i32.const [4008864]
+000c8e1e  i32.load [2, 0]
+000c8e21  call [1465] ; 
+000c8e24  local.set [1]
+000c8e26  local.get [1]
+000c8e28  i32.const [0]
+000c8e2a  call [1008] ; GameObject.get_transform
+000c8e2d  local.get [2]
+000c8e2f  i32.const [0]
+000c8e31  i32.const [0]
+000c8e33  call [1686] ; Transform.SetParent
+000c8e36  local.get [0]
+000c8e38  local.get [1]
+000c8e3a  local.get [0]
+000c8e3c  call [4713] ; UIObject.initGameObject
+000c8e3f  end []

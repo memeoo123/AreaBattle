@@ -1,0 +1,43 @@
+; Original shared generic: ReferencePool.Acquire
+; RankSupportGeneric.Acquire; wasmcode function 7371; offset=2911255 size=109
+; signature={'args': [127], 'returns': [127]}; localGroups=[(1, 127)]
+002c6c1a  local.get [0]
+002c6c1c  i32.load [2, 28]
+002c6c1f  i32.eqz []
+002c6c20  if [-64]
+002c6c22    i32.const [3937756]
+002c6c27    call [900] ; 
+002c6c2a    i32.const [3940520]
+002c6c2f    call [900] ; 
+002c6c32    local.get [0]
+002c6c34    call [954] ; 
+002c6c37  end []
+002c6c38  local.get [0]
+002c6c3a  i32.load [2, 28]
+002c6c3d  i32.load [2, 0]
+002c6c40  local.set [1]
+002c6c42  i32.const [3940520]
+002c6c47  i32.load [2, 0]
+002c6c4a  call [901] ; 
+002c6c4d  local.get [1]
+002c6c4f  i32.const [0]
+002c6c51  call [912] ; Type.GetTypeFromHandle
+002c6c54  local.set [1]
+002c6c56  i32.const [3937756]
+002c6c5b  i32.load [2, 0]
+002c6c5e  call [901] ; 
+002c6c61  local.get [1]
+002c6c63  i32.const [0]
+002c6c65  call [7368] ; ReferencePool.hQWw
+002c6c68  local.set [1]
+002c6c6a  local.get [0]
+002c6c6c  i32.load [2, 28]
+002c6c6f  i32.load [2, 4]
+002c6c72  i32.load [2, 0]
+002c6c75  local.get [0]
+002c6c77  i32.load [2, 28]
+002c6c7a  i32.load [2, 4]
+002c6c7d  local.get [1]
+002c6c7f  call [929] ; 
+002c6c82  return []
+002c6c83  end []

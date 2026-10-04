@@ -27,9 +27,11 @@ namespace AreaBattle
     public sealed class OutgameStartupEntry
     {
         readonly IOutgameStartupEntryHost host;
-        readonly Action migrate;
+        readonly Action migrate,initializeSevenDay;
         public OutgameStartupEntry(IOutgameStartupEntryHost host,Action migrate)
-        {this.host=host??throw new ArgumentNullException(nameof(host));this.migrate=migrate??throw new ArgumentNullException(nameof(migrate));}
+        {this.host=host??throw new ArgumentNullException(nameof(host));this.migrate=migrate??throw new ArgumentNullException(nameof(migrate));initializeSevenDay=host.InitializeSevenDayActivity;}
+        public OutgameStartupEntry(IOutgameStartupEntryHost host,Action migrate,OutgameControllerRegistry controllers):this(host,migrate)
+        {initializeSevenDay=()=>((OutgameSevendayActivityControl)controllers.Resolve(4502)).EnterGameInit();}
         public OutgameStartupEntry(IOutgameStartupEntryHost host,OutgameDataSaveRegistry registry,OutgameLocalDataManager local,OutgameSkinManager skins,OutgameCommanderManager commanders)
             :this(host,()=>OutgameLegacyMigration.Apply(registry,local,skins,commanders)){}
         public void Enter()
@@ -45,7 +47,7 @@ namespace AreaBattle
         void SceneComplete()
         {
             host.SendLoadGameScreen();host.ReportActivityEnter("EnterGameHome",host.CurrentLevel.ToString());
-            host.InitializeLevelRank();host.InitializeSevenDayActivity();host.SetPlayState(1);
+            host.InitializeLevelRank();initializeSevenDay();host.SetPlayState(1);
             host.CloseLoading();host.ReportGameInteractive("");
         }
     }

@@ -1,0 +1,20 @@
+; Original class: ActivityControl
+; Type4637.rqS~|; wasmcode function 4542; offset=1533920 size=49
+; signature={'args': [127, 127], 'returns': [127]}; localGroups=[]
+001767e1  i32.const [5001734]
+001767e6  i32.load8_u [0, 0]
+001767e9  i32.eqz []
+001767ea  if [-64]
+001767ec    i32.const [3949360]
+001767f1    call [900] ; 
+001767f4    i32.const [5001734]
+001767f9    i32.const [1]
+001767fb    i32.store8 [0, 0]
+001767fe  end []
+001767ff  i32.const [3949360]
+00176804  i32.load [2, 0]
+00176807  call [901] ; 
+0017680a  i32.const [0]
+0017680c  call [6298] ; AssemblyUtility.LoadCSharpAssembly
+0017680f  return []
+00176810  end []

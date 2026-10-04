@@ -1,0 +1,93 @@
+; Original class: AchievementActivity
+; Type4714.pjOtS; wasmcode function 6340; offset=2286576 size=236
+; signature={'args': [127, 127, 127], 'returns': [127]}; localGroups=[(1, 127)]
+0022e3f3  global.get [0]
+0022e3f5  i32.const [16]
+0022e3f7  i32.sub []
+0022e3f8  local.set [2]
+0022e3fa  local.get [2]
+0022e3fc  global.set [0]
+0022e3fe  i32.const [5001296]
+0022e403  i32.load8_u [0, 0]
+0022e406  i32.eqz []
+0022e407  if [-64]
+0022e409    i32.const [3929208]
+0022e40e    call [900] ; 
+0022e411    i32.const [3955096]
+0022e416    call [900] ; 
+0022e419    i32.const [3934404]
+0022e41e    call [900] ; 
+0022e421    i32.const [3926996]
+0022e426    call [900] ; 
+0022e429    i32.const [4102724] ; STRING "不包含id为{0}的任务"
+0022e42e    call [900] ; 
+0022e431    i32.const [5001296]
+0022e436    i32.const [1]
+0022e438    i32.store8 [0, 0]
+0022e43b  end []
+0022e43c  local.get [2]
+0022e43e  i32.const [0]
+0022e440  i32.store [2, 12]
+0022e443  block [-64]
+0022e445    local.get [0]
+0022e447    i32.load [2, 72]
+0022e44a    i32.load [2, 28]
+0022e44d    local.get [1]
+0022e44f    local.get [2]
+0022e451    i32.const [12]
+0022e453    i32.add []
+0022e454    i32.const [3955096]
+0022e459    i32.load [2, 0]
+0022e45c    call [1134] ; 
+0022e45f    if [-64]
+0022e461      local.get [2]
+0022e463      i32.load [2, 12]
+0022e466      local.set [0]
+0022e468      br [1]
+0022e46a    end []
+0022e46b    i32.const [0]
+0022e46d    local.set [0]
+0022e46f    i32.const [3926996]
+0022e474    i32.load [2, 0]
+0022e477    i32.const [1]
+0022e479    call [909] ; 
+0022e47c    local.set [3]
+0022e47e    local.get [2]
+0022e480    local.get [1]
+0022e482    i32.store [2, 8]
+0022e485    i32.const [3934404]
+0022e48a    i32.load [2, 0]
+0022e48d    local.get [2]
+0022e48f    i32.const [8]
+0022e491    i32.add []
+0022e492    call [910] ; 
+0022e495    local.set [1]
+0022e497    i32.const [4102724] ; STRING "不包含id为{0}的任务"
+0022e49c    i32.load [2, 0]
+0022e49f    local.get [1]
+0022e4a1    i32.const [0]
+0022e4a3    call [1015] ; String.Format
+0022e4a6    local.set [1]
+0022e4a8    local.get [3]
+0022e4aa    local.get [1]
+0022e4ac    call [905] ; 
+0022e4af    local.get [3]
+0022e4b1    local.get [1]
+0022e4b3    i32.store [2, 16]
+0022e4b6    i32.const [3929208]
+0022e4bb    i32.load [2, 0]
+0022e4be    call [901] ; 
+0022e4c1    local.get [3]
+0022e4c3    i32.const [0]
+0022e4c5    i32.const [2087] ; TABLE CLog.Error
+0022e4c8    global.set [3]
+0022e4ca    i32.const [2087] ; TABLE CLog.Error
+0022e4cd    call_indirect [0, 0]
+0022e4d0  end []
+0022e4d1  local.get [2]
+0022e4d3  i32.const [16]
+0022e4d5  i32.add []
+0022e4d6  global.set [0]
+0022e4d8  local.get [0]
+0022e4da  return []
+0022e4db  end []

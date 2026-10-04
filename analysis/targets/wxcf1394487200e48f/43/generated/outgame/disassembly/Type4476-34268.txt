@@ -1,0 +1,224 @@
+; Original class: NetTool
+; Type4476.get_BaseURL; wasmcode function 7519; offset=3618133 size=611
+; signature={'args': [127], 'returns': [127]}; localGroups=[(3, 127)]
+00373558  global.get [0]
+0037355a  i32.const [16]
+0037355c  i32.sub []
+0037355d  local.set [0]
+0037355f  local.get [0]
+00373561  global.set [0]
+00373563  i32.const [5009858]
+00373568  i32.load8_u [0, 0]
+0037356b  i32.eqz []
+0037356c  if [-64]
+0037356e    i32.const [3928172]
+00373573    call [900] ; 
+00373576    i32.const [3929208]
+0037357b    call [900] ; 
+0037357e    i32.const [3930188]
+00373583    call [900] ; 
+00373586    i32.const [3936280]
+0037358b    call [900] ; 
+0037358e    i32.const [3926996]
+00373593    call [900] ; 
+00373596    i32.const [3938304]
+0037359b    call [900] ; 
+0037359e    i32.const [4086444] ; STRING "default"
+003735a3    call [900] ; 
+003735a6    i32.const [4089064] ; STRING "hcrzd-u-cn-wx"
+003735ab    call [900] ; 
+003735ae    i32.const [4089512] ; STRING "https://"
+003735b3    call [900] ; 
+003735b6    i32.const [4041880] ; STRING ":20150"
+003735bb    call [900] ; 
+003735be    i32.const [4063208] ; STRING "NetTool URL"
+003735c3    call [900] ; 
+003735c6    i32.const [4063180] ; STRING "NetDtype"
+003735cb    call [900] ; 
+003735ce    i32.const [4040520] ; STRING "0"
+003735d3    call [900] ; 
+003735d6    i32.const [5009858]
+003735db    i32.const [1]
+003735dd    i32.store8 [0, 0]
+003735e0  end []
+003735e1  local.get [0]
+003735e3  i32.const [0]
+003735e5  i32.store [2, 12]
+003735e8  block [-64]
+003735ea    block [-64]
+003735ec      i32.const [3936280]
+003735f1      i32.load [2, 0]
+003735f4      i32.load [2, 92]
+003735f7      i32.load [2, 0]
+003735fa      local.set [2]
+003735fc      local.get [2]
+003735fe      if [-64]
+00373600        i32.const [0]
+00373602        local.set [3]
+00373604        local.get [2]
+00373606        i32.load [2, 8]
+00373609        br_if [2]
+0037360b      end []
+0037360c    end []
+0037360d    i32.const [1]
+0037360f    local.set [3]
+00373611  end []
+00373612  local.get [3]
+00373614  if [-64]
+00373616    i32.const [1]
+00373618    local.set [2]
+0037361a    block [-64]
+0037361c      block [-64]
+0037361e        block [-64]
+00373620          i32.const [3928172]
+00373625          i32.load [2, 0]
+00373628          i32.load [2, 92]
+0037362b          i32.load [2, 0]
+0037362e          i32.const [4063180] ; STRING "NetDtype"
+00373633          i32.load [2, 0]
+00373636          i32.const [0]
+00373638          call [1951] ; AppInfoManager.GetOnlineConfigParams
+0037363b          local.set [1]
+0037363d          local.get [1]
+0037363f          if [-64]
+00373641            i32.const [0]
+00373643            local.set [3]
+00373645            local.get [1]
+00373647            i32.load [2, 8]
+0037364a            br_if [2]
+0037364c          end []
+0037364d        end []
+0037364e        i32.const [1]
+00373650        local.set [3]
+00373652      end []
+00373653      local.get [3]
+00373655      br_if [0]
+00373657      i32.const [4040520] ; STRING "0"
+0037365c      i32.load [2, 0]
+0037365f      local.get [1]
+00373661      i32.const [0]
+00373663      call [1019] ; String.Equals
+00373666      br_if [0]
+00373668      local.get [1]
+0037366a      local.get [0]
+0037366c      i32.const [12]
+0037366e      i32.add []
+0037366f      i32.const [0]
+00373671      call [1329] ; Int32.TryParse
+00373674      drop []
+00373675      local.get [0]
+00373677      i32.load [2, 12]
+0037367a      local.set [2]
+0037367c    end []
+0037367d    i32.const [3926996]
+00373682    i32.load [2, 0]
+00373685    i32.const [2]
+00373687    call [909] ; 
+0037368a    local.set [1]
+0037368c    local.get [1]
+0037368e    i32.const [4063180] ; STRING "NetDtype"
+00373693    i32.load [2, 0]
+00373696    call [905] ; 
+00373699    local.get [1]
+0037369b    i32.const [4063180] ; STRING "NetDtype"
+003736a0    i32.load [2, 0]
+003736a3    i32.store [2, 16]
+003736a6    local.get [0]
+003736a8    local.get [2]
+003736aa    i32.store [2, 8]
+003736ad    i32.const [3930188]
+003736b2    i32.load [2, 0]
+003736b5    local.get [0]
+003736b7    i32.const [8]
+003736b9    i32.add []
+003736ba    call [910] ; 
+003736bd    local.set [3]
+003736bf    local.get [1]
+003736c1    local.get [3]
+003736c3    call [905] ; 
+003736c6    local.get [1]
+003736c8    local.get [3]
+003736ca    i32.store [2, 20]
+003736cd    i32.const [3929208]
+003736d2    i32.load [2, 0]
+003736d5    call [901] ; 
+003736d8    local.get [1]
+003736da    i32.const [0]
+003736dc    call [1156] ; CLog.Warning
+003736df    i32.const [3938304]
+003736e4    i32.load [2, 0]
+003736e7    i32.load [2, 92]
+003736ea    i32.load [2, 0]
+003736ed    i32.const [4089064] ; STRING "hcrzd-u-cn-wx"
+003736f2    i32.load [2, 0]
+003736f5    local.get [2]
+003736f7    i32.const [4086444] ; STRING "default"
+003736fc    i32.load [2, 0]
+003736ff    i32.const [0]
+00373701    call [10569] ; SDKToolManager.GetGameBizDomainStatic_Override
+00373704    local.set [1]
+00373706    local.get [2]
+00373708    i32.const [1]
+0037370a    i32.eq []
+0037370b    if [-64]
+0037370d      i32.const [4089512] ; STRING "https://"
+00373712      i32.load [2, 0]
+00373715      local.get [1]
+00373717      i32.const [4041880] ; STRING ":20150"
+0037371c      i32.load [2, 0]
+0037371f      i32.const [0]
+00373721      call [955] ; String.Concat
+00373724      local.set [1]
+00373726    end []
+00373727    i32.const [3936280]
+0037372c    i32.load [2, 0]
+0037372f    i32.load [2, 92]
+00373732    local.get [1]
+00373734    i32.store [2, 0]
+00373737    i32.const [3936280]
+0037373c    i32.load [2, 0]
+0037373f    i32.load [2, 92]
+00373742    drop []
+00373743    i32.const [3926996]
+00373748    i32.load [2, 0]
+0037374b    i32.const [2]
+0037374d    call [909] ; 
+00373750    local.set [2]
+00373752    local.get [2]
+00373754    i32.const [4063208] ; STRING "NetTool URL"
+00373759    i32.load [2, 0]
+0037375c    call [905] ; 
+0037375f    local.get [2]
+00373761    i32.const [4063208] ; STRING "NetTool URL"
+00373766    i32.load [2, 0]
+00373769    i32.store [2, 16]
+0037376c    i32.const [3936280]
+00373771    i32.load [2, 0]
+00373774    i32.load [2, 92]
+00373777    i32.load [2, 0]
+0037377a    local.set [1]
+0037377c    local.get [2]
+0037377e    local.get [1]
+00373780    call [905] ; 
+00373783    local.get [2]
+00373785    local.get [1]
+00373787    i32.store [2, 20]
+0037378a    i32.const [3929208]
+0037378f    i32.load [2, 0]
+00373792    call [901] ; 
+00373795    local.get [2]
+00373797    i32.const [0]
+00373799    call [1156] ; CLog.Warning
+0037379c  end []
+0037379d  i32.const [3936280]
+003737a2  i32.load [2, 0]
+003737a5  i32.load [2, 92]
+003737a8  i32.load [2, 0]
+003737ab  local.set [2]
+003737ad  local.get [0]
+003737af  i32.const [16]
+003737b1  i32.add []
+003737b2  global.set [0]
+003737b4  local.get [2]
+003737b6  return []
+003737b7  end []
