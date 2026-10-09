@@ -32,6 +32,8 @@ namespace AreaBattle
     {
         public StarInfoCfg[] Stars=>StarInfoCfgs;
         public ObstacleInfoCfg[] Obstacles=>ObstacleInfoCfgs;
+        public string DisplayName;
+        public bool BasicTowerExperiment;
         public CampInfoCfg[] CampInfoCfgs;
         public StarInfoCfg[] StarInfoCfgs;
         public ObstacleInfoCfg[] ObstacleInfoCfgs;
@@ -143,7 +145,7 @@ namespace AreaBattle
             if (layout == null || layout.StarInfoCfgs == null) throw new ArgumentException("A recovered layout is required.", "layout");
             if (configs == null) throw new ArgumentNullException("configs");
             if (canConnect == null) throw new ArgumentNullException("canConnect", "Supply the collider-verified pair topology.");
-            Configs = configs; topology = canConnect;
+            Configs = configs; topology = canConnect; BasicTowerExperiment = layout.BasicTowerExperiment;
             // The original RandomHelper owns one static System.Random. A seed here
             // creates an explicit isolated test stream; live views supply the shared stream.
             random = randomSource ?? new System.Random(seed);
@@ -187,6 +189,7 @@ namespace AreaBattle
             foreach (var soldier in Soldiers) soldier.Active = false;
             Towers.Clear(); Lines.Clear(); Soldiers.Clear(); pairs.Clear(); adjacency.Clear(); aiClocks.Clear();
             nextSoldierId = 0; Elapsed = 0; outcomeTimer = 0; outcomeDirty = false;
+            evolutionReaction=.6f; evolutionPlanning=4.5f;
             for (int i = 0; i < initialTowers.Count; i++)
             {
                 var c = initialTowers[i];
@@ -195,6 +198,7 @@ namespace AreaBattle
                 t.Position = c.pos.WorldPosition; t.MaxScore = GetDispatchScoreNum(2);
                 t.Active = true; t.AutoAddScore = true; t.Mode = 0; t.Grade = 0;
                 t.OutgoingCount = 0; t.RegenAccumulator = 0; t.CollisionRadius = .1f;
+                t.Specialization = TowerSpecialization.None; t.RememberedSpecialization = TowerSpecialization.None; t.AdvancementEarned = 0; t.Doctrine = -1; t.ArtFocus = 0; t.AdvancementHistory.Clear(); t.AdvancementBonuses = new AdvancementStats(); t.AdvancementName = "";
                 t.ForwardingHistory.Clear();
                 Towers.Add(t); adjacency.Add(t.Id, new List<LineState>()); RefreshTower(t, false);
             }
@@ -291,15 +295,23 @@ namespace AreaBattle
         private void RefreshOutgoing(TowerState tower)
         {
             int count = 0; foreach (var l in Lines) if (l.Active && l.IsFrom(tower.Id)) count++;
-            tower.OutgoingCount = count; tower.SpawnTime = GetSpawnTime(tower.Grade, count);
+            tower.OutgoingCount = count; tower.SpawnTime = ConnectionSpawnTime(tower);
         }
         private void RefreshTower(TowerState tower, bool notify)
         {
             int old = tower.Grade, score = (int)tower.Score;
             tower.Grade = score <= GetDispatchScoreNum(0) ? 0 : score <= GetDispatchScoreNum(1) ? 1 : 2;
-            tower.MaxLines = GetDispatchLineNum(tower.Grade);
+            DowngradeEvolution(tower);
+            tower.MaxLines = ConnectionCapacity(tower);
+            if (!tower.IsBoss && tower.ShipID >= 1 && tower.ShipID <= 3 && tower.Score >= 10 && (!BasicTowerExperiment || tower.Specialization != TowerSpecialization.None || tower.Camp == PlayerCampID)) tower.AdvancementEarned = System.Math.Max(tower.AdvancementEarned, System.Math.Min(MaximumAdvancements, (int)tower.Score / AdvancementStep));
+            ApplyAutomaticEvolution(tower);
+            tower.MaxLines = ConnectionCapacity(tower);
+            if(BasicTowerExperiment&&tower.OutgoingCount>tower.MaxLines){
+                var extra=Outgoing(tower.Id);
+                for(int i=tower.MaxLines;i<extra.Count;i++){var line=extra[i];SetDirection(line,line.Direction&~(line.SmallTowerId==tower.Id?1:2));}
+            }
             tower.RegenInterval = GetDispatchAddScoreTime(tower.Grade);
-            tower.SpawnTime = GetSpawnTime(tower.Grade, tower.OutgoingCount);
+            tower.SpawnTime = ConnectionSpawnTime(tower);
             if (notify && old != tower.Grade)
                 Emit(new BattleEvent { Kind = "grade", TowerId = tower.Id, Value = tower.Grade,
                     EffectId = tower.Grade > old ? 105 : 0, AudioId = tower.Grade > old ? 2014 : 0 });
@@ -318,6 +330,8 @@ namespace AreaBattle
             {
                 t.Score = -t.Score; int previous = t.Camp;
                 RemoveOutgoing(t.Id); t.Camp = sourceCamp;
+                // A capture crosses zero even when excess damage leaves a positive remainder.
+                if (BasicTowerExperiment && previous != sourceCamp) ResetEvolution(t);
                 if (previous != sourceCamp) t.Mode = 0;
                 Emit(new BattleEvent { Kind = "capture", TowerId = t.Id, PreviousCamp = previous, Camp = sourceCamp,
                     AudioId = sourceCamp == PlayerCampID ? 2005 : previous == PlayerCampID ? 2006 : 0 });
@@ -351,13 +365,16 @@ namespace AreaBattle
             // Advance existing projectiles before issuing this frame's new attacks.
             if (State != BattlePhase.Pause) TickArrowProjectiles(dt);
             if (State != BattlePhase.Running) return;
+            AdvanceEnemyTowers();
             TickPvpAgents(dt);
             TickEnemySkillTimers(dt);
             TickBosses(dt);
             Elapsed += dt;
             // MineGameLogicModule registration order: AI -> LevelControl -> WayLineControl.
+            TickEvolutionAI(dt);
             if (AIEnabled) foreach (var a in aiClocks)
             {
+                if(BasicTowerExperiment&&!Towers.Exists(t=>t.IsBoss&&t.Camp==a.Camp))continue;
                 if (a.Delay > 0f) { a.Delay -= dt; continue; }
                 a.Timer -= dt;
                 if (a.Timer < 0f) { a.Timer += GetAIActionTime(a.Config); RunAI(a.Camp, a.Config); }
@@ -373,17 +390,18 @@ namespace AreaBattle
                     if (t.RegenAccumulator >= t.RegenInterval)
                     {
                         t.RegenAccumulator -= t.RegenInterval;
-                        towerDelta += RegenMultiplier(t);
+                        towerDelta += RegenMultiplier(t) * (1f + t.AdvancementBonuses.Regen / 100f);
                     }
                 }
                 // Tower.Update combines regeneration and rain into one ChangeScore.
                 towerDelta += SkillTowerRainDelta(t, scaledDelta);
                 if (towerDelta != 0f) ChangeScore(t.Id, t.Camp, towerDelta, true);
-                if (t.ShipID == 4) TickArrowTower(t, scaledDelta);
+                if (t.IsArrow) TickArrowTower(t, scaledDelta);
                 // Boss.Update occupies its original place in list_tower, after base
                 // Tower.Update. Earlier towers see newly applied Rain next frame.
                 TickBossTower(t, scaledDelta);
             }
+            AdvanceEnemyTowers();
             if (outcomeDirty)
             {
                 outcomeTimer -= dt;
@@ -424,13 +442,14 @@ namespace AreaBattle
         public SoldierState SpawnSoldier(int sourceId, int targetId)
         {
             var t = Tower(sourceId); var line = FindLine(sourceId, targetId);
-            if (t == null || t.ShipID == 4 || line == null || !line.IsFrom(sourceId)) return null;
+            if (t == null || t.IsArrow || line == null || !line.IsFrom(sourceId)) return null;
             var c = ships[t.ShipID];
             var s = new SoldierState { Id = ++nextSoldierId, Camp = t.Camp, HP = c.hp, Attack = c.attack,
                 Occupy = c.occupy, Reinforce = c.reinforce, Voyage = c.voyage, ShipID = c.id,
                 ShipType = c.shipType, OriginTowerId = sourceId };
             Soldiers.Add(s); AddSoldierToLine(s, line, sourceId);
             OnSoldierCreated(s);
+            ApplySpecialization(t, s);
             Emit(new BattleEvent { Kind = "spawn", SoldierId = s.Id, TowerId = sourceId, LineId = line.Id, Camp = s.Camp });
             return s;
         }
@@ -482,7 +501,8 @@ namespace AreaBattle
             {
                 ChangeScore(target.Id, soldier.Camp, -soldier.Occupy); ClearSoldier(soldier);
             }
-            else if ((int)target.Score < target.MaxScore)
+            else if ((int)target.Score < target.MaxScore &&
+                !(target.Specialization == TowerSpecialization.Relay && Outgoing(target.Id).Count > 0))
             {
                 ChangeScore(target.Id, soldier.Camp, soldier.Reinforce); ClearSoldier(soldier);
             }
@@ -494,6 +514,7 @@ namespace AreaBattle
                 LineState selected = outgoing.Find(l => !target.ForwardingHistory.Contains(l.Id));
                 if (selected == null) { target.ForwardingHistory.Clear(); if (outgoing.Count > 0) selected = outgoing[0]; }
                 if (selected == null) { ClearSoldier(soldier); return; }
+                ApplyRelaySpeed(target, soldier);
                 target.ForwardingHistory.Add(selected.Id); AddSoldierToLine(soldier, selected, target.Id);
                 Emit(new BattleEvent { Kind = "forward", SoldierId = soldier.Id, TowerId = target.Id, LineId = selected.Id });
             }
@@ -548,6 +569,7 @@ namespace AreaBattle
         public void RunAI(int camp, AIConfig cfg)
         {
             if (State != BattlePhase.Running || cfg == null || cfg.ActionNum <= 0) return;
+            if(BasicTowerExperiment&&!Towers.Exists(t=>t.IsBoss&&t.Camp==camp)){PlanEvolutionAI(camp);return;}
             var sources = Towers.FindAll(t => t.Active && t.Camp == camp && t.ShipID != 4);
             for (int i = 0; i < sources.Count; i++)
             {

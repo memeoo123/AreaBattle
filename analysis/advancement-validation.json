@@ -1,0 +1,808 @@
+{
+    "schemaVersion": "1.0",
+    "unityVersion": "6000.0.68f1",
+    "passed": true,
+    "checks": [
+        {
+            "id": "10-point-threshold-retained",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "invalid-state-and-route",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "every-route-stage-and-choice",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "20-point-threshold",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "base-soldier-types-preserved-for-all-routes",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "single-cap-and-speed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "split-three-lines-at10-and-dual-pruning",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "relay-forward-fallback-and-loop-bound",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "relay-own-production-penalty",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "no-growth-while-dispatching-for-any-route",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "capture-retry-and-no-farming",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "production-hud-and-route-art",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "new-level-all-start-basic-and-can-evolve",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "captured-base-tower-must-reach10-under-new-owner",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "experiment-fixed-route-growth-and-budget",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "mandatory-evolution-modal-clock-queue-and-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "enemy-evolution-threshold-choice-parity-and-multiline-ai",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "enemy-production-view-never-opens-player-modal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "current-score-downgrade-and-owner-route-memory",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "route-memory-recovery-no-modal-and-capture-new-choice",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-evolution-reuses-targeting-no-dispatch-and-restoration",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-evolution-production-art-and-choice",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "evolution-campaign-normal-layouts-and-progression",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "campaign-low-start-all-catalog-layouts",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "campaign-first-evolution-arrives-through-growth",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "evolution-ai-counterattack-expansion-and-pause",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "lower-output-balance-and-measured-dispatch",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "split-independent-lanes-all-tiers-and-downgrade",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-growing-range-and-low-score-persistence",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-0-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-0-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-0-3",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-1-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-1-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-1-3",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-2-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-2-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetSpawnTime-2-3",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchLineNum-0",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchLineNum-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchLineNum-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchAddScoreTime-0",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchAddScoreTime-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchAddScoreTime-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchScoreNum-0",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchScoreNum-1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "original-GetDispatchScoreNum-2",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "layout0-source-data",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "exact-zero-capture-retains-incoming",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "capture-overflow",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "noncapturing-damage",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "grade-boundaries",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "friendly-cap",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "regen-two-second-boundary",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "outgoing-capacity",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "pause-no-simulation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "normal-battle-victory-retry",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "defeat-outcome",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "level5-ai-produces-lines",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "spawn-strict-boundary-and-no-debit",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "spawn-no-catchup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "L0-neutral-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "equal-hp-contact",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "tank-contact",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "forward-budget",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "cut-keeps-enemy-direction",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "physics-topology-and-view-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "AI-activation-versus-player-reverse",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "AI-unlinkable-rejected",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "demotion-keeps-existing-lines",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "cut-retains-inflight-soldier-and-clock",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill01-freeze-and-remove-enemy-soldiers",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-visual-aim-delay-is-scaled-and-independent-of-mechanic-tick",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill02-retry-stops-launches-but-retains-flying-bullet",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill12-retry-retains-await-and-reuses-current-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill12-retry-null-target-is-explicit-unresolved-continuation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill12-reset-closes-current-handles-after-overlapping-awaits",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-visual-serial-effect-once-and-subscriber-failure-isolated",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-visual-rain-outquad-does-not-change-mechanical-arrival",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-visual-poison-projectile-ground-order-no-mechanical-projectile",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-visual-recruit-and-attached-effects-source-binding",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-audio-fireball-order-and-conditional-unfreeze",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-audio-poison-handles-end-and-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "soldier-death-contact-detaches-and-cannot-hit-again",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "soldier-arrival-removes-without-death-animation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "score-presentation-keeps-pre-capture-camp-and-requested-delta",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "ordinary-audio-player-contact-and-wayline-arrival-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill02-fireball-damage-and-required-origin",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill02-original-bezier-and-up-offset",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "bullet-zero-arc-random-side-control-point",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill03-strike-cannot-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill04-own-production-multiplier",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "enemy-commander-multipliers-are-not-consumed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "player-skill-expires-after-tower-update-before-lines",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill05-other-production-multiplier",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill06-development-score",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill07-bat-outgoing-only-and-repeated-callback",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill08-existing-new-and-restored-hp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill09-clamped-drain-not-conserved",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill10-arrow-rain-tower-channel",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill10-arrow-clears-first-soldier-regardless-hp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill11-spawn-and-speed",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill12-tick-no-catchup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill13-new-soldier-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill14-recruit-count-and-can-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-serial-count-cannot-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-owner-change-stops-sequence",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-restart-retains-reference-delay-and-remaining-count",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-inactive-at-resume-terminates-before-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-different-camp-at-resume-terminates-before-restart",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-restart-restores-camp-before-continuation",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill15-old-job-does-not-retarget-replacement-id",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill16-new-enemy-attack-reinforce-only",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill17-initial-friendly-snapshot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill18-independent-tower-and-soldier-channels",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-clocks-pause-freezes-scaled-wait",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-result-fireball-callback-has-no-running-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-result-drain-callback-is-gated",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss999-init-no-capture-and-strike1",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss999-volley-friendly-heal",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss102-native-bullet-spawn-and-hit-presentation-order",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss998-rain-radius-damage-and-cleanup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss998-rain-and-regen-share-score-update",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss998-strike6",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss-noop-stops-prior-coroutine",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss-outcome-truncation-boundary",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss-outcome-player-loss-precedes-boss-death",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "boss-delay-crossing-drops-overshoot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "popup-countdown-pauses-battle",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage1-original-target-and-visibility",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "connection-waits-for-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "cut-restores-neighbors-and-exits-through-stage3",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage2-hand-uses-ui-plane-forward-axis",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "level1-stage4-has-no-forced-action",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage5-source-target-and-growth-gate",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage5-poll-scaled-delay-stage6-tip",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage5-unscaled-large-frame-skipped",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "stage5-score-tie-selects-last-player",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "restart-restores-real-first-stage",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "later-small-level-has-no-first-branch-guide",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "level2-production-arrivals-complete-guide",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "all-nine-original-guide-entry-mappings",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "defense-attack-dismiss-arrow-remains",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "skill-tutorial-production-casts-close-matching-slot",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "commander-specific-prompts-and-drag-target",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-config-and-line-rejection",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-range-inclusive-and-source-sqrt",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-clock-strict-threshold-and-no-catchup",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-no-target-still-consumes-clock",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-first-soldier-not-nearest-and-priority",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-large-origin-before-small-and-endpoint-camp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-cut-line-inflight-excluded",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-tower-selection-sampled-list-index",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-direct-kill-ignores-hp-and-fixed-end",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-damage-clamps-without-capture",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-pause-freezes-flight-and-resume",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-victory-does-not-cancel-retained-hit",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-hit-reads-current-source-camp",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-neutral-and-tree-still-attack",
+            "result": "pass",
+            "detail": ""
+        },
+        {
+            "id": "arrow-clear-retry-clock-and-retained-tower-reference",
+            "result": "pass",
+            "detail": ""
+        }
+    ],
+    "limitations": "Experimental progression and presentation; gameplay balance needs playtesting."
+}

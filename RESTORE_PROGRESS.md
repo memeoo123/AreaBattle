@@ -1264,3 +1264,7 @@ OutgameMainPreGameStartup按30617/30622/30608串接：初始化日志→既有se
 ## 控制器矩阵与首批真实接线（699项 + 原生10项）
 CONTROLLER_LIFECYCLE_MATRIX以原metadata接口槽4/5/6核验38控制器114方法（31个已验证空体），修正旧交接：type4561并非继承生命周期，而是显式GameFramework.IControl三方法。新增controller-generics.json解析26934单例/26750模型查询，追加ABProcessConst34450，method-map4477。OutgameControllerRegistry及OutgameCoreControllerBindings绑定真实type4561对象池、4034时间、4027指挥官、3903渠道流程、4118本地数据；无未绑定fallback。复原原生Pool FIFO/预热/回收/延迟释放、Channel原表六分支与旧账号流程1、Commander真实pool引用、LocalData首充/购买key/GamePlayState与重复监听/释放、ServerTime严格>1秒单次刷新/两次SDK读/跨日通知顺序/调试offset差异。当前其余33生命周期和完整Main账户服务仍未接通。
 集成BattleBuild.ValidateMechanicsOnly最新699通过；本轮编译曾因新测试未传OutgameDataVersionState构造参数失败，修复后通过。OutgameControllerPlayModeValidation原生10检查通过：共享实际manager、时间/流程、DontDestroyOnLoad隐藏root、active场景切换、真实消息到共享clock、暂停帧Update、释放解绑、后帧Destroy及再次建root。平台和存储使用明确fixture；没有实际SDK/服务器或完整关外Player声明。未修改用户数据；全部目标in_progress。详见CONTROLLER_LIFECYCLE_AUDIT.json；下一步UI/Game/Level/Player及其余33控制器。
+
+## 进阶玩法分支 — 2026-10-09
+
+当前玩法迭代与正式关卡接入见 [DEVELOPMENT_PROGRESS.md](DEVELOPMENT_PROGRESS.md)。该文档记录已确认规则、最新数值、构建入口、160项验证结果和待试玩事项；本文件前文继续保留原版还原进度，不将新设计视作原版还原证据。

@@ -20,6 +20,9 @@ namespace AreaBattle
         [Serializable] sealed class GeometryLayout { public StarRecord[] StarInfoCfgs; }
 
         public int LevelId = 5;
+        public string LevelDisplayName { get; private set; }
+        public bool BasicTowerExperiment { get; private set; }
+        public bool EvolutionCampaign;
         public int Seed = 4305;
         // Original RandomHelper..cctor creates a single parameterless System.Random.
         // Do not seed or replace this stream on retry, scene initialization or a new view.
@@ -79,6 +82,7 @@ namespace AreaBattle
         {
             var args=Environment.GetCommandLineArgs();int arg=Array.IndexOf(args,"-battle-level");
             bool smoke=Array.IndexOf(args,"-battle-smoke")>=0;
+            if(Array.IndexOf(args,"-battle-evolution")>=0){EvolutionCampaign=true;RequestedNormalLevel=0;}
             int skinArg=Array.IndexOf(args,"-battle-skin");
             if(skinArg>=0&&skinArg+1<args.Length&&int.TryParse(args[skinArg+1],out int skin)&&(skin==100||skin==102))OrdinarySoldierSkinId=skin;
             if(!smoke && Loadout==null)
@@ -118,6 +122,24 @@ namespace AreaBattle
             if(obstacleMaterial!=null)DestroyOwned(obstacleMaterial);
         }
 
+        public static void PrepareEvolutionCampaign(LevelLayout layout)
+        {
+            layout.BasicTowerExperiment=true;
+            var camps=new Dictionary<int,List<StarInfoCfg>>();
+            foreach(var tower in layout.StarInfoCfgs){
+                if(tower.isBoss)continue;
+                tower.ShipID=1;
+                if(tower.CampID==0)continue;
+                if(!camps.TryGetValue(tower.CampID,out var group)){group=new List<StarInfoCfg>();camps.Add(tower.CampID,group);}
+                group.Add(tower);
+            }
+            foreach(var group in camps.Values){
+                // Give the original strongest position the first progression opportunity.
+                var lead=group[0];foreach(var tower in group)if(tower.StartScore>lead.StartScore)lead=tower;
+                int index=0;
+                foreach(var tower in group)tower.StartScore=tower==lead?8:((index++%2==0)?6:5);
+            }
+        }
         public void InitializeNormalLevel(int level)
         {
             var catalog=new BattleLevelCatalog(ReadText("Data/LevelConfig"));
@@ -169,6 +191,7 @@ namespace AreaBattle
             LevelId = level;
             try
             {
+                HideArrowRange();
                 if(Guide!=null)Guide.Dispose();
                 foreach (var obj in ownedObjects) if (obj != null) DestroyOwned(obj);
                 ownedObjects.Clear(); towerObjects.Clear(); towerSprites.Clear(); scoreTexts.Clear(); lineObjects.Clear();recoveredLines.Clear(); soldierObjects.Clear();arrowObjects.Clear();
@@ -183,6 +206,8 @@ namespace AreaBattle
                 var text = ReadText("Data/Levels/level_" + level);
                 var geometry = JsonUtility.FromJson<GeometryLayout>(text);
                 var layout = JsonUtility.FromJson<LevelLayout>(text);
+                if(EvolutionCampaign&&RequestedNormalLevel>=0)PrepareEvolutionCampaign(layout);
+                LevelDisplayName=layout.DisplayName; BasicTowerExperiment=layout.BasicTowerExperiment;
                 font = Resources.Load<Font>("Recovered/Fonts/HYZhuZiMuTouRenW");
                 if (font == null) font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
                 lineMaterial = new Material(Shader.Find("Sprites/Default"));
@@ -253,7 +278,7 @@ namespace AreaBattle
                 Simulation.PvPFireballOrigin=()=>SkillProjectileOrigin(1);
                 int normal=guideLevel<0?level:guideLevel;
                 if(Loadout!=null)CommanderMode=Loadout.CommanderId;
-                Guide=new BattleGuide(Simulation,normal,0,CommanderMode);
+                Guide=new BattleGuide(Simulation,EvolutionCampaign&&RequestedNormalLevel>=0?-1:normal,0,CommanderMode);
                 var stock=new Dictionary<int,int>();for(int id=1;id<=18;id++)stock[2000+id]=ControlledSkillStock;
                 SkillInput=Loadout!=null?Loadout.CreateSkillInput(Simulation,ReadText("Data/AllSkillConfig"),normal):new BattleSkillInput(Simulation,ReadText("Data/AllSkillConfig"),CommanderMode,normal,1,stock);
                 Progress=new BattleProgress(normal,RequestedNormalLevel<0);
@@ -310,9 +335,10 @@ namespace AreaBattle
             if(name=="LevelUp")obj.GetComponent<SpriteRenderer>().sortingOrder=1;
             var effect=obj.GetComponent<RecoveredSpriteEffect>();effect.Begin(visualClock);spriteEffects.Add(effect);
         }
-        static string ProfilePath=>System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.dataPath,"../LocalProfile.json"));
+        string ProfilePath=>System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.dataPath,EvolutionCampaign?"../EvolutionProfile.json":"../LocalProfile.json"));
         public void RestartCurrentLevel()
         {
+            HideArrowRange();
             // Source retry reuses tower entities; restore colliders before reconstructing topology.
             foreach(var tower in towerObjects.Values)tower.SetActive(true);
             Physics.SyncTransforms();Time.timeScale=1f;
@@ -355,6 +381,8 @@ namespace AreaBattle
             if (!Initialized) return;
             BattleCamera.orthographicSize=2.1f*(.5625f/(Screen.width/(float)Math.Max(1,Screen.height)));
             SynchronizeBackground(BattleCamera.aspect);
+            if(Hud!=null)Hud.Synchronize();
+            if(EvolutionInputBlocked){AdvanceFrame(0,Time.unscaledDeltaTime);return;}
             bool skillInput=HandleSkillInput();
             if(!skillInput)HandleInput();
             AdvanceFrame(Time.deltaTime,Time.unscaledDeltaTime);
@@ -363,6 +391,8 @@ namespace AreaBattle
         public void AdvanceFrame(float scaledDelta,float unscaledDelta)
         {
             if(!Initialized)return;
+            if(Hud!=null)Hud.Synchronize();
+            if(Hud!=null&&Hud.EvolutionOpen){Time.timeScale=0;return;}
             visualClock+=scaledDelta;
             Shader.SetGlobalFloat("_RecoveredEffectTime",visualClock);
             Guide.Tick(scaledDelta,unscaledDelta);
@@ -372,6 +402,7 @@ namespace AreaBattle
             Simulation.Tick(scaledDelta);
             Time.timeScale=Simulation.State==BattlePhase.Pause?0f:1f;
             RefreshPresentation();
+            if(Hud!=null&&Hud.EvolutionOpen){Time.timeScale=0;return;}
             if(Hud!=null)Hud.AdvancePresentation(scaledDelta);
             if(SkillPresentation!=null)SkillPresentation.Step(scaledDelta);
             if(Gestures!=null)Gestures.Tick(scaledDelta);
@@ -409,7 +440,7 @@ namespace AreaBattle
         Vector3 SkillProjectileOrigin(int slot)
         {var c=SkillScreenCenter(slot);return BattleCamera.ScreenToWorldPoint(new Vector3(c.x,c.y,5f));}
         public bool TryUseSkillSlot(int slot,int targetId=0,Vector3? groundPoint=null)
-        {return SkillInput.TryUse(slot,targetId,groundPoint,SkillProjectileOrigin(slot));}
+        {return !EvolutionInputBlocked&&SkillInput.TryUse(slot,targetId,groundPoint,SkillProjectileOrigin(slot));}
         bool HandleSkillInput()
         {
             if(Simulation.State!=BattlePhase.Running)return false;
@@ -471,8 +502,9 @@ namespace AreaBattle
         // Production input adapter: original down resets target120; move updates it; up submits it.
         public bool BeginTowerDrag(int sourceId)
         {
+            if(Simulation.Tower(sourceId)!=null&&Simulation.Tower(sourceId).IsArrow){InspectArrowRange(sourceId);return false;}
             cachedDragTarget=0;
-            if(Simulation.State!=BattlePhase.Running||!Guide.CanDraw||!towerObjects.ContainsKey(sourceId)||!Guide.IsSourceAllowed(sourceId))return false;
+            if(EvolutionInputBlocked||Simulation.State!=BattlePhase.Running||!Guide.CanDraw||!towerObjects.ContainsKey(sourceId)||!Guide.IsSourceAllowed(sourceId))return false;
             selectedTower=sourceId;drawing=true;cutting=false;return true;
         }
         public RecoveredGestureVisuals.PreviewResolution MoveTowerDrag(Vector3 groundPoint,int directHitTowerId=0)
@@ -495,6 +527,45 @@ namespace AreaBattle
             bool connected=drawing&&!cutting&&selectedTower!=0&&cachedDragTarget!=0&&Guide.TryConnect(selectedTower,cachedDragTarget);
             drawing=false;cutting=false;selectedTower=0;cachedDragTarget=0;preview.enabled=false;Gestures.EndGesture();return connected;
         }
+        LineRenderer arrowRangeOutline;
+        int inspectedArrow, inspectedArrowCamp;
+        public bool ArrowRangeVisible=>arrowRangeOutline!=null&&arrowRangeOutline.gameObject.activeSelf;
+        public bool InspectArrowRange(int towerId)
+        {
+            var tower=Simulation==null?null:Simulation.Tower(towerId);
+            if(tower==null||!tower.Active||!tower.IsArrow||Simulation.State!=BattlePhase.Running||(Hud!=null&&Hud.EvolutionOpen))return false;
+            drawing=false;cutting=false;selectedTower=0;cachedDragTarget=0;
+            if(preview!=null)preview.enabled=false;
+            if(Gestures!=null)Gestures.EndGesture();
+            inspectedArrow=towerId;inspectedArrowCamp=tower.Camp;
+            if(arrowRangeOutline==null){arrowRangeOutline=MakeLine("Arrow attack range",.018f);arrowRangeOutline.loop=true;arrowRangeOutline.positionCount=96;arrowRangeOutline.sortingOrder=5;}
+            RefreshArrowRange();return true;
+        }
+        void HideArrowRange(){inspectedArrow=0;if(arrowRangeOutline!=null)arrowRangeOutline.gameObject.SetActive(false);}
+        void RefreshArrowRange()
+        {
+            if(inspectedArrow==0)return;
+            var tower=Simulation.Tower(inspectedArrow);
+            if(tower==null||!tower.Active||!tower.IsArrow||tower.Camp!=inspectedArrowCamp||Simulation.State!=BattlePhase.Running||(Hud!=null&&Hud.EvolutionOpen)){HideArrowRange();return;}
+            arrowRangeOutline.gameObject.SetActive(true);
+            var color=CampColor(tower.Camp);color.a=.85f;arrowRangeOutline.startColor=arrowRangeOutline.endColor=color;
+            float radius=tower.ArrowRange;
+            for(int i=0;i<96;i++){float a=i*Mathf.PI*2/96;arrowRangeOutline.SetPosition(i,tower.Position+new Vector3(Mathf.Cos(a)*radius,.035f,Mathf.Sin(a)*radius));}
+        }
+        int evolutionInputFrame=-1;
+        bool EvolutionInputBlocked=>(Hud!=null&&Hud.EvolutionOpen)||Time.frameCount<=evolutionInputFrame;
+        public void CancelInputForEvolution()
+        {
+            HideArrowRange();
+            evolutionInputFrame=Time.frameCount;
+            drawing=false;cutting=false;selectedTower=0;cachedDragTarget=0;
+            if(preview!=null)preview.enabled=false;
+            if(Gestures!=null)Gestures.EndGesture();
+            if(pressedSkill>=0&&Hud!=null)Hud.MoveSkillArtwork(pressedSkill,Vector2.zero,false);
+            pressedSkill=-1;
+            if(SkillTargets!=null)SkillTargets.EndDrag();
+            if(SkillPresentation!=null)SkillPresentation.PreviewPoison(Vector3.zero,false);
+        }
         void HandleInput()
         {
             if(Simulation.State!=BattlePhase.Running || !Guide.CanDraw)return;
@@ -502,8 +573,11 @@ namespace AreaBattle
             if(!GroundPoint(out point))return;
             if(Input.GetMouseButtonDown(0))
             {
+                if(Hud!=null && Hud.BlocksAdvancementPointer(Input.mousePosition))return;
                 if(Input.mousePosition.y>Screen.height-90 || Input.mousePosition.y<60)return;
+                HideArrowRange();
                 selectedTower=TowerUnderPointer();
+                if(selectedTower!=0&&Simulation.Tower(selectedTower).IsArrow){InspectArrowRange(selectedTower);return;}
                 if(selectedTower!=0 && !Guide.IsSourceAllowed(selectedTower))return;
                 cachedDragTarget=0;
                 if(selectedTower!=0&&!BeginTowerDrag(selectedTower))return;
@@ -546,10 +620,16 @@ namespace AreaBattle
             {
                 towerObjects[tower.Id].SetActive(Guide==null || Guide.IsTowerVisible(tower.Id));
                 if(tower.IsBoss)continue;
-                string key=Family[Mathf.Clamp(tower.ShipID,1,4)]+(tower.Grade+1)+CampSuffix[Mathf.Clamp(tower.Camp,0,5)];
+                int artFamily=tower.IsArrow?4:Mathf.Clamp(tower.ShipID,1,4);
+                int artGrade=tower.Specialization==TowerSpecialization.None?tower.Grade+1:Mathf.Clamp((tower.AdvancementSpent+1)/2,1,3);
+                if(BasicTowerExperiment)artGrade=tower.Specialization==TowerSpecialization.None?1:(tower.AdvancementSpent>=4?3:2);
+                string key=Family[artFamily]+artGrade+CampSuffix[Mathf.Clamp(tower.Camp,0,5)];
                 Sprite sprite;
                 if(!spriteCache.TryGetValue(key,out sprite)){sprite=Resources.Load<Sprite>("Recovered/Towers/"+key);spriteCache[key]=sprite;}
                 towerSprites[tower.Id].sprite=sprite;
+                var routeArt=towerObjects[tower.Id].GetComponent<AdvancementVisual>();
+                if(routeArt==null&&tower.Specialization!=TowerSpecialization.None)routeArt=towerObjects[tower.Id].AddComponent<AdvancementVisual>();
+                if(routeArt!=null)routeArt.Synchronize(tower.Specialization,tower.Doctrine,tower.AdvancementSpent,tower.ArtFocus,tower.Camp,tower.Position,BattleCamera,false);
                 towerSprites[tower.Id].enabled=Guide==null || Guide.IsTowerVisible(tower.Id);
                 scoreTexts[tower.Id].gameObject.SetActive(Hud==null&&(Guide==null || Guide.IsTowerVisible(tower.Id)));
                 scoreTexts[tower.Id].text=((int)tower.Score).ToString();
@@ -592,7 +672,8 @@ namespace AreaBattle
                 GameObject visual;
                 if(!soldierObjects.TryGetValue(soldier.Id,out visual))
                 {
-                    int visualSkin=soldier.ShipType==1&&OrdinarySoldierSkinId==102&&(OrdinarySoldierSkinCampMask&(1<<soldier.Camp))!=0?102:soldier.ShipType*100;
+                    int visualFamily=soldier.ShipType;
+                    int visualSkin=visualFamily==1&&OrdinarySoldierSkinId==102&&(OrdinarySoldierSkinCampMask&(1<<soldier.Camp))!=0?102:visualFamily*100;
                     var prefab=soldier.ShipType>=1&&soldier.ShipType<=3?Resources.Load<GameObject>("Recovered/Soldiers/soldier_"+visualSkin):null;
                     if(soldier.ShipType==11||soldier.ShipType==12){var bossSoldier=RecoveredBossVisual.Create(soldier.ShipType==11?9001:9002);bossSoldier.AttachSoldierShadow();visual=Own(bossSoldier.gameObject);}
                     else if(prefab!=null){visual=Own(Instantiate(prefab));visual.GetComponent<RecoveredSoldierVisual>().Begin(visualClock);}
@@ -610,16 +691,20 @@ namespace AreaBattle
                 if(animated!=null)animated.Synchronize(soldier,BattleCamera,visualClock);
                 else if(visual.TryGetComponent<RecoveredBossVisual>(out var bossSoldier))bossSoldier.SynchronizeSoldier(soldier,BattleCamera);
                 else visual.transform.position=soldier.Position+Vector3.up*.05f;
+                var unitArt=visual.GetComponent<AdvancementVisual>();
+                if(unitArt==null&&soldier.VisualRoute!=TowerSpecialization.None)unitArt=visual.AddComponent<AdvancementVisual>();
+                if(unitArt!=null)unitArt.Synchronize(soldier.VisualRoute,soldier.VisualDoctrine,soldier.VisualTier,soldier.VisualFocus,soldier.Camp,soldier.Position,BattleCamera,true);
             }
             var gone=new List<int>();foreach(var pair in soldierObjects)if(!live.Contains(pair.Key))gone.Add(pair.Key);
             foreach(int id in gone){ownedObjects.Remove(soldierObjects[id]);DestroyOwned(soldierObjects[id]);soldierObjects.Remove(id);}
             if(Gestures!=null)Gestures.SynchronizeArrows(Simulation.Arrows);
             if(Hud!=null)Hud.Synchronize();
+            RefreshArrowRange();
             for(int i=spriteEffects.Count-1;i>=0;i--)
                 if(spriteEffects[i]==null||!spriteEffects[i].Advance(visualClock))
                 {if(spriteEffects[i]!=null){ownedObjects.Remove(spriteEffects[i].gameObject);DestroyOwned(spriteEffects[i].gameObject);}spriteEffects.RemoveAt(i);}
         }
-        void SetPaused(bool value){if(Guide.PromptVisible)return;Simulation.Pause(value);Time.timeScale=value?0f:1f;}
+        void SetPaused(bool value){if(EvolutionInputBlocked||Guide.PromptVisible)return;Simulation.Pause(value);Time.timeScale=value?0f:1f;}
         void OnGUI()
         {
             if(textStyle==null){textStyle=new GUIStyle(GUI.skin.label){font=font,fontSize=24,alignment=TextAnchor.MiddleCenter};textStyle.normal.textColor=new Color(.12f,.18f,.25f);buttonStyle=new GUIStyle(GUI.skin.button){font=font,fontSize=20};}

@@ -8,7 +8,7 @@ using Spine.Unity;
 namespace AreaBattle
 {
     // UGUI presentation adapter; simulation and skill targeting remain authoritative outside this class.
-    public sealed class BattleHud : MonoBehaviour
+    public sealed partial class BattleHud : MonoBehaviour
     {
         [Serializable] sealed class Manifest { public CanvasData canvas;public SpriteEntry[] sprites;public SkillIcon[] skillIcons; }
         [Serializable] sealed class CanvasData { public Vector2 referenceResolution;public float match,planeDistance,cameraSize,cameraDepth,nearClip,farClip;public Vector3 cameraPosition;public Quaternion cameraRotation; }
@@ -208,7 +208,7 @@ namespace AreaBattle
             SetBattleHudVisible(sim.State!=BattlePhase.Victory&&sim.State!=BattlePhase.Defeat);
             bool special=view.Progress!=null&&view.Progress.Special;
             int displayedLevel=view.Progress!=null?view.Progress.SelectedLevel:view.LevelId;
-            TextAt(topBar.transform,"ProgressSlider/LevelBg/LevelText",special?"挑战关":"关卡 "+displayedLevel);
+            TextAt(topBar.transform,"ProgressSlider/LevelBg/LevelText",!string.IsNullOrEmpty(view.LevelDisplayName)?view.LevelDisplayName:special?"挑战关":"关卡 "+displayedLevel);
             Show(topBar.transform,"ProgressSlider/LevelBg",special||displayedLevel>=1);
             victoryPanel.SetActive(sim.State==BattlePhase.Victory);defeatPanel.SetActive(sim.State==BattlePhase.Defeat);
             if(lastPresentationPhase!=sim.State)
@@ -252,6 +252,13 @@ namespace AreaBattle
                     }
                 }
                 label.Root.gameObject.SetActive(tower.Active && (view.Guide==null || view.Guide.Stage==0 || visible.Contains(tower.Id)));
+                if(view.BasicTowerExperiment)
+                {
+                    LayoutExperimentTower(label,tower);
+                    label.Score.text=Mathf.Max(0,(int)tower.Score).ToString();
+                }
+                else
+                {
                 // Init f10061/f9712 offsets in UI world space; later grade changes use f10060's battle-world offset.
                 if(tower.Grade!=label.InitialGrade)label.GradeChanged=true;
                 var world=tower.Position+Vector3.up*(.3f+(label.GradeChanged?.1f+(sim.GetDispatchLineNum(tower.Grade)-1)*.05f:0f));
@@ -259,8 +266,17 @@ namespace AreaBattle
                 if(!label.GradeChanged)screen.y+=(.1f+label.InitialGrade*.15f)*UICamera.pixelHeight/(2f*UICamera.orthographicSize);
                 if(RectTransformUtility.ScreenPointToLocalPointInRectangle(towerLayer,screen,UICamera,out var point))label.Root.anchoredPosition=point;
                 label.Score.text=tower.Score>=tower.MaxScore?"Max":Mathf.Max(0,(int)tower.Score).ToString();
+                }
                 RefreshCapacity(label,tower,label.CachedCamp!=tower.Camp);
             }
+            SynchronizeAdvancement();
+            if(view.EvolutionCampaign&&!special&&displayedLevel<=2){
+                var tip=Canvas.transform.Find("Evolution campaign controls");
+                if(tip==null)tip=EvolutionText(Canvas.transform,"Evolution campaign controls",new Vector2(980,65),new Vector2(0,0),"拖动我方塔连线 · 划线断开\n10点选择路线，兵力下降会降级",25,labels.Count>0?new List<TowerLabel>(labels.Values)[0].Score.font:Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf")).transform;
+                var rt=(RectTransform)tip;rt.anchorMin=rt.anchorMax=new Vector2(.5f,0);rt.anchoredPosition=new Vector2(0,355);
+                tip.gameObject.SetActive(!EvolutionOpen&&sim.State==BattlePhase.Running);
+            }
+
             if(view.SkillInput!=null)
             {
                 for(int i=0;i<3;i++)
@@ -340,8 +356,8 @@ namespace AreaBattle
             if(view.Simulation.State==BattlePhase.Running)commander.AnimationState.SetAnimation(0,"idle",true);
         }
         static void DestroyHudObject(GameObject obj){if(Application.isPlaying)Destroy(obj);else DestroyImmediate(obj);}
-        void ClearTowerLabels(){foreach(var label in labels.Values)DestroyHudObject(label.Root.gameObject);labels.Clear();}
+        void ClearTowerLabels(){ClearAdvancement();foreach(var label in labels.Values)DestroyHudObject(label.Root.gameObject);labels.Clear();}
         void OnDestroy(){Clear();}
-        void Clear(){if(lastSimulation!=null)lastSimulation.Event-=OnBattleEvent;if(owner!=null){owner.SetActive(false);DestroyHudObject(owner);}owner=null;Canvas=null;UICamera=null;bossSlider=null;labels.Clear();spriteByName.Clear();skillIcons.Clear();shipKinds.Clear();lastSimulation=null;}
+        void Clear(){ClearAdvancement();if(lastSimulation!=null)lastSimulation.Event-=OnBattleEvent;if(owner!=null){owner.SetActive(false);DestroyHudObject(owner);}owner=null;Canvas=null;UICamera=null;bossSlider=null;labels.Clear();spriteByName.Clear();skillIcons.Clear();shipKinds.Clear();lastSimulation=null;}
     }
 }

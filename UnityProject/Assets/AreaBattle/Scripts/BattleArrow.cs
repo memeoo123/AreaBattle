@@ -8,7 +8,10 @@ namespace AreaBattle
     public partial class TowerState
     {
         public float ArrowAccumulator;
-        public bool IsArrow { get { return ShipID == 4; } }
+        public int ArrowGrade=>Specialization==TowerSpecialization.Arrow?1:Grade;
+        public float ArrowRange=>Specialization==TowerSpecialization.Arrow?1f+Mathf.Max(0,AdvancementSpent-1)*.1f:BattleSimulation.GetArrowRange(Grade);
+        public float ArrowRate=>BattleSimulation.GetArrowRate(ArrowGrade)/(Specialization==TowerSpecialization.Arrow?1f+Mathf.Max(0,AdvancementSpent-1)*.2f:1f);
+        public bool IsArrow { get { return ShipID == 4 || Specialization == TowerSpecialization.Arrow; } }
     }
     public sealed class ArrowState
     {
@@ -46,7 +49,7 @@ namespace AreaBattle
         }
         public SoldierState FindArrowSoldier(TowerState source)
         {
-            float range = GetArrowRange(source.Grade);
+            float range = source.ArrowRange;
             foreach (var line in Lines)
             {
                 if (!line.Active || line.Direction == 0) continue;
@@ -65,7 +68,7 @@ namespace AreaBattle
         {
             var candidates = new List<TowerState>();
             foreach (var t in Towers)
-                if (t.Active && t.Camp != source.Camp && ArrowTowerInRange(source.Position, t.Position, GetArrowRange(source.Grade)))
+                if (t.Active && t.Camp != source.Camp && ArrowTowerInRange(source.Position, t.Position, source.ArrowRange))
                     candidates.Add(t);
             if (candidates.Count == 0) return null;
             int index = ArrowTargetIndex == null ? random.Next(candidates.Count) : ArrowTargetIndex(candidates.Count);
@@ -75,7 +78,7 @@ namespace AreaBattle
         private void TickArrowTower(TowerState tower, float dt)
         {
             tower.ArrowAccumulator += dt;
-            if (tower.ArrowAccumulator <= GetArrowRate(tower.Grade)) return;
+            if (tower.ArrowAccumulator <= tower.ArrowRate) return;
             tower.ArrowAccumulator = 0f;
             FireArrow(tower.Id);
         }
@@ -91,7 +94,7 @@ namespace AreaBattle
             var a = new ArrowState { Id = ++nextArrowId, Source = source, SourceTowerId = source.Id,
                 LaunchCamp = source.Camp, TargetSoldier = soldier, TargetTower = target,
                 TargetSoldierId = soldier == null ? 0 : soldier.Id, TargetTowerId = target == null ? 0 : target.Id,
-                Start = source.Position + Vector3.up * ArrowHeights[source.Grade] };
+                Start = source.Position + Vector3.up * ArrowHeights[source.ArrowGrade] };
             a.End = soldier != null ? soldier.Position + (soldier.LegEnd - soldier.LegStart).normalized * .2f : target.Position + Vector3.up * .1f;
             a.Position = a.Start; Arrows.Add(a);
             Emit(new BattleEvent { Kind = "arrow-fire", ArrowId = a.Id, TowerId = source.Id, SoldierId = a.TargetSoldierId, Camp = source.Camp });
