@@ -1,96 +1,144 @@
-# 《冲向那座塔》复原项目当前状态与接续说明
+## 2026-10-10：连线与塔底座中心对齐（最新）
 
-更新日期：2026-09-30。本文为适合单独上传的当前状态快照，不是最终验收报告。
+用户澄清问题是连线看起来没有从塔中心出发，此前透视修正并未解决此问题。CompactTowerVisual 将底部最前端 pivot 改为各塔底座中心（归一化 Y：普通 .115、突击 .10、分流 .08、箭塔 .095），图片原点对齐实际连线平面 Position + up*.021；参数为按图片观察调整的视觉锚点。未改逻辑塔位、路径和碰撞。扩充既有检查验证图片原点与实际连线端点投影一致。footprint-anchor-build.log：166 项通过、构建成功；三场景重新录制 ART_DYNAMIC_PASS。已查看静态和动态截图；对照 line-anchor-before.png / line-anchor-after.png，两个动态回放页缓存版本更新。此次视觉修正待用户反馈，其他已认可样板保持。
 
-## 1. 当前结论
+## 2026-10-10：普通/突击/分流塔透视统一（最新）
 
-项目仍在进行中，尚未完成完整关外复原，也尚未由用户验收。已有大量原包证据、生产模块和自动验证；最新完成的是 GlobalItemManager 单例宿主及 ItemManager 延迟初始化/保存重启链；此前九种道具实体和礼包奖励链也已通过。生产入口仍为独立 `Battle.unity`，不能据此认定完整大厅、账号登录、关外到战斗再返回的流程已经可玩。
+按用户确认统一校正其余三塔中轴、竖向边线及顶部/基座关系。内置image_gen生成towers-upright-v7.png（2172×724 RGBA），提示词towers-upright-prompt.txt，参考towers-banner-v3.png。运行只读取前三切片，箭塔继续使用arrow-upright-v6；旧原始图仅保留作尺寸校准。保留各塔造型/石露台/短旗布，尺寸上限和玩法未改。towers-upright-build.log：166项通过、构建成功；dynamic-review.log三场景ART_DYNAMIC_PASS。已查看实机截图towers-v7-in-game.png并更新dynamic-review.html、dynamic-review-upright.html的回放。当前透视修正待用户观察，其他样板认可保留。
+## 2026-10-10：箭塔透视扶正（最新）
 
-- 最新集成验证：**1087 项通过**，包含既有战斗与关外模块检查，并非 1087 条完整用户流程。
-- 本次整理重新核对：验证清单中 **2078 个源文件指纹全部匹配**，没有发现验证后源文件内容变化。
-- 38 个启动控制器中，已有 **14 个实际生命周期/共享绑定实现并验证，剩余 24 个**；这不是业务完成率。
-- 反汇编方法索引：**5170 项**；另有礼包权重泛型的专项提取证据。
-- 最新阶段：`global-item-slot-owner`；状态：`in_progress`，完整目标未完成。
-- 本轮新增单例宿主并修正快照创建时机，已重跑集成验证；没有新 Player 或真实用户存档改动。
+按用户要求修正右倾观感：竖直平行立柱，平台与底座中心对齐，弩机支座居中，保留无护栏/无梯子要求。内置image_gen输出arrow-upright-v6.png（1024×1536 RGBA），提示词arrow-upright-prompt.txt，原v5为参考；新图已导入并更新映射。arrow-upright-build.log记录166项通过、构建成功。已重录三组动态场景，dynamic-review.log为ART_DYNAMIC_PASS；回放dynamic-review-upright.html及原dynamic-review.html均更新。已查看静态及动态截图，塔身更竖直；新视觉修正待用户反馈，不撤销此前其他样板认可。截图art-style/style-a/arrow-v6-in-game.png。无玩法/存档变更。
+## 2026-10-09：当前样板确认，动态验收通过（最新）
 
-## 2. 目标与约束
+用户明确“确认当前样板，继续吧”，已认可当前视觉样板。已完成关卡116、30、99001三组6秒受控实际模拟，峰值51/28/54兵，跑动换帧/死亡淡出/暂停冻结通过。此前166项回归覆盖状态与墙碰撞；本次未改运行代码、未重建玩家。完整范围与限制见art-style/style-a/ACCEPTANCE.md，回放dynamic-review.html，报告dynamic-review.json。四项小样板完成（四塔、一种普通剑兵、背景、15墙组合），不等于其他兵种/Boss/HUD/特效全部完成，不自动扩展。旧“待样板视觉确认”描述已被覆盖。
+## 2026-10-09：墙体几何重做（最新，视觉待确认）
 
-目标：在现有工程中，依据授权原包和恢复源码，完整复原《冲向那座塔》的入口/主界面、关卡与模式、养成装备、经济商店、任务活动奖励、离线每日时间、广告平台回调、持久化和返回关外生命周期；最终交付可运行构建及明确验收报告。
+用户明确墙属于本轮目标，要求继续处理薄板观感。新增ClearStoneWall，按15种原墙组合的BoxCollider局部包络重建纯视觉网格：两层错缝石块、倒角、暗色内芯接缝、压顶石、每隔一段一个大垛口；每个墙组合合并为一个MeshRenderer。旧视觉网格保留但禁用Renderer；不新增Collider，不改原位置、旋转、长度、通路或碰撞。WarmStoneWall改为分级面光照与顶点色。首轮过亮，已根据实机截图压低亮度加强接缝。
 
-目标 AppID：`wxcf1394487200e48f`；版本：`43`。工作目录：`E:/Projects/AreaBattle`，Git 仓库 `memeoo123/AreaBattle`，分支 `main`；Windows PowerShell；Unity `6000.0.68f1`。
+stone-wall-build.log：166项通过、构建成功。扩充已有15墙测试：逐顶点检查新几何位于原碰撞包络、旧碰撞矩阵/尺寸不变、旧网格隐藏、新网格存在、重复调用不生成重复墙。已查看关卡116新图wall-blocks-in-game.png；旧图wall-before.png可对照。试玩更新，未改士兵/塔/背景。未做新墙移动端性能测量，不把技术通过当用户视觉认可。由于现有墙碰撞厚度有限，视觉厚度受包络限制，不可擅自拓宽。
+## 2026-10-09：普通士兵显示放大20%（最新）
 
-保留已有战斗实现和真实用户数据；未知规则必须保留为未知，不能编造规则或伪造登录成功。用户不允许启动子代理。测试使用隔离记录、路径或后端，不能用真实存档做破坏性测试。
+用户看战场示意后要求“稍微放大”。ClearSoldierVisual可见高度0.075→0.09世界单位，540×960下约21px；仅视觉尺寸调整，动画/移动/战斗规则不变。soldier-size-build.log记录166项通过及构建成功。已查看新战场截图art-style/style-a/soldier-size-plus20.png，对照保留soldier-size-before.png；试玩已更新，视觉待反馈。soldier-review/index.html仍是此前约18px的历史录制，不能代表新尺寸。
+## 2026-10-09：士兵独立视觉确认（待用户反馈）
 
-## 3. 已实现的主要范围
+用户要求先确认士兵显示效果。已用现有ClearSoldierVisual和阵营Shader在Unity录制24帧、10fps展示：7倍放大与约18px实际尺寸、蓝红朝向、跑动、倒下淡出。展示为隔离录制场景，不是实战运动录像。产出art-style/style-a/soldier-review/index.html，可暂停/逐帧/单独循环跑动或死亡，日志soldier-review-capture.log为PASS。未修改士兵素材或运行玩法，未重建玩家。视觉仍待用户确认，不能记为accepted。
+## 2026-10-09：箭塔去掉护栏和梯子（最新）
 
-| 范围 | 当前实现与边界 |
-| --- | --- |
-| 战斗基础 | 保留既有布局、生产、AI、战斗、技能、Boss、暂停、结算与重试实现和验证；本阶段持续补关外，不重新宣称全部画面/设备一致。 |
-| 启动与流程 | 已恢复核心模块启动、配置启动、Main 初始化/更新/失焦/退出、PreLoad/StarGame/ExitGame、FSM/逻辑模块和关外入口顺序。完整宿主对象和账号服务仍待装配。 |
-| 配置与资源 | 旧资源路线、原始配置、字体、图集、部分原生 UI、资源/音频/时间/Update 服务已有实现和专项检查。主配置含 58 表/2724 行；共享道具配置单独建模，不能混用同名项目类型。 |
-| 数据与存储 | 数据管理器池、存储排队/压缩/去重、物品记录、时间同步、索引快照、工具派发和部分养成数据已有源码对应实现。隔离的复原存档格式不等于原线上协议。 |
-| 关外界面与养成 | 已有菜单切换、指挥官页面/卡片/技能详情、部分皮肤模板及对应规则。完整入口、页面服务和用户流程尚未闭环。 |
-| 道具与奖励 | 已实现共享配置管理、ItemModuleControl、ItemManager、工厂、全局奖励、上报边界、物品基类、七种虚拟道具和自动/手动礼包；实体副作用已连接到相关生产服务。 |
+按用户要求去掉护栏、栏杆立柱和梯子，保留开放厚木平台、弩机支座、承重木架和阵营旗布。内置image_gen生成arrow-simple-v5.png（1024×1536 RGBA），提示词arrow-simple-prompt.txt，原v4为参考。已更新资源映射并构建，arrow-simple-build.log记录166项通过、构建成功。实机截图art-style/style-a/arrow-v5-in-game.png；玩法与其他塔型不变，旧图保留。当前箭塔标准不再包含护栏和梯子。
+## 2026-10-09：箭塔结构修正（最新）
 
-最近道具批次的关键结果：
+用户确认箭塔改为厚木平台、低护栏、横置弩床/箭槽与支座、侧边梯子，蓝瓦平台移除，阵营使用短旗布。内置image_gen生成arrow-structure-v4.png（1024×1536 RGBA），提示词arrow-structure-prompt.txt和arrow-cleanup-prompt.txt。已接入独立箭塔Sprite，其他三塔取原资源，宽高限制和射击规则不变。旋转底座仅静态结构，不新增转向动画。arrow-build.log记录166项通过、构建成功，试玩已更新。已查看实机截图art-style/style-a/arrow-v4-in-game.png，无背景光晕/矩形，红蓝旗可见；小尺寸弩机细节较少，辨识度仍待用户反馈。
+## 2026-10-09：进阶塔阵营旗布修正（最新）
 
-- 原始共享配置读取：79 个道具、4 个礼包组记录、16 个商品、10 个奖励记录；保留原字段默认值、重复键、缓存和初始化顺序。
-- 工厂支持的九种实体均有具体实现：金币、钻石、体力、指挥官、英雄碎片、头像框、游戏积分、自动礼包、手动礼包。源码不支持的类型仍返回空。
-- 礼包恢复了概率判断、按权重不放回选择、含上界的数量随机、原奖励顺序，以及嵌套礼包在转换过程中立即生效的顺序。
-- 验证原始礼包 `20000` 和嵌套礼包 `20001`，覆盖暂存队列、消息/报告/发奖失败时保留的部分副作用。
-- 已验证真实模块链：礼包 → ItemModule/ItemManager → 实体/全局库存 → Tool/本地货币 → 保存与重读。不是仅用空接口模拟发奖。
-- 随机黄金用例使用可注入的确定性随机源；没有声称与原 WASM 的时间种子随机序列逐位相同。
+用户确认移除像瓦片的蓝色护板，恢复石墙，改为有横杆、下垂褶皱和自由布边的短幅贴墙旗布。内置image_gen生成towers-banner-v3.png，提示词banner-revision-prompt.txt，2172×724 RGBA；实际仅接入中间两座进阶塔切片，普通塔/箭塔仍取原图。banner-build.log：166项通过、构建成功；已查看实机红蓝旗布与塔顶功能点。旗布在实际尺寸下较小，可见阵营色，布料细节主要在放大图可见。截图art-style/style-a/banner-v3-in-game.png；试玩已更新，视觉待反馈。旧护板版本保留为历史。
+## 2026-10-09：进阶塔石质露台修正
 
-## 4. 尚未完成的范围
+用户确认将突击/分流塔蓝色瓦檐和内部尖顶改为石质开放露台，阵营色移到窗旁外墙木护板。内置image_gen已生成towers-terrace-v2.png，提示词terrace-revision-prompt.txt，2172×724 RGBA。运行时仅使用新版中间两切片，普通塔/箭塔仍取原图。接入已完成，terrace-build.log记录166项通过、构建成功；已查看实机红蓝阵营护板与功能点，截图art-style/style-a/terrace-v2-in-game.png。试玩入口已更新，视觉待用户反馈。无需重测未改动的士兵性能。
+## 2026-10-09：A风格四项可玩样板完成（最新）
 
-GlobalItemManager 单例发布、配置延迟初始化和 ItemManager 记录启动已实现并验证；**完整生产对象装配仍缺失**，包括实际商品更新/重置/价格供应者、旧资源读取器、数据池注册和 Main 接线。
+用户明确本轮小目标为塔、士兵、背景和障碍。已接入A风格四塔、一种普通剑兵四帧跑动与程序倒下/淡出、新背景、15种原墙组合的卡通材质；166项验证通过，试玩构建成功。Play-Campaign.cmd / Play-TowerLab.cmd 可用。当前phase=sample，等待视觉/试玩反馈，未进入批量扩展；普通兵2/3类、Boss和完整HUD未重做。证据与限制见art-style/style-a/PROGRESS.md、build.log、performance.json、analysis/captures/clear-a-level116-sample.png。新兵动画是序列帧与程序死亡，不是新增Spine。此前设计阶段/待接入描述为历史。
+## 2026-10-09：A方向样板设计（最新状态）
 
-后续仍包括：完整 UserInfo、CommanderUI、Dice、报告宿主和剩余 24 个控制器；账号与真实菜单启动；商店/支付，普通/特殊/每日模式，竞技匹配排行，任务成就，七日/限时活动，骰子选卡，图鉴公告设置，广告平台回调，离线每日刷新，以及战斗奖励与返回关外闭环。部分基础组件已存在，不能把“整条业务流程未验收”解释为所有底层都未实现。
+用户对三方向对比回复“倾向于A”。当前phase=sample（设计中），style_decision=selected（A作为当前样板方向，非最终验收）。已保存统一视觉约定与A样板设计图，见art-style/style-restart/STYLE_BRIEF.md、a-sample-design-v1.png。下一步为分资产制作及可玩样板接入，再做真实尺寸、遮挡与状态检查；未进入批量替换。此前pending状态为历史。
+## 2026-10-09：流程重启（优先于以下历史进度）
 
-报告和平台接口仍有明确外部边界，未验证的服务端行为不能冒充成功。旧资源路线是目前源码默认路径；现代资源获取路线仍未完成，尚无证据表明它是当前默认启动必经路径。
+用户要求按规范流程重新开始，并允许强制阶段关卡。当前 phase=style-selection，style_decision=pending。既有四塔、地面、墙材质与士兵概念均作为历史试验保留；不得将局部认可或“先试一版”解释为整体风格确认。先提供同布局风格对比，用户选择后才进入生产样板；现在不继续修改运行资源。当前入口：art-style/style-restart/STYLE_BRIEF.md。skill已补充风格选择、样板、验收关卡。
+# AreaBattle 进阶玩法交接
 
-还需真实帧更新、输入、完整用户操作、重启/失败回调、可运行关外 Player、视觉音频与原版对比及最终验收。本阶段没有这些完整结果。
+更新：2026-10-09。项目根目录：`E:/Projects/AreaBattle`，下文相对路径均以此为根。
 
-## 5. 验证证据及限制
+## 当前任务与状态
 
-最新集成检查时间：**2026-09-30 19:34:44（北京时间）**。最新增量为 10 项，累计 1087 项。主要是 Unity 批处理下的源规则、边界条件和服务链验证；不能替代完整原生场景或设备测试。
+最新环境进度：背景与障碍材质已经换好并更新试玩版，163项验证通过。背景为浅草地/土地，15种墙体保留原网格/碰撞/组合，仅更换暖色石墙材质；只作用于进阶模式。用户同时要求看士兵如何替换，已检查普通兵图集及GPU顶点动画，建议先一个分层2D兵样板；此建议尚未确认，士兵仍为原版。当前环境记录与士兵评估位于 `art-style/environment/PROGRESS.md`、`SOLDIER_RESTYLE_PLAN.md`。此前“障碍待换”的描述已被本次覆盖。
 
-- `analysis/unity-integrated-validation.json`：`passed=true`，1087 项检查。
-- `analysis/global-item-slot-integrated.log`：对应最新通过日志。
-- `analysis/VALIDATION_MANIFEST.json`：验证范围、历史、2078 个文件指纹及未完成事项。
-- 最近的原生 PlayMode 结果是历史音频资源链 18 项，见 `analysis/audio-resource-native.log`；**不是最新礼包批次的原生重跑**。
-- 历史 Player/启动检查只证明当时范围，不能用作当前完整关外构建验收。最近批次没有新 Player 构建或 smoke 测试。
-- 本任务上次启动的 Unity 验证进程 PID `47084` 已确认退出；此信息为上次观察，不代表其他 Unity 实例状态。
+最新小修正：塔顶线路容量/出线状态圆点已恢复，只隐藏路线名称和装饰标记。圆点属于必要玩法信息，不得再随美术简化移除。161项验证通过且试玩构建已更新，日志 `art-style/towers-first/restore-capacity-dots.log`。
 
-## 6. 文件导航
+最新可玩进度：用户认可朴素普通塔与紧凑进阶塔，要求先试一版。已完成正式接入并重建 `Build/Advancement/AreaBattle.exe`，161项回归通过；入口仍为 `Play-Campaign.cmd` / `Play-TowerLab.cmd`。新代码 `CompactTowerVisual.cs`，材质 `CompactTowerCamp.shader`，资源 `Resources/ArtStyles/Compact/`。阵营配色、塔型升降级与占领重置、数字位置已接入；塔旁路线文字和几何标记已移除。障碍/Boss/士兵/背景暂为原版，障碍仍在后续美术目标中。当前等待试玩反馈，不再重复制作已落地塔型。新增美术和代码未提交；原交接归档及其他本地改动保留。完整记录见开发进度与 `art-style/towers-first/PROGRESS.md`。
 
-所有下列路径相对工作目录 `E:/Projects/AreaBattle`；单独上传本文可了解状态，继续修改则仍需要工程与证据文件。
+最新转向（2026-10-09）：当前开始关内美术风格迭代。大目标是以本项目验证并完善 `game-art-style-switcher` skill；第一版已安装。小目标包含关内所有建筑与障碍，含普通/突击/分流/箭塔及中立状态。要求鲜明、强辨识度，靠建筑本身区分，不依赖文字或附加标记；不能把“不需要标记”误解为排除塔种，对应玩法不变。已生成普通塔/箭塔双图初稿，最终风格未定，尚未接入游戏。下一步盘点实际障碍并补齐四类塔与代表障碍概念总览。详细要求见 `art-style/towers-first/STYLE_BRIEF.md` 和 `DEVELOPMENT_PROGRESS.md`。以下等待玩法反馈的描述保留为前一阶段历史，不再是当前唯一下一步。
 
-- 生产代码：`UnityProject/Assets/AreaBattle/Scripts/`；验证代码：`UnityProject/Assets/AreaBattle/Editor/`。
-- 目标状态：`analysis/targets/wxcf1394487200e48f/43/OUTGAME_RESTORE_STATE.json`。
-- 原包反汇编、方法索引与专项审计：`analysis/targets/wxcf1394487200e48f/43/generated/outgame/`，下文简称 O。
-- 最新审计：O 中的 `GLOBAL_ITEM_SLOT_AUDIT.json`、`GLOBAL_ITEM_SLOT_SOURCE_EVIDENCE.json`；此前包括 `PACKAGE_ITEMS_AUDIT.json`、`PACKAGE_ITEMS_SOURCE_EVIDENCE.json`、`package-random-generics.json`；此前还包括 `SHARED_ITEM_CONFIG_AUDIT.json`、`GLOBAL_ITEM_REWARDS_AUDIT.json`、`VIRTUAL_ITEMS_AUDIT.json`。
-- 最近生产文件：`OutgameGlobalItemSlot.cs`、`OutgameItemConfigManager.cs`、`OutgameItemModuleControl.cs`、`OutgameItemManager.cs`、`OutgameItemFactory.cs`、`OutgameGlobalItemLifecycle.cs`、`OutgameGlobalItemRewards.cs`、`OutgameItemBase.cs`、`OutgameVirtualItems.cs`、`OutgamePackageItems.cs`。
-- 明细历史：目标目录 `REVERSE_PROGRESS.md`、`RESTORE_PROGRESS.md`，以及 `analysis/VALIDATION_REPORT.md`。
+用户已从原版还原转为迭代关内玩法，当前版本接入正式关卡并进入试玩调平衡。
+最新要求是“交接一下，然后开启一段新对话”。本轮实现已完成，无待修复的已知编译/测试失败。
+下一段对话先读本文和 `DEVELOPMENT_PROGRESS.md`，确认接续后等待用户新反馈，不自动重新开展旧的完整还原任务。
+原还原任务的旧交接已逐字节保留到 `analysis/handoff-history/AREA_BATTLE_HANDOFF-20261009-before-evolution.md`，仅按需查阅。
 
-状态文件的 `subsystems` 中有早期概括尚未逐项刷新；判断最新细节时，应结合最新 `milestones`、`nextPriority` 和专项审计，不能只看早期 pending 或旧检查数。
+## Git与环境
 
-## 7. 下一步从哪里开始
+- 分支：`codex/project-changes`，不要切回main或覆盖本分支。
+- 远端：`https://github.com/memeoo123/AreaBattle.git`。
+- 已提交并推送：`14850a10ae8f076fe7ed8519e258f8200d0a7384`；功能、进度文档、检查报告与截图均已上传。
+- 本交接及本次历史归档是在上述推送之后写入的本地文件，尚未提交。
+- Windows PowerShell；Unity `C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Unity.exe`。
+- 不依赖当前运行中的Unity或游戏进程；继续操作前自行确认实例状态。
+- 用户偏好直接落实已确认方案，不反复征求确认；用户说“先聊/先不改”时仅讨论。
+- 不主动启动子代理。不要修改用户真实存档或启动无关项目。
 
-1. 先读最新状态、`GLOBAL_ITEM_SLOT_AUDIT.json` 和 `OutgameGlobalItemSlot.cs`，核对当前工程；不用重做礼包或单例 getter。
-2. 已确认 getter34590先创建并发布单例，再current ItemConfigMgr.InitMgr，最后返回current槽；失败保留已发布对象、不自动重试；回调可以清空/替换，旧实例释放也会清当前槽。这些已有10项检查覆盖。
-3. ctor34570仅初始化统计id10020、实时Products32/Items36；快照40/44保持null直到记录初始化。不能重新提前创建快照，也不能把配置初始化塞入ItemConfigMgr自身getter。
-4. 下一步把现有商品Update/Reset/Prices接到共享GameProductConfig及原旧资源reader，再将slot/ItemManager/实体/数据池注册接入完整生产启动。Slot当前接受显式lifecycle构造器，测试的update注册是受控边界，不能当完整native产品更新。
-5. 继续余下宿主/24控制器/Main/账号/菜单/全部业务；完成实际操作、保存重启、失败回调及原生Player验收。最终目标没有缩小。
+## 可玩入口
 
-常用验证：Unity 可执行文件为 `C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Unity.exe`；使用参数 `-batchmode -accept-apiupdate -projectPath E:/Projects/AreaBattle/UnityProject -executeMethod AreaBattle.EditorTools.BattleBuild.ValidateMechanicsOnly -logFile E:/Projects/AreaBattle/analysis/<本轮名称>.log`。从 PowerShell 启动时使用 `Start-Process -WindowStyle Hidden -PassThru` 并跟踪自己的 PID，不结束其他 Unity 进程。
+- `Play-Campaign.cmd`：当前正式关卡版本，自动续玩，存档 `Build/Advancement/EvolutionProfile.json`。
+- `Play-TowerLab.cmd` / `Play-Advancement.cmd`：试验场99001，不推进正式进度。
+- `Play-Level871.cmd`：旧规则对照入口，不能拿它判断新版是否生效。
+- 构建：`Build/Advancement/AreaBattle.exe`；整个Build目录和本地存档被Git忽略，换机器需重新构建。
 
-## 8. Git 上传与暂停状态
+## 用户确认的设计（不要恢复被推翻的版本）
 
-完整复原目标已按用户要求暂停；本次仅做仓库上传准备，不继续改玩法代码。远端为 `https://github.com/memeoo123/AreaBattle.git`（SSH 地址同库；当前机器采用 HTTPS 认证）。`.gitignore` 排除 Unity 缓存、Build、测试临时工作目录与本地存档；源码、资源及 .meta、Packages、ProjectSettings、证据和状态文档保留。原始参考视频使用 Git LFS；Spine 参考代码使用固定提交子模块。克隆后运行 `git lfs pull` 和 `git submodule update --init --recursive`。
+1. 正式关卡保留原布局、障碍和关卡顺序；非Boss塔位统一从基础塔开始。
+2. 各非中立阵营开局一座8点，其余交替6、5点；中立占领成本和Boss生命值保留。
+3. 基础塔只能一路，不能再按兵力自动增加线路。
+4. 10点首次进阶强制暂停，底部小面板选卡再确认，多塔依次选择；当前塔金色高亮，战场可见。
+5. 路线只有突击（代码Single/界面部分叫单线）、分流、箭塔。中继已退出新版选项。
+6. 突击每路效率从120%起，每10级增加5个百分点，60级145%；始终一路。
+7. 分流每条线独立产兵：10级每路100%，以后每10级加5个百分点，60级每路125%。10级2路，20级3路。
+8. 核心原则：突击强在一个方向；分流单路稍弱但总量更高。绝不能恢复“多路平分固定总产量”。
+9. 箭塔不出兵占领；优先射敌兵，无敌兵射敌塔，箭矢不能占领。复用原箭塔命中机制。
+10. 箭塔10级射程1.0、间隔1.3秒；每10级射程加0.1、射速倍率加20%，60级射程1.5、间隔0.65秒。
+11. 点击己方或敌方箭塔显示真实射程圈。
+12. 当前兵力决定阶段能力；突击/分流跌破10时停用路线、变基础塔，但同一所有者记住路线，回到10自动恢复、不弹窗。
+13. 最新例外：箭塔低于10仍是箭塔，保留基础射程1.0/间隔1.3秒，仍不能出兵。
+14. 换所有者才清空路线记忆。占领前的中立/敌方数值不能继承为进阶资格。重开重置。
+15. 敌方自动进阶，不弹窗，数值与玩家一致。普通敌塔每0.6秒检查反击，开场4.5秒后每1.5秒安排扩张/支援。
+16. 保留一座低等级后方塔自然成长；出兵中的塔仍不自然增长。Boss保留独立机制。
 
-## 9. 接续提示
+## 文件地图
 
-> 请读取 AREA_BATTLE_HANDOFF.md，继续同一版本的完整关外复原。先核对当前工程与最新审计，从商品更新/价格供应者、旧资源读取器及数据池/Main对象装配开始；保留已有战斗和用户数据，不启动子代理，不编造未知规则或登录结果，不把局部检查通过当作完整验收。
+- `UnityProject/Assets/AreaBattle/Scripts/BattleAdvancement.cs`：路线、倍率、升降级、记忆、敌方选路线。
+- `BattleArrow.cs`：箭塔识别、射程/射速、寻找目标与命中；`BattleEvolutionAI.cs`：新版普通敌方连线策略。
+- `BattleView.cs`：正式关卡配置转换、运行时钟/输入、射程圈、存档入口。
+- `BattleEvolutionModal.cs`：暂停选卡与高亮；`BattleAdvancementHud.cs`：紧凑塔名/数值标签。
+- `AdvancementVisual.cs`：路线标记；`AdvancementCatalog.cs`保留旧实验分支，不是新版路线规则来源。
+- `UnityProject/Assets/AreaBattle/Editor/AdvancementValidation.cs`：功能/回归验证及Windows构建。
+- `SingleTowerProbe.cs`：当前10级出兵测量；RunBatch现转发到RunCurrentRates。
+- `DEVELOPMENT_PROGRESS.md`：完整当前进度与参数表。README含入口与构建说明。
 
-此前较长交接文档已按原字节归档：`analysis/handoff-history/AREA_BATTLE_HANDOFF-20260930-192957.md`，SHA256：`1cb05c730af6bf5715eca97fbdc6f703ca350121a1c927e1f1fb08f4842e7811`。它仅供查历史；当前入口以本文为准。
+## 最后验证与限制
+
+- `analysis/advancement-validation.json`：160项通过；Windows构建成功。
+- 正式关卡561条配置的低兵力转换已检查；代表关卡加载、存档、下一关按钮和重开已测。
+- `analysis/current-level10-rates.json`：无技能加成，60秒模拟，突击一路69个；分流每路58个，两路116个；60/120 FPS一致。
+- `analysis/captures/arrow-evolution-range60.png`展示最新高等级射程；`arrow-evolution-range.png`为10级。
+- 检查包含实际Unity渲染和模拟运行，不是对全部关卡通关难度的人工验收。
+- 历史截图及 `analysis/single-tower-probe.json`不代表当前数值。原版还原验证报告也不能充当新版验收。
+
+## 下一步与最少命令
+
+无当前阻塞。等待用户试玩反馈，重点观察分流多路总量、箭塔扩大射程及低血保留能力、AI压迫程度、Boss/高成本中立塔节奏。
+优先调整已有三路线，不自行添加新塔种或复杂战场系统。
+
+验证与重新构建：
+```powershell
+& 'C:/Program Files/Unity/Hub/Editor/6000.0.68f1/Editor/Unity.exe' -batchmode -projectPath 'E:/Projects/AreaBattle/UnityProject' -executeMethod AreaBattle.EditorTools.AdvancementValidation.RunBatch -logFile 'E:/Projects/AreaBattle/Build/advancement-build.log'
+```
+先检查是否已有这个项目的Unity实例，避免重复启动。若仅回答规则问题，不要无故重跑整套验证。
+
+
+
+
+
+
+
+
+
+
+
+
+

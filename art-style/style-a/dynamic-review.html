@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>A风格动态验收</title>
+<style>body{font:16px/1.6 system-ui;background:#f5f3ed;color:#283128;max-width:1000px;margin:24px auto;padding:0 16px}button,select{font:inherit;padding:8px 12px;margin-right:10px}img{display:block;width:540px;max-width:100%;margin-top:16px}input{width:260px}small{color:#596259}</style>
+<h1>A风格动态验收</h1><p>当前已确认样板的 Unity 受控交战录制。每组6秒、10帧/秒；为增加交战密度调整了阵营、初始兵力与连线，不代表正式关卡开局。</p>
+<select id="scene"><option value="116">关卡116：墙体与密集连线</option><option value="30">关卡30：紧凑布局</option><option value="99001">试验场：双向交战</option></select><button id="play">暂停</button><span id="time"></span>
+<p><input id="seek" type="range" min="0" max="59" value="0"><small>拖动逐帧查看</small></p><img id="frame" width="540" height="960">
+<p>验收覆盖跑动、死亡淡出、暂停冻结和密集战场显示。旧HUD与原有技能/升级特效仍保留。本页不是移动端性能证明。</p>
+<script>let n=0,playing=true;const scene=document.querySelector('#scene'),image=document.querySelector('#frame'),seek=document.querySelector('#seek'),play=document.querySelector('#play');function draw(){image.src='../../analysis/captures/art-dynamic-'+scene.value+'/'+String(n).padStart(2,'0')+'.png?v=footprint-anchor';seek.value=n;document.querySelector('#time').textContent=(n/10).toFixed(1)+'秒';play.textContent=playing?'暂停':'播放'}scene.onchange=()=>{n=0;draw()};seek.oninput=()=>{n=+seek.value;playing=false;draw()};play.onclick=()=>{playing=!playing;draw()};setInterval(()=>{if(playing){n=(n+1)%60;draw()}},100);draw();</script></html>
+
+
